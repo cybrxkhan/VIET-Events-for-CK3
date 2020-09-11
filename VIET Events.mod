@@ -10,4 +10,4 @@ tags={
 }
 name="Various Immersive Events and Tales"
 supported_version="1.*"
-path="C:/Users/Oliver/Documents/Paradox Interactive/Crusader Kings III/mod/VIET Events"
+path="mod/VIET Events"
