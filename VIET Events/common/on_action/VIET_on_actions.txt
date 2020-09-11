@@ -1,0 +1,228 @@
+
+
+random_yearly_playable_pulse = {
+	on_actions = {
+		delay = { days = 5 }
+		VIET_events_yearly_pulse
+	}
+	#events = {
+	#	VIETmisc.0001
+	#	VIETmisc.0002
+	#	VIETmisc.0003
+	#}
+}
+
+
+three_year_playable_pulse = {
+	on_actions = {
+		delay = { days = 5 }
+		VIET_events_tri_yearly_pulse
+	}
+}
+
+
+five_year_playable_pulse = {
+	on_actions = {
+		delay = { days = 5 }
+		VIET_events_five_yearly_pulse
+		delay = { days = 8 }
+		#VIET_events_event_chain_pulse
+	}
+}
+
+# Common events - covers the most ordinary and mundane happenings like picking your nose or eating baklava
+VIET_events_yearly_pulse = {
+	trigger = {
+		VIET_basic_is_available_adult_trigger = yes
+	}
+	random_events = {
+		#chance_to_happen = 99
+		21000 = 0
+		
+		#######################################
+		# OLDEST VIET
+		#######################################
+		
+		# Nature
+		100 = VIETold.0001		# Admiring the sky
+		100 = VIETold.0002		# A butterfly lands on your arm outside
+		# Dreams
+		100 = VIETold.0004		# A good dream
+		# Dirt
+		100 = VIETold.0009		# Found a coin in the ground (old VIET version)
+		
+		#######################################
+		# OLDER VIET
+		#######################################
+		
+		# Vegetables		
+		100 = VIETold.1001		# Given a gift of onions from a neighbor (was a courtier in old VIET)
+		100 = VIETold.1006		# Eating Greek salad
+		# Water
+		100 = VIETold.1007		# Choke on water
+		100 = VIETold.1008		# Drank some refreshing water (old VIET version)
+		# Bitter
+		100 = VIETold.1012		# Time for some coffee?
+		# Eggs
+		100 = VIETold.1020		# Eating deviled eggs
+		
+		#######################################
+		# NEXT GEN VIET
+		#######################################
+		
+		# Generic Hello!
+		100 = VIETmisc.0005		# Tried and failed to remember a dream
+		100 = VIETmisc.0006		# Stubbed toe
+		100 = VIETmisc.0008		# Take a nice walk outside
+		100 = VIETmisc.0009		# Drink a refreshing cup of water
+		100 = VIETmisc.0011		# Feeling itchy today
+		100 = VIETmisc.0013		# Character slips and almost tumbles
+		100 = VIETmisc.0014		# Remember an embarassing memory from the past
+		100 = VIETmisc.0015		# Remember a happy memory from the past
+		100 = VIETmisc.0016		# Doing a lot of work recently
+		100 = VIETmisc.0017		# Character woke up early - is it time to do some work?
+		100 = VIETmisc.0018		# Thought of an awesome comeback in an argument... many days later
+		100 = VIETmisc.0020		# Heard a good joke but forgot it already
+		100 = VIETmisc.0022		# Bored during council meeting
+		100 = VIETmisc.0025		# Feel a breeze against the face
+		100 = VIETmisc.0026		# Couldn't find a document in your office
+		100 = VIETmisc.0029		# Found a coin on the ground
+		100 = VIETmisc.0031		# Dreamt of light
+		100 = VIETmisc.0032		# Nightmare of darkness
+		100 = VIETmisc.0034		# Gazing at clouds
+		100 = VIETmisc.0035		# Feeling itchy at meeting with nobles
+		100 = VIETmisc.0036		# Bit tongue at dinner
+		100 = VIETmisc.0041		# Courtier bumps into you accidentally
+		100 = VIETmisc.0045		# Had a good nap
+		100 = VIETmisc.0046		# Read a good book
+	}
+}
+
+# Uncommon events - stuff that happens regularly but isn't as frequent
+VIET_events_tri_yearly_pulse = {
+	trigger = {
+		VIET_basic_is_available_adult_trigger = yes
+	}
+	random_events = {
+		#chance_to_happen = 99
+		18000 = 0
+		
+		#######################################
+		# OLDEST VIET
+		#######################################
+		
+		# Dreams
+		100 = VIETold.0005		# Dreamt of battle
+		# Dirt
+		100 = VIETold.0008		# Slipped in the mud
+		100 = VIETold.0010		# Peasants debate the use of different kinds of fertilizer
+		100 = VIETold.0011		# Priest needs to determine what kind of pigment to use in manuscript
+		
+		#######################################
+		# OLDER VIET
+		#######################################
+		
+		# Vegetables
+		100 = VIETold.1003		# Someone hates cabbages
+		100 = VIETold.1004		# Using onion to combat hair loss?
+		100 = VIETold.1005		# Rumors of vampires nearby - use onions to combat?
+		# Water
+		100 = VIETold.1009		# Need to dig up a new well
+		# Bitter
+		100 = VIETold.1011		# Non-Greek ruler of Greeks learns about bitter greens
+		100 = VIETold.1013		# Stock of olives are too bitter
+		100 = VIETold.1014		# Eating a lot of erotic inducing arugula
+		# Eggs
+		100 = VIETold.1017		# Local merchant's house gets egged during festival (was Republic player in old VIET)
+		100 = VIETold.1018		# Bought a crapload of pickled eggs
+		100 = VIETold.1019		# Your vassal's food accidentally has eggshells in it
+		
+		#######################################
+		# NEXT GEN VIET
+		#######################################
+		
+		# Generic Hello!
+		100 = VIETmisc.0002		# Character dreams of going to a village in Oblivion
+		100 = VIETmisc.0003		# Given Baklava as a gift
+		100 = VIETmisc.0004		# Overhear an Oblivion conversation
+		100 = VIETmisc.0007		# Servant's child recently died
+		100 = VIETmisc.0010		# Legs get numb while sitting on the chamber pot
+		100 = VIETmisc.0012		# Reports of a ghost in residence
+		100 = VIETmisc.0019		# Paid a quick visit to the supposed ruins of a local house of worship
+		100 = VIETmisc.0021		# Thought you heard someone calling your name
+		100 = VIETmisc.0024		# Found a nice flower outside and accidentally stepped on it
+		100 = VIETmisc.0030		# Tripped and fell while saying farewell to an envoy
+		100 = VIETmisc.0037		# Servant is picking nose
+		100 = VIETmisc.0038		# Two servants chat about a play's quality
+		100 = VIETmisc.0040		# Nanny said it'll be alright years ago - is she right?
+		100 = VIETmisc.0042		# Forgotten Identity Part 1 - Meeting an important guest to discuss business when something bad happens
+	}
+}
+
+# Rare events - more unique and unusual happenings
+VIET_events_five_yearly_pulse = {
+	trigger = {
+		VIET_basic_is_available_adult_trigger = yes
+	}
+	random_events = {
+		#chance_to_happen = 99
+		15000 = 0
+		
+		#######################################
+		# OLDEST VIET
+		#######################################
+		
+		# Nature
+		100 = VIETold.0003		# You come across a scorpion
+		# Dreams
+		100 = VIETold.0006		# Dreamt of Dagoth Ur/Morrowind reference
+		100 = VIETold.0007		# Dreamt of ROME
+		# Dirt
+		100 = VIETold.0012		# Courtier has colorful stool - or as a VIETeran once put it, fruit loop poops
+		
+		#######################################
+		# OLDER VIET
+		#######################################
+		
+		# Vegetables
+		100 = VIETold.1002		# Hearing about carrots that are orange in color (historically most carrots were purplish in this era)
+		# Bitter
+		100 = VIETold.1010		# Using chicory to help prevent bruises from tripping
+		100 = VIETold.1015		# Spinach eater
+		# Eggs
+		100 = VIETold.1016		# New fad with cosmetics made from quail eggs
+		
+		#######################################
+		# NEXT GEN VIET
+		#######################################
+		
+		# Generic Hello!
+		100 = VIETmisc.0001		# Character hears a bard sing Scarborough Fair
+		100 = VIETmisc.0023		# Meeting a foreign envoy when you can't hold your bladder
+		100 = VIETmisc.0027		# Watch a psycho killer getting executed
+		100 = VIETmisc.0028		# Reading about an ancient empire
+		100 = VIETmisc.0033		# Book might be too hard to understand
+		100 = VIETmisc.0039		# Witness a happy wedding between childhood friends
+		100 = VIETmisc.0044		# Rumors of illegitimate child with a peasant
+	}
+}
+
+# Event chains - rare, most will only fire once a playthrough
+#VIET_events_event_chain_pulse = {
+#	trigger = {
+#		VIET_basic_is_available_adult_trigger = yes
+#	}
+#	random_events = {
+#		chance_to_happen = 99
+#		1 = 0
+#		
+#		#######################################
+#		# OLD VIET
+#		#######################################
+#		
+#		#######################################
+#		# NEXT GEN VIET
+#		#######################################
+#		
+#	}
+#}

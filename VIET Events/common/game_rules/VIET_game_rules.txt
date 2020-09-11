@@ -1,0 +1,51 @@
+﻿
+VIET_events_atmosphere = {
+	default = VIET_balanced_events
+
+	VIET_balanced_events = {
+	
+	}
+
+	VIET_all_events = {
+	
+	}
+
+	VIET_serious_events = {
+	
+	}
+	
+}
+
+VIET_universe_setting = {
+	default = VIET_normal_universe_events
+
+	VIET_normal_universe_events = {
+	
+	}
+
+	VIET_historical_universe_events = {
+	
+	}
+	
+	#VIET_future_universe_events = {
+	#
+	#}
+
+	VIET_conversion_universe_events = {
+	
+	}
+	
+}
+
+VIET_historical_context = {
+	default = VIET_historical_context_on
+
+	VIET_historical_context_on = {
+	
+	}
+
+	VIET_historical_context_off = {
+	
+	}	
+}
+

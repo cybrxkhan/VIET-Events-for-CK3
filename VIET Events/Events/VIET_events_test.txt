@@ -1,0 +1,164 @@
+﻿############################################################################################################################
+# 
+# Testing/Debugging/Misc Notes
+# 
+# Animations: idle, chancellor, steward, marshal, spymaster, chaplain, anger, rage, disapproval, disbelief, disgust, fear, sadness, shame, shock, worry, boredom, grief, paranoia, dismissal, flirtation, flirtation_left, love, schadenfreude, stress, happiness, ecstasy, admiration, lunatic (?), scheme, beg, pain, newborn, sick, severelywounded, prisonhouse, prisondungeon, war_attacker, war_defender, war_over_tie, war_over_win, war_over_loss, pregnant, personality_honorable, personality_dishonorable, personality_bold, personality_coward, personality_greedy, personality_content, personality_vengeful, personality_forgiving, personality_rational, personality_irrational, personality_compassionate, personality_callous, personality_zealous, personality_cynical
+# 
+############################################################################################################################
+
+
+
+namespace = VIETtest
+
+
+# Prestige and piety test
+VIETtest.0001 = {
+	type = character_event
+	title = VIETtest.0001.t
+	desc = VIETtest.0001.desc
+	theme = VIET_theme_tuscan_country
+	
+	left_portrait = root
+	#right_portrait = root
+	
+	on_trigger_fail = {
+		add_gold = 1000
+	}
+	
+	trigger = {
+		is_adult = yes
+	}
+	
+	option = {
+		name = "OK"
+		
+		add_prestige = 100
+		add_piety = 100
+	}
+}
+
+# Gold test
+VIETtest.0002 = {
+	type = character_event
+	title = VIETtest.0002.t
+	desc = VIETtest.0002.desc
+	theme = VIET_theme_ancient_cairn
+	
+	#left_portrait = root
+	right_portrait = root
+	
+	on_trigger_fail = {
+		add_gold = 1000
+	}
+	
+	trigger = {
+		is_adult = yes
+	}
+	
+	option = {
+		name = "OK"
+		add_gold = 100
+		#show_as_tooltip - what do?
+	}
+}
+
+# Stress and toast test
+VIETtest.0003 = {
+	type = character_event
+	title = VIETtest.0003.t
+	desc = VIETtest.0003.desc
+	theme = VIET_theme_small_town
+	
+	left_portrait = root
+	#right_portrait = root
+	
+	on_trigger_fail = {
+		add_gold = 1000
+	}
+	
+	trigger = {
+		is_adult = yes
+	}
+	
+	option = {
+		name = "OK"
+		
+		random_list = {
+			10 = {
+				desc = VIETtest.0003.a.a
+				send_interface_toast = {
+					left_icon = ROOT
+					title = VIETtest.0003.toast.a
+					add_stress = 10
+					add_gold = 100
+				}
+			}
+			10 = {
+				desc = VIETtest.0003.a.b
+				send_interface_toast = {
+					left_icon = ROOT
+					right_icon = ROOT
+					title = VIETtest.0003.toast.b
+					add_stress = -10
+					add_gold = 1000
+				}
+			}
+		}
+	}
+}
+
+# Music test
+VIETtest.0004 = {
+	type = character_event
+	title = VIETtest.0004.t
+	desc = VIETtest.0004.desc
+	theme = VIET_theme_tuscan_country
+	
+	left_portrait = root
+	#right_portrait = root
+	
+	on_trigger_fail = {
+		add_gold = 1000
+	}
+	
+	trigger = {
+		is_adult = yes
+	}
+	
+	immediate = {
+		play_music_cue = mx_cue_meadandwine
+	}
+	
+	option = {
+		name = "OK"
+		add_prestige = 1
+	}
+}
+
+# Music test
+VIETtest.0005 = {
+	type = character_event
+	title = VIETtest.0005.t
+	desc = VIETtest.0005.desc
+	theme = VIET_theme_ancient_cairn
+	
+	left_portrait = root
+	#right_portrait = root
+	
+	on_trigger_fail = {
+		add_gold = 1000
+	}
+	
+	trigger = {
+		is_adult = yes
+	}
+	
+	immediate = {
+		play_music_cue = mx_cue_banquet 
+	}
+	
+	option = {
+		name = "OK"
+		add_prestige = 1
+	}
+}

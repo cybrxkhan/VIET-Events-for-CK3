@@ -1,0 +1,52 @@
+﻿#Please use these in multiple places:
+VIET_heard_about_Scarborough_Fair = {
+	icon = fertility_positive
+}
+VIET_oblivion_dream_pells_gate = {
+	icon = fertility_positive
+}
+VIET_oblivion_dream_odiil_farm = {
+	icon = fertility_positive
+}
+VIET_oblivion_dream_weye = {
+	icon = fertility_positive
+}
+VIET_oblivion_dream_faregyl = {
+	icon = fertility_positive
+}
+VIET_oblivion_dream_cloud_ruler_temple = {
+	icon = fertility_positive
+}
+VIET_overheard_oblivion_conversation = {
+	icon = fertility_positive
+}
+VIET_gave_servants_advice = {
+	icon = fertility_positive
+}
+VIET_rumors_of_peasant_child = {
+	icon = fertility_positive
+}
+VIET_scorpion_sting = {
+	icon = fertility_positive
+}
+VIET_dagoth_ur_dream = {
+	icon = fertility_positive
+}
+VIET_has_fruit_loops_poops = {
+	icon = fertility_positive
+}
+VIET_ate_good_food = {
+	icon = fertility_positive
+}
+VIET_amused_ruler = {
+	icon = fertility_positive
+}
+VIET_sexy_arugula = {
+	icon = fertility_positive
+}
+VIET_popeye_spinach_lover = {
+	icon = fertility_positive
+}
+VIET_eating_pickled_eggs = {
+	icon = fertility_positive
+}

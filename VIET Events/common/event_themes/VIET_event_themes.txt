@@ -1,0 +1,144 @@
+﻿#########################
+# 
+# VIET EVENT THEMES
+# With sources listed in comments
+# 
+#########################
+
+######################
+### GENERIC THEMES ### Can be used for any event
+######################
+
+# Only one generic theme per icon! If an icon is missing from the generic themes, please make a new generic theme.
+
+# OUTSIDE
+# Tuscan Country
+#	Generic: https://www.tokkoro.com/3082738-countryside_dirt-road_grass_landscape_outdoors_road_rural_scenic_soil_trees.html
+# Skyrim Forest
+# Ancient Cairn
+#	Generic: https://www.nexusmods.com/skyrimspecialedition/images/21517
+
+# SETTLEMENTS
+# Small Town
+#	Generic: https://pxhere.com/en/photo/623979
+
+# ABSTRACT
+# Nightmare: https://www.publicdomainpictures.net/en/view-image.php?image=101005&picture=candle-light
+#
+#
+
+
+######################
+### OUTSIDE 		### 
+######################
+
+VIET_theme_tuscan_country = {
+	icon = {
+		reference = "gfx/interface/event_window/type_love.dds"
+	}
+	sound = {
+		reference = "event:/SFX/Events/Themes/sfx_event_theme_type_activity" #reference = @generic_event_theme_sound
+	}
+	background = {
+		event_background = VIET_background_tuscan_country
+	}
+}
+
+#VIET_skyrim_forest_theme = {
+#	icon = {
+#		reference = "gfx/interface/event_window/type_love.dds"
+#	}
+#	sound = {
+#		reference = "event:/SFX/Events/Themes/sfx_event_theme_type_activity"
+#	}
+#	background = {
+#		event_background = VIET_skyrim_forest_theme
+#	}
+#}
+
+VIET_theme_ancient_cairn = {
+	icon = {
+		reference = "gfx/interface/event_window/type_domain.dds"
+	}
+	sound = {
+		reference = "event:/SFX/Events/Themes/sfx_event_theme_type_activity"
+	}
+	background = {
+		event_background = VIET_background_ancient_cairn
+	}
+}
+
+VIET_theme_garden_generic = { # For when I don't want the lovey-dovey extras
+	icon = {
+		reference = "gfx/interface/event_window/type_love.dds"
+	}
+	sound = {
+		reference = @generic_event_theme_sound
+	}
+	background = {
+		event_background = garden
+	}
+}
+
+
+#######################
+#### SETTLEMENTS	### 
+#######################
+
+VIET_theme_small_town = {
+	icon = {
+		reference = "gfx/interface/event_window/type_domain.dds"
+	}
+	sound = {
+		reference = @generic_event_theme_sound
+	}
+	background = {
+		event_background = VIET_background_small_town
+	}
+}
+
+
+#######################
+#### ABSTRACT		### 
+#######################
+
+VIET_theme_good_dream = {
+	icon = {
+		reference = "gfx/interface/event_window/type_faith.dds"
+	}
+	sound = {
+		reference = @generic_event_theme_sound
+	}
+	background = {
+		event_background = VIET_background_light_dream
+	}
+}
+
+VIET_theme_nightmare = {
+	icon = {
+		reference = "gfx/interface/event_window/type_illness.dds"
+	}
+	sound = {
+		reference = @generic_event_theme_sound
+	}
+	background = {
+		event_background = VIET_background_nightmare
+	}
+}
+
+
+#######################
+#### HOME AND COURT	### 
+#######################
+
+VIET_theme_office = {
+	icon = {
+		reference = "gfx/interface/event_window/type_duty.dds"
+	}
+	sound = {
+		reference = @generic_event_theme_sound
+	}
+	background = {
+		event_background = study
+	}
+}

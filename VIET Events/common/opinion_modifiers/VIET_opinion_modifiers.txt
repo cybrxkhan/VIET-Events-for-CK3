@@ -1,0 +1,38 @@
+﻿
+VIET_opinion_didnt_get_angry = {
+	years = 2
+	decaying = yes
+	opinion = 15
+}
+VIET_opinion_angry_at_me = {
+	years = 2
+	decaying = yes
+	opinion = -15
+}
+VIET_opinion_bumped_into_me = {
+	years = 2
+	decaying = yes
+	opinion = -10
+}
+VIET_opinion_fruit_loops_poops_help = {
+	years = 3
+	opinion = 20
+}
+VIET_opinion_angry_eggshells = {
+	years = 2
+	decaying = yes
+	opinion = -15
+}
+VIET_opinion_forgave_me = {
+	years = 2
+	decaying = yes
+	opinion = 10
+}
+VIET_opinion_approved_of_cabbage_hate = {
+	years = 2
+	opinion = 5
+}
+VIET_opinion_disapproved_of_cabbage_hate = {
+	years = 2
+	opinion = -5
+}
