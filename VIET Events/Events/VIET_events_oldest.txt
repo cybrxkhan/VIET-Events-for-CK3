@@ -10,6 +10,7 @@
 # 0001-0004		Nature
 # 0005-0007		Dreams
 # 0008-0012		Dirt
+# 0013-0017		Food (Culture Specific)
 # 
 ############################################################################################################################
 
@@ -872,6 +873,487 @@ VIETold.0012 = {
 				target = root
 				modifier = VIET_opinion_fruit_loops_poops_help
 			}
+		}
+	}
+}
+
+##################################################
+# FOOD (CULTURE SPECIFIC)	0013-0107
+##################################################
+
+
+# Lazy Byzantine Cook
+VIETold.0013 = {
+	type = character_event
+	title = VIETold.0013.t
+	desc = VIETold.0013.desc
+	theme = feast_activity
+	
+	left_portrait = {
+		character = root
+		animation = personality_rational
+	}
+
+	trigger = {
+		has_game_rule = VIET_normal_universe_events
+		OR = {
+			has_culture_group = culture_group:byzantine_group
+			# Greek cook shows up in areas near the ERE
+			capital_province = {
+				OR = {
+					has_culture_group = culture_group:byzantine_group
+					geographical_region = world_europe_south_east
+					geographical_region = world_asia_minor
+					geographical_region = world_europe_south_italy
+					geographical_region = world_europe_east
+					geographical_region = world_middle_east_jerusalem
+					geographical_region = world_africa_north_east
+				}
+			}		
+		}
+	}
+	
+	weight_multiplier = {
+		base = 1
+		modifier = {
+			add = 0.2
+			has_trait = gluttonous
+		}
+		modifier = {
+			add = -0.2
+			has_trait = temperate
+		}
+		modifier = {
+			add = 0.2
+			has_trait = diligent
+		}
+		modifier = {
+			add = -0.2
+			has_trait = lazy
+		}
+		modifier = {
+			add = 0.2
+			has_trait = vengeful
+		}
+		modifier = {
+			add = -0.2
+			has_trait = forgiving
+		}
+	}
+
+	
+	option = { # Don't be lazy
+		name = VIETold.0013.a		
+		add_character_modifier = {
+			modifier = VIET_gave_cook_advice
+			days = 1095
+		}
+		stress_impact = {
+			content = minor_stress_impact_gain
+		}
+	}	
+	option = { # It's fine
+		name = VIETold.0013.b
+		stress_impact = {
+			base = miniscule_stress_impact_loss
+			content = miniscule_stress_impact_loss
+		}
+	}	
+	option = { # Try different varieties of food
+		name = VIETold.0013.c
+		add_prestige = 10		
+		if = {
+			limit = {
+				has_game_rule = VIET_historical_context_on
+			}
+			custom_tooltip = VIETold.0013.info # About garum and Byzantine cheese
+		}
+	}
+}
+
+
+# Come across a merchant eating with a fork from the east
+VIETold.0014 = {
+	type = character_event
+	title = VIETold.0014.t
+	desc = VIETold.0014.desc
+	theme = feast_activity
+	
+	left_portrait = {
+		character = root
+		animation = disapproval
+	}
+
+	trigger = {
+		has_game_rule = VIET_normal_universe_events
+		OR = {
+			has_culture_group = culture_group:baltic_group	
+			has_culture_group = culture_group:balto_finnic_group	
+			has_culture_group = culture_group:brythonic_group	
+			has_culture_group = culture_group:central_germanic_group	
+			has_culture_group = culture_group:east_slavic_group	
+			has_culture_group = culture_group:frankish_group	
+			has_culture_group = culture_group:goidelic_group	
+			has_culture_group = culture_group:iberian_group	
+			has_culture_group = culture_group:latin_group	
+			has_culture_group = culture_group:magyar_group	
+			has_culture_group = culture_group:south_slavic_group	
+			has_culture_group = culture_group:volga_finnic_group	
+			has_culture_group = culture_group:west_germanic_group	
+			has_culture_group = culture_group:west_slavic_group	
+		}
+		root.culture = {
+			has_cultural_era_or_later = culture_era_high_medieval # Forks becoming more commonplace
+		}
+	}
+	
+	weight_multiplier = {
+		base = 1
+		modifier = {
+			add = 0.2
+			has_trait = gluttonous
+		}
+		modifier = {
+			add = -0.2
+			has_trait = temperate
+		}
+		modifier = {
+			add = 0.2
+			has_trait = gregarious
+		}
+		modifier = {
+			add = -0.2
+			has_trait = shy
+		}
+		modifier = {
+			add = 0.2
+			has_trait = ambitious
+		}
+		modifier = {
+			add = -0.2
+			has_trait = content
+		}
+	}
+
+	
+	option = { # How vain!
+		name = VIETold.0014.a		
+		add_piety = 5
+		stress_impact = {
+			humble = miniscule_stress_impact_gain
+		}
+		if = {
+			limit = {
+				has_game_rule = VIET_historical_context_on
+			}
+			custom_tooltip = VIETold.0014.info # About forks
+		}
+	}	
+	option = { # Respect other customs
+		name = VIETold.0014.b
+		add_prestige = 5
+		stress_impact = {
+			arrogant = miniscule_stress_impact_gain
+		}		
+		if = {
+			limit = {
+				has_game_rule = VIET_historical_context_on
+			}
+			custom_tooltip = VIETold.0014.info # About forks
+		}
+	}
+}
+
+
+
+
+# Kefir has gone sour
+VIETold.0015 = {
+	type = character_event
+	title = VIETold.0015.t
+	desc = VIETold.0015.desc
+	theme = feast_activity
+	
+	left_portrait = {
+		character = root
+		animation = disgust
+	}
+
+	trigger = {
+		NOT = { has_game_rule = VIET_conversion_universe_events }
+		OR = {
+			has_culture_group = culture_group:byzantine_group	
+			has_culture_group = culture_group:east_slavic_group	
+			has_culture_group = culture_group:iranian_group	
+			has_culture_group = culture_group:turkic_group	
+			has_culture_group = culture_group:volga_finnic_group
+			capital_province = {
+				OR = {
+					has_culture_group = culture_group:byzantine_group
+					geographical_region = world_europe_south_east
+					geographical_region = world_asia_minor
+				}
+			}
+		}
+	}
+	
+	weight_multiplier = {
+		base = 1
+		modifier = {
+			add = 0.2
+			has_trait = gluttonous
+		}
+		modifier = {
+			add = -0.2
+			has_trait = temperate
+		}
+		modifier = {
+			add = 0.2
+			has_trait = fickle
+		}
+		modifier = {
+			add = -0.2
+			has_trait = stubborn
+		}
+		modifier = {
+			add = 0.2
+			has_trait = lazy
+		}
+		modifier = {
+			add = -0.2
+			has_trait = diligent
+		}
+	}
+
+	
+	option = { # boo
+		name = VIETold.0015.a
+		trigger = {
+			NOT = { has_trait = paranoid }
+		}
+		stress_impact = {
+			base = miniscule_stress_impact_gain
+		}
+		if = {
+			limit = {
+				has_game_rule = VIET_historical_context_on
+			}
+			custom_tooltip = VIETold.0015.info # About kefir
+		}
+	}	
+	option = { # is someone trying to kill me?
+		name = VIETold.0015.b		
+		trigger = {
+			has_trait = paranoid
+		}
+		trait = paranoid
+		stress_impact = {
+			paranoid = miniscule_stress_impact_gain
+		}
+		if = {
+			limit = {
+				has_game_rule = VIET_historical_context_on
+			}
+			custom_tooltip = VIETold.0015.info # About kefir
+		}
+	}
+}
+
+
+## North African tea ceremony
+#VIETold.0016 = {
+#	type = character_event
+#	title = VIETold.0016.t
+#	desc = VIETold.0016.desc
+#	theme = feast_activity
+#	
+#	left_portrait = {
+#		character = root
+#		animation = personality_content
+#	}	
+#	right_portrait = {
+#		character = scope:scope_VIET_north_african_tea_vassal
+#		animation = happiness
+#	}
+#
+#	trigger = {
+#		NOT = { has_game_rule = VIET_conversion_universe_events }
+#		OR = {
+#			has_culture_group = culture_group:berber_group	
+#			has_culture = culture:andalusian
+#			has_culture = culture:egyptian
+#		}
+#		any_vassal = {
+#			is_available_ai_adult = yes
+#			OR = {
+#				has_culture_group = culture_group:berber_group	
+#				has_culture = culture:andalusian
+#				has_culture = culture:egyptian
+#			}
+#		}
+#	}
+#	
+#	weight_multiplier = {
+#		base = 1
+#		modifier = {
+#			add = 0.2
+#			has_trait = gluttonous
+#		}
+#		modifier = {
+#			add = -0.2
+#			has_trait = temperate
+#		}
+#		modifier = {
+#			add = 0.2
+#			has_trait = fickle
+#		}
+#		modifier = {
+#			add = -0.2
+#			has_trait = stubborn
+#		}
+#		modifier = {
+#			add = 0.2
+#			has_trait = lazy
+#		}
+#		modifier = {
+#			add = -0.2
+#			has_trait = diligent
+#		}
+#	}
+#	
+#	immediate = {
+#		any_vassal = { # Not working for some reason?
+#			limit = {
+#				is_available_ai_adult = yes
+#				OR = {
+#					has_culture_group = culture_group:berber_group	
+#					has_culture = culture:andalusian
+#					has_culture = culture:egyptian
+#				}
+#			}
+#			save_scope_as = scope_VIET_north_african_tea_vassal
+#		}
+#	}
+#
+#	
+#	option = { # Nice
+#		name = VIETold.0016.a
+#		stress_impact = {
+#			base = minor_stress_impact_loss
+#			calm = miniscule_stress_impact_loss
+#		}
+#		scope:scope_VIET_north_african_tea_vassal = {
+#			stress_impact = {
+#				base = minor_stress_impact_loss
+#				calm = miniscule_stress_impact_loss
+#			}
+#			add_opinion = {
+#				target = root
+#				modifier = VIET_opinion_north_african_tea
+#			}
+#			reverse_add_opinion = {
+#				target = root
+#				modifier = VIET_opinion_north_african_tea
+#			}			
+#		}
+#	}
+#}
+
+
+
+# Visit a Mongol/nomad pit stop
+VIETold.0017 = {
+	type = character_event
+	title = VIETold.0017.t
+	desc = VIETold.0017.desc
+	theme = feast_activity
+	
+	left_portrait = root
+
+	trigger = {
+		NOT = { has_game_rule = VIET_conversion_universe_events }
+		OR = {
+			has_culture_group = culture_group:mongolic_group
+			has_culture_group = culture_group:turkic_group
+		}
+	}
+	
+	weight_multiplier = {
+		base = 1
+		modifier = {
+			add = 0.2
+			has_trait = diligent
+		}
+		modifier = {
+			add = -0.2
+			has_trait = lazy
+		}
+		modifier = {
+			add = 0.2
+			has_trait = gregarious
+		}
+		modifier = {
+			add = -0.2
+			has_trait = shy
+		}
+		modifier = {
+			add = 0.2
+			has_trait = ambitious
+		}
+		modifier = {
+			add = -0.2
+			has_trait = content
+		}
+	}
+	
+	option = { # Horse meat
+		name = VIETold.0017.a
+		stress_impact = {
+			base = minor_stress_impact_loss
+		}
+		add_character_modifier = {
+			modifier = VIET_guanz_food
+			days = 365
+		}
+	}	
+	option = { # Mutton
+		name = VIETold.0017.b
+		stress_impact = {
+			base = minor_stress_impact_loss
+		}
+		add_character_modifier = {
+			modifier = VIET_guanz_food
+			days = 365
+		}
+	}
+	option = { # Goat testicles
+		name = VIETold.0017.c
+		stress_impact = {
+			base = minor_stress_impact_loss
+		}
+		add_character_modifier = {
+			modifier = VIET_guanz_food
+			days = 365
+		}
+	}
+	option = { # Dumplings filled with meat, onion, and garlic
+		name = VIETold.0017.d
+		stress_impact = {
+			base = minor_stress_impact_loss
+		}
+		add_character_modifier = {
+			modifier = VIET_guanz_food
+			days = 365
+		}
+	}
+	option = { # Barley porridge mixed with milk fat
+		name = VIETold.0017.e
+		stress_impact = {
+			base = minor_stress_impact_loss
+		}
+		add_character_modifier = {
+			modifier = VIET_guanz_food
+			days = 365
 		}
 	}
 }

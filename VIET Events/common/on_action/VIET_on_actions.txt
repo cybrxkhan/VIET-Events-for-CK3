@@ -56,6 +56,10 @@ VIET_events_yearly_pulse = {
 		100 = VIETold.0004		# A good dream
 		# Dirt
 		100 = VIETold.0009		# Found a coin in the ground (old VIET version)
+		# Food
+		100 = VIETold.0013		# Lazy Byzantine Cook
+		100 = VIETold.0015		# Kefir has gone sour
+		100 = VIETold.0017		# Visit a Mongol/nomad pit stop
 		
 		#######################################
 		# OLDER VIET
@@ -141,6 +145,9 @@ VIET_events_tri_yearly_pulse = {
 		100 = VIETold.0008		# Slipped in the mud
 		100 = VIETold.0010		# Peasants debate the use of different kinds of fertilizer
 		100 = VIETold.0011		# Priest needs to determine what kind of pigment to use in manuscript
+		# Food
+		100 = VIETold.0014		# Come across a merchant eating with a fork from the east
+		#100 = VIETold.0016		# North African tea ceremony
 		
 		#######################################
 		# OLDER VIET

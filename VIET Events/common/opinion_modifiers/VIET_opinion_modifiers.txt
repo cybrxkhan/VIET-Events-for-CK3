@@ -36,3 +36,8 @@ VIET_opinion_disapproved_of_cabbage_hate = {
 	years = 2
 	opinion = -5
 }
+VIET_opinion_north_african_tea = {
+	years = 3
+	decaying = yes
+	opinion = 10
+}

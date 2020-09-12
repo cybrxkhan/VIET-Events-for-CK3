@@ -107,6 +107,11 @@ VIET_lustful_ruler = {
 VIET_late_night_work = {
 	icon = fertility_positive
 }
-
+VIET_gave_cook_advice = {
+	icon = fertility_positive
+}
+VIET_guanz_food = {
+	icon = fertility_positive
+}
 
 
