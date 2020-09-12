@@ -50,3 +50,63 @@ VIET_popeye_spinach_lover = {
 VIET_eating_pickled_eggs = {
 	icon = fertility_positive
 }
+VIET_lake_rumare_dream_lake = {
+	icon = fertility_positive
+}
+VIET_lake_rumare_dream_wayshrine = {
+	icon = fertility_positive
+}
+VIET_lake_rumare_dream_forest = {
+	icon = fertility_positive
+}
+VIET_lake_rumare_dream_cottage = {
+	icon = fertility_positive
+}
+VIET_oblivion_dream_bruma = {
+	icon = fertility_positive
+}
+VIET_oblivion_dream_anvil = {
+	icon = fertility_positive
+}
+VIET_oblivion_dream_leyawiin = {
+	icon = fertility_positive
+}
+VIET_oblivion_dream_east_lake_rumare = {
+	icon = fertility_positive
+}
+VIET_moved_to_tears = {
+	icon = fertility_positive
+}
+VIET_unmoved_by_art = {
+	icon = fertility_positive
+}
+VIET_auriels_ascension = {
+	icon = fertility_positive
+}
+VIET_repressing_auriels_ascension_cult = {
+	icon = fertility_positive
+}
+VIET_good_flute_music = {
+	icon = fertility_positive
+}
+VIET_read_book_hotel_del_luna = {
+	icon = fertility_positive
+}
+VIET_mysterious_vision_past = {
+	icon = fertility_positive
+}
+VIET_read_cute_love_story = {
+	icon = fertility_positive
+}
+VIET_learning_local_lore = {
+	icon = fertility_positive
+}
+VIET_lustful_ruler = {
+	icon = fertility_positive
+}
+VIET_late_night_work = {
+	icon = fertility_positive
+}
+
+
+

@@ -2,7 +2,6 @@
 # 
 # Adaptations of events from the CK2 version of VIET Events
 # VIETold.1000-VIETold.1999 reserved for events made when VIET was part of the HIP collection of mods
-# VIETold.2000-VIETold.2999 reserved for events made towards the end of CK2's life cycle
 # Fired from the on_actions for every one, two, five, and ten years depending on rarity
 # 
 # 
@@ -844,7 +843,7 @@ VIETold.1014 = {
 	
 	left_portrait = {
 		character = root
-		animation = flirtation_left
+		animation = flirtation
 	}
 
 	trigger = {

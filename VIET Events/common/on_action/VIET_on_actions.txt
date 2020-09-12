@@ -2,31 +2,37 @@
 
 random_yearly_playable_pulse = {
 	on_actions = {
-		delay = { days = 5 }
+		delay = { days = 8 }
 		VIET_events_yearly_pulse
 	}
-	#events = {
-	#	VIETmisc.0001
-	#	VIETmisc.0002
-	#	VIETmisc.0003
-	#}
 }
 
 
 three_year_playable_pulse = {
 	on_actions = {
-		delay = { days = 5 }
+		delay = { days = 18 }
 		VIET_events_tri_yearly_pulse
 	}
 }
 
+# Province Events go on separate pulse
+#five_year_playable_pulse = {
+#	on_actions = {
+#		delay = { days = 5 }
+#		VIET_events_five_yearly_pulse
+#		delay = { days = 8 }
+#		#VIET_events_event_chain_pulse
+#	}
+#}
 
 five_year_playable_pulse = {
 	on_actions = {
-		delay = { days = 5 }
+		delay = { days = 28 }
 		VIET_events_five_yearly_pulse
-		delay = { days = 8 }
+		#delay = { days = 8 }
 		#VIET_events_event_chain_pulse
+		#delay = { days = 8 }
+		#VIET_events_province_event_pulse
 	}
 }
 
@@ -37,7 +43,7 @@ VIET_events_yearly_pulse = {
 	}
 	random_events = {
 		#chance_to_happen = 99
-		21000 = 0
+		24000 = 0
 		
 		#######################################
 		# OLDEST VIET
@@ -65,6 +71,24 @@ VIET_events_yearly_pulse = {
 		100 = VIETold.1012		# Time for some coffee?
 		# Eggs
 		100 = VIETold.1020		# Eating deviled eggs
+		
+		#######################################
+		# NEXT GEN VIET
+		#######################################
+		
+		# Oblivion soundtrack inspired
+		100 = VIETmisc.2002		# Harvest Dawn - passing by peasants doing farm work
+		100 = VIETmisc.2005		# All's Well - nothing exciting happened in court today
+		100 = VIETmisc.2006		# Watchman's Ease - talking with guard on duty
+		100 = VIETmisc.2007		# Glory of Cyrodiil - what is my purpose as a ruler?
+		100 = VIETmisc.2011		# Sunrise of Flutes - Meet a shephard playing the flute
+		100 = VIETmisc.2012		# Peace of Akatosh - is peace a worthwhile ideal?
+		# Reading stories
+		100 = VIETmisc.2014		# Watched entertaining slice of life play about love
+		# Stuck inside
+		100 = VIETmisc.2019		# Observing something outside
+		100 = VIETmisc.2022		# Accidentally bumped into some furniture
+		100 = VIETmisc.2025		# Heard a loud noise outside - what could it be?
 		
 		#######################################
 		# NEXT GEN VIET
@@ -105,7 +129,7 @@ VIET_events_tri_yearly_pulse = {
 	}
 	random_events = {
 		#chance_to_happen = 99
-		18000 = 0
+		20000 = 0
 		
 		#######################################
 		# OLDEST VIET
@@ -138,6 +162,26 @@ VIET_events_tri_yearly_pulse = {
 		100 = VIETold.1019		# Your vassal's food accidentally has eggshells in it
 		
 		#######################################
+		# OLD VIET
+		#######################################
+		
+		# Oblivion soundtrack inspired
+		100 = VIETold.2001		# Through the Valleys - Dream of Lake Rumare
+		100 = VIETold.2003		# King and Country - existential crisis about purpose as a ruler
+		100 = VIETold.2004		# Wings of Kynareth - Dream of Cyrodiil and deciding where to go
+		100 = VIETold.2008		# Minstrel's Lament - Court moved to tears by sad song
+		100 = VIETold.2010		# Dusk at the Market - Merchant runs out of product
+		# Reading stories
+		100 = VIETmisc.2015		# Poet tells historical story with inaccuracy
+		100 = VIETmisc.2017		# Reading about ancient warriors
+		100 = VIETmisc.2018		# Read a cute love story
+		# Stuck inside
+		100 = VIETmisc.2020		# Trapped inside a lovely mansion in a dream
+		100 = VIETmisc.2023		# Maidservants encounter mice and are afraid
+		100 = VIETmisc.2024		# Catch two servants having sex
+		100 = VIETmisc.2026		# Staying up late at night a lot
+		
+		#######################################
 		# NEXT GEN VIET
 		#######################################
 		
@@ -166,7 +210,7 @@ VIET_events_five_yearly_pulse = {
 	}
 	random_events = {
 		#chance_to_happen = 99
-		15000 = 0
+		16000 = 0
 		
 		#######################################
 		# OLDEST VIET
@@ -191,6 +235,18 @@ VIET_events_five_yearly_pulse = {
 		100 = VIETold.1015		# Spinach eater
 		# Eggs
 		100 = VIETold.1016		# New fad with cosmetics made from quail eggs
+		
+		#######################################
+		# OLD VIET
+		#######################################
+		
+		# Oblivion soundtrack inspired
+		100 = VIETmisc.2009		# Auriel's Ascension - a deity manifests themselves (was a province event in old VIET)
+		# Reading stories
+		100 = VIETold.2013		# Read Hotel Del Luna - i.e., what happens when cybrxkhan watches a K-Drama on a whim and finds it's actually great
+		100 = VIETold.2016		# Saw a vision of the past while reading a book
+		# Stuck inside
+		100 = VIETold.2021		# Learning about local folklore about ancient ruin of man who stayed inside a house during plague
 		
 		#######################################
 		# NEXT GEN VIET

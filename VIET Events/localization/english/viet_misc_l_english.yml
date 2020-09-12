@@ -4,7 +4,7 @@
  setting_VIET_balanced_events_desc:0 "Most events from VIET events will occur, but the silliest ones that break immersion for some players are disabled. Choose this for the best balance between serious and light-hearted events."
  setting_VIET_all_events:0 "#high All Events#!"
  setting_VIET_all_events_desc:0 "All events from VIET will happen, including some humorous ones. Choose this if you want the full VIET Events experience."
- setting_VIET_serious_events:0 "#high Serious Events#!"
+ setting_VIET_serious_events:0 "#high Serious Events (Restricted)#!"
  setting_VIET_serious_events_desc:0 "Disables most of the light-hearted events from VIET. Choose this if you only want the serious, grounded events."
  rule_VIET_universe_setting:0 "VIET Universe Setting"
  setting_VIET_normal_universe_events:0 "Default Setting"

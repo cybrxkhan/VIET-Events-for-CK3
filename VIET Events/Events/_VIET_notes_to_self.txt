@@ -14,8 +14,9 @@
 # OLD EVENTS NOT INCLUDED
 # 
 # Dream - Temptation VIETnam.221-223 
-# African fufu feast - VIETmisc.2005 (Fufu did not exist in Africa at the time, since it relies on a New World plant, cassava)
-# 
+# African fufu feast - VIETmisc.2005 - Fufu did not exist in Africa at the time, since it relies on a New World plant, cassava
+# Book is 3Deep5Me - VIETmisc.8329 - too similar to new event
+# Courtier picks up games hobby - VIETmisc.8437 - no CK3 equivalent
 # 
 ###########################################################################################################################
 

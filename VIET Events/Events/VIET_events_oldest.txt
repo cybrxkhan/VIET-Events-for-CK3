@@ -751,7 +751,7 @@ VIETold.0012 = {
 	}	
 	right_portrait = {
 		character = root
-		animation = personality_honorable
+		animation = boredom
 	}
 
 	trigger = {
