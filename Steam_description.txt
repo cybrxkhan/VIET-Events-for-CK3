@@ -50,7 +50,7 @@ Version 1.0.0 "Temujin"
 [*]Added new game rules to customize event seriousness, compatibility with conversion mods, and historical context tooltips
 [/LIST]
 
-
+*Adapted from VIET for CK2
 
 [url=https://imgur.com/GlNXL7m][img]http://i.imgur.com/GlNXL7m.jpg[/img][/url]
 
