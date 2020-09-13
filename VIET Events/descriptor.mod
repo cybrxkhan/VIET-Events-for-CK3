@@ -3,4 +3,4 @@ tags={
 	"Events" "Gameplay" "Flavor" "Immersion" "Culture" "cybrxkhan" "VIET"
 }
 name="Various Immersive Events and Tales"
-supported_version="1.*"
+supported_version="1.0.*"

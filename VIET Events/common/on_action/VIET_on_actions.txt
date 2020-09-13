@@ -1,4 +1,4 @@
-
+﻿
 
 random_yearly_playable_pulse = {
 	on_actions = {
@@ -81,18 +81,18 @@ VIET_events_yearly_pulse = {
 		#######################################
 		
 		# Oblivion soundtrack inspired
-		100 = VIETmisc.2002		# Harvest Dawn - passing by peasants doing farm work
-		100 = VIETmisc.2005		# All's Well - nothing exciting happened in court today
-		100 = VIETmisc.2006		# Watchman's Ease - talking with guard on duty
-		100 = VIETmisc.2007		# Glory of Cyrodiil - what is my purpose as a ruler?
-		100 = VIETmisc.2011		# Sunrise of Flutes - Meet a shephard playing the flute
-		100 = VIETmisc.2012		# Peace of Akatosh - is peace a worthwhile ideal?
+		100 = VIETold.2002		# Harvest Dawn - passing by peasants doing farm work
+		100 = VIETold.2005		# All's Well - nothing exciting happened in court today
+		100 = VIETold.2006		# Watchman's Ease - talking with guard on duty
+		100 = VIETold.2007		# Glory of Cyrodiil - what is my purpose as a ruler?
+		100 = VIETold.2011		# Sunrise of Flutes - Meet a shephard playing the flute
+		100 = VIETold.2012		# Peace of Akatosh - is peace a worthwhile ideal?
 		# Reading stories
-		100 = VIETmisc.2014		# Watched entertaining slice of life play about love
+		100 = VIETold.2014		# Watched entertaining slice of life play about love
 		# Stuck inside
-		100 = VIETmisc.2019		# Observing something outside
-		100 = VIETmisc.2022		# Accidentally bumped into some furniture
-		100 = VIETmisc.2025		# Heard a loud noise outside - what could it be?
+		100 = VIETold.2019		# Observing something outside
+		100 = VIETold.2022		# Accidentally bumped into some furniture
+		100 = VIETold.2025		# Heard a loud noise outside - what could it be?
 		
 		#######################################
 		# NEXT GEN VIET
@@ -179,14 +179,14 @@ VIET_events_tri_yearly_pulse = {
 		100 = VIETold.2008		# Minstrel's Lament - Court moved to tears by sad song
 		100 = VIETold.2010		# Dusk at the Market - Merchant runs out of product
 		# Reading stories
-		100 = VIETmisc.2015		# Poet tells historical story with inaccuracy
-		100 = VIETmisc.2017		# Reading about ancient warriors
-		100 = VIETmisc.2018		# Read a cute love story
+		100 = VIETold.2015		# Poet tells historical story with inaccuracy
+		100 = VIETold.2017		# Reading about ancient warriors
+		100 = VIETold.2018		# Read a cute love story
 		# Stuck inside
-		100 = VIETmisc.2020		# Trapped inside a lovely mansion in a dream
-		100 = VIETmisc.2023		# Maidservants encounter mice and are afraid
-		100 = VIETmisc.2024		# Catch two servants having sex
-		100 = VIETmisc.2026		# Staying up late at night a lot
+		100 = VIETold.2020		# Trapped inside a lovely mansion in a dream
+		100 = VIETold.2023		# Maidservants encounter mice and are afraid
+		100 = VIETold.2024		# Catch two servants having sex
+		100 = VIETold.2026		# Staying up late at night a lot
 		
 		#######################################
 		# NEXT GEN VIET
@@ -248,7 +248,7 @@ VIET_events_five_yearly_pulse = {
 		#######################################
 		
 		# Oblivion soundtrack inspired
-		100 = VIETmisc.2009		# Auriel's Ascension - a deity manifests themselves (was a province event in old VIET)
+		100 = VIETold.2009		# Auriel's Ascension - a deity manifests themselves (was a province event in old VIET)
 		# Reading stories
 		100 = VIETold.2013		# Read Hotel Del Luna - i.e., what happens when cybrxkhan watches a K-Drama on a whim and finds it's actually great
 		100 = VIETold.2016		# Saw a vision of the past while reading a book

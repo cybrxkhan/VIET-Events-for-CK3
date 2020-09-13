@@ -9,5 +9,5 @@ tags={
 	"VIET"
 }
 name="Various Immersive Events and Tales"
-supported_version="1.*"
+supported_version="1.0.*"
 path="mod/VIET Events"

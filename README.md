@@ -1,9 +1,12 @@
 # VIET Events for CK3
 
-## BETA Version
+## Latest Version: 1.0.0 "Temujin" (Released 9/13/20)
 
-[Under Construction]
+Very Immersive Events and Tales (VIET), the sequel to VIET Events Reborn for CK2, is a flavor mod that adds a vast collection of events about everyday life to spice up your game. These events add immersion and a diversity of experiences in between wars and vanilla’s event chains, and cover mundane minutiae ranging from small talk with courtiers and eating local cuisine to epic tales about love, philosophy, and the human condition.
 
+Alongside many new events, I intend to adapt many of the events from the old VIET for CK2 as possible. I hope the lessons I learned from my eight years (with a hiatus) of modding CK2 will help me deliver a fun experience for any players interested in my mods.
+
+Feel free to use my work in your mods - all I ask is that I am credited and (if possible) to give me a heads up.
 
 ## Features
 
@@ -16,4 +19,11 @@
 
 ## Manual Installation Steps
 
-[Under Cosntruction]
+DO NOT manually download the master branch unless you know what you're doing as it is the WIP version that is constantly being updated!
+
+1. Go to https://github.com/cybrxkhan/VIET-Events-for-CK3/releases and find the latest version you wish to download.
+2. Extract the .zip file to Documents\Paradox Interactive\Crusader Kings III\mod
+3. Launch CKIII and select VIET Events in the launcher.
+4. Enjoy and play!
+
+NOTE: If you are re-installing a mod, delete the old version of the mod first before copy and pasting the new one! While it's not always necessary, it's a good habit to do to prevent any potential issues.

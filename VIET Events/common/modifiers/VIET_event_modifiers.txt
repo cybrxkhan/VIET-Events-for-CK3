@@ -1,117 +1,272 @@
-﻿#Please use these in multiple places:
+﻿#################################################
+# 
+# MODIFIER LIST
+# 
+# cat_positive
+# cat_negative
+# cockroach_positive
+# cockroach_negative
+# county_modifier_control_positive
+# county_modifier_control_negative
+# county_modifier_corruption_positive
+# county_modifier_corruption_negative
+# county_modifier_development_positive
+# county_modifier_development_negative
+# county_modifier_opinion_positive
+# county_modifier_opinion_negative
+# diplomacy_positive
+# diplomacy_negative
+# dog_positive
+# dog_negative
+# dread_positive
+# dread_negative
+# drink_positive
+# drink_negative
+# economy_positive
+# economy_negative
+# family_positive
+# family_negative
+# feast_positive
+# feast_negative
+# fertility_positive
+# fertility_negative
+# food_positive
+# food_negative
+# health_positive
+# health_negative
+# horse_positive
+# horse_negative
+# hunt_positive
+# hunt_negative
+# intrigue_positive
+# intrigue_negative
+# learning_positive
+# learning_negative
+# letter_positive
+# letter_negative
+# love_positive
+# love_negative
+# magic_positive
+# magic_negative
+# martial_positive
+# martial_negative
+# outdoors_positive
+# outdoors_negative
+# piety_positive
+# piety_negative
+# prestige_positive
+# prestige_negative
+# prison_positive
+# prison_negative
+# prowess_positive
+# prowess_negative
+# rat_positive
+# rat_negative
+# rock_positive
+# rock_negative
+# social_positive
+# social_negative
+# spoon_positive
+# spoon_negative
+# stewardship_positive
+# stewardship_negative
+# stress_positive
+# stress_negative
+# treatment_positive
+# treatment_negative
+# 
+#################################################
+
+
+
+
 VIET_heard_about_Scarborough_Fair = {
 	icon = fertility_positive
+	stress_gain_mult = -0.25
+	stress_loss_mult = 0.25
+	monthly_piety = 0.25
 }
 VIET_oblivion_dream_pells_gate = {
-	icon = fertility_positive
+	icon = rock_positive
+	stress_gain_mult = -0.2
+	stress_loss_mult = 0.2
 }
 VIET_oblivion_dream_odiil_farm = {
-	icon = fertility_positive
+	icon = martial_positive
+	martial = 1
+	prowess = 1
 }
 VIET_oblivion_dream_weye = {
-	icon = fertility_positive
+	icon = outdoors_positive
+	monthly_prestige = 0.3
 }
 VIET_oblivion_dream_faregyl = {
-	icon = fertility_positive
+	icon = food_positive
+	health = 0.3
 }
 VIET_oblivion_dream_cloud_ruler_temple = {
-	icon = fertility_positive
+	icon = piety_positive
+	monthly_piety = 0.3
 }
 VIET_overheard_oblivion_conversation = {
-	icon = fertility_positive
+	icon = social_positive
+	hostile_scheme_power_mult = 0.1
+	personal_scheme_power_mult = 0.1
 }
 VIET_gave_servants_advice = {
-	icon = fertility_positive
+	icon = social_positive
+	general_opinion = 5
+	hostile_scheme_power_mult = 0.05
+	personal_scheme_power_mult = 0.05
 }
 VIET_rumors_of_peasant_child = {
-	icon = fertility_positive
+	icon = love_negative
+	general_opinion = -10
+	monthly_prestige = -0.5
 }
 VIET_scorpion_sting = {
-	icon = fertility_positive
+	icon = health_negative
+	health = -0.5
 }
 VIET_dagoth_ur_dream = {
-	icon = fertility_positive
+	icon = magic_positive
+	learning = 1
+	monthly_piety = -0.1
+	monthly_prestige = 0.1
+	hostile_scheme_resistance_mult = 0.1
 }
 VIET_has_fruit_loops_poops = {
-	icon = fertility_positive
+	icon = food_negative
+	health = -0.5
+	fertility = -0.1
 }
 VIET_ate_good_food = {
-	icon = fertility_positive
+	icon = food_positive
+	health = 0.1
 }
 VIET_amused_ruler = {
-	icon = fertility_positive
+	icon = health_positive
+	diplomacy = 1
 }
 VIET_sexy_arugula = {
-	icon = fertility_positive
+	icon = food_positive
+	fertility = 0.1
+	seduce_scheme_power_mult = 0.05
 }
 VIET_popeye_spinach_lover = {
-	icon = fertility_positive
+	icon = food_positive
+	health = 0.5
 }
 VIET_eating_pickled_eggs = {
-	icon = fertility_positive
+	icon = food_positive
+	health = 0.1
 }
 VIET_lake_rumare_dream_lake = {
-	icon = fertility_positive
+	icon = outdoors_positive
+	monthly_prestige = 0.03
+	diplomacy = 1
 }
 VIET_lake_rumare_dream_wayshrine = {
-	icon = fertility_positive
+	icon = piety_positive
+	monthly_piety = 0.03
+	learning = 1
 }
 VIET_lake_rumare_dream_forest = {
-	icon = fertility_positive
+	icon = hunt_positive
+	monthly_prestige = 0.03
+	intrigue = 1
 }
 VIET_lake_rumare_dream_cottage = {
-	icon = fertility_positive
+	icon = county_modifier_development_positive
+	monthly_piety = 0.03
+	stewardship = 1
 }
 VIET_oblivion_dream_bruma = {
-	icon = fertility_positive
+	icon = piety_positive
+	martial = 1
+	prowess = 1
 }
 VIET_oblivion_dream_anvil = {
-	icon = fertility_positive
+	icon = economy_positive
+	stewardship = 1
+	fertility = 0.05
 }
 VIET_oblivion_dream_leyawiin = {
-	icon = fertility_positive
+	icon = outdoors_positive
+	intrigue = 1
+	hostile_scheme_resistance_mult = 0.1
 }
 VIET_oblivion_dream_east_lake_rumare = {
 	icon = fertility_positive
+	diplomacy = 1
+	stress_loss_mult = 0.2
 }
 VIET_moved_to_tears = {
-	icon = fertility_positive
+	icon = stress_positive
+	monthly_piety = 0.05
+	diplomacy = 1
 }
 VIET_unmoved_by_art = {
-	icon = fertility_positive
+	icon = letter_positive
+	monthly_dread = 0.1
+	intrigue = 1
 }
 VIET_auriels_ascension = {
-	icon = fertility_positive
+	icon = piety_positive
+	monthly_piety = 0.25
+	domain_tax_mult = -0.1
 }
 VIET_repressing_auriels_ascension_cult = {
-	icon = fertility_positive
+	icon = dread_positive
+	monthly_prestige = 0.1
+	monthly_dread = 0.1
+	general_opinion = -10
 }
 VIET_good_flute_music = {
-	icon = fertility_positive
+	icon = social_positive
+	stress_gain_mult = -0.1
 }
 VIET_read_book_hotel_del_luna = {
-	icon = fertility_positive
+	icon = love_positive
+	diplomacy = 1
+	learning = 1
+	stress_gain_mult = -0.5
+	monthly_piety = 0.1
 }
 VIET_mysterious_vision_past = {
-	icon = fertility_positive
+	icon = magic_positive
+	intrigue = 1
+	learning = 1
 }
 VIET_read_cute_love_story = {
-	icon = fertility_positive
+	icon = love_positive
+	fertility = 0.03
+	attraction_opinion = 5
 }
 VIET_learning_local_lore = {
-	icon = fertility_positive
+	icon = learning_positive
+	diplomacy = 1
+	learning = 1
 }
 VIET_lustful_ruler = {
-	icon = fertility_positive
+	icon = love_positive
+	fertility = 0.1
+	seduce_scheme_power_mult = 0.1
 }
 VIET_late_night_work = {
-	icon = fertility_positive
+	icon = letter_positive
+	diplomacy = 2
+	stewardship = 2
+	health = -0.25
+	stress_gain_mult = 0.2
 }
 VIET_gave_cook_advice = {
-	icon = fertility_positive
+	icon = social_positive
+	hostile_scheme_resistance_mult = 0.03
 }
 VIET_guanz_food = {
-	icon = fertility_positive
+	icon = food_positive
+	diplomacy = 1
 }
 
 

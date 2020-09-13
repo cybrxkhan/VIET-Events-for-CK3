@@ -2663,7 +2663,7 @@ VIETmisc.0037 = {
 	
 	option = { # who cares
 		name = VIETmisc.0037.a
-		add_piety = 2
+		add_piety = 5
 		stress_impact = {
 			honest = miniscule_stress_impact_gain
 			paranoid = miniscule_stress_impact_gain
@@ -2681,7 +2681,7 @@ VIETmisc.0037 = {
 	}
 	option = { # mock her
 		name = VIETmisc.0037.c
-		add_dread = minor_dread_gain
+		add_dread = 4
 		stress_impact = {
 			sadistic = minor_stress_impact_loss
 			compassionate = minor_stress_impact_gain
@@ -2691,7 +2691,7 @@ VIETmisc.0037 = {
 	}
 	option = { # lash her
 		name = VIETmisc.0037.d
-		add_dread = medium_dread_gain
+		add_dread = 8
 		stress_impact = {
 			sadistic = minor_stress_impact_loss
 			wrathful = miniscule_stress_impact_loss

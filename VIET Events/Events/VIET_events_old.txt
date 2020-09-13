@@ -720,19 +720,20 @@ VIETold.2009 = {
 		name = VIETold.2009.a
 		add_character_modifier = {
 			modifier = VIET_auriels_ascension
-			days = 1095
+			years = 5
 		}
 	}	
 	option = { # It's a cult!
 		name = VIETold.2009.b
 		add_character_modifier = {
 			modifier = VIET_repressing_auriels_ascension_cult
-			days = 1095
+			years = 5
 		}
 	}	
 	option = { # No opinion
 		name = VIETold.2009.c
-		# Because no good OR bad effects
+		# Because no good OR bad effects?
+		add_prestige = 10
 	}
 }
 
@@ -1026,7 +1027,7 @@ VIETold.2013 = {
 		name = VIETold.2013.a
 		add_character_modifier = {
 			modifier = VIET_read_book_hotel_del_luna
-			duration = 1095
+			years = 8
 		}
 	}
 }
