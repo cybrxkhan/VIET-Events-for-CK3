@@ -1,4 +1,4 @@
-[url=https://imgur.com/OhIA5bm][img]http://i.imgur.com/OhIA5bm.jpg[/img][/url]
+[img]http://i.imgur.com/OhIA5bm.jpg[/img]
 
 [h1]Current Version: 1.0.0 "Temujin" (Released 9/13/20, Compatible with vanilla patch 1.0.X)[/h1]
 [B]Please See [url=https://forum.paradoxplaza.com/forum/threads/mod-viet-events-for-ck3-a-flavor-and-immersion-event-mod.1422081/]Forum Thread[/url] For More Info[/B]
@@ -9,11 +9,14 @@ Very Immersive Events and Tales (VIET), the sequel to [url=https://steamcommunit
 
 Alongside many new events, I intend to adapt many of the events from the old VIET for CK2 as possible. I hope the lessons I learned from my eight years (with a hiatus) of modding CK2 will help me deliver a fun experience for any players interested in my mods.
 
+[B]As this is the early version of VIET, I welcome any and all feedback - I'm still getting the hang of switching to CK3 modding from CK2's. Please let me know if you encounter any bugs, or if you feel the events fire too frequently or not frequently enough. While the events may get repetitive if you play long enough as I haven’t added that many yet (which is similar to what happens with vanilla CK3 anyways), I hope to continue adding more and more events in every update![/B]
+
 Feel free to use my work in your mods - all I ask is that I am credited and (if possible) to give me a heads up. And if you liked the mod, feel free to favorite and rate it up!
 
-[url=https://imgur.com/FaFtOmm][img]http://i.imgur.com/FaFtOmm.gif[/img][/url]
+[img]http://i.imgur.com/FaFtOmm.gif[/img]
 
-[url=https://imgur.com/EyXurbK][img]http://i.imgur.com/EyXurbK.jpg[/img][/url]
+
+[img]http://i.imgur.com/EyXurbK.jpg[/img]
 
 [LIST]
 [*]Over [B]108 new flavor events[/B] and event chains, and more will be added in updates over time
@@ -24,7 +27,7 @@ Feel free to use my work in your mods - all I ask is that I am credited and (if 
 [/LIST]
 
 
-[url=https://imgur.com/RQ5QZTF][img]http://i.imgur.com/RQ5QZTF.jpg[/img][/url]
+[img]http://i.imgur.com/RQ5QZTF.jpg[/img]
 
 Version 1.0.0 "Temujin"
 
@@ -52,7 +55,7 @@ Version 1.0.0 "Temujin"
 
 *Adapted from VIET for CK2
 
-[url=https://imgur.com/GlNXL7m][img]http://i.imgur.com/GlNXL7m.jpg[/img][/url]
+[img]http://i.imgur.com/GlNXL7m.jpg[/img]
 
 A huge thanks to the teams of WTWSMS (especially ILikeTrians and Loup99) and Lux Invicta (including tsf4), as well as M@ni@c, creator of Hide Your Jewelry, for maintaining and improving on VIET for CK2 over the years, which provided me a solid foundation for improved reboot of VIET Events.
 
@@ -61,4 +64,3 @@ Credits also to OrdepNM, who was my partner in crime in the early days of VIET f
 Special thanks to Sleight of Hand for pushing me to get into the CK2 modding scene and for other assistance over the years, which is why I am still here for some reason.
 
 Lastly, thanks to all the people who I worked with, took stuff from over the years, and provided encouragement and feedback.
-

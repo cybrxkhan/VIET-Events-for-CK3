@@ -25,7 +25,7 @@ VIETold.2001 = {
 	type = character_event
 	title = VIETold.2001.t
 	desc = VIETold.2001.desc
-	theme = VIET_theme_tuscan_country
+	theme = VIET_theme_oblivion_pastoral_dream
 	
 	right_portrait = {
 		character = root
@@ -115,7 +115,7 @@ VIETold.2002 = {
 	type = character_event
 	title = VIETold.2002.t
 	desc = VIETold.2002.desc
-	theme = VIET_theme_tuscan_country
+	theme = VIET_theme_oblivion_pastoral_dream
 	
 	right_portrait = {
 		character = root
@@ -288,7 +288,7 @@ VIETold.2004 = {
 	type = character_event
 	title = VIETold.2004.t
 	desc = VIETold.2004.desc
-	theme = VIET_theme_tuscan_country
+	theme = VIET_theme_oblivion_pastoral_dream
 	
 	left_portrait = {
 		character = root

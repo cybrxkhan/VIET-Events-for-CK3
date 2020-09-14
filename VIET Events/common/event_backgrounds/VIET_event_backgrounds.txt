@@ -1,10 +1,20 @@
 ﻿### EVENT BACKGROUNDS LIST:
+# VIET_oblivion_pastoral_dream
 # VIET_background_light_dream
 # VIET_background_nightmare
 # VIET_background_tuscan_country
 # VIET_background_ancient_cairn
 # VIET_background_small_town
 
+
+### OBLIVION PASTORAL ###
+VIET_background_oblivion_pastoral_dream = {
+	background = {
+		reference = "gfx/interface/illustrations/event_scenes/VIET_oblivion_pastoral_dream.dds"
+		environment = "environment_event_garden"
+		ambience = "event:/SFX/Events/Backgrounds/castle_garden_day"
+	}
+}
 
 ### LIGHT DREAM ###
 VIET_background_light_dream = {
@@ -26,74 +36,68 @@ VIET_background_nightmare = {
 
 ### TUSCAN COUNTRY ###
 VIET_background_tuscan_country = {
-	#background = {
-	#	trigger = {
-	#		scope:activity.activity_province = {
-	#			terrain = farmlands
-	#		}
-	#	}
-	#	reference = "gfx/interface/illustrations/event_scenes/farms.dds"
-	#	environment = "environment_event_farms"
-	#	ambience = "event:/SFX/Events/Backgrounds/fields_farms_day"
-	#}
-	#
-	#background = { #Desert
-	#	trigger = {
-	#		scope:activity.activity_province = {
-	#			graphical_wilderness_desert_trigger = yes
-	#		}
-	#	}
-	#	reference = "gfx/interface/illustrations/event_scenes/desert.dds"
-	#	environment = "environment_event_desert"
-	#	ambience = "event:/SFX/Events/Backgrounds/desert_day"
-	#}
-	#
-	#
-	#background = { #forest_pine
-	#	trigger = {
-	#		scope:activity.activity_province = {
-	#			graphical_wilderness_forest_pine_trigger = yes
-	#		}
-	#	}
-	#	reference = "gfx/interface/illustrations/event_scenes/forest_pine.dds"
-	#	environment = "environment_event_forest_pine"
-	#	ambience = "event:/SFX/Events/Backgrounds/coniferous_forest_day"
-	#}
-	#
-	#background = { #forest
-	#	trigger = {
-	#		scope:activity.activity_province = {
-	#			graphical_wilderness_forest_trigger = yes
-	#		}
-	#	}
-	#	reference = "gfx/interface/illustrations/event_scenes/forest.dds"
-	#	environment = "environment_event_forest"
-	#	ambience = "event:/SFX/Events/Backgrounds/deciduous_forest_day"
-	#}
-	#
-	#background = { #mountains
-	#	trigger = {
-	#		scope:activity.activity_province = {
-	#			graphical_wilderness_mountains_trigger = yes
-	#		}
-	#	}
-	#	reference = "gfx/interface/illustrations/event_scenes/mountains.dds"
-	#	environment = "environment_event_mountains"
-	#	ambience = "event:/SFX/Events/Backgrounds/mountains_day"
-	#}
-	#
-	#background = { #steppe
-	#	trigger = {
-	#		scope:activity.activity_province = {
-	#			graphical_wilderness_steppe_trigger = yes
-	#		}
-	#	}
-	#	reference = "gfx/interface/illustrations/event_scenes/steppe.dds"
-	#	environment = "environment_event_steppe"
-	#	ambience = "event:/SFX/Events/Backgrounds/steppe_day"
-	#}
 
-	background = { #Fallback
+	background = { # Middle Eastern/Tarim/Tibet
+		trigger = {
+			capital_province = {
+				OR = {
+					geographical_region = world_middle_east
+					geographical_region = world_middle_east_persia
+					geographical_region = world_steppe_tarim
+					geographical_region = world_tibet # Find some icy land?
+				}
+			}
+		}
+		reference = "gfx/interface/illustrations/event_scenes/VIET_tuscan_country_arabic.dds"
+		environment = "environment_event_garden"
+		ambience = "event:/SFX/Events/Backgrounds/castle_garden_day"
+	}
+
+	background = { # Eastern Europe/Steppe/Siberia
+		trigger = {
+			capital_province = {
+				OR = {
+					geographical_region = world_steppe_west
+					geographical_region = world_steppe_east
+					geographical_region = world_europe_east
+				}
+			}
+		}
+		reference = "gfx/interface/illustrations/event_scenes/VIET_tuscan_country_cuman.dds"
+		environment = "environment_event_garden"
+		ambience = "event:/SFX/Events/Backgrounds/castle_garden_day"
+	}
+
+	background = { # Western Europe
+		trigger = {
+			capital_province = {
+				OR = {
+					geographical_region = world_europe_west
+					geographical_region = world_europe_south
+					geographical_region = world_europe_north
+				}
+			}
+		}
+		reference = "gfx/interface/illustrations/event_scenes/VIET_tuscan_country_english.dds"
+		environment = "environment_event_garden"
+		ambience = "event:/SFX/Events/Backgrounds/castle_garden_day"
+	}
+
+	background = { # Indian
+		trigger = {
+			capital_province = {
+				OR = {
+					geographical_region = world_burma
+					geographical_region = world_india
+				}
+			}
+		}
+		reference = "gfx/interface/illustrations/event_scenes/VIET_tuscan_country_marathi.dds"
+		environment = "environment_event_garden"
+		ambience = "event:/SFX/Events/Backgrounds/castle_garden_day"
+	}
+
+	background = { #Fallback - Mediterranean, Africa, etc.
 		reference = "gfx/interface/illustrations/event_scenes/VIET_tuscan_country.dds"
 		environment = "environment_event_garden"
 		ambience = "event:/SFX/Events/Backgrounds/castle_garden_day"
@@ -102,72 +106,20 @@ VIET_background_tuscan_country = {
 
 ### ANCIENT CAIRN ###
 VIET_background_ancient_cairn = {
-	#background = {
-	#	trigger = {
-	#		scope:activity.activity_province = {
-	#			terrain = farmlands
-	#		}
-	#	}
-	#	reference = "gfx/interface/illustrations/event_scenes/farms.dds"
-	#	environment = "environment_event_farms"
-	#	ambience = "event:/SFX/Events/Backgrounds/fields_farms_day"
-	#}
-	#
-	#background = { #Desert
-	#	trigger = {
-	#		scope:activity.activity_province = {
-	#			graphical_wilderness_desert_trigger = yes
-	#		}
-	#	}
-	#	reference = "gfx/interface/illustrations/event_scenes/desert.dds"
-	#	environment = "environment_event_desert"
-	#	ambience = "event:/SFX/Events/Backgrounds/desert_day"
-	#}
-	#
-	#
-	#background = { #forest_pine
-	#	trigger = {
-	#		scope:activity.activity_province = {
-	#			graphical_wilderness_forest_pine_trigger = yes
-	#		}
-	#	}
-	#	reference = "gfx/interface/illustrations/event_scenes/forest_pine.dds"
-	#	environment = "environment_event_forest_pine"
-	#	ambience = "event:/SFX/Events/Backgrounds/coniferous_forest_day"
-	#}
-	#
-	#background = { #forest
-	#	trigger = {
-	#		scope:activity.activity_province = {
-	#			graphical_wilderness_forest_trigger = yes
-	#		}
-	#	}
-	#	reference = "gfx/interface/illustrations/event_scenes/forest.dds"
-	#	environment = "environment_event_forest"
-	#	ambience = "event:/SFX/Events/Backgrounds/deciduous_forest_day"
-	#}
-	#
-	#background = { #mountains
-	#	trigger = {
-	#		scope:activity.activity_province = {
-	#			graphical_wilderness_mountains_trigger = yes
-	#		}
-	#	}
-	#	reference = "gfx/interface/illustrations/event_scenes/mountains.dds"
-	#	environment = "environment_event_mountains"
-	#	ambience = "event:/SFX/Events/Backgrounds/mountains_day"
-	#}
-	#
-	#background = { #steppe
-	#	trigger = {
-	#		scope:activity.activity_province = {
-	#			graphical_wilderness_steppe_trigger = yes
-	#		}
-	#	}
-	#	reference = "gfx/interface/illustrations/event_scenes/steppe.dds"
-	#	environment = "environment_event_steppe"
-	#	ambience = "event:/SFX/Events/Backgrounds/steppe_day"
-	#}
+
+	background = { # Middle Eastern/Tarim/Africa
+		trigger = {
+			capital_province = {
+				OR = {
+					geographical_region = graphical_mena
+					geographical_region = world_steppe_tarim
+				}
+			}
+		}
+		reference = "gfx/interface/illustrations/event_scenes/VIET_ancient_cairn_arabic.dds"
+		environment = "environment_event_garden"
+		ambience = "event:/SFX/Events/Backgrounds/castle_garden_day"
+	}
 
 	background = { #Fallback
 		reference = "gfx/interface/illustrations/event_scenes/VIET_ancient_cairn.dds"
@@ -178,77 +130,142 @@ VIET_background_ancient_cairn = {
 
 ### SMALL TOWN ###
 VIET_background_small_town = {
-	#background = {
-	#	trigger = {
-	#		scope:activity.activity_province = {
-	#			terrain = farmlands
-	#		}
-	#	}
-	#	reference = "gfx/interface/illustrations/event_scenes/farms.dds"
-	#	environment = "environment_event_farms"
-	#	ambience = "event:/SFX/Events/Backgrounds/fields_farms_day"
-	#}
-	#
-	#background = { #Desert
-	#	trigger = {
-	#		scope:activity.activity_province = {
-	#			graphical_wilderness_desert_trigger = yes
-	#		}
-	#	}
-	#	reference = "gfx/interface/illustrations/event_scenes/desert.dds"
-	#	environment = "environment_event_desert"
-	#	ambience = "event:/SFX/Events/Backgrounds/desert_day"
-	#}
-	#
-	#
-	#background = { #forest_pine
-	#	trigger = {
-	#		scope:activity.activity_province = {
-	#			graphical_wilderness_forest_pine_trigger = yes
-	#		}
-	#	}
-	#	reference = "gfx/interface/illustrations/event_scenes/forest_pine.dds"
-	#	environment = "environment_event_forest_pine"
-	#	ambience = "event:/SFX/Events/Backgrounds/coniferous_forest_day"
-	#}
-	#
-	#background = { #forest
-	#	trigger = {
-	#		scope:activity.activity_province = {
-	#			graphical_wilderness_forest_trigger = yes
-	#		}
-	#	}
-	#	reference = "gfx/interface/illustrations/event_scenes/forest.dds"
-	#	environment = "environment_event_forest"
-	#	ambience = "event:/SFX/Events/Backgrounds/deciduous_forest_day"
-	#}
-	#
-	#background = { #mountains
-	#	trigger = {
-	#		scope:activity.activity_province = {
-	#			graphical_wilderness_mountains_trigger = yes
-	#		}
-	#	}
-	#	reference = "gfx/interface/illustrations/event_scenes/mountains.dds"
-	#	environment = "environment_event_mountains"
-	#	ambience = "event:/SFX/Events/Backgrounds/mountains_day"
-	#}
-	#
-	#background = { #steppe
-	#	trigger = {
-	#		scope:activity.activity_province = {
-	#			graphical_wilderness_steppe_trigger = yes
-	#		}
-	#	}
-	#	reference = "gfx/interface/illustrations/event_scenes/steppe.dds"
-	#	environment = "environment_event_steppe"
-	#	ambience = "event:/SFX/Events/Backgrounds/steppe_day"
-	#}
 
-	background = { #Fallback
+	background = { # Tarim Basin/Steppe/Tibet
+		trigger = {
+			capital_province = {
+				OR = {
+					geographical_region = world_steppe
+					geographical_region = world_tibet
+				}
+			}
+		}
+		reference = "gfx/interface/illustrations/event_scenes/VIET_small_town_sogdian.dds"
+		environment = "environment_event_market_east"
+		ambience = "event:/SFX/Events/Backgrounds/town_market_middleeastern_day"
+	}
+
+	background = { # India
+		trigger = {
+			capital_province = {
+				OR = {
+					geographical_region = world_india
+					geographical_region = world_burma
+				}
+			}
+		}
+		reference = "gfx/interface/illustrations/event_scenes/VIET_small_town_marathi.dds"
+		environment = "environment_event_market_east"
+		ambience = "event:/SFX/Events/Backgrounds/town_market_middleeastern_day"
+	}
+
+	background = { # Middle Eastern/Africa
+		trigger = {
+			capital_province = {
+				geographical_region = graphical_mena
+			}
+		}
+		reference = "gfx/interface/illustrations/event_scenes/VIET_small_town_arabic.dds"
+		environment = "environment_event_market_east"
+		ambience = "event:/SFX/Events/Backgrounds/town_market_middleeastern_day"
+	}
+
+	background = { #Fallback / Western European
 		reference = "gfx/interface/illustrations/event_scenes/VIET_small_town.dds"
 		environment = "environment_event_market_west"
 		ambience = "event:/SFX/Events/Backgrounds/townmarket_western_day"
+	}
+}
+
+
+
+### SKYRIM FOREST ###
+VIET_background_skyrim_forest = {
+
+	background = { # Western European
+		trigger = {
+			capital_province = {
+				geographical_region = world_europe_west
+				NOT = { geographical_region = world_europe_west_iberia } # Mediterranean
+			}
+		}
+		reference = "gfx/interface/illustrations/event_scenes/VIET_skyrim_forest_english.dds"
+		environment = "environment_event_forest"
+		ambience = "event:/SFX/Events/Backgrounds/deciduous_forest_day"
+	}
+
+	background = { # Steppe/Tibet
+		trigger = {
+			capital_province = {
+				OR = {
+					geographical_region = world_steppe
+					geographical_region = world_tibet
+				}
+			}
+		}
+		reference = "gfx/interface/illustrations/event_scenes/VIET_skyrim_forest_mongolian.dds"
+		environment = "environment_event_steppe"
+		ambience = "event:/SFX/Events/Backgrounds/steppe_day"
+	}
+
+	background = { # India
+		trigger = {
+			capital_province = {
+				OR = {
+					geographical_region = world_burma
+					geographical_region = world_india
+				}
+			}
+		}
+		reference = "gfx/interface/illustrations/event_scenes/VIET_skyrim_forest_marathi.dds"
+		environment = "environment_event_forest"
+		ambience = "event:/SFX/Events/Backgrounds/deciduous_forest_day"
+	}
+
+	background = { # Sub-Saharan Africa
+		trigger = {
+			capital_province = {
+				OR = {
+					geographical_region = world_africa_west
+					geographical_region = world_africa_east
+				}
+			}
+		}
+		reference = "gfx/interface/illustrations/event_scenes/VIET_skyrim_forest_hausa.dds"
+		environment = "environment_event_steppe"
+		ambience = "event:/SFX/Events/Backgrounds/steppe_day"
+	}
+
+	background = { # Mediterranean
+		trigger = {
+			capital_province = {
+				geographical_region = graphical_mediterranean
+			}
+		}
+		reference = "gfx/interface/illustrations/event_scenes/VIET_skyrim_forest_greek.dds"
+		environment = "environment_event_forest"
+		ambience = "event:/SFX/Events/Backgrounds/deciduous_forest_day"
+	}
+
+	background = { # Middle Eastern/Africa
+		trigger = {
+			capital_province = {
+				OR = {
+					geographical_region = world_middle_east
+					geographical_region = world_middle_east_persia
+					geographical_region = world_africa_north
+				}
+			}
+		}
+		reference = "gfx/interface/illustrations/event_scenes/VIET_skyrim_forest_arabic.dds"
+		environment = "environment_event_desert"
+		ambience = "event:/SFX/Events/Backgrounds/desert_day"
+	}
+
+	background = { #Fallback / Northern European
+		reference = "gfx/interface/illustrations/event_scenes/VIET_skyrim_forest.dds"
+		environment = "environment_event_forest_pine"
+		ambience = "event:/SFX/Events/Backgrounds/coniferous_forest_day"
 	}
 }
 

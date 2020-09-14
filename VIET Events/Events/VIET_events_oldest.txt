@@ -26,7 +26,7 @@ VIETold.0001 = {
 	type = character_event
 	title = VIETold.0001.t
 	desc = VIETold.0001.desc
-	theme = VIET_theme_tuscan_country
+	theme = VIET_theme_skyrim_forest
 	
 	right_portrait = {
 		character = root
@@ -76,7 +76,7 @@ VIETold.0002 = {
 	type = character_event
 	title = VIETold.0002.t
 	desc = VIETold.0002.desc
-	theme = VIET_theme_tuscan_country
+	theme = VIET_theme_skyrim_forest
 	
 	right_portrait = root
 
@@ -328,7 +328,7 @@ VIETold.0006 = {
 	type = character_event
 	title = VIETold.0006.t
 	desc = VIETold.0006.desc
-	theme = secret # Change to nightmare?
+	theme = VIET_theme_nightmare # Previously secret
 	
 	right_portrait = {
 		character = root
@@ -524,7 +524,7 @@ VIETold.0009 = {
 	type = character_event
 	title = VIETold.0009.t
 	desc = VIETold.0009.desc
-	theme = VIET_theme_tuscan_country
+	theme = VIET_theme_skyrim_forest
 	
 	left_portrait = {
 		character = root

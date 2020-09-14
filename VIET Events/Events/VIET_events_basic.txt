@@ -105,7 +105,7 @@ VIETmisc.0002 = {
 	type = character_event
 	title = VIETmisc.0002.t
 	desc = VIETmisc.0002.desc
-	theme = VIET_theme_tuscan_country
+	theme = VIET_theme_oblivion_pastoral_dream
 	
 	#left_portrait = root
 	right_portrait = root

@@ -112,7 +112,7 @@ VIETtest.0004 = {
 	type = character_event
 	title = VIETtest.0004.t
 	desc = VIETtest.0004.desc
-	theme = VIET_theme_tuscan_country
+	theme = VIET_theme_oblivion_pastoral_dream
 	
 	left_portrait = root
 	#right_portrait = root
@@ -140,7 +140,7 @@ VIETtest.0005 = {
 	type = character_event
 	title = VIETtest.0005.t
 	desc = VIETtest.0005.desc
-	theme = VIET_theme_ancient_cairn
+	theme = VIET_theme_skyrim_forest
 	
 	left_portrait = root
 	#right_portrait = root

@@ -14,18 +14,34 @@
 # OUTSIDE
 # Tuscan Country
 #	Generic: https://www.tokkoro.com/3082738-countryside_dirt-road_grass_landscape_outdoors_road_rural_scenic_soil_trees.html
+# 	MidEast: https://regiopia.com/fileadmin/user_upload/Asien/israel/eilat/red-canyon/israel-red-canyon_eilat_sandra-prueller.jpg
+# 	N. Europe: https://pxhere.com/en/photo/798390
+#	India: https://upload.wikimedia.org/wikipedia/commons/c/c1/Wild_boar_in_Sariska_Tiger_Reserve_Rajasthan.jpg
+#	Steppe: Personal Skyrim screenshot
 # Skyrim Forest
+#	Generic: https://www.nexusmods.com/skyrim/mods/50065/?
+#	Arabic: Personal Skyrim screenshot
+#	Mediterranean: https://www.needpix.com/photo/1120892/tree-pine-mediterranean-conifer-landscape-nature-summer-france
+#	African: https://www.publicdomainpictures.net/en/view-image.php?image=270048&picture=stromy-na-africke-savane
+#	Steppe: https://www.magnificent-mongolia.com/bestofcentralmongoliatour
+#	W. Europe: https://www.wallpapers13.com/valley-with-green-meadows-grass-trees-blue-sky-and-white-cloud-ultra-hd-wallpaper/
 # Ancient Cairn
 #	Generic: https://www.nexusmods.com/skyrimspecialedition/images/21517
+#	MidEast: Personal Skyrim screenshot
+#	India: https://pixabay.com/photos/rice-fields-gangavati-karnataka-204128/
 
 # SETTLEMENTS
 # Small Town
 #	Generic: https://pxhere.com/en/photo/623979
+#	MidEast: https://pxhere.com/en/photo/610771
+#	India: https://think360studio.com/blog/amazing-new-delhi-trip-2019
 
 # ABSTRACT
 # Nightmare: https://www.publicdomainpictures.net/en/view-image.php?image=101005&picture=candle-light
-#
-#
+# Dream: Created by self in GIMP
+# Oblivion Pastoral: Oblivion screenshot from somewhere
+# 
+# 
 
 
 ######################
@@ -44,17 +60,17 @@ VIET_theme_tuscan_country = {
 	}
 }
 
-#VIET_skyrim_forest_theme = {
-#	icon = {
-#		reference = "gfx/interface/event_window/type_love.dds"
-#	}
-#	sound = {
-#		reference = "event:/SFX/Events/Themes/sfx_event_theme_type_activity"
-#	}
-#	background = {
-#		event_background = VIET_skyrim_forest_theme
-#	}
-#}
+VIET_theme_skyrim_forest = {
+	icon = {
+		reference = "gfx/interface/event_window/type_love.dds"
+	}
+	sound = {
+		reference = "event:/SFX/Events/Themes/sfx_event_theme_type_activity"
+	}
+	background = {
+		event_background = VIET_background_skyrim_forest
+	}
+}
 
 VIET_theme_ancient_cairn = {
 	icon = {
@@ -123,6 +139,18 @@ VIET_theme_nightmare = {
 	}
 	background = {
 		event_background = VIET_background_nightmare
+	}
+}
+
+VIET_theme_oblivion_pastoral_dream = {
+	icon = {
+		reference = "gfx/interface/event_window/type_love.dds"
+	}
+	sound = {
+		reference = @generic_event_theme_sound
+	}
+	background = {
+		event_background = VIET_background_oblivion_pastoral_dream
 	}
 }
 
