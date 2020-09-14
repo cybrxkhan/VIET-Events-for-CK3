@@ -11,6 +11,7 @@
 # 1007-1010		Water
 # 1011-1015		Bitter
 # 1016-1020		Eggs
+# 1021-1024		Furniture
 # 
 ############################################################################################################################
 
@@ -1414,6 +1415,257 @@ VIETold.1020 = {
 		stress_impact = {
 			base = minor_stress_impact_loss
 			temperate = miniscule_stress_impact_gain
+		}
+	}
+}
+
+###################################################################################
+# FURNITURE 1021-1024
+###################################################################################
+
+
+# Buy a new wardrobe?
+VIETold.1021 = {
+	type = character_event
+	title = VIETold.1021.t
+	desc = VIETold.1021.desc
+	theme = family	
+	
+	right_portrait = root
+
+	trigger = {
+		#NOT = { has_game_rule = VIET_conversion_universe_events }
+		gold >= 0
+	}
+	
+	weight_multiplier = {
+		base = 1
+		modifier = {
+			add = 0.2
+			has_trait = greedy
+		}
+		modifier = {
+			add = -0.2
+			has_trait = generous
+		}
+		modifier = {
+			add = 0.2
+			has_trait = ambitious
+		}
+		modifier = {
+			add = -0.2
+			has_trait = lazy
+		}
+		modifier = {
+			add = 0.2
+			has_trait = arrogant
+		}
+		modifier = {
+			add = -0.2
+			has_trait = humble
+		}
+	}
+	
+	option = { # Buy a simple one
+		name = VIETold.1021.a
+		remove_short_term_gold = 5
+		add_prestige = 10
+		stress_impact = {
+			arrogant = minor_stress_impact_gain
+		}
+	}	
+	option = { # Buy a decent one
+		name = VIETold.1021.b
+		remove_short_term_gold = 10
+		add_prestige = 20
+	}	
+	option = { # Buy a pricey one
+		name = VIETold.1021.c
+		remove_short_term_gold = 20
+		add_prestige = 40
+		stress_impact = {
+			humble = minor_stress_impact_gain
+		}		
+	}
+}
+
+
+# The chair you sit on breaks
+VIETold.1022 = {
+	type = character_event
+	title = VIETold.1022.t
+	desc = VIETold.1022.desc
+	theme = unfriendly	
+	
+	right_portrait = {
+		character = root
+		animation = pain
+	}
+
+	#trigger = {
+		#NOT = { has_game_rule = VIET_conversion_universe_events }
+	#}
+	
+	weight_multiplier = {
+		base = 1
+		modifier = {
+			add = 0.2
+			has_trait = gluttonous
+		}
+		modifier = {
+			add = -0.2
+			has_trait = temperate
+		}
+		modifier = {
+			add = 0.2
+			has_trait = wrathful
+		}
+		modifier = {
+			add = -0.2
+			has_trait = calm
+		}
+		modifier = {
+			add = 0.2
+			has_trait = arrogant
+		}
+		modifier = {
+			add = -0.2
+			has_trait = humble
+		}
+	}
+	
+	option = { # Ouch
+		name = VIETold.1022.a
+		add_stress = 4
+		random = {
+			chance = 30
+			send_interface_message = {
+				right_icon = root
+				title = VIETold.1022.message
+				increase_wounds_no_death_effect = { REASON = fall }
+			}
+		}	
+	}
+}
+
+
+# Look under the dining table and see some gum
+VIETold.1023 = {
+	type = character_event
+	title = VIETold.1023.t
+	desc = VIETold.1023.desc
+	theme = feast_activity	
+	
+	right_portrait = {
+		character = root
+		animation = disgust
+	}
+
+	#trigger = {
+		#NOT = { has_game_rule = VIET_conversion_universe_events }
+	#}
+	
+	weight_multiplier = {
+		base = 1
+		modifier = {
+			add = 0.2
+			has_trait = paranoid
+		}
+		modifier = {
+			add = -0.2
+			has_trait = trusting
+		}
+		modifier = {
+			add = 0.2
+			has_trait = gluttonous
+		}
+		modifier = {
+			add = -0.2
+			has_trait = temperate
+		}
+		modifier = {
+			add = 0.2
+			has_trait = calm
+		}
+		modifier = {
+			add = -0.2
+			has_trait = wrathful
+		}
+	}
+	
+	option = { # Ouch
+		name = VIETold.1023.a
+		add_prestige = -3
+		stress_impact = {
+			arrogant = miniscule_stress_impact_gain
+			gluttonous = miniscule_stress_impact_gain
+		}
+	}
+}
+
+
+# Your desk is a mess
+VIETold.1024 = {
+	type = character_event
+	title = VIETold.1024.t
+	desc = VIETold.1024.desc
+	theme = learning	
+	
+	left_portrait = {
+		character = root
+		animation = disbelief
+	}
+
+	#trigger = {
+		#NOT = { has_game_rule = VIET_conversion_universe_events }
+	#}
+	
+	weight_multiplier = {
+		base = 1
+		modifier = {
+			add = 0.2
+			has_trait = lazy
+		}
+		modifier = {
+			add = -0.2
+			has_trait = diligent
+		}
+		modifier = {
+			add = 0.2
+			has_trait = content
+		}
+		modifier = {
+			add = -0.2
+			has_trait = ambitious
+		}
+		modifier = {
+			add = 0.2
+			has_trait = shy
+		}
+		modifier = {
+			add = -0.2
+			has_trait = gregarious
+		}
+	}
+	
+	option = { # Clean it up
+		name = VIETold.1024.a
+		random_list = {
+			30 = { add_prestige = 5 }
+			20 = { add_prestige = 10 }
+			10 = { add_prestige = 15 }
+		}
+		stress_impact = {
+			diligent = miniscule_stress_impact_loss
+			lazy = miniscule_stress_impact_gain
+		}
+	}	
+	option = { # Don't do anything
+		name = VIETold.1024.b
+		stress_impact = {
+			base = miniscule_stress_impact_loss
+			diligent = minor_stress_impact_gain
+			lazy = miniscule_stress_impact_loss
 		}
 	}
 }

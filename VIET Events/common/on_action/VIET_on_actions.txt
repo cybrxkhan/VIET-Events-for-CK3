@@ -75,6 +75,9 @@ VIET_events_yearly_pulse = {
 		100 = VIETold.1012		# Time for some coffee?
 		# Eggs
 		100 = VIETold.1020		# Eating deviled eggs
+		# Furniture
+		100 = VIETold.1023		# Look under the dining table and see some gum
+		100 = VIETold.1024		# Your desk is a mess
 		
 		#######################################
 		# NEXT GEN VIET
@@ -167,6 +170,9 @@ VIET_events_tri_yearly_pulse = {
 		100 = VIETold.1017		# Local merchant's house gets egged during festival (was Republic player in old VIET)
 		100 = VIETold.1018		# Bought a crapload of pickled eggs
 		100 = VIETold.1019		# Your vassal's food accidentally has eggshells in it
+		# Buy a new wardrobe?
+		100 = VIETold.1021		# Buy a new wardrobe?
+		100 = VIETold.1022		# The chair you sit on breaks
 		
 		#######################################
 		# OLD VIET
