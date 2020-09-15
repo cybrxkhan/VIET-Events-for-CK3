@@ -268,5 +268,61 @@ VIET_guanz_food = {
 	icon = food_positive
 	diplomacy = 1
 }
+VIET_open_minded_about_incest = {
+	icon = love_positive
+	monthly_piety = -0.2
+	fertility = 0.05
+	learning = 1
+}
+VIET_deviant_opinion = {
+	icon = piety_negative
+	monthly_piety = -0.3
+	fertility = 0.15
+}
+VIET_skeptical_about_fantasy_stories = {
+	icon = learning_positive
+	intrigue = 1
+	hostile_scheme_resistance_mult = 0.03
+}
+VIET_heard_fantasy_stories = {
+	icon = magic_positive
+	diplomacy = 1
+	learning = 1
+}
+VIET_interesting_talk_with_stranger = {
+	icon = social_positive
+	diplomacy = 2
+}
+VIET_thinking_about_foreign_lands = {
+	icon = diplomacy_positive
+	learning = 1
+	different_culture_opinion = 10
+	opinion_of_different_culture = 10
+	monthly_prestige = 0.04
+}
+VIET_open_to_new_ideas = {
+	icon = magic_positive
+	monthly_lifestyle_xp_gain_mult = 0.12
+}
+VIET_im_curious = {
+	icon = social_positive
+	monthly_lifestyle_xp_gain_mult = 0.1
+	scheme_discovery_chance_mult = 0.02
+}
+VIET_heard_eerie_story = {
+	icon = magic_positive
+	intrigue = 1
+	monthly_lifestyle_xp_gain_mult = 0.05
+}
+VIET_navel_gazing = {
+	icon = learning_positive
+	diplomacy = -2
+	learning = 3
+}
+VIET_impressed_others_with_knowledge = {
+	icon = learning_positive
+	monthly_prestige = 0.15
+	general_opinion = 5
+}
 
 

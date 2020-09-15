@@ -1096,6 +1096,7 @@ VIETold.2014 = {
 
 
 # Poet tells historical story with inaccuracy
+# AKA BADHISTORY
 VIETold.2015 = {
 	type = character_event
 	title = VIETold.2015.t
@@ -1109,7 +1110,7 @@ VIETold.2015 = {
 
 	trigger = {
 	#	NOT = { has_game_rule = VIET_serious_events }
-		learning >= 9 # gotta be smart enough to actually know this stuff
+		learning >= medium_skill_rating # gotta be smart enough to actually know this stuff
 	}
 	
 	weight_multiplier = {
@@ -1942,4 +1943,1107 @@ VIETold.2026 = {
 		}
 	}
 }
+
+
+##################################################
+# FANTASTICAL STORIES	2027-2040
+##################################################
+
+
+# Rumors about incestuous marriage in faraway lands
+VIETold.2027 = {
+	type = character_event
+	title = VIETold.2027.t
+	desc = VIETold.2027.desc
+	theme = learning
+	
+	right_portrait = {
+		character = root
+		animation = personality_cynical
+	}
+
+	trigger = {
+	#	NOT = { has_game_rule = VIET_serious_events }
+		faith = {
+			NOR = {
+				has_doctrine = tenet_divine_marriage
+				has_doctrine = doctrine_consanguinity_unrestricted
+			}		
+		}
+	}
+	
+	weight_multiplier = {
+		base = 1
+		modifier = {
+			add = 0.2
+			has_trait = gregarious
+		}
+		modifier = {
+			add = -0.2
+			has_trait = shy
+		}
+		modifier = {
+			add = 0.2
+			has_trait = lustful
+		}
+		modifier = {
+			add = -0.2
+			has_trait = chaste
+		}
+		modifier = {
+			add = 0.2
+			has_trait = trusting
+		}
+		modifier = {
+			add = -0.2
+			has_trait = paranoid
+		}
+	}
+	
+	option = { # Barbaric
+		name = VIETold.2027.a
+		add_piety = 5
+		stress_impact = {
+			humble = miniscule_stress_impact_gain
+		}
+	}	
+	option = { # Open minded
+		name = VIETold.2027.b
+		add_character_modifier = {
+			modifier = VIET_open_minded_about_incest
+			days = 730
+		}
+		add_piety = -5
+		stress_impact = {
+			zealous = minor_stress_impact_gain
+		}
+	}	
+	option = { # Horny
+		name = VIETold.2027.c
+		trigger = {
+			NOR = {
+				has_trait = chaste
+				has_trait = celibate
+				has_sexuality = asexual
+			}
+		}
+		add_piety = -5
+		add_prestige = -5
+		add_character_modifier = {
+			modifier = VIET_deviant_opinion
+			days = 730
+		}
+		stress_impact = {
+			zealous = minor_stress_impact_gain
+		}
+	}	
+	option = { # Skeptical
+		name = VIETold.2027.d
+		#trigger = {
+		#	trait = cynical
+		#}
+		add_character_modifier = {
+			modifier = VIET_skeptical_about_fantasy_stories
+			days = 730
+		}
+		stress_impact = {
+			trusting = miniscule_stress_impact_gain
+		}
+	}
+}
+
+
+
+# Servant hears about the flying rabbits of the north
+VIETold.2028 = {
+	type = character_event
+	title = VIETold.2028.t
+	desc = VIETold.2028.desc
+	theme = crown
+	
+	left_portrait = root
+
+	#trigger = {
+	#	NOT = { has_game_rule = VIET_serious_events }
+	#}
+	
+	weight_multiplier = {
+		base = 1
+		modifier = {
+			add = 0.2
+			has_trait = gregarious
+		}
+		modifier = {
+			add = -0.2
+			has_trait = shy
+		}
+		modifier = {
+			add = 0.2
+			has_trait = lazy
+		}
+		modifier = {
+			add = -0.2
+			has_trait = diligent
+		}
+		modifier = {
+			add = 0.2
+			has_trait = humble
+		}
+		modifier = {
+			add = -0.2
+			has_trait = arrogant
+		}
+	}
+	
+	option = { # Rabbits don't fly
+		name = VIETold.2028.a
+		add_character_modifier = {
+			modifier = VIET_skeptical_about_fantasy_stories
+			days = 365
+		}
+		stress_impact = {
+			trusting = miniscule_stress_impact_gain
+		}
+	}	
+	option = { # Cool story bro
+		name = VIETold.2028.b
+		add_character_modifier = {
+			modifier = VIET_heard_fantasy_stories
+			days = 365
+		}
+	}	
+	option = { # Actually
+		name = VIETold.2028.c
+		trigger = {
+			learning >= decent_skill_rating			
+		}
+		skill = learning
+		add_character_modifier = {
+			modifier = VIET_impressed_others_with_knowledge
+			days = 365
+		}
+	}
+}
+
+
+
+# Traveler tells of the lost village in the deserts of Egypt
+VIETold.2029 = {
+	type = character_event
+	title = VIETold.2029.t
+	desc = VIETold.2029.desc
+	theme = vassal
+	
+	left_portrait = {
+		character = root
+		animation = personality_honorable
+	}
+
+	trigger = {
+	#	NOT = { has_game_rule = VIET_serious_events }
+		NOT = { has_game_rule = VIET_conversion_universe_events }
+	}
+	
+	weight_multiplier = {
+		base = 1
+		modifier = {
+			add = 0.2
+			has_trait = gregarious
+		}
+		modifier = {
+			add = -0.2
+			has_trait = shy
+		}
+		modifier = {
+			add = 0.2
+			has_trait = diligent
+		}
+		modifier = {
+			add = -0.2
+			has_trait = lazy
+		}
+		modifier = {
+			add = 0.2
+			has_trait = ambitious
+		}
+		modifier = {
+			add = -0.2
+			has_trait = content
+		}
+		# Less likely to happen within Egypt area, because event is about a traveler to Egypt
+		modifier = {
+			add = -0.4
+			capital_province = {
+				geographical_region = world_africa_north_east
+			}
+		}
+	}
+	
+	option = { # Amazing
+		name = VIETold.2029.a
+		add_prestige = 5
+		add_character_modifier = {
+			modifier = VIET_interesting_talk_with_stranger
+			days = 654
+		}
+	}	
+	option = { # O rly?
+		name = VIETold.2029.b
+		add_character_modifier = {
+			modifier = VIET_skeptical_about_fantasy_stories
+			days = 654
+		}
+		stress_impact = {
+			trusting = miniscule_stress_impact_gain
+		}
+	}		
+	option = { # Are they still around?
+		name = VIETold.2029.c
+		add_piety = 5
+		add_character_modifier = {
+			modifier = VIET_thinking_about_foreign_lands
+			days = 700
+		}
+	}	
+}
+
+
+
+# Traveler tells of a golden island beyond Japan
+VIETold.2030 = {
+	type = character_event
+	title = VIETold.2030.t
+	desc = VIETold.2030.desc
+	theme = feast_activity
+	
+	right_portrait = {
+		character = root
+		animation = admiration
+	}
+
+	trigger = {
+	#	NOT = { has_game_rule = VIET_serious_events }
+		NOT = { has_game_rule = VIET_conversion_universe_events }
+	}
+	
+	weight_multiplier = {
+		base = 1
+		modifier = {
+			add = 0.2
+			has_trait = gregarious
+		}
+		modifier = {
+			add = -0.2
+			has_trait = shy
+		}
+		modifier = {
+			add = 0.2
+			has_trait = gluttonous
+		}
+		modifier = {
+			add = -0.2
+			has_trait = temperate
+		}
+		modifier = {
+			add = 0.2
+			has_trait = generous
+		}
+		modifier = {
+			add = -0.2
+			has_trait = greedy
+		}
+		# Less likely to happen outside of India, Central Asia, and the Middle East, as people didn't travel that far
+		modifier = {
+			add = -0.5
+			capital_province = {
+				OR = {
+					geographical_region = world_africa_north_east
+					geographical_region = world_africa_east
+					geographical_region = world_steppe
+					geographical_region = world_middle_east
+					geographical_region = world_india
+					geographical_region = world_burma
+					geographical_region = world_tibet
+					#geographical_region = world_asia_minor
+				}
+			}
+		}
+	}
+	
+	option = { # Amazing
+		name = VIETold.2030.a
+		add_character_modifier = {
+			modifier = VIET_thinking_about_foreign_lands
+			days = 700
+		}
+	}	
+	option = { # O rly?
+		name = VIETold.2030.b
+		add_character_modifier = {
+			modifier = VIET_skeptical_about_fantasy_stories
+			days = 700
+		}
+		stress_impact = {
+			trusting = miniscule_stress_impact_gain
+		}
+	}
+}
+
+
+
+# Hearing about opposite land underground
+VIETold.2031 = {
+	type = character_event
+	title = VIETold.2031.t
+	desc = VIETold.2031.desc
+	theme = realm
+	
+	right_portrait = {
+		character = root
+		animation = personality_cynical
+	}
+
+	#trigger = {
+	#	NOT = { has_game_rule = VIET_serious_events }
+	#}
+	
+	weight_multiplier = {
+		base = 1
+		modifier = {
+			add = 0.2
+			has_trait = lazy
+		}
+		modifier = {
+			add = -0.2
+			has_trait = diligent
+		}
+		modifier = {
+			add = 0.2
+			has_trait = trusting
+		}
+		modifier = {
+			add = -0.2
+			has_trait = paranoid
+		}
+		modifier = {
+			add = 0.2
+			has_trait = patient
+		}
+		modifier = {
+			add = -0.2
+			has_trait = impatient
+		}
+	}
+	
+	option = { # Amazing
+		name = VIETold.2031.a
+		add_character_modifier = {
+			modifier = VIET_open_to_new_ideas
+			days = 555
+		}
+	}	
+	option = { # O rly?
+		name = VIETold.2031.b
+		add_character_modifier = {
+			modifier = VIET_skeptical_about_fantasy_stories
+			days = 555
+		}
+		stress_impact = {
+			trusting = miniscule_stress_impact_gain
+		}
+	}	
+	option = { # Fascinating
+		name = VIETold.2031.c
+		add_character_modifier = {
+			modifier = VIET_thinking_about_foreign_lands
+			days = 555
+		}
+	}
+}
+
+
+
+
+# Story of the labyrinth a la the Minotaur
+VIETold.2032 = {
+	type = character_event
+	title = VIETold.2032.t
+	desc = VIETold.2032.desc
+	theme = realm
+	
+	right_portrait = {
+		character = root
+		animation = personality_cynical
+	}
+
+	#trigger = {
+	#	NOT = { has_game_rule = VIET_serious_events }
+	#}
+	
+	weight_multiplier = {
+		base = 1
+		modifier = {
+			add = 0.2
+			has_trait = just
+		}
+		modifier = {
+			add = -0.2
+			has_trait = arbitrary
+		}
+		modifier = {
+			add = 0.2
+			has_trait = brave
+		}
+		modifier = {
+			add = -0.2
+			has_trait = craven
+		}
+		modifier = {
+			add = 0.2
+			has_trait = sadistic
+		}
+		modifier = {
+			add = -0.2
+			has_trait = compassionate
+		}
+	}
+	
+	option = { # They deserve freedom
+		name = VIETold.2032.a
+		add_prestige = 5
+		add_dread = -3
+		stress_impact = {
+			callous = miniscule_stress_impact_gain
+			sadistic = miniscule_stress_impact_gain
+		}
+	}	
+	option = { # It is unnecessary
+		name = VIETold.2032.b
+		add_piety = 5
+		add_dread = -3
+		stress_impact = {
+			callous = miniscule_stress_impact_gain
+			sadistic = miniscule_stress_impact_gain
+		}
+	}	
+	option = { # Sounds fun!
+		name = VIETold.2032.c
+		add_dread = 5
+		stress_impact = {
+			compassionate = miniscule_stress_impact_gain
+			just = miniscule_stress_impact_gain
+		}
+	}
+}
+
+
+
+
+# Gate to another world
+VIETold.2033 = {
+	type = character_event
+	title = VIETold.2033.t
+	desc = VIETold.2033.desc
+	theme = learning
+	
+	left_portrait = root
+
+	#trigger = {
+	#	NOT = { has_game_rule = VIET_serious_events }
+	#}
+	
+	weight_multiplier = {
+		base = 1
+		modifier = {
+			add = 0.2
+			has_trait = lustful
+		}
+		modifier = {
+			add = -0.2
+			has_trait = chaste
+		}
+		modifier = {
+			add = 0.2
+			has_trait = brave
+		}
+		modifier = {
+			add = -0.2
+			has_trait = craven
+		}
+		modifier = {
+			add = 0.2
+			has_trait = lazy
+		}
+		modifier = {
+			add = -0.2
+			has_trait = diligent
+		}
+	}
+	
+	option = { # Sounds nice
+		name = VIETold.2033.a
+		random_list = {
+			10 = { add_prestige = 3 }
+			10 = { add_piety = 3 }
+		}
+		stress_impact = {
+			paranoid = miniscule_stress_impact_gain
+			arrogant = miniscule_stress_impact_gain
+		}
+	}	
+	option = { # Will beat her
+		name = VIETold.2033.b
+		add_prestige = 3
+		stress_impact = {
+			craven = miniscule_stress_impact_gain
+			lazy = miniscule_stress_impact_gain
+		}
+	}	
+	option = { # I like what I have
+		name = VIETold.2033.c
+		add_piety = 3
+		stress_impact = {
+			ambitious = miniscule_stress_impact_gain
+			arrogant = miniscule_stress_impact_gain
+		}
+	}
+}
+
+
+
+# Old man recounts meeting the Dreamer - will be large event chain later about a mysterious figure appearing in dreams, maybe ambiguous conicidence, maybe actual otherworldly figure
+VIETold.2034 = {
+	type = character_event
+	title = VIETold.2034.t
+	desc = VIETold.2034.desc
+	theme = VIET_theme_small_town
+	
+	right_portrait = root
+
+	#trigger = {
+	#	NOT = { has_game_rule = VIET_serious_events }
+	#}
+	
+	weight_multiplier = {
+		base = 1
+		modifier = {
+			add = 0.2
+			has_trait = compassionate
+		}
+		modifier = {
+			add = -0.2
+			has_trait = callous
+		}
+		modifier = {
+			add = 0.2
+			has_trait = humble
+		}
+		modifier = {
+			add = -0.2
+			has_trait = arrogant
+		}
+		modifier = {
+			add = 0.2
+			has_trait = gregarious
+		}
+		modifier = {
+			add = -0.2
+			has_trait = shy
+		}
+	}
+	
+	option = { # Type A is bad
+		name = VIETold.2034.a
+		if = {
+			limit = {
+				faith = {
+					OR = {
+						trait_is_virtue = calm					
+						trait_is_virtue = content					
+						trait_is_virtue = patient					
+					}
+				}
+			}
+			add_piety = 10
+		}
+		else_if = {
+			limit = {
+				faith = {
+					OR = {
+						trait_is_virtue = brave					
+						trait_is_virtue = ambitious					
+						trait_is_virtue = impatient					
+					}
+				}
+			}
+			add_piety = -10
+		}
+		else = {
+			add_piety = 5
+		}
+	}
+	
+	option = { # Type B is bad
+		name = VIETold.2034.b
+		if = {
+			limit = {
+				faith = {
+					OR = {
+						trait_is_virtue = brave					
+						trait_is_virtue = ambitious					
+						trait_is_virtue = impatient					
+					}
+				}
+			}
+			add_piety = 5
+			add_prestige = 5
+		}
+		else_if = {
+			limit = {
+				faith = {
+					OR = {
+						trait_is_virtue = calm					
+						trait_is_virtue = content					
+						trait_is_virtue = patient					
+					}
+				}
+			}
+			add_piety = -5
+			add_prestige = -5
+		}
+		else = {
+			add_prestige = 5
+		}
+	}
+	
+	#option = { # You met the Dreamer too?
+	#	name = VIETold.2034.c
+	#	trigger = {
+	#		has_character_flag = VIET_met_the_dreamer
+	#	}
+	#	# Add to a Dreamer variable???
+	#}
+}
+
+
+
+
+# Stories of the immortal horse
+VIETold.2035 = {
+	type = character_event
+	title = VIETold.2035.t
+	desc = VIETold.2035.desc
+	theme = VIET_theme_skyrim_forest
+	
+	right_portrait = {
+		character = root
+		animation = personality_honorable
+	}
+
+	trigger = {
+	#	NOT = { has_game_rule = VIET_serious_events }
+		NOT = { has_game_rule = VIET_conversion_universe_events }
+		# Should only be for people who know a bit about the Eurasian nomads, or are the nomads themselves
+		capital_province = {
+			NOR = {
+				geographical_region = world_africa_west
+				geographical_region = world_africa_east
+				geographical_region = world_africa_north_west
+				geographical_region = world_europe_west
+				geographical_region = world_europe_north
+			}
+		}
+	}
+	
+	weight_multiplier = {
+		base = 1
+		modifier = {
+			add = 0.2
+			has_trait = brave
+		}
+		modifier = {
+			add = -0.2
+			has_trait = craven
+		}
+		modifier = {
+			add = 0.2
+			has_trait = diligent
+		}
+		modifier = {
+			add = -0.2
+			has_trait = lazy
+		}
+		modifier = {
+			add = 0.2
+			has_trait = calm
+		}
+		modifier = {
+			add = -0.2
+			has_trait = wrathful
+		}
+	}
+	
+
+	
+	option = { # Curious!
+		name = VIETold.2035.a
+		add_character_modifier = {
+			modifier = VIET_im_curious
+			days = 444
+		}
+	}	
+	option = { # O rly?
+		name = VIETold.2035.b
+		add_character_modifier = {
+			modifier = VIET_skeptical_about_fantasy_stories
+			days = 444
+		}
+		stress_impact = {
+			trusting = miniscule_stress_impact_gain
+		}
+	}
+}
+
+# Guard claims to have met a woman in white/lady in white (a common type of spirit in various folklores around the world)
+VIETold.2036 = {
+	type = character_event
+	title = VIETold.2036.t
+	desc = VIETold.2036.desc
+	theme = skull	
+	override_background = { event_background = corridor_day }
+	
+	left_portrait = root
+
+	#trigger = {
+	#	NOT = { has_game_rule = VIET_serious_events }
+	#}
+	
+	weight_multiplier = {
+		base = 1
+		modifier = {
+			add = 0.2
+			has_trait = brave
+		}
+		modifier = {
+			add = -0.2
+			has_trait = craven
+		}
+		modifier = {
+			add = 0.2
+			has_trait = honest
+		}
+		modifier = {
+			add = -0.2
+			has_trait = deceitful
+		}
+		modifier = {
+			add = 0.2
+			has_trait = humble
+		}
+		modifier = {
+			add = -0.2
+			has_trait = arrogant
+		}
+	}
+	
+
+	
+	option = { # What a coward lol
+		name = VIETold.2036.a
+		add_character_modifier = {
+			modifier = VIET_amused_ruler
+			days = 365
+		}
+		stress_impact = {
+			craven = miniscule_stress_impact_gain
+			compassionate = miniscule_stress_impact_gain
+		}
+		if = {
+			limit = {
+				has_game_rule = VIET_historical_context_on
+			}
+			custom_tooltip = VIETold.2036.info
+		}
+	}	
+	option = { # Frightening things beyond!
+		name = VIETold.2036.b
+		add_character_modifier = {
+			modifier = VIET_heard_eerie_story
+			days = 365
+		}
+		stress_impact = {
+			brave = miniscule_stress_impact_gain
+		}
+		if = {
+			limit = {
+				has_game_rule = VIET_historical_context_on
+			}
+			custom_tooltip = VIETold.2036.info
+		}
+	}
+}
+
+# Maid recounts meeting the Dreamer (female Dreamer; there is both a Male and Female Dreamer in the event chain, who are ambiguously connected)
+VIETold.2037 = {
+	type = character_event
+	title = VIETold.2037.t
+	desc = VIETold.2037.desc
+	theme = friendly	
+	override_background = { event_background = corridor_day }
+	
+	left_portrait = root
+
+	#trigger = {
+	#	NOT = { has_game_rule = VIET_serious_events }
+	#}
+	
+	weight_multiplier = {
+		base = 1
+		modifier = {
+			add = 0.2
+			has_trait = brave
+		}
+		modifier = {
+			add = -0.2
+			has_trait = craven
+		}
+		modifier = {
+			add = 0.2
+			has_trait = impatient
+		}
+		modifier = {
+			add = -0.2
+			has_trait = patient
+		}
+		modifier = {
+			add = 0.2
+			has_trait = humble
+		}
+		modifier = {
+			add = -0.2
+			has_trait = arrogant
+		}
+	}
+	
+
+	
+	option = { # Very odd
+		name = VIETold.2037.a
+		add_character_modifier = {
+			modifier = VIET_heard_eerie_story
+			days = 365
+		}
+	}	
+	#option = { # You met the Dreamer too?
+	#	name = VIETold.2037.b
+	#	trigger = {
+	#		has_character_flag = VIET_met_the_dreamer
+	#	}
+	#	# Add to a Dreamer variable???
+	#}
+}
+
+
+# Scholar tells of an island on a lake - part 1
+VIETold.2038 = {
+	type = character_event
+	title = VIETold.2038.t
+	desc = VIETold.2038.desc
+	theme = love
+	
+	left_portrait = {
+		character = root
+		animation = personality_rational
+	}
+
+	#trigger = {
+	#	NOT = { has_game_rule = VIET_serious_events }
+	#}
+	
+	weight_multiplier = {
+		base = 1
+		modifier = {
+			add = 0.2
+			has_trait = gregarious
+		}
+		modifier = {
+			add = -0.2
+			has_trait = shy
+		}
+		modifier = {
+			add = 0.2
+			has_trait = diligent
+		}
+		modifier = {
+			add = -0.2
+			has_trait = lazy
+		}
+		modifier = {
+			add = 0.2
+			has_trait = humble
+		}
+		modifier = {
+			add = -0.2
+			has_trait = arrogant
+		}
+	}
+	
+
+	
+	option = { # Interesting
+		name = VIETold.2038.a
+		custom_tooltip = VIETold.2039.tooltip
+		trigger_event = {
+			id = VIETold.2039
+		}
+	}
+}
+
+
+# Scholar tells of an island on a lake - part 2
+VIETold.2039 = {
+	type = character_event
+	title = VIETold.2039.t
+	desc = VIETold.2039.desc
+	theme = love
+	
+	left_portrait = {
+		character = root
+		animation = personality_cynical
+	}
+
+	#trigger = {
+	#	NOT = { has_game_rule = VIET_serious_events }
+	#}
+	
+	option = { # Strange
+		name = VIETold.2039.a
+		add_character_modifier = {
+			modifier = VIET_heard_eerie_story
+			days = 365
+		}
+	}	
+	option = { # A dream?
+		name = VIETold.2039.b
+		add_character_modifier = {
+			modifier = VIET_navel_gazing
+			days = 365
+		}
+	}	
+	option = { # Curious
+		name = VIETold.2039.c
+		add_character_modifier = {
+			modifier = VIET_im_curious
+			days = 365
+		}
+	}
+}
+
+
+# Courtiers debate the skin color of the people living on the fantastical Isle of Color (with rhyming)
+VIETold.2040 = {
+	type = character_event
+	title = VIETold.2040.t
+	desc = VIETold.2040.desc
+	theme = realm
+	
+	left_portrait = root
+
+	#trigger = {
+	#	NOT = { has_game_rule = VIET_serious_events }
+	#}
+	
+	weight_multiplier = {
+		base = 1
+		modifier = {
+			add = 0.2
+			has_trait = gregarious
+		}
+		modifier = {
+			add = -0.2
+			has_trait = shy
+		}
+		modifier = {
+			add = 0.2
+			has_trait = deceitful
+		}
+		modifier = {
+			add = -0.2
+			has_trait = honest
+		}
+		modifier = {
+			add = 0.2
+			has_trait = arrogant
+		}
+		modifier = {
+			add = -0.2
+			has_trait = humble
+		}
+	}
+	
+
+	
+	option = { # It's made up
+		name = VIETold.2040.a
+		trigger = {
+			has_trait = cynical
+		}
+		trait = cynical
+		random_list = {
+			10 = { add_prestige = 5 }
+			10 = { add_piety = 5 }
+		}
+		stress_impact = {
+			cynical = miniscule_stress_impact_loss
+		}
+	}	
+	option = { # Pink skin
+		name = VIETold.2040.b
+		add_prestige = 5
+	}	
+	option = { # Dark blue skin
+		name = VIETold.2040.c
+		add_prestige = 5
+	}	
+	option = { # Green skin
+		name = VIETold.2040.d
+		random_list = {
+			10 = { add_prestige = 5 }
+			5 = { add_piety = 5 }
+		}
+	}	
+	option = { # I don't know the answer, the truth I cannot infer.
+		name = VIETold.2040.e
+		random_list = {
+			5 = { add_prestige = 5 }
+			10 = { add_piety = 5 }
+		}
+	}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
