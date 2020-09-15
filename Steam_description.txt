@@ -9,7 +9,9 @@ Very Immersive Events and Tales (VIET), the sequel to [url=https://steamcommunit
 
 Alongside many new events, I intend to adapt many of the events from the old VIET for CK2 as possible. I hope the lessons I learned from my eight years (with a hiatus) of modding CK2 will help me deliver a fun experience for any players interested in my mods.
 
-[B]As this is the early version of VIET, I welcome any and all feedback - I'm still getting the hang of switching to CK3 modding from CK2's. Please let me know if you encounter any bugs, or if you feel the events fire too frequently or not frequently enough. While the events may get repetitive if you play long enough as I haven’t added that many yet (which is similar to what happens with vanilla CK3 anyways), I hope to continue adding more and more events in every update![/B]
+As this is the early version of VIET, I welcome any and all feedback - I'm still getting the hang of switching to CK3 modding from CK2's. Please let me know if you encounter any bugs, or if you feel the events fire too frequently or not frequently enough. While the events may get repetitive if you play long enough as I haven’t added that many yet (which is similar to what happens with vanilla CK3 anyways), [B]I hope to continue adding more and more events in every update![/B]
+
+[B][U]VIET [I]will[/I] work on existing saves![/U][/B] Depending on your RNG luck, it might just take a while for events to pop up as there are only 108 events and counting at the moment (sounds like a lot but it isn't compared to the CK2 version). In my test games I've had stretches of a decade or two with no events, and suddenly a bunch happen within the span of a few years. Anyways, if using on a save game, always make a backup just in case.
 
 Feel free to use my work in your mods - all I ask is that I am credited and (if possible) to give me a heads up. And if you liked the mod, feel free to favorite and rate it up!
 
@@ -26,10 +28,20 @@ Feel free to use my work in your mods - all I ask is that I am credited and (if 
 [*]NOT achievement compatible!
 [/LIST]
 
+[h1]TRANSLATIONS AVAILABLE[/h1]
+[LIST]
+[*]Chinese - teabbm has offered to help with translation
+[*]French - Mouchi from WTWSMS team has offered to help with translation
+[*]German - Thomsen has offered to help with translation
+[*]Korean - [url=https://steamcommunity.com/sharedfiles/filedetails/?id=2227982565]Available as sub-mod here[/url], thanks to Ohboksu
+[*]Russian - Alesha_Popvich has offered to help with translation
+[*]Spanish - Sourenics has offered to help with translation
+[/LIST]
+
 
 [img]http://i.imgur.com/RQ5QZTF.jpg[/img]
 
-Version 1.0.0 "Temujin"
+[h1]Version 1.0.0 "Temujin"[/h1]
 
 [I]Temujin was the birth name of Genghis Khan, one of the most accomplished conquerors in world history. In the span of one lifetime, he went from an outcast of his own tribe, to a name feared across Eurasia. He and his descendants would rule the largest continuous land empire in history, with consequential ramifications for world history.[/I]
 
