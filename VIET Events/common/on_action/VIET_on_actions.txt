@@ -80,7 +80,7 @@ VIET_events_yearly_pulse = {
 		100 = VIETold.1024		# Your desk is a mess
 		
 		#######################################
-		# NEXT GEN VIET
+		# OLD VIET
 		#######################################
 		
 		# Oblivion soundtrack inspired
@@ -96,6 +96,10 @@ VIET_events_yearly_pulse = {
 		100 = VIETold.2019		# Observing something outside
 		100 = VIETold.2022		# Accidentally bumped into some furniture
 		100 = VIETold.2025		# Heard a loud noise outside - what could it be?
+		# Fantastical Stories
+		100 = VIETold.2027		# Rumors about incestuous marriage in faraway lands
+		100 = VIETold.2033		# Gate to another world
+		100 = VIETold.2035		# Stories of the immortal horse
 		
 		#######################################
 		# NEXT GEN VIET
@@ -115,6 +119,7 @@ VIET_events_yearly_pulse = {
 		100 = VIETmisc.0018		# Thought of an awesome comeback in an argument... many days later
 		100 = VIETmisc.0020		# Heard a good joke but forgot it already
 		100 = VIETmisc.0022		# Bored during council meeting
+		100 = VIETmisc.0024		# Found a nice flower outside and accidentally stepped on it
 		100 = VIETmisc.0025		# Feel a breeze against the face
 		100 = VIETmisc.0026		# Couldn't find a document in your office
 		100 = VIETmisc.0029		# Found a coin on the ground
@@ -123,6 +128,7 @@ VIET_events_yearly_pulse = {
 		100 = VIETmisc.0034		# Gazing at clouds
 		100 = VIETmisc.0035		# Feeling itchy at meeting with nobles
 		100 = VIETmisc.0036		# Bit tongue at dinner
+		100 = VIETmisc.0037		# Servant is picking nose
 		100 = VIETmisc.0041		# Courtier bumps into you accidentally
 		100 = VIETmisc.0045		# Had a good nap
 		100 = VIETmisc.0046		# Read a good book
@@ -193,6 +199,12 @@ VIET_events_tri_yearly_pulse = {
 		100 = VIETold.2023		# Maidservants encounter mice and are afraid
 		100 = VIETold.2024		# Catch two servants having sex
 		100 = VIETold.2026		# Staying up late at night a lot
+		# Fantastical Stories
+		100 = VIETold.2028		# Servant hears about the flying rabbits of the north
+		100 = VIETold.2031		# Hearing about opposite land underground
+		100 = VIETold.2032		# Story of the labyrinth a la the Minotaur
+		100 = VIETold.2036		# Guard claims to have met a woman in white/lady in white
+		100 = VIETold.2040		# Courtiers debate the skin color of the people living on the fantastical Isle of Color 
 		
 		#######################################
 		# NEXT GEN VIET
@@ -207,9 +219,7 @@ VIET_events_tri_yearly_pulse = {
 		100 = VIETmisc.0012		# Reports of a ghost in residence
 		100 = VIETmisc.0019		# Paid a quick visit to the supposed ruins of a local house of worship
 		100 = VIETmisc.0021		# Thought you heard someone calling your name
-		100 = VIETmisc.0024		# Found a nice flower outside and accidentally stepped on it
 		100 = VIETmisc.0030		# Tripped and fell while saying farewell to an envoy
-		100 = VIETmisc.0037		# Servant is picking nose
 		100 = VIETmisc.0038		# Two servants chat about a play's quality
 		100 = VIETmisc.0040		# Nanny said it'll be alright years ago - is she right?
 		100 = VIETmisc.0042		# Forgotten Identity Part 1 - Meeting an important guest to discuss business when something bad happens
@@ -260,6 +270,12 @@ VIET_events_five_yearly_pulse = {
 		100 = VIETold.2016		# Saw a vision of the past while reading a book
 		# Stuck inside
 		100 = VIETold.2021		# Learning about local folklore about ancient ruin of man who stayed inside a house during plague
+		# Fantastical Stories
+		100 = VIETold.2029		# Traveler tells of the lost village in the deserts of Egypt
+		100 = VIETold.2030		# Traveler tells of a golden island beyond Japan
+		100 = VIETold.2034		# Old man recounts meeting the Dreamer
+		100 = VIETold.2037		# Maid recounts meeting the Dreamer
+		100 = VIETold.2039		# Scholar tells of an island on a lake
 		
 		#######################################
 		# NEXT GEN VIET
