@@ -33,10 +33,6 @@ VIETold.1001 = {
 		character = root
 		animation = personality_content
 	}	
-
-	#trigger = {
-	#	NOT = { has_game_rule = VIET_serious_events }
-	#}
 	
 	weight_multiplier = {
 		base = 1
@@ -154,7 +150,6 @@ VIETold.1003 = {
 	}	
 
 	trigger = {
-		#NOT = { has_game_rule = VIET_serious_events }
 		any_courtier = {
 			is_available_ai_adult = yes
 			has_trait = arrogant
@@ -244,7 +239,6 @@ VIETold.1004 = {
 	left_portrait = root
 
 	trigger = {
-		#NOT = { has_game_rule = VIET_serious_events }
 		age >= 40
 	}
 	
@@ -425,10 +419,6 @@ VIETold.1007 = {
 		character = root
 		animation = pain
 	}
-
-	#trigger = {
-	#	NOT = { has_game_rule = VIET_conversion_universe_events }
-	#}
 	
 	weight_multiplier = {
 		base = 1
@@ -476,10 +466,6 @@ VIETold.1008 = {
 		character = root
 		animation = personality_content
 	}
-
-	#trigger = {
-	#	NOT = { has_game_rule = VIET_conversion_universe_events }
-	#}
 	
 	weight_multiplier = {
 		base = 1
@@ -527,10 +513,6 @@ VIETold.1009 = {
 		character = root
 		animation = boredom
 	}
-
-	#trigger = {
-	#	NOT = { has_game_rule = VIET_conversion_universe_events }
-	#}
 	
 	weight_multiplier = {
 		base = 1
@@ -587,7 +569,6 @@ VIETold.1010 = {
 	}
 
 	trigger = {
-		#NOT = { has_game_rule = VIET_conversion_universe_events }
 		court_physician_available_trigger = yes
 	}
 	
@@ -852,7 +833,6 @@ VIETold.1014 = {
 	}
 
 	trigger = {
-	#	NOT = { has_game_rule = VIET_conversion_universe_events }
 		NOR = {
 			has_trait = celibate
 			has_sexuality = asexual
@@ -958,7 +938,6 @@ VIETold.1015 = {
 	}
 
 	trigger = {
-	#	NOT = { has_game_rule = VIET_conversion_universe_events }
 		NOT = { has_character_modifier = VIET_popeye_spinach_lover }
 	}
 	
@@ -1125,10 +1104,6 @@ VIETold.1017 = {
 	theme = realm
 	
 	right_portrait = root
-
-	#trigger = {
-	#	NOT = { has_game_rule = VIET_conversion_universe_events }
-	#}
 	
 	weight_multiplier = {
 		base = 1
@@ -1179,7 +1154,6 @@ VIETold.1018 = {
 	}
 
 	trigger = {
-	#	NOT = { has_game_rule = VIET_conversion_universe_events }
 		NOT = { faith = { religion_tag = islam_religion } }
 		OR = {
 			has_trait = drunkard
@@ -1256,7 +1230,6 @@ VIETold.1019 = {
 	}
 
 	trigger = {
-	#	NOT = { has_game_rule = VIET_conversion_universe_events }
 		any_vassal = {
 			is_available_ai_adult = yes
 		}
@@ -1346,10 +1319,6 @@ VIETold.1020 = {
 		character = root
 		animation = personality_content
 	}
-
-	#trigger = {
-	#	NOT = { has_game_rule = VIET_conversion_universe_events }
-	#}
 	
 	weight_multiplier = {
 		base = 1
@@ -1434,7 +1403,6 @@ VIETold.1021 = {
 	right_portrait = root
 
 	trigger = {
-		#NOT = { has_game_rule = VIET_conversion_universe_events }
 		gold >= 0
 	}
 	
@@ -1501,10 +1469,6 @@ VIETold.1022 = {
 		character = root
 		animation = pain
 	}
-
-	#trigger = {
-		#NOT = { has_game_rule = VIET_conversion_universe_events }
-	#}
 	
 	weight_multiplier = {
 		base = 1
@@ -1560,10 +1524,6 @@ VIETold.1023 = {
 		character = root
 		animation = disgust
 	}
-
-	#trigger = {
-		#NOT = { has_game_rule = VIET_conversion_universe_events }
-	#}
 	
 	weight_multiplier = {
 		base = 1
@@ -1615,10 +1575,6 @@ VIETold.1024 = {
 		character = root
 		animation = disbelief
 	}
-
-	#trigger = {
-		#NOT = { has_game_rule = VIET_conversion_universe_events }
-	#}
 	
 	weight_multiplier = {
 		base = 1

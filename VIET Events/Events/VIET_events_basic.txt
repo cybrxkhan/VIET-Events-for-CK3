@@ -20,7 +20,7 @@
 # ##### GRAND LIST OF EVENTS #####
 # 
 # 0001-0046		Generic
-# 
+# 0047-????		Art
 # 
 # 
 ############################################################################################################################
@@ -42,9 +42,7 @@ VIETmisc.0001 = {
 	left_portrait = {
 		character = root
 		animation = happiness
-	}
-	#right_portrait = root
-	
+	}	
 
 	trigger = {
 		NOT = { has_game_rule = VIET_conversion_universe_events }
@@ -107,9 +105,7 @@ VIETmisc.0002 = {
 	desc = VIETmisc.0002.desc
 	theme = VIET_theme_oblivion_pastoral_dream
 	
-	#left_portrait = root
-	right_portrait = root
-	
+	right_portrait = root	
 
 	trigger = {
 		NOR = {
@@ -199,12 +195,6 @@ VIETmisc.0003 = {
 		character = root
 		animation = ecstasy
 	}
-	#right_portrait = root
-	
-
-	#trigger = {
-	#	is_adult = yes
-	#}
 	
 	weight_multiplier = {
 		base = 1
@@ -331,11 +321,6 @@ VIETmisc.0005 = {
 		animation = worry
 	}
 	
-
-	#trigger = {
-	#	NOT = { has_game_rule = VIET_serious_events }
-	#}
-	
 	weight_multiplier = {
 		base = 1
 		modifier = {
@@ -409,12 +394,7 @@ VIETmisc.0006 = {
 		character = root
 		animation = grief
 	}
-	
-
-	#trigger = {
-	#	NOT = { has_game_rule = VIET_serious_events }
-	#}
-	
+		
 	weight_multiplier = {
 		base = 1
 		modifier = {
@@ -458,11 +438,6 @@ VIETmisc.0007 = {
 	theme = family
 	
 	right_portrait = root
-	
-
-	#trigger = {
-	#	NOT = { has_game_rule = VIET_serious_events }
-	#}
 	
 	weight_multiplier = {
 		base = 1
@@ -565,11 +540,6 @@ VIETmisc.0008 = {
 		animation = personality_content
 	}
 	
-
-	#trigger = {
-	#	NOT = { has_game_rule = VIET_serious_events }
-	#}
-	
 	weight_multiplier = {
 		base = 1
 		modifier = {
@@ -624,11 +594,6 @@ VIETmisc.0009 = {
 		animation = personality_content
 	}
 	
-
-	#trigger = {
-	#	NOT = { has_game_rule = VIET_serious_events }
-	#}
-	
 	weight_multiplier = {
 		base = 1
 		modifier = {
@@ -680,11 +645,6 @@ VIETmisc.0010 = {
 		character = root
 		animation = stress
 	} 
-	
-
-	#trigger = {
-	#	NOT = { has_game_rule = VIET_serious_events }
-	#}
 	
 	weight_multiplier = {
 		base = 1
@@ -772,11 +732,6 @@ VIETmisc.0011 = {
 		animation = personality_irrational
 	}  
 	
-
-	#trigger = {
-	#	NOT = { has_game_rule = VIET_serious_events }
-	#}
-	
 	weight_multiplier = {
 		base = 1
 		modifier = {
@@ -825,11 +780,6 @@ VIETmisc.0012 = {
 		character = root
 		animation = paranoia
 	}  
-	
-
-	#trigger = {
-	#	NOT = { has_game_rule = VIET_serious_events }
-	#}
 	
 	weight_multiplier = {
 		base = 1
@@ -931,11 +881,6 @@ VIETmisc.0013 = {
 		animation = personality_coward
 	}  
 	
-
-	#trigger = {
-	#	NOT = { has_game_rule = VIET_serious_events }
-	#}
-	
 	weight_multiplier = {
 		base = 1
 		modifier = {
@@ -1004,11 +949,6 @@ VIETmisc.0014 = {
 		animation = grief
 	}  
 	
-
-	#trigger = {
-	#	NOT = { has_game_rule = VIET_serious_events }
-	#}
-	
 	weight_multiplier = {
 		base = 1
 		modifier = {
@@ -1059,11 +999,6 @@ VIETmisc.0015 = {
 		animation = happiness
 	}  
 	
-
-	#trigger = {
-	#	NOT = { has_game_rule = VIET_serious_events }
-	#}
-	
 	weight_multiplier = {
 		base = 1
 		modifier = {
@@ -1111,11 +1046,6 @@ VIETmisc.0016 = {
 	theme = VIET_theme_office
 	
 	right_portrait = root
-	
-
-	#trigger = {
-	#	NOT = { has_game_rule = VIET_serious_events }
-	#}
 	
 	weight_multiplier = {
 		base = 1
@@ -1195,11 +1125,6 @@ VIETmisc.0017 = {
 	
 	left_portrait = root
 	
-
-	#trigger = {
-	#	NOT = { has_game_rule = VIET_serious_events }
-	#}
-	
 	weight_multiplier = {
 		base = 1
 		modifier = {
@@ -1261,11 +1186,6 @@ VIETmisc.0018 = {
 		animation = sadness
 	} 
 	
-
-	#trigger = {
-	#	NOT = { has_game_rule = VIET_serious_events }
-	#}
-	
 	weight_multiplier = {
 		base = 1
 		modifier = {
@@ -1316,11 +1236,6 @@ VIETmisc.0019 = {
 		character = root
 		animation = personality_content
 	} 
-	
-
-	#trigger = {
-	#	NOT = { has_game_rule = VIET_serious_events }
-	#}
 	
 	weight_multiplier = {
 		base = 1
@@ -1381,11 +1296,6 @@ VIETmisc.0020 = {
 		animation = happiness
 	} 
 	
-
-	#trigger = {
-	#	NOT = { has_game_rule = VIET_serious_events }
-	#}
-	
 	weight_multiplier = {
 		base = 1
 		modifier = {
@@ -1436,11 +1346,6 @@ VIETmisc.0021 = {
 		character = root
 		animation = paranoia
 	} 
-	
-
-	#trigger = {
-	#	NOT = { has_game_rule = VIET_serious_events }
-	#}
 	
 	weight_multiplier = {
 		base = 1
@@ -1499,11 +1404,6 @@ VIETmisc.0022 = {
 		character = root
 		animation = boredom
 	} 
-	
-
-	#trigger = {
-	#	NOT = { has_game_rule = VIET_serious_events }
-	#}
 	
 	weight_multiplier = {
 		base = 1
@@ -1577,11 +1477,6 @@ VIETmisc.0023 = {
 		character = root
 		animation = pain
 	} 
-	
-
-	#trigger = {
-	#	NOT = { has_game_rule = VIET_serious_events }
-	#}
 	
 	weight_multiplier = {
 		base = 1
@@ -1709,11 +1604,6 @@ VIETmisc.0024 = {
 		animation = sadness
 	} 
 	
-
-	#trigger = {
-	#	NOT = { has_game_rule = VIET_serious_events }
-	#}
-	
 	weight_multiplier = {
 		base = 1
 		modifier = {
@@ -1781,11 +1671,7 @@ VIETmisc.0025 = {
 		character = root
 		animation = personality_content
 	} 
-	
 
-	#trigger = {
-	#	NOT = { has_game_rule = VIET_serious_events }
-	#}
 	
 	weight_multiplier = {
 		base = 1
@@ -1836,11 +1722,7 @@ VIETmisc.0026 = {
 		character = root
 		animation = stress
 	} 
-	
 
-	#trigger = {
-	#	NOT = { has_game_rule = VIET_serious_events }
-	#}
 	
 	weight_multiplier = {
 		base = 1
@@ -1908,11 +1790,7 @@ VIETmisc.0027 = {
 	}
 	
 	left_portrait = root
-	
 
-	#trigger = {
-	#	NOT = { has_game_rule = VIET_serious_events }
-	#}
 	
 	weight_multiplier = {
 		base = 1
@@ -2103,10 +1981,6 @@ VIETmisc.0029 = {
 		animation = personality_greedy
 	}
 	
-
-	#trigger = {
-	#	NOT = { has_game_rule = VIET_serious_events }
-	#}
 	
 	weight_multiplier = {
 		base = 1
@@ -2155,11 +2029,6 @@ VIETmisc.0030 = {
 		animation = pain
 	}
 	
-
-	#trigger = {
-	#	NOT = { has_game_rule = VIET_serious_events }
-	#}
-	
 	weight_multiplier = {
 		base = 1
 		modifier = {
@@ -2207,11 +2076,6 @@ VIETmisc.0031 = {
 		character = root
 		animation = personality_content
 	}
-	
-
-	#trigger = {
-	#	NOT = { has_game_rule = VIET_serious_events }
-	#}
 	
 	weight_multiplier = {
 		base = 1
@@ -2273,11 +2137,6 @@ VIETmisc.0032 = {
 		animation = paranoia
 	}
 	
-
-	#trigger = {
-	#	NOT = { has_game_rule = VIET_serious_events }
-	#}
-	
 	weight_multiplier = {
 		base = 1
 		modifier = {
@@ -2338,11 +2197,6 @@ VIETmisc.0033 = {
 		character = root
 		animation = personality_cynical
 	}
-	
-
-	#trigger = {
-	#	NOT = { has_game_rule = VIET_serious_events }
-	#}
 	
 	weight_multiplier = {
 		base = 1
@@ -2425,15 +2279,10 @@ VIETmisc.0034 = {
 	desc = VIETmisc.0034.desc
 	theme = VIET_theme_tuscan_country
 	
-	#left_portrait = { 	
-	#	character = root
-	#	animation = personality_cynical
-	#}
-	
-
-	#trigger = {
-	#	NOT = { has_game_rule = VIET_serious_events }
-	#}
+	left_portrait = { 	
+		character = root
+		animation = happiness
+	}
 	
 	weight_multiplier = {
 		base = 1
@@ -2505,11 +2354,6 @@ VIETmisc.0035 = {
 		animation = pain
 	}
 	
-
-	#trigger = {
-	#	NOT = { has_game_rule = VIET_serious_events }
-	#}
-	
 	weight_multiplier = {
 		base = 1
 		modifier = {
@@ -2561,11 +2405,6 @@ VIETmisc.0036 = {
 		character = root
 		animation = pain
 	}
-	
-
-	#trigger = {
-	#	NOT = { has_game_rule = VIET_serious_events }
-	#}
 	
 	weight_multiplier = {
 		base = 1
@@ -2627,11 +2466,6 @@ VIETmisc.0037 = {
 		character = root
 		animation = disgust
 	}
-	
-
-	#trigger = {
-	#	NOT = { has_game_rule = VIET_serious_events }
-	#}
 	
 	weight_multiplier = {
 		base = 1
@@ -2720,11 +2554,6 @@ VIETmisc.0038 = {
 		animation = personality_cynical
 	}
 	
-
-	#trigger = {
-	#	NOT = { has_game_rule = VIET_serious_events }
-	#}
-	
 	weight_multiplier = {
 		base = 1
 		modifier = {
@@ -2785,11 +2614,6 @@ VIETmisc.0039 = {
 	theme = party
 	
 	left_portrait = root
-	
-
-	#trigger = {
-	#	NOT = { has_game_rule = VIET_serious_events }
-	#}
 	
 	weight_multiplier = {
 		base = 1
@@ -2883,11 +2707,6 @@ VIETmisc.0040 = {
 		character = root
 		animation = sadness
 	}
-	
-
-	#trigger = {
-	#	NOT = { has_game_rule = VIET_serious_events }
-	#}
 	
 	weight_multiplier = {
 		base = 1
@@ -3047,11 +2866,6 @@ VIETmisc.0042 = {
 	
 	right_portrait = root
 	
-
-	#trigger = {
-	#	NOT = { has_game_rule = VIET_serious_events }
-	#}
-	
 	weight_multiplier = {
 		base = 1
 		modifier = {
@@ -3109,11 +2923,7 @@ VIETmisc.0043 = {
 	right_portrait = { 	
 		character = root
 		animation = worry
-	}	
-
-	#trigger = {
-	#	NOT = { has_game_rule = VIET_serious_events }
-	#}
+	}
 	
 	immediate = {
 		play_music_cue = mx_cue_stress  
@@ -3186,11 +2996,6 @@ VIETmisc.0044 = {
 		animation = disapproval
 	}
 	
-
-	#trigger = {
-	#	NOT = { has_game_rule = VIET_serious_events }
-	#}
-	
 	weight_multiplier = {
 		base = 1
 		modifier = {
@@ -3254,11 +3059,6 @@ VIETmisc.0045 = {
 		animation = personality_forgiving
 	}
 	
-
-	#trigger = {
-	#	NOT = { has_game_rule = VIET_serious_events }
-	#}
-	
 	weight_multiplier = {
 		base = 1
 		modifier = {
@@ -3315,11 +3115,6 @@ VIETmisc.0046 = {
 	theme = learning
 	
 	left_portrait = root
-	
-
-	#trigger = {
-	#	NOT = { has_game_rule = VIET_serious_events }
-	#}
 	
 	weight_multiplier = {
 		base = 1
@@ -3380,5 +3175,94 @@ VIETmisc.0046 = {
 	}
 }
 
+##################################################################
+# ART 0047-00??
+##################################################################
+
+
+# Curl up with a good book?
+#VIETmisc.0047 = {
+#	type = character_event
+#	title = VIETmisc.0047.t
+#	desc = VIETmisc.0047.desc
+#	theme = learning
+#	override_background = { event_background = sitting_room }
+#	
+#	left_portrait = {
+#		character = root
+#		animation = personality_rational
+#	}
+#	
+#
+#	trigger = {
+#		learning >= medium_skill_rating
+#	}
+#	
+#	weight_multiplier = {
+#		base = 1
+#		modifier = {
+#			add = 0.2
+#			has_trait = shy
+#		}
+#		modifier = {
+#			add = -0.2
+#			has_trait = gregarious
+#		}
+#		modifier = {
+#			add = 0.2
+#			has_trait = lazy
+#		}
+#		modifier = {
+#			add = -0.2
+#			has_trait = diligent
+#		}
+#		modifier = {
+#			add = 0.2
+#			has_trait = content
+#		}
+#		modifier = {
+#			add = -0.2
+#			has_trait = ambitious
+#		}
+#	}
+#	
+#	option = { # read
+#		name = VIETmisc.0047.a
+#		if = {
+#			limit = {
+#				OR = {
+#					trait = diligent
+#					trait = ambitious
+#				}
+#			}
+#			stress_impact = {
+#				diligent = minor_stress_impact_gain
+#				ambitious = minor_stress_impact_gain
+#			}
+#		}
+#		else = {
+#			stress_impact = {
+#				base = minor_stress_impact_loss
+#				shy = major_stress_impact_loss
+#			}		
+#		}
+#		prestige = -25
+#		add_character_modifier = {
+#			modifier = VIET_curled_up_with_good_book
+#			years = 5
+#		}
+#	}	
+#	option = { # don't get too into it
+#		name = VIETmisc.0047.b
+#		stress_impact = {
+#			base = miniscule_stress_impact_loss
+#			shy = miniscule_stress_impact_loss
+#		}		
+#		add_character_modifier = {
+#			modifier = VIET_curled_up_with_good_book
+#			years = 1
+#		}
+#	}
+#}
 
 

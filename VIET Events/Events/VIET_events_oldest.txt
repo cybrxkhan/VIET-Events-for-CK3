@@ -33,10 +33,6 @@ VIETold.0001 = {
 		animation = personality_content
 	}	
 
-	#trigger = {
-	#	NOT = { has_game_rule = VIET_serious_events }
-	#}
-	
 	weight_multiplier = {
 		base = 1
 		modifier = {
@@ -80,10 +76,6 @@ VIETold.0002 = {
 	
 	right_portrait = root
 
-	#trigger = {
-	#	NOT = { has_game_rule = VIET_serious_events }
-	#}
-	
 	weight_multiplier = {
 		base = 1
 		modifier = {
@@ -154,7 +146,6 @@ VIETold.0003 = {
 	right_portrait = root
 
 	trigger = {
-		#NOT = { has_game_rule = VIET_serious_events }
 		capital_province = {
 			OR = {
 				terrain = desert
@@ -230,10 +221,6 @@ VIETold.0004 = {
 		animation = personality_content
 	}	
 
-	#trigger = {
-	#	NOT = { has_game_rule = VIET_serious_events }
-	#}
-	
 	weight_multiplier = {
 		base = 1
 		modifier = {
@@ -281,10 +268,6 @@ VIETold.0005 = {
 		animation = anger
 	}	
 
-	#trigger = {
-	#	NOT = { has_game_rule = VIET_serious_events }
-	#}
-	
 	weight_multiplier = {
 		base = 1
 		modifier = {
@@ -467,10 +450,6 @@ VIETold.0008 = {
 		animation = pain
 	}	
 
-	#trigger = {
-	#	has_game_rule = VIET_normal_universe_events
-	#}
-	
 	weight_multiplier = {
 		base = 1
 		modifier = {
@@ -531,10 +510,6 @@ VIETold.0009 = {
 		animation = personality_greedy
 	}	
 
-	#trigger = {
-	#	has_game_rule = VIET_normal_universe_events
-	#}
-	
 	weight_multiplier = {
 		base = 1
 		modifier = {
@@ -580,10 +555,6 @@ VIETold.0010 = {
 	override_background = { event_background = terrain }
 	
 	right_portrait = root
-
-	#trigger = {
-	#	has_game_rule = VIET_normal_universe_events
-	#}
 	
 	weight_multiplier = {
 		base = 1
@@ -669,10 +640,6 @@ VIETold.0011 = {
 		character = root
 		animation = personality_zealous #personality_cynical
 	}
-
-	#trigger = {
-	#	has_game_rule = VIET_normal_universe_events
-	#}
 	
 	weight_multiplier = {
 		base = 1
