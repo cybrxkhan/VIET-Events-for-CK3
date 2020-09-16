@@ -84,7 +84,7 @@
  VIET_navel_gazing:0 "Introspectivo"
  VIET_navel_gazing_desc:0 ""¿Cuál es el significado de la vida?""
  VIET_impressed_others_with_knowledge:0 "Impresionó a otros con conocimiento"
- xxxxx:0 "xxxxx" VIET_curled_up_with_good_book:0 "Enganchado a los Libros"
+ VIET_curled_up_with_good_book:0 "Enganchado a los Libros"
  VIET_curled_up_with_good_book_desc:0 "¿Quién necesita gente cuando tienes historias de personajes y lugares imaginarios?"
  VIET_constructive_criticism:0 "Dio una Crítica Constructiva"
  VIET_art_censorship:0 "Crítico del Arte"
@@ -113,3 +113,4 @@
  VIET_opinion_doesnt_care_about_me:0 "No se Preocupa por Mí"
  VIET_opinion_interesting_conversation:0 "Conversación Interesante"
  VIET_haunted_by_ghost_for_sin:0 "Atormentado por un Fantasma por sus Pecados"
+ xxxxx:0 "xxxxx"
