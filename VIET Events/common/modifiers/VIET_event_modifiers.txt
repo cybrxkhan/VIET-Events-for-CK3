@@ -324,5 +324,56 @@ VIET_impressed_others_with_knowledge = {
 	monthly_prestige = 0.15
 	general_opinion = 5
 }
+VIET_curled_up_with_good_book = {
+	icon = learning_positive
+	stress_loss_mult = 0.1
+	learning = 1
+}
+VIET_constructive_criticism = {
+	icon = social_positive
+	diplomacy = 1
+}
+VIET_art_censorship = {
+	icon = diplomacy_negative
+	diplomacy = -1
+	monthly_dread = 0.3
+}
+VIET_abstract_religious_art = {
+	icon = piety_positive
+	monthly_piety = 0.35
+	religious_vassal_opinion = 3
+}
+VIET_examined_old_ruins = {
+	icon = rock_positive
+	monthly_lifestyle_xp_gain_mult = 0.08
+}
+VIET_memorable_dramatic_play = {
+	icon = county_modifier_opinion_positive
+	diplomacy = 1
+	monthly_piety = 0.05
+}
+VIET_simple_doesnt_like_drama_play = {
+	icon = social_positive
+	general_opinion = -5
+	intrigue = 1
+}
+VIET_efficient_time = {
+	icon = stewardship_positive
+	diplomacy = 1
+	stewardship = 1
+}
+VIET_caring_leader = {
+	icon = county_modifier_control_positive
+	county_opinion_add = 15
+}
+VIET_noontime_sun_headache = {
+	icon = stress_negative
+	health = -0.1
+}
+VIET_haunted_by_ghost_for_sin = {
+	icon = stress_negative
+	general_opinion = -10
+	monthly_piety = -0.45
+}
 
 

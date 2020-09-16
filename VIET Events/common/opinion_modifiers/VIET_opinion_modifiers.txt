@@ -41,3 +41,24 @@ VIET_opinion_north_african_tea = {
 	decaying = yes
 	opinion = 10
 }
+VIET_opinion_prayed_for_me = {
+	years = 4
+	decaying = yes
+	opinion = 10
+}
+VIET_opinion_nagged_me = {
+	years = 4
+	decaying = yes
+	opinion = -10
+}
+VIET_opinion_doesnt_care_about_me = {
+	years = 4
+	decaying = yes
+	opinion = -10
+}
+VIET_opinion_interesting_conversation = {
+	years = 2
+	decaying = yes
+	opinion = 5
+	stacking = yes
+}
