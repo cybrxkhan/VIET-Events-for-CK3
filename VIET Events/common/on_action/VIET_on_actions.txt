@@ -43,7 +43,7 @@ VIET_events_yearly_pulse = {
 	}
 	random_events = {
 		#chance_to_happen = 99
-		23000 = 0
+		22000 = 0
 		
 		#######################################
 		# OLDEST VIET
@@ -155,7 +155,7 @@ VIET_events_tri_yearly_pulse = {
 	}
 	random_events = {
 		#chance_to_happen = 99
-		19000 = 0
+		18000 = 0
 		
 		#######################################
 		# OLDEST VIET
@@ -169,7 +169,7 @@ VIET_events_tri_yearly_pulse = {
 		100 = VIETold.0011		# Priest needs to determine what kind of pigment to use in manuscript
 		# Food
 		100 = VIETold.0014		# Come across a merchant eating with a fork from the east
-		#100 = VIETold.0016		# North African tea ceremony
+		100 = VIETold.0016		# North African tea ceremony
 		
 		#######################################
 		# OLDER VIET
