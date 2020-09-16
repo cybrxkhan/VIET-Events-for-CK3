@@ -20,8 +20,8 @@
 # ##### GRAND LIST OF EVENTS #####
 # 
 # 0001-0046		Generic
-# 0047-????		Art
-# 
+# 0047-0056		Art
+# 0057-0062		Underworld
 # 
 ############################################################################################################################
 
@@ -83,12 +83,7 @@ VIETmisc.0001 = {
 	
 	option = { # Bravo!
 		name = VIETmisc.0001.a
-		random = {
-			chance = 50
-			send_interface_toast = {
-				add_stress = -25
-			}
-		}
+		add_stress = -50
 		add_character_flag = VIET_heard_Scarborough_Fair_event_happened
 		add_character_modifier = {
 			modifier = VIET_heard_about_Scarborough_Fair
@@ -240,9 +235,7 @@ VIETmisc.0004 = {
 	title = VIETmisc.0004.t
 	desc = VIETmisc.0004.desc
 	theme = friendly
-	override_background = {
-		event_background = corridor_day
-	}
+	override_background = { event_background = corridor_day }
 	
 	right_portrait = {
 		character = root
@@ -701,6 +694,7 @@ VIETmisc.0010 = {
 			40 = {
 				desc = VIETmisc.0010.b.a
 				send_interface_toast = {
+					type = event_toast_effect_good
 					left_icon = ROOT
 					title = VIETmisc.0010.toast.a
 					custom_tooltip = VIETmisc.0010.toast.b.fall
@@ -709,6 +703,7 @@ VIETmisc.0010 = {
 			60 = {
 				desc = VIETmisc.0010.b.b
 				send_interface_toast = {
+					type = event_toast_effect_bad
 					left_icon = ROOT
 					title = VIETmisc.0010.toast.b
 					increase_wounds_no_death_effect = { REASON = fall }
@@ -1545,6 +1540,7 @@ VIETmisc.0023 = {
 				}
 				desc = VIETmisc.0023.b.a
 				send_interface_toast = {
+					type = event_toast_effect_good
 					left_icon = ROOT
 					title = VIETmisc.0023.toast.b.success.title
 					custom_tooltip = VIETmisc.0023.toast.b.success
@@ -1573,6 +1569,7 @@ VIETmisc.0023 = {
 				}
 				desc = VIETmisc.0023.b.b
 				send_interface_toast = {
+					type = event_toast_effect_bad
 					left_icon = ROOT
 					title = VIETmisc.0023.toast.b.failure.title
 					custom_tooltip = VIETmisc.0023.toast.b.failure
@@ -2245,6 +2242,7 @@ VIETmisc.0033 = {
 			70 = {
 				desc = VIETmisc.0033.b.a
 				send_interface_toast = {
+					#type = event_toast_effect_bad
 					left_icon = ROOT
 					title = VIETmisc.0033.toast.a
 					custom_tooltip = VIETmisc.0033.toast.failure
@@ -2253,6 +2251,7 @@ VIETmisc.0033 = {
 			30 = {
 				desc = VIETmisc.0033.b.b
 				send_interface_toast = {
+					#type = event_toast_effect_good
 					left_icon = ROOT
 					title = VIETmisc.0033.toast.b
 					custom_tooltip = VIETmisc.0033.toast.success
@@ -2277,7 +2276,7 @@ VIETmisc.0034 = {
 	type = character_event
 	title = VIETmisc.0034.t
 	desc = VIETmisc.0034.desc
-	theme = VIET_theme_tuscan_country
+	theme = VIET_theme_skyrim_forest
 	
 	left_portrait = { 	
 		character = root
@@ -2761,9 +2760,7 @@ VIETmisc.0041 = {
 	title = VIETmisc.0041.t
 	desc = VIETmisc.0041.desc
 	theme = unfriendly
-	override_background = {
-		event_background = garden
-	}
+	override_background = { event_background = garden }
 	
 	left_portrait = { 	
 		character = scope:scope_VIET_slip_bumper
@@ -2935,6 +2932,7 @@ VIETmisc.0043 = {
 			50 = {
 				desc = VIETmisc.0043.a.a
 				send_interface_toast = {
+					type = event_toast_effect_bad
 					left_icon = ROOT
 					title = VIETmisc.0043.toast.a
 					custom_tooltip = VIETmisc.0043.toast.failure
@@ -2943,8 +2941,9 @@ VIETmisc.0043 = {
 				}			
 			}
 			50 = {
-				desc = VIETmisc.0043.a.a
+				desc = VIETmisc.0043.a.b
 				send_interface_toast = {
+					type = event_toast_effect_good
 					left_icon = ROOT
 					title = VIETmisc.0043.toast.b
 					custom_tooltip = VIETmisc.0043.toast.success
@@ -3176,93 +3175,1343 @@ VIETmisc.0046 = {
 }
 
 ##################################################################
-# ART 0047-00??
+# ART 0047-0056
 ##################################################################
 
 
 # Curl up with a good book?
-#VIETmisc.0047 = {
-#	type = character_event
-#	title = VIETmisc.0047.t
-#	desc = VIETmisc.0047.desc
-#	theme = learning
-#	override_background = { event_background = sitting_room }
-#	
-#	left_portrait = {
-#		character = root
-#		animation = personality_rational
-#	}
-#	
-#
-#	trigger = {
-#		learning >= medium_skill_rating
-#	}
-#	
-#	weight_multiplier = {
-#		base = 1
-#		modifier = {
-#			add = 0.2
-#			has_trait = shy
-#		}
-#		modifier = {
-#			add = -0.2
-#			has_trait = gregarious
-#		}
-#		modifier = {
-#			add = 0.2
-#			has_trait = lazy
-#		}
-#		modifier = {
-#			add = -0.2
-#			has_trait = diligent
-#		}
-#		modifier = {
-#			add = 0.2
-#			has_trait = content
-#		}
-#		modifier = {
-#			add = -0.2
-#			has_trait = ambitious
-#		}
-#	}
-#	
-#	option = { # read
-#		name = VIETmisc.0047.a
-#		if = {
-#			limit = {
-#				OR = {
-#					trait = diligent
-#					trait = ambitious
-#				}
-#			}
-#			stress_impact = {
-#				diligent = minor_stress_impact_gain
-#				ambitious = minor_stress_impact_gain
-#			}
-#		}
-#		else = {
-#			stress_impact = {
-#				base = minor_stress_impact_loss
-#				shy = major_stress_impact_loss
-#			}		
-#		}
-#		prestige = -25
-#		add_character_modifier = {
-#			modifier = VIET_curled_up_with_good_book
-#			years = 5
-#		}
-#	}	
-#	option = { # don't get too into it
-#		name = VIETmisc.0047.b
-#		stress_impact = {
-#			base = miniscule_stress_impact_loss
-#			shy = miniscule_stress_impact_loss
-#		}		
-#		add_character_modifier = {
-#			modifier = VIET_curled_up_with_good_book
-#			years = 1
-#		}
-#	}
-#}
+VIETmisc.0047 = {
+	type = character_event
+	title = VIETmisc.0047.t
+	desc = VIETmisc.0047.desc
+	theme = learning
+	override_background = { event_background = sitting_room }
+	
+	left_portrait = {
+		character = root
+		animation = personality_rational
+	}
+	
+
+	trigger = {
+		learning >= medium_skill_rating
+	}
+	
+	weight_multiplier = {
+		base = 1
+		modifier = {
+			add = 0.2
+			has_trait = shy
+		}
+		modifier = {
+			add = -0.2
+			has_trait = gregarious
+		}
+		modifier = {
+			add = 0.2
+			has_trait = lazy
+		}
+		modifier = {
+			add = -0.2
+			has_trait = diligent
+		}
+		modifier = {
+			add = 0.2
+			has_trait = content
+		}
+		modifier = {
+			add = -0.2
+			has_trait = ambitious
+		}
+	}
+	
+	option = { # read
+		name = VIETmisc.0047.a
+		if = {
+			limit = {
+				OR = {
+					has_trait = diligent
+					has_trait = ambitious
+				}
+			}
+			stress_impact = {
+				diligent = minor_stress_impact_gain
+				ambitious = minor_stress_impact_gain
+			}
+		}
+		else = {
+			stress_impact = {
+				base = minor_stress_impact_loss
+				shy = major_stress_impact_loss
+			}		
+		}
+		prestige = -25
+		add_character_modifier = {
+			modifier = VIET_curled_up_with_good_book
+			years = 5
+		}
+	}	
+	option = { # don't get too into it
+		name = VIETmisc.0047.b
+		stress_impact = {
+			base = miniscule_stress_impact_loss
+			shy = miniscule_stress_impact_loss
+		}		
+		add_character_modifier = {
+			modifier = VIET_curled_up_with_good_book
+			years = 1
+		}
+	}
+}
+
+
+
+# Actors in a play are too melodramatic and suck at acting
+VIETmisc.0048 = {
+	type = character_event
+	title = VIETmisc.0048.t
+	desc = VIETmisc.0048.desc
+	theme = party
+	override_background = { event_background = market }
+	
+	right_portrait = {
+		character = root
+		animation = disapproval
+	}
+	
+	weight_multiplier = {
+		base = 1
+		modifier = {
+			add = 0.2
+			has_trait = gregarious
+		}
+		modifier = {
+			add = -0.2
+			has_trait = shy
+		}
+		modifier = {
+			add = 0.2
+			has_trait = arbitrary
+		}
+		modifier = {
+			add = -0.2
+			has_trait = just
+		}
+		modifier = {
+			add = 0.2
+			has_trait = lustful
+		}
+		modifier = {
+			add = -0.2
+			has_trait = chaste
+		}
+	}
+	
+	option = { # Waste!
+		name = VIETmisc.0048.a
+		add_prestige = -5
+	}	
+	option = { # Give money out of pity
+		name = VIETmisc.0048.b
+		trigger = {
+			has_trait = generous
+		}
+		trait = generous
+		remove_short_term_gold = 5
+		if = {
+			limit = {
+				faith = {
+					trait_is_virtue = generous
+				}
+			}
+			add_piety = 10
+		}
+		stress_impact = {
+			generous = minor_stress_impact_loss
+			wrathful = minor_stress_impact_gain
+			cynical = minor_stress_impact_gain
+		}
+	}	
+	option = { # Lash them
+		name = VIETmisc.0048.c
+		trigger = {
+			has_trait = sadistic
+		}
+		trait = sadistic
+		if = {
+			limit = {
+				faith = {
+					OR = {
+						trait_is_virtue = compassionate					
+						trait_is_virtue = patient					
+						trait_is_virtue = calm					
+						trait_is_virtue = fprgiving					
+					}
+				}
+			}
+			add_piety = -10
+		}
+		add_dread = 5
+		stress_impact = {
+			sadistic = minor_stress_impact_loss
+		}
+	}	
+	option = { # Give them advice
+		name = VIETmisc.0048.d
+		trigger = {
+			diplomacy >= decent_skill_rating			
+		}
+		skill = diplomacy
+		add_character_modifier = {
+			modifier = VIET_constructive_criticism
+			days = 730
+		}
+	}	
+	option = { # Horny option
+		name = { # Into women
+			trigger = {
+				OR = {
+					AND = {
+						is_female = no
+						NOT = { has_sexuality = homosexual }
+					}
+					AND = {
+						is_female = yes
+						OR = {
+							has_sexuality = homosexual						
+							has_sexuality = bisexual						
+						}
+					}
+				}
+			}
+			text = VIETmisc.0048.e
+		}
+		name = { # Into men
+			trigger = {
+				OR = {
+					AND = {
+						is_female = yes
+						NOT = { has_sexuality = homosexual }
+					}
+					AND = {
+						is_female = no
+						OR = {
+							has_sexuality = homosexual						
+							has_sexuality = bisexual						
+						}
+					}
+				}
+			}
+			text = VIETmisc.0048.f
+		}
+		trigger = {
+			NOR = {
+				has_trait = celibate
+				has_sexuality = asexual
+			}			
+		}
+		add_character_modifier = {
+			modifier = VIET_lustful_ruler
+			days = 365
+		}
+	}
+}
+
+
+# Nearby house of worship is descrated by hooligans
+VIETmisc.0049 = {
+	type = character_event
+	title = VIETmisc.0049.t
+	desc = VIETmisc.0049.desc
+	theme = faith
+	
+	right_portrait = {
+		character = root
+		animation = sadness
+	}
+	
+	weight_multiplier = {
+		base = 1
+		modifier = {
+			add = 0.2
+			has_trait = arbitrary
+		}
+		modifier = {
+			add = -0.2
+			has_trait = just
+		}
+		modifier = {
+			add = 0.2
+			has_trait = zealous
+		}
+		modifier = {
+			add = -0.2
+			has_trait = cynical
+		}
+		modifier = {
+			add = 0.2
+			has_trait = lazy
+		}
+		modifier = {
+			add = -0.2
+			has_trait = diligent
+		}
+	}
+	
+	option = { # Not my problem
+		name = VIETmisc.0049.a
+		add_piety = -20
+		stress_impact = {
+			zealous = medium_stress_impact_gain
+			compassionate = miniscule_stress_impact_gain
+			just = miniscule_stress_impact_gain
+		}
+	}	
+	option = { # I'll help
+		name = VIETmisc.0049.b
+		remove_short_term_gold = 20
+		add_piety = 40
+		stress_impact = {
+			cynical = minor_stress_impact_gain
+			greedy = miniscule_stress_impact_gain
+		}
+	}	
+	option = { # I'll help if they help me
+		name = VIETmisc.0049.c
+		remove_short_term_gold = 20
+		add_piety = -10
+		add_prestige = 40
+		stress_impact = {
+			zealous = minor_stress_impact_gain
+			generous = miniscule_stress_impact_gain
+		}
+	}
+}
+
+
+# A famous painter creates very surreal art
+VIETmisc.0050 = {
+	type = character_event
+	title = VIETmisc.0050.t
+	desc = VIETmisc.0050.desc
+	theme = love
+	override_background = { event_background = study }
+	
+	right_portrait = {
+		character = root
+		animation = personality_rational
+	}
+	
+	weight_multiplier = {
+		base = 1
+		modifier = {
+			add = 0.2
+			has_trait = gregarious
+		}
+		modifier = {
+			add = -0.2
+			has_trait = shy
+		}
+		modifier = {
+			add = 0.2
+			has_trait = greedy
+		}
+		modifier = {
+			add = -0.2
+			has_trait = generous
+		}
+		modifier = {
+			add = 0.2
+			has_trait = honest
+		}
+		modifier = {
+			add = -0.2
+			has_trait = deceitful
+		}
+	}
+	
+	option = { # Too strange
+		name = VIETmisc.0050.a
+		add_prestige = 5
+	}	
+	option = { # It's okay
+		name = VIETmisc.0050.b
+		add_piety = 5
+	}	
+	option = { # It's cool!
+		name = VIETmisc.0050.c
+		add_character_modifier = {
+			modifier = VIET_open_to_new_ideas
+			days = 1095
+		}
+	}	
+	option = { # It's bad! 
+		name = VIETmisc.0050.d
+		add_dread = 5
+		add_character_modifier = {
+			modifier = VIET_art_censorship
+			days = 1095
+		}
+	}	
+	option = { # It's cool! - religious
+		name = VIETmisc.0050.e
+		trigger = {
+			has_trait = zealous
+		}
+		trait = zealous
+		add_character_modifier = {
+			modifier = VIET_abstract_religious_art
+			days = 1095
+		}
+	}
+}
+
+
+
+# Rest at old ruin on journey somewhere
+VIETmisc.0051 = {
+	type = character_event
+	title = VIETmisc.0051.t
+	desc = VIETmisc.0051.desc
+	theme = realm
+	override_background = { event_background = VIET_background_ancient_cairn }
+	
+	right_portrait = {
+		character = root
+		animation = personality_rational
+	}
+	
+	weight_multiplier = {
+		base = 1
+		modifier = {
+			add = 0.2
+			has_trait = diligent
+		}
+		modifier = {
+			add = -0.2
+			has_trait = lazy
+		}
+		modifier = {
+			add = 0.2
+			has_trait = patient
+		}
+		modifier = {
+			add = -0.2
+			has_trait = impatient
+		}
+		modifier = {
+			add = 0.2
+			has_trait = ambitious
+		}
+		modifier = {
+			add = -0.2
+			has_trait = content
+		}
+	}
+	
+	option = { # ok
+		name = VIETmisc.0051.a
+		add_character_modifier = {
+			modifier = VIET_examined_old_ruins
+			years = 7
+		}
+	}
+}
+
+
+# Nobleman shows realistic painting of a beautiful woman
+VIETmisc.0052 = {
+	type = character_event
+	title = VIETmisc.0052.t
+	desc = VIETmisc.0052.desc
+	theme = learning
+	
+	right_portrait = {
+		character = root
+		animation = personality_rational
+	}
+	
+	weight_multiplier = {
+		base = 1
+		modifier = {
+			add = 0.2
+			has_trait = gregarious
+		}
+		modifier = {
+			add = -0.2
+			has_trait = shy
+		}
+		modifier = {
+			add = 0.2
+			has_trait = content
+		}
+		modifier = {
+			add = -0.2
+			has_trait = ambitious
+		}
+		modifier = {
+			add = 0.2
+			has_trait = deceitful
+		}
+		modifier = {
+			add = -0.2
+			has_trait = honest
+		}
+	}
+	
+	option = { # ok
+		name = VIETmisc.0052.a
+		random_list = {
+			20 = { add_prestige = 5 }
+			10 = { add_piety = 5 }
+		}
+	}	
+	option = { # horny option
+		name = VIETmisc.0052.b
+		trigger = {
+			NOR = {
+				has_trait = celibate
+				has_sexuality = asexual
+			}
+			OR = {
+				AND = {
+					is_female = no
+					NOT = { has_sexuality = homosexual }
+				}
+				AND = {
+					is_female = yes
+					OR = {
+						has_sexuality = homosexual						
+						has_sexuality = bisexual						
+					}
+				}
+			}		
+		}
+		stress_impact = {
+			chaste = minor_stress_impact_gain
+			lustful = minor_stress_impact_loss
+		}
+		add_character_modifier = {
+			modifier = VIET_lustful_ruler
+			days = 365
+		}
+	}
+}
+
+
+
+# Watching a play about an incestuous couple
+VIETmisc.0053 = {
+	type = character_event
+	title = VIETmisc.0053.t
+	desc = VIETmisc.0053.desc
+	theme = love
+	override_background = { event_background = throne_room }
+	
+	right_portrait = {
+		character = root
+		animation = admiration
+	}
+	
+	weight_multiplier = {
+		base = 1
+		modifier = {
+			add = 0.2
+			has_trait = gregarious
+		}
+		modifier = {
+			add = -0.2
+			has_trait = shy
+		}
+		modifier = {
+			add = 0.2
+			has_trait = gluttonous
+		}
+		modifier = {
+			add = -0.2
+			has_trait = temperate
+		}
+		modifier = {
+			add = 0.2
+			has_trait = lustful
+		}
+		modifier = {
+			add = -0.2
+			has_trait = chaste
+		}
+	}
+	
+	option = { # sad
+		name = VIETmisc.0053.a
+		add_character_modifier = {
+			modifier = VIET_memorable_dramatic_play
+			years = 3
+		}
+	}	
+	option = { # bad
+		name = VIETmisc.0053.b
+		trigger = {
+			faith = {
+				NOR = {
+					has_doctrine = tenet_divine_marriage
+					has_doctrine = doctrine_consanguinity_unrestricted
+				}		
+			}		
+		}
+		add_piety = 5
+		#add_character_modifier = {
+		#	modifier = VIET_prudish_ruler
+		#	years = 3
+		#}
+	}
+	option = { # bored
+		name = VIETmisc.0053.c
+		add_character_modifier = {
+			modifier = VIET_simple_doesnt_like_drama_play
+			years = 3
+		}
+	}
+	option = { # incest religion
+		name = VIETmisc.0053.d
+		trigger = {
+			faith = {
+				OR = {
+					has_doctrine = tenet_divine_marriage
+					has_doctrine = doctrine_consanguinity_unrestricted
+				}		
+			}		
+		}
+		add_piety = 5
+		add_character_modifier = {
+			modifier = VIET_memorable_dramatic_play
+			years = 3
+		}
+	}
+}
+
+
+
+# Impressed with temple artwork while visiting
+VIETmisc.0054 = {
+	type = character_event
+	title = VIETmisc.0054.t
+	desc = VIETmisc.0054.desc
+	theme = faith
+	
+	left_portrait = {
+		character = root
+		animation = admiration
+	}
+	
+	weight_multiplier = {
+		base = 1
+		modifier = {
+			add = 0.2
+			has_trait = zealous
+		}
+		modifier = {
+			add = -0.2
+			has_trait = cynical
+		}
+		modifier = {
+			add = 0.2
+			has_trait = ambitious
+		}
+		modifier = {
+			add = -0.2
+			has_trait = lazy
+		}
+		modifier = {
+			add = 0.2
+			has_trait = fickle
+		}
+		modifier = {
+			add = -0.2
+			has_trait = stubborn
+		}
+	}
+	
+	option = { # religion
+		name = VIETmisc.0054.a
+		add_piety = 4
+		stress_impact = {
+			cynical = miniscule_stress_impact_gain
+		}
+	}	
+	option = { # wish i had it
+		name = VIETmisc.0054.b
+		add_prestige = 4
+		stress_impact = {
+			zealous = miniscule_stress_impact_gain
+		}
+	}
+}
+
+
+# Poet forgets lines in middle of performance
+VIETmisc.0055 = {
+	type = character_event
+	title = VIETmisc.0055.t
+	desc = VIETmisc.0055.desc
+	theme = unfriendly
+	override_background = { event_background = throne_room }
+	
+	left_portrait = {
+		character = root
+		animation = personality_callous
+	}
+	
+	weight_multiplier = {
+		base = 1
+		modifier = {
+			add = 0.2
+			has_trait = patient
+		}
+		modifier = {
+			add = -0.2
+			has_trait = impatient
+		}
+		modifier = {
+			add = 0.2
+			has_trait = callous
+		}
+		modifier = {
+			add = -0.2
+			has_trait = compassionate
+		}
+		modifier = {
+			add = 0.2
+			has_trait = arrogant
+		}
+		modifier = {
+			add = -0.2
+			has_trait = humble
+		}
+	}
+	
+	option = { # lol
+		name = VIETmisc.0055.a
+		add_prestige = 10
+	}	
+	option = { # laugh
+		name = VIETmisc.0055.b
+		add_dread = 5
+		stress_impact = {
+			compassionate = minor_stress_impact_gain
+			sadistic = minor_stress_impact_loss
+		}
+	}	
+	option = { # comfort
+		name = VIETmisc.0055.c
+		add_piety = 10
+		stress_impact = {
+			forgiving = minor_stress_impact_loss
+			callous = minor_stress_impact_gain
+		}
+	}
+}
+
+
+
+# Bard's lute breaks in middle of performance
+VIETmisc.0056 = {
+	type = character_event
+	title = VIETmisc.0056.t
+	desc = VIETmisc.0056.desc
+	theme = unfriendly
+	override_background = { event_background = feast }
+	
+	left_portrait = {
+		character = root
+		animation = personality_callous
+	}
+	
+	weight_multiplier = {
+		base = 1
+		modifier = {
+			add = 0.2
+			has_trait = patient
+		}
+		modifier = {
+			add = -0.2
+			has_trait = impatient
+		}
+		modifier = {
+			add = 0.2
+			has_trait = callous
+		}
+		modifier = {
+			add = -0.2
+			has_trait = compassionate
+		}
+		modifier = {
+			add = 0.2
+			has_trait = arrogant
+		}
+		modifier = {
+			add = -0.2
+			has_trait = humble
+		}
+	}
+	
+	option = { # lol
+		name = VIETmisc.0056.a
+	}	
+	option = { # laugh
+		name = VIETmisc.0056.b
+		add_dread = 5
+		add_prestige = -5
+		stress_impact = {
+			compassionate = minor_stress_impact_gain
+			sadistic = minor_stress_impact_gain
+		}
+	}	
+	option = { # give money for drink and new lute
+		name = VIETmisc.0056.c
+		remove_short_term_gold = 5
+		add_prestige = 10
+		stress_impact = {
+			compassionate = minor_stress_impact_loss
+			greedy = minor_stress_impact_gain
+		}
+	}
+}
+
+
+##################################################################
+# HELL 0057-0062
+##################################################################
+
+
+# Come across a preacher ranting about how people need to repent
+VIETmisc.0057 = {
+	type = character_event
+	title = VIETmisc.0057.t
+	desc = VIETmisc.0057.desc
+	theme = faith
+	override_background = { event_background = market }
+	
+	left_portrait = {
+		character = root
+		animation = personality_callous
+	}
+	
+	weight_multiplier = {
+		base = 1
+		modifier = {
+			add = 0.2
+			has_trait = trusting
+		}
+		modifier = {
+			add = -0.2
+			has_trait = paranoid
+		}
+		modifier = {
+			add = 0.2
+			has_trait = patient
+		}
+		modifier = {
+			add = -0.2
+			has_trait = impatient
+		}
+		modifier = {
+			add = 0.2
+			has_trait = gregarious
+		}
+		modifier = {
+			add = -0.2
+			has_trait = shy
+		}
+	}
+	
+	option = { # Repent!
+		name = VIETmisc.0057.a
+		trigger = {
+			has_trait = zealous
+		}
+		trait = zealous
+		add_piety = 10
+		add_prestige = -5
+	}	
+	option = { # Trust in heaven
+		name = VIETmisc.0057.b
+		trigger = {
+			NOT = { has_trait = cynical }
+		}
+		add_piety = 5
+	}	
+	option = { # He's a fraud
+		name = VIETmisc.0057.c
+		add_prestige = 5
+		stress_impact = {
+			trusting = miniscule_stress_impact_gain
+		}
+	}	
+	option = { # Guards, kick him out!
+		name = VIETmisc.0057.d
+		add_dread = 5
+		stress_impact = {
+			patient = miniscule_stress_impact_gain
+			forgiving = miniscule_stress_impact_gain
+		}
+	}
+}
+
+
+
+# Dreamt of going to hell
+VIETmisc.0058 = {
+	type = character_event
+	title = VIETmisc.0058.t
+	desc = VIETmisc.0058.desc
+	theme = VIET_theme_nightmare
+	
+	left_portrait = {
+		character = root
+		animation = beg
+	}
+	
+	weight_multiplier = {
+		base = 1
+		modifier = {
+			add = 0.2
+			has_trait = zealous
+		}
+		modifier = {
+			add = -0.2
+			has_trait = cynical
+		}
+		modifier = {
+			add = 0.2
+			has_trait = sadistic
+		}
+		modifier = {
+			add = -0.2
+			has_trait = compassionate
+		}
+		modifier = {
+			add = 0.2
+			has_trait = lustful
+		}
+		modifier = {
+			add = -0.2
+			has_trait = chaste
+		}
+	}
+	
+	option = { # ok
+		name = VIETmisc.0058.a
+		add_stress = 16
+	}	
+	option = { # be more virtuous
+		name = VIETmisc.0058.b
+		add_stress = 8
+		add_piety = 5
+		add_prestige = -5
+	}
+}
+
+
+
+# Elder tells about the Gates of Hell
+VIETmisc.0059 = {
+	type = character_event
+	title = VIETmisc.0059.t
+	desc = VIETmisc.0059.desc
+	theme = VIET_theme_small_town
+	
+	left_portrait = {
+		character = root
+		animation = personality_rational
+	}
+	
+	weight_multiplier = {
+		base = 1
+		modifier = {
+			add = 0.2
+			has_trait = gregarious
+		}
+		modifier = {
+			add = -0.2
+			has_trait = shy
+		}
+		modifier = {
+			add = 0.2
+			has_trait = humble
+		}
+		modifier = {
+			add = -0.2
+			has_trait = arrogant
+		}
+		modifier = {
+			add = 0.2
+			has_trait = patient
+		}
+		modifier = {
+			add = -0.2
+			has_trait = impatient
+		}
+	}
+	
+	option = { # ok
+		name = VIETmisc.0059.a
+		add_character_modifier = {
+			modifier = VIET_learning_local_lore
+			years = 4
+		}
+	}
+}
+
+
+
+# Village elder claims she reformed after demons took her on a trip to hell when she was young
+VIETmisc.0060 = {
+	type = character_event
+	title = VIETmisc.0060.t
+	desc = VIETmisc.0060.desc
+	theme = VIET_theme_small_town
+	
+	left_portrait = {
+		character = root
+		animation = personality_cynical
+	}
+	
+	weight_multiplier = {
+		base = 1
+		modifier = {
+			add = 0.2
+			has_trait = gregarious
+		}
+		modifier = {
+			add = -0.2
+			has_trait = shy
+		}
+		modifier = {
+			add = 0.2
+			has_trait = patient
+		}
+		modifier = {
+			add = -0.2
+			has_trait = impatient
+		}
+		modifier = {
+			add = 0.2
+			has_trait = calm
+		}
+		modifier = {
+			add = -0.2
+			has_trait = wrathful
+		}
+	}
+	
+	option = { # ok
+		name = VIETmisc.0060.a
+		add_prestige = 5
+		add_character_modifier = {
+			modifier = VIET_interesting_talk_with_stranger
+			days = 730
+		}
+	}	
+	option = { # faith inspires us!
+		name = VIETmisc.0060.b
+		add_piety = 5
+		add_character_modifier = {
+			modifier = VIET_interesting_talk_with_stranger
+			days = 730
+		}
+		stress_impact = {
+			cynical = miniscule_stress_impact_gain
+		}
+	}
+	option = { # nonsense!
+		name = VIETmisc.0060.c
+		add_character_modifier = {
+			modifier = VIET_skeptical_about_fantasy_stories
+			days = 730
+		}
+		stress_impact = {
+			patient = miniscule_stress_impact_gain
+			zealous = miniscule_stress_impact_gain
+			trusting = miniscule_stress_impact_gain
+		}
+	}
+}
+
+
+
+
+# Courtier is haunted by a ghost that tells them to repent for their sins
+VIETmisc.0061 = {
+	type = character_event
+	title = VIETmisc.0061.t
+	desc = VIETmisc.0061.desc
+	theme = secret
+	
+	left_portrait = {
+		character = root
+		animation = personality_callous
+	}	
+	right_portrait = {
+		character = scope:scope_VIET_haunted_sinner
+		animation = fear
+	}
+	
+	trigger = {
+		any_courtier = {
+			is_available_ai_adult = yes
+			num_sinful_traits >= 1
+			num_virtuous_traits <= 1
+		}	
+	}
+	
+	weight_multiplier = {
+		base = 1
+		modifier = {
+			add = 0.2
+			has_trait = honest
+		}
+		modifier = {
+			add = -0.2
+			has_trait = deceitful
+		}
+		modifier = {
+			add = 0.2
+			has_trait = trusting
+		}
+		modifier = {
+			add = -0.2
+			has_trait = paranoid
+		}
+		modifier = {
+			add = 0.2
+			has_trait = cynical
+		}
+		modifier = {
+			add = -0.2
+			has_trait = zealous
+		}
+	}	
+	
+	immediate = {
+		random_courtier = {
+			limit = {
+				is_available_ai_adult = yes
+				num_sinful_traits >= 1
+				num_virtuous_traits <= 1
+			}
+			save_scope_as = scope_VIET_haunted_sinner
+		}
+	}
+	
+	option = { # pray
+		name = VIETmisc.0061.a
+		add_piety = 5
+		stress_impact = {
+			cynical = miniscule_stress_impact_gain
+		}
+		scope:scope_VIET_haunted_sinner = {
+			add_character_modifier = {
+				modifier = VIET_haunted_by_ghost_for_sin
+				years = 3
+			}
+			add_opinion = {
+				target = root
+				modifier = VIET_opinion_prayed_for_me
+			}		
+		}
+	}	
+	option = { # reform!
+		name = VIETmisc.0061.b
+		add_piety = 5
+		stress_impact = {
+			humble = miniscule_stress_impact_gain
+			zealous = minor_stress_impact_gain
+		}
+		scope:scope_VIET_haunted_sinner = {
+			add_character_modifier = {
+				modifier = VIET_haunted_by_ghost_for_sin
+				years = 3
+			}
+			add_opinion = {
+				target = root
+				modifier = VIET_opinion_nagged_me
+			}		
+		}
+	}
+	option = { # not my problem
+		name = VIETmisc.0061.c
+		add_dread = 5
+		stress_impact = {
+			compassionate = minor_stress_impact_gain
+		}
+		scope:scope_VIET_haunted_sinner = {
+			add_character_modifier = {
+				modifier = VIET_haunted_by_ghost_for_sin
+				years = 6
+			}
+			add_opinion = {
+				target = root
+				modifier = VIET_opinion_doesnt_care_about_me
+			}		
+		}
+	}
+	option = { # liar
+		name = VIETmisc.0061.d
+		add_dread = 5
+		stress_impact = {
+			cynical = minor_stress_impact_loss
+			trusting = minor_stress_impact_gain
+		}
+		scope:scope_VIET_haunted_sinner = {
+			add_character_modifier = {
+				modifier = VIET_haunted_by_ghost_for_sin
+				years = 6
+			}
+			add_opinion = {
+				target = root
+				modifier = VIET_opinion_doesnt_care_about_me
+			}		
+		}
+	}
+}
+
+
+
+# Talking with courtier about what hell is like
+VIETmisc.0062 = {
+	type = character_event
+	title = VIETmisc.0062.t
+	desc = VIETmisc.0062.desc
+	theme = faith	
+	override_background = { event_background = garden }
+	
+	left_portrait = {
+		character = root
+		animation = personality_cynical
+	}	
+	right_portrait = {
+		character = scope:scope_VIET_hell_wonderer
+		animation = personality_rational
+	}
+	
+	trigger = {
+		any_courtier = {
+			is_available_ai_adult = yes
+		}	
+	}
+	
+	weight_multiplier = {
+		base = 1
+		modifier = {
+			add = 0.2
+			has_trait = honest
+		}
+		modifier = {
+			add = -0.2
+			has_trait = deceitful
+		}
+		modifier = {
+			add = 0.2
+			has_trait = gregarious
+		}
+		modifier = {
+			add = -0.2
+			has_trait = shy
+		}
+		modifier = {
+			add = 0.2
+			has_trait = brave
+		}
+		modifier = {
+			add = -0.2
+			has_trait = craven
+		}
+	}	
+	
+	immediate = {
+		random_courtier = {
+			limit = {
+				is_available_ai_adult = yes
+			}
+			save_scope_as = scope_VIET_hell_wonderer
+		}
+	}
+	
+	option = { # Hot hell
+		name = VIETmisc.0062.a
+		scope:scope_VIET_hell_wonderer = {
+			add_opinion = {
+				target = root
+				modifier = VIET_opinion_interesting_conversation
+			}
+			reverse_add_opinion = {
+				target = root
+				modifier = VIET_opinion_interesting_conversation
+			}		
+		}
+	}	
+	option = { # Cold hell
+		name = VIETmisc.0062.b
+		scope:scope_VIET_hell_wonderer = {
+			add_opinion = {
+				target = root
+				modifier = VIET_opinion_interesting_conversation
+			}
+			reverse_add_opinion = {
+				target = root
+				modifier = VIET_opinion_interesting_conversation
+			}		
+		}
+	}	
+	option = { # Don't talk
+		name = VIETmisc.0062.c
+		add_piety = 5
+		add_dread = 3
+		scope:scope_VIET_hell_wonderer = {
+			add_opinion = {
+				target = root
+				modifier = VIET_opinion_nagged_me
+			}		
+		}
+	}	
+	option = { # Focus on living good lives
+		name = VIETmisc.0062.d
+		add_piety = 5
+		stress_impact = {
+			cynical = miniscule_stress_impact_gain
+		}
+		scope:scope_VIET_hell_wonderer = {
+			add_opinion = {
+				target = root
+				modifier = VIET_opinion_interesting_conversation
+			}
+			reverse_add_opinion = {
+				target = root
+				modifier = VIET_opinion_interesting_conversation
+			}		
+		}
+	}	
+	option = { # Cynical option
+		name = VIETmisc.0062.e
+		trigger = {
+			has_trait = cynical
+		}
+		trait = cynical
+		add_prestige = 5
+		stress_impact = {
+			craven = miniscule_stress_impact_gain
+		}
+		scope:scope_VIET_hell_wonderer = {
+			add_opinion = {
+				target = root
+				modifier = VIET_opinion_interesting_conversation
+			}
+			reverse_add_opinion = {
+				target = root
+				modifier = VIET_opinion_interesting_conversation
+			}		
+		}
+	}
+}
 
 

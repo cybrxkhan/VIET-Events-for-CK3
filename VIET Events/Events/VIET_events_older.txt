@@ -12,6 +12,7 @@
 # 1011-1015		Bitter
 # 1016-1020		Eggs
 # 1021-1024		Furniture
+# 1025-1029		Time
 # 
 ############################################################################################################################
 
@@ -1625,3 +1626,313 @@ VIETold.1024 = {
 		}
 	}
 }
+
+
+###################################################################################
+# TIME 1025-1029
+###################################################################################
+
+
+# Character receives an hourglass - potential for ARTIFACT in the future
+VIETold.1025 = {
+	type = character_event
+	title = VIETold.1025.t
+	desc = VIETold.1025.desc
+	theme = stewardship	
+	
+	left_portrait = {
+		character = root
+		animation = personality_forgiving
+	}
+	
+	trigger = {
+		NOT = { has_character_flag = VIET_hourglass_event_happened }
+	}
+	
+	weight_multiplier = {
+		base = 1
+		modifier = {
+			add = 0.2
+			has_trait = gregarious
+		}
+		modifier = {
+			add = -0.2
+			has_trait = shy
+		}
+		modifier = {
+			add = 0.2
+			has_trait = generous
+		}
+		modifier = {
+			add = -0.2
+			has_trait = greedy
+		}
+		modifier = {
+			add = 0.2
+			has_trait = patient
+		}
+		modifier = {
+			add = -0.2
+			has_trait = impatient
+		}
+	}
+	
+	option = { # Cool
+		name = VIETold.1025.a
+		add_character_flag = VIET_hourglass_event_happened
+		add_character_modifier = {
+			modifier = VIET_efficient_time
+			years = 5
+		}
+	}
+}
+
+# You overslept, oh no
+VIETold.1026 = {
+	type = character_event
+	title = VIETold.1026.t
+	desc = VIETold.1026.desc
+	theme = stewardship_duty_focus	
+	
+	left_portrait = {
+		character = root
+		animation = personality_vengeful
+	}
+
+	
+	weight_multiplier = {
+		base = 1
+		modifier = {
+			add = 0.2
+			has_trait = lazy
+		}
+		modifier = {
+			add = -0.2
+			has_trait = diligent
+		}
+		modifier = {
+			add = 0.2
+			has_trait = shy
+		}
+		modifier = {
+			add = -0.2
+			has_trait = gregarious
+		}
+		modifier = {
+			add = 0.2
+			has_trait = lustful
+		}
+		modifier = {
+			add = -0.2
+			has_trait = chaste
+		}
+	}
+	
+	option = { # Whoops
+		name = VIETold.1026.a
+		random_list = {
+			10 = { add_prestige = -5 }
+			10 = { add_prestige = -10 }
+			10 = { add_prestige = -15 }
+			10 = { add_prestige = -20 }
+		}
+		stress_impact = {
+			diligent = minor_stress_impact_gain
+			lazy = minor_stress_impact_loss
+		}
+	}
+}
+
+# You get a new servant who is very diligent
+VIETold.1027 = {
+	type = character_event
+	title = VIETold.1027.t
+	desc = VIETold.1027.desc
+	theme = family	
+	
+	left_portrait = {
+		character = root
+		animation = personality_compassionate
+	}
+
+	
+	weight_multiplier = {
+		base = 1
+		modifier = {
+			add = 0.2
+			has_trait = trusting
+		}
+		modifier = {
+			add = -0.2
+			has_trait = paranoid
+		}
+		modifier = {
+			add = 0.2
+			has_trait = humble
+		}
+		modifier = {
+			add = -0.2
+			has_trait = arrogant
+		}
+		modifier = {
+			add = 0.2
+			has_trait = compassionate
+		}
+		modifier = {
+			add = -0.2
+			has_trait = callous
+		}
+	}
+	
+	option = { # Whoops
+		name = VIETold.1027.a
+		add_character_modifier = {
+				modifier = VIET_efficient_time
+				years = 8
+			}
+		}
+	}
+}
+
+
+# Fire in village doesn't spiral out of control because of water in the clock tower
+VIETold.1028 = {
+	type = character_event
+	title = VIETold.1028.t
+	desc = VIETold.1028.desc
+	theme = realm	
+	
+	right_portrait = {
+		character = root
+		animation = personality_forgiving
+	}
+
+	
+	weight_multiplier = {
+		base = 1
+		modifier = {
+			add = 0.2
+			has_trait = just
+		}
+		modifier = {
+			add = -0.2
+			has_trait = arbitrary
+		}
+		modifier = {
+			add = 0.2
+			has_trait = lazy
+		}
+		modifier = {
+			add = -0.2
+			has_trait = diligent
+		}
+		modifier = {
+			add = 0.2
+			has_trait = gregarious
+		}
+		modifier = {
+			add = -0.2
+			has_trait = shy
+		}
+	}
+	
+	option = { # Ok
+		name = VIETold.1028.a
+		stress_impact = {
+			generous = miniscule_stress_impact_gain
+			compassionate = miniscule_stress_impact_gain
+		}
+	}	
+	option = { # Help them
+		name = VIETold.1028.b
+		remove_short_term_gold = -15
+		add_piety = 10
+		add_character_modifier = {
+			modifier = VIET_caring_leader
+			years = 8
+		}
+		stress_impact = {
+			callous = miniscule_stress_impact_gain
+			greedy = miniscule_stress_impact_gain
+		}
+	}
+}
+
+
+
+# Doing work outside in the sun at noon gives you a headache
+VIETold.1029 = {
+	type = character_event
+	title = VIETold.1029.t
+	desc = VIETold.1029.desc
+	theme = stress	
+	
+	right_portrait = {
+		character = root
+		animation = personality_forgiving
+	}
+
+	
+	weight_multiplier = {
+		base = 1
+		modifier = {
+			add = 0.2
+			has_trait = diligent
+		}
+		modifier = {
+			add = -0.2
+			has_trait = lazy
+		}
+		modifier = {
+			add = 0.2
+			has_trait = impatient
+		}
+		modifier = {
+			add = -0.2
+			has_trait = patient
+		}
+		modifier = {
+			add = 0.2
+			has_trait = humble
+		}
+		modifier = {
+			add = -0.2
+			has_trait = arrogant
+		}
+	}
+	
+	option = { # Go inside
+		name = VIETold.1029.a
+		random = {
+			chance = 25
+			send_interface_toast = {
+				type = event_toast_effect_bad
+				add_character_modifier = {
+					modifier = VIET_noontime_sun_headache
+					days = 543
+				}
+			}
+		}
+		stress_impact = {
+			diligent = miniscule_stress_impact_gain
+		}
+	}	
+	option = { # Help them
+		name = VIETold.1029.b
+		random = {
+			chance = 75
+			send_interface_toast = {
+				type = event_toast_effect_bad
+				add_character_modifier = {
+					modifier = VIET_noontime_sun_headache
+					days = 543
+				}
+			}
+		}
+		stress_impact = {
+			callous = miniscule_stress_impact_gain
+			greedy = miniscule_stress_impact_gain
+		}
+	}
+}
+
