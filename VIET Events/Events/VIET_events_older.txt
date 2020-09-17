@@ -1787,9 +1787,8 @@ VIETold.1027 = {
 	option = { # Whoops
 		name = VIETold.1027.a
 		add_character_modifier = {
-				modifier = VIET_efficient_time
-				years = 8
-			}
+			modifier = VIET_efficient_time
+			years = 8
 		}
 	}
 }
@@ -1845,7 +1844,7 @@ VIETold.1028 = {
 	}	
 	option = { # Help them
 		name = VIETold.1028.b
-		remove_short_term_gold = -15
+		remove_short_term_gold = 15
 		add_piety = 10
 		add_character_modifier = {
 			modifier = VIET_caring_leader
@@ -1865,7 +1864,7 @@ VIETold.1029 = {
 	type = character_event
 	title = VIETold.1029.t
 	desc = VIETold.1029.desc
-	theme = stress	
+	theme = VIET_theme_tuscan_country	
 	
 	right_portrait = {
 		character = root
@@ -1917,7 +1916,7 @@ VIETold.1029 = {
 			diligent = miniscule_stress_impact_gain
 		}
 	}	
-	option = { # Help them
+	option = { # Do work
 		name = VIETold.1029.b
 		random = {
 			chance = 75
@@ -1929,6 +1928,7 @@ VIETold.1029 = {
 				}
 			}
 		}
+		add_prestige = 20
 		stress_impact = {
 			callous = miniscule_stress_impact_gain
 			greedy = miniscule_stress_impact_gain

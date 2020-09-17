@@ -1127,104 +1127,106 @@ VIETold.0015 = {
 }
 
 
-## North African tea ceremony
-#VIETold.0016 = {
-#	type = character_event
-#	title = VIETold.0016.t
-#	desc = VIETold.0016.desc
-#	theme = feast_activity
-#	
-#	left_portrait = {
-#		character = root
-#		animation = personality_content
-#	}	
-#	right_portrait = {
-#		character = scope:scope_VIET_north_african_tea_vassal
-#		animation = happiness
-#	}
-#
-#	trigger = {
-#		NOT = { has_game_rule = VIET_conversion_universe_events }
-#		OR = {
-#			has_culture_group = culture_group:berber_group	
-#			has_culture = culture:andalusian
-#			has_culture = culture:egyptian
-#		}
-#		any_vassal = {
-#			is_available_ai_adult = yes
-#			OR = {
-#				has_culture_group = culture_group:berber_group	
-#				has_culture = culture:andalusian
-#				has_culture = culture:egyptian
-#			}
-#		}
-#	}
-#	
-#	weight_multiplier = {
-#		base = 1
-#		modifier = {
-#			add = 0.2
-#			has_trait = gluttonous
-#		}
-#		modifier = {
-#			add = -0.2
-#			has_trait = temperate
-#		}
-#		modifier = {
-#			add = 0.2
-#			has_trait = fickle
-#		}
-#		modifier = {
-#			add = -0.2
-#			has_trait = stubborn
-#		}
-#		modifier = {
-#			add = 0.2
-#			has_trait = lazy
-#		}
-#		modifier = {
-#			add = -0.2
-#			has_trait = diligent
-#		}
-#	}
-#	
-#	immediate = {
-#		any_vassal = { # Not working for some reason?
-#			limit = {
-#				is_available_ai_adult = yes
-#				OR = {
-#					has_culture_group = culture_group:berber_group	
-#					has_culture = culture:andalusian
-#					has_culture = culture:egyptian
-#				}
-#			}
-#			save_scope_as = scope_VIET_north_african_tea_vassal
-#		}
-#	}
-#
-#	
-#	option = { # Nice
-#		name = VIETold.0016.a
-#		stress_impact = {
-#			base = minor_stress_impact_loss
-#			calm = miniscule_stress_impact_loss
-#		}
-#		scope:scope_VIET_north_african_tea_vassal = {
-#			stress_impact = {
-#				base = minor_stress_impact_loss
-#				calm = miniscule_stress_impact_loss
-#			}
-#			add_opinion = {
-#				target = root
-#				modifier = VIET_opinion_north_african_tea
-#			}
-#			reverse_add_opinion = {
-#				target = root
-#				modifier = VIET_opinion_north_african_tea
-#			}			
-#		}
-#	}
-#}
+# North African tea ceremony
+VIETold.0016 = {
+	type = character_event
+	title = VIETold.0016.t
+	desc = VIETold.0016.desc
+	theme = vassal
+	
+	left_portrait = {
+		character = root
+		animation = personality_content
+	}	
+	right_portrait = {
+		character = scope:scope_VIET_north_african_tea_vassal
+		animation = happiness
+	}
+
+	trigger = {
+		NOT = { has_game_rule = VIET_conversion_universe_events }
+		OR = {
+			has_culture_group = culture_group:berber_group	
+			has_culture = culture:andalusian
+			has_culture = culture:egyptian
+		}
+		any_vassal = {
+			is_available_ai_adult = yes
+			OR = {
+				has_culture_group = culture_group:berber_group	
+				has_culture = culture:andalusian
+				has_culture = culture:egyptian
+			}
+		}
+	}
+	
+	weight_multiplier = {
+		base = 1
+		modifier = {
+			add = 0.2
+			has_trait = gluttonous
+		}
+		modifier = {
+			add = -0.2
+			has_trait = temperate
+		}
+		modifier = {
+			add = 0.2
+			has_trait = fickle
+		}
+		modifier = {
+			add = -0.2
+			has_trait = stubborn
+		}
+		modifier = {
+			add = 0.2
+			has_trait = lazy
+		}
+		modifier = {
+			add = -0.2
+			has_trait = diligent
+		}
+	}
+	
+	immediate = {
+		random_vassal = { # Use random_vassal not any_vassal d'oh
+			limit = {
+				is_available_ai_adult = yes
+				OR = {
+					has_culture_group = culture_group:berber_group	
+					has_culture = culture:andalusian
+					has_culture = culture:egyptian
+				}
+			}
+			save_scope_as = scope_VIET_north_african_tea_vassal
+		}
+	}
+
+	
+	option = { # Nice
+		name = VIETold.0016.a
+		stress_impact = {
+			base = minor_stress_impact_loss
+			calm = miniscule_stress_impact_loss
+			gregarious = miniscule_stress_impact_loss
+		}
+		scope:scope_VIET_north_african_tea_vassal = {
+			stress_impact = {
+				base = minor_stress_impact_loss
+				calm = miniscule_stress_impact_loss
+				gregarious = miniscule_stress_impact_loss
+			}
+			add_opinion = {
+				target = root
+				modifier = VIET_opinion_north_african_tea
+			}
+			reverse_add_opinion = {
+				target = root
+				modifier = VIET_opinion_north_african_tea
+			}			
+		}
+	}
+}
 
 
 
