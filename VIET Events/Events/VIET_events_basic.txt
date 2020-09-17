@@ -637,7 +637,11 @@ VIETmisc.0010 = {
 	right_portrait = {
 		character = root
 		animation = stress
-	} 
+	}
+	
+	trigger = {
+		NOT = { has_game_rule = VIET_serious_events }
+	}
 	
 	weight_multiplier = {
 		base = 1
@@ -1471,7 +1475,11 @@ VIETmisc.0023 = {
 	right_portrait = {
 		character = root
 		animation = pain
-	} 
+	}
+	
+	trigger = {
+		NOT = { has_game_rule = VIET_serious_events }
+	}
 	
 	weight_multiplier = {
 		base = 1
