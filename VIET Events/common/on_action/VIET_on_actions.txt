@@ -43,7 +43,7 @@ VIET_events_yearly_pulse = {
 	}
 	random_events = {
 		#chance_to_happen = 99
-		22000 = 0
+		24000 = 0 # 24000
 		
 		#######################################
 		# OLDEST VIET
@@ -155,7 +155,7 @@ VIET_events_tri_yearly_pulse = {
 	}
 	random_events = {
 		#chance_to_happen = 99
-		18000 = 0
+		20000 = 0 # 20000?
 		
 		#######################################
 		# OLDEST VIET
@@ -256,7 +256,7 @@ VIET_events_five_yearly_pulse = {
 	}
 	random_events = {
 		#chance_to_happen = 99
-		15000 = 0
+		16000 = 0 # 16000?
 		
 		#######################################
 		# OLDEST VIET

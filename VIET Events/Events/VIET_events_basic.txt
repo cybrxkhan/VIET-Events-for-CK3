@@ -3253,7 +3253,7 @@ VIETmisc.0047 = {
 				shy = major_stress_impact_loss
 			}		
 		}
-		prestige = -25
+		add_prestige = -25
 		add_character_modifier = {
 			modifier = VIET_curled_up_with_good_book
 			years = 5
@@ -3353,7 +3353,7 @@ VIETmisc.0048 = {
 						trait_is_virtue = compassionate					
 						trait_is_virtue = patient					
 						trait_is_virtue = calm					
-						trait_is_virtue = fprgiving					
+						trait_is_virtue = forgiving					
 					}
 				}
 			}

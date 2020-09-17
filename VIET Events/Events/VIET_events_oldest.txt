@@ -1189,7 +1189,7 @@ VIETold.0016 = {
 	}
 	
 	immediate = {
-		any_vassal = { # Not working for some reason?
+		random_vassal = { # Use random_vassal not any_vassal d'oh
 			limit = {
 				is_available_ai_adult = yes
 				OR = {
