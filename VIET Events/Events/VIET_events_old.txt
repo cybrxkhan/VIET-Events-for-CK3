@@ -112,7 +112,7 @@ VIETold.2002 = {
 	type = character_event
 	title = VIETold.2002.t
 	desc = VIETold.2002.desc
-	theme = VIET_theme_oblivion_pastoral_dream
+	theme = VIET_theme_tuscan_country
 	
 	right_portrait = {
 		character = root
