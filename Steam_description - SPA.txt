@@ -1,0 +1,83 @@
+[img]http://i.imgur.com/OhIA5bm.jpg[/img]
+
+[h1]Versión actual: 1.0.1 "Hieronymus Bosch" (Salida 9/16/20, Compatible con versión vanilla 1.0.X)[/h1]
+[B]Echa un Vistazo a [url=https://forum.paradoxplaza.com/forum/threads/mod-viet-events-for-ck3-a-flavor-and-immersion-event-mod.1422081/]Tema del Foro[/url] Para Más Información[/B]
+[B]Descarga/Instalación manual [url=https://github.com/cybrxkhan/VIET-Events-for-CK3/releases]on Github[/url]
+[/B]
+
+Very Immersive Events and Tales (VIET), la secuela de [url=https://steamcommunity.com/sharedfiles/filedetails/?id=1601402546]VIET Events Reborn para CK2[/url], es un mod que añade una vasta colección de eventos sobre la vida diaria para darle chispa a tu partida. Estos eventos añaden inmersión y diversidad de experiencias con nuevos eventos y cadenas, y cubren desde las más mundanas minuncias como pequeñas charlas con cortesanos y comer comida local hasta historias épicas sobre amor, filosofia y la condición humana.
+
+Además de nuevos eventos, intento adaptar muchos de los eventos del viejo VIET de CK2 siempre que sea posible. Espero que estos ocho años (con algún parón) creando mods para CK2 me ayuden a dar una experiencia divertida a cualquier jugador interesado en mis mods.
+
+Ten en cuenta que esta es una vresión temprana de VIET, así que acepto cualquier crítica constructiva - Aún estoy pillándole el truco a modificar CK3. No dudes en avisarme si encuentras algún fallo, o si crees que los eventos saltan muy frecuentemente. Aunque los eventos pueden ser repetitivos si juegas mucho, pues aún no he añadido muchos (igual ocurre con los eventos del CK3 vanilla), [B]Espero poder ir añadiendo más eventos en cada actualización![/B]
+
+[B]¡[U]VIET [I]FUNCIONARÁ[/I] CON GUARDADOS EXISTENTES![/U][/B] (Pero recuerda hacer una copia de seguridad por si las moscas.)
+
+Siéntete libre de usar mi trabajo con tus mods - todo lo que pido es reconocimiento y (si es posible) un aviso. ¡Y si te gusta el mod, dale a favoritos y pulgar arriba!
+
+[img]http://i.imgur.com/FaFtOmm.gif[/img]
+
+
+[img]http://i.imgur.com/EyXurbK.jpg[/img]
+
+[LIST]
+[*]Más de [B]141 nuevos eventos[/B] y cadenas, y aún se añadirán más con cada actualización
+[*]Regla de juego para desactivar los eventos estúpidos para aquellos que no les guste, con tres niveles para escoger entre: Balanceado (Predeterminado), Serio (Restringido), y Todos los eventos (Todo)
+[*][B]Compatible con casi cualquier cosa[/B] ya que no modifico archivos del vanilla - incluso con mods de conversión total puedes desactivar los eventos que hagan referencias a cosas o lugares específicos del mundo medieval que no tendrían sentido en otros periodos o universos (como mods fantásticos o de ciencia ficción)
+[*]Aprende historia con las [B]descripciones de Contexto Histórico[/B] que proporcionan información sobre la inspiración detrás de algunos eventos - a veces, ¡la realidad supera la ficción! (Estos se pueden desactivar con una regla de juego para aquellos que creen que no ayuda a la inmersión.)
+[*]¡NO es compatible con los logros!
+[/LIST]
+
+[h1]TRADUCCIONES DISPONIBLES[/h1]
+¡Ahora tenemos cubiertos los idiomas oficiales! Por favvor, tened en cuenta que debido a mi horario irregular a la hora de actualizar los mods, los compañeros trabajando en las traducciones pueden o no estar al tanto de las últimas versiones de VIET, dado que están cediendo su tiempo amablemente para traducirlo desinteresadamente.. Tened en cuenta que todo el texto que no sea Inglés tiene un marcador de posición en la versión base de VIET.
+[LIST]
+[*]Chino - teabbm ha proporcionado la traducción, integrada en VIET.
+[*]Francés - Mouchi del equipo de WTWSMS está trabajando en una traducción que será integrada en VIET.
+[*]Alemán - [url=https://steamcommunity.com/sharedfiles/filedetails/?id=2229986442]Disponible como sub-mod aquí[/url], gracias a eXums
+[*]Coreano - [url=https://steamcommunity.com/sharedfiles/filedetails/?id=2227982565]Disponible como sub-mod aquí[/url], gracias a Ohboksu
+[*]Ruso - [url=https://steamcommunity.com/sharedfiles/filedetails/?id=2230011509]Disponible como sub-mod aquí[/url], gracias a Alesha_Popvich
+[*]Español - Sourenics está proporcionando la traducción, integrada en VIET.
+[/LIST]
+
+
+[img]http://i.imgur.com/RQ5QZTF.jpg[/img]
+
+[h1]Versión 1.0.1 "Hieronymus Bosch"[/h1]
+
+[I]Hieronymus Bosch fue un renombrado pintor holandés del siglo XV, famoso por sus coloridas pinturas de la vida y el infierno. Sus pinturas fueron macabras y surrealistas para su tiempo, con imaginería terrorífica que refleja el espíritu de un hombre religioso que deseaba expresar los temas morales y espirituales en sus obras.[/I]
+
+[LIST]
+[*]Añadidos 31 eventos nuevos sobre los siguientes temas:
+[LIST]
+[*]9 Arte
+[*]6 Inframundo
+[*]13 Historias fantásticas*
+[*]4 Mobiliario*
+[*]1 Comida*
+[/LIST]
+[*]Desactivados algunos eventos si usas la regla de juego Serio como medida de precaución
+[*]Añadidas algunas variantes culturales/regionales para un mejor trasfondo
+[*]Algunos marcadores (ej. las notificaciones que aparecen tras algunos eventos) tendrán ahora un color rojo (negativo) y verde (positivo), dependiendo de la situación
+[*]Aumentados ligeramente los requisitos de la habilidad de Instrucción para desencadenar el evento Mala Historia
+[*]Movidos algunos eventos desde on_actions trianual a on_actions anual
+[*]El evento de la Feria de Scarborough hará que pierdas estrés siempre
+[*]Arregladas algunas traducciones que no coincidian con el Inglés en las Reglas del Juego
+[*]Arregladas líneas que faltaban en algunos modificadores de opinión
+[*]Arreglada la animación de personaje que faltaba en el evento de Mirando las Nubes
+[*]Arreglado el fallo de traducción con el marcador del evento de Libro Difícil
+[*]Otros fallos de traducción y arreglos que olvido nombrar aquí
+[/LIST]
+
+*Adaptación desde VIET para CK2
+
+[img]http://i.imgur.com/GlNXL7m.jpg[/img]
+
+Un abrazo enorme a los equipos de WTWSMS (especialmente ILikeTrians and Loup99) y Lux Invicta (incluido tsf4), así como a M@ni@c, creador de Hide Your Jewelry, por mantener y mejorar VIET para CK2 con los años, lo que me proporcionó una base sólidad para un relanzamiento mejorado de los Eventos de VIET.
+
+Reconocimiento también a OrdepNM, quien fue mi cómplice en los inicios de VIET para CK2, y que estuvo ahí para ayudar a mentenerlo mientras yo sufría serios problemas médicos.
+
+Gracias también a Sleight of Hand por presionarme a entrar en el mundo de las modificaciones para CK2 y por su ayuda todos estos años, que es por lo que aún estoy aquí.
+
+Muchísimas gracias también a toda esa amable gente que está dedicando su tiempo a traducir el mod - puedes ver quiénes son en la lista de la sección "Características" en la página de la descripción del mod en Steam.
+
+Por último, gracias a toda la gente con la que he trabajdo, y he aprendido a lo largo de estos años, y me proporcionaron valor y consejos.
