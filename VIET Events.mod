@@ -1,4 +1,4 @@
-version="1.0.0"
+version="1.0.1"
 tags={
 	"Events"
 	"Gameplay"
@@ -8,6 +8,6 @@ tags={
 	"cybrxkhan"
 	"VIET"
 }
-name="Various Immersive Events and Tales"
+name="Very Immersive Events and Tales"
 supported_version="1.0.*"
 path="mod/VIET Events"
