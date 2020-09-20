@@ -1,6 +1,6 @@
 [img]http://i.imgur.com/OhIA5bm.jpg[/img]
 
-[h1]Current Version: 1.0.1 "Hieronymus Bosch" (Released 9/16/20, Compatible with vanilla patch 1.0.X)[/h1]
+[h1]Current Version: 1.0.2 "Ibn Tumart" (Released 9/20/20, Compatible with vanilla patch 1.0.X)[/h1]
 [B]Please See [url=https://forum.paradoxplaza.com/forum/threads/mod-viet-events-for-ck3-a-flavor-and-immersion-event-mod.1422081/]Forum Thread[/url] For More Info[/B]
 [B]Manual Download/Installation available [url=https://github.com/cybrxkhan/VIET-Events-for-CK3/releases]on Github[/url]
 [/B]
@@ -21,7 +21,7 @@ Feel free to use my work in your mods - all I ask is that I am credited and (if 
 [img]http://i.imgur.com/EyXurbK.jpg[/img]
 
 [LIST]
-[*]Over [B]141 new flavor events[/B] and event chains, and more will be added in updates over time
+[*]Over [B]161 new flavor events[/B] and event chains, and more will be added in updates over time
 [*]Game rule to disable sillier events for those who don't like them, with three levels to choose from: Balanced (Default), Serious (Restricted), and All Events (Full)
 [*][B]Compatible with almost anything[/B] since it doesn't touch any vanilla files - even with overhaul mods, you can via game rule disable events that reference things specific to our medieval world that wouldn’t make sense in other time periods or universes (like fantasy and sci-fi conversion mods)
 [*]Learn history with [B]Historical Context tooltips[/B] that provide information about what inspired some of the events - sometimes, reality is stranger than fiction! (These can be disabled via game rule for those who find it immersion breaking.)
@@ -42,30 +42,22 @@ We now have every official language covered! Please be aware that due to my irre
 
 [img]http://i.imgur.com/RQ5QZTF.jpg[/img]
 
-[h1]Version 1.0.1 "Hieronymus Bosch"[/h1]
+[h1]Version 1.0.2 "Ibn Tumart"[/h1]
 
-[I]Hieronymus Bosch was a renowned Dutch painter from the 15th century, most famous for his vivid and fantastical depictions of life and hell. His paintings were unusually macabre and surreal for the time, featuring terrifying imagery that reflected a deeply religious man who wished to express moralistic, spiritual themes in his work.[/I]
+[I]“I become not one of them by living among them; sandy earth is the gangue in which gold is found.”
+
+- Ibn Tumart, spiritual and political founder of the Almohad movement that overthrew the Almoravids[/I]
 
 [LIST]
 [*]Added 31 new events about the following themes:
 [LIST]
-[*]9 Art
-[*]6 Underworld
-[*]13 Fantastical Stories*
-[*]4 Furniture*
-[*]1 Food*
+[*]9 Generic
+[*]13 Prophecy and Future*
 [/LIST]
-[*]Disabled a few events if using the Serious Events Game rule as a precautionary measure
-[*]Added in several new cultural/regional variants for the new event backgrounds
-[*]A few toasts (ie the banner messages that appear after some events) will now be red (negative) and green (positive) colored as appropriate, depending on the situation
-[*]Upped the learning requirements to trigger the Bad History event very slightly
-[*]Moved a few events from the tri-yearly on_actions to the yearly on_actions
-[*]Scarborough Fair event will now always make you lose stress
-[*]Fixed other languages’ localization not matching default English localization for game rules
-[*]Fixed missing localization for opinion modifiers
-[*]Fixed gazing at clouds event missing character animation
-[*]Fixed localization issue with the difficult book event toast
-[*]Misc localization and bug fixes I forgot to list here
+[*]Added event chain “Winter Wind Sentiment” from old VIET (23 events total)
+[*]Rebalanced prestige/piety gains to be slightly higher than previously, though still somewhat less than vanilla (typical range increased from ~1-20 to ~1-50, with intended average from ~5-10 to ~10-30).
+[*]Changed a few events’ backgrounds to be the tavern, where appropriate
+[*]Miscellaneous bug fixes
 [/LIST]
 
 *Adapted from VIET for CK2
