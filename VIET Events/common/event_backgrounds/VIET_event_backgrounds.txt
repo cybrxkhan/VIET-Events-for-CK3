@@ -131,11 +131,27 @@ VIET_background_ancient_cairn = {
 ### SMALL TOWN ###
 VIET_background_small_town = {
 
+	background = { # Northern Mediterranean
+		trigger = {
+			capital_province = {
+				OR = {
+					geographical_region = world_asia_minor
+					geographical_region = world_europe_south
+					geographical_region = world_europe_west_iberia
+				}
+			}
+		}
+		reference = "gfx/interface/illustrations/event_scenes/VIET_small_town_italian.dds"
+		environment = "environment_event_garden"
+		ambience = "event:/SFX/Events/Backgrounds/townmarket_western_day"
+	}
+
 	background = { # Tarim Basin/Steppe/Tibet
 		trigger = {
 			capital_province = {
 				OR = {
-					geographical_region = world_steppe
+					geographical_region = world_steppe_tarim
+					geographical_region = world_steppe_west
 					geographical_region = world_tibet
 				}
 			}
@@ -182,6 +198,21 @@ VIET_background_small_town = {
 ### SKYRIM FOREST ###
 VIET_background_skyrim_forest = {
 
+	background = { # Eastern European
+		trigger = {
+			capital_province = {
+				OR = {
+					geographical_region = world_europe_east
+					geographical_region = world_europe_north
+					geographical_region = world_steppe_west
+				}
+			}
+		}
+		reference = "gfx/interface/illustrations/event_scenes/VIET_skyrim_forest_siberian.dds"
+		environment = "environment_event_forest_pine"
+		ambience = "event:/SFX/Events/Backgrounds/coniferous_forest_day"
+	}
+
 	background = { # Western European
 		trigger = {
 			capital_province = {
@@ -198,7 +229,7 @@ VIET_background_skyrim_forest = {
 		trigger = {
 			capital_province = {
 				OR = {
-					geographical_region = world_steppe
+					geographical_region = world_steppe_east
 					geographical_region = world_tibet
 				}
 			}
@@ -255,6 +286,7 @@ VIET_background_skyrim_forest = {
 					geographical_region = world_middle_east_persia
 					geographical_region = world_africa_north
 					geographical_region = world_africa_sahara
+					geographical_region = world_steppe_tarim
 				}
 			}
 		}

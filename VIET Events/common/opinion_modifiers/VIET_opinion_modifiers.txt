@@ -62,3 +62,19 @@ VIET_opinion_interesting_conversation = {
 	opinion = 5
 	stacking = yes
 }
+VIET_opinion_mutual_compassion = {
+	years = 3
+	decaying = yes
+	opinion = 10
+	stacking = yes
+}
+VIET_opinion_ignored_child = {
+	years = 5
+	decaying = yes
+	opinion = -15
+}
+VIET_opinion_survived_night_ruins = {
+	years = 10
+	decaying = yes
+	opinion = 30
+}

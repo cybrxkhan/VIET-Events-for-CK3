@@ -4,6 +4,9 @@ random_yearly_playable_pulse = {
 	on_actions = {
 		delay = { days = 8 }
 		VIET_events_yearly_pulse
+		# For testing purposes
+		#delay = { days = 58 }
+		#VIET_events_event_chain_pulse
 	}
 }
 
@@ -29,8 +32,8 @@ five_year_playable_pulse = {
 	on_actions = {
 		delay = { days = 28 }
 		VIET_events_five_yearly_pulse
-		#delay = { days = 8 }
-		#VIET_events_event_chain_pulse
+		delay = { days = 58 }
+		VIET_events_event_chain_pulse
 		#delay = { days = 8 }
 		#VIET_events_province_event_pulse
 	}
@@ -103,6 +106,9 @@ VIET_events_yearly_pulse = {
 		100 = VIETold.2027		# Rumors about incestuous marriage in faraway lands
 		100 = VIETold.2033		# Gate to another world
 		100 = VIETold.2035		# Stories of the immortal horse
+		# Prophecy and Future
+		100 = VIETold.2046		# Dreaming of your realm's future
+		100 = VIETold.2053		# Thinking about whether people across time periods are the same all over
 		
 		#######################################
 		# NEXT GEN VIET
@@ -220,7 +226,9 @@ VIET_events_tri_yearly_pulse = {
 		100 = VIETold.2031		# Hearing about opposite land underground
 		100 = VIETold.2032		# Story of the labyrinth a la the Minotaur
 		100 = VIETold.2036		# Guard claims to have met a woman in white/lady in white
-		100 = VIETold.2040		# Courtiers debate the skin color of the people living on the fantastical Isle of Color 
+		100 = VIETold.2040		# Courtiers debate the skin color of the people living on the fantastical Isle of Color
+		# Prophecy and Future
+		100 = VIETold.2051		# Come across a beggar proclaiming the end is nigh
 		
 		#######################################
 		# NEXT GEN VIET
@@ -301,6 +309,10 @@ VIET_events_five_yearly_pulse = {
 		100 = VIETold.2034		# Old man recounts meeting the Dreamer
 		100 = VIETold.2037		# Maid recounts meeting the Dreamer
 		100 = VIETold.2039		# Scholar tells of an island on a lake
+		# Prophecy and Future
+		100 = VIETold.2044		# Seer predicts the coming of Genghis Khan
+		100 = VIETold.2049		# Pagan seer prophesizes the decline of polytheism
+		100 = VIETold.2052		# You meet the whore of Babylon in a dream
 		
 		#######################################
 		# NEXT GEN VIET
@@ -323,21 +335,27 @@ VIET_events_five_yearly_pulse = {
 }
 
 # Event chains - rare, most will only fire once a playthrough
-#VIET_events_event_chain_pulse = {
-#	trigger = {
-#		VIET_basic_is_available_adult_trigger = yes
-#	}
-#	random_events = {
-#		chance_to_happen = 99
-#		1 = 0
-#		
-#		#######################################
-#		# OLD VIET
-#		#######################################
-#		
-#		#######################################
-#		# NEXT GEN VIET
-#		#######################################
-#		
-#	}
-#}
+VIET_events_event_chain_pulse = {
+	trigger = {
+		VIET_basic_is_available_adult_trigger = yes
+		is_ai = no # Will only happen to player
+	}
+	random_events = {
+		10000 = 0
+		
+		#######################################
+		# OLD VIET
+		#######################################
+		
+		# Prophecy and future
+		100 = VIETold.2041		# Prophetic dream of World War 1
+		
+		# Actual Event Chains
+		100 = VIETmisc.1000		# Kogarashi Sentiment/Fast Love - Character recalls their first love
+		
+		#######################################
+		# NEXT GEN VIET
+		#######################################
+		
+	}
+}

@@ -1,0 +1,594 @@
+﻿############################################################################################################################
+# 
+# Large Scale Event Chains (but not Story Cycles) - VIETmisc.1000-VIETmisc.1999 reserved
+# Fired from the on_actions for every one, two, five, and ten years depending on rarity
+# 
+# 1000-1022		Kogarashi Sentiment/Fast Love - Character recalls their first love
+# 
+############################################################################################################################
+
+namespace = VIETmisc
+
+
+########################################################################################
+# Kogarashi Sentiment/Fast Love - Character recalls their first love
+#
+# It's an affectionate parody/po-mo take on 80s/90s shoujo OPs from the Koimonogatari season of Monogatari, the last anime I seriously watched years ago.
+#
+# Romaji and Commiesubs' translation:
+#
+# Riyuu sae mo wasureteta namida de / My memories are still beautiful despite a sheet of frozen tears,
+# Kooritsuita omoide ha kirei de / and I don’t remember why I shed them
+#
+# Ano kisetsu to onaji kogarashi ga / Now the winter winds of yesteryear
+# Futari no jikan wo ima makimodosu / turn back the clock for us
+#
+# Kanchigai ichiji no ki no mayoi / A misunderstanding, a moment’s hesitation
+# Arifureta SENCHIMENTARIRIZUMU / Cliched sentimentalism
+# eien ni / The perfect moment,
+# Mitsukaranai setsuna / lost forever
+#
+# Mou ichido / Once more
+# Mou nidoto / Never again
+# ienai kotoba ha / I remain young and trusting
+# Osanai mama yasashii mama / with my unspoken love
+# Kajikanda kioku / and numb memories
+#
+# Mouichido / Once more
+# Mou nidoto / Never again
+# iwanai kotae mo / I never gave an answer, 
+# Kanashii mama / which pains me
+# Kawaii mama / but I remain beautiful
+# Nukumori dake okiwasurete / the warmth of your skin.
+#
+########################################################################################
+
+
+
+# Ping event to start the chain and make sure it starts in the winter time (so it will always start on December 28, the air date of Koimonogatari's last episode)
+VIETmisc.1000 = {
+	hidden = yes
+
+	trigger = {
+		NOT = { has_character_flag = VIET_monogatari_chain_chosen }
+		NOT = { has_global_variable = VIET_monogatari_chain_completed }		
+		OR = {
+			has_trait = compassionate
+			has_trait = patient
+			has_trait = chaste
+			has_trait = calm
+			has_trait = content
+			has_trait = humble
+			has_trait = trusting
+			has_trait = cynical
+		}		
+		NOT = { has_trait = sadistic }
+		NOT = { has_trait = callous }
+	}
+	
+	weight_multiplier = {
+		base = 1
+		modifier = {
+			add = 0.2
+			has_trait = compassionate
+		}
+		modifier = {
+			add = -0.2
+			has_trait = wrathful
+		}
+		modifier = {
+			add = 0.2
+			has_trait = patient
+		}
+		modifier = {
+			add = -0.2
+			has_trait = impatient
+		}
+		modifier = {
+			add = 0.2
+			has_trait = chaste
+		}
+		modifier = {
+			add = -0.2
+			has_trait = lustful
+		}
+	}
+	
+	immediate = {
+		add_character_flag = VIET_monogatari_chain_chosen
+		trigger_event = {
+			id = VIETmisc.1001
+			trigger_on_next_date = 12.28
+		}
+	}
+}
+
+
+# Wintry Wind Sentiment Introduce
+VIETmisc.1001 = {
+	type = character_event
+	title = VIETmisc.1001.t
+	desc = VIETmisc.1001.desc
+	theme = love
+	override_background = { event_background = sitting_room }
+	
+	left_portrait = {
+		character = root
+		animation = personality_rational
+	}
+	
+	option = {
+		name = VIETmisc.1001.a
+		trigger_event = {
+			id = VIETmisc.1002
+			days = { 2 4 }
+		}
+	}
+}
+
+
+# My Memories are Still Beautiful
+VIETmisc.1002 = {
+	type = character_event
+	title = VIETmisc.1002.t
+	desc = VIETmisc.1002.desc
+	theme = love
+	override_background = { event_background = market }
+	
+	#left_portrait = root
+	
+	option = {
+		name = VIETmisc.1002.a
+		trigger_event = {
+			id = VIETmisc.1003
+			days = { 2 4 }
+		}
+	}
+}
+
+
+# Despite a Sheet of Frozen Tears
+VIETmisc.1003 = {
+	type = character_event
+	title = VIETmisc.1003.t
+	desc = VIETmisc.1003.desc
+	theme = love
+	override_background = { event_background = alley_day }
+	
+	#left_portrait = root
+	
+	option = {
+		name = VIETmisc.1003.a
+		trigger_event = {
+			id = VIETmisc.1004
+			days = { 2 4 }
+		}
+	}
+}
+
+
+# And I Don’t Remember
+VIETmisc.1004 = {
+	type = character_event
+	title = VIETmisc.1004.t
+	desc = VIETmisc.1004.desc
+	theme = love
+	override_background = { event_background = sitting_room }
+	
+	left_portrait = {
+		character = root
+		animation = personality_rational
+	}
+	
+	option = {
+		name = VIETmisc.1004.a
+		trigger_event = {
+			id = VIETmisc.1005
+			days = { 2 4 }
+		}
+	}
+}
+
+
+# Why I Shed These Tears
+VIETmisc.1005 = {
+	type = character_event
+	title = VIETmisc.1005.t
+	desc = VIETmisc.1005.desc
+	theme = love
+	override_background = { event_background = throne_room }
+	
+	option = {
+		name = VIETmisc.1005.a
+		trigger_event = {
+			id = VIETmisc.1006
+			days = { 2 4 }
+		}
+	}
+}
+
+
+# Now the Winter Winds of Yesteryear
+VIETmisc.1006 = {
+	type = character_event
+	title = VIETmisc.1006.t
+	desc = VIETmisc.1006.desc
+	theme = love
+	override_background = { event_background = VIET_background_skyrim_forest }
+	
+	left_portrait = {
+		character = root
+		animation = sadness
+	}
+	
+	option = {
+		name = VIETmisc.1006.a
+		trigger_event = {
+			id = VIETmisc.1007
+			days = { 2 4 }
+		}
+	}
+}
+
+# Turn Back the Clock for Us
+VIETmisc.1007 = {
+	type = character_event
+	title = VIETmisc.1007.t
+	desc = VIETmisc.1007.desc
+	theme = love
+	override_background = { event_background = VIET_background_skyrim_forest }
+	
+	#left_portrait = {
+	#	character = root
+	#	animation = stress
+	#}
+	
+	option = {
+		name = VIETmisc.1007.a
+		trigger_event = {
+			id = VIETmisc.1008
+			days = { 2 4 }
+		}
+	}
+}
+
+# A Misunderstanding
+VIETmisc.1008 = {
+	type = character_event
+	title = VIETmisc.1008.t
+	desc = VIETmisc.1008.desc
+	theme = love
+	override_background = { event_background = VIET_background_skyrim_forest }
+	
+	#left_portrait = root
+	
+	option = {
+		name = VIETmisc.1008.a
+		trigger_event = {
+			id = VIETmisc.1009
+			days = { 2 4 }
+		}
+	}
+}
+
+# A Moment’s Hesitation
+VIETmisc.1009 = {
+	type = character_event
+	title = VIETmisc.1009.t
+	desc = VIETmisc.1009.desc
+	theme = love
+	override_background = { event_background = VIET_background_skyrim_forest }
+	
+	#left_portrait = root
+	
+	option = {
+		name = VIETmisc.1009.a
+		trigger_event = {
+			id = VIETmisc.1010
+			days = { 2 4 }
+		}
+	}
+}
+
+
+# Cliched Sentimentalism
+VIETmisc.1010 = {
+	type = character_event
+	title = VIETmisc.1010.t
+	desc = VIETmisc.1010.desc
+	theme = love
+	override_background = { event_background = VIET_background_skyrim_forest }
+	
+	#left_portrait = root
+	
+	option = {
+		name = VIETmisc.1010.a
+		trigger_event = {
+			id = VIETmisc.1011
+			days = { 2 4 }
+		}
+	}
+}
+
+
+# The Perfect Moment
+VIETmisc.1011 = {
+	type = character_event
+	title = VIETmisc.1011.t
+	desc = VIETmisc.1011.desc
+	theme = love
+	override_background = { event_background = VIET_background_skyrim_forest }
+	
+	#left_portrait = root
+	
+	option = {
+		name = VIETmisc.1011.a
+		trigger_event = {
+			id = VIETmisc.1012
+			days = { 2 4 }
+		}
+	}
+}
+
+
+# Lost Forever
+VIETmisc.1012 = {
+	type = character_event
+	title = VIETmisc.1012.t
+	desc = VIETmisc.1012.desc
+	theme = love
+	override_background = { event_background = garden }
+	
+	left_portrait = {
+		character = root
+		animation = sadness
+	}
+	
+	option = {
+		name = VIETmisc.1012.a
+		trigger_event = {
+			id = VIETmisc.1013
+			days = { 2 4 }
+		}
+	}
+}
+
+
+# Once More, Never Again
+VIETmisc.1013 = {
+	type = character_event
+	title = VIETmisc.1013.t
+	desc = VIETmisc.1013.desc
+	theme = love
+	override_background = { event_background = garden }
+	
+	#left_portrait = {
+	#	character = root
+	#	animation = sadness
+	#}
+	
+	option = {
+		name = VIETmisc.1013.a
+		trigger_event = {
+			id = VIETmisc.1014
+			days = { 2 4 }
+		}
+	}
+}
+
+
+# I Remain Young and Trusting
+VIETmisc.1014 = {
+	type = character_event
+	title = VIETmisc.1014.t
+	desc = VIETmisc.1014.desc
+	theme = love
+	override_background = { event_background = VIET_background_skyrim_forest }
+	
+	#left_portrait = root
+	
+	option = {
+		name = VIETmisc.1014.a
+		trigger_event = {
+			id = VIETmisc.1015
+			days = { 2 4 }
+		}
+	}
+}
+
+
+# With My Unspoken Love
+VIETmisc.1015 = {
+	type = character_event
+	title = VIETmisc.1015.t
+	desc = VIETmisc.1015.desc
+	theme = love
+	override_background = { event_background = sitting_room }
+	
+	left_portrait = {
+		character = root
+		animation = stress
+	}
+	
+	option = {
+		name = VIETmisc.1015.a
+		trigger_event = {
+			id = VIETmisc.1016
+			days = { 2 4 }
+		}
+	}
+}
+
+
+
+# And Numb Memories
+VIETmisc.1016 = {
+	type = character_event
+	title = VIETmisc.1016.t
+	desc = VIETmisc.1016.desc
+	theme = love
+	override_background = { event_background = garden }
+	
+	#left_portrait = root
+	
+	option = {
+		name = VIETmisc.1016.a
+		trigger_event = {
+			id = VIETmisc.1017
+			days = { 2 4 }
+		}
+	}
+}
+
+
+# Once More, Never Again
+VIETmisc.1017 = {
+	type = character_event
+	title = VIETmisc.1017.t
+	desc = VIETmisc.1017.desc
+	theme = love
+	override_background = { event_background = garden }
+	
+	#left_portrait = root
+	
+	option = {
+		name = VIETmisc.1017.a
+		trigger_event = {
+			id = VIETmisc.1018
+			days = { 2 4 }
+		}
+	}
+}
+
+
+# I Never Gave an Answer
+VIETmisc.1018 = {
+	type = character_event
+	title = VIETmisc.1018.t
+	desc = VIETmisc.1018.desc
+	theme = love
+	override_background = { event_background = corridor_day }
+	
+	#left_portrait = root
+	
+	option = {
+		name = VIETmisc.1018.a
+		trigger_event = {
+			id = VIETmisc.1019
+			days = { 2 4 }
+		}
+	}
+}
+
+
+
+# Which Pains Me
+VIETmisc.1019 = {
+	type = character_event
+	title = VIETmisc.1019.t
+	desc = VIETmisc.1019.desc
+	theme = love
+	override_background = { event_background = corridor_day }
+	
+	#left_portrait = root
+	
+	option = {
+		name = VIETmisc.1019.a
+		trigger_event = {
+			id = VIETmisc.1020
+			days = { 2 4 }
+		}
+	}
+}
+
+# But I Remain Beautiful
+VIETmisc.1020 = {
+	type = character_event
+	title = VIETmisc.1020.t
+	desc = VIETmisc.1020.desc
+	theme = love
+	override_background = { event_background = throne_room }
+	
+	left_portrait = {
+		character = root
+		animation = happiness
+	}
+	
+	option = {
+		name = VIETmisc.1020.a
+		trigger_event = {
+			id = VIETmisc.1021
+			days = { 2 4 }
+		}
+	}
+}
+
+
+# And Leave Behind
+VIETmisc.1021 = {
+	type = character_event
+	title = VIETmisc.1021.t
+	desc = VIETmisc.1021.desc
+	theme = love
+	override_background = { event_background = VIET_background_skyrim_forest }
+	
+	#left_portrait = {
+	#	character = root
+	#	animation = sadness
+	#}
+	
+	option = {
+		name = VIETmisc.1021.a
+		trigger_event = {
+			id = VIETmisc.1022
+			days = { 2 4 }
+		}
+	}
+}
+
+
+# The Warmth of Your Skin
+VIETmisc.1022 = {
+	type = character_event
+	title = VIETmisc.1022.t
+	desc = VIETmisc.1022.desc
+	theme = love
+	override_background = { event_background = VIET_background_skyrim_forest }
+	
+	#left_portrait = root
+	
+	immediate = {
+		play_music_cue = "mx_cue_marriage" # Best fit I could find
+	}
+	
+	option = {
+		name = VIETmisc.1022.a
+		add_piety = 100
+		add_character_modifier = {
+			modifier = VIET_memory_of_first_love
+		}
+		set_global_variable = {
+			name = VIET_monogatari_chain_completed
+			value = yes
+		}
+	}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

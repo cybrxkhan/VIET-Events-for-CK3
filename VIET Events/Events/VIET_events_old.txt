@@ -11,6 +11,7 @@
 # 2013-2018		Reading Stories
 # 2019-2026		Stuck Inside
 # 2027-2040		Fantastical Stories
+# 2041-2054		Prophecy and Future
 # 
 ############################################################################################################################
 
@@ -2877,6 +2878,743 @@ VIETold.2040 = {
 	}
 }
 
+###################################################################################################
+# PROPHECY AND FUTURE 2041-2054
+###################################################################################################
+
+# Prophetic dream of World War 1
+VIETold.2041 = {
+	type = character_event
+	title = VIETold.2041.t
+	desc = VIETold.2041.desc
+	theme = battle
+	
+	left_portrait = { 	
+		character = root
+		animation = fear
+	}
+	
+	trigger = {
+		NOT = { has_game_rule = VIET_serious_events }
+		NOT = { has_character_flag = VIET_had_WW1_dream }
+		NOT = { has_global_variable = VIET_WW1_prophecy_happened }
+	}
+
+	weight_multiplier = {
+		base = 1
+		modifier = {
+			add = 0.2
+			has_trait = cynical
+		}
+		modifier = {
+			add = -0.2
+			has_trait = zealous
+		}
+		modifier = {
+			add = 0.2
+			has_trait = deceitful
+		}
+		modifier = {
+			add = -0.2
+			has_trait = honest
+		}
+		modifier = {
+			add = 0.2
+			has_trait = just
+		}
+		modifier = {
+			add = -0.2
+			has_trait = arbitrary
+		}
+	}
+	
+	immediate = {
+		add_character_flag = VIET_had_WW1_dream
+	}
+
+	
+	option = { # Ok
+		name = VIETold.2041.a		
+		trigger_event = {
+			id = VIETold.2042
+			days = 1
+		}
+	}
+}
+
+
+# Over the trench
+VIETold.2042 = {
+	type = character_event
+	title = VIETold.2042.t
+	desc = VIETold.2042.desc
+	theme = battle
+	
+	left_portrait = { 	
+		character = root
+		animation = paranoia
+	}
+	
+	option = { # Ok
+		name = VIETold.2042.a		
+		trigger_event = {
+			id = VIETold.2043
+			days = 1
+		}
+	}
+}
+
+
+# Witness the great war
+VIETold.2043 = {
+	type = character_event
+	title = VIETold.2043.t
+	desc = VIETold.2043.desc
+	theme = battle
+	
+	left_portrait = { 	
+		character = root
+		animation = shock
+	}
+	
+	immediate = {
+		play_music_cue = mx_cue_crusade_starts 
+	}
+	
+	option = { # Ok
+		name = VIETold.2043.a	
+		stress_impact = {
+			base = medium_stress_impact_gain
+			craven = minor_stress_impact_gain
+			just = minor_stress_impact_gain
+			compassionate = minor_stress_impact_gain
+		}
+		add_character_modifier = {
+			modifier = VIET_world_war_1_dream
+			#days = 1918
+		}
+		set_global_variable = {
+			name = VIET_WW1_prophecy_happened
+			value = yes
+		}
+	}
+}
+
+# Seer predicts the coming of Genghis Khan
+VIETold.2044 = {
+	type = character_event
+	title = VIETold.2044.t
+	desc = VIETold.2044.desc
+	theme = crown
+	
+	left_portrait = {
+		character = root
+		animation = personality_rational
+	}
+	
+	trigger = {
+		NOT = { has_character_flag = VIET_genghis_khan_prophecy }
+		NOT = { has_global_variable = mongols_have_appeared }
+	}
+
+	weight_multiplier = {
+		base = 1
+		modifier = {
+			add = 0.2
+			has_trait = just
+		}
+		modifier = {
+			add = -0.2
+			has_trait = arbitrary
+		}
+		modifier = {
+			add = 0.2
+			has_trait = zealous
+		}
+		modifier = {
+			add = -0.2
+			has_trait = cynical
+		}
+		modifier = {
+			add = 0.2
+			has_trait = patient
+		}
+		modifier = {
+			add = -0.2
+			has_trait = impatient
+		}
+	}
+	
+	immediate = {
+		add_character_flag = VIET_genghis_khan_prophecy
+	}
+
+	
+	option = { # Ok
+		name = VIETold.2044.a		
+		trigger_event = {
+			id = VIETold.2045
+		}
+	}
+}
+
+
+
+
+# React to the seer's prediction
+VIETold.2045 = {
+	type = character_event
+	title = VIETold.2045.t
+	desc = VIETold.2045.desc
+	theme = war
+	override_background = { event_background = throne_room }
+	
+	left_portrait = {
+		character = root
+		animation = personality_cynical
+	}
+	
+	option = { # China cannot possibly fall
+		name = VIETold.2045.a		
+		add_prestige = 5
+	}	
+	option = { # India will survive
+		name = VIETold.2045.b
+		add_prestige = 5
+	}	
+	option = { # Sword of Islam is strong
+		name = VIETold.2045.c
+		add_piety = 5
+	}	
+	option = { # Crusader zeal is unbeatable
+		name = VIETold.2045.d
+		add_piety = 5
+	}
+}
+
+
+# Dreaming of your realm's future
+VIETold.2046 = {
+	type = character_event
+	title = VIETold.2046.t
+	desc = VIETold.2046.desc
+	theme = VIET_theme_tuscan_country
+	
+	left_portrait = {
+		character = root
+		animation = personality_rational
+	}
+	
+	trigger = {
+		NOT = { has_character_flag = VIET_future_fork_dream }
+	}
+
+	weight_multiplier = {
+		base = 1
+		modifier = {
+			add = 0.2
+			has_trait = ambitious
+		}
+		modifier = {
+			add = -0.2
+			has_trait = content
+		}
+		modifier = {
+			add = 0.2
+			has_trait = zealous
+		}
+		modifier = {
+			add = -0.2
+			has_trait = cynical
+		}
+		modifier = {
+			add = 0.2
+			has_trait = diligent
+		}
+		modifier = {
+			add = -0.2
+			has_trait = lazy
+		}
+	}
+	
+	immediate = {
+		add_character_flag = VIET_future_fork_dream
+	}
+
+	# Actual choice of direction doesn't matter, only thing that matters is if character has enough good vs bad traits
+	option = { # Left
+		name = VIETold.2046.a
+		random_list = {
+			50 = {
+				trigger_event = {
+					id = VIETold.2047
+				}
+			}
+			50 = {
+				trigger_event = {
+					id = VIETold.2048
+				}
+			}
+		}
+		#hidden_tooltip = {
+		#	if = {
+		#		limit = {
+		#			num_sinful_traits > 1	
+		#		}
+		#		random_list = {
+		#			75 = {
+		#				trigger_event = {
+		#					id = VIETold.2047
+		#				}
+		#			}
+		#			25 = {
+		#				trigger_event = {
+		#					id = VIETold.2048
+		#				}
+		#			}
+		#		}
+		#	}
+		#	else_if = {
+		#		limit = {
+		#			num_virtuous_traits > 1	
+		#		}
+		#		random_list = {
+		#			25 = {
+		#				trigger_event = {
+		#					id = VIETold.2047
+		#				}
+		#			}
+		#			75 = {
+		#				trigger_event = {
+		#					id = VIETold.2048
+		#				}
+		#			}
+		#		}
+		#	}
+		#	else = {
+		#		random_list = {
+		#			50 = {
+		#				trigger_event = {
+		#					id = VIETold.2047
+		#				}
+		#			}
+		#			50 = {
+		#				trigger_event = {
+		#					id = VIETold.2048
+		#				}
+		#			}
+		#		}
+		#	}
+		#}
+	}
+	option = { # Right
+		name = VIETold.2046.b
+		random_list = {
+			50 = {
+				trigger_event = {
+					id = VIETold.2047
+				}
+			}
+			50 = {
+				trigger_event = {
+					id = VIETold.2048
+				}
+			}
+		}
+		#hidden_tooltip = {
+		#	if = {
+		#		limit = {
+		#			num_sinful_traits > 1	
+		#		}
+		#		random_list = {
+		#			75 = {
+		#				trigger_event = {
+		#					id = VIETold.2047
+		#				}
+		#			}
+		#			25 = {
+		#				trigger_event = {
+		#					id = VIETold.2048
+		#				}
+		#			}
+		#		}
+		#	}
+		#	else_if = {
+		#		limit = {
+		#			num_virtuous_traits > 1	
+		#		}
+		#		random_list = {
+		#			25 = {
+		#				trigger_event = {
+		#					id = VIETold.2047
+		#				}
+		#			}
+		#			75 = {
+		#				trigger_event = {
+		#					id = VIETold.2048
+		#				}
+		#			}
+		#		}
+		#	}
+		#	else = {
+		#		random_list = {
+		#			50 = {
+		#				trigger_event = {
+		#					id = VIETold.2047
+		#				}
+		#			}
+		#			50 = {
+		#				trigger_event = {
+		#					id = VIETold.2048
+		#				}
+		#			}
+		#		}
+		#	}
+		#}
+	}
+}
+
+
+
+# Dreaming of your realm's future - bad end
+VIETold.2047 = {
+	type = character_event
+	title = VIETold.2047.t
+	desc = VIETold.2047.desc
+	theme = VIET_theme_nightmare
+	
+	left_portrait = {
+		character = root
+		animation = fear
+	}
+
+	option = { # Oh no
+		name = VIETold.2047.a
+		add_character_modifier = {
+			modifier = VIET_dream_future_bad
+			years = 3
+		}
+	}
+}
+
+# Dreaming of your realm's future - good end
+VIETold.2048 = {
+	type = character_event
+	title = VIETold.2048.t
+	desc = VIETold.2048.desc
+	theme = VIET_theme_good_dream
+	
+	left_portrait = {
+		character = root
+		animation = happiness
+	}
+
+	option = { # Oh no
+		name = VIETold.2048.a
+		add_character_modifier = {
+			modifier = VIET_dream_future_good
+			years = 3
+		}
+	}
+}
+
+
+
+# Pagan seer prophesizes the decline of polytheism
+VIETold.2049 = {
+	type = character_event
+	title = VIETold.2049.t
+	desc = VIETold.2049.desc
+	theme = faith
+	override_background = { event_background = throne_room }
+	
+	left_portrait = {
+		character = root
+		animation = personality_callous
+	}
+	
+	trigger = {
+		NOT = { has_character_flag = VIET_pagan_future_prophecy }
+		faith = {
+			religion = { is_in_family = rf_pagan }
+			has_doctrine_parameter = unreformed
+		}
+	}
+
+	weight_multiplier = {
+		base = 1
+		# Less likely in eastern parts of the map where Abrahamic religious wars are less relevant
+		modifier = {
+			add = -0.7
+			capital_province = {
+				OR = {
+					geographical_region = world_steppe_tarim
+					geographical_region = world_steppe_east
+					geographical_region = world_burma
+					geographical_region = world_tibet
+				}
+			}
+		}
+		modifier = {
+			add = 0.2
+			has_trait = paranoid
+		}
+		modifier = {
+			add = -0.2
+			has_trait = trusting
+		}
+		modifier = {
+			add = 0.2
+			has_trait = zealous
+		}
+		modifier = {
+			add = -0.2
+			has_trait = cynical
+		}
+		modifier = {
+			add = 0.2
+			has_trait = gregarious
+		}
+		modifier = {
+			add = -0.2
+			has_trait = shy
+		}
+	}
+	
+	immediate = {
+		add_character_flag = VIET_pagan_future_prophecy
+	}
+
+	option = { # ok
+		name = VIETold.2049.a
+		trigger_event = {
+			id = VIETold.2050
+			days = 1
+		}
+	}
+}
+
+
+# Pagan seer prophesizes the decline of polytheism
+VIETold.2050 = {
+	type = character_event
+	title = VIETold.2050.t
+	desc = VIETold.2050.desc
+	theme = faith
+	override_background = { event_background = throne_room }
+	
+	left_portrait = {
+		character = root
+		animation = worry
+	}
+	
+	immediate = {
+		play_music_cue = mx_cue_ck3_vocal_maintheme
+	}
+
+	option = { # Old gods are strong
+		name = VIETold.2050.a
+		add_piety = 5
+		stress_impact = {
+			base = minor_stress_impact_gain
+			arrogant = miniscule_stress_impact_loss
+			trusting = miniscule_stress_impact_loss
+		}
+	}
+	option = { # Protect ourselves from the Holy Fury
+		name = VIETold.2050.b
+		add_piety = 5
+		stress_impact = {
+			base = minor_stress_impact_gain
+			brave = miniscule_stress_impact_loss
+			wrathful = miniscule_stress_impact_loss
+		}
+	}
+	option = { # Sons of Abraham are too mighty
+		name = VIETold.2050.c
+		add_prestige = -5
+	}
+}
+
+
+# Come across a beggar proclaiming the end is nigh
+VIETold.2051 = {
+	type = character_event
+	title = VIETold.2051.t
+	desc = VIETold.2051.desc
+	theme = faith
+	override_background = { event_background = market }
+	
+	left_portrait = {
+		character = root
+		animation = personality_callous
+	}
+
+	weight_multiplier = {
+		base = 1
+		modifier = {
+			add = 0.2
+			has_trait = trusting
+		}
+		modifier = {
+			add = -0.2
+			has_trait = paranoid
+		}
+		modifier = {
+			add = 0.2
+			has_trait = humble
+		}
+		modifier = {
+			add = -0.2
+			has_trait = arrogant
+		}
+		modifier = {
+			add = 0.2
+			has_trait = patient
+		}
+		modifier = {
+			add = -0.2
+			has_trait = impatient
+		}
+	}
+
+	option = { # ok
+		name = VIETold.2051.a
+		stress_impact = {
+			paranoid = minor_stress_impact_gain
+		}
+	}
+	option = { # Oh no!!!
+		name = VIETold.2051.b
+		random_list = {
+			10 = { add_piety = 10 }
+			10 = { add_piety = -10 }
+		}
+		stress_impact = {
+			base = minor_stress_impact_gain
+		}
+	}
+}
+
+
+
+# You meet the whore of Babylon in a dream
+VIETold.2052 = {
+	type = character_event
+	title = VIETold.2052.t
+	desc = VIETold.2052.desc
+	theme = seduction
+	override_background = { event_background = corridor_night }
+	
+	left_portrait = {
+		character = root
+		animation = fear
+	}
+
+	weight_multiplier = {
+		base = 1
+		modifier = {
+			add = 0.2
+			has_trait = lustful
+		}
+		modifier = {
+			add = -0.2
+			has_trait = chaste
+		}
+		modifier = {
+			add = 0.2
+			has_trait = deceitful
+		}
+		modifier = {
+			add = -0.2
+			has_trait = honest
+		}
+		modifier = {
+			add = 0.2
+			has_trait = zealous
+		}
+		modifier = {
+			add = -0.2
+			has_trait = cynical
+		}
+	}
+
+	option = { # ok
+		name = VIETold.2052.a
+		add_character_modifier = {
+			modifier = VIET_whore_of_babylon_dream
+			days = 666
+		}
+	}
+}
+
+# Thinking about whether people across time periods are the same all over
+VIETold.2053 = {
+	type = character_event
+	title = VIETold.2053.t
+	desc = VIETold.2053.desc
+	theme = VIET_theme_garden_generic
+	
+	left_portrait = {
+		character = root
+		animation = personality_rational
+	}
+
+	weight_multiplier = {
+		base = 1
+		modifier = {
+			add = 0.2
+			has_trait = trusting
+		}
+		modifier = {
+			add = -0.2
+			has_trait = paranoid
+		}
+		modifier = {
+			add = 0.2
+			has_trait = shy
+		}
+		modifier = {
+			add = -0.2
+			has_trait = gregarious
+		}
+		modifier = {
+			add = 0.2
+			has_trait = calm
+		}
+		modifier = {
+			add = -0.2
+			has_trait = wrathful
+		}
+	}
+
+	option = { # Just like us!
+		name = VIETold.2053.a
+		add_prestige = 2
+		add_piety = 2
+		add_character_modifier = {
+			modifier = VIET_navel_gazing
+			days = 180
+		}
+		stress_impact = {
+			cynical = miniscule_stress_impact_gain
+			arrogant = miniscule_stress_impact_gain
+		}
+	}
+	option = { # Not like us!
+		name = VIETold.2053.b
+		add_dread = 4
+		add_character_modifier = {
+			modifier = VIET_navel_gazing
+			days = 180
+		}
+		stress_impact = {
+			compassionate = miniscule_stress_impact_gain
+			trusting = miniscule_stress_impact_gain
+			humble = miniscule_stress_impact_gain
+		}
+	}
+}
 
 
 
