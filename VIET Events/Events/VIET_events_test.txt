@@ -4,7 +4,50 @@
 # 
 # Animations: idle, chancellor, steward, marshal, spymaster, chaplain, anger, rage, disapproval, disbelief, disgust, fear, sadness, shame, shock, worry, boredom, grief, paranoia, dismissal, flirtation, flirtation_left, love, schadenfreude, stress, happiness, ecstasy, admiration, lunatic (?), scheme, beg, pain, newborn, sick, severelywounded, prisonhouse, prisondungeon, war_attacker, war_defender, war_over_tie, war_over_win, war_over_loss, pregnant, personality_honorable, personality_dishonorable, personality_bold, personality_coward, personality_greedy, personality_content, personality_vengeful, personality_forgiving, personality_rational, personality_irrational, personality_compassionate, personality_callous, personality_zealous, personality_cynical
 # 
+# mx_cue_sacredrite = solemn flutes that becomes more orchestral and bigger as it continues
+# mx_cue_epic_sacral_moment = epic stuff, not as epic as 
+# mx_cue_touching_moment = sweeping orchestra
+# mx_cue_positive_effect = triumphant orchestra
+# mx_cue_peace_ensues = deep and calmer horn and brass version of mx_cue_crusade_starts
+# mx_cue_faith_conversion = nice orchestra, a little fantasy like
+# mx_cue_birth = harp and light orchestra theme version
+# mx_cue_seduction = ??? harp and strings??? A little Celtic, and a little bittersweet
+# mx_cue_marriage = low tune of woodwinds and plucked strings that ends somewhat quicklier than the others it seems
+# mx_cue_negative = there is a sad singing wailing woman along with the tragic music - VERY QUICK THOUGH
+# mx_cue_low_key_positive = dance-y kind of tavern theme
+# 
 ############################################################################################################################
+
+
+###########################################################################################################################
+# 
+# OLD EVENTS NOT INCLUDED
+# 
+# Dream - Temptation VIETnam.221-223 - to do later
+# African fufu feast - VIETmisc.2005 - Fufu did not exist in Africa at the time, since it relies on a New World plant, cassava
+# Book is 3Deep5Me - VIETmisc.8329 - too similar to new event
+# Courtier picks up games hobby - VIETmisc.8437 - no CK3 equivalent
+# Maitreya Buddha claimant - VIETmisc.8075 - to do later
+# Courtier chokes and dies - VIETmisc.8078-8079 - to do later, need to look more into how to code death and death reasons
+# Child wonders what to do when growing up - VIETMisc.8081 - to do later, will do several childhood events at once
+# 
+###########################################################################################################################
+
+
+
+#################################################################################################################################
+# 
+# PRESTIGE & PIETY GAINS/LOSSES
+# 
+# 01-50 		= Range
+# 10-30 		= Average
+# 01-09 		= Extremely minor events - e.g. stubbed a toe
+# 10/15/20		= Minor events involving self - cannot find documents
+# 20/25/30/35	= Minor events involving others - meet with courtiers to chat
+# 40/50			= Major events (that aren't super major) - crazy stuff happens with envoy
+# 
+# 
+#################################################################################################################################
 
 
 

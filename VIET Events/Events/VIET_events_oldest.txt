@@ -1236,6 +1236,7 @@ VIETold.0017 = {
 	title = VIETold.0017.t
 	desc = VIETold.0017.desc
 	theme = feast_activity
+	override_background = { event_background = tavern }
 	
 	left_portrait = root
 

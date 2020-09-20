@@ -465,7 +465,7 @@ VIETmisc.0007 = {
 		ai_chance = {
 			base = 30
 			ai_value_modifier = {
-				ai_compassion = 100
+				ai_compassion = 1
 			}
 		}
 		add_prestige = 5
@@ -479,7 +479,7 @@ VIETmisc.0007 = {
 		ai_chance = {
 			base = 20
 			ai_value_modifier = {
-				ai_zeal = 100
+				ai_zeal = 1
 			}
 		}
 		add_piety = 5
@@ -494,7 +494,7 @@ VIETmisc.0007 = {
 		ai_chance = {
 			base = 20
 			ai_value_modifier = {
-				ai_compassion = -100
+				ai_compassion = -1
 			}
 		}
 		add_piety = -5
@@ -512,7 +512,7 @@ VIETmisc.0007 = {
 		ai_chance = {
 			base = 30
 			ai_value_modifier = {
-				ai_compassion = -00
+				ai_compassion = 1
 			}
 		}
 		add_piety = 10
@@ -3927,7 +3927,7 @@ VIETmisc.0056 = {
 	title = VIETmisc.0056.t
 	desc = VIETmisc.0056.desc
 	theme = unfriendly
-	override_background = { event_background = feast }
+	override_background = { event_background = tavern }
 	
 	left_portrait = {
 		character = root
@@ -4522,4 +4522,601 @@ VIETmisc.0062 = {
 	}
 }
 
+###############################################################
+# ADVENTURE 0063-0071
+###############################################################
 
+
+# Inherit money from an old adventurer
+VIETmisc.0063 = {
+	type = character_event
+	title = VIETmisc.0063.t
+	desc = VIETmisc.0063.desc
+	theme = stewardship
+	
+	right_portrait = root
+	
+	weight_multiplier = {
+		base = 1
+		modifier = {
+			add = 0.2
+			has_trait = compassionate
+		}
+		modifier = {
+			add = -0.2
+			has_trait = callous
+		}
+		modifier = {
+			add = 0.2
+			has_trait = gregarious
+		}
+		modifier = {
+			add = -0.2
+			has_trait = shy
+		}
+		modifier = {
+			add = 0.2
+			has_trait = trusting
+		}
+		modifier = {
+			add = -0.2
+			has_trait = paranoid
+		}
+	}
+	
+	option = { # Cool
+		name = VIETmisc.0063.a
+		random_list = {
+			10 = { add_gold = 20 }
+			10 = { add_gold = 30 }
+			10 = { add_gold = 40 }
+			10 = { add_gold = 50 }
+		}
+	}
+}
+
+
+
+# You and a courtier find a lost child
+VIETmisc.0064 = {
+	type = character_event
+	title = VIETmisc.0064.t
+	desc = VIETmisc.0064.desc
+	theme = VIET_theme_small_town
+	
+	left_portrait = root
+	
+	right_portrait = scope:scope_VIET_child_sob_help
+	
+	trigger = {
+		any_courtier = {
+			is_available_ai_adult = yes
+			OR = {
+				has_trait = compassionate
+				has_trait = just
+				has_trait = humble
+				has_trait = patient
+			}
+			NOR = {
+				has_trait = sadistic
+				has_trait = callous
+			}
+		}	
+	}
+	
+	weight_multiplier = {
+		base = 1
+		modifier = {
+			add = 0.2
+			has_trait = diligent
+		}
+		modifier = {
+			add = -0.2
+			has_trait = lazy
+		}
+		modifier = {
+			add = 0.2
+			has_trait = gregarious
+		}
+		modifier = {
+			add = -0.2
+			has_trait = shy
+		}
+		modifier = {
+			add = 0.2
+			has_trait = humble
+		}
+		modifier = {
+			add = -0.2
+			has_trait = arrogant
+		}
+	}	
+	
+	immediate = {
+		random_courtier = {
+			limit = {
+				is_available_ai_adult = yes
+				OR = {
+					has_trait = compassionate
+					has_trait = just
+					has_trait = humble
+					has_trait = patient
+				}
+				NOR = {
+					has_trait = sadistic
+					has_trait = callous
+				}
+			}
+			save_scope_as = scope_VIET_child_sob_help
+		}
+	}
+	
+	option = { # Go ahead without me
+		name = VIETmisc.0064.a
+		ai_chance = {
+			base = 30
+		}
+		stress_impact = {
+			compassionate = miniscule_stress_impact_gain
+			just = miniscule_stress_impact_gain
+		}
+	}	
+	option = { # Let's find the parents together
+		name = VIETmisc.0064.b
+		ai_chance = {
+			base = 30
+			ai_value_modifier = {
+				ai_honor = 1
+				ai_compassion = 1
+			}
+		}
+		stress_impact = {
+			callous = minor_stress_impact_gain
+			sadistic = minor_stress_impact_gain
+		}
+		scope:scope_VIET_child_sob_help = {
+			add_opinion = {
+				target = root
+				modifier = VIET_opinion_mutual_compassion
+			}
+			reverse_add_opinion = {
+				target = root
+				modifier = VIET_opinion_mutual_compassion
+			}		
+		}
+	}
+	option = { # Who cares about the child
+		name = VIETmisc.0064.c
+		ai_chance = {
+			base = 30
+			ai_value_modifier = {
+				ai_honor = -1
+				ai_compassion = -1
+			}
+		}
+		stress_impact = {
+			compassionate = minor_stress_impact_gain
+			just = minor_stress_impact_gain
+		}
+		scope:scope_VIET_child_sob_help = {
+			add_opinion = {
+				target = root
+				modifier = VIET_opinion_ignored_child
+			}	
+		}
+	}
+}
+
+
+# Dream of joining an Oblivion guild
+VIETmisc.0065 = {
+	type = character_event
+	title = VIETmisc.0065.t
+	desc = VIETmisc.0065.desc
+	theme = VIET_theme_oblivion_pastoral_dream
+	
+	left_portrait = {
+		character = root
+		animation = personality_honorable
+	}
+	
+	trigger = {
+		#NOT = { has_character_flag = VIET_oblivion_guild_event_happened }
+		NOT = { has_game_rule = VIET_serious_events }	# Just as a precaution
+	}
+	
+	weight_multiplier = {
+		base = 1
+		modifier = {
+			add = 0.2
+			has_trait = brave
+		}
+		modifier = {
+			add = -0.2
+			has_trait = craven
+		}
+		modifier = {
+			add = 0.2
+			has_trait = shy
+		}
+		modifier = {
+			add = -0.2
+			has_trait = gregarious
+		}
+		modifier = {
+			add = 0.2
+			has_trait = calm
+		}
+		modifier = {
+			add = -0.2
+			has_trait = diligent
+		}
+	}	
+
+	
+	option = { # Dark brotherhood
+		name = VIETmisc.0065.a
+		add_character_modifier = {
+			modifier = VIET_oblivion_dream_dark_brotherhood
+			years = 3
+		}
+	}	
+	option = { # Fighters Guild
+		name = VIETmisc.0065.b
+		add_character_modifier = {
+			modifier = VIET_oblivion_dream_fighters_guild
+			years = 3
+		}
+	}	
+	option = { # Thieves Guild
+		name = VIETmisc.0065.c
+		add_character_modifier = {
+			modifier = VIET_oblivion_dream_thieves_guild
+			years = 3
+		}
+	}	
+	option = { # Mages Guild
+		name = VIETmisc.0065.d
+		add_character_modifier = {
+			modifier = VIET_oblivion_dream_mages_guild
+			years = 3
+		}
+	}	
+	option = { # Arena
+		name = VIETmisc.0065.e
+		add_character_modifier = {
+			modifier = VIET_oblivion_dream_arena
+			years = 3
+		}
+	}
+}
+
+
+# You and a courtier get lost and stay overnight at a ruin
+VIETmisc.0066 = {
+	type = character_event
+	title = VIETmisc.0066.t
+	desc = VIETmisc.0066.desc
+	theme = friendly	
+	override_background = { event_background = VIET_background_ancient_cairn }
+	
+	left_portrait = root
+	
+	right_portrait = scope:scope_VIET_fellow_lost_traveler
+	
+	trigger = {
+		any_courtier = {
+			is_available_ai_adult = yes
+			NOT = { is_close_family_of = root }
+		}	
+	}
+	
+	weight_multiplier = {
+		base = 1
+		modifier = {
+			add = 0.2
+			has_trait = diligent
+		}
+		modifier = {
+			add = -0.2
+			has_trait = lazy
+		}
+		modifier = {
+			add = 0.2
+			has_trait = arrogant
+		}
+		modifier = {
+			add = -0.2
+			has_trait = humble
+		}
+		modifier = {
+			add = 0.2
+			has_trait = stubborn
+		}
+		modifier = {
+			add = -0.2
+			has_trait = fickle
+		}
+	}	
+	
+	immediate = {
+		random_courtier = {
+			limit = {
+				is_available_ai_adult = yes
+			}
+			save_scope_as = scope_VIET_fellow_lost_traveler
+		}
+	}
+	
+	option = { # Go ahead without me
+		name = VIETmisc.0066.a		
+		scope:scope_VIET_fellow_lost_traveler = {
+			add_opinion = {
+				target = root
+				modifier = VIET_opinion_survived_night_ruins
+			}
+			reverse_add_opinion = {
+				target = root
+				modifier = VIET_opinion_survived_night_ruins
+			}		
+		}
+	}
+}
+
+
+# Listen in on an argument between a scholar and an adventurer
+VIETmisc.0067 = {
+	type = character_event
+	title = VIETmisc.0067.t
+	desc = VIETmisc.0067.desc
+	theme = friendly	
+	override_background = { event_background = tavern }
+	
+	right_portrait = {
+		character = root
+		animation = personality_rational
+	}
+	
+	weight_multiplier = {
+		base = 1
+		modifier = {
+			add = 0.2
+			has_trait = diligent
+		}
+		modifier = {
+			add = -0.2
+			has_trait = lazy
+		}
+		modifier = {
+			add = 0.2
+			has_trait = gregarious
+		}
+		modifier = {
+			add = -0.2
+			has_trait = shy
+		}
+		modifier = {
+			add = 0.2
+			has_trait = ambitious
+		}
+		modifier = {
+			add = -0.2
+			has_trait = content
+		}
+	}
+	
+	option = { # Support the scholar - the adventurer is making stuff up
+		name = VIETmisc.0067.a		
+		add_character_modifier = {
+			modifier = VIET_values_scholarly_perspectives
+			days = 800
+		}
+	}	
+	option = { # Support the adventurer - the scholar is an armchair academic
+		name = VIETmisc.0067.b		
+		add_character_modifier = {
+			modifier = VIET_values_adventurer_experiences
+			days = 800
+		}
+	}	
+	option = { # Stay out of this argument
+		name = VIETmisc.0067.c		
+		add_prestige = 20
+	}
+}
+
+
+
+# Explore the area a little further from your home
+VIETmisc.0068 = {
+	type = character_event
+	title = VIETmisc.0068.t
+	desc = VIETmisc.0068.desc
+	theme = VIET_theme_skyrim_forest
+	
+	right_portrait = root
+	
+	weight_multiplier = {
+		base = 1
+		modifier = {
+			add = 0.2
+			has_trait = brave
+		}
+		modifier = {
+			add = -0.2
+			has_trait = craven
+		}
+		modifier = {
+			add = 0.2
+			has_trait = trusting
+		}
+		modifier = {
+			add = -0.2
+			has_trait = paranoid
+		}
+		modifier = {
+			add = 0.2
+			has_trait = ambitious
+		}
+		modifier = {
+			add = -0.2
+			has_trait = lazy
+		}
+	}
+	
+	option = { # Cool
+		name = VIETmisc.0068.a		
+		stress_impact = {
+			base = medium_stress_impact_loss
+		}
+	}
+}
+
+
+
+# Meet a commoner on the road who's just chilling and relaxing
+VIETmisc.0069 = {
+	type = character_event
+	title = VIETmisc.0069.t
+	desc = VIETmisc.0069.desc
+	theme = VIET_theme_tuscan_country
+	
+	right_portrait = root
+	
+	weight_multiplier = {
+		base = 1
+		modifier = {
+			add = 0.2
+			has_trait = gregarious
+		}
+		modifier = {
+			add = -0.2
+			has_trait = shy
+		}
+		modifier = {
+			add = 0.2
+			has_trait = diligent
+		}
+		modifier = {
+			add = -0.2
+			has_trait = lazy
+		}
+		modifier = {
+			add = 0.2
+			has_trait = humble
+		}
+		modifier = {
+			add = -0.2
+			has_trait = arrogant
+		}
+	}
+	
+	option = { # Laziness is good
+		name = VIETmisc.0069.a
+		add_prestige = -5
+		stress_impact = {
+			base = miniscule_stress_impact_loss
+		}
+	}	
+	option = { # Hard work is good
+		name = VIETmisc.0069.b
+		add_prestige = 5
+		stress_impact = {
+			base = miniscule_stress_impact_gain
+			lazy = miniscule_stress_impact_gain
+		}
+	}	
+	option = { # Whatever
+		name = VIETmisc.0069.c
+	}
+}
+
+
+# Come to an old graveyard
+VIETmisc.0070 = {
+	type = character_event
+	title = VIETmisc.0070.t
+	desc = VIETmisc.0070.desc
+	theme = VIET_theme_small_town
+	
+	right_portrait = {
+		character = root
+		animation = personality_zealous
+	}
+	
+	weight_multiplier = {
+		base = 1
+		modifier = {
+			add = 0.2
+			has_trait = patient
+		}
+		modifier = {
+			add = -0.2
+			has_trait = impatient
+		}
+		modifier = {
+			add = 0.2
+			has_trait = zealous
+		}
+		modifier = {
+			add = -0.2
+			has_trait = cynical
+		}
+		modifier = {
+			add = 0.2
+			has_trait = just
+		}
+		modifier = {
+			add = -0.2
+			has_trait = arbitrary
+		}
+	}
+	
+	option = { # ok
+		name = VIETmisc.0070.a
+		add_piety = 10
+	}
+}
+
+# Meet some traveling pilgrims on the road
+VIETmisc.0071 = {
+	type = character_event
+	title = VIETmisc.0071.t
+	desc = VIETmisc.0071.desc
+	theme = VIET_theme_tuscan_country
+	
+	right_portrait = root
+	
+	weight_multiplier = {
+		base = 1
+		modifier = {
+			add = 0.2
+			has_trait = gregarious
+		}
+		modifier = {
+			add = -0.2
+			has_trait = shy
+		}
+		modifier = {
+			add = 0.2
+			has_trait = zealous
+		}
+		modifier = {
+			add = -0.2
+			has_trait = cynical
+		}
+		modifier = {
+			add = 0.2
+			has_trait = humble
+		}
+		modifier = {
+			add = -0.2
+			has_trait = arrogant
+		}
+	}
+	
+	option = { # ok
+		name = VIETmisc.0071.a
+		add_piety = 10
+	}
+}

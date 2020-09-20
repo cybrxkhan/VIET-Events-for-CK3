@@ -375,5 +375,69 @@ VIET_haunted_by_ghost_for_sin = {
 	general_opinion = -10
 	monthly_piety = -0.45
 }
+VIET_oblivion_dream_dark_brotherhood = {
+	icon = letter_positive
+	intrigue = 1
+	murder_scheme_power_mult = 0.15
+}
+VIET_oblivion_dream_fighters_guild = {
+	icon = hunt_positive
+	martial = 1
+	knight_effectiveness_mult = 0.1
+}
+VIET_oblivion_dream_mages_guild = {
+	icon = learning_positive
+	learning = 1
+	monthly_lifestyle_xp_gain_mult = 0.04
+}
+VIET_oblivion_dream_thieves_guild = {
+	icon = economy_positive
+	diplomacy = 1
+	intrigue = 1
+}
+VIET_oblivion_dream_arena = {
+	icon = economy_positive
+	prowess = 2
+	health = 0.2
+}
+VIET_values_scholarly_perspectives = {
+	icon = learning_positive
+	monthly_piety = 0.15
+	monthly_lifestyle_xp_gain_mult = 0.2
+}
+VIET_values_adventurer_experiences = {
+	icon = horse_positive
+	monthly_prestige = 0.15
+	mercenary_hire_cost_mult = -0.15
+}
+VIET_world_war_1_dream = {
+	icon = stress_negative
+	martial = -1
+	prowess = -1
+	health = -0.1
+	monthly_piety = 0.3
+}
+VIET_whore_of_babylon_dream = {
+	icon = piety_negative
+	monthly_piety = -0.1
+}
+VIET_dream_future_good = {
+	icon = family_positive
+	monthly_piety = 0.1
+	monthly_prestige = 0.1
+}
+VIET_dream_future_bad = {
+	icon = family_negative
+	monthly_piety = -0.1
+	monthly_prestige = -0.1
+}
+VIET_memory_of_first_love = {
+	icon = love_positive
+	monthly_piety = 0.5
+	stress_gain_mult = -0.3
+	stress_loss_mult = 0.3
+	monthly_dread = -0.5
+	fertility = -0.05
+}
 
 
