@@ -480,15 +480,15 @@ VIETold.0008 = {
 	
 	option = { # Ok
 		name = VIETold.0008.a		
-		add_prestige = -5
+		add_prestige = -10
 	}	
 	option = { # Will of God
 		name = VIETold.0008.b
 		trigger = {
 			NOT = { has_trait = cynical }
 		}
-		add_prestige = -10
-		add_piety = 5		
+		add_prestige = -20
+		add_piety = 10		
 		stress_impact = {
 			humble = miniscule_stress_impact_loss
 			zealous = miniscule_stress_impact_loss
@@ -586,7 +586,7 @@ VIETold.0010 = {
 	
 	option = { # Don't talk such rot
 		name = VIETold.0010.a	
-		add_prestige = 5		
+		add_prestige = 10		
 		stress_impact = {
 			humble = miniscule_stress_impact_gain
 			compassionate = miniscule_stress_impact_gain
@@ -599,30 +599,30 @@ VIETold.0010 = {
 		name = VIETold.0010.b
 		random_list = {
 			10 = { add_prestige = 1 }
-			10 = { add_prestige = 3 }
 			10 = { add_prestige = 5 }
-			10 = { add_prestige = 7 }
-			10 = { add_prestige = 9 }
+			10 = { add_prestige = 10 }
+			10 = { add_prestige = 15 }
+			10 = { add_prestige = 20 }
 		}
 	}	
 	option = { # Feces
 		name = VIETold.0010.c
 		random_list = {
 			10 = { add_prestige = 1 }
-			10 = { add_prestige = 3 }
 			10 = { add_prestige = 5 }
-			10 = { add_prestige = 7 }
-			10 = { add_prestige = 9 }
+			10 = { add_prestige = 10 }
+			10 = { add_prestige = 15 }
+			10 = { add_prestige = 20 }
 		}
 	}	
 	option = { # Dead plants
 		name = VIETold.0010.d
 		random_list = {
 			10 = { add_prestige = 1 }
-			10 = { add_prestige = 3 }
 			10 = { add_prestige = 5 }
-			10 = { add_prestige = 7 }
-			10 = { add_prestige = 9 }
+			10 = { add_prestige = 10 }
+			10 = { add_prestige = 15 }
+			10 = { add_prestige = 20 }
 		}
 	}
 }
@@ -671,7 +671,7 @@ VIETold.0011 = {
 	
 	option = { # Earwax
 		name = VIETold.0011.a	
-		add_prestige = 3	
+		add_prestige = 13	
 		if = {
 			limit = {
 				has_game_rule = VIET_historical_context_on
@@ -681,7 +681,7 @@ VIETold.0011 = {
 	}	
 	option = { # Urine
 		name = VIETold.0011.b	
-		add_piety = 3		
+		add_piety = 13		
 		if = {
 			limit = {
 				has_game_rule = VIET_historical_context_on
@@ -692,8 +692,8 @@ VIETold.0011 = {
 	option = { # Colorful stones
 		name = VIETold.0011.c
 		random_list = {
-			10 = {add_prestige = 3 }
-			10 = { add_piety = 3 }
+			10 = { add_prestige = 13 }
+			10 = { add_piety = 13 }
 		}	
 		if = {
 			limit = {
@@ -1005,7 +1005,7 @@ VIETold.0014 = {
 	
 	option = { # How vain!
 		name = VIETold.0014.a		
-		add_piety = 5
+		add_piety = 25
 		stress_impact = {
 			humble = miniscule_stress_impact_gain
 		}
@@ -1018,7 +1018,7 @@ VIETold.0014 = {
 	}	
 	option = { # Respect other customs
 		name = VIETold.0014.b
-		add_prestige = 5
+		add_prestige = 25
 		stress_impact = {
 			arrogant = miniscule_stress_impact_gain
 		}		
