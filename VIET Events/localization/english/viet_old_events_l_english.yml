@@ -1160,7 +1160,7 @@
  VIETold.2043.a:0 "I lie back down and try to sleep, but can't."
  VIETold.2044.t:0 "From the Steppes"
  VIETold.2044.desc:0 "There have been many nomad empires, some quite large and some quite small. But today I have met an elderly wise woman and self-proclaimed seer who says we have yet to see the greatest of these empires. She says in the not too distant future, a great conqueror shall come from the steppes and destroy all the kingdoms and empires in his path, if not the entire world.\n\nHa! As if that'd happen."
- VIETold.2044.a:0 "Many nomad hordes come and go, what would make this one any different?"
+ VIETold.2044.a:0 "Many nomad hordes who come and go, what would make this one any different?"
  VIETold.2045.t:0 "Scourge of [ROOT.Char.GetFaith.HighGodName]"
  VIETold.2045.desc:0 "This lord shall be born grasping a blood clot in his fist, the seer proclaims, and his mighty warriors shall pour forth from the steppes like water flows down a river and wash the world in blood and death.\n\nShe laughs at my doubt, and says in a chilling tone: "This man, this instrument of war, this instrument of the divine is not to be trifled with, for he is the very fist of [ROOT.Char.GetFaith.HighGodName] to punish all for their wickedness. By his arrows, the Jade Dragon to the east shall perish. Under the hooves of his riders, the Rajas of India shall fall one by one. Against his dark armor, forged from the very sins of mankind, even the fearsome Sword of Islam and the Crusader Kings will do naught but a scratch to this bloodied messenger of [ROOT.Char.GetFaith.HighGodName].""
  VIETold.2045.a:0 "Ha! The Jade Dragon cannot possibly fall."
