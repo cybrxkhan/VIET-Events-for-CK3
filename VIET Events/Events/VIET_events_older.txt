@@ -65,7 +65,7 @@ VIETold.1001 = {
 	
 	option = { # Ok
 		name = VIETold.1001.a	
-		add_prestige = 1
+		add_prestige = 10
 		add_stress = -1
 	}
 }
@@ -212,7 +212,7 @@ VIETold.1003 = {
 	
 	option = { # Disagree
 		name = VIETold.1003.b
-		add_piety = 3
+		add_piety = 10
 		stress_impact = {
 			arrogant = minor_stress_impact_gain
 		}
@@ -226,7 +226,7 @@ VIETold.1003 = {
 	
 	option = { # Make a joke
 		name = VIETold.1003.c
-		add_prestige = 3
+		add_prestige = 10
 	}
 }
 
@@ -273,7 +273,7 @@ VIETold.1004 = {
 	
 	option = { # ok
 		name = VIETold.1004.a
-		add_prestige = 15
+		add_prestige = 25
 	}
 }
 
@@ -334,7 +334,7 @@ VIETold.1005 = {
 	
 	option = { # Protect self
 		name = VIETold.1005.a
-		add_piety = -5
+		add_piety = -10
 		stress_impact = {
 			cynical = miniscule_stress_impact_gain
 		}
@@ -344,7 +344,7 @@ VIETold.1005 = {
 		trigger = {
 			NOT = { has_trait = zealous }
 		}
-		add_prestige = -5
+		add_prestige = -10
 	}
 }
 
@@ -747,12 +747,12 @@ VIETold.1012 = {
 	
 	option = { # sweet
 		name = VIETold.1012.a
-		add_prestige = 1
+		add_prestige = 4
 		add_stress = -2
 	}	
 	option = { # not sweet
 		name = VIETold.1012.b
-		add_piety = 1
+		add_piety = 4
 		add_stress = -2
 	}
 }
@@ -814,7 +814,7 @@ VIETold.1013 = {
 	
 	option = { # what a waste
 		name = VIETold.1013.a
-		add_prestige = -5
+		add_prestige = -16
 		remove_short_term_gold = 8
 	}
 }
@@ -878,13 +878,13 @@ VIETold.1014 = {
 			limit = {
 				faith = { trait_is_sin = lustful }
 			}
-			add_piety = -10
+			add_piety = -25
 		}
 		if = {
 			limit = {
 				faith = { trait_is_virtue = lustful }
 			}
-			add_piety = 10
+			add_piety = 25
 		}
 		stress_impact = {
 			lustful = miniscule_stress_impact_loss
@@ -903,13 +903,13 @@ VIETold.1014 = {
 			limit = {
 				faith = { trait_is_sin = lustful }
 			}
-			add_piety = 10
+			add_piety = 25
 		}
 		if = {
 			limit = {
 				faith = { trait_is_virtue = lustful }
 			}
-			add_piety = -10
+			add_piety = -25
 		}
 		stress_impact = {
 			base = miniscule_stress_impact_loss
@@ -1033,16 +1033,16 @@ VIETold.1016 = {
 			limit = {
 				faith = { trait_is_virtue = humble }
 			}
-			add_piety = 10
+			add_piety = 20
 		}	
 		else_if = {
 			limit = {
 				faith = { trait_is_virtue = arrogant }
 			}
-			add_prestige = -5
+			add_prestige = -10
 		}
 		else = {
-			add_piety = 5
+			add_piety = 10
 			stress_impact = {
 				arrogant = miniscule_stress_impact_gain
 				ambitious = miniscule_stress_impact_gain
@@ -1059,12 +1059,12 @@ VIETold.1016 = {
 			limit = {
 				faith = { trait_is_virtue = gluttonous }
 			}
-			add_piety = 5
+			add_piety = 10
 		}	
 	}	
 	option = { # Fad will pass in time
 		name = VIETold.1016.c
-		add_piety = 5
+		add_piety = 10
 	}	
 	option = { # Looks good on me!
 		name = VIETold.1016.d
@@ -1075,17 +1075,18 @@ VIETold.1016 = {
 			limit = {
 				faith = { trait_is_virtue = humble }
 			}
-			add_piety = -5
-			add_prestige = 5
+			add_piety = -20
+			add_prestige = 30
 		}
 		else_if = {
 			limit = {
 				faith = { trait_is_virtue = arrogant }
 			}
-			add_prestige = 10
+			add_prestige = 30
 		}
 		else = {
-			add_prestige = 5
+			add_piety = -10
+			add_prestige = 20
 			stress_impact = {
 				arrogant = minor_stress_impact_loss
 				humble = miniscule_stress_impact_gain
@@ -1136,7 +1137,7 @@ VIETold.1017 = {
 	
 	option = { # Interesting
 		name = VIETold.1017.a
-		add_prestige = -5
+		add_prestige = -15
 	}
 }
 
@@ -1199,7 +1200,7 @@ VIETold.1018 = {
 	option = { # Whelp lol
 		name = VIETold.1018.a
 		remove_short_term_gold = 6
-		add_prestige = -10
+		add_prestige = -20
 		add_character_modifier = {
 			modifier = VIET_eating_pickled_eggs
 			days = 365
@@ -1437,21 +1438,21 @@ VIETold.1021 = {
 	
 	option = { # Buy a simple one
 		name = VIETold.1021.a
-		remove_short_term_gold = 5
-		add_prestige = 10
+		remove_short_term_gold = 10
+		add_prestige = 25
 		stress_impact = {
 			arrogant = minor_stress_impact_gain
 		}
 	}	
 	option = { # Buy a decent one
 		name = VIETold.1021.b
-		remove_short_term_gold = 10
-		add_prestige = 20
+		remove_short_term_gold = 20
+		add_prestige = 50
 	}	
 	option = { # Buy a pricey one
 		name = VIETold.1021.c
-		remove_short_term_gold = 20
-		add_prestige = 40
+		remove_short_term_gold = 30
+		add_prestige = 75
 		stress_impact = {
 			humble = minor_stress_impact_gain
 		}		
@@ -1556,7 +1557,7 @@ VIETold.1023 = {
 	
 	option = { # Ouch
 		name = VIETold.1023.a
-		add_prestige = -3
+		add_prestige = -9
 		stress_impact = {
 			arrogant = miniscule_stress_impact_gain
 			gluttonous = miniscule_stress_impact_gain
@@ -1608,9 +1609,9 @@ VIETold.1024 = {
 	option = { # Clean it up
 		name = VIETold.1024.a
 		random_list = {
-			30 = { add_prestige = 5 }
-			20 = { add_prestige = 10 }
-			10 = { add_prestige = 15 }
+			30 = { add_prestige = 10 }
+			20 = { add_prestige = 15 }
+			10 = { add_prestige = 20 }
 		}
 		stress_impact = {
 			diligent = miniscule_stress_impact_loss
@@ -1731,10 +1732,11 @@ VIETold.1026 = {
 	option = { # Whoops
 		name = VIETold.1026.a
 		random_list = {
-			10 = { add_prestige = -5 }
 			10 = { add_prestige = -10 }
 			10 = { add_prestige = -15 }
 			10 = { add_prestige = -20 }
+			10 = { add_prestige = -25 }
+			10 = { add_prestige = -30 }
 		}
 		stress_impact = {
 			diligent = minor_stress_impact_gain
@@ -1844,8 +1846,8 @@ VIETold.1028 = {
 	}	
 	option = { # Help them
 		name = VIETold.1028.b
-		remove_short_term_gold = 15
-		add_piety = 10
+		remove_short_term_gold = 25
+		add_piety = 50
 		add_character_modifier = {
 			modifier = VIET_caring_leader
 			years = 8
@@ -1928,7 +1930,7 @@ VIETold.1029 = {
 				}
 			}
 		}
-		add_prestige = 20
+		add_prestige = 30
 		stress_impact = {
 			callous = miniscule_stress_impact_gain
 			greedy = miniscule_stress_impact_gain

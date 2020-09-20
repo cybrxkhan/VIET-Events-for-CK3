@@ -37,13 +37,13 @@
 
 #################################################################################################################################
 # 
-# PRESTIGE & PIETY GAINS/LOSSES
+# PRESTIGE & PIETY GAINS/LOSSES - These are only rough and flexible guidelines
 # 
 # 01-50 		= Range
 # 10-30 		= Average
 # 01-09 		= Extremely minor events - e.g. stubbed a toe
-# 10/15/20		= Minor events involving self - cannot find documents
-# 20/25/30/35	= Minor events involving others - meet with courtiers to chat
+# 05/10/15/20	= Minor events involving self or lesser ones involving others like servants - cannot find documents, mention something to a servant, expressing simple opinions
+# 20/25/30/35	= Minor events involving others - chatting with courtiers about various things, expressing opinions to a lot of people
 # 40/50			= Major events (that aren't super major) - crazy stuff happens with envoy
 # 
 # 
