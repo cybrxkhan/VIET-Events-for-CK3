@@ -2,7 +2,7 @@
 
 [h1]Versión actual: 1.0.1 "Hieronymus Bosch" (Salida 9/16/20, Compatible con versión vanilla 1.0.X)[/h1]
 [B]Echa un Vistazo a [url=https://forum.paradoxplaza.com/forum/threads/mod-viet-events-for-ck3-a-flavor-and-immersion-event-mod.1422081/]Tema del Foro[/url] Para Más Información[/B]
-[B]Descarga/Instalación manual [url=https://github.com/cybrxkhan/VIET-Events-for-CK3/releases]on Github[/url]
+[B]Descarga/Instalación manual [url=https://github.com/cybrxkhan/VIET-Events-for-CK3/releases]en Github[/url]
 [/B]
 
 Very Immersive Events and Tales (VIET), la secuela de [url=https://steamcommunity.com/sharedfiles/filedetails/?id=1601402546]VIET Events Reborn para CK2[/url], es un mod que añade una vasta colección de eventos sobre la vida diaria para darle chispa a tu partida. Estos eventos añaden inmersión y diversidad de experiencias con nuevos eventos y cadenas, y cubren desde las más mundanas minuncias como pequeñas charlas con cortesanos y comer comida local hasta historias épicas sobre amor, filosofia y la condición humana.
