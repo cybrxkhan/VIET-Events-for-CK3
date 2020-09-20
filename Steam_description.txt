@@ -32,7 +32,7 @@ Feel free to use my work in your mods - all I ask is that I am credited and (if 
 We now have every official language covered! Please be aware that due to my irregular schedule for updating my mods, the folks working on these translations may or may not be up to date with the latest version of VIET as they are kindly spending their own free time and effort to work on these. Do note that all non-English text has placeholder English localization in the base version of VIET.
 [LIST]
 [*]Chinese - teabbm has provided translation which is integrated into base VIET.
-[*]French - Mouchi from the WTWSMS team is working on translation which will be integrated into base VIET.
+[*]French - [url=https://steamcommunity.com/sharedfiles/filedetails/?id=2234027514]Available as sub-mod here[/url], thanks to Mouchi
 [*]German - [url=https://steamcommunity.com/sharedfiles/filedetails/?id=2229986442]Available as sub-mod here[/url], thanks to eXums
 [*]Korean - [url=https://steamcommunity.com/sharedfiles/filedetails/?id=2227982565]Available as sub-mod here[/url], thanks to Ohboksu
 [*]Russian - [url=https://steamcommunity.com/sharedfiles/filedetails/?id=2230011509]Available as sub-mod here[/url], thanks to Alesha_Popvich
@@ -72,7 +72,7 @@ We now have every official language covered! Please be aware that due to my irre
 
 [img]http://i.imgur.com/GlNXL7m.jpg[/img]
 
-A huge thanks to the teams of WTWSMS (especially ILikeTrians and Loup99) and Lux Invicta (including tsf4), as well as M@ni@c, creator of Hide Your Jewelry, for maintaining and improving on VIET for CK2 over the years, which provided me a solid foundation for improved reboot of VIET Events.
+A huge thanks to the teams of WTWSMS (especially IlikeTrains and Loup99) and Lux Invicta (including tsf4), as well as M@ni@c, creator of Hide Your Jewelry, for maintaining and improving on VIET for CK2 over the years, which provided me a solid foundation for improved reboot of VIET Events.
 
 Credits also to OrdepNM, who was my partner in crime in the early days of VIET for CK2 and who stepped up to help maintain it while I had serious medical issues years ago.
 
