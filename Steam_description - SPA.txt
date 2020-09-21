@@ -1,6 +1,6 @@
 [img]http://i.imgur.com/OhIA5bm.jpg[/img]
 
-[h1]Versión actual: 1.0.1 "Hieronymus Bosch" (Salida 9/16/20, Compatible con versión vanilla 1.0.X)[/h1]
+[h1]Versión actual: 1.0.2 "Ibn Tumart" (Salida 20/09/20, Compatible con versión vanilla 1.0.X)[/h1]
 [B]Echa un Vistazo a [url=https://forum.paradoxplaza.com/forum/threads/mod-viet-events-for-ck3-a-flavor-and-immersion-event-mod.1422081/]Tema del Foro[/url] Para Más Información[/B]
 [B]Descarga/Instalación manual [url=https://github.com/cybrxkhan/VIET-Events-for-CK3/releases]en Github[/url]
 [/B]
@@ -21,7 +21,7 @@ Siéntete libre de usar mi trabajo con tus mods - todo lo que pido es reconocimi
 [img]http://i.imgur.com/EyXurbK.jpg[/img]
 
 [LIST]
-[*]Más de [B]141 nuevos eventos[/B] y cadenas, y aún se añadirán más con cada actualización
+[*]Más de [B]184 nuevos eventos[/B] y cadenas, y aún se añadirán más con cada actualización
 [*]Regla de juego para desactivar los eventos estúpidos para aquellos que no les guste, con tres niveles para escoger entre: Balanceado (Predeterminado), Serio (Restringido), y Todos los eventos (Todo)
 [*][B]Compatible con casi cualquier cosa[/B] ya que no modifico archivos del vanilla - incluso con mods de conversión total puedes desactivar los eventos que hagan referencias a cosas o lugares específicos del mundo medieval que no tendrían sentido en otros periodos o universos (como mods fantásticos o de ciencia ficción)
 [*]Aprende historia con las [B]descripciones de Contexto Histórico[/B] que proporcionan información sobre la inspiración detrás de algunos eventos - a veces, ¡la realidad supera la ficción! (Estos se pueden desactivar con una regla de juego para aquellos que creen que no ayuda a la inmersión.)
@@ -40,32 +40,32 @@ Siéntete libre de usar mi trabajo con tus mods - todo lo que pido es reconocimi
 [/LIST]
 
 
+[img]https://i.imgur.com/9twioNH.jpg[/img]
+
+Por favor, echa un vistazo a [url=https://steamcommunity.com/workshop/filedetails/discussion/2227658180/2943622078759317376/]este hilo[/url] para más información.
+
+Gracias.
+
+
 [img]http://i.imgur.com/RQ5QZTF.jpg[/img]
 
-[h1]Versión 1.0.1 "Hieronymus Bosch"[/h1]
+[h1]Versión 1.0.2 "Ibn Tumart"[/h1]
 
-[I]Hieronymus Bosch fue un renombrado pintor holandés del siglo XV, famoso por sus coloridas pinturas de la vida y el infierno. Sus pinturas fueron macabras y surrealistas para su tiempo, con imaginería terrorífica que refleja el espíritu de un hombre religioso que deseaba expresar los temas morales y espirituales en sus obras.[/I]
+[I]"No me convierto en uno de ellos por vivir entre ellos; la arena es una ganga en la que se encuentra el oro."
+
+- Ibn Tumart, fundador espiritual y político del movimiento Almohade que derrocó a los Almorávides[/I]
 
 [LIST]
-[*]Añadidos 31 eventos nuevos sobre los siguientes temas:
+[*]Añadidos 21 eventos nuevos sobre los siguientes temas:
 [LIST]
-[*]9 Arte
-[*]6 Inframundo
-[*]13 Historias fantásticas*
-[*]4 Mobiliario*
-[*]1 Comida*
+[*]9 Aventura
+[*]13 Profecías y Futuro*
 [/LIST]
-[*]Desactivados algunos eventos si usas la regla de juego Serio como medida de precaución
-[*]Añadidas algunas variantes culturales/regionales para un mejor trasfondo
-[*]Algunos marcadores (ej. las notificaciones que aparecen tras algunos eventos) tendrán ahora un color rojo (negativo) y verde (positivo), dependiendo de la situación
-[*]Aumentados ligeramente los requisitos de la habilidad de Instrucción para desencadenar el evento Mala Historia
-[*]Movidos algunos eventos desde on_actions trianual a on_actions anual
-[*]El evento de la Feria de Scarborough hará que pierdas estrés siempre
-[*]Arregladas algunas traducciones que no coincidian con el Inglés en las Reglas del Juego
-[*]Arregladas líneas que faltaban en algunos modificadores de opinión
-[*]Arreglada la animación de personaje que faltaba en el evento de Mirando las Nubes
-[*]Arreglado el fallo de traducción con el marcador del evento de Libro Difícil
-[*]Otros fallos de traducción y arreglos que olvido nombrar aquí
+[*]Añadida cadena de eventos "Sentimiento de Viento de Invierno" del antiguo VIET (23 eventos en total)
+[*]Rebalanceadas las ganancias de prestigio/piedad para ser un poco más altas, aunque aún son inferiores al vanilla (rango típico incrementado de ~1-20 a ~1-50, con una media de ~5-10 a ~10-30)
+[*]Añadidos un par de nuevos fondos de evento.
+[*]Se han cambiado unos pocos fondos de evento para que muestre la taberna, cuando sea apropiado
+[*]Otros arreglos de bug
 [/LIST]
 
 *Adaptación desde VIET para CK2
