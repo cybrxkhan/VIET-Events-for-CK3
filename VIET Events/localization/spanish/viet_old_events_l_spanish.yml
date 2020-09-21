@@ -1161,8 +1161,6 @@
  VIETold.2044.t:0 "Desde las Estepas"
  VIETold.2044.desc:0 "Ha habido muchos imperios nómadas, algunos grandes, otros pequeños. Pero hoy he conocido una sabia y auto-proclamada vidente que dice que aún falta el más grande de los imperios. Dice que en un futuro no muy lejano, un gran conquistador vendrá de las estepas y destruirá todos los reinos e imperios en su camino, o quizá el mundo entero.\n\n¡Ja! Como si eso pudiera pasar."
  VIETold.2044.a:0 "Many nomad hordes who come and go, what would make this one any different?"
- VIETold.2046.a:0 "Left"
- VIETold.2046.b:0 "Right"
  VIETold.2045.t:0 "El Azote de [ROOT.Char.GetFaith.HighGodName]"
  VIETold.2045.desc:0 "Este señor nacerá con un coágulo de sangre en su puño, vaticina la vidente, y sus poderosos guerreros brotarán de las estepas como el agua fluye río abajo y lavarán el mundo con sangre y muerte.\n\nSe ríe ante mis dudas, y en tono escalofriante añade: "No es cuestión de broma que este hombre, este instrumento de guerra, este instrumento de los divinos es el mismísimo azote de [ROOT.Char.GetFaith.HighGodName] para castigar a todos por sus pecados. Bajo sus flechas perecerá el Dragón de Jade del este. Bajo las pezuñas de sus jinetes, caerán los Rajás de la India uno a uno. Contra su armadura oscura, forjada de los pecados de la humanidad, incluso las más fieras Espadas del Islam y los Reyes Cruzados no harán más que rasguños a este mensajero de [ROOT.Char.GetFaith.HighGodName].""
  VIETold.2045.a:0 "¡Ja! El Dragón de Jade no puede caer."
