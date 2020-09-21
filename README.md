@@ -1,6 +1,10 @@
 # VIET Events for CK3
 
-## Latest Version: 1.0.1 "Hieronymus Bosch" (Released 9/16/20)
+## Latest Version: 1.0.2 "Ibn Tumart" (Released 9/20/20)
+
+_“I become not one of them by living among them; sandy earth is the gangue in which gold is found.”_
+
+_- Ibn Tumart, spiritual and political founder of the Almohad movement that overthrew the Almoravids_
 
 Very Immersive Events and Tales (VIET), the sequel to VIET Events Reborn for CK2, is a flavor mod that adds a vast collection of events about everyday life to spice up your game. These events add immersion and a diversity of experiences in between wars and vanilla’s event chains, and cover mundane minutiae ranging from small talk with courtiers and eating local cuisine to epic tales about love, philosophy, and the human condition.
 
