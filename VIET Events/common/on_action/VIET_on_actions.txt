@@ -151,6 +151,11 @@ VIET_events_yearly_pulse = {
 		# Underworld
 		100 = VIETmisc.0058		# Dreamt of going to hell
 		100 = VIETmisc.0062		# Talking with courtier about what hell is like
+		# Adventure
+		100 = VIETmisc.0068		# Explore the area a little further from your home
+		100 = VIETmisc.0069		# Meet a commoner on the road who's just chilling and relaxing
+		100 = VIETmisc.0070		# Come to an old graveyard
+		100 = VIETmisc.0071		# Meet some traveling pilgrims on the road
 	}
 }
 
@@ -254,6 +259,12 @@ VIET_events_tri_yearly_pulse = {
 		100 = VIETmisc.0057		# Come across a preacher ranting about how people need to repent
 		100 = VIETmisc.0059		# Elder tells about the Gates of Hell
 		100 = VIETmisc.0061		# Courtier is haunted by a ghost that tells them to repent for their sins
+		# Adventure
+		100 = VIETmisc.0063		# Inherit money from an old adventurer
+		100 = VIETmisc.0064		# You and a courtier find a lost child
+		100 = VIETmisc.0065		# Dream of joining an Oblivion guild
+		100 = VIETmisc.0066		# You and a courtier get lost and stay overnight at a ruin
+		100 = VIETmisc.0067		# Listen in on an argument between a scholar and an adventurer
 	}
 }
 
