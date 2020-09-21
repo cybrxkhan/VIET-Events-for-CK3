@@ -21,7 +21,7 @@ Feel free to use my work in your mods - all I ask is that I am credited and (if 
 [img]http://i.imgur.com/EyXurbK.jpg[/img]
 
 [LIST]
-[*]Over [B]161 new flavor events[/B] and event chains, and more will be added in updates over time
+[*]Over [B]184 new flavor events[/B], and more will be added in updates over time
 [*]Game rule to disable sillier events for those who don't like them, with three levels to choose from: Balanced (Default), Serious (Restricted), and All Events (Full)
 [*][B]Compatible with almost anything[/B] since it doesn't touch any vanilla files - even with overhaul mods, you can via game rule disable events that reference things specific to our medieval world that wouldn’t make sense in other time periods or universes (like fantasy and sci-fi conversion mods)
 [*]Learn history with [B]Historical Context tooltips[/B] that provide information about what inspired some of the events - sometimes, reality is stranger than fiction! (These can be disabled via game rule for those who find it immersion breaking.)
@@ -38,6 +38,33 @@ We now have every official language covered! Please be aware that due to my irre
 [*]Russian - [url=https://steamcommunity.com/sharedfiles/filedetails/?id=2230011509]Available as sub-mod here[/url], thanks to Alesha_Popvich
 [*]Spanish - Sourenics has provided translation which is integrated into base VIET.
 [/LIST]
+
+
+[img]https://i.imgur.com/9twioNH.jpg[/img]
+
+[B]Is VIET compatible with other mods?[/B]
+
+VIET is theoretically compatible with all mods as I do not edit any vanilla files. If you're using a conversion mod, check the Universe game rule - these options will disable some events that don't make sense for certain settings (for instance, an event referring to China wouldn't make sense in the AGOT mod, while one that talks about Charlemagne wouldn't make sense for the Bronze Age mod).
+
+[B]Will VIET work on existing save games?[/B]
+
+Yes! You can safely add VIET to any ongoing games. Just remember you have a backup of your save file just in case.
+
+[B]Is VIET available in other languages?[/B]
+
+VIET is partially or fully translated into every language available in the base game - see the Features section for more info and links. Since the translators work in their free time, they might not be finished translating everything yet, especially if I just released a new version of VIET. If possible I try to leave the default English text as placeholders for any untranslated events.
+
+[B]Is this the mod with the “cock”/chicken pun jokes?[/B]
+
+Those events have not been in VIET for years, and even when they were in there was only a couple out of the hundreds of events I coded. As an aside, even though events with that kind of humor are no longer in, some of the other humor might not be to everyone's taste so there is a game rule to only keep the more serious events if you so wish.
+
+[B]Why am I not seeing any new events? Many years have passed since I started the game.[/B]
+
+TLDR: RNG is being RNG.
+
+Longer explanation: Like vanilla’s events, VIET’s events are triggered randomly via on_actions. If you’re not familiar with PI code terminology, an analogy is like if you randomly pulled different slips of paper out of a hat. Most of those papers are blank and don’t have anything on them, but some have writing on them. It’s the same with events - each time the game attempts to “pull” an event out of the “hat”, sometimes “nothing” gets pulled out; other times, you’ll get an event. So, depending on your luck, you might get a bunch of events at once, or you might have long stretches with nothing for years or even decades.
+
+That said, I am always looking to improve the frequency of events, and make them less common or more common as needed. I am also looking into creating a game rule to customize how often events will happen, but I can’t guarantee I’ll figure out anything on that front.
 
 
 [img]http://i.imgur.com/RQ5QZTF.jpg[/img]
