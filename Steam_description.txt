@@ -58,7 +58,7 @@ Thanks!
 [LIST]
 [*]Added 31 new events about the following themes:
 [LIST]
-[*]9 Generic
+[*]9 Adventure
 [*]13 Prophecy and Future*
 [/LIST]
 [*]Added event chain “Winter Wind Sentiment” from old VIET (23 events total)
