@@ -1,12 +1,12 @@
-version="1.0.1"
+version="1.0.2"
 tags={
 	"Events"
 	"Gameplay"
 	"Flavor"
 	"Immersion"
 	"Culture"
-	"cybrxkhan"
 	"VIET"
+	"cybrxkhan"
 }
 name="Very Immersive Events and Tales"
 supported_version="1.0.*"
