@@ -4,6 +4,7 @@
 # Fired from the on_actions for every one, two, five, and ten years depending on rarity
 # 
 # 1000-1022		Kogarashi Sentiment/Fast Love - Character recalls their first love
+# 1023-1029		Cinnamon Addict (Cinnamon Toast Crunch)
 # 
 ############################################################################################################################
 
@@ -575,11 +576,219 @@ VIETmisc.1022 = {
 }
 
 
+#########################################################################
+# 
+# CINNAMON ADDICT / CINNAMON TOAST CRUNCH 1023-1029
+# 
+#########################################################################
 
 
 
 
+#Begin the swirls of cinnamon in every bite
+VIETmisc.1023 = {
+	type = character_event
+	title = VIETmisc.1023.t
+	desc = VIETmisc.1023.desc
+	theme = feast_activities
+	override_background = { event_background = sitting_room }
+	
+	left_portrait = {
+		character = root
+		animation = personality_greedy
+	}
+	
+	trigger = {
+		has_game_rule = VIET_all_events
+		NOT = { has_character_flag = VIET_cinnamon_chain_chosen }
+		NOT = { has_character_modifier = VIET_cinnamon_toast_crunch_addict }
+		NOT = { has_global_variable = VIET_cinnamon_toast_crunch_yeah }		
+		NOT = { has_trait = temperate }
+		gold >= 100
+	}
+	
+	weight_multiplier = {
+		base = 1
+		modifier = {
+			add = 0.2
+			has_trait = gregarious
+		}
+		modifier = {
+			add = -0.2
+			has_trait = shy
+		}
+		modifier = {
+			add = 0.2
+			has_trait = impatient
+		}
+		modifier = {
+			add = -0.2
+			has_trait = patient
+		}
+		modifier = {
+			add = 0.2
+			has_trait = arbitrary
+		}
+		modifier = {
+			add = -0.2
+			has_trait = just
+		}
+	}
+	
+	
+	option = {
+		name = VIETmisc.1023.a
+		add_character_flag = VIET_cinnamon_chain_chosen
+		trigger_event = {
+			id = VIETmisc.1024
+			days = { 30 60 }
+		}
+	}
+}
 
+
+
+# Preparing for a cinnamon feast
+VIETmisc.1024 = {
+	type = character_event
+	title = VIETmisc.1024.t
+	desc = VIETmisc.1024.desc
+	theme = feast_activities
+	override_background = { event_background = throne_room }
+	
+	left_portrait = {
+		character = root
+		animation = personality_content
+	}
+	
+	option = {
+		name = VIETmisc.1024.a
+		remove_short_term_gold = 25
+		trigger_event = {
+			id = VIETmisc.1025
+			days = { 8 20 }
+		}
+	}
+}
+
+
+# Enjoying the cinnamon feast
+VIETmisc.1025 = {
+	type = character_event
+	title = VIETmisc.1025.t
+	desc = VIETmisc.1025.desc
+	theme = feast_activities
+	
+	left_portrait = {
+		character = root
+		animation = personality_honorable
+	}
+	
+	option = {
+		name = VIETmisc.1025.a
+		trigger_event = {
+			id = VIETmisc.1026
+			days = { 8 20 }
+		}
+	}
+}
+
+
+# Concerned courtiers
+VIETmisc.1026 = {
+	type = character_event
+	title = VIETmisc.1026.t
+	desc = VIETmisc.1026.desc
+	theme = vassal
+	
+	left_portrait = {
+		character = root
+		animation = personality_callous
+	}
+	
+	option = {
+		name = VIETmisc.1026.a
+		trigger_event = {
+			id = VIETmisc.1027
+			days = { 2 5 }
+		}
+	}
+}
+
+
+# Sticky buns, sticky fingers
+VIETmisc.1027 = {
+	type = character_event
+	title = VIETmisc.1027.t
+	desc = VIETmisc.1027.desc
+	theme = vassal
+	
+	left_portrait = {
+		character = root
+		animation = personality_callous
+	}
+	
+	option = {
+		name = VIETmisc.1027.a
+		trigger_event = {
+			id = VIETmisc.1028
+			days = { 2 5 }
+		}
+	}
+}
+
+
+# Council meeting
+VIETmisc.1028 = {
+	type = character_event
+	title = VIETmisc.1028.t
+	desc = VIETmisc.1028.desc
+	theme = stewardship_duty_focus
+	
+	left_portrait = {
+		character = root
+		animation = shame
+	}
+	
+	option = {
+		name = VIETmisc.1028.a
+		trigger_event = {
+			id = VIETmisc.1029
+			days = { 2 5 }
+		}
+	}
+}
+
+
+
+# The taste you can see
+VIETmisc.1029 = {
+	type = character_event
+	title = VIETmisc.1029.t
+	desc = VIETmisc.1029.desc
+	theme = feast_activities
+	override_background = { event_background = sitting_room }
+	
+	left_portrait = {
+		character = root
+		animation = personality_greedy
+	}
+	
+	option = {
+		name = VIETmisc.1029.a
+		add_character_modifier = {
+			modifier = VIET_cinnamon_toast_crunch_addict
+		}
+		add_character_modifier = {
+			modifier = VIET_ignored_disapproval_and_mockery
+			years = 8
+		}
+		set_global_variable = {
+			name = VIET_cinnamon_toast_crunch_yeah
+			value = yes
+		}
+	}
+}
 
 
 

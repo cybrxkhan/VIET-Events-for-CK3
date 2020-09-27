@@ -78,3 +78,9 @@ VIET_opinion_survived_night_ruins = {
 	decaying = yes
 	opinion = 30
 }
+VIET_opinion_gave_me_a_gift = {
+	years = 3
+	decaying = yes
+	opinion = 10
+	stacking = yes
+}

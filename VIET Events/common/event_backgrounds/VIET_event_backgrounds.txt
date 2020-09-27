@@ -76,6 +76,7 @@ VIET_background_tuscan_country = {
 					#geographical_region = world_europe_south
 					geographical_region = world_europe_north
 				}
+				NOT = { geographical_region = world_europe_west_iberia }
 			}
 		}
 		reference = "gfx/interface/illustrations/event_scenes/VIET_tuscan_country_english.dds"

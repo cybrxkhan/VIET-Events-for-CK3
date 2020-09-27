@@ -22,6 +22,9 @@
 # 0001-0046		Generic
 # 0047-0056		Art
 # 0057-0062		Underworld
+# 0063-0071		Adventure
+# 0072-0078		Fire
+# 0079-0082		Baklava
 # 
 ############################################################################################################################
 
@@ -5126,3 +5129,860 @@ VIETmisc.0071 = {
 		add_piety = 20
 	}
 }
+
+
+###############################################################
+# FIRE 0072-0078
+###############################################################
+
+
+
+
+# Meet some traveling pilgrims on the road
+VIETmisc.0072 = {
+	type = character_event
+	title = VIETmisc.0072.t
+	desc = VIETmisc.0072.desc
+	theme = realm
+	override_background = { event_background = burning_building } 
+	
+	right_portrait = {
+		character = root
+		animation = grief
+	}
+	
+	weight_multiplier = {
+		base = 1
+		modifier = {
+			add = 0.2
+			has_trait = lazy
+		}
+		modifier = {
+			add = -0.2
+			has_trait = diligent
+		}
+		modifier = {
+			add = 0.2
+			has_trait = arbitrary
+		}
+		modifier = {
+			add = -0.2
+			has_trait = just
+		}
+		modifier = {
+			add = 0.2
+			has_trait = trusting
+		}
+		modifier = {
+			add = -0.2
+			has_trait = paranoid
+		}
+	}
+	
+	option = { # ok
+		name = VIETmisc.0072.a
+		stress_impact = {
+			base = medium_stress_impact_gain
+			diligent = minor_stress_impact_gain
+			ambitious = minor_stress_impact_gain
+			paranoid = miniscule_stress_impact_gain
+		}
+		add_character_modifier = {
+			modifier = VIET_small_house_fire
+			days = 1095
+		}
+	}
+}
+
+
+# Commoner asks if you want to chop wood
+VIETmisc.0073 = {
+	type = character_event
+	title = VIETmisc.0073.t
+	desc = VIETmisc.0073.desc
+	theme = VIET_theme_small_town
+	
+	left_portrait = {
+		character = root
+		animation = personality_callous
+	}
+	
+	weight_multiplier = {
+		base = 1
+		modifier = {
+			add = 0.2
+			has_trait = gregarious
+		}
+		modifier = {
+			add = -0.2
+			has_trait = shy
+		}
+		modifier = {
+			add = 0.2
+			has_trait = humble
+		}
+		modifier = {
+			add = -0.2
+			has_trait = arrogant
+		}
+		modifier = {
+			add = 0.2
+			has_trait = trusting
+		}
+		modifier = {
+			add = -0.2
+			has_trait = paranoid
+		}
+	}
+	
+	option = { # No
+		name = VIETmisc.0073.a
+	}	
+	option = { # boo
+		name = VIETmisc.0073.b
+		add_dread = 5
+		stress_impact = {
+			humble = miniscule_stress_impact_gain
+			calm = miniscule_stress_impact_gain
+			forgiving = miniscule_stress_impact_gain
+		}
+	}	
+	option = { # ok
+		name = VIETmisc.0073.c
+		add_prestige = -20
+		add_character_modifier = {
+			modifier = VIET_chopped_some_wood
+			days = 1095
+		}
+		stress_impact = {
+			arrogant = minor_stress_impact_gain
+		}
+	}
+}
+
+
+
+# Burn yourself slightly by coming too close to a torch
+VIETmisc.0074 = {
+	type = character_event
+	title = VIETmisc.0074.t
+	desc = VIETmisc.0074.desc
+	theme = secret
+	
+	left_portrait = {
+		character = root
+		animation = pain
+	}
+	
+	weight_multiplier = {
+		base = 1
+		modifier = {
+			add = 0.2
+			has_trait = lazy
+		}
+		modifier = {
+			add = -0.2
+			has_trait = diligent
+		}
+		modifier = {
+			add = 0.2
+			has_trait = paranoid
+		}
+		modifier = {
+			add = -0.2
+			has_trait = trusting
+		}
+		modifier = {
+			add = 0.2
+			has_trait = wrathful
+		}
+		modifier = {
+			add = -0.2
+			has_trait = calm
+		}
+	}
+	
+	option = { # Oh no
+		name = VIETmisc.0074.a
+		add_character_modifier = {
+			modifier = VIET_torch_burn
+			days = 365
+		}
+	}
+}
+
+
+# Stand far or close to the fire?
+VIETmisc.0075 = {
+	type = character_event
+	title = VIETmisc.0075.t
+	desc = VIETmisc.0075.desc
+	theme = family
+	
+	left_portrait = root
+	
+	weight_multiplier = {
+		base = 1
+		modifier = {
+			add = 0.2
+			has_trait = ambitious
+		}
+		modifier = {
+			add = -0.2
+			has_trait = content
+		}
+		modifier = {
+			add = 0.2
+			has_trait = paranoid
+		}
+		modifier = {
+			add = -0.2
+			has_trait = trusting
+		}
+		modifier = {
+			add = 0.2
+			has_trait = impatient
+		}
+		modifier = {
+			add = -0.2
+			has_trait = patient
+		}
+	}
+	
+	option = { # hot
+		name = VIETmisc.0075.a
+		add_piety = 5
+	}	
+	option = { # cold
+		name = VIETmisc.0075.b
+		add_prestige = 5
+	}	
+	option = { # go to bed
+		name = VIETmisc.0075.c
+		add_stress = -5
+	}
+}
+
+
+# Mysterious fires appearing on the horizon without any known source
+VIETmisc.0076 = {
+	type = character_event
+	title = VIETmisc.0076.t
+	desc = VIETmisc.0076.desc
+	theme = intrigue
+	
+	left_portrait = {
+		character = root
+		animation = worry
+	}
+	
+	weight_multiplier = {
+		base = 1
+		modifier = {
+			add = 0.2
+			has_trait = zealous
+		}
+		modifier = {
+			add = -0.2
+			has_trait = cynical
+		}
+		modifier = {
+			add = 0.2
+			has_trait = paranoid
+		}
+		modifier = {
+			add = -0.2
+			has_trait = trusting
+		}
+		modifier = {
+			add = 0.2
+			has_trait = ambitious
+		}
+		modifier = {
+			add = -0.2
+			has_trait = content
+		}
+	}
+	
+	option = { # Interesting
+		name = VIETmisc.0076.a
+		add_character_modifier = {
+			modifier = VIET_mysterious_horizon_fires
+			days = 1095
+		}
+	}	
+	option = { # I'm a nerd
+		name = VIETmisc.0076.b
+		trigger = {
+			learning >= decent_skill_rating			
+		}
+		skill = learning
+		add_character_modifier = {
+			modifier = VIET_impressed_others_with_knowledge
+			days = 365
+		}
+	}
+}
+
+
+
+# Visiting scholar recommends making some changes to your house for fire safety reasons
+VIETmisc.0077 = {
+	type = character_event
+	title = VIETmisc.0077.t
+	desc = VIETmisc.0077.desc
+	theme = vassal
+	
+	left_portrait = {
+		character = root
+		animation = personality_rational
+	}
+	
+	weight_multiplier = {
+		base = 1
+		modifier = {
+			add = 0.2
+			has_trait = gregarious
+		}
+		modifier = {
+			add = -0.2
+			has_trait = shy
+		}
+		modifier = {
+			add = 0.2
+			has_trait = patient
+		}
+		modifier = {
+			add = -0.2
+			has_trait = impatient
+		}
+		modifier = {
+			add = 0.2
+			has_trait = paranoid
+		}
+		modifier = {
+			add = -0.2
+			has_trait = trusting
+		}
+	}
+	
+	option = { # Will do!
+		name = VIETmisc.0077.a
+		trigger = {
+			OR = {
+				gold >= 25
+				is_ai = no
+			}
+		}
+		remove_short_term_gold = 25
+		add_character_modifier = {
+			modifier = VIET_house_fire_safety_measures
+			days = 3650
+		}
+		if = {
+			limit = {
+				has_game_rule = VIET_historical_context_on
+			}
+			custom_tooltip = VIETmisc.0077.info
+		}
+	}	
+	option = { # Don't have money to spare
+		name = VIETmisc.0077.b
+		if = {
+			limit = {
+				gold >= 25
+			}
+			stress_impact = {
+				diligent = minor_stress_impact_gain
+			}
+		}
+		if = {
+			limit = {
+				has_game_rule = VIET_historical_context_on
+			}
+			custom_tooltip = VIETmisc.0077.info
+		}
+	}	
+	option = { # He's up to something!
+		name = VIETmisc.0077.c
+		trigger = {
+			has_trait = paranoid
+		}
+		trait = paranoid
+		add_dread = 5
+		if = {
+			limit = {
+				has_game_rule = VIET_historical_context_on
+			}
+			custom_tooltip = VIETmisc.0077.info
+		}
+	}
+}
+
+
+
+# See some vagrants huddled on the side of the road by a fire
+VIETmisc.0078 = {
+	type = character_event
+	title = VIETmisc.0078.t
+	desc = VIETmisc.0078.desc
+	theme = realm
+	override_background = { event_background = VIET_background_tuscan_country }
+	
+	left_portrait = {
+		character = root
+		animation = personality_callous
+	}
+	
+	weight_multiplier = {
+		base = 1
+		modifier = {
+			add = 0.2
+			has_trait = gregarious
+		}
+		modifier = {
+			add = -0.2
+			has_trait = shy
+		}
+		modifier = {
+			add = 0.2
+			has_trait = diligent
+		}
+		modifier = {
+			add = -0.2
+			has_trait = lazy
+		}
+		modifier = {
+			add = 0.2
+			has_trait = greedy
+		}
+		modifier = {
+			add = -0.2
+			has_trait = generous
+		}
+	}
+	
+	option = { # It is what it is
+		name = VIETmisc.0078.a
+		stress_impact = {
+			compassionate = miniscule_stress_impact_gain
+		}
+	}	
+	option = { # Take them away!
+		name = VIETmisc.0078.b
+		trigger = {
+			NOT = { has_trait = compassionate }
+		}
+		add_dread = 8
+		add_character_modifier = {
+			modifier = VIET_dislikes_commoners
+			days = 730
+		}
+		stress_impact = {
+			humble = miniscule_stress_impact_gain
+			sadistic = miniscule_stress_impact_loss
+		}
+	}	
+	option = { # Give them some gold
+		name = VIETmisc.0078.c
+		remove_short_term_gold = 5
+		add_character_modifier = {
+			modifier = VIET_friend_of_beggars
+			days = 730
+		}
+		stress_impact = {
+			callous = miniscule_stress_impact_gain
+			greedy = miniscule_stress_impact_gain
+			arrogant = miniscule_stress_impact_gain
+		}
+	}
+}
+
+
+###############################################################
+# BAKLAVA 0079-0082
+###############################################################
+
+
+# Baklava merchant offers special baklava
+VIETmisc.0079 = {
+	type = character_event
+	title = VIETmisc.0079.t
+	desc = VIETmisc.0079.desc
+	theme = feast_activity
+	override_background = { event_background = market }
+	
+	left_portrait = {
+		character = root
+		animation = personality_rational
+	}
+	
+	trigger = {
+		VIET_is_baklava_culture_trigger = yes
+		gold >= 10
+	}
+	
+	weight_multiplier = {
+		base = 1
+		modifier = {
+			add = 0.2
+			has_trait = gluttonous
+		}
+		modifier = {
+			add = -0.2
+			has_trait = temperate
+		}
+		modifier = {
+			add = 0.2
+			has_trait = lustful
+		}
+		modifier = {
+			add = -0.2
+			has_trait = chaste
+		}
+		modifier = {
+			add = 0.2
+			has_trait = content
+		}
+		modifier = {
+			add = -0.2
+			has_trait = ambitious
+		}
+	}
+	
+	option = { # Normal baklava
+		name = VIETmisc.0079.a
+		remove_short_term_gold = 10
+		add_character_modifier = {
+			modifier = VIET_bought_baklava_normal
+			days = 365
+		}
+	}	
+	option = { # Baklava w/ cheese
+		name = VIETmisc.0079.b
+		trigger = {
+			OR = {
+				is_ai = no
+				gold >= 20
+			}
+		}
+		remove_short_term_gold = 20
+		add_character_modifier = {
+			modifier = VIET_bought_baklava_sweet_cheese
+			days = 365
+		}
+	}	
+	option = { # Baklava w/ spices
+		name = VIETmisc.0079.c
+		trigger = {
+			OR = {
+				is_ai = no
+				gold >= 20
+			}
+		}
+		remove_short_term_gold = 20
+		add_character_modifier = {
+			modifier = VIET_bought_baklava_spices
+			days = 365
+		}
+	}	
+	option = { # Baklava w/ fruits
+		name = VIETmisc.0079.d
+		trigger = {
+			OR = {
+				is_ai = no
+				gold >= 20
+			}
+		}
+		remove_short_term_gold = 20
+		add_character_modifier = {
+			modifier = VIET_bought_baklava_fruits
+			days = 365
+		}
+	}	
+	option = { # All the baklava!!!
+		name = VIETmisc.0079.e
+		trigger = {
+			has_trait = gluttonous
+			OR = {
+				is_ai = no
+				gold >= 60
+			}
+		}
+		trait = gluttonous
+		remove_short_term_gold = 60
+		add_character_modifier = {
+			modifier = VIET_bought_baklava_normal
+			days = 365
+		}
+		add_character_modifier = {
+			modifier = VIET_bought_baklava_sweet_cheese
+			days = 365
+		}
+		add_character_modifier = {
+			modifier = VIET_bought_baklava_spices
+			days = 365
+		}
+		add_character_modifier = {
+			modifier = VIET_bought_baklava_fruits
+			days = 365
+		}
+	}
+}
+
+
+
+# A courtier is obsessed with baklava
+VIETmisc.0080 = {
+	type = character_event
+	title = VIETmisc.0080.t
+	desc = VIETmisc.0080.desc
+	theme = feast_activity
+	override_background = { event_background = throne_room }
+	
+	left_portrait = {
+		character = root
+		animation = personality_forgiving
+	}	
+	right_portrait = {
+		character = scope:scope_VIET_baklava_fanatic
+		animation = personality_greedy
+	}
+	
+	trigger = {
+		VIET_is_baklava_culture_trigger = yes
+		any_courtier = {
+			is_available_ai_adult = yes
+			VIET_is_baklava_culture_trigger = yes
+		}
+	}
+	
+	weight_multiplier = {
+		base = 1
+		modifier = {
+			add = 0.2
+			has_trait = gluttonous
+		}
+		modifier = {
+			add = -0.2
+			has_trait = temperate
+		}
+		modifier = {
+			add = 0.2
+			has_trait = gregarious
+		}
+		modifier = {
+			add = -0.2
+			has_trait = shy
+		}
+		modifier = {
+			add = 0.2
+			has_trait = humble
+		}
+		modifier = {
+			add = -0.2
+			has_trait = arrogant
+		}
+	}
+	
+	immediate = {
+		random_courtier = {
+			limit = {
+				is_available_ai_adult = yes
+				VIET_is_baklava_culture_trigger = yes
+			}
+			save_scope_as = scope_VIET_baklava_fanatic
+		}
+	}
+	
+	option = { # Very funny!
+		name = VIETmisc.0080.a
+		scope:scope_VIET_baklava_fanatic = {
+			add_prestige = -25
+			add_character_modifier = {
+				modifier = VIET_baklava_fanatic
+				years = 10
+			}
+		}
+	}	
+	option = { # I like it too
+		name = VIETmisc.0080.b
+		add_prestige = -25
+		add_character_modifier = {
+			modifier = VIET_baklava_fanatic
+			years = 10
+		}
+		scope:scope_VIET_baklava_fanatic = {
+			add_prestige = -25
+			add_character_modifier = {
+				modifier = VIET_baklava_fanatic
+				years = 10
+			}
+		}
+	}
+}
+
+
+# Got baklava syrup all over documents
+VIETmisc.0081 = {
+	type = character_event
+	title = VIETmisc.0081.t
+	desc = VIETmisc.0081.desc
+	theme = VIET_theme_office
+	
+	right_portrait = root
+	
+	trigger = {
+		VIET_is_baklava_culture_trigger = yes
+	}
+	
+	weight_multiplier = {
+		base = 1
+		modifier = {
+			add = 0.2
+			has_trait = gluttonous
+		}
+		modifier = {
+			add = -0.2
+			has_trait = temperate
+		}
+		modifier = {
+			add = 0.2
+			has_trait = impatient
+		}
+		modifier = {
+			add = -0.2
+			has_trait = patient
+		}
+		modifier = {
+			add = 0.2
+			has_trait = lazy
+		}
+		modifier = {
+			add = -0.2
+			has_trait = diligent
+		}
+	}
+	
+	option = { # Uh oh
+		name = VIETmisc.0081.a
+		add_prestige = -10
+		stress_impact = {
+			diligent = miniscule_stress_impact_gain
+			impatient = miniscule_stress_impact_gain
+		}
+	}
+}
+
+
+
+# You are given a gift of baklava
+VIETmisc.0082 = {
+	type = character_event
+	title = VIETmisc.0082.t
+	desc = VIETmisc.0082.desc
+	theme = vassal
+	
+	left_portrait = {
+		character = root
+		animation = personality_forgiving
+	}	
+	right_portrait = {
+		character = scope:scope_VIET_baklava_gifter
+		animation = personality_compassionate
+	}
+	
+	trigger = {
+		VIET_is_baklava_culture_trigger = yes
+		any_courtier = {
+			is_available_ai_adult = yes
+			VIET_is_baklava_culture_trigger = yes
+		}
+	}
+	
+	weight_multiplier = {
+		base = 1
+		modifier = {
+			add = 0.2
+			has_trait = gluttonous
+		}
+		modifier = {
+			add = -0.2
+			has_trait = temperate
+		}
+		modifier = {
+			add = 0.2
+			has_trait = trusting
+		}
+		modifier = {
+			add = -0.2
+			has_trait = paranoid
+		}
+		modifier = {
+			add = 0.2
+			has_trait = gregarious
+		}
+		modifier = {
+			add = -0.2
+			has_trait = shy
+		}
+	}
+	
+	immediate = {
+		random_courtier = {
+			limit = {
+				is_available_ai_adult = yes
+				VIET_is_baklava_culture_trigger = yes
+			}
+			save_scope_as = scope_VIET_baklava_gifter
+		}
+		scope:scope_VIET_baklava_gifter = {
+			reverse_add_opinion = {
+				target = root
+				modifier = VIET_opinion_gave_me_a_gift
+			}			
+		}
+	}
+	
+	option = { # Give to visiting envoys
+		name = VIETmisc.0082.a
+		add_character_modifier = {
+			modifier = VIET_baklava_envoy_gifts
+			years = 4
+		}
+		stress_impact = {
+			shy = miniscule_stress_impact_gain
+		}
+	}	
+	option = { # Provide to banquet guests
+		name = VIETmisc.0082.b
+		add_character_modifier = {
+			modifier = VIET_baklava_guests_banquets
+			years = 4
+		}
+		stress_impact = {
+			shy = miniscule_stress_impact_gain
+		}
+	}
+	option = { # Donate to the poor
+		name = VIETmisc.0082.c
+		add_character_modifier = {
+			modifier = VIET_baklava_donate_to_poor
+			years = 4
+		}
+		stress_impact = {
+			greedy = miniscule_stress_impact_gain
+		}
+	}
+	option = { # Keep to self
+		name = VIETmisc.0082.d
+		add_character_modifier = {
+			modifier = VIET_baklava_keep_for_self
+			years = 4
+		}
+		stress_impact = {
+			generous = miniscule_stress_impact_gain
+		}
+	}
+}
+

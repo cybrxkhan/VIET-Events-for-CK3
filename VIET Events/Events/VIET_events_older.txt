@@ -13,6 +13,7 @@
 # 1016-1020		Eggs
 # 1021-1024		Furniture
 # 1025-1029		Time
+# 1030-1032		Moss
 # 
 ############################################################################################################################
 
@@ -1938,3 +1939,196 @@ VIETold.1029 = {
 	}
 }
 
+##################################################
+# MOSS EVENTS	1030-1032
+##################################################
+
+
+
+# Moss on walls - do you want to clean up or not?
+VIETold.1030 = {
+	type = character_event
+	title = VIETold.1030.t
+	desc = VIETold.1030.desc
+	theme = realm
+	
+	right_portrait = {
+		character = root
+		animation = personality_dishonorable
+	}
+
+	
+	weight_multiplier = {
+		base = 1
+		modifier = {
+			add = 0.2
+			has_trait = diligent
+		}
+		modifier = {
+			add = -0.2
+			has_trait = lazy
+		}
+		modifier = {
+			add = 0.2
+			has_trait = honest
+		}
+		modifier = {
+			add = -0.2
+			has_trait = deceitful
+		}
+		modifier = {
+			add = 0.2
+			has_trait = arrogant
+		}
+		modifier = {
+			add = -0.2
+			has_trait = humble
+		}
+	}
+	
+	option = { # Clean it up yourself
+		name = VIETold.1030.a
+		add_character_modifier = {
+			modifier = VIET_moss_exercise
+			days = 365
+		}
+		if = {
+			limit = {
+				faith = { trait_is_virtue = humble }
+			}
+			add_piety = 15
+		}
+		stress_impact = {
+			lazy = minor_stress_impact_gain
+		}
+	}	
+	option = { # Make servants clean it up
+		name = VIETold.1030.b
+		add_prestige = 20
+	}	
+	option = { # Don't do anything
+		name = VIETold.1030.c
+		stress_impact = {
+			base = minor_stress_impact_loss
+			diligent = minor_stress_impact_gain
+		}
+	}
+}
+
+
+# Put too much moss in shoes
+VIETold.1031 = {
+	type = character_event
+	title = VIETold.1031.t
+	desc = VIETold.1031.desc
+	theme = VIET_theme_skyrim_forest
+	
+	right_portrait = {
+		character = root
+		animation = shame
+	}
+
+	trigger = {
+		# Should only be in northern European and Siberian regions
+		capital_province = {
+			OR = {
+				geographical_region = world_europe_north
+				geographical_region = world_europe_east
+				geographical_region = world_steppe_west
+				geographical_region = world_steppe_east
+			}
+			OR = {
+				terrain = taiga
+				terrain = forest
+				terrain = mountains
+				terrain = hills
+				terrain = hills
+			}
+		}	
+	}
+	
+	weight_multiplier = {
+		base = 1
+		modifier = {
+			add = 0.2
+			has_trait = stubborn
+		}
+		modifier = {
+			add = -0.2
+			has_trait = fickle
+		}
+		modifier = {
+			add = 0.2
+			has_trait = honest
+		}
+		modifier = {
+			add = -0.2
+			has_trait = deceitful
+		}
+		modifier = {
+			add = 0.2
+			has_trait = wrathful
+		}
+		modifier = {
+			add = -0.2
+			has_trait = calm
+		}
+	}
+	
+	option = { # Whoops
+		name = VIETold.1031.a
+		add_prestige = -10
+	}
+}
+
+
+
+# Take a nap on a rock with moss
+VIETold.1032 = {
+	type = character_event
+	title = VIETold.1032.t
+	desc = VIETold.1032.desc
+	theme = VIET_theme_skyrim_forest
+
+	left_portrait = {
+		character = root
+		animation = personality_content
+	}
+	
+	weight_multiplier = {
+		base = 1
+		modifier = {
+			add = 0.2
+			has_trait = lazy
+		}
+		modifier = {
+			add = -0.2
+			has_trait = diligent
+		}
+		modifier = {
+			add = 0.2
+			has_trait = content
+		}
+		modifier = {
+			add = -0.2
+			has_trait = ambitious
+		}
+		modifier = {
+			add = 0.2
+			has_trait = calm
+		}
+		modifier = {
+			add = -0.2
+			has_trait = wrathful
+		}
+	}
+	
+	option = { # Cool
+		name = VIETold.1032.a
+		add_stress = -5
+		add_character_modifier = {
+			modifier = VIET_outdoors_nap
+			days = 1111
+		}
+	}
+}

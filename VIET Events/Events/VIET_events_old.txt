@@ -11,7 +11,8 @@
 # 2013-2018		Reading Stories
 # 2019-2026		Stuck Inside
 # 2027-2040		Fantastical Stories
-# 2041-2054		Prophecy and Future
+# 2041-2053		Prophecy and Future
+# 
 # 
 ############################################################################################################################
 
@@ -2884,7 +2885,7 @@ VIETold.2040 = {
 }
 
 ###################################################################################################
-# PROPHECY AND FUTURE 2041-2054
+# PROPHECY AND FUTURE 2041-2053
 ###################################################################################################
 
 # Prophetic dream of World War 1
@@ -3620,6 +3621,1200 @@ VIETold.2053 = {
 		}
 	}
 }
+
+
+
+################################################################################################
+# SKYRIM DIALOGUE INSPIRED 2054-2067 (inspired by Skyrim dialogue (many will be disabled by Serious or Balanced game rule))
+################################################################################################
+
+
+
+
+# Narri - barmaid flirts with character
+VIETold.2054 = {
+	type = character_event
+	title = VIETold.2054.t
+	desc = VIETold.2054.desc
+	theme = friendly	
+	override_background = { event_background = tavern }
+	
+	right_portrait = root
+	
+	trigger = {
+		VIET_is_unattractive_trigger = no
+	}
+
+	weight_multiplier = {
+		base = 1
+		modifier = {
+			add = 0.2
+			has_trait = honest
+		}
+		modifier = {
+			add = -0.2
+			has_trait = deceitful
+		}
+		modifier = {
+			add = 0.2
+			has_trait = gregarious
+		}
+		modifier = {
+			add = -0.2
+			has_trait = shy
+		}
+		modifier = {
+			add = 0.2
+			has_trait = humble
+		}
+		modifier = {
+			add = -0.2
+			has_trait = arrogant
+		}
+	}
+
+	option = { # Ignore her
+		name = VIETold.2054.a
+		if = {
+			limit = {
+				faith = {
+					trait_is_virtue = chaste
+				}
+			}
+			add_piety = 10
+		}
+		add_prestige = 10
+	}
+
+	option = { # Chat with her
+		name = VIETold.2054.b
+		if = {
+			limit = {
+				faith = {
+					trait_is_virtue = chaste
+				}
+			}
+			add_piety = 10
+		}
+		add_character_modifier = {
+			modifier = VIET_interesting_talk_with_stranger
+			days = 365
+		}
+		stress_impact = {
+			gregarious = miniscule_stress_impact_loss
+		}
+	}
+
+	option = { # Chat with her
+		name = VIETold.2054.c
+		add_character_modifier = {
+			modifier = VIET_interesting_talk_with_stranger
+			days = 365
+		}
+		stress_impact = {
+			chaste = miniscule_stress_impact_gain
+			lustful = miniscule_stress_impact_loss
+		}
+	}
+
+	option = { # Have a one night stand
+		name = VIETold.2054.d
+		trigger = {
+			has_trait = lustful
+		}
+		trait = lustful
+		if = {
+			limit = {
+				faith = {
+					trait_is_virtue = chaste
+				}
+			}
+			add_piety = -20
+		}
+		add_character_modifier = {
+			modifier = VIET_one_time_lovemaking
+			days = 365
+		}
+		stress_impact = {
+			lustful = minor_stress_impact_loss
+		}
+	}
+}
+
+
+
+# It's a fine day with you around - character meets young noblewoman
+VIETold.2055 = {
+	type = character_event
+	title = VIETold.2055.t
+	desc = VIETold.2055.desc
+	theme = party
+	
+	left_portrait = {
+		character = root
+		animation = personality_compassionate
+	}
+	
+	trigger = {
+		NOT = { has_character_flag = VIET_nice_day_around_girl_event }
+		#NOT = { has_game_rule = VIET_serious_events }
+	}
+
+	weight_multiplier = {
+		base = 1
+		modifier = {
+			add = 0.2
+			has_trait = diligent
+		}
+		modifier = {
+			add = -0.2
+			has_trait = lazy
+		}
+		modifier = {
+			add = 0.2
+			has_trait = gregarious
+		}
+		modifier = {
+			add = -0.2
+			has_trait = shy
+		}
+		modifier = {
+			add = 0.2
+			has_trait = patient
+		}
+		modifier = {
+			add = -0.2
+			has_trait = impatient
+		}
+	}
+	
+	immediate = {
+		add_character_flag = VIET_nice_day_around_girl_event
+	}
+
+	option = { # Give her advice
+		name = VIETold.2055.a
+		add_prestige = 25
+		stress_impact = {
+			callous = minor_stress_impact_gain
+		}
+	}
+	option = { # Talk to someone else
+		name = VIETold.2055.b
+		add_character_modifier = {
+			modifier = VIET_interesting_talk_with_stranger
+			days = 365
+		}
+		stress_impact = {
+			humble = minor_stress_impact_gain
+		}
+	}
+	option = { # Let her join my court
+		name = VIETold.2055.c
+		remove_short_term_gold = 10
+		stress_impact = {
+			shy = minor_stress_impact_gain
+		}
+		trigger_event = VIETold.2056
+	}
+}
+
+
+
+# It's a fine day with you around - character meets young noblewoman
+VIETold.2056 = {
+	type = character_event
+	title = VIETold.2056.t
+	desc = VIETold.2056.desc
+	theme = party
+	
+	left_portrait = {
+		character = root
+		animation = personality_compassionate
+	}
+	right_portrait = {
+		character = scope:scope_VIET_nice_day_girl
+		animation = personality_content
+	}
+	
+	immediate = {
+		hidden_effect = {
+			create_character = {
+				location = root.capital_province
+				age = { 16 25 }
+				gender = female
+				faith = root.faith
+				culture = root.culture
+				save_scope_as = scope_VIET_nice_day_girl
+				random_traits_list = {
+					count = 1
+					education_diplomacy_3 = {}
+					education_stewardship_3 = {}
+					education_intrigue_3 = {}
+				}
+				random_traits_list = {
+					count = 3
+					compassionate = {}
+					gregarious = {}
+					humble = {}
+					generous = {}
+					shy = {}
+				}
+				random_traits = yes
+			}
+			scope:scope_VIET_nice_day_girl = {
+				random_list = {
+					40 = { }
+					40 = { add_trait = beauty_good_1 }
+					15 = { add_trait = beauty_good_2 }
+					5 = { add_trait = beauty_good_3 }
+				}
+				#add_character_modifier = {
+				#	modifier = VIET_nice_day_girl
+				#}
+			}			
+		}
+	}
+
+	option = { # Welcome!
+		name = VIETold.2056.a
+		add_courtier = scope:scope_VIET_nice_day_girl
+	}
+}
+
+
+
+# Jenassa - strange female mercenary comes to court
+VIETold.2057 = {
+	type = character_event
+	title = VIETold.2057.t
+	desc = VIETold.2057.desc
+	theme = martial_strategy_focus
+	
+	left_portrait = {
+		character = root
+		animation = personality_cynical
+	}
+	
+	trigger = {
+		NOT = { has_character_flag = VIET_jenassa_mercenary_event }
+		NOT = { has_game_rule = VIET_serious_events }
+	}
+
+	weight_multiplier = {
+		base = 1
+		modifier = {
+			add = 0.2
+			has_trait = brave
+		}
+		modifier = {
+			add = -0.2
+			has_trait = craven
+		}
+		modifier = {
+			add = 0.2
+			has_trait = fickle
+		}
+		modifier = {
+			add = -0.2
+			has_trait = stubborn
+		}
+		modifier = {
+			add = 0.2
+			has_trait = humble
+		}
+		modifier = {
+			add = -0.2
+			has_trait = arrogant
+		}
+	}
+	
+	immediate = {
+		add_character_flag = VIET_jenassa_mercenary_event 
+	}
+
+	option = { # Hire her
+		name = VIETold.2057.a
+		trigger = {
+			OR = {
+				is_ai = no
+				gold >= 30
+			}
+		}
+		remove_short_term_gold = 30
+		add_character_modifier = {
+			modifier = VIET_strange_female_bodyguard
+			years = 20
+		}
+	}
+	option = { # Don't hire her
+		name = VIETold.2057.b
+		add_prestige = 25
+	}
+	option = { # Amusing!
+		name = VIETold.2057.c
+		trigger = {
+			NOT = { faith = { has_doctrine = doctrine_gender_female_dominated } }
+		}
+		add_character_modifier = {
+			modifier = VIET_amused_ruler
+			days = 365
+		}
+	}
+}
+
+
+
+# Bad nip in the air
+VIETold.2058 = {
+	type = character_event
+	title = VIETold.2058.t
+	desc = VIETold.2058.desc
+	theme = VIET_theme_tuscan_country
+	
+	right_portrait = {
+		character = root
+		animation = personality_rational
+	}
+
+	weight_multiplier = {
+		base = 1
+		modifier = {
+			add = 0.2
+			has_trait = compassionate
+		}
+		modifier = {
+			add = -0.2
+			has_trait = callous
+		}
+		modifier = {
+			add = 0.2
+			has_trait = diligent
+		}
+		modifier = {
+			add = -0.2
+			has_trait = lazy
+		}
+		modifier = {
+			add = 0.2
+			has_trait = humble
+		}
+		modifier = {
+			add = -0.2
+			has_trait = arrogant
+		}
+	}
+
+	option = { # Not my problem
+		name = VIETold.2058.a
+		add_prestige = 10
+		stress_impact = {
+			compassionate = miniscule_stress_impact_gain
+		}
+	}
+	option = { # It'll be fine
+		name = VIETold.2058.b
+		random_list = {
+			70 = { add_piety = 10 }
+			30 = { add_prestige = 10 }
+		}
+	}
+	option = { # Pray nothing happens
+		name = VIETold.2058.c
+		add_piety = 10
+		stress_impact = {
+			cynical = miniscule_stress_impact_gain
+		}
+	}
+	option = { # Generic answer
+		name = VIETold.2058.d
+		random_list = {
+			70 = { add_prestige = 10 }
+			30 = { add_piety = 10 }
+		}
+	}
+}
+
+
+# Mila Valentina - Chat with a kid helping her mother sell fruits and vegetables
+VIETold.2059 = {
+	type = character_event
+	title = VIETold.2059.t
+	desc = VIETold.2059.desc
+	theme = VIET_theme_small_town
+	override_background = { event_background = market }
+	
+	right_portrait = {
+		character = root
+		animation = personality_rational
+	}
+	
+	trigger = {
+		NOT = { has_game_rule = VIET_serious_events }
+	}
+
+	weight_multiplier = {
+		base = 1
+		modifier = {
+			add = 0.2
+			has_trait = lazy
+		}
+		modifier = {
+			add = -0.2
+			has_trait = diligent
+		}
+		modifier = {
+			add = 0.2
+			has_trait = patient
+		}
+		modifier = {
+			add = -0.2
+			has_trait = impatient
+		}
+		modifier = {
+			add = 0.2
+			has_trait = generous
+		}
+		modifier = {
+			add = -0.2
+			has_trait = greedy
+		}
+	}
+
+	option = { # Get used to hard work
+		name = VIETold.2059.a
+		add_prestige = 10
+		stress_impact = {
+			compassionate = miniscule_stress_impact_gain
+		}
+	}
+	option = { # You should relax
+		name = VIETold.2059.b
+		add_piety = 10
+		stress_impact = {
+			diligent = miniscule_stress_impact_gain
+		}
+	}
+	option = { # Pray
+		name = VIETold.2059.c
+		add_piety = 10
+		stress_impact = {
+			cynical = miniscule_stress_impact_gain
+		}
+	}
+	option = { # Hope for the future
+		name = VIETold.2059.d
+		add_prestige = 10
+		stress_impact = {
+			cynical = miniscule_stress_impact_gain
+		}
+	}
+}
+
+
+
+
+# Jon Battle-Born - Getting to know a friendly, poetic guardsman
+VIETold.2060 = {
+	type = character_event
+	title = VIETold.2060.t
+	desc = VIETold.2060.desc
+	theme = friendly	
+	override_background = { event_background = corridor_day }
+	
+	left_portrait = {
+		character = root
+		animation = personality_compassionate
+	}
+	
+	trigger = {
+		NOT = { has_character_flag = VIET_jon_battle_born_event }
+		NOT = { has_game_rule = VIET_serious_events }
+	}
+
+	weight_multiplier = {
+		base = 1
+		modifier = {
+			add = 0.2
+			has_trait = gregarious
+		}
+		modifier = {
+			add = -0.2
+			has_trait = shy
+		}
+		modifier = {
+			add = 0.2
+			has_trait = lazy
+		}
+		modifier = {
+			add = -0.2
+			has_trait = diligent
+		}
+		modifier = {
+			add = 0.2
+			has_trait = calm
+		}
+		modifier = {
+			add = -0.2
+			has_trait = wrathful
+		}
+	}
+
+	immediate = {
+		add_character_flag = VIET_jon_battle_born_event 
+	}
+
+	option = { # Don't get distracted
+		name = VIETold.2060.a
+		add_prestige = 10
+	}
+	option = { # Don't be lazy
+		name = VIETold.2060.b
+		add_dread = 5
+	}
+	option = { # Relaxing is good
+		name = VIETold.2060.c
+		add_piety = 10
+	}
+	option = { # Promotion?
+		name = VIETold.2060.d
+		trigger_event = VIETold.2061		
+	}
+}
+
+
+
+# Jon Battle-Born - Getting to know a friendly, poetic guardsman
+VIETold.2061 = {
+	type = character_event
+	title = VIETold.2061.t
+	desc = VIETold.2061.desc
+	theme = friendly	
+	override_background = { event_background = corridor_day }
+	
+	left_portrait = {
+		character = root
+		animation = personality_compassionate
+	}
+	right_portrait = {
+		character = scope:scope_VIET_jon_battle_born
+		animation = admiration
+	}
+	
+	immediate = {
+		hidden_effect = {
+			create_character = {
+				location = root.capital_province
+				age = { 20 35 }
+				gender = male
+				trait = blademaster_2
+				faith = root.faith
+				culture = root.culture
+				diplomacy = { 8 13 }
+				martial = { 8 13 }
+				prowess = { 4 9 } # Blademaster gives at least 6
+				save_scope_as = scope_VIET_jon_battle_born
+				random_traits_list = {
+					count = 1
+					education_diplomacy_3 = {}
+					education_martial_3 = {}
+				}
+				random_traits_list = {
+					count = 3
+					compassionate = {}
+					gregarious = {}
+					humble = {}
+					generous = {}
+					just = {}
+					patient = {}
+					brave = {}
+					calm = {}
+				}
+				random_traits = yes
+			}
+			scope:scope_VIET_jon_battle_born = {
+				random_list = {
+					40 = { }
+					40 = { add_trait = physique_good_1 }
+					15 = { add_trait = physique_good_2 }
+					5 = { add_trait = physique_good_3 }
+				}
+				add_character_modifier = {
+					modifier = VIET_jon_battle_born_soldier
+				}
+			}			
+		}
+	}
+
+	option = { # Welcome!
+		name = VIETold.2061.a
+		add_courtier = scope:scope_VIET_jon_battle_born
+	}
+}
+
+
+
+# Lydia - A maid is sworn to carry your burdens
+VIETold.2062 = {
+	type = character_event
+	title = VIETold.2062.t
+	desc = VIETold.2062.desc
+	theme = family
+	
+	left_portrait = root
+	
+	trigger = {
+		NOT = { has_character_flag = VIET_lydia_maid_event }
+		NOT = { has_game_rule = VIET_serious_events }
+	}
+
+	weight_multiplier = {
+		base = 1
+		modifier = {
+			add = 0.2
+			has_trait = patient
+		}
+		modifier = {
+			add = -0.2
+			has_trait = impatient
+		}
+		modifier = {
+			add = 0.2
+			has_trait = humble
+		}
+		modifier = {
+			add = -0.2
+			has_trait = arrogant
+		}
+		modifier = {
+			add = 0.2
+			has_trait = calm
+		}
+		modifier = {
+			add = -0.2
+			has_trait = wrathful
+		}
+	}
+
+	immediate = {
+		add_character_flag = VIET_lydia_maid_event
+	}
+
+	option = { # Don't get distracted
+		name = VIETold.2062.a
+		add_prestige = 10
+		add_dread = 5
+	}
+	option = { # Don't be lazy
+		name = VIETold.2062.b
+		add_character_modifier = {
+			modifier = VIET_amused_ruler
+			days = 730
+		}
+	}
+	option = { # Promotion?
+		name = VIETold.2062.c
+		trigger_event = VIETold.2063		
+	}
+}
+
+
+
+# Lydia - A maid is sworn to carry your burdens
+VIETold.2063 = {
+	type = character_event
+	title = VIETold.2063.t
+	desc = VIETold.2063.desc
+	theme = family
+	
+	left_portrait = {
+		character = root
+		animation = personality_compassionate
+	}
+	right_portrait = {
+		character = scope:scope_VIET_skyrim_lydia
+		animation = boredom
+	}
+	
+	immediate = {
+		hidden_effect = {
+			create_character = {
+				location = root.capital_province
+				age = { 16 30 }
+				gender = female
+				faith = root.faith
+				culture = root.culture
+				intrigue = { 8 13 }
+				trait = cynical
+				save_scope_as = scope_VIET_skyrim_lydia
+				random_traits_list = {
+					count = 1
+					education_intrigue_3 = {}
+					education_intrigue_4 = {}
+				}
+				random_traits_list = {
+					count = 2
+					compassionate = {}
+					humble = {}
+					just = {}
+					brave = {}
+				}
+				random_traits = yes
+			}
+			scope:scope_VIET_skyrim_lydia = {
+				random_list = {
+					60 = { }
+					40 = { add_trait = physique_good_1 }
+					15 = { add_trait = physique_good_2 }
+					5 = { add_trait = physique_good_3 }
+					40 = { add_trait = beauty_good_1 }
+					15 = { add_trait = beauty_good_2 }
+					5 = { add_trait = beauty_good_3 }
+				}
+				add_character_modifier = {
+					modifier = VIET_is_lydia_from_skyrim
+				}
+			}			
+		}
+	}
+
+	option = { # Welcome!
+		name = VIETold.2063.a
+		add_courtier = scope:scope_VIET_skyrim_lydia
+	}
+}
+
+
+
+# Mithorpa Nasyal (unused NPC) - come across a peasant who initially lashes out but apologises
+VIETold.2064 = {
+	type = character_event
+	title = VIETold.2064.t
+	desc = VIETold.2064.desc
+	theme = VIET_theme_tuscan_country
+	
+	left_portrait = root
+
+	weight_multiplier = {
+		base = 1
+		modifier = {
+			add = 0.2
+			has_trait = brave
+		}
+		modifier = {
+			add = -0.2
+			has_trait = craven
+		}
+		modifier = {
+			add = 0.2
+			has_trait = humble
+		}
+		modifier = {
+			add = -0.2
+			has_trait = arrogant
+		}
+		modifier = {
+			add = 0.2
+			has_trait = trusting
+		}
+		modifier = {
+			add = -0.2
+			has_trait = paranoid
+		}
+	}
+
+	option = { # Forgive him
+		name = VIETold.2064.a
+		if = {
+			limit = {
+				faith = {
+					OR = {
+						trait_is_virtue = forgiving
+						trait_is_virtue = calm
+					}
+				}
+			}
+			add_piety = 20
+		}
+		else_if = {
+			limit = {
+				faith = {
+					OR = {
+						trait_is_virtue = vengeful
+						trait_is_virtue = wrathful
+					}
+				}
+			}
+			add_piety = -20
+		}
+		else = {
+			add_piety = 10
+		}
+		stress_impact = {
+			vengeful = minor_stress_impact_gain
+			wrathful = minor_stress_impact_gain
+		}
+	}
+	option = { # Get angry
+		name = VIETold.2064.b
+		if = {
+			limit = {
+				faith = {
+					OR = {
+						trait_is_virtue = vengeful
+						trait_is_virtue = wrathful
+					}
+				}
+			}
+			add_piety = 20
+		}
+		else_if = {
+			limit = {
+				faith = {
+					OR = {
+						trait_is_virtue = forgiving
+						trait_is_virtue = calm
+					}
+				}
+			}
+			add_piety = -20
+		}
+		else = {
+			add_piety = -10
+		}
+		add_dread = 5
+		stress_impact = {
+			forgiving = miniscule_stress_impact_gain
+			calm = miniscule_stress_impact_gain
+		}
+	}
+	option = { # Be a dick and lash him
+		name = VIETold.2064.c
+		if = {
+			limit = {
+				faith = {
+					OR = {
+						trait_is_virtue = forgiving
+						trait_is_virtue = calm
+					}
+				}
+			}
+			add_piety = -20
+		}
+		else = {
+			add_piety = -10
+		}
+		add_dread = 10
+		stress_impact = {
+			forgiving = minor_stress_impact_gain
+			calm = minor_stress_impact_gain
+		}
+	}
+	option = { # Imprison him
+		name = VIETold.2064.d
+		trigger = {
+			has_trait = wrathful
+			NOT = { has_trait = compassionate }
+			NOT = { has_trait = humble }
+			NOT = { has_trait = forgiving }
+		}
+		trait = wrathful
+		if = {
+			limit = {
+				faith = {
+					OR = {
+						trait_is_virtue = forgiving
+						trait_is_virtue = calm
+					}
+				}
+			}
+			add_piety = -30
+		}
+		else = {
+			add_piety = -20
+		}
+		add_dread = 15
+		stress_impact = {
+			just = minor_stress_impact_gain
+		}
+	}
+}
+
+
+# Sinmir - Elderly townsman criticizes your security
+VIETold.2065 = {
+	type = character_event
+	title = VIETold.2065.t
+	desc = VIETold.2065.desc
+	theme = martial_strategy_focus	
+	override_background = { event_background = tavern }
+	
+	left_portrait = root
+	
+	trigger = {
+		NOT = { has_game_rule = VIET_serious_events }
+	}
+
+	weight_multiplier = {
+		base = 1
+		modifier = {
+			add = 0.2
+			has_trait = patient
+		}
+		modifier = {
+			add = -0.2
+			has_trait = impatient
+		}
+		modifier = {
+			add = 0.2
+			has_trait = humble
+		}
+		modifier = {
+			add = -0.2
+			has_trait = arrogant
+		}
+		modifier = {
+			add = 0.2
+			has_trait = honest
+		}
+		modifier = {
+			add = -0.2
+			has_trait = deceitful
+		}
+	}
+
+	option = { # Ignore him
+		name = VIETold.2065.a
+		add_prestige = -20
+		stress_impact = {
+			base = miniscule_stress_impact_loss
+			wrathful = miniscule_stress_impact_gain
+			arrogant = minor_stress_impact_gain
+		}
+	}
+	option = { # Ask him what should be done
+		name = VIETold.2065.b
+		random_list = {
+			10 = {
+				add_character_modifier = {
+					modifier = VIET_sinmir_good_defense_advice
+					years = 7
+				}
+			}
+			10 = {
+				add_character_modifier = {
+					modifier = VIET_sinmir_bad_defense_advice
+					years = 7
+				}
+			}
+		}
+	}
+	option = { # Tell him to mind his business
+		name = VIETold.2065.c
+		add_dread = 5
+	}
+}
+
+
+
+
+# Telrav - encounter a robbed "merchant" on the road
+VIETold.2066 = {
+	type = character_event
+	title = VIETold.2066.t
+	desc = VIETold.2066.desc
+	theme = VIET_theme_tuscan_country
+	
+	left_portrait = root
+
+	weight_multiplier = {
+		base = 1
+		modifier = {
+			add = 0.2
+			has_trait = lazy
+		}
+		modifier = {
+			add = -0.2
+			has_trait = diligent
+		}
+		modifier = {
+			add = 0.2
+			has_trait = impatient
+		}
+		modifier = {
+			add = -0.2
+			has_trait = patient
+		}
+		modifier = {
+			add = 0.2
+			has_trait = trusting
+		}
+		modifier = {
+			add = -0.2
+			has_trait = paranoid
+		}
+	}
+
+	option = { # Help him
+		name = VIETold.2066.a
+		trigger = {
+			NOR = {
+				intrigue >= medium_skill_rating
+				has_trait = paranoid
+			}
+		}
+		trigger_event = VIETold.2067
+	}
+	option = { # You're on your own
+		name = VIETold.2066.b
+		trigger = {
+			NOR = {
+				intrigue >= medium_skill_rating
+				has_trait = paranoid
+			}
+		}
+		add_piety = -20
+		stress_impact = {
+			compassionate = minor_stress_impact_gain
+			generous = miniscule_stress_impact_gain
+			humble = miniscule_stress_impact_gain
+		}
+	}
+	option = { # Something's fishy
+		name = VIETold.2066.c
+		trigger = {
+			intrigue >= medium_skill_rating
+			#NOT = {
+			#	has_trait = paranoid
+			#}
+		}
+		skill = intrigue
+	}
+	option = { # Something's fishy - help but be careful
+		name = VIETold.2066.d
+		trigger = {
+			intrigue >= medium_skill_rating
+			#NOT = {
+			#	has_trait = paranoid
+			#}
+		}
+		skill = intrigue
+		add_character_flag = VIET_skyrim_fake_merchant_suspicion
+		trigger_event = VIETold.2067
+	}
+	#option = { # Something's fishy
+	#	name = VIETold.2066.c
+	#	trigger = {
+	#		#intrigue < medium_skill_rating
+	#		has_trait = paranoid
+	#	}
+	#	trait = paranoid
+	#}
+	#option = { # Something's fishy - help but be careful
+	#	name = VIETold.2066.d
+	#	trigger = {
+	#		#intrigue < medium_skill_rating
+	#		has_trait = paranoid
+	#	}
+	#	trait = paranoid
+	#	add_character_flag = VIET_skyrim_fake_merchant_suspicion
+	#	trigger_event = VIETold.2067
+	#}
+}
+
+
+
+# Telrav - encounter a robbed "merchant" on the road
+VIETold.2067 = {
+	type = character_event
+	title = VIETold.2067.t
+	desc = {
+		first_valid = {
+			triggered_desc = {
+				trigger = {
+					has_character_flag = VIET_skyrim_fake_merchant_suspicion
+				}
+				desc = VIETold.2067.desc.b
+			}
+			desc = VIETold.2067.desc.a
+		}
+	}
+	theme = VIET_theme_skyrim_forest
+	
+	left_portrait = {
+		character = root
+		animation = personality_vengeful
+	}
+
+	option = { # Retreat!
+		name = VIETold.2067.a
+		trigger = {
+			NOT = { has_character_flag = VIET_skyrim_fake_merchant_suspicion }
+		}
+		random = {
+			chance = 30
+			modifier = {
+				add = -10
+				prowess >= 11
+			}
+			modifier = {
+				add = 10
+				prowess <= 5
+			}
+			modifier = {
+				add = -10
+				martial >= 11
+			}
+			modifier = {
+				add = 10
+				martial <= 5
+			}
+			increase_wounds_effect = {
+				REASON = pilgrimage_bandit_attack
+			}		
+		}
+	}
+	option = { # We win!
+		name = VIETold.2067.b
+		trigger = {
+			has_character_flag = VIET_skyrim_fake_merchant_suspicion
+		}
+		random = {
+			chance = 15
+			modifier = {
+				add = -10
+				prowess >= 11
+			}
+			modifier = {
+				add = 10
+				prowess <= 5
+			}
+			modifier = {
+				add = -10
+				martial >= 11
+			}
+			modifier = {
+				add = 10
+				martial <= 5
+			}
+			increase_wounds_effect = {
+				REASON = pilgrimage_bandit_attack
+			}		
+		}
+		random_list = {
+			10 = { add_gold = 20 }
+			10 = { add_gold = 40 }
+			10 = { add_gold = 60 }
+			10 = { add_gold = 80 }
+		}
+	}
+	
+	after = {
+		remove_character_flag = VIET_skyrim_fake_merchant_suspicion
+	}
+}
+
+
 
 
 

@@ -5,4 +5,42 @@ VIET_basic_is_available_adult_trigger = {
 	is_adult = yes
 }
 
+VIET_is_baklava_culture_trigger = {
+	OR = {
+		culture_group = culture_group:byzantine_group
+		culture_group = culture_group:turkic_group
+		culture_group = culture_group:south_slavic_group 
+		culture_group = culture_group:iranian_group 
+		culture_group = culture_group:berber_group 
+		culture_group = culture_group:arabic_group 
+	}
+}
+
+VIET_is_unattractive_trigger = {
+	OR = {
+		has_trait = leper
+		has_trait = maimed
+		has_trait = disfigured
+		has_trait = infirm
+		has_trait = eunuch
+		has_trait = blind
+		has_trait = beauty_bad_1
+		has_trait = beauty_bad_2
+		has_trait = beauty_bad_3
+		has_trait = physique_bad_2
+		has_trait = physique_bad_3
+		has_trait = clubfooted
+		has_trait = hunchbacked
+		has_trait = lisping
+		has_trait = stuttering
+		has_trait = dwarf
+		has_trait = giant
+		has_trait = weak
+		has_trait = spindly
+		has_trait = scaly
+		has_trait = albino
+		has_trait = wheezing
+	}
+}
+
 
