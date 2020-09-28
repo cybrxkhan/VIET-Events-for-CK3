@@ -73,10 +73,34 @@ VIETtest.0001 = {
 	}
 	
 	option = {
-		name = "OK"
-		
-		add_prestige = 100
-		add_piety = 100
+		name = "OK"		
+		VIET_tiny_prestige_gain_effect = yes
+		VIET_tiny_piety_gain_effect = yes
+	}	
+	option = {
+		name = "OK"		
+		VIET_tiny_prestige_loss_effect = yes
+		VIET_tiny_piety_loss_effect = yes
+	}	
+	option = {
+		name = "OK"		
+		VIET_small_prestige_gain_effect = yes
+		VIET_small_piety_gain_effect = yes
+	}	
+	option = {
+		name = "OK"		
+		VIET_small_prestige_loss_effect = yes
+		VIET_small_piety_loss_effect = yes
+	}	
+	option = {
+		name = "OK"		
+		VIET_medium_prestige_gain_effect = yes
+		VIET_medium_piety_gain_effect = yes
+	}	
+	option = {
+		name = "OK"		
+		VIET_medium_prestige_loss_effect = yes
+		VIET_medium_piety_loss_effect = yes
 	}
 }
 
@@ -174,7 +198,33 @@ VIETtest.0004 = {
 	
 	option = {
 		name = "OK"
-		add_prestige = 1
+		VIET_large_prestige_gain_effect = yes
+		VIET_large_piety_gain_effect = yes
+	}		
+	option = {
+		name = "OK"
+		VIET_large_prestige_loss_effect = yes
+		VIET_large_piety_loss_effect = yes
+	}	
+	option = {
+		name = "OK"
+		VIET_huge_prestige_gain_effect = yes
+		VIET_huge_piety_gain_effect = yes
+	}		
+	option = {
+		name = "OK"
+		VIET_huge_prestige_loss_effect = yes
+		VIET_huge_piety_loss_effect = yes
+	}	
+	option = {
+		name = "OK"
+		VIET_random_small_prestige_gain_effect = yes
+		VIET_random_small_piety_gain_effect = yes
+	}	
+	option = {
+		name = "OK"
+		VIET_random_small_prestige_loss_effect = yes
+		VIET_random_small_piety_loss_effect = yes
 	}
 }
 
@@ -202,6 +252,22 @@ VIETtest.0005 = {
 	
 	option = {
 		name = "OK"
-		add_prestige = 1
+		VIET_random_medium_prestige_gain_effect = yes
+		VIET_random_medium_piety_gain_effect = yes
+	}	
+	option = {
+		name = "OK"
+		VIET_random_medium_prestige_loss_effect = yes
+		VIET_random_medium_piety_loss_effect = yes
+	}	
+	option = {
+		name = "OK"
+		VIET_random_large_prestige_gain_effect = yes
+		VIET_random_large_piety_gain_effect = yes
+	}	
+	option = {
+		name = "OK"
+		VIET_random_large_prestige_loss_effect = yes
+		VIET_random_large_piety_loss_effect = yes
 	}
 }

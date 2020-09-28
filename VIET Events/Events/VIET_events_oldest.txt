@@ -106,7 +106,7 @@ VIETold.0002 = {
 	
 	option = { # Wait for it to fly off
 		name = VIETold.0002.a	
-		add_piety = 1
+		VIET_tiny_piety_gain_effect = yes
 		stress_impact = {
 			compassionate = minor_stress_impact_loss
 			wrathful = miniscule_stress_impact_gain
@@ -116,7 +116,7 @@ VIETold.0002 = {
 	}	
 	option = { # Shoo it off
 		name = VIETold.0002.b	
-		add_prestige = 1
+		VIET_tiny_prestige_gain_effect = yes
 		stress_impact = {
 			compassionate = miniscule_stress_impact_gain
 			patient = miniscule_stress_impact_gain
@@ -124,7 +124,7 @@ VIETold.0002 = {
 	}	
 	option = { # kill it!
 		name = VIETold.0002.c
-		add_prestige = 1
+		add_dread = 5
 		stress_impact = {
 			compassionate = minor_stress_impact_gain
 			patient = miniscule_stress_impact_gain
@@ -251,7 +251,7 @@ VIETold.0004 = {
 	
 	option = { # Ok
 		name = VIETold.0004.a	
-		add_piety = 2
+		VIET_tiny_piety_gain_effect = yes
 		add_stress = -2
 	}
 }
@@ -357,8 +357,8 @@ VIETold.0006 = {
 			days = 666
 		}
 		random_list = {
-			10 = { add_piety = 5 }
-			10 = { add_prestige = -5 }
+			10 = { VIET_tiny_piety_gain_effect = yes }
+			10 = { VIET_tiny_prestige_loss_effect = yes }
 		}
 	}
 }
@@ -428,7 +428,7 @@ VIETold.0007 = {
 	
 	option = { # Ok
 		name = VIETold.0007.a		
-		add_prestige = 5
+		VIET_tiny_prestige_gain_effect = yes
 	}
 }
 
@@ -480,15 +480,20 @@ VIETold.0008 = {
 	
 	option = { # Ok
 		name = VIETold.0008.a		
-		add_prestige = -10
+		VIET_small_prestige_loss_effect = yes
+		stress_impact = {
+			base = miniscule_stress_impact_gain
+			arrogant = miniscule_stress_impact_gain
+			impatient = miniscule_stress_impact_gain
+		}
 	}	
 	option = { # Will of God
 		name = VIETold.0008.b
 		trigger = {
 			NOT = { has_trait = cynical }
 		}
-		add_prestige = -20
-		add_piety = 10		
+		VIET_medium_prestige_loss_effect = yes
+		VIET_small_piety_gain_effect = yes
 		stress_impact = {
 			humble = miniscule_stress_impact_loss
 			zealous = miniscule_stress_impact_loss
@@ -586,7 +591,7 @@ VIETold.0010 = {
 	
 	option = { # Don't talk such rot
 		name = VIETold.0010.a	
-		add_prestige = 10		
+		VIET_medium_prestige_gain_effect = yes
 		stress_impact = {
 			humble = miniscule_stress_impact_gain
 			compassionate = miniscule_stress_impact_gain
@@ -597,33 +602,15 @@ VIETold.0010 = {
 	}	
 	option = { # Urine
 		name = VIETold.0010.b
-		random_list = {
-			10 = { add_prestige = 1 }
-			10 = { add_prestige = 5 }
-			10 = { add_prestige = 10 }
-			10 = { add_prestige = 15 }
-			10 = { add_prestige = 20 }
-		}
+		VIET_random_medium_prestige_gain_effect = yes
 	}	
 	option = { # Feces
 		name = VIETold.0010.c
-		random_list = {
-			10 = { add_prestige = 1 }
-			10 = { add_prestige = 5 }
-			10 = { add_prestige = 10 }
-			10 = { add_prestige = 15 }
-			10 = { add_prestige = 20 }
-		}
+		VIET_random_medium_prestige_gain_effect = yes
 	}	
 	option = { # Dead plants
 		name = VIETold.0010.d
-		random_list = {
-			10 = { add_prestige = 1 }
-			10 = { add_prestige = 5 }
-			10 = { add_prestige = 10 }
-			10 = { add_prestige = 15 }
-			10 = { add_prestige = 20 }
-		}
+		VIET_random_medium_prestige_gain_effect = yes
 	}
 }
 
@@ -671,7 +658,7 @@ VIETold.0011 = {
 	
 	option = { # Earwax
 		name = VIETold.0011.a	
-		add_prestige = 13	
+		VIET_small_prestige_gain_effect = yes
 		if = {
 			limit = {
 				has_game_rule = VIET_historical_context_on
@@ -681,7 +668,7 @@ VIETold.0011 = {
 	}	
 	option = { # Urine
 		name = VIETold.0011.b	
-		add_piety = 13		
+		VIET_small_piety_gain_effect = yes	
 		if = {
 			limit = {
 				has_game_rule = VIET_historical_context_on
@@ -692,8 +679,8 @@ VIETold.0011 = {
 	option = { # Colorful stones
 		name = VIETold.0011.c
 		random_list = {
-			10 = { add_prestige = 13 }
-			10 = { add_piety = 13 }
+			10 = { VIET_small_prestige_gain_effect = yes }
+			10 = { VIET_small_piety_gain_effect = yes }
 		}	
 		if = {
 			limit = {
@@ -928,7 +915,7 @@ VIETold.0013 = {
 	}	
 	option = { # Try different varieties of food
 		name = VIETold.0013.c
-		add_prestige = 10		
+		VIET_small_prestige_gain_effect = yes	
 		if = {
 			limit = {
 				has_game_rule = VIET_historical_context_on
@@ -1005,7 +992,7 @@ VIETold.0014 = {
 	
 	option = { # How vain!
 		name = VIETold.0014.a		
-		add_piety = 25
+		VIET_medium_piety_gain_effect = yes
 		stress_impact = {
 			humble = miniscule_stress_impact_gain
 		}
@@ -1018,7 +1005,7 @@ VIETold.0014 = {
 	}	
 	option = { # Respect other customs
 		name = VIETold.0014.b
-		add_prestige = 25
+		VIET_medium_prestige_gain_effect = yes
 		stress_impact = {
 			arrogant = miniscule_stress_impact_gain
 		}		

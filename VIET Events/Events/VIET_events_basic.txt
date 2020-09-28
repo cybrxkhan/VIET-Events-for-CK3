@@ -359,7 +359,7 @@ VIETmisc.0005 = {
 				send_interface_toast = {
 					left_icon = ROOT
 					title = VIETmisc.0005.toast.a
-					add_prestige = 10
+					VIET_small_prestige_loss_effect = yes
 				}
 			}
 			60 = {
@@ -471,7 +471,7 @@ VIETmisc.0007 = {
 				ai_compassion = 1
 			}
 		}
-		add_prestige = 20
+		VIET_medium_prestige_gain_effect = yes
 		stress_impact = {
 			callous = minor_stress_impact_gain
 			sadistic = minor_stress_impact_gain
@@ -485,7 +485,7 @@ VIETmisc.0007 = {
 				ai_zeal = 1
 			}
 		}
-		add_piety = 20
+		VIET_medium_piety_gain_effect = yes
 		stress_impact = {
 			cynical = minor_stress_impact_gain
 			callous = minor_stress_impact_gain
@@ -500,7 +500,7 @@ VIETmisc.0007 = {
 				ai_compassion = -1
 			}
 		}
-		add_piety = -20
+		VIET_medium_prestige_loss_effect = yes
 		stress_impact = {
 			compassionate = medium_stress_impact_gain
 			humble = minor_stress_impact_gain
@@ -518,7 +518,8 @@ VIETmisc.0007 = {
 				ai_compassion = 1
 			}
 		}
-		add_piety = 35
+		VIET_large_piety_gain_effect = yes
+		VIET_tiny_prestige_loss_effect = yes
 	}
 }
 
@@ -566,7 +567,7 @@ VIETmisc.0008 = {
 	
 	option = { # Took a quick walk outside
 		name = VIETmisc.0008.a
-		add_prestige = 5
+		VIET_tiny_prestige_gain_effect = yes
 		stress_impact = {
 			base = miniscule_stress_impact_loss
 			lazy = miniscule_stress_impact_loss
@@ -620,7 +621,7 @@ VIETmisc.0009 = {
 	
 	option = { # Feels nice
 		name = VIETmisc.0009.a
-		add_piety = 2
+		VIET_tiny_piety_gain_effect = yes
 		stress_impact = {
 			base = miniscule_stress_impact_loss
 			humble = miniscule_stress_impact_loss
@@ -682,7 +683,7 @@ VIETmisc.0010 = {
 				ai_rationality = 100
 			}
 		}
-		add_prestige = -15
+		VIET_small_prestige_loss_effect = yes
 		stress_impact = {
 			base = miniscule_stress_impact_gain
 			stubborn = miniscule_stress_impact_gain
@@ -714,7 +715,7 @@ VIETmisc.0010 = {
 					left_icon = ROOT
 					title = VIETmisc.0010.toast.b
 					increase_wounds_no_death_effect = { REASON = fall }
-					add_prestige = -25
+					VIET_medium_prestige_loss_effect = yes
 				}
 			}
 		}
@@ -833,13 +834,14 @@ VIETmisc.0012 = {
 			has_trait = cynical
 		}
 		trait = cynical
+		VIET_small_prestige_gain_effect = yes
 	}	
 	option = { # say some prayers
 		name = VIETmisc.0012.c
 		trigger = {
 			NOT = { has_trait = paranoid }
 		}
-		add_piety = 10
+		VIET_small_piety_gain_effect = yes
 		stress_impact = {
 			cynical = miniscule_stress_impact_gain
 		}
@@ -850,7 +852,7 @@ VIETmisc.0012 = {
 			has_trait = brave
 		}
 		trait = brave
-		add_prestige = 10
+		VIET_medium_prestige_gain_effect = yes
 		stress_impact = {
 			base = minor_stress_impact_gain
 			craven = minor_stress_impact_gain
@@ -862,6 +864,7 @@ VIETmisc.0012 = {
 			NOT = { has_trait = paranoid }
 			NOT = { has_trait = cynical }
 		}
+		VIET_small_prestige_gain_effect = yes
 		stress_impact = {
 			base = miniscule_stress_impact_gain
 		}
@@ -913,7 +916,7 @@ VIETmisc.0013 = {
 	
 	option = { # no biggie
 		name = VIETmisc.0013.a
-		add_prestige = -20
+		VIET_medium_prestige_loss_effect = yes
 		stress_impact = {
 			arrogant = miniscule_stress_impact_gain
 			wrathful = miniscule_stress_impact_gain
@@ -921,15 +924,15 @@ VIETmisc.0013 = {
 	}	
 	option = { # try to pretend it didn't happen
 		name = VIETmisc.0013.b
-		add_piety = -20
+		VIET_medium_piety_loss_effect = yes
 		stress_impact = {
 			honest = miniscule_stress_impact_gain
 		}
 	}
 	option = { # make a self-deprecating joke
 		name = VIETmisc.0013.c
-		add_prestige = -25
-		add_piety = 10
+		VIET_large_prestige_loss_effect = yes
+		VIET_medium_piety_gain_effect = yes
 		stress_impact = {
 			arrogant = miniscule_stress_impact_gain
 			ambitious = miniscule_stress_impact_gain
@@ -1082,7 +1085,7 @@ VIETmisc.0016 = {
 		#trigger = {
 		#	NOT = { has_trait = lazy }
 		#}
-		add_prestige = -30
+		VIET_small_prestige_loss_effect = yes
 		stress_impact = {
 			base = minor_stress_impact_loss
 			lazy = miniscule_stress_impact_loss
@@ -1093,7 +1096,7 @@ VIETmisc.0016 = {
 	
 	option = { # Continue with work
 		name = VIETmisc.0016.b
-		add_prestige = 30
+		VIET_small_prestige_gain_effect = yes
 		stress_impact = {
 			base = minor_stress_impact_gain
 			lazy = minor_stress_impact_gain
@@ -1107,7 +1110,7 @@ VIETmisc.0016 = {
 			has_trait = lazy
 		}
 		trait = lazy
-		add_prestige = -50
+		VIET_medium_prestige_loss_effect = yes
 		stress_impact = {
 			lazy = medium_stress_impact_loss
 		}		
@@ -1158,7 +1161,7 @@ VIETmisc.0017 = {
 	option = { # Will relax and enjoy the morning
 		name = VIETmisc.0017.a
 		stress_impact = {
-			base = miniscule_stress_impact_loss
+			base = minor_stress_impact_loss
 			lazy = miniscule_stress_impact_loss
 			diligent = miniscule_stress_impact_gain
 			ambitious = miniscule_stress_impact_gain
@@ -1167,7 +1170,7 @@ VIETmisc.0017 = {
 	
 	option = { # Do some work!
 		name = VIETmisc.0017.b
-		add_prestige = 20
+		VIET_medium_piety_gain_effect = yes
 		stress_impact = {
 			lazy = miniscule_stress_impact_gain
 		}		
@@ -1218,7 +1221,7 @@ VIETmisc.0018 = {
 	
 	option = { # darn!
 		name = VIETmisc.0018.a
-		add_prestige = -10
+		VIET_small_prestige_loss_effect = yes
 		stress_impact = {
 			base = miniscule_stress_impact_gain
 		}	
@@ -1269,14 +1272,14 @@ VIETmisc.0019 = {
 	
 	option = { # pray
 		name = VIETmisc.0019.a
-		add_piety = 30
+		VIET_random_medium_piety_gain_effect = yes
 		stress_impact = {
 			cynical = minor_stress_impact_gain
 		}	
 	}	
 	option = { # Out of courtesy
 		name = VIETmisc.0019.b
-		add_prestige = 30
+		VIET_random_medium_prestige_gain_effect = yes
 		stress_impact = {
 			zealous = minor_stress_impact_gain
 		}	
@@ -1437,7 +1440,7 @@ VIETmisc.0022 = {
 	
 	option = { # look outside the window
 		name = VIETmisc.0022.a
-		add_prestige = -10
+		VIET_small_prestige_loss_effect = yes
 		stress_impact = {
 			diligent = minor_stress_impact_gain
 			ambitious = miniscule_stress_impact_gain
@@ -1455,15 +1458,10 @@ VIETmisc.0022 = {
 	option = { # try hard to focus
 		name = VIETmisc.0022.c
 		stress_impact = {
-			base = miniscule_stress_impact_gain
+			base = minor_stress_impact_gain
 			lazy = minor_stress_impact_gain
 		}
-		random_list = {
-			40 = { }
-			30 = { add_prestige = 10 }
-			20 = { add_prestige = 20 }
-			10 = { add_prestige = 30 }
-		}
+		VIET_random_medium_prestige_gain_effect = yes
 	}	
 }
 
@@ -1524,12 +1522,7 @@ VIETmisc.0023 = {
 			stubborn = miniscule_stress_impact_gain
 			arrogant = miniscule_stress_impact_gain
 		}
-		random_list = {
-			40 = { add_prestige = -15 }
-			30 = { add_prestige = -20 }
-			20 = { add_prestige = -25 }
-			10 = { add_prestige = -30 }
-		}
+		VIET_random_medium_prestige_loss_effect = yes
 	}	
 	
 	option = { # Try to hold it in
@@ -1555,9 +1548,9 @@ VIETmisc.0023 = {
 					left_icon = ROOT
 					title = VIETmisc.0023.toast.b.success.title
 					custom_tooltip = VIETmisc.0023.toast.b.success
-					#stress_impact = {
-					#	base = miniscule_stress_impact_gain
-					#}
+					stress_impact = {
+						base = minor_stress_impact_gain
+					}
 				}			
 			}
 			# Fail to hold it in until the dignitary is done
@@ -1584,14 +1577,9 @@ VIETmisc.0023 = {
 					left_icon = ROOT
 					title = VIETmisc.0023.toast.b.failure.title
 					custom_tooltip = VIETmisc.0023.toast.b.failure
-					random_list = {
-						40 = { add_prestige = -30 }
-						30 = { add_prestige = -40 }
-						20 = { add_prestige = -50 }
-						10 = { add_prestige = -60 }
-					}
+					VIET_random_large_prestige_loss_effect = yes
 					stress_impact = {
-						base = minor_stress_impact_gain
+						base = medium_stress_impact_gain
 					}
 				}			
 			}
@@ -1762,7 +1750,7 @@ VIETmisc.0026 = {
 	
 	option = { # yay
 		name = VIETmisc.0026.a
-		add_prestige = -5
+		VIET_small_prestige_loss_effect = yes
 		random_list = {
 			# successfully relax
 			50 = {
@@ -1831,7 +1819,7 @@ VIETmisc.0027 = {
 	
 	option = { # tragic people like him exist
 		name = VIETmisc.0027.a
-		add_piety = 10
+		VIET_medium_piety_gain_effect = yes
 		stress_impact = {
 			sadistic = miniscule_stress_impact_gain
 			callous = miniscule_stress_impact_gain
@@ -1839,7 +1827,7 @@ VIETmisc.0027 = {
 	}	
 	option = { # don't care but need to keep up appearances
 		name = VIETmisc.0027.b
-		add_prestige = 10
+		VIET_medium_prestige_gain_effect = yes
 		stress_impact = {
 			compassionate = miniscule_stress_impact_gain
 			just = miniscule_stress_impact_gain
@@ -1847,7 +1835,7 @@ VIETmisc.0027 = {
 	}	
 	option = { # could have used him in the army
 		name = VIETmisc.0027.c
-		add_piety = -10
+		add_dread = 10
 		stress_impact = {
 			compassionate = minor_stress_impact_gain
 			just = minor_stress_impact_gain
@@ -2068,7 +2056,7 @@ VIETmisc.0030 = {
 	
 	option = { # oh noes
 		name = VIETmisc.0030.a
-		add_prestige = -10
+		VIET_medium_prestige_loss_effect = yes
 	}
 }
 
@@ -2120,7 +2108,7 @@ VIETmisc.0031 = {
 			has_trait = zealous
 		}
 		trait = zealous
-		add_piety = 5
+		VIET_tiny_piety_gain_effect = yes
 		add_stress = -10
 	}	
 	option = { # ok
@@ -2128,7 +2116,7 @@ VIETmisc.0031 = {
 		trigger = {
 			NOT = { has_trait = zealous }
 		}
-		add_piety = 2
+		VIET_tiny_piety_gain_effect = yes
 		add_stress = -2
 	}
 }
@@ -2180,7 +2168,7 @@ VIETmisc.0032 = {
 			has_trait = zealous
 		}
 		trait = zealous
-		add_piety = -5
+		VIET_tiny_piety_loss_effect = yes
 		add_stress = 10
 	}	
 	option = { # ok
@@ -2188,7 +2176,7 @@ VIETmisc.0032 = {
 		trigger = {
 			NOT = { has_trait = zealous }
 		}
-		add_piety = -2
+		VIET_tiny_piety_loss_effect = yes
 		add_stress = 2
 	}
 }
@@ -2325,7 +2313,7 @@ VIETmisc.0034 = {
 	
 	option = { # not worth it
 		name = VIETmisc.0034.a
-		add_piety = 5
+		VIET_tiny_piety_gain_effect = yes
 		stress_impact = {
 			zealous = minor_stress_impact_loss
 			cynical = miniscule_stress_impact_gain
@@ -2333,7 +2321,7 @@ VIETmisc.0034 = {
 	}	
 	option = { # Myself
 		name = VIETmisc.0034.b
-		add_prestige = 5
+		VIET_tiny_prestige_gain_effect = yes
 		stress_impact = {
 			humble = miniscule_stress_impact_gain
 			arrogant = minor_stress_impact_loss
@@ -2395,7 +2383,7 @@ VIETmisc.0035 = {
 	
 	option = { # scratch it!
 		name = VIETmisc.0035.a
-		add_prestige = -10
+		VIET_small_prestige_loss_effect = yes
 	}	
 	option = { # resist it
 		name = VIETmisc.0035.b
@@ -2447,7 +2435,7 @@ VIETmisc.0036 = {
 	
 	option = { # oh my
 		name = VIETmisc.0036.a
-		add_prestige = -10
+		VIET_small_prestige_loss_effect = yes
 		stress_impact = {
 			gregarious = miniscule_stress_impact_gain
 			calm = miniscule_stress_impact_gain
@@ -2456,7 +2444,7 @@ VIETmisc.0036 = {
 	}	
 	option = { # ha ha!
 		name = VIETmisc.0036.b
-		add_prestige = -10
+		VIET_small_prestige_loss_effect = yes
 		stress_impact = {
 			arrogant = miniscule_stress_impact_gain
 			shy = miniscule_stress_impact_gain
@@ -2508,7 +2496,7 @@ VIETmisc.0037 = {
 	
 	option = { # who cares
 		name = VIETmisc.0037.a
-		add_piety = 5
+		VIET_tiny_piety_gain_effect = yes
 		stress_impact = {
 			honest = miniscule_stress_impact_gain
 			paranoid = miniscule_stress_impact_gain
@@ -2598,20 +2586,20 @@ VIETmisc.0038 = {
 	}	
 	option = { # It was garbage
 		name = VIETmisc.0038.b
-		add_piety = 10
-		add_prestige = -10
+		VIET_small_piety_gain_effect = yes
+		VIET_small_prestige_loss_effect =yes
 	}	
 	option = { # It was funny
 		name = VIETmisc.0038.c
-		add_prestige = 10
-		add_piety = -10
+		VIET_small_prestige_gain_effect = yes
+		VIET_small_piety_loss_effect = yes
 	}
 	option = { # Both make good points
 		name = VIETmisc.0038.d
 		random_list = {
-			10 = { }
-			10 = { add_piety = 10 }
-			10 = { add_prestige = 10 }
+			20 = { }
+			10 = { VIET_small_piety_gain_effect = yes }
+			10 = { VIET_small_prestige_gain_effect = yes }
 		}
 	}
 }
@@ -2663,7 +2651,10 @@ VIETmisc.0039 = {
 		#trigger = {
 		#	NOT = { has_trait = shy }
 		#}
-		add_piety = 10
+		VIET_medium_piety_gain_effect = yes
+		stress_impact = {
+			shy = minor_stress_impact_gain
+		}
 	}	
 	option = { # boo marriage
 		name = VIETmisc.0039.b
@@ -2671,7 +2662,7 @@ VIETmisc.0039 = {
 			has_trait = cynical
 		}
 		trait = cynical
-		add_prestige = 10
+		VIET_medium_prestige_gain_effect = yes
 		stress_impact = {
 			compassionate = miniscule_stress_impact_gain
 		}
@@ -2682,7 +2673,7 @@ VIETmisc.0039 = {
 			has_trait = gluttonous
 		}
 		trait = gluttonous
-		add_prestige = 10
+		VIET_medium_prestige_gain_effect = yes
 		stress_impact = {
 			patient = miniscule_stress_impact_gain
 		}
@@ -2749,7 +2740,7 @@ VIETmisc.0040 = {
 	
 	option = { # has to be
 		name = VIETmisc.0040.a
-		add_piety = 5
+		VIET_tiny_piety_gain_effect = yes
 		stress_impact = {
 			base = miniscule_stress_impact_loss
 			cynical = minor_stress_impact_gain
@@ -2757,7 +2748,7 @@ VIETmisc.0040 = {
 	}	
 	option = { # life suck
 		name = VIETmisc.0040.b
-		add_prestige = 5
+		VIET_tiny_prestige_gain_effect = yes
 		stress_impact = {
 			base = miniscule_stress_impact_gain
 		}
@@ -2836,7 +2827,7 @@ VIETmisc.0041 = {
 				modifier = VIET_opinion_didnt_get_angry
 			}		
 		}
-		add_prestige = 10
+		VIET_small_prestige_gain_effect = yes
 		stress_impact = {
 			vengeful = miniscule_stress_impact_gain
 			wrathful = miniscule_stress_impact_gain
@@ -2948,7 +2939,7 @@ VIETmisc.0043 = {
 					left_icon = ROOT
 					title = VIETmisc.0043.toast.a
 					custom_tooltip = VIETmisc.0043.toast.failure
-					add_prestige = -25
+					VIET_large_prestige_loss_effect = yes
 					add_stress = 10
 				}			
 			}
@@ -2959,15 +2950,18 @@ VIETmisc.0043 = {
 					left_icon = ROOT
 					title = VIETmisc.0043.toast.b
 					custom_tooltip = VIETmisc.0043.toast.success
-					add_prestige = 25
+					VIET_large_prestige_gain_effect = yes
 				}
 			}
 		}
 	}	
 	option = { # skillfully avoid their name
 		name = VIETmisc.0043.b
-		add_prestige = -15
 		add_stress = 5
+		random = {
+			chance = 33
+			VIET_medium_prestige_loss_effect = yes
+		}
 	}
 }
 
@@ -3037,7 +3031,7 @@ VIETmisc.0044 = {
 	
 	option = { # Not much that can be done about it
 		name = VIETmisc.0044.a
-		add_prestige = -25
+		VIET_medium_prestige_loss_effect = yes
 		add_stress = 10
 		add_character_modifier = {
 			modifier = VIET_rumors_of_peasant_child
@@ -3046,7 +3040,7 @@ VIETmisc.0044 = {
 	}	
 	option = { # Convince others it's not true
 		name = VIETmisc.0044.b
-		add_prestige = -50
+		VIET_huge_prestige_loss_effect = yes
 		add_stress = 20
 		add_character_modifier = {
 			modifier = VIET_rumors_of_peasant_child
@@ -3114,7 +3108,7 @@ VIETmisc.0045 = {
 			has_trait = diligent
 		}
 		trait = diligent
-		add_prestige = 10
+		VIET_small_prestige_gain_effect = yes
 	}
 }
 
@@ -3164,15 +3158,15 @@ VIETmisc.0046 = {
 		}
 		random_list = {
 			40 = { }
-			40 = { add_prestige = 5 }
+			40 = { VIET_tiny_prestige_gain_effect = yes }
 			20 = { add_diplomacy_skill = 1 }
 		}
 	}	
 	option = { # let it inspire you
 		name = VIETmisc.0046.b
 		random_list = {
-			10 = { add_prestige = 10 }
-			10 = { add_piety = 10 }
+			10 = { VIET_small_prestige_gain_effect = yes }
+			10 = { VIET_small_piety_gain_effect = yes }
 		}
 	}	
 	option = { # write down thoughts
@@ -3258,7 +3252,7 @@ VIETmisc.0047 = {
 				shy = major_stress_impact_loss
 			}		
 		}
-		add_prestige = -25
+		VIET_medium_prestige_loss_effect = yes
 		add_character_modifier = {
 			modifier = VIET_curled_up_with_good_book
 			years = 5
@@ -3336,7 +3330,7 @@ VIETmisc.0048 = {
 					trait_is_virtue = generous
 				}
 			}
-			add_piety = 10
+			VIET_small_piety_gain_effect = yes
 		}
 		stress_impact = {
 			generous = minor_stress_impact_loss
@@ -3361,7 +3355,7 @@ VIETmisc.0048 = {
 					}
 				}
 			}
-			add_piety = -20
+			VIET_medium_piety_gain_effect = yes
 		}
 		add_dread = 5
 		stress_impact = {
@@ -3430,7 +3424,7 @@ VIETmisc.0048 = {
 }
 
 
-# Nearby house of worship is descrated by hooligans
+# Nearby house of worship is desecrated by hooligans
 VIETmisc.0049 = {
 	type = character_event
 	title = VIETmisc.0049.t
@@ -3472,7 +3466,7 @@ VIETmisc.0049 = {
 	
 	option = { # Not my problem
 		name = VIETmisc.0049.a
-		add_piety = -30
+		VIET_large_piety_loss_effect = yes
 		stress_impact = {
 			zealous = medium_stress_impact_gain
 			compassionate = miniscule_stress_impact_gain
@@ -3482,7 +3476,7 @@ VIETmisc.0049 = {
 	option = { # I'll help
 		name = VIETmisc.0049.b
 		remove_short_term_gold = 20
-		add_piety = 40
+		VIET_large_piety_gain_effect = yes
 		stress_impact = {
 			cynical = minor_stress_impact_gain
 			greedy = miniscule_stress_impact_gain
@@ -3491,8 +3485,8 @@ VIETmisc.0049 = {
 	option = { # I'll help if they help me
 		name = VIETmisc.0049.c
 		remove_short_term_gold = 20
-		add_piety = -20
-		add_prestige = 50
+		VIET_medium_piety_loss_effect = yes
+		VIET_huge_prestige_gain_effect = yes
 		stress_impact = {
 			zealous = minor_stress_impact_gain
 			generous = miniscule_stress_impact_gain
@@ -3544,11 +3538,11 @@ VIETmisc.0050 = {
 	
 	option = { # Too strange
 		name = VIETmisc.0050.a
-		add_prestige = 10
+		VIET_small_prestige_gain_effect = yes
 	}	
 	option = { # It's okay
 		name = VIETmisc.0050.b
-		add_piety = 10
+		VIET_small_piety_gain_effect = yes
 	}	
 	option = { # It's cool!
 		name = VIETmisc.0050.c
@@ -3674,8 +3668,8 @@ VIETmisc.0052 = {
 	option = { # ok
 		name = VIETmisc.0052.a
 		random_list = {
-			20 = { add_prestige = 10 }
-			10 = { add_piety = 10 }
+			20 = { VIET_small_prestige_gain_effect = yes }
+			10 = { VIET_small_piety_gain_effect = yes }
 		}
 	}	
 	option = { # horny option
@@ -3770,7 +3764,7 @@ VIETmisc.0053 = {
 				}		
 			}		
 		}
-		add_piety = 15
+		VIET_small_piety_gain_effect = yes
 		#add_character_modifier = {
 		#	modifier = VIET_prudish_ruler
 		#	years = 3
@@ -3793,7 +3787,7 @@ VIETmisc.0053 = {
 				}		
 			}		
 		}
-		add_piety = 20
+		VIET_medium_piety_gain_effect = yes
 		add_character_modifier = {
 			modifier = VIET_memorable_dramatic_play
 			years = 3
@@ -3845,14 +3839,14 @@ VIETmisc.0054 = {
 	
 	option = { # religion
 		name = VIETmisc.0054.a
-		add_piety = 4
+		VIET_tiny_piety_gain_effect = yes
 		stress_impact = {
 			cynical = miniscule_stress_impact_gain
 		}
 	}	
 	option = { # wish i had it
 		name = VIETmisc.0054.b
-		add_prestige = 4
+		VIET_tiny_prestige_gain_effect = yes
 		stress_impact = {
 			zealous = miniscule_stress_impact_gain
 		}
@@ -3903,7 +3897,7 @@ VIETmisc.0055 = {
 	
 	option = { # lol
 		name = VIETmisc.0055.a
-		add_prestige = 10
+		VIET_tiny_prestige_gain_effect = yes
 	}	
 	option = { # laugh
 		name = VIETmisc.0055.b
@@ -3915,7 +3909,7 @@ VIETmisc.0055 = {
 	}	
 	option = { # comfort
 		name = VIETmisc.0055.c
-		add_piety = 10
+		VIET_tiny_piety_gain_effect = yes
 		stress_impact = {
 			forgiving = minor_stress_impact_loss
 			callous = minor_stress_impact_gain
@@ -3971,8 +3965,8 @@ VIETmisc.0056 = {
 	}	
 	option = { # laugh
 		name = VIETmisc.0056.b
-		add_dread = 5
-		add_prestige = -10
+		add_dread = 10
+		VIET_small_prestige_loss_effect = yes
 		stress_impact = {
 			compassionate = minor_stress_impact_gain
 			sadistic = minor_stress_impact_gain
@@ -3981,7 +3975,7 @@ VIETmisc.0056 = {
 	option = { # give money for drink and new lute
 		name = VIETmisc.0056.c
 		remove_short_term_gold = 8
-		add_prestige = 20
+		VIET_small_prestige_gain_effect = yes
 		stress_impact = {
 			compassionate = minor_stress_impact_loss
 			greedy = minor_stress_impact_gain
@@ -4042,19 +4036,19 @@ VIETmisc.0057 = {
 			has_trait = zealous
 		}
 		trait = zealous
-		add_piety = 25
-		add_prestige = -10
+		VIET_large_piety_gain_effect = yes
+		VIET_medium_prestige_loss_effect = yes
 	}	
 	option = { # Trust in heaven
 		name = VIETmisc.0057.b
 		trigger = {
 			NOT = { has_trait = cynical }
 		}
-		add_piety = 15
+		VIET_medium_piety_gain_effect = yes
 	}	
 	option = { # He's a fraud
 		name = VIETmisc.0057.c
-		add_prestige = 15
+		VIET_medium_prestige_gain_effect = yes
 		stress_impact = {
 			trusting = miniscule_stress_impact_gain
 		}
@@ -4062,6 +4056,7 @@ VIETmisc.0057 = {
 	option = { # Guards, kick him out!
 		name = VIETmisc.0057.d
 		add_dread = 5
+		VIET_small_prestige_gain_effect = yes
 		stress_impact = {
 			patient = miniscule_stress_impact_gain
 			forgiving = miniscule_stress_impact_gain
@@ -4113,13 +4108,13 @@ VIETmisc.0058 = {
 	
 	option = { # ok
 		name = VIETmisc.0058.a
-		add_stress = 16
+		add_stress = 20
 	}	
 	option = { # be more virtuous
 		name = VIETmisc.0058.b
-		add_stress = 8
-		add_piety = 10
-		add_prestige = -10
+		add_stress = 10
+		VIET_small_piety_gain_effect = yes
+		VIET_small_prestige_loss_effect = yes
 	}
 }
 
@@ -4218,7 +4213,7 @@ VIETmisc.0060 = {
 	
 	option = { # ok
 		name = VIETmisc.0060.a
-		add_prestige = 20
+		VIET_medium_prestige_gain_effect = yes
 		add_character_modifier = {
 			modifier = VIET_interesting_talk_with_stranger
 			days = 730
@@ -4226,7 +4221,7 @@ VIETmisc.0060 = {
 	}	
 	option = { # faith inspires us!
 		name = VIETmisc.0060.b
-		add_piety = 20
+		VIET_medium_piety_gain_effect = yes
 		add_character_modifier = {
 			modifier = VIET_interesting_talk_with_stranger
 			days = 730
@@ -4237,7 +4232,7 @@ VIETmisc.0060 = {
 	}
 	option = { # nonsense!
 		name = VIETmisc.0060.c
-		add_prestige = 20
+		VIET_medium_prestige_gain_effect = yes
 		add_character_modifier = {
 			modifier = VIET_skeptical_about_fantasy_stories
 			days = 730
@@ -4318,7 +4313,7 @@ VIETmisc.0061 = {
 	
 	option = { # pray
 		name = VIETmisc.0061.a
-		add_piety = 20
+		VIET_medium_piety_gain_effect = yes
 		stress_impact = {
 			cynical = miniscule_stress_impact_gain
 		}
@@ -4335,7 +4330,7 @@ VIETmisc.0061 = {
 	}	
 	option = { # reform!
 		name = VIETmisc.0061.b
-		add_piety = 20
+		VIET_medium_piety_gain_effect = yes
 		stress_impact = {
 			humble = miniscule_stress_impact_gain
 			zealous = minor_stress_impact_gain
@@ -4354,7 +4349,7 @@ VIETmisc.0061 = {
 	option = { # not my problem
 		name = VIETmisc.0061.c
 		add_dread = 10
-		add_piety = -10
+		VIET_small_piety_loss_effect = yes
 		stress_impact = {
 			compassionate = minor_stress_impact_gain
 		}
@@ -4372,7 +4367,7 @@ VIETmisc.0061 = {
 	option = { # liar
 		name = VIETmisc.0061.d
 		add_dread = 10
-		add_prestige = -10
+		VIET_small_prestige_loss_effect = yes
 		stress_impact = {
 			cynical = minor_stress_impact_loss
 			trusting = minor_stress_impact_gain
@@ -4454,7 +4449,7 @@ VIETmisc.0062 = {
 	
 	option = { # Hot hell
 		name = VIETmisc.0062.a
-		add_prestige = 10
+		VIET_small_prestige_gain_effect = yes
 		scope:scope_VIET_hell_wonderer = {
 			add_opinion = {
 				target = root
@@ -4468,7 +4463,7 @@ VIETmisc.0062 = {
 	}	
 	option = { # Cold hell
 		name = VIETmisc.0062.b
-		add_prestige = 10
+		VIET_small_prestige_gain_effect = yes
 		scope:scope_VIET_hell_wonderer = {
 			add_opinion = {
 				target = root
@@ -4482,7 +4477,7 @@ VIETmisc.0062 = {
 	}	
 	option = { # Don't talk
 		name = VIETmisc.0062.c
-		add_piety = 10
+		VIET_small_piety_gain_effect = yes
 		add_dread = 3
 		scope:scope_VIET_hell_wonderer = {
 			add_opinion = {
@@ -4493,7 +4488,7 @@ VIETmisc.0062 = {
 	}	
 	option = { # Focus on living good lives
 		name = VIETmisc.0062.d
-		add_piety = 10
+		VIET_small_piety_gain_effect = yes
 		stress_impact = {
 			cynical = miniscule_stress_impact_gain
 		}
@@ -4514,7 +4509,7 @@ VIETmisc.0062 = {
 			has_trait = cynical
 		}
 		trait = cynical
-		add_prestige = 10
+		VIET_small_prestige_gain_effect = yes
 		stress_impact = {
 			craven = miniscule_stress_impact_gain
 		}
@@ -4930,7 +4925,7 @@ VIETmisc.0067 = {
 	}	
 	option = { # Stay out of this argument
 		name = VIETmisc.0067.c		
-		add_prestige = 20
+		VIET_medium_prestige_gain_effect = yes
 	}
 }
 
@@ -5022,16 +5017,16 @@ VIETmisc.0069 = {
 	
 	option = { # Laziness is good
 		name = VIETmisc.0069.a
-		add_prestige = -10
+		VIET_small_prestige_loss_effect = yes
 		stress_impact = {
-			base = miniscule_stress_impact_loss
+			base = minor_stress_impact_loss
 		}
 	}	
 	option = { # Hard work is good
 		name = VIETmisc.0069.b
-		add_prestige = 10
+		VIET_small_prestige_gain_effect = yes
 		stress_impact = {
-			base = miniscule_stress_impact_gain
+			base = minor_stress_impact_gain
 			lazy = miniscule_stress_impact_gain
 		}
 	}	
@@ -5083,7 +5078,7 @@ VIETmisc.0070 = {
 	
 	option = { # ok
 		name = VIETmisc.0070.a
-		add_piety = 20
+		VIET_small_piety_gain_effect = yes
 	}
 }
 
@@ -5126,7 +5121,7 @@ VIETmisc.0071 = {
 	
 	option = { # ok
 		name = VIETmisc.0071.a
-		add_piety = 20
+		VIET_medium_piety_gain_effect = yes
 	}
 }
 
@@ -5138,7 +5133,7 @@ VIETmisc.0071 = {
 
 
 
-# Meet some traveling pilgrims on the road
+# Part of house burns down though no one is hurt
 VIETmisc.0072 = {
 	type = character_event
 	title = VIETmisc.0072.t
@@ -5249,7 +5244,7 @@ VIETmisc.0073 = {
 	}	
 	option = { # ok
 		name = VIETmisc.0073.c
-		add_prestige = -20
+		VIET_medium_prestige_loss_effect = yes
 		add_character_modifier = {
 			modifier = VIET_chopped_some_wood
 			days = 1095
@@ -5351,11 +5346,11 @@ VIETmisc.0075 = {
 	
 	option = { # hot
 		name = VIETmisc.0075.a
-		add_piety = 5
+		VIET_tiny_piety_gain_effect = yes
 	}	
 	option = { # cold
 		name = VIETmisc.0075.b
-		add_prestige = 5
+		VIET_tiny_prestige_gain_effect = yes
 	}	
 	option = { # go to bed
 		name = VIETmisc.0075.c
@@ -5798,7 +5793,7 @@ VIETmisc.0080 = {
 	option = { # Very funny!
 		name = VIETmisc.0080.a
 		scope:scope_VIET_baklava_fanatic = {
-			add_prestige = -25
+			VIET_medium_prestige_loss_effect = yes
 			add_character_modifier = {
 				modifier = VIET_baklava_fanatic
 				years = 10
@@ -5807,13 +5802,13 @@ VIETmisc.0080 = {
 	}	
 	option = { # I like it too
 		name = VIETmisc.0080.b
-		add_prestige = -25
+		VIET_medium_prestige_loss_effect = yes
 		add_character_modifier = {
 			modifier = VIET_baklava_fanatic
 			years = 10
 		}
 		scope:scope_VIET_baklava_fanatic = {
-			add_prestige = -25
+			VIET_medium_prestige_loss_effect = yes
 			add_character_modifier = {
 				modifier = VIET_baklava_fanatic
 				years = 10
@@ -5866,7 +5861,7 @@ VIETmisc.0081 = {
 	
 	option = { # Uh oh
 		name = VIETmisc.0081.a
-		add_prestige = -10
+		VIET_small_prestige_loss_effect = yes
 		stress_impact = {
 			diligent = miniscule_stress_impact_gain
 			impatient = miniscule_stress_impact_gain

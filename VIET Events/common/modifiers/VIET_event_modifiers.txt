@@ -84,7 +84,7 @@ VIET_heard_about_Scarborough_Fair = {
 	icon = fertility_positive
 	stress_gain_mult = -0.25
 	stress_loss_mult = 0.25
-	monthly_piety = 0.25
+	monthly_piety = 0.4
 }
 VIET_oblivion_dream_pells_gate = {
 	icon = rock_positive
@@ -98,7 +98,7 @@ VIET_oblivion_dream_odiil_farm = {
 }
 VIET_oblivion_dream_weye = {
 	icon = outdoors_positive
-	monthly_prestige = 0.3
+	monthly_prestige = 0.2
 }
 VIET_oblivion_dream_faregyl = {
 	icon = food_positive
@@ -106,7 +106,7 @@ VIET_oblivion_dream_faregyl = {
 }
 VIET_oblivion_dream_cloud_ruler_temple = {
 	icon = piety_positive
-	monthly_piety = 0.3
+	monthly_piety = 0.2
 }
 VIET_overheard_oblivion_conversation = {
 	icon = social_positive
@@ -163,22 +163,22 @@ VIET_eating_pickled_eggs = {
 }
 VIET_lake_rumare_dream_lake = {
 	icon = outdoors_positive
-	monthly_prestige = 0.03
+	monthly_prestige = 0.1
 	diplomacy = 1
 }
 VIET_lake_rumare_dream_wayshrine = {
 	icon = piety_positive
-	monthly_piety = 0.03
+	monthly_piety = 0.1
 	learning = 1
 }
 VIET_lake_rumare_dream_forest = {
 	icon = hunt_positive
-	monthly_prestige = 0.03
+	monthly_prestige = 0.1
 	intrigue = 1
 }
 VIET_lake_rumare_dream_cottage = {
 	icon = county_modifier_development_positive
-	monthly_piety = 0.03
+	monthly_piety = 0.1
 	stewardship = 1
 }
 VIET_oblivion_dream_bruma = {
@@ -203,22 +203,22 @@ VIET_oblivion_dream_east_lake_rumare = {
 }
 VIET_moved_to_tears = {
 	icon = stress_positive
-	monthly_piety = 0.05
+	monthly_piety = 0.1
 	diplomacy = 1
 }
 VIET_unmoved_by_art = {
 	icon = letter_positive
-	monthly_dread = 0.1
+	monthly_dread = 0.3
 	intrigue = 1
 }
 VIET_auriels_ascension = {
 	icon = piety_positive
-	monthly_piety = 0.25
-	domain_tax_mult = -0.1
+	monthly_piety = 0.3
+	domain_tax_mult = -0.05
 }
 VIET_repressing_auriels_ascension_cult = {
 	icon = dread_positive
-	monthly_prestige = 0.1
+	monthly_prestige = 0.2
 	monthly_dread = 0.1
 	general_opinion = -10
 }
@@ -298,7 +298,7 @@ VIET_thinking_about_foreign_lands = {
 	learning = 1
 	different_culture_opinion = 10
 	opinion_of_different_culture = 10
-	monthly_prestige = 0.04
+	monthly_prestige = 0.1
 }
 VIET_open_to_new_ideas = {
 	icon = magic_positive
@@ -321,7 +321,7 @@ VIET_navel_gazing = {
 }
 VIET_impressed_others_with_knowledge = {
 	icon = learning_positive
-	monthly_prestige = 0.15
+	monthly_prestige = 0.2
 	general_opinion = 5
 }
 VIET_curled_up_with_good_book = {
@@ -340,7 +340,7 @@ VIET_art_censorship = {
 }
 VIET_abstract_religious_art = {
 	icon = piety_positive
-	monthly_piety = 0.35
+	monthly_piety = 0.3
 	religious_vassal_opinion = 3
 }
 VIET_examined_old_ruins = {
@@ -350,7 +350,7 @@ VIET_examined_old_ruins = {
 VIET_memorable_dramatic_play = {
 	icon = county_modifier_opinion_positive
 	diplomacy = 1
-	monthly_piety = 0.05
+	monthly_piety = 0.1
 }
 VIET_simple_doesnt_like_drama_play = {
 	icon = social_positive
@@ -373,7 +373,7 @@ VIET_noontime_sun_headache = {
 VIET_haunted_by_ghost_for_sin = {
 	icon = stress_negative
 	general_opinion = -10
-	monthly_piety = -0.45
+	monthly_piety = -0.4
 }
 VIET_oblivion_dream_dark_brotherhood = {
 	icon = letter_positive
@@ -402,12 +402,12 @@ VIET_oblivion_dream_arena = {
 }
 VIET_values_scholarly_perspectives = {
 	icon = learning_positive
-	monthly_piety = 0.15
+	monthly_piety = 0.2
 	monthly_lifestyle_xp_gain_mult = 0.2
 }
 VIET_values_adventurer_experiences = {
 	icon = horse_positive
-	monthly_prestige = 0.15
+	monthly_prestige = 0.2
 	mercenary_hire_cost_mult = -0.15
 }
 VIET_world_war_1_dream = {
@@ -415,7 +415,7 @@ VIET_world_war_1_dream = {
 	martial = -1
 	prowess = -1
 	health = -0.1
-	monthly_piety = 0.3
+	monthly_piety = 0.4
 }
 VIET_whore_of_babylon_dream = {
 	icon = piety_negative
@@ -423,13 +423,13 @@ VIET_whore_of_babylon_dream = {
 }
 VIET_dream_future_good = {
 	icon = family_positive
-	monthly_piety = 0.1
-	monthly_prestige = 0.1
+	monthly_piety = 0.2
+	monthly_prestige = 0.2
 }
 VIET_dream_future_bad = {
 	icon = family_negative
-	monthly_piety = -0.1
-	monthly_prestige = -0.1
+	monthly_piety = -0.2
+	monthly_prestige = -0.2
 }
 VIET_memory_of_first_love = {
 	icon = love_positive
@@ -455,7 +455,7 @@ VIET_torch_burn = {
 }
 VIET_mysterious_horizon_fires = {
 	icon = magic_negative
-	monthly_piety = -0.05
+	monthly_piety = -0.1
 	intrigue = -1
 }
 VIET_house_fire_safety_measures = {
@@ -511,7 +511,7 @@ VIET_baklava_fanatic = {
 VIET_baklava_envoy_gifts = {
 	icon = food_positive
 	diplomacy = 1
-	monthly_prestige = 0.15
+	monthly_prestige = 0.2
 }
 VIET_baklava_guests_banquets = {
 	icon = food_positive
@@ -522,7 +522,7 @@ VIET_baklava_donate_to_poor = {
 	icon = food_positive
 	diplomacy = 1
 	stewardship = 1
-	monthly_piety = 0.15
+	monthly_piety = 0.2
 }
 VIET_baklava_keep_for_self = {
 	icon = food_positive
@@ -576,12 +576,11 @@ VIET_outdoors_nap = {
 }
 VIET_ignored_disapproval_and_mockery = {
 	icon = social_positive
-	diplomacy = -2
-	monthly_prestige = 0.2
+	monthly_prestige = -0.1
 	stress_gain_mult = -0.1
 }
 VIET_cinnamon_toast_crunch_addict = {
-	icon = social_positive
+	icon = food_positive
 	health = 0.2
 }
 VIET_strange_female_bodyguard = {

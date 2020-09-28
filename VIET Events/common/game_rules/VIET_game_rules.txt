@@ -49,3 +49,19 @@ VIET_historical_context = {
 	}	
 }
 
+VIET_resource_amounts = {
+	default = VIET_historical_context_on
+
+	VIET_resouce_default = {
+	
+	}
+
+	VIET_resouce_one_and_a_half = {
+	
+	}	
+
+	VIET_resouce_twice = {
+	
+	}	
+}
+

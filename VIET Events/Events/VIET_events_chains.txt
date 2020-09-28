@@ -590,7 +590,7 @@ VIETmisc.1023 = {
 	type = character_event
 	title = VIETmisc.1023.t
 	desc = VIETmisc.1023.desc
-	theme = feast_activities
+	theme = feast_activity
 	override_background = { event_background = sitting_room }
 	
 	left_portrait = {
@@ -653,7 +653,7 @@ VIETmisc.1024 = {
 	type = character_event
 	title = VIETmisc.1024.t
 	desc = VIETmisc.1024.desc
-	theme = feast_activities
+	theme = feast_activity
 	override_background = { event_background = throne_room }
 	
 	left_portrait = {
@@ -677,7 +677,7 @@ VIETmisc.1025 = {
 	type = character_event
 	title = VIETmisc.1025.t
 	desc = VIETmisc.1025.desc
-	theme = feast_activities
+	theme = feast_activity
 	
 	left_portrait = {
 		character = root
@@ -766,7 +766,7 @@ VIETmisc.1029 = {
 	type = character_event
 	title = VIETmisc.1029.t
 	desc = VIETmisc.1029.desc
-	theme = feast_activities
+	theme = feast_activity
 	override_background = { event_background = sitting_room }
 	
 	left_portrait = {
@@ -777,11 +777,11 @@ VIETmisc.1029 = {
 	option = {
 		name = VIETmisc.1029.a
 		add_character_modifier = {
-			modifier = VIET_cinnamon_toast_crunch_addict
+			modifier = VIET_ignored_disapproval_and_mockery
+			years = 4
 		}
 		add_character_modifier = {
-			modifier = VIET_ignored_disapproval_and_mockery
-			years = 8
+			modifier = VIET_cinnamon_toast_crunch_addict
 		}
 		set_global_variable = {
 			name = VIET_cinnamon_toast_crunch_yeah
