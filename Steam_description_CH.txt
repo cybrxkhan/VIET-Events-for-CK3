@@ -1,6 +1,6 @@
 [img]http://i.imgur.com/OhIA5bm.jpg[/img]
 
-[h1]当前版本：1.0.1 "Hieronymus Bosch" (2020.9.16更新，兼容原版1.0.X)[/h1]
+[h1]当前版本：1.1.0 "Dragon" (2020.9.28更新，兼容原版1.1.X)[/h1]
 [B]更多信息请见[url=https://forum.paradoxplaza.com/forum/threads/mod-viet-events-for-ck3-a-flavor-and-immersion-event-mod.1422081/]论坛[/url][/B]
 [B]直接下载请见[url=https://github.com/cybrxkhan/VIET-Events-for-CK3/releases]Github[/url]
 [/B]
@@ -21,7 +21,7 @@ Very Immersive Events and Tales (VIET)是[url=https://steamcommunity.com/sharedf
 [img]http://i.imgur.com/EyXurbK.jpg[/img]
 
 [LIST]
-[*]多达[B]141个新风味事件（链）[/B]，以后的更新中会加入更多
+[*]多达[B]219个新风味事件（链）[/B]，以后的更新中会加入更多
 [*]如果你不喜欢某些傻里傻气的事件，你可以在规则里面将它们停用，共有三个等级可供选择：平衡（默认）、严肃（有所限制）、所有事件（不设限）
 [*][B]几乎兼容所有模组[/B]，因为不触及原文件。就算是全局模组，你也可以在规则里禁用提及我们中世纪世界的事件，这样一来在其它世界线（比如奇幻世界或是科幻世界的模组）就显得更为合理了
 [*]用[B]历史背景提示[/B]学习历史。提示里包含了启发某一事件的历史背景——有时候，现实比幻想更为荒诞不经！（如你认为这有损带入感，可以在规则中禁用。）
@@ -31,41 +31,41 @@ Very Immersive Events and Tales (VIET)是[url=https://steamcommunity.com/sharedf
 [h1]可用语种[/h1]
 我们现在包括了游戏的所有官方语言！要注意，由于我会不定期更新模组，负责翻译的人或许无法紧跟最新版本的进度，毕竟他们花的是自己的闲暇时间。因此请注意所有的非英文事件都会有占位符。
 [LIST]
-[*]中文——由Tbeabm帮助翻译
-[*]法文——WTWSMS组的Mouchi帮助翻译
+[*]中文——本模组自带中文，由[url=https://paratranz.cn/projects/1580]Tbeabm等人的项目组[/url]帮助翻译。
+[*]法文——[url=https://steamcommunity.com/sharedfiles/filedetails/?id=2234027514]在此订阅子模组[/url]，感谢Mouchi
 [*]德文——[url=https://steamcommunity.com/sharedfiles/filedetails/?id=2229986442]在此订阅子模组[/url]，感谢Thomsen
 [*]韩文——[url=https://steamcommunity.com/sharedfiles/filedetails/?id=2227982565]在此订阅子模组[/url]，感谢Ohboksu
 [*]俄文——[url=https://steamcommunity.com/sharedfiles/filedetails/?id=2230011509]在此订阅子模组[/url]，感谢Alesha_Popvich
-[*]西文——由Sourenics帮助翻译
+[*]西文——本模组自带西文，由Sourenics帮助翻译。
 [/LIST]
 
 
-[img]http://i.imgur.com/RQ5QZTF.jpg[/img]
+[img]https://i.imgur.com/9twioNH.jpg[/img]
 
-[h1]版本1.0.1 "Hieronymus Bosch"[/h1]
+更多信息请见[url=https://steamcommunity.com/workshop/filedetails/discussion/2227658180/2943622078759317376/]此帖[/url]。
 
-[I]Hieronymus Bosch是15世纪著名的荷兰画家，最著名的是他对现实和地狱的生动描绘。他的画作当时是异常的骇人和超现实的，其恐怖的作品反映了他是一个虔诚的宗教人士，他希望在他的作品中表达道德，精神主题。[/I]
+谢谢！
+
+[I]“不要来批怒龙的逆鳞。”
+
+——威廉莎士比亚，李尔王[/I]
+
 
 [LIST]
-[*]加入31个新事件，主题包括：
+[*]加入新的游戏规则，决定玩家一次性能获得多少虔诚／威望
+[*]加入28个新事件，主题包括：
 [LIST]
-[*]9个艺术事件
-[*]6个地下事件
-[*]13个奇幻故事事件*
-[*]4个家具事件*
-[*]1个食物事件*
+[*]7个火事件
+[*]4个果仁蜜饼事件
+[*]14个由上古卷轴5启发的事件（可以在规则中禁用）*
+[*]4个苔藓事件*
 [/LIST]
-[*]为严肃事件游戏规则新禁用了几个事件
-[*]为新事件背景添加了一些新的文化/区域变体
-[*]根据情形不同，红绿颜色可以正确显示了
-[*]稍微提高了触发“错误历史”事件的学识要求
-[*]将几个事件从三年on_actions改成了每年on_actions
-[*]“斯卡布罗集市”事件总能让你失去压力
-[*]修正其它语言文本下的规则与英文文本不对映的错误
-[*]修正好感修正缺少文字的错误
-[*]修正“看云”事件没有角色动画的错误
-[*]修正了一些文本错误
-[*]修正了一些杂项错误
+[*]加入了CK2版本的VIET里的肉桂成瘾事件（共计7个）
+[*]调整了威望和虔诚的得失量
+[*]从修正获得的威望虔诚更多了（有些概率不是0％却显示是0％，是由于CK3不支持显示比1％小的百分比数，不知道为啥）
+[*]把事件文件夹变成小写，因为大写导致了Linux上的问题
+[*]伊比利亚地区现在使用“托斯卡纳乡村”事件背景的地中海变体
+[*]修正了一些文本错误和漏洞
 [/LIST]
 
 *由CK2版本VIET改编
