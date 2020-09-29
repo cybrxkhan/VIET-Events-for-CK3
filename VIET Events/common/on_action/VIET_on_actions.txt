@@ -84,6 +84,9 @@ VIET_events_yearly_pulse = {
 		# Time
 		100 = VIETold.1026		# You overslept, oh no
 		100 = VIETold.1029		# Doing work outside in the sun at noon gives you a headache
+		# Moss
+		100 = VIETold.1031		# Put too much moss in shoes
+		100 = VIETold.1032		# Take a nap on a rock with moss
 		
 		#######################################
 		# OLD VIET
@@ -109,6 +112,9 @@ VIET_events_yearly_pulse = {
 		# Prophecy and Future
 		100 = VIETold.2046		# Dreaming of your realm's future
 		100 = VIETold.2053		# Thinking about whether people across time periods are the same all over
+		# Skyrim dialogue inspired
+		100 = VIETold.2058		# Bad nip in the air
+		100 = VIETold.2064		# Mithorpa Nasyal (unused NPC) - come across a peasant who initially lashes out but apologises
 		
 		#######################################
 		# NEXT GEN VIET
@@ -156,6 +162,13 @@ VIET_events_yearly_pulse = {
 		100 = VIETmisc.0069		# Meet a commoner on the road who's just chilling and relaxing
 		100 = VIETmisc.0070		# Come to an old graveyard
 		100 = VIETmisc.0071		# Meet some traveling pilgrims on the road
+		# Fire
+		100 = VIETmisc.0074		# Burn yourself slightly by coming too close to a torch
+		100 = VIETmisc.0075		# Stand far or close to the fire?
+		100 = VIETmisc.0078		# See some vagrants huddled on the side of the road by a fire
+		# Baklava
+		100 = VIETmisc.0079		# Baklava merchant offers special baklava
+		100 = VIETmisc.0081		# Got baklava syrup all over documents
 	}
 }
 
@@ -206,6 +219,8 @@ VIET_events_tri_yearly_pulse = {
 		# Time
 		100 = VIETold.1025		# Character receives an hourglass - potential for ARTIFACT in the future
 		100 = VIETold.1027		# You get a new servant who is very diligent
+		# Moss
+		100 = VIETold.1030		# Moss on walls - do you want to clean up or not?
 		
 		#######################################
 		# OLD VIET
@@ -234,6 +249,10 @@ VIET_events_tri_yearly_pulse = {
 		100 = VIETold.2040		# Courtiers debate the skin color of the people living on the fantastical Isle of Color
 		# Prophecy and Future
 		100 = VIETold.2051		# Come across a beggar proclaiming the end is nigh
+		# Skyrim dialogue inspired
+		100 = VIETold.2054		# Narri - barmaid flirts with character
+		100 = VIETold.2059		# Mila Valentina - Chat with a kid helping her mother sell fruits and vegetables
+		100 = VIETold.2065		# Sinmir - Elderly townsman criticizes your security
 		
 		#######################################
 		# NEXT GEN VIET
@@ -265,6 +284,11 @@ VIET_events_tri_yearly_pulse = {
 		100 = VIETmisc.0065		# Dream of joining an Oblivion guild
 		100 = VIETmisc.0066		# You and a courtier get lost and stay overnight at a ruin
 		100 = VIETmisc.0067		# Listen in on an argument between a scholar and an adventurer
+		# Fire
+		100 = VIETmisc.0072		# Part of house burns down though no one is hurt
+		100 = VIETmisc.0073		# Commoner asks if you want to chop wood
+		# Baklava
+		100 = VIETmisc.0082		# You are given a gift of baklava
 	}
 }
 
@@ -324,6 +348,12 @@ VIET_events_five_yearly_pulse = {
 		100 = VIETold.2044		# Seer predicts the coming of Genghis Khan
 		100 = VIETold.2049		# Pagan seer prophesizes the decline of polytheism
 		100 = VIETold.2052		# You meet the whore of Babylon in a dream
+		# Skyrim dialogue inspired
+		100 = VIETold.2055		# It's a fine day with you around - character meets young noblewoman
+		100 = VIETold.2057		# Jenassa - strange female mercenary comes to court
+		100 = VIETold.2060		# Jon Battle-Born - Getting to know a friendly, poetic guardsman
+		100 = VIETold.2062		# Lydia - A maid is sworn to carry your burdens
+		100 = VIETold.2066		# Telrav - encounter a robbed "merchant" on the road
 		
 		#######################################
 		# NEXT GEN VIET
@@ -342,6 +372,11 @@ VIET_events_five_yearly_pulse = {
 		100 = VIETmisc.0053		# Watching a play about an incestuous couple
 		# Underworld
 		100 = VIETmisc.0060		# Village elder claims she reformed after demons took her on a trip to hell when she was young
+		# Fire
+		100 = VIETmisc.0076		# Mysterious fires appearing on the horizon without any known source
+		100 = VIETmisc.0077		# Visiting scholar recommends making some changes to your house for fire safety reasons
+		# Baklava
+		100 = VIETmisc.0080		# A courtier is obsessed with baklava
 	}
 }
 
@@ -363,6 +398,7 @@ VIET_events_event_chain_pulse = {
 		
 		# Actual Event Chains
 		100 = VIETmisc.1000		# Kogarashi Sentiment/Fast Love - Character recalls their first love
+		100 = VIETmisc.1023		# Begin the swirls of cinnamon in every bite
 		
 		#######################################
 		# NEXT GEN VIET
