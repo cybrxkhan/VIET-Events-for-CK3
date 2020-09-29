@@ -1,6 +1,6 @@
 [img]http://i.imgur.com/OhIA5bm.jpg[/img]
 
-[h1]Current Version: 1.0.2 "Ibn Tumart" (Released 9/20/20, Compatible with vanilla patch 1.0.X)[/h1]
+[h1]Current Version: 1.1.0 "Dragon" (Released 9/28/20, Compatible with vanilla patch 1.1.X)[/h1]
 [B]Please See [url=https://forum.paradoxplaza.com/forum/threads/mod-viet-events-for-ck3-a-flavor-and-immersion-event-mod.1422081/]Forum Thread[/url] For More Info[/B]
 [B]Manual Download/Installation available [url=https://github.com/cybrxkhan/VIET-Events-for-CK3/releases]on Github[/url]
 [/B]
@@ -21,7 +21,7 @@ Feel free to use my work in your mods - all I ask is that I am credited and (if 
 [img]http://i.imgur.com/EyXurbK.jpg[/img]
 
 [LIST]
-[*]Over [B]184 new flavor events[/B], and more will be added in updates over time
+[*]Over [B]219 new flavor events[/B], and more will be added in updates over time
 [*]Game rule to disable sillier events for those who don't like them, with three levels to choose from: Balanced (Default), Serious (Restricted), and All Events (Full)
 [*][B]Compatible with almost anything[/B] since it doesn't touch any vanilla files - even with overhaul mods, you can via game rule disable events that reference things specific to our medieval world that wouldn’t make sense in other time periods or universes (like fantasy and sci-fi conversion mods)
 [*]Learn history with [B]Historical Context tooltips[/B] that provide information about what inspired some of the events - sometimes, reality is stranger than fiction! (These can be disabled via game rule for those who find it immersion breaking.)
@@ -49,23 +49,27 @@ Thanks!
 
 [img]http://i.imgur.com/RQ5QZTF.jpg[/img]
 
-[h1]Version 1.0.2 "Ibn Tumart"[/h1]
+[h1]Version 1.1.0 "Dragon"[/h1]
 
-[I]“I become not one of them by living among them; sandy earth is the gangue in which gold is found.”
+[I]"Come not between the dragon, and his wrath."
 
-- Ibn Tumart, spiritual and political founder of the Almohad movement that overthrew the Almoravids[/I]
+- William Shakespeare, King Lear[/I]
 
 [LIST]
-[*]Added 21 new events about the following themes:
+[*]Added new game rule to be able to increase the amount of lump sum prestige/piety gains for VIET Events for players who do not like the default amounts
+[*]Added 28 new events about the following themes:
 [LIST]
-[*]9 Adventure
-[*]13 Prophecy and Future*
+[*]7 Fire
+[*]4 Baklava
+[*]14 Skyrim dialogue inspired (the more gratuitous references will be disabled via game rule)*
+[*]3 Moss*
 [/LIST]
-[*]Added event chain “Winter Wind Sentiment” from old VIET (23 events total)
-[*]Rebalanced prestige/piety gains to be slightly higher than previously, though still somewhat less than vanilla (typical range increased from ~1-20 to ~1-50, with intended average from ~5-10 to ~10-30).
-[*]Added in a couple new event backgrounds
-[*]Changed a few events’ backgrounds to be the tavern, where appropriate
-[*]Miscellaneous bug fixes
+[*]Added Cinnamon Addict event chain from CK2 VIET (7 events total)
+[*]Revamped prestige/piety gain/loss averages/ranges again
+[*]Increased prestige/piety gains from modifiers (several were showing up as 0% NOT because they were actually 0%, but because CK3 does not show percentage points smaller than 1% for prestige/piety modifiers unlike CK2 for some reason)
+[*]Made events folder lowercase as having it capitalized was causing issues on linux
+[*]Iberian region now uses the Mediterranean variant of the “Tuscan Country” event background
+[*]Various bug and typo fixes
 [/LIST]
 
 *Adapted from VIET for CK2

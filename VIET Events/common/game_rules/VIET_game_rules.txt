@@ -50,7 +50,7 @@ VIET_historical_context = {
 }
 
 VIET_resource_amounts = {
-	default = VIET_historical_context_on
+	default = VIET_resouce_default
 
 	VIET_resouce_default = {
 	
