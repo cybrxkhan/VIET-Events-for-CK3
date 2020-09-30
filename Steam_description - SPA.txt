@@ -21,7 +21,7 @@ Siéntete libre de usar mi trabajo con tus mods - todo lo que pido es reconocimi
 [img]http://i.imgur.com/EyXurbK.jpg[/img]
 
 [LIST]
-[*]Más de [B]184 nuevos eventos[/B] y cadenas, y aún se añadirán más con cada actualización
+[*]Más de [B]219 nuevos eventos[/B] y cadenas, y aún se añadirán más con cada actualización
 [*]Regla de juego para desactivar los eventos estúpidos para aquellos que no les guste, con tres niveles para escoger entre: Balanceado (Predeterminado), Serio (Restringido), y Todos los eventos (Todo)
 [*][B]Compatible con casi cualquier cosa[/B] ya que no modifico archivos del vanilla - incluso con mods de conversión total puedes desactivar los eventos que hagan referencias a cosas o lugares específicos del mundo medieval que no tendrían sentido en otros periodos o universos (como mods fantásticos o de ciencia ficción)
 [*]Aprende historia con las [B]descripciones de Contexto Histórico[/B] que proporcionan información sobre la inspiración detrás de algunos eventos - a veces, ¡la realidad supera la ficción! (Estos se pueden desactivar con una regla de juego para aquellos que creen que no ayuda a la inmersión.)
@@ -49,22 +49,26 @@ Gracias.
 
 [img]http://i.imgur.com/RQ5QZTF.jpg[/img]
 
-[h1]Versión 1.0.2 "Ibn Tumart"[/h1]
+[h1]Versión 1.1.0 "Dragón"[/h1]
 
-[I]"No me convierto en uno de ellos por vivir entre ellos; la arena es una ganga en la que se encuentra el oro."
+[I]"No te interpongas entre el dragón y su ira."
 
-- Ibn Tumart, fundador espiritual y político del movimiento Almohade que derrocó a los Almorávides[/I]
+- William Shakespeare, Rey Lear[/I]
 
 [LIST]
-[*]Añadidos 21 eventos nuevos sobre los siguientes temas:
+[*]Añadida nueva regla de juego que permite incrementar la cantidad de prestigio/piedad ganadas para aquellos jugadores que no les gustan las cantidades predeterminadas
+[*]Añadidos 28 eventos nuevos sobre los siguientes temas:
 [LIST]
-[*]9 Aventura
-[*]13 Profecías y Futuro*
+[*]7 Fuego
+[*]4 Baklava
+[*]14 Diálogos inspirados en Skyrim (Las referencias más gratuitas se pueden desactivar con una regla de juego)*
+[*]3 Musgo*
 [/LIST]
-[*]Añadida cadena de eventos "Sentimiento de Viento de Invierno" del antiguo VIET (23 eventos en total)
-[*]Rebalanceadas las ganancias de prestigio/piedad para ser un poco más altas, aunque aún son inferiores al vanilla (rango típico incrementado de ~1-20 a ~1-50, con una media de ~5-10 a ~10-30)
-[*]Añadidos un par de nuevos fondos de evento.
-[*]Se han cambiado unos pocos fondos de evento para que muestre la taberna, cuando sea apropiado
+[*]Añadida cadena de eventos "Adicto a la Canela" de VIET CK2 (7 eventos)
+[*]Rebalanceadas las ganancias de prestigio/piedad, otra vez
+[*]Incrementadas las ganancias de prestigio/piedad de los modificadores (muchos se mostraban como 0% no porque realmente fueran 0%, sino porque CK3 no muestra puntos porcentuales inferiores a 1%)
+[*]Se ha puesto la carpeta de eventos en minúscula, ya que estaba provocando problemas en usuarios de Linux
+[*]La región de Iberia utiliza ahora la variante Mediterránea del fondo de evento "Tierra Toscana"
 [*]Otros arreglos de bug
 [/LIST]
 
