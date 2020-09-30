@@ -50,7 +50,7 @@
 
 VIET_theme_tuscan_country = {
 	icon = {
-		reference = "gfx/interface/event_window/type_love.dds"
+		reference = "gfx/interface/icons/event_types/type_love.dds"
 	}
 	sound = {
 		reference = "event:/SFX/Events/Themes/sfx_event_theme_type_activity" #reference = @generic_event_theme_sound
@@ -62,7 +62,7 @@ VIET_theme_tuscan_country = {
 
 VIET_theme_skyrim_forest = {
 	icon = {
-		reference = "gfx/interface/event_window/type_love.dds"
+		reference = "gfx/interface/icons/event_types/type_love.dds"
 	}
 	sound = {
 		reference = "event:/SFX/Events/Themes/sfx_event_theme_type_activity"
@@ -74,7 +74,7 @@ VIET_theme_skyrim_forest = {
 
 VIET_theme_ancient_cairn = {
 	icon = {
-		reference = "gfx/interface/event_window/type_domain.dds"
+		reference = "gfx/interface/icons/event_types/type_domain.dds"
 	}
 	sound = {
 		reference = "event:/SFX/Events/Themes/sfx_event_theme_type_activity"
@@ -86,7 +86,7 @@ VIET_theme_ancient_cairn = {
 
 VIET_theme_garden_generic = { # For when I don't want the lovey-dovey extras
 	icon = {
-		reference = "gfx/interface/event_window/type_love.dds"
+		reference = "gfx/interface/icons/event_types/type_love.dds"
 	}
 	sound = {
 		reference = @generic_event_theme_sound
@@ -103,7 +103,7 @@ VIET_theme_garden_generic = { # For when I don't want the lovey-dovey extras
 
 VIET_theme_small_town = {
 	icon = {
-		reference = "gfx/interface/event_window/type_domain.dds"
+		reference = "gfx/interface/icons/event_types/type_domain.dds"
 	}
 	sound = {
 		reference = @generic_event_theme_sound
@@ -120,7 +120,7 @@ VIET_theme_small_town = {
 
 VIET_theme_good_dream = {
 	icon = {
-		reference = "gfx/interface/event_window/type_faith.dds"
+		reference = "gfx/interface/icons/event_types/type_faith.dds"
 	}
 	sound = {
 		reference = @generic_event_theme_sound
@@ -132,7 +132,7 @@ VIET_theme_good_dream = {
 
 VIET_theme_nightmare = {
 	icon = {
-		reference = "gfx/interface/event_window/type_illness.dds"
+		reference = "gfx/interface/icons/event_types/type_illness.dds"
 	}
 	sound = {
 		reference = @generic_event_theme_sound
@@ -144,7 +144,7 @@ VIET_theme_nightmare = {
 
 VIET_theme_oblivion_pastoral_dream = {
 	icon = {
-		reference = "gfx/interface/event_window/type_love.dds"
+		reference = "gfx/interface/icons/event_types/type_love.dds"
 	}
 	sound = {
 		reference = @generic_event_theme_sound
@@ -161,7 +161,7 @@ VIET_theme_oblivion_pastoral_dream = {
 
 VIET_theme_office = {
 	icon = {
-		reference = "gfx/interface/event_window/type_duty.dds"
+		reference = "gfx/interface/icons/event_types/type_duty.dds"
 	}
 	sound = {
 		reference = @generic_event_theme_sound
