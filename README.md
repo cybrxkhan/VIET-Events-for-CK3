@@ -1,6 +1,6 @@
 # VIET Events for CK3
 
-## Latest Version: 1.1.0 "Dragon" (Released 9/28/20)
+## Latest Version: 1.1.0 "Dragon" (Released 9/29/20)
 
 _"Come not between the dragon, and his wrath."_
 

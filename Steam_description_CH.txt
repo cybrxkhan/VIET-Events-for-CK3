@@ -1,6 +1,6 @@
 [img]http://i.imgur.com/OhIA5bm.jpg[/img]
 
-[h1]当前版本：1.1.0 "Dragon" (2020.9.28更新，兼容原版1.1.X)[/h1]
+[h1]当前版本：1.1.0 "Dragon" (2020.9.29更新，兼容原版1.1.X)[/h1]
 [B]更多信息请见[url=https://forum.paradoxplaza.com/forum/threads/mod-viet-events-for-ck3-a-flavor-and-immersion-event-mod.1422081/]论坛[/url][/B]
 [B]直接下载请见[url=https://github.com/cybrxkhan/VIET-Events-for-CK3/releases]Github[/url]
 [/B]

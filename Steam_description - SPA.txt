@@ -1,6 +1,6 @@
 [img]http://i.imgur.com/OhIA5bm.jpg[/img]
 
-[h1]Versión actual: 1.0.2 "Ibn Tumart" (Salida 20/09/20, Compatible con versión vanilla 1.0.X)[/h1]
+[h1]Versión actual: 1.1.0 "Dragón" (Salida 29/09/20, Compatible con versión vanilla 1.1.X)[/h1]
 [B]Echa un Vistazo a [url=https://forum.paradoxplaza.com/forum/threads/mod-viet-events-for-ck3-a-flavor-and-immersion-event-mod.1422081/]Tema del Foro[/url] Para Más Información[/B]
 [B]Descarga/Instalación manual [url=https://github.com/cybrxkhan/VIET-Events-for-CK3/releases]en Github[/url]
 [/B]
