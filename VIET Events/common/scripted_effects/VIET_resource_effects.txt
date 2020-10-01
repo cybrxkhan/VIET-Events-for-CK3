@@ -99,13 +99,13 @@
 VIET_tiny_prestige_gain_effect = {
 	if = {
 		limit = {
-			has_game_rule = VIET_resouce_twice
+			has_game_rule = VIET_resource_twice
 		}
 		add_prestige = 10
 	}
 	else_if = {
 		limit = {
-			has_game_rule = VIET_resouce_one_and_a_half
+			has_game_rule = VIET_resource_one_and_a_half
 		}
 		add_prestige = 8
 	}
@@ -116,13 +116,13 @@ VIET_tiny_prestige_gain_effect = {
 VIET_tiny_piety_gain_effect = {
 	if = {
 		limit = {
-			has_game_rule = VIET_resouce_twice
+			has_game_rule = VIET_resource_twice
 		}
 		add_piety = 10
 	}
 	else_if = {
 		limit = {
-			has_game_rule = VIET_resouce_one_and_a_half
+			has_game_rule = VIET_resource_one_and_a_half
 		}
 		add_piety = 8
 	}
@@ -133,13 +133,13 @@ VIET_tiny_piety_gain_effect = {
 VIET_tiny_prestige_loss_effect = {
 	if = {
 		limit = {
-			has_game_rule = VIET_resouce_twice
+			has_game_rule = VIET_resource_twice
 		}
 		add_prestige = -10
 	}
 	else_if = {
 		limit = {
-			has_game_rule = VIET_resouce_one_and_a_half
+			has_game_rule = VIET_resource_one_and_a_half
 		}
 		add_prestige = -8
 	}
@@ -150,13 +150,13 @@ VIET_tiny_prestige_loss_effect = {
 VIET_tiny_piety_loss_effect = {
 	if = {
 		limit = {
-			has_game_rule = VIET_resouce_twice
+			has_game_rule = VIET_resource_twice
 		}
 		add_piety = -10
 	}
 	else_if = {
 		limit = {
-			has_game_rule = VIET_resouce_one_and_a_half
+			has_game_rule = VIET_resource_one_and_a_half
 		}
 		add_piety = -8
 	}
@@ -175,13 +175,13 @@ VIET_tiny_piety_loss_effect = {
 VIET_small_prestige_gain_effect = {
 	if = {
 		limit = {
-			has_game_rule = VIET_resouce_twice
+			has_game_rule = VIET_resource_twice
 		}
 		add_prestige = 20
 	}
 	else_if = {
 		limit = {
-			has_game_rule = VIET_resouce_one_and_a_half
+			has_game_rule = VIET_resource_one_and_a_half
 		}
 		add_prestige = 15
 	}
@@ -192,13 +192,13 @@ VIET_small_prestige_gain_effect = {
 VIET_small_piety_gain_effect = {
 	if = {
 		limit = {
-			has_game_rule = VIET_resouce_twice
+			has_game_rule = VIET_resource_twice
 		}
 		add_piety = 20
 	}
 	else_if = {
 		limit = {
-			has_game_rule = VIET_resouce_one_and_a_half
+			has_game_rule = VIET_resource_one_and_a_half
 		}
 		add_piety = 15
 	}
@@ -209,13 +209,13 @@ VIET_small_piety_gain_effect = {
 VIET_small_prestige_loss_effect = {
 	if = {
 		limit = {
-			has_game_rule = VIET_resouce_twice
+			has_game_rule = VIET_resource_twice
 		}
 		add_prestige = -20
 	}
 	else_if = {
 		limit = {
-			has_game_rule = VIET_resouce_one_and_a_half
+			has_game_rule = VIET_resource_one_and_a_half
 		}
 		add_prestige = -15
 	}
@@ -226,13 +226,13 @@ VIET_small_prestige_loss_effect = {
 VIET_small_piety_loss_effect = {
 	if = {
 		limit = {
-			has_game_rule = VIET_resouce_twice
+			has_game_rule = VIET_resource_twice
 		}
 		add_piety = -20
 	}
 	else_if = {
 		limit = {
-			has_game_rule = VIET_resouce_one_and_a_half
+			has_game_rule = VIET_resource_one_and_a_half
 		}
 		add_piety = -15
 	}
@@ -251,13 +251,13 @@ VIET_small_piety_loss_effect = {
 VIET_medium_prestige_gain_effect = {
 	if = {
 		limit = {
-			has_game_rule = VIET_resouce_twice
+			has_game_rule = VIET_resource_twice
 		}
 		add_prestige = 50
 	}
 	else_if = {
 		limit = {
-			has_game_rule = VIET_resouce_one_and_a_half
+			has_game_rule = VIET_resource_one_and_a_half
 		}
 		add_prestige = 40
 	}
@@ -268,13 +268,13 @@ VIET_medium_prestige_gain_effect = {
 VIET_medium_piety_gain_effect = {
 	if = {
 		limit = {
-			has_game_rule = VIET_resouce_twice
+			has_game_rule = VIET_resource_twice
 		}
 		add_piety = 50
 	}
 	else_if = {
 		limit = {
-			has_game_rule = VIET_resouce_one_and_a_half
+			has_game_rule = VIET_resource_one_and_a_half
 		}
 		add_piety = 40
 	}
@@ -285,13 +285,13 @@ VIET_medium_piety_gain_effect = {
 VIET_medium_prestige_loss_effect = {
 	if = {
 		limit = {
-			has_game_rule = VIET_resouce_twice
+			has_game_rule = VIET_resource_twice
 		}
 		add_prestige = -50
 	}
 	else_if = {
 		limit = {
-			has_game_rule = VIET_resouce_one_and_a_half
+			has_game_rule = VIET_resource_one_and_a_half
 		}
 		add_prestige = -40
 	}
@@ -302,13 +302,13 @@ VIET_medium_prestige_loss_effect = {
 VIET_medium_piety_loss_effect = {
 	if = {
 		limit = {
-			has_game_rule = VIET_resouce_twice
+			has_game_rule = VIET_resource_twice
 		}
 		add_piety = -50
 	}
 	else_if = {
 		limit = {
-			has_game_rule = VIET_resouce_one_and_a_half
+			has_game_rule = VIET_resource_one_and_a_half
 		}
 		add_piety = -40
 	}
@@ -327,13 +327,13 @@ VIET_medium_piety_loss_effect = {
 VIET_large_prestige_gain_effect = {
 	if = {
 		limit = {
-			has_game_rule = VIET_resouce_twice
+			has_game_rule = VIET_resource_twice
 		}
 		add_prestige = 70
 	}
 	else_if = {
 		limit = {
-			has_game_rule = VIET_resouce_one_and_a_half
+			has_game_rule = VIET_resource_one_and_a_half
 		}
 		add_prestige = 55
 	}
@@ -344,13 +344,13 @@ VIET_large_prestige_gain_effect = {
 VIET_large_piety_gain_effect = {
 	if = {
 		limit = {
-			has_game_rule = VIET_resouce_twice
+			has_game_rule = VIET_resource_twice
 		}
 		add_piety = 70
 	}
 	else_if = {
 		limit = {
-			has_game_rule = VIET_resouce_one_and_a_half
+			has_game_rule = VIET_resource_one_and_a_half
 		}
 		add_piety = 55
 	}
@@ -361,13 +361,13 @@ VIET_large_piety_gain_effect = {
 VIET_large_prestige_loss_effect = {
 	if = {
 		limit = {
-			has_game_rule = VIET_resouce_twice
+			has_game_rule = VIET_resource_twice
 		}
 		add_prestige = -70
 	}
 	else_if = {
 		limit = {
-			has_game_rule = VIET_resouce_one_and_a_half
+			has_game_rule = VIET_resource_one_and_a_half
 		}
 		add_prestige = -55
 	}
@@ -378,13 +378,13 @@ VIET_large_prestige_loss_effect = {
 VIET_large_piety_loss_effect = {
 	if = {
 		limit = {
-			has_game_rule = VIET_resouce_twice
+			has_game_rule = VIET_resource_twice
 		}
 		add_piety = -70
 	}
 	else_if = {
 		limit = {
-			has_game_rule = VIET_resouce_one_and_a_half
+			has_game_rule = VIET_resource_one_and_a_half
 		}
 		add_piety = -55
 	}
@@ -403,13 +403,13 @@ VIET_large_piety_loss_effect = {
 VIET_huge_prestige_gain_effect = {
 	if = {
 		limit = {
-			has_game_rule = VIET_resouce_twice
+			has_game_rule = VIET_resource_twice
 		}
 		add_prestige = 100
 	}
 	else_if = {
 		limit = {
-			has_game_rule = VIET_resouce_one_and_a_half
+			has_game_rule = VIET_resource_one_and_a_half
 		}
 		add_prestige = 75
 	}
@@ -420,13 +420,13 @@ VIET_huge_prestige_gain_effect = {
 VIET_huge_piety_gain_effect = {
 	if = {
 		limit = {
-			has_game_rule = VIET_resouce_twice
+			has_game_rule = VIET_resource_twice
 		}
 		add_piety = 100
 	}
 	else_if = {
 		limit = {
-			has_game_rule = VIET_resouce_one_and_a_half
+			has_game_rule = VIET_resource_one_and_a_half
 		}
 		add_piety = 75
 	}
@@ -437,13 +437,13 @@ VIET_huge_piety_gain_effect = {
 VIET_huge_prestige_loss_effect = {
 	if = {
 		limit = {
-			has_game_rule = VIET_resouce_twice
+			has_game_rule = VIET_resource_twice
 		}
 		add_prestige = -100
 	}
 	else_if = {
 		limit = {
-			has_game_rule = VIET_resouce_one_and_a_half
+			has_game_rule = VIET_resource_one_and_a_half
 		}
 		add_prestige = -75
 	}
@@ -454,13 +454,13 @@ VIET_huge_prestige_loss_effect = {
 VIET_huge_piety_loss_effect = {
 	if = {
 		limit = {
-			has_game_rule = VIET_resouce_twice
+			has_game_rule = VIET_resource_twice
 		}
 		add_piety = -100
 	}
 	else_if = {
 		limit = {
-			has_game_rule = VIET_resouce_one_and_a_half
+			has_game_rule = VIET_resource_one_and_a_half
 		}
 		add_piety = -75
 	}
@@ -477,7 +477,7 @@ VIET_huge_piety_loss_effect = {
 VIET_random_small_prestige_gain_effect = {
 	if = {
 		limit = {
-			has_game_rule = VIET_resouce_twice
+			has_game_rule = VIET_resource_twice
 		}
 		random_list = {
 			10 = { add_prestige = 10 }
@@ -488,7 +488,7 @@ VIET_random_small_prestige_gain_effect = {
 	}
 	else_if = {
 		limit = {
-			has_game_rule = VIET_resouce_one_and_a_half
+			has_game_rule = VIET_resource_one_and_a_half
 		}
 		random_list = {
 			10 = { add_prestige = 10 }
@@ -509,7 +509,7 @@ VIET_random_small_prestige_gain_effect = {
 VIET_random_small_piety_gain_effect = {
 	if = {
 		limit = {
-			has_game_rule = VIET_resouce_twice
+			has_game_rule = VIET_resource_twice
 		}
 		random_list = {
 			10 = { add_piety = 10 }
@@ -520,7 +520,7 @@ VIET_random_small_piety_gain_effect = {
 	}
 	else_if = {
 		limit = {
-			has_game_rule = VIET_resouce_one_and_a_half
+			has_game_rule = VIET_resource_one_and_a_half
 		}
 		random_list = {
 			10 = { add_piety = 10 }
@@ -541,7 +541,7 @@ VIET_random_small_piety_gain_effect = {
 VIET_random_small_prestige_loss_effect = {
 	if = {
 		limit = {
-			has_game_rule = VIET_resouce_twice
+			has_game_rule = VIET_resource_twice
 		}
 		random_list = {
 			10 = { add_prestige = -10 }
@@ -552,7 +552,7 @@ VIET_random_small_prestige_loss_effect = {
 	}
 	else_if = {
 		limit = {
-			has_game_rule = VIET_resouce_one_and_a_half
+			has_game_rule = VIET_resource_one_and_a_half
 		}
 		random_list = {
 			10 = { add_prestige = -10 }
@@ -573,7 +573,7 @@ VIET_random_small_prestige_loss_effect = {
 VIET_random_small_piety_loss_effect = {
 	if = {
 		limit = {
-			has_game_rule = VIET_resouce_twice
+			has_game_rule = VIET_resource_twice
 		}
 		random_list = {
 			10 = { add_piety = -10 }
@@ -584,7 +584,7 @@ VIET_random_small_piety_loss_effect = {
 	}
 	else_if = {
 		limit = {
-			has_game_rule = VIET_resouce_one_and_a_half
+			has_game_rule = VIET_resource_one_and_a_half
 		}
 		random_list = {
 			10 = { add_piety = -10 }
@@ -611,7 +611,7 @@ VIET_random_small_piety_loss_effect = {
 VIET_random_medium_prestige_gain_effect = {
 	if = {
 		limit = {
-			has_game_rule = VIET_resouce_twice
+			has_game_rule = VIET_resource_twice
 		}
 		random_list = {
 			10 = { add_prestige = 20 }
@@ -622,7 +622,7 @@ VIET_random_medium_prestige_gain_effect = {
 	}
 	else_if = {
 		limit = {
-			has_game_rule = VIET_resouce_one_and_a_half
+			has_game_rule = VIET_resource_one_and_a_half
 		}
 		random_list = {
 			10 = { add_prestige = 15 }
@@ -643,7 +643,7 @@ VIET_random_medium_prestige_gain_effect = {
 VIET_random_medium_piety_gain_effect = {
 	if = {
 		limit = {
-			has_game_rule = VIET_resouce_twice
+			has_game_rule = VIET_resource_twice
 		}
 		random_list = {
 			10 = { add_piety = 20 }
@@ -654,7 +654,7 @@ VIET_random_medium_piety_gain_effect = {
 	}
 	else_if = {
 		limit = {
-			has_game_rule = VIET_resouce_one_and_a_half
+			has_game_rule = VIET_resource_one_and_a_half
 		}
 		random_list = {
 			10 = { add_piety = 15 }
@@ -675,7 +675,7 @@ VIET_random_medium_piety_gain_effect = {
 VIET_random_medium_prestige_loss_effect = {
 	if = {
 		limit = {
-			has_game_rule = VIET_resouce_twice
+			has_game_rule = VIET_resource_twice
 		}
 		random_list = {
 			10 = { add_prestige = -20 }
@@ -686,7 +686,7 @@ VIET_random_medium_prestige_loss_effect = {
 	}
 	else_if = {
 		limit = {
-			has_game_rule = VIET_resouce_one_and_a_half
+			has_game_rule = VIET_resource_one_and_a_half
 		}
 		random_list = {
 			10 = { add_prestige = -15 }
@@ -707,7 +707,7 @@ VIET_random_medium_prestige_loss_effect = {
 VIET_random_medium_piety_loss_effect = {
 	if = {
 		limit = {
-			has_game_rule = VIET_resouce_twice
+			has_game_rule = VIET_resource_twice
 		}
 		random_list = {
 			10 = { add_piety = -20 }
@@ -718,7 +718,7 @@ VIET_random_medium_piety_loss_effect = {
 	}
 	else_if = {
 		limit = {
-			has_game_rule = VIET_resouce_one_and_a_half
+			has_game_rule = VIET_resource_one_and_a_half
 		}
 		random_list = {
 			10 = { add_piety = -15 }
@@ -745,7 +745,7 @@ VIET_random_medium_piety_loss_effect = {
 VIET_random_large_prestige_gain_effect = {
 	if = {
 		limit = {
-			has_game_rule = VIET_resouce_twice
+			has_game_rule = VIET_resource_twice
 		}
 		random_list = {
 			10 = { add_prestige = 60 }
@@ -756,7 +756,7 @@ VIET_random_large_prestige_gain_effect = {
 	}
 	else_if = {
 		limit = {
-			has_game_rule = VIET_resouce_one_and_a_half
+			has_game_rule = VIET_resource_one_and_a_half
 		}
 		random_list = {
 			10 = { add_prestige = 45 }
@@ -777,7 +777,7 @@ VIET_random_large_prestige_gain_effect = {
 VIET_random_large_piety_gain_effect = {
 	if = {
 		limit = {
-			has_game_rule = VIET_resouce_twice
+			has_game_rule = VIET_resource_twice
 		}
 		random_list = {
 			10 = { add_piety = 60 }
@@ -788,7 +788,7 @@ VIET_random_large_piety_gain_effect = {
 	}
 	else_if = {
 		limit = {
-			has_game_rule = VIET_resouce_one_and_a_half
+			has_game_rule = VIET_resource_one_and_a_half
 		}
 		random_list = {
 			10 = { add_piety = 45 }
@@ -809,7 +809,7 @@ VIET_random_large_piety_gain_effect = {
 VIET_random_large_prestige_loss_effect = {
 	if = {
 		limit = {
-			has_game_rule = VIET_resouce_twice
+			has_game_rule = VIET_resource_twice
 		}
 		random_list = {
 			10 = { add_prestige = -60 }
@@ -820,7 +820,7 @@ VIET_random_large_prestige_loss_effect = {
 	}
 	else_if = {
 		limit = {
-			has_game_rule = VIET_resouce_one_and_a_half
+			has_game_rule = VIET_resource_one_and_a_half
 		}
 		random_list = {
 			10 = { add_prestige = -45 }
@@ -841,7 +841,7 @@ VIET_random_large_prestige_loss_effect = {
 VIET_random_large_piety_loss_effect = {
 	if = {
 		limit = {
-			has_game_rule = VIET_resouce_twice
+			has_game_rule = VIET_resource_twice
 		}
 		random_list = {
 			10 = { add_piety = -60 }
@@ -852,7 +852,7 @@ VIET_random_large_piety_loss_effect = {
 	}
 	else_if = {
 		limit = {
-			has_game_rule = VIET_resouce_one_and_a_half
+			has_game_rule = VIET_resource_one_and_a_half
 		}
 		random_list = {
 			10 = { add_piety = -45 }
