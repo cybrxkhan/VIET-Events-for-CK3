@@ -171,5 +171,18 @@
  VIET_strange_female_bodyguard:0 "危险的女保镖"
  VIET_strange_female_bodyguard_desc:0 "这位统治者的一个保镖是个精通弓刀的可怖女人。雇用她确实是个离经叛道的争议之举，但是这女人能力不俗，还浑身散发着危险和死亡，故而少有人敢公开挑她的刺。"
  VIET_ignored_disapproval_and_mockery:0 "无视否定与嘲弄"
- # 1.0.4 - please leave this comment here
+ # 1.1.1 - please leave this comment here
+ VIET_tiring_travel:0 "Tiring Travel"
+ VIET_tiring_travel_desc:0 "This character is exhausted from having to travel around recently."
+ VIET_sun_wu_kong_story:0 "Heard the Story of Sun Wu Kong"
+ VIET_egyptian_sunscreen:0 "Sunscreen Made Using Egyptian Recipe"
+ VIET_egyptian_sunscreen_desc:0 "This character currently possesses an oil made mostly from rice, jasmine, lupine, and other herbs, that is based on an old Egyptian recipe. It is meant to be applied on the skin to help prevent sunburns and tanning."
+ VIET_stared_at_sun:0 "Stared at the Sun for Too Long"
+ VIET_permanent_sun_damage:0 "Permanent Sun Damage to Eyes"
+ VIET_permanent_sun_damage_desc:0 "At some point in their life, this character was moronic enough to stare at the sun for too long, causing permanent damage to their eyes. Though they aren't blind per se, their eyesight is not as good as it used to be."
+ VIET_numerology_prediction_good:0 "Numerologist's Reading (Good)"
+ VIET_numerology_prediction_bad:0 "Numerologist's Reading (Bad)"
+ VIET_advanced_finger_counting:0 "Advanced Finger Counting Techniques"
+ VIET_guards_on_alert:0 "Guards on Alert"
+ # 1.1.2 - please leave this comment here
  xxxxx:0 "xxxxx"
