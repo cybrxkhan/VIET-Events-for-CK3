@@ -51,6 +51,40 @@
 
 
 
+#	title = {
+#		first_valid = {
+#			triggered_desc = {
+#				trigger = {
+#					VIET_norse_localization_trigger = yes
+#				}
+#				desc = VIETmisc.0018.t.norse
+#			}
+#			desc = VIETmisc.0018.t
+#		}
+#	}
+#
+#	desc = {
+#		first_valid = {
+#			triggered_desc = {
+#				trigger = {
+#					VIET_norse_localization_trigger = yes
+#				}
+#				desc = VIETmisc.0005.desc.norse
+#			}
+#			desc = VIETmisc.0005.desc
+#		}
+#	}
+#
+#
+#		name = {
+#			trigger = { VIET_norse_localization_trigger = no }
+#			text = VIETmisc.0005.a
+#		}
+#		name = {
+#			trigger = { VIET_norse_localization_trigger = yes }
+#			text = VIETmisc.0005.a.norse
+#		}
+
 namespace = VIETtest
 
 

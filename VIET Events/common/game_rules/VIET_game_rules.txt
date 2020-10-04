@@ -65,3 +65,27 @@ VIET_resource_amounts = {
 	}	
 }
 
+VIET_event_frequency = {
+	default = VIET_event_frequency_default
+
+	VIET_event_frequency_default = {
+	
+	}
+
+	VIET_event_frequency_high = {
+	
+	}	
+
+	VIET_event_frequency_very_high = {
+	
+	}			
+
+	VIET_event_frequency_very_low = {
+	
+	}		
+
+	VIET_event_frequency_low = {
+	
+	}
+}
+

@@ -43,4 +43,32 @@ VIET_is_unattractive_trigger = {
 	}
 }
 
+# For special Norse specific localizations provided by tora75
+VIET_norse_localization_trigger = {
+	OR = {
+		AND = {
+			culture_group = culture_group:north_germanic_group
+			faith = { has_doctrine_parameter = unreformed }
+		}
+		faith = faith:norse_pagan
+	}
+}
+
+
+VIET_is_sinosphere_trigger = {
+	OR = {
+		culture_group = culture_group:chinese_group
+		culture_group = culture_group:mongolic_group
+		culture_group = culture_group:qiangic_group
+		culture = culture:sogdian
+		culture = culture:tocharian
+		culture = culture:saka
+		culture = culture:uyghur
+		culture = culture:yughur
+		culture = culture:uriankhai
+		culture = culture:shatuo
+		culture = culture:ongud
+	}
+}
+
 

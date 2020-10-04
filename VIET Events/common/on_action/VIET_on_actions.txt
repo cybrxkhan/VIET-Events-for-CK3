@@ -45,8 +45,34 @@ VIET_events_yearly_pulse = {
 		VIET_basic_is_available_adult_trigger = yes
 	}
 	random_events = {
-		#chance_to_happen = 99
-		24000 = 0 # 24000
+		chance_of_no_event = {
+			value = 30
+			if = {
+				limit = {
+					has_game_rule = VIET_event_frequency_low_frequent
+				}
+				add = 10
+			}
+			if = {
+				limit = {
+					has_game_rule = VIET_event_frequency_very_low_frequent
+				}
+				add = 20
+			}
+			if = {
+				limit = {
+					has_game_rule = VIET_event_frequency_high
+				}
+				subtract = 10
+			}
+			if = {
+				limit = {
+					has_game_rule = VIET_event_frequency_very_high_frequent
+				}
+				subtract = 20
+			}
+		}
+		21000 = 0
 		
 		#######################################
 		# OLDEST VIET
@@ -115,6 +141,10 @@ VIET_events_yearly_pulse = {
 		# Skyrim dialogue inspired
 		100 = VIETold.2058		# Bad nip in the air
 		100 = VIETold.2064		# Mithorpa Nasyal (unused NPC) - come across a peasant who initially lashes out but apologises
+		# Sun
+		100 = VIETold.2068		# Wake up early and not much work today - what to do?
+		100 = VIETold.2069		# Traveling under the hot sun
+		100 = VIETold.2071		# Relaxing under the bright sun
 		
 		#######################################
 		# NEXT GEN VIET
@@ -169,6 +199,8 @@ VIET_events_yearly_pulse = {
 		# Baklava
 		100 = VIETmisc.0079		# Baklava merchant offers special baklava
 		100 = VIETmisc.0081		# Got baklava syrup all over documents
+		# Numbers
+		100 = VIETmisc.0087		# Farmer tried to cheat a deal by altering the tally sticks but is caught
 	}
 }
 
@@ -178,8 +210,34 @@ VIET_events_tri_yearly_pulse = {
 		VIET_basic_is_available_adult_trigger = yes
 	}
 	random_events = {
-		#chance_to_happen = 99
-		20000 = 0 # 20000?
+		chance_of_no_event = {
+			value = 30
+			if = {
+				limit = {
+					has_game_rule = VIET_event_frequency_low_frequent
+				}
+				add = 10
+			}
+			if = {
+				limit = {
+					has_game_rule = VIET_event_frequency_very_low_frequent
+				}
+				add = 20
+			}
+			if = {
+				limit = {
+					has_game_rule = VIET_event_frequency_high
+				}
+				subtract = 10
+			}
+			if = {
+				limit = {
+					has_game_rule = VIET_event_frequency_very_high_frequent
+				}
+				subtract = 20
+			}
+		}
+		18000 = 0 # 20000?
 		
 		#######################################
 		# OLDEST VIET
@@ -253,6 +311,9 @@ VIET_events_tri_yearly_pulse = {
 		100 = VIETold.2054		# Narri - barmaid flirts with character
 		100 = VIETold.2059		# Mila Valentina - Chat with a kid helping her mother sell fruits and vegetables
 		100 = VIETold.2065		# Sinmir - Elderly townsman criticizes your security
+		# Sun
+		100 = VIETold.2072		# Traveling merchant offers to sell you Egyptian sunscreen
+		100 = VIETold.2073		# Courtier stared at sun for too long
 		
 		#######################################
 		# NEXT GEN VIET
@@ -289,6 +350,11 @@ VIET_events_tri_yearly_pulse = {
 		100 = VIETmisc.0073		# Commoner asks if you want to chop wood
 		# Baklava
 		100 = VIETmisc.0082		# You are given a gift of baklava
+		# Numbers
+		100 = VIETmisc.0083		# A beggar claims to know numerology and will divine the future
+		100 = VIETmisc.0084		# A scholar is trying to figure out some equations outside
+		100 = VIETmisc.0086		# Guard catches foreign spy because she used a foreign method of finger counting
+		100 = VIETmisc.0088		# Gambling with loaded dice in the market
 	}
 }
 
@@ -298,8 +364,34 @@ VIET_events_five_yearly_pulse = {
 		VIET_basic_is_available_adult_trigger = yes
 	}
 	random_events = {
-		#chance_to_happen = 99
-		16000 = 0 # 16000?
+		chance_of_no_event = {
+			value = 30
+			if = {
+				limit = {
+					has_game_rule = VIET_event_frequency_low_frequent
+				}
+				add = 10
+			}
+			if = {
+				limit = {
+					has_game_rule = VIET_event_frequency_very_low_frequent
+				}
+				add = 20
+			}
+			if = {
+				limit = {
+					has_game_rule = VIET_event_frequency_high
+				}
+				subtract = 10
+			}
+			if = {
+				limit = {
+					has_game_rule = VIET_event_frequency_very_high_frequent
+				}
+				subtract = 20
+			}
+		}
+		15000 = 0
 		
 		#######################################
 		# OLDEST VIET
@@ -354,6 +446,8 @@ VIET_events_five_yearly_pulse = {
 		100 = VIETold.2060		# Jon Battle-Born - Getting to know a friendly, poetic guardsman
 		100 = VIETold.2062		# Lydia - A maid is sworn to carry your burdens
 		100 = VIETold.2066		# Telrav - encounter a robbed "merchant" on the road
+		# Sun
+		100 = VIETold.2070		# Sun Wu Kong theatrical performance (a meta pun on "Sun")
 		
 		#######################################
 		# NEXT GEN VIET
@@ -377,6 +471,8 @@ VIET_events_five_yearly_pulse = {
 		100 = VIETmisc.0077		# Visiting scholar recommends making some changes to your house for fire safety reasons
 		# Baklava
 		100 = VIETmisc.0080		# A courtier is obsessed with baklava
+		# Numbers
+		100 = VIETmisc.0085		# Learn advanced finger counting from a retired merchant
 	}
 }
 
@@ -387,7 +483,34 @@ VIET_events_event_chain_pulse = {
 		is_ai = no # Will only happen to player
 	}
 	random_events = {
-		10000 = 0
+		chance_of_no_event = {
+			value = 30
+			if = {
+				limit = {
+					has_game_rule = VIET_event_frequency_low_frequent
+				}
+				add = 10
+			}
+			if = {
+				limit = {
+					has_game_rule = VIET_event_frequency_very_low_frequent
+				}
+				add = 20
+			}
+			if = {
+				limit = {
+					has_game_rule = VIET_event_frequency_high
+				}
+				subtract = 10
+			}
+			if = {
+				limit = {
+					has_game_rule = VIET_event_frequency_very_high_frequent
+				}
+				subtract = 20
+			}
+		}
+		15000 = 0
 		
 		#######################################
 		# OLD VIET
