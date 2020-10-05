@@ -72,7 +72,7 @@ VIET_events_yearly_pulse = {
 				subtract = 20
 			}
 		}
-		22000 = 0
+		24000 = 0
 		
 		#######################################
 		# OLDEST VIET
@@ -237,7 +237,7 @@ VIET_events_tri_yearly_pulse = {
 				subtract = 20
 			}
 		}
-		20000 = 0 # 20000?
+		21000 = 0 # 20000?
 		
 		#######################################
 		# OLDEST VIET
