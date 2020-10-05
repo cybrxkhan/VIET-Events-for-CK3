@@ -784,7 +784,7 @@ VIETmisc.0010 = {
 					send_interface_toast = {
 						type = event_toast_effect_good
 						left_icon = ROOT
-						title = VIETmisc.0010.toast.a.norse
+						title = VIETmisc.0010.toast.b.a.norse
 						custom_tooltip = VIETmisc.0010.toast.b.fall.norse
 					}
 				}
@@ -6388,7 +6388,7 @@ VIETmisc.0083 = {
 					VIET_small_piety_gain_effect = yes
 					add_character_modifier = {
 						modifier = VIET_numerology_prediction_good
-						duration = 1206
+						days = 1206
 					}
 				}
 			}
@@ -6400,7 +6400,7 @@ VIETmisc.0083 = {
 					VIET_small_piety_loss_effect = yes
 					add_character_modifier = {
 						modifier = VIET_numerology_prediction_bad
-						duration = 1206
+						days = 1206
 					}
 				}
 			}

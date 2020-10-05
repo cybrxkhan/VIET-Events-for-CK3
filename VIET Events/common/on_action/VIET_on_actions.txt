@@ -49,13 +49,13 @@ VIET_events_yearly_pulse = {
 			value = 30
 			if = {
 				limit = {
-					has_game_rule = VIET_event_frequency_low_frequent
+					has_game_rule = VIET_event_frequency_low
 				}
 				add = 10
 			}
 			if = {
 				limit = {
-					has_game_rule = VIET_event_frequency_very_low_frequent
+					has_game_rule = VIET_event_frequency_very_low
 				}
 				add = 20
 			}
@@ -67,12 +67,12 @@ VIET_events_yearly_pulse = {
 			}
 			if = {
 				limit = {
-					has_game_rule = VIET_event_frequency_very_high_frequent
+					has_game_rule = VIET_event_frequency_very_high
 				}
 				subtract = 20
 			}
 		}
-		21000 = 0
+		22000 = 0
 		
 		#######################################
 		# OLDEST VIET
@@ -214,13 +214,13 @@ VIET_events_tri_yearly_pulse = {
 			value = 30
 			if = {
 				limit = {
-					has_game_rule = VIET_event_frequency_low_frequent
+					has_game_rule = VIET_event_frequency_low
 				}
 				add = 10
 			}
 			if = {
 				limit = {
-					has_game_rule = VIET_event_frequency_very_low_frequent
+					has_game_rule = VIET_event_frequency_very_low
 				}
 				add = 20
 			}
@@ -232,12 +232,12 @@ VIET_events_tri_yearly_pulse = {
 			}
 			if = {
 				limit = {
-					has_game_rule = VIET_event_frequency_very_high_frequent
+					has_game_rule = VIET_event_frequency_very_high
 				}
 				subtract = 20
 			}
 		}
-		18000 = 0 # 20000?
+		20000 = 0 # 20000?
 		
 		#######################################
 		# OLDEST VIET
@@ -368,13 +368,13 @@ VIET_events_five_yearly_pulse = {
 			value = 30
 			if = {
 				limit = {
-					has_game_rule = VIET_event_frequency_low_frequent
+					has_game_rule = VIET_event_frequency_low
 				}
 				add = 10
 			}
 			if = {
 				limit = {
-					has_game_rule = VIET_event_frequency_very_low_frequent
+					has_game_rule = VIET_event_frequency_very_low
 				}
 				add = 20
 			}
@@ -386,12 +386,12 @@ VIET_events_five_yearly_pulse = {
 			}
 			if = {
 				limit = {
-					has_game_rule = VIET_event_frequency_very_high_frequent
+					has_game_rule = VIET_event_frequency_very_high
 				}
 				subtract = 20
 			}
 		}
-		15000 = 0
+		18000 = 0
 		
 		#######################################
 		# OLDEST VIET
@@ -487,13 +487,13 @@ VIET_events_event_chain_pulse = {
 			value = 30
 			if = {
 				limit = {
-					has_game_rule = VIET_event_frequency_low_frequent
+					has_game_rule = VIET_event_frequency_low
 				}
 				add = 10
 			}
 			if = {
 				limit = {
-					has_game_rule = VIET_event_frequency_very_low_frequent
+					has_game_rule = VIET_event_frequency_very_low
 				}
 				add = 20
 			}
@@ -505,7 +505,7 @@ VIET_events_event_chain_pulse = {
 			}
 			if = {
 				limit = {
-					has_game_rule = VIET_event_frequency_very_high_frequent
+					has_game_rule = VIET_event_frequency_very_high
 				}
 				subtract = 20
 			}

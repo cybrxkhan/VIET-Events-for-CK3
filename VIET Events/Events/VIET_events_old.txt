@@ -4855,9 +4855,9 @@ VIETold.2068 = {
 	option = { # Lie in bed
 		name = VIETold.2068.c
 		stress_impact = {
-			base = miniscule_stress_impact_lose
-			lazy = miniscule_stress_impact_lose
-			content = miniscule_stress_impact_lose
+			base = miniscule_stress_impact_loss
+			lazy = miniscule_stress_impact_loss
+			content = miniscule_stress_impact_loss
 		}
 	}
 	option = { # Read a book
@@ -5034,9 +5034,9 @@ VIETold.2071 = {
 		random_list = {
 			10 = {
 				stress_impact = {
-					base = miniscule_stress_impact_lose
-					lazy = miniscule_stress_impact_lose
-					content = miniscule_stress_impact_lose
+					base = miniscule_stress_impact_loss
+					lazy = miniscule_stress_impact_loss
+					content = miniscule_stress_impact_loss
 				}
 			}
 			10 = {
@@ -5222,7 +5222,7 @@ VIETold.2073 = {
 
 	option = { # What a dumbass
 		name = VIETold.2073.a
-		scope:scope_VIET_slip_bumper = {
+		scope:scope_VIET_sun_starer = {
 			random_list = {
 				75 = {
 					add_character_modifier = {
