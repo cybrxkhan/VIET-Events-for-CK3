@@ -1,9 +1,14 @@
 [img]http://i.imgur.com/OhIA5bm.jpg[/img]
 
+<<<<<<< Updated upstream
 [h1]Versión actual: 1.0.2 "Ibn Tumart" (Salida 20/09/20, Compatible con versión vanilla 1.0.X)[/h1]
+=======
+[h1]Versión actual: 1.1.1 "Al-Tusi" (Salida 04/10/20, Compatible con versión vanilla 1.1.X)[/h1]
+>>>>>>> Stashed changes
 [B]Echa un Vistazo a [url=https://forum.paradoxplaza.com/forum/threads/mod-viet-events-for-ck3-a-flavor-and-immersion-event-mod.1422081/]Tema del Foro[/url] Para Más Información[/B]
 [B]Descarga/Instalación manual [url=https://github.com/cybrxkhan/VIET-Events-for-CK3/releases]en Github[/url]
 [/B]
+[B][url=https://imgur.com/a/TIePH1f]¡Mira algunas capturas de pantalla![/url][/B]
 
 Very Immersive Events and Tales (VIET), la secuela de [url=https://steamcommunity.com/sharedfiles/filedetails/?id=1601402546]VIET Events Reborn para CK2[/url], es un mod que añade una vasta colección de eventos sobre la vida diaria para darle chispa a tu partida. Estos eventos añaden inmersión y diversidad de experiencias con nuevos eventos y cadenas, y cubren desde las más mundanas minuncias como pequeñas charlas con cortesanos y comer comida local hasta historias épicas sobre amor, filosofia y la condición humana.
 
@@ -21,7 +26,7 @@ Siéntete libre de usar mi trabajo con tus mods - todo lo que pido es reconocimi
 [img]http://i.imgur.com/EyXurbK.jpg[/img]
 
 [LIST]
-[*]Más de [B]219 nuevos eventos[/B] y cadenas, y aún se añadirán más con cada actualización
+[*]Más de [B]231 nuevos eventos[/B] y cadenas, y aún se añadirán más con cada actualización
 [*]Regla de juego para desactivar los eventos estúpidos para aquellos que no les guste, con tres niveles para escoger entre: Balanceado (Predeterminado), Serio (Restringido), y Todos los eventos (Todo)
 [*][B]Compatible con casi cualquier cosa[/B] ya que no modifico archivos del vanilla - incluso con mods de conversión total puedes desactivar los eventos que hagan referencias a cosas o lugares específicos del mundo medieval que no tendrían sentido en otros periodos o universos (como mods fantásticos o de ciencia ficción)
 [*]Aprende historia con las [B]descripciones de Contexto Histórico[/B] que proporcionan información sobre la inspiración detrás de algunos eventos - a veces, ¡la realidad supera la ficción! (Estos se pueden desactivar con una regla de juego para aquellos que creen que no ayuda a la inmersión.)
@@ -49,27 +54,21 @@ Gracias.
 
 [img]http://i.imgur.com/RQ5QZTF.jpg[/img]
 
-[h1]Versión 1.1.0 "Dragón"[/h1]
+[h1]Versión 1.1.1 "Al-Tusi"[/h1]
 
-[I]"No te interpongas entre el dragón y su ira."
-
-- William Shakespeare, Rey Lear[/I]
+[I]El polímata Iraní al-Tusi contribuyó en diversos campos de la ciencia, como el desarrollo de la trigonometría como disciplina matemática. Era el astrónomo de la corte de Hulegu Khan, nieto de Gengis Khan y fundador del Ilkanato. Bajo el patronazgo de Hulegu, al-tusi fundó el observatorio de Maragheh, uno de los más avanzados del mundo medieval, y el cual empleó astrónomos islámicos y chinos.[/I]
 
 [LIST]
-[*]Añadida nueva regla de juego que permite incrementar la cantidad de prestigio/piedad ganadas para aquellos jugadores que no les gustan las cantidades predeterminadas
-[*]Añadidos 28 eventos nuevos sobre los siguientes temas:
+[*]Añadidos 12 eventos nuevos sobre los siguientes temas:
 [LIST]
-[*]7 Fuego
-[*]4 Baklava
-[*]14 Diálogos inspirados en Skyrim (Las referencias más gratuitas se pueden desactivar con una regla de juego)*
-[*]3 Musgo*
+[*]6 Números
+[*]6 Sol*
 [/LIST]
-[*]Añadida cadena de eventos "Adicto a la Canela" de VIET CK2 (7 eventos)
-[*]Rebalanceadas las ganancias de prestigio/piedad, otra vez
-[*]Incrementadas las ganancias de prestigio/piedad de los modificadores (muchos se mostraban como 0% no porque realmente fueran 0%, sino porque CK3 no muestra puntos porcentuales inferiores a 1%)
-[*]Se ha puesto la carpeta de eventos en minúscula, ya que estaba provocando problemas en usuarios de Linux
-[*]La región de Iberia utiliza ahora la variante Mediterránea del fondo de evento "Tierra Toscana"
-[*]Otros arreglos de bug
+[*]Añadida nueva regla de juego para modificar la frecuencia con la que aparecen los eventos (Cuidado: Esto solo afecta a la probabilidad - el sistema RNG aún puede causar que unos eventos aparezcan mucho, otros ni siquiera lo hagan, depende de la suerte, ¡así que úsala con precaución!)
+[*]Añadidas variaciones especiales de traducción para muchos eventos de VIET para nórdigos paganos, cortesía de [B]tora75[/B]
+[*]Recalibra la frecuencia de los eventos de acuerdo a la nueva regla de frecuencias
+[*]Arreglado el evento de olvidarte de un sueño hace que pierdas prestigio en lugar de ganarlo
+[*]Otros arreglos de bugs
 [/LIST]
 
 *Adaptación desde VIET para CK2
@@ -81,6 +80,8 @@ Un abrazo enorme a los equipos de WTWSMS (especialmente ILikeTrians and Loup99) 
 Reconocimiento también a OrdepNM, quien fue mi cómplice en los inicios de VIET para CK2, y que estuvo ahí para ayudar a mentenerlo mientras yo sufría serios problemas médicos.
 
 Gracias también a Sleight of Hand por presionarme a entrar en el mundo de las modificaciones para CK2 y por su ayuda todos estos años, que es por lo que aún estoy aquí.
+
+Gracias a tora75 por contribuir a la traducción única de muchos eventos nórdicos.
 
 Muchísimas gracias también a toda esa amable gente que está dedicando su tiempo a traducir el mod - puedes ver quiénes son en la lista de la sección "Características" en la página de la descripción del mod en Steam.
 
