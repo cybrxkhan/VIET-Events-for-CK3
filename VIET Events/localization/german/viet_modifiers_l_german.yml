@@ -136,7 +136,7 @@
  VIET_dream_future_bad:0 "Dreamt of a Cursed Future"
  VIET_memory_of_first_love:0 "Memories of a First Love"
  VIET_memory_of_first_love_desc:0 "In his heart, he'll love her. Always."
- # 1.0.3 - please leave this comment here
+ # 1.1.0 - please leave this comment here
  VIET_small_house_fire:0 "Small House Fire"
  VIET_chopped_some_wood:0 "Chopped Some Wood"
  VIET_torch_burn:0 "Got a Minor Burn from a Torch"
@@ -172,5 +172,18 @@
  VIET_strange_female_bodyguard:0 "Dangerous Amazonian Bodyguard"
  VIET_strange_female_bodyguard_desc:0 "One of this ruler's bodyguards is a feared woman who is skilled in blade and bow. Though keeping her around is an unorthodox and controversial choice, she has proven to be very capable, and always has an aura of danger and death around her, so few dare to question her openly."
  VIET_ignored_disapproval_and_mockery:0 "Ignored Disapproval and Mockery"
- # 1.0.4 - please leave this comment here
+ # 1.1.1 - please leave this comment here
+ VIET_tiring_travel:0 "Tiring Travel"
+ VIET_tiring_travel_desc:0 "This character is exhausted from having to travel around recently."
+ VIET_sun_wu_kong_story:0 "Heard the Story of Sun Wu Kong"
+ VIET_egyptian_sunscreen:0 "Sunscreen Made Using Egyptian Recipe"
+ VIET_egyptian_sunscreen_desc:0 "This character currently possesses an oil made mostly from rice, jasmine, lupine, and other herbs, that is based on an old Egyptian recipe. It is meant to be applied on the skin to help prevent sunburns and tanning."
+ VIET_stared_at_sun:0 "Stared at the Sun for Too Long"
+ VIET_permanent_sun_damage:0 "Permanent Sun Damage to Eyes"
+ VIET_permanent_sun_damage_desc:0 "At some point in their life, this character was moronic enough to stare at the sun for too long, causing permanent damage to their eyes. Though they aren't blind per se, their eyesight is not as good as it used to be."
+ VIET_numerology_prediction_good:0 "Numerologist's Reading (Good)"
+ VIET_numerology_prediction_bad:0 "Numerologist's Reading (Bad)"
+ VIET_advanced_finger_counting:0 "Advanced Finger Counting Techniques"
+ VIET_guards_on_alert:0 "Guards on Alert"
+ # 1.1.2 - please leave this comment here
  xxxxx:0 "xxxxx"

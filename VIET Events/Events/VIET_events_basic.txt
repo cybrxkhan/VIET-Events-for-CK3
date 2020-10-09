@@ -25,6 +25,7 @@
 # 0063-0071		Adventure
 # 0072-0078		Fire
 # 0079-0082		Baklava
+# 0083-0088		Numbers
 # 
 ############################################################################################################################
 
@@ -306,7 +307,17 @@ VIETmisc.0004 = {
 VIETmisc.0005 = {
 	type = character_event
 	title = VIETmisc.0005.t
-	desc = VIETmisc.0005.desc
+	desc = {
+		first_valid = {
+			triggered_desc = {
+				trigger = {
+					VIET_norse_localization_trigger = yes
+				}
+				desc = VIETmisc.0005.desc.norse
+			}
+			desc = VIETmisc.0005.desc
+		}
+	}
 	theme = friendly
 	override_background = {
 		event_background = bedchamber
@@ -346,7 +357,14 @@ VIETmisc.0005 = {
 	}
 	
 	option = { # Oh well
-		name = VIETmisc.0005.a	
+		name = {
+			trigger = { VIET_norse_localization_trigger = no }
+			text = VIETmisc.0005.a
+		}
+		name = {
+			trigger = { VIET_norse_localization_trigger = yes }
+			text = VIETmisc.0005.a.norse
+		}
 		stress_impact = {
 			content = miniscule_stress_impact_loss
 		}	
@@ -359,7 +377,7 @@ VIETmisc.0005 = {
 				send_interface_toast = {
 					left_icon = ROOT
 					title = VIETmisc.0005.toast.a
-					VIET_small_prestige_loss_effect = yes
+					VIET_small_prestige_gain_effect = yes
 				}
 			}
 			60 = {
@@ -430,7 +448,17 @@ VIETmisc.0006 = {
 VIETmisc.0007 = {
 	type = character_event
 	title = VIETmisc.0007.t
-	desc = VIETmisc.0007.desc
+	desc = {
+		first_valid = {
+			triggered_desc = {
+				trigger = {
+					VIET_norse_localization_trigger = yes
+				}
+				desc = VIETmisc.0007.desc.norse
+			}
+			desc = VIETmisc.0007.desc
+		}
+	}
 	theme = family
 	
 	right_portrait = root
@@ -493,7 +521,14 @@ VIETmisc.0007 = {
 		}
 	}	
 	option = { # I don't care
-		name = VIETmisc.0007.c
+		name = {
+			trigger = { VIET_norse_localization_trigger = no }
+			text = VIETmisc.0007.c
+		}
+		name = {
+			trigger = { VIET_norse_localization_trigger = yes }
+			text = VIETmisc.0007.c.norse
+		}
 		ai_chance = {
 			base = 20
 			ai_value_modifier = {
@@ -507,7 +542,14 @@ VIETmisc.0007 = {
 		}
 	}	
 	option = { # Give servant a couple weeks off
-		name = VIETmisc.0007.d
+		name = {
+			trigger = { VIET_norse_localization_trigger = no }
+			text = VIETmisc.0007.d
+		}
+		name = {
+			trigger = { VIET_norse_localization_trigger = yes }
+			text = VIETmisc.0007.d.norse
+		}
 		trigger = {
 			has_trait = compassionate
 		}
@@ -634,8 +676,28 @@ VIETmisc.0009 = {
 # Legs get numb while sitting on the chamber pot
 VIETmisc.0010 = {
 	type = character_event
-	title = VIETmisc.0010.t
-	desc = VIETmisc.0010.desc
+	title = {
+		first_valid = {
+			triggered_desc = {
+				trigger = {
+					VIET_norse_localization_trigger = yes
+				}
+				desc = VIETmisc.0010.t.norse
+			}
+			desc = VIETmisc.0010.t
+		}
+	}
+	desc = {
+		first_valid = {
+			triggered_desc = {
+				trigger = {
+					VIET_norse_localization_trigger = yes
+				}
+				desc = VIETmisc.0010.desc.norse
+			}
+			desc = VIETmisc.0010.desc
+		}
+	}
 	theme = secret
 	
 	right_portrait = {
@@ -676,7 +738,14 @@ VIETmisc.0010 = {
 	}
 	
 	option = { # Call for help
-		name = VIETmisc.0010.a
+		name = {
+			trigger = { VIET_norse_localization_trigger = no }
+			text = VIETmisc.0010.a
+		}
+		name = {
+			trigger = { VIET_norse_localization_trigger = yes }
+			text = VIETmisc.0010.a.norse
+		}
 		ai_chance = {
 			base = 30
 			ai_value_modifier = {
@@ -691,33 +760,68 @@ VIETmisc.0010 = {
 		}
 	}	
 	option = { # Try to stand by self
-		name = VIETmisc.0010.b
+		name = {
+			trigger = { VIET_norse_localization_trigger = no }
+			text = VIETmisc.0010.b
+		}
+		name = {
+			trigger = { VIET_norse_localization_trigger = yes }
+			text = VIETmisc.0010.b.norse
+		}
 		ai_chance = {
 			base = 20
 			ai_value_modifier = {
 				ai_zeal = 100
 			}
 		}
-		random_list = {
-			40 = {
-				desc = VIETmisc.0010.b.a
-				send_interface_toast = {
-					type = event_toast_effect_good
-					left_icon = ROOT
-					title = VIETmisc.0010.toast.a
-					custom_tooltip = VIETmisc.0010.toast.b.fall
+		if = {
+			limit = {
+				VIET_norse_localization_trigger = yes
+			}
+			random_list = {
+				40 = {
+					desc = VIETmisc.0010.b.a.norse
+					send_interface_toast = {
+						type = event_toast_effect_good
+						left_icon = ROOT
+						title = VIETmisc.0010.toast.b.a.norse
+						custom_tooltip = VIETmisc.0010.toast.b.fall.norse
+					}
+				}
+				60 = {
+					desc = VIETmisc.0010.b.b.norse
+					send_interface_toast = {
+						type = event_toast_effect_bad
+						left_icon = ROOT
+						title = VIETmisc.0010.toast.b.norse
+						increase_wounds_no_death_effect = { REASON = fall }
+						VIET_medium_prestige_loss_effect = yes
+					}
 				}
 			}
-			60 = {
-				desc = VIETmisc.0010.b.b
-				send_interface_toast = {
-					type = event_toast_effect_bad
-					left_icon = ROOT
-					title = VIETmisc.0010.toast.b
-					increase_wounds_no_death_effect = { REASON = fall }
-					VIET_medium_prestige_loss_effect = yes
+		}
+		else = {
+			random_list = {
+				40 = {
+					desc = VIETmisc.0010.b.a
+					send_interface_toast = {
+						type = event_toast_effect_good
+						left_icon = ROOT
+						title = VIETmisc.0010.toast.a
+						custom_tooltip = VIETmisc.0010.toast.b.fall
+					}
 				}
-			}
+				60 = {
+					desc = VIETmisc.0010.b.b
+					send_interface_toast = {
+						type = event_toast_effect_bad
+						left_icon = ROOT
+						title = VIETmisc.0010.toast.b
+						increase_wounds_no_death_effect = { REASON = fall }
+						VIET_medium_prestige_loss_effect = yes
+					}
+				}
+			}		
 		}
 	}
 }
@@ -777,7 +881,17 @@ VIETmisc.0011 = {
 VIETmisc.0012 = {
 	type = character_event
 	title = VIETmisc.0012.t
-	desc = VIETmisc.0012.desc
+	desc = {
+		first_valid = {
+			triggered_desc = {
+				trigger = {
+					VIET_norse_localization_trigger = yes
+				}
+				desc = VIETmisc.0012.desc.norse
+			}
+			desc = VIETmisc.0012.desc
+		}
+	}
 	theme = secret
 	
 	right_portrait = {
@@ -818,7 +932,14 @@ VIETmisc.0012 = {
 	}
 	
 	option = { # ahhh
-		name = VIETmisc.0012.a
+		name = {
+			trigger = { VIET_norse_localization_trigger = no }
+			text = VIETmisc.0012.a
+		}
+		name = {
+			trigger = { VIET_norse_localization_trigger = yes }
+			text = VIETmisc.0012.a.norse
+		}
 		trigger = {
 			has_trait = paranoid
 			NOT = { has_trait = cynical }
@@ -829,7 +950,14 @@ VIETmisc.0012 = {
 		}
 	}	
 	option = { # seeing things
-		name = VIETmisc.0012.b
+		name = {
+			trigger = { VIET_norse_localization_trigger = no }
+			text = VIETmisc.0012.b
+		}
+		name = {
+			trigger = { VIET_norse_localization_trigger = yes }
+			text = VIETmisc.0012.b.norse
+		}
 		trigger = {
 			has_trait = cynical
 		}
@@ -847,7 +975,14 @@ VIETmisc.0012 = {
 		}
 	}
 	option = { # am not afraid
-		name = VIETmisc.0012.d
+		name = {
+			trigger = { VIET_norse_localization_trigger = no }
+			text = VIETmisc.0012.d
+		}
+		name = {
+			trigger = { VIET_norse_localization_trigger = yes }
+			text = VIETmisc.0012.d.norse
+		}
 		trigger = {
 			has_trait = brave
 		}
@@ -1182,8 +1317,28 @@ VIETmisc.0017 = {
 # Thought of an awesome comeback in an argument... many days later
 VIETmisc.0018 = {
 	type = character_event
-	title = VIETmisc.0018.t
-	desc = VIETmisc.0018.desc
+	title = {
+		first_valid = {
+			triggered_desc = {
+				trigger = {
+					VIET_norse_localization_trigger = yes
+				}
+				desc = VIETmisc.0018.t.norse
+			}
+			desc = VIETmisc.0018.t
+		}
+	}
+	desc = {
+		first_valid = {
+			triggered_desc = {
+				trigger = {
+					VIET_norse_localization_trigger = yes
+				}
+				desc = VIETmisc.0018.desc.norse
+			}
+			desc = VIETmisc.0018.desc
+		}
+	}
 	theme = unfriendly
 	
 	right_portrait = {
@@ -1220,7 +1375,14 @@ VIETmisc.0018 = {
 	}
 	
 	option = { # darn!
-		name = VIETmisc.0018.a
+		name = {
+			trigger = { VIET_norse_localization_trigger = no }
+			text = VIETmisc.0018.a
+		}
+		name = {
+			trigger = { VIET_norse_localization_trigger = yes }
+			text = VIETmisc.0018.a.norse
+		}
 		VIET_small_prestige_loss_effect = yes
 		stress_impact = {
 			base = miniscule_stress_impact_gain
@@ -1292,8 +1454,28 @@ VIETmisc.0019 = {
 # Heard a good joke but forgot it already
 VIETmisc.0020 = {
 	type = character_event
-	title = VIETmisc.0020.t
-	desc = VIETmisc.0020.desc
+	title = {
+		first_valid = {
+			triggered_desc = {
+				trigger = {
+					VIET_norse_localization_trigger = yes
+				}
+				desc = VIETmisc.0020.t.norse
+			}
+			desc = VIETmisc.0020.t
+		}
+	}
+	desc = {
+		first_valid = {
+			triggered_desc = {
+				trigger = {
+					VIET_norse_localization_trigger = yes
+				}
+				desc = VIETmisc.0020.desc.norse
+			}
+			desc = VIETmisc.0020.desc
+		}
+	}
 	theme = friendly
 	
 	right_portrait = {
@@ -1329,8 +1511,15 @@ VIETmisc.0020 = {
 		}
 	}
 	
-	option = { # pray
-		name = VIETmisc.0020.a
+	option = { # cool
+		name = {
+			trigger = { VIET_norse_localization_trigger = no }
+			text = VIETmisc.0020.a
+		}
+		name = {
+			trigger = { VIET_norse_localization_trigger = yes }
+			text = VIETmisc.0020.a.norse
+		}
 		add_stress = -2
 	}
 }
@@ -1398,8 +1587,28 @@ VIETmisc.0021 = {
 # Bored during council meeting
 VIETmisc.0022 = {
 	type = character_event
-	title = VIETmisc.0022.t
-	desc = VIETmisc.0022.desc
+	title = {
+		first_valid = {
+			triggered_desc = {
+				trigger = {
+					VIET_norse_localization_trigger = yes
+				}
+				desc = VIETmisc.0022.t.norse
+			}
+			desc = VIETmisc.0022.t
+		}
+	}
+	desc = {
+		first_valid = {
+			triggered_desc = {
+				trigger = {
+					VIET_norse_localization_trigger = yes
+				}
+				desc = VIETmisc.0022.desc.norse
+			}
+			desc = VIETmisc.0022.desc
+		}
+	}
 	theme = vassal
 	override_background = {
 		event_background = council_chamber
@@ -1469,8 +1678,28 @@ VIETmisc.0022 = {
 # Meeting a foreign envoy when you can't hold your bladder
 VIETmisc.0023 = {
 	type = character_event
-	title = VIETmisc.0023.t
-	desc = VIETmisc.0023.desc
+	title = {
+		first_valid = {
+			triggered_desc = {
+				trigger = {
+					VIET_norse_localization_trigger = yes
+				}
+				desc = VIETmisc.0023.t.norse
+			}
+			desc = VIETmisc.0023.t
+		}
+	}
+	desc = {
+		first_valid = {
+			triggered_desc = {
+				trigger = {
+					VIET_norse_localization_trigger = yes
+				}
+				desc = VIETmisc.0023.desc.norse
+			}
+			desc = VIETmisc.0023.desc
+		}
+	}
 	theme = crown
 	
 	right_portrait = {
@@ -1515,7 +1744,14 @@ VIETmisc.0023 = {
 	}
 	
 	option = { # Run to the chamber pot immediately
-		name = VIETmisc.0023.a
+		name = {
+			trigger = { VIET_norse_localization_trigger = no }
+			text = VIETmisc.0023.a
+		}
+		name = {
+			trigger = { VIET_norse_localization_trigger = yes }
+			text = VIETmisc.0023.a.norse
+		}
 		stress_impact = {
 			base = minor_stress_impact_gain
 			ambitious = minor_stress_impact_gain
@@ -1526,63 +1762,134 @@ VIETmisc.0023 = {
 	}	
 	
 	option = { # Try to hold it in
-		name = VIETmisc.0023.b
-		random_list = {
-			# Successfully hold it in until the dignitary is done
-			30 = {
-				modifier = {
-					add = 10
-					has_trait = calm
-				}
-				modifier = {
-					add = 10
-					has_trait = stubborn
-				}
-				modifier = {
-					add = 10
-					has_trait = patient
-				}
-				desc = VIETmisc.0023.b.a
-				send_interface_toast = {
-					type = event_toast_effect_good
-					left_icon = ROOT
-					title = VIETmisc.0023.toast.b.success.title
-					custom_tooltip = VIETmisc.0023.toast.b.success
-					stress_impact = {
-						base = minor_stress_impact_gain
-					}
-				}			
+		name = {
+			trigger = { VIET_norse_localization_trigger = no }
+			text = VIETmisc.0023.b
+		}
+		name = {
+			trigger = { VIET_norse_localization_trigger = yes }
+			text = VIETmisc.0023.b.norse
+		}
+		if = {
+			limit = {
+				VIET_norse_localization_trigger = yes
 			}
-			# Fail to hold it in until the dignitary is done
-			70 = {
-				modifier = {
-					add = 10
-					has_trait = paranoid
-				}
-				modifier = {
-					add = 10
-					has_trait = impatient
-				}
-				modifier = {
-					add = 10
-					has_trait = fickle
-				}
-				modifier = {
-					add = 10
-					has_trait = shy
-				}
-				desc = VIETmisc.0023.b.b
-				send_interface_toast = {
-					type = event_toast_effect_bad
-					left_icon = ROOT
-					title = VIETmisc.0023.toast.b.failure.title
-					custom_tooltip = VIETmisc.0023.toast.b.failure
-					VIET_random_large_prestige_loss_effect = yes
-					stress_impact = {
-						base = medium_stress_impact_gain
+			random_list = {
+				# Successfully hold it in until the dignitary is done
+				30 = {
+					modifier = {
+						add = 10
+						has_trait = calm
 					}
-				}			
+					modifier = {
+						add = 10
+						has_trait = stubborn
+					}
+					modifier = {
+						add = 10
+						has_trait = patient
+					}
+					desc = VIETmisc.0023.b.a.norse
+					send_interface_toast = {
+						type = event_toast_effect_good
+						left_icon = ROOT
+						title = VIETmisc.0023.toast.b.success.title.norse
+						custom_tooltip = VIETmisc.0023.toast.b.success.norse
+						stress_impact = {
+							base = minor_stress_impact_gain
+						}
+					}			
+				}
+				# Fail to hold it in until the dignitary is done
+				70 = {
+					modifier = {
+						add = 10
+						has_trait = paranoid
+					}
+					modifier = {
+						add = 10
+						has_trait = impatient
+					}
+					modifier = {
+						add = 10
+						has_trait = fickle
+					}
+					modifier = {
+						add = 10
+						has_trait = shy
+					}
+					desc = VIETmisc.0023.b.b.norse
+					send_interface_toast = {
+						type = event_toast_effect_bad
+						left_icon = ROOT
+						title = VIETmisc.0023.toast.b.failure.title.norse
+						custom_tooltip = VIETmisc.0023.toast.b.failure.norse
+						VIET_random_large_prestige_loss_effect = yes
+						stress_impact = {
+							base = medium_stress_impact_gain
+						}
+					}			
+				}
 			}
+		}
+		else = {
+			random_list = {
+				# Successfully hold it in until the dignitary is done
+				30 = {
+					modifier = {
+						add = 10
+						has_trait = calm
+					}
+					modifier = {
+						add = 10
+						has_trait = stubborn
+					}
+					modifier = {
+						add = 10
+						has_trait = patient
+					}
+					desc = VIETmisc.0023.b.a
+					send_interface_toast = {
+						type = event_toast_effect_good
+						left_icon = ROOT
+						title = VIETmisc.0023.toast.b.success.title
+						custom_tooltip = VIETmisc.0023.toast.b.success
+						stress_impact = {
+							base = minor_stress_impact_gain
+						}
+					}			
+				}
+				# Fail to hold it in until the dignitary is done
+				70 = {
+					modifier = {
+						add = 10
+						has_trait = paranoid
+					}
+					modifier = {
+						add = 10
+						has_trait = impatient
+					}
+					modifier = {
+						add = 10
+						has_trait = fickle
+					}
+					modifier = {
+						add = 10
+						has_trait = shy
+					}
+					desc = VIETmisc.0023.b.b
+					send_interface_toast = {
+						type = event_toast_effect_bad
+						left_icon = ROOT
+						title = VIETmisc.0023.toast.b.failure.title
+						custom_tooltip = VIETmisc.0023.toast.b.failure
+						VIET_random_large_prestige_loss_effect = yes
+						stress_impact = {
+							base = medium_stress_impact_gain
+						}
+					}			
+				}
+			}		
 		}
 	}	
 }
@@ -1780,7 +2087,17 @@ VIETmisc.0026 = {
 VIETmisc.0027 = {
 	type = character_event
 	title = VIETmisc.0027.t
-	desc = VIETmisc.0027.desc
+	desc = {
+		first_valid = {
+			triggered_desc = {
+				trigger = {
+					VIET_norse_localization_trigger = yes
+				}
+				desc = VIETmisc.0027.desc.norse
+			}
+			desc = VIETmisc.0027.desc
+		}
+	}
 	theme = dread
 	override_background = {
 		event_background = gallows
@@ -1818,7 +2135,14 @@ VIETmisc.0027 = {
 	}
 	
 	option = { # tragic people like him exist
-		name = VIETmisc.0027.a
+		name = {
+			trigger = { VIET_norse_localization_trigger = no }
+			text = VIETmisc.0027.a
+		}
+		name = {
+			trigger = { VIET_norse_localization_trigger = yes }
+			text = VIETmisc.0027.a.norse
+		}
 		VIET_medium_piety_gain_effect = yes
 		stress_impact = {
 			sadistic = miniscule_stress_impact_gain
@@ -2609,7 +2933,17 @@ VIETmisc.0038 = {
 VIETmisc.0039 = {
 	type = character_event
 	title = VIETmisc.0039.t
-	desc = VIETmisc.0039.desc
+	desc = {
+		first_valid = {
+			triggered_desc = {
+				trigger = {
+					VIET_norse_localization_trigger = yes
+				}
+				desc = VIETmisc.0039.desc.norse
+			}
+			desc = VIETmisc.0039.desc
+		}
+	}
 	theme = party
 	
 	left_portrait = root
@@ -2687,7 +3021,14 @@ VIETmisc.0039 = {
 		add_stress = -5
 	}	
 	option = { # Sexy servant
-		name = VIETmisc.0039.e
+		name = {
+			trigger = { VIET_norse_localization_trigger = no }
+			text = VIETmisc.0039.e
+		}
+		name = {
+			trigger = { VIET_norse_localization_trigger = yes }
+			text = VIETmisc.0039.e.norse
+		}
 		trigger = {
 			has_trait = lustful
 		}
@@ -5979,5 +6320,651 @@ VIETmisc.0082 = {
 			generous = miniscule_stress_impact_gain
 		}
 	}
+}
+
+
+#########################################################################################
+# NUMBERS 0083-0088
+#########################################################################################
+
+
+# A beggar claims to know numerology and will divine the future
+VIETmisc.0083 = {
+	type = character_event
+	title = VIETmisc.0083.t
+	desc = VIETmisc.0083.desc
+	theme = VIET_theme_small_town
+	
+	left_portrait = {
+		character = root
+		animation = personality_cynical
+	}
+	
+	weight_multiplier = {
+		base = 1
+		modifier = {
+			add = 0.2
+			has_trait = zealous
+		}
+		modifier = {
+			add = -0.2
+			has_trait = cynical
+		}
+		modifier = {
+			add = 0.2
+			has_trait = trusting
+		}
+		modifier = {
+			add = -0.2
+			has_trait = paranoid
+		}
+		modifier = {
+			add = 0.2
+			has_trait = humble
+		}
+		modifier = {
+			add = -0.2
+			has_trait = arrogant
+		}
+	}
+
+	
+	option = { # No
+		name = VIETmisc.0083.a
+	}	
+	option = { # Ok
+		name = VIETmisc.0083.b
+		remove_short_term_gold = 5
+		VIET_small_prestige_loss_effect = yes
+		stress_impact = {
+			cynical = miniscule_stress_impact_gain
+		}
+		random_list = {
+			50 = {
+				desc = VIETmisc.0083.b.good
+				send_interface_toast = {
+					left_icon = ROOT
+					title = VIETmisc.0083.b.good.title
+					VIET_small_piety_gain_effect = yes
+					add_character_modifier = {
+						modifier = VIET_numerology_prediction_good
+						days = 1206
+					}
+				}
+			}
+			50 = {
+				desc = VIETmisc.0083.b.bad
+				send_interface_toast = {
+					left_icon = ROOT
+					title = VIETmisc.0083.b.bad.title
+					VIET_small_piety_loss_effect = yes
+					add_character_modifier = {
+						modifier = VIET_numerology_prediction_bad
+						days = 1206
+					}
+				}
+			}
+		}
+	}
+}
+
+
+
+# A scholar is trying to figure out some equations outside
+VIETmisc.0084 = {
+	type = character_event
+	title = VIETmisc.0084.t
+	desc = VIETmisc.0084.desc
+	theme = VIET_theme_garden_generic
+	
+	left_portrait = {
+		character = root
+		animation = personality_rational
+	}
+	
+	weight_multiplier = {
+		base = 1
+		modifier = {
+			add = 0.2
+			has_trait = zealous
+		}
+		modifier = {
+			add = -0.2
+			has_trait = cynical
+		}
+		modifier = {
+			add = 0.2
+			has_trait = patient
+		}
+		modifier = {
+			add = -0.2
+			has_trait = impatient
+		}
+		modifier = {
+			add = 0.2
+			has_trait = gregarious
+		}
+		modifier = {
+			add = -0.2
+			has_trait = shy
+		}
+	}
+
+	
+	option = { # How rude!
+		name = VIETmisc.0084.a
+		add_dread = 5
+		VIET_small_prestige_gain_effect = yes
+		VIET_small_piety_loss_effect = yes
+		stress_impact = {
+			humble = miniscule_stress_impact_gain
+			calm = miniscule_stress_impact_gain
+			forgiving = miniscule_stress_impact_gain
+		}
+	}	
+	option = { # Good luck
+		name = VIETmisc.0084.b
+		VIET_small_piety_gain_effect = yes
+		stress_impact = {
+			arrogant = miniscule_stress_impact_gain
+			wrathful = miniscule_stress_impact_gain
+			vengeful = miniscule_stress_impact_gain
+		}
+	}	
+	option = { # But wot if...
+		name = VIETmisc.0084.c
+		trigger = {
+			learning >= high_skill_rating			
+		}
+		skill = learning
+		VIET_medium_prestige_gain_effect = yes
+		add_character_modifier = {
+			modifier = VIET_impressed_others_with_knowledge
+			days = 444
+		}
+	}
+}
+
+
+
+# Learn advanced finger counting from a retired merchant
+VIETmisc.0085 = {
+	type = character_event
+	title = VIETmisc.0085.t
+	desc = VIETmisc.0085.desc
+	theme = stewardship
+	override_background = { event_background = market }
+	
+	left_portrait = {
+		character = root
+		animation = personality_rational
+	}
+	
+	trigger = {
+		gold >= 30
+		NOT = { has_character_modifier = VIET_advanced_finger_counting }
+	}
+	
+	weight_multiplier = {
+		base = 1
+		modifier = {
+			add = 0.2
+			has_trait = diligent
+		}
+		modifier = {
+			add = -0.2
+			has_trait = lazy
+		}
+		modifier = {
+			add = 0.2
+			has_trait = ambitious
+		}
+		modifier = {
+			add = -0.2
+			has_trait = content
+		}
+		modifier = {
+			add = 0.2
+			has_trait = greedy
+		}
+		modifier = {
+			add = -0.2
+			has_trait = generous
+		}
+	}
+
+	
+	option = { # Learn it!
+		name = VIETmisc.0085.a
+		remove_short_term_gold = 30
+		add_character_modifier = {
+			modifier = VIET_advanced_finger_counting
+		}
+		if = {
+			limit = {
+				has_game_rule = VIET_historical_context_on
+			}
+			custom_tooltip = VIETmisc.0085.info
+		}
+	}	
+	option = { # Don't need to learn it
+		name = VIETmisc.0085.b
+	}
+}
+
+
+# Guard catches foreign spy because she used a foreign method of finger counting
+VIETmisc.0086 = {
+	type = character_event
+	title = VIETmisc.0086.t
+	desc = VIETmisc.0086.desc
+	theme = secret
+	override_background = { event_background = market }
+	
+	left_portrait = {
+		character = root
+		animation = personality_callous
+	}
+	
+	trigger = {
+		gold >= 30
+		NOT = { has_character_modifier = VIET_advanced_finger_counting }
+	}
+	
+	weight_multiplier = {
+		base = 1
+		modifier = {
+			add = 0.2
+			has_trait = diligent
+		}
+		modifier = {
+			add = -0.2
+			has_trait = lazy
+		}
+		modifier = {
+			add = 0.2
+			has_trait = paranoid
+		}
+		modifier = {
+			add = -0.2
+			has_trait = trusting
+		}
+		modifier = {
+			add = 0.2
+			has_trait = patient
+		}
+		modifier = {
+			add = -0.2
+			has_trait = impatient
+		}
+	}
+
+	
+	option = { # Good job
+		name = VIETmisc.0086.a
+		add_character_modifier = {
+			modifier = VIET_guards_on_alert
+			years = 3
+		}
+		if = {
+			limit = {
+				has_game_rule = VIET_historical_context_on
+			}
+			custom_tooltip = VIETmisc.0086.info
+		}
+	}
+}
+
+
+
+# Farmer tried to cheat a deal by altering the tally sticks but is caught
+VIETmisc.0087 = {
+	type = character_event
+	title = VIETmisc.0087.t
+	desc = VIETmisc.0087.desc
+	theme = realm
+	
+	left_portrait = {
+		character = root
+		animation = personality_callous
+	}
+	
+	weight_multiplier = {
+		base = 1
+		modifier = {
+			add = 0.2
+			has_trait = diligent
+		}
+		modifier = {
+			add = -0.2
+			has_trait = lazy
+		}
+		modifier = {
+			add = 0.2
+			has_trait = humble
+		}
+		modifier = {
+			add = -0.2
+			has_trait = arrogant
+		}
+		modifier = {
+			add = 0.2
+			has_trait = just
+		}
+		modifier = {
+			add = -0.2
+			has_trait = arbitrary
+		}
+	}
+
+	
+	option = { # Let him go
+		name = VIETmisc.0087.a
+		if = {
+			limit = {
+				faith = {
+					trait_is_virtue = forgiving
+				}
+			}
+			VIET_medium_piety_gain_effect = yes
+		}
+		else = {
+			VIET_small_piety_gain_effect = yes
+		}
+		stress_impact = {
+			just = medium_stress_impact_gain
+		}
+		if = {
+			limit = {
+				has_game_rule = VIET_historical_context_on
+			}
+			custom_tooltip = VIETmisc.0087.info
+		}
+	}
+	
+	option = { # Make him pay a fine
+		name = VIETmisc.0087.b
+		VIET_medium_prestige_gain_effect = yes
+		if = {
+			limit = {
+				has_game_rule = VIET_historical_context_on
+			}
+			custom_tooltip = VIETmisc.0087.info
+		}
+	}
+	
+	option = { # Imprison him
+		name = VIETmisc.0087.c
+		add_dread = 7
+		stress_impact = {
+			forgiving = minor_stress_impact_gain
+			compassionate = minor_stress_impact_gain
+		}
+		if = {
+			limit = {
+				has_game_rule = VIET_historical_context_on
+			}
+			custom_tooltip = VIETmisc.0087.info
+		}
+	}	
+}
+
+
+
+# Gambling with loaded dice in the market
+VIETmisc.0088 = {
+	type = character_event
+	title = VIETmisc.0088.t
+	desc = VIETmisc.0088.desc
+	theme = family
+	override_background = { event_background = market }
+	
+	left_portrait = {
+		character = root
+		animation = personality_cynical
+	}
+	
+	weight_multiplier = {
+		base = 1
+		modifier = {
+			add = 0.2
+			has_trait = greedy
+		}
+		modifier = {
+			add = -0.2
+			has_trait = generous
+		}
+		modifier = {
+			add = 0.2
+			has_trait = lustful
+		}
+		modifier = {
+			add = -0.2
+			has_trait = chaste
+		}
+		modifier = {
+			add = 0.2
+			has_trait = fickle
+		}
+		modifier = {
+			add = -0.2
+			has_trait = stubborn
+		}
+	}
+
+	
+	option = { # Won't gamble
+		name = VIETmisc.0088.a		
+		if = {
+			limit = {
+				faith = {
+					OR = {
+						trait_is_sin = greedy
+						trait_is_virtue = generous
+						trait_is_virtue = temperate
+					}
+				}
+			}
+			VIET_small_piety_gain_effect = yes
+		}
+		stress_impact = {
+			greedy = minor_stress_impact_gain
+		}
+	}	
+	option = { # Gamble a bit
+		name = VIETmisc.0088.b
+		trigger = {
+			OR = {
+				is_ai = no
+				gold >= 0
+			}
+			intrigue < decent_skill_rating
+		}		
+		if = {
+			limit = {
+				faith = {
+					trait_is_sin = greedy
+				}
+			}
+			VIET_small_piety_loss_effect = yes
+		}
+		random_list = {
+			20 = {
+				modifier = {
+					add = 7
+					intrigue >= 10
+				}
+				modifier = {
+					add = 7
+					intrigue >= 16
+				}
+				modifier = {
+					add = 7
+					intrigue >= 25
+				}
+				desc = VIETmisc.0088.win.small
+				send_interface_toast = {
+					left_icon = ROOT
+					title = VIETmisc.0088.win.small
+					random_list = {
+						40 = { add_gold = 10 }
+						30 = { add_gold = 20 }
+						20 = { add_gold = 30 }
+						10 = { add_gold = 40 }
+					}
+				}
+			}
+			80 = {
+				desc = VIETmisc.0088.lose.small
+				send_interface_toast = {
+					left_icon = ROOT
+					title = VIETmisc.0088.lose.small
+					stress_impact = {
+						base = miniscule_stress_impact_gain
+					}
+					random_list = {
+						10 = { remove_short_term_gold = 10 }
+						10 = { remove_short_term_gold = 15 }
+						10 = { remove_short_term_gold = 20 }
+						10 = { remove_short_term_gold = 25 }
+					}
+				}
+			}
+		}
+	}
+	option = { # Gamble a lot
+		name = VIETmisc.0088.c
+		trigger = {
+			OR = {
+				is_ai = no
+				gold >= 0
+			}
+			intrigue < decent_skill_rating
+		}		
+		if = {
+			limit = {
+				faith = {
+					trait_is_sin = greedy
+				}
+			}
+			VIET_medium_piety_loss_effect = yes
+		}
+		random_list = {
+			20 = {
+				modifier = {
+					add = 7
+					intrigue >= 10
+				}
+				modifier = {
+					add = 7
+					intrigue >= 16
+				}
+				modifier = {
+					add = 7
+					intrigue >= 25
+				}
+				desc = VIETmisc.0088.win.big
+				send_interface_toast = {
+					left_icon = ROOT
+					title = VIETmisc.0088.win.big
+					random_list = {
+						40 = { add_gold = 25 }
+						30 = { add_gold = 35 }
+						20 = { add_gold = 45 }
+						10 = { add_gold = 55 }
+					}
+				}
+			}
+			80 = {
+				desc = VIETmisc.0088.lose.big
+				send_interface_toast = {
+					left_icon = ROOT
+					title = VIETmisc.0088.lose.big
+					stress_impact = {
+						base = minor_stress_impact_gain
+					}
+					random_list = {
+						10 = { remove_short_term_gold = 25 }
+						10 = { remove_short_term_gold = 30 }
+						10 = { remove_short_term_gold = 35 }
+						10 = { remove_short_term_gold = 40 }
+					}
+				}
+			}
+		}
+	}
+	option = { # He's using weighted dice!
+		name = VIETmisc.0088.d
+		trigger = {
+			intrigue >= decent_skill_rating
+		}
+		skill = intrigue
+		VIET_large_prestige_gain_effect = yes
+		stress_impact = {
+			forgiving = minor_stress_impact_gain
+		}
+	}
+	option = { # Will manipulate things against him
+		name = VIETmisc.0088.e
+		trigger = {
+			OR = {
+				is_ai = no
+				gold >= 0
+			}
+			intrigue >= decent_skill_rating
+		}
+		skill = intrigue	
+		if = {
+			limit = {
+				faith = {
+					trait_is_sin = greedy
+				}
+			}
+			VIET_medium_piety_loss_effect = yes
+		}
+		random_list = {
+			80 = {
+				modifier = {
+					add = 7
+					intrigue >= 15
+				}
+				modifier = {
+					add = 7
+					intrigue >= 20
+				}
+				modifier = {
+					add = 7
+					intrigue >= 25
+				}
+				desc = VIETmisc.0088.win.big
+				send_interface_toast = {
+					left_icon = ROOT
+					title = VIETmisc.0088.win.big
+					random_list = {
+						40 = { add_gold = 25 }
+						30 = { add_gold = 35 }
+						20 = { add_gold = 45 }
+						10 = { add_gold = 55 }
+					}
+				}
+			}
+			20 = {
+				desc = VIETmisc.0088.lose.small
+				send_interface_toast = {
+					left_icon = ROOT
+					title = VIETmisc.0088.lose.small
+					stress_impact = {
+						base = minor_stress_impact_gain
+					}
+					random_list = {
+						10 = { remove_short_term_gold = 10 }
+						10 = { remove_short_term_gold = 15 }
+						10 = { remove_short_term_gold = 20 }
+						10 = { remove_short_term_gold = 25 }
+					}
+				}
+			}
+		}
+	}	
 }
 

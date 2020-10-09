@@ -50,18 +50,42 @@ VIET_historical_context = {
 }
 
 VIET_resource_amounts = {
-	default = VIET_resouce_default
+	default = VIET_resource_default
 
-	VIET_resouce_default = {
+	VIET_resource_default = {
 	
 	}
 
-	VIET_resouce_one_and_a_half = {
+	VIET_resource_one_and_a_half = {
 	
 	}	
 
-	VIET_resouce_twice = {
+	VIET_resource_twice = {
 	
 	}	
+}
+
+VIET_event_frequency = {
+	default = VIET_event_frequency_default
+
+	VIET_event_frequency_default = {
+	
+	}
+
+	VIET_event_frequency_high = {
+	
+	}	
+
+	VIET_event_frequency_very_high = {
+	
+	}			
+
+	VIET_event_frequency_very_low = {
+	
+	}		
+
+	VIET_event_frequency_low = {
+	
+	}
 }
 

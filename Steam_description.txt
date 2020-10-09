@@ -1,9 +1,10 @@
 [img]http://i.imgur.com/OhIA5bm.jpg[/img]
 
-[h1]Current Version: 1.1.0 "Dragon" (Released 9/28/20, Compatible with vanilla patch 1.1.X)[/h1]
+[h1]Current Version: 1.1.1 "Al-Tusi" (Released 10/4/20, Compatible with vanilla patch 1.1.X)[/h1]
 [B]Please See [url=https://forum.paradoxplaza.com/forum/threads/mod-viet-events-for-ck3-a-flavor-and-immersion-event-mod.1422081/]Forum Thread[/url] For More Info[/B]
 [B]Manual Download/Installation available [url=https://github.com/cybrxkhan/VIET-Events-for-CK3/releases]on Github[/url]
 [/B]
+[B][url=https://imgur.com/a/TIePH1f]See All Preview Screenshots Here[/url][/B]
 
 Very Immersive Events and Tales (VIET), the sequel to [url=https://steamcommunity.com/sharedfiles/filedetails/?id=1601402546]VIET Events Reborn for CK2[/url], is a flavor mod that adds a vast collection of events about everyday life to spice up your game. These events add immersion and a diversity of experiences in between wars and vanilla’s event chains, and cover mundane minutiae ranging from small talk with courtiers and eating local cuisine to epic tales about love, philosophy, and the human condition.
 
@@ -21,7 +22,7 @@ Feel free to use my work in your mods - all I ask is that I am credited and (if 
 [img]http://i.imgur.com/EyXurbK.jpg[/img]
 
 [LIST]
-[*]Over [B]219 new flavor events[/B], and more will be added in updates over time
+[*]Over [B]231 new flavor events[/B], and more will be added in updates over time
 [*]Game rule to disable sillier events for those who don't like them, with three levels to choose from: Balanced (Default), Serious (Restricted), and All Events (Full)
 [*][B]Compatible with almost anything[/B] since it doesn't touch any vanilla files - even with overhaul mods, you can via game rule disable events that reference things specific to our medieval world that wouldn’t make sense in other time periods or universes (like fantasy and sci-fi conversion mods)
 [*]Learn history with [B]Historical Context tooltips[/B] that provide information about what inspired some of the events - sometimes, reality is stranger than fiction! (These can be disabled via game rule for those who find it immersion breaking.)
@@ -31,7 +32,7 @@ Feel free to use my work in your mods - all I ask is that I am credited and (if 
 [h1]TRANSLATIONS AVAILABLE[/h1]
 We now have every official language covered! Please be aware that due to my irregular schedule for updating my mods, the folks working on these translations may or may not be up to date with the latest version of VIET as they are kindly spending their own free time and effort to work on these. Do note that all non-English text has placeholder English localization in the base version of VIET.
 [LIST]
-[*]Chinese - teabbm has provided translation which is integrated into base VIET.
+[*]Chinese - [url=https://paratranz.cn/projects/1580]a team led by Tbeabm[/url] has provided translation which is integrated into base VIET.
 [*]French - [url=https://steamcommunity.com/sharedfiles/filedetails/?id=2234027514]Available as sub-mod here[/url], thanks to Mouchi
 [*]German - [url=https://steamcommunity.com/sharedfiles/filedetails/?id=2229986442]Available as sub-mod here[/url], thanks to eXums
 [*]Korean - [url=https://steamcommunity.com/sharedfiles/filedetails/?id=2227982565]Available as sub-mod here[/url], thanks to Ohboksu
@@ -49,27 +50,21 @@ Thanks!
 
 [img]http://i.imgur.com/RQ5QZTF.jpg[/img]
 
-[h1]Version 1.1.0 "Dragon"[/h1]
+[h1]Version 1.1.1 "Al-Tusi"[/h1]
 
-[I]"Come not between the dragon, and his wrath."
-
-- William Shakespeare, King Lear[/I]
+[I]The medieval Iranian polymath al-Tusi contributed to several fields of science, such as developing trigonometry as a mathematical discipline. He was most prominently the court astronomer for Hulegu Khan, grandson of Genghis Khan and founder of the Ilkhanate. Under Hulegu’s patronage, al-Tusi founded the Maragheh observatory, one of the most advanced of its kind in the medieval world, which employed both Islamic and Chinese astronomers.[/I]
 
 [LIST]
-[*]Added new game rule to be able to increase the amount of lump sum prestige/piety gains for VIET Events for players who do not like the default amounts
-[*]Added 28 new events about the following themes:
+[*]Added 12 new events about the following themes:
 [LIST]
-[*]7 Fire
-[*]4 Baklava
-[*]14 Skyrim dialogue inspired (the more gratuitous references will be disabled via game rule)*
-[*]3 Moss*
+[*]6 Numbers
+[*]6 Sun*
 [/LIST]
-[*]Added Cinnamon Addict event chain from CK2 VIET (7 events total)
-[*]Revamped prestige/piety gain/loss averages/ranges again
-[*]Increased prestige/piety gains from modifiers (several were showing up as 0% NOT because they were actually 0%, but because CK3 does not show percentage points smaller than 1% for prestige/piety modifiers unlike CK2 for some reason)
-[*]Made events folder lowercase as having it capitalized was causing issues on linux
-[*]Iberian region now uses the Mediterranean variant of the “Tuscan Country” event background
-[*]Various bug and typo fixes
+[*]Added new game rule for how frequently events from VIET fire (Warning: This only affects the likelihood - RNG may still cause some event spam, or no events to fire for long periods of time, depending on your luck, so use with caution!)
+[*]Added special variations of localization for several VIET Events for pagan Norse, credits to [B]tora75[/B]
+[*]Recalibrated the frequency of events to account for the new frequency game rule
+[*]Fixed event about forgetting a dream making you lose instead of gain prestige
+[*]Miscellaneous bugfixes
 [/LIST]
 
 *Adapted from VIET for CK2
@@ -81,6 +76,8 @@ A huge thanks to the teams of WTWSMS (especially IlikeTrains and Loup99) and Lux
 Credits also to OrdepNM, who was my partner in crime in the early days of VIET for CK2 and who stepped up to help maintain it while I had serious medical issues years ago.
 
 Special thanks to Sleight of Hand for pushing me to get into the CK2 modding scene and for other assistance over the years, which is why I am still here for some reason.
+
+Thanks to tora75 for contributing the Norse unique localizations for several events.
 
 Huge thanks also to the various kind souls who are taking the time to translate the mod - you can see the full list of them in the "Features" section in the Steam mod page description.
 

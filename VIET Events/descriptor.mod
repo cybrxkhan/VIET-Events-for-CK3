@@ -1,9 +1,9 @@
-version="1.0.0"
+version="1.1.0"
 tags={
 	"Events"
 	"Gameplay"
 	"Culture"
 }
 name="VIET Events - A Flavor and Immersion Event Mod"
-supported_version="1.0.*"
+supported_version="1.1.*"
 remote_file_id="2227658180"

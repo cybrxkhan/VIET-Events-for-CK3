@@ -13,6 +13,7 @@
 # 2027-2040		Fantastical Stories
 # 2041-2053		Prophecy and Future
 # 2054-2067		Skyrim Dialogue Inspired
+# 2068-2073		Sun
 # 
 ############################################################################################################################
 
@@ -3001,6 +3002,7 @@ VIETold.2044 = {
 	trigger = {
 		NOT = { has_character_flag = VIET_genghis_khan_prophecy }
 		NOT = { has_global_variable = mongols_have_appeared }
+		NOT = { has_game_rule = VIET_conversion_universe_events }
 	}
 
 	weight_multiplier = {
@@ -3320,6 +3322,7 @@ VIETold.2049 = {
 	}
 	
 	trigger = {
+		has_game_rule = VIET_normal_universe_events
 		NOT = { has_character_flag = VIET_pagan_future_prophecy }
 		faith = {
 			religion = { is_in_family = rf_pagan }
@@ -3496,6 +3499,7 @@ VIETold.2052 = {
 		character = root
 		animation = fear
 	}
+	
 
 	weight_multiplier = {
 		base = 1
@@ -4796,10 +4800,446 @@ VIETold.2067 = {
 
 
 
+###############################################################
+# SUN 2068-2073
+###############################################################
+
+# Wake up early and not much work today - what to do?
+VIETold.2068 = {
+	type = character_event
+	title = VIETold.2068.t
+	desc = VIETold.2068.desc
+	theme = family
+	
+	left_portrait = root
+
+	weight_multiplier = {
+		base = 1
+		modifier = {
+			add = 0.2
+			has_trait = paranoid
+		}
+		modifier = {
+			add = -0.2
+			has_trait = trusting
+		}
+		modifier = {
+			add = 0.2
+			has_trait = impatient
+		}
+		modifier = {
+			add = -0.2
+			has_trait = patient
+		}
+		modifier = {
+			add = 0.2
+			has_trait = wrathful
+		}
+		modifier = {
+			add = -0.2
+			has_trait = calm
+		}
+	}
+
+	option = { # Take a walk
+		name = VIETold.2068.a
+		VIET_small_piety_gain_effect = yes
+	}
+	option = { # Eat breakfast early
+		name = VIETold.2068.b
+		add_character_modifier = {
+			modifier = VIET_ate_good_food
+			days = 365
+		}
+	}
+	option = { # Lie in bed
+		name = VIETold.2068.c
+		stress_impact = {
+			base = miniscule_stress_impact_loss
+			lazy = miniscule_stress_impact_loss
+			content = miniscule_stress_impact_loss
+		}
+	}
+	option = { # Read a book
+		name = VIETold.2068.d
+		VIET_small_prestige_gain_effect = yes
+	}
+}
+
+
+
+# Traveling under the hot sun
+VIETold.2069 = {
+	type = character_event
+	title = VIETold.2069.t
+	desc = VIETold.2069.desc
+	theme = VIET_theme_tuscan_country
+	
+	left_portrait = {
+		character = root
+		animation = pain
+	}
+
+	weight_multiplier = {
+		base = 1
+		modifier = {
+			add = 0.2
+			has_trait = diligent
+		}
+		modifier = {
+			add = -0.2
+			has_trait = lazy
+		}
+		modifier = {
+			add = 0.2
+			has_trait = impatient
+		}
+		modifier = {
+			add = -0.2
+			has_trait = patient
+		}
+		modifier = {
+			add = 0.2
+			has_trait = stubborn
+		}
+		modifier = {
+			add = -0.2
+			has_trait = fickle
+		}
+	}
+
+	option = { # Take a quick rest
+		name = VIETold.2069.a
+		VIET_random_small_prestige_loss_effect = yes
+	}
+	option = { # Continue on!
+		name = VIETold.2069.b
+		VIET_random_small_prestige_gain_effect = yes
+		stress_impact = {
+			base = minor_stress_impact_gain
+			lazy = miniscule_stress_impact_gain
+		}
+		add_character_modifier = {
+			modifier = VIET_tiring_travel
+			years = 3
+		}
+	}
+}
+
+
+
+# Sun Wu Kong theatrical performance (a meta pun on "Sun")
+VIETold.2070 = {
+	type = character_event
+	title = VIETold.2070.t
+	desc = VIETold.2070.desc
+	theme = friendly
+	override_background = { event_background = market }
+	
+	left_portrait = {
+		character = root
+		animation = admiration
+	}
+	
+	trigger = {
+		OR = {
+			VIET_is_sinosphere_trigger = yes
+			any_directly_owned_province = {
+				VIET_is_sinosphere_trigger = yes
+			}
+		}
+		NOT = { has_game_rule = VIET_conversion_universe_events }
+	}
+
+	weight_multiplier = {
+		base = 1
+		modifier = {
+			add = 0.2
+			has_trait = gregarious
+		}
+		modifier = {
+			add = -0.2
+			has_trait = shy
+		}
+		modifier = {
+			add = 0.2
+			has_trait = generous
+		}
+		modifier = {
+			add = -0.2
+			has_trait = greedy
+		}
+		modifier = {
+			add = 0.2
+			has_trait = fickle
+		}
+		modifier = {
+			add = -0.2
+			has_trait = stubborn
+		}
+	}
+
+	option = { # ok
+		name = VIETold.2070.a
+		add_character_modifier = {
+			modifier = VIET_sun_wu_kong_story
+			years = 8
+		}
+	}
+}
+
+
+# Relaxing under the bright sun
+VIETold.2071 = {
+	type = character_event
+	title = VIETold.2071.t
+	desc = VIETold.2071.desc
+	theme = VIET_theme_skyrim_forest
+	
+	right_portrait = {
+		character = root
+		animation = personality_content
+	}
+
+	weight_multiplier = {
+		base = 1
+		modifier = {
+			add = 0.2
+			has_trait = gregarious
+		}
+		modifier = {
+			add = -0.2
+			has_trait = shy
+		}
+		modifier = {
+			add = 0.2
+			has_trait = generous
+		}
+		modifier = {
+			add = -0.2
+			has_trait = greedy
+		}
+		modifier = {
+			add = 0.2
+			has_trait = fickle
+		}
+		modifier = {
+			add = -0.2
+			has_trait = stubborn
+		}
+	}
+
+	option = { # ok
+		name = VIETold.2071.a
+		random_list = {
+			10 = {
+				stress_impact = {
+					base = miniscule_stress_impact_loss
+					lazy = miniscule_stress_impact_loss
+					content = miniscule_stress_impact_loss
+				}
+			}
+			10 = {
+				VIET_tiny_piety_gain_effect = yes
+			}
+		}
+	}
+}
+
+
+
+# Traveling merchant offers to sell you Egyptian sunscreen
+VIETold.2072 = {
+	type = character_event
+	title = VIETold.2072.t
+	desc = VIETold.2072.desc
+	theme = love
+	override_background = { event_background = throne_room }
+	
+	left_portrait = {
+		character = root
+		animation = personality_rational
+	}
+	
+	trigger = {
+		NOT = { has_game_rule = VIET_conversion_universe_events }
+		# Should only happen in the Mediterranean, Middle East, and Africa close to Egypt
+		capital_province = {
+			OR = {
+				geographical_region = world_africa_north
+				geographical_region = world_africa_east
+				geographical_region = world_asia_minor
+				geographical_region = world_middle_east
+				geographical_region = world_europe_south
+				geographical_region = world_europe_west_iberia
+				geographical_region = world_europe_west_francia
+			}
+		}
+	}
+
+	weight_multiplier = {
+		base = 1
+		modifier = {
+			add = 0.2
+			has_trait = arrogant
+		}
+		modifier = {
+			add = -0.2
+			has_trait = humble
+		}
+		modifier = {
+			add = 0.2
+			has_trait = patient
+		}
+		modifier = {
+			add = -0.2
+			has_trait = impatient
+		}
+		modifier = {
+			add = 0.2
+			has_trait = honest
+		}
+		modifier = {
+			add = -0.2
+			has_trait = deceitful
+		}
+	}
+
+	option = { # Buy the sunscreen
+		name = VIETold.2072.a
+		trigger = {
+			OR = {
+				is_ai = no
+				gold >= 25
+			}
+		}
+		remove_short_term_gold = 30
+		add_character_modifier = {
+			modifier = VIET_egyptian_sunscreen
+			years = 5
+		}
+		if = {
+			limit = {
+				has_game_rule = VIET_historical_context_on
+			}
+			custom_tooltip = VIETold.2072.info
+		}
+	}
+	option = { # Haggle with the merchant
+		name = VIETold.2072.b
+		trigger = {
+			OR = {
+				is_ai = no
+				gold >= 25
+			}
+			diplomacy >= medium_skill_rating
+		}
+		skill = diplomacy
+		remove_short_term_gold = 20
+		add_character_modifier = {
+			modifier = VIET_egyptian_sunscreen
+			years = 5
+		}
+		if = {
+			limit = {
+				has_game_rule = VIET_historical_context_on
+			}
+			custom_tooltip = VIETold.2072.info
+		}
+	}
+	option = { # No need to buy it
+		name = VIETold.2072.c
+		if = {
+			limit = {
+				has_game_rule = VIET_historical_context_on
+			}
+			custom_tooltip = VIETold.2072.info
+		}
+	}
+}
 
 
 
 
+# Courtier stared at sun for too long
+VIETold.2073 = {
+	type = character_event
+	title = VIETold.2073.t
+	desc = VIETold.2073.desc
+	theme = VIET_theme_garden_generic
+	
+	left_portrait = {
+		character = root
+		animation = disapproval
+	}	
+	right_portrait = {
+		character = scope:scope_VIET_sun_starer
+		animation = grief
+	}
+	
+	trigger = {
+		any_courtier_or_guest = {
+			is_available_ai_adult = yes
+		}
+	}
+
+	weight_multiplier = {
+		base = 1
+		modifier = {
+			add = 0.2
+			has_trait = arrogant
+		}
+		modifier = {
+			add = -0.2
+			has_trait = humble
+		}
+		modifier = {
+			add = 0.2
+			has_trait = patient
+		}
+		modifier = {
+			add = -0.2
+			has_trait = impatient
+		}
+		modifier = {
+			add = 0.2
+			has_trait = honest
+		}
+		modifier = {
+			add = -0.2
+			has_trait = deceitful
+		}
+	}
+	
+	immediate = {
+		random_courtier_or_guest = {
+			limit = {
+				is_available_ai_adult = yes
+			}
+			save_scope_as = scope_VIET_sun_starer
+		}
+	}
+
+	option = { # What a dumbass
+		name = VIETold.2073.a
+		scope:scope_VIET_sun_starer = {
+			random_list = {
+				75 = {
+					add_character_modifier = {
+						modifier = VIET_stared_at_sun
+						years = 1
+					}
+				}
+				25 = {
+					add_character_modifier = {
+						modifier = VIET_permanent_sun_damage
+						years = 1
+					}
+				}
+			}
+		}
+	}
+}
 
 
 
