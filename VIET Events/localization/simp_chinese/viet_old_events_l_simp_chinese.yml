@@ -743,7 +743,7 @@
  # Version 1.0.4 Start Here - Please leave this comment here
  # Version 1.1.2 Start Here - Please leave this comment here
  VIETold.1033.t:0 "Ouch!"
- VIETold.1033.desc:0 "Someone wasn't looking at where they were going! While taking a walk in the courtyard with [scope_VIET_head_boinker.GetSheHe.GetTitledFirstName], [scope_VIET_head_boinker.GetSheHe] tripped and hit [scope_VIET_head_boinker.GetHerHis] head on a rock."
+ VIETold.1033.desc:0 "Someone wasn't looking at where they were going! While I was taking a walk in the courtyard with [scope_VIET_head_boinker.GetSheHe.GetTitledFirstName], [scope_VIET_head_boinker.GetSheHe] tripped and hit [scope_VIET_head_boinker.GetHerHis] head on a rock."
  VIETold.1033.a:0 "Somebody, help!"
  VIETold.1034.t:0 "Strange Rock"
  VIETold.1034.desc:0 "This rock is unusually shaped. I found it in my garden, and find it an interesting little thing, for it is beautiful, unearthly so, almost like a gemstone in a way. Maybe it is a good sign from [ROOT.Char.GetFaith.HighGodName]?"
