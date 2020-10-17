@@ -383,7 +383,7 @@
  # Version 1.1.2 Start - Please leave here
  VIETmisc.0089.t:0 "Irritating and Coarse"
  VIETmisc.0089.desc:0 "A young warrior visiting from afar is stopping by my court today. I host a small banquet to welcome him, and ask him what he thinks about our desert lands.\n\n“To be honest, my [ROOT.Char.GetLadyLord],” he says with a chuckle, “I’m not really used to such a sandy land. You understand there isn’t much sand where I come from, so arriving here, with all this sand, it’s…. I must admit, I hate sand.”"
- VIETmisc.0089.a:0 "“Tell me,” I say, amused, “what don’t you like about sand, now that you’ve experienced it?”"
+ VIETmisc.0089.a:0 "“Tell me,” I say, amused, “what don’t you like about sand, now you’ve experienced it?”"
  VIETmisc.0090.t:0 "The Earthworm"
  VIETmisc.0090.desc:0 "While traveling down the road, we encounter something long, thin, and seemingly slimy on the road. I tell my guards to wait, and I approach and kneel down next to the object. After some careful observation, I realize it is an earthworm, struggling to get to the other side of the road under the heat of the sun."
  VIETmisc.0090.a:0 "Looks like it’s nothing, let’s continue, then."
@@ -407,7 +407,7 @@
  VIETmisc.0093.b:0 "It is an impressive, beautiful book."
  VIETmisc.0093.info:0 "#emphasis Historical Context:#! A lapidary was a type of text or book that provided information about stones, gems, minerals, and other materials found in the earth. Various stones were considered to have different useful or harmful properties, depending on culture and time period,. Lapidaries sometimes would also analyze stones in religious terms, in that they discussed the supposed hidden, magical properties of different stones."
  VIETmisc.0094.t:0 "Thunderstones"
- VIETmisc.0094.desc:0 "Many thunderstones were discovered in a field not too far from here. Local [ROOT.Char.GetFaith.GetAdjective] [Root.Char.GetFaith.AltPriestTermPlural] are debating whether these are vestiges of a war between the divine forces of [ROOT.Char.GetFaith.HighGodName] and [ROOT.Char.GetFaith.DevilName], or if they are remnants of bows and arrows used by lesser spirits and fairies to bewitch people, whether out of malevolence or mischief. Either way, they agree these stones are imbued with spiritual powers, especially as there are a large amount. However, more rationally inclined scholars believe these stones are a natural phenomenon, and were created during thunderstorms and thrown onto earth through lightning."
+ VIETmisc.0094.desc:0 "Many thunderstones were discovered in a field not too far from here. Local [ROOT.Char.GetFaith.GetAdjective] [ROOT.Char.Custom('DefaultPriestTitlePlural')] are debating whether these are vestiges of a war between the divine forces of [ROOT.Char.GetFaith.HighGodName] and [ROOT.Char.GetFaith.DevilName], or if they are remnants of bows and arrows used by lesser spirits and fairies to bewitch people, whether out of malevolence or mischief. Either way, they agree these stones are imbued with spiritual powers, especially as there are a large amount. However, more rationally inclined scholars believe these stones are a natural phenomenon, and were created during thunderstorms and thrown onto earth through lightning."
  VIETmisc.0094.a:0 "The farmers can use the stones to protect their livestock."
  VIETmisc.0094.b:0 "Bring them to a local [ROOT.Char.GetFaith.HouseOfWorship] to be venerated."
  VIETmisc.0094.c:0 "We should use these as charms to ward off bad luck."
@@ -418,7 +418,7 @@
  VIETmisc.0095.a:0 "Let’s trust the words of [scope_VIET_sandman_dreamer.GetTitledFirstName]. What reason does [scope_VIET_sandman_dreamer.GetSheHe] have to lie?"
  VIETmisc.0095.b:0 "A fairytale, as [scope_VIET_sandman_skeptic.GetTitledFirstName] says. What if you just dreamt of a sandman?"
  VIETmisc.0096.t:0 "Standing Stones"
- VIETmisc.0096.desc:0 "“Tell me,” I ask our guide, “what is that over there?”\n\nHe turns and look to where I am pointing - a tall, rod-like stone, standing by itself out in the empty field along the side of the road.\n\n“Ah, that stone, my [ROOT.Char.GetLadyLord]? It’s always been there,” he explains. “Some say it was built by ancient [Root.Char.GetFaith.AltPriestTermPlural] to worship the heavens. Others say a long-lost race of giants carried the stones here, and this is all that remains of their once mighty buildings.”"
+ VIETmisc.0096.desc:0 "“Tell me,” I ask our guide, “what is that over there?”\n\nHe turns to look to where I am pointing - a tall, rod-like stone, standing by itself out in the empty field along the side of the road.\n\n“Ah, that stone, my [ROOT.Char.GetLadyLord]? It’s always been there,” he explains. “Some say it was built by ancient [ROOT.Char.Custom('DefaultPriestTitlePlural')] to worship the heavens. Others say a long-lost race of giants carried the stones here, and this is all that remains of their once mighty buildings.”"
  VIETmisc.0096.a:0 "I nod sagely, before we continue our journey."
  # Version 1.1.3 Start
  VIETmisc.0097.t:0 "xxxxx"
