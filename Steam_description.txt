@@ -1,6 +1,6 @@
 [img]http://i.imgur.com/OhIA5bm.jpg[/img]
 
-[h1]Current Version: 1.1.1 "Al-Tusi" (Released 10/4/20, Compatible with vanilla patch 1.1.X)[/h1]
+[h1]Current Version: 1.1.2 "Liber Lapidum" (Released 10/17/20, Compatible with vanilla patch 1.1.X)[/h1]
 [B]Please See [url=https://forum.paradoxplaza.com/forum/threads/mod-viet-events-for-ck3-a-flavor-and-immersion-event-mod.1422081/]Forum Thread[/url] For More Info[/B]
 [B]Manual Download/Installation available [url=https://github.com/cybrxkhan/VIET-Events-for-CK3/releases]on Github[/url]
 [/B]
@@ -22,7 +22,7 @@ Feel free to use my work in your mods - all I ask is that I am credited and (if 
 [img]http://i.imgur.com/EyXurbK.jpg[/img]
 
 [LIST]
-[*]Over [B]231 new flavor events[/B], and more will be added in updates over time
+[*]Over [B]266 new flavor events[/B], and more will be added in updates over time
 [*]Game rule to disable sillier events for those who don't like them, with three levels to choose from: Balanced (Default), Serious (Restricted), and All Events (Full)
 [*][B]Compatible with almost anything[/B] since it doesn't touch any vanilla files - even with overhaul mods, you can via game rule disable events that reference things specific to our medieval world that wouldn’t make sense in other time periods or universes (like fantasy and sci-fi conversion mods)
 [*]Learn history with [B]Historical Context tooltips[/B] that provide information about what inspired some of the events - sometimes, reality is stranger than fiction! (These can be disabled via game rule for those who find it immersion breaking.)
@@ -50,21 +50,19 @@ Thanks!
 
 [img]http://i.imgur.com/RQ5QZTF.jpg[/img]
 
-[h1]Version 1.1.1 "Al-Tusi"[/h1]
+[h1]Version 1.1.2 "Liber Lapidum"[/h1]
 
-[I]The medieval Iranian polymath al-Tusi contributed to several fields of science, such as developing trigonometry as a mathematical discipline. He was most prominently the court astronomer for Hulegu Khan, grandson of Genghis Khan and founder of the Ilkhanate. Under Hulegu’s patronage, al-Tusi founded the Maragheh observatory, one of the most advanced of its kind in the medieval world, which employed both Islamic and Chinese astronomers.[/I]
+[I]Liber Lapidum was the most famous work by Marbod of Rennes, a French scholar and archdeacon of the 11th and 12th centuries. It was arguably the most widely distributed medieval European lapidary. Lapidaries are a genre of ancient and medieval scholarly books that dealt with stones and gems and their supposed physical and supernatural qualities.[/I]
 
 [LIST]
-[*]Added 12 new events about the following themes:
+[*]Added 35 new events about the following themes:
 [LIST]
-[*]6 Numbers
-[*]6 Sun*
+[*]8 Earth
+[*]8 Rocks and Minerals*
+[*]19 Generic*
 [/LIST]
-[*]Added new game rule for how frequently events from VIET fire (Warning: This only affects the likelihood - RNG may still cause some event spam, or no events to fire for long periods of time, depending on your luck, so use with caution!)
-[*]Added special variations of localization for several VIET Events for pagan Norse, credits to [B]tora75[/B]
-[*]Recalibrated the frequency of events to account for the new frequency game rule
-[*]Fixed event about forgetting a dream making you lose instead of gain prestige
-[*]Miscellaneous bugfixes
+[*]Added several new cultural event picture variations
+[*]Miscellaneous bug fixes and tweaks
 [/LIST]
 
 *Adapted from VIET for CK2
