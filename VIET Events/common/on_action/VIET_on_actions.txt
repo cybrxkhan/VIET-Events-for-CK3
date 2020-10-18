@@ -113,6 +113,9 @@ VIET_events_yearly_pulse = {
 		# Moss
 		100 = VIETold.1031		# Put too much moss in shoes
 		100 = VIETold.1032		# Take a nap on a rock with moss
+		# Rocks and Minerals
+		100 = VIETold.1033		# Courtier hits their head on a rock
+		100 = VIETold.1037		# Find some shiny pebbles
 		
 		#######################################
 		# OLD VIET
@@ -145,6 +148,15 @@ VIET_events_yearly_pulse = {
 		100 = VIETold.2068		# Wake up early and not much work today - what to do?
 		100 = VIETold.2069		# Traveling under the hot sun
 		100 = VIETold.2071		# Relaxing under the bright sun
+		# Generic
+		100 = VIETold.2075		# Visiting an herbalist lady's shop
+		100 = VIETold.2078		# Smiths in army camp doing work
+		100 = VIETold.2079		# Met someone interesting at a ball
+		100 = VIETold.2080		# Dreamt of a magnificent castle
+		100 = VIETold.2084		# Witness a happy peasant family
+		100 = VIETold.2087		# Guards make an arrest but accidentally burst into the wrong person's house
+		100 = VIETold.2091		# Beautiful view of mountains
+		100 = VIETold.2092		# Dreamt of being ambushed at night
 		
 		#######################################
 		# NEXT GEN VIET
@@ -201,6 +213,10 @@ VIET_events_yearly_pulse = {
 		100 = VIETmisc.0081		# Got baklava syrup all over documents
 		# Numbers
 		100 = VIETmisc.0087		# Farmer tried to cheat a deal by altering the tally sticks but is caught
+		# Earth
+		100 = VIETmisc.0090		# See an earthworm on the road
+		100 = VIETmisc.0092		# Rest in a cave while traveling
+		100 = VIETmisc.0096		# Come across an ancient standing stone
 	}
 }
 
@@ -279,6 +295,10 @@ VIET_events_tri_yearly_pulse = {
 		100 = VIETold.1027		# You get a new servant who is very diligent
 		# Moss
 		100 = VIETold.1030		# Moss on walls - do you want to clean up or not?
+		# Rocks and Minerals
+		100 = VIETold.1035		# Character comes across a boulder believed to have spiritual properties
+		100 = VIETold.1036		# Farmers find the bones of a mystical beast
+		100 = VIETold.1040		# Sulfur treatment for acne
 		
 		#######################################
 		# OLD VIET
@@ -314,6 +334,16 @@ VIET_events_tri_yearly_pulse = {
 		# Sun
 		100 = VIETold.2072		# Traveling merchant offers to sell you Egyptian sunscreen
 		100 = VIETold.2073		# Courtier stared at sun for too long
+		# Generic
+		100 = VIETold.2074		# Almost get struck by lightning
+		100 = VIETold.2076		# Wolf hanging around house protectively
+		100 = VIETold.2081		# Maid reports your courtier wrote her a creepy love letter and is perving on her
+		100 = VIETold.2083		# Notorious criminal breaks out of jail
+		100 = VIETold.2085		# Is China the greatest?
+		100 = VIETold.2086		# Courtier complains about loud construction noise
+		100 = VIETold.2088		# Hearing about the barbarian invasions of Rome
+		100 = VIETold.2089		# Could there be even wealthier kingdoms south of West Africa?
+		100 = VIETold.2090		# Scholar owns an indecipherable scroll - is it evil?
 		
 		#######################################
 		# NEXT GEN VIET
@@ -355,6 +385,10 @@ VIET_events_tri_yearly_pulse = {
 		100 = VIETmisc.0084		# A scholar is trying to figure out some equations outside
 		100 = VIETmisc.0086		# Guard catches foreign spy because she used a foreign method of finger counting
 		100 = VIETmisc.0088		# Gambling with loaded dice in the market
+		# Earth
+		100 = VIETmisc.0089		# I hate sand, it's corase and is irritating and gets everywhere
+		100 = VIETmisc.0094		# Thunderstones found near the area
+		100 = VIETmisc.0095		# Courtier dreams of the sandman
 	}
 }
 
@@ -418,6 +452,10 @@ VIET_events_five_yearly_pulse = {
 		100 = VIETold.1016		# New fad with cosmetics made from quail eggs
 		# Time
 		100 = VIETold.1028		# Fire in village doesn't spiral out of control because of water in the clock tower
+		# Rocks and Minerals
+		100 = VIETold.1034		# Find a special rock
+		100 = VIETold.1038		# Your character hears about lingams and yoni
+		100 = VIETold.1039		# Merchant shows off a fire-proof napkin
 		
 		#######################################
 		# OLD VIET
@@ -448,6 +486,10 @@ VIET_events_five_yearly_pulse = {
 		100 = VIETold.2066		# Telrav - encounter a robbed "merchant" on the road
 		# Sun
 		100 = VIETold.2070		# Sun Wu Kong theatrical performance (a meta pun on "Sun")
+		# Generic
+		100 = VIETold.2077		# Bloody knife found on bed - implied to maybe be a prank
+		100 = VIETold.2082		# Did a physician botch a surgery of a nobleman?
+		100 = VIETold.2093		# Nobleman runs away from criminals trying to kill him
 		
 		#######################################
 		# NEXT GEN VIET
@@ -473,6 +515,9 @@ VIET_events_five_yearly_pulse = {
 		100 = VIETmisc.0080		# A courtier is obsessed with baklava
 		# Numbers
 		100 = VIETmisc.0085		# Learn advanced finger counting from a retired merchant
+		# Earth
+		100 = VIETmisc.0091		# Find what appears to be an ancient skeleton buried near a construction site
+		100 = VIETmisc.0093		# A scholar shows you a lapidary (medieval encyclopedia of rocks and precious stones)
 	}
 }
 

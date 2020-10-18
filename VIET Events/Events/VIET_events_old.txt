@@ -14,6 +14,7 @@
 # 2041-2053		Prophecy and Future
 # 2054-2067		Skyrim Dialogue Inspired
 # 2068-2073		Sun
+# 2074-2093		Generic (was inspired by CK2 event pics when made)
 # 
 ############################################################################################################################
 
@@ -5243,19 +5244,1688 @@ VIETold.2073 = {
 
 
 
+##############################################################################################
+# GENERIC 2074-2093 (was inspired by CK2 event pics when made)
+##############################################################################################
+
+
+
+# Almost get struck by lightning
+VIETold.2074 = {
+	type = character_event
+	title = VIETold.2074.t
+	desc = VIETold.2074.desc
+	theme = VIET_theme_garden_generic
+	
+	left_portrait = {
+		character = root
+		animation = shock # lol shock
+	}
+	
+	#trigger = {
+	#	capital_province = {
+	#		NOT = {
+	#			terrain = desert
+	#		}
+	#	}
+	#}
+
+	weight_multiplier = {
+		base = 1
+		modifier = {
+			add = 0.2
+			has_trait = arrogant
+		}
+		modifier = {
+			add = -0.2
+			has_trait = humble
+		}
+		modifier = {
+			add = 0.2
+			has_trait = wrathful
+		}
+		modifier = {
+			add = -0.2
+			has_trait = calm
+		}
+		modifier = {
+			add = 0.2
+			has_trait = cynical
+		}
+		modifier = {
+			add = -0.2
+			has_trait = zealous
+		}
+	}
+
+
+	option = { # uh oh 
+		name = VIETold.2074.a
+		add_stress = 8
+	}
+}
+
+
+
+# Visiting an herbalist lady's shop
+VIETold.2075 = {
+	type = character_event
+	title = VIETold.2075.t	
+	desc = {
+		desc = VIETold.2075.desc
+		triggered_desc = {
+			trigger = {
+				OR = {
+					learning >= medium_skill_rating
+					has_trait = physician_1
+					has_trait = physician_2
+					has_trait = physician_3
+					has_trait = lifestyle_herbalist
+				}
+			}
+			desc = VIETold.2075.desc.educated
+		}
+	}
+	theme = medicine
+	
+	left_portrait = {
+		character = root
+		animation = personality_rational
+	}
+
+	weight_multiplier = {
+		base = 1
+		modifier = {
+			add = 0.2
+			has_trait = cynical
+		}
+		modifier = {
+			add = -0.2
+			has_trait = zealous
+		}
+		modifier = {
+			add = 0.2
+			has_trait = calm
+		}
+		modifier = {
+			add = -0.2
+			has_trait = wrathful
+		}
+		modifier = {
+			add = 0.2
+			has_trait = humble
+		}
+		modifier = {
+			add = -0.2
+			has_trait = arrogant
+		}
+	}
+
+
+	option = { # Buy some herbs
+		name = VIETold.2075.a
+		trigger = {
+			OR = {
+				is_ai = no
+				gold >= 15
+			}
+		}
+		remove_short_term_gold = 15
+		add_character_modifier = {
+			modifier = VIET_purchase_herbs_small
+			years = 4
+		}
+	}
+	option = { # Buy a lot of herbs
+		name = VIETold.2075.d
+		trigger = {
+			OR = {
+				is_ai = no
+				gold >= 45
+			}
+		}
+		remove_short_term_gold = 45
+		add_character_modifier = {
+			modifier = VIET_purchase_herbs_large
+			years = 4
+		}
+	}
+	option = { # Just browse for fun
+		name = VIETold.2075.b
+		VIET_medium_prestige_gain_effect = yes
+	}
+	option = { # Skeptical
+		name = VIETold.2075.c
+		add_character_modifier = {
+			modifier = VIET_skeptical_ruler
+			days = 777
+		}
+	}
+}
+
+
+
+# Wolf hanging around house protectively
+VIETold.2076 = {
+	type = character_event
+	title = VIETold.2076.t	
+	desc = VIETold.2076.desc
+	theme = VIET_theme_skyrim_forest
+	
+	right_portrait = {
+		character = root
+		animation = worry
+	}
+
+	weight_multiplier = {
+		base = 1
+		modifier = {
+			add = 0.2
+			has_trait = zealous
+		}
+		modifier = {
+			add = -0.2
+			has_trait = cynical
+		}
+		modifier = {
+			add = 0.2
+			has_trait = just
+		}
+		modifier = {
+			add = -0.2
+			has_trait = arbitrary
+		}
+		modifier = {
+			add = 0.2
+			has_trait = humble
+		}
+		modifier = {
+			add = -0.2
+			has_trait = arrogant
+		}
+	}
+
+
+	option = { # Chase it out
+		name = VIETold.2076.a
+		VIET_medium_prestige_gain_effect = yes
+	}
+	option = { # Let it stay
+		name = VIETold.2076.b
+		add_character_modifier = {
+			modifier = VIET_wolf_protector
+			years = 5
+		}
+	}
+}
+
+
+# Bloody knife found on bed - implied to maybe be a prank
+VIETold.2077 = {
+	type = character_event
+	title = VIETold.2077.t	
+	desc = VIETold.2077.desc
+	theme = intrigue
+	#override_background = { event_background = sitting_room }
+	
+	right_portrait = {
+		character = root
+		animation = paranoia
+	}
+
+	weight_multiplier = {
+		base = 1
+		modifier = {
+			add = 0.2
+			has_trait = trusting
+		}
+		modifier = {
+			add = -0.2
+			has_trait = paranoid
+		}
+		modifier = {
+			add = 0.2
+			has_trait = forgiving
+		}
+		modifier = {
+			add = -0.2
+			has_trait = vengeful
+		}
+		modifier = {
+			add = 0.2
+			has_trait = lazy
+		}
+		modifier = {
+			add = -0.2
+			has_trait = diligent
+		}
+	}
+
+
+	option = { # Increase security
+		name = VIETold.2077.a
+		add_character_modifier = {
+			modifier = VIET_guards_on_alert
+			years = 3
+		}
+		stress_impact = {
+			base = minor_stress_impact_gain
+			paranoid = medium_stress_impact_gain
+			craven = miniscule_stress_impact_gain
+		}
+	}
+	option = { # No harm no foul
+		name = VIETold.2077.b
+		trigger = {
+			NOT = { has_trait = paranoid }
+		}
+		stress_impact = {
+			base = minor_stress_impact_loss
+			vengeful = minor_stress_impact_gain
+		}
+	}
+	option = { # I am brave!
+		name = VIETold.2077.c
+		trigger = {
+			has_trait = brave
+		}
+		trait = brave
+		VIET_medium_prestige_gain_effect = yes
+		stress_impact = {
+			paranoid = minor_stress_impact_loss
+		}
+	}
+	option = { # It's colored water
+		name = VIETold.2077.d
+		trigger = {
+			learning >= decent_skill_rating			
+		}
+		skill = learning
+		add_learning_lifestyle_xp = medium_lifestyle_xp
+		add_character_modifier = {
+			modifier = VIET_impressed_reasoning_skills
+			years = 3
+		}
+		stress_impact = {
+			paranoid = minor_stress_impact_loss
+		}
+	}
+}
+
+
+
+# Smiths in army camp doing work
+VIETold.2078 = {
+	type = character_event
+	title = VIETold.2078.t	
+	desc = VIETold.2078.desc
+	theme = martial_strategy_focus
+	
+	left_portrait = {
+		character = root
+		animation = personality_content
+	}
+
+	weight_multiplier = {
+		base = 1
+		modifier = {
+			add = 0.2
+			has_trait = diligent
+		}
+		modifier = {
+			add = -0.2
+			has_trait = lazy
+		}
+		modifier = {
+			add = 0.2
+			has_trait = brave
+		}
+		modifier = {
+			add = -0.2
+			has_trait = craven
+		}
+		modifier = {
+			add = 0.2
+			has_trait = humble
+		}
+		modifier = {
+			add = -0.2
+			has_trait = arrogant
+		}
+	}
+
+
+	option = { # Hard work will not be in vain
+		name = VIETold.2078.a
+		VIET_medium_prestige_gain_effect = yes
+		stress_impact = {
+			arrogant = miniscule_stress_impact_gain
+			sadistic = miniscule_stress_impact_gain
+			callous = miniscule_stress_impact_gain
+		}
+	}
+	option = { # They need to work harder!
+		name = VIETold.2078.b
+		add_dread = 10
+		stress_impact = {
+			humble = miniscule_stress_impact_gain
+			compassionate = miniscule_stress_impact_gain
+		}
+	}
+}
+
+
+
+
+# Met someone interesting at a ball
+VIETold.2079 = {
+	type = character_event
+	title = VIETold.2079.t	
+	desc = VIETold.2079.desc
+	theme = party
+	
+	left_portrait = {
+		character = root
+		animation = happiness
+	}
+
+	weight_multiplier = {
+		base = 1
+		modifier = {
+			add = 0.2
+			has_trait = gregarious
+		}
+		modifier = {
+			add = -0.2
+			has_trait = shy
+		}
+		modifier = {
+			add = 0.2
+			has_trait = trusting
+		}
+		modifier = {
+			add = -0.2
+			has_trait = paranoid
+		}
+		modifier = {
+			add = 0.2
+			has_trait = compassionate
+		}
+		modifier = {
+			add = -0.2
+			has_trait = callous
+		}
+	}
+
+
+	option = { # ok
+		name = VIETold.2079.a
+		add_diplomacy_lifestyle_xp = minor_lifestyle_xp
+		add_character_modifier = {
+			modifier = VIET_interesting_talk_with_stranger
+			days = 365
+		}
+	}
+}
+
+
+
+# Dreamt of a magnificent castle
+VIETold.2080 = {
+	type = character_event
+	title = VIETold.2080.t	
+	desc = VIETold.2080.desc
+	theme = realm
+	override_background = { event_background = sitting_room }
+	
+	left_portrait = {
+		character = root
+		animation = happiness
+	}
+
+	weight_multiplier = {
+		base = 1
+		modifier = {
+			add = 0.2
+			has_trait = ambitious
+		}
+		modifier = {
+			add = -0.2
+			has_trait = content
+		}
+		modifier = {
+			add = 0.2
+			has_trait = arrogant
+		}
+		modifier = {
+			add = -0.2
+			has_trait = humble
+		}
+		modifier = {
+			add = 0.2
+			has_trait = gregarious
+		}
+		modifier = {
+			add = -0.2
+			has_trait = shy
+		}
+	}
+
+
+	option = { # ok
+		name = VIETold.2080.a
+		add_character_modifier = {
+			modifier = VIET_magnificent_castle_dream
+			years = 3
+		}
+	}
+}
+
+
+
+# Maid reports your courtier wrote her a creepy love letter and is perving on her
+VIETold.2081 = {
+	type = character_event
+	title = VIETold.2081.t	
+	desc = VIETold.2081.desc
+	theme = seduction
+	
+	left_portrait = {
+		character = scope:scope_VIET_courtier_perving_on_maid
+		animation = personality_dishonorable
+	}
+	
+	trigger = {
+		any_courtier = {
+			is_available_ai_adult = yes
+			has_trait = lustful
+			is_female = no
+			NOT = { has_sexuality = homosexual }
+			NOT = { has_sexuality = asexual }
+		}
+	}
+
+	weight_multiplier = {
+		base = 1
+		modifier = {
+			add = 0.2
+			has_trait = arbitrary
+		}
+		modifier = {
+			add = -0.2
+			has_trait = just
+		}
+		modifier = {
+			add = 0.2
+			has_trait = forgiving
+		}
+		modifier = {
+			add = -0.2
+			has_trait = vengeful
+		}
+		modifier = {
+			add = 0.2
+			has_trait = calm
+		}
+		modifier = {
+			add = -0.2
+			has_trait = wrathful
+		}
+	}
+
+	immediate = {
+		random_courtier = {
+			limit = {
+				is_available_ai_adult = yes
+				has_trait = lustful
+				is_female = no
+				NOT = { has_sexuality = homosexual }
+				NOT = { has_sexuality = asexual }
+			}
+			save_scope_as = scope_VIET_courtier_perving_on_maid
+		}
+	}
+
+	option = { # Ignore the issue
+		name = VIETold.2081.a
+		VIET_medium_piety_loss_effect = yes
+		scope:scope_VIET_courtier_perving_on_maid = {
+			add_character_modifier = {
+				modifier = VIET_loves_cute_maids
+				years = 8
+			}
+			add_opinion = {
+				target = root
+				modifier = VIET_opinion_ignore_maid_harassment
+			}
+			reverse_add_opinion = {
+				target = root
+				modifier = VIET_opinion_maid_harasser
+			}			
+		}
+		stress_impact = {
+			compassionate = minor_stress_impact_gain
+			chaste = minor_stress_impact_gain
+			just = minor_stress_impact_gain
+		}
+	}
+	option = { # Tell the guy to stop
+		name = VIETold.2081.b
+		VIET_medium_piety_gain_effect = yes
+		scope:scope_VIET_courtier_perving_on_maid = {
+			add_character_modifier = {
+				modifier = VIET_loves_cute_maids
+				years = 8
+			}
+			add_opinion = {
+				target = root
+				modifier = VIET_opinion_warned_about_maids
+			}
+			reverse_add_opinion = {
+				target = root
+				modifier = VIET_opinion_maid_harasser
+			}			
+		}
+		stress_impact = {
+			callous = minor_stress_impact_gain
+			shy = minor_stress_impact_gain
+		}
+	}
+}
+
+
+
+# Did a physician botch a surgery of a nobleman?
+VIETold.2082 = {
+	type = character_event
+	title = VIETold.2082.t	
+	desc = VIETold.2082.desc
+	theme = medicine
+	override_background = { event_background = throne_room }
+	
+	left_portrait = {
+		character = root
+		animation = boredom
+	}
+	
+
+	weight_multiplier = {
+		base = 1
+		modifier = {
+			add = 0.2
+			has_trait = honest
+		}
+		modifier = {
+			add = -0.2
+			has_trait = deceitful
+		}
+		modifier = {
+			add = 0.2
+			has_trait = just
+		}
+		modifier = {
+			add = -0.2
+			has_trait = arbitrary
+		}
+		modifier = {
+			add = 0.2
+			has_trait = patient
+		}
+		modifier = {
+			add = -0.2
+			has_trait = impatient
+		}
+	}
+
+
+	option = { # Imprison the physician
+		name = VIETold.2082.a
+		trigger = {
+			learning < medium_skill_rating
+		}
+		add_dread = 10
+		VIET_large_prestige_gain_effect = yes
+		stress_impact = {
+			forgiving = miniscule_stress_impact_gain
+			compassionate = miniscule_stress_impact_gain
+			calm = miniscule_stress_impact_gain
+			patient = miniscule_stress_impact_gain
+			trusting = miniscule_stress_impact_gain
+			just = miniscule_stress_impact_gain
+		}
+	}
+	option = { # Physician made a mistake but is innocent and will pay a fine
+		name = VIETold.2082.b
+		trigger = {
+			learning < medium_skill_rating
+		}
+		VIET_large_prestige_gain_effect = yes
+		stress_impact = {
+			vengeful = miniscule_stress_impact_gain
+			wrathful = miniscule_stress_impact_gain
+			paranoid = miniscule_stress_impact_gain
+		}
+	}
+	option = { # Physician did his best, give him credit
+		name = VIETold.2082.c
+		trigger = {
+			learning < medium_skill_rating
+		}
+		VIET_large_prestige_gain_effect = yes
+		stress_impact = {
+			vengeful = miniscule_stress_impact_gain
+			wrathful = miniscule_stress_impact_gain
+			paranoid = miniscule_stress_impact_gain
+		}
+	}
+	option = { # Ackshually...
+		name = VIETold.2082.d
+		trigger = {
+			learning >= medium_skill_rating
+		}
+		skill = learning
+		VIET_huge_prestige_gain_effect = yes
+		add_character_modifier = {
+			modifier = VIET_impressed_medical_skills
+			years = 4
+		}
+	}
+}
+
+
+
+
+# Notorious criminal breaks out of jail
+VIETold.2083 = {
+	type = character_event
+	title = VIETold.2083.t	
+	desc = VIETold.2083.desc
+	theme = dread
+	
+	left_portrait = {
+		character = root
+		animation = grief
+	}	
+
+	weight_multiplier = {
+		base = 1
+		modifier = {
+			add = 0.2
+			has_trait = arbitrary
+		}
+		modifier = {
+			add = -0.2
+			has_trait = just
+		}
+		modifier = {
+			add = 0.2
+			has_trait = lazy
+		}
+		modifier = {
+			add = -0.2
+			has_trait = diligent
+		}
+		modifier = {
+			add = 0.2
+			has_trait = trusting
+		}
+		modifier = {
+			add = -0.2
+			has_trait = paranoid
+		}
+	}
+
+
+	option = { # Oh no!
+		name = VIETold.2083.a
+		add_character_modifier = {
+			modifier = VIET_notorious_jailbreak
+			years = 8
+		}
+	}
+}
+
+
+# Witness a happy peasant family
+VIETold.2084 = {
+	type = character_event
+	title = VIETold.2084.t	
+	desc = VIETold.2084.desc
+	theme = family
+	override_background = { event_background = VIET_background_tuscan_country }
+	
+	left_portrait = root
+
+	weight_multiplier = {
+		base = 1
+		modifier = {
+			add = 0.2
+			has_trait = calm
+		}
+		modifier = {
+			add = -0.2
+			has_trait = wrathful
+		}
+		modifier = {
+			add = 0.2
+			has_trait = compassionate
+		}
+		modifier = {
+			add = -0.2
+			has_trait = callous
+		}
+		modifier = {
+			add = 0.2
+			has_trait = humble
+		}
+		modifier = {
+			add = -0.2
+			has_trait = arrogant
+		}
+	}
+
+
+	option = { # Good
+		name = VIETold.2084.a
+		VIET_small_piety_gain_effect = yes
+		stress_impact = {
+			callous = miniscule_stress_impact_gain
+			arrogant = miniscule_stress_impact_gain
+		}
+	}
+	option = { # Boo
+		name = VIETold.2084.b
+		add_dread = 5
+		stress_impact = {
+			compassionate = miniscule_stress_impact_gain
+			humble = miniscule_stress_impact_gain
+		}
+	}
+}
+
+# Is China the greatest?
+VIETold.2085 = {
+	type = character_event
+	title = VIETold.2085.t	
+	desc = VIETold.2085.desc
+	theme = realm
+	
+	left_portrait = {
+		character = root
+		animation = personality_rational
+	}
+	
+	trigger = {
+		NOR = {
+			VIET_is_sinosphere_trigger = yes
+			any_directly_owned_province = {
+				VIET_is_sinosphere_trigger = yes
+			}
+		}
+		NOT = { has_game_rule = VIET_conversion_universe_events }	
+	}
+
+	weight_multiplier = {
+		base = 1
+		modifier = {
+			add = 0.2
+			has_trait = ambitious
+		}
+		modifier = {
+			add = -0.2
+			has_trait = content
+		}
+		modifier = {
+			add = 0.2
+			has_trait = diligent
+		}
+		modifier = {
+			add = -0.2
+			has_trait = lazy
+		}
+		modifier = {
+			add = 0.2
+			has_trait = honest
+		}
+		modifier = {
+			add = -0.2
+			has_trait = deceitful
+		}
+	}
+
+
+	option = { # Be proud of ourselves
+		name = VIETold.2085.a
+		VIET_small_prestige_gain_effect = yes
+		stress_impact = {
+			humble = miniscule_stress_impact_gain
+		}
+	}
+	option = { # Learn a lot from the Chinese
+		name = VIETold.2085.b
+		VIET_small_piety_gain_effect = yes
+		stress_impact = {
+			arrogant = miniscule_stress_impact_gain
+		}
+	}
+	option = { # They're no better than anyone else
+		name = VIETold.2085.c
+		random_list = {
+			10 = { VIET_small_prestige_gain_effect = yes }
+			10 = { VIET_small_piety_gain_effect = yes }
+		}
+		stress_impact = {
+			patient = miniscule_stress_impact_gain
+		}
+	}
+}
+
+
+
+# Courtier complains about loud construction noise
+VIETold.2086 = {
+	type = character_event
+	title = VIETold.2086.t	
+	desc = VIETold.2086.desc
+	theme = realm
+	
+	left_portrait = {
+		character = root
+		animation = personality_rational
+	}	
+	right_portrait = {
+		character = scope:scope_VIET_courtier_noise_complainer
+		animation = dismissal
+	}
+	
+	trigger = {
+		any_courtier = {
+			is_available_ai_adult = yes
+			OR = {
+				has_trait = arrogant
+				has_trait = impatient
+				has_trait = wrathful
+				has_trait = paranoid
+				has_trait = arbitrary
+			}
+			NOR = {
+				has_trait = shy
+				has_trait = humble
+				has_trait = forgiving
+			}
+			NOT = { is_close_family_of = root }
+		}		
+	}
+
+	weight_multiplier = {
+		base = 1
+		modifier = {
+			add = 0.2
+			has_trait = patient
+		}
+		modifier = {
+			add = -0.2
+			has_trait = impatient
+		}
+		modifier = {
+			add = 0.2
+			has_trait = calm
+		}
+		modifier = {
+			add = -0.2
+			has_trait = wrathful
+		}
+		modifier = {
+			add = 0.2
+			has_trait = just
+		}
+		modifier = {
+			add = -0.2
+			has_trait = arbitrary
+		}
+	}
+
+	immediate = {
+		random_courtier = {
+			limit = {
+				is_available_ai_adult = yes
+				OR = {
+					has_trait = arrogant
+					has_trait = impatient
+					has_trait = wrathful
+					has_trait = paranoid
+					has_trait = arbitrary
+				}
+				NOR = {
+					has_trait = shy
+					has_trait = humble
+					has_trait = forgiving
+				}
+				NOT = { is_close_family_of = root }
+			}
+			save_scope_as = scope_VIET_courtier_noise_complainer
+		}
+	}
+
+	option = { # Halt construction
+		name = VIETold.2086.a
+		add_character_modifier = {
+			modifier = VIET_reduce_construction_noise
+			years = 5
+		}
+		scope:scope_VIET_courtier_noise_complainer = {
+			add_opinion = {
+				target = root
+				modifier = VIET_opinion_supported_construction_noise
+			}
+		}
+	}
+	option = { # Continue with construction, no big deal
+		name = VIETold.2086.b
+		scope:scope_VIET_courtier_noise_complainer = {
+			add_opinion = {
+				target = root
+				modifier = VIET_opinion_ignored_construction_noise
+			}
+		}
+	}
+	option = { # Discuss ways to reduce noise
+		name = VIETold.2086.c
+		trigger = {
+			stewardship >= decent_skill_rating			
+		}
+		skill = stewardship
+		VIET_medium_prestige_loss_effect = yes
+		scope:scope_VIET_courtier_noise_complainer = {
+			add_opinion = {
+				target = root
+				modifier = VIET_opinion_compromise_construction_noise
+			}
+		}		
+	}
+	option = { # Convince courtier to put up with it
+		name = VIETold.2086.d
+		add_diplomacy_lifestyle_xp = minor_lifestyle_xp
+		duel = {
+			skill = diplomacy
+			target = scope:scope_VIET_courtier_noise_complainer
+			10 = { # Failure
+				compare_modifier = {
+					value = scope:duel_value
+					multiplier = -1.1
+				}
+				#modifier = {
+				#	factor = 1.2
+				#	has_trait = shy
+				#}
+				#modifier = {
+				#	factor = 1.2
+				#	has_trait = impatient
+				#}
+				#modifier = {
+				#	factor = 1.2
+				#	has_trait = callous
+				#}
+				desc = VIETold.2086.d.toast.a
+				send_interface_toast = {
+					left_icon = ROOT
+					title = VIETold.2086.d.toast.failure
+					scope:scope_VIET_courtier_noise_complainer = {
+						add_opinion = {
+							target = root
+							modifier = VIET_opinion_ignored_construction_noise
+						}
+					}
+				}
+			}
+			10 = { # Success
+				compare_modifier = {
+					value = scope:duel_value
+					multiplier = 1.1
+				}
+				#modifier = {
+				#	factor = 1.2
+				#	has_trait = gregarious
+				#}
+				#modifier = {
+				#	factor = 1.2
+				#	has_trait = patient
+				#}
+				#modifier = {
+				#	factor = 1.2
+				#	has_trait = compassionate
+				#}
+				desc = VIETold.2086.toast.b
+				send_interface_toast = {
+					left_icon = ROOT
+					title = VIETold.2086.d.toast.success
+					scope:scope_VIET_courtier_noise_complainer = {
+						add_opinion = {
+							target = root
+							modifier = VIET_opinion_compromise_construction_noise
+						}
+					}
+				}
+			}
+		}		
+	}
+}
+
+
+
+# Guards make an arrest but accidentally burst into the wrong person's house
+VIETold.2087 = {
+	type = character_event
+	title = VIETold.2087.t	
+	desc = VIETold.2087.desc
+	theme = corruption
+	
+	left_portrait = {
+		character = root
+		animation = personality_callous
+	}
+
+	weight_multiplier = {
+		base = 1
+		modifier = {
+			add = 0.2
+			has_trait = paranoid
+		}
+		modifier = {
+			add = -0.2
+			has_trait = trusting
+		}
+		modifier = {
+			add = 0.2
+			has_trait = lazy
+		}
+		modifier = {
+			add = -0.2
+			has_trait = diligent
+		}
+		modifier = {
+			add = 0.2
+			has_trait = arbitrary
+		}
+		modifier = {
+			add = -0.2
+			has_trait = just
+		}
+	}
+
+	option = { # whoops
+		name = VIETold.2087.a
+		VIET_large_prestige_loss_effect = yes
+		stress_impact = {
+			just = minor_stress_impact_gain
+		}
+	}
+	option = { # compensate them
+		name = VIETold.2087.b
+		remove_short_term_gold = 15
+		stress_impact = {
+			arbitrary = miniscule_stress_impact_gain
+			arrogant = minor_stress_impact_gain
+			greedy = minor_stress_impact_gain
+		}
+	}
+}
+
+
+
+
+# Hearing about the barbarian invasions of Rome
+VIETold.2088 = {
+	type = character_event
+	title = VIETold.2088.t	
+	desc = VIETold.2088.desc
+	theme = learning
+	
+	left_portrait = {
+		character = root
+		animation = personality_rational
+	}
+	
+	trigger = {
+		has_game_rule = VIET_normal_universe_events
+		OR = {
+			capital_province = {
+				OR = {
+					geographical_region = world_europe
+					geographical_region = world_asia_minor
+					geographical_region = world_middle_east
+					geographical_region = world_africa_north
+					geographical_region = world_africa_east
+					geographical_region = world_steppe_west
+				}
+			}
+			has_culture_group = culture_group:baltic_group
+			has_culture_group = culture_group:byzantine_group
+			has_culture_group = culture_group:central_germanic_group
+			has_culture_group = culture_group:east_slavic_group
+			has_culture_group = culture_group:magyar_group
+			has_culture_group = culture_group:south_slavic_group
+			has_culture_group = culture_group:west_slavic_group
+			has_culture_group = culture_group:latin_group
+			has_culture_group = culture_group:frankish_group
+			has_culture_group = culture_group:west_germanic_group
+			has_culture_group = culture_group:arabic_group
+			has_culture_group = culture_group:balto_finnic_group
+			has_culture_group = culture_group:volga_finnic_group
+			has_culture_group = culture_group:berber_group
+			has_culture_group = culture_group:brythonic_group
+			has_culture_group = culture_group:east_african_group
+			has_culture_group = culture_group:goidelic_group
+			has_culture_group = culture_group:iberian_group
+			has_culture_group = culture_group:iranian_group
+			has_culture_group = culture_group:israelite_group
+			has_culture_group = culture_group:north_germanic_group
+		}
+	}
+
+	weight_multiplier = {
+		base = 1
+		modifier = {
+			add = 0.2
+			has_trait = diligent
+		}
+		modifier = {
+			add = -0.2
+			has_trait = lazy
+		}
+		modifier = {
+			add = 0.2
+			has_trait = brave
+		}
+		modifier = {
+			add = -0.2
+			has_trait = craven
+		}
+		modifier = {
+			add = 0.2
+			has_trait = just
+		}
+		modifier = {
+			add = -0.2
+			has_trait = arbitrary
+		}
+	}
+
+	option = { # Genseric, father of the Vandals
+		name = VIETold.2088.a
+		random = {
+			chance = 33
+			add_diplomacy_skill = 1
+		}
+		if = {
+			limit = {
+				has_game_rule = VIET_historical_context_on
+			}
+			custom_tooltip = VIETold.2088.a.info
+		}
+	}
+	option = { # Attila the Hun, Scourge of God
+		name = VIETold.2088.b
+		random = {
+			chance = 33
+			add_martial_skill = 1
+		}
+		if = {
+			limit = {
+				has_game_rule = VIET_historical_context_on
+			}
+			custom_tooltip = VIETold.2088.b.info
+		}
+	}
+	option = { # Alaric the Goth and Sacker of Rome
+		name = VIETold.2088.c
+		random = {
+			chance = 33
+			add_stewardship_skill = 1
+		}
+		if = {
+			limit = {
+				has_game_rule = VIET_historical_context_on
+			}
+			custom_tooltip = VIETold.2088.c.info
+		}
+	}
+	option = { # Odoacer, ender of Western Rome
+		name = VIETold.2088.d
+		random = {
+			chance = 33
+			add_intrigue_skill = 1
+		}
+		if = {
+			limit = {
+				has_game_rule = VIET_historical_context_on
+			}
+			custom_tooltip = VIETold.2088.d.info
+		}
+	}
+	option = { # Clovis, founder of the Merovingian Franks
+		name = VIETold.2088.e
+		random = {
+			chance = 33
+			add_learning_skill = 1
+		}
+		if = {
+			limit = {
+				has_game_rule = VIET_historical_context_on
+			}
+			custom_tooltip = VIETold.2088.e.info
+		}
+	}
+}
+
+
+
+# Could there be even wealthier kingdoms south of West Africa?
+VIETold.2089 = {
+	type = character_event
+	title = VIETold.2089.t	
+	desc = VIETold.2089.desc
+	theme = stewardship
+	
+	left_portrait = {
+		character = root
+		animation = personality_rational
+	}
+	
+	trigger = {
+		has_game_rule = VIET_normal_universe_events
+		OR = {
+			capital_province = {
+				OR = {
+					geographical_region = world_europe
+					geographical_region = world_asia_minor
+					geographical_region = world_middle_east
+					geographical_region = world_africa_north
+					geographical_region = world_africa_east
+					geographical_region = world_steppe_west
+					geographical_region = world_india
+				}
+			}
+			has_culture_group = culture_group:baltic_group
+			has_culture_group = culture_group:byzantine_group
+			has_culture_group = culture_group:central_germanic_group
+			has_culture_group = culture_group:east_slavic_group
+			has_culture_group = culture_group:magyar_group
+			has_culture_group = culture_group:south_slavic_group
+			has_culture_group = culture_group:west_slavic_group
+			has_culture_group = culture_group:latin_group
+			has_culture_group = culture_group:frankish_group
+			has_culture_group = culture_group:west_germanic_group
+			has_culture_group = culture_group:arabic_group
+			has_culture_group = culture_group:balto_finnic_group
+			has_culture_group = culture_group:volga_finnic_group
+			has_culture_group = culture_group:berber_group
+			has_culture_group = culture_group:brythonic_group
+			has_culture_group = culture_group:east_african_group
+			has_culture_group = culture_group:goidelic_group
+			has_culture_group = culture_group:iberian_group
+			has_culture_group = culture_group:iranian_group
+			has_culture_group = culture_group:israelite_group
+			has_culture_group = culture_group:north_germanic_group
+			has_culture_group = culture_group:dravidian_group
+			has_culture_group = culture_group:indo_aryan_group
+			has_culture_group = culture_group:akan_group
+			has_culture_group = culture_group:sahelian_group
+			has_culture_group = culture_group:senegambian_group
+			has_culture_group = culture_group:somalian_group
+			has_culture_group = culture_group:west_african_group
+			has_culture_group = culture_group:yoruba_group
+			has_culture_group = culture_group:central_african_group
+		}
+	}
+
+	weight_multiplier = {
+		base = 1
+		modifier = {
+			add = 0.2
+			has_trait = diligent
+		}
+		modifier = {
+			add = -0.2
+			has_trait = lazy
+		}
+		modifier = {
+			add = 0.2
+			has_trait = greedy
+		}
+		modifier = {
+			add = -0.2
+			has_trait = generous
+		}
+		modifier = {
+			add = 0.2
+			has_trait = gluttonous
+		}
+		modifier = {
+			add = -0.2
+			has_trait = temperate
+		}
+	}
+
+	option = { # Nope
+		name = VIETold.2089.a
+		add_character_modifier = {
+			modifier = VIET_thinking_about_foreign_lands
+			days = 365
+		}
+	}
+	option = { # Yes
+		name = VIETold.2089.b
+		add_character_modifier = {
+			modifier = VIET_open_to_new_ideas
+			days = 365
+		}
+	}
+	option = { # We are the best
+		name = VIETold.2089.c
+		trigger = {
+			OR = {
+				has_culture_group = culture_group:sahelian_group
+				has_culture_group = culture_group:senegambian_group
+				has_culture_group = culture_group:west_african_group
+				has_culture_group = culture_group:central_african_group			
+			}
+		}
+		VIET_small_prestige_gain_effect = yes
+	}
+}
+
+
+# Scholar owns an indecipherable scroll - is it evil?
+VIETold.2090 = {
+	type = character_event
+	title = VIETold.2090.t	
+	desc = VIETold.2090.desc
+	theme = learning
+	
+	left_portrait = {
+		character = root
+		animation = personality_callous
+	}
+
+	weight_multiplier = {
+		base = 1
+		modifier = {
+			add = 0.2
+			has_trait = diligent
+		}
+		modifier = {
+			add = -0.2
+			has_trait = lazy
+		}
+		modifier = {
+			add = 0.2
+			has_trait = greedy
+		}
+		modifier = {
+			add = -0.2
+			has_trait = generous
+		}
+		modifier = {
+			add = 0.2
+			has_trait = gluttonous
+		}
+		modifier = {
+			add = -0.2
+			has_trait = temperate
+		}
+	}
+
+	option = { # Destroy it
+		name = VIETold.2090.a
+		VIET_medium_piety_gain_effect = yes
+		VIET_medium_prestige_loss_effect = yes
+	}
+	option = { # Take a look
+		name = VIETold.2090.b
+		VIET_medium_piety_loss_effect = yes
+		add_learning_lifestyle_xp = minor_lifestyle_xp
+		random = {
+			chance = 33
+			add_learning_skill = 1
+		}		
+	}
+	option = { # Doesn't matter
+		name = VIETold.2090.c
+	}
+	option = { # Show to other scholars
+		name = VIETold.2090.d
+		VIET_medium_piety_loss_effect = yes
+		add_character_modifier = {
+			modifier = VIET_discussed_mysterious_scroll_with_scholars
+			years = 4
+		}
+	}
+}
+
+
+# Beautiful view of mountains
+VIETold.2091 = {
+	type = character_event
+	title = VIETold.2091.t	
+	desc = VIETold.2091.desc
+	theme = VIET_theme_skyrim_forest
+	
+	left_portrait = {
+		character = root
+		animation = personality_callous
+	}
+	
+	trigger = {
+		capital_province = {
+			OR = {
+				terrain = mountains
+				terrain = hills
+				terrain = desert_mountains
+			}
+			any_neighboring_county = {
+				OR = {
+					terrain = mountains
+					terrain = desert_mountains
+				}			
+			}
+		}
+	}
+
+	weight_multiplier = {
+		base = 1
+		modifier = {
+			add = 0.2
+			has_trait = content
+		}
+		modifier = {
+			add = -0.2
+			has_trait = ambitious
+		}
+		modifier = {
+			add = 0.2
+			has_trait = trusting
+		}
+		modifier = {
+			add = -0.2
+			has_trait = paranoid
+		}
+		modifier = {
+			add = 0.2
+			has_trait = zealous
+		}
+		modifier = {
+			add = -0.2
+			has_trait = cynical
+		}
+	}
+
+	option = { # Cool
+		name = VIETold.2091.a
+		add_stress = -4
+	}
+}
+
+
+
+# Dreamt of being ambushed at night
+VIETold.2092 = {
+	type = character_event
+	title = VIETold.2092.t	
+	desc = VIETold.2092.desc
+	theme = battle
+	
+	left_portrait = {
+		character = root
+		animation = fear
+	}
+
+	weight_multiplier = {
+		base = 1
+		modifier = {
+			add = 0.2
+			has_trait = craven
+		}
+		modifier = {
+			add = -0.2
+			has_trait = brave
+		}
+		modifier = {
+			add = 0.2
+			has_trait = ambitious
+		}
+		modifier = {
+			add = -0.2
+			has_trait = content
+		}
+		modifier = {
+			add = 0.2
+			has_trait = paranoid
+		}
+		modifier = {
+			add = -0.2
+			has_trait = trusting
+		}
+	}
+
+	option = { # Cool
+		name = VIETold.2092.a
+		stress_impact = {
+			base = miniscule_stress_impact_gain
+			craven = miniscule_stress_impact_gain
+			paranoid = miniscule_stress_impact_gain
+		}
+	}
+}
 
 
 
 
 
+# Nobleman runs away from criminals trying to kill him
+VIETold.2093 = {
+	type = character_event
+	title = VIETold.2093.t	
+	desc = VIETold.2093.desc
+	theme = vassal
+	
+	left_portrait = {
+		character = scope:scope_VIET_nobleman_refugee
+		animation = paranoia
+	}
 
+	weight_multiplier = {
+		base = 1
+		modifier = {
+			add = 0.2
+			has_trait = generous
+		}
+		modifier = {
+			add = -0.2
+			has_trait = greedy
+		}
+		modifier = {
+			add = 0.2
+			has_trait = patient
+		}
+		modifier = {
+			add = -0.2
+			has_trait = impatient
+		}
+		modifier = {
+			add = 0.2
+			has_trait = fickle
+		}
+		modifier = {
+			add = -0.2
+			has_trait = stubborn
+		}
+	}
+	
+	immediate = {
+		hidden_effect = {
+			create_character = {
+				location = root.capital_province
+				age = { 16 30 }
+				gender = male
+				faith = root.faith
+				culture = root.culture
+				save_scope_as = scope_VIET_nobleman_refugee
+				random_traits_list = {
+					count = 1
+					education_diplomacy_2 = {}
+					education_martial_2 = {}
+					education_stewardship_2 = {}
+					education_intrigue_2 = {}
+					education_learning_2 = {}
+				}
+				random_traits = yes
+			}
+			scope:scope_VIET_nobleman_refugee = {
+				add_character_modifier = {
+					modifier = VIET_nobleman_with_criminal_problems
+				}
+			}		
+		}
+	}
 
-
-
-
-
-
-
+	option = { # Ok
+		name = VIETold.2093.a
+		VIET_large_prestige_gain_effect = yes
+		remove_short_term_gold = 15
+		stress_impact = {
+			arbitrary = minor_stress_impact_gain
+			callous = medium_stress_impact_gain
+			arrogant = minor_stress_impact_gain
+		}
+		hidden_effect = {
+			scope:scope_VIET_nobleman_refugee = {
+				death = {
+					death_reason = death_disappearance
+				}
+			}
+		}
+	}
+	option = { # Ok
+		name = VIETold.2093.b
+		stress_impact = {
+			compassionate = medium_stress_impact_gain
+			just = medium_stress_impact_gain
+		}
+		hidden_effect = {
+			scope:scope_VIET_nobleman_refugee = {
+				death = {
+					death_reason = death_disappearance
+				}
+			}
+		}
+	}
+	option = { # Ok
+		name = VIETold.2093.c
+		VIET_large_prestige_loss_effect = yes
+		add_courtier = scope:scope_VIET_nobleman_refugee
+	}
+}
 
 
 

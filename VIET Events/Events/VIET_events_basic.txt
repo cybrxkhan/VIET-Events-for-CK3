@@ -26,6 +26,7 @@
 # 0072-0078		Fire
 # 0079-0082		Baklava
 # 0083-0088		Numbers
+# 0089-0096		Earth
 # 
 ############################################################################################################################
 
@@ -6966,5 +6967,639 @@ VIETmisc.0088 = {
 			}
 		}
 	}	
+}
+
+
+##################################################################
+# EARTH 0089-0096
+##################################################################
+
+
+# I hate sand, it's corase and is irritating and gets everywhere
+VIETmisc.0089 = {
+	type = character_event
+	title = VIETmisc.0089.t
+	desc = VIETmisc.0089.desc
+	theme = VIET_theme_skyrim_forest
+	
+	left_portrait = {
+		character = root
+		animation = happiness
+	}
+	
+	trigger = {
+		NOT = { has_game_rule = VIET_serious_events } # The reference isn't direct but strongly implied, but just in case
+		capital_province = {
+			OR = {
+				terrain = desert
+				terrain = desert_mountains
+			}
+		}
+	}
+	
+	weight_multiplier = {
+		base = 1
+		modifier = {
+			add = 0.2
+			has_trait = gregarious
+		}
+		modifier = {
+			add = -0.2
+			has_trait = shy
+		}
+		modifier = {
+			add = 0.2
+			has_trait = patient
+		}
+		modifier = {
+			add = -0.2
+			has_trait = impatient
+		}
+		modifier = {
+			add = 0.2
+			has_trait = content
+		}
+		modifier = {
+			add = -0.2
+			has_trait = ambitious
+		}
+	}
+
+	
+	option = { # Okay Anakin
+		name = VIETmisc.0089.a
+		add_character_modifier = {
+			modifier = VIET_talked_about_sand
+			days = 365
+		}
+	}	
+}
+
+
+
+
+# See an earthworm on the road
+VIETmisc.0090 = {
+	type = character_event
+	title = VIETmisc.0090.t
+	desc = VIETmisc.0090.desc
+	theme = VIET_theme_tuscan_country
+	
+	right_portrait = root
+	
+	weight_multiplier = {
+		base = 1
+		modifier = {
+			add = 0.2
+			has_trait = paranoid
+		}
+		modifier = {
+			add = -0.2
+			has_trait = trusting
+		}
+		modifier = {
+			add = 0.2
+			has_trait = diligent
+		}
+		modifier = {
+			add = -0.2
+			has_trait = lazy
+		}
+		modifier = {
+			add = 0.2
+			has_trait = compassionate
+		}
+		modifier = {
+			add = -0.2
+			has_trait = callous
+		}
+	}
+
+	
+	option = { # Do nothing
+		name = VIETmisc.0090.a
+		stress_impact = {
+			compassionate = miniscule_stress_impact_gain
+		}
+	}	
+	option = { # Help it
+		name = VIETmisc.0090.b
+		if = {
+			limit = {
+				faith = {
+					OR = {
+						trait_is_virtue = compassionate
+						trait_is_virtue = patient
+						trait_is_virtue = calm
+						trait_is_virtue = just
+					}
+				}
+			}
+			VIET_small_piety_gain_effect = yes
+		}
+		stress_impact = {
+			callous = miniscule_stress_impact_gain
+			sadistic = miniscule_stress_impact_gain
+			arrogant = miniscule_stress_impact_gain
+			wrathful = miniscule_stress_impact_gain
+		}
+	}		
+	option = { # Kill it
+		name = VIETmisc.0090.c
+		if = {
+			limit = {
+				faith = {
+					OR = {
+						trait_is_virtue = compassionate
+						trait_is_virtue = patient
+						trait_is_virtue = calm
+						trait_is_virtue = just
+					}
+				}
+			}
+			VIET_small_piety_loss_effect = yes
+		}
+		add_dread = 5
+		stress_impact = {
+			compassionate = minor_stress_impact_gain
+			humble = miniscule_stress_impact_gain
+			calm = miniscule_stress_impact_gain
+		}
+	}	
+}
+
+
+
+# Find what appears to be an ancient skeleton buried near a construction site
+VIETmisc.0091 = {
+	type = character_event
+	title = VIETmisc.0091.t
+	desc = VIETmisc.0091.desc
+	theme = VIET_theme_small_town
+	
+	right_portrait = root
+	
+	weight_multiplier = {
+		base = 1
+		modifier = {
+			add = 0.2
+			has_trait = paranoid
+		}
+		modifier = {
+			add = -0.2
+			has_trait = trusting
+		}
+		modifier = {
+			add = 0.2
+			has_trait = diligent
+		}
+		modifier = {
+			add = -0.2
+			has_trait = lazy
+		}
+		modifier = {
+			add = 0.2
+			has_trait = compassionate
+		}
+		modifier = {
+			add = -0.2
+			has_trait = callous
+		}
+	}
+	
+	immediate = {
+		random_list = {
+			10 = { add_character_flag = VIET_skeleton_found_intrigue_reality }
+			10 = { add_character_flag = VIET_skeleton_found_learning_reality }
+		}
+	}
+
+	
+	option = { # It's just a skeleton
+		name = VIETmisc.0091.a
+		VIET_large_piety_loss_effect = yes
+		stress_impact = {
+			compassionate = minor_stress_impact_gain
+			zealous = minor_stress_impact_gain
+			just = minor_stress_impact_gain
+		}
+	}	
+	option = { # Bury it
+		name = VIETmisc.0091.a
+		remove_short_term_gold = 15
+		VIET_large_piety_gain_effect = yes
+	}	
+	option = { # Skeleton is actually a recent murder victim!
+		name = VIETmisc.0091.c
+		trigger = {
+			intrigue >= medium_skill_rating
+			has_character_flag = VIET_skeleton_found_intrigue_reality
+		}
+		skill = intrigue
+		custom_tooltip = VIETmisc.0091.c.tooltip
+		VIET_huge_piety_gain_effect = yes
+		add_intrigue_lifestyle_xp = medium_lifestyle_xp
+		add_character_modifier = {
+			modifier = VIET_helped_solve_old_murder_mystery
+			years = 8
+		}
+	}	
+	option = { # Skeleton should be studied
+		name = VIETmisc.0091.c
+		trigger = {
+			learning >= medium_skill_rating
+			has_character_flag = VIET_skeleton_found_learning_reality
+		}
+		skill = learning
+		custom_tooltip = VIETmisc.0091.d.tooltip
+		add_learning_lifestyle_xp = medium_lifestyle_xp
+		add_character_modifier = {
+			modifier = VIET_studying_ancient_clothes
+			years = 8
+		}
+	}
+	
+	after = {
+		remove_character_flag = VIET_skeleton_found_intrigue_reality
+		remove_character_flag = VIET_skeleton_found_learning_reality
+	}
+}
+
+
+
+
+# Rest in a cave while traveling
+VIETmisc.0092 = {
+	type = character_event
+	title = VIETmisc.0092.t
+	desc = VIETmisc.0092.desc
+	theme = VIET_theme_skyrim_forest
+	
+	right_portrait = root
+	
+	weight_multiplier = {
+		base = 1
+		modifier = {
+			add = 0.2
+			has_trait = lazy
+		}
+		modifier = {
+			add = -0.2
+			has_trait = diligent
+		}
+		modifier = {
+			add = 0.2
+			has_trait = fickle
+		}
+		modifier = {
+			add = -0.2
+			has_trait = stubborn
+		}
+		modifier = {
+			add = 0.2
+			has_trait = gregarious
+		}
+		modifier = {
+			add = -0.2
+			has_trait = shy
+		}
+	}
+
+	
+	option = { # Explore
+		name = VIETmisc.0092.a
+		add_character_modifier = {
+			modifier = VIET_explored_cave
+			years = 5
+		}
+		stress_impact = {
+			craven = medium_stress_impact_gain
+			lazy = miniscule_stress_impact_gain
+		}
+	}	
+	option = { # Rest before leaving
+		name = VIETmisc.0092.b
+		VIET_medium_prestige_gain_effect = yes
+	}
+}
+
+
+
+
+# A scholar shows you a lapidary (medieval encyclopedia of rocks and precious stones)
+VIETmisc.0093 = {
+	type = character_event
+	title = VIETmisc.0093.t
+	desc = VIETmisc.0093.desc
+	theme = learning
+	
+	right_portrait = {
+		character = root
+		animation = personality_rational
+	}
+	
+	weight_multiplier = {
+		base = 1
+		modifier = {
+			add = 0.2
+			has_trait = diligent
+		}
+		modifier = {
+			add = -0.2
+			has_trait = lazy
+		}
+		modifier = {
+			add = 0.2
+			has_trait = greedy
+		}
+		modifier = {
+			add = -0.2
+			has_trait = generous
+		}
+		modifier = {
+			add = 0.2
+			has_trait = gregarious
+		}
+		modifier = {
+			add = -0.2
+			has_trait = shy
+		}
+	}
+
+	
+	option = { # Study the book
+		name = VIETmisc.0093.a
+		VIET_medium_prestige_loss_effect = yes
+		random_list = {
+			10 = { add_stewardship_lifestyle_xp = medium_lifestyle_xp }
+			10 = { add_learning_lifestyle_xp = medium_lifestyle_xp }
+		}
+		add_character_modifier = {
+			modifier = VIET_lapidary_study
+			years = 5
+		}
+		if = {
+			limit = {
+				has_game_rule = VIET_historical_context_on
+			}
+			custom_tooltip = VIETmisc.0093.info
+		}
+	}	
+	option = { # Cool
+		name = VIETmisc.0093.a
+		VIET_medium_prestige_gain_effect = yes
+		if = {
+			limit = {
+				has_game_rule = VIET_historical_context_on
+			}
+			custom_tooltip = VIETmisc.0093.info
+		}
+	}
+}
+
+
+
+# Thunderstones found near the area
+VIETmisc.0094 = {
+	type = character_event
+	title = VIETmisc.0094.t
+	desc = VIETmisc.0094.desc
+	theme = learning
+	
+	right_portrait = root
+	
+	weight_multiplier = {
+		base = 1
+		modifier = {
+			add = 0.2
+			has_trait = diligent
+		}
+		modifier = {
+			add = -0.2
+			has_trait = lazy
+		}
+		modifier = {
+			add = 0.2
+			has_trait = patient
+		}
+		modifier = {
+			add = -0.2
+			has_trait = impatient
+		}
+		modifier = {
+			add = 0.2
+			has_trait = honest
+		}
+		modifier = {
+			add = -0.2
+			has_trait = deceitful
+		}
+	}
+
+	
+	option = { # Give them to farmers
+		name = VIETmisc.0094.a
+		VIET_huge_prestige_gain_effect = yes
+		if = {
+			limit = {
+				has_game_rule = VIET_historical_context_on
+			}
+			custom_tooltip = VIETmisc.0094.info
+		}
+	}	
+	option = { # Give them to local temple
+		name = VIETmisc.0094.b
+		VIET_huge_piety_gain_effect = yes
+		if = {
+			limit = {
+				has_game_rule = VIET_historical_context_on
+			}
+			custom_tooltip = VIETmisc.0094.info
+		}
+	}	
+	option = { # Use as charms to ward off bad luck
+		name = VIETmisc.0094.c
+		add_character_modifier = {
+			modifier = VIET_thunderstone_talisman
+			duration = 8
+		}
+		if = {
+			limit = {
+				has_game_rule = VIET_historical_context_on
+			}
+			custom_tooltip = VIETmisc.0094.info
+		}
+	}
+	option = { # Give to scholars to study
+		name = VIETmisc.0094.d
+		add_character_modifier = {
+			modifier = VIET_thunderstone_studies
+			duration = 8
+		}
+		if = {
+			limit = {
+				has_game_rule = VIET_historical_context_on
+			}
+			custom_tooltip = VIETmisc.0094.info
+		}
+	}
+}
+
+
+
+
+# Courtier dreams of the sandman
+VIETmisc.0095 = {
+	type = character_event
+	title = VIETmisc.0095.t
+	desc = VIETmisc.0095.desc
+	theme = vassal
+	
+	left_portrait = {
+		character = scope:scope_VIET_sandman_dreamer
+		animation = happiness
+	}	
+	right_portrait = {
+		character = scope:scope_VIET_sandman_skeptic
+		animation = disapproval
+	}
+	
+	trigger = {
+		any_courtier = {
+			is_available_ai_adult = yes
+			NOT = { has_trait = cynical }
+		}	
+		any_courtier = {
+			is_available_ai_adult = yes
+			has_trait = cynical
+		}	
+	}
+	
+	weight_multiplier = {
+		base = 1
+		modifier = {
+			add = 0.2
+			has_trait = gregarious
+		}
+		modifier = {
+			add = -0.2
+			has_trait = shy
+		}
+		modifier = {
+			add = 0.2
+			has_trait = zealous
+		}
+		modifier = {
+			add = -0.2
+			has_trait = cynical
+		}
+		modifier = {
+			add = 0.2
+			has_trait = trusting
+		}
+		modifier = {
+			add = -0.2
+			has_trait = paranoid
+		}
+	}
+
+	immediate = {
+		random_courtier = {
+			limit = {
+				is_available_ai_adult = yes
+				NOT = { has_trait = cynical }
+			}
+			save_scope_as = scope_VIET_sandman_dreamer
+		}
+		random_courtier = {
+			limit = {
+				is_available_ai_adult = yes
+				has_trait = cynical
+			}
+			save_scope_as = scope_VIET_sandman_skeptic
+		}
+	}
+	
+	option = { # Dream is probably real
+		name = VIETmisc.0095.a
+		scope:scope_VIET_sandman_dreamer = {
+			add_opinion = {
+				target = root
+				modifier = VIET_opinion_believed_sandman_story
+			}		
+		}
+		scope:scope_VIET_sandman_skeptic = {
+			add_opinion = {
+				target = root
+				modifier = VIET_opinion_sandman_dialogue_disagree
+			}		
+		}
+	}	
+	option = { # Dream is probably just a dream
+		name = VIETmisc.0095.b
+		scope:scope_VIET_sandman_dreamer = {
+			add_opinion = {
+				target = root
+				modifier = VIET_opinion_didnt_believe_sandman_story
+			}		
+		}
+		scope:scope_VIET_sandman_skeptic = {
+			add_opinion = {
+				target = root
+				modifier = VIET_opinion_sandman_dialogue_agree
+			}		
+		}
+	}
+}
+
+
+
+# Come across an ancient standing stone
+VIETmisc.0096 = {
+	type = character_event
+	title = VIETmisc.0096.t
+	desc = VIETmisc.0096.desc
+	theme = VIET_theme_ancient_cairn
+	
+	left_portrait = {
+		character = root
+		animation = personality_rational
+	}
+	
+	weight_multiplier = {
+		base = 1
+		modifier = {
+			add = 0.2
+			has_trait = brave
+		}
+		modifier = {
+			add = -0.2
+			has_trait = craven
+		}
+		modifier = {
+			add = 0.2
+			has_trait = ambitious
+		}
+		modifier = {
+			add = -0.2
+			has_trait = content
+		}
+		modifier = {
+			add = 0.2
+			has_trait = calm
+		}
+		modifier = {
+			add = -0.2
+			has_trait = wrathful
+		}
+	}
+	
+	option = { # Interesting
+		name = VIETmisc.0096.a
+		add_character_modifier = {
+			modifier = VIET_learning_local_lore
+			years = 4
+		}
+	}
 }
 

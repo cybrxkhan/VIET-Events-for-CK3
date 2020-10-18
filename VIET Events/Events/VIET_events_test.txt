@@ -21,15 +21,28 @@
 
 ###########################################################################################################################
 # 
-# OLD EVENTS NOT INCLUDED
+# OLD EVENTS NOT INCLUDED -- will come back to some of these later
 # 
 # Dream - Temptation VIETnam.221-223 - to do later
 # African fufu feast - VIETmisc.2005 - Fufu did not exist in Africa at the time, since it relies on a New World plant, cassava
 # Book is 3Deep5Me - VIETmisc.8329 - too similar to new event
 # Courtier picks up games hobby - VIETmisc.8437 - no CK3 equivalent
-# Maitreya Buddha claimant - VIETmisc.8075 - to do later
+# Maitreya Buddha claimant - VIETmisc.8075 - province event, to do later
 # Courtier chokes and dies - VIETmisc.8078-8079 - to do later, need to look more into how to code death and death reasons
 # Child wonders what to do when growing up - VIETMisc.8081 - to do later, will do several childhood events at once
+# Blacksmiths in province become renowned - VIETmisc.8282 - province event, to do later
+# Benevolent spirit residing in forest - VIETmisc.8288 - province event, to do later
+# Mad alchemist living in the wilderness - VIETmisc.8292 - province event, to do later
+# Miscellaneous artifact events - VIETmisc.8297 - VIETmisc.8310 - to do later, when PI adds in a proper official artifact system
+# Village mysteriously disappears - VIETmisc.8314 - province event, to do later
+# Happy perfectly arranged marriage - VIETmisc.8315 - province event, already has similar version in new VIET
+# Kobold mine infestation - VIETmisc.2276 - province event, to do later
+# Blacksmiths in province are renowned - VIETmisc.8282 - province event, to do later
+# Protective spirit in forest - VIETmisc.8288 - province event, to do later
+# Rumors of a mad scientist - VIETmisc.8292 - province event, to do later
+# Misc artifact events - VIETmisc.8297 - VIETmisc.8310 - to do later, when PI adds in a proper official artifact system
+# Population of town disappears - VIETmisc.8314 - province event, to do later
+# A perfect wedding - VIETmisc.8315 - province event, to do later
 # 
 ###########################################################################################################################
 

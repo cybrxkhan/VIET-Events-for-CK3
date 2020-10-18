@@ -84,3 +84,51 @@ VIET_opinion_gave_me_a_gift = {
 	opinion = 10
 	stacking = yes
 }
+VIET_opinion_shiny_pebble_gift = {
+	years = 3
+	decaying = yes
+	opinion = 5
+}
+VIET_opinion_ignore_maid_harassment = {
+	years = 5
+	opinion = 25
+}
+VIET_opinion_warned_about_maids = {
+	years = 5
+	opinion = -25
+}
+VIET_opinion_maid_harasser = {
+	years = 5
+	opinion = -25
+}
+VIET_opinion_supported_construction_noise = {
+	years = 3
+	decaying = yes
+	opinion = 15
+}
+VIET_opinion_ignored_construction_noise = {
+	years = 3
+	decaying = yes
+	opinion = -15
+}
+VIET_opinion_compromise_construction_noise = {
+	years = 3
+	decaying = yes
+	opinion = 10
+}
+VIET_opinion_believed_sandman_story = {
+	years = 1
+	opinion = 5
+}
+VIET_opinion_didnt_believe_sandman_story = {
+	years = 1
+	opinion = -5
+}
+VIET_opinion_sandman_dialogue_agree = {
+	years = 1
+	opinion = 5
+}
+VIET_opinion_sandman_dialogue_disagree = {
+	years = 1
+	opinion = -5
+}

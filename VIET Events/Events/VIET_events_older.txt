@@ -14,6 +14,7 @@
 # 1021-1024		Furniture
 # 1025-1029		Time
 # 1030-1032		Moss
+# 1033-1040		Rocks and Minerals
 # 
 ############################################################################################################################
 
@@ -302,6 +303,9 @@ VIETold.1005 = {
 			has_culture_group = culture_group:west_slavic_group
 			has_culture_group = culture_group:latin_group
 			has_culture_group = culture_group:frankish_group
+			has_culture_group = culture_group:balto_finnic_group
+			has_culture_group = culture_group:volga_finnic_group
+			has_culture_group = culture_group:north_germanic_group
 		}
 	}
 	
@@ -2119,6 +2123,585 @@ VIETold.1032 = {
 		add_character_modifier = {
 			modifier = VIET_outdoors_nap
 			days = 1111
+		}
+	}
+}
+
+
+
+##################################################
+# ROCKS AND MINERALS 1033-1040
+##################################################
+
+
+# Courtier hits their head on a rock
+VIETold.1033 = {
+	type = character_event
+	title = VIETold.1033.t
+	desc = VIETold.1033.desc
+	theme = VIET_theme_garden_generic
+
+	left_portrait = {
+		character = scope:scope_VIET_head_boinker
+		animation = pain
+	}		
+	right_portrait = {
+		character = root
+		animation = disbelief
+	}	
+
+	trigger = {
+		any_courtier_or_guest = {
+			is_available_ai_adult = yes
+		}
+	}
+	
+	weight_multiplier = {
+		base = 1
+		modifier = {
+			add = 0.2
+			has_trait = gregarious
+		}
+		modifier = {
+			add = -0.2
+			has_trait = shy
+		}
+		modifier = {
+			add = 0.2
+			has_trait = lazy
+		}
+		modifier = {
+			add = -0.2
+			has_trait = diligent
+		}
+		modifier = {
+			add = 0.2
+			has_trait = brave
+		}
+		modifier = {
+			add = -0.2
+			has_trait = craven
+		}
+	}
+	
+	immediate = {
+		random_courtier_or_guest = {
+			limit = {
+				is_available_ai_adult = yes
+			}
+			increase_wounds_no_death_effect = { REASON = fall }
+			save_scope_as = scope_VIET_head_boinker
+		}
+	}
+	
+	option = { # Oh no!
+		name = VIETold.1033.a
+	}
+}
+
+
+# Find a special rock
+VIETold.1034 = {
+	type = character_event
+	title = VIETold.1034.t
+	desc = VIETold.1034.desc
+	theme = VIET_theme_garden_generic
+
+	left_portrait = {
+		character = root
+		animation = personality_rational
+	}	
+	
+	trigger = {
+		NOT = { has_character_modifier = VIET_special_rock }
+	}
+	
+	weight_multiplier = {
+		base = 1
+		modifier = {
+			add = 0.2
+			has_trait = patient
+		}
+		modifier = {
+			add = -0.2
+			has_trait = impatient
+		}
+		modifier = {
+			add = 0.2
+			has_trait = content
+		}
+		modifier = {
+			add = -0.2
+			has_trait = ambitious
+		}
+		modifier = {
+			add = 0.2
+			has_trait = paranoid
+		}
+		modifier = {
+			add = -0.2
+			has_trait = trusting
+		}
+	}
+	
+	option = { # Cool
+		name = VIETold.1034.a
+		add_character_modifier = {
+			modifier = VIET_special_rock
+		}
+	}
+}
+
+
+# Character comes across a boulder believed to have spiritual properties
+VIETold.1035 = {
+	type = character_event
+	title = VIETold.1035.t
+	desc = VIETold.1035.desc
+	theme = VIET_theme_skyrim_forest
+
+	left_portrait = {
+		character = root
+		animation = personality_rational
+	}	
+	
+	weight_multiplier = {
+		base = 1
+		modifier = {
+			add = 0.2
+			has_trait = diligent
+		}
+		modifier = {
+			add = -0.2
+			has_trait = lazy
+		}
+		modifier = {
+			add = 0.2
+			has_trait = zealous
+		}
+		modifier = {
+			add = -0.2
+			has_trait = cynical
+		}
+		modifier = {
+			add = 0.2
+			has_trait = brave
+		}
+		modifier = {
+			add = -0.2
+			has_trait = craven
+		}
+	}
+	
+	option = { # Cool
+		name = VIETold.1035.a
+		random = {
+			chance = 40
+			add_character_modifier = {
+				modifier = VIET_boulder_blessing
+				years = 3
+			}		
+		}
+		stress_impact = {
+			cynical = minor_stress_impact_gain
+		}	
+	}
+	
+	option = { # Cool
+		name = VIETold.1035.b
+		add_character_modifier = {
+			modifier = VIET_skeptical_ruler
+			years = 2
+		}
+		stress_impact = {
+			zealous = minor_stress_impact_gain
+		}	
+	}
+}
+
+
+
+# Farmers find the bones of a mystical beast
+VIETold.1036 = {
+	type = character_event
+	title = VIETold.1036.t
+	desc = VIETold.1036.desc
+	theme = realm
+
+	left_portrait = {
+		character = root
+		animation = personality_rational
+	}	
+	
+	weight_multiplier = {
+		base = 1
+		modifier = {
+			add = 0.2
+			has_trait = humble
+		}
+		modifier = {
+			add = -0.2
+			has_trait = arrogant
+		}
+		modifier = {
+			add = 0.2
+			has_trait = greedy
+		}
+		modifier = {
+			add = -0.2
+			has_trait = generous
+		}
+		modifier = {
+			add = 0.2
+			has_trait = just
+		}
+		modifier = {
+			add = -0.2
+			has_trait = arbitrary
+		}
+	}
+	
+	option = { # Study it
+		name = VIETold.1036.a
+		random_list = {
+			25 = { add_learning_skill = 1 }
+			75 = { add_learning_lifestyle_xp = medium_lifestyle_xp }
+		}
+	}	
+	option = { # Get rid of it
+		name = VIETold.1036.b
+		add_gold = 25
+		stress_impact = {
+			diligent = miniscule_stress_impact_gain
+		}
+		
+	}
+	option = { # Use it as decoration
+		name = VIETold.1036.c
+		add_character_modifier = {
+			modifier = VIET_has_dinosaur_bone
+			years = 10
+		}
+		stress_impact = {
+			humble = miniscule_stress_impact_gain
+		}
+	}
+}
+
+
+# Find some shiny pebbles
+VIETold.1037 = {
+	type = character_event
+	title = VIETold.1037.t
+	desc = VIETold.1037.desc
+	theme = VIET_theme_skyrim_forest
+
+	left_portrait = {
+		character = root
+		animation = admiration
+	}	
+	
+	weight_multiplier = {
+		base = 1
+		modifier = {
+			add = 0.2
+			has_trait = humble
+		}
+		modifier = {
+			add = -0.2
+			has_trait = arrogant
+		}
+		modifier = {
+			add = 0.2
+			has_trait = greedy
+		}
+		modifier = {
+			add = -0.2
+			has_trait = generous
+		}
+		modifier = {
+			add = 0.2
+			has_trait = just
+		}
+		modifier = {
+			add = -0.2
+			has_trait = arbitrary
+		}
+	}
+	
+	option = { # Nice
+		name = VIETold.1037.a
+		VIET_tiny_piety_gain_effect = yes
+		stress_impact = {
+			base = miniscule_stress_impact_loss
+		}
+	}	
+	option = { # Give to kids
+		name = VIETold.1037.b
+		trigger = {
+			any_child = {
+				NOT = { is_adult = yes }
+				is_ai = yes
+			}
+		}
+		every_child = {
+			limit = {
+				NOT = { is_adult = yes }
+				is_ai = yes				
+			}
+			add_opinion = {
+				target = root
+				modifier = VIET_opinion_shiny_pebble_gift
+			}
+		}
+	}
+}
+
+
+# Your character hears about lingams and yoni
+VIETold.1038 = {
+	type = character_event
+	title = VIETold.1038.t
+	desc = VIETold.1038.desc
+	theme = faith
+	override_background = { event_background = throne_room }
+
+	left_portrait = {
+		character = root
+		animation = personality_cynical
+	}
+	
+	trigger = {
+		NOT = { has_game_rule = VIET_conversion_universe_events }
+		NOR = {
+			has_culture_group = culture_group:dravidian_group
+			has_culture_group = culture_group:indo_aryan_group
+			has_culture_group = culture_group:burman_group
+			has_culture_group = culture_group:tibetan_group
+			religion = { is_in_family = rf_eastern }
+			capital_province = {
+				geographical_region = graphical_india
+			}
+		}
+	}
+	
+	weight_multiplier = {
+		base = 1
+		modifier = {
+			add = 0.2
+			has_trait = gregarious
+		}
+		modifier = {
+			add = -0.2
+			has_trait = shy
+		}
+		modifier = {
+			add = 0.2
+			has_trait = diligent
+		}
+		modifier = {
+			add = -0.2
+			has_trait = lazy
+		}
+		modifier = {
+			add = 0.2
+			has_trait = cynical
+		}
+		modifier = {
+			add = -0.2
+			has_trait = zealous
+		}
+	}
+	
+	option = { # Bad infidel people!
+		name = VIETold.1038.a
+		VIET_small_piety_gain_effect = yes
+		stress_impact = {
+			cynical = miniscule_stress_impact_gain
+			humble = miniscule_stress_impact_gain
+			compassionate = miniscule_stress_impact_gain
+		}
+		if = {
+			limit = {
+				has_game_rule = VIET_historical_context_on
+			}
+			custom_tooltip = VIETold.1038.info
+		}
+	}	
+	option = { # Sounds interesting
+		name = VIETold.1038.b
+		VIET_small_piety_loss_effect = yes
+		add_character_modifier = {
+			modifier = VIET_amused_ruler
+			years = 3
+		}
+		if = {
+			limit = {
+				has_game_rule = VIET_historical_context_on
+			}
+			custom_tooltip = VIETold.1038.info
+		}
+	}
+	option = { # Tolerate
+		name = VIETold.1038.c
+		VIET_small_piety_loss_effect = yes
+		add_character_modifier = {
+			modifier = VIET_religiously_tolerant_ruler
+			years = 3
+		}
+		stress_impact = {
+			zealous = minor_stress_impact_gain
+		}
+		if = {
+			limit = {
+				has_game_rule = VIET_historical_context_on
+			}
+			custom_tooltip = VIETold.1038.info
+		}
+	}
+}
+
+
+
+# Merchant shows off a fire-proof napkin
+VIETold.1039 = {
+	type = character_event
+	title = VIETold.1039.t
+	desc = VIETold.1039.desc
+	theme = party
+
+	left_portrait = {
+		character = root
+		animation = admiration
+	}
+	
+	weight_multiplier = {
+		base = 1
+		modifier = {
+			add = 0.2
+			has_trait = gregarious
+		}
+		modifier = {
+			add = -0.2
+			has_trait = shy
+		}
+		modifier = {
+			add = 0.2
+			has_trait = gluttonous
+		}
+		modifier = {
+			add = -0.2
+			has_trait = temperate
+		}
+		modifier = {
+			add = 0.2
+			has_trait = greedy
+		}
+		modifier = {
+			add = -0.2
+			has_trait = generous
+		}
+	}
+	
+	option = { # Cool story bro
+		name = VIETold.1039.a
+		trigger = {
+			OR = {
+				is_ai = no
+				gold >= 15
+			}
+		}
+		remove_short_term_gold = 15
+		add_character_modifier = {
+			modifier = VIET_magical_napkins
+			years = 7
+		}
+		if = {
+			limit = {
+				has_game_rule = VIET_historical_context_on
+			}
+			custom_tooltip = VIETold.1039.info
+		}
+	}	
+	option = { # Cool story bro
+		name = VIETold.1039.b
+		if = {
+			limit = {
+				has_game_rule = VIET_historical_context_on
+			}
+			custom_tooltip = VIETold.1039.info
+		}
+	}
+}
+
+
+# Sulfur treatment for acne
+VIETold.1040 = {
+	type = character_event
+	title = VIETold.1040.t
+	desc = VIETold.1040.desc
+	theme = medicine
+
+	left_portrait = {
+		character = root
+		animation = worry
+	}
+	
+	weight_multiplier = {
+		base = 1
+		modifier = {
+			add = 0.2
+			has_trait = diligent
+		}
+		modifier = {
+			add = -0.2
+			has_trait = lazy
+		}
+		modifier = {
+			add = 0.2
+			has_trait = wrathful
+		}
+		modifier = {
+			add = -0.2
+			has_trait = calm
+		}
+		modifier = {
+			add = 0.2
+			has_trait = paranoid
+		}
+		modifier = {
+			add = -0.2
+			has_trait = trusting
+		}
+	}
+	
+	option = { # purchase treatment
+		name = VIETold.1040.a
+		trigger = {
+			OR = {
+				is_ai = no
+				gold >= 10
+			}
+		}
+		remove_short_term_gold = 10
+		if = {
+			limit = {
+				has_game_rule = VIET_historical_context_on
+			}
+			custom_tooltip = VIETold.1040.info
+		}
+	}	
+	option = { # not worth it
+		name = VIETold.1040.b
+		add_character_modifier = {
+			modifier = VIET_bad_acne
+			years = 3
+		}
+		if = {
+			limit = {
+				has_game_rule = VIET_historical_context_on
+			}
+			custom_tooltip = VIETold.1040.info
 		}
 	}
 }
