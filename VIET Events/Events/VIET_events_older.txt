@@ -2295,6 +2295,7 @@ VIETold.1035 = {
 	
 	option = { # Cool
 		name = VIETold.1035.a
+		VIET_tiny_piety_gain_effect = yes
 		random = {
 			chance = 40
 			add_character_modifier = {

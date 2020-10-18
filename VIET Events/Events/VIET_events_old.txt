@@ -6266,7 +6266,7 @@ VIETold.2086 = {
 				#	factor = 1.2
 				#	has_trait = callous
 				#}
-				desc = VIETold.2086.d.toast.a
+				desc = VIETold.2086.d.a
 				send_interface_toast = {
 					left_icon = ROOT
 					title = VIETold.2086.d.toast.failure
@@ -6295,7 +6295,7 @@ VIETold.2086 = {
 				#	factor = 1.2
 				#	has_trait = compassionate
 				#}
-				desc = VIETold.2086.toast.b
+				desc = VIETold.2086.d.b
 				send_interface_toast = {
 					left_icon = ROOT
 					title = VIETold.2086.d.toast.success
@@ -6723,12 +6723,12 @@ VIETold.2091 = {
 				terrain = hills
 				terrain = desert_mountains
 			}
-			any_neighboring_county = {
-				OR = {
-					terrain = mountains
-					terrain = desert_mountains
-				}			
-			}
+			#any_neighboring_county = {
+			#	OR = {
+			#		terrain = mountains
+			#		terrain = desert_mountains
+			#	}			
+			#}
 		}
 	}
 

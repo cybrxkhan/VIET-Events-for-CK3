@@ -7185,7 +7185,7 @@ VIETmisc.0091 = {
 		}
 	}	
 	option = { # Bury it
-		name = VIETmisc.0091.a
+		name = VIETmisc.0091.b
 		remove_short_term_gold = 15
 		VIET_large_piety_gain_effect = yes
 	}	
@@ -7205,7 +7205,7 @@ VIETmisc.0091 = {
 		}
 	}	
 	option = { # Skeleton should be studied
-		name = VIETmisc.0091.c
+		name = VIETmisc.0091.d
 		trigger = {
 			learning >= medium_skill_rating
 			has_character_flag = VIET_skeleton_found_learning_reality
@@ -7346,7 +7346,7 @@ VIETmisc.0093 = {
 		}
 	}	
 	option = { # Cool
-		name = VIETmisc.0093.a
+		name = VIETmisc.0093.b
 		VIET_medium_prestige_gain_effect = yes
 		if = {
 			limit = {
@@ -7421,7 +7421,7 @@ VIETmisc.0094 = {
 		name = VIETmisc.0094.c
 		add_character_modifier = {
 			modifier = VIET_thunderstone_talisman
-			duration = 8
+			years = 8
 		}
 		if = {
 			limit = {
@@ -7434,7 +7434,7 @@ VIETmisc.0094 = {
 		name = VIETmisc.0094.d
 		add_character_modifier = {
 			modifier = VIET_thunderstone_studies
-			duration = 8
+			years = 8
 		}
 		if = {
 			limit = {
