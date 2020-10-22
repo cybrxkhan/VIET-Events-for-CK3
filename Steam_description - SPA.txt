@@ -1,6 +1,6 @@
 [img]http://i.imgur.com/OhIA5bm.jpg[/img]
 
-[h1]Versión actual: 1.1.1 "Al-Tusi" (Salida 04/10/20, Compatible con versión vanilla 1.1.X)[/h1]
+[h1]Versión actual: 1.1.2 "Liber Lapidum" (Salida 17/10/20, Compatible con versión vanilla 1.1.X)[/h1]
 [B]Echa un Vistazo a [url=https://forum.paradoxplaza.com/forum/threads/mod-viet-events-for-ck3-a-flavor-and-immersion-event-mod.1422081/]Tema del Foro[/url] Para Más Información[/B]
 [B]Descarga/Instalación manual [url=https://github.com/cybrxkhan/VIET-Events-for-CK3/releases]en Github[/url]
 [/B]
@@ -22,7 +22,7 @@ Siéntete libre de usar mi trabajo con tus mods - todo lo que pido es reconocimi
 [img]http://i.imgur.com/EyXurbK.jpg[/img]
 
 [LIST]
-[*]Más de [B]231 nuevos eventos[/B] y cadenas, y aún se añadirán más con cada actualización
+[*]Más de [B]266 nuevos eventos[/B] y cadenas, y aún se añadirán más con cada actualización
 [*]Regla de juego para desactivar los eventos estúpidos para aquellos que no les guste, con tres niveles para escoger entre: Balanceado (Predeterminado), Serio (Restringido), y Todos los eventos (Todo)
 [*][B]Compatible con casi cualquier cosa[/B] ya que no modifico archivos del vanilla - incluso con mods de conversión total puedes desactivar los eventos que hagan referencias a cosas o lugares específicos del mundo medieval que no tendrían sentido en otros periodos o universos (como mods fantásticos o de ciencia ficción)
 [*]Aprende historia con las [B]descripciones de Contexto Histórico[/B] que proporcionan información sobre la inspiración detrás de algunos eventos - a veces, ¡la realidad supera la ficción! (Estos se pueden desactivar con una regla de juego para aquellos que creen que no ayuda a la inmersión.)
@@ -50,21 +50,19 @@ Gracias.
 
 [img]http://i.imgur.com/RQ5QZTF.jpg[/img]
 
-[h1]Versión 1.1.1 "Al-Tusi"[/h1]
+[h1]Versión 1.1.2 "Liber Lapidum"[/h1]
 
-[I]El polímata Iraní al-Tusi contribuyó en diversos campos de la ciencia, como el desarrollo de la trigonometría como disciplina matemática. Era el astrónomo de la corte de Hulegu Khan, nieto de Gengis Khan y fundador del Ilkanato. Bajo el patronazgo de Hulegu, al-tusi fundó el observatorio de Maragheh, uno de los más avanzados del mundo medieval, y el cual empleó astrónomos islámicos y chinos.[/I]
+[I]El Liber Lapidum fue la obra más famosa de Marbodio de Rennes, un estudioso francés y archidiácono entre los siglos XI y XII. Fue el lapidario más extensamente distribuído de la Europa medieval. Los lapidarios son antiguos libros eruditos que trataban rocas y gemas y sus supuestas propiedades físicas y sobrenaturales.[/I]
 
 [LIST]
-[*]Añadidos 12 eventos nuevos sobre los siguientes temas:
+[*]Añadidos 35 eventos nuevos sobre los siguientes temas:
 [LIST]
-[*]6 Números
-[*]6 Sol*
+[*]8 Tierra
+[*]8 Rocas y Minerales*
+[*]19 Genéricos*
 [/LIST]
-[*]Añadida nueva regla de juego para modificar la frecuencia con la que aparecen los eventos (Cuidado: Esto solo afecta a la probabilidad - el sistema RNG aún puede causar que unos eventos aparezcan mucho, otros ni siquiera lo hagan, depende de la suerte, ¡así que úsala con precaución!)
-[*]Añadidas variaciones especiales de traducción para muchos eventos de VIET para nórdigos paganos, cortesía de [B]tora75[/B]
-[*]Recalibra la frecuencia de los eventos de acuerdo a la nueva regla de frecuencias
-[*]Arreglado el evento de olvidarte de un sueño hace que pierdas prestigio en lugar de ganarlo
-[*]Otros arreglos de bugs
+[*]Añadidas varias variaciones culturales para las imágenes de los eventos
+[*]Otros arreglos menores de bugs
 [/LIST]
 
 *Adaptación desde VIET para CK2
