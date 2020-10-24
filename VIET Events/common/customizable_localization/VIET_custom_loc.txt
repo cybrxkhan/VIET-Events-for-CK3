@@ -1,0 +1,30 @@
+VIETGrandparent = {
+	type = character
+
+	text = {
+		trigger = { is_female = yes }
+		localization_key = relation_grandmother
+	}
+
+	text = {
+		localization_key = relation_grandfather
+	}
+}
+
+VIETGrandparentPossessive = {
+	type = character
+
+	text = {
+		trigger = { is_female = yes }
+		localization_key = relation_grandmother_possessive
+	}
+
+	text = {
+		localization_key = relation_grandfather_possessive
+	}
+}
+
+
+
+
+
