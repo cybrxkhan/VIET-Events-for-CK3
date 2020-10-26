@@ -132,3 +132,62 @@ VIET_opinion_sandman_dialogue_disagree = {
 	years = 1
 	opinion = -5
 }
+VIET_opinion_didnt_believe_me_myling = {
+	years = 3
+	opinion = -10
+}
+VIET_opinion_believes_me_myling = {
+	years = 3
+	opinion = 10
+}
+VIET_opinion_confused = {
+	years = 3
+	decaying = yes
+	opinion = -5
+	stacking = yes
+}
+VIET_opinion_likes_arms = {
+	years = 6
+	opinion = 12
+}
+VIET_opinion_insensitive_comments = {
+	years = 5
+	decaying = yes
+	opinion = -10
+	stacking = yes
+}
+VIET_opinion_chastised_ghost_pranker = {
+	years = 4
+	decaying = yes
+	opinion = -10
+}
+VIET_opinion_supported_ghost_pranker = {
+	years = 4
+	decaying = yes
+	opinion = 10
+}
+VIET_opinion_chastised_ghost_prank_victim = {
+	years = 4
+	decaying = yes
+	opinion = -10
+}
+VIET_opinion_supported_ghost_prank_victim = {
+	years = 4
+	decaying = yes
+	opinion = 10
+}
+VIET_opinion_scooby_doo_villain_release = {
+	years = 4
+	decaying = yes
+	opinion = 10
+}
+VIET_opinion_scooby_doo_villain_forced_apology = {
+	years = 4
+	decaying = yes
+	opinion = -10
+}
+VIET_opinion_scooby_doo_villain_forced_reward = {
+	years = 4
+	decaying = yes
+	opinion = -20
+}
