@@ -279,9 +279,9 @@
  VIET_scooby_doo_villain_let_go_desc:0 "This character, as a ruler of some territory, did not punish one of their courtiers who was terrorizing the locals by pretending to be a ghost."
  VIET_scooby_doo_villain_punisher:0 "This character, as a ruler of some territory, punished one of their courtiers who was terrorizing the locals by pretending to be a ghost."
  VIET_haunted_house_curse:0 "Curse of the Haunted House"
- VIET_hospitality_spirit_blessing:0 "Spirit's Blessing"
- VIET_hospitality_spirit_blessing_desc:0 "This person passed a test of character from a ghost who visited their house."
  VIET_hospitality_spirit_cursed:0 "Spirit's Curse"
- VIET_hospitality_spirit_cursed_desc:0 "This person failed a test of character from a ghost who visited their house."
+ VIET_hospitality_spirit_cursed_desc:0 "This person failed a test of character from a ghost who visited their house. Or at least, that's what their servants claimed - who knows whether such a supernatural incident was true or just a figment of this person's imagination?"
+ VIET_hospitality_spirit_blessing:0 "Spirit's Blessing"
+ VIET_hospitality_spirit_blessing_desc:0 "This person passed a test of character from a ghost who visited their house. Or at least, that's what their servants claimed - who knows whether such a supernatural incident was true or just a figment of this person's imagination?"
  # 1.1.4 - please leave this comment here
  xxxxx:0 "xxxxx"

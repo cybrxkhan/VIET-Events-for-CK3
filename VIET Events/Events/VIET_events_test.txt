@@ -43,6 +43,13 @@
 # Misc artifact events - VIETmisc.8297 - VIETmisc.8310 - to do later, when PI adds in a proper official artifact system
 # Population of town disappears - VIETmisc.8314 - province event, to do later
 # A perfect wedding - VIETmisc.8315 - province event, to do later
+# Ghosts keep visiting a province - VIETmisc.8370 - province event, to do later
+# Respected elder passes away - VIETmisc.8371 - province event, to do later
+# Meeting the Lithuanian goddess of death - VIETmisc.8373-8374 - need to revamp, to do later
+# Banshee Event - VIETmisc.8375 - need to revamp for culture province, to do later
+# Misc province events - VIETmisc.8389-8396 - province events, to do later
+# Black cat events - VIETmisc.8397-8398 - revise, to do later
+# 
 # 
 ###########################################################################################################################
 
