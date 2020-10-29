@@ -501,7 +501,7 @@
  VIETmisc.0099.desc:0 "In a nearby settlement I’m visiting, I see a house at the edge of town. The windows are broken, and the walls look like they are crumbling and could fall apart at any moment. Weeds and vines are all over the building grounds, and the overall atmosphere is quite ominous.\n\n“No one’s lived there for many decades,” one of the local elders explains to me, when asked about it. “It’s certain to be haunted by the spirits of past inhabitants, so no one dares go in there, save for a few foolhardy morons who always come out changed for the worse.”"
  VIETmisc.0099.a:0 "Oh dear. I will make sure to stay far away from it, then."
  VIETmisc.0099.b:0 "Come on, it can’t be that bad. I’ll take a look."
- VIETmisc.0099.message:0 "The locals say you are now cursed by visiting the haunted house"
+ VIETmisc.0099.message:0 "The locals say you are now cursed"
  VIETmisc.0100.t:0 "Self-Defense Against Possession?"
  VIETmisc.0100.desc:0 "“I swear, he was possessed by a spirit! He approached me while screaming and speaking in tongues and tried to kill me!” the woman cries. “It was an accident! He was trying to hurt me, so I grabbed the knife without thinking…”\n\nI am overseeing the trial of a commoner accused of murder. She says the man she killed was possessed by a spirit. There are no witnesses, but several other commoners did say this man was strange and would sometimes act in bizarre ways, like as if a ghost possessed him. There had been previous cases where this man attempted to harm others, though never to the point of threatening their lives. Lastly, the woman did not resist arrest and willingly complied with the authorities."
  VIETmisc.0100.a:0 "As she was in danger, her actions are reasonable. No punishment is needed."

@@ -794,7 +794,7 @@
  VIETold.1041.desc:0 "Estoy practicando ejercicios de combate con mis guerreros. Practico unos movimientos con mis armas mientras estoy a pecho descubierto. [scope_VIET_yotsugi.GetTitledFirstName], que observa toda la escena, comenta: "Tienes buenos músculos, [ROOT.Char.GetTitledFirstNameNoTooltip]. Estás bastante fornido, y tienes buena carne. Sí, tus músculos carnosos parecen deliciosos.""
  VIETold.1041.a:0 "Esto... ¿vale?"
  VIETold.1042.t:0 "Buena Postura"
- VIETold.1042.desc:0 "[scope_VIET_yotsugi_chatter.GetTitledFirstName] me estaba contando algo, hablaba con una elegante postura. En otras palabras, [scope_VIET_yotsugi.Custom('ES_ElElla')] intentaba decir las cosas mientras mantenía una postura perfecta, para dar énfasis a sus argumentos."
+ VIETold.1042.desc:0 "[scope_VIET_yotsugi.GetTitledFirstName] me estaba contando algo, hablaba con una elegante postura. En otras palabras, [scope_VIET_yotsugi.Custom('ES_ElElla')] intentaba decir las cosas mientras mantenía una postura perfecta, para dar énfasis a sus argumentos."
  VIETold.1042.a:0 "Decidí responder con una postura igual de elegante."
  VIETold.1042.b:0 "Tus poses son estúpidas y carecen de efectividad."
  VIETold.1042.info:0 "#emphasis Contexto Histórico:#! Ya en tiempos de los griegos y romanos, los oradores hábiles se entrenaban para acompañar su discurso con gestos deliberados específicos, aunque las evidencias son escasas a medida que nos alejamos en el tiempo. El término formal para la gesticulación como fórmula retórica se llama quironomía."
