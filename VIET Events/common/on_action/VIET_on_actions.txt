@@ -72,7 +72,8 @@ VIET_events_yearly_pulse = {
 				subtract = 20
 			}
 		}
-		24000 = 0
+		
+		27000 = 0
 		
 		#######################################
 		# OLDEST VIET
@@ -253,7 +254,7 @@ VIET_events_tri_yearly_pulse = {
 				subtract = 20
 			}
 		}
-		21000 = 0 # 20000?
+		23000 = 0 # 20000?
 		
 		#######################################
 		# OLDEST VIET
@@ -425,6 +426,7 @@ VIET_events_five_yearly_pulse = {
 				subtract = 20
 			}
 		}
+		
 		18000 = 0
 		
 		#######################################
@@ -473,7 +475,7 @@ VIET_events_five_yearly_pulse = {
 		100 = VIETold.2030		# Traveler tells of a golden island beyond Japan
 		100 = VIETold.2034		# Old man recounts meeting the Dreamer
 		100 = VIETold.2037		# Maid recounts meeting the Dreamer
-		100 = VIETold.2039		# Scholar tells of an island on a lake
+		100 = VIETold.2038		# Scholar tells of an island on a lake
 		# Prophecy and Future
 		100 = VIETold.2044		# Seer predicts the coming of Genghis Khan
 		100 = VIETold.2049		# Pagan seer prophesizes the decline of polytheism
