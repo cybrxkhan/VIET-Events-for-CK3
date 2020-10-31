@@ -794,12 +794,13 @@ VIET_dying_acquaintance_advice = {
 VIET_beggar_burial = {
 	icon = piety_positive
 	county_opinion_add = 5
-	monthly_piety = 0.3
+	monthly_piety = 0.4
 }
 VIET_deaths_blessing = {
 	icon = piety_positive
 	intrigue = 1
-	health = 0.5
+	hostile_scheme_resistance_mult = 0.1
+	health = 0.3
 	monthly_piety = 0.5
 }
 VIET_zombie_outbreak_stories = {
@@ -828,8 +829,8 @@ VIET_executed_necrophiliac = {
 }
 VIET_imprisoned_necrophiliac = {
 	icon = dread_positive
-	county_opinion_add = 10
-	monthly_prestige = 0.2
+	county_opinion_add = 5
+	monthly_prestige = 0.1
 }
 VIET_heartless_towards_servants = {
 	icon = dread_negative
@@ -861,17 +862,26 @@ VIET_scooby_doo_villain_let_go = {
 }
 VIET_scooby_doo_villain_punisher = {
 	icon = county_modifier_opinion_positive
-	county_opinion_add = 5
+	county_opinion_add = 10
 	monthly_prestige = 0.3
+}
+VIET_haunted_house_curse = {
+	icon = piety_negative
+	health = -0.5
+	monthly_piety = -0.2
+	monthly_prestige = -0.2
 }
 VIET_hospitality_spirit_cursed = {
 	icon = prestige_negative
-	health = 
+	intrigue = -1
+	health = -0.3
+	monthly_piety = -0.2
 }
 VIET_hospitality_spirit_blessing = {
 	icon = prestige_positive
-	county_opinion_add = 5
-	monthly_prestige = 0.3
+	intrigue = 1
+	health = 0.3
+	monthly_piety = 0.2
 }
 
 

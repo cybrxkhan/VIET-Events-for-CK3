@@ -27,6 +27,7 @@
 # 0079-0082		Baklava
 # 0083-0088		Numbers
 # 0089-0096		Earth
+# 0097-0103		Spooky
 # 
 ############################################################################################################################
 
@@ -7600,6 +7601,624 @@ VIETmisc.0096 = {
 			modifier = VIET_learning_local_lore
 			years = 4
 		}
+	}
+}
+
+
+
+######################################################################
+# SPOOKY 0097-0103
+######################################################################
+
+
+# Courtier pranks another by pretending there's a ghost around
+VIETmisc.0097 = {
+	type = character_event
+	title = VIETmisc.0097.t
+	desc = VIETmisc.0097.desc
+	theme = friendly
+	override_background = { event_background = corridor_day }
+	
+	left_portrait = {
+		character = scope:scope_VIET_ghost_prankster
+		animation = schadenfreude
+	}	
+	right_portrait = {
+		character = scope:scope_VIET_ghost_prank_victim
+		animation = fear
+	}
+	
+	trigger = {
+		any_courtier = {
+			is_available_ai_adult = yes
+			OR = {
+				has_trait = gregarious
+				has_trait = sadistic
+				has_trait = deceitful
+			}
+			NOR = {
+				has_trait = shy
+				has_trait = craven
+				has_trait = trusting					
+				has_trait = paranoid					
+			}
+		}	
+		any_courtier = {
+			is_available_ai_adult = yes
+			OR = {
+				has_trait = shy
+				has_trait = craven
+				has_trait = trusting
+				has_trait = paranoid
+			}
+		}	
+	}
+	
+	weight_multiplier = {
+		base = 1
+		modifier = {
+			add = 0.2
+			has_trait = patient
+		}
+		modifier = {
+			add = -0.2
+			has_trait = impatient
+		}
+		modifier = {
+			add = 0.2
+			has_trait = deceitful
+		}
+		modifier = {
+			add = -0.2
+			has_trait = honest
+		}
+		modifier = {
+			add = 0.2
+			has_trait = calm
+		}
+		modifier = {
+			add = -0.2
+			has_trait = wrathful
+		}
+	}
+	
+	immediate = {
+		random_courtier = {
+			limit = {
+				is_available_ai_adult = yes
+				OR = {
+					has_trait = gregarious
+					has_trait = sadistic
+					has_trait = deceitful
+				}
+				NOR = {
+					has_trait = shy
+					has_trait = craven
+					has_trait = trusting					
+					has_trait = paranoid					
+				}
+			}
+			save_scope_as = scope_VIET_ghost_prankster
+		}	
+		random_courtier = {
+			limit = {
+				is_available_ai_adult = yes
+				OR = {
+					has_trait = shy
+					has_trait = craven
+					has_trait = trusting
+					has_trait = paranoid
+				}
+			}
+			save_scope_as = scope_VIET_ghost_prank_victim
+		}	
+	}
+	
+	option = { # Stop the pranking
+		name = VIETmisc.0097.a
+		scope:scope_VIET_ghost_prankster = {
+			add_opinion = {
+				target = root
+				modifier = VIET_opinion_chastised_ghost_pranker
+			}		
+		}
+		scope:scope_VIET_ghost_prank_victim = {
+			add_opinion = {
+				target = root
+				modifier = VIET_opinion_supported_ghost_prank_victim
+			}		
+		}
+		stress_impact = {
+			sadistic = miniscule_stress_impact_gain
+			callous = miniscule_stress_impact_gain
+			arrogant = miniscule_stress_impact_gain
+		}
+	}	
+	option = { # Stop falling for pranks
+		name = VIETmisc.0097.b
+		scope:scope_VIET_ghost_prankster = {
+			add_opinion = {
+				target = root
+				modifier = VIET_opinion_supported_ghost_pranker
+			}		
+		}
+		scope:scope_VIET_ghost_prank_victim = {
+			add_opinion = {
+				target = root
+				modifier = VIET_opinion_chastised_ghost_prank_victim
+			}		
+		}
+		stress_impact = {
+			compassionate = miniscule_stress_impact_gain
+			humble = miniscule_stress_impact_gain
+		}
+	}
+}
+
+
+
+# Courtier pretends to be a ghost to scare off local kids
+VIETmisc.0098 = {
+	type = character_event
+	title = VIETmisc.0098.t
+	desc = VIETmisc.0098.desc
+	theme = realm
+	
+	left_portrait = {
+		character = scope:scope_VIET_fake_ghost
+		animation = anger
+	}
+	
+	trigger = {
+		any_courtier = {
+			is_available_ai_adult = yes
+			OR = {
+				has_trait = wrathful
+				has_trait = sadistic
+				has_trait = callous
+				has_trait = impatient
+				has_trait = vengeful
+			}
+			NOR = {
+				has_trait = shy
+				has_trait = craven
+				has_trait = compassionate					
+				has_trait = forgiving					
+			}
+		}
+	}
+	
+	weight_multiplier = {
+		base = 1
+		modifier = {
+			add = 0.2
+			has_trait = lazy
+		}
+		modifier = {
+			add = -0.2
+			has_trait = diligent
+		}
+		modifier = {
+			add = 0.2
+			has_trait = deceitful
+		}
+		modifier = {
+			add = -0.2
+			has_trait = honest
+		}
+		modifier = {
+			add = 0.2
+			has_trait = just
+		}
+		modifier = {
+			add = -0.2
+			has_trait = arbitrary
+		}
+	}
+	
+	immediate = {
+		random_courtier = {
+			limit = {
+				is_available_ai_adult = yes
+				OR = {
+					has_trait = wrathful
+					has_trait = sadistic
+					has_trait = callous
+					has_trait = impatient
+					has_trait = vengeful
+				}
+				NOR = {
+					has_trait = shy
+					has_trait = craven
+					has_trait = compassionate					
+					has_trait = forgiving					
+				}
+			}
+			save_scope_as = scope_VIET_fake_ghost
+		}
+	}
+	
+	option = { # Who cares
+		name = VIETmisc.0098.a
+		add_character_modifier = {
+			modifier = VIET_scooby_doo_villain_let_go
+			years = 4
+		}
+		scope:scope_VIET_fake_ghost = {
+			add_opinion = {
+				target = root
+				modifier = VIET_opinion_scooby_doo_villain_release
+			}		
+		}
+		stress_impact = {
+			just = medium_stress_impact_gain
+			compassionate = minor_stress_impact_gain
+		}
+	}	
+	option = { # Apologize to locals
+		name = VIETmisc.0098.b
+		VIET_medium_prestige_gain_effect = yes
+		scope:scope_VIET_fake_ghost = {
+			add_opinion = {
+				target = root
+				modifier = VIET_opinion_scooby_doo_villain_forced_apology
+			}		
+		}
+	}
+	option = { # Compensate locals
+		name = VIETmisc.0098.c
+		VIET_medium_prestige_gain_effect = yes
+		add_character_modifier = {
+			modifier = VIET_scooby_doo_villain_punisher
+			years = 4
+		}
+		scope:scope_VIET_fake_ghost = {
+			add_opinion = {
+				target = root
+				modifier = VIET_opinion_scooby_doo_villain_forced_reward
+			}		
+		}
+	}
+}
+
+
+
+
+# Explore a haunted hosue or not?
+VIETmisc.0099 = {
+	type = character_event
+	title = VIETmisc.0099.t
+	desc = VIETmisc.0099.desc
+	theme = death
+	override_background = { event_background = VIET_background_small_town }
+	
+	left_portrait = {
+		character = root
+		animation = personality_cynical
+	}
+	
+	weight_multiplier = {
+		base = 1
+		modifier = {
+			add = 0.2
+			has_trait = brave
+		}
+		modifier = {
+			add = -0.2
+			has_trait = craven
+		}
+		modifier = {
+			add = 0.2
+			has_trait = arrogant
+		}
+		modifier = {
+			add = -0.2
+			has_trait = humble
+		}
+		modifier = {
+			add = 0.2
+			has_trait = gregarious
+		}
+		modifier = {
+			add = -0.2
+			has_trait = shy
+		}
+	}
+	
+	option = { # Don't do anything
+		name = VIETmisc.0099.a
+		stress_impact = {
+			brave = medium_stress_impact_gain
+		}
+	}	
+	option = { # Can't be that bad
+		name = VIETmisc.0099.b
+		VIET_huge_prestige_gain_effect = yes
+		random = {
+			chance = 45
+			send_interface_message = {
+				#left_icon = root
+				right_icon = root
+				title = VIETmisc.0099.message
+				add_character_modifier = {
+					modifier = VIET_haunted_house_curse
+					years = 13
+				}
+			}
+		}
+		stress_impact = {
+			craven = medium_stress_impact_gain
+		}
+	}
+}
+
+
+
+# Commoner on trial for murder, claims her victim was possessed and she killed in self-defense
+VIETmisc.0100 = {
+	type = character_event
+	title = VIETmisc.0100.t
+	desc = VIETmisc.0100.desc
+	theme = martial_authority_focus
+	override_background = { event_background = gallows }
+	
+	left_portrait = {
+		character = root
+		animation = personality_cynical
+	}
+	
+	weight_multiplier = {
+		base = 1
+		modifier = {
+			add = 0.2
+			has_trait = just
+		}
+		modifier = {
+			add = -0.2
+			has_trait = arbitrary
+		}
+		modifier = {
+			add = 0.2
+			has_trait = patient
+		}
+		modifier = {
+			add = -0.2
+			has_trait = impatient
+		}
+		modifier = {
+			add = 0.2
+			has_trait = diligent
+		}
+		modifier = {
+			add = -0.2
+			has_trait = lazy
+		}
+	}
+	
+	option = { # Justified - let her go
+		name = VIETmisc.0100.a
+		VIET_large_piety_gain_effect = yes
+		stress_impact = {
+			vengeful = minor_stress_impact_gain
+			cynical = minor_stress_impact_gain
+		}
+	}	
+	option = { # Manslaughter - imprison her
+		name = VIETmisc.0100.b
+		VIET_large_prestige_gain_effect = yes
+		stress_impact = {
+			vengeful = minor_stress_impact_gain
+			trusting = minor_stress_impact_gain
+		}
+	}	
+	option = { # Suspicious - execute her
+		name = VIETmisc.0100.c
+		add_dread = 15
+		stress_impact = {
+			trusting = minor_stress_impact_gain
+			forgiving = minor_stress_impact_gain
+		}
+	}
+}
+
+
+
+# Come across an unknown servant - is he a spirit testing one's hospitality?
+VIETmisc.0101 = {
+	type = character_event
+	title = VIETmisc.0101.t
+	desc = VIETmisc.0101.desc
+	theme = friendly
+	override_background = { event_background = corridor_day }
+	
+	right_portrait = root
+	
+	weight_multiplier = {
+		base = 1
+		modifier = {
+			add = 0.2
+			has_trait = zealous
+		}
+		modifier = {
+			add = -0.2
+			has_trait = cynical
+		}
+		modifier = {
+			add = 0.2
+			has_trait = paranoid
+		}
+		modifier = {
+			add = -0.2
+			has_trait = trusting
+		}
+		modifier = {
+			add = 0.2
+			has_trait = deceitful
+		}
+		modifier = {
+			add = -0.2
+			has_trait = honest
+		}
+	}
+	
+	option = { # Be nice
+		name = VIETmisc.0101.a
+		add_character_flag = VIET_spirit_character_test_nice
+		stress_impact = {
+			callous = miniscule_stress_impact_gain
+			sadistic = miniscule_stress_impact_gain
+			arrogant = miniscule_stress_impact_gain
+			impatient = miniscule_stress_impact_gain
+			wrathful = miniscule_stress_impact_gain
+		}
+	}	
+	option = { # Be mean
+		name = VIETmisc.0101.b
+		add_character_flag = VIET_spirit_character_test_mean
+		stress_impact = {
+			compassionate = miniscule_stress_impact_gain
+			humble = miniscule_stress_impact_gain
+			patient = miniscule_stress_impact_gain
+			calm = miniscule_stress_impact_gain
+		}
+	}
+	
+	after = {
+		trigger_event = VIETmisc.0102
+	}
+}
+
+
+# Come across an unknown servant - is he a spirit testing one's hospitality?
+VIETmisc.0102 = {
+	type = character_event
+	title = VIETmisc.0102.t
+	desc = VIETmisc.0102.desc
+	theme = friendly
+	
+	left_portrait = {
+		character = root
+		animation = paranoia
+	}
+	
+	option = { # Ok
+		name = VIETmisc.0102.a
+		if = {
+			limit = {
+				has_character_flag = VIET_spirit_character_test_nice
+			}
+			add_character_modifier = {
+				modifier = VIET_hospitality_spirit_blessing
+				years = 4
+			}
+		}
+		if = {
+			limit = {
+				has_character_flag = VIET_spirit_character_test_mean
+			}
+			add_character_modifier = {
+				modifier = VIET_hospitality_spirit_cursed
+				years = 4
+			}
+		}
+	}
+	
+	after = {
+		if = {
+			limit = {
+				has_character_flag = VIET_spirit_character_test_nice
+			}
+			remove_character_flag = VIET_spirit_character_test_nice
+		}
+		if = {
+			limit = {
+				has_character_flag = VIET_spirit_character_test_mean
+			}
+			remove_character_flag = VIET_spirit_character_test_mean
+		}
+	}
+}
+
+
+# It's a spider!
+VIETmisc.0103 = {
+	type = character_event
+	title = VIETmisc.0103.t
+	desc = VIETmisc.0103.desc
+	theme = unfriendly
+	override_background = { event_background = throne_room }
+	
+	left_portrait = {
+		character = root
+		animation = fear
+	}
+
+	weight_multiplier = {
+		base = 1
+		modifier = {
+			add = 0.2
+			has_trait = craven
+		}
+		modifier = {
+			add = -0.2
+			has_trait = brave
+		}
+		modifier = {
+			add = 0.2
+			has_trait = paranoid
+		}
+		modifier = {
+			add = -0.2
+			has_trait = trusting
+		}
+		modifier = {
+			add = 0.2
+			has_trait = sadistic
+		}
+		modifier = {
+			add = -0.2
+			has_trait = compassionate
+		}
+	}
+	
+	option = { # Ok
+		name = VIETmisc.0103.a
+		stress_impact = {
+			base = minor_stress_impact_gain
+			craven = minor_stress_impact_gain
+		}
+	}	
+	option = { # Everyone run
+		name = VIETmisc.0103.b
+		VIET_small_prestige_loss_effect = yes
+		stress_impact = {
+			craven = minor_stress_impact_gain
+		}
+	}	
+	option = { # Kill it
+		name = VIETmisc.0103.c
+		trigger = {
+			has_trait = brave
+		}
+		trait = brave
+		VIET_small_prestige_gain_effect = yes
+	}	
+	option = { # Kill it
+		name = VIETmisc.0103.c
+		trigger = {
+			has_trait = sadistic
+		}
+		trait = sadistic
+		add_dread = 5
+	}	
+	option = { # Let it go
+		name = VIETmisc.0103.d
+		trigger = {
+			has_trait = compassionate
+		}
+		trait = compassionate
+		VIET_medium_piety_gain_effect = yes
+		VIET_small_prestige_loss_effect = yes
 	}
 }
 

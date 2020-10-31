@@ -1,3 +1,5 @@
+﻿
+
 VIETGrandparent = {
 	type = character
 
@@ -23,8 +25,3 @@ VIETGrandparentPossessive = {
 		localization_key = relation_grandfather_possessive
 	}
 }
-
-
-
-
-

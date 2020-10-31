@@ -117,6 +117,10 @@ VIET_events_yearly_pulse = {
 		# Rocks and Minerals
 		100 = VIETold.1033		# Courtier hits their head on a rock
 		100 = VIETold.1037		# Find some shiny pebbles
+		# Monogatari Reference
+		100 = VIETold.1041		# Ononoki - courtier likes your arms
+		100 = VIETold.1042		# Ononoki - courtier talks with a "posed look"
+		100 = VIETold.1043		# That time of month (from Hanamonogatari) - courtier makes rude PMS comment
 		
 		#######################################
 		# OLD VIET
@@ -158,6 +162,18 @@ VIET_events_yearly_pulse = {
 		100 = VIETold.2087		# Guards make an arrest but accidentally burst into the wrong person's house
 		100 = VIETold.2091		# Beautiful view of mountains
 		100 = VIETold.2092		# Dreamt of being ambushed at night
+		# Death
+		100 = VIETold.2094		# Is death like a dream?
+		100 = VIETold.2107		# A quick death or a gradual death?
+		100 = VIETold.2108		# Grave robbers caught nearby
+		100 = VIETold.2111		# Holy man praying for a deceased woman with no family
+		100 = VIETold.2116		# Holy man tells of dealing with polteregists
+		100 = VIETold.2118		# Thinking about people who have come before us
+		100 = VIETold.2119		# Will people remember me after I die?
+		100 = VIETold.2120		# Acquaintance recalls near death experience (female)
+		100 = VIETold.2121		# Acquaintance recalls near death experience (male)
+		100 = VIETold.2122		# Recall happy memory about late parents
+		100 = VIETold.2126		# Servant's pet dog passed away
 		
 		#######################################
 		# NEXT GEN VIET
@@ -218,6 +234,9 @@ VIET_events_yearly_pulse = {
 		100 = VIETmisc.0090		# See an earthworm on the road
 		100 = VIETmisc.0092		# Rest in a cave while traveling
 		100 = VIETmisc.0096		# Come across an ancient standing stone
+		# Death
+		100 = VIETmisc.0097		# Courtier pranks another by pretending there's a ghost around
+		100 = VIETmisc.0103		# It's a spider!
 	}
 }
 
@@ -345,6 +364,17 @@ VIET_events_tri_yearly_pulse = {
 		100 = VIETold.2088		# Hearing about the barbarian invasions of Rome
 		100 = VIETold.2089		# Could there be even wealthier kingdoms south of West Africa?
 		100 = VIETold.2090		# Scholar owns an indecipherable scroll - is it evil?
+		# Death
+		100 = VIETold.2095		# Cherished old maid passes away
+		100 = VIETold.2096		# Cherished old servant passes away (Tolkien quote)
+		100 = VIETold.2097		# Meet the deceased - it is not your time yet
+		100 = VIETold.2100		# Terminal lucidity in dying acquaintance
+		100 = VIETold.2104		# Guardsman sees grandparents before dying (common phenomonon at end of life)
+		100 = VIETold.2106		# Find a beggar's corpse on the side of the road
+		100 = VIETold.2117		# Stories about zombies
+		100 = VIETold.2123		# Character comes across scene of bandit battle
+		100 = VIETold.2127		# Pass by a tombstone with a meaningful, profound warning
+		100 = VIETold.2128		# Character dreams of ancestors coming to visit
 		
 		#######################################
 		# NEXT GEN VIET
@@ -390,6 +420,9 @@ VIET_events_tri_yearly_pulse = {
 		100 = VIETmisc.0089		# I hate sand, it's corase and is irritating and gets everywhere
 		100 = VIETmisc.0094		# Thunderstones found near the area
 		100 = VIETmisc.0095		# Courtier dreams of the sandman
+		# Spooky
+		100 = VIETmisc.0099		# Explore a haunted hosue or not?
+		100 = VIETmisc.0100		# Commoner on trial for murder, claims her victim was possessed and she killed in self-defense
 	}
 }
 
@@ -492,6 +525,14 @@ VIET_events_five_yearly_pulse = {
 		100 = VIETold.2077		# Bloody knife found on bed - implied to maybe be a prank
 		100 = VIETold.2082		# Did a physician botch a surgery of a nobleman?
 		100 = VIETold.2093		# Nobleman runs away from criminals trying to kill him
+		# Death
+		100 = VIETold.2098		# Witnessing the death of a rat
+		100 = VIETold.2102		# Visit from a ghostly little girl
+		100 = VIETold.2109		# Visit from an otherworldly being, or just a dream?
+		100 = VIETold.2110		# Coming across a Myling (Nordic mythology)
+		100 = VIETold.2112		# Woman annoys death so much he takes her back to the land of the living - based on an old folk tale
+		100 = VIETold.2124		# You have a friendly ghost stalker according to a holy person
+		100 = VIETold.2125		# Local townsman accused of having sex with ghosts
 		
 		#######################################
 		# NEXT GEN VIET
@@ -520,6 +561,9 @@ VIET_events_five_yearly_pulse = {
 		# Earth
 		100 = VIETmisc.0091		# Find what appears to be an ancient skeleton buried near a construction site
 		100 = VIETmisc.0093		# A scholar shows you a lapidary (medieval encyclopedia of rocks and precious stones)
+		# Death
+		100 = VIETmisc.0098		# Courtier pretends to be a ghost to scare off local kids
+		100 = VIETmisc.0101		# Come across an unknown servant - is he a spirit testing one's hospitality?
 	}
 }
 
@@ -565,10 +609,14 @@ VIET_events_event_chain_pulse = {
 		
 		# Prophecy and future
 		100 = VIETold.2041		# Prophetic dream of World War 1
+		# Death
+		100 = VIETold.2113		# The Grim Reaper is an absentminded girl and she stops by after getting lost
 		
 		# Actual Event Chains
 		100 = VIETmisc.1000		# Kogarashi Sentiment/Fast Love - Character recalls their first love
 		100 = VIETmisc.1023		# Begin the swirls of cinnamon in every bite
+		100 = VIETmisc.1030		# Lost Love - a beloved servant falls ill and is dying
+		100 = VIETmisc.1036		# Dream of the Final Journey - beloved grandparent returns to guide character into the afterlife
 		
 		#######################################
 		# NEXT GEN VIET

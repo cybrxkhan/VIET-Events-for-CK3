@@ -49,7 +49,8 @@
 # Banshee Event - VIETmisc.8375 - need to revamp for culture province, to do later
 # Misc province events - VIETmisc.8389-8396 - province events, to do later
 # Black cat events - VIETmisc.8397-8398 - revise, to do later
-# 
+# Those are just fantasies for people who don't have brothers/sisters - VIETmisc.2240 - similar event in new VIET
+# Araragi-kun - VIETmisc.2241 - province event, to do later
 # 
 ###########################################################################################################################
 

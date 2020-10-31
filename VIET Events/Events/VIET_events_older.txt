@@ -15,6 +15,7 @@
 # 1025-1029		Time
 # 1030-1032		Moss
 # 1033-1040		Rocks and Minerals
+# 1041-1043		Monogatari References
 # 
 ############################################################################################################################
 
@@ -2703,6 +2704,324 @@ VIETold.1040 = {
 				has_game_rule = VIET_historical_context_on
 			}
 			custom_tooltip = VIETold.1040.info
+		}
+	}
+}
+
+
+########################################################
+# MONOGATARI REFERENCES 1041-1043
+########################################################
+
+
+# Ononoki - courtier likes your arms
+VIETold.1041 = {
+	type = character_event
+	title = VIETold.1041.t
+	desc = VIETold.1041.desc
+	theme = martial_strategy_focus
+
+	left_portrait = {
+		character = root
+		animation = marshal
+	}
+	right_portrait = {
+		character = scope:scope_VIET_yotsugi
+		animation = flirtation
+	}
+	
+	trigger = {
+		NOT = { has_game_rule = VIET_serious_events }
+		any_courtier_or_guest = {
+			is_available_ai_adult = yes
+			NOT = { has_trait = chaste }
+			NOT = { has_sexuality = asexual }
+			OR = {
+				AND = {
+					is_female = yes
+					NOT = { has_sexuality = homosexual }
+				}
+				AND = {
+					is_female = no
+					OR = { 
+						has_sexuality = bisexual
+						has_sexuality = homosexual
+					}
+				}
+			}
+		}
+	}
+	
+	weight_multiplier = {
+		base = 1
+		modifier = {
+			add = 0.2
+			has_trait = brave
+		}
+		modifier = {
+			add = -0.2
+			has_trait = craven
+		}
+		modifier = {
+			add = 0.2
+			has_trait = gregarious
+		}
+		modifier = {
+			add = -0.2
+			has_trait = shy
+		}
+		modifier = {
+			add = 0.2
+			has_trait = calm
+		}
+		modifier = {
+			add = -0.2
+			has_trait = wrathful
+		}
+	}
+	
+	immediate = {
+		random_courtier_or_guest = {
+			limit = {
+				is_available_ai_adult = yes
+				NOT = { has_trait = chaste }
+				NOT = { has_sexuality = asexual }
+				OR = {
+					AND = {
+						is_female = yes
+						NOT = { has_sexuality = homosexual }
+					}
+					AND = {
+						is_female = no
+						OR = { 
+							has_sexuality = bisexual
+							has_sexuality = homosexual
+						}
+					}
+				}
+			}
+			save_scope_as = scope_VIET_yotsugi
+		}
+	}
+	
+	option = { # okay...
+		name = VIETold.1041.a
+		scope:scope_VIET_yotsugi = {
+			add_opinion = {
+				target = root
+				modifier = VIET_opinion_likes_arms
+			}
+			reverse_add_opinion = {
+				target = root
+				modifier = VIET_opinion_confused
+			}			
+		}		
+	}
+}
+
+
+# Ononoki - courtier talks with a "posed look"
+VIETold.1042 = {
+	type = character_event
+	title = VIETold.1042.t
+	desc = VIETold.1042.desc
+	theme = diplomacy_majesty_focus
+
+	left_portrait = {
+		character = root
+		animation = boredom
+	}
+	right_portrait = {
+		character = scope:scope_VIET_yotsugi
+		animation = personality_honorable
+	}
+	
+	trigger = {
+		NOT = { has_game_rule = VIET_serious_events }
+		any_courtier_or_guest = {
+			is_available_ai_adult = yes
+			NOT = { has_trait = shy }		
+		}
+	}
+	
+	weight_multiplier = {
+		base = 1
+		modifier = {
+			add = 0.2
+			has_trait = forgiving
+		}
+		modifier = {
+			add = -0.2
+			has_trait = vengeful
+		}
+		modifier = {
+			add = 0.2
+			has_trait = gregarious
+		}
+		modifier = {
+			add = -0.2
+			has_trait = shy
+		}
+		modifier = {
+			add = 0.2
+			has_trait = calm
+		}
+		modifier = {
+			add = -0.2
+			has_trait = wrathful
+		}
+	}
+	
+	immediate = {
+		random_courtier_or_guest = {
+			limit = {
+				is_available_ai_adult = yes
+				NOT = { has_trait = shy }
+			}
+			save_scope_as = scope_VIET_yotsugi
+		}
+	}
+	
+	option = { # okay...
+		name = VIETold.1042.a
+		VIET_medium_prestige_loss_effect = yes
+		scope:scope_VIET_yotsugi = {
+			reverse_add_opinion = {
+				target = root
+				modifier = VIET_opinion_confused
+			}			
+		}	
+		if = {
+			limit = {
+				has_game_rule = VIET_historical_context_on
+			}
+			custom_tooltip = VIETold.1042.info
+		}	
+	}	
+	option = { # you're doing it wrong
+		name = VIETold.1042.b
+		trigger = {
+			diplomacy >= mediocre_skill_rating
+		}
+		skill = diplomacy
+		VIET_medium_prestige_gain_effect = yes
+		scope:scope_VIET_yotsugi = {
+			add_opinion = {
+				target = root
+				modifier = VIET_opinion_insensitive_comments
+			}			
+		}
+		if = {
+			limit = {
+				has_game_rule = VIET_historical_context_on
+			}
+			custom_tooltip = VIETold.1042.info
+		}		
+	}
+}
+
+
+# That time of month (from Hanamonogatari) - courtier makes rude PMS comment
+VIETold.1043 = {
+	type = character_event
+	title = VIETold.1043.t
+	desc = VIETold.1043.desc
+	theme = diplomacy
+
+	left_portrait = {
+		character = root
+		animation = disbelief
+	}
+	right_portrait = {
+		character = scope:scope_VIET_guy_moon_time
+		animation = personality_rational
+	}
+	
+	trigger = {
+		is_female = yes
+		any_courtier_or_guest = {
+			is_available_ai_adult = yes
+			is_female = no
+			NOT = { has_trait = shy }	
+			NOT = { has_trait = craven }
+		}
+	}
+	
+	weight_multiplier = {
+		base = 1
+		modifier = {
+			add = 0.2
+			has_trait = impatient
+		}
+		modifier = {
+			add = -0.2
+			has_trait = patient
+		}
+		modifier = {
+			add = 0.2
+			has_trait = wrathful
+		}
+		modifier = {
+			add = -0.2
+			has_trait = calm
+		}
+		modifier = {
+			add = 0.2
+			has_trait = sadistic
+		}
+		modifier = {
+			add = -0.2
+			has_trait = compassionate
+		}
+	}
+	
+	immediate = {
+		random_courtier_or_guest = {
+			limit = {
+			is_available_ai_adult = yes
+			is_female = no
+			NOT = { has_trait = shy }	
+			NOT = { has_trait = craven }
+			}
+			save_scope_as = scope_VIET_guy_moon_time
+		}
+	}
+	
+	option = { # okay...
+		name = VIETold.1043.a
+		VIET_small_prestige_loss_effect = yes
+		scope:scope_VIET_guy_moon_time = {
+			reverse_add_opinion = {
+				target = root
+				modifier = VIET_opinion_confused
+			}			
+		}		
+	}	
+	option = { # slap face
+		name = VIETold.1043.b
+		add_dread = 5
+		scope:scope_VIET_guy_moon_time = {
+			reverse_add_opinion = {
+				target = root
+				modifier = VIET_opinion_angry_at_me
+			}			
+		}		
+	}	
+	option = { # walk away
+		name = VIETold.1043.c
+		stress_impact = {
+			base = miniscule_stress_impact_gain
+		}
+	}	
+	option = { # pretend you didn't hear that
+		name = VIETold.1043.d
+		VIET_small_prestige_loss_effect = yes
+		#VIET_medium_prestige_loss_effect = yes
+		stress_impact = {
+			forgiving = miniscule_stress_impact_loss
+			vengeful = miniscule_stress_impact_gain
+			wrathful = miniscule_stress_impact_gain
+			honest = miniscule_stress_impact_gain
 		}
 	}
 }

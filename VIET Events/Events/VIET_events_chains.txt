@@ -5,6 +5,7 @@
 # 
 # 1000-1022		Kogarashi Sentiment/Fast Love - Character recalls their first love
 # 1023-1029		Cinnamon Addict (Cinnamon Toast Crunch)
+# 1030-1035		Lost Love - a beloved servant falls ill and is dying
 # 
 ############################################################################################################################
 
@@ -794,8 +795,587 @@ VIETmisc.1029 = {
 
 
 
+######################################################################################
+# 
+# LOST LOVE
+# A beloved old servant who is dying mistakes the character for their lost love,
+# thus allowing them the blessing of the last thing they see before passing on
+# is the smiling visage of someone who meant so much to them for all these years.
+# 
+######################################################################################
 
 
+# Lost Love - a beloved servant falls ill and is dying
+# NOTE: Servant is always the opposite gender of the character
+VIETmisc.1030 = {
+	type = character_event
+	title = VIETmisc.1030.t
+	desc = {
+		first_valid = {
+			triggered_desc = {
+				trigger = {
+					is_female = yes
+				}
+				desc = VIETmisc.1030.desc.female
+			}
+			desc = VIETmisc.1030.desc.male
+		}
+	}
+	theme = family
+	override_background = { event_background = sitting_room }
+	
+	left_portrait = {
+		character = root
+		animation = worry
+	}
+	
+	trigger = {
+		NOT = { has_character_flag = VIET_love_lost_event_chain }
+		NOT = { has_global_variable = VIET_love_lost_event_done }
+	}
+	
+	weight_multiplier = {
+		base = 1
+		modifier = {
+			add = 0.2
+			has_trait = compassionate
+		}
+		modifier = {
+			add = -0.2
+			has_trait = callous
+		}
+		modifier = {
+			add = 0.2
+			has_trait = humble
+		}
+		modifier = {
+			add = -0.2
+			has_trait = arrogant
+		}
+		modifier = {
+			add = 0.2
+			has_trait = gregarious
+		}
+		modifier = {
+			add = -0.2
+			has_trait = shy
+		}
+	}
+	
+	
+	option = {
+		name = VIETmisc.1030.a
+		add_character_flag = VIET_love_lost_event_chain
+		trigger_event = {
+			id = VIETmisc.1031
+			days = { 10 20 }
+		}
+	}
+}
+
+
+# The servant awakes
+VIETmisc.1031 = {
+	type = character_event
+	title = VIETmisc.1031.t
+	desc = {
+		first_valid = {
+			triggered_desc = {
+				trigger = {
+					is_female = yes
+				}
+				desc = VIETmisc.1031.desc.female
+			}
+			desc = VIETmisc.1031.desc.male
+		}
+	}
+	theme = family
+	override_background = { event_background = sitting_room }
+	
+	left_portrait = {
+		character = root
+		animation = admiration
+	}
+	
+	option = {		
+		name = {
+			trigger = { is_female = no }
+			text = VIETmisc.1031.a.male
+		}
+		name = {
+			trigger = { is_female = yes }
+			text = VIETmisc.1031.a.female
+		}
+		trigger_event = {
+			id = VIETmisc.1032
+			days = 1
+		}
+	}
+}
+
+
+# The servant mistakes the character for their long-lost love
+VIETmisc.1032 = {
+	type = character_event
+	title = VIETmisc.1032.t
+	desc = {
+		first_valid = {
+			triggered_desc = {
+				trigger = {
+					is_female = yes
+				}
+				desc = VIETmisc.1032.desc.female
+			}
+			desc = VIETmisc.1032.desc.male
+		}
+	}
+	theme = seduction
+	override_background = { event_background = sitting_room }
+	
+	left_portrait = {
+		character = root
+		animation = personality_forgiving
+	}
+	
+	immediate = {
+		play_music_cue = "mx_cue_marriage" # Best fit I could find
+	}
+	
+	option = {		
+		name = {
+			trigger = { is_female = no }
+			text = VIETmisc.1032.a.male
+		}
+		name = {
+			trigger = { is_female = yes }
+			text = VIETmisc.1032.a.female
+		}
+		trigger_event = {
+			id = VIETmisc.1033
+			days = { 6 15 }
+		}
+	}
+}
+
+
+# After the funeral, character meets with servant's sister, for answers
+VIETmisc.1033 = {
+	type = character_event
+	title = VIETmisc.1033.t
+	desc = {
+		first_valid = {
+			triggered_desc = {
+				trigger = {
+					is_female = yes
+				}
+				desc = VIETmisc.1033.desc.female
+			}
+			desc = VIETmisc.1033.desc.male
+		}
+	}
+	theme = family
+	override_background = { event_background = sitting_room }
+	
+	left_portrait = {
+		character = root
+		animation = personality_rational
+	}
+	
+	option = {
+		name = VIETmisc.1033.a
+		trigger_event = VIETmisc.1034
+	}
+}
+
+
+
+# The sister tells how coincidentally, the character shares the same name as the servant's long-lost love, and may have even looked similar
+VIETmisc.1034 = {
+	type = character_event
+	title = VIETmisc.1034.t
+	desc = {
+		first_valid = {
+			triggered_desc = {
+				trigger = {
+					is_female = yes
+				}
+				desc = VIETmisc.1034.desc.female
+			}
+			desc = VIETmisc.1034.desc.male
+		}
+	}
+	theme = seduction
+	override_background = { event_background = sitting_room }
+	
+	left_portrait = {
+		character = root
+		animation = personality_rational
+	}
+	
+	option = {
+		name = VIETmisc.1034.a
+		trigger_event = VIETmisc.1035
+	}
+}
+
+
+
+# The sister thanks the character
+VIETmisc.1035 = {
+	type = character_event
+	title = VIETmisc.1035.t
+	desc = {
+		first_valid = {
+			triggered_desc = {
+				trigger = {
+					is_female = yes
+				}
+				desc = VIETmisc.1035.desc.female
+			}
+			desc = VIETmisc.1035.desc.male
+		}
+	}
+	theme = seduction
+	override_background = { event_background = sitting_room }
+	
+	left_portrait = {
+		character = root
+		animation = personality_rational
+	}
+	
+	option = {
+		name = VIETmisc.1035.a
+		add_character_modifier = {
+			modifier = VIET_servants_death_love_lesson
+		}
+		set_global_variable = {
+			name = VIET_love_lost_event_done
+			value = yes
+		}
+	}
+}
+
+############################################################################################################
+# 
+# DREAM OF THE FINAL JOURNEY
+# Character dreams of deceased grandparent, who gently guides them to prepare for their own death.
+# Will only happen to older characters to prevent healthy young characters from dying "for no reason."
+# In real life, studies have shown that it is very common for people to experience "end of life dreams."
+# These visions, which are not the same as hallucinations, often feature deceased relatives or friends.
+# The majority of these dreams tend to be comforting, peaceful, and help the person who's dying prepare.
+# The event chain I wrote here is loosely inspired by some of the anecdotes discussed in these studies.
+# If you're reading this, I highly recommend you search up "End of Life dreams." They can be rather profound.
+# 
+# EDIT: I wrote the below event chain shortly after my grandmother passed away (peacefuly in her sleep, surrounded by family).
+# Around that time, I was reading up a lot on end of life experiences, perhaps to help myself process what was going on.
+# It's why the old version of this event chain in CK2 VIET also included a number of events touching on the theme of death in a serious manner.
+# You could say this event chain is loosely a tribute to her, since she sacrificed a lot to raise and help me over the years.
+# I hope she is doing well, wherever she is.
+# 
+############################################################################################################
+
+
+
+
+# Dream of the Final Journey - beloved grandparent returns to guide character into the afterlife
+VIETmisc.1036 = {
+	type = character_event
+	title = VIETmisc.1036.t
+	desc = VIETmisc.1036.desc
+	theme = VIET_theme_oblivion_pastoral_dream
+	
+	#left_portrait = {
+	#	character = root
+	#	animation = happiness
+	#}
+	
+	trigger = {
+		age >= 50 # Narrative is less fitting if character is older
+		NOT = { has_character_flag = VIET_final_journey_dream_chosen }
+		NOT = { has_global_variable = VIET_final_journey_dream_completed }
+		# While this ideally should happen to anyone, in order to ensure the full storyline plays out, it's best to do it with someone healthy
+		#health >= 4
+		is_healthy = yes		# is 3.5 too low?
+		# Pick a nice grandparent
+		any_close_or_extended_family_member = {
+			even_if_dead = yes
+			is_grandparent_of = root
+			has_personality_benevolent_trigger = yes
+			num_sinful_traits < 1
+			NOT = { has_trait = callous }
+			NOT = { has_trait = sadistic }
+			NOT = { has_trait = wrathful }
+		}
+		#num_virtuous_traits >= 1
+		num_sinful_traits < 1
+		NOR = {
+			has_trait = callous
+			has_trait = sadistic
+		}
+	}
+	
+	weight_multiplier = {
+		base = 1
+		modifier = {
+			add = 0.6
+			age >= 70
+		}
+		modifier = {
+			add = 0.3
+			age >= 60
+		}
+		modifier = {
+			add = -0.3
+			age <= 60
+		}
+		modifier = {
+			add = -0.6
+			age <= 55
+		}
+		modifier = {
+			add = 0.4
+			has_trait = compassionate
+		}
+		#modifier = {
+		#	add = -0.4
+		#	has_trait = callous
+		#}
+		#modifier = {
+		#	add = -0.4
+		#	has_trait = sadistic
+		#}
+		modifier = {
+			add = 0.2
+			has_trait = humble
+		}
+		modifier = {
+			add = -0.2
+			has_trait = arrogant
+		}
+		modifier = {
+			add = 0.2
+			has_trait = patient
+		}
+		modifier = {
+			add = -0.2
+			has_trait = impatient
+		}
+		modifier = {
+			add = 0.2
+			has_trait = calm
+		}
+		modifier = {
+			add = -0.2
+			has_trait = wrathful
+		}
+	}
+	
+	immediate = {
+		random_close_or_extended_family_member = {
+			even_if_dead = yes
+			limit = {
+				is_grandparent_of = root
+				has_personality_benevolent_trigger = yes
+				num_sinful_traits < 1
+				NOT = { has_trait = callous }
+				NOT = { has_trait = sadistic }
+				NOT = { has_trait = wrathful }			
+			}
+			save_scope_as = scope_VIET_grandparent_dream
+		}		
+	}
+	
+	
+	option = {
+		name = VIETmisc.1036.a
+		add_character_flag = VIET_final_journey_dream_chosen
+		trigger_event = VIETmisc.1037
+	}
+}
+
+
+# Reunion - character sees grandparent in dream
+VIETmisc.1037 = {
+	type = character_event
+	title = VIETmisc.1037.t
+	desc = VIETmisc.1037.desc
+	theme = family
+	override_background = { event_background = VIET_background_oblivion_pastoral_dream }
+	
+	left_portrait = {
+		character = scope:scope_VIET_grandparent_dream
+		animation = personality_forgiving
+	}
+	
+	option = {
+		name = VIETmisc.1037.a
+		trigger_event = VIETmisc.1038
+	}
+}
+
+
+# Grandparent tells character to prepare for a journey
+VIETmisc.1038 = {
+	type = character_event
+	title = VIETmisc.1038.t
+	desc = VIETmisc.1038.desc
+	theme = family
+	override_background = { event_background = VIET_background_oblivion_pastoral_dream }
+	
+	left_portrait = {
+		character = scope:scope_VIET_grandparent_dream
+		animation = personality_compassionate
+	}
+	
+	option = {
+		name = VIETmisc.1038.a
+		trigger_event = VIETmisc.1039
+	}
+}
+
+
+# Character wakes up, feeling comforted
+VIETmisc.1039 = {
+	type = character_event
+	title = VIETmisc.1039.t
+	desc = VIETmisc.1039.desc
+	theme = death
+	override_background = { event_background = sitting_room }
+	
+	left_portrait = {
+		character = root
+		animation = personality_content
+	}
+	
+	option = {
+		name = VIETmisc.1039.a
+		trigger_event = {
+			id = VIETmisc.1040
+			days = { 30 60 }
+		}
+	}
+}
+
+
+# Character keeps seeing grandparent in real life
+VIETmisc.1040 = {
+	type = character_event
+	title = VIETmisc.1040.t
+	desc = VIETmisc.1040.desc
+	theme = family
+	
+	left_portrait = {
+		character = root
+		animation = personality_content
+	}	
+	right_portrait = {
+		character = scope:scope_VIET_grandparent_dream
+		animation = personality_forgiving
+	}
+	
+	option = {
+		name = VIETmisc.1040.a
+		stress_impact = {
+			base = major_stress_impact_loss
+		}
+		trigger_event = {
+			id = VIETmisc.1041
+			days = { 30 60 }
+		}
+	}
+}
+
+
+# Grandparent returns once more in a second dream for another gentle reminder
+VIETmisc.1041 = {
+	type = character_event
+	title = VIETmisc.1041.t
+	desc = VIETmisc.1041.desc
+	theme = faith
+	override_background = { event_background = VIET_background_oblivion_pastoral_dream }
+	
+	left_portrait = {
+		character = scope:scope_VIET_grandparent_dream
+		animation = happiness
+	}
+	
+	option = {
+		name = VIETmisc.1041.a
+		trigger_event = VIETmisc.1042
+	}
+}
+
+
+# Character wakes up and starts to show signs of impending death but is at ease and peace
+VIETmisc.1042 = {
+	type = character_event
+	title = VIETmisc.1042.t
+	desc = VIETmisc.1042.desc
+	theme = death
+	override_background = { event_background = sitting_room }
+	
+	left_portrait = {
+		character = root
+		animation = personality_rational
+	}
+	
+	option = {
+		name = VIETmisc.1042.a
+		stress_impact = {
+			base = major_stress_impact_loss
+		}
+		trigger_event = {
+			id = VIETmisc.1043
+			days = { 20 40 }
+		}
+	}
+}
+
+
+# Character prepares for death
+VIETmisc.1043 = {
+	type = character_event
+	title = VIETmisc.1043.t
+	desc = VIETmisc.1043.desc
+	theme = faith
+	override_background = { event_background = sitting_room }
+	
+	left_portrait = {
+		character = root
+		animation = personality_content
+	}
+	
+	option = {
+		name = VIETmisc.1043.a
+		trigger_event = VIETmisc.1044
+	}
+}
+
+
+# The character begins their final journey with their grandparent
+VIETmisc.1044 = {
+	type = character_event
+	title = VIETmisc.1044.t
+	desc = VIETmisc.1044.desc
+	theme = death
+	override_background = { event_background = VIET_background_light_dream }
+	
+	right_portrait = {
+		character = scope:scope_VIET_grandparent_dream
+		animation = personality_content
+	}
+	
+	option = {
+		name = VIETmisc.1044.a
+		death = {
+			death_reason = death_old_age
+		}
+		set_global_variable = {
+			name = VIET_final_journey_dream_completed
+			value = yes
+		}
+	}
+}
 
 
 
