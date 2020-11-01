@@ -421,7 +421,7 @@ VIET_events_tri_yearly_pulse = {
 		100 = VIETmisc.0094		# Thunderstones found near the area
 		100 = VIETmisc.0095		# Courtier dreams of the sandman
 		# Spooky
-		100 = VIETmisc.0099		# Explore a haunted hosue or not?
+		100 = VIETmisc.0099		# Explore a haunted house or not?
 		100 = VIETmisc.0100		# Commoner on trial for murder, claims her victim was possessed and she killed in self-defense
 	}
 }
