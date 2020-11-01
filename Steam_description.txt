@@ -1,6 +1,6 @@
 [img]http://i.imgur.com/OhIA5bm.jpg[/img]
 
-[h1]Current Version: 1.1.2 "Liber Lapidum" (Released 10/17/20, Compatible with vanilla patch 1.1.X)[/h1]
+[h1]Current Version: 1.1.3 "Zhiguai" (Released 10/31/20, Compatible with vanilla patch 1.1.X)[/h1]
 [B]Please See [url=https://forum.paradoxplaza.com/forum/threads/mod-viet-events-for-ck3-a-flavor-and-immersion-event-mod.1422081/]Forum Thread[/url] For More Info[/B]
 [B]Manual Download/Installation available [url=https://github.com/cybrxkhan/VIET-Events-for-CK3/releases]on Github[/url]
 [/B]
@@ -22,7 +22,7 @@ Feel free to use my work in your mods - all I ask is that I am credited and (if 
 [img]http://i.imgur.com/EyXurbK.jpg[/img]
 
 [LIST]
-[*]Over [B]266 new flavor events[/B], and more will be added in updates over time
+[*]Over [B]326 new flavor events[/B], and more will be added in updates over time
 [*]Game rule to disable sillier events for those who don't like them, with three levels to choose from: Balanced (Default), Serious (Restricted), and All Events (Full)
 [*][B]Compatible with almost anything[/B] since it doesn't touch any vanilla files - even with overhaul mods, you can via game rule disable events that reference things specific to our medieval world that wouldn’t make sense in other time periods or universes (like fantasy and sci-fi conversion mods)
 [*]Learn history with [B]Historical Context tooltips[/B] that provide information about what inspired some of the events - sometimes, reality is stranger than fiction! (These can be disabled via game rule for those who find it immersion breaking.)
@@ -50,19 +50,21 @@ Thanks!
 
 [img]http://i.imgur.com/RQ5QZTF.jpg[/img]
 
-[h1]Version 1.1.2 "Liber Lapidum"[/h1]
+[h1]Version 1.1.3 "Zhiguai"[/h1]
 
-[I]Liber Lapidum was the most famous work by Marbod of Rennes, a French scholar and archdeacon of the 11th and 12th centuries. It was arguably the most widely distributed medieval European lapidary. Lapidaries are a genre of ancient and medieval scholarly books that dealt with stones and gems and their supposed physical and supernatural qualities.[/I]
+[I]Zhiguai, or “Tales of the Strange,” was a genre of Chinese literature that was especially popular during the Tang dynasty. Featuring supernatural elements, these short stories were often presented as retellings of true, factual happenings. They would inspire Chinese literature in later eras, most famously Pu Songling’s Liaozhai Zhiyi (translated as “Strange Tales from a Chinese Studio” in English) from the 17th century, whose short stories combined zhiguai tropes with elements from other genres.[/I]
 
 [LIST]
-[*]Added 35 new events about the following themes:
+[*]Added 45 new events about the following themes:
 [LIST]
-[*]8 Earth
-[*]8 Rocks and Minerals*
-[*]19 Generic*
+[*]7 Spooky
+[*]35 Death*
+[*]3 Monogatari Referencing*
 [/LIST]
-[*]Added several new cultural event picture variations
-[*]Miscellaneous bug fixes and tweaks
+[*]Added two event chains from CK2 VIET: “Love Lost” and “Dream of the Final Journey” (15 events total)
+[*]Made events slightly less frequent, especially those on the yearly on_actions
+[*]Fixed missing placeholder localization for the Cinnamon Crunch event chain for several non-English languages
+[*]Fixed Scholar’s Tale event not triggering first event properly
 [/LIST]
 
 *Adapted from VIET for CK2

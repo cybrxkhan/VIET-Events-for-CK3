@@ -1,8 +1,8 @@
 # VIET Events for CK3
 
-## Latest Version: 1.1.2 "Liber Lapidum" (Released 10/17/20)
+## Latest Version: 1.1.3 "Zhiguai" (Released 10/31/20)
 
-_The medieval Iranian polymath al-Tusi contributed to several fields of science, such as developing trigonometry as a mathematical discipline. He was most prominently the court astronomer for Hulegu Khan, grandson of Genghis Khan and founder of the Ilkhanate. Under Hulegu’s patronage, al-Tusi founded the Maragheh observatory, one of the most advanced of its kind in the medieval world, which employed both Islamic and Chinese astronomers._
+_Zhiguai, or “Tales of the Strange,” was a genre of Chinese prose literature that came to prominence following the fall of the Han Dynasty. These short stories typically featured supernatural elements, and were often presented as retellings of true, factual happenings. They would inspire Chinese literature in later eras, most famously Pu Songling’s Liaozhai Zhiyi (translated as “Strange Tales from a Chinese Studio” in English) from the 17th century, whose short stories combined zhiguai tropes with elements from other genres._
 
 Very Immersive Events and Tales (VIET), the sequel to VIET Events Reborn for CK2, is a flavor mod that adds a vast collection of events about everyday life to spice up your game. These events add immersion and a diversity of experiences in between wars and vanilla’s event chains, and cover mundane minutiae ranging from small talk with courtiers and eating local cuisine to epic tales about love, philosophy, and the human condition.
 
