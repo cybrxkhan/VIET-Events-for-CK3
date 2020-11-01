@@ -1,6 +1,6 @@
 [img]http://i.imgur.com/OhIA5bm.jpg[/img]
 
-[h1]Versión actual: 1.1.2 "Liber Lapidum" (Salida 17/10/20, Compatible con versión vanilla 1.1.X)[/h1]
+[h1]Versión actual: 1.1.3 "Zhiguai" (Salida 31/10/20, Compatible con versión vanilla 1.1.X)[/h1]
 [B]Echa un Vistazo a [url=https://forum.paradoxplaza.com/forum/threads/mod-viet-events-for-ck3-a-flavor-and-immersion-event-mod.1422081/]Tema del Foro[/url] Para Más Información[/B]
 [B]Descarga/Instalación manual [url=https://github.com/cybrxkhan/VIET-Events-for-CK3/releases]en Github[/url]
 [/B]
@@ -22,7 +22,7 @@ Siéntete libre de usar mi trabajo con tus mods - todo lo que pido es reconocimi
 [img]http://i.imgur.com/EyXurbK.jpg[/img]
 
 [LIST]
-[*]Más de [B]266 nuevos eventos[/B] y cadenas, y aún se añadirán más con cada actualización
+[*]Más de [B]326 nuevos eventos[/B] y cadenas, y aún se añadirán más con cada actualización
 [*]Regla de juego para desactivar los eventos estúpidos para aquellos que no les guste, con tres niveles para escoger entre: Balanceado (Predeterminado), Serio (Restringido), y Todos los eventos (Todo)
 [*][B]Compatible con casi cualquier cosa[/B] ya que no modifico archivos del vanilla - incluso con mods de conversión total puedes desactivar los eventos que hagan referencias a cosas o lugares específicos del mundo medieval que no tendrían sentido en otros periodos o universos (como mods fantásticos o de ciencia ficción)
 [*]Aprende historia con las [B]descripciones de Contexto Histórico[/B] que proporcionan información sobre la inspiración detrás de algunos eventos - a veces, ¡la realidad supera la ficción! (Estos se pueden desactivar con una regla de juego para aquellos que creen que no ayuda a la inmersión.)
@@ -50,19 +50,21 @@ Gracias.
 
 [img]http://i.imgur.com/RQ5QZTF.jpg[/img]
 
-[h1]Versión 1.1.2 "Liber Lapidum"[/h1]
+[h1]Versión 1.1.3 "Zhiguai"[/h1]
 
-[I]El Liber Lapidum fue la obra más famosa de Marbodio de Rennes, un estudioso francés y archidiácono entre los siglos XI y XII. Fue el lapidario más extensamente distribuído de la Europa medieval. Los lapidarios son antiguos libros eruditos que trataban rocas y gemas y sus supuestas propiedades físicas y sobrenaturales.[/I]
+[I]Zhiguai, o "Cuentos de Milagros", era un género literario chino especialmente popular durante el periodo Tang. Generalmente, eran historias cortas con elementos sobrenaturales, que reformulaban sucesos reales. Inspirarían la literatura china en épocas posteriores, como las famosas Liaozhai Zhiyi de Pu Songling (traducidas como "Extraños Cuentos de un Estudio Chino") del siglo XVII, cuyas historias combinaban argumentos zhiguai con elementos de otros géneros.[/I]
 
 [LIST]
-[*]Añadidos 35 eventos nuevos sobre los siguientes temas:
+[*]Añadidos 45 eventos nuevos sobre los siguientes temas:
 [LIST]
-[*]8 Tierra
-[*]8 Rocas y Minerales*
-[*]19 Genéricos*
+[*]7 Terror
+[*]35 Muerte*
+[*]3 Referencias a Monogatari*
 [/LIST]
-[*]Añadidas varias variaciones culturales para las imágenes de los eventos
-[*]Otros arreglos menores de bugs
+[*]Añadidos dos cadenas de eventos de VIET CK2: "Amor Perdido" y "Sueño del Viaje Final" (15 eventos en total)
+[*]Los eventos se han hecho menos frecuentes, especialmente los de on_action anual
+[*]Arreglado marcador de posición en la traducción de la cadena de eventos "Canela" para varios idiomas
+[*]Arreglado el fallo en el desencadenante del evento "La Historia del Sabio"
 [/LIST]
 
 *Adaptación desde VIET para CK2
