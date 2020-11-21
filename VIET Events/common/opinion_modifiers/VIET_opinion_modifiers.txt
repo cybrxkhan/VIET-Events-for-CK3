@@ -191,3 +191,18 @@ VIET_opinion_scooby_doo_villain_forced_reward = {
 	decaying = yes
 	opinion = -20
 }
+VIET_opinion_bad_hangover_break = {
+	years = 3
+	decaying = yes
+	opinion = 10
+}
+VIET_opinion_bad_hangover_relief = {
+	years = 3
+	decaying = yes
+	opinion = 5
+}
+VIET_opinion_bad_hangover_mockery = {
+	years = 3
+	decaying = yes
+	opinion = -10
+}

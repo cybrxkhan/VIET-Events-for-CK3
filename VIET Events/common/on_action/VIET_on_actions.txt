@@ -71,6 +71,12 @@ VIET_events_yearly_pulse = {
 				}
 				subtract = 20
 			}
+			if = {
+				limit = {
+					is_at_war = yes # Won't get spammed while at war
+				}
+				add = 10
+			}
 		}
 		
 		27000 = 0
@@ -272,6 +278,12 @@ VIET_events_tri_yearly_pulse = {
 				}
 				subtract = 20
 			}
+			if = {
+				limit = {
+					is_at_war = yes # Won't get spammed while at war
+				}
+				add = 10
+			}
 		}
 		23000 = 0 # 20000?
 		
@@ -458,6 +470,12 @@ VIET_events_five_yearly_pulse = {
 				}
 				subtract = 20
 			}
+			if = {
+				limit = {
+					is_at_war = yes # Won't get spammed while at war
+				}
+				add = 10
+			}
 		}
 		
 		18000 = 0
@@ -526,7 +544,6 @@ VIET_events_five_yearly_pulse = {
 		100 = VIETold.2082		# Did a physician botch a surgery of a nobleman?
 		100 = VIETold.2093		# Nobleman runs away from criminals trying to kill him
 		# Death
-		100 = VIETold.2098		# Witnessing the death of a rat
 		100 = VIETold.2102		# Visit from a ghostly little girl
 		100 = VIETold.2109		# Visit from an otherworldly being, or just a dream?
 		100 = VIETold.2110		# Coming across a Myling (Nordic mythology)
@@ -539,7 +556,6 @@ VIET_events_five_yearly_pulse = {
 		#######################################
 		
 		# Generic Hello!
-		100 = VIETmisc.0001		# Character hears a bard sing Scarborough Fair
 		100 = VIETmisc.0023		# Meeting a foreign envoy when you can't hold your bladder
 		100 = VIETmisc.0027		# Watch a psycho killer getting executed
 		100 = VIETmisc.0028		# Reading about an ancient empire
@@ -563,7 +579,6 @@ VIET_events_five_yearly_pulse = {
 		100 = VIETmisc.0093		# A scholar shows you a lapidary (medieval encyclopedia of rocks and precious stones)
 		# Death
 		100 = VIETmisc.0098		# Courtier pretends to be a ghost to scare off local kids
-		100 = VIETmisc.0101		# Come across an unknown servant - is he a spirit testing one's hospitality?
 	}
 }
 
@@ -572,6 +587,7 @@ VIET_events_event_chain_pulse = {
 	trigger = {
 		VIET_basic_is_available_adult_trigger = yes
 		is_ai = no # Will only happen to player
+		is_at_war = no # Won't get spammed while at war
 	}
 	random_events = {
 		chance_of_no_event = {
@@ -601,7 +617,7 @@ VIET_events_event_chain_pulse = {
 				subtract = 20
 			}
 		}
-		15000 = 0
+		18000 = 0
 		
 		#######################################
 		# OLD VIET
@@ -610,6 +626,7 @@ VIET_events_event_chain_pulse = {
 		# Prophecy and future
 		100 = VIETold.2041		# Prophetic dream of World War 1
 		# Death
+		100 = VIETold.2098		# Witnessing the death of a rat
 		100 = VIETold.2113		# The Grim Reaper is an absentminded girl and she stops by after getting lost
 		
 		# Actual Event Chains
@@ -621,6 +638,12 @@ VIET_events_event_chain_pulse = {
 		#######################################
 		# NEXT GEN VIET
 		#######################################
+		
+		#Generic Hello!
+		100 = VIETmisc.0001		# Character hears a bard sing Scarborough Fair
+		
+		#Death
+		100 = VIETmisc.0101		# Come across an unknown servant - is he a spirit testing one's hospitality?
 		
 	}
 }

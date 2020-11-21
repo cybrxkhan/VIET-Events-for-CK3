@@ -283,5 +283,16 @@
  VIET_hospitality_spirit_cursed_desc:0 "This person failed a test of character from a ghost who visited their house. Or at least, that's what their servants claimed - who knows whether such a supernatural incident was true or just a figment of this person's imagination?"
  VIET_hospitality_spirit_blessing:0 "Spirit's Blessing"
  VIET_hospitality_spirit_blessing_desc:0 "This person passed a test of character from a ghost who visited their house. Or at least, that's what their servants claimed - who knows whether such a supernatural incident was true or just a figment of this person's imagination?"
- # 1.1.4 - please leave this comment here
- xxxxx:0 "xxxxx"
+ # 1.2.0 - please leave this comment here
+ VIET_party_with_servants:0 "Partied with Servants"
+ VIET_forbade_effigy_celebration:0 "Forbade Effigy Celebration"
+ VIET_bad_hangover:0 "Bad Hangover"
+ VIET_opinion_bad_hangover_break:0 "Let Me Take Day Off After Hangover"
+ VIET_opinion_bad_hangover_relief:0 "Gave Me Hangover Relief"
+ VIET_opinion_bad_hangover_mockery:0 "Made Fun Of Me For Hangover"
+ VIET_ate_bad_baklava:0 "Ate Bad Baklava"
+ VIET_sympathetic:0 "Sympathetic"
+ VIET_admits_mistakes:0 "Admits Mistakes"
+ VIET_smuggling_side_business:0 "Smuggling Side Business"
+ VIET_smuggling_side_business_desc:0 "This character is known to engage in illegal smuggling, even if it is against laws that they are supposed to enforce."
+ # 1.2.1 - please leave this comment here
