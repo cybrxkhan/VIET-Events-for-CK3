@@ -71,6 +71,19 @@ Thanks!
 
 *Adapted from VIET for CK2
 
+
+[img]https://i.imgur.com/6L11s2n.jpg[/img]
+
+[LIST]
+[*][url=https://steamcommunity.com/sharedfiles/filedetails/?id=2273832430][B]Regional Immersion and Cultural Enrichment (RICE)[/B][/url] - a cultural flavor mod for lesser-known, obscure regions modeled after PI's flavor packs
+[*][url=https://steamcommunity.com/sharedfiles/filedetails/?id=2273832430]Regional Immersion and Cultural Enrichment (RICE)[/url] - a cultural flavor mod for lesser-known, obscure regions modeled after PI's flavor packs
+[*][url=https://steamcommunity.com/sharedfiles/filedetails/?id=2217770052]In Taberna (CK2 Edition)[/url] - the classic song from CK2 returns to CK3
+[*][url=https://steamcommunity.com/sharedfiles/filedetails/?id=2218667128]Recruit Courtiers[/url] - simple decision to spawn male or female courtiers in your court for a small price, similar to CK2
+[*][url=https://steamcommunity.com/sharedfiles/filedetails/?id=2219643991]Reduced Injuries and Deaths from Battles[/url] - if you're tired of people dropping like flies in battles
+[/LIST]
+
+
+
 [img]http://i.imgur.com/GlNXL7m.jpg[/img]
 
 A huge thanks to the teams of WTWSMS (especially IlikeTrains and Loup99) and Lux Invicta (including tsf4), as well as M@ni@c, creator of Hide Your Jewelry, for maintaining and improving on VIET for CK2 over the years, which provided me a solid foundation for improved reboot of VIET Events.
