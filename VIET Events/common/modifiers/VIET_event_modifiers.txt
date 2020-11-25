@@ -885,14 +885,14 @@ VIET_hospitality_spirit_blessing = {
 }
 VIET_party_with_servants = {
 	icon = feast_positive
-	stress_gain_mult = -0.25
-	county_opinion_add = 10
+	stress_gain_mult = -0.1
+	county_opinion_add = 5
 	monthly_prestige = -0.2
 }
 VIET_forbade_effigy_celebration = {
 	icon = dread_negative
 	county_opinion_add = -10
-	monthly_prestige = 0.1
+	monthly_prestige = 0.3
 }
 VIET_bad_hangover = {
 	icon = feast_negative
@@ -905,9 +905,9 @@ VIET_ate_bad_baklava = {
 }
 VIET_sympathetic = {
 	icon = social_positive
-	general_opinion = 10
-	monthly_dread = -0.2
-	diplomacy = 1
+	#general_opinion = 10
+	monthly_dread = -0.1
+	diplomacy = 2
 	intrigue = -1
 }
 VIET_admits_mistakes = {
@@ -922,6 +922,7 @@ VIET_smuggling_side_business = {
 	monthly_intrigue_lifestyle_xp_gain_mult = 0.1
 	monthly_income = 0.5
 	monthly_piety = -0.3
+	monthly_prestige = -0.3
 }
 
 

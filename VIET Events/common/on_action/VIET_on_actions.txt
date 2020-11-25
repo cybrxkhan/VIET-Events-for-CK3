@@ -96,6 +96,8 @@ VIET_events_yearly_pulse = {
 		100 = VIETold.0013		# Lazy Byzantine Cook
 		100 = VIETold.0015		# Kefir has gone sour
 		100 = VIETold.0017		# Visit a Mongol/nomad pit stop
+		# Shady
+		100 = VIETold.0018		# Bought bad baklava
 		
 		#######################################
 		# OLDER VIET
@@ -243,6 +245,8 @@ VIET_events_yearly_pulse = {
 		# Death
 		100 = VIETmisc.0097		# Courtier pranks another by pretending there's a ghost around
 		100 = VIETmisc.0103		# It's a spider!
+		# Celebration
+		100 = VIETmisc.0107		# Courtier is hungover
 	}
 }
 
@@ -300,6 +304,10 @@ VIET_events_tri_yearly_pulse = {
 		# Food
 		100 = VIETold.0014		# Come across a merchant eating with a fork from the east
 		100 = VIETold.0016		# North African tea ceremony
+		# Shady
+		100 = VIETold.0019		# Servant got scammed when they bought a cat, thinking it was a pig
+		100 = VIETold.0020		# Servant is found to be a smuggler
+		100 = VIETold.0021		# Saint's bone scam
 		
 		#######################################
 		# OLDER VIET
@@ -435,6 +443,10 @@ VIET_events_tri_yearly_pulse = {
 		# Spooky
 		100 = VIETmisc.0099		# Explore a haunted house or not?
 		100 = VIETmisc.0100		# Commoner on trial for murder, claims her victim was possessed and she killed in self-defense
+		# Celebration
+		100 = VIETmisc.0104		# Servants celebrate the birth of their child after trying for a while
+		100 = VIETmisc.0105		# Guard's father dies and he is happy
+		100 = VIETmisc.0108		# Meet a happy madwoman in the street
 	}
 }
 
@@ -579,6 +591,8 @@ VIET_events_five_yearly_pulse = {
 		100 = VIETmisc.0093		# A scholar shows you a lapidary (medieval encyclopedia of rocks and precious stones)
 		# Death
 		100 = VIETmisc.0098		# Courtier pretends to be a ghost to scare off local kids
+		# Celebration
+		100 = VIETmisc.0106		# Witness local village celebrating with a burning effigy
 	}
 }
 

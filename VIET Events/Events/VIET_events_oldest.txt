@@ -11,6 +11,7 @@
 # 0005-0007		Dreams
 # 0008-0012		Dirt
 # 0013-0017		Food (Culture Specific)
+# 0018-0022		Shady
 # 
 ############################################################################################################################
 
@@ -1312,6 +1313,336 @@ VIETold.0017 = {
 			modifier = VIET_guanz_food
 			days = 365
 		}
+	}
+}
+
+##################################################
+# SHADY EVENTS	0018-0022
+##################################################
+
+# Bought bad baklava
+VIETold.0018 = {
+	type = character_event
+	title = VIETold.0018.t
+	desc = VIETold.0018.desc
+	theme = unfriendly
+	override_background = { event_background = throne_room }
+	
+	left_portrait = {
+		character = root
+		animation = pain
+	}
+
+	trigger = {
+		NOT = { has_game_rule = VIET_conversion_universe_events }
+		VIET_is_baklava_culture_trigger = yes
+	}
+	
+	weight_multiplier = {
+		base = 1
+		modifier = {
+			add = 0.2
+			has_trait = gluttonous
+		}
+		modifier = {
+			add = -0.2
+			has_trait = temperate
+		}
+		modifier = {
+			add = 0.2
+			has_trait = trusting
+		}
+		modifier = {
+			add = -0.2
+			has_trait = paranoid
+		}
+		modifier = {
+			add = 0.2
+			has_trait = impatient
+		}
+		modifier = {
+			add = -0.2
+			has_trait = patient
+		}
+	}
+	
+	option = { # boo
+		name = VIETold.0018.a
+		stress_impact = {
+			base = minor_stress_impact_loss
+		}
+		add_character_modifier = {
+			modifier = VIET_ate_bad_baklava
+			days = 365
+		}
+	}
+}
+
+
+
+# Servant got scammed when they bought a cat, thinking it was a pig
+VIETold.0019 = {
+	type = character_event
+	title = VIETold.0019.t
+	desc = VIETold.0019.desc
+	theme = realm
+	
+	right_portrait = root
+	
+	weight_multiplier = {
+		base = 1
+		modifier = {
+			add = 0.2
+			has_trait = gregarious
+		}
+		modifier = {
+			add = -0.2
+			has_trait = shy
+		}
+		modifier = {
+			add = 0.2
+			has_trait = honest
+		}
+		modifier = {
+			add = -0.2
+			has_trait = deceitful
+		}
+		modifier = {
+			add = 0.2
+			has_trait = compassionate
+		}
+		modifier = {
+			add = -0.2
+			has_trait = sadistic
+		}
+	}
+	
+	option = { # How funny
+		name = VIETold.0019.a
+		add_character_modifier = {
+			modifier = VIET_amused_ruler
+			days = 365
+		}
+		stress_impact = {
+			base = minor_stress_impact_loss
+			compassionate = minor_stress_impact_gain
+		}
+		if = {
+			limit = {
+				has_game_rule = VIET_historical_context_on
+			}
+			custom_tooltip = VIETold.0019.info
+		}
+	}
+	
+	option = { # Punish the evildoers
+		name = VIETold.0019.b
+		add_dread = 5
+		VIET_medium_prestige_gain_effect = yes
+		stress_impact = {
+			lazy = minor_stress_impact_gain
+		}
+		if = {
+			limit = {
+				has_game_rule = VIET_historical_context_on
+			}
+			custom_tooltip = VIETold.0019.info
+		}
+	}
+	
+	option = { # Got conned by it myself
+		name = VIETold.0019.c
+		trigger = {
+			has_trait = trusting
+		}
+		trait = trusting
+		VIET_medium_piety_gain_effect = yes
+		if = {
+			limit = {
+				has_game_rule = VIET_historical_context_on
+			}
+			custom_tooltip = VIETold.0019.info
+		}
+	}
+}
+
+
+
+
+# Servant is found to be a smuggler
+VIETold.0020 = {
+	type = character_event
+	title = VIETold.0020.t
+	desc = VIETold.0020.desc
+	theme = intrigue
+	
+	right_portrait = root
+	
+	weight_multiplier = {
+		base = 1
+		modifier = {
+			add = 0.2
+			has_trait = paranoid
+		}
+		modifier = {
+			add = -0.2
+			has_trait = trusting
+		}
+		modifier = {
+			add = 0.2
+			has_trait = diligent
+		}
+		modifier = {
+			add = -0.2
+			has_trait = lazy
+		}
+		modifier = {
+			add = 0.2
+			has_trait = sadistic
+		}
+		modifier = {
+			add = -0.2
+			has_trait = compassionate
+		}
+	}
+	
+	option = { # Don't care
+		name = VIETold.0020.a
+		VIET_medium_prestige_loss_effect = yes
+		stress_impact = {
+			arbitrary = minor_stress_impact_loss
+			forgiving = minor_stress_impact_loss
+			calm = minor_stress_impact_loss
+			just = minor_stress_impact_gain
+			vengeful = minor_stress_impact_gain
+			wrathful = minor_stress_impact_gain
+		}
+	}	
+	option = { # expel them
+		name = VIETold.0020.b
+		VIET_large_piety_gain_effect = yes
+		stress_impact = {
+			forgiving = minor_stress_impact_gain
+			trusting = minor_stress_impact_gain
+			lazy = minor_stress_impact_gain
+		}
+	}	
+	option = { # imprison them
+		name = VIETold.0020.c
+		VIET_large_prestige_gain_effect = yes
+		stress_impact = {
+			forgiving = minor_stress_impact_gain
+			trusting = minor_stress_impact_gain			
+			lazy = minor_stress_impact_gain			
+		}
+	}	
+	option = { # work with them
+		name = VIETold.0020.d
+		add_character_modifier = {
+			modifier = VIET_smuggling_side_business
+			years = 5
+		}
+		VIET_huge_piety_loss_effect = yes
+		stress_impact = {
+			just = major_stress_impact_gain
+			compassionate = minor_stress_impact_gain			
+			generous = medium_stress_impact_gain			
+			zealous = minor_stress_impact_gain			
+		}
+	}
+}
+
+
+
+
+# Saint's bone scam
+VIETold.0021 = {
+	type = character_event
+	title = VIETold.0021.t
+	desc = VIETold.0021.desc
+	theme = faith
+	override_background = { event_background = market }
+	
+	left_portrait = {
+		character = root
+		animation = personality_rational
+	}
+	
+	trigger = {
+		religion = religion:christianity_religion
+		NOT = { has_game_rule = VIET_conversion_universe_events }
+	}
+	
+	weight_multiplier = {
+		base = 1
+		modifier = {
+			add = 0.2
+			has_trait = zealous
+		}
+		modifier = {
+			add = -0.2
+			has_trait = cynical
+		}
+		modifier = {
+			add = 0.2
+			has_trait = greedy
+		}
+		modifier = {
+			add = -0.2
+			has_trait = generous
+		}
+		modifier = {
+			add = 0.2
+			has_trait = gregarious
+		}
+		modifier = {
+			add = -0.2
+			has_trait = shy
+		}
+	}
+	
+	option = { # Buy it!
+		name = VIETold.0021.a
+		trigger = {
+			intrigue < decent_skill_rating			
+		}
+		VIET_medium_piety_gain_effect = yes
+		remove_short_term_gold = 10
+		trigger_event = VIETold.0022
+	}	
+	option = { # Don't buy it
+		name = VIETold.0021.b
+		trigger = {
+			intrigue < decent_skill_rating			
+		}
+	}	
+	option = { # It's a scam
+		name = VIETold.0021.c
+		trigger = {
+			intrigue >= decent_skill_rating			
+		}
+		skill = intrigue
+		VIET_medium_prestige_gain_effect = yes
+	}
+}
+
+
+# Saint's bone scam
+VIETold.0022 = {
+	type = character_event
+	title = VIETold.0022.t
+	desc = VIETold.0022.desc
+	theme = faith
+	override_background = { event_background = throne_room }
+	
+	left_portrait = {
+		character = root
+		animation = sadness
+	}
+	
+	option = { # Oh no
+		name = VIETold.0022.a
+		VIET_huge_prestige_loss_effect = yes
 	}
 }
 

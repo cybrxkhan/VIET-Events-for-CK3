@@ -66,6 +66,12 @@ VIETmisc.1000 = {
 		}		
 		NOT = { has_trait = sadistic }
 		NOT = { has_trait = callous }
+		# Temporarily disabled for female and homosexual characters until proper localization is added
+		OR = {
+			is_female = yes
+			has_sexuality = asexual
+			has_sexuality = homosexual
+		}
 	}
 	
 	weight_multiplier = {

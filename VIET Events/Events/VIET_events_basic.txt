@@ -28,6 +28,7 @@
 # 0083-0088		Numbers
 # 0089-0096		Earth
 # 0097-0103		Spooky
+# 0104-0108		Celebration
 # 
 ############################################################################################################################
 
@@ -5956,6 +5957,7 @@ VIETmisc.0079 = {
 	}
 	
 	trigger = {
+		NOT = { has_game_rule = VIET_conversion_universe_events }
 		VIET_is_baklava_culture_trigger = yes
 		gold >= 10
 	}
@@ -6088,6 +6090,7 @@ VIETmisc.0080 = {
 	}
 	
 	trigger = {
+		NOT = { has_game_rule = VIET_conversion_universe_events }
 		VIET_is_baklava_culture_trigger = yes
 		any_courtier = {
 			is_available_ai_adult = yes
@@ -6171,6 +6174,7 @@ VIETmisc.0081 = {
 	right_portrait = root
 	
 	trigger = {
+		NOT = { has_game_rule = VIET_conversion_universe_events }
 		VIET_is_baklava_culture_trigger = yes
 	}
 	
@@ -6231,6 +6235,7 @@ VIETmisc.0082 = {
 	}
 	
 	trigger = {
+		NOT = { has_game_rule = VIET_conversion_universe_events }
 		VIET_is_baklava_culture_trigger = yes
 		any_courtier = {
 			is_available_ai_adult = yes
@@ -8219,6 +8224,388 @@ VIETmisc.0103 = {
 		trait = compassionate
 		VIET_medium_piety_gain_effect = yes
 		VIET_small_prestige_loss_effect = yes
+	}
+}
+
+
+
+######################################################################
+# CELEBRATION 0104-0108
+######################################################################
+
+
+# Servants celebrate the birth of their child after trying for a while
+VIETmisc.0104 = {
+	type = character_event
+	title = VIETmisc.0104.t
+	desc = VIETmisc.0104.desc
+	theme = friendly
+	
+	left_portrait = {
+		character = root
+		animation = personality_content
+	}
+
+	weight_multiplier = {
+		base = 1
+		modifier = {
+			add = 0.2
+			has_trait = gregarious
+		}
+		modifier = {
+			add = -0.2
+			has_trait = shy
+		}
+		modifier = {
+			add = 0.2
+			has_trait = zealous
+		}
+		modifier = {
+			add = -0.2
+			has_trait = cynical
+		}
+		modifier = {
+			add = 0.2
+			has_trait = lazy
+		}
+		modifier = {
+			add = -0.2
+			has_trait = diligent
+		}
+	}
+	
+	option = { # Don't get involved
+		name = VIETmisc.0104.a
+		VIET_small_prestige_gain_effect = yes
+		stress_impact = {
+			gregarious = miniscule_stress_impact_gain
+			humble = miniscule_stress_impact_gain
+			compassionate = miniscule_stress_impact_gain
+			zealous = miniscule_stress_impact_gain
+			generous = miniscule_stress_impact_gain
+		}
+	}	
+	option = { # Congratulate with a few words
+		name = VIETmisc.0104.b
+		VIET_small_prestige_loss_effect = yes
+		VIET_medium_piety_gain_effect = yes
+	}	
+	option = { # Give a small tgift as a sign of generosity
+		name = VIETmisc.0104.c
+		remove_short_term_gold = 5
+		VIET_medium_piety_gain_effect = yes
+		stress_impact = {
+			generous = medium_stress_impact_loss
+			greedy = medium_stress_impact_gain
+		}
+	}	
+	option = { # Host a party for them
+		name = VIETmisc.0104.d
+		remove_short_term_gold = 10
+		add_character_modifier = {
+			modifier = VIET_party_with_servants
+			years = 3
+		}
+		stress_impact = {
+			gregarious = minor_stress_impact_loss
+			shy = minor_stress_impact_gain
+			humble = minor_stress_impact_loss
+			arrogant = minor_stress_impact_gain
+		}
+	}
+}
+
+
+
+# Guard's father dies and he is happy
+VIETmisc.0105 = {
+	type = character_event
+	title = VIETmisc.0105.t
+	desc = VIETmisc.0105.desc
+	theme = death
+	override_background = { event_background = corridor_day }
+	
+	left_portrait = {
+		character = root
+		animation = disbelief
+	}
+
+	weight_multiplier = {
+		base = 1
+		modifier = {
+			add = 0.2
+			has_trait = gregarious
+		}
+		modifier = {
+			add = -0.2
+			has_trait = shy
+		}
+		modifier = {
+			add = 0.2
+			has_trait = patient
+		}
+		modifier = {
+			add = -0.2
+			has_trait = impatient
+		}
+		modifier = {
+			add = 0.2
+			has_trait = content
+		}
+		modifier = {
+			add = -0.2
+			has_trait = ambitious
+		}
+	}
+	
+	option = { # Happy for you
+		name = VIETmisc.0105.a
+		VIET_small_piety_loss_effect = yes
+		add_character_modifier = {
+			modifier = VIET_sympathetic
+			years = 3
+		}
+	}	
+	option = { # Muh filial piety
+		name = VIETmisc.0105.b
+		VIET_small_piety_gain_effect = yes
+	}
+}
+
+
+
+# Witness local village celebrating with a burning effigy
+VIETmisc.0106 = {
+	type = character_event
+	title = VIETmisc.0106.t
+	desc = VIETmisc.0106.desc
+	theme = feast_activity
+	override_background = { event_background = VIET_background_small_town }
+	
+	right_portrait = root
+
+	weight_multiplier = {
+		base = 1
+		modifier = {
+			add = 0.2
+			has_trait = gregarious
+		}
+		modifier = {
+			add = -0.2
+			has_trait = shy
+		}
+		modifier = {
+			add = 0.2
+			has_trait = humble
+		}
+		modifier = {
+			add = -0.2
+			has_trait = arrogant
+		}
+		modifier = {
+			add = 0.2
+			has_trait = gluttonous
+		}
+		modifier = {
+			add = -0.2
+			has_trait = temperate
+		}
+	}
+	
+	option = { # Ok
+		name = VIETmisc.0106.a
+		VIET_medium_prestige_gain_effect = yes
+	}	
+	option = { # Forbid them from celebrating it!
+		name = VIETmisc.0106.b
+		add_character_modifier = {
+			modifier = VIET_forbade_effigy_celebration
+			years = 10
+		}
+		stress_impact = {
+			compassionate = medium_stress_impact_gain
+			patient = miniscule_stress_impact_gain
+			lazy = miniscule_stress_impact_gain
+			content = miniscule_stress_impact_gain
+			gregarious = miniscule_stress_impact_gain
+			just = miniscule_stress_impact_gain
+		}
+	}
+}
+
+
+
+# Courtier is hungover
+VIETmisc.0107 = {
+	type = character_event
+	title = VIETmisc.0107.t
+	desc = VIETmisc.0107.desc
+	theme = vassal
+	
+	left_portrait = {
+		character = scope:scope_VIET_court_sleepy
+		animation = pain
+	}
+	
+	trigger = {
+		any_courtier = {
+			is_available_ai_adult = yes
+			NAND = {
+				has_trait = zealous
+				religion = religion:islam_religion
+			}
+			OR = {
+				has_trait = gregarious
+				has_trait = drunkard
+				has_trait = lustful
+				has_trait = lazy
+				has_trait = trusting
+				has_trait = gluttonous
+			}
+		}
+	}
+
+	weight_multiplier = {
+		base = 1
+		modifier = {
+			add = 0.2
+			has_trait = gregarious
+		}
+		modifier = {
+			add = -0.2
+			has_trait = shy
+		}
+		modifier = {
+			add = 0.2
+			has_trait = humble
+		}
+		modifier = {
+			add = -0.2
+			has_trait = arrogant
+		}
+		modifier = {
+			add = 0.2
+			has_trait = gluttonous
+		}
+		modifier = {
+			add = -0.2
+			has_trait = temperate
+		}
+	}
+	
+	immediate = {
+		random_courtier = {
+			limit = {
+				is_available_ai_adult = yes
+				NAND = {
+					has_trait = zealous
+					religion = religion:islam_religion
+				}
+				OR = {
+					has_trait = gregarious
+					has_trait = drunkard
+					has_trait = lustful
+					has_trait = lazy
+					has_trait = trusting
+					has_trait = gluttonous
+				}
+			}
+			save_scope_as = scope_VIET_court_sleepy
+			add_character_modifier = {
+				modifier = VIET_bad_hangover
+				years = 3
+			}
+		}	
+	}
+	
+	option = { # Go home and rest
+		name = VIETmisc.0107.a
+		VIET_medium_prestige_gain_effect = yes
+		scope:scope_VIET_court_sleepy = {
+			add_opinion = {
+				target = root
+				modifier = VIET_opinion_bad_hangover_break
+			}		
+		}
+	}
+	option = { # Have some water
+		name = VIETmisc.0107.b
+		VIET_medium_piety_gain_effect = yes
+		scope:scope_VIET_court_sleepy = {
+			add_opinion = {
+				target = root
+				modifier = VIET_opinion_bad_hangover_relief
+			}		
+		}		
+	}
+	option = { # Ha ha!
+		name = VIETmisc.0107.c
+		add_character_modifier = {
+			modifier = VIET_amused_ruler
+			days = 777
+		}
+		stress_impact = {
+			base = miniscule_stress_impact_loss
+			compassionate = miniscule_stress_impact_gain
+		}
+		scope:scope_VIET_court_sleepy = {
+			add_opinion = {
+				target = root
+				modifier = VIET_opinion_bad_hangover_mockery
+			}		
+		}		
+	}
+}
+
+
+# Meet a happy madwoman in the street
+VIETmisc.0108 = {
+	type = character_event
+	title = VIETmisc.0108.t
+	desc = VIETmisc.0108.desc
+	theme = friendly
+	override_background = { event_background = VIET_background_small_town }
+	
+	left_portrait = {
+		character = root
+		animation = personality_content
+	}
+
+	weight_multiplier = {
+		base = 1
+		modifier = {
+			add = 0.2
+			has_trait = trusting
+		}
+		modifier = {
+			add = -0.2
+			has_trait = paranoid
+		}
+		modifier = {
+			add = 0.2
+			has_trait = calm
+		}
+		modifier = {
+			add = -0.2
+			has_trait = wrathful
+		}
+		modifier = {
+			add = 0.2
+			has_trait = patient
+		}
+		modifier = {
+			add = -0.2
+			has_trait = impatient
+		}
+	}
+	
+	option = { # She has a point
+		name = VIETmisc.0108.a
+		VIET_small_piety_gain_effect = yes		
+	}	
+	option = { # Just a lunatic
+		name = VIETmisc.0108.b
+		VIET_small_prestige_gain_effect = yes		
 	}
 }
 
