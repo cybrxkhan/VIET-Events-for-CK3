@@ -1,6 +1,6 @@
 [img]http://i.imgur.com/OhIA5bm.jpg[/img]
 
-[h1]Versión actual: 1.1.3 "Zhiguai" (Salida 31/10/20, Compatible con versión vanilla 1.1.X)[/h1]
+[h1]Versión actual: 1.2.0 "Regocijo" (Salida 24/11/20, Compatible con versión vanilla 1.2.X)[/h1]
 [B]Echa un Vistazo a [url=https://forum.paradoxplaza.com/forum/threads/mod-viet-events-for-ck3-a-flavor-and-immersion-event-mod.1422081/]Tema del Foro[/url] Para Más Información[/B]
 [B]Descarga/Instalación manual [url=https://github.com/cybrxkhan/VIET-Events-for-CK3/releases]en Github[/url]
 [/B]
@@ -22,7 +22,7 @@ Siéntete libre de usar mi trabajo con tus mods - todo lo que pido es reconocimi
 [img]http://i.imgur.com/EyXurbK.jpg[/img]
 
 [LIST]
-[*]Más de [B]326 nuevos eventos[/B] y cadenas, y aún se añadirán más con cada actualización
+[*]Más de [B]336 nuevos eventos[/B] y cadenas, y aún se añadirán más con cada actualización
 [*]Regla de juego para desactivar los eventos estúpidos para aquellos que no les guste, con tres niveles para escoger entre: Balanceado (Predeterminado), Serio (Restringido), y Todos los eventos (Todo)
 [*][B]Compatible con casi cualquier cosa[/B] ya que no modifico archivos del vanilla - incluso con mods de conversión total puedes desactivar los eventos que hagan referencias a cosas o lugares específicos del mundo medieval que no tendrían sentido en otros periodos o universos (como mods fantásticos o de ciencia ficción)
 [*]Aprende historia con las [B]descripciones de Contexto Histórico[/B] que proporcionan información sobre la inspiración detrás de algunos eventos - a veces, ¡la realidad supera la ficción! (Estos se pueden desactivar con una regla de juego para aquellos que creen que no ayuda a la inmersión.)
@@ -50,24 +50,39 @@ Gracias.
 
 [img]http://i.imgur.com/RQ5QZTF.jpg[/img]
 
-[h1]Versión 1.1.3 "Zhiguai"[/h1]
+[h1]Versión 1.2.0 "Regocijo"[/h1]
 
-[I]Zhiguai, o "Cuentos de Milagros", era un género literario chino especialmente popular durante el periodo Tang. Generalmente, eran historias cortas con elementos sobrenaturales, que reformulaban sucesos reales. Inspirarían la literatura china en épocas posteriores, como las famosas Liaozhai Zhiyi de Pu Songling (traducidas como "Extraños Cuentos de un Estudio Chino") del siglo XVII, cuyas historias combinaban argumentos zhiguai con elementos de otros géneros.[/I]
+[I]"Que nadie llore por mí, ni celebre mi funeral con duelo; porque todavía vivo, pasando de un lado a otro por la boca de los hombres."
+- Quintus Ennius[/I]
 
 [LIST]
-[*]Añadidos 45 eventos nuevos sobre los siguientes temas:
+[*]Actualizado a la versión 1.2.0
+[*]Añadidos 10 nuevos eventos sobre los siguientes temas:
 [LIST]
-[*]7 Terror
-[*]35 Muerte*
-[*]3 Referencias a Monogatari*
+[*]5 Celebración
+[*]5 Turbios*
 [/LIST]
-[*]Añadidos dos cadenas de eventos de VIET CK2: "Amor Perdido" y "Sueño del Viaje Final" (15 eventos en total)
-[*]Los eventos se han hecho menos frecuentes, especialmente los de on_action anual
-[*]Arreglado marcador de posición en la traducción de la cadena de eventos "Canela" para varios idiomas
-[*]Arreglado el fallo en el desencadenante del evento "La Historia del Sabio"
+[*]Cadenas de eventos importantes y raros no tendrán lugar durante guerras
+[*]Cadenas de eventos importantes y raros tendrán lugar con menos frecuencia
+[*]Se reduce la frecuencia con la que los eventos se desencadenan durante guerras
+[*]Movidos algunos eventos de la sección de cinco años en on_actions a la sección raros
+[*]Se ha desactivado temporalmente el evento "Sentimiento de Vientos de Invierno" para personajes femeninos y homosexuales (el texto especial para personajes femeninos y homosexuales se añadirá en un futuro)																																											  
 [/LIST]
 
 *Adaptación desde VIET para CK2
+
+
+[img]https://i.imgur.com/6L11s2n.jpg[/img]
+
+[LIST]
+[*][url=https://steamcommunity.com/sharedfiles/filedetails/?id=2273832430][B]Regional Immersion and Cultural Enrichment (RICE)[/B][/url] - a cultural flavor mod for lesser-known, obscure regions modeled after PI's flavor packs
+[*][url=https://steamcommunity.com/sharedfiles/filedetails/?id=2273832430]Regional Immersion and Cultural Enrichment (RICE)[/url] - a cultural flavor mod for lesser-known, obscure regions modeled after PI's flavor packs
+[*][url=https://steamcommunity.com/sharedfiles/filedetails/?id=2217770052]In Taberna (CK2 Edition)[/url] - the classic song from CK2 returns to CK3
+[*][url=https://steamcommunity.com/sharedfiles/filedetails/?id=2218667128]Recruit Courtiers[/url] - simple decision to spawn male or female courtiers in your court for a small price, similar to CK2
+[*][url=https://steamcommunity.com/sharedfiles/filedetails/?id=2219643991]Reduced Injuries and Deaths from Battles[/url] - if you're tired of people dropping like flies in battles
+[/LIST]
+
+
 
 [img]http://i.imgur.com/GlNXL7m.jpg[/img]
 
