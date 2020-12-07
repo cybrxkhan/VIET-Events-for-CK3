@@ -51,6 +51,13 @@
 # Black cat events - VIETmisc.8397-8398 - revise, to do later
 # Those are just fantasies for people who don't have brothers/sisters - VIETmisc.2240 - similar event in new VIET
 # Araragi-kun - VIETmisc.2241 - province event, to do later
+# Content - Fine with illness or disability - VIETnam.76 - rework later
+# Craven - foolish while sparring - VIETnam.84 - rework later
+# Proud - Muslim fasting outside Ramadan (problem) - VIETnam.86 - rework later with Ramadan
+# Gluttonous - tasty food to eat! - VIETnam.90 - too many tasty foods
+# Trusting - character got pranked by a courtier - VIETnam.93 - rework later
+# Deceitful - Never show true self - VIETnam.94 - rework later
+# Cruel - subjects fear character - VIETnam.96 - rework later
 # 
 ###########################################################################################################################
 
