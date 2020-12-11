@@ -67,11 +67,11 @@ VIETmisc.1000 = {
 		NOT = { has_trait = sadistic }
 		NOT = { has_trait = callous }
 		# Temporarily disabled for female and homosexual characters until proper localization is added
-		OR = {
-			is_female = yes
+		#OR = {
+		#	is_female = yes
 			has_sexuality = asexual
-			has_sexuality = homosexual
-		}
+		#	has_sexuality = homosexual
+		#}
 	}
 	
 	weight_multiplier = {
@@ -126,7 +126,30 @@ VIETmisc.1001 = {
 	}
 	
 	option = {
-		name = VIETmisc.1001.a
+		name = {
+			trigger = {
+				OR = {
+					is_female = no
+					AND = {
+						is_female = yes
+						has_sexuality = homosexual
+					}
+				}
+			}
+			text = VIETmisc.1001.a
+		}
+		name = {
+			trigger = {
+				OR = {
+					is_female = yes
+					AND = {
+						is_female = no
+						has_sexuality = homosexual
+					}
+				}
+			}
+			text = VIETmisc.1001.a.female
+		}
 		trigger_event = {
 			id = VIETmisc.1002
 			days = { 2 4 }
@@ -139,7 +162,23 @@ VIETmisc.1001 = {
 VIETmisc.1002 = {
 	type = character_event
 	title = VIETmisc.1002.t
-	desc = VIETmisc.1002.desc
+	desc = {
+		first_valid = {
+			triggered_desc = {
+				trigger = {
+					OR = {
+						is_female = yes
+						AND = {
+							is_female = no
+							has_sexuality = homosexual
+						}
+					}
+				}
+				desc = VIETmisc.1002.desc.female
+			}
+			desc = VIETmisc.1002.desc
+		}
+	}
 	theme = love
 	override_background = { event_background = market }
 	
@@ -159,7 +198,23 @@ VIETmisc.1002 = {
 VIETmisc.1003 = {
 	type = character_event
 	title = VIETmisc.1003.t
-	desc = VIETmisc.1003.desc
+	desc = {
+		first_valid = {
+			triggered_desc = {
+				trigger = {
+					OR = {
+						is_female = yes
+						AND = {
+							is_female = no
+							has_sexuality = homosexual
+						}
+					}
+				}
+				desc = VIETmisc.1003.desc.female
+			}
+			desc = VIETmisc.1003.desc
+		}
+	}
 	theme = love
 	override_background = { event_background = alley_day }
 	
@@ -179,7 +234,23 @@ VIETmisc.1003 = {
 VIETmisc.1004 = {
 	type = character_event
 	title = VIETmisc.1004.t
-	desc = VIETmisc.1004.desc
+	desc = {
+		first_valid = {
+			triggered_desc = {
+				trigger = {
+					OR = {
+						is_female = yes
+						AND = {
+							is_female = no
+							has_sexuality = homosexual
+						}
+					}
+				}
+				desc = VIETmisc.1004.desc.female
+			}
+			desc = VIETmisc.1004.desc
+		}
+	}
 	theme = love
 	override_background = { event_background = sitting_room }
 	
@@ -202,7 +273,23 @@ VIETmisc.1004 = {
 VIETmisc.1005 = {
 	type = character_event
 	title = VIETmisc.1005.t
-	desc = VIETmisc.1005.desc
+	desc = {
+		first_valid = {
+			triggered_desc = {
+				trigger = {
+					OR = {
+						is_female = yes
+						AND = {
+							is_female = no
+							has_sexuality = homosexual
+						}
+					}
+				}
+				desc = VIETmisc.1005.desc.female
+			}
+			desc = VIETmisc.1005.desc
+		}
+	}
 	theme = love
 	override_background = { event_background = throne_room }
 	
@@ -220,7 +307,23 @@ VIETmisc.1005 = {
 VIETmisc.1006 = {
 	type = character_event
 	title = VIETmisc.1006.t
-	desc = VIETmisc.1006.desc
+	desc = {
+		first_valid = {
+			triggered_desc = {
+				trigger = {
+					OR = {
+						is_female = yes
+						AND = {
+							is_female = no
+							has_sexuality = homosexual
+						}
+					}
+				}
+				desc = VIETmisc.1006.desc.female
+			}
+			desc = VIETmisc.1006.desc
+		}
+	}
 	theme = love
 	override_background = { event_background = VIET_background_skyrim_forest }
 	
@@ -264,7 +367,23 @@ VIETmisc.1007 = {
 VIETmisc.1008 = {
 	type = character_event
 	title = VIETmisc.1008.t
-	desc = VIETmisc.1008.desc
+	desc = {
+		first_valid = {
+			triggered_desc = {
+				trigger = {
+					OR = {
+						is_female = yes
+						AND = {
+							is_female = no
+							has_sexuality = homosexual
+						}
+					}
+				}
+				desc = VIETmisc.1008.desc.female
+			}
+			desc = VIETmisc.1008.desc
+		}
+	}
 	theme = love
 	override_background = { event_background = VIET_background_skyrim_forest }
 	
@@ -283,7 +402,23 @@ VIETmisc.1008 = {
 VIETmisc.1009 = {
 	type = character_event
 	title = VIETmisc.1009.t
-	desc = VIETmisc.1009.desc
+	desc = {
+		first_valid = {
+			triggered_desc = {
+				trigger = {
+					OR = {
+						is_female = yes
+						AND = {
+							is_female = no
+							has_sexuality = homosexual
+						}
+					}
+				}
+				desc = VIETmisc.1009.desc.female
+			}
+			desc = VIETmisc.1009.desc
+		}
+	}
 	theme = love
 	override_background = { event_background = VIET_background_skyrim_forest }
 	
@@ -303,7 +438,23 @@ VIETmisc.1009 = {
 VIETmisc.1010 = {
 	type = character_event
 	title = VIETmisc.1010.t
-	desc = VIETmisc.1010.desc
+	desc = {
+		first_valid = {
+			triggered_desc = {
+				trigger = {
+					OR = {
+						is_female = yes
+						AND = {
+							is_female = no
+							has_sexuality = homosexual
+						}
+					}
+				}
+				desc = VIETmisc.1010.desc.female
+			}
+			desc = VIETmisc.1010.desc
+		}
+	}
 	theme = love
 	override_background = { event_background = VIET_background_skyrim_forest }
 	
@@ -323,7 +474,23 @@ VIETmisc.1010 = {
 VIETmisc.1011 = {
 	type = character_event
 	title = VIETmisc.1011.t
-	desc = VIETmisc.1011.desc
+	desc = {
+		first_valid = {
+			triggered_desc = {
+				trigger = {
+					OR = {
+						is_female = yes
+						AND = {
+							is_female = no
+							has_sexuality = homosexual
+						}
+					}
+				}
+				desc = VIETmisc.1011.desc.female
+			}
+			desc = VIETmisc.1011.desc
+		}
+	}
 	theme = love
 	override_background = { event_background = VIET_background_skyrim_forest }
 	
@@ -343,7 +510,23 @@ VIETmisc.1011 = {
 VIETmisc.1012 = {
 	type = character_event
 	title = VIETmisc.1012.t
-	desc = VIETmisc.1012.desc
+	desc = {
+		first_valid = {
+			triggered_desc = {
+				trigger = {
+					OR = {
+						is_female = yes
+						AND = {
+							is_female = no
+							has_sexuality = homosexual
+						}
+					}
+				}
+				desc = VIETmisc.1012.desc.female
+			}
+			desc = VIETmisc.1012.desc
+		}
+	}
 	theme = love
 	override_background = { event_background = garden }
 	
@@ -366,7 +549,23 @@ VIETmisc.1012 = {
 VIETmisc.1013 = {
 	type = character_event
 	title = VIETmisc.1013.t
-	desc = VIETmisc.1013.desc
+	desc = {
+		first_valid = {
+			triggered_desc = {
+				trigger = {
+					OR = {
+						is_female = yes
+						AND = {
+							is_female = no
+							has_sexuality = homosexual
+						}
+					}
+				}
+				desc = VIETmisc.1013.desc.female
+			}
+			desc = VIETmisc.1013.desc
+		}
+	}
 	theme = love
 	override_background = { event_background = garden }
 	
@@ -376,7 +575,30 @@ VIETmisc.1013 = {
 	#}
 	
 	option = {
-		name = VIETmisc.1013.a
+		name = {
+			trigger = {
+				OR = {
+					is_female = no
+					AND = {
+						is_female = yes
+						has_sexuality = homosexual
+					}
+				}
+			}
+			text = VIETmisc.1013.a
+		}
+		name = {
+			trigger = {
+				OR = {
+					is_female = yes
+					AND = {
+						is_female = no
+						has_sexuality = homosexual
+					}
+				}
+			}
+			text = VIETmisc.1013.a.female
+		}
 		trigger_event = {
 			id = VIETmisc.1014
 			days = { 2 4 }
@@ -389,7 +611,23 @@ VIETmisc.1013 = {
 VIETmisc.1014 = {
 	type = character_event
 	title = VIETmisc.1014.t
-	desc = VIETmisc.1014.desc
+	desc = {
+		first_valid = {
+			triggered_desc = {
+				trigger = {
+					OR = {
+						is_female = yes
+						AND = {
+							is_female = no
+							has_sexuality = homosexual
+						}
+					}
+				}
+				desc = VIETmisc.1014.desc.female
+			}
+			desc = VIETmisc.1014.desc
+		}
+	}
 	theme = love
 	override_background = { event_background = VIET_background_skyrim_forest }
 	
@@ -409,7 +647,23 @@ VIETmisc.1014 = {
 VIETmisc.1015 = {
 	type = character_event
 	title = VIETmisc.1015.t
-	desc = VIETmisc.1015.desc
+	desc = {
+		first_valid = {
+			triggered_desc = {
+				trigger = {
+					OR = {
+						is_female = yes
+						AND = {
+							is_female = no
+							has_sexuality = homosexual
+						}
+					}
+				}
+				desc = VIETmisc.1015.desc.female
+			}
+			desc = VIETmisc.1015.desc
+		}
+	}
 	theme = love
 	override_background = { event_background = sitting_room }
 	
@@ -419,7 +673,30 @@ VIETmisc.1015 = {
 	}
 	
 	option = {
-		name = VIETmisc.1015.a
+		name = {
+			trigger = {
+				OR = {
+					is_female = no
+					AND = {
+						is_female = yes
+						has_sexuality = homosexual
+					}
+				}
+			}
+			text = VIETmisc.1015.a
+		}
+		name = {
+			trigger = {
+				OR = {
+					is_female = yes
+					AND = {
+						is_female = no
+						has_sexuality = homosexual
+					}
+				}
+			}
+			text = VIETmisc.1015.a.female
+		}
 		trigger_event = {
 			id = VIETmisc.1016
 			days = { 2 4 }
@@ -433,7 +710,23 @@ VIETmisc.1015 = {
 VIETmisc.1016 = {
 	type = character_event
 	title = VIETmisc.1016.t
-	desc = VIETmisc.1016.desc
+	desc = {
+		first_valid = {
+			triggered_desc = {
+				trigger = {
+					OR = {
+						is_female = yes
+						AND = {
+							is_female = no
+							has_sexuality = homosexual
+						}
+					}
+				}
+				desc = VIETmisc.1016.desc.female
+			}
+			desc = VIETmisc.1016.desc
+		}
+	}
 	theme = love
 	override_background = { event_background = garden }
 	
@@ -453,7 +746,23 @@ VIETmisc.1016 = {
 VIETmisc.1017 = {
 	type = character_event
 	title = VIETmisc.1017.t
-	desc = VIETmisc.1017.desc
+	desc = {
+		first_valid = {
+			triggered_desc = {
+				trigger = {
+					OR = {
+						is_female = yes
+						AND = {
+							is_female = no
+							has_sexuality = homosexual
+						}
+					}
+				}
+				desc = VIETmisc.1017.desc.female
+			}
+			desc = VIETmisc.1017.desc
+		}
+	}
 	theme = love
 	override_background = { event_background = garden }
 	
@@ -473,7 +782,23 @@ VIETmisc.1017 = {
 VIETmisc.1018 = {
 	type = character_event
 	title = VIETmisc.1018.t
-	desc = VIETmisc.1018.desc
+	desc = {
+		first_valid = {
+			triggered_desc = {
+				trigger = {
+					OR = {
+						is_female = yes
+						AND = {
+							is_female = no
+							has_sexuality = homosexual
+						}
+					}
+				}
+				desc = VIETmisc.1018.desc.female
+			}
+			desc = VIETmisc.1018.desc
+		}
+	}
 	theme = love
 	override_background = { event_background = corridor_day }
 	
@@ -494,7 +819,23 @@ VIETmisc.1018 = {
 VIETmisc.1019 = {
 	type = character_event
 	title = VIETmisc.1019.t
-	desc = VIETmisc.1019.desc
+	desc = {
+		first_valid = {
+			triggered_desc = {
+				trigger = {
+					OR = {
+						is_female = yes
+						AND = {
+							is_female = no
+							has_sexuality = homosexual
+						}
+					}
+				}
+				desc = VIETmisc.1019.desc.female
+			}
+			desc = VIETmisc.1019.desc
+		}
+	}
 	theme = love
 	override_background = { event_background = corridor_day }
 	
@@ -513,7 +854,23 @@ VIETmisc.1019 = {
 VIETmisc.1020 = {
 	type = character_event
 	title = VIETmisc.1020.t
-	desc = VIETmisc.1020.desc
+	desc = {
+		first_valid = {
+			triggered_desc = {
+				trigger = {
+					OR = {
+						is_female = yes
+						AND = {
+							is_female = no
+							has_sexuality = homosexual
+						}
+					}
+				}
+				desc = VIETmisc.1020.desc.female
+			}
+			desc = VIETmisc.1020.desc
+		}
+	}
 	theme = love
 	override_background = { event_background = throne_room }
 	
@@ -523,7 +880,30 @@ VIETmisc.1020 = {
 	}
 	
 	option = {
-		name = VIETmisc.1020.a
+		name = {
+			trigger = {
+				OR = {
+					is_female = no
+					AND = {
+						is_female = yes
+						has_sexuality = homosexual
+					}
+				}
+			}
+			text = VIETmisc.1020.a
+		}
+		name = {
+			trigger = {
+				OR = {
+					is_female = yes
+					AND = {
+						is_female = no
+						has_sexuality = homosexual
+					}
+				}
+			}
+			text = VIETmisc.1020.a.female
+		}
 		trigger_event = {
 			id = VIETmisc.1021
 			days = { 2 4 }
@@ -536,7 +916,23 @@ VIETmisc.1020 = {
 VIETmisc.1021 = {
 	type = character_event
 	title = VIETmisc.1021.t
-	desc = VIETmisc.1021.desc
+	desc = {
+		first_valid = {
+			triggered_desc = {
+				trigger = {
+					OR = {
+						is_female = yes
+						AND = {
+							is_female = no
+							has_sexuality = homosexual
+						}
+					}
+				}
+				desc = VIETmisc.1021.desc.female
+			}
+			desc = VIETmisc.1021.desc
+		}
+	}
 	theme = love
 	override_background = { event_background = VIET_background_skyrim_forest }
 	
@@ -559,7 +955,23 @@ VIETmisc.1021 = {
 VIETmisc.1022 = {
 	type = character_event
 	title = VIETmisc.1022.t
-	desc = VIETmisc.1022.desc
+	desc = {
+		first_valid = {
+			triggered_desc = {
+				trigger = {
+					OR = {
+						is_female = yes
+						AND = {
+							is_female = no
+							has_sexuality = homosexual
+						}
+					}
+				}
+				desc = VIETmisc.1022.desc.female
+			}
+			desc = VIETmisc.1022.desc
+		}
+	}
 	theme = love
 	override_background = { event_background = VIET_background_skyrim_forest }
 	

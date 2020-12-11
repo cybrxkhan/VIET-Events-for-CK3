@@ -1,0 +1,7 @@
+﻿VIET_basic_traveler_template = {
+	age = { 16 45 }
+	trait = adventurer
+	gender_female_chance = 33
+	dynasty = none
+	random_traits = yes
+}

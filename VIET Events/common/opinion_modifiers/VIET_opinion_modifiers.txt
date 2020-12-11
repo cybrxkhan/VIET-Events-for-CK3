@@ -206,3 +206,7 @@ VIET_opinion_bad_hangover_mockery = {
 	decaying = yes
 	opinion = -10
 }
+VIET_orphan_gave_me_home = {
+	years = 100
+	opinion = 25
+}

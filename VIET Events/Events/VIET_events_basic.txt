@@ -29,6 +29,7 @@
 # 0089-0096		Earth
 # 0097-0103		Spooky
 # 0104-0108		Celebration
+# 0109-0117		Generic
 # 
 ############################################################################################################################
 
@@ -8606,6 +8607,801 @@ VIETmisc.0108 = {
 	option = { # Just a lunatic
 		name = VIETmisc.0108.b
 		VIET_small_prestige_gain_effect = yes		
+	}
+}
+
+
+
+###############################################################
+# GENERIC 0109-0117
+###############################################################
+
+
+
+# Disappointment to the heavens
+VIETmisc.0109 = {
+	type = character_event
+	title = VIETmisc.0109.t
+	desc = VIETmisc.0109.desc
+	theme = VIET_theme_nightmare
+	
+	left_portrait = {
+		character = root
+		animation = sadness
+	}
+
+	weight_multiplier = {
+		base = 1
+		modifier = {
+			add = 0.2
+			has_trait = zealous
+		}
+		modifier = {
+			add = -0.2
+			has_trait = cynical
+		}
+		modifier = {
+			add = 0.2
+			has_trait = callous
+		}
+		modifier = {
+			add = -0.2
+			has_trait = compassionate
+		}
+		modifier = {
+			add = 0.2
+			has_trait = arrogant
+		}
+		modifier = {
+			add = -0.2
+			has_trait = humble
+		}
+	}
+	
+	option = { # Ok
+		name = VIETmisc.0109.a
+		VIET_tiny_piety_loss_effect = yes
+	}
+}
+
+
+
+# Talking with a blacksmith about blacksmith-y things
+VIETmisc.0110 = {
+	type = character_event
+	title = VIETmisc.0110.t
+	desc = VIETmisc.0110.desc
+	theme = martial
+	
+	right_portrait = root
+
+	weight_multiplier = {
+		base = 1
+		modifier = {
+			add = 0.2
+			has_trait = diligent
+		}
+		modifier = {
+			add = -0.2
+			has_trait = lazy
+		}
+		modifier = {
+			add = 0.2
+			has_trait = patient
+		}
+		modifier = {
+			add = -0.2
+			has_trait = impatient
+		}
+		modifier = {
+			add = 0.2
+			has_trait = gregarious
+		}
+		modifier = {
+			add = -0.2
+			has_trait = shy
+		}
+	}
+	
+	option = { # Ok
+		name = VIETmisc.0110.a
+		add_character_modifier = {
+			modifier = VIET_blacksmith_discussion
+			years = 6
+		}
+	}
+}
+
+scripted_trigger VIETmisc0111_foreign_traveler_trigger = {
+	is_adult = yes
+	OR = {
+		faith.religion = root.faith.religion
+		has_same_culture_group_as = root
+	}
+}
+
+scripted_trigger VIETmisc0111_foreign_ruler_for_creation_trigger = {
+	in_diplomatic_range = root
+	OR = {
+		faith.religion = root.faith.religion
+		has_same_culture_group_as = root
+	}
+}
+
+scripted_effect VIETmisc0111_add_courtier_effect = {
+	save_scope_as = new_courtier
+	root = { add_courtier = scope:new_courtier }
+	add_opinion = {
+		target = root
+		modifier = grateful_opinion
+		opinion = $OPINION$
+	}
+}
+
+# Come across an adventurer left for dead
+VIETmisc.0111 = {
+	type = character_event
+	title = VIETmisc.0111.t
+	desc = VIETmisc.0111.desc
+	theme = VIET_theme_skyrim_forest
+	
+	left_portrait = root
+	right_portrait = {
+		character = scope:scope_VIET_left_for_dead_person
+		animation = wounded
+	}
+
+	weight_multiplier = {
+		base = 1
+		modifier = {
+			add = 0.2
+			has_trait = content
+		}
+		modifier = {
+			add = -0.2
+			has_trait = ambitious
+		}
+		modifier = {
+			add = 0.2
+			has_trait = trusting
+		}
+		modifier = {
+			add = -0.2
+			has_trait = paranoid
+		}
+		modifier = {
+			add = 0.2
+			has_trait = gregarious
+		}
+		modifier = {
+			add = -0.2
+			has_trait = shy
+		}
+	}
+	
+	immediate = {
+		hidden_effect = {
+			random_pool_character = {
+				province = root.capital_province
+				limit = { VIETmisc0111_foreign_traveler_trigger = yes }
+				save_scope_as = scope_VIET_left_for_dead_person
+			}
+
+			#No such character? Let's make one
+			if = {
+				limit = { NOT = { exists = scope:scope_VIET_left_for_dead_person } }
+
+				random_independent_ruler = {
+					limit = { VIETmisc0111_foreign_ruler_for_creation_trigger = yes }
+					save_scope_as = creation_template_ruler
+				}
+
+				create_character = {
+					location = root.capital_province
+					template = pool_repopulate_prowess
+					culture = scope:creation_template_ruler.culture
+					faith = scope:creation_template_ruler.faith
+					save_scope_as = VIET_basic_traveler_template
+				}
+
+				if = {
+					limit = {
+						NOT = { exists = scope:create_family_blocker }
+						exists = scope:scope_VIET_left_for_dead_person # They will exist, but we do this to suppress errors for newly created characters not existing while trigger tooltips are generating
+					}
+					game_rule_create_spouse_and_children = { CHARACTER = scope:scope_VIET_left_for_dead_person }
+				}
+			}
+
+			if = {
+				limit = { exists = scope:scope_VIET_left_for_dead_person } # They will exist, but we do this to suppress errors for newly created characters not existing while trigger tooltips are generating
+				
+				# Do they have a traveling family?
+				scope:scope_VIET_left_for_dead_person = {
+					random_traveling_family_member = {
+						limit = { is_spouse_of = prev }
+						alternative_limit = { NOT = { this = scope:scope_VIET_left_for_dead_person } }
+						save_scope_as = traveler_family_1
+					}
+					if = {
+						limit = { exists = scope:traveler_family_1 }
+						random_traveling_family_member = {
+							limit = {
+								NOR = {
+									this = scope:traveler_family_1
+									this = scope:scope_VIET_left_for_dead_person
+								}
+							}
+							save_scope_as = traveler_family_2
+						}
+					}
+					if = {
+						limit = { exists = scope:traveler_family_2 }
+						random_traveling_family_member = {
+							limit = {
+								NOR = {
+									this = scope:traveler_family_1
+									this = scope:traveler_family_2
+									this = scope:scope_VIET_left_for_dead_person
+								}
+							}
+							save_scope_as = traveler_family_3
+						}
+					}
+					if = {
+						limit = { exists = scope:traveler_family_3 }
+						random_traveling_family_member = {
+							limit = {
+								NOR = {
+									this = scope:traveler_family_1
+									this = scope:traveler_family_2
+									this = scope:traveler_family_3
+									this = scope:scope_VIET_left_for_dead_person
+								}
+							}
+							save_scope_as = traveler_family_4
+						}
+					}
+				}
+			}
+			scope:scope_VIET_left_for_dead_person = {
+				increase_wounds_effect = {
+					REASON = pilgrimage_bandit_attack
+				}	
+				add_character_modifier = {
+					modifier = VIET_adventurer_left_for_dead_origin
+				}
+			}
+		}		
+	}
+	
+	option = { # Leave them be
+		name = VIETmisc.0111.a
+		VIET_large_piety_loss_effect = yes
+		add_dread = 10
+		stress_impact = {
+			compassionate = medium_stress_impact_gain
+			generous = medium_stress_impact_gain
+			gregarious = minor_stress_impact_gain
+		}
+	}
+	
+	option = { # Escort them to the safety of town
+		name = VIETmisc.0111.b
+		VIET_large_prestige_loss_effect = yes
+		VIET_large_piety_gain_effect = yes
+		stress_impact = {
+			paranoid = minor_stress_impact_gain
+			callous = miniscule_stress_impact_gain
+			sadistic = minor_stress_impact_gain
+		}
+	}
+	
+	option = { # Invite them to court
+		name = VIETmisc.0111.c
+		trigger = {
+			OR = {
+				gold >= 15
+				is_ai = no
+			}
+		}
+		remove_short_term_gold = 15
+		VIET_huge_prestige_loss_effect = yes
+		VIET_huge_piety_gain_effect = yes
+		stress_impact = {
+			paranoid = minor_stress_impact_gain
+			callous = miniscule_stress_impact_gain
+			sadistic = minor_stress_impact_gain
+		}
+		scope:scope_VIET_left_for_dead_person = {
+			if = {
+				limit = { exists = scope:traveler_family_1 }
+				every_traveling_family_member = {
+					#custom = yearly.1090.travelers_family
+					VIETmisc0111_add_courtier_effect = { OPINION = 50 }
+				}
+			}
+			else = {
+				VIETmisc0111_add_courtier_effect = { OPINION = 50 }
+			}
+		}
+		if = {
+			limit = {
+				can_add_hook = {
+					target = scope:scope_VIET_left_for_dead_person
+					type = loyalty_hook
+				}
+			}
+			add_hook = {
+				target = scope:scope_VIET_left_for_dead_person
+				type = loyalty_hook
+			}
+		}
+		hidden_effect = {
+			if = {
+				limit = { can_set_relation_potential_friend_trigger = { CHARACTER = scope:scope_VIET_left_for_dead_person } }
+				set_relation_potential_friend = scope:scope_VIET_left_for_dead_person
+			}
+		}
+	}
+}
+
+# Smell a weird smell
+VIETmisc.0112 = {
+	type = character_event
+	title = VIETmisc.0112.t
+	desc = VIETmisc.0112.desc
+	theme = realm
+	
+	left_portrait = {
+		character = root
+		animation = paranoia
+	}	
+	right_portrait = {
+		character = scope:scope_VIET_no_smell_courtier
+		animation = personality_cynical
+	}
+	
+	trigger = {
+		any_courtier_or_guest = {
+			limit = {
+				is_available_ai_adult = yes
+			}
+			save_scope_as = scope_VIET_no_smell_courtier
+		}	
+	}
+
+	weight_multiplier = {
+		base = 1
+		modifier = {
+			add = 0.2
+			has_trait = paranoid
+		}
+		modifier = {
+			add = -0.2
+			has_trait = trusting
+		}
+		modifier = {
+			add = 0.2
+			has_trait = stubborn
+		}
+		modifier = {
+			add = -0.2
+			has_trait = fickle
+		}
+		modifier = {
+			add = 0.2
+			has_trait = honest
+		}
+		modifier = {
+			add = -0.2
+			has_trait = deceitful
+		}
+	}
+	
+	immediate = {
+		random_courtier_or_guest = {
+			limit = {
+				is_available_ai_adult = yes
+			}
+			save_scope_as = scope_VIET_no_smell_courtier
+		}	
+	}
+	
+	option = { # I smell it!
+		name = VIETmisc.0112.a
+		stress_impact = {
+			fickle = miniscule_stress_impact_gain
+			deceitful = miniscule_stress_impact_gain
+			patient = miniscule_stress_impact_gain
+			calm = miniscule_stress_impact_gain
+			trusting = miniscule_stress_impact_gain
+			arrogant = miniscule_stress_impact_gain
+			gregarious = miniscule_stress_impact_gain
+		}
+		add_character_modifier = {
+			modifier = VIET_smelling_smells
+			days = 444
+		}
+	}	
+	option = { # Take a rest
+		name = VIETmisc.0112.b
+		stress_impact = {
+			stubborn = miniscule_stress_impact_gain
+			honest = miniscule_stress_impact_gain
+			impatient = miniscule_stress_impact_gain
+			wrathful = miniscule_stress_impact_gain
+			paranoid = miniscule_stress_impact_gain
+			humble = miniscule_stress_impact_gain
+			shy = miniscule_stress_impact_gain
+		}
+		add_character_modifier = {
+			modifier = VIET_smelling_smells
+			days = 444
+		}
+	}
+}
+
+
+# Elderberry tea?
+VIETmisc.0113 = {
+	type = character_event
+	title = VIETmisc.0113.t
+	desc = VIETmisc.0113.desc
+	theme = family
+	
+	left_portrait = {
+		character = root
+		animation = happiness
+	}
+
+	weight_multiplier = {
+		base = 1
+		modifier = {
+			add = 0.2
+			has_trait = content
+		}
+		modifier = {
+			add = -0.2
+			has_trait = ambitious
+		}
+		modifier = {
+			add = 0.2
+			has_trait = lazy
+		}
+		modifier = {
+			add = -0.2
+			has_trait = diligent
+		}
+		modifier = {
+			add = 0.2
+			has_trait = compassionate
+		}
+		modifier = {
+			add = -0.2
+			has_trait = sadistic
+		}
+	}
+	
+	option = { # ok
+		name = VIETmisc.0113.a
+		stress_impact = {
+			base = miniscule_stress_impact_loss
+			lazy = miniscule_stress_impact_loss
+		}
+		add_character_modifier = {
+			modifier = VIET_elderberry_tea
+			years = 5
+		}
+	}
+}
+
+
+# Songbird perches on a nearby tree
+VIETmisc.0114 = {
+	type = character_event
+	title = VIETmisc.0114.t
+	desc = VIETmisc.0114.desc
+	theme = VIET_theme_garden_generic
+	
+	right_portrait = {
+		character = root
+		animation = happiness
+	}
+
+	weight_multiplier = {
+		base = 1
+		modifier = {
+			add = 0.2
+			has_trait = content
+		}
+		modifier = {
+			add = -0.2
+			has_trait = ambitious
+		}
+		modifier = {
+			add = 0.2
+			has_trait = humble
+		}
+		modifier = {
+			add = -0.2
+			has_trait = arrogant
+		}
+		modifier = {
+			add = 0.2
+			has_trait = compassionate
+		}
+		modifier = {
+			add = -0.2
+			has_trait = sadistic
+		}
+	}
+	
+	option = { # ok
+		name = VIETmisc.0114.a
+		VIET_tiny_piety_gain_effect = yes
+		stress_impact = {
+			base = miniscule_stress_impact_loss
+			compassionate = miniscule_stress_impact_loss
+		}	
+	}
+}
+
+
+# A jail cell is empty due to sueprstition
+VIETmisc.0115 = {
+	type = character_event
+	title = VIETmisc.0115.t
+	desc = VIETmisc.0115.desc
+	theme = dungeon
+	
+	left_portrait = {
+		character = root
+		animation = happiness
+	}
+
+	weight_multiplier = {
+		base = 1
+		modifier = {
+			add = 0.2
+			has_trait = diligent
+		}
+		modifier = {
+			add = -0.2
+			has_trait = lazy
+		}
+		modifier = {
+			add = 0.2
+			has_trait = brave
+		}
+		modifier = {
+			add = -0.2
+			has_trait = craven
+		}
+		modifier = {
+			add = 0.2
+			has_trait = sadistic
+		}
+		modifier = {
+			add = -0.2
+			has_trait = content
+		}
+	}
+	
+	option = { # don't provoke the spirits
+		name = VIETmisc.0115.a
+		stress_impact = {
+			cynical = medium_stress_impact_gain
+			brave = medium_stress_impact_gain
+		}
+	}	
+	option = { # provoke the spirits
+		name = VIETmisc.0115.b
+		stress_impact = {
+			zealous = minor_stress_impact_gain
+			craven = medium_stress_impact_gain
+		}
+		VIET_medium_prestige_gain_effect = yes
+		random = {
+			chance = 40
+			modifier = {
+				add = 15
+				num_sinful_traits >= 1
+			}
+			modifier = {
+				add = -15				
+				num_virtuous_traits >= 1
+			}
+			send_interface_toast = {
+				left_icon = ROOT
+				title = VIETmisc.0115.toast
+				add_character_modifier = {
+					modifier = VIET_prison_ghost_curse
+					years = 8
+				}
+			}
+		}		
+	}
+}
+
+
+
+# Witness a couple fornicating in public
+VIETmisc.0116 = {
+	type = character_event
+	title = VIETmisc.0116.t
+	desc = VIETmisc.0116.desc
+	theme = seduction
+	override_background = { event_background = alley_day }
+	
+	left_portrait = {
+		character = root
+		animation = shock
+	}
+
+	weight_multiplier = {
+		base = 1
+		modifier = {
+			add = 0.2
+			has_trait = gregarious
+		}
+		modifier = {
+			add = -0.2
+			has_trait = shy
+		}
+		modifier = {
+			add = 0.2
+			has_trait = lazy
+		}
+		modifier = {
+			add = -0.2
+			has_trait = diligent
+		}
+		modifier = {
+			add = 0.2
+			has_trait = fickle
+		}
+		modifier = {
+			add = -0.2
+			has_trait = stubborn
+		}
+	}
+	
+	option = { # Debauched commoners
+		name = VIETmisc.0116.a
+		VIET_medium_piety_gain_effect = yes
+		add_character_modifier = {
+			modifier = VIET_witnessed_public_fornication
+			years = 3
+		}
+		stress_impact = {
+			humble = medium_stress_impact_gain
+			lustful = miniscule_stress_impact_gain
+		}
+		if = {
+			limit = {
+				has_game_rule = VIET_historical_context_on
+			}
+			custom_tooltip = VIETmisc.0116.info
+		}	
+	}	
+	option = { # Not one to judge
+		name = VIETmisc.0116.b
+		VIET_medium_prestige_gain_effect = yes
+		add_character_modifier = {
+			modifier = VIET_witnessed_public_fornication
+			years = 3
+		}
+		stress_impact = {
+			arrogant = medium_stress_impact_gain
+		}
+		if = {
+			limit = {
+				has_game_rule = VIET_historical_context_on
+			}
+			custom_tooltip = VIETmisc.0116.info
+		}	
+	}	
+	option = { # Aroused ruler
+		name = VIETmisc.0116.c
+		trigger = {
+			NOR = {
+				has_sexuality = asexual
+				has_sexuality = homosexual # Witnessing a hetereosexual couple
+				has_trait = celibate
+				has_trait = eunuch
+			}
+		}
+		add_character_modifier = {
+			modifier = VIET_lustful_ruler
+			years = 3
+		}
+		add_character_modifier = {
+			modifier = VIET_witnessed_public_fornication
+			years = 3
+		}
+		stress_impact = {
+			chaste = medium_stress_impact_gain
+		}
+		if = {
+			limit = {
+				has_game_rule = VIET_historical_context_on
+			}
+			custom_tooltip = VIETmisc.0116.info
+		}	
+	}	
+	option = { # Join them
+		name = VIETmisc.0116.d
+		trigger = {
+			has_trait = lustful
+			is_female = no
+			OR = {
+				gold >= 5
+				is_ai = no
+			}
+		}
+		remove_short_term_gold = 5
+		trait = lustful
+		add_character_modifier = {
+			modifier = VIET_threesome_with_commoners
+			years = 3
+		}
+		if = {
+			limit = {
+				has_game_rule = VIET_historical_context_on
+			}
+			custom_tooltip = VIETmisc.0116.info
+		}	
+	}
+}
+
+
+# Learning about cooking from a cook
+VIETmisc.0117 = {
+	type = character_event
+	title = VIETmisc.0117.t
+	desc = VIETmisc.0117.desc
+	theme = feast_activity
+	
+	left_portrait = {
+		character = root
+		animation = personality_rational
+	}
+
+	weight_multiplier = {
+		base = 1
+		modifier = {
+			add = 0.2
+			has_trait = gregarious
+		}
+		modifier = {
+			add = -0.2
+			has_trait = shy
+		}
+		modifier = {
+			add = 0.2
+			has_trait = gluttonous
+		}
+		modifier = {
+			add = -0.2
+			has_trait = temperate
+		}
+		modifier = {
+			add = 0.2
+			has_trait = humble
+		}
+		modifier = {
+			add = -0.2
+			has_trait = arrogant
+		}
+	}
+	
+	option = { # Interesting
+		name = VIETmisc.0117.a
+		add_character_modifier = {
+			modifier = VIET_cook_knowledge
+			years = 7
+		}
 	}
 }
 

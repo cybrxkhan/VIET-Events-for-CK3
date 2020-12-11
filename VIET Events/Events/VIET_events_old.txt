@@ -3629,6 +3629,7 @@ VIETold.2054 = {
 	
 	trigger = {
 		VIET_is_unattractive_trigger = no
+		is_female = no
 	}
 
 	weight_multiplier = {
@@ -3691,8 +3692,14 @@ VIETold.2054 = {
 		}
 	}
 
-	option = { # Chat with her
+	option = { # Flirt with her
 		name = VIETold.2054.c
+		trigger = {
+			NOR = {
+				has_sexuality = homosexual
+				has_sexuality = asexual
+			}
+		}
 		add_character_modifier = {
 			modifier = VIET_interesting_talk_with_stranger
 			days = 365
@@ -3707,6 +3714,10 @@ VIETold.2054 = {
 		name = VIETold.2054.d
 		trigger = {
 			has_trait = lustful
+			NOR = {
+				has_sexuality = homosexual
+				has_sexuality = asexual
+			}
 		}
 		trait = lustful
 		if = {
@@ -3865,6 +3876,18 @@ VIETold.2056 = {
 	option = { # Welcome!
 		name = VIETold.2056.a
 		add_courtier = scope:scope_VIET_nice_day_girl
+		if = {
+			limit = {
+				can_add_hook = {
+					target = scope:scope_VIET_nice_day_girl
+					type = favor_hook
+				}
+			}
+			add_hook = {
+				target = scope:scope_VIET_nice_day_girl
+				type = favor_hook
+			}
+		}
 	}
 }
 
@@ -4235,6 +4258,18 @@ VIETold.2061 = {
 	option = { # Welcome!
 		name = VIETold.2061.a
 		add_courtier = scope:scope_VIET_jon_battle_born
+		if = {
+			limit = {
+				can_add_hook = {
+					target = scope:scope_VIET_jon_battle_born
+					type = favor_hook
+				}
+			}
+			add_hook = {
+				target = scope:scope_VIET_jon_battle_born
+				type = favor_hook
+			}
+		}
 	}
 }
 
@@ -4366,7 +4401,19 @@ VIETold.2063 = {
 
 	option = { # Welcome!
 		name = VIETold.2063.a
-		add_courtier = scope:scope_VIET_skyrim_lydia
+		add_courtier = scope:scope_VIET_skyrim_lydia			
+		if = {
+			limit = {
+				can_add_hook = {
+					target = scope:scope_VIET_skyrim_lydia
+					type = loyalty_hook
+				}
+			}
+			add_hook = {
+				target = scope:scope_VIET_skyrim_lydia
+				type = loyalty_hook
+			}
+		}
 	}
 }
 
@@ -6898,14 +6945,26 @@ VIETold.2093 = {
 			arbitrary = minor_stress_impact_gain
 			callous = medium_stress_impact_gain
 			arrogant = minor_stress_impact_gain
-		}
-		hidden_effect = {
-			scope:scope_VIET_nobleman_refugee = {
-				death = {
-					death_reason = death_disappearance
+		}	
+		if = {
+			limit = {
+				can_add_hook = {
+					target = scope:scope_VIET_nobleman_refugee
+					type = favor_hook
 				}
 			}
+			add_hook = {
+				target = scope:scope_VIET_nobleman_refugee
+				type = favor_hook
+			}
 		}
+		#hidden_effect = {
+		#	scope:scope_VIET_nobleman_refugee = {
+		#		death = {
+		#			death_reason = death_disappearance
+		#		}
+		#	}
+		#}
 	}
 	option = { # Ok
 		name = VIETold.2093.b
@@ -6913,18 +6972,30 @@ VIETold.2093 = {
 			compassionate = medium_stress_impact_gain
 			just = medium_stress_impact_gain
 		}
-		hidden_effect = {
-			scope:scope_VIET_nobleman_refugee = {
-				death = {
-					death_reason = death_disappearance
-				}
-			}
-		}
+		#hidden_effect = {
+		#	scope:scope_VIET_nobleman_refugee = {
+		#		death = {
+		#			death_reason = death_disappearance
+		#		}
+		#	}
+		#}
 	}
 	option = { # Ok
 		name = VIETold.2093.c
 		VIET_large_prestige_loss_effect = yes
-		add_courtier = scope:scope_VIET_nobleman_refugee
+		add_courtier = scope:scope_VIET_nobleman_refugee			
+		if = {
+			limit = {
+				can_add_hook = {
+					target = scope:scope_VIET_nobleman_refugee
+					type = loyalty_hook
+				}
+			}
+			add_hook = {
+				target = scope:scope_VIET_nobleman_refugee
+				type = loyalty_hook
+			}
+		}
 	}
 }
 

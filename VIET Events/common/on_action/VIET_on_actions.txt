@@ -98,6 +98,14 @@ VIET_events_yearly_pulse = {
 		100 = VIETold.0017		# Visit a Mongol/nomad pit stop
 		# Shady
 		100 = VIETold.0018		# Bought bad baklava
+		# Generic Traits (OG)
+		100 = VIETold.0023		# Slothful - Don't Like Working
+		100 = VIETold.0024		# Diligent - fell asleep working last night
+		100 = VIETold.0025		# Greedy - coin purse on the ground during Summer Fair
+		100 = VIETold.0027		# Ambitious - Ruler wants to improve image
+		100 = VIETold.0032		# Envious - Why is everyone better than me?
+		100 = VIETold.0038		# Too prudish?
+		100 = VIETold.0039		# Paranoid - character thinks he/she just saw an assassin
 		
 		#######################################
 		# OLDER VIET
@@ -247,6 +255,11 @@ VIET_events_yearly_pulse = {
 		100 = VIETmisc.0103		# It's a spider!
 		# Celebration
 		100 = VIETmisc.0107		# Courtier is hungover
+		# Generic
+		100 = VIETmisc.0109		# Disappointment to the heavens
+		100 = VIETmisc.0112		# Smell a weird smell
+		100 = VIETmisc.0113		# Elderberry tea?
+		100 = VIETmisc.0114		# Songbird perches on a nearby tree
 	}
 }
 
@@ -308,6 +321,14 @@ VIET_events_tri_yearly_pulse = {
 		100 = VIETold.0019		# Servant got scammed when they bought a cat, thinking it was a pig
 		100 = VIETold.0020		# Servant is found to be a smuggler
 		100 = VIETold.0021		# Saint's bone scam
+		# Generic Trait (OG)
+		100 = VIETold.0028		# Arbitrary - Silence after arbitrary sentencing
+		100 = VIETold.0029		# Just ruler, and peasants love it
+		100 = VIETold.0030		# Wroth - anger means none dare cross
+		100 = VIETold.0031		# Patient - Listening to the opinions of others
+		100 = VIETold.0035		# Humble - character learns from a peasant
+		100 = VIETold.0036		# Lustful - Ugly Wench throws herself at you
+		100 = VIETold.0037		# Chaste - Pretty young maiden tempts you
 		
 		#######################################
 		# OLDER VIET
@@ -447,6 +468,10 @@ VIET_events_tri_yearly_pulse = {
 		100 = VIETmisc.0104		# Servants celebrate the birth of their child after trying for a while
 		100 = VIETmisc.0105		# Guard's father dies and he is happy
 		100 = VIETmisc.0108		# Meet a happy madwoman in the street
+		# Generic
+		100 = VIETmisc.0110		# Talking with a blacksmith about blacksmith-y things
+		100 = VIETmisc.0116		# Witness a couple fornicating in public
+		100 = VIETmisc.0117		# Learning about cooking from a cook
 	}
 }
 
@@ -503,6 +528,11 @@ VIET_events_five_yearly_pulse = {
 		100 = VIETold.0007		# Dreamt of ROME
 		# Dirt
 		100 = VIETold.0012		# Courtier has colorful stool - or as a VIETeran once put it, fruit loop poops
+		# Generic Trait (OG)
+		100 = VIETold.0026		# Charitable - Beggar Girl
+		100 = VIETold.0033		# Kind - Help a recently deceased impoverished noble's orphaned child
+		100 = VIETold.0034		# Brave - defeated bandit
+		100 = VIETold.0040		# Honest - character meets an incompetent merchant
 		
 		#######################################
 		# OLDER VIET
@@ -593,6 +623,9 @@ VIET_events_five_yearly_pulse = {
 		100 = VIETmisc.0098		# Courtier pretends to be a ghost to scare off local kids
 		# Celebration
 		100 = VIETmisc.0106		# Witness local village celebrating with a burning effigy
+		# Generic
+		100 = VIETmisc.0111		# Come across an adventurer left for dead
+		100 = VIETmisc.0115		# A jail cell is empty due to sueprstition
 	}
 }
 

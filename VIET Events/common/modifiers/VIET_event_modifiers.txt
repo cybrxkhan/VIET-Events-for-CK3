@@ -924,5 +924,133 @@ VIET_smuggling_side_business = {
 	monthly_piety = -0.3
 	monthly_prestige = -0.3
 }
-
+VIET_indoors_nap = {
+	icon = stress_positive
+	stress_gain_mult = -0.1
+}
+VIET_tasty_snack = {
+	icon = stress_positive
+	stress_loss_mult = 0.1
+}
+VIET_satisfied_work = {
+	icon = diplomacy_positive
+	diplomacy = 1
+	stewardship = -1
+	monthly_prestige = 0.2
+}
+VIET_feeling_reclusive = {
+	icon = county_modifier_development_positive
+	diplomacy = -1
+	intrigue = 1
+	monthly_dread = 0.1
+}
+VIET_taking_a_break = {
+	icon = stress_positive
+	monthly_prestige = -0.2
+	stress_gain_mult = -0.15
+	stress_loss_mult = 0.15
+}
+VIET_orphan_beggar_girl = {
+	icon = social_positive
+	diplomacy = -2
+	intrigue = 2
+	prowess = 1
+}
+VIET_the_greedy = {
+	icon = economy_negative
+	domain_tax_mult = 0.08
+	diplomacy = -2
+}
+VIET_arbitrary_ruling = {
+	icon = dread_negative
+	monthly_prestige = -0.2
+	county_opinion_add = -5
+}
+VIET_cynical_mood = {
+	icon = social_positive
+	intrigue = 2
+}
+VIET_values_other_opinions = {
+	icon = social_positive
+	diplomacy = 1
+	monthly_lifestyle_xp_gain_mult = 0.04
+}
+VIET_feeling_sad = {
+	icon = love_negative
+	stress_gain_mult = 0.1
+	stress_loss_mult = -0.1	
+}
+VIET_feeling_unproductive = {
+	icon = love_negative
+	#stewardship = -1
+	monthly_lifestyle_xp_gain_mult = -0.1
+}
+VIET_orphan_noble_boy = {
+	icon = social_positive
+	diplomacy = 1
+	prowess = 1
+}
+VIET_defeated_bandit = {
+	icon = martial_positive
+	general_opinion = 10
+	prowess = 1
+	monthly_dynasty_prestige = 0.2
+	monthly_prestige = 0.3
+}
+VIET_the_prude = {
+	icon = piety_positive
+	general_opinion = -5
+	monthly_piety = 0.4
+}
+VIET_loosening_up = {
+	icon = piety_positive
+	general_opinion = 10
+	monthly_piety = -0.2
+}
+VIET_miscellaneous_shopping = {
+	icon = economy_positive
+	monthly_prestige = 0.3
+}
+VIET_gave_business_advice = {
+	icon = economy_positive
+	diplomacy = 1
+}
+VIET_blacksmith_discussion = {
+	icon = horse_positive
+	stewardship = 1
+	monthly_stewardship_lifestyle_xp_gain_mult = 0.1
+}
+VIET_adventurer_left_for_dead_origin = {
+	icon = hunt_positive
+	martial = 1
+	prowess = 1
+	monthly_prestige = 0.1
+}
+VIET_smelling_smells = {
+	icon = stress_negative
+	stress_gain_mult = 0.05
+}
+VIET_elderberry_tea = {
+	icon = health_positive
+	negate_health_penalty_add = 0.3
+}
+VIET_prison_ghost_curse = {
+	icon = prison_negative
+	intrigue = -1
+	hostile_scheme_resistance_mult = -0.15
+}
+VIET_witnessed_public_fornication = {
+	icon = fertility_positive
+	fertility = 0.01
+}
+VIET_threesome_with_commoners = {
+	icon = fertility_positive
+	stress_gain_mult = -0.15	
+	fertility = 0.05
+}
+VIET_cook_knowledge = {
+	icon = food_positive
+	intrigue = 1
+	negate_health_penalty_add = 0.1
+}
 
