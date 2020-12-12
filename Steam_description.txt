@@ -1,6 +1,6 @@
 [img]http://i.imgur.com/OhIA5bm.jpg[/img]
 
-[h1]Current Version: 1.2.1 "Dong Son" (Released 12/11/20, Compatible with vanilla patch 1.2.X)[/h1]
+[h1]Current Version: 1.2.1 "Dong Son" (Released 12/11/20 for VIET's 8th Anniversary, Compatible with vanilla patch 1.2.X)[/h1]
 [B]Please See [url=https://forum.paradoxplaza.com/forum/threads/mod-viet-events-for-ck3-a-flavor-and-immersion-event-mod.1422081/]Forum Thread[/url] For More Info[/B]
 [B]Manual Download/Installation available [url=https://github.com/cybrxkhan/VIET-Events-for-CK3/releases]on Github[/url]
 [/B]

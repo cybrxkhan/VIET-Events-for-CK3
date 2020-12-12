@@ -1,6 +1,6 @@
 # VIET Events for CK3
 
-## Latest Version: 1.2.1 "Dong Son" (Released 12/11/20)
+## Latest Version: 1.2.1 "Dong Son" (Released 12/11/20 - VIET's 8th Anniversary!)
 
 _“The Dong Son culture was a Bronze Age culture located in northern Vietnam during the first millennium BCE, and whose people are the likely direct ancestors of modern-day Vietnamese. Their cultural influence extended throughout Southeast Asia and they are particularly skilled in bronze casting. These bronze drums and mythologized accounts of the Dong Son culture have featured prominently in Vietnamese culture for centuries. In recent times, they are a symbol of Viet society before Chinese influence. Centuries before, a major settlement of the Dong Son, was the first capital of the Ngo Dynasty, the first independent post-China dynasty of Vietnam in the 10th century CE._
 
