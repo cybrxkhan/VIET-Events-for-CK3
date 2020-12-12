@@ -2,8 +2,7 @@
 
 ## Latest Version: 1.2.1 "Dong Son" (Released 12/11/20)
 
-_“Let no one weep for me, or celebrate my funeral with mourning; for I still live, as I pass to and fro through the mouths of men.”_
-_- Quintus Ennius_
+_“The Dong Son culture was a Bronze Age culture located in northern Vietnam during the first millennium BCE, and whose people are the likely direct ancestors of modern-day Vietnamese. Their cultural influence extended throughout Southeast Asia and they are particularly skilled in bronze casting. These bronze drums and mythologized accounts of the Dong Son culture have featured prominently in Vietnamese culture for centuries. In recent times, they are a symbol of Viet society before Chinese influence. Centuries before, a major settlement of the Dong Son, was the first capital of the Ngo Dynasty, the first independent post-China dynasty of Vietnam in the 10th century CE._
 
 Very Immersive Events and Tales (VIET), the sequel to VIET Events Reborn for CK2, is a flavor mod that adds a vast collection of events about everyday life to spice up your game. These events add immersion and a diversity of experiences in between wars and vanilla’s event chains, and cover mundane minutiae ranging from small talk with courtiers and eating local cuisine to epic tales about love, philosophy, and the human condition.
 
