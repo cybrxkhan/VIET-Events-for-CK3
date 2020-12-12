@@ -52,7 +52,7 @@ Thanks!
 
 [h1]Version 1.2.1 "Dong Son"[/h1]
 
-[I]The Dong Son culture was a Bronze Age culture located in northern Vietnam during the first millennium BCE, and whose people are the likely direct ancestors of modern-day Vietnamese. Their cultural influence extended throughout Southeast Asia and they are particularly skilled in bronze casting. These bronze drums and mythologized accounts of the Dong Son culture have featured prominently in Vietnamese culture for centuries. In recent times, they are a symbol of Viet society before Chinese influence. Centuries before, a major settlement of the Dong Son, was the first capital of the Ngo Dynasty, the first independent post-China dynasty of Vietnam in the 10th century CE.[/I]
+[I]The Dong Son culture was a Bronze Age culture located in northern Vietnam during the first millennium BCE, and whose people are the likely direct ancestors of modern-day Vietnamese. Their cultural influence extended throughout Southeast Asia and they are particularly skilled in bronze casting. These bronze drums and mythologized accounts of the Dong Son culture have featured prominently in Vietnamese culture for centuries. In recent times, they are a symbol of Viet society before Chinese influence. A major settlement of the Dong Son, Co Loa, would later become was the first capital of the Ngo Dynasty, the first independent post-China dynasty of Vietnam in the 10th century CE.[/I]
 
 [LIST]
 [*]Added 27 new events about the following themes:
