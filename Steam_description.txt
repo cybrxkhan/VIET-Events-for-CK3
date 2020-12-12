@@ -1,6 +1,6 @@
 [img]http://i.imgur.com/OhIA5bm.jpg[/img]
 
-[h1]Current Version: 1.2.0 "Merriment" (Released 11/24/20, Compatible with vanilla patch 1.2.X)[/h1]
+[h1]Current Version: 1.2.1 "Dong Son" (Released 12/11/20, Compatible with vanilla patch 1.2.X)[/h1]
 [B]Please See [url=https://forum.paradoxplaza.com/forum/threads/mod-viet-events-for-ck3-a-flavor-and-immersion-event-mod.1422081/]Forum Thread[/url] For More Info[/B]
 [B]Manual Download/Installation available [url=https://github.com/cybrxkhan/VIET-Events-for-CK3/releases]on Github[/url]
 [/B]
@@ -22,7 +22,7 @@ Feel free to use my work in your mods - all I ask is that I am credited and (if 
 [img]http://i.imgur.com/EyXurbK.jpg[/img]
 
 [LIST]
-[*]Over [B]336 new flavor events[/B], and more will be added in updates over time
+[*]Over [B]363 new flavor events[/B], and more will be added in updates over time
 [*]Game rule to disable sillier events for those who don't like them, with three levels to choose from: Balanced (Default), Serious (Restricted), and All Events (Full)
 [*][B]Compatible with almost anything[/B] since it doesn't touch any vanilla files - even with overhaul mods, you can via game rule disable events that reference things specific to our medieval world that wouldn’t make sense in other time periods or universes (like fantasy and sci-fi conversion mods)
 [*]Learn history with [B]Historical Context tooltips[/B] that provide information about what inspired some of the events - sometimes, reality is stranger than fiction! (These can be disabled via game rule for those who find it immersion breaking.)
@@ -50,23 +50,21 @@ Thanks!
 
 [img]http://i.imgur.com/RQ5QZTF.jpg[/img]
 
-[h1]Version 1.2.0 "Merriment"[/h1]
+[h1]Version 1.2.1 "Dong Son"[/h1]
 
-[I]“Let no one weep for me, or celebrate my funeral with mourning; for I still live, as I pass to and fro through the mouths of men.”
-- Quintus Ennius[/I]
+[I]The Dong Son culture was a Bronze Age culture located in northern Vietnam during the first millennium BCE, and whose people are the likely direct ancestors of modern-day Vietnamese. Their cultural influence extended throughout Southeast Asia and they are particularly skilled in bronze casting. These bronze drums and mythologized accounts of the Dong Son culture have featured prominently in Vietnamese culture for centuries. In recent times, they are a symbol of Viet society before Chinese influence. Centuries before, a major settlement of the Dong Son, was the first capital of the Ngo Dynasty, the first independent post-China dynasty of Vietnam in the 10th century CE.[/I]
 
 [LIST]
-[*]Updated to vanilla patch 1.2.0
-[*]Added 10 new events about the following themes:
+[*]Added 27 new events about the following themes:
 [LIST]
-[*]5 Celebration
-[*]5 Shady*
+[*]18 generic trait related (the first events ever coded for VIET back in 2012)*
+[*]9 generic
 [/LIST]
-[*]Major event chains and rare events will no longer trigger during wars
-[*]Major event chains and rare events will trigger less frequently
-[*]All events are less likely to trigger during wars
-[*]Moved a few events from the five year on_actions to the rare/event chain on_actions
-[*]Temporarily disabled Winter Wind Sentiment event chain for female and homosexual characters (special text for female or homosexual characters will be added in a future update)
+[*]Added text variations of the “Winter Wind Sentiment” event chain for female and homosexual characters (not sure why I missed that one before all these years…)
+[*]Some courtiers spawned via event will have a loyalty or favor hook to the ruler of the court they spawned in
+[*]Nobleman spawned via the “Never Trust a Bandit” event will go to the global pool if not recruited to court
+[*]Changed Skyrim barmaid event to fire for men only, and flirt/one night stand options will only be available to straight and bisexual characters for obvious reasons
+[*]Miscellaneous bugfixes
 [/LIST]
 
 *Adapted from VIET for CK2
@@ -75,7 +73,6 @@ Thanks!
 [img]https://i.imgur.com/6L11s2n.jpg[/img]
 
 [LIST]
-[*][url=https://steamcommunity.com/sharedfiles/filedetails/?id=2273832430][B]Regional Immersion and Cultural Enrichment (RICE)[/B][/url] - a cultural flavor mod for lesser-known, obscure regions modeled after PI's flavor packs
 [*][url=https://steamcommunity.com/sharedfiles/filedetails/?id=2273832430]Regional Immersion and Cultural Enrichment (RICE)[/url] - a cultural flavor mod for lesser-known, obscure regions modeled after PI's flavor packs
 [*][url=https://steamcommunity.com/sharedfiles/filedetails/?id=2217770052]In Taberna (CK2 Edition)[/url] - the classic song from CK2 returns to CK3
 [*][url=https://steamcommunity.com/sharedfiles/filedetails/?id=2218667128]Recruit Courtiers[/url] - simple decision to spawn male or female courtiers in your court for a small price, similar to CK2

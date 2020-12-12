@@ -1,6 +1,6 @@
 # VIET Events for CK3
 
-## Latest Version: 1.2.0 "Merriment" (Released 11/24/20)
+## Latest Version: 1.2.1 "Dong Son" (Released 12/11/20)
 
 _“Let no one weep for me, or celebrate my funeral with mourning; for I still live, as I pass to and fro through the mouths of men.”_
 _- Quintus Ennius_
@@ -13,7 +13,7 @@ Feel free to use my work in your mods - all I ask is that I am credited and (if 
 
 ## Features
 
-- Over 336 new flavor events and event chains, and more will be added in updates over time
+- Over 363 new flavor events and event chains, and more will be added in updates over time
 - Game rule to disable sillier events for those who don't like them, with three levels to choose from: Balanced (Default), Serious (Restricted), and All Events (Full)
 - Compatible with almost anything since it doesn't touch any vanilla files - even with overhaul mods, you can via game rule disable events that reference things specific to our medieval world that wouldn’t make sense in other time periods or universes (like fantasy and sci-fi conversion mods)
 - Learn history with Historical Context tooltips that provide information about what inspired some of the events - sometimes, reality is stranger than fiction! (These can be disabled via game rule for those who find it immersion breaking.)
