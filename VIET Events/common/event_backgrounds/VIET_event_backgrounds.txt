@@ -63,13 +63,12 @@ VIET_background_tuscan_country = {
 		ambience = "event:/SFX/Events/Backgrounds/castle_garden_day"
 	}
 
-	background = { # Middle Eastern/Tarim/Tibet
+	background = { # Middle Eastern/Tarim
 		trigger = {
 			capital_province = {
 				OR = {
 					geographical_region = world_middle_east
 					geographical_region = world_middle_east_persia
-					geographical_region = world_steppe_tarim
 				}
 			}
 		}
@@ -123,6 +122,28 @@ VIET_background_tuscan_country = {
 		ambience = "event:/SFX/Events/Backgrounds/castle_garden_day"
 	}
 
+	background = { # Iberian
+		trigger = {
+			capital_province = {
+				geographical_region = world_europe_west_iberia
+			}
+		}
+		reference = "gfx/interface/illustrations/event_scenes/VIET_tuscan_country_castilian.dds"
+		environment = "environment_event_garden"
+		ambience = "event:/SFX/Events/Backgrounds/castle_garden_day"
+	}
+
+	background = { # Tarim Basin
+		trigger = {
+			capital_province = {
+				geographical_region = world_steppe_tarim
+			}
+		}
+		reference = "gfx/interface/illustrations/event_scenes/VIET_tuscan_country_tocharian.dds"
+		environment = "environment_event_garden"
+		ambience = "event:/SFX/Events/Backgrounds/desert_day"
+	}
+
 	background = { #Fallback - Mediterranean, Africa, etc.
 		reference = "gfx/interface/illustrations/event_scenes/VIET_tuscan_country.dds"
 		environment = "environment_event_garden"
@@ -133,18 +154,26 @@ VIET_background_tuscan_country = {
 ### ANCIENT CAIRN ###
 VIET_background_ancient_cairn = {
 
-	background = { # Middle Eastern/Tarim/Africa
+	background = { # Middle Eastern/Africa
 		trigger = {
 			capital_province = {
-				OR = {
-					geographical_region = graphical_mena
-					geographical_region = world_steppe_tarim
-				}
+				geographical_region = graphical_mena
 			}
 		}
 		reference = "gfx/interface/illustrations/event_scenes/VIET_ancient_cairn_arabic.dds"
 		environment = "environment_event_garden"
 		ambience = "event:/SFX/Events/Backgrounds/castle_garden_day"
+	}
+
+	background = { # Tarim
+		trigger = {
+			capital_province = {
+				geographical_region = world_steppe_tarim
+			}
+		}
+		reference = "gfx/interface/illustrations/event_scenes/VIET_ancient_cairn_tocharian.dds"
+		environment = "environment_event_garden"
+		ambience = "event:/SFX/Events/Backgrounds/desert_day"
 	}
 
 	background = { #Fallback
@@ -311,6 +340,7 @@ VIET_background_skyrim_forest = {
 		trigger = {
 			capital_province = {
 				geographical_region = graphical_mediterranean
+				NOT = { geographical_region = world_europe_west_iberia }
 			}
 		}
 		reference = "gfx/interface/illustrations/event_scenes/VIET_skyrim_forest_greek.dds"
@@ -326,13 +356,34 @@ VIET_background_skyrim_forest = {
 					geographical_region = world_middle_east_persia
 					geographical_region = world_africa_north
 					geographical_region = world_africa_sahara
-					geographical_region = world_steppe_tarim
 				}
 			}
 		}
 		reference = "gfx/interface/illustrations/event_scenes/VIET_skyrim_forest_arabic.dds"
 		environment = "environment_event_desert"
 		ambience = "event:/SFX/Events/Backgrounds/desert_day"
+	}
+
+	background = { # Iberian
+		trigger = {
+			capital_province = {
+				geographical_region = world_europe_west_iberia
+			}
+		}
+		reference = "gfx/interface/illustrations/event_scenes/VIET_skyrim_forest_castilian.dds"
+		environment = "environment_event_garden"
+		ambience = "event:/SFX/Events/Backgrounds/desert_day"
+	}
+
+	background = { # Tarim Basin
+		trigger = {
+			capital_province = {
+				geographical_region = world_steppe_tarim
+			}
+		}
+		reference = "gfx/interface/illustrations/event_scenes/VIET_skyrim_forest_tocharian.dds"
+		environment = "environment_event_garden"
+		ambience = "event:/SFX/Events/Backgrounds/deciduous_forest_day"
 	}
 
 	background = { #Fallback / Northern European

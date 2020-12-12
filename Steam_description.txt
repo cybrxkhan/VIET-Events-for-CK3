@@ -61,6 +61,7 @@ Thanks!
 [*]9 generic
 [/LIST]
 [*]Added text variations of the “Winter Wind Sentiment” event chain for female and homosexual characters (not sure why I missed that one before all these years…)
+[*]Added a few new event backgrounds for the Iberian and Tarim Basin regions
 [*]Some courtiers spawned via event will have a loyalty or favor hook to the ruler of the court they spawned in
 [*]Nobleman spawned via the “Never Trust a Bandit” event will go to the global pool if not recruited to court
 [*]Changed Skyrim barmaid event to fire for men only, and flirt/one night stand options will only be available to straight and bisexual characters for obvious reasons
