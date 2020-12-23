@@ -202,15 +202,16 @@ VIETmisc.1003 = {
 		first_valid = {
 			triggered_desc = {
 				trigger = {
-					OR = {
-						is_female = yes
-						AND = {
-							is_female = no
-							has_sexuality = homosexual
-						}
-					}
+					is_female = yes
 				}
 				desc = VIETmisc.1003.desc.female
+			}
+			triggered_desc = {
+				trigger = {
+					is_female = no
+					has_sexuality = homosexual
+				}
+				desc = VIETmisc.1003.desc.male.homosexual
 			}
 			desc = VIETmisc.1003.desc
 		}
