@@ -58,6 +58,7 @@
 # Trusting - character got pranked by a courtier - VIETnam.93 - rework later
 # Deceitful - Never show true self - VIETnam.94 - rework later
 # Cruel - subjects fear character - VIETnam.96 - rework later
+# Hebrew Mouthwash - VIETmisc.2106 - wait until PI develops Jewish flavor/cultures more
 # 
 ###########################################################################################################################
 

@@ -16,6 +16,7 @@
 # 1030-1032		Moss
 # 1033-1040		Rocks and Minerals
 # 1041-1043		Monogatari References
+# 1044-1052		Toothbrush/Oral Hygiene
 # 
 ############################################################################################################################
 
@@ -3023,5 +3024,831 @@ VIETold.1043 = {
 			wrathful = miniscule_stress_impact_gain
 			honest = miniscule_stress_impact_gain
 		}
+	}
+}
+
+
+######################################################################
+# TOOTHBRUSH / ORAL HYGIENE VIETold.1044-1052
+######################################################################
+
+
+
+# Convince a courtier to use miswak more
+VIETold.1044 = {
+	type = character_event
+	title = VIETold.1044.t
+	desc = VIETold.1044.desc
+	theme = diplomacy
+
+	left_portrait = {
+		character = root
+		animation = disapproval
+	}
+	right_portrait = {
+		character = scope:scope_VIET_bad_teeth_person
+		animation = shame
+	}
+	
+	trigger = {
+		faith = { has_doctrine = muhammad_succession_sunni_doctrine }
+		NOT = { has_game_rule = VIET_conversion_universe_events }
+		any_courtier_or_guest = {
+			is_available_ai_adult = yes
+			faith = { has_doctrine = muhammad_succession_sunni_doctrine }
+		}
+	}
+	
+	weight_multiplier = {
+		base = 1
+		modifier = {
+			add = 0.2
+			has_trait = zealous
+		}
+		modifier = {
+			add = -0.2
+			has_trait = cynical
+		}
+		modifier = {
+			add = 0.2
+			has_trait = arrogant
+		}
+		modifier = {
+			add = -0.2
+			has_trait = humble
+		}
+		modifier = {
+			add = 0.2
+			has_trait = diligent
+		}
+		modifier = {
+			add = -0.2
+			has_trait = lazy
+		}
+	}
+	
+	immediate = {
+		random_courtier_or_guest = {
+			limit = {
+				is_available_ai_adult = yes
+			}
+			save_scope_as = scope_VIET_bad_teeth_person
+			#random_list = {
+			#	50 = {
+			#		modifier = {
+			#			add = 5
+			#			has_trait = diligent
+			#		}
+			#		modifier = {
+			#			add = 5
+			#			has_trait = zealous
+			#		}
+			#		modifier = {
+			#			add = 5
+			#			has_trait = trusting
+			#		}
+			#		add_character_flag = VIET_followed_miswak_advice
+			#	}
+			#	50 = {
+			#		modifier = {
+			#			add = 5
+			#			has_trait = lazy
+			#		}
+			#		modifier = {
+			#			add = 5
+			#			has_trait = stubborn
+			#		}
+			#		modifier = {
+			#			add = 5
+			#			has_trait = content
+			#		}
+			#		add_character_flag = VIET_did_not_follow_miswak_advice
+			#	}
+			#}
+		}
+	}
+	
+	option = { # okay
+		name = VIETold.1044.a		
+		random_list = {
+			50 = {
+				modifier = {
+					add = 5
+					scope:scope_VIET_bad_teeth_person = { has_trait = diligent }
+				}
+				modifier = {
+					add = 5
+					scope:scope_VIET_bad_teeth_person = { has_trait = zealous }
+				}
+				modifier = {
+					add = 5
+					scope:scope_VIET_bad_teeth_person = { has_trait = trusting }
+				}
+				desc = VIETold.1044.a.a
+				send_interface_toast = {
+					left_icon = ROOT
+					right_icon = scope:scope_VIET_bad_teeth_person
+					title = VIETold.1044.toast.a
+					VIET_medium_prestige_gain_effect = yes
+					scope:scope_VIET_bad_teeth_person = {
+						add_character_modifier = {
+							modifier = VIET_using_miswak_more
+							years = 5
+						}
+						add_opinion = {
+							target = root
+							modifier = VIET_opinion_miswak_advice_good
+						}			
+					}
+				}
+			}
+			50 = {
+				modifier = {
+					add = 5
+					scope:scope_VIET_bad_teeth_person = { has_trait = lazy }
+				}
+				modifier = {
+					add = 5
+					scope:scope_VIET_bad_teeth_person = { has_trait = stubborn }
+				}
+				modifier = {
+					add = 5
+					scope:scope_VIET_bad_teeth_person = { has_trait = content }
+				}
+				desc = VIETold.1044.a.b
+				send_interface_toast = {
+					left_icon = ROOT
+					right_icon = scope:scope_VIET_bad_teeth_person
+					title = VIETold.1044.toast.b
+					scope:scope_VIET_bad_teeth_person = {
+						add_opinion = {
+							target = root
+							modifier = VIET_opinion_miswak_advice_bad
+						}			
+					}
+				}
+			}
+		}
+		#if = {
+		#	limit = {
+		#		scope:scope_VIET_bad_teeth_person = {
+		#			has_character_flag = VIET_followed_miswak_advice
+		#		}
+		#	}
+		#	VIET_medium_prestige_gain_effect = yes
+		#	scope:scope_VIET_bad_teeth_person = {
+		#		add_character_modifier = {
+		#			modifier = VIET_using_miswak_more
+		#			years = 5
+		#		}
+		#		add_opinion = {
+		#			target = root
+		#			modifier = VIET_opinion_miswak_advice_good
+		#		}			
+		#	}
+		#}
+		#if = {
+		#	limit = {
+		#		scope:scope_VIET_bad_teeth_person = {
+		#			has_character_flag = VIET_did_not_follow_miswak_advice
+		#		}
+		#	}
+		#	scope:scope_VIET_bad_teeth_person = {
+		#		add_opinion = {
+		#			target = root
+		#			modifier = VIET_opinion_miswak_advice_bad
+		#		}			
+		#	}		
+		#}
+		if = {
+			limit = {
+				has_game_rule = VIET_historical_context_on
+			}
+			custom_tooltip = VIETold.1044.info
+		}
+	}
+
+	after = {
+		if = {
+			limit = {
+				scope:scope_VIET_bad_teeth_person = {
+					has_character_flag = VIET_followed_miswak_advice
+				}
+			}
+			scope:scope_VIET_bad_teeth_person = {
+				remove_character_flag = VIET_followed_miswak_advice
+			}
+		}
+		if = {
+			limit = {
+				scope:scope_VIET_bad_teeth_person = {
+					has_character_flag = VIET_did_not_follow_miswak_advice
+				}
+			}
+			scope:scope_VIET_bad_teeth_person = {
+				remove_character_flag = VIET_did_not_follow_miswak_advice
+			}
+		}
+	}
+}
+
+
+
+# Miswak usage is encouraged by scripture
+VIETold.1045 = {
+	type = character_event
+	title = VIETold.1045.t
+	desc = VIETold.1045.desc
+	theme = friendly
+
+	left_portrait = {
+		character = root
+		animation = worry
+	}
+	
+	trigger = {
+		faith = { has_doctrine_parameter = muhammad_succession_sunni_doctrine }
+		NOT = { has_game_rule = VIET_conversion_universe_events }
+	}
+	
+	weight_multiplier = {
+		base = 1
+		modifier = {
+			add = 0.2
+			has_trait = zealous
+		}
+		modifier = {
+			add = -0.2
+			has_trait = cynical
+		}
+		modifier = {
+			add = 0.2
+			has_trait = arrogant
+		}
+		modifier = {
+			add = -0.2
+			has_trait = humble
+		}
+		modifier = {
+			add = 0.2
+			has_trait = diligent
+		}
+		modifier = {
+			add = -0.2
+			has_trait = lazy
+		}
+	}
+	
+	option = { # okay
+		name = VIETold.1045.a		
+		add_character_modifier = {
+			modifier = VIET_using_miswak_more
+			years = 10
+		}
+		if = {
+			limit = {
+				has_game_rule = VIET_historical_context_on
+			}
+			custom_tooltip = VIETold.1045.info
+		}
+	}	
+	option = { # don't overdo it
+		name = VIETold.1045.b
+		VIET_medium_prestige_gain_effect = yes
+		stress_impact = {
+			base = minor_stress_impact_loss
+		}
+		if = {
+			limit = {
+				has_game_rule = VIET_historical_context_on
+			}
+			custom_tooltip = VIETold.1045.info
+		}
+	}
+}
+
+
+
+# Visiting noble gifts player a gold toothpick
+VIETold.1046 = {
+	type = character_event
+	title = VIETold.1046.t
+	desc = VIETold.1046.desc
+	theme = friendly
+
+	left_portrait = {
+		character = root
+		animation = personality_rational
+	}
+	
+	weight_multiplier = {
+		base = 1
+		modifier = {
+			add = 0.2
+			has_trait = gregarious
+		}
+		modifier = {
+			add = -0.2
+			has_trait = shy
+		}
+		modifier = {
+			add = 0.2
+			has_trait = compassionate
+		}
+		modifier = {
+			add = -0.2
+			has_trait = sadistic
+		}
+		modifier = {
+			add = 0.2
+			has_trait = temperate
+		}
+		modifier = {
+			add = -0.2
+			has_trait = gluttonous
+		}
+	}
+	
+	option = { # okay
+		name = VIETold.1046.a		
+		VIET_medium_prestige_gain_effect = yes
+	}
+}
+
+
+# Character learns about silly Chinese toothbrushes
+VIETold.1047 = {
+	type = character_event
+	title = VIETold.1047.t
+	desc = VIETold.1047.desc
+	theme = friendly
+
+	left_portrait = {
+		character = root
+		animation = personality_rational
+	}
+	
+	trigger = {
+		NOR = {
+			VIET_is_sinosphere_trigger = yes
+			any_directly_owned_province = {
+				VIET_is_sinosphere_trigger = yes
+			}
+		}
+		NOT = { has_game_rule = VIET_conversion_universe_events }
+	}
+	
+	weight_multiplier = {
+		base = 1
+		modifier = {
+			add = 0.2
+			has_trait = gregarious
+		}
+		modifier = {
+			add = -0.2
+			has_trait = shy
+		}
+		modifier = {
+			add = 0.2
+			has_trait = diligent
+		}
+		modifier = {
+			add = -0.2
+			has_trait = lazy
+		}
+		modifier = {
+			add = 0.2
+			has_trait = patient
+		}
+		modifier = {
+			add = -0.2
+			has_trait = impatient
+		}
+	}
+	
+	option = { # okay
+		name = VIETold.1047.a		
+		VIET_small_prestige_gain_effect = yes
+	}	
+	option = { # okay
+		name = VIETold.1047.b		
+		VIET_small_piety_gain_effect = yes
+	}
+}
+
+
+# Courtier talks about toothbrush sexy times
+VIETold.1048 = {
+	type = character_event
+	title = VIETold.1048.t
+	desc = VIETold.1048.desc
+	theme = seduction
+
+	left_portrait = {
+		character = root
+		animation = shock
+	}
+	right_portrait = {
+		character = scope:scope_VIET_toothbrush_pervert
+		animation = schadenfreude
+	}
+	
+	trigger = {
+		any_courtier_or_guest = {
+			is_available_ai_adult = yes			
+			NOR = {
+				has_trait = chaste
+				has_trait = shy
+				has_trait = paranoid
+				AND = {
+					has_trait = zealous
+					faith = {
+						trait_is_sin = lustful
+					}
+				}
+			}
+		}
+		has_game_rule = VIET_all_events
+	}
+	
+	weight_multiplier = {
+		base = 1
+		modifier = {
+			add = 0.2
+			has_trait = shy
+		}
+		modifier = {
+			add = -0.2
+			has_trait = gregarious
+		}
+		modifier = {
+			add = 0.2
+			has_trait = content
+		}
+		modifier = {
+			add = -0.2
+			has_trait = ambitious
+		}
+		modifier = {
+			add = 0.2
+			has_trait = lustful
+		}
+		modifier = {
+			add = -0.2
+			has_trait = chaste
+		}
+	}
+	
+	immediate = {
+		random_courtier_or_guest = {
+			limit = {
+				is_available_ai_adult = yes
+				NOR = {
+					has_trait = chaste
+					has_trait = shy
+					has_trait = paranoid
+					AND = {
+						has_trait = zealous
+						faith = {
+							trait_is_sin = lustful
+						}
+					}
+				}
+			}
+			save_scope_as = scope_VIET_toothbrush_pervert
+			add_character_modifier = {
+				modifier = VIET_toothbrush_pervert
+				years = 10
+			}
+			if = {
+				limit = {
+					NOT = {
+						faith = {
+							trait_is_virtue = lustful
+						}					
+					}				
+				}
+				VIET_huge_piety_loss_effect = yes
+			}
+		}
+	}
+	
+	option = { # Run away
+		name = VIETold.1048.a
+		#if = {
+		#	limit = {
+		#		NOT = {
+		#			faith = {
+		#				trait_is_virtue = lustful
+		#			}					
+		#		}				
+		#	}
+		#	VIET_medium_piety_gain_effect = yes
+		#}
+		#else = {
+		#	VIET_medium_piety_loss_effect = yes
+		#}
+		add_character_modifier = {
+			modifier = VIET_keep_mind_pure
+			days = 825
+		}
+		stress_impact = {
+			shy = minor_stress_impact_loss
+			lustful = medium_stress_impact_gain
+		}
+	}	
+	option = { # Be polite
+		name = VIETold.1048.b		
+		#VIET_medium_prestige_gain_effect = yes
+		add_character_modifier = {
+			modifier = VIET_politely_listened_to_weirdness
+			days = 825
+		}
+		stress_impact = {
+			shy = minor_stress_impact_gain
+			chaste = minor_stress_impact_gain
+		}
+	}
+	option = { # Get turned on
+		name = VIETold.1048.c
+		trigger = {
+			NOR = {
+				has_sexuality = asexual
+				has_trait = celibate
+				has_trait = eunuch
+				has_trait = chaste
+			}
+		}
+		if = {
+			limit = {
+				faith = {
+					trait_is_virtue = lustful
+				}
+			}
+			VIET_medium_piety_gain_effect = yes
+		}
+		else = {
+			VIET_medium_piety_loss_effect = yes
+		}
+		add_character_modifier = {
+			modifier = VIET_lustful_ruler
+			days = 825
+		}
+		stress_impact = {
+			shy = minor_stress_impact_gain
+		}
+	}
+}
+
+
+# Someone suggests you should clean your tongue as well
+VIETold.1049 = {
+	type = character_event
+	title = VIETold.1049.t
+	desc = VIETold.1049.desc
+	theme = friendly
+
+	left_portrait = {
+		character = root
+		animation = personality_rational
+	}
+	
+	weight_multiplier = {
+		base = 1
+		modifier = {
+			add = 0.2
+			has_trait = humble
+		}
+		modifier = {
+			add = -0.2
+			has_trait = arrogant
+		}
+		modifier = {
+			add = 0.2
+			has_trait = content
+		}
+		modifier = {
+			add = -0.2
+			has_trait = ambitious
+		}
+		modifier = {
+			add = 0.2
+			has_trait = diligent
+		}
+		modifier = {
+			add = -0.2
+			has_trait = lazy
+		}
+	}
+	
+	option = { # Ok
+		name = VIETold.1049.a
+		add_character_modifier = {
+			modifier = VIET_cleans_tongue
+			years = 7
+		}
+	}
+}
+
+
+
+# Old people with bad teeth scare you and inspire you to do more cleaning
+VIETold.1050 = {
+	type = character_event
+	title = VIETold.1050.t
+	desc = VIETold.1050.desc
+	theme = unfriendly
+
+	right_portrait = {
+		character = root
+		animation = worry
+	}
+	
+	weight_multiplier = {
+		base = 1
+		modifier = {
+			add = 0.2
+			has_trait = arrogant
+		}
+		modifier = {
+			add = -0.2
+			has_trait = humble
+		}
+		modifier = {
+			add = 0.2
+			has_trait = ambitious
+		}
+		modifier = {
+			add = -0.2
+			has_trait = content
+		}
+		modifier = {
+			add = 0.2
+			has_trait = paranoid
+		}
+		modifier = {
+			add = -0.2
+			has_trait = lazy
+		}
+	}
+	
+	option = { # Ok
+		name = VIETold.1050.a
+		add_character_modifier = {
+			modifier = VIET_loves_toothbrushing
+		}
+	}
+}
+
+
+# Bloody teeth before meeting with people 
+VIETold.1051 = {
+	type = character_event
+	title = VIETold.1051.t
+	desc = VIETold.1051.desc
+	theme = unfriendly
+
+	right_portrait = {
+		character = root
+		animation = worry
+	}
+	
+	weight_multiplier = {
+		base = 1
+		modifier = {
+			add = 0.2
+			has_trait = impatient
+		}
+		modifier = {
+			add = -0.2
+			has_trait = patient
+		}
+		modifier = {
+			add = 0.2
+			has_trait = ambitious
+		}
+		modifier = {
+			add = -0.2
+			has_trait = content
+		}
+		modifier = {
+			add = 0.2
+			has_trait = wrathful
+		}
+		modifier = {
+			add = -0.2
+			has_trait = calm
+		}
+	}
+	
+	option = { # Ok
+		name = VIETold.1051.a
+		VIET_medium_prestige_loss_effect = yes
+	}
+}
+
+
+# Toothbrush toilet prank (or not)
+VIETold.1052 = {
+	type = character_event
+	title = VIETold.1052.t
+	desc = VIETold.1052.desc
+	theme = diplomacy
+
+	left_portrait = {
+		character = root
+		animation = disbelief
+	}
+	right_portrait = {
+		character = scope:scope_VIET_toothbrush_pranker
+		animation = schadenfreude
+	}
+	
+	trigger = {
+		any_courtier = {
+			is_available_ai_adult = yes
+			OR = {
+				has_trait = gregarious
+				has_trait = arbitrary
+				has_trait = callous
+				has_trait = sadistic
+			}
+			NOT = { has_trait = shy }	
+			NOT = { has_trait = craven }
+			NOT = { has_trait = compassionate }
+			NOT = { has_trait = humble }
+		}
+	}
+	
+	weight_multiplier = {
+		base = 1
+		modifier = {
+			add = 0.2
+			has_trait = impatient
+		}
+		modifier = {
+			add = -0.2
+			has_trait = patient
+		}
+		modifier = {
+			add = 0.2
+			has_trait = wrathful
+		}
+		modifier = {
+			add = -0.2
+			has_trait = calm
+		}
+		modifier = {
+			add = 0.2
+			has_trait = sadistic
+		}
+		modifier = {
+			add = -0.2
+			has_trait = compassionate
+		}
+	}
+	
+	immediate = {
+		random_courtier = {
+			limit = {
+				is_available_ai_adult = yes
+				OR = {
+					has_trait = gregarious
+					has_trait = arbitrary
+					has_trait = callous
+					has_trait = sadistic
+				}
+				NOT = { has_trait = shy }	
+				NOT = { has_trait = craven }
+				NOT = { has_trait = compassionate }
+				NOT = { has_trait = humble }
+			}
+			save_scope_as = scope_VIET_toothbrush_pranker
+		}
+	}
+	
+	option = { # okay...
+		name = VIETold.1052.a
+		stress_impact = {
+			paranoid = minor_stress_impact_gain
+		}
+		scope:scope_VIET_toothbrush_pranker = {
+			reverse_add_opinion = {
+				target = root
+				modifier = VIET_opinion_afraid_of_pranks
+			}			
+		}		
+	}
+	option = { # Oh no!
+		name = VIETold.1052.b
+		stress_impact = {
+			base = minor_stress_impact_gain
+		}
+		scope:scope_VIET_toothbrush_pranker = {
+			reverse_add_opinion = {
+				target = root
+				modifier = VIET_opinion_afraid_of_pranks
+			}			
+		}		
 	}
 }

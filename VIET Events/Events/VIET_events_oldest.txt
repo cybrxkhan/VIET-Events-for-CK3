@@ -1782,7 +1782,7 @@ VIETold.0024 = {
 		}
 		modifier = {
 			add = -0.2
-			has_trait = paient
+			has_trait = patient
 		}
 		modifier = {
 			add = 0.2
@@ -2737,7 +2737,7 @@ VIETold.0033 = {
 		hidden_effect = {
 			scope:scope_VIET_noble_orphan = {
 				add_character_modifier = {
-					modifier = scope_VIET_noble_orphan
+					modifier = VIET_noble_orphan
 				}
 			}		
 		}

@@ -7,7 +7,7 @@
 # 
 # is_available_at_peace_adult = yes <-- use as trigger if needed
 # on_actions also has triggers
-# has_game_rule = VIET_all_events / VIET_no_silly_events / VIET_default_events
+# has_game_rule = VIET_all_events / VIET_serious_events / VIET_balanced_events
 # has_game_rule = VIET_normal_universe_events / VIET_historical_universe_events / VIET_conversion_universe_events
 # 
 # base = miniscule_stress_impact_loss
@@ -30,6 +30,7 @@
 # 0097-0103		Spooky
 # 0104-0108		Celebration
 # 0109-0117		Generic
+# 0118-0123		Oral Hygiene
 # 
 ############################################################################################################################
 
@@ -8964,11 +8965,8 @@ VIETmisc.0112 = {
 	
 	trigger = {
 		any_courtier_or_guest = {
-			limit = {
-				is_available_ai_adult = yes
-			}
-			save_scope_as = scope_VIET_no_smell_courtier
-		}	
+			is_available_ai_adult = yes
+		}
 	}
 
 	weight_multiplier = {
@@ -9401,6 +9399,435 @@ VIETmisc.0117 = {
 		add_character_modifier = {
 			modifier = VIET_cook_knowledge
 			years = 7
+		}
+	}
+}
+
+#######################################
+# ORAL HYGIENE 0118-0123
+#######################################
+
+# Complaining about toothaches
+VIETmisc.0118 = {
+	type = character_event
+	title = VIETmisc.0118.t
+	desc = VIETmisc.0118.desc
+	theme = feast_activity
+	
+	left_portrait = {
+		character = root
+		animation = personality_coward
+	}
+	
+	trigger = {
+		court_physician_available_trigger = yes
+	}
+
+	weight_multiplier = {
+		base = 1
+		modifier = {
+			add = 0.2
+			has_trait = gregarious
+		}
+		modifier = {
+			add = -0.2
+			has_trait = shy
+		}
+		modifier = {
+			add = 0.2
+			has_trait = gluttonous
+		}
+		modifier = {
+			add = -0.2
+			has_trait = temperate
+		}
+		modifier = {
+			add = 0.2
+			has_trait = wrathful
+		}
+		modifier = {
+			add = -0.2
+			has_trait = calm
+		}
+	}
+	
+	immediate = {
+		save_court_physician_as_effect = { SCOPE_NAME = physician }
+	}
+	
+	option = { # Ok
+		name = VIETmisc.0118.a
+		remove_short_term_gold = 5
+		random = {
+			add_character_modifier = {
+				modifier = VIET_constant_toothaches
+				years = 9
+			}
+			chance = 45
+		}
+		if = {
+			limit = {
+				has_game_rule = VIET_historical_context_on
+			}
+			custom_tooltip = VIETmisc.0118.a.info
+		}
+	}	
+	option = { # Ok
+		name = VIETmisc.0118.b
+		remove_short_term_gold = 15
+		random = {
+			add_character_modifier = {
+				modifier = VIET_constant_toothaches
+				years = 9
+			}
+			chance = 35
+		}
+		if = {
+			limit = {
+				has_game_rule = VIET_historical_context_on
+			}
+			custom_tooltip = VIETmisc.0118.b.info
+		}
+	}	
+	option = { # Ok
+		name = VIETmisc.0118.c
+		remove_short_term_gold = 25
+		random = {
+			add_character_modifier = {
+				modifier = VIET_constant_toothaches
+				years = 9
+			}
+			chance = 25
+		}
+		if = {
+			limit = {
+				has_game_rule = VIET_historical_context_on
+			}
+			custom_tooltip = VIETmisc.0118.c.info
+		}
+	}	
+	option = { # Ok
+		name = VIETmisc.0118.d
+		remove_short_term_gold = 35
+		random = {
+			add_character_modifier = {
+				modifier = VIET_constant_toothaches
+				years = 9
+			}
+			chance = 15
+		}
+		if = {
+			limit = {
+				has_game_rule = VIET_historical_context_on
+			}
+			custom_tooltip = VIETmisc.0118.d.info
+		}
+	}
+}
+
+
+
+# Bite on cheek when eating
+VIETmisc.0119 = {
+	type = character_event
+	title = VIETmisc.0119.t
+	desc = VIETmisc.0119.desc
+	theme = feast_activity
+	
+	left_portrait = {
+		character = root
+		animation = grief
+	}
+
+	weight_multiplier = {
+		base = 1
+		modifier = {
+			add = 0.2
+			has_trait = impatient
+		}
+		modifier = {
+			add = -0.2
+			has_trait = impatient
+		}
+		modifier = {
+			add = 0.2
+			has_trait = gluttonous
+		}
+		modifier = {
+			add = -0.2
+			has_trait = temperate
+		}
+		modifier = {
+			add = 0.2
+			has_trait = stubborn
+		}
+		modifier = {
+			add = -0.2
+			has_trait = fickle
+		}
+	}
+	
+	option = { # Ok
+		name = VIETmisc.0119.a
+		VIET_tiny_prestige_loss_effect = yes
+		stress_impact = {
+			base = miniscule_stress_impact_gain
+			wrathful = miniscule_stress_impact_gain
+		}
+	}
+}
+
+
+
+# Bad mouth sores
+VIETmisc.0120 = {
+	type = character_event
+	title = VIETmisc.0120.t
+	desc = VIETmisc.0120.desc
+	theme = feast_activity
+	
+	left_portrait = {
+		character = root
+		animation = grief
+	}
+
+	weight_multiplier = {
+		base = 1
+		modifier = {
+			add = 0.2
+			has_trait = impatient
+		}
+		modifier = {
+			add = -0.2
+			has_trait = patient
+		}
+		modifier = {
+			add = 0.2
+			has_trait = gluttonous
+		}
+		modifier = {
+			add = -0.2
+			has_trait = temperate
+		}
+		modifier = {
+			add = 0.2
+			has_trait = stubborn
+		}
+		modifier = {
+			add = -0.2
+			has_trait = fickle
+		}
+	}
+	
+	option = { # Eating softer foods
+		name = VIETmisc.0120.a
+		VIET_medium_prestige_loss_effect = yes
+		stress_impact = {
+			gluttonous = minor_stress_impact_gain
+			temperate = minor_stress_impact_loss
+		}		
+	}	
+	option = { # Try to live with the mouth sores
+		name = VIETmisc.0120.b
+		add_character_modifier = {
+			modifier = VIET_mouth_sores
+			years = 1
+		}
+		stress_impact = {
+			base = minor_stress_impact_gain
+			impatient = minor_stress_impact_gain
+			craven = minor_stress_impact_gain
+		}	
+	}
+}
+
+
+
+# Courtier gets a tooth extraction
+VIETmisc.0121 = {
+	type = character_event
+	title = VIETmisc.0121.t
+	desc = VIETmisc.0121.desc
+	theme = vassal
+	
+	left_portrait = { 	
+		character = scope:scope_VIET_tooth_extracted
+		animation = happiness
+	}
+
+	weight_multiplier = {
+		base = 1
+		modifier = {
+			add = 0.2
+			has_trait = patient
+		}
+		modifier = {
+			add = -0.2
+			has_trait = impatient
+		}
+		modifier = {
+			add = 0.2
+			has_trait = humble
+		}
+		modifier = {
+			add = -0.2
+			has_trait = arrogant
+		}
+		modifier = {
+			add = 0.2
+			has_trait = compassionate
+		}
+		modifier = {
+			add = -0.2
+			has_trait = callous
+		}
+	}
+	
+	immediate = {
+		random_courtier = {
+			limit = {
+				is_available_ai_adult = yes
+			}
+			save_scope_as = scope_VIET_tooth_extracted
+		}	
+		scope:scope_VIET_tooth_extracted = {
+			add_character_modifier = {
+				modifier = VIET_skilled_tooth_extraction
+				years = 5
+			}	
+		}
+	}
+	
+	option = { # Ok
+		name = VIETmisc.0121.a
+		if = {
+			limit = {
+				has_game_rule = VIET_historical_context_on
+			}
+			custom_tooltip = VIETmisc.0121.info
+		}
+	}	
+	option = { # Reward the barber
+		name = VIETmisc.0121.b
+		remove_short_term_gold = 15
+		VIET_large_prestige_gain_effect = yes
+		stress_impact = {
+			greedy = medium_stress_impact_gain
+			arrogant = minor_stress_impact_gain
+		}
+		if = {
+			limit = {
+				has_game_rule = VIET_historical_context_on
+			}
+			custom_tooltip = VIETmisc.0121.info
+		}
+	}
+}
+
+
+
+# Discover a new mouthwash recipe
+VIETmisc.0122 = {
+	type = character_event
+	title = VIETmisc.0122.t
+	desc = VIETmisc.0122.desc
+	theme = friendly
+	
+	left_portrait = { 	
+		character = root
+		animation = happiness
+	}
+
+	weight_multiplier = {
+		base = 1
+		modifier = {
+			add = 0.2
+			has_trait = arrogant
+		}
+		modifier = {
+			add = -0.2
+			has_trait = humble
+		}
+		modifier = {
+			add = 0.2
+			has_trait = diligent
+		}
+		modifier = {
+			add = -0.2
+			has_trait = lazy
+		}
+		modifier = {
+			add = 0.2
+			has_trait = temperate
+		}
+		modifier = {
+			add = -0.2
+			has_trait = gluttonous
+		}
+	}
+	
+	option = { # Ok
+		name = VIETmisc.0122.a
+		add_character_modifier = {
+			modifier = VIET_good_mouthwash
+			years = 6
+		}
+	}
+}
+
+
+
+# Aid with tooth whitening
+VIETmisc.0123 = {
+	type = character_event
+	title = VIETmisc.0123.t
+	desc = VIETmisc.0123.desc
+	theme = friendly
+	
+	left_portrait = { 	
+		character = root
+		animation = personality_rational
+	}
+
+	weight_multiplier = {
+		base = 1
+		modifier = {
+			add = 0.2
+			has_trait = arrogant
+		}
+		modifier = {
+			add = -0.2
+			has_trait = humble
+		}
+		modifier = {
+			add = 0.2
+			has_trait = paranoid
+		}
+		modifier = {
+			add = -0.2
+			has_trait = trusting
+		}
+		modifier = {
+			add = 0.2
+			has_trait = fickle
+		}
+		modifier = {
+			add = -0.2
+			has_trait = lazy
+		}
+	}
+	
+	option = { # Ok
+		name = VIETmisc.0123.a
+		add_character_modifier = {
+			modifier = VIET_teeth_whitening
+			years = 5
+		}
+		if = {
+			limit = {
+				has_game_rule = VIET_historical_context_on
+			}
+			custom_tooltip = VIETmisc.0123.info
 		}
 	}
 }

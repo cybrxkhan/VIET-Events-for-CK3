@@ -137,6 +137,8 @@ VIET_events_yearly_pulse = {
 		100 = VIETold.1041		# Ononoki - courtier likes your arms
 		100 = VIETold.1042		# Ononoki - courtier talks with a "posed look"
 		100 = VIETold.1043		# That time of month (from Hanamonogatari) - courtier makes rude PMS comment
+		# Toothbrush
+		100 = VIETold.1051		# Bloody teeth before meeting with people 
 		
 		#######################################
 		# OLD VIET
@@ -260,6 +262,10 @@ VIET_events_yearly_pulse = {
 		100 = VIETmisc.0112		# Smell a weird smell
 		100 = VIETmisc.0113		# Elderberry tea?
 		100 = VIETmisc.0114		# Songbird perches on a nearby tree
+		# Oral Hygiene
+		100 = VIETmisc.0118		# Complaining about toothaches
+		100 = VIETmisc.0119		# Bite on cheek when eating
+		100 = VIETmisc.0120		# Bad mouth sores
 	}
 }
 
@@ -360,6 +366,12 @@ VIET_events_tri_yearly_pulse = {
 		100 = VIETold.1035		# Character comes across a boulder believed to have spiritual properties
 		100 = VIETold.1036		# Farmers find the bones of a mystical beast
 		100 = VIETold.1040		# Sulfur treatment for acne
+		# Toothbrush
+		100 = VIETold.1044		# Convince a courtier to use miswak more
+		100 = VIETold.1045		# Miswak usage is encouraged by scripture
+		100 = VIETold.1046		# Visiting noble gifts player a gold toothpick
+		100 = VIETold.1047		# Character learns about silly Chinese toothbrushes
+		100 = VIETold.1049		# Someone suggests you should clean your tongue as well
 		
 		#######################################
 		# OLD VIET
@@ -472,6 +484,10 @@ VIET_events_tri_yearly_pulse = {
 		100 = VIETmisc.0110		# Talking with a blacksmith about blacksmith-y things
 		100 = VIETmisc.0116		# Witness a couple fornicating in public
 		100 = VIETmisc.0117		# Learning about cooking from a cook
+		# Oral Hygiene
+		100 = VIETmisc.0121		# Courtier gets a tooth extraction
+		100 = VIETmisc.0122		# Discover a new mouthwash recipe
+		100 = VIETmisc.0123		# Aid with tooth whitening
 	}
 }
 
@@ -551,6 +567,10 @@ VIET_events_five_yearly_pulse = {
 		100 = VIETold.1034		# Find a special rock
 		100 = VIETold.1038		# Your character hears about lingams and yoni
 		100 = VIETold.1039		# Merchant shows off a fire-proof napkin
+		# Toothbrush
+		100 = VIETold.1048		# Courtier talks about toothbrush sexy times
+		100 = VIETold.1050		# Old people with bad teeth scare you and inspire you to do more cleaning
+		100 = VIETold.1052		# Toothbrush toilet prank (or not)
 		
 		#######################################
 		# OLD VIET

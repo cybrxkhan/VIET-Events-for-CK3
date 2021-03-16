@@ -210,3 +210,16 @@ VIET_orphan_gave_me_home = {
 	years = 100
 	opinion = 25
 }
+VIET_opinion_miswak_advice_good = {
+	years = 4
+	opinion = 10
+}
+VIET_opinion_miswak_advice_bad = {
+	years = 4
+	opinion = -10
+}
+VIET_opinion_afraid_of_pranks = {
+	years = 10
+	decaying = yes
+	opinion = -15
+}

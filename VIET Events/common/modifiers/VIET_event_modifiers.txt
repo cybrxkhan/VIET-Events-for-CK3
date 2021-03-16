@@ -1053,4 +1053,58 @@ VIET_cook_knowledge = {
 	intrigue = 1
 	negate_health_penalty_add = 0.1
 }
+VIET_using_miswak_more = {
+	icon = health_positive
+	health = 0.1
+}
+VIET_toothbrush_pervert = {
+	icon = fertility_negative
+	fertility = 0.04
+	#seduction_scheme_resistance_mult = -0.1
+	monthly_piety = -0.1
+}
+VIET_keep_mind_pure = {
+	icon = piety_positive
+	fertility = -0.02
+	monthly_piety = 0.2
+}
+VIET_politely_listened_to_weirdness = {
+	icon = social_positive
+	diplomacy = 1
+}
+VIET_cleans_tongue = {
+	icon = health_positive
+	health = 0.1
+}
+VIET_loves_toothbrushing = {
+	icon = health_positive
+	health = 0.1
+	negate_health_penalty_add = 0.1
+}
+VIET_constant_toothaches = {
+	icon = stress_negative
+	health = -0.1
+	stress_gain_mult = 0.10
+	stress_loss_mult = -0.10
+}
+VIET_mouth_sores = {
+	icon = stress_negative
+	stress_gain_mult = 0.10
+	stress_loss_mult = -0.10
+}
+VIET_skilled_tooth_extraction = {
+	icon = stress_positive
+	general_opinion = 10
+}
+VIET_good_mouthwash = {
+	icon = fertility_positive
+	general_opinion = 5
+	health = 0.1
+	seduce_scheme_power_mult = 0.05
+}
+VIET_teeth_whitening = {
+	icon = fertility_positive
+	diplomacy = 1
+	attraction_opinion = 10
+}
 
