@@ -1,8 +1,8 @@
 # VIET Events for CK3
 
-## Latest Version: 1.2.1 "Dong Son" (Released 12/11/20 - VIET's 8th Anniversary!)
+## Latest Version: 1.3.0 "Miswak" (Released 3/16/21)
 
-_The Dong Son culture was a Bronze Age culture located in northern Vietnam during the first millennium BCE, and whose people are the likely direct ancestors of modern-day Vietnamese. Their cultural influence extended throughout Southeast Asia and they are particularly skilled in bronze casting. These bronze drums and mythologized accounts of the Dong Son culture have featured prominently in Vietnamese culture for centuries. A major Dong Son settlement, Co Loa, would later become was the first capital of the Ngo Dynasty, the first independent post-China dynasty of Vietnam in the 10th century CE._
+_The miswak is a type of teeth cleaning twig that has been popular for centuries throughout the Middle East, North Africa, and South Asia. Islamic hadiths frequently mention their importance, and recommend their use in a variety of situations, and it is still used to this day. For example, the Prophet Muhammad is quoted in one hadith as having said: “Were it not that I might overburden the Believers I would have ordered them to use miswak at the time of every Prayer.”_
 
 Very Immersive Events and Tales (VIET), the sequel to VIET Events Reborn for CK2, is a flavor mod that adds a vast collection of events about everyday life to spice up your game. These events add immersion and a diversity of experiences in between wars and vanilla’s event chains, and cover mundane minutiae ranging from small talk with courtiers and eating local cuisine to epic tales about love, philosophy, and the human condition.
 
@@ -12,7 +12,7 @@ Feel free to use my work in your mods - all I ask is that I am credited and (if 
 
 ## Features
 
-- Over 363 new flavor events and event chains, and more will be added in updates over time
+- Over 378 new flavor events and event chains, and more will be added in updates over time
 - Game rule to disable sillier events for those who don't like them, with three levels to choose from: Balanced (Default), Serious (Restricted), and All Events (Full)
 - Compatible with almost anything since it doesn't touch any vanilla files - even with overhaul mods, you can via game rule disable events that reference things specific to our medieval world that wouldn’t make sense in other time periods or universes (like fantasy and sci-fi conversion mods)
 - Learn history with Historical Context tooltips that provide information about what inspired some of the events - sometimes, reality is stranger than fiction! (These can be disabled via game rule for those who find it immersion breaking.)

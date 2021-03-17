@@ -1,6 +1,6 @@
 [img]http://i.imgur.com/OhIA5bm.jpg[/img]
 
-[h1]Current Version: 1.2.1 "Dong Son" (Released 12/11/20 for VIET's 8th Anniversary, Compatible with vanilla patch 1.2.X)[/h1]
+[h1]Current Version: 1.3.0 "Miswak" (Released 3/16/21, Compatible with vanilla patch 1.3.X)[/h1]
 [B]Please See [url=https://forum.paradoxplaza.com/forum/threads/mod-viet-events-for-ck3-a-flavor-and-immersion-event-mod.1422081/]Forum Thread[/url] For More Info[/B]
 [B]Manual Download/Installation available [url=https://github.com/cybrxkhan/VIET-Events-for-CK3/releases]on Github[/url]
 [/B]
@@ -22,7 +22,7 @@ Feel free to use my work in your mods - all I ask is that I am credited and (if 
 [img]http://i.imgur.com/EyXurbK.jpg[/img]
 
 [LIST]
-[*]Over [B]363 new flavor events[/B], and more will be added in updates over time
+[*]Over [B]378 new flavor events[/B], and more will be added in updates over time
 [*]Game rule to disable sillier events for those who don't like them, with three levels to choose from: Balanced (Default), Serious (Restricted), and All Events (Full)
 [*][B]Compatible with almost anything[/B] since it doesn't touch any vanilla files - even with overhaul mods, you can via game rule disable events that reference things specific to our medieval world that wouldn’t make sense in other time periods or universes (like fantasy and sci-fi conversion mods)
 [*]Learn history with [B]Historical Context tooltips[/B] that provide information about what inspired some of the events - sometimes, reality is stranger than fiction! (These can be disabled via game rule for those who find it immersion breaking.)
@@ -50,22 +50,18 @@ Thanks!
 
 [img]http://i.imgur.com/RQ5QZTF.jpg[/img]
 
-[h1]Version 1.2.1 "Dong Son"[/h1]
+[h1]Version 1.3.0 "Miswak"[/h1]
 
-[I]The Dong Son culture was a Bronze Age culture located in northern Vietnam during the first millennium BCE, and whose people are the likely direct ancestors of modern-day Vietnamese. Their cultural influence extended throughout Southeast Asia and they are particularly skilled in bronze casting. These bronze drums and mythologized accounts of the Dong Son culture have featured prominently in Vietnamese culture for centuries. A major Dong Son settlement, Co Loa, would later become was the first capital of the Ngo Dynasty, the first independent post-China dynasty of Vietnam in the 10th century CE.[/I]
+[I]The miswak is a type of teeth cleaning twig that has been popular for centuries throughout the Middle East, North Africa, and South Asia. Islamic hadiths frequently mention their importance, and recommend their use in a variety of situations, and it is still used to this day. For example, the Prophet Muhammad is quoted in one hadith as having said: “Were it not that I might overburden the Believers I would have ordered them to use miswak at the time of every Prayer.”[/I]
 
 [LIST]
-[*]Added 27 new events about the following themes:
+[*]Updated to vanilla patch 1.3 Corvus
+[*]Added 15 new events about the following themes:
 [LIST]
-[*]18 generic trait related (the first events ever coded for VIET back in 2012)*
-[*]9 generic
+[*]9 Teeth*
+[*]6 Oral Hygiene
 [/LIST]
-[*]Added text variations of the “Winter Wind Sentiment” event chain for female and homosexual characters (not sure why I missed that one before all these years…)
-[*]Added a few new event backgrounds for the Iberian and Tarim Basin regions
-[*]Some courtiers spawned via event will have a loyalty or favor hook to the ruler of the court they spawned in
-[*]Nobleman spawned via the “Never Trust a Bandit” event will go to the global pool if not recruited to court
-[*]Changed Skyrim barmaid event to fire for men only, and flirt/one night stand options will only be available to straight and bisexual characters for obvious reasons
-[*]Miscellaneous bugfixes
+[*]Miscellaneous bugfixes as usual
 [/LIST]
 
 *Adapted from VIET for CK2
