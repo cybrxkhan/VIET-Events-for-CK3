@@ -9788,6 +9788,10 @@ VIETmisc.0123 = {
 		character = root
 		animation = personality_rational
 	}
+	
+	trigger = {
+		court_physician_available_trigger = yes
+	}
 
 	weight_multiplier = {
 		base = 1
@@ -9815,6 +9819,10 @@ VIETmisc.0123 = {
 			add = -0.2
 			has_trait = lazy
 		}
+	}
+	
+	immediate = {
+		save_court_physician_as_effect = { SCOPE_NAME = physician }
 	}
 	
 	option = { # Ok
