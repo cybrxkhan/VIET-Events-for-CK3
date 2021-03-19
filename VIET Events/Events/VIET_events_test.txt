@@ -59,6 +59,12 @@
 # Deceitful - Never show true self - VIETnam.94 - rework later
 # Cruel - subjects fear character - VIETnam.96 - rework later
 # Hebrew Mouthwash - VIETmisc.2106 - wait until PI develops Jewish flavor/cultures more
+# Old VIET generic province events - VIETmisc.8005-8011 - province events
+# Suspicious courtiers talking - VIETmisc.8013 - too similar to vanilla CK3 event
+# Chamber Pot Docs - VIETmisc.8016 - redo later?
+# Young Musician lady and husband - VIETmisc.8020-8021 - rework later
+# Ghost Sighting - VIETmisc.8028 - province event
+# Misc artifact events - VIETmisc.8033-8035 - to do later, when PI adds in a proper official artifact system
 # 
 ###########################################################################################################################
 
