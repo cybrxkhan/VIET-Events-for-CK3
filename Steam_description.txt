@@ -1,6 +1,6 @@
 [img]http://i.imgur.com/OhIA5bm.jpg[/img]
 
-[h1]Current Version: 1.3.0 "Miswak" (Released 3/16/21, Compatible with vanilla patch 1.3.X)[/h1]
+[h1]Current Version: 1.3.1 "Osman" (Released 3/21/21, Compatible with vanilla patch 1.3.X)[/h1]
 [B]Please See [url=https://forum.paradoxplaza.com/forum/threads/mod-viet-events-for-ck3-a-flavor-and-immersion-event-mod.1422081/]Forum Thread[/url] For More Info[/B]
 [B]Manual Download/Installation available [url=https://github.com/cybrxkhan/VIET-Events-for-CK3/releases]on Github[/url][/B]
 [B]Paradox Download [url=https://mods.paradoxplaza.com/mods/12992/Any]Available Here[/url][/B]
@@ -22,7 +22,7 @@ Feel free to use my work in your mods - all I ask is that I am credited and (if 
 [img]http://i.imgur.com/EyXurbK.jpg[/img]
 
 [LIST]
-[*]Over [B]378 new flavor events[/B], and more will be added in updates over time
+[*]Over [B]405 new flavor events[/B], and more will be added in updates over time
 [*]Game rule to disable sillier events for those who don't like them, with three levels to choose from: Balanced (Default), Serious (Restricted), and All Events (Full)
 [*][B]Compatible with almost anything[/B] since it doesn't touch any vanilla files - even with overhaul mods, you can via game rule disable events that reference things specific to our medieval world that wouldn’t make sense in other time periods or universes (like fantasy and sci-fi conversion mods)
 [*]Learn history with [B]Historical Context tooltips[/B] that provide information about what inspired some of the events - sometimes, reality is stranger than fiction! (These can be disabled via game rule for those who find it immersion breaking.)
@@ -50,18 +50,17 @@ Thanks!
 
 [img]http://i.imgur.com/RQ5QZTF.jpg[/img]
 
-[h1]Version 1.3.0 "Miswak"[/h1]
+[h1]Version 1.3.1 "Osman"[/h1]
 
-[I]The miswak is a type of teeth cleaning twig that has been popular for centuries throughout the Middle East, North Africa, and South Asia. Islamic hadiths frequently mention their importance, and recommend their use in a variety of situations, and it is still used to this day. For example, the Prophet Muhammad is quoted in one hadith as having said: “Were it not that I might overburden the Believers I would have ordered them to use miswak at the time of every Prayer.”[/I]
+[I]Osman I was a 14th century Turkish lord in Anatolia, and the founder of the Ottoman Dynasty. Much of his life is shrouded in myth and legend. The state he established would eventually come to dominate much of Europe and the Middle East, and endure in one form or another until shortly after World War I.[/I]
 
 [LIST]
-[*]Updated to vanilla patch 1.3 Corvus
-[*]Added 15 new events about the following themes:
+[*]Added 27 new events about the following themes:
 [LIST]
-[*]9 Teeth*
-[*]6 Oral Hygiene
+[*]22 generic*
+[*]5 Beginnings
 [/LIST]
-[*]Miscellaneous bugfixes as usual
+[*]Obligatory miscellaneous bugfixes
 [/LIST]
 
 *Adapted from VIET for CK2
