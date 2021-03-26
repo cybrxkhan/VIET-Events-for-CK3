@@ -1031,7 +1031,7 @@ VIET_smelling_smells = {
 	stress_gain_mult = 0.05
 }
 VIET_elderberry_tea = {
-	icon = health_positive
+	icon = drink_positive
 	negate_health_penalty_add = 0.3
 }
 VIET_prison_ghost_curse = {
@@ -1106,5 +1106,117 @@ VIET_teeth_whitening = {
 	icon = fertility_positive
 	diplomacy = 1
 	attraction_opinion = 10
+}
+VIET_remembering_childhood_love = {
+	icon = love_positive
+	stress_loss_mult = 0.15
+}
+VIET_rewarded_oblivion_guard = {
+	icon = martial_positive
+	county_opinion_add = 5
+	monthly_prestige = 0.1
+}
+VIET_comforted_heartbroken_lad = {
+	icon = love_positive
+	diplomacy = 1
+}
+VIET_chinese_rumors = {
+	icon = learning_positive
+	learning = 1
+}
+VIET_girl_power = {
+	icon = social_positive
+	county_opinion_add = 5
+}
+VIET_sexist_against_women = {
+	icon = social_positive
+	attraction_opinion = -10
+}
+VIET_nerd_hates_sports = {
+	icon = learning_positive
+	learning = 1
+	prowess = -1
+}
+VIET_female_rumors_bodyguards = {
+	icon = love_negative
+	county_opinion_add = -5
+}
+VIET_lack_of_good_sleep = {
+	icon = stress_negative
+	stress_gain_mult = 0.10
+	stress_loss_mult = -0.10
+	monthly_lifestyle_xp_gain_mult = -0.1
+}
+VIET_interesting_idealistic_ideas = {
+	icon = social_positive
+	monthly_lifestyle_xp_gain_mult = 0.04
+}
+VIET_quick_nap = {
+	icon = stress_positive
+	stress_gain_mult = -0.10
+	stress_loss_mult = 0.10
+}
+VIET_sore_muscles = {
+	icon = stress_negative
+	stress_gain_mult = 0.05
+	health = -0.1
+}
+VIET_read_book_romance = {
+	icon = love_positive
+	diplomacy = 1
+	attraction_opinion = 5
+}
+VIET_read_book_gritty = {
+	icon = dread_positive
+	intrigue = 1
+	hostile_scheme_power_mult = 0.1
+	personal_scheme_power_mult = 0.1
+}
+VIET_read_book_fantasy = {
+	icon = outdoors_positive
+	martial = 1
+	learning = 1
+}
+VIET_read_book_slice_of_life = {
+	icon = drink_positive
+	stewardship = 1
+	stress_gain_mult = -0.05
+	stress_loss_mult = 0.05
+}
+VIET_minty_fresh_breath = {
+	icon = fertility_positive
+	general_opinion = 5
+	attraction_opinion = 5
+}
+VIET_herbal_mouth_cleaning_other = {
+	icon = fertility_positive
+	attraction_opinion = 5
+	health = 0.1
+}
+VIET_trinkets_odds_and_ends = {
+	icon = spoon_positive
+	monthly_prestige = 0.2
+}
+VIET_abandoned_a_baby = {
+	icon = social_negative
+	monthly_dread = 0.2
+	county_opinion_add = -10
+	general_opinion = -10
+}
+VIET_abaonded_as_a_child = {
+	icon = social_positive
+	diplomacy = -1
+	intrigue = 1
+}
+VIET_hired_new_dutiful_servants = {
+	icon = county_modifier_development_positive
+	stewardship = 1
+	monthly_prestige = 0.1
+}
+VIET_saved_abandoned_baby = {
+	icon = social_positive
+	monthly_piety = 0.2
+	county_opinion_add = 10
+	general_opinion = 10
 }
 

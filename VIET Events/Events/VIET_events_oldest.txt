@@ -2737,7 +2737,7 @@ VIETold.0033 = {
 		hidden_effect = {
 			scope:scope_VIET_noble_orphan = {
 				add_character_modifier = {
-					modifier = VIET_noble_orphan
+					modifier = VIET_orphan_noble_boy
 				}
 			}		
 		}

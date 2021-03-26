@@ -31,6 +31,7 @@
 # 0104-0108		Celebration
 # 0109-0117		Generic
 # 0118-0123		Oral Hygiene
+# 0124-0128		Beginnings
 # 
 ############################################################################################################################
 
@@ -9838,5 +9839,615 @@ VIETmisc.0123 = {
 			custom_tooltip = VIETmisc.0123.info
 		}
 	}
+}
+
+
+
+##################################################################
+# BEGINNINGS 0124-0128
+##################################################################
+
+
+
+# A new shop opens in town
+VIETmisc.0124 = {
+	type = character_event
+	title = VIETmisc.0124.t
+	desc = VIETmisc.0124.desc
+	theme = stewardship_wealth_focus
+	override_background = { event_background = market }
+	
+	left_portrait = { 	
+		character = root
+		animation = personality_rational
+	}
+
+	weight_multiplier = {
+		base = 1
+		modifier = {
+			add = 0.2
+			has_trait = generous
+		}
+		modifier = {
+			add = -0.2
+			has_trait = greedy
+		}
+		modifier = {
+			add = 0.2
+			has_trait = gregarious
+		}
+		modifier = {
+			add = -0.2
+			has_trait = shy
+		}
+		modifier = {
+			add = 0.2
+			has_trait = fickle
+		}
+		modifier = {
+			add = -0.2
+			has_trait = stubborn
+		}
+	}
+	
+	option = { # No thanks
+		name = VIETmisc.0124.a
+		VIET_medium_prestige_gain_effect = yes
+		stress_impact = {
+			greedy = medium_stress_impact_gain
+			arrogant = minor_stress_impact_gain
+		}
+	}	
+	option = { # I'll take it
+		name = VIETmisc.0124.b
+		add_character_modifier = {
+			modifier = VIET_trinkets_odds_and_ends
+			years = 3
+		}
+		stress_impact = {
+			generous = minor_stress_impact_gain
+			paranoid = minor_stress_impact_gain
+		}
+	}
+	option = { # I'll buy it
+		name = VIETmisc.0124.c
+		trigger = {
+			OR = {
+				gold >= 10
+				is_ai = no
+			}
+		}
+		remove_short_term_gold = 10
+		VIET_medium_prestige_gain_effect = yes
+		add_character_modifier = {
+			modifier = VIET_trinkets_odds_and_ends
+			years = 3
+		}
+		stress_impact = {
+			greedy = medium_stress_impact_gain
+			callous = medium_stress_impact_gain
+			paranoid = minor_stress_impact_gain
+		}
+	}
+	option = { # You suck
+		name = VIETmisc.0124.d
+		add_dread = 8
+		stress_impact = {
+			compassionate = medium_stress_impact_gain
+			humble = medium_stress_impact_gain
+			trusting = medium_stress_impact_gain
+		}
+	}
+}
+
+
+# A servant is about to give birth
+VIETmisc.0125 = {
+	type = character_event
+	title = VIETmisc.0125.t
+	desc = VIETmisc.0125.desc
+	theme = family
+	
+	left_portrait = { 	
+		character = root
+		animation = shock
+	}
+
+	weight_multiplier = {
+		base = 1
+		modifier = {
+			add = 0.2
+			has_trait = lazy
+		}
+		modifier = {
+			add = -0.2
+			has_trait = diligent
+		}
+		modifier = {
+			add = 0.2
+			has_trait = calm
+		}
+		modifier = {
+			add = -0.2
+			has_trait = wrathful
+		}
+		modifier = {
+			add = 0.2
+			has_trait = gregarious
+		}
+		modifier = {
+			add = -0.2
+			has_trait = shy
+		}
+	}
+	
+	option = { # I'm out of here
+		name = VIETmisc.0125.a
+		VIET_medium_piety_loss_effect = yes
+		VIET_medium_prestige_gain_effect = yes
+		stress_impact = {
+			brave = minor_stress_impact_gain
+			compassionate = minor_stress_impact_gain
+		}
+	}	
+	option = { # I'll find help
+		name = VIETmisc.0125.b
+		VIET_medium_prestige_loss_effect = yes
+		VIET_medium_piety_gain_effect = yes
+		stress_impact = {
+			callous = minor_stress_impact_gain
+			craven = minor_stress_impact_gain
+		}
+	}
+	option = { # I know what to do
+		name = VIETmisc.0125.c
+		trigger = {
+			has_trait = lifestyle_physician
+		}
+		trait = lifestyle_physician
+		VIET_medium_prestige_gain_effect = yes
+		VIET_medium_piety_gain_effect = yes
+		stress_impact = {
+			callous = medium_stress_impact_gain
+			craven = medium_stress_impact_gain
+		}
+	}
+	option = { # I know what to do
+		name = VIETmisc.0125.c
+		trigger = {
+			NOT = { has_trait = lifestyle_physician }
+			learning >= decent_skill_rating
+		}
+		skill = learning
+		VIET_medium_prestige_gain_effect = yes
+		VIET_medium_piety_gain_effect = yes
+		stress_impact = {
+			callous = medium_stress_impact_gain
+			craven = medium_stress_impact_gain
+		}
+	}
+}
+
+
+# Come across a recently planted tree in a village
+VIETmisc.0126 = {
+	type = character_event
+	title = VIETmisc.0126.t
+	desc = VIETmisc.0126.desc
+	theme = VIET_theme_small_town
+	
+	left_portrait = { 	
+		character = root
+		animation = personality_zealous
+	}
+
+	weight_multiplier = {
+		base = 1
+		modifier = {
+			add = 0.2
+			has_trait = patient
+		}
+		modifier = {
+			add = -0.2
+			has_trait = impatient
+		}
+		modifier = {
+			add = 0.2
+			has_trait = calm
+		}
+		modifier = {
+			add = -0.2
+			has_trait = wrathful
+		}
+		modifier = {
+			add = 0.2
+			has_trait = just
+		}
+		modifier = {
+			add = -0.2
+			has_trait = arbitrary
+		}
+	}
+	
+	option = { # Ok
+		name = VIETmisc.0126.a
+		random_list = {
+			10 = { VIET_medium_piety_gain_effect = yes }
+			10 = { VIET_medium_prestige_gain_effect = yes }
+		}
+		stress_impact = {
+			cynical = miniscule_stress_impact_gain
+			arbitrary = miniscule_stress_impact_gain
+		}
+	}	
+	option = { # Ok
+		name = VIETmisc.0126.b
+		VIET_medium_piety_gain_effect = yes
+		stress_impact = {
+			cynical = miniscule_stress_impact_gain
+			arbitrary = miniscule_stress_impact_gain
+		}
+	}	
+	option = { # Ok
+		name = VIETmisc.0126.c
+		VIET_medium_prestige_gain_effect = yes
+		stress_impact = {
+			humble = miniscule_stress_impact_gain
+			compassionate = miniscule_stress_impact_gain
+		}
+	}
+}
+
+
+
+# Young elopers trespass in your residence
+VIETmisc.0127 = {
+	type = character_event
+	title = VIETmisc.0127.t
+	desc = VIETmisc.0127.desc
+	theme = vassal
+	
+	right_portrait = root
+
+	weight_multiplier = {
+		base = 1
+		modifier = {
+			add = 0.2
+			has_trait = lazy
+		}
+		modifier = {
+			add = -0.2
+			has_trait = diligent
+		}
+		modifier = {
+			add = 0.2
+			has_trait = forgiving
+		}
+		modifier = {
+			add = -0.2
+			has_trait = vengeful
+		}
+		modifier = {
+			add = 0.2
+			has_trait = patient
+		}
+		modifier = {
+			add = -0.2
+			has_trait = impatient
+		}
+	}
+	
+	option = { # Ok
+		name = VIETmisc.0127.a
+	}	
+	option = { # Ok
+		name = VIETmisc.0127.b
+		add_dread = 15
+		stress_impact = {
+			compassionate = minor_stress_impact_gain
+			just = minor_stress_impact_gain
+			patient = minor_stress_impact_gain
+			calm = minor_stress_impact_gain
+			forgiving = minor_stress_impact_gain
+		}
+	}	
+	option = { # Return them to their parents
+		name = VIETmisc.0127.c
+		VIET_large_piety_gain_effect = yes
+		stress_impact = {
+			callous = minor_stress_impact_gain
+			sadistic = minor_stress_impact_gain
+			wrathful = minor_stress_impact_gain
+			vengeful = minor_stress_impact_gain
+			paranoid = minor_stress_impact_gain
+		}
+	}
+	option = { # Help them out
+		name = VIETmisc.0127.d
+		VIET_large_prestige_gain_effect = yes
+		stress_impact = {
+			callous = minor_stress_impact_gain
+			sadistic = minor_stress_impact_gain
+			wrathful = minor_stress_impact_gain
+			vengeful = minor_stress_impact_gain
+			paranoid = minor_stress_impact_gain
+		}
+	}
+	option = { # Hire them
+		name = VIETmisc.0127.e
+		trigger = {
+			OR = {
+				gold >= 25
+				is_ai = no
+			}
+		}
+		remove_short_term_gold = 25
+		VIET_medium_prestige_gain_effect = yes
+		add_character_modifier = {
+			modifier = VIET_hired_new_dutiful_servants
+			years = 10
+		}
+		stress_impact = {
+			callous = minor_stress_impact_gain
+			sadistic = minor_stress_impact_gain
+			wrathful = minor_stress_impact_gain
+			vengeful = minor_stress_impact_gain
+			paranoid = minor_stress_impact_gain
+			greedy = minor_stress_impact_gain
+		}
+	}
+}
+
+
+
+# Come across an abandoned baby - what to do?
+VIETmisc.0128 = {
+	type = character_event
+	title = VIETmisc.0128.t
+	desc = VIETmisc.0128.desc
+	theme = type_family
+	override_background = { event_background = VIET_background_skyrim_forest }
+	
+	left_portrait = root
+	
+	right_portrait = {
+		character = scope:scope_VIET_baby_rescuer
+		animation = newborn
+	}
+	
+	#lower_center_portrait = scope:scope_VIET_abandoned_baby
+	
+	trigger = {
+		any_courtier = {
+			is_available_ai_adult = yes
+			NOT = { is_close_or_extended_family_of = root }
+			is_married = no
+			is_concubine = no
+			OR = {
+				has_trait = compassionate
+				has_trait = just
+				has_trait = generous
+			}
+			NOR = {
+				has_trait = sadistic
+				has_trait = callous
+				has_trait = paranoid
+				has_trait = wrathful
+			}
+		}	
+	}
+	
+	weight_multiplier = {
+		base = 1
+		modifier = {
+			add = 0.2
+			has_trait = diligent
+		}
+		modifier = {
+			add = -0.2
+			has_trait = lazy
+		}
+		modifier = {
+			add = 0.2
+			has_trait = calm
+		}
+		modifier = {
+			add = -0.2
+			has_trait = wrathful
+		}
+		modifier = {
+			add = 0.2
+			has_trait = trusting
+		}
+		modifier = {
+			add = -0.2
+			has_trait = paranoid
+		}
+	}	
+	
+	immediate = {
+		random_courtier = {
+			limit = {
+				is_available_ai_adult = yes
+				NOT = { is_close_or_extended_family_of = root }
+				is_married = no
+				is_concubine = no
+				OR = {
+					has_trait = compassionate
+					has_trait = just
+					has_trait = generous
+				}
+				NOR = {
+					has_trait = sadistic
+					has_trait = callous
+					has_trait = paranoid
+					has_trait = wrathful
+				}
+			}
+			save_scope_as = scope_VIET_baby_rescuer
+		}
+		hidden_effect = {
+			create_character = {
+				location = root.capital_province
+				age = { 1 2 }
+				gender_female_chance = 50
+				faith = root.faith
+				culture = root.culture
+				save_scope_as = scope_VIET_abandoned_baby
+				random_traits = yes
+			}	
+		}
+	}
+	
+	option = { # Leave it to die
+		name = VIETmisc.0128.a
+		add_dread = 20
+		if = {
+			limit = {
+				faith = {
+					OR = {
+						trait_is_virtue = compassionate
+						trait_is_virtue = generous
+						trait_is_virtue = just
+					}
+				}
+			}
+			VIET_huge_piety_loss_effect = yes
+		}
+		else = {
+			VIET_large_piety_gain_effect = yes
+		}
+		add_character_modifier = {
+			modifier = VIET_abandoned_a_baby
+			years = 10
+		}
+		scope:scope_VIET_baby_rescuer = {
+			add_opinion = {
+				target = root
+				modifier = VIET_opinion_abandoned_baby
+			}	
+		}
+		if = {
+			limit = {
+				NOR = {
+					has_trait = callous
+					has_trait = sadistic
+				}
+			}
+			stress_impact = {
+				base = minor_stress_gain
+				compassionate = massive_stress_gain
+				just = medium_stress_gain
+				generous = medium_stress_gain
+			}
+		}
+		hidden_effect = {
+			scope:scope_VIET_abandoned_baby = {
+				death = {
+					death_reason = death_wolves # Maybe something else in the future?
+				}			
+			}
+		}
+	}		
+	option = { # Let a servant adopt it
+		name = VIETmisc.0128.b
+		if = {
+			limit = {
+				faith = {
+					OR = {
+						trait_is_virtue = compassionate
+						trait_is_virtue = generous
+						trait_is_virtue = just
+					}
+				}
+			}
+			VIET_large_piety_gain_effect = yes
+		}
+		else = {
+			VIET_medium_piety_gain_effect = yes
+		}
+		VIET_huge_prestige_loss_effect = yes
+		add_character_modifier = {
+			modifier = VIET_saved_abandoned_baby
+			years = 10
+		}
+		stress_impact = {
+			callous = major_stress_gain
+			sadistic = medium_stress_gain
+			arbitrary = minor_stress_gain
+			greedy = minor_stress_gain
+		}
+		hidden_effect = {
+			scope:scope_VIET_abandoned_baby = {
+				death = {
+					death_reason = death_disappearance
+				}			
+			}
+		}
+	}		
+	option = { # Let courtier adopt it
+		name = VIETmisc.0128.c
+		if = {
+			limit = {
+				faith = {
+					OR = {
+						trait_is_virtue = compassionate
+						trait_is_virtue = generous
+						trait_is_virtue = just
+					}
+				}
+			}
+			VIET_large_piety_gain_effect = yes
+		}
+		else = {
+			VIET_medium_piety_gain_effect = yes
+		}
+		VIET_huge_prestige_loss_effect = yes
+		add_character_modifier = {
+			modifier = VIET_saved_abandoned_baby
+			years = 10
+		}
+		if = {
+			limit = {
+				scope:scope_VIET_baby_rescuer = {
+					is_female = yes
+				}
+			}
+			scope:scope_VIET_abandoned_baby = {
+				set_mother = scope:scope_VIET_baby_rescuer		
+			}
+		}
+		else_if = {
+			limit = {
+				scope:scope_VIET_baby_rescuer = {
+					is_female = no
+				}
+			}
+			scope:scope_VIET_abandoned_baby = {
+				set_father = scope:scope_VIET_baby_rescuer		
+			}
+		}
+		hidden_effect = {
+			#We take care of the sundries in a hidden effect so as not to put too much into the tooltip.
+			scope:scope_VIET_abandoned_baby = { set_house = scope:scope_VIET_baby_rescuer.house }
+			add_courtier = scope:scope_VIET_abandoned_baby
+			scope:scope_VIET_baby_rescuer = {
+				add_opinion = {
+					target = scope:scope_VIET_abandoned_baby
+					modifier = VIET_opinion_adopted_child
+				}	
+				reverse_add_opinion = {
+					target = scope:scope_VIET_abandoned_baby
+					modifier = VIET_opinion_adopted_parent
+				}	
+			}
+		}
+		stress_impact = {
+			callous = major_stress_gain
+			sadistic = medium_stress_gain
+			arbitrary = minor_stress_gain
+			greedy = minor_stress_gain
+		}
+	}	
 }
 

@@ -192,6 +192,20 @@ VIET_events_yearly_pulse = {
 		100 = VIETold.2121		# Acquaintance recalls near death experience (male)
 		100 = VIETold.2122		# Recall happy memory about late parents
 		100 = VIETold.2126		# Servant's pet dog passed away
+		# Generic
+		100 = VIETold.2129		# Character remembers a childhood love
+		100 = VIETold.2130		# Servant has crush on maid
+		100 = VIETold.2131		# Character feels inspired
+		100 = VIETold.2132		# Saw a mudcrab the other day
+		100 = VIETold.2134		# Courtier said something inappropriate
+		100 = VIETold.2135		# Young man is feeling sad about a girl - comfort him
+		100 = VIETold.2139		# Ocean nightmare
+		100 = VIETold.2142		# Mint before toothbrushing
+		100 = VIETold.2143		# A nice peaceful dream
+		100 = VIETold.2145		# Female leader is asked about preferences in men
+		100 = VIETold.2147		# Feeling sleepy but an important meeting with the council is coming up
+		100 = VIETold.2148		# Sore muscles all of a sudden
+		100 = VIETold.2149		# Foot cramp at an awkward time
 		
 		#######################################
 		# NEXT GEN VIET
@@ -266,6 +280,8 @@ VIET_events_yearly_pulse = {
 		100 = VIETmisc.0118		# Complaining about toothaches
 		100 = VIETmisc.0119		# Bite on cheek when eating
 		100 = VIETmisc.0120		# Bad mouth sores
+		# Beginnings		
+		100 = VIETmisc.0127		# Young elopers trespass in your residence
 	}
 }
 
@@ -428,6 +444,13 @@ VIET_events_tri_yearly_pulse = {
 		100 = VIETold.2123		# Character comes across scene of bandit battle
 		100 = VIETold.2127		# Pass by a tombstone with a meaningful, profound warning
 		100 = VIETold.2128		# Character dreams of ancestors coming to visit
+		# Generic
+		100 = VIETold.2133		# Guard exclaims STOP YOU VIOLATED THE LAW
+		100 = VIETold.2140		# Hearing about people who have a vegetarian diet
+		100 = VIETold.2141		# Rumors about the blessed isles
+		100 = VIETold.2144		# Rumors of female ruler having affairs with handsome bodyguards
+		100 = VIETold.2146		# Are flying contraptions even possible?
+		100 = VIETold.2150		# Recommend a book you recently read
 		
 		#######################################
 		# NEXT GEN VIET
@@ -488,6 +511,9 @@ VIET_events_tri_yearly_pulse = {
 		100 = VIETmisc.0121		# Courtier gets a tooth extraction
 		100 = VIETmisc.0122		# Discover a new mouthwash recipe
 		100 = VIETmisc.0123		# Aid with tooth whitening
+		# Beginnings
+		100 = VIETmisc.0124		# A new shop opens in town
+		100 = VIETmisc.0126		# Come across a recently planted tree in a village
 	}
 }
 
@@ -612,6 +638,9 @@ VIET_events_five_yearly_pulse = {
 		100 = VIETold.2112		# Woman annoys death so much he takes her back to the land of the living - based on an old folk tale
 		100 = VIETold.2124		# You have a friendly ghost stalker according to a holy person
 		100 = VIETold.2125		# Local townsman accused of having sex with ghosts
+		# Generic
+		100 = VIETold.2137		# Rumors of a powerful empress in China
+		100 = VIETold.2138		# Rumors of a Chinese women playing polo
 		
 		#######################################
 		# NEXT GEN VIET
@@ -646,6 +675,9 @@ VIET_events_five_yearly_pulse = {
 		# Generic
 		100 = VIETmisc.0111		# Come across an adventurer left for dead
 		100 = VIETmisc.0115		# A jail cell is empty due to sueprstition
+		# Beginnings
+		100 = VIETmisc.0125		# A servant is about to give birth
+		100 = VIETmisc.0128		# Come across an abandoned baby - what to do?
 	}
 }
 

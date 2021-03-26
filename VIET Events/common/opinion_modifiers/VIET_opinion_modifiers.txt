@@ -223,3 +223,23 @@ VIET_opinion_afraid_of_pranks = {
 	decaying = yes
 	opinion = -15
 }
+VIET_opinion_chastised_me_in_public = {
+	years = 5
+	opinion = -10
+}
+VIET_opinion_inappropriate_speech = {
+	years = 5
+	opinion = -10
+}
+VIET_opinion_abandoned_baby = {
+	years = 100
+	opinion = -60
+}
+VIET_opinion_adopted_parent = {
+	years = 100
+	opinion = 50
+}
+VIET_opinion_adopted_child = {
+	years = 100
+	opinion = 50
+}
