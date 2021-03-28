@@ -10004,7 +10004,20 @@ VIETmisc.0125 = {
 		trigger = {
 			has_trait = lifestyle_physician
 		}
-		trait = lifestyle_physician
+		if = {
+			limit= {
+				has_trait = physician_1
+			}
+			remove_trait = physician_1
+			add_trait = physician_2
+		}
+		if = {
+			limit= {
+				has_trait = physician_2
+			}
+			remove_trait = physician_2
+			add_trait = physician_3
+		}
 		VIET_medium_prestige_gain_effect = yes
 		VIET_medium_piety_gain_effect = yes
 		stress_impact = {
