@@ -790,7 +790,7 @@ VIETmisc.0010 = {
 					send_interface_toast = {
 						type = event_toast_effect_good
 						left_icon = ROOT
-						title = VIETmisc.0010.toast.b.a.norse
+						title = VIETmisc.0010.toast.b.fall.norse
 						custom_tooltip = VIETmisc.0010.toast.b.fall.norse
 					}
 				}
@@ -10002,9 +10002,39 @@ VIETmisc.0125 = {
 	option = { # I know what to do
 		name = VIETmisc.0125.c
 		trigger = {
-			has_trait = lifestyle_physician
+			has_trait = physician_1
 		}
-		trait = lifestyle_physician
+		trait = physician_1
+		remove_trait = physician_1
+		add_trait = physician_2
+		VIET_medium_prestige_gain_effect = yes
+		VIET_medium_piety_gain_effect = yes
+		stress_impact = {
+			callous = medium_stress_impact_gain
+			craven = medium_stress_impact_gain
+		}
+	}
+	option = { # I know what to do
+		name = VIETmisc.0125.c
+		trigger = {
+			has_trait = physician_2
+		}
+		trait = physician_2
+		remove_trait = physician_2
+		add_trait = physician_3
+		VIET_medium_prestige_gain_effect = yes
+		VIET_medium_piety_gain_effect = yes
+		stress_impact = {
+			callous = medium_stress_impact_gain
+			craven = medium_stress_impact_gain
+		}
+	}
+	option = { # I know what to do
+		name = VIETmisc.0125.c
+		trigger = {
+			has_trait = physician_3
+		}
+		trait = physician_3
 		VIET_medium_prestige_gain_effect = yes
 		VIET_medium_piety_gain_effect = yes
 		stress_impact = {
