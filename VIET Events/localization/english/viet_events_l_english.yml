@@ -647,7 +647,7 @@
  VIETmisc.0129.t:0 "A Prank"
  VIETmisc.0129.desc:0 "A thief was recently caught by my guards for trespassing in the house of my [ROOT.GetCharacter.Custom('lowly_servant_type')]. He was a young noble who had nothing better to do, as he’s done this multiple times, and only now is he finally caught. The only thing is… he doesn’t actually steal anything.\n\nI pay him a visit in the dungeons before making a judgment. Perhaps there’s more to this than meets the eye?\n\nHe laughs when he explains himself: "Okay! I'll tell you! I sneak into people's houses, take things off their tables and shelves, and put them in their barrels or containers! Hahaha! They think their possessions are stolen, but no! They are right there! They just don't know!""
  VIETmisc.0129.a:0 "As you are a noble, I’ll let you go this time. Don’t do it again."
- VIETmisc.0129.b:0 "Those are harmless pranks, yes, but must pay a fine for trespassing."
+ VIETmisc.0129.b:0 "Those are harmless pranks, yes, but you must pay a fine for trespassing."
  VIETmisc.0129.c:0 "I don’t like you. Let this ne’er-do-well rot in prison to set an example!"
  VIETmisc.0129.d:0 "Hmm… you know what, I could use a sly fox like you."
  VIETmisc.0130.t:0 "Praise [ROOT.Char.GetFaith.HighGodName]!"

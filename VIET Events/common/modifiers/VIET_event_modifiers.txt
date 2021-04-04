@@ -1219,4 +1219,39 @@ VIET_saved_abandoned_baby = {
 	county_opinion_add = 10
 	general_opinion = 10
 }
+VIET_horehound_tea = {
+	icon = drink_positive
+	negate_health_penalty_add = 0.1
+}
+VIET_mountain_tea = {
+	icon = drink_positive
+	negate_health_penalty_add = 0.1
+}
+VIET_chinese_black_tea_gift = {
+	icon = drink_positive
+	diplomacy = 1
+	health = 0.2
+}
+VIET_incest_debate = {
+	icon = love_positive
+	learning_per_piety_level = 1
+	fertility = 0.02
+}
+VIET_otumeel_prankster = {
+	icon = county_modifier_control_positive
+	intrigue = 2
+	hostile_scheme_power_mult = 0.04
+	hostile_scheme_resistance_mult = 0.02
+	general_opinion = -15
+}
+VIET_borissean_scholar_conversations = {
+	icon = learning_positive
+	learning = 1
+	monthly_lifestyle_xp_gain_mult = 0.05
+	monthly_learning_lifestyle_xp_gain_mult = 0.05
+}
+VIET_hears_voices_like_thamriel = {
+	icon = stress_positive
+	hostile_scheme_resistance_mult = 0.02
+}
 

@@ -206,6 +206,14 @@ VIET_events_yearly_pulse = {
 		100 = VIETold.2147		# Feeling sleepy but an important meeting with the council is coming up
 		100 = VIETold.2148		# Sore muscles all of a sudden
 		100 = VIETold.2149		# Foot cramp at an awkward time
+		# Generic 2
+		100 = VIETold.2151		# Sad character breaks down and cries
+		100 = VIETold.2152		# Horehound herbal tea 
+		100 = VIETold.2153		# Mountain tea from the Balkans
+		100 = VIETold.2155		# Too much salt
+		100 = VIETold.2156		# Cook asks how you want to eat your eggs
+		100 = VIETold.2158		# Indian/Iranian superstition about sneezing
+		100 = VIETold.2159		# Asian superstition about the number of sneezes
 		
 		#######################################
 		# NEXT GEN VIET
@@ -282,6 +290,8 @@ VIET_events_yearly_pulse = {
 		100 = VIETmisc.0120		# Bad mouth sores
 		# Beginnings		
 		100 = VIETmisc.0127		# Young elopers trespass in your residence
+		# Oblivion Dialogue
+		100 = VIETmisc.0130		# Hastrel Ottus - annoying commoner tells you to be more religious
 	}
 }
 
@@ -451,6 +461,10 @@ VIET_events_tri_yearly_pulse = {
 		100 = VIETold.2144		# Rumors of female ruler having affairs with handsome bodyguards
 		100 = VIETold.2146		# Are flying contraptions even possible?
 		100 = VIETold.2150		# Recommend a book you recently read
+		# Generic 2
+		100 = VIETold.2154		# Gift of Black Tea from China
+		100 = VIETold.2157		# Character meets S'shani, the old sea captain and rover... now a shipowner and fatcat.
+		100 = VIETold.2160		# Ate lots of baklava
 		
 		#######################################
 		# NEXT GEN VIET
@@ -514,6 +528,9 @@ VIET_events_tri_yearly_pulse = {
 		# Beginnings
 		100 = VIETmisc.0124		# A new shop opens in town
 		100 = VIETmisc.0126		# Come across a recently planted tree in a village
+		# Oblivion Dialogue
+		100 = VIETmisc.0131		# Borissean - trying to convince a scholar to join your court and failing
+		100 = VIETmisc.0132		# Thamriel - meet a crazy woman in the garden
 	}
 }
 
@@ -641,6 +658,8 @@ VIET_events_five_yearly_pulse = {
 		# Generic
 		100 = VIETold.2137		# Rumors of a powerful empress in China
 		100 = VIETold.2138		# Rumors of a Chinese women playing polo
+		# Generic 2
+		100 = VIETold.2161		# Incest argument
 		
 		#######################################
 		# NEXT GEN VIET
@@ -678,6 +697,8 @@ VIET_events_five_yearly_pulse = {
 		# Beginnings
 		100 = VIETmisc.0125		# A servant is about to give birth
 		100 = VIETmisc.0128		# Come across an abandoned baby - what to do?
+		# Oblivion Dialogue
+		100 = VIETmisc.0129		# Otumeel - Prankster who breaks in people's not to steal, but to move things around
 	}
 }
 

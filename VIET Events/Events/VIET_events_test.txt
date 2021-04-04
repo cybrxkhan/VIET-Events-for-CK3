@@ -64,7 +64,9 @@
 # Chamber Pot Docs - VIETmisc.8016 - redo later?
 # Young Musician lady and husband - VIETmisc.8020-8021 - rework later
 # Ghost Sighting - VIETmisc.8028 - province event
-# Misc artifact events - VIETmisc.8033-8035 - to do later, when PI adds in a proper official artifact system
+# Misc artifact events - VIETmisc.8033-8036 - to do later, when PI adds in a proper official artifact system
+# Chinese lady visits - VIETmisc.8037-8038 - to do later
+# Pistachio province event - VIETmisc.8049 - province event
 # 
 ###########################################################################################################################
 

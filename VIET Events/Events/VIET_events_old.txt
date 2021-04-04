@@ -17,6 +17,7 @@
 # 2074-2093		Generic (was inspired by CK2 event pics when made)
 # 2094-2128		Death
 # 2129-2150		Generic (part of the first batch of events made for CK2 VIET Events Reborn)
+# 2151-2161		Generic 2 (part of the first batch of events made for CK2 VIET Events Reborn)
 # 
 ############################################################################################################################
 
@@ -5875,6 +5876,10 @@ VIETold.2081 = {
 				modifier = VIET_opinion_maid_harasser
 			}			
 		}
+		progress_towards_rival_effect = {
+			CHARACTER = scope:scope_VIET_courtier_perving_on_maid
+			OPINION = no
+		}
 		stress_impact = {
 			callous = minor_stress_impact_gain
 			shy = minor_stress_impact_gain
@@ -8543,6 +8548,14 @@ VIETold.2122 = {
 		character = root
 		animation = happiness
 	}
+	
+	trigger = {
+		NOT = {
+			any_parent = {
+				is_alive = yes
+			}		
+		}
+	}
 
 	weight_multiplier = {
 		base = 1
@@ -10637,6 +10650,716 @@ VIETold.2150 = {
 			modifier = VIET_read_book_slice_of_life
 			years = 7
 		}
+	}
+}
+
+
+##################################################
+# GENERIC	2151-2161
+##################################################
+
+
+# Sad character breaks down and cries
+VIETold.2151 = {
+	type = character_event
+	title = VIETold.2151.t	
+	desc = VIETold.2151.desc
+	theme = unfriendly
+	override_background = { event_background = corridor_night }
+	
+	right_portrait = {
+		character = root
+		animation = grief
+	}
+	
+	trigger = {
+		OR = {
+			has_trait_emotional_trigger = yes
+			stress_level >= 1
+			#has_a_stress_coping_trait_trigger = yes
+		}
+	}
+
+	weight_multiplier = {
+		base = 1
+		modifier = {
+			add = 0.2
+			has_trait = shy
+		}
+		modifier = {
+			add = -0.2
+			has_trait = gregarious
+		}
+		modifier = {
+			add = 0.2
+			has_trait = ambitious
+		}
+		modifier = {
+			add = -0.2
+			has_trait = content
+		}
+		modifier = {
+			add = 0.2
+			has_trait = wrathful
+		}
+		modifier = {
+			add = -0.2
+			has_trait = calm
+		}
+	}
+
+	option = { # Boohoo
+		name = VIETold.2151.a
+		stress_impact = {
+			base = minor_stress_impact_loss
+		}
+	}
+}
+
+
+# Horehound herbal tea - found in most places in CKII's map, interestingly
+VIETold.2152 = {
+	type = character_event
+	title = VIETold.2152.t	
+	desc = VIETold.2152.desc
+	theme = friendly
+	
+	left_portrait = {
+		character = root
+		animation = personality_content
+	}
+	
+	trigger = {
+		NOT = { has_game_rule = VIET_conversion_universe_events }
+	}
+
+	weight_multiplier = {
+		base = 1
+		modifier = {
+			add = 0.2
+			has_trait = shy
+		}
+		modifier = {
+			add = -0.2
+			has_trait = gregarious
+		}
+		modifier = {
+			add = 0.2
+			has_trait = patient
+		}
+		modifier = {
+			add = -0.2
+			has_trait = impatient
+		}
+		modifier = {
+			add = 0.2
+			has_trait = calm
+		}
+		modifier = {
+			add = -0.2
+			has_trait = wrathful
+		}
+	}
+
+	option = { # Ok
+		name = VIETold.2152.a
+		add_character_modifier = {
+			modifier = VIET_horehound_tea
+			days = 420
+		}
+		if = {
+			limit = {
+				has_game_rule = VIET_historical_context_on
+			}
+			custom_tooltip = VIETold.2152.info
+		}
+	}
+}
+
+
+# Mountain tea from the Balkans
+VIETold.2153 = {
+	type = character_event
+	title = VIETold.2153.t	
+	desc = VIETold.2153.desc
+	theme = friendly
+	
+	left_portrait = {
+		character = root
+		animation = personality_content
+	}
+	
+	trigger = {
+		NOT = { has_game_rule = VIET_conversion_universe_events }
+		capital_province = {
+			OR = {
+				geographical_region = custom_south_slavia
+				geographical_region = world_europe_south_east
+				geographical_region = custom_k_thessalonika
+			}
+		}
+	}
+
+	weight_multiplier = {
+		base = 1
+		modifier = {
+			add = 0.2
+			has_trait = shy
+		}
+		modifier = {
+			add = -0.2
+			has_trait = gregarious
+		}
+		modifier = {
+			add = 0.2
+			has_trait = patient
+		}
+		modifier = {
+			add = -0.2
+			has_trait = impatient
+		}
+		modifier = {
+			add = 0.2
+			has_trait = calm
+		}
+		modifier = {
+			add = -0.2
+			has_trait = wrathful
+		}
+	}
+
+	option = { # Ok
+		name = VIETold.2153.a
+		add_character_modifier = {
+			modifier = VIET_mountain_tea
+			days = 420
+		}
+	}
+}
+
+
+# Gift of Black Tea from China
+VIETold.2154 = {
+	type = character_event
+	title = VIETold.2154.t	
+	desc = VIETold.2154.desc
+	theme = realm
+	override_icon = {
+		reference = "gfx/interface/icons/event_types/type_feast.dds"
+	}
+	
+	left_portrait = {
+		character = root
+		animation = personality_content
+	}
+	
+	trigger = {
+		NOT = { has_game_rule = VIET_conversion_universe_events }
+		capital_province = {
+			OR = {
+				geographical_region = world_steppe_tarim
+				geographical_region = world_steppe_east
+				geographical_region = world_india
+				geographical_region = world_middle_east_persia
+				geographical_region = world_burma
+				geographical_region = world_tibet
+			}
+		}
+	}
+
+	weight_multiplier = {
+		base = 1
+		modifier = {
+			add = 0.2
+			has_trait = temperate
+		}
+		modifier = {
+			add = -0.2
+			has_trait = gluttonous
+		}
+		modifier = {
+			add = 0.2
+			has_trait = humble
+		}
+		modifier = {
+			add = -0.2
+			has_trait = arrogant
+		}
+		modifier = {
+			add = 0.2
+			has_trait = calm
+		}
+		modifier = {
+			add = -0.2
+			has_trait = wrathful
+		}
+	}
+
+	option = { # Ok
+		name = VIETold.2154.a
+		add_character_modifier = {
+			modifier = VIET_chinese_black_tea_gift
+			years = 4
+		}
+	}
+}
+
+
+
+
+# Too much salt
+VIETold.2155 = {
+	type = character_event
+	title = VIETold.2155.t	
+	desc = VIETold.2155.desc
+	theme = feast_activity
+	
+	left_portrait = {
+		character = root
+		animation = disgust
+	}
+
+	weight_multiplier = {
+		base = 1
+		modifier = {
+			add = 0.2
+			has_trait = gluttonous
+		}
+		modifier = {
+			add = -0.2
+			has_trait = temperate
+		}
+		modifier = {
+			add = 0.2
+			has_trait = impatient
+		}
+		modifier = {
+			add = -0.2
+			has_trait = patient
+		}
+		modifier = {
+			add = 0.2
+			has_trait = lazy
+		}
+		modifier = {
+			add = -0.2
+			has_trait = calm
+		}
+	}
+
+	option = { # Ok
+		name = VIETold.2155.a
+		VIET_tiny_prestige_loss_effect = yes
+	}
+	option = { # Try to eat it
+		name = VIETold.2155.b
+		stress_impact = {
+			base = miniscule_stress_impact_gain
+		}
+	}
+}
+
+
+# Cook asks how you want to eat your eggs
+VIETold.2156 = {
+	type = character_event
+	title = VIETold.2156.t	
+	desc = VIETold.2156.desc
+	theme = feast_activity
+	
+	left_portrait = {
+		character = root
+		animation = personality_rational
+	}
+
+	weight_multiplier = {
+		base = 1
+		modifier = {
+			add = 0.2
+			has_trait = gluttonous
+		}
+		modifier = {
+			add = -0.2
+			has_trait = temperate
+		}
+		modifier = {
+			add = 0.2
+			has_trait = humble
+		}
+		modifier = {
+			add = -0.2
+			has_trait = arrogant
+		}
+		modifier = {
+			add = 0.2
+			has_trait = fickle
+		}
+		modifier = {
+			add = -0.2
+			has_trait = stubborn
+		}
+	}
+
+	option = { # soft
+		name = VIETold.2156.a
+		VIET_small_piety_gain_effect = yes
+	}
+	option = { # hard
+		name = VIETold.2156.b
+		VIET_small_prestige_gain_effect = yes
+	}
+	option = { # Whatever my cook prefers
+		name = VIETold.2156.c
+		stress_impact = {
+			base = miniscule_stress_impact_loss
+			calm = miniscule_stress_impact_loss
+			trusting = miniscule_stress_impact_loss
+		}
+	}
+}
+
+
+# Character meets S'shani, the old sea captain and rover... now a shipowner and fatcat.
+VIETold.2157 = {
+	type = character_event
+	title = VIETold.2157.t	
+	desc = VIETold.2157.desc
+	theme = feast_activity
+	
+	left_portrait = {
+		character = root
+		animation = personality_rational
+	}
+	
+	trigger = {
+		any_held_county = {
+			is_coastal_county = yes	
+		}
+	}
+
+	weight_multiplier = {
+		base = 1
+		modifier = {
+			add = 0.2
+			has_trait = greedy
+		}
+		modifier = {
+			add = -0.2
+			has_trait = ambitious
+		}
+		modifier = {
+			add = 0.2
+			has_trait = gregarious
+		}
+		modifier = {
+			add = -0.2
+			has_trait = shy
+		}
+		modifier = {
+			add = 0.2
+			has_trait = patient
+		}
+		modifier = {
+			add = -0.2
+			has_trait = impatient
+		}
+	}
+
+	option = { # ok
+		name = VIETold.2157.a
+		add_character_modifier = {
+			modifier = VIET_interesting_talk_with_stranger
+			years = 3
+		}
+	}
+}
+
+
+
+# Indian/Iranian superstition about sneezing
+VIETold.2158 = {
+	type = character_event
+	title = VIETold.2158.t	
+	desc = VIETold.2158.desc
+	theme = education
+	
+	right_portrait = root
+	
+	trigger = {
+		NOT = { has_game_rule = VIET_conversion_universe_events }
+		OR = {
+			has_culture_group = culture_group:iranian_group
+			has_culture_group = culture_group:dravidian_group
+			has_culture_group = culture_group:indo_aryan_group
+		}		
+	}
+
+	weight_multiplier = {
+		base = 1
+		modifier = {
+			add = 0.2
+			has_trait = wrathful
+		}
+		modifier = {
+			add = -0.2
+			has_trait = calm
+		}
+		modifier = {
+			add = 0.2
+			has_trait = zealous
+		}
+		modifier = {
+			add = -0.2
+			has_trait = cynical
+		}
+		modifier = {
+			add = 0.2
+			has_trait = paranoid
+		}
+		modifier = {
+			add = -0.2
+			has_trait = trusting
+		}
+	}
+
+	option = { # silly superstition
+		name = VIETold.2158.a
+		VIET_small_prestige_gain_effect = yes
+		stress_impact = {
+			trusting = minor_stress_impact_gain
+			paranoid = minor_stress_impact_gain
+			zealous = minor_stress_impact_gain
+		}
+	}
+	option = { # drink water just in case
+		name = VIETold.2158.b
+		random_list = {
+			10 = { VIET_small_prestige_gain_effect = yes }
+			10 = { VIET_small_piety_gain_effect = yes }
+		}
+		if = {
+			limit = {
+				has_trait = paranoid
+			}
+			stress_impact = {
+				paranoid = minor_stress_impact_loss
+			}
+		}
+		stress_impact = {
+			cynical = minor_stress_impact_gain
+		}
+	}
+	option = { # get water, quickly!
+		name = VIETold.2158.c
+		VIET_small_piety_gain_effect = yes
+		if = {
+			limit = {
+				has_trait = paranoid
+			}
+			stress_impact = {
+				paranoid = minor_stress_impact_loss
+			}
+		}
+		stress_impact = {
+			cynical = minor_stress_impact_gain
+		}
+	}
+}
+
+
+
+# Asian superstition about the number of sneezes
+VIETold.2159 = {
+	type = character_event
+	title = VIETold.2159.t	
+	desc = VIETold.2159.desc
+	theme = realm
+	
+	right_portrait = root
+	
+	trigger = {
+		NOT = { has_game_rule = VIET_conversion_universe_events }
+		VIET_is_sinosphere_trigger = yes	
+	}
+
+	weight_multiplier = {
+		base = 1
+		modifier = {
+			add = 0.2
+			has_trait = wrathful
+		}
+		modifier = {
+			add = -0.2
+			has_trait = calm
+		}
+		modifier = {
+			add = 0.2
+			has_trait = zealous
+		}
+		modifier = {
+			add = -0.2
+			has_trait = cynical
+		}
+		modifier = {
+			add = 0.2
+			has_trait = paranoid
+		}
+		modifier = {
+			add = -0.2
+			has_trait = trusting
+		}
+	}
+
+	option = { # Once
+		name = VIETold.2159.a
+		VIET_small_prestige_gain_effect = yes
+	}
+	option = { # Twice
+		name = VIETold.2159.b
+		VIET_medium_prestige_gain_effect = yes
+		VIET_medium_piety_gain_effect = yes
+		stress_impact = {
+			base = miniscule_stress_impact_gain
+		}
+	}
+	option = { # Thrice
+		name = VIETold.2159.c
+		VIET_small_piety_gain_effect = yes
+	}
+}
+
+
+
+# Ate lots of baklava
+VIETold.2160 = {
+	type = character_event
+	title = VIETold.2160.t	
+	desc = VIETold.2160.desc
+	theme = party
+	
+	right_portrait = root
+
+	weight_multiplier = {
+		base = 1
+		modifier = {
+			add = 0.2
+			has_trait = gluttonous
+		}
+		modifier = {
+			add = -0.2
+			has_trait = temperate
+		}
+		modifier = {
+			add = 0.2
+			has_trait = callous
+		}
+		modifier = {
+			add = -0.2
+			has_trait = compassionate
+		}
+		modifier = {
+			add = 0.2
+			has_trait = impatient
+		}
+		modifier = {
+			add = -0.2
+			has_trait = patient
+		}
+	}
+
+	option = { # Once
+		name = VIETold.2160.a
+		add_character_modifier = {
+			modifier = VIET_ate_good_food
+			days = 421
+		}
+	}
+}
+
+
+# Incest argument
+VIETold.2161 = {
+	type = character_event
+	title = VIETold.2161.t	
+	desc = VIETold.2161.desc
+	theme = faith
+	override_background = { event_background = garden }
+	
+	left_portrait = {
+		character = root
+		animation = personality_rational
+	}
+	
+	trigger = {
+		NOT = { has_game_rule = VIET_serious_events }
+	}
+
+	weight_multiplier = {
+		base = 1
+		modifier = {
+			add = 0.2
+			has_trait = zealous
+		}
+		modifier = {
+			add = -0.2
+			has_trait = cynical
+		}
+		modifier = {
+			add = 0.2
+			has_trait = gregarious
+		}
+		modifier = {
+			add = -0.2
+			has_trait = shy
+		}
+		modifier = {
+			add = 0.2
+			has_trait = lustful
+		}
+		modifier = {
+			add = -0.2
+			has_trait = chaste
+		}
+	}
+	
+	immediate = {
+		VIET_large_piety_gain_effect = yes
+		add_character_modifier = {
+			modifier = VIET_incest_debate
+			years = 3
+		}		
+	}
+
+	option = { # Ok
+		name = VIETold.2161.a
+		custom_tooltip = VIETold.2161.a.tooltip
+	}
+	option = { # Ok
+		name = VIETold.2161.b
+		custom_tooltip = VIETold.2161.b.tooltip
+	}
+	option = { # Ok
+		name = VIETold.2161.c
+		custom_tooltip = VIETold.2161.c.tooltip
+	}
+	option = { # Ok
+		name = VIETold.2161.d
+		trigger = {
+			has_trait = zealous
+		}
+		trait = zealous
+		VIET_large_prestige_gain_effect = yes
+		custom_tooltip = VIETold.2161.d.tooltip
+	}
+	option = { # Ok
+		name = VIETold.2161.d
+		trigger = {
+			learning >= decent_skill_rating
+			NOT = { has_trait = zealous }
+		}
+		skill = learning
+		VIET_large_prestige_gain_effect = yes
+		custom_tooltip = VIETold.2161.d.tooltip
 	}
 }
 

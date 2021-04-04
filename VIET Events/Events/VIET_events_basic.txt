@@ -32,6 +32,7 @@
 # 0109-0117		Generic
 # 0118-0123		Oral Hygiene
 # 0124-0128		Beginnings
+# 0129-0132		Oblivion Dialogue Inspired
 # 
 ############################################################################################################################
 
@@ -4674,6 +4675,10 @@ VIETmisc.0061 = {
 				modifier = VIET_opinion_prayed_for_me
 			}		
 		}
+		progress_towards_friend_effect = {
+			CHARACTER = scope:scope_VIET_haunted_sinner
+			OPINION = no
+		}
 	}	
 	option = { # reform!
 		name = VIETmisc.0061.b
@@ -4692,10 +4697,15 @@ VIETmisc.0061 = {
 				modifier = VIET_opinion_nagged_me
 			}		
 		}
+		progress_towards_friend_effect = {
+			CHARACTER = scope:scope_VIET_haunted_sinner
+			OPINION = no
+		}
 	}
 	option = { # not my problem
 		name = VIETmisc.0061.c
 		add_dread = 10
+		VIET_medium_prestige_gain_effect = yes
 		VIET_small_piety_loss_effect = yes
 		stress_impact = {
 			compassionate = minor_stress_impact_gain
@@ -4709,6 +4719,10 @@ VIETmisc.0061 = {
 				target = root
 				modifier = VIET_opinion_doesnt_care_about_me
 			}		
+		}
+		progress_towards_rival_effect = {
+			CHARACTER = scope:scope_VIET_haunted_sinner
+			OPINION = no
 		}
 	}
 	option = { # liar
@@ -4728,6 +4742,10 @@ VIETmisc.0061 = {
 				target = root
 				modifier = VIET_opinion_doesnt_care_about_me
 			}		
+		}
+		progress_towards_rival_effect = {
+			CHARACTER = scope:scope_VIET_haunted_sinner
+			OPINION = no
 		}
 	}
 }
@@ -5035,6 +5053,10 @@ VIETmisc.0064 = {
 				modifier = VIET_opinion_mutual_compassion
 			}		
 		}
+		progress_towards_friend_effect = {
+			CHARACTER = scope:scope_VIET_child_sob_help
+			OPINION = no
+		}
 	}
 	option = { # Who cares about the child
 		name = VIETmisc.0064.c
@@ -5054,6 +5076,10 @@ VIETmisc.0064 = {
 				target = root
 				modifier = VIET_opinion_ignored_child
 			}	
+		}
+		progress_towards_rival_effect = {
+			CHARACTER = scope:scope_VIET_child_sob_help
+			OPINION = no
 		}
 	}
 }
@@ -5210,6 +5236,10 @@ VIETmisc.0066 = {
 				target = root
 				modifier = VIET_opinion_survived_night_ruins
 			}		
+		}
+		progress_towards_friend_effect = {
+			CHARACTER = scope:scope_VIET_fellow_lost_traveler
+			OPINION = no
 		}
 	}
 }
@@ -6151,7 +6181,7 @@ VIETmisc.0080 = {
 	}	
 	option = { # I like it too
 		name = VIETmisc.0080.b
-		VIET_medium_prestige_loss_effect = yes
+		VIET_huge_prestige_loss_effect = yes
 		add_character_modifier = {
 			modifier = VIET_baklava_fanatic
 			years = 10
@@ -6162,6 +6192,10 @@ VIETmisc.0080 = {
 				modifier = VIET_baklava_fanatic
 				years = 10
 			}
+		}
+		progress_towards_friend_effect = {
+			CHARACTER = scope:scope_VIET_baklava_fanatic
+			OPINION = no
 		}
 	}
 }
@@ -7741,6 +7775,14 @@ VIETmisc.0097 = {
 			callous = miniscule_stress_impact_gain
 			arrogant = miniscule_stress_impact_gain
 		}
+		progress_towards_friend_effect = {
+			CHARACTER = scope:scope_VIET_ghost_prank_victim
+			OPINION = no
+		}
+		progress_towards_rival_effect = {
+			CHARACTER = scope:scope_VIET_ghost_prankster
+			OPINION = no
+		}
 	}	
 	option = { # Stop falling for pranks
 		name = VIETmisc.0097.b
@@ -7759,6 +7801,14 @@ VIETmisc.0097 = {
 		stress_impact = {
 			compassionate = miniscule_stress_impact_gain
 			humble = miniscule_stress_impact_gain
+		}
+		progress_towards_friend_effect = {
+			CHARACTER = scope:scope_VIET_ghost_prankster
+			OPINION = no
+		}
+		progress_towards_rival_effect = {
+			CHARACTER = scope:scope_VIET_ghost_prank_victim
+			OPINION = no
 		}
 	}
 }
@@ -7872,6 +7922,10 @@ VIETmisc.0098 = {
 				modifier = VIET_opinion_scooby_doo_villain_forced_apology
 			}		
 		}
+		progress_towards_rival_effect = {
+			CHARACTER = scope:scope_VIET_fake_ghost
+			OPINION = no
+		}
 	}
 	option = { # Compensate locals
 		name = VIETmisc.0098.c
@@ -7885,6 +7939,10 @@ VIETmisc.0098 = {
 				target = root
 				modifier = VIET_opinion_scooby_doo_villain_forced_reward
 			}		
+		}
+		progress_towards_rival_effect = {
+			CHARACTER = scope:scope_VIET_fake_ghost
+			OPINION = no
 		}
 	}
 }
@@ -8530,6 +8588,10 @@ VIETmisc.0107 = {
 				modifier = VIET_opinion_bad_hangover_break
 			}		
 		}
+		progress_towards_friend_effect = {
+			CHARACTER = scope:scope_VIET_court_sleepy
+			OPINION = no
+		}
 	}
 	option = { # Have some water
 		name = VIETmisc.0107.b
@@ -8539,6 +8601,10 @@ VIETmisc.0107 = {
 				target = root
 				modifier = VIET_opinion_bad_hangover_relief
 			}		
+		}
+		progress_towards_friend_effect = {
+			CHARACTER = scope:scope_VIET_court_sleepy
+			OPINION = no
 		}		
 	}
 	option = { # Ha ha!
@@ -8803,7 +8869,7 @@ VIETmisc.0111 = {
 					template = pool_repopulate_prowess
 					culture = scope:creation_template_ruler.culture
 					faith = scope:creation_template_ruler.faith
-					save_scope_as = VIET_basic_traveler_template
+					save_scope_as = scope_VIET_left_for_dead_person
 				}
 
 				if = {
@@ -10378,6 +10444,10 @@ VIETmisc.0128 = {
 				}			
 			}
 		}
+		progress_towards_rival_effect = {
+			CHARACTER = scope:scope_VIET_baby_rescuer
+			OPINION = no
+		}
 	}		
 	option = { # Let a servant adopt it
 		name = VIETmisc.0128.b
@@ -10477,6 +10547,382 @@ VIETmisc.0128 = {
 			sadistic = medium_stress_gain
 			arbitrary = minor_stress_gain
 			greedy = minor_stress_gain
+		}
+		progress_towards_friend_effect = {
+			CHARACTER = scope:scope_VIET_baby_rescuer
+			OPINION = no
+		}
+	}	
+}
+
+
+######################################################################
+# OBLIVION DIALOGUE INSPIRED
+######################################################################
+
+
+# Otumeel - Prankster who breaks in people's not to steal, but to move things around
+VIETmisc.0129 = {
+	type = character_event
+	title = VIETmisc.0129.t
+	desc = VIETmisc.0129.desc
+	theme = prison
+	
+	right_portrait = {
+		character = scope:scope_VIET_otumeel_prankster
+		animation = schadenfreude
+	}
+	
+	weight_multiplier = {
+		base = 1
+		modifier = {
+			add = 0.2
+			has_trait = diligent
+		}
+		modifier = {
+			add = -0.2
+			has_trait = lazy
+		}
+		modifier = {
+			add = 0.2
+			has_trait = calm
+		}
+		modifier = {
+			add = -0.2
+			has_trait = wrathful
+		}
+		modifier = {
+			add = 0.2
+			has_trait = trusting
+		}
+		modifier = {
+			add = -0.2
+			has_trait = paranoid
+		}
+	}	
+	
+	immediate = {
+		hidden_effect = {
+			create_character = {
+				location = root.capital_province
+				age = { 18 30 }
+				gender_female_chance = 0
+				faith = root.faith
+				culture = root.culture
+				save_scope_as = scope_VIET_otumeel_prankster
+				random_traits = no
+				trait = education_intrigue_3
+				trait = gregarious
+				trait = arbitrary
+				trait = content				
+			}
+			scope:scope_VIET_otumeel_prankster = {
+				add_character_modifier = {
+					modifier = VIET_otumeel_prankster
+				}	
+			}
+		}
+	}
+	
+	option = { # Don't do it again
+		name = VIETmisc.0129.a
+		stress_impact = {
+			just = medium_stress_impact_gain
+			vengeful = minor_stress_impact_gain
+			sadistic = minor_stress_impact_gain
+			wrathful = minor_stress_impact_gain
+			callous = minor_stress_impact_gain
+		}			
+		hidden_effect = {
+			scope:scope_VIET_otumeel_prankster = {
+				death = {
+					death_reason = death_disappearance
+				}			
+			}
+		}
+	}	
+	option = { # Pay a fine
+		name = VIETmisc.0129.b
+		VIET_large_prestige_gain_effect = yes
+		stress_impact = {
+			arbitrary = minor_stress_impact_gain
+			forgiving = minor_stress_impact_gain
+			callous = minor_stress_impact_gain
+			lazy = minor_stress_impact_gain
+			content = minor_stress_impact_gain
+		}		
+		hidden_effect = {
+			scope:scope_VIET_otumeel_prankster = {
+				death = {
+					death_reason = death_disappearance
+				}			
+			}
+		}
+	}	
+	option = { # Stay in prison!
+		name = VIETmisc.0129.c
+		add_dread = 5
+		stress_impact = {
+			trusting = medium_stress_impact_gain
+			compassionate = medium_stress_impact_gain
+			forgiving = medium_stress_impact_gain
+			lazy = medium_stress_impact_gain
+			content = medium_stress_impact_gain
+		}		
+		hidden_effect = {
+			scope:scope_VIET_otumeel_prankster = {
+				death = {
+					death_reason = death_disappearance
+				}			
+			}
+		}
+	}
+	option = { # You look handy
+		name = VIETmisc.0129.d
+		VIET_large_prestige_loss_effect = yes
+		stress_impact = {
+			just = medium_stress_impact_gain
+			vengeful = minor_stress_impact_gain
+			sadistic = minor_stress_impact_gain
+			wrathful = minor_stress_impact_gain
+		}		
+		add_courtier = scope:scope_VIET_otumeel_prankster
+	}	
+}
+
+
+
+# Hastrel Ottus - annoying commoner tells you to be more religious
+VIETmisc.0130 = {
+	type = character_event
+	title = VIETmisc.0130.t
+	desc = VIETmisc.0130.desc
+	theme = faith
+	override_background = { event_background = tavern }
+	
+	left_portrait = {
+		character = root
+		animation = boredom
+	}
+	
+	weight_multiplier = {
+		base = 1
+		modifier = {
+			add = 0.2
+			has_trait = gluttonous
+		}
+		modifier = {
+			add = -0.2
+			has_trait = temperate
+		}
+		modifier = {
+			add = 0.2
+			has_trait = content
+		}
+		modifier = {
+			add = -0.2
+			has_trait = ambitious
+		}
+		modifier = {
+			add = 0.2
+			has_trait = cynical
+		}
+		modifier = {
+			add = -0.2
+			has_trait = zealous
+		}
+	}
+	
+	option = { # Ok thanks
+		name = VIETmisc.0130.a
+		stress_impact = {
+			zealous = medium_stress_impact_gain
+			wrathful = minor_stress_impact_gain
+		}
+	}		
+	option = { # I do that every day!
+		name = VIETmisc.0130.b
+		VIET_medium_piety_gain_effect = yes
+		VIET_medium_prestige_loss_effect = yes
+		stress_impact = {
+			cynical = medium_stress_impact_gain
+			lazy = miniscule_stress_impact_gain
+			humble = miniscule_stress_impact_gain
+			shy = miniscule_stress_impact_gain
+		}
+	}			
+	option = { # Stop bothering me!
+		name = VIETmisc.0130.c
+		add_dread = 5
+		stress_impact = {
+			zealous = medium_stress_impact_gain
+			compassionate = miniscule_stress_impact_gain
+			patient = miniscule_stress_impact_gain
+			calm = miniscule_stress_impact_gain
+			shy = miniscule_stress_impact_gain
+		}
+	}	
+}
+
+
+
+# Borissean - trying to convince a scholar to join your court and failing
+VIETmisc.0131 = {
+	type = character_event
+	title = VIETmisc.0131.t
+	desc = VIETmisc.0131.desc
+	theme = learning_scholarship_focus
+	
+	left_portrait = {
+		character = root
+		animation = personality_bold
+	}
+	
+	weight_multiplier = {
+		base = 1
+		modifier = {
+			add = 0.2
+			has_trait = gregarious
+		}
+		modifier = {
+			add = -0.2
+			has_trait = shy
+		}
+		modifier = {
+			add = 0.2
+			has_trait = arrogant
+		}
+		modifier = {
+			add = -0.2
+			has_trait = humble
+		}
+		modifier = {
+			add = 0.2
+			has_trait = ambitious
+		}
+		modifier = {
+			add = -0.2
+			has_trait = content
+		}
+	}
+	
+	option = { # What a waste of time!
+		name = VIETmisc.0131.a
+		VIET_medium_prestige_loss_effect = yes
+	}		
+	option = { # Ask if you can visit him from time to time
+		name = VIETmisc.0131.b
+		trigger = {
+			diplomacy >= medium_skill_rating			
+		}
+		skill = diplomacy
+		add_character_modifier = {
+			modifier = VIET_borissean_scholar_conversations
+			years = 10
+		}
+	}	
+}
+
+
+
+# Thamriel - meet a crazy woman in the garden
+VIETmisc.0132 = {
+	type = character_event
+	title = VIETmisc.0132.t
+	desc = VIETmisc.0132.desc
+	theme = VIET_theme_garden_generic
+	override_icon = {
+		reference = "gfx/interface/icons/event_types/type_stress.dds"
+	}
+	
+	left_portrait = {
+		character = root
+		animation = worry
+	}
+	
+	weight_multiplier = {
+		base = 1
+		modifier = {
+			add = 0.2
+			has_trait = shy
+		}
+		modifier = {
+			add = -0.2
+			has_trait = gregarious
+		}
+		modifier = {
+			add = 0.2
+			has_trait = calm
+		}
+		modifier = {
+			add = -0.2
+			has_trait = wrathful
+		}
+		modifier = {
+			add = 0.2
+			has_trait = compassionate
+		}
+		modifier = {
+			add = -0.2
+			has_trait = sadistic
+		}
+	}
+	
+	option = { # Please go ahead
+		name = VIETmisc.0132.a
+		trigger = {
+			NOR = {
+				has_trait = lunatic_genetic
+				has_trait = lunatic_1
+			}
+		}
+		VIET_medium_piety_gain_effect = yes
+		stress_impact = {
+			impatient = minor_stress_impact_gain
+			wrathful = minor_stress_impact_gain
+			callous = minor_stress_impact_gain
+		}		
+	}		
+	option = { # Chain up the lunatic!
+		name = VIETmisc.0132.b
+		trigger = {
+			NOR = {
+				has_trait = lunatic_genetic
+				has_trait = lunatic_1
+			}
+		}
+		add_dread = 5
+		VIET_medium_prestige_gain_effect = yes
+		stress_impact = {
+			compassionate = minor_stress_impact_gain
+			patient = minor_stress_impact_gain
+			forgiving = minor_stress_impact_gain
+			just = minor_stress_impact_gain
+			calm = minor_stress_impact_gain
+		}
+	}			
+	option = { # I'm a little crazy too
+		name = VIETmisc.0132.c
+		trigger = {
+			has_trait = lunatic_1
+			NOT = {	has_trait = lunatic_genetic	}
+		}
+		trait = lunatic_1
+		add_character_modifier = {
+			modifier = VIET_hears_voices_like_thamriel
+			years = 5
+		}
+	}				
+	option = { # I'm a little crazy too
+		name = VIETmisc.0132.c
+		trigger = {
+			has_trait = lunatic_genetic
+			NOT = {	has_trait = lunatic_1 }
+		}
+		trait = lunatic_genetic
+		add_character_modifier = {
+			modifier = VIET_hears_voices_like_thamriel
+			years = 5
 		}
 	}	
 }

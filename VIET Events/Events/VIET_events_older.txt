@@ -3267,7 +3267,8 @@ VIETold.1045 = {
 	}
 	
 	trigger = {
-		faith = { has_doctrine_parameter = muhammad_succession_sunni_doctrine }
+		root.faith = { has_doctrine_parameter = muhammad_succession_sunni_doctrine }
+		#faith = { faiths_are_in_sunni_islam_group = yes }
 		NOT = { has_game_rule = VIET_conversion_universe_events }
 	}
 	
