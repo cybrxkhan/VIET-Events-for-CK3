@@ -2,9 +2,8 @@
 
 ## Latest Version: 1.3.2 "De Amicitia" (Released 4/3/21)
 
-_“In the face of a true friend, a man sees, as it were, a second self.”
-
-Cicero in his treatise on friendship, De Amicitia_
+_“In the face of a true friend, a man sees, as it were, a second self.”_
+_- Cicero in his treatise on friendship, De Amicitia_
 
 Very Immersive Events and Tales (VIET), the sequel to VIET Events Reborn for CK2, is a flavor mod that adds a vast collection of events about everyday life to spice up your game. These events add immersion and a diversity of experiences in between wars and vanilla’s event chains, and cover mundane minutiae ranging from small talk with courtiers and eating local cuisine to epic tales about love, philosophy, and the human condition.
 
