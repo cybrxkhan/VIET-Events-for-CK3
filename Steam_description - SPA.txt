@@ -1,9 +1,9 @@
 [img]http://i.imgur.com/OhIA5bm.jpg[/img]
 
-[h1]Versión actual: 1.2.1 "Dong Son" (Salida 11/12/20, el 8º aniversario de VIET, Compatible con versión vanilla 1.2.X)[/h1]
+[h1]Versión actual: 1.3.2 "De Amicitia" (Salida 03/04/21, el 8º aniversario de VIET, Compatible con versión vanilla 1.3.X)[/h1]
 [B]Echa un Vistazo a [url=https://forum.paradoxplaza.com/forum/threads/mod-viet-events-for-ck3-a-flavor-and-immersion-event-mod.1422081/]Tema del Foro[/url] Para Más Información[/B]
-[B]Descarga/Instalación manual [url=https://github.com/cybrxkhan/VIET-Events-for-CK3/releases]en Github[/url]
-[/B]
+[B]Descarga/Instalación manual [url=https://github.com/cybrxkhan/VIET-Events-for-CK3/releases]en Github[/url][/B]
+[B]Descarga desde Paradox [url=https://mods.paradoxplaza.com/mods/12992/Any] disponible aquí[/url][/B]
 [B][url=https://imgur.com/a/TIePH1f]¡Mira algunas capturas de pantalla![/url][/B]
 
 Very Immersive Events and Tales (VIET), la secuela de [url=https://steamcommunity.com/sharedfiles/filedetails/?id=1601402546]VIET Events Reborn para CK2[/url], es un mod que añade una vasta colección de eventos sobre la vida diaria para darle chispa a tu partida. Estos eventos añaden inmersión y diversidad de experiencias con nuevos eventos y cadenas, y cubren desde las más mundanas minuncias como pequeñas charlas con cortesanos y comer comida local hasta historias épicas sobre amor, filosofia y la condición humana.
@@ -22,7 +22,7 @@ Siéntete libre de usar mi trabajo con tus mods - todo lo que pido es reconocimi
 [img]http://i.imgur.com/EyXurbK.jpg[/img]
 
 [LIST]
-[*]Más de [B]363 nuevos eventos[/B] y cadenas, y aún se añadirán más con cada actualización
+[*]Más de [B]420 nuevos eventos[/B] y cadenas, y aún se añadirán más con cada actualización
 [*]Regla de juego para desactivar los eventos estúpidos para aquellos que no les guste, con tres niveles para escoger entre: Balanceado (Predeterminado), Serio (Restringido), y Todos los eventos (Todo)
 [*][B]Compatible con casi cualquier cosa[/B] ya que no modifico archivos del vanilla - incluso con mods de conversión total puedes desactivar los eventos que hagan referencias a cosas o lugares específicos del mundo medieval que no tendrían sentido en otros periodos o universos (como mods fantásticos o de ciencia ficción)
 [*]Aprende historia con las [B]descripciones de Contexto Histórico[/B] que proporcionan información sobre la inspiración detrás de algunos eventos - a veces, ¡la realidad supera la ficción! (Estos se pueden desactivar con una regla de juego para aquellos que creen que no ayuda a la inmersión.)
@@ -50,21 +50,20 @@ Gracias.
 
 [img]http://i.imgur.com/RQ5QZTF.jpg[/img]
 
-[h1]Versión 1.2.1 "Dong Son"[/h1]
+[h1]Versión 1.3.2 "De Amicitia"[/h1]
 
-[I]La cultura Dong Son fue una cultura de la Edad del Bronce localizada al norte de Vietnam durante el primer milenio aC, y cuya gente son ancestros directos de los actuales vietnamitas. Su influencia cultural se extendió por el Sudeste de Asia, y eran particularmente habilidosos en la fundición del bronce. Estos tambores de bronce y los relatos mitologizados de la cultura Dong Son han ocupado un lugar prominente en la cultura vietnamita durante siglos. Un gran asentamiento Dong Son, Co Loa, se convertiría más tarde en la primera capital de la dinastía Ngo, la primera dinastía independiente de la era post-China en el siglo X dC.[/I]
+[I]"En el rostro de un verdadero amigo, un hombre se ve a sí mismo."
+
+Cicerón en su tratado sobre la amistad, De Amicitia[/I]
 
 [LIST]
-[*]Añadidos 27 nuevos eventos sobre los siguientes temas:
+[*]Añadidos 15 nuevos eventos sobre los siguientes temas:
 [LIST]
-[*]18 relacionados con rasgos (los primeros eventos creados para VIET en 2012)*
-[*]9 genéricos
+[*]11 genéricos
+[*]4 inspirados en diálogos de Oblivion
 [/LIST]
-[*]Añadidas variaciones para la cadena de eventos "Sentimientos de Vientos de Invierno" para personajes femeninos y homosexuales (no entiendo como pude perderme esto tras tantos años...)
-[*]Añadidos nuevos fondos para las regiones Iberas y Tarim Basin
-[*]Algunos cortesanos invocados por evento contarán con un gancho de lealtad o favor con el gobernante de la corte en la que han aparecido
-[*]El noble invocado con el evento "Nunca confíes en un bandido" desaparecerá si no es reclutado
-[*]Cambiado el evento de la camarera de Skyrim para que solo se active para hombres, y las opciones de flirteo solo estarán disponibles para heterosexuales y bisexuales por razones obvias
+[*]Ahora hay eventos que incrementan la posibilidad de convertirse en rivales o amigos, como ocurre en algunos eventos originales
+[*]Sirvienta de parto ahora mejora la habilidad de médico si tienes una, y mostrará opciones y desencadenantes correctamente.
 [*]Arreglo de fallos
 [/LIST]
 
