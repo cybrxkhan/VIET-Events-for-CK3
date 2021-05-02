@@ -214,6 +214,12 @@ VIET_events_yearly_pulse = {
 		100 = VIETold.2156		# Cook asks how you want to eat your eggs
 		100 = VIETold.2158		# Indian/Iranian superstition about sneezing
 		100 = VIETold.2159		# Asian superstition about the number of sneezes
+		# Medicine
+		100 = VIETold.2162		# Drinking an herbal tonic
+		100 = VIETold.2164		# Two physicians debate treatments
+		100 = VIETold.2167		# Courtier takes wrong type and dosage of medicine by accident
+		100 = VIETold.2168		# Spilled the herbal tea and burning yourself by accident
+		100 = VIETold.2170		# Took medicine for sore throat
 		
 		#######################################
 		# NEXT GEN VIET
@@ -465,6 +471,9 @@ VIET_events_tri_yearly_pulse = {
 		100 = VIETold.2154		# Gift of Black Tea from China
 		100 = VIETold.2157		# Character meets S'shani, the old sea captain and rover... now a shipowner and fatcat.
 		100 = VIETold.2160		# Ate lots of baklava
+		# Medicine
+		100 = VIETold.2163		# Quack doctor arrested
+		100 = VIETold.2169		# Scholar and merchant debate merits of quarantining
 		
 		#######################################
 		# NEXT GEN VIET
@@ -660,6 +669,8 @@ VIET_events_five_yearly_pulse = {
 		100 = VIETold.2138		# Rumors of a Chinese women playing polo
 		# Generic 2
 		100 = VIETold.2161		# Incest argument
+		# Medicine
+		100 = VIETold.2165		# Observing a skilled physician demonstrate surgery
 		
 		#######################################
 		# NEXT GEN VIET

@@ -581,7 +581,7 @@ VIET_ignored_disapproval_and_mockery = {
 }
 VIET_cinnamon_toast_crunch_addict = {
 	icon = food_positive
-	health = 0.2
+	negate_health_penalty_add = 0.2
 }
 VIET_strange_female_bodyguard = {
 	icon = martial_positive
@@ -671,17 +671,17 @@ VIET_skeptical_ruler = {
 }
 VIET_purchase_herbs_small = {
 	icon = health_positive
-	health = 0.1
+	negate_health_penalty_add = 0.1
 	fertility = 0.02
 }
 VIET_purchase_herbs_medium = {
 	icon = health_positive
-	health = 0.3
+	negate_health_penalty_add = 0.3
 	fertility = 0.05
 }
 VIET_purchase_herbs_large = {
 	icon = health_positive
-	health = 0.5
+	negate_health_penalty_add = 0.5
 	fertility = 0.1
 }
 VIET_wolf_protector = {
@@ -1074,7 +1074,7 @@ VIET_politely_listened_to_weirdness = {
 }
 VIET_cleans_tongue = {
 	icon = health_positive
-	health = 0.1
+	negate_health_penalty_add = 0.1
 }
 VIET_loves_toothbrushing = {
 	icon = health_positive
@@ -1191,7 +1191,7 @@ VIET_minty_fresh_breath = {
 VIET_herbal_mouth_cleaning_other = {
 	icon = fertility_positive
 	attraction_opinion = 5
-	health = 0.1
+	negate_health_penalty_add = 0.1
 }
 VIET_trinkets_odds_and_ends = {
 	icon = spoon_positive
@@ -1253,5 +1253,82 @@ VIET_borissean_scholar_conversations = {
 VIET_hears_voices_like_thamriel = {
 	icon = stress_positive
 	hostile_scheme_resistance_mult = 0.02
+}
+VIET_drinking_basic_tonic = {
+	icon = drink_positive
+	negate_health_penalty_add = 0.3
+}
+VIET_punished_quack_doctor = {
+	icon = prison_positive
+	monthly_prestige = 0.2
+	county_opinion_add = 5
+}
+VIET_impressed_others_medical_knowledge = {
+	icon = treatment_positive
+	monthly_prestige = 0.2
+}
+VIET_surgery_lesson = {
+	icon = treatment_positive
+	learning = 2
+	negate_health_penalty_add = 0.1
+}
+VIET_wrong_medicine_order = {
+	icon = treatment_negative
+	health = -0.1
+}
+VIET_mild_burns_tea = {
+	icon = drink_negative
+	health = -0.1
+}
+VIET_sore_throat_medicine = {
+	icon = health_positive
+	negate_health_penalty_add = 0.1
+}
+VIET_hurt_kids_no_witness = {
+	icon = dread_positive
+	monthly_dread = 0.1
+}
+VIET_hurt_kids_witnesses = {
+	icon = dread_negative
+	general_opinion = -5
+	county_opinion_add = -5
+	monthly_dread = 0.3
+	monthly_piety = -0.1
+}
+VIET_jaded_about_charity = {
+	icon = intrigue_positive
+	hostile_scheme_resistance_mult = 0.1
+	monthly_piety = -0.1
+}
+VIET_beggar_friend = {
+	icon = social_positive
+	monthly_prestige = -0.2
+	monthly_piety = 0.4
+}
+VIET_hired_beggar_servant = {
+	icon = social_positive
+	stewardship = 1
+	monthly_prestige = -0.1
+	monthly_piety = 0.1
+}
+VIET_taught_locals_martial_arts = {
+	icon = prowess_positive
+	monthly_prestige = 0.2
+	county_opinion_add = 5
+}
+VIET_learned_martial_arts_from_local = {
+	icon = prowess_positive
+	prowess = 2
+	health = 0.1
+}
+VIET_bullies_servants = {
+	icon = intrigue_positive
+	intrigue = 2
+	diplomacy = -1
+}
+VIET_almshouse_donation = {
+	icon = piety_positive
+	monthly_piety = 0.3
+	county_opinion_add = 5
 }
 

@@ -18,6 +18,7 @@
 # 2094-2128		Death
 # 2129-2150		Generic (part of the first batch of events made for CK2 VIET Events Reborn)
 # 2151-2161		Generic 2 (part of the first batch of events made for CK2 VIET Events Reborn)
+# 2162-2170		Medicine
 # 
 ############################################################################################################################
 
@@ -11292,6 +11293,7 @@ VIETold.2161 = {
 	
 	trigger = {
 		NOT = { has_game_rule = VIET_serious_events }
+		faith = { has_doctrine = doctrine_consanguinity_unrestricted }
 	}
 
 	weight_multiplier = {
@@ -11360,6 +11362,668 @@ VIETold.2161 = {
 		skill = learning
 		VIET_large_prestige_gain_effect = yes
 		custom_tooltip = VIETold.2161.d.tooltip
+	}
+}
+
+
+##############################################################
+# MEDICINE 2162-2170
+##############################################################
+
+# Drinking an herbal tonic
+VIETold.2162 = {
+	type = character_event
+	title = VIETold.2162.t	
+	desc = VIETold.2162.desc
+	theme = medicine
+	
+	left_portrait = root
+
+	weight_multiplier = {
+		base = 1
+		modifier = {
+			add = 0.2
+			has_trait = diligent
+		}
+		modifier = {
+			add = -0.2
+			has_trait = lazy
+		}
+		modifier = {
+			add = 0.2
+			has_trait = trusting
+		}
+		modifier = {
+			add = -0.2
+			has_trait = paranoid
+		}
+		modifier = {
+			add = 0.2
+			has_trait = ambitious
+		}
+		modifier = {
+			add = -0.2
+			has_trait = content
+		}
+	}
+
+	option = { # Ok
+		name = VIETold.2162.a
+		add_character_modifier = {
+			modifier = VIET_drinking_basic_tonic
+			years = 10
+		}
+	}
+}
+
+
+# Quack doctor arrested
+VIETold.2163 = {
+	type = character_event
+	title = VIETold.2163.t	
+	desc = VIETold.2163.desc
+	theme = corruption
+	override_icon = {
+		reference = "gfx/interface/icons/event_types/type_medicine.dds"
+	}
+	
+	left_portrait = root
+
+	weight_multiplier = {
+		base = 1
+		modifier = {
+			add = 0.2
+			has_trait = just
+		}
+		modifier = {
+			add = -0.2
+			has_trait = arbitrary
+		}
+		modifier = {
+			add = 0.2
+			has_trait = paranoid
+		}
+		modifier = {
+			add = -0.2
+			has_trait = trusting
+		}
+		modifier = {
+			add = 0.2
+			has_trait = diligent
+		}
+		modifier = {
+			add = -0.2
+			has_trait = lazy
+		}
+	}
+
+	option = { # Imprison him
+		name = VIETold.2163.a
+		VIET_huge_prestige_gain_effect = yes
+		add_character_modifier = {
+			modifier = VIET_punished_quack_doctor
+			years = 7
+		}
+	}
+	option = { # Make him drink poison
+		name = VIETold.2163.b
+		if = {
+			limit = {
+				has_trait = sadistic
+			}	
+			stress_impact = {
+				sadistic = minor_stress_impact_loss
+			}
+		}
+		else = {	
+			stress_impact = {
+				compassionate = medium_stress_impact_gain
+				forgiving = medium_stress_impact_gain
+			}		
+		}		
+		if = {
+			limit = {
+				faith = {
+					OR = {
+						trait_is_sin = vengeful
+						trait_is_sin = wrathful
+						trait_is_sin = sadistic
+					}
+				}
+			}
+			VIET_huge_piety_loss_effect = yes
+		}		
+		else_if = {
+			limit = {
+				faith = {
+					OR = {
+						trait_is_virtue = vengeful
+						trait_is_virtue = wrathful
+						trait_is_virtue = sadistic
+					}
+				}
+			}
+			VIET_large_piety_gain_effect = yes
+		}
+		else = {
+			VIET_large_piety_loss_effect = yes
+		}
+		VIET_large_prestige_gain_effect = yes
+		add_dread = 15
+		add_character_modifier = {
+			modifier = VIET_punished_quack_doctor
+			years = 7
+		}
+	}
+	option = { # let him go
+		name = VIETold.2163.c
+		stress_impact = {
+			compassionate = minor_stress_impact_gain
+			just = medium_stress_impact_gain
+		}
+		add_dread = 15
+		add_character_modifier = {
+			modifier = VIET_arbitrary_ruling
+			years = 7
+		}
+	}
+}
+
+
+
+# Two physicians debate treatments
+VIETold.2164 = {
+	type = character_event
+	title = VIETold.2164.t	
+	desc = VIETold.2164.desc
+	theme = medicine
+	override_background = { event_background = council_chamber }
+	
+	left_portrait = {
+		character = root
+		animation = personality_rational
+	}
+
+	weight_multiplier = {
+		base = 1
+		modifier = {
+			add = 0.2
+			has_trait = patient
+		}
+		modifier = {
+			add = -0.2
+			has_trait = impatient
+		}
+		modifier = {
+			add = 0.2
+			has_trait = trusting
+		}
+		modifier = {
+			add = -0.2
+			has_trait = paranoid
+		}
+		modifier = {
+			add = 0.2
+			has_trait = fickle
+		}
+		modifier = {
+			add = -0.2
+			has_trait = stubborn
+		}
+	}
+
+	option = { # Wow so smart!
+		name = VIETold.2164.a
+		trigger = {
+			learning < high_skill_rating			
+		}
+		add_learning_lifestyle_xp = medium_lifestyle_xp
+		random = {
+			chance = 33
+			add_learning_skill = 1
+		}
+	}
+	option = { # Ackshually
+		name = VIETold.2164.b
+		trigger = {
+			learning >= high_skill_rating			
+		}
+		skill = learning
+		VIET_large_prestige_gain_effect = yes
+		add_character_modifier = {
+			modifier = VIET_impressed_others_medical_knowledge
+			years = 5
+		}
+	}
+}
+
+
+
+# Observing a skilled physician demonstrate surgery
+VIETold.2165 = {
+	type = character_event
+	title = VIETold.2165.t	
+	desc = VIETold.2165.desc
+	theme = medicine
+	
+	left_portrait = {
+		character = root
+		animation = personality_rational
+	}
+
+	weight_multiplier = {
+		base = 1
+		modifier = {
+			add = 0.2
+			has_trait = patient
+		}
+		modifier = {
+			add = -0.2
+			has_trait = impatient
+		}
+		modifier = {
+			add = 0.2
+			has_trait = ambitious
+		}
+		modifier = {
+			add = -0.2
+			has_trait = lazy
+		}
+		modifier = {
+			add = 0.2
+			has_trait = brave
+		}
+		modifier = {
+			add = -0.2
+			has_trait = craven
+		}
+	}
+
+	option = { # Observe
+		name = VIETold.2165.a
+		add_learning_lifestyle_xp = medium_lifestyle_xp
+		random = {
+			chance = 33
+			add_learning_skill = 1
+		}
+		add_character_modifier = {
+			modifier = VIET_surgery_lesson
+			years = 10
+		}
+		stress_impact = {
+			craven = major_stress_impact_gain
+			lazy = miniscule_stress_impact_gain
+		}
+	}
+	option = { # More pressing concerns
+		name = VIETold.2165.b
+		VIET_huge_prestige_gain_effect = yes
+		stress_impact = {
+			craven = miniscule_stress_impact_loss
+			diligent = miniscule_stress_impact_loss
+		}
+	}
+	option = { # Can I help?
+		name = VIETold.2165.c
+		trigger = {
+			learning >= high_skill_rating			
+		}
+		skill = learning
+		add_learning_lifestyle_xp = medium_lifestyle_xp
+		random = {
+			chance = 33
+			add_learning_skill = 1
+		}
+		VIET_huge_prestige_gain_effect = yes
+		add_character_modifier = {
+			modifier = VIET_surgery_lesson
+			years = 10
+		}
+		stress_impact = {
+			craven = major_stress_impact_gain
+			lazy = miniscule_stress_impact_gain
+		}
+	}
+}
+
+
+
+# Servant forgets how many spoons of medicine to take
+VIETold.2166 = {
+	type = character_event
+	title = VIETold.2166.t	
+	desc = VIETold.2166.desc
+	theme = medicine	
+	override_background = { event_background = corridor_day }
+	
+	right_portrait = root
+
+	weight_multiplier = {
+		base = 1
+		modifier = {
+			add = 0.2
+			has_trait = lazy
+		}
+		modifier = {
+			add = -0.2
+			has_trait = diligent
+		}
+		modifier = {
+			add = 0.2
+			has_trait = calm
+		}
+		modifier = {
+			add = -0.2
+			has_trait = wrathful
+		}
+		modifier = {
+			add = 0.2
+			has_trait = trusting
+		}
+		modifier = {
+			add = -0.2
+			has_trait = paranoid
+		}
+	}
+
+	option = { # Ok
+		name = VIETold.2166.a
+		VIET_small_piety_gain_effect = yes
+		stress_impact = {
+			sadistic = miniscule_stress_impact_gain
+			callous = miniscule_stress_impact_gain
+			wrathful = miniscule_stress_impact_gain
+		}
+	}
+	option = { # You're stupid
+		name = VIETold.2166.b
+		add_dread = 5
+		stress_impact = {
+			compassionate = miniscule_stress_impact_gain
+			patient = miniscule_stress_impact_gain
+			humble = miniscule_stress_impact_gain
+		}
+	}
+	option = { # Help
+		name = VIETold.2166.c
+		trigger = {
+			learning >= decent_skill_rating			
+		}
+		skill = learning
+		VIET_small_prestige_gain_effect = yes
+		VIET_small_piety_gain_effect = yes
+	}
+}
+
+
+
+# Courtier takes wrong type and dosage of medicine by accident
+VIETold.2167 = {
+	type = character_event
+	title = VIETold.2167.t	
+	desc = VIETold.2167.desc
+	theme = family
+	override_icon = {
+		reference = "gfx/interface/icons/event_types/type_medicine.dds"
+	}
+	
+	left_portrait = root
+	right_portrait = {
+		character = scope:scope_VIET_courtier_medicine_wrong
+		animation = worry
+	}
+	
+	trigger = {
+		any_courtier = {
+			is_available_ai_adult = yes
+		}
+	}
+
+	weight_multiplier = {
+		base = 1
+		modifier = {
+			add = 0.2
+			has_trait = lazy
+		}
+		modifier = {
+			add = -0.2
+			has_trait = diligent
+		}
+		modifier = {
+			add = 0.2
+			has_trait = wrathful
+		}
+		modifier = {
+			add = -0.2
+			has_trait = calm
+		}
+		modifier = {
+			add = 0.2
+			has_trait = callous
+		}
+		modifier = {
+			add = -0.2
+			has_trait = compassionate
+		}
+	}
+
+
+	
+	immediate = {
+		random_courtier = {
+			limit = {
+				is_available_ai_adult = yes
+			}
+			save_scope_as = scope_VIET_courtier_medicine_wrong
+		}
+	}
+
+	option = { # Ok
+		name = VIETold.2167.a
+		scope:scope_VIET_courtier_medicine_wrong = {
+			add_character_modifier = {
+				modifier = VIET_wrong_medicine_order
+				days = 456
+			}
+		}
+	}
+}
+
+
+
+# Spilled the herbal tea and burning yourself by accident
+VIETold.2168 = {
+	type = character_event
+	title = VIETold.2168.t	
+	desc = VIETold.2168.desc
+	theme = feast_activity
+	
+	right_portrait = {
+		character = root
+		animation = pain
+	}
+
+	weight_multiplier = {
+		base = 1
+		modifier = {
+			add = 0.2
+			has_trait = impatient
+		}
+		modifier = {
+			add = -0.2
+			has_trait = patient
+		}
+		modifier = {
+			add = 0.2
+			has_trait = wrathful
+		}
+		modifier = {
+			add = -0.2
+			has_trait = calm
+		}
+		modifier = {
+			add = 0.2
+			has_trait = trusting
+		}
+		modifier = {
+			add = -0.2
+			has_trait = paranoid
+		}
+	}
+	
+	immediate = {
+		play_music_cue = mx_cue_stress
+	}
+
+	option = { # Ok
+		name = VIETold.2168.a
+		add_character_modifier = {
+			modifier = VIET_mild_burns_tea
+			days = 345
+		}
+		VIET_small_prestige_loss_effect = yes
+		stress_impact = {
+			base = miniscule_stress_impact_gain
+			impatient = miniscule_stress_impact_gain
+			wrathful = miniscule_stress_impact_gain
+			arrogant = miniscule_stress_impact_gain
+		}		
+	}
+}
+
+# Scholar and merchant debate merits of quarantining
+VIETold.2169 = {
+	type = character_event
+	title = VIETold.2169.t	
+	desc = VIETold.2169.desc
+	theme = medicine
+	override_background = { event_background = tavern }
+	
+	left_portrait = {
+		character = root
+		animation = personality_rational
+	}
+
+	weight_multiplier = {
+		base = 1
+		modifier = {
+			add = 0.2
+			has_trait = gregarious
+		}
+		modifier = {
+			add = -0.2
+			has_trait = shy
+		}
+		modifier = {
+			add = 0.2
+			has_trait = patient
+		}
+		modifier = {
+			add = -0.2
+			has_trait = impatient
+		}
+		modifier = {
+			add = 0.2
+			has_trait = humble
+		}
+		modifier = {
+			add = -0.2
+			has_trait = arrogant
+		}
+	}
+
+	option = { # businessman
+		name = VIETold.2169.a
+		VIET_small_prestige_gain_effect = yes
+		stress_impact = {
+			zealous = miniscule_stress_impact_gain
+			patient = miniscule_stress_impact_gain
+			craven = miniscule_stress_impact_gain
+		}	
+		if = {
+			limit = {
+				has_game_rule = VIET_historical_context_on
+			}
+			custom_tooltip = VIETold.2169.info
+		}		
+	}
+	option = { # scholar
+		name = VIETold.2169.b
+		VIET_small_piety_gain_effect = yes
+		stress_impact = {
+			cynical = miniscule_stress_impact_gain
+			impatient = miniscule_stress_impact_gain
+			brave = miniscule_stress_impact_gain
+		}
+		if = {
+			limit = {
+				has_game_rule = VIET_historical_context_on
+			}
+			custom_tooltip = VIETold.2169.info
+		}			
+	}
+	option = { # who cares?
+		name = VIETold.2169.c
+		stress_impact = {
+			base = miniscule_stress_impact_loss
+		}
+		if = {
+			limit = {
+				has_game_rule = VIET_historical_context_on
+			}
+			custom_tooltip = VIETold.2169.info
+		}		
+	}
+}
+
+
+
+# Took medicine for sore throat
+VIETold.2170 = {
+	type = character_event
+	title = VIETold.2170.t	
+	desc = VIETold.2170.desc
+	theme = friendly
+	override_icon = {
+		reference = "gfx/interface/icons/event_types/type_medicine.dds"
+	}
+	
+	right_portrait = root
+
+	weight_multiplier = {
+		base = 1
+		modifier = {
+			add = 0.2
+			has_trait = gregarious
+		}
+		modifier = {
+			add = -0.2
+			has_trait = shy
+		}
+		modifier = {
+			add = 0.2
+			has_trait = impatient
+		}
+		modifier = {
+			add = -0.2
+			has_trait = patient
+		}
+		modifier = {
+			add = 0.2
+			has_trait = arrogant
+		}
+		modifier = {
+			add = -0.2
+			has_trait = humble
+		}
+	}
+
+	option = { # ok
+		name = VIETold.2170.a
+		add_character_modifier = {
+			modifier = VIET_sore_throat_medicine
+			days = 365
+		}
 	}
 }
 

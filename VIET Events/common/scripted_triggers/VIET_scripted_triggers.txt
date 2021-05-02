@@ -1,5 +1,6 @@
-﻿
-
+﻿is_VIET_loaded = {
+    always = yes
+}
 VIET_basic_is_available_adult_trigger = {
 	basic_is_valid_for_yearly_events_trigger = yes
 	is_adult = yes

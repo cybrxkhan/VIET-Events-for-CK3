@@ -1,7 +1,8 @@
 [img]http://i.imgur.com/OhIA5bm.jpg[/img]
 
-[h1]Current Version: 1.3.2 "De Amicitia" (Released 4/3/21, Compatible with vanilla patch 1.3.X)[/h1]
-[B]Please See [url=https://forum.paradoxplaza.com/forum/threads/mod-viet-events-for-ck3-a-flavor-and-immersion-event-mod.1422081/]Forum Thread[/url] For More Info[/B]
+[h1]Current Version: 1.3.3 "Benevolence" (Released 5/1/21, Compatible with vanilla patch 1.3.X)[/h1]
+[h1][B][url=https://discord.gg/9KuyXv2uZA]Discord Server for My Mods[/url][/B][/h1]
+[B][url=https://forum.paradoxplaza.com/forum/threads/mod-viet-events-for-ck3-a-flavor-and-immersion-event-mod.1422081/]Paradox Forum Thread[/url][/B]
 [B]Manual Download/Installation available [url=https://github.com/cybrxkhan/VIET-Events-for-CK3/releases]on Github[/url][/B]
 [B]Paradox Download [url=https://mods.paradoxplaza.com/mods/12992/Any]Available Here[/url][/B]
 [B][url=https://imgur.com/a/TIePH1f]See All Preview Screenshots Here[/url][/B]
@@ -22,7 +23,7 @@ Feel free to use my work in your mods - all I ask is that I am credited and (if 
 [img]http://i.imgur.com/EyXurbK.jpg[/img]
 
 [LIST]
-[*]Over [B]420 new flavor events[/B], and more will be added in updates over time
+[*]Over [B]444 new flavor events[/B], and more will be added in updates over time
 [*]Game rule to disable sillier events for those who don't like them, with three levels to choose from: Balanced (Default), Serious (Restricted), and All Events (Full)
 [*][B]Compatible with almost anything[/B] since it doesn't touch any vanilla files - even with overhaul mods, you can via game rule disable events that reference things specific to our medieval world that wouldn’t make sense in other time periods or universes (like fantasy and sci-fi conversion mods)
 [*]Learn history with [B]Historical Context tooltips[/B] that provide information about what inspired some of the events - sometimes, reality is stranger than fiction! (These can be disabled via game rule for those who find it immersion breaking.)
@@ -50,20 +51,21 @@ Thanks!
 
 [img]http://i.imgur.com/RQ5QZTF.jpg[/img]
 
-[h1]Version 1.3.2 "De Amicitia"[/h1]
+[h1]Version 1.3.3 "Benevolence"[/h1]
 
-[I]“In the face of a true friend, a man sees, as it were, a second self.”
+[I]"Benevolence is the characteristic element of humanity."
 
-Cicero in his treatise on friendship, De Amicitia[/I]
+Confucius, The Doctrine of the Mean[/I]
 
 [LIST]
-[*]Added 15 new events about the following themes:
+[*]Added 24 new events about the following themes:
 [LIST]
-[*]11 generic*
-[*]4 inspired by Oblivion dialogue
+[*]9 Medicine*
+[*]15 Kindness
 [/LIST]
-[*]A few events now increase the potential to become friends or rivals, just like some vanilla events
-[*]Maidservant in labor event now upgrades your physician trait if you have one, and will show the physician options’ triggers properly
+[*]A few modifiers that previously gave a health bonus now negate health penalties instead
+[*]Ancient ruins background now has more appropriate noise
+[*]Fixed incest debate event happening for non-incestuous religions
 [*]Miscellaneous bugfixes
 [/LIST]
 

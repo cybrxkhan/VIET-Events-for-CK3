@@ -243,3 +243,31 @@ VIET_opinion_adopted_child = {
 	years = 100
 	opinion = 50
 }
+VIET_opinion_comforted_me = {
+	years = 5
+	decaying = yes
+	opinion = 15
+	stacking = yes
+}
+VIET_opinion_mocked_me = {
+	years = 5
+	decaying = yes
+	opinion = -15
+	stacking = yes
+}
+VIET_opinion_judgmental = {
+	years = 5
+	decaying = yes
+	opinion = -10
+	stacking = yes
+}
+VIET_opinion_helped_me_when_i_tripped = {
+	years = 5
+	decaying = yes
+	opinion = 15
+}
+VIET_opinion_disregarded_injury = {
+	years = 5
+	decaying = yes
+	opinion = -15
+}
