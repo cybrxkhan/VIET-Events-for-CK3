@@ -6,6 +6,7 @@
 # 1000-1022		Kogarashi Sentiment/Fast Love - Character recalls their first love
 # 1023-1029		Cinnamon Addict (Cinnamon Toast Crunch)
 # 1030-1035		Lost Love - a beloved servant falls ill and is dying
+# 1036-1044		Dream of the Final Journey
 # 
 ############################################################################################################################
 

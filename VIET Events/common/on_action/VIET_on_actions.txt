@@ -298,6 +298,14 @@ VIET_events_yearly_pulse = {
 		100 = VIETmisc.0127		# Young elopers trespass in your residence
 		# Oblivion Dialogue
 		100 = VIETmisc.0130		# Hastrel Ottus - annoying commoner tells you to be more religious
+		# Kindness
+		100 = VIETmisc.0134		# It's a cruel world out there
+		100 = VIETmisc.0135		# A courtier is feeling sad today
+		100 = VIETmisc.0136		# A courtier cheers you up
+		100 = VIETmisc.0137		# Courtier inherits a bunch of money from an old person
+		100 = VIETmisc.0140		# Courtier trips and is helped by another
+		100 = VIETmisc.0141		# Witness people being mean to a beggar and a peasant woman helping him
+		100 = VIETmisc.0143		# Priest is giving a boring sermon on kindness
 	}
 }
 
@@ -540,6 +548,12 @@ VIET_events_tri_yearly_pulse = {
 		# Oblivion Dialogue
 		100 = VIETmisc.0131		# Borissean - trying to convince a scholar to join your court and failing
 		100 = VIETmisc.0132		# Thamriel - meet a crazy woman in the garden
+		# Kindness
+		100 = VIETmisc.0133		# Meet a little brother and sister
+		100 = VIETmisc.0138		# Character comes across a run-down orphanage
+		100 = VIETmisc.0144		# Ruler overhears servants complaining about another servant who bullies them
+		100 = VIETmisc.0145		# Local clergy revered for their kindness dies - attend funeral or not?
+		100 = VIETmisc.0146		# A woman kindly tells a man that he dropped his coin bag, and your guards react in different ways
 	}
 }
 
@@ -710,6 +724,10 @@ VIET_events_five_yearly_pulse = {
 		100 = VIETmisc.0128		# Come across an abandoned baby - what to do?
 		# Oblivion Dialogue
 		100 = VIETmisc.0129		# Otumeel - Prankster who breaks in people's not to steal, but to move things around
+		# Kindness
+		100 = VIETmisc.0139		# Courtier is friends with a beggar
+		100 = VIETmisc.0142		# Observe a veteran teaching local women about self-defense
+		100 = VIETmisc.0147		# Local notables band together to fund an almshouse - will you join in?
 	}
 }
 

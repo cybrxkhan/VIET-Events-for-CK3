@@ -176,6 +176,22 @@ VIET_background_ancient_cairn = {
 		ambience = "event:/SFX/Events/Backgrounds/desert_day"
 	}
 
+	background = { # Northern European
+		trigger = {
+			capital_province = {
+				OR = {
+					geographical_region = world_europe_north				
+					geographical_region = world_europe_east				
+					geographical_region = ghw_region_siberia				
+					geographical_region = custom_west_slavia				
+				}
+			}
+		}
+		reference = "gfx/interface/illustrations/event_scenes/VIET_ancient_cairn_norse.dds"
+		environment = "environment_event_garden"
+		ambience = "event:/SFX/Events/Backgrounds/desert_day"
+	}
+
 	background = { #Fallback
 		reference = "gfx/interface/illustrations/event_scenes/VIET_ancient_cairn.dds"
 		environment = "environment_event_garden"

@@ -11066,6 +11066,7 @@ VIETmisc.0133 = {
 				# Didn't hurt kids, people saw
 				10 = {
 					send_interface_toast = {
+						type = event_toast_effect_bad
 						left_icon = ROOT
 						title = VIETmisc.0133.toast.2
 						VIET_huge_prestige_loss_effect = yes
@@ -11085,6 +11086,7 @@ VIETmisc.0133 = {
 				# Hurt kids, people saw
 				10 = {
 					send_interface_toast = {
+						type = event_toast_effect_bad
 						left_icon = ROOT
 						title = VIETmisc.0133.toast.4
 						VIET_huge_prestige_loss_effect = yes

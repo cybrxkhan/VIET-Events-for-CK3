@@ -6,4 +6,4 @@ tags={
 }
 name="VIET Events - A Flavor and Immersion Event Mod"
 supported_version="1.3.*"
-remote_file_id="2227658180"
+path="mod/VIET Events"
