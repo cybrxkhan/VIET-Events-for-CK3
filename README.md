@@ -1,9 +1,9 @@
 # VIET Events for CK3
 
-## Latest Version: 1.3.3 "Benevolence" (Released 5/1/21)
+## Latest Version: 1.3.4 "Arboretum" (Released 5/15/21)
 
-_"Benevolence is the characteristic element of humanity."_
-_- Confucius, The Doctrine of the Mean_
+_“If you have a garden in your library, everything will be complete.”_
+_- Cicero, letter to Varro_
 
 Very Immersive Events and Tales (VIET), the sequel to VIET Events Reborn for CK2, is a flavor mod that adds a vast collection of events about everyday life to spice up your game. These events add immersion and a diversity of experiences in between wars and vanilla’s event chains, and cover mundane minutiae ranging from small talk with courtiers and eating local cuisine to epic tales about love, philosophy, and the human condition.
 
@@ -13,7 +13,7 @@ Feel free to use my work in your mods - all I ask is that I am credited and (if 
 
 ## Features
 
-- Over 444 new flavor events and event chains, and more will be added in updates over time
+- Over 454 new flavor events and event chains, and more will be added in updates over time
 - Game rule to disable sillier events for those who don't like them, with three levels to choose from: Balanced (Default), Serious (Restricted), and All Events (Full)
 - Compatible with almost anything since it doesn't touch any vanilla files - even with overhaul mods, you can via game rule disable events that reference things specific to our medieval world that wouldn’t make sense in other time periods or universes (like fantasy and sci-fi conversion mods)
 - Learn history with Historical Context tooltips that provide information about what inspired some of the events - sometimes, reality is stranger than fiction! (These can be disabled via game rule for those who find it immersion breaking.)

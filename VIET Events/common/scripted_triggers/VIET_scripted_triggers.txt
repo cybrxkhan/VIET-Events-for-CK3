@@ -72,4 +72,11 @@ VIET_is_sinosphere_trigger = {
 	}
 }
 
+VIET_is_in_broccoli_region_trigger = {
+	OR = {
+		geographical_region = world_europe_south
+		geographical_region = world_europe_west_francia
+	}
+}
+
 

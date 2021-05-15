@@ -220,6 +220,8 @@ VIET_events_yearly_pulse = {
 		100 = VIETold.2167		# Courtier takes wrong type and dosage of medicine by accident
 		100 = VIETold.2168		# Spilled the herbal tea and burning yourself by accident
 		100 = VIETold.2170		# Took medicine for sore throat
+		# Broccoli
+		100 = VIETold.2173		# Broccoli vs cauliflower
 		
 		#######################################
 		# NEXT GEN VIET
@@ -306,6 +308,12 @@ VIET_events_yearly_pulse = {
 		100 = VIETmisc.0140		# Courtier trips and is helped by another
 		100 = VIETmisc.0141		# Witness people being mean to a beggar and a peasant woman helping him
 		100 = VIETmisc.0143		# Priest is giving a boring sermon on kindness
+		# Leaves
+		100 = VIETmisc.0148		# Take a nap and a leaf falls down on you (loosely inspired by a scene from Hotel Del Luna)
+		100 = VIETmisc.0149		# Hear some crunching leaves - turns out to be mice
+		# Bushes
+		100 = VIETmisc.0151		# Birds in a Bush
+		100 = VIETmisc.0153		# Tripped and fell into a bush
 	}
 }
 
@@ -482,6 +490,8 @@ VIET_events_tri_yearly_pulse = {
 		# Medicine
 		100 = VIETold.2163		# Quack doctor arrested
 		100 = VIETold.2169		# Scholar and merchant debate merits of quarantining
+		# Broccoli
+		100 = VIETold.2172		# Someone doesn't like broccoli
 		
 		#######################################
 		# NEXT GEN VIET
@@ -554,6 +564,10 @@ VIET_events_tri_yearly_pulse = {
 		100 = VIETmisc.0144		# Ruler overhears servants complaining about another servant who bullies them
 		100 = VIETmisc.0145		# Local clergy revered for their kindness dies - attend funeral or not?
 		100 = VIETmisc.0146		# A woman kindly tells a man that he dropped his coin bag, and your guards react in different ways
+		# Leaves
+		100 = VIETmisc.0150		# Gift of a golden leaf
+		# Bushes
+		100 = VIETmisc.0152		# Gardener suggests sprucing up the courtyard
 	}
 }
 
@@ -685,6 +699,8 @@ VIET_events_five_yearly_pulse = {
 		100 = VIETold.2161		# Incest argument
 		# Medicine
 		100 = VIETold.2165		# Observing a skilled physician demonstrate surgery
+		# Broccoli
+		100 = VIETold.2171		# Exotic broccoli introduced to character
 		
 		#######################################
 		# NEXT GEN VIET
@@ -728,6 +744,8 @@ VIET_events_five_yearly_pulse = {
 		100 = VIETmisc.0139		# Courtier is friends with a beggar
 		100 = VIETmisc.0142		# Observe a veteran teaching local women about self-defense
 		100 = VIETmisc.0147		# Local notables band together to fund an almshouse - will you join in?
+		# Bushes
+		100 = VIETmisc.0154		# Talk with a peasant about berries, which is berry good
 	}
 }
 

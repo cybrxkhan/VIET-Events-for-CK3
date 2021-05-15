@@ -19,6 +19,7 @@
 # 2129-2150		Generic (part of the first batch of events made for CK2 VIET Events Reborn)
 # 2151-2161		Generic 2 (part of the first batch of events made for CK2 VIET Events Reborn)
 # 2162-2170		Medicine
+# 2171-2173		Broccoli
 # 
 ############################################################################################################################
 
@@ -2988,6 +2989,54 @@ VIETold.2043 = {
 		set_global_variable = {
 			name = VIET_WW1_prophecy_happened
 			value = yes
+		}
+		if = {
+			limit = {
+				OR = {
+					has_trait = callous
+					has_trait = sadistic
+				}
+			}
+			random = {
+				chance = 50
+				add_trait = compassionate
+			}
+		}
+		if = {
+			limit = {
+				has_trait = trusting
+			}
+			random = {
+				chance = 50
+				add_trait = paranoid
+			}
+		}
+		if = {
+			limit = {
+				has_trait = vengeful
+			}
+			random = {
+				chance = 50
+				add_trait = forgiving
+			}
+		}
+		if = {
+			limit = {
+				has_trait = wrathful
+			}
+			random = {
+				chance = 50
+				add_trait = calm
+			}
+		}
+		if = {
+			limit = {
+				has_trait = arrogant
+			}
+			random = {
+				chance = 50
+				add_trait = humble
+			}
 		}
 	}
 }
@@ -12023,6 +12072,304 @@ VIETold.2170 = {
 		add_character_modifier = {
 			modifier = VIET_sore_throat_medicine
 			days = 365
+		}
+	}
+}
+
+
+#############################################
+# BROCCOLI 2171-2173
+#############################################
+
+# Exotic broccoli introduced to character
+VIETold.2171 = {
+	type = character_event
+	title = VIETold.2171.t	
+	desc = VIETold.2171.desc
+	theme = friendly
+	
+	right_portrait = {
+		character = root
+		animation = personality_cynical
+	}
+	
+	trigger = {
+		has_game_rule = VIET_normal_universe_events
+		capital_province = {
+			VIET_is_in_broccoli_region_trigger = no
+			OR = {
+				geographical_region = world_europe
+				geographical_region = world_asia_minor
+				geographical_region = world_middle_east
+				geographical_region = world_africa_north
+			}
+		}
+	}
+
+	weight_multiplier = {
+		base = 1
+		modifier = {
+			add = 0.2
+			has_trait = gregarious
+		}
+		modifier = {
+			add = -0.2
+			has_trait = shy
+		}
+		modifier = {
+			add = 0.2
+			has_trait = gluttonous
+		}
+		modifier = {
+			add = -0.2
+			has_trait = temperate
+		}
+		modifier = {
+			add = 0.2
+			has_trait = greedy
+		}
+		modifier = {
+			add = -0.2
+			has_trait = generous
+		}
+	}
+
+	option = { # ok
+		name = VIETold.2171.a
+		VIET_medium_prestige_gain_effect = yes
+		if = {
+			limit = {
+				has_game_rule = VIET_historical_context_on
+			}
+			custom_tooltip = VIETold.2171.info
+		}
+	}
+	option = { # ok
+		name = VIETold.2171.b
+		add_character_modifier = {
+			modifier = VIET_tried_new_food
+			days = 365
+		}
+		if = {
+			limit = {
+				has_game_rule = VIET_historical_context_on
+			}
+			custom_tooltip = VIETold.2171.info
+		}
+	}
+	option = { # ok
+		name = VIETold.2171.c
+		remove_short_term_gold = 10
+		add_character_modifier = {
+			modifier = VIET_broccoli_food
+			years = 3
+		}
+		if = {
+			limit = {
+				has_game_rule = VIET_historical_context_on
+			}
+			custom_tooltip = VIETold.2171.info
+		}
+		stress_impact = {
+			paranoid = miniscule_stress_impact_gain
+			gluttonous = miniscule_stress_impact_loss
+		}
+	}
+}
+
+
+# Someone doesn't like broccoli
+VIETold.2172 = {
+	type = character_event
+	title = VIETold.2172.t	
+	desc = VIETold.2172.desc
+	theme = vassal
+	
+	right_portrait = {
+		character = scope:VIET_broccoli_hater
+		animation = disgust
+	}
+	
+	trigger = {
+		has_game_rule = VIET_normal_universe_events
+		capital_province = {
+			VIET_is_in_broccoli_region_trigger = yes
+		}
+		any_courtier_or_guest = {
+			is_available_ai_adult = yes
+			OR = {
+				has_trait = stubborn
+				has_trait = arbitrary
+				has_trait = gluttonous
+				has_trait = paranoid
+				has_trait = arrogant
+				has_trait = impatient
+			}
+			NOR = {
+				has_trait = temperate
+				has_trait = content
+				has_trait = calm
+			}
+		}
+	}
+
+	weight_multiplier = {
+		base = 1
+		modifier = {
+			add = 0.2
+			has_trait = arrogant
+		}
+		modifier = {
+			add = -0.2
+			has_trait = humble
+		}
+		modifier = {
+			add = 0.2
+			has_trait = patient
+		}
+		modifier = {
+			add = -0.2
+			has_trait = impatient
+		}
+		modifier = {
+			add = 0.2
+			has_trait = honest
+		}
+		modifier = {
+			add = -0.2
+			has_trait = deceitful
+		}
+	}
+	
+	immediate = {
+		random_courtier_or_guest = {
+			limit = {
+				is_available_ai_adult = yes
+				OR = {
+					has_trait = stubborn
+					has_trait = arbitrary
+					has_trait = gluttonous
+					has_trait = paranoid
+					has_trait = arrogant
+					has_trait = impatient
+				}
+				NOR = {
+					has_trait = temperate
+					has_trait = content
+					has_trait = calm
+				}
+			}
+			save_scope_as = VIET_broccoli_hater
+		}
+	}
+
+	option = { # Its okay
+		name = VIETold.2172.a
+		VIET_random_small_prestige_gain_effect = yes
+		scope:VIET_broccoli_hater = {
+			add_opinion = {
+				target = root
+				modifier = VIET_opinion_doesnt_hate_broccoli
+			}
+		}
+	}
+	option = { # Don't care
+		name = VIETold.2172.b
+	}
+	option = { # I hate it too
+		name = VIETold.2172.c
+		VIET_random_small_prestige_loss_effect = yes
+		scope:VIET_broccoli_hater = {
+			add_opinion = {
+				target = root
+				modifier = VIET_opinion_also_hates_broccoli
+			}
+		}
+	}
+}
+
+
+# Broccoli vs cauliflower
+VIETold.2173 = {
+	type = character_event
+	title = VIETold.2173.t	
+	desc = VIETold.2173.desc
+	theme = feast_activity
+	override_background = { event_background = corridor_day }
+	
+	left_portrait = root
+	
+	trigger = {
+		has_game_rule = VIET_normal_universe_events
+		capital_province = {
+			VIET_is_in_broccoli_region_trigger = yes
+		}
+	}
+
+	weight_multiplier = {
+		base = 1
+		modifier = {
+			add = 0.2
+			has_trait = lazy
+		}
+		modifier = {
+			add = -0.2
+			has_trait = diligent
+		}
+		modifier = {
+			add = 0.2
+			has_trait = gluttonous
+		}
+		modifier = {
+			add = -0.2
+			has_trait = temperate
+		}
+		modifier = {
+			add = 0.2
+			has_trait = paranoid
+		}
+		modifier = {
+			add = -0.2
+			has_trait = trusting
+		}
+	}
+
+	option = { # broccoli
+		name = VIETold.2173.a
+		VIET_tiny_piety_gain_effect = yes
+		add_character_modifier = {
+			modifier = VIET_eating_healthy_vegetables
+			years = 2
+		}
+	}
+	option = { # cauliflower
+		name = VIETold.2173.b
+		VIET_tiny_prestige_gain_effect = yes
+		add_character_modifier = {
+			modifier = VIET_eating_healthy_vegetables
+			years = 2
+		}
+	}
+	option = { # Am fine with either
+		name = VIETold.2173.c
+		add_character_modifier = {
+			modifier = VIET_eating_healthy_vegetables
+			years = 2
+		}
+		stress_impact = {
+			base = miniscule_stress_impact_loss
+			content = miniscule_stress_impact_loss
+		}
+	}
+	option = { # Why not both
+		name = VIETold.2173.d
+		random_list = {
+			10 = { VIET_tiny_piety_gain_effect = yes }
+			10 = { VIET_tiny_prestige_gain_effect = yes }
+		}
+		add_character_modifier = {
+			modifier = VIET_eating_healthy_vegetables
+			years = 2
 		}
 	}
 }

@@ -271,3 +271,11 @@ VIET_opinion_disregarded_injury = {
 	decaying = yes
 	opinion = -15
 }
+VIET_opinion_also_hates_broccoli = {
+	years = 10
+	opinion = 5
+}
+VIET_opinion_doesnt_hate_broccoli = {
+	years = 10
+	opinion = -5
+}

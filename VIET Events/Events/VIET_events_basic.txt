@@ -34,6 +34,8 @@
 # 0124-0128		Beginnings
 # 0129-0132		Oblivion Dialogue Inspired
 # 0133-0147		Kindness
+# 0148-0150		Leaves
+# 0151-0154		Bushes
 # 
 ############################################################################################################################
 
@@ -12338,6 +12340,405 @@ VIETmisc.0147 = {
 		stress_impact = {
 			generous = medium_stress_impact_gain
 			compassionate = minor_stress_impact_gain
+		}
+	}
+}
+
+
+#####################################################
+# LEAVES 0148-0150
+#####################################################
+
+
+
+# Take a nap and a leaf falls down on you (loosely inspired by a scene from Hotel Del Luna)
+VIETmisc.0148 = {
+	type = character_event
+	title = VIETmisc.0148.t
+	desc = VIETmisc.0148.desc
+	theme = VIET_theme_tuscan_country
+	
+	left_portrait = {
+		character = root
+		animation = personality_forgiving
+	}
+	
+	weight_multiplier = {
+		base = 1
+		modifier = {
+			add = 0.2
+			has_trait = content
+		}
+		modifier = {
+			add = -0.2
+			has_trait = ambitious
+		}
+		modifier = {
+			add = 0.2
+			has_trait = calm
+		}
+		modifier = {
+			add = -0.2
+			has_trait = wrathful
+		}
+		modifier = {
+			add = 0.2
+			has_trait = compassionate
+		}
+		modifier = {
+			add = -0.2
+			has_trait = callous
+		}
+	}
+
+	
+	option = { # Ok
+		name = VIETmisc.0148.a
+		stress_impact = {
+			base = miniscule_stress_impact_loss
+			content = miniscule_stress_impact_loss
+			lazy = miniscule_stress_impact_loss
+		}
+	}
+}
+
+
+
+# Hear some crunching leaves - turns out to be mice
+VIETmisc.0149 = {
+	type = character_event
+	title = VIETmisc.0149.t
+	desc = VIETmisc.0149.desc
+	theme = VIET_theme_skyrim_forest
+	
+	right_portrait = {
+		character = root
+		animation = paranoia
+	}
+	
+	weight_multiplier = {
+		base = 1
+		modifier = {
+			add = 0.2
+			has_trait = paranoid
+		}
+		modifier = {
+			add = -0.2
+			has_trait = trusting
+		}
+		modifier = {
+			add = 0.2
+			has_trait = brave
+		}
+		modifier = {
+			add = -0.2
+			has_trait = craven
+		}
+		modifier = {
+			add = 0.2
+			has_trait = impatient
+		}
+		modifier = {
+			add = -0.2
+			has_trait = patient
+		}
+	}
+
+	
+	option = { # Ok
+		name = VIETmisc.0149.a
+		if = {
+			limit = {
+				has_trait = paranoid
+			}
+			stress_impact = {
+				paranoid = minor_stress_impact_gain
+			}
+		}
+		else = {
+			stress_impact = {
+				base = miniscule_stress_impact_loss
+			}		
+		}
+	}
+}
+
+# Gift of a golden leaf
+VIETmisc.0150 = {
+	type = character_event
+	title = VIETmisc.0150.t
+	desc = VIETmisc.0150.desc
+	theme = vassal
+	
+	right_portrait = root
+	
+	weight_multiplier = {
+		base = 1
+		modifier = {
+			add = 0.2
+			has_trait = just
+		}
+		modifier = {
+			add = -0.2
+			has_trait = arbitrary
+		}
+		modifier = {
+			add = 0.2
+			has_trait = diligent
+		}
+		modifier = {
+			add = -0.2
+			has_trait = lazy
+		}
+		modifier = {
+			add = 0.2
+			has_trait = greedy
+		}
+		modifier = {
+			add = -0.2
+			has_trait = generous
+		}
+	}
+
+	
+	option = { # Ok
+		name = VIETmisc.0150.a
+		VIET_large_prestige_gain_effect = yes
+	}
+}
+
+
+###################################################
+# BUSHES 0151-0154
+###################################################
+
+
+# Birds in a Bush
+VIETmisc.0151 = {
+	type = character_event
+	title = VIETmisc.0151.t
+	desc = VIETmisc.0151.desc
+	theme = VIET_theme_tuscan_country
+	
+	left_portrait = {
+		character = root
+		animation = paranoia
+	}
+	
+	weight_multiplier = {
+		base = 1
+		modifier = {
+			add = 0.2
+			has_trait = paranoid
+		}
+		modifier = {
+			add = -0.2
+			has_trait = trusting
+		}
+		modifier = {
+			add = 0.2
+			has_trait = craven
+		}
+		modifier = {
+			add = -0.2
+			has_trait = brave
+		}
+		modifier = {
+			add = 0.2
+			has_trait = gregarious
+		}
+		modifier = {
+			add = -0.2
+			has_trait = shy
+		}
+	}
+
+	
+	option = { # Ok
+		name = VIETmisc.0151.a
+		if = {
+			limit = {
+				has_trait = paranoid
+			}
+			stress_impact = {
+				paranoid = minor_stress_impact_gain
+			}
+		}
+		else = {
+			stress_impact = {
+				base = miniscule_stress_impact_loss
+			}		
+		}
+	}
+}
+
+
+
+# Gardener suggests sprucing up the courtyard
+VIETmisc.0152 = {
+	type = character_event
+	title = VIETmisc.0152.t
+	desc = VIETmisc.0152.desc
+	theme = VIET_theme_garden_generic
+	
+	left_portrait = root
+	
+	weight_multiplier = {
+		base = 1
+		modifier = {
+			add = 0.2
+			has_trait = patient
+		}
+		modifier = {
+			add = -0.2
+			has_trait = impatient
+		}
+		modifier = {
+			add = 0.2
+			has_trait = arrogant
+		}
+		modifier = {
+			add = -0.2
+			has_trait = humble
+		}
+		modifier = {
+			add = 0.2
+			has_trait = honest
+		}
+		modifier = {
+			add = -0.2
+			has_trait = deceitful
+		}
+	}
+
+	
+	option = { # Ok
+		name = VIETmisc.0152.a
+		trigger = {
+			OR = {
+				gold >= 25
+				is_ai = no
+			}
+		}
+		remove_short_term_gold = 25
+		add_character_modifier = {
+			modifier = VIET_new_ornamental_bushes
+			days = 3650
+		}
+	}
+	
+	option = { # Ok
+		name = VIETmisc.0152.b
+		stress_impact = {
+			arrogant = miniscule_stress_impact_gain
+		}
+	}
+	
+}
+
+
+# Tripped and fell into a bush
+VIETmisc.0153 = {
+	type = character_event
+	title = VIETmisc.0153.t
+	desc = VIETmisc.0153.desc
+	theme = VIET_theme_garden_generic
+	
+	right_portrait = {
+		character = root
+		animation = pain
+	}
+	
+	weight_multiplier = {
+		base = 1
+		modifier = {
+			add = 0.2
+			has_trait = impatient
+		}
+		modifier = {
+			add = -0.2
+			has_trait = patient
+		}
+		modifier = {
+			add = 0.2
+			has_trait = wrathful
+		}
+		modifier = {
+			add = -0.2
+			has_trait = calm
+		}
+		modifier = {
+			add = 0.2
+			has_trait = stubborn
+		}
+		modifier = {
+			add = -0.2
+			has_trait = fickle
+		}
+	}
+
+	
+	option = { # Ok
+		name = VIETmisc.0153.a
+		VIET_medium_prestige_loss_effect = yes
+		stress_impact = {
+			base = miniscule_stress_impact_gain
+			arrogant = miniscule_stress_impact_gain
+			impatient = miniscule_stress_impact_gain
+			wrathful = miniscule_stress_impact_gain
+		}
+	}
+	
+}
+
+
+
+# Talk with a peasant about berries, which is berry good
+VIETmisc.0154 = {
+	type = character_event
+	title = VIETmisc.0154.t
+	desc = VIETmisc.0154.desc
+	theme = VIET_theme_tuscan_country
+	
+	left_portrait = {
+		character = root
+		animation = personality_rational
+	}
+	
+	weight_multiplier = {
+		base = 1
+		modifier = {
+			add = 0.2
+			has_trait = gregarious
+		}
+		modifier = {
+			add = -0.2
+			has_trait = shy
+		}
+		modifier = {
+			add = 0.2
+			has_trait = humble
+		}
+		modifier = {
+			add = -0.2
+			has_trait = arrogant
+		}
+		modifier = {
+			add = 0.2
+			has_trait = trusting
+		}
+		modifier = {
+			add = -0.2
+			has_trait = paranoid
+		}
+	}
+
+	
+	option = { # Ok
+		name = VIETmisc.0154.a
+		add_character_modifier = {
+			modifier = VIET_berry_good_talk
+			years = 7
 		}
 	}
 }

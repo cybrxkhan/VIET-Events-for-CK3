@@ -1331,4 +1331,27 @@ VIET_almshouse_donation = {
 	monthly_piety = 0.3
 	county_opinion_add = 5
 }
+VIET_new_ornamental_bushes = {
+	icon = prestige_positive
+	monthly_prestige = 0.3
+	monthly_dynasty_prestige = 0.1
+}
+VIET_berry_good_talk = {
+	icon = fertility_positive
+	intrigue = 1
+	learning = 1
+}
+VIET_tried_new_food = {
+	icon = food_positive
+	diplomacy = 1
+}
+VIET_broccoli_food = {
+	icon = food_positive
+	health = 0.2
+}
+VIET_eating_healthy_vegetables = {
+	icon = food_positive
+	health = 0.3
+	negate_health_penalty_add = 0.1
+}
 

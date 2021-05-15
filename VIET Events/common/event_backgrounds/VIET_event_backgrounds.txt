@@ -192,6 +192,21 @@ VIET_background_ancient_cairn = {
 		ambience = "event:/SFX/Events/Backgrounds/desert_day"
 	}
 
+	background = { # Celtic
+		trigger = {
+			capital_province = {
+				OR = {
+					geographical_region = custom_ireland
+					geographical_region = custom_scotland
+					#geographical_region = custom_wales
+				}
+			}
+		}
+		reference = "gfx/interface/illustrations/event_scenes/VIET_ancient_cairn_irish.dds"
+		environment = "environment_event_garden"
+		ambience = "event:/SFX/Events/Backgrounds/desert_day"
+	}
+
 	background = { #Fallback
 		reference = "gfx/interface/illustrations/event_scenes/VIET_ancient_cairn.dds"
 		environment = "environment_event_garden"
@@ -269,6 +284,50 @@ VIET_background_small_town = {
 		reference = "gfx/interface/illustrations/event_scenes/VIET_small_town_arabic.dds"
 		environment = "environment_event_garden"
 		ambience = "event:/SFX/Events/Backgrounds/town_market_middleeastern_day"
+	}
+
+	background = { # Northern/Eastern European
+		trigger = {
+			capital_province = {
+				OR = {
+					geographical_region = world_europe_north
+					geographical_region = world_europe_east
+					geographical_region = ghw_region_siberia
+				}
+			}
+		}
+		reference = "gfx/interface/illustrations/event_scenes/VIET_small_town_norse.dds"
+		environment = "environment_event_garden"
+		ambience = "event:/SFX/Events/Backgrounds/townmarket_western_day"
+	}
+
+	background = { # Celtic
+		trigger = {
+			capital_province = {
+				OR = {
+					geographical_region = custom_ireland
+					geographical_region = custom_scotland
+					geographical_region = custom_wales
+				}
+			}
+		}
+		reference = "gfx/interface/illustrations/event_scenes/VIET_small_town_irish.dds"
+		environment = "environment_event_garden"
+		ambience = "event:/SFX/Events/Backgrounds/townmarket_western_day"
+	}
+
+	background = { # English
+		trigger = {
+			capital_province = {
+				OR = {
+					geographical_region = custom_england
+					geographical_region = dlc_fp1_region_western_adventure_targets_northern_france_brittany
+				}
+			}
+		}
+		reference = "gfx/interface/illustrations/event_scenes/VIET_small_town_english.dds"
+		environment = "environment_event_garden"
+		ambience = "event:/SFX/Events/Backgrounds/townmarket_western_day"
 	}
 
 	background = { #Fallback / Western European
