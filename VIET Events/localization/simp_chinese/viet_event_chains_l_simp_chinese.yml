@@ -126,7 +126,6 @@
  VIETmisc.1044.t:0 "最后的旅程"
  VIETmisc.1044.desc:0 "我的意识飘忽不定，无视这四周的一切。不知过了多久，我终于见到了[scope_VIET_grandparent_dream.GetTitledFirstName]，我的[scope_VIET_grandparent_dream.Custom('VIETGrandparent')]。和从前一样，我又成了孩子，[scope_VIET_grandparent_dream.GetSheHe]看起来还是那么的高大，令人心安。\n\n“你准备好走了吗，小[ROOT.Char.GetFirstNameNoTooltip]？”[scope_VIET_grandparent_dream.GetSheHe]问道：“我知道放手不容易，但你能做到的。人们早晚要踏上这旅程。”\n\n“我想我准备好了。”我喃喃道。我向[scope_VIET_grandparent_dream.GetHerHim]伸出手：“和您一起，我会没事的！我爱您！”\n\n[scope_VIET_grandparent_dream.Custom('VIETGrandparent')]轻轻握住我的手，笑了。"
  VIETmisc.1044.a:0 "“我也爱你，孩子，我们走吧。”"
- # Toothbrushing Siblings Event Chain - Please leave here
  VIETmisc.1045.t:0 "帮个忙？"
  VIETmisc.1045.desc:0 "大家都说，人应该和手足兄弟和睦相处。哈！没门！[scope_VIET_karen.GetSheHe]这人的确性格不坏，可有时[scope_VIET_karen.GetSheHe]也烦人至极，所以我俩的感情也没那么好。这不，过去的几天里，[scope_VIET_karen.GetSheHe]一直在求我帮[scope_VIET_karen.GetHerHim]一个忙，是，求人帮忙这件事情有可原，但为什么非得麻烦我呢？"
  VIETmisc.1045.a:0 "对不起，亲爱的[scope_VIET_karen.GetFirstNameNoTooltip]，不行。"
@@ -148,7 +147,6 @@
  VIETmisc.1051.t:0 "手足之情"
  VIETmisc.1051.desc:0 "所以，自那天起，我和[scope_VIET_karen.GetFirstNameNoTooltip]相处地好了一些。"
  VIETmisc.1051.a:0 "讲真，我不记得是谁赢了这场比赛，也不记得[scope_VIET_karen.GetSheHe]到底要我帮什么忙了。"
- # Toothbrushing Siblings Event Chain - Please leave here
  VIETmisc.1052.t:0 "xxxxx"
  VIETmisc.1052.desc:0 "xxxxx"
  VIETmisc.1052.a:0 "xxxxx"
@@ -333,3 +331,4 @@
  VIETmisc.1020.a.female:0 "我希望他为我感到骄傲……"
  VIETmisc.1021.desc.female:0 "但他已从我的生活中离去了。尽管事后我们和解了，但后来我们很快就成年了，然后就分手了——永远分手了。\n\n我想这是不可避免的。那时我们还年轻，我们没有意识到的童年不会永远延续下去。\n\n没有什么是永恒的。坏东西不会，好事也不会。"
  VIETmisc.1022.desc.female:0 "但直到今天，我还是会想起那个傻小子。我还在想着他那憨态可掬的微笑。我仍然记得那时候我们什么都不做地坐在那棵树下背靠背，肩并肩地笑着。\n\n我的朋友。\n\n我的同伴。\n\n我的灵感。\n\n我的天使。"
+ VIETmisc.1003.desc.male.homosexual:0 "他是住在附近的一个男孩。我认为他出身高贵，否则我怎么能一开始就和他一起玩呢？——但他的家境很贫困，对当地事务影响并不大。\n\n我们小时候经常一起嬉闹，我和他，我们俩，沉浸在自己的小小世界中。\n\n现在，我开始真的很怀念那段时光了。"
