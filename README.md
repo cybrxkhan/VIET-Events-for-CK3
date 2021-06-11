@@ -1,9 +1,9 @@
 # VIET Events for CK3
 
-## Latest Version: 1.3.4 "Arboretum" (Released 5/15/21)
+## Latest Version: 1.4.0 "Windmill" (Released 6/10/21)
 
-_“If you have a garden in your library, everything will be complete.”_
-_- Cicero, letter to Varro_
+_“Pray, look better, sir... those things yonder are no giants, but windmills.”_
+_- Sancho from Don Quixote by Miguel de Cervantes_
 
 Very Immersive Events and Tales (VIET), the sequel to VIET Events Reborn for CK2, is a flavor mod that adds a vast collection of events about everyday life to spice up your game. These events add immersion and a diversity of experiences in between wars and vanilla’s event chains, and cover mundane minutiae ranging from small talk with courtiers and eating local cuisine to epic tales about love, philosophy, and the human condition.
 
