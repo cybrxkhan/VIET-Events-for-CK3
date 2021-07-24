@@ -1,6 +1,6 @@
 [img]http://i.imgur.com/OhIA5bm.jpg[/img]
 
-[h1]Current Version: 1.4.0 "Windmill" (Released 6/10/21, Compatible with vanilla patch 1.4.X)[/h1]
+[h1]Current Version: 1.4.0.1 "Windmill" (Released 7/23/21, Compatible with vanilla patch 1.4.X)[/h1]
 [h1][B][url=https://discord.gg/9KuyXv2uZA]Discord Server for My Mods[/url][/B][/h1]
 [B][url=https://forum.paradoxplaza.com/forum/threads/mod-viet-events-for-ck3-a-flavor-and-immersion-event-mod.1422081/]Paradox Forum Thread[/url][/B]
 [B]Manual Download/Installation available [url=https://github.com/cybrxkhan/VIET-Events-for-CK3/releases]on Github[/url][/B]
@@ -51,7 +51,14 @@ Thanks!
 
 [img]http://i.imgur.com/RQ5QZTF.jpg[/img]
 
-[h1]Version 1.4.0 "Windmilld"[/h1]
+[h1]Version 1.4.0.1 Hotfix[/h1]
+
+[LIST]
+[*]Fixed events not triggering for Linux users
+[*]Fixed WW1 event not doing trait changes
+[/LIST]
+
+[h1]Version 1.4.0 "Windmill"[/h1]
 
 [I]“Pray, look better, sir... those things yonder are no giants, but windmills.”
 - Sancho from Don Quixote by Miguel de Cervantes[/I]

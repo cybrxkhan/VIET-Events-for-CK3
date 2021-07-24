@@ -1,6 +1,6 @@
 # VIET Events for CK3
 
-## Latest Version: 1.4.0 "Windmill" (Released 6/10/21)
+## Latest Version: 1.4.0.1 Hotfix for "Windmill" (Released 7/23/21)
 
 _“Pray, look better, sir... those things yonder are no giants, but windmills.”_
 _- Sancho from Don Quixote by Miguel de Cervantes_

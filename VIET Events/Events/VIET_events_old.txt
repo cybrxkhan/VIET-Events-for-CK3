@@ -2992,13 +2992,21 @@ VIETold.2043 = {
 		}
 		if = {
 			limit = {
-				OR = {
-					has_trait = callous
-					has_trait = sadistic
-				}
+				has_trait = callous
 			}
 			random = {
 				chance = 50
+				remove_trait = callous
+				add_trait = compassionate
+			}
+		}
+		if = {
+			limit = {
+				has_trait = sadistic
+			}
+			random = {
+				chance = 50
+				remove_trait = sadistic
 				add_trait = compassionate
 			}
 		}
@@ -3008,6 +3016,7 @@ VIETold.2043 = {
 			}
 			random = {
 				chance = 50
+				remove_trait = trusting
 				add_trait = paranoid
 			}
 		}
@@ -3017,6 +3026,7 @@ VIETold.2043 = {
 			}
 			random = {
 				chance = 50
+				remove_trait = vengeful
 				add_trait = forgiving
 			}
 		}
@@ -3026,6 +3036,7 @@ VIETold.2043 = {
 			}
 			random = {
 				chance = 50
+				remove_trait = wrathful
 				add_trait = calm
 			}
 		}
@@ -3035,6 +3046,7 @@ VIETold.2043 = {
 			}
 			random = {
 				chance = 50
+				remove_trait = arrogant
 				add_trait = humble
 			}
 		}
