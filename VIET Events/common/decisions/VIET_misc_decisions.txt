@@ -1,0 +1,504 @@
+﻿
+
+VIET_decision_traveling_baklava_merchant = {
+	picture = "gfx/interface/illustrations/decisions/decision_viet_baklava.dds"
+	desc = VIET_decision_traveling_baklava_merchant_desc
+
+	ai_check_interval = 48
+
+	cooldown = { days = 365 }
+
+	is_shown = {
+		is_landed = yes
+		has_character_modifier = VIET_traveling_baklava_merchant_in_town
+	}
+
+	is_valid = {
+		has_character_modifier = VIET_traveling_baklava_merchant_in_town	
+	}
+
+	is_valid_showing_failures_only = {
+		is_adult = yes
+		is_available = yes
+	}
+
+	effect = {
+		custom_tooltip = VIET_decision_traveling_baklava_merchant_effect_tooltip
+		if = {
+			limit = {
+				has_game_rule = VIET_historical_context_on
+			}
+			custom_tooltip = VIET_decision_traveling_baklava_merchant_context_tooltip
+		}
+		trigger_event = VIETmisc.2002
+	}
+
+	cost = {
+		gold = { value = minor_gold_value } # Will depend
+	}
+	
+	ai_potential = {
+		short_term_gold > minor_gold_value
+	}
+
+	ai_will_do = {
+		base = 25
+		modifier = {
+			add = 10
+			has_trait = gluttonous
+		}
+		modifier = {
+			add = -10
+			has_trait = temperate
+		}
+	}
+}
+
+VIET_decision_traveling_five_spice_merchant = {
+	picture = "gfx/interface/illustrations/decisions/decision_viet_spices.dds"
+	desc = VIET_decision_traveling_five_spice_merchant_desc
+
+	ai_check_interval = 48
+
+	cooldown = { days = 365 }
+
+	is_shown = {
+		is_landed = yes
+		has_character_modifier = VIET_traveling_spice_merchant_in_town
+	}
+
+	is_valid = {
+		has_character_modifier = VIET_traveling_spice_merchant_in_town
+		NOT = { has_character_modifier = VIET_bought_five_spice_blend }
+	}
+
+	is_valid_showing_failures_only = {
+		is_adult = yes
+		is_available = yes
+	}
+
+	effect = {
+		custom_tooltip = VIET_decision_traveling_five_spice_merchant_effect_tooltip
+		if = {
+			limit = {
+				has_game_rule = VIET_historical_context_on
+			}
+			custom_tooltip = VIET_decision_traveling_five_spice_merchant_context_tooltip
+		}
+		trigger_event = VIETmisc.2005
+	}
+
+	cost = {
+		gold = { value = minor_gold_value } # Will depend
+	}
+	
+	ai_potential = {
+		short_term_gold > minor_gold_value
+	}
+
+	ai_will_do = {
+		base = 25
+		modifier = {
+			add = 10
+			has_trait = gluttonous
+		}
+		modifier = {
+			add = -10
+			has_trait = temperate
+		}
+	}
+}
+
+
+VIET_decision_exorcise_ghost_follower = {
+	picture = "gfx/interface/illustrations/decisions/decision_viet_skull.dds"
+	desc = VIET_decision_exorcise_ghost_follower_desc
+
+	ai_check_interval = 30
+
+	is_shown = {
+		is_landed = yes
+		has_character_modifier = VIET_ghost_haunting
+	}
+
+	is_valid = {
+		has_character_modifier = VIET_ghost_haunting
+	}
+
+	is_valid_showing_failures_only = {
+		is_adult = yes
+		is_available = yes
+	}
+
+	effect = {
+		custom_tooltip = VIET_decision_exorcise_ghost_follower_effect_tooltip
+		if = {
+			limit = {
+				has_game_rule = VIET_historical_context_on
+			}
+			custom_tooltip = VIET_decision_exorcise_ghost_follower_context_tooltip
+		}
+		trigger_event = VIETmisc.2009
+	}
+
+	cost = {
+		piety = { value = medium_piety_value } # Will depend
+	}
+	
+	ai_potential = {
+		piety > medium_piety_value
+	}
+
+	ai_will_do = {
+		base = 45
+		modifier = {
+			add = 10
+			has_trait = zealous
+		}
+		modifier = {
+			add = -10
+			has_trait = cynical
+		}
+	}
+}
+
+
+VIET_decision_drink_shadowbanish_wine = {
+	picture = "gfx/interface/illustrations/decisions/decision_viet_wine.dds"
+	desc = VIET_decision_drink_shadowbanish_wine_desc
+
+	ai_check_interval = 12
+
+	is_shown = {
+		is_landed = yes
+		has_character_modifier = VIET_has_shadowbanish_wine_bottle
+	}
+
+	is_valid = {
+		has_character_modifier = VIET_has_shadowbanish_wine_bottle
+		gold >= 50
+	}
+
+	is_valid_showing_failures_only = {
+		is_adult = yes
+		is_available = yes
+	}
+
+	effect = {
+		custom_tooltip = VIET_decision_drink_shadowbanish_wine_effect_tooltip
+		if = {
+			limit = {
+				OR = {
+					religion = religion:islam_religion # Prohibited by khamr, a prohibition against intoxicants
+					religion = religion:jainism_religion # Prohibited along with the consumption of any fermented food
+					religion = religion:buddhism_religion # Discouraged as it disrupts progress along the eightfold path
+				}
+			}
+			VIET_huge_piety_loss_effect = yes
+		}
+		if = {
+			limit = {
+				has_game_rule = VIET_historical_context_on
+			}
+			custom_tooltip = VIET_decision_drink_shadowbanish_wine_context_tooltip
+		}
+		trigger_event = VIETmisc.2017
+	}
+
+	#cost = {
+	#	piety = { value = medium_piety_value } # Will depend
+	#}
+	#
+	#ai_potential = {
+	#	piety > medium_piety_value
+	#}
+
+	ai_will_do = {
+		base = 40
+	}
+}
+
+
+
+
+VIET_decision_destroy_shadowbanish_wine = {
+	picture = "gfx/interface/illustrations/decisions/decision_viet_wine.dds"
+	desc = VIET_decision_destroy_shadowbanish_wine_desc
+
+	ai_check_interval = 12
+
+	is_shown = {
+		is_landed = yes
+		has_character_modifier = VIET_has_shadowbanish_wine_bottle
+		OR = {
+			religion = religion:islam_religion # Prohibited by khamr, a prohibition against intoxicants
+			religion = religion:jainism_religion # Prohibited along with the consumption of any fermented food
+			religion = religion:buddhism_religion # Discouraged as it disrupts progress along the eightfold path
+		}
+	}
+
+	is_valid = {
+		has_character_modifier = VIET_has_shadowbanish_wine_bottle
+		OR = {
+			religion = religion:islam_religion # Prohibited by khamr, a prohibition against intoxicants
+			religion = religion:jainism_religion # Prohibited along with the consumption of any fermented food
+			religion = religion:buddhism_religion # Discouraged as it disrupts progress along the eightfold path
+		}
+	}
+
+	is_valid_showing_failures_only = {
+		is_adult = yes
+		is_available = yes
+	}
+
+	effect = {
+		custom_tooltip = VIET_decision_destroy_shadowbanish_wine_effect_tooltip
+		if = {
+			limit = {
+				has_game_rule = VIET_historical_context_on
+			}
+			custom_tooltip = VIET_decision_destroy_shadowbanish_wine_context_tooltip
+		}
+		trigger_event = VIETmisc.2018
+	}
+
+	#cost = {
+	#	piety = { value = medium_piety_value } # Will depend
+	#}
+	#
+	#ai_potential = {
+	#	piety > medium_piety_value
+	#}
+
+	ai_will_do = {
+		base = 55
+		modifier = {
+			add = 10
+			has_trait = zealous
+		}
+		modifier = {
+			add = -10
+			has_trait = cynical
+		}
+	}
+}
+
+
+
+
+VIET_decision_unlock_mysterious_chest = {
+	picture = "gfx/interface/illustrations/decisions/decision_viet_treasure_chest.dds"
+	desc = VIET_decision_unlock_mysterious_chest_desc
+
+	ai_check_interval = 36
+
+	is_shown = {
+		is_landed = yes
+		has_character_modifier = VIET_has_mysterious_chest
+	}
+
+	is_valid = {
+		has_character_modifier = VIET_has_mysterious_chest
+	}
+
+	is_valid_showing_failures_only = {
+		is_adult = yes
+		is_available = yes
+	}
+
+	effect = {
+		custom_tooltip = VIET_decision_unlock_mysterious_chest_effect_tooltip
+		trigger_event = VIETmisc.2020
+	}
+
+	cost = {
+		gold = { value = minor_gold_value } # Will depend
+		prestige = { value = minor_prestige_value } # Will depend
+	}
+	
+	ai_potential = {
+		gold > minor_gold_value
+		prestige > minor_prestige_value
+	}
+
+	ai_will_do = {
+		base = 45
+	}
+}
+
+
+VIET_decision_hire_belrand = {
+	picture = "gfx/interface/illustrations/decisions/decision_viet_travel.dds"
+	desc = VIET_decision_hire_belrand_desc
+
+	ai_check_interval = 36
+
+	is_shown = {
+		is_landed = yes
+		has_character_modifier = VIET_mercenary_scholar_in_town
+	}
+
+	is_valid = {
+		has_character_modifier = VIET_mercenary_scholar_in_town
+	}
+
+	is_valid_showing_failures_only = {
+		is_adult = yes
+		is_available = yes
+	}
+
+	effect = {
+		show_as_tooltip = {
+			add_character_modifier = {
+				modifier = VIET_hired_belrand
+				years = 10
+			}	
+		}
+		trigger_event = VIETmisc.2022
+	}
+
+	cost = {
+		gold = { value = minor_gold_value } # Will depend
+	}
+	
+	ai_potential = {
+		gold > minor_gold_value
+	}
+
+	ai_will_do = {
+		base = 30
+	}
+}
+
+
+
+VIET_decision_ransom_kidnapped_servants = {
+	picture = "gfx/interface/illustrations/decisions/decision_viet_bandits.dds"
+	desc = VIET_decision_ransom_kidnapped_servants_desc
+
+	#ai_check_interval = 4 # Due to small timeframe, AI will choose whether to do it immediately
+
+	is_shown = {
+		is_landed = yes
+		has_character_modifier = VIET_servant_hostage_countdown
+		#NOT = { has_character_flag = VIET_decision_choose_rescue_servants }
+	}
+
+	is_valid = {
+		has_character_modifier = VIET_servant_hostage_countdown
+	}
+
+	is_valid_showing_failures_only = {
+		is_adult = yes
+		is_available = yes
+	}
+
+	effect = {
+		#add_character_flag = VIET_decision_choose_rescue_servants
+		custom_tooltip = VIET_decision_ransom_kidnapped_servants_effect_tooltip
+		stress_impact = {
+			callous = minor_stress_impact_gain
+		}
+		trigger_event = VIETmisc.2024
+	}
+
+	cost = {
+		prestige = { value = medium_prestige_value } # Will depend
+	#	gold = { value = minor_gold_value } # Will depend
+	}
+	
+	ai_potential = {
+		gold > 100
+	}
+
+	ai_will_do = {
+		base = 30
+		modifier = {
+			add = 10
+			has_trait = zealous
+		}
+		modifier = {
+			add = -10
+			has_trait = cynical
+		}
+	}
+}
+
+
+
+
+VIET_decision_meet_qi_ma_the_liar = {
+	picture = "gfx/interface/illustrations/decisions/decision_viet_qi_ma.dds"
+	desc = VIET_decision_meet_qi_ma_the_liar_desc
+
+	#ai_check_interval = 4 # Due to small timeframe, AI will choose whether to do it immediately
+
+	is_shown = {
+		is_landed = yes
+		has_character_modifier = VIET_qi_ma_in_town
+		has_global_variable = VIET_qi_ma_is_active
+	}
+
+	is_valid = {
+		has_character_modifier = VIET_qi_ma_in_town
+	}
+
+	is_valid_showing_failures_only = {
+		is_adult = yes
+		is_available = yes
+	}
+
+	effect = {
+		custom_tooltip = VIET_decision_meet_qi_ma_the_liar_effect_tooltip
+		trigger_event = VIETmonogatari.0005
+	}
+
+	cost = {
+		prestige = { value = medium_prestige_value } # Will depend
+	}
+	
+	ai_potential = {
+		prestige > medium_prestige_value
+	}
+
+	ai_will_do = {
+		base = 30
+	}
+}
+
+VIET_decision_tester = {
+	picture = "gfx/interface/illustrations/decisions/decision_viet_qi_ma.dds"
+	desc = VIET_decision_meet_qi_ma_the_liar_desc
+
+	#ai_check_interval = 4 # Due to small timeframe, AI will choose whether to do it immediately
+
+	is_shown = {
+		is_landed = yes
+		debug_only = yes
+	}
+
+	is_valid = {
+		has_global_variable = VIET_qi_ma_is_active
+	}
+
+	effect = {
+		add_gold = 1
+	}
+
+	cost = {
+		gold = 1
+	}
+	
+	ai_potential = {
+		gold > 1
+	}
+
+	ai_will_do = {
+		base = 30
+	}
+}
+
+
+
+
+

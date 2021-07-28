@@ -37,3 +37,5 @@
  setting_VIET_event_frequency_low_desc:0 "VIET事件较少触发。警告：由于随机数生成原理，可能一次性会看到很多事件弹出，或是很久都没有事件弹出。"
  setting_VIET_event_frequency_very_low:0 "非常低"
  setting_VIET_event_frequency_very_low_desc:0 "VIET事件很少触发。你会几乎看不到事件！警告：由于随机数生成原理，可能一次性会看到很多事件弹出，或是很久都没有事件弹出。"
+ death_VIET_choking_food:0 "died chooking on food"
+ xxxxx:0 "xxxxx"

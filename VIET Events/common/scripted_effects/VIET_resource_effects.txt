@@ -19,6 +19,7 @@
 # Medium:	25/40/50	Events involving minor court/realm issues, or local commoners - e.g., chatting with courtiers about various things, expressing opinions to a lot of people
 # Large:	35/55/70	Events involving major court/realm issues or important people - e.g., meeting a minor envoy or local merchants
 # Huge:		50/75/100	Most significant events - e.g. meeting a major envoy, talking with notable nobles of the realm, etc.
+# Massive:	100/150/200	Most significant-er events - ones that would have large ramifications beyond huge events
 # 
 # Randomizers:
 #
@@ -68,6 +69,12 @@
 # 	VIET_huge_piety_gain_effect
 # 	VIET_huge_prestige_loss_effect
 # 	VIET_huge_piety_loss_effect
+#
+# MASSIVE:
+# 	VIET_massive_prestige_gain_effect
+# 	VIET_massive_piety_gain_effect
+# 	VIET_massive_prestige_loss_effect
+# 	VIET_massive_piety_loss_effect
 # 
 # RANDOM SMALL:
 # 	VIET_random_small_prestige_gain_effect
@@ -468,6 +475,82 @@ VIET_huge_piety_loss_effect = {
 		add_piety = -50
 	}
 }
+
+
+####################
+# MASSIVE
+####################
+
+# Most significant-er events - ones that would have large ramifications beyond huge events
+VIET_massive_prestige_gain_effect = {
+	if = {
+		limit = {
+			has_game_rule = VIET_resource_twice
+		}
+		add_prestige = 200
+	}
+	else_if = {
+		limit = {
+			has_game_rule = VIET_resource_one_and_a_half
+		}
+		add_prestige = 150
+	}
+	else = {
+		add_prestige = 100
+	}
+}
+VIET_massive_piety_gain_effect = {
+	if = {
+		limit = {
+			has_game_rule = VIET_resource_twice
+		}
+		add_piety = 200
+	}
+	else_if = {
+		limit = {
+			has_game_rule = VIET_resource_one_and_a_half
+		}
+		add_piety = 150
+	}
+	else = {
+		add_piety = 100
+	}
+}
+VIET_massive_prestige_loss_effect = {
+	if = {
+		limit = {
+			has_game_rule = VIET_resource_twice
+		}
+		add_prestige = -200
+	}
+	else_if = {
+		limit = {
+			has_game_rule = VIET_resource_one_and_a_half
+		}
+		add_prestige = -150
+	}
+	else = {
+		add_prestige = -100
+	}
+}
+VIET_massive_piety_loss_effect = {
+	if = {
+		limit = {
+			has_game_rule = VIET_resource_twice
+		}
+		add_piety = -200
+	}
+	else_if = {
+		limit = {
+			has_game_rule = VIET_resource_one_and_a_half
+		}
+		add_piety = -150
+	}
+	else = {
+		add_piety = -100
+	}
+}
+
 
 
 ####################

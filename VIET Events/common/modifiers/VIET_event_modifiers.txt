@@ -447,7 +447,7 @@ VIET_small_house_fire = {
 VIET_chopped_some_wood = {
 	icon = outdoors_positive
 	health = 0.2
-	county_opinion_add = 5
+	county_opinion_add = 3
 }
 VIET_torch_burn = {
 	icon = outdoors_negative
@@ -471,7 +471,7 @@ VIET_dislikes_commoners = {
 VIET_friend_of_beggars = {
 	icon = social_positive
 	monthly_piety = 0.1
-	county_opinion_add = 5
+	county_opinion_add = 10
 }
 VIET_bought_baklava_normal = {
 	icon = food_positive
@@ -705,7 +705,7 @@ VIET_impressed_medical_skills = {
 }
 VIET_notorious_jailbreak = {
 	icon = prison_negative
-	county_opinion_add = -10
+	county_opinion_add = -7
 	monthly_prestige = -0.2
 }
 VIET_loves_cute_maids = {
@@ -715,7 +715,7 @@ VIET_loves_cute_maids = {
 }
 VIET_reduce_construction_noise = {
 	icon = county_modifier_development_negative
-	county_opinion_add = -10
+	county_opinion_add = -7
 	build_speed = 0.1
 	monthly_dread = 0.1
 }
@@ -742,7 +742,7 @@ VIET_studying_ancient_clothes = {
 VIET_helped_solve_old_murder_mystery = {
 	icon = prison_positive
 	intrigue = 1
-	county_opinion_add = 5
+	county_opinion_add = 8
 	monthly_prestige = 0.4
 }
 VIET_explored_cave = {
@@ -793,7 +793,7 @@ VIET_dying_acquaintance_advice = {
 }
 VIET_beggar_burial = {
 	icon = piety_positive
-	county_opinion_add = 5
+	county_opinion_add = 4
 	monthly_piety = 0.4
 }
 VIET_deaths_blessing = {
@@ -820,16 +820,16 @@ VIET_friendly_ghost_stalker = {
 }
 VIET_let_necrophiliac_go = {
 	icon = dread_negative
-	county_opinion_add = -10
+	county_opinion_add = -12
 }
 VIET_executed_necrophiliac = {
 	icon = dread_positive
-	county_opinion_add = 10
+	county_opinion_add = 12
 	monthly_dread = 0.2
 }
 VIET_imprisoned_necrophiliac = {
 	icon = dread_positive
-	county_opinion_add = 5
+	county_opinion_add = 6
 	monthly_prestige = 0.1
 }
 VIET_heartless_towards_servants = {
@@ -862,7 +862,7 @@ VIET_scooby_doo_villain_let_go = {
 }
 VIET_scooby_doo_villain_punisher = {
 	icon = county_modifier_opinion_positive
-	county_opinion_add = 10
+	county_opinion_add = 5
 	monthly_prestige = 0.3
 }
 VIET_haunted_house_curse = {
@@ -886,7 +886,7 @@ VIET_hospitality_spirit_blessing = {
 VIET_party_with_servants = {
 	icon = feast_positive
 	stress_gain_mult = -0.1
-	county_opinion_add = 5
+	county_opinion_add = 3
 	monthly_prestige = -0.2
 }
 VIET_forbade_effigy_celebration = {
@@ -964,7 +964,7 @@ VIET_the_greedy = {
 VIET_arbitrary_ruling = {
 	icon = dread_negative
 	monthly_prestige = -0.2
-	county_opinion_add = -5
+	county_opinion_add = -8
 }
 VIET_cynical_mood = {
 	icon = social_positive
@@ -1113,7 +1113,7 @@ VIET_remembering_childhood_love = {
 }
 VIET_rewarded_oblivion_guard = {
 	icon = martial_positive
-	county_opinion_add = 5
+	county_opinion_add = 3
 	monthly_prestige = 0.1
 }
 VIET_comforted_heartbroken_lad = {
@@ -1200,7 +1200,7 @@ VIET_trinkets_odds_and_ends = {
 VIET_abandoned_a_baby = {
 	icon = social_negative
 	monthly_dread = 0.2
-	county_opinion_add = -10
+	county_opinion_add = -5
 	general_opinion = -10
 }
 VIET_abaonded_as_a_child = {
@@ -1216,7 +1216,7 @@ VIET_hired_new_dutiful_servants = {
 VIET_saved_abandoned_baby = {
 	icon = social_positive
 	monthly_piety = 0.2
-	county_opinion_add = 10
+	county_opinion_add = 5
 	general_opinion = 10
 }
 VIET_horehound_tea = {
@@ -1314,7 +1314,7 @@ VIET_hired_beggar_servant = {
 VIET_taught_locals_martial_arts = {
 	icon = prowess_positive
 	monthly_prestige = 0.2
-	county_opinion_add = 5
+	county_opinion_add = 7
 }
 VIET_learned_martial_arts_from_local = {
 	icon = prowess_positive
@@ -1329,7 +1329,7 @@ VIET_bullies_servants = {
 VIET_almshouse_donation = {
 	icon = piety_positive
 	monthly_piety = 0.3
-	county_opinion_add = 5
+	county_opinion_add = 15
 }
 VIET_new_ornamental_bushes = {
 	icon = prestige_positive
@@ -1353,5 +1353,167 @@ VIET_eating_healthy_vegetables = {
 	icon = food_positive
 	health = 0.3
 	negate_health_penalty_add = 0.1
+}
+VIET_traveling_baklava_merchant_in_town = {
+	icon = food_positive
+	county_opinion_add = 1
+}
+VIET_bought_traveling_merchant_baklava = {
+	icon = food_positive
+	monthly_prestige = 0.3
+	diplomacy = 1
+}
+VIET_bought_traveling_merchant_lokma = {
+	icon = food_positive
+	monthly_prestige = 0.3
+	martial = 1
+}
+VIET_bought_traveling_merchant_kanafeh = {
+	icon = food_positive
+	monthly_prestige = 0.3
+	stewardship = 1
+}
+VIET_bought_traveling_merchant_halwa = {
+	icon = food_positive
+	monthly_prestige = 0.3
+	intrigue = 1
+}
+VIET_bought_traveling_merchant_qatayef = {
+	icon = food_positive
+	monthly_prestige = 0.3
+	learning = 1
+}
+VIET_traveling_spice_merchant_in_town = {
+	icon = food_positive
+	county_opinion_add = 1
+}
+VIET_bought_five_spice_blend = {
+	icon = food_positive
+	monthly_prestige = 0.2
+	health = 0.1
+	diplomacy_per_prestige_level = 1
+}
+VIET_ghost_haunting = {
+	icon = piety_negative
+	stewardship = -1
+	intrigue = -2
+	health = -0.3
+	monthly_prestige = -0.3
+}
+VIET_ghost_curse = {
+	icon = piety_negative
+	diplomacy = -1
+	martial = -1
+	stewardship = -1
+	intrigue = -2
+	health = -0.6
+}
+VIET_ghost_blessing = {
+	icon = piety_positive
+	diplomacy = 1
+	martial = 1
+	stewardship = 1
+	intrigue = 1
+	learning = 1
+	health = 0.5
+}
+VIET_has_shadowbanish_wine_bottle = {
+	icon = drink_positive
+}
+VIET_drank_shadowbanish_wine = {
+	icon = drink_positive
+	intrigue = 2
+	hostile_scheme_power_mult = 0.2
+	hostile_scheme_resistance_mult = 0.2
+	health = 0.1
+}
+VIET_destroyed_shadowbanish_wine = {
+	icon = piety_positive
+	monthly_piety = 0.5
+}
+VIET_has_mysterious_chest = {
+	icon = stewardship_positive
+}
+VIET_mercenary_scholar_in_town = {
+	icon = social_positive
+}
+VIET_hired_belrand = {
+	icon = prowess_positive
+	martial = 1
+	intrigue = 1
+	learning = 1
+	hostile_scheme_power_mult = 0.2
+	hostile_scheme_resistance_mult = 0.2
+}
+VIET_chest_ancient_scroll = {
+	icon = learning_positive
+	learning = 1
+	monthly_lifestyle_xp_gain_mult = 0.03
+}
+VIET_chest_golden_rose = {
+	icon = prestige_positive
+	monthly_prestige = 0.3
+}
+VIET_servant_hostage_countdown = {
+	icon = prison_negative
+	monthly_prestige = -0.2
+}
+VIET_ransomed_servants = {
+	icon = stewardship_positive
+	county_opinion_add = 4
+	monthly_piety = 0.3
+}
+VIET_let_servants_die = {
+	icon = prowess_negative
+	general_opinion = -5
+	county_opinion_add = -10
+	monthly_piety = -0.5
+}
+VIET_partly_successful_rescue_of_servants = {
+	icon = prowess_positive
+	general_opinion = 5
+	county_opinion_add = 4
+	monthly_piety = 0.3
+}
+VIET_servants_die_not_fault = {
+	icon = prowess_negative
+	monthly_prestige = -0.2
+}
+VIET_failed_to_rescue_servants = {
+	icon = prowess_negative
+	monthly_prestige = -0.4
+}
+VIET_rescued_servants_success = {
+	icon = prowess_positive
+	general_opinion = 5
+	county_opinion_add = 8
+	monthly_piety = 0.3
+	monthly_prestige = 0.3
+}
+VIET_kidnapped_servants_defect = {
+	icon = county_modifier_control_negative
+	intrigue = -1
+	county_opinion_add = -5
+	monthly_prestige = -0.3
+}
+VIET_kidnapped_servants_killed = {
+	icon = prowess_negative
+	general_opinion = -5
+	county_opinion_add = -10
+	monthly_prestige = -0.4
+}
+VIET_brilliant_servant = {
+	icon = social_positive
+	stewardship = 1
+	intrigue = 1
+	monthly_lifestyle_xp_gain_mult = 0.03
+}
+VIET_useful_intel_on_bandits = {
+	icon = outdoors_positive
+	martial = 1
+	intrigue = 1
+}
+VIET_qi_ma_in_town = {
+	icon = cat_positive
 }
 

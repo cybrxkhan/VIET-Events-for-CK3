@@ -1,0 +1,1956 @@
+﻿############################################################################################################################
+# 
+# Events connected to decisions - VIETmisc.2000-VIETmisc.2999 reserved
+# Fired from the on_actions for every one, two, five, and ten years depending on intended rarity
+# 
+# Note to self:
+# 
+# is_available_at_peace_adult = yes <-- use as trigger if needed
+# on_actions also has triggers
+# has_game_rule = VIET_all_events / VIET_serious_events / VIET_balanced_events
+# has_game_rule = VIET_normal_universe_events / VIET_historical_universe_events / VIET_conversion_universe_events
+# 
+# base = miniscule_stress_impact_loss
+# content = minor_stress_impact_loss
+# calm = medium_stress_impact_loss
+# 
+# Animations: idle, chancellor, steward, marshal, spymaster, chaplain, anger, rage, disapproval, disbelief, disgust, fear, sadness, shame, shock, worry, boredom, grief, paranoia, dismissal, flirtation, flirtation_left, love, schadenfreude, stress, happiness, ecstasy, admiration, lunatic (?), scheme, beg, pain, newborn, sick, severelywounded, prisonhouse, prisondungeon, war_attacker, war_defender, war_over_tie, war_over_win, war_over_loss, pregnant, personality_honorable, personality_dishonorable, personality_bold, personality_coward, personality_greedy, personality_content, personality_vengeful, personality_forgiving, personality_rational, personality_irrational, personality_compassionate, personality_callous, personality_zealous, personality_cynical
+# 
+# 
+# ##### GRAND LIST OF EVENTS #####
+# 
+# 2001-2003		Baklava Merchant
+# 2004-2006		Spice Merchant
+# 2007-2013		Ghost Exorcism
+# 2014-2018		Shadowbanish Wine
+# 2019-2020		Mysterious Treasure Chest
+# 2021-2022		Hire Mercenary Scholar
+# 2023-2038		Servants Kidnapped
+# 
+############################################################################################################################
+
+
+namespace = VIETmisc
+
+
+##################################################################
+# BAKLAVA MERCHANT 2001-2003
+##################################################################
+
+# Traveling baklava merchant arrives in town
+VIETmisc.2001 = {
+	type = character_event
+	title = VIETmisc.2001.t
+	desc = VIETmisc.2001.desc
+	theme = VIET_theme_small_town
+	override_icon = { reference = "gfx/interface/icons/event_types/type_feast.dds" }
+	
+	left_portrait = root
+	
+	trigger = {
+		NOT = { has_game_rule = VIET_conversion_universe_events }
+		OR = {
+			NOT = { has_government = tribal_government }			
+			capital_province = {
+				OR = {
+					geographical_region = world_middle_east
+					geographical_region = world_africa_north
+					geographical_region = world_europe_south
+					geographical_region = world_asia_minor
+					geographical_region = ghw_region_crimea
+					geographical_region = ghw_region_balkans
+				}
+			}
+		}
+	}
+	
+	weight_multiplier = {
+		base = 1
+		modifier = {
+			add = 0.2
+			has_trait = just
+		}
+		modifier = {
+			add = -0.2
+			has_trait = arbitrary
+		}
+		modifier = {
+			add = 0.2
+			has_trait = diligent
+		}
+		modifier = {
+			add = -0.2
+			has_trait = callous
+		}
+		modifier = {
+			add = 0.2
+			has_trait = gluttonous
+		}
+		modifier = {
+			add = -0.2
+			has_trait = temperate
+		}
+		modifier = {
+			add = -0.4			
+			capital_province = {
+				NOR = {
+					geographical_region = world_middle_east
+					geographical_region = world_africa_north
+					geographical_region = world_europe_south
+					geographical_region = world_asia_minor
+					geographical_region = ghw_region_crimea
+					geographical_region = ghw_region_balkans
+				}
+			}
+		}
+	}
+	
+	option = { # Ok
+		name = VIETmisc.2001.a
+		add_character_modifier = {
+			modifier = VIET_traveling_baklava_merchant_in_town
+		}
+		custom_tooltip = VIETmisc.2001.tooltip
+		hidden_effect = {
+			random_list = {
+				10 = {
+					trigger_event = {
+						id = VIETmisc.2003
+						months = { 12 16 }
+					}
+				}
+				10 = {
+					trigger_event = {
+						id = VIETmisc.2003
+						months = { 20 24 }
+					}
+				}
+				10 = {
+					trigger_event = {
+						id = VIETmisc.2003
+						months = { 28 32 }
+					}
+				}
+				10 = {
+					trigger_event = {
+						id = VIETmisc.2003
+						months = { 36 40 }
+					}
+				}
+			}
+		}
+	}
+}
+
+
+# Purchase something from the baklava merchant?
+VIETmisc.2002 = {
+	type = character_event
+	title = VIETmisc.2002.t
+	desc = VIETmisc.2002.desc
+	theme = VIET_theme_small_town #feast_activity
+	override_icon = { reference = "gfx/interface/icons/event_types/type_feast.dds" }
+	#override_background = { event_background = market }
+	
+	left_portrait = {
+		character = root
+		animation = ecstasy
+	}
+	
+	option = { # Ok
+		name = VIETmisc.2002.a
+		trigger = {
+			NOT = { has_character_modifier = VIET_bought_traveling_merchant_baklava }
+		}
+		add_character_modifier = {
+			modifier = VIET_bought_traveling_merchant_baklava
+			years = 5
+		}		
+	}
+	option = { # Ok
+		name = VIETmisc.2002.b
+		trigger = {
+			NOT = { has_character_modifier = VIET_bought_traveling_merchant_lokma }
+		}
+		add_character_modifier = {
+			modifier = VIET_bought_traveling_merchant_lokma
+			years = 5
+		}		
+	}	
+	option = { # Ok
+		name = VIETmisc.2002.c
+		trigger = {
+			NOT = { has_character_modifier = VIET_bought_traveling_merchant_kanafeh }
+		}
+		add_character_modifier = {
+			modifier = VIET_bought_traveling_merchant_kanafeh
+			years = 5
+		}		
+	}	
+	option = { # Ok
+		name = VIETmisc.2002.d
+		trigger = {
+			NOT = { has_character_modifier = VIET_bought_traveling_merchant_halwa }
+		}
+		add_character_modifier = {
+			modifier = VIET_bought_traveling_merchant_halwa
+			years = 5
+		}		
+	}
+	option = { # Ok
+		name = VIETmisc.2002.e
+		trigger = {
+			NOT = { has_character_modifier = VIET_bought_traveling_merchant_qatayef }
+		}
+		add_character_modifier = {
+			modifier = VIET_bought_traveling_merchant_qatayef
+			years = 5
+		}		
+	}
+}
+
+# Traveling baklava merchant leaves town
+VIETmisc.2003 = {
+	type = character_event
+	title = VIETmisc.2003.t
+	desc = VIETmisc.2003.desc
+	theme = VIET_theme_small_town
+	override_icon = { reference = "gfx/interface/icons/event_types/type_feast.dds" }
+	
+	left_portrait = {
+		character = root
+		animation = sadness
+	}
+	
+	option = { # Ok
+		name = VIETmisc.2003.a
+		remove_character_modifier = VIET_traveling_baklava_merchant_in_town
+	}
+}
+
+
+
+##################################################################
+# SPICE MERCHANT 2004-2006
+##################################################################
+
+# Traveling spice merchant arrives in town
+VIETmisc.2004 = {
+	type = character_event
+	title = VIETmisc.2004.t
+	desc = VIETmisc.2004.desc
+	theme = VIET_theme_small_town
+	override_icon = { reference = "gfx/interface/icons/event_types/type_feast.dds" }
+	
+	left_portrait = root
+	
+	weight_multiplier = {
+		base = 1
+		modifier = {
+			add = 0.2
+			has_trait = just
+		}
+		modifier = {
+			add = -0.2
+			has_trait = arbitrary
+		}
+		modifier = {
+			add = 0.2
+			has_trait = diligent
+		}
+		modifier = {
+			add = -0.2
+			has_trait = callous
+		}
+		modifier = {
+			add = 0.2
+			has_trait = gluttonous
+		}
+		modifier = {
+			add = -0.2
+			has_trait = temperate
+		}
+	}
+	
+	option = { # Ok
+		name = VIETmisc.2004.a
+		add_character_modifier = {
+			modifier = VIET_traveling_spice_merchant_in_town
+		}
+		custom_tooltip = VIETmisc.2004.tooltip
+		hidden_effect = {
+			random_list = {
+				10 = {
+					trigger_event = {
+						id = VIETmisc.2006
+						months = { 12 16 }
+					}
+				}
+				10 = {
+					trigger_event = {
+						id = VIETmisc.2006
+						months = { 20 24 }
+					}
+				}
+				10 = {
+					trigger_event = {
+						id = VIETmisc.2006
+						months = { 28 32 }
+					}
+				}
+				10 = {
+					trigger_event = {
+						id = VIETmisc.2006
+						months = { 36 40 }
+					}
+				}
+			}
+		}
+	}
+}
+
+
+# Purchase something from the spice merchant?
+VIETmisc.2005 = {
+	type = character_event
+	title = VIETmisc.2005.t
+	desc = VIETmisc.2005.desc
+	theme = VIET_theme_small_town #feast_activity
+	override_icon = { reference = "gfx/interface/icons/event_types/type_feast.dds" }
+	#override_background = { event_background = market }
+	
+	left_portrait = {
+		character = root
+		animation = personality_content
+	}
+	
+	option = { # Ok
+		name = VIETmisc.2005.a
+		add_character_modifier = {
+			modifier = VIET_bought_five_spice_blend
+			years = 5
+		}		
+	}
+}
+
+# Traveling spice merchant leaves town
+VIETmisc.2006 = {
+	type = character_event
+	title = VIETmisc.2006.t
+	desc = VIETmisc.2006.desc
+	theme = VIET_theme_small_town
+	override_icon = { reference = "gfx/interface/icons/event_types/type_feast.dds" }
+	
+	left_portrait = {
+		character = root
+		animation = sadness
+	}
+	
+	option = { # Ok
+		name = VIETmisc.2006.a
+		remove_character_modifier = VIET_traveling_spice_merchant_in_town
+	}
+}
+
+
+
+##################################################################
+# EXORCISE THE GHOST 2007-2013
+##################################################################
+
+# A ghost seems to be haunting you
+VIETmisc.2007 = {
+	type = character_event
+	title = VIETmisc.2007.t
+	desc = VIETmisc.2007.desc
+	theme = intrigue
+	
+	left_portrait = {
+		character = root
+		animation = paranoia
+	}
+	
+	weight_multiplier = {
+		base = 1
+		modifier = {
+			add = 0.2
+			has_trait = zealous
+		}
+		modifier = {
+			add = -0.2
+			has_trait = cynical
+		}
+		modifier = {
+			add = 0.2
+			has_trait = paranoid
+		}
+		modifier = {
+			add = -0.2
+			has_trait = trusting
+		}
+		modifier = {
+			add = 0.2
+			num_sinful_traits >= 1
+		}
+		modifier = {
+			add = -0.2
+			num_virtuous_traits >= 1
+		}
+	}
+	
+	immediate = {
+		play_music_cue = "mx_cue_murder"
+	}
+	
+	option = { # Ok
+		name = VIETmisc.2007.a
+		add_character_modifier = {
+			modifier = VIET_ghost_haunting
+		}
+		custom_tooltip = VIETmisc.2007.tooltip
+		hidden_effect = {
+			random_list = {
+				10 = {
+					trigger_event = {
+						id = VIETmisc.2008
+						months = 24
+					}
+				}
+				10 = {
+					trigger_event = {
+						id = VIETmisc.2008
+						months = 48
+					}
+				}
+				10 = {
+					trigger_event = {
+						id = VIETmisc.2008
+						months = 72
+					}
+				}
+				10 = {
+					trigger_event = {
+						id = VIETmisc.2008
+						months = 96
+					}
+				}
+				10 = {
+					trigger_event = {
+						id = VIETmisc.2008
+						months = 120
+					}
+				}
+				20 = { # Maybe the ghost is real?
+
+				}
+			}
+		}
+	}
+}
+
+# The ghost is gone
+VIETmisc.2008 = {
+	type = character_event
+	title = VIETmisc.2008.t
+	desc = VIETmisc.2008.desc
+	theme = VIET_theme_garden_generic
+	
+	left_portrait = {
+		character = root
+		animation = personality_cynical
+	}
+	
+	option = { # Ok
+		name = VIETmisc.2008.a
+		remove_character_modifier = VIET_ghost_haunting
+	}
+}
+
+
+# Pay the exorcist
+VIETmisc.2009 = {
+	type = character_event
+	title = VIETmisc.2009.t
+	desc = VIETmisc.2009.desc
+	theme = faith
+	
+	left_portrait = {
+		character = root
+		animation = personality_zealous
+	}
+	
+	option = { # Normal fee
+		name = VIETmisc.2009.a
+		remove_short_term_gold = 50
+		custom_tooltip = VIETmisc.2009.a.tooltip
+		hidden_effect = {
+			random_list = {
+				20 = {	# Hoax
+					trigger_event = VIETmisc.2010
+				}
+				40 = {	# Good result
+					trigger_event = VIETmisc.2011	
+				}
+				20 = {	# Malevolent ghost vows revenge
+					trigger_event = VIETmisc.2012		
+				}
+				20 = {	# Benevolent ghost apologizes
+					trigger_event = VIETmisc.2013		
+				}
+			}
+		}
+	}	
+	option = { # Large fee
+		name = VIETmisc.2009.b
+		remove_short_term_gold = 100
+		custom_tooltip = VIETmisc.2009.b.tooltip
+		stress_impact = {
+			greedy = medium_stress_impact_gain
+			cynical = minor_stress_impact_gain
+		}
+		hidden_effect = {
+			random_list = {
+				10 = {	# Hoax
+					trigger_event = VIETmisc.2010				
+				}
+				60 = {	# Good result
+					trigger_event = VIETmisc.2011
+				
+				}
+				10 = {	# Malevolent ghost vows revenge
+					trigger_event = VIETmisc.2012			
+				}
+				20 = {	# Benevolent ghost apologizes
+					trigger_event = VIETmisc.2013				
+				}
+			}
+		}
+	}	
+	option = { # No fee
+		name = VIETmisc.2009.c
+		custom_tooltip = VIETmisc.2009.c.tooltip
+		stress_impact = {
+			humble = medium_stress_impact_gain
+			generous = minor_stress_impact_gain
+			just = minor_stress_impact_gain
+		}
+		hidden_effect = {
+			random_list = {
+				25 = {	# Hoax
+					trigger_event = VIETmisc.2010
+				}
+				30 = {	# Good result
+					trigger_event = VIETmisc.2011
+				
+				}
+				25 = {	# Malevolent ghost vows revenge
+					trigger_event = VIETmisc.2012
+				
+				}
+				20 = {	# Benevolent ghost apologizes
+					trigger_event = VIETmisc.2013				
+				}
+			}
+		}
+	}
+}
+
+
+
+# It's a hoax!
+VIETmisc.2010 = {
+	type = character_event
+	title = VIETmisc.2010.t
+	desc = VIETmisc.2010.desc
+	theme = corruption
+	
+	left_portrait = {
+		character = root
+		animation = rage
+	}
+	
+	immediate = {
+		remove_character_modifier = VIET_ghost_haunting
+	}
+	
+	option = { # Bah
+		name = VIETmisc.2010.a
+		VIET_huge_prestige_loss_effect = yes
+		stress_impact = {
+			base = minor_stress_impact_gain
+			greedy = minor_stress_impact_gain
+			wrathful = minor_stress_impact_gain
+		}
+	}
+}
+
+# The ghost is gone
+VIETmisc.2011 = {
+	type = character_event
+	title = VIETmisc.2011.t
+	desc = VIETmisc.2011.desc
+	theme = friendly
+	
+	left_portrait = {
+		character = root
+		animation = happiness
+	}
+	
+	immediate = {
+		remove_character_modifier = VIET_ghost_haunting
+	}
+	
+	option = { # Bah
+		name = VIETmisc.2011.a
+	}
+}
+
+
+# The ghost turns out to be malevolent
+VIETmisc.2012 = {
+	type = character_event
+	title = VIETmisc.2012.t
+	desc = VIETmisc.2012.desc
+	theme = VIET_theme_nightmare
+	
+	left_portrait = {
+		character = root
+		animation = shock
+	}
+	
+	immediate = {
+		remove_character_modifier = VIET_ghost_haunting
+		play_music_cue = mx_cue_crusade_starts 
+	}
+	
+	option = { # Crap
+		name = VIETmisc.2012.a
+		add_character_modifier = {
+			modifier = VIET_ghost_curse
+		}
+		stress_impact = {
+			base = medium_stress_impact_gain
+			craven = medium_stress_impact_gain
+			zealous = minor_stress_impact_gain
+		}
+	}
+}
+
+
+# The ghost turns out to be benevolent
+VIETmisc.2013 = {
+	type = character_event
+	title = VIETmisc.2013.t
+	desc = VIETmisc.2013.desc
+	theme = VIET_theme_good_dream
+	
+	left_portrait = {
+		character = root
+		animation = personality_content
+	}
+	
+	immediate = {
+		remove_character_modifier = VIET_ghost_haunting
+		play_music_cue = "mx_cue_positive_effect"
+	}
+	
+	option = { # Ok
+		name = VIETmisc.2013.a
+		add_character_modifier = {
+			modifier = VIET_ghost_blessing
+		}
+		stress_impact = {
+			base = medium_stress_impact_loss
+			compassionate = medium_stress_impact_loss
+			humble = medium_stress_impact_loss
+			trusting = medium_stress_impact_loss
+			zealous = medium_stress_impact_loss
+		}
+	}
+}
+
+
+
+
+##################################################################
+# SHADOWBANISH WINE 2014-2018
+##################################################################
+
+# Your soldiers find Shadowbanish Wine
+VIETmisc.2014 = {
+	type = character_event
+	title = VIETmisc.2014.t
+	desc = VIETmisc.2014.desc
+	theme = VIET_theme_ancient_cairn
+	
+	left_portrait = {
+		character = root
+		animation = personality_rational
+	}
+	
+	weight_multiplier = {
+		base = 1
+		modifier = {
+			add = 0.2
+			has_trait = lazy
+		}
+		modifier = {
+			add = -0.2
+			has_trait = diligent
+		}
+		modifier = {
+			add = 0.2
+			has_trait = brave
+		}
+		modifier = {
+			add = -0.2
+			has_trait = craven
+		}
+		modifier = {
+			add = 0.2
+			has_trait = trusting
+		}
+		modifier = {
+			add = -0.2
+			has_trait = paranoid
+		}
+	}
+	
+	option = { # Ok
+		name = VIETmisc.2014.a
+		trigger_event = {
+			id = VIETmisc.2015
+			days = { 3 8 }
+		}
+	}
+}
+
+# Old lady recognizes the wine bottle
+VIETmisc.2015 = {
+	type = character_event
+	title = VIETmisc.2015.t
+	desc = VIETmisc.2015.desc
+	theme = VIET_theme_small_town
+	
+	left_portrait = {
+		character = root
+		animation = personality_rational
+	}
+	
+	option = { # Ok
+		name = VIETmisc.2015.a
+		trigger_event = VIETmisc.2016
+	}
+}
+
+# Old lady recognizes the wine bottle
+VIETmisc.2016 = {
+	type = character_event
+	title = VIETmisc.2016.t
+	desc = VIETmisc.2016.desc
+	theme = VIET_theme_small_town
+	
+	left_portrait = {
+		character = root
+		animation = personality_rational
+	}
+	
+	immediate = {
+		random_list = {
+			10 = {
+				add_character_modifier = {
+					modifier = VIET_has_shadowbanish_wine_bottle
+					months = 24
+				}
+			}
+			10 = {
+				add_character_modifier = {
+					modifier = VIET_has_shadowbanish_wine_bottle
+					months = 48
+				}
+			}
+			10 = {
+				add_character_modifier = {
+					modifier = VIET_has_shadowbanish_wine_bottle
+					months = 72
+				}
+			}
+			10 = {
+				add_character_modifier = {
+					modifier = VIET_has_shadowbanish_wine_bottle
+					months = 96
+				}
+			}
+			10 = {
+				add_character_modifier = {
+					modifier = VIET_has_shadowbanish_wine_bottle
+					months = 120
+				}
+			}
+		}
+	}
+	
+	option = { # Ok
+		name = VIETmisc.2016.a
+		custom_tooltip = VIETmisc.2016.tooltip
+		if = {
+			limit = {
+				OR = {
+					religion = religion:islam_religion # Prohibited by khamr, a prohibition against intoxicants
+					religion = religion:jainism_religion # Prohibited along with the consumption of any fermented food
+					religion = religion:buddhism_religion # Discouraged as it disrupts progress along the eightfold path
+				}			
+			}
+			custom_tooltip = VIETmisc.2016.tooltip.haram
+		}
+	}
+}
+
+
+
+
+# Drink the wine bottle
+VIETmisc.2017 = {
+	type = character_event
+	title = VIETmisc.2017.t
+	desc = {
+		first_valid = {
+			triggered_desc = {
+				trigger = {
+					has_trait = blind
+				}
+				desc = VIETmisc.2017.desc.blind
+			}
+			triggered_desc = {
+				trigger = {
+					NOT = { has_trait = blind }
+				}
+				desc = VIETmisc.2017.desc
+			}
+		}
+	}
+	theme = friendly
+	override_background = { event_background = corridor_night }
+	
+	left_portrait = {
+		character = root
+		animation = ecstasy
+	}
+	
+	immediate = {
+		remove_character_modifier = VIET_has_shadowbanish_wine_bottle
+		random_list = {
+			10 = {
+				add_character_modifier = {
+					modifier = VIET_drank_shadowbanish_wine
+					months = 24
+				}
+			}
+			10 = {
+				add_character_modifier = {
+					modifier = VIET_drank_shadowbanish_wine
+					months = 36
+				}
+			}
+			10 = {
+				add_character_modifier = {
+					modifier = VIET_drank_shadowbanish_wine
+					months = 48
+				}
+			}
+		}
+		if = {
+			limit = {
+				OR = {
+					religion = religion:islam_religion # Prohibited by khamr, a prohibition against intoxicants
+					religion = religion:jainism_religion # Prohibited along with the consumption of any fermented food
+					religion = religion:buddhism_religion # Discouraged as it disrupts progress along the eightfold path
+				}			
+			}
+			VIET_huge_piety_loss_effect = yes
+		}
+	}
+	
+	option = { # Ok
+		name = VIETmisc.2017.a
+	}
+}
+
+
+
+# Destroy the wine bottle
+VIETmisc.2018 = {
+	type = character_event
+	title = VIETmisc.2018.t
+	desc = VIETmisc.2018.desc
+	theme = VIET_background_skyrim_forest
+	
+	left_portrait = {
+		character = root
+		animation = personality_zealous
+	}
+	
+	immediate = {		
+		remove_character_modifier = VIET_has_shadowbanish_wine_bottle
+	}
+	
+	option = { # Ok
+		name = VIETmisc.2018.a
+		add_character_modifier = {
+			modifier = VIET_destroyed_shadowbanish_wine
+			years = 10
+		}
+		VIET_huge_piety_gain_effect = yes
+	}
+}
+
+
+
+
+##################################################################
+# MYSTERIOUS TREASURE CHEST 2019-2020
+##################################################################
+
+# Your servants find a mysterious treasure chest
+VIETmisc.2019 = {
+	type = character_event
+	title = VIETmisc.2019.t
+	desc = VIETmisc.2019.desc
+	theme = VIET_theme_tuscan_country
+	
+	right_portrait = root
+	
+	weight_multiplier = {
+		base = 1
+		modifier = {
+			add = 0.2
+			has_trait = diligent
+		}
+		modifier = {
+			add = -0.2
+			has_trait = lazy
+		}
+		modifier = {
+			add = 0.2
+			has_trait = calm
+		}
+		modifier = {
+			add = -0.2
+			has_trait = wrathful
+		}
+		modifier = {
+			add = 0.2
+			has_trait = compassionate
+		}
+		modifier = {
+			add = -0.2
+			has_trait = sadistic
+		}
+	}
+	
+	immediate = {
+		random_list = {
+			10 = {
+				add_character_modifier = {
+					modifier = VIET_has_mysterious_chest
+					years = 5
+				}
+			}
+			20 = {
+				add_character_modifier = {
+					modifier = VIET_has_mysterious_chest
+					years = 10
+				}
+			}
+			10 = {
+				add_character_modifier = {
+					modifier = VIET_has_mysterious_chest
+					years = 15
+				}
+			}
+		}
+	}
+	
+	option = { # Ok
+		name = VIETmisc.2019.a
+		custom_tooltip = VIETmisc.2019.tooltip
+	}
+}
+
+
+
+# Opening the treasure chest
+VIETmisc.2020 = {
+	type = character_event
+	title = VIETmisc.2020.t
+	desc = {
+		desc = VIETmisc.2020.desc
+		first_valid = {
+			triggered_desc = {
+				trigger = { has_character_flag = VIET_decision_chest_nothing }
+				desc = VIETmisc.2020.desc.a
+			}
+			triggered_desc = {
+				trigger = { has_character_flag = VIET_decision_chest_small_gold }
+				desc = VIETmisc.2020.desc.b
+			}
+			triggered_desc = {
+				trigger = { has_character_flag = VIET_decision_chest_large_gold }
+				desc = VIETmisc.2020.desc.c
+			}
+			triggered_desc = {
+				trigger = { has_character_flag = VIET_decision_chest_ancient_scroll }
+				desc = VIETmisc.2020.desc.d
+			}
+			triggered_desc = {
+				trigger = { has_character_flag = VIET_decision_chest_golden_rose }
+				desc = VIETmisc.2020.desc.e
+			}
+		}
+	}
+	theme = realm
+	
+	left_portrait = {
+		character = root
+		animation = personality_rational
+	}
+	
+	immediate = {
+		remove_character_modifier = VIET_has_mysterious_chest
+		random_list = {
+			# Nothing
+			10 = {
+				add_character_flag = VIET_decision_chest_nothing
+			}
+			# Small amount of gold
+			20 = {
+				add_character_flag = VIET_decision_chest_small_gold
+				random_list = {
+					10 = { add_gold = 20 }
+					10 = { add_gold = 30 }
+					10 = { add_gold = 40 }
+				}
+			}
+			# Large amount of gold
+			10 = {
+				add_character_flag = VIET_decision_chest_large_gold
+				random_list = {
+					10 = { add_gold = 50 }
+					10 = { add_gold = 75 }
+					10 = { add_gold = 100 }
+					10 = { add_gold = 125 }
+					10 = { add_gold = 150 }
+				}
+			}
+			# Ancient Scroll
+			10 = {
+				add_character_flag = VIET_decision_chest_ancient_scroll
+				add_character_modifier = {
+					modifier = VIET_chest_ancient_scroll
+					years = 10
+				}
+			}
+			# Golden Rose
+			10 = {
+				add_character_flag = VIET_decision_chest_golden_rose
+				add_character_modifier = {
+					modifier = VIET_chest_golden_rose
+					years = 10
+				}
+			}
+		}
+	}
+	
+	option = { # Ok
+		name = VIETmisc.2020.a
+		trigger = { has_character_flag = VIET_decision_chest_nothing }
+	}	
+	option = { # Ok
+		name = VIETmisc.2020.b
+		trigger = { has_character_flag = VIET_decision_chest_small_gold }
+	}	
+	option = { # Ok
+		name = VIETmisc.2020.c
+		trigger = { has_character_flag = VIET_decision_chest_large_gold }
+	}	
+	option = { # Ok
+		name = VIETmisc.2020.d
+		trigger = { has_character_flag = VIET_decision_chest_ancient_scroll }
+	}	
+	option = { # Ok
+		name = VIETmisc.2020.e
+		trigger = { has_character_flag = VIET_decision_chest_golden_rose }
+	}
+	
+	after = {
+		if = {
+			limit = { has_character_flag = VIET_decision_chest_nothing }
+			remove_character_flag = VIET_decision_chest_nothing
+		}
+		if = {
+			limit = { has_character_flag = VIET_decision_chest_small_gold }
+			remove_character_flag = VIET_decision_chest_small_gold
+		}
+		if = {
+			limit = { has_character_flag = VIET_decision_chest_large_gold }
+			remove_character_flag = VIET_decision_chest_large_gold
+		}
+		if = {
+			limit = { has_character_flag = VIET_decision_chest_ancient_scroll }
+			remove_character_flag = VIET_decision_chest_ancient_scroll
+		}
+		if = {
+			limit = { has_character_flag = VIET_decision_chest_golden_rose }
+			remove_character_flag = VIET_decision_chest_golden_rose
+		}
+	}
+}
+
+
+
+
+
+
+##################################################################
+# HIRE MERCENARY SCHOLAR 2021-2022 (Loosely based off Belrand in Skyrim)
+##################################################################
+
+# Meet the mercenary scholar at an inn
+VIETmisc.2021 = {
+	type = character_event
+	title = VIETmisc.2021.t
+	desc = VIETmisc.2021.desc
+	theme = martial_chivalry_focus
+	override_background = { event_background = tavern }
+	
+	
+	left_portrait = root
+	
+	weight_multiplier = {
+		base = 1
+		modifier = {
+			add = 0.2
+			has_trait = gluttonous
+		}
+		modifier = {
+			add = -0.2
+			has_trait = temperate
+		}
+		modifier = {
+			add = 0.2
+			has_trait = gregarious
+		}
+		modifier = {
+			add = -0.2
+			has_trait = shy
+		}
+		modifier = {
+			add = 0.2
+			has_trait = trusting
+		}
+		modifier = {
+			add = -0.2
+			has_trait = paranoid
+		}
+	}
+	
+	immediate = {
+		random_list = {
+			10 = {
+				add_character_modifier = {
+					modifier = VIET_mercenary_scholar_in_town
+					years = 2
+				}
+			}
+			10 = {
+				add_character_modifier = {
+					modifier = VIET_mercenary_scholar_in_town
+					years = 3
+				}
+			}
+			10 = {
+				add_character_modifier = {
+					modifier = VIET_mercenary_scholar_in_town
+					years = 4
+				}
+			}
+			10 = {
+				add_character_modifier = {
+					modifier = VIET_mercenary_scholar_in_town
+					years = 5
+				}
+			}
+		}
+	}
+	
+	option = { # Ok
+		name = VIETmisc.2021.a
+		custom_tooltip = VIETmisc.2021.tooltip
+	}
+}
+
+# The mercenary is hired
+VIETmisc.2022 = {
+	type = character_event
+	title = VIETmisc.2022.t
+	desc = VIETmisc.2022.desc
+	theme = martial_chivalry_focus
+	override_background = { event_background = tavern }
+	
+	
+	left_portrait = {
+		character = root
+		animation = personality_content
+	}
+	
+	immediate = {
+		remove_character_modifier = VIET_mercenary_scholar_in_town
+	}
+	
+	option = { # Ok
+		name = VIETmisc.2022.a
+		add_character_modifier = {
+			modifier = VIET_hired_belrand
+			years = 10
+		}
+	}
+}
+
+
+
+##################################################################
+# SERVANTS KIDNAPPED 2023-2038
+##################################################################
+
+# Servants are kidnapped - start the countdown
+VIETmisc.2023 = {
+	type = character_event
+	title = VIETmisc.2023.t
+	desc = VIETmisc.2023.desc
+	theme = corruption
+	override_background = { event_background = throne_room }
+	
+	
+	left_portrait = {
+		character = root
+		animation = worry
+	}
+	
+	weight_multiplier = {
+		base = 1
+		modifier = {
+			add = 0.2
+			has_trait = lazy
+		}
+		modifier = {
+			add = -0.2
+			has_trait = diligent
+		}
+		modifier = {
+			add = 0.2
+			has_trait = fickle
+		}
+		modifier = {
+			add = -0.2
+			has_trait = stubborn
+		}
+		modifier = {
+			add = 0.2
+			has_trait = greedy
+		}
+		modifier = {
+			add = -0.2
+			has_trait = generous
+		}
+	}
+	
+	immediate = {
+		play_music_cue = mx_cue_stress  
+	}
+	
+	option = { # Ok
+		name = VIETmisc.2023.a
+		#hidden_effect = { # Start countdown to ransom deadline
+		#	trigger_event = {
+		#		id = VIETmisc.2008
+		#		days = 366
+		#	}		
+		#}
+		add_character_modifier = {
+			modifier = VIET_servant_hostage_countdown
+			days = 365
+		}
+		add_character_flag = VIET_servant_hostage_countdown_real
+		if = {
+			limit = {
+				is_ai = no
+			}
+			hidden_effect = {
+				random_list = {
+					35 = { # Random unexpected outcome
+						trigger_event = {
+							id = VIETmisc.2035
+							days = { 30 240 }
+						}
+					}
+					65 = { # Deadline is not met
+						trigger_event = {
+							id = VIETmisc.2032
+							days = 366 # When this event triggers, the modifier is already removed - use a hidden flag?
+						}
+					}
+				}		
+			}
+		}
+		else = {
+			random_list = {
+				35 = { # Random unexpected outcome
+					trigger_event = {
+						id = VIETmisc.2035
+						days = { 30 240 }
+					}
+				}
+				65 = { # Deadline is not met
+					trigger_event = {
+						id = VIETmisc.2032
+						days = 366 # When this event triggers, the modifier is already removed - use a hidden flag?
+					}
+				}
+				100 = { # Deadline is met
+					modifier = {
+						add = 10
+						NOR = {
+							has_trait = callous
+							has_trait = sadistic
+							has_trait = greedy
+							has_trait = arbitrary
+						}							
+					}
+					modifier = {
+						add = 15
+						has_trait = compassionate						
+					}
+					modifier = {
+						add = 15
+						has_trait = just						
+					}
+					trigger_event = {
+						id = VIETmisc.2024
+						days = { 30 240 }
+					}
+				}
+			}
+		}
+		#else = { # AI does nothing
+		#	
+		#}
+		custom_tooltip = VIETmisc.2023.tooltip
+	}
+}
+
+
+
+# Choose whether to pay the ransom or rescue the servants
+VIETmisc.2024 = {
+	type = character_event
+	title = VIETmisc.2024.t
+	desc = VIETmisc.2024.desc
+	theme = corruption
+	override_background = { event_background = throne_room }
+	
+	
+	left_portrait = {
+		character = root
+		animation = personality_bold
+	}
+	
+	immediate = {
+		hidden_effect = {
+			remove_character_modifier = VIET_servant_hostage_countdown
+			remove_character_flag = VIET_servant_hostage_countdown_real
+		}
+	}
+	
+	option = { # Pay the ransom
+		name = VIETmisc.2024.a
+		custom_tooltip = VIETmisc.2024.a.tooltip
+		stress_impact = {
+			greedy = medium_stress_impact_gain
+			vengeful = minor_stress_impact_gain
+		}
+		#hidden_effect = {
+			random_list = {
+				55 = { # Bandits accept ransom as originally agreed
+					modifier = {
+						add = 4
+						dread > 25
+					}
+					modifier = {
+						add = 6
+						dread > 50
+					}
+					modifier = {
+						add = 8
+						dread > 75
+					}
+					modifier = { # You're a man/woman of your word
+						add = 10
+						OR = {
+							has_trait = just
+							has_trait = honest
+						}
+					}
+					modifier = {
+						add = 5
+						probably_intelligent_trigger = yes
+					}
+					modifier = {
+						add = 10
+						diplomacy > decent_skill_rating
+					}
+					trigger_event = VIETmisc.2025						
+				}
+				25 = { # Bandits demand increase in ransom
+					modifier = {
+						add = 5
+						martial < mediocre_skill_rating
+					}
+					modifier = {
+						add = 5
+						intrigue < mediocre_skill_rating
+					}
+					modifier = {
+						add = 5
+						probably_unintelligent_trigger = yes
+					}
+					trigger_event = VIETmisc.2026				
+				}
+				20 = { # Bandits kill servants
+					modifier = {
+						add = 5
+						martial < mediocre_skill_rating
+					}
+					modifier = {
+						add = 5
+						intrigue < mediocre_skill_rating
+					}
+					modifier = {
+						add = 5
+						OR = {
+							has_trait = trusting
+							has_trait = honest
+						}
+					}
+					modifier = {
+						add = 5
+						probably_unintelligent_trigger = yes
+					}
+					trigger_event = VIETmisc.2028				
+				}
+			}
+		#}
+	}	
+	option = { # Attempt to rescue servants
+		name = VIETmisc.2024.b
+		custom_tooltip = VIETmisc.2024.b.tooltip
+		stress_impact = {
+			craven = medium_stress_impact_gain
+			paranoid = minor_stress_impact_gain
+		}
+		#hidden_effect = {
+			random_list = {
+				30 = { # Rescue fails
+					modifier = {
+						add = 5
+						martial < mediocre_skill_rating
+					}
+					modifier = {
+						add = 5
+						intrigue < mediocre_skill_rating
+					}
+					modifier = {
+						add = 5
+						probably_unintelligent_trigger = yes
+					}
+					trigger_event = VIETmisc.2029						
+				}
+				40 = { # Rescue is partial success
+					trigger_event = VIETmisc.2030						
+				}
+				30 = { # Rescue succeeds
+					modifier = {
+						add = 5
+						martial > decent_skill_rating
+					}
+					modifier = {
+						add = 5
+						intrigue > decent_skill_rating
+					}
+					modifier = {
+						add = 5
+						probably_intelligent_trigger = yes
+					}
+					trigger_event = VIETmisc.2031						
+				}
+			}
+		#}
+	}
+}
+
+
+# Ransom is paid without incident
+VIETmisc.2025 = {
+	type = character_event
+	title = VIETmisc.2025.t
+	desc = VIETmisc.2025.desc
+	theme = corruption
+	override_background = { event_background = VIET_background_skyrim_forest }
+	
+	
+	right_portrait = {
+		character = root
+		animation = personality_bold
+	}
+	
+	option = { # Pay the ransom
+		name = VIETmisc.2025.a
+		remove_short_term_gold = 100
+		add_character_modifier = {
+			modifier = VIET_ransomed_servants
+			years = 10
+		}
+		#VIET_huge_prestige_loss_effect = yes
+	}
+}
+
+
+# Bandits demand increased ransom
+VIETmisc.2026 = {
+	type = character_event
+	title = VIETmisc.2026.t
+	desc = VIETmisc.2026.desc
+	theme = corruption
+	override_background = { event_background = VIET_background_skyrim_forest }
+	
+	
+	right_portrait = {
+		character = root
+		animation = anger
+	}
+	
+	option = { # Pay the increased ransom
+		name = VIETmisc.2026.a
+		stress_impact = {
+			greedy = medium_stress_impact_gain
+			vengeful = minor_stress_impact_gain
+		}
+		remove_short_term_gold = 200
+		add_character_modifier = {
+			modifier = VIET_ransomed_servants
+			years = 10
+		}
+		VIET_massive_prestige_loss_effect = yes
+	}	
+	option = { # Pay the original amount!
+		name = VIETmisc.2026.b
+		trigger = {
+			diplomacy >= medium_skill_rating
+		}
+		skill = diplomacy
+		remove_short_term_gold = 100
+		add_character_modifier = {
+			modifier = VIET_ransomed_servants
+			years = 10
+		}
+		#VIET_huge_prestige_loss_effect = yes
+	}
+	option = { # Servants will die
+		name = VIETmisc.2026.c
+		stress_impact = {
+			compassionate = major_stress_gain
+			just = major_stress_gain
+			vengeful = medium_stress_gain
+		}
+		add_character_modifier = {
+			modifier = VIET_let_servants_die
+			years = 10
+		}
+		VIET_massive_piety_loss_effect = yes
+	}
+	option = { # Risky last minute rescue
+		name = VIETmisc.2026.d
+		trigger = {
+			martial >= medium_skill_rating
+			NOT = {
+				intrigue >= medium_skill_rating
+			}
+		}
+		skill = martial
+		custom_tooltip = VIETmisc.2026.d.tooltip
+		stress_impact = {
+			craven = medium_stress_impact_gain
+			paranoid = minor_stress_impact_gain
+		}
+		#hidden_effect = {
+			trigger_event = VIETmisc.2027
+		#}
+	}
+	option = { # Risky last minute rescue
+		name = VIETmisc.2026.d
+		trigger = {
+			intrigue >= medium_skill_rating
+		}
+		skill = intrigue
+		custom_tooltip = VIETmisc.2026.d.tooltip
+		stress_impact = {
+			craven = medium_stress_impact_gain
+			paranoid = minor_stress_impact_gain
+		}
+		#hidden_effect = {
+			trigger_event = VIETmisc.2027
+		#}
+	}
+}
+
+# Last minute distraction, some die
+VIETmisc.2027 = {
+	type = character_event
+	title = VIETmisc.2027.t
+	desc = VIETmisc.2027.desc
+	theme = battle
+	override_background = { event_background = VIET_background_skyrim_forest }	
+	
+	right_portrait = {
+		character = root
+		animation = personality_callous
+	}
+	
+	option = { # Yay
+		name = VIETmisc.2027.a
+		add_character_modifier = {
+			modifier = VIET_partly_successful_rescue_of_servants
+			years = 10
+		}
+	}
+}
+
+# Bandits betray you
+VIETmisc.2028 = {
+	type = character_event
+	title = VIETmisc.2028.t
+	desc = VIETmisc.2028.desc
+	theme = battle
+	override_background = { event_background = VIET_background_skyrim_forest }	
+	
+	right_portrait = {
+		character = root
+		animation = personality_vengeful
+	}
+	
+	immediate = {
+		play_music_cue = "mx_cue_death"
+	}
+	
+	option = { # Dammit!
+		name = VIETmisc.2028.a
+		stress_impact = {
+			base = minor_stress_impact_gain
+			paranoid = minor_stress_impact_gain
+			wrathful = minor_stress_impact_gain
+		}
+		add_character_modifier = {
+			modifier = VIET_servants_die_not_fault
+			years = 10
+		}
+		VIET_huge_prestige_loss_effect = yes
+	}
+}
+
+# Rescue fails
+VIETmisc.2029 = {
+	type = character_event
+	title = VIETmisc.2029.t
+	desc = VIETmisc.2029.desc
+	theme = battle
+	override_background = { event_background = VIET_background_skyrim_forest }	
+	
+	right_portrait = {
+		character = root
+		animation = personality_vengeful
+	}
+	
+	immediate = {
+		play_music_cue = "mx_cue_death"
+	}
+	
+	option = { # Dammit!
+		name = VIETmisc.2029.a
+		stress_impact = {
+			base = minor_stress_impact_gain
+			diligent = minor_stress_impact_gain
+			compassionate = minor_stress_impact_gain
+			wrathful = minor_stress_impact_gain
+		}
+		add_character_modifier = {
+			modifier = VIET_failed_to_rescue_servants
+			years = 10
+		}
+		VIET_huge_prestige_loss_effect = yes
+	}
+}
+
+# Rescue is partial success
+VIETmisc.2030 = {
+	type = character_event
+	title = VIETmisc.2030.t
+	desc = VIETmisc.2030.desc
+	theme = battle
+	override_background = { event_background = VIET_background_skyrim_forest }
+	
+	right_portrait = {
+		character = root
+		animation = personality_callous
+	}
+	
+	option = { # Ok
+		name = VIETmisc.2030.a
+		add_character_modifier = {
+			modifier = VIET_partly_successful_rescue_of_servants
+			years = 10
+		}
+	}
+}
+
+# Rescue is success
+VIETmisc.2031 = {
+	type = character_event
+	title = VIETmisc.2031.t
+	desc = VIETmisc.2031.desc
+	theme = battle
+	override_background = { event_background = VIET_background_skyrim_forest }
+	
+	right_portrait = {
+		character = root
+		animation = personality_callous
+	}
+	
+	option = { # Ok
+		name = VIETmisc.2031.a
+		stress_impact = {
+			base = minor_stress_impact_loss
+			vengeful = minor_stress_impact_loss
+			compassionate = minor_stress_impact_loss
+		}
+		add_character_modifier = {
+			modifier = VIET_rescued_servants_success
+			years = 10
+		}
+	}
+}
+
+
+# Ping for outcome if nothing is done
+VIETmisc.2032 = {
+	type = empty
+	hidden = yes
+	
+	immediate = {	
+		if = {
+			limit = {
+				has_character_flag = VIET_servant_hostage_countdown_real
+			}
+			remove_character_flag = VIET_servant_hostage_countdown_real
+			random_list = {
+				30 = { trigger_event = VIETmisc.2033 } # Servants defect
+				70 = { trigger_event = VIETmisc.2034 } # Servants are killed
+			}
+		}	
+	}
+}
+
+# Servants defect to bandits
+VIETmisc.2033 = {
+	type = character_event
+	title = VIETmisc.2033.t
+	desc = VIETmisc.2033.desc
+	theme = realm
+	
+	left_portrait = {
+		character = root
+		animation = worry
+	}
+	
+	immediate = {
+		play_music_cue = "mx_cue_murder"
+	}
+	
+	option = { # Ok
+		name = VIETmisc.2033.a
+		stress_impact = {
+			base = minor_stress_impact_gain
+			arrogant = minor_stress_impact_gain
+			paranoid = minor_stress_impact_gain
+			wrathful = minor_stress_impact_gain
+		}
+		add_character_modifier = {
+			modifier = VIET_kidnapped_servants_defect
+			years = 10
+		}
+		VIET_massive_prestige_loss_effect = yes
+	}
+}
+
+# Servants are killed
+VIETmisc.2034 = {
+	type = character_event
+	title = VIETmisc.2034.t
+	desc = VIETmisc.2034.desc
+	theme = realm
+	
+	left_portrait = {
+		character = root
+		animation = worry
+	}
+	
+	immediate = {
+		play_music_cue = "mx_cue_murder"
+	}
+	
+	option = { # Ok
+		name = VIETmisc.2034.a
+		stress_impact = {
+			base = minor_stress_impact_gain
+			diligent = minor_stress_impact_gain
+			compassionate = minor_stress_impact_gain
+			wrathful = minor_stress_impact_gain
+		}
+		add_character_modifier = {
+			modifier = VIET_kidnapped_servants_killed
+			years = 10
+		}
+		VIET_massive_prestige_loss_effect = yes
+	}
+}
+
+# Ping for unexpected outcome
+VIETmisc.2035 = {
+	type = empty
+	hidden = yes
+	
+	immediate = {
+		remove_character_flag = VIET_servant_hostage_countdown_real
+		if = {
+			limit = {
+				has_character_modifier = VIET_servant_hostage_countdown
+			}
+			random_list = {
+				10 = { trigger_event = VIETmisc.2036 } # Servants execute a bungled escape attempt
+				10 = { trigger_event = VIETmisc.2037 } # Servants are killed early in gang war
+				10 = { trigger_event = VIETmisc.2038 } # Servants escape successfully
+			}
+		}	
+	}
+}
+
+# Servants execute a bungled escape attempt
+VIETmisc.2036 = {
+	type = character_event
+	title = VIETmisc.2036.t
+	desc = VIETmisc.2036.desc
+	theme = realm
+	
+	left_portrait = root
+	
+	immediate = {
+		remove_character_modifier = VIET_servant_hostage_countdown
+		VIET_huge_prestige_loss_effect = yes
+	}
+	
+	option = { # Ok
+		name = VIETmisc.2036.a
+	}
+}
+
+# Servants are killed early in gang war
+VIETmisc.2037 = {
+	type = character_event
+	title = VIETmisc.2037.t
+	desc = VIETmisc.2037.desc
+	theme = realm
+	
+	left_portrait = root
+	
+	immediate = {
+		remove_character_modifier = VIET_servant_hostage_countdown
+		VIET_massive_prestige_loss_effect = yes
+	}
+	
+	option = { # Ok
+		name = VIETmisc.2037.a
+		stress_impact = {
+			base = minor_stress_impact_gain
+			compassionate = minor_stress_impact_gain
+		}
+	}
+}
+
+# Servants escape successfully
+VIETmisc.2038 = {
+	type = character_event
+	title = VIETmisc.2038.t
+	desc = VIETmisc.2038.desc
+	theme = realm
+	
+	left_portrait = {
+		character = root
+		animation = personality_content
+	}	
+	right_portrait = {
+		character = scope:servant
+		animation = personality_bold
+	}
+	
+	immediate = {
+		remove_character_modifier = VIET_servant_hostage_countdown
+		VIET_massive_prestige_gain_effect = yes
+		add_character_modifier = {
+			modifier = VIET_useful_intel_on_bandits
+			years = 5
+		}
+		create_character = {
+			location = root.capital_province
+			template = VIET_heroic_servant_template
+			save_scope_as = servant
+		}
+	}
+	
+	option = { # Ok
+		name = VIETmisc.2038.a
+		add_character_modifier = {
+			modifier = VIET_brilliant_servant
+			years = 20
+		}
+		hidden_effect = {
+			scope:servant = {
+				death = {
+					death_reason = death_disappearance
+				}
+			}
+		}
+	}	
+	option = { # Ok
+		name = VIETmisc.2038.b
+		VIET_massive_prestige_gain_effect = yes
+		pay_short_term_gold = {
+			target = scope:servant
+			gold = minor_gold_value
+		}
+		add_courtier = scope:servant
+	}
+}
+
+
+
+
+
+
