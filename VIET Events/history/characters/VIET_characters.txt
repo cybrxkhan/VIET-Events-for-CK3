@@ -1,0 +1,24 @@
+﻿
+# Qi Ma the Liar
+VIET_character_003 = {
+	name = "RICE_name_ma"
+	dynasty = RICE_qi_ma
+	religion = "zhengyi"
+	culture = "han"
+	trait = education_diplomacy_4
+	trait = intellect_good_3
+	trait = beauty_good_3
+	trait = physique_good_3
+	trait = honest
+	trait = humble
+	trait = calm
+	trait = lunatic_genetic
+	trait = hashishiyah
+	60.1.1 = {
+		birth = "60.1.1"
+	}
+	88.8.8 = {
+		give_nickname = RICE_nick_the_liar
+		death = "88.8.8"
+	}
+}

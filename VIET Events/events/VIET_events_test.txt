@@ -67,6 +67,10 @@
 # Misc artifact events - VIETmisc.8033-8036 - to do later, when PI adds in a proper official artifact system
 # Chinese lady visits - VIETmisc.8037-8038 - to do later
 # Pistachio province event - VIETmisc.8049 - province event
+# Landslide - VIETScarborough.2 - province event
+# Local boys win fame in war - VIETScarborough.3 - province event
+# Trying to remember what thinking about - VIETScarborough.6-7 - needs to be lengthier
+# Teenage son is fornicating with a maid - VIETScarborough.20 - rework when add in childhood events
 # 
 ###########################################################################################################################
 

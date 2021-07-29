@@ -1,0 +1,69 @@
+﻿
+VIET_gift_baklava = {
+	category = interaction_category_friendly
+	common_interaction = yes
+
+	auto_accept = yes
+	
+	ai_targets = {
+		ai_recipients = scripted_relations
+	}
+	ai_targets = {
+		ai_recipients = liege
+	}
+	ai_targets = {
+		ai_recipients = neighboring_rulers
+		ai_recipients = peer_vassals
+		max = 10
+	}
+	ai_targets = {
+		ai_recipients = vassals
+		max = 10
+	}
+	ai_target_quick_trigger = {
+		adult = yes
+	}
+	ai_frequency = 24
+	
+	cooldown = { years = 1 }
+	
+	is_shown = {
+		NOT = {
+			scope:recipient = scope:actor
+		}
+		scope:actor = {	
+			has_character_modifier = RICE_tuyuhun_character_owns_qinghaicong_horses
+			is_ruler = yes
+		}
+		scope:recipient = {
+			#is_ai = yes
+			is_adult = yes
+			is_ruler = yes
+		}
+	}
+	
+	is_valid = {
+		scope:actor = {
+			gold >= minor_gold_value
+		}
+	}
+	
+	on_accept = {
+		scope:actor = {
+			remove_short_term_gold = minor_gold_value
+			trigger_event = VIETmisc.2039	
+			show_as_tooltip = {
+				VIET_huge_prestige_gain_effect = yes			
+			}
+		}
+		scope:recipient = {
+			show_as_tooltip = {
+				custom_tooltip = VIET_decision_traveling_baklava_merchant_effect_tooltip
+				add_opinion = {
+					target = scope:actor
+					modifier = VIET_opinion_gifted_baklava
+				}				
+			}
+		}
+	}
+}

@@ -1,0 +1,5 @@
+﻿
+RICE_qi_ma = {
+	name = "dynn_RICE_qi_ma"
+	culture = "han"
+}

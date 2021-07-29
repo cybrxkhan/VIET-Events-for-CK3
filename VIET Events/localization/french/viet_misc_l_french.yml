@@ -36,4 +36,5 @@
  setting_VIET_event_frequency_low_desc:0 "VIET Events trigger somewhat less frequently. WARNING: Due to the way RNG works, you may still see many events at once, or no events for long stretches of time."
  setting_VIET_event_frequency_very_low:0 "Very Low"
  setting_VIET_event_frequency_very_low_desc:0 "VIET Events trigger much less frequently. You may rarely see events! WARNING: Due to the way RNG works, you may still see many events at once, or no events for long stretches of time."
+ death_VIET_choking_food:0 "died chooking on food"
  xxxxx:0 "xxxxx"
