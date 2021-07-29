@@ -1,54 +1,7 @@
-﻿
-VIET_basic_traveler_template = {
+﻿VIET_basic_traveler_template = {
 	age = { 16 45 }
 	trait = adventurer
 	gender_female_chance = 33
 	dynasty = none
 	random_traits = yes
-}
-VIET_heroic_servant_template = {
-	age = { 16 45 }
-	trait = brave
-	gender_female_chance = 50
-	culture = root.culture
-	faith = root.faith
-	#Education
-	random_traits_list = {
-		count = 1
-		education_learning_1 = {
-			weight = { base = 35 }
-		}
-		education_learning_2 = {
-			weight = { base = 35 }
-		}
-		education_learning_3 = {
-			weight = { base = 25 }
-		}
-		education_learning_4 = {
-			weight = { base = 15 }
-		}
-	}
-	#Personality
-	random_traits_list = {
-		count = 2
-		ambitious = {}
-		diligent = {}
-		zealous = {}
-		calm = {}
-		patient = {}
-		stubborn = {}
-		gregarious = {}
-	}
-	intrigue = { 6 12 }
-	after_creation = {
-		random_list = {
-			100 = { }
-			10 = { add_trait = physique_good_1 }
-			10 = { add_trait = physique_good_2 }
-			10 = { add_trait = physique_good_3 }
-			10 = { add_trait = intellect_good_1 }
-			10 = { add_trait = intellect_good_2 }
-			10 = { add_trait = intellect_good_3 }
-		}
-	}
 }

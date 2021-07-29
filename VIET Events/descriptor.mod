@@ -1,4 +1,4 @@
-version="1.3.0"
+version="1.4.0"
 tags={
 	"Events"
 	"Gameplay"
@@ -6,4 +6,4 @@ tags={
 }
 name="VIET Events - A Flavor and Immersion Event Mod"
 supported_version="1.4.*"
-remote_file_id="2227658180"
+path="mod/VIET Events"
