@@ -919,6 +919,7 @@
  VIETold.1059.t:0 "What is That?"
  VIETold.1059.desc:0 ""Goodness gracious!" I exclaim.\n\nThere is an awkward pause.\n\n"Who cut the cheese?" I exclaim.\n\nEveryone looks around nervously.\n\n"I did," a servant admits.\n\nI tell him, "Next time, make sure you cut it into smaller pieces, alright? It’s difficult eating cheese if it’s in giant pieces like this.""
  VIETold.1059.a:0 ""Yes, my [ROOT.Char.GetLadyLord]!""
+ # Version 1.4.2 Start Here - Please leave this comment here
  VIETold.1060.t:0 "Ha Ha!"
  VIETold.1060.desc:0 ""Don't make me laugh!" I exclaim.\n\n[jokester.GetTitledFirstName] says the joke anyways, and I almost die of laughter. It was a good joke, too good in fact!"
  VIETold.1060.a:0 "Tell it again!"
