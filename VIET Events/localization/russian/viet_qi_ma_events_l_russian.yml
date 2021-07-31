@@ -7,7 +7,7 @@
  VIETmonogatari.0001.t:0 "Qi Ma the Liar Arrives"
  VIETmonogatari.0001.desc:0 "I have heard that a most unusual traveler has arrived in the region. He is known as Qi Ma the Liar, and many claim he possesses unrivaled, unparalleled wisdom, even if some of his advice often refers to bizarre topics or makes little sense at times. Oddly, though many claim he is immensely famous, I have never heard of him before.\n\nStill, given he is known for his insights, perhaps I should pay him a visit sometime. Who knows what deep, intellectual subjects we might discuss? Even if he is a madman, maybe I could learn a thing or two. Then again, there are those who say I shouldn’t associate with those who refer to strange things."
  VIETmonogatari.0001.a:0 "I'll mull it over."
- VIETmonogatari.0001.tooltip:0 "For as long as you have the [character_modifier|E], #V Qi Ma the Liar is Nearby#!, you will have access to a [decision|E] to #V meet#! him. If you wish to seek his advice, you should do it as soon as you can - he won't be in town forever, and will sooner than later travel to elsewhere."
+ VIETmonogatari.0001.tooltip:0 "For as long as you have the [character_modifier|E], #V Qi Ma the Liar is Nearby#!, you will have access to a [decision|E] to #V meet#! [qi_ma_the_liar|E]. If you wish to seek his advice, you should do it as soon as you can - he won't be in town forever, and will sooner than later travel to elsewhere."
  VIETmonogatari.0002.t:0 "xxxxx"
  VIETmonogatari.0002.desc:0 "xxxxx"
  VIETmonogatari.0002.a:0 "xxxxx"

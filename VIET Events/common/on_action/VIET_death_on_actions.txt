@@ -1,0 +1,12 @@
+﻿on_death = {
+	on_actions = {
+		on_death_VIET
+	}
+}
+
+
+on_death_VIET = {
+	events = {
+		VIETmonogatari.0004		# Qi Ma at the funeral (failsafe in case character dies before global variable can be reset)
+	}
+}

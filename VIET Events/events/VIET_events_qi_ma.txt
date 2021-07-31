@@ -1,4 +1,4 @@
-############################################################################################################################
+﻿############################################################################################################################
 # 
 # Events connected to decisions - VIETmonogatari.0001-VIETmonogatari.0999 reserved
 # Fired from the on_actions for every one, two, five, and ten years depending on intended rarity
@@ -47,7 +47,8 @@ VIETmonogatari.0001 = {
 	
 	trigger = {
 		NOT = { has_global_variable = VIET_qi_ma_is_active }
-		has_game_rule = VIET_all_events
+		NOT = { has_game_rule = VIET_serious_events }
+		#has_game_rule = VIET_all_events
 	}
 	
 	weight_multiplier = {
@@ -55,12 +56,12 @@ VIETmonogatari.0001 = {
 		modifier = { # unlikely to happen for AI
 			add = -0.75
 			is_ai = yes
-			NOR = {
-				has_trait = hashishiyah
-				has_trait = lunatic_genetic
-				has_trait = lunatic_1
-				has_trait = hashishiyah
-			}			
+			#NOR = {
+			#	has_trait = hashishiyah
+			#	has_trait = lunatic_genetic
+			#	has_trait = lunatic_1
+			#	has_trait = hashishiyah
+			#}			
 		}
 		modifier = {
 			add = 0.2
@@ -200,19 +201,15 @@ VIETmonogatari.0003 = {
 
 # Qi Ma at the funeral (failsafe in case character dies before global variable can be reset)
 VIETmonogatari.0004 = {
-	type = character_event
-	title = VIETmonogatari.0004.t
-	desc = VIETmonogatari.0004.desc
-	theme = VIET_theme_tuscan_country	
+	type = empty
+	hidden = yes
 	
-	#left_portrait = root
+	trigger = {
+		has_character_modifier = VIET_qi_ma_in_town
+	}
 	
 	immediate = {
 		remove_global_variable = VIET_qi_ma_is_active
-	}
-	
-	option = { # Ok
-		name = VIETmonogatari.0004.a
 		remove_character_modifier = VIET_qi_ma_in_town
 	}
 }

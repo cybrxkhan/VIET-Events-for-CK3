@@ -17,6 +17,7 @@
 # 1033-1040		Rocks and Minerals
 # 1041-1043		Monogatari References
 # 1044-1052		Toothbrush/Oral Hygiene
+# 1053-1059		Generic (from Swansong)
 # 
 ############################################################################################################################
 
@@ -3853,3 +3854,397 @@ VIETold.1052 = {
 		}		
 	}
 }
+
+
+
+
+
+######################################################################
+# GENERIC (SCARBOROUGH) VIETold.1053-1059
+######################################################################
+
+
+# What has more value - the real thing, or a fake?
+VIETold.1053 = {
+	type = character_event
+	title = VIETold.1053.t
+	desc = VIETold.1053.desc
+	theme = diplomacy
+
+	left_portrait = {
+		character = root
+		animation = personality_cynical
+	}
+	
+	weight_multiplier = {
+		base = 1
+		modifier = {
+			add = 0.2
+			has_trait = gregarious
+		}
+		modifier = {
+			add = -0.2
+			has_trait = shy
+		}
+		modifier = {
+			add = 0.2
+			has_trait = patient
+		}
+		modifier = {
+			add = -0.2
+			has_trait = impatient
+		}
+		modifier = {
+			add = 0.2
+			has_trait = lazy
+		}
+		modifier = {
+			add = -0.2
+			has_trait = diligent
+		}
+	}
+	
+	option = { # Real thing
+		name = VIETold.1053.a
+		VIET_small_piety_gain_effect = yes
+		add_character_modifier = {
+			modifier = VIET_contemplating_reality
+			years = 4
+		}
+	}	
+	option = { # Fake thing
+		name = VIETold.1053.b
+		VIET_small_prestige_gain_effect = yes
+		add_character_modifier = {
+			modifier = VIET_contemplating_reality
+			years = 4
+		}
+	}
+	option = { # Both
+		name = VIETold.1053.c
+		random_list = {
+			10 = { VIET_small_piety_gain_effect = yes }
+			10 = { VIET_small_prestige_gain_effect = yes }
+		}
+		add_character_modifier = {
+			modifier = VIET_contemplating_reality
+			years = 4
+		}
+	}
+	option = { # Dumb question
+		name = VIETold.1053.d
+		add_dread = 10
+	}
+}
+
+# Clump of dirt in hair
+VIETold.1054 = {
+	type = character_event
+	title = VIETold.1054.t
+	desc = VIETold.1054.desc
+	theme = unfriendly
+	override_background = { event_background = council_chamber }
+
+	right_portrait = {
+		character = root
+		animation = paranoia
+	}
+	
+	weight_multiplier = {
+		base = 1
+		modifier = {
+			add = 0.2
+			has_trait = impatient
+		}
+		modifier = {
+			add = -0.2
+			has_trait = patient
+		}
+		modifier = {
+			add = 0.2
+			has_trait = trusting
+		}
+		modifier = {
+			add = -0.2
+			has_trait = paranoid
+		}
+		modifier = {
+			add = 0.2
+			has_trait = lazy
+		}
+		modifier = {
+			add = -0.2
+			has_trait = diligent
+		}
+	}
+	
+	option = { # ok
+		name = VIETold.1054.a
+		VIET_medium_prestige_loss_effect = yes
+		stress_impact = {
+			arrogant = minor_stress_impact_gain
+			wrathful = minor_stress_impact_gain
+		}
+	}
+}
+
+# Hearing about people with different number of eyes
+VIETold.1055 = {
+	type = character_event
+	title = VIETold.1055.t
+	desc = VIETold.1055.desc
+	theme = learning
+
+	right_portrait = {
+		character = root
+		animation = personality_rational
+	}
+	
+	weight_multiplier = {
+		base = 1
+		modifier = {
+			add = 0.2
+			has_trait = fickle
+		}
+		modifier = {
+			add = -0.2
+			has_trait = stubborn
+		}
+		modifier = {
+			add = 0.2
+			has_trait = patient
+		}
+		modifier = {
+			add = -0.2
+			has_trait = impatient
+		}
+		modifier = {
+			add = 0.2
+			has_trait = lustful
+		}
+		modifier = {
+			add = -0.2
+			has_trait = chaste
+		}
+	}
+	
+	option = { # ok
+		name = VIETold.1055.a
+		add_character_modifier = {
+			modifier = VIET_contemplating_reality
+			years = 5
+		}
+	}	
+	option = { # ok
+		name = VIETold.1055.b
+		add_character_modifier = {
+			modifier = VIET_skeptical_about_fantasy_stories
+			years = 5
+		}
+	}
+}
+
+
+
+# Sensing someone said something unflattering said about you
+VIETold.1056 = {
+	type = character_event
+	title = VIETold.1056.t
+	desc = VIETold.1056.desc
+	theme = unfriendly
+
+	right_portrait = {
+		character = root
+		animation = paranoia
+	}
+	
+	weight_multiplier = {
+		base = 1
+		modifier = {
+			add = 0.2
+			has_trait = paranoid
+		}
+		modifier = {
+			add = -0.2
+			has_trait = trusting
+		}
+		modifier = {
+			add = 0.2
+			has_trait = wrathful
+		}
+		modifier = {
+			add = -0.2
+			has_trait = calm
+		}
+		modifier = {
+			add = 0.2
+			has_trait = vengeful
+		}
+		modifier = {
+			add = -0.2
+			has_trait = forgiving
+		}
+	}
+	
+	option = { # ok
+		name = VIETold.1056.a
+		stress_impact = {
+			base = miniscule_stress_impact_gain
+			paranoid = minor_stress_impact_gain
+		}
+	}
+}
+
+
+
+# Something wedged between your teeth
+VIETold.1057 = {
+	type = character_event
+	title = VIETold.1057.t
+	desc = VIETold.1057.desc
+	theme = unfriendly
+
+	left_portrait = {
+		character = root
+		animation = grief
+	}
+	
+	weight_multiplier = {
+		base = 1
+		modifier = {
+			add = 0.2
+			has_trait = impatient
+		}
+		modifier = {
+			add = -0.2
+			has_trait = patient
+		}
+		modifier = {
+			add = 0.2
+			has_trait = trusting
+		}
+		modifier = {
+			add = -0.2
+			has_trait = paranoid
+		}
+		modifier = {
+			add = 0.2
+			has_trait = lazy
+		}
+		modifier = {
+			add = -0.2
+			has_trait = diligent
+		}
+	}
+	
+	option = { # ok
+		name = VIETold.1057.a
+		stress_impact = {
+			arrogant = minor_stress_impact_gain
+			wrathful = minor_stress_impact_gain
+		}
+		VIET_medium_prestige_loss_effect = yes
+	}
+}
+
+
+
+# Feeling melancholy about growing older
+VIETold.1058 = {
+	type = character_event
+	title = VIETold.1058.t
+	desc = VIETold.1058.desc
+	theme = unfriendly
+
+	left_portrait = {
+		character = root
+		animation = sadness
+	}
+	
+	weight_multiplier = {
+		base = 1
+		modifier = {
+			add = 0.2
+			has_trait = ambitious
+		}
+		modifier = {
+			add = -0.2
+			has_trait = content
+		}
+		modifier = {
+			add = 0.2
+			has_trait = wrathful
+		}
+		modifier = {
+			add = -0.2
+			has_trait = calm
+		}
+		modifier = {
+			add = 0.2
+			has_trait = just
+		}
+		modifier = {
+			add = -0.2
+			has_trait = arbitrary
+		}
+	}
+	
+	option = { # ok
+		name = VIETold.1058.a
+		add_character_modifier = {
+			modifier = VIET_melancholy_about_ageing
+			years = 6
+		}
+	}
+}
+
+# Who cut the cheese? Dumb punny joke lol
+VIETold.1059 = {
+	type = character_event
+	title = VIETold.1059.t
+	desc = VIETold.1059.desc
+	theme = friendly
+
+	left_portrait = {
+		character = root
+		animation = personality_forgiving
+	}
+	
+	trigger = {
+		has_game_rule = VIET_all_events
+	}
+	
+	weight_multiplier = {
+		base = 1
+		modifier = {
+			add = 0.2
+			has_trait = paranoid
+		}
+		modifier = {
+			add = -0.2
+			has_trait = trusting
+		}
+		modifier = {
+			add = 0.2
+			has_trait = arrogant
+		}
+		modifier = {
+			add = -0.2
+			has_trait = humble
+		}
+		modifier = {
+			add = 0.2
+			has_trait = wrathful
+		}
+		modifier = {
+			add = -0.2
+			has_trait = calm
+		}
+	}
+	
+	option = { # ok
+		name = VIETold.1059.a
+		VIET_medium_piety_gain_effect = yes
+	}
+}
+

@@ -15,6 +15,8 @@ three_year_playable_pulse = {
 	on_actions = {
 		delay = { days = 18 }
 		VIET_events_tri_yearly_pulse
+		delay = { days = 88 }
+		VIET_events_common_decisions_pulse
 	}
 }
 
@@ -34,6 +36,8 @@ five_year_playable_pulse = {
 		VIET_events_five_yearly_pulse
 		delay = { days = 58 }
 		VIET_events_event_chain_pulse
+		delay = { days = 88 }
+		VIET_events_rare_decisions_pulse
 		#delay = { days = 8 }
 		#VIET_events_province_event_pulse
 	}
@@ -138,7 +142,11 @@ VIET_events_yearly_pulse = {
 		100 = VIETold.1042		# Ononoki - courtier talks with a "posed look"
 		100 = VIETold.1043		# That time of month (from Hanamonogatari) - courtier makes rude PMS comment
 		# Toothbrush
-		100 = VIETold.1051		# Bloody teeth before meeting with people 
+		100 = VIETold.1051		# Bloody teeth before meeting with people
+		# Generic (Swansong)
+		100 = VIETold.1056		# Sensing someone said something unflattering said about you
+		100 = VIETold.1057		# Something wedged between your teeth
+		100 = VIETold.1058		# Feeling melancholy about growing older
 		
 		#######################################
 		# OLD VIET
@@ -420,6 +428,9 @@ VIET_events_tri_yearly_pulse = {
 		100 = VIETold.1046		# Visiting noble gifts player a gold toothpick
 		100 = VIETold.1047		# Character learns about silly Chinese toothbrushes
 		100 = VIETold.1049		# Someone suggests you should clean your tongue as well
+		# Generic (Swansong)
+		100 = VIETold.1054		# Clump of dirt in hair
+		100 = VIETold.1055		# Hearing about people with different number of eyes
 		
 		#######################################
 		# OLD VIET
@@ -651,6 +662,9 @@ VIET_events_five_yearly_pulse = {
 		100 = VIETold.1048		# Courtier talks about toothbrush sexy times
 		100 = VIETold.1050		# Old people with bad teeth scare you and inspire you to do more cleaning
 		100 = VIETold.1052		# Toothbrush toilet prank (or not)
+		# Generic (Swansong)
+		100 = VIETold.1053		# What has more value - the real thing, or a fake?
+		100 = VIETold.1059		# Who cut the cheese? Dumb punny joke lol
 		
 		#######################################
 		# OLD VIET
@@ -814,3 +828,114 @@ VIET_events_event_chain_pulse = {
 		
 	}
 }
+
+# Decision based events/event chains/mechanics - common for stuff that would feasibly happen more regularly
+VIET_events_common_decisions_pulse = {
+	trigger = {
+		VIET_basic_is_available_adult_trigger = yes
+	}
+	random_events = {
+		chance_of_no_event = {
+			value = 1
+			if = {
+				limit = {
+					has_game_rule = VIET_event_frequency_low
+				}
+				add = 10
+			}
+			if = {
+				limit = {
+					has_game_rule = VIET_event_frequency_very_low
+				}
+				add = 20
+			}
+			if = {
+				limit = {
+					has_game_rule = VIET_event_frequency_high
+				}
+				subtract = 10
+			}
+			if = {
+				limit = {
+					has_game_rule = VIET_event_frequency_very_high
+				}
+				subtract = 20
+			}
+		}
+		10000 = 0
+		
+		#######################################
+		# OLD VIET (for events converted into decision event chains)
+		#######################################
+		
+		#######################################
+		# NEXT GEN VIET
+		#######################################
+		
+		#Generic first set
+		100 = VIETmisc.2001		# Traveling baklava merchant arrives in town
+		100 = VIETmisc.2004		# Traveling spice merchant arrives in town
+		100 = VIETmisc.2007		# A ghost seems to be haunting you
+		100 = VIETmisc.2019		# Your servants find a mysterious treasure chest
+		100 = VIETmisc.2021		# Meet the mercenary scholar at an inn
+		
+	}
+}
+
+
+# Decision based events/event chains/mechanics - rare for stuff that would happen less regularly
+VIET_events_rare_decisions_pulse = {
+	trigger = {
+		VIET_basic_is_available_adult_trigger = yes
+	}
+	random_events = {
+		chance_of_no_event = {
+			value = 1
+			if = {
+				limit = {
+					has_game_rule = VIET_event_frequency_low
+				}
+				add = 10
+			}
+			if = {
+				limit = {
+					has_game_rule = VIET_event_frequency_very_low
+				}
+				add = 20
+			}
+			if = {
+				limit = {
+					has_game_rule = VIET_event_frequency_high
+				}
+				subtract = 10
+			}
+			if = {
+				limit = {
+					has_game_rule = VIET_event_frequency_very_high
+				}
+				subtract = 20
+			}
+		}
+		13000 = 0
+		
+		#######################################
+		# OLD VIET (for events converted into decision event chains)
+		#######################################
+		
+		#######################################
+		# NEXT GEN VIET
+		#######################################
+		
+		#Qi Ma
+		100 = VIETmonogatari.0001	# Hear of Qi Ma the Liar
+		
+		#Generic first set
+		100 = VIETmisc.2014		# Your soldiers find Shadowbanish Wine
+		100 = VIETmisc.2023		# Servants are kidnapped - start the countdown
+		
+	}
+}
+
+
+
+

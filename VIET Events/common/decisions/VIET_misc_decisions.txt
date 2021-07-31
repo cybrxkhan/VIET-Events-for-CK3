@@ -376,7 +376,7 @@ VIET_decision_ransom_kidnapped_servants = {
 	picture = "gfx/interface/illustrations/decisions/decision_viet_bandits.dds"
 	desc = VIET_decision_ransom_kidnapped_servants_desc
 
-	#ai_check_interval = 4 # Due to small timeframe, AI will choose whether to do it immediately
+	ai_check_interval = 4 # Due to small timeframe, AI will choose whether to do it immediately
 
 	is_shown = {
 		is_landed = yes
@@ -431,7 +431,7 @@ VIET_decision_meet_qi_ma_the_liar = {
 	picture = "gfx/interface/illustrations/decisions/decision_viet_qi_ma.dds"
 	desc = VIET_decision_meet_qi_ma_the_liar_desc
 
-	#ai_check_interval = 4 # Due to small timeframe, AI will choose whether to do it immediately
+	ai_check_interval = 4
 
 	is_shown = {
 		is_landed = yes
@@ -470,7 +470,9 @@ VIET_decision_tester = {
 	picture = "gfx/interface/illustrations/decisions/decision_viet_qi_ma.dds"
 	desc = VIET_decision_meet_qi_ma_the_liar_desc
 
-	#ai_check_interval = 4 # Due to small timeframe, AI will choose whether to do it immediately
+	ai_check_interval = 4 # Due to small timeframe, AI will choose whether to do it immediately
+	
+	cooldown = { days = 365 }
 
 	is_shown = {
 		is_landed = yes

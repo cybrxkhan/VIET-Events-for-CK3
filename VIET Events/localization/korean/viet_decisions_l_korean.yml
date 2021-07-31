@@ -46,8 +46,8 @@
  VIET_decision_ransom_kidnapped_servants_confirm:0 "We must save them!"
  VIET_decision_meet_qi_ma_the_liar:0 "Meet with Qi Ma the Liar"
  VIET_decision_meet_qi_ma_the_liar_tooltip:0 "A renowned foreign adventurer in town could bestow on me his unconventional wisdom."
- VIET_decision_meet_qi_ma_the_liar_effect_tooltip:0 "You gain some insight into the universe."
- VIET_decision_meet_qi_ma_the_liar_desc:0 "Though the famed yet mysterious traveler Qi Ma is strange, if not a lunatic, I should seek his advice before he leaves for parts unknown."
+ VIET_decision_meet_qi_ma_the_liar_effect_tooltip:0 "You gain some insight into the universe thanks to [qi_ma_the_liar|E]."
+ VIET_decision_meet_qi_ma_the_liar_desc:0 "Though the famed yet mysterious traveler [qi_ma|E] is strange, if not a lunatic, I should seek his advice before he leaves for parts unknown."
  VIET_decision_meet_qi_ma_the_liar_confirm:0 "Does he have news from the other provinces?"
  VIET_decision_meet_qi_ma_the_liar_context_tooltip:0 "#emphasis Historical Context:#! Qi Ma knows much, and tells some, and he knows many things others do not - some of it verified by actual facts.."
  

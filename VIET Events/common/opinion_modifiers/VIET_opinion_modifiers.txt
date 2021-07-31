@@ -279,3 +279,33 @@ VIET_opinion_doesnt_hate_broccoli = {
 	years = 10
 	opinion = -5
 }
+VIET_opinion_joking_together = {
+	years = 5
+	decaying = yes
+	opinion = 10
+	stacking = yes
+}
+VIET_opinion_appreciates_honesty = {
+	years = 10
+	decaying = yes
+	opinion = 15
+	stacking = yes
+}
+VIET_opinion_gifted_baklava = {
+	years = 10
+	decaying = yes
+	opinion = 25
+}
+VIET_opinion_gifted_spices = {
+	years = 10
+	decaying = yes
+	opinion = 25
+}
+VIET_opinion_refused_gift_baklava = {
+	years = 10
+	opinion = -25
+}
+VIET_opinion_refused_gift_spices = {
+	years = 10
+	opinion = -25
+}

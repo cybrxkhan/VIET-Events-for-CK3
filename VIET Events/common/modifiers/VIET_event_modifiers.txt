@@ -1516,4 +1516,14 @@ VIET_useful_intel_on_bandits = {
 VIET_qi_ma_in_town = {
 	icon = cat_positive
 }
+VIET_contemplating_reality = {
+	icon = magic_positive
+	diplomacy = -1
+	learning = 2
+}
+VIET_melancholy_about_ageing = {
+	icon = stress_negative
+	stress_gain_mult = 0.1
+	stress_loss_mult = -0.1
+}
 
