@@ -83,7 +83,7 @@ VIET_events_yearly_pulse = {
 			}
 		}
 		
-		27000 = 0
+		30000 = 0
 		
 		#######################################
 		# OLDEST VIET
@@ -364,7 +364,7 @@ VIET_events_tri_yearly_pulse = {
 				add = 10
 			}
 		}
-		23000 = 0 # 20000?
+		27000 = 0 # 20000?
 		
 		#######################################
 		# OLDEST VIET
@@ -622,7 +622,7 @@ VIET_events_five_yearly_pulse = {
 			}
 		}
 		
-		18000 = 0
+		25000 = 0
 		
 		#######################################
 		# OLDEST VIET
@@ -836,7 +836,7 @@ VIET_events_common_decisions_pulse = {
 	}
 	random_events = {
 		chance_of_no_event = {
-			value = 1
+			value = 30
 			if = {
 				limit = {
 					has_game_rule = VIET_event_frequency_low
@@ -862,7 +862,7 @@ VIET_events_common_decisions_pulse = {
 				subtract = 20
 			}
 		}
-		10000 = 0
+		12000 = 0
 		
 		#######################################
 		# OLD VIET (for events converted into decision event chains)
@@ -890,7 +890,7 @@ VIET_events_rare_decisions_pulse = {
 	}
 	random_events = {
 		chance_of_no_event = {
-			value = 1
+			value = 30
 			if = {
 				limit = {
 					has_game_rule = VIET_event_frequency_low
@@ -916,7 +916,7 @@ VIET_events_rare_decisions_pulse = {
 				subtract = 20
 			}
 		}
-		13000 = 0
+		15000 = 0
 		
 		#######################################
 		# OLD VIET (for events converted into decision event chains)

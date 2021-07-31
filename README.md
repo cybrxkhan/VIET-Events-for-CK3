@@ -1,23 +1,23 @@
 # VIET Events for CK3
 
-## Latest Version: 1.4.0.1 Hotfix for "Windmill" (Released 7/23/21)
+## Latest Version: 1.4.1 "Decisions" (Released 7/30/21)
 
-_“Pray, look better, sir... those things yonder are no giants, but windmills.”_
-_- Sancho from Don Quixote by Miguel de Cervantes_
+_“"A man’s character is his destiny."_
+_- Heraclitus (c. 500s BCE), Pre-Socratic Greek philosopher_
 
 Very Immersive Events and Tales (VIET), the sequel to VIET Events Reborn for CK2, is a flavor mod that adds a vast collection of events about everyday life to spice up your game. These events add immersion and a diversity of experiences in between wars and vanilla’s event chains, and cover mundane minutiae ranging from small talk with courtiers and eating local cuisine to epic tales about love, philosophy, and the human condition.
 
-Alongside many new events, I intend to adapt many of the events from the old VIET for CK2 as possible. I hope the lessons I learned from my eight years (with a hiatus) of modding CK2 will help me deliver a fun experience for any players interested in my mods.
+Alongside many new events, I intend to adapt many of the events from the old VIET for CK2 as possible. I hope the lessons I learned from my eight years (with a hiatus) of modding CK2 will help me deliver a fun experience for any players interested in my mods. Lastly, please note that VIET is not achievement compatible.
 
 Feel free to use my work in your mods - all I ask is that I am credited and (if possible) to give me a heads up.
 
 ## Features
 
-- Over 454 new flavor events and event chains, and more will be added in updates over time
+- Over 528 new flavor events to experience!
+- Explore new decisions, character interactions, and event chains
 - Game rule to disable sillier events for those who don't like them, with three levels to choose from: Balanced (Default), Serious (Restricted), and All Events (Full)
 - Compatible with almost anything since it doesn't touch any vanilla files - even with overhaul mods, you can via game rule disable events that reference things specific to our medieval world that wouldn’t make sense in other time periods or universes (like fantasy and sci-fi conversion mods)
 - Learn history with Historical Context tooltips that provide information about what inspired some of the events - sometimes, reality is stranger than fiction! (These can be disabled via game rule for those who find it immersion breaking.)
-- NOT ACHIEVEMENT COMPATIBLE!
 
 
 ## Manual Installation Steps

@@ -1,6 +1,6 @@
 [img]http://i.imgur.com/OhIA5bm.jpg[/img]
 
-[h1]Current Version: 1.4.0.1 "Windmill" (Released 7/23/21, Compatible with vanilla patch 1.4.X)[/h1]
+[h1]Current Version: 1.4.1 "Decisions" (Released 7/30/21, Compatible with vanilla patch 1.4.X)[/h1]
 [h1][B][url=https://discord.gg/9KuyXv2uZA]Discord Server for My Mods[/url][/B][/h1]
 [B][url=https://forum.paradoxplaza.com/forum/threads/mod-viet-events-for-ck3-a-flavor-and-immersion-event-mod.1422081/]Paradox Forum Thread[/url][/B]
 [B]Manual Download/Installation available [url=https://github.com/cybrxkhan/VIET-Events-for-CK3/releases]on Github[/url][/B]
@@ -11,7 +11,7 @@ Very Immersive Events and Tales (VIET), the sequel to [url=https://steamcommunit
 
 Alongside many new events, I intend to adapt many of the events from the old VIET for CK2 as possible. I hope the lessons I learned from my eight years (with a hiatus) of modding CK2 will help me deliver a fun experience for any players interested in my mods.
 
-As this is the early version of VIET, I welcome any and all feedback - I'm still getting the hang of switching to CK3 modding from CK2's. Please let me know if you encounter any bugs, or if you feel the events fire too frequently or not frequently enough. While the events may get repetitive if you play long enough as I haven’t added that many yet (which is similar to what happens with vanilla CK3 anyways), [B]I hope to continue adding more and more events in every update![/B]
+As this is the early version of VIET, I welcome any and all feedback - I'm still getting the hang of switching to CK3 modding from CK2's. Please let me know if you encounter any bugs, or if you feel the events fire too frequently or not frequently enough. While the events may get repetitive if you play long enough, [B]I hope to continue adding more and more events in every update![/B] Please note that [B][U]VIET IS NOT ACHIEVEMENT COMPATIBLE![/U][/B]
 
 [B][U]VIET [I]WILL[/I] WORK ON EXISTING SAVES![/U][/B] (Though remember to make a backup copy of your save just in case.)
 
@@ -23,11 +23,11 @@ Feel free to use my work in your mods - all I ask is that I am credited and (if 
 [img]http://i.imgur.com/EyXurbK.jpg[/img]
 
 [LIST]
-[*]Over [B]454 new flavor events[/B], and more will be added in updates over time
+[*]Over [B]528 new flavor events[/B] to experience!
+[*]Explore new decisions, character interactions, and event chains
 [*]Game rule to disable sillier events for those who don't like them, with three levels to choose from: Balanced (Default), Serious (Restricted), and All Events (Full)
 [*][B]Compatible with almost anything[/B] since it doesn't touch any vanilla files - even with overhaul mods, you can via game rule disable events that reference things specific to our medieval world that wouldn’t make sense in other time periods or universes (like fantasy and sci-fi conversion mods)
 [*]Learn history with [B]Historical Context tooltips[/B] that provide information about what inspired some of the events - sometimes, reality is stranger than fiction! (These can be disabled via game rule for those who find it immersion breaking.)
-[*]NOT achievement compatible!
 [/LIST]
 
 [h1]TRANSLATIONS AVAILABLE[/h1]
@@ -51,21 +51,40 @@ Thanks!
 
 [img]http://i.imgur.com/RQ5QZTF.jpg[/img]
 
-[h1]Version 1.4.0.1 Hotfix[/h1]
+[h1]Version 1.4.1 "Decisions"[/h1]
+
+[I]"A man’s character is his destiny."
+- Heraclitus (c. 500s BCE), Pre-Socratic Greek philosopher[/I]
 
 [LIST]
-[*]Fixed events not triggering for Linux users
-[*]Fixed WW1 event not doing trait changes
+[*]Added 74 events with the following themes:
+[LIST]
+[*]67 events across 9 event chains related to decisions
+[*]7 generic*
 [/LIST]
-
-[h1]Version 1.4.0 "Windmill"[/h1]
-
-[I]“Pray, look better, sir... those things yonder are no giants, but windmills.”
-- Sancho from Don Quixote by Miguel de Cervantes[/I]
-
+[*]Added 10 new decisions:
 [LIST]
-[*]Updated to vanilla Azure/1.4 patch
-[*]Added some new Chinese localization
+[*]Visit the Famous Patissier
+[*]Visit the Famous Spice Merchant
+[*]Exorcise the Ghost Following You
+[*]Drink Shadowbanish Wine
+[*]Destroy Shadowbanish Wine
+[*]Unlock the Mysterious Chest
+[*]Hire a Mercenary Scholar
+[*]Save Kidnapped Servants
+[*]Qi Ma the Liar
+[/LIST]
+[*]Added 2 new character interactions based on decisions event chains:
+[LIST]
+[*]Present Gift of Special Pastries
+[*]Present Gift of the Special Spice Blend
+[/LIST]
+[*]Added new game concept: Qi Ma the Liar
+[*]Added a few new cultural variants for the small town event background
+[*]Somewhat lowered the frequency of events across the board
+[*]Tweaked County Opinion bonuses from modifiers to be more varied and granular
+[*]Event about seer's prophecy of Genghis Khan is much less likely to trigger in West and Central Africa
+[*]Miscellaneous bugfixes
 [/LIST]
 
 *Adapted from VIET for CK2
