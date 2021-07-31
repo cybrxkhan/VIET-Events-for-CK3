@@ -62,17 +62,17 @@ Thanks!
 [*]67 events across 9 event chains related to decisions
 [*]7 generic*
 [/LIST]
-[*]Added 10 new decisions:
+[*]Added 10 new decisions if you encounter some of the new events:
 [LIST]
-[*]Visit the Famous Patissier
-[*]Visit the Famous Spice Merchant
-[*]Exorcise the Ghost Following You
+[*]Visit a Famous Patissier
+[*]Visit a Famous Spice Merchant
+[*]Exorcise a Ghost Following You
 [*]Drink Shadowbanish Wine
 [*]Destroy Shadowbanish Wine
-[*]Unlock the Mysterious Chest
+[*]Unlock a Mysterious Chest
 [*]Hire a Mercenary Scholar
-[*]Save Kidnapped Servants
-[*]Qi Ma the Liar
+[*]Save Your Kidnapped Servants
+[*]Meet with Qi Ma the Liar
 [/LIST]
 [*]Added 2 new character interactions based on decisions event chains:
 [LIST]
