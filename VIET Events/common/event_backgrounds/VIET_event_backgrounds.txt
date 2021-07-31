@@ -217,13 +217,41 @@ VIET_background_ancient_cairn = {
 ### SMALL TOWN ###
 VIET_background_small_town = {
 
-	background = { # African
+	background = { # Non-Tropical African
 		trigger = {
 			capital_province = {
 				geographical_region = world_africa
+				NOT = { geographical_region = ghw_region_subsahelian_africa }
 			}
 		}
 		reference = "gfx/interface/illustrations/event_scenes/VIET_small_town_african.dds"
+		environment = "environment_event_garden"
+		ambience = "event:/SFX/Events/Backgrounds/townmarket_western_day"
+	}
+
+	background = { # Tropical African
+		trigger = {
+			capital_province = {
+				geographical_region = ghw_region_subsahelian_africa
+			}
+		}
+		reference = "gfx/interface/illustrations/event_scenes/VIET_small_town_akan.dds"
+		environment = "environment_event_garden"
+		ambience = "event:/SFX/Events/Backgrounds/townmarket_western_day"
+	}
+
+	background = { # Eastern Mediterranean (Greece, Turkey, Sicily, etc.)
+		trigger = {
+			capital_province = {
+				OR = {
+					geographical_region = world_asia_minor
+					geographical_region = world_europe_south
+				}
+				NOT = { geographical_region = ghw_region_balkans }
+				NOT = { geographical_region = ghw_region_caucasus }
+			}
+		}
+		reference = "gfx/interface/illustrations/event_scenes/VIET_small_town_greek.dds"
 		environment = "environment_event_garden"
 		ambience = "event:/SFX/Events/Backgrounds/townmarket_western_day"
 	}
@@ -232,9 +260,9 @@ VIET_background_small_town = {
 		trigger = {
 			capital_province = {
 				OR = {
-					geographical_region = world_asia_minor
-					geographical_region = world_europe_south
 					geographical_region = world_europe_west_iberia
+					geographical_region = ghw_region_balkans
+					geographical_region = ghw_region_caucasus
 				}
 			}
 		}
@@ -249,6 +277,7 @@ VIET_background_small_town = {
 				OR = {
 					geographical_region = world_steppe_tarim
 					geographical_region = world_steppe_west
+					geographical_region = world_steppe_east
 					geographical_region = world_tibet
 				}
 			}

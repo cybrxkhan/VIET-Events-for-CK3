@@ -1,5 +1,5 @@
 ﻿
-game_concept_qi_ma_the_liar = {
+qi_ma_the_liar = {
 	texture = "gfx/interface/icons/modifiers/cat_positive.dds"
-	alias = { game_concept_qi_ma }
+	alias = { qi_ma }
 }

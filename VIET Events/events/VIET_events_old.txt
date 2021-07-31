@@ -3074,6 +3074,15 @@ VIETold.2044 = {
 	weight_multiplier = {
 		base = 1
 		modifier = {
+			add = -0.9
+			capital_province = {
+				OR = {
+					geographical_region = world_africa_west
+					geographical_region = world_africa_sahara
+				}
+			}
+		}
+		modifier = {
 			add = 0.2
 			has_trait = just
 		}
