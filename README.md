@@ -2,7 +2,7 @@
 
 ## Latest Version: 1.4.1 "Decisions" (Released 7/30/21)
 
-_“"A man’s character is his destiny."_
+_"A man’s character is his destiny."_
 _- Heraclitus (c. 500s BCE), Pre-Socratic Greek philosopher_
 
 Very Immersive Events and Tales (VIET), the sequel to VIET Events Reborn for CK2, is a flavor mod that adds a vast collection of events about everyday life to spice up your game. These events add immersion and a diversity of experiences in between wars and vanilla’s event chains, and cover mundane minutiae ranging from small talk with courtiers and eating local cuisine to epic tales about love, philosophy, and the human condition.
