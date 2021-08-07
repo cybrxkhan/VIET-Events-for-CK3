@@ -32,7 +32,7 @@
  VIET_decision_destroy_shadowbanish_wine_context_tooltip:0 "#emphasis Historical Context:#! Some religions forbid or at least warn against the consumption of alcohol, including many sects of Islam, Jainism, Buddhism, and so on. Typically, it is believed that alcohol impairs one's judgment and morals."
  VIET_decision_hire_belrand:0 "Hire the Mercenary Scholar"
  VIET_decision_hire_belrand_tooltip:0 "The mercenary scholar I met the other day seemed most impressive...."
- VIET_decision_hire_belrand_desc:0 "After meeting the mercenary scholar, and confirming from other sources that he is a legitimate scholar and warrior, perhaps I should hire him to be byb my side."
+ VIET_decision_hire_belrand_desc:0 "After meeting the mercenary scholar, and confirming from other sources that he is a legitimate scholar and warrior, perhaps I should hire him to be by my side."
  VIET_decision_hire_belrand_confirm:0 "Let's meet him."
  VIET_decision_unlock_mysterious_chest:0 "Unlock the Mysterious Chest"
  VIET_decision_unlock_mysterious_chest_tooltip:0 "What could be inside this strange chest?"
