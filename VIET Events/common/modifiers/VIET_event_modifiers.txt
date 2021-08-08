@@ -1526,4 +1526,77 @@ VIET_melancholy_about_ageing = {
 	stress_gain_mult = 0.1
 	stress_loss_mult = -0.1
 }
+VIET_greatly_respects_elders = {
+	icon = family_positive
+	diplomacy = 1
+	monthly_prestige = 0.3
+}
+VIET_humble_generosity = {
+	icon = piety_positive
+	general_opinion = 5
+	monthly_piety = 0.3
+}
+VIET_100_love_techniques = {
+	icon = love_positive
+	intrigue = 1
+	fertility = 0.05
+}
+VIET_inspired_by_historical_heroes = {
+	icon = prestige_positive
+	monthly_lifestyle_xp_gain_mult = 0.04
+}
+VIET_refused_cat_lady_issue = {
+	icon = cat_negative
+	county_opinion_add = -5
+}
+VIET_did_something_cat_lady_issue = {
+	icon = cat_positive
+	county_opinion_add = 5
+}
+VIET_hearing_foreign_tall_tales = {
+	icon = social_positive
+	diplomacy = 1
+	monthly_lifestyle_xp_gain_mult = 0.03	
+}
+VIET_owns_a_lot_of_shoes = {
+	icon = stewardship_negative
+	stewardship = -2
+	county_opinion_add = -5
+}
+VIET_lots_of_calipers = {
+	icon = county_modifier_development_positive
+	stewardship = 1
+	build_speed = -0.05
+	build_gold_cost = -0.05
+}
+VIET_resolved_century_feud = {
+	icon = social_positive
+	diplomacy = 1
+	monthly_diplomacy_lifestyle_xp_gain_mult = 0.05
+}
+VIET_rumors_of_qi_ma_diplomatic = {
+	icon = cat_positive
+	diplomacy = 1
+	monthly_diplomacy_lifestyle_xp_gain_mult = 0.1
+}
+VIET_rumors_of_qi_ma_martial = {
+	icon = cat_positive
+	martial = 1
+	monthly_martial_lifestyle_xp_gain_mult = 0.1
+}
+VIET_rumors_of_qi_ma_stewardship = {
+	icon = cat_positive
+	stewardship = 1
+	monthly_stewardship_lifestyle_xp_gain_mult = 0.1
+}
+VIET_rumors_of_qi_ma_intrigue = {
+	icon = cat_positive
+	intrigue = 1
+	monthly_intrigue_lifestyle_xp_gain_mult = 0.1
+}
+VIET_rumors_of_qi_ma_learning = {
+	icon = cat_positive
+	learning = 1
+	monthly_learning_lifestyle_xp_gain_mult = 0.1
+}
 

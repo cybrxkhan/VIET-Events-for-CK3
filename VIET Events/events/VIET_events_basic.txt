@@ -36,6 +36,7 @@
 # 0133-0147		Kindness
 # 0148-0150		Leaves
 # 0151-0154		Bushes
+# 0155-0164		Hundred
 # 
 ############################################################################################################################
 
@@ -12739,6 +12740,891 @@ VIETmisc.0154 = {
 		add_character_modifier = {
 			modifier = VIET_berry_good_talk
 			years = 7
+		}
+	}
+}
+
+
+###################################################
+# HUNDRED 0155-0164
+###################################################
+
+# A local elder reaches 100 years old
+VIETmisc.0155 = {
+	type = character_event
+	title = VIETmisc.0155.t
+	desc = VIETmisc.0155.desc
+	theme = realm
+	
+	left_portrait = {
+		character = root
+		animation = personality_rational
+	}
+	
+	weight_multiplier = {
+		base = 1
+		modifier = {
+			add = 0.2
+			has_trait = diligent
+		}
+		modifier = {
+			add = -0.2
+			has_trait = lazy
+		}
+		modifier = {
+			add = 0.2
+			has_trait = humble
+		}
+		modifier = {
+			add = -0.2
+			has_trait = arrogant
+		}
+		modifier = {
+			add = 0.2
+			has_trait = trusting
+		}
+		modifier = {
+			add = -0.2
+			has_trait = paranoid
+		}
+	}
+
+	
+	option = { # Why bother with them?
+		name = VIETmisc.0155.a
+		VIET_large_prestige_gain_effect = yes
+		stress_impact = {
+			humble = minor_stress_gain
+			compassionate = minor_stress_gain
+		}
+	}	
+	option = { # Send them a gift
+		name = VIETmisc.0155.b
+		trigger = {
+			OR = {
+				gold >= 15
+				is_ai = no
+			}
+		}
+		remove_short_term_gold = 15
+		VIET_huge_piety_gain_effect = yes
+	}	
+	option = { # Visit them in person
+		name = VIETmisc.0155.c
+		trigger = {
+			OR = {
+				gold >= 30
+				is_ai = no
+			}
+		}
+		remove_short_term_gold = 30
+		VIET_huge_piety_gain_effect = yes
+		VIET_huge_prestige_loss_effect = yes
+		add_character_modifier = {
+			modifier = VIET_greatly_respects_elders
+			years = 10
+		}
+		stress_impact = {
+			greedy = minor_stress_gain
+			callous = minor_stress_gain
+		}
+	}
+}
+
+# Found a pot of gold with 100 coins outside
+VIETmisc.0156 = {
+	type = character_event
+	title = VIETmisc.0156.t
+	desc = VIETmisc.0156.desc
+	theme = VIET_theme_skyrim_forest
+	
+	left_portrait = {
+		character = root
+		animation = personality_honorable
+	}
+	
+	weight_multiplier = {
+		base = 1
+		modifier = {
+			add = 0.2
+			has_trait = lazy
+		}
+		modifier = {
+			add = -0.2
+			has_trait = diligent
+		}
+		modifier = {
+			add = 0.2
+			has_trait = content
+		}
+		modifier = {
+			add = -0.2
+			has_trait = ambitious
+		}
+		modifier = {
+			add = 0.2
+			has_trait = gregarious
+		}
+		modifier = {
+			add = -0.2
+			has_trait = shy
+		}
+	}
+
+	
+	option = { # You keep it
+		name = VIETmisc.0156.a
+		if = {
+			limit = {
+				faith = {
+					trait_is_virtue = generous
+				}
+			}
+			VIET_massive_piety_gain_effect = yes
+		}
+		else = {
+			VIET_huge_piety_gain_effect = yes
+		}
+		stress_impact = {
+			greedy = minor_stress_gain
+			callous = minor_stress_gain
+			arbitrary = minor_stress_gain
+			arrogant = minor_stress_gain
+		}
+		add_character_modifier = {
+			modifier = VIET_humble_generosity
+			years = 10
+		}
+	}	
+	option = { # Split it between the two of you
+		name = VIETmisc.0156.b
+		add_gold = 50
+	}	
+	option = { # I keep it!
+		name = VIETmisc.0156.c
+		add_gold = 100
+		add_dread = 10
+		if = {
+			limit = {
+				faith = {
+					trait_is_virtue = generous
+				}
+			}
+			VIET_massive_piety_loss_effect = yes
+		}
+		else = {
+			VIET_huge_piety_loss_effect = yes
+		}
+		stress_impact = {
+			generous = minor_stress_gain
+			compassionate = minor_stress_gain
+			just = minor_stress_gain
+			humble = minor_stress_gain
+		}
+	}
+}
+
+# Horny courtier talks about a harlot he had sex with
+VIETmisc.0157 = {
+	type = character_event
+	title = VIETmisc.0157.t
+	desc = VIETmisc.0157.desc
+	theme = feast_activity
+	
+	left_portrait = {
+		character = root
+		animation = disgust
+	}	
+	right_portrait = {
+		character = scope:horny
+		animation = schadenfreude
+	}
+	
+	trigger = {
+		any_courtier = {
+			is_available_ai_adult = yes
+			is_married = no
+			is_female = no
+			NOR = {
+				has_sexuality = asexual
+				has_sexuality = homosexual
+				has_trait = chaste
+				has_trait = celibate
+				has_trait = eunuch
+			}
+			OR = {
+				has_trait = lustful
+				has_trait = gregarious
+				has_trait = arbitrary
+				has_trait = lazy
+				has_trait = gluttonous
+			}
+		}	
+	}
+	
+	weight_multiplier = {
+		base = 1
+		modifier = {
+			add = 0.2
+			has_trait = lustful
+		}
+		modifier = {
+			add = -0.2
+			has_trait = chaste
+		}
+		modifier = {
+			add = 0.2
+			has_trait = gluttonous
+		}
+		modifier = {
+			add = -0.2
+			has_trait = temperate
+		}
+		modifier = {
+			add = 0.2
+			has_trait = gregarious
+		}
+		modifier = {
+			add = -0.2
+			has_trait = shy
+		}
+	}
+	
+	immediate = {
+		random_courtier = {
+			limit = {
+				is_available_ai_adult = yes
+				is_married = no
+				is_female = no
+				NOR = {
+					has_sexuality = asexual
+					has_sexuality = homosexual
+					has_trait = chaste
+					has_trait = celibate
+					has_trait = eunuch
+				}
+				OR = {
+					has_trait = lustful
+					has_trait = gregarious
+					has_trait = arbitrary
+					has_trait = lazy
+					has_trait = gluttonous
+				}
+			}
+			add_character_modifier = {
+				modifier = VIET_100_love_techniques
+				years = 10
+			}
+			save_scope_as = horny
+		}
+	}
+
+	
+	option = { # Steer it to another topic
+		name = VIETmisc.0157.a
+		if = {
+			limit = {
+				faith = {
+					OR = {
+						trait_is_sin = lustful
+						trait_is_virtue = chaste
+					}
+				}
+			}
+			VIET_huge_piety_gain_effect = yes
+		}
+		else_if = {
+			limit = {
+				faith = {
+					OR = {
+						trait_is_virtue = lustful
+						trait_is_sin = chaste
+					}
+				}
+			}
+			VIET_huge_piety_loss_effect = yes
+		}
+		else = {
+			VIET_medium_piety_gain_effect = yes
+		}
+		stress_impact = {
+			lustful = minor_stress_gain
+		}
+	}	
+	option = { # Call the guy out on it
+		name = VIETmisc.0157.b
+		if = {
+			limit = {
+				faith = {
+					OR = {
+						trait_is_sin = lustful
+						trait_is_virtue = chaste
+					}
+				}
+			}
+			VIET_huge_piety_gain_effect = yes
+		}
+		else_if = {
+			limit = {
+				faith = {
+					OR = {
+						trait_is_virtue = lustful
+						trait_is_sin = chaste
+					}
+				}
+			}
+			VIET_huge_piety_loss_effect = yes
+		}
+		else = {
+			VIET_medium_piety_gain_effect = yes
+		}
+		VIET_large_prestige_gain_effect = yes
+		scope:horny = {
+			add_opinion = {
+				target = root
+				modifier = VIET_opinion_love_techniques_prude
+			}		
+		}
+		stress_impact = {
+			lustful = minor_stress_gain
+		}
+	}	
+	option = { # Learn more about it
+		name = VIETmisc.0157.c
+		if = {
+			limit = {
+				faith = {
+					OR = {
+						trait_is_sin = lustful
+						trait_is_virtue = chaste
+					}
+				}
+			}
+			VIET_huge_piety_loss_effect = yes
+		}
+		else_if = {
+			limit = {
+				faith = {
+					OR = {
+						trait_is_virtue = lustful
+						trait_is_sin = chaste
+					}
+				}
+			}
+			VIET_huge_piety_gain_effect = yes
+		}
+		else = {
+			VIET_medium_piety_loss_effect = yes
+		}
+		add_character_modifier = {
+			modifier = VIET_100_love_techniques
+			years = 10
+		}
+		scope:horny = {
+			add_opinion = {
+				target = root
+				modifier = VIET_opinion_love_techniques_agreement
+			}		
+		}
+		stress_impact = {
+			chaste = medium_stress_gain
+			celibate = medium_stress_gain
+		}
+	}
+}
+
+
+
+# Learn about the story of the 100 brave youths
+VIETmisc.0158 = {
+	type = character_event
+	title = VIETmisc.0158.t
+	desc = VIETmisc.0158.desc
+	theme = VIET_theme_ancient_cairn
+	
+	left_portrait = {
+		character = root
+		animation = personality_compassionate
+	}
+	
+	weight_multiplier = {
+		base = 1
+		modifier = {
+			add = 0.2
+			has_trait = brave
+		}
+		modifier = {
+			add = -0.2
+			has_trait = craven
+		}
+		modifier = {
+			add = 0.2
+			has_trait = content
+		}
+		modifier = {
+			add = -0.2
+			has_trait = ambitious
+		}
+		modifier = {
+			add = 0.2
+			has_trait = fickle
+		}
+		modifier = {
+			add = -0.2
+			has_trait = stubborn
+		}
+	}
+	
+	option = { # Ok
+		name = VIETmisc.0158.a
+		add_character_modifier = {
+			modifier = VIET_inspired_by_historical_heroes
+			years = 10
+		}
+	}
+}
+
+
+
+# What do to with a local crazy cat lady?
+VIETmisc.0159 = {
+	type = character_event
+	title = VIETmisc.0159.t
+	desc = VIETmisc.0159.desc
+	theme = realm
+	
+	left_portrait = {
+		character = root
+		animation = boredom
+	}
+	
+	weight_multiplier = {
+		base = 1
+		modifier = {
+			add = 0.2
+			has_trait = arbitrary
+		}
+		modifier = {
+			add = -0.2
+			has_trait = just
+		}
+		modifier = {
+			add = 0.2
+			has_trait = patient
+		}
+		modifier = {
+			add = -0.2
+			has_trait = impatient
+		}
+		modifier = {
+			add = 0.2
+			has_trait = deceitful
+		}
+		modifier = {
+			add = -0.2
+			has_trait = honest
+		}
+	}
+	
+	option = { # Not my problem
+		name = VIETmisc.0159.a
+		add_character_modifier = {
+			modifier = VIET_refused_cat_lady_issue
+			years = 10
+		}
+		stress_impact = {
+			sadistic = medium_stress_gain
+		}
+	}	
+	option = { # Do something about it
+		name = VIETmisc.0159.b
+		VIET_huge_prestige_loss_effect = yes
+		add_character_modifier = {
+			modifier = VIET_did_something_cat_lady_issue
+			years = 10
+		}
+		stress_impact = {
+			just = minor_stress_gain
+			compassionate = minor_stress_gain
+			humble = minor_stress_gain
+			patient = miniscule_stress_impact_gain
+			calm = miniscule_stress_impact_gain
+			forgiving = miniscule_stress_impact_gain
+		}
+	}	
+	option = { # Imprison lady, kill her cats
+		name = VIETmisc.0159.c
+		trigger = {
+			has_trait = sadistic
+		}
+		trait = sadistic
+		VIET_massive_prestige_loss_effect = yes
+		add_dread = 20
+		add_character_modifier = {
+			modifier = VIET_did_something_cat_lady_issue
+			years = 10
+		}
+		stress_impact = {
+			just = medium_stress_gain
+			humble = medium_stress_gain
+			patient = minor_stress_gain
+			calm = minor_stress_gain
+			forgiving = minor_stress_gain
+		}
+	}	
+	option = { # Imprison lady, kill her cats
+		name = VIETmisc.0159.c
+		trigger = {
+			has_trait = callous
+			NOT = {
+				has_trait = sadistic
+			}
+		}
+		trait = callous
+		VIET_massive_prestige_loss_effect = yes
+		add_dread = 20
+		add_character_modifier = {
+			modifier = VIET_did_something_cat_lady_issue
+			years = 10
+		}
+		stress_impact = {
+			just = medium_stress_gain
+			humble = medium_stress_gain
+			patient = minor_stress_gain
+			calm = minor_stress_gain
+			forgiving = minor_stress_gain
+		}
+	}
+}
+
+
+
+
+# Hearing about a woman who gave birth to 100 kids
+VIETmisc.0160 = {
+	type = character_event
+	title = VIETmisc.0160.t
+	desc = VIETmisc.0160.desc
+	theme = realm
+	
+	right_portrait = root
+	
+	
+	weight_multiplier = {
+		base = 1
+		modifier = {
+			add = 0.2
+			has_trait = gregarious
+		}
+		modifier = {
+			add = -0.2
+			has_trait = shy
+		}
+		modifier = {
+			add = 0.2
+			has_trait = ambitious
+		}
+		modifier = {
+			add = -0.2
+			has_trait = content
+		}
+		modifier = {
+			add = 0.2
+			has_trait = trusting
+		}
+		modifier = {
+			add = -0.2
+			has_trait = paranoid
+		}
+	}
+	
+	option = { # Not my problem
+		name = VIETmisc.0160.a
+		add_character_modifier = {
+			modifier = VIET_hearing_foreign_tall_tales
+			years = 10
+		}
+	}	
+	option = { # Do something about it
+		name = VIETmisc.0160.b
+		add_character_modifier = {
+			modifier = VIET_skeptical_about_fantasy_stories
+			years = 10
+		}
+	}
+}
+
+
+# Spouse has over a hundred fancy shoes
+VIETmisc.0161 = {
+	type = character_event
+	title = VIETmisc.0161.t
+	desc = VIETmisc.0161.desc
+	theme = unfriendly
+	
+	left_portrait = {
+		character = root
+		animation = disapproval
+	}
+	right_portrait = {
+		character = scope:spouse
+		animation = shame
+	}
+	
+	trigger = {
+		is_married = yes
+		any_spouse = {
+			OR = {
+				has_trait = greedy
+				has_trait = arrogant
+				has_trait = lazy
+				has_trait = arbitrary
+				has_trait = ambitious
+			}
+			NOR = {
+				has_trait = content
+				has_trait = humble
+				has_trait = generous
+			}
+			is_ruler = no
+		}	
+	}
+	
+	weight_multiplier = {
+		base = 1
+		modifier = {
+			add = 0.2
+			has_trait = gregarious
+		}
+		modifier = {
+			add = -0.2
+			has_trait = shy
+		}
+		modifier = {
+			add = 0.2
+			has_trait = ambitious
+		}
+		modifier = {
+			add = -0.2
+			has_trait = content
+		}
+		modifier = {
+			add = 0.2
+			has_trait = trusting
+		}
+		modifier = {
+			add = -0.2
+			has_trait = paranoid
+		}
+	}
+	
+	immediate = {
+		random_spouse = {
+			limit = {
+				OR = {
+					has_trait = greedy
+					has_trait = arrogant
+					has_trait = lazy
+					has_trait = arbitrary
+					has_trait = ambitious
+				}
+				NOR = {
+					has_trait = content
+					has_trait = humble
+					has_trait = generous
+				}
+				is_ruler = no
+			}	
+			add_character_modifier = {
+				modifier = VIET_owns_a_lot_of_shoes
+				years = 10
+			}	
+			save_scope_as = spouse
+		}	
+	}
+	
+	option = { # Sell it off
+		name = VIETmisc.0161.a
+		scope:spouse = {
+			remove_character_modifier = VIET_owns_a_lot_of_shoes
+			add_gold = 50
+			add_opinion = {
+				target = root
+				modifier = VIET_opinion_sell_shoes
+			}		
+		}
+		stress_impact = {
+			content = minor_stress_gain
+			arrogant = minor_stress_gain
+			greedy = minor_stress_gain
+			forgiving = minor_stress_gain
+		}
+	}	
+	option = { # Not my problem
+		name = VIETmisc.0161.b
+		VIET_huge_prestige_loss_effect = yes
+		stress_impact = {
+			just = minor_stress_gain
+			humble = minor_stress_gain
+			generous = minor_stress_gain
+		}
+	}
+}
+
+
+# Bizarre, dark, and eerie (but benevolent) dream of 100 Spirits
+VIETmisc.0162 = {
+	type = character_event
+	title = VIETmisc.0162.t
+	desc = VIETmisc.0162.desc
+	theme = friendly
+	override_background = { event_background = corridor_night }
+	
+	left_portrait = {
+		character = root
+		animation = paranoia
+	}
+	
+	weight_multiplier = {
+		base = 1
+		modifier = {
+			add = 0.2
+			has_trait = compassionate
+		}
+		modifier = {
+			add = -0.2
+			has_trait = callous
+		}
+		modifier = {
+			add = 0.2
+			has_trait = just
+		}
+		modifier = {
+			add = -0.2
+			has_trait = arbitrary
+		}
+		modifier = {
+			add = 0.2
+			has_trait = generous
+		}
+		modifier = {
+			add = -0.2
+			has_trait = greedy
+		}
+	}
+	
+	immediate = {
+		play_music_cue = mx_cue_secret 
+	}
+	
+	option = { # Ok.....
+		name = VIETmisc.0162.a
+		VIET_huge_piety_gain_effect = yes
+	}
+}
+
+
+# Found a barrel with 100 calipers inside
+VIETmisc.0163 = {
+	type = character_event
+	title = VIETmisc.0163.t
+	desc = VIETmisc.0163.desc
+	theme = VIET_theme_tuscan_country
+	
+	left_portrait = {
+		character = root
+		animation = personality_irrational
+	}
+	
+	weight_multiplier = {
+		base = 1
+		modifier = {
+			add = 0.2
+			has_trait = diligent
+		}
+		modifier = {
+			add = -0.2
+			has_trait = lazy
+		}
+		modifier = {
+			add = 0.2
+			has_trait = paranoid
+		}
+		modifier = {
+			add = -0.2
+			has_trait = trusting
+		}
+		modifier = {
+			add = 0.2
+			has_trait = impatient
+		}
+		modifier = {
+			add = -0.2
+			has_trait = patient
+		}
+	}
+	
+	option = { # Make use of calipers
+		name = VIETmisc.0163.a
+		add_character_modifier = {
+			modifier = VIET_lots_of_calipers
+			years = 10
+		}
+	}	
+	option = { # Sell them
+		name = VIETmisc.0163.b
+		add_gold = 40
+	}
+}
+
+
+# Successfully resolved a local feud between two noble clans
+VIETmisc.0164 = {
+	type = character_event
+	title = VIETmisc.0164.t
+	desc = VIETmisc.0164.desc
+	theme = diplomacy
+	override_background = { event_background = council_chamber }
+	
+	left_portrait = {
+		character = root
+		animation = personality_bold
+	}
+	
+	weight_multiplier = {
+		base = 1
+		modifier = {
+			add = 0.2
+			has_trait = diligent
+		}
+		modifier = {
+			add = -0.2
+			has_trait = lazy
+		}
+		modifier = {
+			add = 0.2
+			has_trait = just
+		}
+		modifier = {
+			add = -0.2
+			has_trait = arbitrary
+		}
+		modifier = {
+			add = 0.2
+			has_trait = calm
+		}
+		modifier = {
+			add = -0.2
+			has_trait = wrathful
+		}
+	}
+	
+	option = { # Cool
+		name = VIETmisc.0164.a
+		VIET_huge_prestige_gain_effect = yes
+		add_character_modifier = {
+			modifier = VIET_resolved_century_feud
+			years = 10
 		}
 	}
 }

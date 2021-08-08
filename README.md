@@ -1,9 +1,10 @@
 # VIET Events for CK3
 
-## Latest Version: 1.4.1 "Decisions" (Released 7/30/21)
+## Latest Version: 1.4.2 "Vạn Tuế" (Released 8/8/21)
 
-_"A man’s character is his destiny."_
-_- Heraclitus (c. 500s BCE), Pre-Socratic Greek philosopher_
+_“Vạn Tuế” the Vietnamese equivalent of the Chinese Wansui, Japanese Banzai, and Korean Manse (written as 萬歲 in traditional Chinese characters), translates to ten thousand years and is used in archaic contexts to wish long life, particularly to a monarch, though in some modern Asian countries, it is used to express a feeling of triumph._
+
+_This update is to commemorate VIET passing over 100k subscribers on Steam Workshop, almost one year after the mod’s release. Thank you all for your continued support, it means a lot! My CK3 modwork has been an unusual but fun way for me to engage in creative writing, and I hope to continue adding more content over time._
 
 Very Immersive Events and Tales (VIET), the sequel to VIET Events Reborn for CK2, is a flavor mod that adds a vast collection of events about everyday life to spice up your game. These events add immersion and a diversity of experiences in between wars and vanilla’s event chains, and cover mundane minutiae ranging from small talk with courtiers and eating local cuisine to epic tales about love, philosophy, and the human condition.
 
@@ -13,7 +14,7 @@ Feel free to use my work in your mods - all I ask is that I am credited and (if 
 
 ## Features
 
-- Over 528 new flavor events to experience!
+- Over 543 new flavor events to experience!
 - Explore new decisions, character interactions, and event chains
 - Game rule to disable sillier events for those who don't like them, with three levels to choose from: Balanced (Default), Serious (Restricted), and All Events (Full)
 - Compatible with almost anything since it doesn't touch any vanilla files - even with overhaul mods, you can via game rule disable events that reference things specific to our medieval world that wouldn’t make sense in other time periods or universes (like fantasy and sci-fi conversion mods)

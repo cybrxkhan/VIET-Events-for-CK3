@@ -1,6 +1,6 @@
 [img]http://i.imgur.com/OhIA5bm.jpg[/img]
 
-[h1]Current Version: 1.4.1 "Decisions" (Released 7/30/21, Compatible with vanilla patch 1.4.X)[/h1]
+[h1]Current Version: 1.4.2 "Vạn Tuế" (Released 8/8/21, Compatible with vanilla patch 1.4.X)[/h1]
 [h1][B][url=https://discord.gg/9KuyXv2uZA]Discord Server for My Mods[/url][/B][/h1]
 [B][url=https://forum.paradoxplaza.com/forum/threads/mod-viet-events-for-ck3-a-flavor-and-immersion-event-mod.1422081/]Paradox Forum Thread[/url][/B]
 [B]Manual Download/Installation available [url=https://github.com/cybrxkhan/VIET-Events-for-CK3/releases]on Github[/url][/B]
@@ -23,7 +23,7 @@ Feel free to use my work in your mods - all I ask is that I am credited and (if 
 [img]http://i.imgur.com/EyXurbK.jpg[/img]
 
 [LIST]
-[*]Over [B]528 new flavor events[/B] to experience!
+[*]Over [B]543 new flavor events[/B] to experience!
 [*]Explore new decisions, character interactions, and event chains
 [*]Game rule to disable sillier events for those who don't like them, with three levels to choose from: Balanced (Default), Serious (Restricted), and All Events (Full)
 [*][B]Compatible with almost anything[/B] since it doesn't touch any vanilla files - even with overhaul mods, you can via game rule disable events that reference things specific to our medieval world that wouldn’t make sense in other time periods or universes (like fantasy and sci-fi conversion mods)
@@ -51,39 +51,21 @@ Thanks!
 
 [img]http://i.imgur.com/RQ5QZTF.jpg[/img]
 
-[h1]Version 1.4.1 "Decisions"[/h1]
+[h1]Version 1.4.2 "Vạn Tuế"[/h1]
 
-[I]"A man’s character is his destiny."
-- Heraclitus (c. 500s BCE), Pre-Socratic Greek philosopher[/I]
+[I]“Vạn Tuế” the Vietnamese equivalent of the Chinese Wansui, Japanese Banzai, and Korean Manse (written as 萬歲 in traditional Chinese characters), translates to ten thousand years and is used in archaic contexts to wish long life, particularly to a monarch, though in some modern Asian countries, it is used to express a feeling of triumph.
+
+This update is to commemorate VIET passing over 100k subscribers on Steam Workshop, almost one year after the mod’s release. Thank you all for your continued support, it means a lot! My CK3 modwork has been an unusual but fun way for me to engage in creative writing, and I hope to continue adding more content over time.[/I]
 
 [LIST]
-[*]Added 74 events with the following themes:
+[*]Added 15 events with the following themes:
 [LIST]
-[*]67 events across 9 event chains related to decisions
-[*]7 generic*
+[*]10 about one hundred
+[*]5 rumors about Qi Ma the Liar
 [/LIST]
-[*]Added 10 new decisions if you encounter some of the new events:
-[LIST]
-[*]Visit a Famous Patissier
-[*]Visit a Famous Spice Merchant
-[*]Exorcise a Ghost Following You
-[*]Drink Shadowbanish Wine
-[*]Destroy Shadowbanish Wine
-[*]Unlock a Mysterious Chest
-[*]Hire a Mercenary Scholar
-[*]Save Your Kidnapped Servants
-[*]Meet with Qi Ma the Liar
-[/LIST]
-[*]Added 2 new character interactions based on decisions event chains:
-[LIST]
-[*]Present Gift of Special Pastries
-[*]Present Gift of the Special Spice Blend
-[/LIST]
-[*]Added new game concept: Qi Ma the Liar
-[*]Added a few new cultural variants for the small town event background
-[*]Somewhat lowered the frequency of events across the board
-[*]Tweaked County Opinion bonuses from modifiers to be more varied and granular
-[*]Event about seer's prophecy of Genghis Khan is much less likely to trigger in West and Central Africa
+[*]Added new 2 new potential results for the Unlock the Treasure Chest decision
+[*]Added in Qi Ma’s father Qi Ma, and his father’s father, Qi Ma, to the history files
+[*]Qi Ma event chain will no longer spawn for total conversion mods (for now)
 [*]Miscellaneous bugfixes
 [/LIST]
 

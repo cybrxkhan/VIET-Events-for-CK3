@@ -48,7 +48,7 @@ VIETmonogatari.0001 = {
 	trigger = {
 		NOT = { has_global_variable = VIET_qi_ma_is_active }
 		NOT = { has_game_rule = VIET_serious_events }
-		#has_game_rule = VIET_all_events
+		has_game_rule = VIET_normal_universe_events
 	}
 	
 	weight_multiplier = {
@@ -225,6 +225,7 @@ VIETmonogatari.0005 = {
 	left_portrait = root
 	
 	immediate = {
+		add_character_flag = VIET_met_qi_ma_before
 		character:VIET_character_003 = {
 			save_scope_as = qi_ma
 		}	
@@ -264,6 +265,391 @@ VIETmonogatari.0006 = {
 	
 	after = {
 		clear_saved_scope = qi_ma
+	}
+}
+
+
+
+
+
+# Rumors about Qi Ma the Liar - diplomacy
+VIETmonogatari.0010 = {
+	type = character_event
+	title = VIETmonogatari.0010.t
+	desc = VIETmonogatari.0010.desc
+	theme = diplomacy	
+	
+	left_portrait = root
+	
+	#trigger = {
+		#NOT = { has_global_variable = VIET_qi_ma_is_active }
+		#NOT = { has_game_rule = VIET_serious_events }
+		#has_game_rule = VIET_normal_universe_events
+	#}
+	
+	weight_multiplier = {
+		base = 1
+		modifier = { # unlikely to happen for AI
+			add = -0.75
+			is_ai = yes
+			#NOR = {
+			#	has_trait = hashishiyah
+			#	has_trait = lunatic_genetic
+			#	has_trait = lunatic_1
+			#	has_trait = hashishiyah
+			#}			
+		}
+		modifier = {
+			add = 0.2
+			has_trait = compassionate
+		}
+		modifier = {
+			add = -0.2
+			has_trait = sadistic
+		}
+		modifier = {
+			add = 0.2
+			has_trait = shy
+		}
+		modifier = {
+			add = -0.2
+			has_trait = gregarious
+		}
+		modifier = {
+			add = 0.2
+			has_trait = calm
+		}
+		modifier = {
+			add = -0.2
+			has_trait = wrathful
+		}
+	}
+	
+	option = { # Ok
+		name = VIETmonogatari.0010.a
+		trigger = {
+			NOT = { has_character_flag = VIET_met_qi_ma_before }
+		}
+		add_character_modifier = {
+			modifier = VIET_rumors_of_qi_ma_diplomatic
+			years = 3
+		}
+	}	
+	option = { # Ok
+		name = VIETmonogatari.0010.b
+		trigger = {
+			has_character_flag = VIET_met_qi_ma_before
+		}
+		add_character_modifier = {
+			modifier = VIET_rumors_of_qi_ma_diplomatic
+			years = 3
+		}
+	}
+}
+
+
+# Rumors about Qi Ma the Liar - martial
+VIETmonogatari.0011 = {
+	type = character_event
+	title = VIETmonogatari.0010.t
+	desc = VIETmonogatari.0011.desc
+	theme = martial	
+	
+	left_portrait = root
+	
+	#trigger = {
+		#NOT = { has_global_variable = VIET_qi_ma_is_active }
+		#NOT = { has_game_rule = VIET_serious_events }
+		#has_game_rule = VIET_normal_universe_events
+	#}
+	
+	weight_multiplier = {
+		base = 1
+		modifier = { # unlikely to happen for AI
+			add = -0.75
+			is_ai = yes
+			#NOR = {
+			#	has_trait = hashishiyah
+			#	has_trait = lunatic_genetic
+			#	has_trait = lunatic_1
+			#	has_trait = hashishiyah
+			#}			
+		}
+		modifier = {
+			add = 0.2
+			has_trait = compassionate
+		}
+		modifier = {
+			add = -0.2
+			has_trait = sadistic
+		}
+		modifier = {
+			add = 0.2
+			has_trait = shy
+		}
+		modifier = {
+			add = -0.2
+			has_trait = gregarious
+		}
+		modifier = {
+			add = 0.2
+			has_trait = calm
+		}
+		modifier = {
+			add = -0.2
+			has_trait = wrathful
+		}
+	}
+	
+	option = { # Ok
+		name = VIETmonogatari.0010.a
+		trigger = {
+			NOT = { has_character_flag = VIET_met_qi_ma_before }
+		}
+		add_character_modifier = {
+			modifier = VIET_rumors_of_qi_ma_martial
+			years = 3
+		}
+	}	
+	option = { # Ok
+		name = VIETmonogatari.0010.b
+		trigger = {
+			has_character_flag = VIET_met_qi_ma_before
+		}
+		add_character_modifier = {
+			modifier = VIET_rumors_of_qi_ma_martial
+			years = 3
+		}
+	}
+}
+
+
+# Rumors about Qi Ma the Liar - stewardship
+VIETmonogatari.0012 = {
+	type = character_event
+	title = VIETmonogatari.0010.t
+	desc = VIETmonogatari.0012.desc
+	theme = stewardship	
+	
+	left_portrait = root
+	
+	#trigger = {
+		#NOT = { has_global_variable = VIET_qi_ma_is_active }
+		#NOT = { has_game_rule = VIET_serious_events }
+		#has_game_rule = VIET_normal_universe_events
+	#}
+	
+	weight_multiplier = {
+		base = 1
+		modifier = { # unlikely to happen for AI
+			add = -0.75
+			is_ai = yes
+			#NOR = {
+			#	has_trait = hashishiyah
+			#	has_trait = lunatic_genetic
+			#	has_trait = lunatic_1
+			#	has_trait = hashishiyah
+			#}			
+		}
+		modifier = {
+			add = 0.2
+			has_trait = compassionate
+		}
+		modifier = {
+			add = -0.2
+			has_trait = sadistic
+		}
+		modifier = {
+			add = 0.2
+			has_trait = shy
+		}
+		modifier = {
+			add = -0.2
+			has_trait = gregarious
+		}
+		modifier = {
+			add = 0.2
+			has_trait = calm
+		}
+		modifier = {
+			add = -0.2
+			has_trait = wrathful
+		}
+	}
+
+	option = { # Ok
+		name = VIETmonogatari.0010.a
+		trigger = {
+			NOT = { has_character_flag = VIET_met_qi_ma_before }
+		}
+		add_character_modifier = {
+			modifier = VIET_rumors_of_qi_ma_stewardship
+			years = 3
+		}
+	}	
+	option = { # Ok
+		name = VIETmonogatari.0010.b
+		trigger = {
+			has_character_flag = VIET_met_qi_ma_before
+		}
+		add_character_modifier = {
+			modifier = VIET_rumors_of_qi_ma_stewardship
+			years = 3
+		}
+	}
+}
+
+
+# Rumors about Qi Ma the Liar - intrigue
+VIETmonogatari.0013 = {
+	type = character_event
+	title = VIETmonogatari.0010.t
+	desc = VIETmonogatari.0013.desc
+	theme = intrigue	
+	
+	left_portrait = root
+	
+	#trigger = {
+		#NOT = { has_global_variable = VIET_qi_ma_is_active }
+		#NOT = { has_game_rule = VIET_serious_events }
+		#has_game_rule = VIET_normal_universe_events
+	#}
+	
+	weight_multiplier = {
+		base = 1
+		modifier = { # unlikely to happen for AI
+			add = -0.75
+			is_ai = yes
+			#NOR = {
+			#	has_trait = hashishiyah
+			#	has_trait = lunatic_genetic
+			#	has_trait = lunatic_1
+			#	has_trait = hashishiyah
+			#}			
+		}
+		modifier = {
+			add = 0.2
+			has_trait = compassionate
+		}
+		modifier = {
+			add = -0.2
+			has_trait = sadistic
+		}
+		modifier = {
+			add = 0.2
+			has_trait = shy
+		}
+		modifier = {
+			add = -0.2
+			has_trait = gregarious
+		}
+		modifier = {
+			add = 0.2
+			has_trait = calm
+		}
+		modifier = {
+			add = -0.2
+			has_trait = wrathful
+		}
+	}
+
+	option = { # Ok
+		name = VIETmonogatari.0010.a
+		trigger = {
+			NOT = { has_character_flag = VIET_met_qi_ma_before }
+		}
+		add_character_modifier = {
+			modifier = VIET_rumors_of_qi_ma_intrigue
+			years = 3
+		}
+	}	
+	option = { # Ok
+		name = VIETmonogatari.0010.b
+		trigger = {
+			has_character_flag = VIET_met_qi_ma_before
+		}
+		add_character_modifier = {
+			modifier = VIET_rumors_of_qi_ma_intrigue
+			years = 3
+		}
+	}
+}
+
+
+
+
+# Rumors about Qi Ma the Liar - learning
+VIETmonogatari.0014 = {
+	type = character_event
+	title = VIETmonogatari.0010.t
+	desc = VIETmonogatari.0014.desc
+	theme = learning	
+	
+	left_portrait = root
+	
+	#trigger = {
+		#NOT = { has_global_variable = VIET_qi_ma_is_active }
+		#NOT = { has_game_rule = VIET_serious_events }
+		#has_game_rule = VIET_normal_universe_events
+	#}
+	
+	weight_multiplier = {
+		base = 1
+		modifier = { # unlikely to happen for AI
+			add = -0.75
+			is_ai = yes
+			#NOR = {
+			#	has_trait = hashishiyah
+			#	has_trait = lunatic_genetic
+			#	has_trait = lunatic_1
+			#	has_trait = hashishiyah
+			#}			
+		}
+		modifier = {
+			add = 0.2
+			has_trait = compassionate
+		}
+		modifier = {
+			add = -0.2
+			has_trait = sadistic
+		}
+		modifier = {
+			add = 0.2
+			has_trait = shy
+		}
+		modifier = {
+			add = -0.2
+			has_trait = gregarious
+		}
+		modifier = {
+			add = 0.2
+			has_trait = calm
+		}
+		modifier = {
+			add = -0.2
+			has_trait = wrathful
+		}
+	}
+
+	option = { # Ok
+		name = VIETmonogatari.0010.a
+		trigger = {
+			NOT = { has_character_flag = VIET_met_qi_ma_before }
+		}
+		add_character_modifier = {
+			modifier = VIET_rumors_of_qi_ma_learning
+			years = 3
+		}
+	}	
+	option = { # Ok
+		name = VIETmonogatari.0010.b
+		trigger = {
+			has_character_flag = VIET_met_qi_ma_before
+		}
+		add_character_modifier = {
+			modifier = VIET_rumors_of_qi_ma_learning
+			years = 3
+		}
 	}
 }
 

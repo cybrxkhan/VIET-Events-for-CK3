@@ -309,3 +309,15 @@ VIET_opinion_refused_gift_spices = {
 	years = 10
 	opinion = -25
 }
+VIET_opinion_love_techniques_agreement = {
+	years = 5
+	opinion = 10
+}
+VIET_opinion_love_techniques_prude = {
+	years = 5
+	opinion = -10
+}
+VIET_opinion_sell_shoes = {
+	years = 10
+	opinion = -15
+}

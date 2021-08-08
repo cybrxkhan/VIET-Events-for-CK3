@@ -322,6 +322,9 @@ VIET_events_yearly_pulse = {
 		# Bushes
 		100 = VIETmisc.0151		# Birds in a Bush
 		100 = VIETmisc.0153		# Tripped and fell into a bush
+		# 100 / One Hundred
+		100 = VIETmisc.0158		# Learn about the story of the 100 brave youths
+		100 = VIETmisc.0160		# Hearing about a woman who gave birth to 100 kids
 	}
 }
 
@@ -579,6 +582,12 @@ VIET_events_tri_yearly_pulse = {
 		100 = VIETmisc.0150		# Gift of a golden leaf
 		# Bushes
 		100 = VIETmisc.0152		# Gardener suggests sprucing up the courtyard
+		# 100 / One Hundred
+		100 = VIETmisc.0155		# A local elder reaches 100 years old
+		100 = VIETmisc.0156		# Found a pot of gold with 100 coins outside
+		100 = VIETmisc.0157		# Horny courtier talks about a harlot he had sex with
+		100 = VIETmisc.0161		# Spouse has over a hundred fancy shoes
+		100 = VIETmisc.0164		# Successfully resolved a local feud between two noble clans
 	}
 }
 
@@ -760,6 +769,10 @@ VIET_events_five_yearly_pulse = {
 		100 = VIETmisc.0147		# Local notables band together to fund an almshouse - will you join in?
 		# Bushes
 		100 = VIETmisc.0154		# Talk with a peasant about berries, which is berry good
+		# 100 / One Hundred
+		100 = VIETmisc.0159		# What do to with a local crazy cat lady?
+		100 = VIETmisc.0162		# Bizarre, dark, and eerie (but benevolent) dream of 100 Spirits
+		100 = VIETmisc.0163		# Found a barrel with 100 calipers inside
 	}
 }
 
@@ -820,11 +833,18 @@ VIET_events_event_chain_pulse = {
 		# NEXT GEN VIET
 		#######################################
 		
-		#Generic Hello!
+		# Generic Hello!
 		100 = VIETmisc.0001		# Character hears a bard sing Scarborough Fair
 		
-		#Death
+		# Death
 		100 = VIETmisc.0101		# Come across an unknown servant - is he a spirit testing one's hospitality?
+		
+		# Qi Ma the Liar
+		100 = VIETmonogatari.0010		# Rumors about Qi Ma the Liar - diplomacy
+		100 = VIETmonogatari.0011		# Rumors about Qi Ma the Liar - martial
+		100 = VIETmonogatari.0012		# Rumors about Qi Ma the Liar - stewardship
+		100 = VIETmonogatari.0013		# Rumors about Qi Ma the Liar - intrigue
+		100 = VIETmonogatari.0014		# Rumors about Qi Ma the Liar - learning
 		
 	}
 }
