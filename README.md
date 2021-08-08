@@ -4,7 +4,7 @@
 
 _“Vạn Tuế” the Vietnamese equivalent of the Chinese Wansui, Japanese Banzai, and Korean Manse (written as 萬歲 in traditional Chinese characters), translates to ten thousand years and is used in archaic contexts to wish long life, particularly to a monarch, though in some modern Asian countries, it is used to express a feeling of triumph._
 
-_This update is to commemorate VIET passing over 100k subscribers on Steam Workshop, almost one year after the mod’s release. Thank you all for your continued support, it means a lot! My CK3 modwork has been an unusual but fun way for me to engage in creative writing, and I hope to continue adding more content over time._
+_This update is to commemorate VIET passing 100k subscribers on Steam Workshop, almost a year after the initial release. Thank you all for your continued support, it means a lot! My CK3 modwork has been an unusual but fun way for me to engage in creative writing, and I hope to continue adding even more content in the future._
 
 Very Immersive Events and Tales (VIET), the sequel to VIET Events Reborn for CK2, is a flavor mod that adds a vast collection of events about everyday life to spice up your game. These events add immersion and a diversity of experiences in between wars and vanilla’s event chains, and cover mundane minutiae ranging from small talk with courtiers and eating local cuisine to epic tales about love, philosophy, and the human condition.
 
