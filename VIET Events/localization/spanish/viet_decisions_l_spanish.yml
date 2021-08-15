@@ -59,4 +59,3 @@
  VIET_gift_spices_desc:0 "Buy the famed #V Five Spice Blend#! as a gift for [recipient.GetShortUINameNoTooltip]"
  VIET_gift_spices_effect_tooltip:0 "[recipient.GetShortUINameNoTooltip] will receive a special [character_modifier|E] representing the #V Five Spice Blend#!"
  VIET_decision_xxxxx:0 "xxxxx"
- 
