@@ -1,6 +1,7 @@
 [img]http://i.imgur.com/OhIA5bm.jpg[/img]
 
 [h1]Versión actual: 1.4.2 "Vạn Tuế" (Salida 08/08/21, Compatible con versión vanilla 1.4.X)[/h1]
+[h1][B][url=https://discord.gg/9KuyXv2uZA]Servidor de Discord de mis Mods[/url][/B][/h1]
 [B]Echa un Vistazo a [url=https://forum.paradoxplaza.com/forum/threads/mod-viet-events-for-ck3-a-flavor-and-immersion-event-mod.1422081/]Tema del Foro[/url] Para Más Información[/B]
 [B]Descarga/Instalación manual [url=https://github.com/cybrxkhan/VIET-Events-for-CK3/releases]en Github[/url][/B]
 [B]Descarga desde Paradox [url=https://mods.paradoxplaza.com/mods/12992/Any] disponible aquí[/url][/B]
@@ -22,19 +23,19 @@ Siéntete libre de usar mi trabajo con tus mods - todo lo que pido es reconocimi
 [img]http://i.imgur.com/EyXurbK.jpg[/img]
 
 [LIST]
-[*]Más de [B]543 nuevos eventos[/B] y cadenas, y aún se añadirán más con cada actualización
+[*]¡Más de [B]543 nuevos eventos[/B] para experimentar!
+[*]Explora nuevas decisiones, interacciones y cadenas de eventos
 [*]Regla de juego para desactivar los eventos estúpidos para aquellos que no les guste, con tres niveles para escoger entre: Balanceado (Predeterminado), Serio (Restringido), y Todos los eventos (Todo)
 [*][B]Compatible con casi cualquier cosa[/B] ya que no modifico archivos del vanilla - incluso con mods de conversión total puedes desactivar los eventos que hagan referencias a cosas o lugares específicos del mundo medieval que no tendrían sentido en otros periodos o universos (como mods fantásticos o de ciencia ficción)
 [*]Aprende historia con las [B]descripciones de Contexto Histórico[/B] que proporcionan información sobre la inspiración detrás de algunos eventos - a veces, ¡la realidad supera la ficción! (Estos se pueden desactivar con una regla de juego para aquellos que creen que no ayuda a la inmersión.)
-[*]¡NO es compatible con los logros!
 [/LIST]
 
 [h1]TRADUCCIONES DISPONIBLES[/h1]
 ¡Ahora tenemos cubiertos los idiomas oficiales! Por favvor, tened en cuenta que debido a mi horario irregular a la hora de actualizar los mods, los compañeros trabajando en las traducciones pueden o no estar al tanto de las últimas versiones de VIET, dado que están cediendo su tiempo amablemente para traducirlo desinteresadamente.. Tened en cuenta que todo el texto que no sea Inglés tiene un marcador de posición en la versión base de VIET.
 [LIST]
-[*]Chino - teabbm ha proporcionado la traducción, integrada en VIET.
-[*]Francés - Mouchi del equipo de WTWSMS está trabajando en una traducción que será integrada en VIET.
-[*]Alemán - [url=https://steamcommunity.com/sharedfiles/filedetails/?id=2229986442]Disponible como sub-mod aquí[/url], gracias a eXums
+[*]Chino - [url=https://paratranz.cn/projects/1580]un equipo liderado por Tbeabm ha proporcionado la traducción, integrada en VIET.
+[*]Francés - [url=https://steamcommunity.com/sharedfiles/filedetails/?id=2234027514]Disponible como sub-mod aquí[/url], gracias a Mouchi
+[*]Alemán - [url=https://steamcommunity.com/sharedfiles/filedetails/?id=2447914570]Disponible como sub-mod aquí[/url], gracias a Ilusive
 [*]Coreano - [url=https://steamcommunity.com/sharedfiles/filedetails/?id=2227982565]Disponible como sub-mod aquí[/url], gracias a Ohboksu
 [*]Ruso - [url=https://steamcommunity.com/sharedfiles/filedetails/?id=2230011509]Disponible como sub-mod aquí[/url], gracias a Alesha_Popvich
 [*]Español - Sourenics está proporcionando la traducción, integrada en VIET.
@@ -50,21 +51,22 @@ Gracias.
 
 [img]http://i.imgur.com/RQ5QZTF.jpg[/img]
 
-[h1]Versión 1.3.2 "De Amicitia"[/h1]
+[h1]Versión 1.4.2 "Vạn Tuế"[/h1]
 
-[I]"En el rostro de un verdadero amigo, un hombre se ve a sí mismo."
+[I]“Vạn Tuế” el equivalente vietnamita al chino Wansui, al japonés Banzai, y al coreano Manse (escrito 萬歲 en carácteres tradicionales chinos), se traduce como "diez mil años" y se usa en contextos arcaicos para desear una larga vida, en particular al monarca, aunque en algunos países asiáticos se usa como expresión de triunfo.
 
-Cicerón en su tratado sobre la amistad, De Amicitia[/I]
+Esta actualización conmemora los 100k suscriptores en Steam Workshop, tras casi un año del lanzamiento. Gracias a todos por vuestro apoyo, ¡significa mucho! Mi trabajo con los mods para CK3 ha sido una inusual pero divertida forma de disfrutar con la escritura creativa, y espero poder seguir añadiendo nuevos contenidos en el futuro.[/I]
 
 [LIST]
 [*]Añadidos 15 nuevos eventos sobre los siguientes temas:
 [LIST]
-[*]11 genéricos
-[*]4 inspirados en diálogos de Oblivion
+[*]10 sobre el "cien"
+[*]5 rumores sobre Qi Ma el Mentiroso
 [/LIST]
-[*]Ahora hay eventos que incrementan la posibilidad de convertirse en rivales o amigos, como ocurre en algunos eventos originales
-[*]Sirvienta de parto ahora mejora la habilidad de médico si tienes una, y mostrará opciones y desencadenantes correctamente.
-[*]Arreglo de fallos
+[*]Añadidos 2 nuevos potenciales resultados en la decisión "Desbloquear Cofre del Tesoro"
+[*]Añadido el padre de Qi Ma, Qi Ma, y el padre de su padre, Qi Ma, en los archivos históricos
+[*]La cadena de Qi Ma no aparecerá en mods de conversión total (por ahora)
+[*]Arreglos varios
 [/LIST]
 
 *Adaptación desde VIET para CK2
