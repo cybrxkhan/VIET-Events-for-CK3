@@ -36,9 +36,9 @@
  setting_VIET_event_frequency_low_desc:0 "Los eventos de VIET se activan menos frecuentemente. ATENCIÓN: Debido a cómo funciona el RNG, puedes ver muchos eventos al mismo tiempo, o ninguno por largos periodos, esto solo afecta a las probabilidades de que ocurran."
  setting_VIET_event_frequency_very_low:0 "Muy Bajo"
  setting_VIET_event_frequency_very_low_desc:0 "Los eventos de VIET se activan mucho menos frecuentemente. ATENCIÓN: Debido a cómo funciona el RNG, puedes ver muchos eventos al mismo tiempo, o ninguno por largos periodos, esto solo afecta a las probabilidades de que ocurran."
- death_VIET_choking_food:0 "died chooking on food"
+ death_VIET_choking_food:0 "murió ahogado en comida"
  
  # Game Concepts 
- game_concept_qi_ma_the_liar:0 "Qi Ma the Liar"
+ game_concept_qi_ma_the_liar:0 "Qi Ma el Mentiroso"
  game_concept_qi_ma:0 "Qi Ma"
- game_concept_qi_ma_the_liar_desc:0 "$game_concept_qi_ma_the_liar$ is an enigmatic traveler who [rulers|E] can sometimes encounter via a random event. Some say he is a deity in earthly form; others say an immortal, cursed by heaven to wander for all eternity, or perhaps members of a long-lived dynasty of adventurers; or perhaps something else.\n\nThough he will never stay for too long, his presence grants access to a special [decision|E] to pay him a visit. He will provide the [ruler|E] with some sagely but oftentimes cryptic advice or thoughts, which will grant them a small boost to one of the five [skills|E].\n\nFor those who do not wish to encounter this figure, he will not appear if the #V Serious Events (Restricted)#! game rule is chosen at game start."
+ game_concept_qi_ma_the_liar_desc:0 "$game_concept_qi_ma_the_liar$ es un viajero enigmático que los [rulers|E] pueden encontrarse con un evento aleatorio. Algunos dicen que es una deidad en forma terrenal; otros que es un ser inmortal maldecido por los cielos a errar por toda la eternidad, tal vez miembro de alguna dinastía de aventureros inmortales; o tal vez sea otra cosa.\n\nAunque no se queda por mucho tiempo, su presencia da acceso a la [decision|E] especial de hacerle una visita. Otorgará al [ruler|E] consejos sabios pero a veces enigmáticos, que podrán dar un bonus a alguna de tus cinco [skills|E].\n\nPara aquellos que no quieran encontrarse con esta figura, no aparecerá si se ha escogido la regla de juego #V Eventos Serios (Restringido)#!"
