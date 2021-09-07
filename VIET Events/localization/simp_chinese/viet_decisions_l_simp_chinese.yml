@@ -59,6 +59,7 @@
  VIET_decision_feed_the_crows:0 "Feed the Crows"
  VIET_decision_feed_the_crows_tooltip:0 "Feed the crows the next time they visit you"
  VIET_decision_feed_the_crows_desc:0 "I want to go into my garden and feed my friends, the crows. They will undoubtedly appreciate my gesture."
+ VIET_decision_feed_the_crows_effect_tooltip:0 "You will lose some [stress|E] and gain a little [dread|E]"
  VIET_decision_feed_the_crows_confirm:0 "Where's my bag of crow food?"
  VIET_decision_feed_the_crows_context_tooltip:0 "#emphasis Historical Context:#! Birds of the #italic Corvus#! genus, known commonly as crows or ravens, are a common part of folklore and religious belief around the world. In many cultures, they are seen as harbingers of ill-omen and symbols of misfortune and death, though in some places or contexts, they are viewed more ambiguously as tricksters or psychopomps. They are known for their intelligence and excellent memory. The distinction between crows and ravens is somewhat inconsistent, but generally, crows are smaller than ravens."
  
