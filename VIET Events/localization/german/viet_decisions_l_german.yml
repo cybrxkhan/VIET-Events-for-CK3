@@ -49,7 +49,19 @@
  VIET_decision_meet_qi_ma_the_liar_effect_tooltip:0 "You gain some insight into the universe thanks to [qi_ma_the_liar|E]."
  VIET_decision_meet_qi_ma_the_liar_desc:0 "Though the famed yet mysterious traveler [qi_ma|E] is strange, if not a lunatic, I should seek his advice before he leaves for parts unknown."
  VIET_decision_meet_qi_ma_the_liar_confirm:0 "Does he have news from the other provinces?"
- VIET_decision_meet_qi_ma_the_liar_context_tooltip:0 "#emphasis Historical Context:#! Qi Ma knows much, and tells some, and he knows many things others do not - some of it verified by actual facts.."
+ VIET_decision_meet_qi_ma_the_liar_context_tooltip:0 "#emphasis Historical Context:#! Qi Ma knows much, and tells some, and he knows many things others do not - some of it verified by actual facts."
+ VIET_decision_deal_with_crows:0 "Deal with the Murder of Crows"
+ VIET_decision_deal_with_crows_tooltip:0 "You're attracting a lot of crows lately."
+ VIET_decision_deal_with_crows_effect_tooltip:0 "You choose how to handle the crows that have been following you around lately."
+ VIET_decision_deal_with_crows_desc:0 "Large numbers of crows appear wherever I go lately. Rumors are spreading about why this is, and they are not necessarily good. I need to take care of this somehow."
+ VIET_decision_deal_with_crows_confirm:0 "The crows must be taken care of."
+ VIET_decision_deal_with_crows_context_tooltip:0 "#emphasis Historical Context:#! Birds of the #italic Corvus#! genus, known commonly as crows or ravens, are a common part of folklore and religious belief around the world. In many cultures, they are seen as harbingers of ill-omen and symbols of misfortune and death, though in some places or contexts, they are viewed more ambiguously as tricksters or psychopomps. They are known for their intelligence and excellent memory. The distinction between crows and ravens is somewhat inconsistent, but generally, crows are smaller than ravens."
+ VIET_decision_feed_the_crows:0 "Feed the Crows"
+ VIET_decision_feed_the_crows_tooltip:0 "Feed the crows the next time they visit you"
+ VIET_decision_feed_the_crows_desc:0 "I want to go into my garden and feed my friends, the crows. They will undoubtedly appreciate my gesture."
+ VIET_decision_feed_the_crows_confirm:0 "Where's my bag of crow food?"
+ VIET_decision_feed_the_crows_context_tooltip:0 "#emphasis Historical Context:#! Birds of the #italic Corvus#! genus, known commonly as crows or ravens, are a common part of folklore and religious belief around the world. In many cultures, they are seen as harbingers of ill-omen and symbols of misfortune and death, though in some places or contexts, they are viewed more ambiguously as tricksters or psychopomps. They are known for their intelligence and excellent memory. The distinction between crows and ravens is somewhat inconsistent, but generally, crows are smaller than ravens."
+ 
  
  # Character Interactions
  VIET_gift_baklava:0 "Present Gift of Special Pastries"

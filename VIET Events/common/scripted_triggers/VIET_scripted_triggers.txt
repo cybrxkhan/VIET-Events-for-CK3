@@ -79,4 +79,3 @@ VIET_is_in_broccoli_region_trigger = {
 	}
 }
 
-

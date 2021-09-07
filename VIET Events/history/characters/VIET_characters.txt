@@ -1,6 +1,69 @@
 ﻿
 
-# VIET_character_001 reserved for the Dreamer (Male)
+# Dreamer (Male)
+VIET_character_001 = {
+	name = "VIET_name_dreamer"
+	religion = "mahayana"
+	culture = "han"
+	diplomacy = 108
+	martial = 108
+	stewardship = 108
+	intrigue = 108
+	learning = 108
+	prowess = 108
+	trait = intellect_good_3
+	trait = beauty_good_3
+	trait = physique_good_3
+	trait = savior
+	trait = compassionate
+	trait = just
+	trait = humble
+	trait = patient
+	trait = calm
+	disallow_random_traits = yes
+	1.1.1 = {
+		birth = "1.1.1"
+	}
+	18.8.8 = {
+		add_spouse = VIET_character_002
+		effect = {
+			set_relation_soulmate = character:VIET_character_002
+			set_relation_best_friend = character:VIET_character_002
+		}
+	}
+	28.8.8 = {
+		death = "28.8.8"
+	}
+}
+
+# Dreamer (Female)
+VIET_character_002 = {
+	name = "VIET_name_dreamer"
+	religion = "mahayana"
+	culture = "han"
+	diplomacy = 108
+	martial = 108
+	stewardship = 108
+	intrigue = 108
+	learning = 108
+	prowess = 108
+	trait = intellect_good_3
+	trait = beauty_good_3
+	trait = physique_good_3
+	trait = savior
+	trait = compassionate
+	trait = just
+	trait = humble
+	trait = patient
+	trait = calm
+	disallow_random_traits = yes
+	1.1.1 = {
+		birth = "1.1.1"
+	}
+	28.8.8 = {
+		death = "28.8.8"
+	}
+}
 
 # VIET_character_002 reserved for the Dreamer (Female)
 
