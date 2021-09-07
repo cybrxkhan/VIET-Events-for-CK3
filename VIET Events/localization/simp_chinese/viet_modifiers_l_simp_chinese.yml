@@ -523,7 +523,7 @@
  # 1.4.3 - please leave this comment here 
  VIET_crows_following:0 "Surrounded by Crows"
  VIET_crows_following_desc:0 "Crows follow this character everywhere. Though they aren't a danger and don't do anything (at least not yet), there are rumors that they either bring this character much misfortune, or are a sign of this character's supposed dark nature."
- VIET_crow_enemy:0 "Enemies of Crows"
+ VIET_crow_enemy:0 "Enemy of Crows"
  VIET_crow_enemy_desc:0 "This character has done something to offend the local crows. Crows are, by nature, very intelligent creatures, and many of the local crows constantly attack this character, drop random items and manure around their residence, and overall just make their life miserable."
  VIET_crow_friend:0 "Friends with Crows"
  VIET_crow_friend_desc:0 "This character has befriended a number of local crows. Crows are, by nature, very intelligent creatures, and they enjoy the company of this character. Though some rumors view this situation negatively, it is not necessarily a bad one for this character at all."

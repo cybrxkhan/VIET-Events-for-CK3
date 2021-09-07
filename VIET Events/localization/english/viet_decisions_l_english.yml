@@ -64,12 +64,12 @@
  
  
  # Character Interactions
- VIET_gift_baklava:0 "Regalar pasteles especiales"
- VIET_gift_baklava_desc:0 "Comprar varios pasteles, postres y dulces hechos por el famoso pastelero para [recipient.GetShortUINameNoTooltip]"
- VIET_gift_baklava_effect_tooltip:0 "[recipient.GetShortUINameNoTooltip] recibirá tu regalo de postres, lo que le dará a [recipient.Custom('ES_ElElla')] un [character_modifier|E]"
- VIET_gift_spices:0 "Regalar la mezcla de especias especial"
- VIET_gift_spices_desc:0 "Comprar la famosa #V Mezcla de Cinco Especias#! como regalo para [recipient.GetShortUINameNoTooltip]"
- VIET_gift_spices_effect_tooltip:0 "[recipient.GetShortUINameNoTooltip] recibirá un [character_modifier|E] especial representando la #V Mezcla de Cinco Especias#!"
+ VIET_gift_baklava:0 "Present Gift of Special Pastries"
+ VIET_gift_baklava_desc:0 "Buy various pastries, confectionary, and desserts made by a famous patissier as a gift for [recipient.GetShortUINameNoTooltip]"
+ VIET_gift_baklava_effect_tooltip:0 "[recipient.GetShortUINameNoTooltip] will receive your chosen gift of desserts, which will give [recipient.GetHerHim] a [character_modifier|E]"
+ VIET_gift_spices:0 "Present Gift of the Special Spice Blend"
+ VIET_gift_spices_desc:0 "Buy the famed #V Five Spice Blend#! as a gift for [recipient.GetShortUINameNoTooltip]"
+ VIET_gift_spices_effect_tooltip:0 "[recipient.GetShortUINameNoTooltip] will receive a special [character_modifier|E] representing the #V Five Spice Blend#!"
  VIET_decision_xxxxx:0 "xxxxx"
  
  # Character Interactions
