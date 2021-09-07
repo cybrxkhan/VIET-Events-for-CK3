@@ -62,17 +62,20 @@
  VIET_decision_feed_the_crows_confirm:0 "Where's my bag of crow food?"
  VIET_decision_feed_the_crows_context_tooltip:0 "#emphasis Historical Context:#! Birds of the #italic Corvus#! genus, known commonly as crows or ravens, are a common part of folklore and religious belief around the world. In many cultures, they are seen as harbingers of ill-omen and symbols of misfortune and death, though in some places or contexts, they are viewed more ambiguously as tricksters or psychopomps. They are known for their intelligence and excellent memory. The distinction between crows and ravens is somewhat inconsistent, but generally, crows are smaller than ravens." 
  
+ 
  # Character Interactions
- VIET_gift_baklava:0 "Present Gift of Special Pastries"
- VIET_gift_baklava_desc:0 "Buy various pastries, confectionary, and desserts made by a famous patissier as a gift for [recipient.GetShortUINameNoTooltip]"
- VIET_gift_baklava_effect_tooltip:0 "[recipient.GetShortUINameNoTooltip] will receive your chosen gift of desserts, which will give [recipient.GetHerHim] a [character_modifier|E]"
- VIET_gift_spices:0 "Present Gift of the Special Spice Blend"
- VIET_gift_spices_desc:0 "Buy the famed #V Five Spice Blend#! as a gift for [recipient.GetShortUINameNoTooltip]"
- VIET_gift_spices_effect_tooltip:0 "[recipient.GetShortUINameNoTooltip] will receive a special [character_modifier|E] representing the #V Five Spice Blend#!"
+ VIET_gift_baklava:0 "Regalar pasteles especiales"
+ VIET_gift_baklava_desc:0 "Comprar varios pasteles, postres y dulces hechos por el famoso pastelero para [recipient.GetShortUINameNoTooltip]"
+ VIET_gift_baklava_effect_tooltip:0 "[recipient.GetShortUINameNoTooltip] recibirá tu regalo de postres, lo que le dará a [recipient.Custom('ES_ElElla')] un [character_modifier|E]"
+ VIET_gift_spices:0 "Regalar la mezcla de especias especial"
+ VIET_gift_spices_desc:0 "Comprar la famosa #V Mezcla de Cinco Especias#! como regalo para [recipient.GetShortUINameNoTooltip]"
+ VIET_gift_spices_effect_tooltip:0 "[recipient.GetShortUINameNoTooltip] recibirá un [character_modifier|E] especial representando la #V Mezcla de Cinco Especias#!"
  VIET_decision_xxxxx:0 "xxxxx"
  
  # Character Interactions
- activity_VIET_dealing_with_crows:0 "Attempt to Resolve the Crow Issue"
- activity_VIET_dealing_with_crows_name:0 "[ACTIVITY.GetOwner.GetNamePossessiveOrMy|U] Attempt to Resolve the Crow Issue"
+ activity_VIET_crow_appeasement:0 "Crow Appeasement"
+ activity_VIET_crow_appeasement_name:0 "[ACTIVITY.GetOwner.GetNamePossessiveOrMy|U] Crow Appeasement"
+ activity_VIET_crow_removal:0 "Crow Removal"
+ activity_VIET_crow_removal_name:0 "[ACTIVITY.GetOwner.GetNamePossessiveOrMy|U] Crow Removal"
  activity_VIET_xxxxx:0 "xxxxx"
  
