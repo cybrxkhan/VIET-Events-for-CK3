@@ -209,7 +209,8 @@
  VIETmisc.2052.desc:0 "After consulting with some scholars well-versed in animals, I decided to try feeding the crows. I have my servants gather a few bags filled with seeds, nuts, and leftover scraps of food from unfinished meals.\n\nWhen the crows came by one day, perched on a tree not too far from my room, I gathered the bags and walked outside into a small patch of dirt in front of them. There, I whistled to get their attention before reaching into the bag and tossing the food onto the ground. The crows and I stared at each other awkwardly, before I left to let them be; a few minutes later, from my room, I saw a few swoop down to eat the food.\n\nThis went on for several more weeks, and I’ve come to realize… it feels nice, actually."
  VIETmisc.2052.a:0 "Hopefully this will placate these crows!"
  VIETmisc.2052.b:0 "I am thinking of doing even more for them."
- VIETmisc.2052.tooltip:0 "The crows aren’t so bad - maybe you can find a way to help them out even more. This will increase the likelihood the crows view you #P positively#!."
+ VIETmisc.2052.tooltip.a:0 "You continue feeding the crows. Hopefully this wil convince them to leave you alone."
+ VIETmisc.2052.tooltip.b:0 "The crows aren’t so bad - maybe you can find a way to help them out even more. This will increase the likelihood the crows view you #P positively#!."
  VIETmisc.2053.t:0 "A Garden for Crows"
  VIETmisc.2053.desc:0 "Some of my courtiers must have thought I was being a lunatic, but I instructed my servants to construct a small fountain outside my residence, and place near it some basins or containers where we would leave some seeds, nuts, and leftover food everyday. Not only will we get rid of leftover food, but it would be a nice way to help the crows out if what they've wanted all this time was just some nourishment.\n\nSoon enough, over the next few weeks, I noticed more and more crows coming by this little garden I made. I now go out sometimes to say hello and feed them personally."
  VIETmisc.2053.a:0 "There are some who question me, but these crows seem friendly."
@@ -238,10 +239,10 @@
  VIETmisc.2059.t:0 "xxxxx"
  VIETmisc.2059.desc:0 "xxxxx"
  VIETmisc.2059.a:0 "xxxxx"
- # 1.4.4 - please leave this comment here
  VIETmisc.2060.t:0 "xxxxx"
  VIETmisc.2060.desc:0 "xxxxx"
  VIETmisc.2060.a:0 "xxxxx"
+ # 1.4.4 - please leave this comment here
  VIETmisc.2061.t:0 "xxxxx"
  VIETmisc.2061.desc:0 "xxxxx"
  VIETmisc.2061.a:0 "xxxxx"
