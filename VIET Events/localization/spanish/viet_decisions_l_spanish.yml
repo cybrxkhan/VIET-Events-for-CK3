@@ -71,3 +71,8 @@
  VIET_gift_spices_desc:0 "Comprar la famosa #V Mezcla de Cinco Especias#! como regalo para [recipient.GetShortUINameNoTooltip]"
  VIET_gift_spices_effect_tooltip:0 "[recipient.GetShortUINameNoTooltip] recibirá un [character_modifier|E] especial representando la #V Mezcla de Cinco Especias#!"
  VIET_decision_xxxxx:0 "xxxxx"
+ 
+ # Character Interactions
+ activity_VIET_dealing_with_crows:0 "Attempt to Resolve the Crow Issue"
+ activity_VIET_dealing_with_crows_name:0 "[ACTIVITY.GetOwner.GetNamePossessiveOrMy|U] Attempt to Resolve the Crow Issue"
+ activity_VIET_xxxxx:0 "xxxxx"
