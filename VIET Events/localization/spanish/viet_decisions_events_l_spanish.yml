@@ -186,14 +186,14 @@
  VIETmisc.2046.a:0 "¿Qué? ¿Quién se atreve a rechazar mi regalo?"
  # 1.4.2 - please leave this comment here 
  # 1.4.3 - please leave this comment here
- VIETmisc.2047.t:0 "El Asesino"
+ VIETmisc.2047.t:0 "La Bandada
  VIETmisc.2047.desc:0 "Está pasando algo inusual.\n\nEn las pasadas semanas, una gran cantidad de cuervos se ha movido aquí, posándose en árboles y tejados. Uno de mis criados llegó a contar hasta un centenar. Los cuervos no hacen nada, pero su presencia resulta desconcertante cuanto menos. Más preocupante, han empezado a seguirme. No importa donde vaya, los cuervos me siguen de cerca.\n\nAlgunos dicen que esto es una señal, y que hay que ocuparse cuanto antes de estas oscuras criaturas. Otros lo consideran una superstición, y sugieren que los dejemos estar. Y otros simplemente dicen que no debemos hacerles caso, para no provocar su ira y atraer males sobrenaturales."
  VIETmisc.2047.a:0 "Vivimos en tiempos extraños."
- VIETmisc.2047.tooltip:0 "Tienes acceso a una [decision|E] para #V Lidiar con el asesinato de cuervos#! mientras tengas el [modifier|E] #V Seguido por cuervos!#. Tal vez los pájaros se vayan por sí solos, o tal vez debamos hacer algo para cazarlos - la decisión es tuya."
+ VIETmisc.2047.tooltip:0 "Tienes acceso a una [decision|E] para #V Lidiar con la bandada de cuervos#! mientras tengas el [modifier|E] #V Seguido por cuervos!#. Tal vez los pájaros se vayan por sí solos, o tal vez debamos hacer algo para cazarlos - la decisión es tuya."
  VIETmisc.2048.t:0 "¿Se han ido?"
  VIETmisc.2048.desc:0 "Me acostumbré tanto a ver cuervos por todos lados que no me di cuenta cuando su numero empezó a disminuir en las últimas semanas. Parece que hayan desaparecido. Algunos dicen que es un milagro, otros un presagio; los más escépticos dicen que los pájaros simplemente se han aburrido de mí."
  VIETmisc.2048.a:0 "Era inusual, todo sea dicho."
- VIETmisc.2049.t:0 "Lidiando con el asesinato"
+ VIETmisc.2049.t:0 "Lidiando con la bandada"
  VIETmisc.2049.desc:0 "Hay algo raro en estos cuervos que han empezado a seguirme. ¡Cada pocos días, aparecen de la nada y se quedan ahí, mirándome de forma amenazadora! Tras una deliberación con mis cortesanos, he decidido empezar un plan de acción."
  VIETmisc.2049.a:0 "¡Cazadlos! ¡Asustadlos! ¡Los echaremos para siempre!"
  VIETmisc.2049.b:0 "Son inofensivos - tal vez pueda hacer las "paces" con ellos."
