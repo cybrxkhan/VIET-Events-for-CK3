@@ -8956,6 +8956,16 @@ VIETmisc.0111 = {
 			generous = medium_stress_impact_gain
 			gregarious = minor_stress_impact_gain
 		}
+		hidden_effect = {
+			scope:scope_VIET_left_for_dead_person = {
+				random = {
+					chance = 50
+					death = {
+						death_reason = death_wounds
+					}	
+				}
+			}
+		}
 	}
 	
 	option = { # Escort them to the safety of town
