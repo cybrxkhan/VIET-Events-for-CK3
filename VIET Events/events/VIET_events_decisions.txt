@@ -26,6 +26,9 @@
 # 2019-2020		Mysterious Treasure Chest
 # 2021-2022		Hire Mercenary Scholar
 # 2023-2038		Servants Kidnapped
+# 2039-2042		Baklava Merchant Gifting
+# 2043-2046		Spice Merchant Gifting
+# 2047-2060		Deal with the Crows
 # 
 ############################################################################################################################
 
@@ -2408,6 +2411,791 @@ VIETmisc.2046 = {
 				target = scope:recipient
 				modifier = VIET_opinion_gifted_spices
 			}
+		}
+	}
+}
+
+
+##################################################################
+# DEAL WITH THE CROWS 2047-2060
+##################################################################
+
+# Crows keep following you around for some reason
+VIETmisc.2047 = {
+	type = character_event
+	title = VIETmisc.2047.t
+	desc = VIETmisc.2047.desc
+	theme = skull
+	override_background = { event_background = courtyard }
+	
+	right_portrait = {
+		character = root
+		animation = boredom
+	}
+	
+	weight_multiplier = {
+		base = 1
+		modifier = {
+			add = 0.2
+			has_trait = deceitful
+		}
+		modifier = {
+			add = -0.2
+			has_trait = honest
+		}
+		modifier = {
+			add = 0.2
+			has_trait = paranoid
+		}
+		modifier = {
+			add = -0.2
+			has_trait = trusting
+		}
+		modifier = {
+			add = 0.2
+			has_trait = calm
+		}
+		modifier = {
+			add = -0.2
+			has_trait = wrathful
+		}
+	}
+	
+	immediate = {
+		play_music_cue = "mx_cue_murder"
+	}
+	
+	option = { # Ok
+		name = VIETmisc.2047.a
+		add_character_modifier = {
+			modifier = VIET_crows_following
+		}
+		custom_tooltip = VIETmisc.2047.tooltip
+		hidden_effect = {
+			random_list = {
+				10 = {
+					trigger_event = {
+						id = VIETmisc.2060
+						months = { 24 36 }
+					}
+				}
+				10 = {
+					trigger_event = {
+						id = VIETmisc.2060
+						months = { 48 60 }
+					}
+				}
+				10 = {
+					trigger_event = {
+						id = VIETmisc.2060
+						months = { 72 84 }
+					}
+				}
+				10 = {
+					trigger_event = {
+						id = VIETmisc.2060
+						months = { 96 108 }
+					}
+				}
+				10 = {
+					trigger_event = {
+						id = VIETmisc.2060
+						months = { 120 132 }
+					}
+				}
+				40 = { # Crows stick around forever
+
+				}
+			}
+		}
+	}
+}
+
+
+# Crows disappear for good
+VIETmisc.2048 = {
+	type = character_event
+	title = VIETmisc.2048.t
+	desc = VIETmisc.2048.desc
+	theme = skull
+	override_background = { event_background = courtyard }
+	
+	left_portrait = {
+		character = root
+		animation = personality_irrational
+	}
+	
+	immediate = {
+		play_music_cue = "mx_cue_murder"
+	}
+	
+	option = { # Ok
+		name = VIETmisc.2048.a
+		remove_character_modifier = VIET_crows_following
+	}
+}
+
+
+# What to do with the crows?
+VIETmisc.2049 = {
+	type = character_event
+	title = VIETmisc.2049.t
+	desc = VIETmisc.2049.desc
+	theme = skull
+	override_background = { event_background = council_chamber }
+	
+	left_portrait = {
+		character = root
+		animation = worry
+	}
+	
+	immediate = {
+		capital_province = { save_scope_as = capital_province } #For loc.
+		# Stop characters from planning multiple activities at once.
+		add_character_flag = planning_an_activity
+		add_character_flag = VIET_doing_crow_activities
+	}
+	
+	option = { # Get rid of them
+		name = VIETmisc.2049.a
+		VIET_huge_prestige_gain_effect = yes
+		stress_impact = {
+			compassionate = minor_stress_impact_gain
+			forgiving = minor_stress_impact_gain
+			patient = minor_stress_impact_gain
+			calm = minor_stress_impact_gain
+			content = minor_stress_impact_gain
+		}
+		custom_tooltip = VIETmisc.2049.a.tooltip
+		# Choose appropriate location
+		scope:capital_province = {	
+			spawn_activity = {
+				owner = root
+				type = activity_VIET_crow_removal
+			}	
+		}
+	}	
+	option = { # Try to make peace with them
+		name = VIETmisc.2049.b
+		VIET_huge_prestige_loss_effect = yes
+		VIET_huge_piety_loss_effect = yes
+		stress_impact = {
+			wrathful = minor_stress_impact_gain
+			vengeful = minor_stress_impact_gain
+			impatient = minor_stress_impact_gain
+			sadistic = minor_stress_impact_gain
+			paranoid = minor_stress_impact_gain
+		}
+		custom_tooltip = VIETmisc.2049.b.tooltip
+		# Choose appropriate location
+		scope:capital_province = {	
+			spawn_activity = {
+				owner = root
+				type = activity_VIET_crow_appeasement
+			}	
+		}
+	}
+}
+
+
+# The crows actually left for good...?
+VIETmisc.2050 = {
+	type = character_event
+	title = VIETmisc.2050.t
+	desc = VIETmisc.2050.desc
+	theme = skull
+	override_background = { event_background = garden }
+	
+	left_portrait = {
+		character = root
+		animation = personality_irrational
+	}
+	
+	immediate = {
+		remove_character_modifier = VIET_crows_following
+	}
+	
+	option = { # Ok
+		name = VIETmisc.2050.a
+	}
+	
+	after = {
+		trigger_event = {
+			id = VIETmisc.2059
+			days = 1
+		}
+	}
+}
+
+
+# The crows stick around to annoy the hell out of you
+VIETmisc.2051 = {
+	type = character_event
+	title = VIETmisc.2051.t
+	desc = VIETmisc.2051.desc
+	theme = skull
+	override_background = { event_background = garden }
+	
+	left_portrait = {
+		character = root
+		animation = paranoia
+	}
+	
+	immediate = {
+		play_music_cue = mx_cue_secret
+		remove_character_modifier = VIET_crows_following
+		random_list = {
+			10 = {
+				add_character_modifier = {
+					modifier = VIET_crow_enemy
+					years = 10
+				}			
+			}
+			10 = {
+				add_character_modifier = {
+					modifier = VIET_crow_enemy
+					years = 20
+				}			
+			}
+			10 = {
+				add_character_modifier = {
+					modifier = VIET_crow_enemy
+					years = 30
+				}			
+			}
+			10 = {
+				add_character_modifier = {
+					modifier = VIET_crow_enemy
+					years = 40
+				}			
+			}
+			60 = {
+				modifier = {
+					add = 3
+					num_sinful_traits >= 1
+				}
+				modifier = {
+					add = 3
+					has_trait = arrogant
+				}
+				modifier = {
+					add = 3
+					has_trait = sadistic
+				}
+				modifier = {
+					add = 3
+					has_trait = wrathful
+				}
+				modifier = {
+					add = 3
+					has_trait = vengeful
+				}
+				add_character_modifier = {
+					modifier = VIET_crow_enemy
+				}			
+			}
+		}
+	}
+	
+	option = { # Ok
+		name = VIETmisc.2051.a
+		VIET_massive_prestige_loss_effect = yes
+		VIET_massive_piety_loss_effect = yes
+		stress_impact = {
+			base = minor_stress_impact_gain
+			wrathful = minor_stress_impact_gain
+			paranoid = medium_stress_impact_gain
+		}
+	}
+	
+	after = {
+		trigger_event = {
+			id = VIETmisc.2059
+			days = 1
+		}
+	}
+}
+
+
+
+# Feeding the crows
+VIETmisc.2052 = {
+	type = character_event
+	title = VIETmisc.2052.t
+	desc = VIETmisc.2052.desc
+	theme = skull
+	override_background = { event_background = garden }
+	
+	left_portrait = {
+		character = root
+		animation = personality_forgiving
+	}
+	
+	option = { # Ok
+		name = VIETmisc.2052.a
+		custom_tooltip = VIETmisc.2052.tooltip.a
+		hidden_effect = {
+			random_list = {
+				50 = {
+					modifier = {
+						add = 4
+						num_virtuous_traits >= 1
+					}
+					modifier = {
+						add = 4
+						has_trait = humble
+					}
+					modifier = {
+						add = 4
+						has_trait = compassionate
+					}
+					modifier = {
+						add = 4
+						has_trait = just
+					}
+					modifier = {
+						add = 4
+						has_trait = calm
+					}
+					trigger_event = {
+						id = VIETmisc.2055
+						days = { 15 35 }
+					}		
+				}
+				50 = {
+					modifier = {
+						add = 3
+						num_sinful_traits >= 1
+					}
+					modifier = {
+						add = 3
+						has_trait = arrogant
+					}
+					modifier = {
+						add = 3
+						has_trait = sadistic
+					}
+					modifier = {
+						add = 3
+						has_trait = wrathful
+					}
+					modifier = {
+						add = 3
+						has_trait = vengeful
+					}
+					trigger_event = {
+						id = VIETmisc.2054
+						days = { 15 35 }
+					}		
+				}
+			}
+		}
+	}
+	
+	option = { # Ok
+		name = VIETmisc.2052.b
+		trigger = {
+			OR = {
+				is_ai = no
+				gold >= 25
+			}
+		}
+		remove_short_term_gold = 25
+		VIET_huge_prestige_loss_effect = yes
+		custom_tooltip = VIETmisc.2052.tooltip.b
+		trigger_event = {
+			id = VIETmisc.2053
+			days = { 10 20 }
+		}
+	}
+}
+
+
+
+# Build a fountain for the crows
+VIETmisc.2053 = {
+	type = character_event
+	title = VIETmisc.2053.t
+	desc = VIETmisc.2053.desc
+	theme = skull
+	override_background = { event_background = garden }
+	
+	left_portrait = {
+		character = root
+		animation = personality_forgiving
+	}
+	
+	option = { # Ok
+		name = VIETmisc.2053.a
+		VIET_huge_piety_gain_effect = yes
+		trigger_event = {
+			id = VIETmisc.2055
+			days = { 10 25 }
+		}
+	}
+}
+
+
+
+# Crows leave for good
+VIETmisc.2054 = {
+	type = character_event
+	title = VIETmisc.2054.t
+	desc = VIETmisc.2054.desc
+	theme = skull
+	override_background = { event_background = garden }
+	
+	left_portrait = {
+		character = root
+		animation = personality_forgiving
+	}
+	
+	immediate = {
+		remove_character_modifier = VIET_crows_following
+	}
+	
+	option = { # Ok
+		name = VIETmisc.2054.a
+	}
+	
+	after = {
+		trigger_event = {
+			id = VIETmisc.2059
+			days = 1
+		}
+	}
+}
+
+
+# Crows stay
+VIETmisc.2055 = {
+	type = character_event
+	title = VIETmisc.2055.t
+	desc = VIETmisc.2055.desc
+	theme = skull
+	override_background = { event_background = garden }
+	
+	left_portrait = {
+		character = root
+		animation = personality_forgiving
+	}
+	
+	immediate = {
+		remove_character_modifier = VIET_crows_following
+		add_character_modifier = {
+			modifier = VIET_crow_friend
+		}
+	}
+	
+	option = { # Ok
+		name = VIETmisc.2055.a
+		VIET_huge_prestige_gain_effect = yes
+		add_dread = 10
+		hidden_effect = {
+			if = {
+				limit = {
+					has_any_nickname = no
+				}
+				random = {
+					chance = 65
+					send_interface_toast = {
+						left_icon = ROOT
+						title = VIETmisc.2055.toast
+						if = {
+							limit = {
+								is_female = no
+							}
+							give_nickname = VIET_nick_crow_lord
+						}
+						else = {
+							give_nickname = VIET_nick_crow_lady
+						}
+					}
+				}
+			}
+			else_if = {
+				limit = {
+					has_bad_nickname = yes
+				}
+				random = {
+					chance = 50
+					send_interface_toast = {
+						left_icon = ROOT
+						title = VIETmisc.2055.toast
+						if = {
+							limit = {
+								is_female = no
+							}
+							give_nickname = VIET_nick_crow_lord
+						}
+						else = {
+							give_nickname = VIET_nick_crow_lady
+						}
+					}
+				}				
+			}
+			else = {
+				random = {
+					chance = 35
+					send_interface_toast = {
+						left_icon = ROOT
+						title = VIETmisc.2055.toast
+						if = {
+							limit = {
+								is_female = no
+							}
+							give_nickname = VIET_nick_crow_lord
+						}
+						else = {
+							give_nickname = VIET_nick_crow_lady
+						}
+					}
+				}				
+			}		
+		}
+	}
+	
+	after = {
+		trigger_event = {
+			id = VIETmisc.2059
+			days = 1
+		}
+	}
+}
+
+
+# Crows save you from a bandit attack
+VIETmisc.2056 = {
+	type = character_event
+	title = VIETmisc.2056.t
+	desc = VIETmisc.2056.desc
+	theme = battle	
+	override_background = { event_background = VIET_background_tuscan_country }
+	
+	right_portrait = {
+		character = root
+		animation = admiration
+	}	
+	
+	weight_multiplier = {
+		base = 1
+		modifier = {
+			add = 0.2
+			has_trait = brave
+		}
+		modifier = {
+			add = -0.2
+			has_trait = craven
+		}
+		modifier = {
+			add = 0.2
+			has_trait = diligent
+		}
+		modifier = {
+			add = -0.2
+			has_trait = lazy
+		}
+		modifier = {
+			add = 0.2
+			has_trait = ambitious
+		}
+		modifier = {
+			add = -0.2
+			has_trait = paranoid
+		}
+	}
+	
+	option = { # ok
+		name = VIETmisc.2056.a
+		VIET_large_prestige_gain_effect = yes
+		add_dread = 10
+		add_character_modifier = {
+			modifier = VIET_rescued_by_crows
+			years = 5
+		}		
+	}
+}
+
+# Crows give you some presents
+VIETmisc.2057 = {
+	type = character_event
+	title = VIETmisc.2057.t
+	desc = VIETmisc.2057.desc
+	theme = skull
+	override_background = { event_background = garden }
+	
+	left_portrait = {
+		character = root
+		animation = personality_content
+	}
+	
+	immediate = {
+		random_list = {
+			10 = {
+				add_character_flag = VIET_crow_present_gold
+				random_list = {
+					10 = { add_gold = 1 }
+					10 = { add_gold = 2 }
+					10 = { add_gold = 5 }
+					10 = { add_gold = 8 }
+					10 = { add_gold = 10 }
+					10 = { add_gold = 12 }
+					10 = { add_gold = 16 }
+					10 = { add_gold = 20 }
+				}
+			}
+			10 = {
+				add_character_flag = VIET_crow_present_jewels
+				random_list = {
+					10 = { add_gold = 5 }
+					10 = { add_gold = 10 }
+					10 = { add_gold = 20 }
+					10 = { add_gold = 30 }
+					10 = { add_gold = 40 }
+					10 = { add_gold = 50 }
+				}
+			}
+			10 = {
+				add_character_flag = VIET_crow_present_parchment
+				VIET_random_small_prestige_gain_effect = yes
+			}
+			10 = {
+				add_character_flag = VIET_crow_present_rocks
+				VIET_random_small_piety_gain_effect = yes
+			}
+			10 = {
+				add_character_flag = VIET_crow_present_plants
+				add_character_modifier = {
+					modifier = VIET_crow_gift_plants
+					years = 2
+				}
+			}
+		}
+	}
+	
+	weight_multiplier = {
+		base = 1
+		modifier = {
+			add = 0.2
+			has_trait = compassionate
+		}
+		modifier = {
+			add = -0.2
+			has_trait = callous
+		}
+		modifier = {
+			add = 0.2
+			has_trait = calm
+		}
+		modifier = {
+			add = -0.2
+			has_trait = wrathful
+		}
+		modifier = {
+			add = 0.2
+			has_trait = generous
+		}
+		modifier = {
+			add = -0.2
+			has_trait = greedy
+		}
+	}
+	
+	option = { # Ok
+		name = VIETmisc.2057.a
+		trigger = { has_character_flag = VIET_crow_present_gold }
+	}	
+	option = { # Ok
+		name = VIETmisc.2057.b
+		trigger = { has_character_flag = VIET_crow_present_jewels }
+	}	
+	option = { # Ok
+		name = VIETmisc.2057.c
+		trigger = { has_character_flag = VIET_crow_present_parchment }
+	}	
+	option = { # Ok
+		name = VIETmisc.2057.d
+		trigger = { has_character_flag = VIET_crow_present_rocks }
+	}	
+	option = { # Ok
+		name = VIETmisc.2057.e
+		trigger = { has_character_flag = VIET_crow_present_plants }
+	}
+	
+	after = {
+		if = {
+			limit = { has_character_flag = VIET_crow_present_gold }
+			remove_character_flag = VIET_crow_present_gold
+		}
+		if = {
+			limit = { has_character_flag = VIET_crow_present_jewels }
+			remove_character_flag = VIET_crow_present_jewels
+		}
+		if = {
+			limit = { has_character_flag = VIET_crow_present_parchment }
+			remove_character_flag = VIET_crow_present_parchment
+		}
+		if = {
+			limit = { has_character_flag = VIET_crow_present_rocks }
+			remove_character_flag = VIET_crow_present_rocks
+		}
+		if = {
+			limit = { has_character_flag = VIET_crow_present_plants }
+			remove_character_flag = VIET_crow_present_plants
+		}
+	}
+}
+
+
+# Relaxing with the crows
+VIETmisc.2058 = {
+	type = character_event
+	title = VIETmisc.2058.t
+	desc = VIETmisc.2058.desc
+	theme = skull
+	override_background = { event_background = garden }
+	
+	left_portrait = {
+		character = root
+		animation = personality_content
+	}
+	
+	option = { # Ok
+		name = VIETmisc.2058.a
+		add_dread = 10
+		stress_impact = {
+			base = minor_stress_impact_loss
+			compassionate = minor_stress_impact_loss
+			calm = minor_stress_impact_loss
+		}
+	}
+}
+
+
+# Misc cleanup
+VIETmisc.2059 = {
+	hidden = yes	
+	immediate = {
+		scope:activity = {
+			complete_activity = yes
+		}
+	}
+}
+
+
+# Ping to check if currently doing anything with crows or if crow situation is resolved
+VIETmisc.2060 = {
+	hidden = yes	
+	immediate = {
+		if = {
+			limit = {
+				NOR = {
+					has_character_flag = VIET_doing_crow_activities
+					has_character_modifier = VIET_crow_enemy
+					has_character_modifier = VIET_crow_friend
+				}
+			}
+			trigger_event = VIETmisc.2048
 		}
 	}
 }

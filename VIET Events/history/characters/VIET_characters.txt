@@ -3,6 +3,7 @@
 # Dreamer (Male)
 VIET_character_001 = {
 	name = "VIET_name_dreamer"
+	dna = VIET_dreamer_male
 	religion = "mahayana"
 	culture = "han"
 	diplomacy = 108
@@ -39,6 +40,8 @@ VIET_character_001 = {
 # Dreamer (Female)
 VIET_character_002 = {
 	name = "VIET_name_dreamer"
+	female = yes
+	dna = VIET_dreamer_female
 	religion = "mahayana"
 	culture = "han"
 	diplomacy = 108
@@ -64,8 +67,6 @@ VIET_character_002 = {
 		death = "28.8.8"
 	}
 }
-
-# VIET_character_002 reserved for the Dreamer (Female)
 
 # Qi Ma the Liar
 VIET_character_003 = {

@@ -2425,6 +2425,9 @@ VIETold.2034 = {
 	
 	option = { # Type A is bad
 		name = VIETold.2034.a
+		trigger = {
+			NOT = { exists = var:VIET_dreamer_karmic_connection_male }
+		}
 		if = {
 			limit = {
 				faith = {
@@ -2456,6 +2459,9 @@ VIETold.2034 = {
 	
 	option = { # Type B is bad
 		name = VIETold.2034.b
+		trigger = {
+			NOT = { exists = var:VIET_dreamer_karmic_connection_male }
+		}
 		if = {
 			limit = {
 				faith = {
@@ -2487,13 +2493,19 @@ VIETold.2034 = {
 		}
 	}
 	
-	#option = { # You met the Dreamer too?
-	#	name = VIETold.2034.c
-	#	trigger = {
-	#		has_character_flag = VIET_met_the_dreamer
-	#	}
-	#	# Add to a Dreamer variable???
-	#}
+	option = { # You met the Dreamer too?
+		name = VIETold.2034.c
+		trigger = {
+			#has_character_flag = VIET_met_the_dreamer
+			exists = var:VIET_dreamer_karmic_connection_male
+		}
+		# Add to a Dreamer variable???
+		VIET_large_piety_gain_effect = yes
+		change_variable = {
+			name = VIET_dreamer_karmic_connection_male
+			add = 1
+		}
+	}
 }
 
 
@@ -2691,18 +2703,27 @@ VIETold.2037 = {
 	
 	option = { # Very odd
 		name = VIETold.2037.a
+		trigger = {
+			NOT = { exists = var:VIET_dreamer_karmic_connection_female }
+		}
 		add_character_modifier = {
 			modifier = VIET_heard_eerie_story
 			days = 365
 		}
 	}	
-	#option = { # You met the Dreamer too?
-	#	name = VIETold.2037.b
-	#	trigger = {
-	#		has_character_flag = VIET_met_the_dreamer
-	#	}
-	#	# Add to a Dreamer variable???
-	#}
+	option = { # You met the Dreamer too?
+		name = VIETold.2037.b
+		trigger = {
+			#has_character_flag = VIET_met_the_dreamer
+			exists = var:VIET_dreamer_karmic_connection_female
+		}
+		# Add to a Dreamer variable???
+		VIET_large_piety_gain_effect = yes
+		change_variable = {
+			name = VIET_dreamer_karmic_connection_female
+			add = 1
+		}
+	}
 }
 
 
@@ -5355,7 +5376,6 @@ VIETold.2073 = {
 				25 = {
 					add_character_modifier = {
 						modifier = VIET_permanent_sun_damage
-						years = 1
 					}
 				}
 			}
@@ -9793,12 +9813,36 @@ VIETold.2138 = {
 			modifier = VIET_thinking_about_foreign_lands
 			years = 2
 		}
+		if = {
+			limit = {
+				has_game_rule = VIET_historical_context_on
+			}
+			custom_tooltip = VIETold.2138.info
+		}
+		stress_impact = {
+			cynical = minor_stress_impact_gain
+			shy = minor_stress_impact_gain
+		}
 	}
 	option = { # Boo women
 		name = VIETold.2138.b
+		trigger = {
+			is_female = no
+			NOT = { faith = { has_doctrine = doctrine_gender_female_dominated } }
+		}
 		add_character_modifier = {
 			modifier = VIET_sexist_against_women
 			years = 2
+		}
+		if = {
+			limit = {
+				has_game_rule = VIET_historical_context_on
+			}
+			custom_tooltip = VIETold.2138.info
+		}
+		stress_impact = {
+			humble = minor_stress_impact_gain
+			content = minor_stress_impact_gain
 		}
 	}
 	option = { # Girl power
@@ -9807,12 +9851,54 @@ VIETold.2138 = {
 			modifier = VIET_girl_power
 			years = 2
 		}
+		if = {
+			limit = {
+				has_game_rule = VIET_historical_context_on
+			}
+			custom_tooltip = VIETold.2138.info
+		}
+		stress_impact = {
+			arrogant = minor_stress_impact_gain
+			humble = minor_stress_impact_loss
+		}
 	}
 	option = { # Interesting
 		name = VIETold.2138.d
 		add_character_modifier = {
 			modifier = VIET_nerd_hates_sports
 			years = 2
+		}
+		if = {
+			limit = {
+				has_game_rule = VIET_historical_context_on
+			}
+			custom_tooltip = VIETold.2138.info
+		}
+		stress_impact = {
+			brave = minor_stress_impact_gain
+			craven = minor_stress_impact_loss
+		}
+	}
+	option = { # As a woman I hate women
+		name = VIETold.2138.e
+		trigger = {
+			is_female = yes
+			NOT = { faith = { has_doctrine = doctrine_gender_female_dominated } }
+		}
+		add_character_modifier = {
+			modifier = VIET_self_hating_woman
+			years = 2
+		}
+		if = {
+			limit = {
+				has_game_rule = VIET_historical_context_on
+			}
+			custom_tooltip = VIETold.2138.info
+		}
+		stress_impact = {
+			humble = minor_stress_impact_gain
+			arrogant = minor_stress_impact_loss
+			shy = minor_stress_impact_loss
 		}
 	}
 }

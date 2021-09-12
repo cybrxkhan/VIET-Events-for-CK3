@@ -1,0 +1,110 @@
+﻿
+
+activity_VIET_crow_removal = {
+	solo = yes
+	color = { 0.18 0.17 0.21 1 } #Dark
+	on_spawn = {
+		invite_character_to_activity = activity_owner
+		accept_invitation_for_character = activity_owner
+
+	}
+	on_activate = {
+		activity_owner = {
+			random_list = {
+				# Crows are gone for good
+				40 = {
+					modifier = {
+						add = 4
+						dread > 25
+					}
+					modifier = {
+						add = 6
+						dread > 50
+					}
+					modifier = {
+						add = 8
+						dread > 75
+					}
+					modifier = {
+						add = 5
+						num_virtuous_traits >= 1
+					}
+					modifier = {
+						add = 5
+						has_trait = humble
+					}
+					modifier = {
+						add = 5
+						has_trait = compassionate
+					}
+					modifier = {
+						add = 5
+						has_trait = patient
+					}
+					trigger_event = {
+						id = VIETmisc.2050
+						days = { 20 60 }
+					}				
+				}
+				# Crows take revenge on you
+				60 = {
+					modifier = {
+						add = 4
+						num_sinful_traits >= 1
+					}
+					modifier = {
+						add = 4
+						has_trait = arrogant
+					}
+					modifier = {
+						add = 4
+						has_trait = sadistic
+					}
+					modifier = {
+						add = 4
+						has_trait = wrathful
+					}
+					modifier = {
+						add = 4
+						has_trait = vengeful
+					}
+					trigger_event = {
+						id = VIETmisc.2051
+						days = { 20 60 }
+					}				
+				}
+			}
+		}
+	}
+	on_complete = {
+		activity_owner = {
+			remove_character_flag = planning_an_activity
+			remove_character_flag = VIET_doing_crow_activities
+		}	
+	}
+}
+
+
+activity_VIET_crow_appeasement = {
+	solo = yes
+	color = { 0.22 0.23 0.24 1 } #Dark
+	on_spawn = {
+		invite_character_to_activity = activity_owner
+		accept_invitation_for_character = activity_owner
+
+	}
+	on_activate = {
+		activity_owner = {
+			trigger_event = {
+				id = VIETmisc.2052
+				days = { 15 35 }
+			}
+		}
+	}
+	on_complete = {
+		activity_owner = {
+			remove_character_flag = planning_an_activity
+			remove_character_flag = VIET_doing_crow_activities
+		}	
+	}
+}

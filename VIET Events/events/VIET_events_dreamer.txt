@@ -1,0 +1,252 @@
+﻿############################################################################################################################
+# 
+# Dreamer Event Chain - VIETmisc.8000-VIETmisc.8999 reserved
+# 
+# 8000-8003		The Dreamer Appears in a Dream
+# 
+############################################################################################################################
+
+namespace = VIETmisc
+
+
+# You meet the Dreamer
+VIETmisc.8000 = {
+	type = character_event
+	title = VIETmisc.8000.t
+	desc = VIETmisc.8000.desc
+	theme = VIET_scarborough_fair
+	
+	left_portrait = {
+		character = scope:dreamer
+		animation = personality_honorable
+	}
+	
+	trigger = {
+		has_game_rule = VIET_normal_universe_events
+		num_sinful_traits < 1
+		NOR = {
+			has_trait = callous
+			has_trait = sadistic
+		}
+	}
+	
+	weight_multiplier = {
+		base = 1
+		modifier = {
+			add = 0.6
+			num_virtuous_traits > 1
+		}
+		modifier = {
+			add = -0.6
+			num_virtuous_traits < 1
+		}
+		modifier = {
+			add = 0.2
+			has_trait = humble
+		}
+		modifier = {
+			add = -0.2
+			has_trait = arrogant
+		}
+		modifier = {
+			add = 0.2
+			has_trait = compassionate
+		}
+		modifier = {
+			add = -0.2
+			has_trait = vengeful
+		}
+		modifier = {
+			add = 0.2
+			has_trait = calm
+		}
+		modifier = {
+			add = -0.2
+			has_trait = wrathful
+		}
+		modifier = {
+			add = 0.2
+			has_trait = content
+		}
+		modifier = {
+			add = -0.2
+			has_trait = ambitious
+		}
+	}
+	
+	immediate = {
+		if = {
+			limit = { NOT = { has_character_flag = VIET_met_the_dreamer } }		
+			add_character_flag = VIET_met_the_dreamer
+		}
+		# Choose whether to meet the male or female Dreamer
+		random_list = {
+			10 = {
+				if = {
+					limit = { NOT = { exists = var:VIET_dreamer_karmic_connection_male } }
+					set_variable = {
+						name = VIET_dreamer_karmic_connection_male
+						value = 1
+					}
+				}
+				else = {
+					change_variable = {
+						name = VIET_dreamer_karmic_connection_male
+						add = 1
+					}		
+				}
+				character:VIET_character_001 = {
+					save_scope_as = dreamer
+				}
+			}
+			10 = {
+				if = {
+					limit = { NOT = { exists = var:VIET_dreamer_karmic_connection_female } }
+					set_variable = {
+						name = VIET_dreamer_karmic_connection_female
+						value = 1
+					}
+				}
+				else = {
+					change_variable = {
+						name = VIET_dreamer_karmic_connection_female
+						add = 1
+					}		
+				}
+				character:VIET_character_002 = {
+					save_scope_as = dreamer
+				}
+			}
+		}
+	}
+	
+	
+	option = {
+		name = VIETmisc.8000.a
+		trigger_event = VIETmisc.8001
+	}
+}
+
+
+
+# You meet the Dreamer
+VIETmisc.8001 = {
+	type = character_event
+	title = VIETmisc.8001.t
+	desc = VIETmisc.8001.desc
+	theme = VIET_scarborough_fair
+	
+	left_portrait = {
+		character = scope:dreamer
+		animation = personality_honorable
+	}	
+	
+	option = {
+		name = VIETmisc.8001.a
+		random_list = {
+			75 = {
+				if = {
+					limit = { NOT = { exists = var:VIET_dreamer_yin_wisdom } }
+					set_variable = {
+						name = VIET_dreamer_yin_wisdom
+						value = 1
+					}
+				}
+				else = {
+					change_variable = {
+						name = VIET_dreamer_yin_wisdom
+						add = 1
+					}		
+				}			
+			}
+			25 = {
+				if = {
+					limit = { NOT = { exists = var:VIET_dreamer_yang_wisdom } }
+					set_variable = {
+						name = VIET_dreamer_yang_wisdom
+						value = 1
+					}
+				}
+				else = {
+					change_variable = {
+						name = VIET_dreamer_yang_wisdom
+						add = 1
+					}		
+				}			
+			}
+		}
+		trigger_event = VIETmisc.8003
+	}	
+	
+	option = {
+		name = VIETmisc.8001.b
+		random_list = {
+			25 = {
+				if = {
+					limit = { NOT = { exists = var:VIET_dreamer_yin_wisdom } }
+					set_variable = {
+						name = VIET_dreamer_yin_wisdom
+						value = 1
+					}
+				}
+				else = {
+					change_variable = {
+						name = VIET_dreamer_yin_wisdom
+						add = 1
+					}		
+				}			
+			}
+			75 = {
+				if = {
+					limit = { NOT = { exists = var:VIET_dreamer_yang_wisdom } }
+					set_variable = {
+						name = VIET_dreamer_yang_wisdom
+						value = 1
+					}
+				}
+				else = {
+					change_variable = {
+						name = VIET_dreamer_yang_wisdom
+						add = 1
+					}		
+				}			
+			}
+		}
+		trigger_event = VIETmisc.8002
+	}
+}
+
+
+# You wake up from the Dream with the Dreamer
+VIETmisc.8002 = {
+	type = character_event
+	title = VIETmisc.8002.t
+	desc = VIETmisc.8002.desc
+	theme = friendly	
+	
+	option = {
+		name = VIETmisc.8002.a
+		VIET_massive_piety_gain_effect = yes
+	}
+}
+
+
+# You wake up from the Dream with the Dreamer
+VIETmisc.8003 = {
+	type = character_event
+	title = VIETmisc.8003.t
+	desc = VIETmisc.8003.desc
+	theme = friendly	
+	
+	option = {
+		name = VIETmisc.8003.a
+		VIET_massive_piety_gain_effect = yes
+	}
+
+	after = {
+		clear_saved_scope = dreamer
+	}	
+	
+}
+
+

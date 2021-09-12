@@ -5,6 +5,7 @@
 # VIET_background_tuscan_country
 # VIET_background_ancient_cairn
 # VIET_background_small_town
+# VIET_background_scarborough_fair
 
 
 ### OBLIVION PASTORAL ###
@@ -494,6 +495,18 @@ VIET_background_skyrim_forest = {
 		reference = "gfx/interface/illustrations/event_scenes/VIET_skyrim_forest.dds"
 		environment = "environment_event_forest_pine"
 		ambience = "event:/SFX/Events/Backgrounds/coniferous_forest_day"
+	}
+}
+
+
+
+
+### SCARBOROUGH FAIR ###
+VIET_background_scarborough_fair = {
+	background = {
+		reference = "gfx/interface/illustrations/event_scenes/VIET_scarborough_fair.dds"
+		environment = "environment_event_garden"
+		ambience = "event:/SFX/Events/Backgrounds/castle_garden_day"
 	}
 }
 

@@ -898,6 +898,7 @@ VIET_events_common_decisions_pulse = {
 		100 = VIETmisc.2007		# A ghost seems to be haunting you
 		100 = VIETmisc.2019		# Your servants find a mysterious treasure chest
 		100 = VIETmisc.2021		# Meet the mercenary scholar at an inn
+		100 = VIETmisc.2047		# Crows keep following you around for some reason
 		
 	}
 }
@@ -953,9 +954,62 @@ VIET_events_rare_decisions_pulse = {
 		100 = VIETmisc.2014		# Your soldiers find Shadowbanish Wine
 		100 = VIETmisc.2023		# Servants are kidnapped - start the countdown
 		
+		#Meet the Dreamer
+		100 = VIETmisc.8000		# You meet the Dreamer
+		
 	}
 }
 
+
+# Miscellaneous events indirectly related to decisions event chains
+VIET_events_misc_decisions_pulse = {
+	trigger = {
+		VIET_basic_is_available_adult_trigger = yes
+	}
+	random_events = {
+		chance_of_no_event = {
+			value = 30
+			if = {
+				limit = {
+					has_game_rule = VIET_event_frequency_low
+				}
+				add = 10
+			}
+			if = {
+				limit = {
+					has_game_rule = VIET_event_frequency_very_low
+				}
+				add = 20
+			}
+			if = {
+				limit = {
+					has_game_rule = VIET_event_frequency_high
+				}
+				subtract = 10
+			}
+			if = {
+				limit = {
+					has_game_rule = VIET_event_frequency_very_high
+				}
+				subtract = 20
+			}
+		}
+		3000 = 0
+		
+		#######################################
+		# OLD VIET (for events converted into decision event chains)
+		#######################################
+		
+		#######################################
+		# NEXT GEN VIET
+		#######################################
+		
+		#Meet the Dreamer
+		100 = VIETmisc.2056		# Crows save you from a bandit attack
+		100 = VIETmisc.2057		# Crows give you some presents
+		
+	}
+}
 
 
 

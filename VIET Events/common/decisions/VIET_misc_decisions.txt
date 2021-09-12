@@ -466,6 +466,98 @@ VIET_decision_meet_qi_ma_the_liar = {
 	}
 }
 
+
+VIET_decision_deal_with_crows = {
+	picture = "gfx/interface/illustrations/decisions/decision_viet_crow.dds"
+	desc = VIET_decision_deal_with_crows_desc
+
+	ai_check_interval = 36
+
+	is_shown = {
+		is_landed = yes
+		has_character_modifier = VIET_crows_following
+	}
+
+	is_valid = {
+		has_character_modifier = VIET_crows_following
+	}
+
+	is_valid_showing_failures_only = {
+		is_adult = yes
+		is_available = yes
+	}
+
+	effect = {
+		custom_tooltip = VIET_decision_deal_with_crows_effect_tooltip
+		if = {
+			limit = {
+				has_game_rule = VIET_historical_context_on
+			}
+			custom_tooltip = VIET_decision_deal_with_crows_context_tooltip
+		}
+		trigger_event = VIETmisc.2049
+	}
+
+	cost = {
+		gold = { value = minor_gold_value } # Will depend
+	}
+	
+	ai_potential = {
+		gold > minor_gold_value
+	}
+
+	ai_will_do = {
+		base = 30
+	}
+}
+
+
+VIET_decision_feed_the_crows = {
+	picture = "gfx/interface/illustrations/decisions/decision_viet_crow.dds"
+	desc = VIET_decision_feed_the_crows_desc
+
+	ai_check_interval = 36
+	
+	cooldown = { days = 1825 }
+
+	is_shown = {
+		is_landed = yes
+		has_character_modifier = VIET_crow_friend
+	}
+
+	is_valid = {
+		has_character_modifier = VIET_crow_friend
+	}
+
+	is_valid_showing_failures_only = {
+		is_adult = yes
+		is_available = yes
+	}
+
+	effect = {
+		custom_tooltip = VIET_decision_feed_the_crows_effect_tooltip
+		if = {
+			limit = {
+				has_game_rule = VIET_historical_context_on
+			}
+			custom_tooltip = VIET_decision_feed_the_crows_context_tooltip
+		}
+		trigger_event = VIETmisc.2058
+	}
+
+	cost = {
+		gold = { value = minor_gold_value } # Will depend
+	}
+	
+	ai_potential = {
+		gold > minor_gold_value
+	}
+
+	ai_will_do = {
+		base = 30
+	}
+}
+
 VIET_decision_tester = {
 	picture = "gfx/interface/illustrations/decisions/decision_viet_qi_ma.dds"
 	desc = VIET_decision_meet_qi_ma_the_liar_desc

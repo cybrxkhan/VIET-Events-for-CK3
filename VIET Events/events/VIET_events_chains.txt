@@ -985,7 +985,7 @@ VIETmisc.1022 = {
 	
 	option = {
 		name = VIETmisc.1022.a
-		add_piety = 100
+		VIET_massive_piety_gain_effect = yes
 		add_character_modifier = {
 			modifier = VIET_memory_of_first_love
 		}
