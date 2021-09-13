@@ -24,6 +24,9 @@ VIET_character_001 = {
 	disallow_random_traits = yes
 	1.1.1 = {
 		birth = "1.1.1"
+		effect = {
+			add_character_flag = no_headgear
+		}
 	}
 	18.8.8 = {
 		add_spouse = VIET_character_002
@@ -62,6 +65,12 @@ VIET_character_002 = {
 	disallow_random_traits = yes
 	1.1.1 = {
 		birth = "1.1.1"
+		effect = {
+			add_character_flag = no_headgear
+		}
+	}
+	18.8.8 = {
+		add_spouse = VIET_character_002
 	}
 	28.8.8 = {
 		death = "28.8.8"
@@ -86,6 +95,9 @@ VIET_character_003 = {
 	father = VIET_character_004
 	60.1.1 = {
 		birth = "60.1.1"
+		effect = {
+			add_character_flag = no_headgear
+		}
 	}
 	88.8.8 = {
 		give_nickname = RICE_nick_the_liar
@@ -111,6 +123,9 @@ VIET_character_004 = {
 	father = VIET_character_005
 	44.1.1 = {
 		birth = "44.1.1"
+		effect = {
+			add_character_flag = no_headgear
+		}
 	}
 	88.8.8 = {
 		give_nickname = RICE_nick_the_liar
@@ -135,6 +150,9 @@ VIET_character_005 = {
 	trait = hashishiyah
 	8.1.1 = {
 		birth = "8.1.1"
+		effect = {
+			add_character_flag = no_headgear
+		}
 	}
 	88.8.8 = {
 		give_nickname = RICE_nick_the_liar

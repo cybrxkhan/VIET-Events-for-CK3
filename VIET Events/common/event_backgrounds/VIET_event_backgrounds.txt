@@ -38,6 +38,34 @@ VIET_background_nightmare = {
 ### TUSCAN COUNTRY ###
 VIET_background_tuscan_country = {
 
+	background = { # Central European
+		trigger = {
+			capital_province = {
+				OR = {
+					geographical_region = world_europe_west_germania
+					geographical_region = custom_hungary
+				}
+			}
+		}
+		reference = "gfx/interface/illustrations/event_scenes/VIET_tuscan_country_bavarian.dds"
+		environment = "environment_event_garden"
+		ambience = "event:/SFX/Events/Backgrounds/castle_garden_day"
+	}
+
+	background = { # Northern European
+		trigger = {
+			capital_province = {
+				OR = {
+					geographical_region = world_europe_north
+					geographical_region = ghw_region_baltic
+				}
+			}
+		}
+		reference = "gfx/interface/illustrations/event_scenes/VIET_tuscan_country_norse.dds"
+		environment = "environment_event_garden"
+		ambience = "event:/SFX/Events/Backgrounds/castle_garden_day"
+	}
+
 	background = { # Tibetan
 		trigger = {
 			capital_province = {
@@ -86,6 +114,7 @@ VIET_background_tuscan_country = {
 					geographical_region = world_steppe_east
 					geographical_region = world_europe_east
 				}
+				NOT = { geographical_region = ghw_region_baltic }
 			}
 		}
 		reference = "gfx/interface/illustrations/event_scenes/VIET_tuscan_country_cuman.dds"
@@ -97,11 +126,9 @@ VIET_background_tuscan_country = {
 		trigger = {
 			capital_province = {
 				OR = {
-					geographical_region = world_europe_west
-					#geographical_region = world_europe_south
-					geographical_region = world_europe_north
+					geographical_region = world_europe_west_britannia
+					geographical_region = world_europe_west_francia				
 				}
-				NOT = { geographical_region = world_europe_west_iberia }
 			}
 		}
 		reference = "gfx/interface/illustrations/event_scenes/VIET_tuscan_country_english.dds"
@@ -155,6 +182,17 @@ VIET_background_tuscan_country = {
 ### ANCIENT CAIRN ###
 VIET_background_ancient_cairn = {
 
+	background = { # Tibet
+		trigger = {
+			capital_province = {
+				geographical_region = ghw_region_tibet
+			}
+		}
+		reference = "gfx/interface/illustrations/event_scenes/VIET_ancient_cairn_bodpa.dds"
+		environment = "environment_event_mountains"
+		ambience = "event:/SFX/Events/Backgrounds/steppe_day"
+	}
+
 	background = { # Middle Eastern/Africa
 		trigger = {
 			capital_province = {
@@ -162,7 +200,7 @@ VIET_background_ancient_cairn = {
 			}
 		}
 		reference = "gfx/interface/illustrations/event_scenes/VIET_ancient_cairn_arabic.dds"
-		environment = "environment_event_garden"
+		environment = "environment_event_desert"
 		ambience = "event:/SFX/Events/Backgrounds/desert_day"
 	}
 
@@ -173,7 +211,7 @@ VIET_background_ancient_cairn = {
 			}
 		}
 		reference = "gfx/interface/illustrations/event_scenes/VIET_ancient_cairn_tocharian.dds"
-		environment = "environment_event_garden"
+		environment = "environment_event_desert"
 		ambience = "event:/SFX/Events/Backgrounds/desert_day"
 	}
 
@@ -189,7 +227,7 @@ VIET_background_ancient_cairn = {
 			}
 		}
 		reference = "gfx/interface/illustrations/event_scenes/VIET_ancient_cairn_norse.dds"
-		environment = "environment_event_garden"
+		environment = "environment_event_forest_pine"
 		ambience = "event:/SFX/Events/Backgrounds/desert_day"
 	}
 
@@ -204,13 +242,13 @@ VIET_background_ancient_cairn = {
 			}
 		}
 		reference = "gfx/interface/illustrations/event_scenes/VIET_ancient_cairn_irish.dds"
-		environment = "environment_event_garden"
+		environment = "environment_event_forest"
 		ambience = "event:/SFX/Events/Backgrounds/desert_day"
 	}
 
 	background = { #Fallback
 		reference = "gfx/interface/illustrations/event_scenes/VIET_ancient_cairn.dds"
-		environment = "environment_event_garden"
+		environment = "environment_event_forest"
 		ambience = "event:/SFX/Events/Backgrounds/deciduous_forest_day"
 	}
 }
@@ -372,6 +410,28 @@ VIET_background_small_town = {
 ### SKYRIM FOREST ###
 VIET_background_skyrim_forest = {
 
+	background = { # Iranian
+		trigger = {
+			capital_province = {
+				geographical_region = world_middle_east_persia
+			}
+		}
+		reference = "gfx/interface/illustrations/event_scenes/VIET_skyrim_forest_persian.dds"
+		environment = "environment_event_desert"
+		ambience = "event:/SFX/Events/Backgrounds/desert_day"
+	}
+
+	background = { # East African
+		trigger = {
+			capital_province = {
+				geographical_region = world_africa_east
+			}
+		}
+		reference = "gfx/interface/illustrations/event_scenes/VIET_skyrim_forest_ethiopian.dds"
+		environment = "environment_event_mountains"
+		ambience = "event:/SFX/Events/Backgrounds/coniferous_forest_day"
+	}
+	
 	background = { # Eastern European
 		trigger = {
 			capital_province = {
@@ -390,8 +450,9 @@ VIET_background_skyrim_forest = {
 	background = { # Western European
 		trigger = {
 			capital_province = {
-				geographical_region = world_europe_west
-				NOT = { geographical_region = world_europe_west_iberia } # Mediterranean
+				geographical_region = world_europe_west_britannia
+				geographical_region = world_europe_west_francia
+				#NOT = { geographical_region = world_europe_west_iberia } # Mediterranean
 			}
 		}
 		reference = "gfx/interface/illustrations/event_scenes/VIET_skyrim_forest_english.dds"
@@ -409,7 +470,7 @@ VIET_background_skyrim_forest = {
 			}
 		}
 		reference = "gfx/interface/illustrations/event_scenes/VIET_skyrim_forest_mongolian.dds"
-		environment = "environment_event_garden"
+		environment = "environment_event_steppe"
 		ambience = "event:/SFX/Events/Backgrounds/steppe_day"
 	}
 
@@ -427,13 +488,10 @@ VIET_background_skyrim_forest = {
 		ambience = "event:/SFX/Events/Backgrounds/deciduous_forest_day"
 	}
 
-	background = { # Sub-Saharan Africa
+	background = { # Sub-Saharan West Africa
 		trigger = {
 			capital_province = {
-				OR = {
-					geographical_region = world_africa_west
-					geographical_region = world_africa_east
-				}
+				geographical_region = world_africa_west
 			}
 		}
 		reference = "gfx/interface/illustrations/event_scenes/VIET_skyrim_forest_hausa.dds"
@@ -449,7 +507,7 @@ VIET_background_skyrim_forest = {
 			}
 		}
 		reference = "gfx/interface/illustrations/event_scenes/VIET_skyrim_forest_greek.dds"
-		environment = "environment_event_garden"
+		environment = "environment_event_forest"
 		ambience = "event:/SFX/Events/Backgrounds/deciduous_forest_day"
 	}
 
@@ -457,8 +515,8 @@ VIET_background_skyrim_forest = {
 		trigger = {
 			capital_province = {
 				OR = {
-					geographical_region = world_middle_east
-					geographical_region = world_middle_east_persia
+					geographical_region = world_middle_east_jerusalem
+					geographical_region = world_middle_east_arabia
 					geographical_region = world_africa_north
 					geographical_region = world_africa_sahara
 				}
@@ -487,7 +545,7 @@ VIET_background_skyrim_forest = {
 			}
 		}
 		reference = "gfx/interface/illustrations/event_scenes/VIET_skyrim_forest_tocharian.dds"
-		environment = "environment_event_garden"
+		environment = "environment_event_desert"
 		ambience = "event:/SFX/Events/Backgrounds/deciduous_forest_day"
 	}
 

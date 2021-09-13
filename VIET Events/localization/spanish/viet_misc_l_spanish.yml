@@ -37,6 +37,12 @@
  setting_VIET_event_frequency_very_low:0 "Muy Bajo"
  setting_VIET_event_frequency_very_low_desc:0 "Los eventos de VIET se activan mucho menos frecuentemente. ATENCIÓN: Debido a cómo funciona el RNG, puedes ver muchos eventos al mismo tiempo, o ninguno por largos periodos, esto solo afecta a las probabilidades de que ocurran."
  death_VIET_choking_food:0 "murió ahogado en comida"
+ d_VIET_dreamer_male:0 "The Dreamland"
+ d_VIET_dreamer_male_adj:0 "Dreamland"
+ d_VIET_dreamer_female:0 "The Dreamland"
+ d_VIET_dreamer_female_adj:0 "Dreamland"
+ d_VIET_elsewhere:0 "Elsewhere"
+ d_VIET_elsewhere_adj:0 "Elsewhere"
  
  # Game Concepts 
  game_concept_qi_ma_the_liar:0 "Qi Ma el Mentiroso"
