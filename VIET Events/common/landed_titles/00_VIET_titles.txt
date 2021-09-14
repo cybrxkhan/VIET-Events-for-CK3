@@ -31,7 +31,7 @@ d_VIET_elsewhere = {
 	
 	#capital = c_byzantion
 	
-	#definite_form = yes
+	definite_form = yes
 	
 	can_create = { always = no }
 }

@@ -4,6 +4,8 @@ random_yearly_playable_pulse = {
 	on_actions = {
 		delay = { days = 8 }
 		VIET_events_yearly_pulse
+		delay = { days = 100 }
+		VIET_events_misc_decisions_pulse
 		# For testing purposes
 		#delay = { days = 58 }
 		#VIET_events_event_chain_pulse

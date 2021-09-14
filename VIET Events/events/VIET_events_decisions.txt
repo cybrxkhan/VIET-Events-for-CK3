@@ -2977,6 +2977,10 @@ VIETmisc.2056 = {
 		animation = admiration
 	}	
 	
+	trigger = {
+		has_character_modifier = VIET_crow_friend
+	}
+	
 	weight_multiplier = {
 		base = 1
 		modifier = {
@@ -3027,6 +3031,10 @@ VIETmisc.2057 = {
 	left_portrait = {
 		character = root
 		animation = personality_content
+	}
+	
+	trigger = {
+		has_character_modifier = VIET_crow_friend
 	}
 	
 	immediate = {

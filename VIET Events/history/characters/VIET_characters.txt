@@ -3,6 +3,7 @@
 # Dreamer (Male)
 VIET_character_001 = {
 	name = "VIET_name_dreamer"
+	dynasty = VIET_dreamer_dynasty
 	dna = VIET_dreamer_male
 	religion = "mahayana"
 	culture = "han"
@@ -22,27 +23,31 @@ VIET_character_001 = {
 	trait = patient
 	trait = calm
 	disallow_random_traits = yes
-	1.1.1 = {
-		birth = "1.1.1"
+	father = VIET_character_006
+	mother = VIET_character_007
+	28.8.8 = {
+		birth = "28.8.8"
 		effect = {
 			add_character_flag = no_headgear
+			add_character_flag = has_scripted_appearance
 		}
 	}
-	18.8.8 = {
+	48.8.8 = {
 		add_spouse = VIET_character_002
 		effect = {
 			set_relation_soulmate = character:VIET_character_002
 			set_relation_best_friend = character:VIET_character_002
 		}
 	}
-	28.8.8 = {
-		death = "28.8.8"
+	58.8.8 = {
+		death = "58.8.8"
 	}
 }
 
 # Dreamer (Female)
 VIET_character_002 = {
 	name = "VIET_name_dreamer"
+	dynasty = VIET_dreamer_dynasty
 	female = yes
 	dna = VIET_dreamer_female
 	religion = "mahayana"
@@ -63,17 +68,17 @@ VIET_character_002 = {
 	trait = patient
 	trait = calm
 	disallow_random_traits = yes
-	1.1.1 = {
-		birth = "1.1.1"
+	father = VIET_character_006
+	mother = VIET_character_007
+	28.8.8 = {
+		birth = "28.8.8"
 		effect = {
 			add_character_flag = no_headgear
+			add_character_flag = has_scripted_appearance
 		}
 	}
-	18.8.8 = {
-		add_spouse = VIET_character_002
-	}
-	28.8.8 = {
-		death = "28.8.8"
+	58.8.8 = {
+		death = "58.8.8"
 	}
 }
 
@@ -156,6 +161,80 @@ VIET_character_005 = {
 	}
 	88.8.8 = {
 		give_nickname = RICE_nick_the_liar
+		death = "88.8.8"
+	}
+}
+
+# Dreamer's father
+VIET_character_006 = {
+	name = "VIET_name_dreamer"
+	dynasty = VIET_dreamer_dynasty
+	religion = "mahayana"
+	culture = "han"
+	diplomacy = 108
+	martial = 108
+	stewardship = 108
+	intrigue = 108
+	learning = 108
+	prowess = 108
+	trait = intellect_good_3
+	trait = beauty_good_3
+	trait = physique_good_3
+	trait = savior
+	trait = compassionate
+	trait = just
+	trait = humble
+	trait = patient
+	trait = calm
+	disallow_random_traits = yes
+	1.1.1 = {
+		birth = "1.1.1"
+		effect = {
+			add_character_flag = no_headgear
+		}
+	}
+	18.8.8 = {
+		add_spouse = VIET_character_007
+		effect = {
+			set_relation_soulmate = character:VIET_character_007
+			set_relation_best_friend = character:VIET_character_007
+		}
+	}
+	88.8.8 = {
+		death = "88.8.8"
+	}
+}
+
+# Dreamer (Female)
+VIET_character_007 = {
+	name = "VIET_name_dreamer"
+	dynasty = VIET_dreamer_dynasty
+	female = yes
+	religion = "mahayana"
+	culture = "han"
+	diplomacy = 108
+	martial = 108
+	stewardship = 108
+	intrigue = 108
+	learning = 108
+	prowess = 108
+	trait = intellect_good_3
+	trait = beauty_good_3
+	trait = physique_good_3
+	trait = savior
+	trait = compassionate
+	trait = just
+	trait = humble
+	trait = patient
+	trait = calm
+	disallow_random_traits = yes
+	1.1.1 = {
+		birth = "1.1.1"
+		effect = {
+			add_character_flag = no_headgear
+		}
+	}
+	88.8.8 = {
 		death = "88.8.8"
 	}
 }
