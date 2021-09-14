@@ -7,11 +7,9 @@
 [B]Paradox Download [url=https://mods.paradoxplaza.com/mods/12992/Any]Available Here[/url][/B]
 [B][url=https://imgur.com/a/TIePH1f]See All Preview Screenshots Here[/url][/B]
 
-Very Immersive Events and Tales (VIET), the sequel to [url=https://steamcommunity.com/sharedfiles/filedetails/?id=1601402546]VIET Events Reborn for CK2[/url], is a flavor mod that adds a vast collection of events about everyday life to spice up your game. These events add immersion and a diversity of experiences in between wars and vanilla’s event chains, and cover mundane minutiae ranging from small talk with courtiers and eating local cuisine to epic tales about love, philosophy, and the human condition.
+Very Immersive Events and Tales (VIET), the sequel to [url=https://steamcommunity.com/sharedfiles/filedetails/?id=1601402546]VIET Events Reborn for CK2[/url], is a flavor mod that adds a vast collection of events about everyday life to spice up your game. They add immersion and a diversity of experiences in between wars and vanilla’s event chains, and cover mundane minutiae from small talk with courtiers and eating local cuisine to epic tales about love, philosophy, and the human condition. I hope the lessons I learned from my eight years (with a hiatus) of modding CK2 will help me deliver a fun experience for any players interested in my mods.
 
-Alongside many new events, I intend to adapt many of the events from the old VIET for CK2 as possible. I hope the lessons I learned from my eight years (with a hiatus) of modding CK2 will help me deliver a fun experience for any players interested in my mods.
-
-As this is the early version of VIET, I welcome any and all feedback - I'm still getting the hang of switching to CK3 modding from CK2's. Please let me know if you encounter any bugs, or if you feel the events fire too frequently or not frequently enough. While the events may get repetitive if you play long enough, [B]I hope to continue adding more and more events in every update![/B] Please note that [B][U]VIET IS NOT ACHIEVEMENT COMPATIBLE![/U][/B]
+Let me know if you encounter any bugs. [B]I hope to continue adding more and more events in every update![/B] Please note that [B][U]VIET IS NOT ACHIEVEMENT COMPATIBLE![/U][/B]
 
 [B][U]VIET [I]WILL[/I] WORK ON EXISTING SAVES![/U][/B] (Though remember to make a backup copy of your save just in case.)
 
