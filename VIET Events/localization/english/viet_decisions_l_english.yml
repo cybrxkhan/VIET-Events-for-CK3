@@ -62,6 +62,11 @@
  VIET_decision_feed_the_crows_effect_tooltip:0 "You will lose some [stress|E] and gain a little [dread|E]"
  VIET_decision_feed_the_crows_confirm:0 "Where's my bag of crow food?"
  VIET_decision_feed_the_crows_context_tooltip:0 "#emphasis Historical Context:#! Birds of the #italic Corvus#! genus, known commonly as crows or ravens, are a common part of folklore and religious belief around the world. In many cultures, they are seen as harbingers of ill-omen and symbols of misfortune and death, though in some places or contexts, they are viewed more ambiguously as tricksters or psychopomps. They are known for their intelligence and excellent memory. The distinction between crows and ravens is somewhat inconsistent, but generally, crows are smaller than ravens." 
+ VIET_decision_strange_trails:0 "Follow the Strange Trails"
+ VIET_decision_strange_trails_tooltip:0 "My dreams are pointing me to somewhere. They must be."
+ VIET_decision_strange_trails_desc:0 "All these dreams I've been having about the fool for love have preoccupied my thoughts as of late. I now think I've been dreaming of a place nearby. I know where it is. I've been there before. I must visit it again. Perhaps going there will ease my mind and reveal why I've been dreaming about it."
+ VIET_decision_strange_trails_effect_tooltip:0 "You will follow the strange trails to find the place you've been dreaming about."
+ VIET_decision_strange_trails_confirm:0 "I seek answers, but I don't even know the question." 
  
  
  # Character Interactions

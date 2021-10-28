@@ -62,15 +62,20 @@
  VIET_decision_feed_the_crows_effect_tooltip:0 "You will lose some [stress|E] and gain a little [dread|E]"
  VIET_decision_feed_the_crows_confirm:0 "Where's my bag of crow food?"
  VIET_decision_feed_the_crows_context_tooltip:0 "#emphasis Historical Context:#! Birds of the #italic Corvus#! genus, known commonly as crows or ravens, are a common part of folklore and religious belief around the world. In many cultures, they are seen as harbingers of ill-omen and symbols of misfortune and death, though in some places or contexts, they are viewed more ambiguously as tricksters or psychopomps. They are known for their intelligence and excellent memory. The distinction between crows and ravens is somewhat inconsistent, but generally, crows are smaller than ravens." 
+ VIET_decision_strange_trails:0 "Follow the Strange Trails"
+ VIET_decision_strange_trails_tooltip:0 "My dreams are pointing me to somewhere. They must be."
+ VIET_decision_strange_trails_desc:0 "All these dreams I've been having about the fool for love have preoccupied my thoughts as of late. I now think I've been dreaming of a place nearby. I know where it is. I've been there before. I must visit it again. Perhaps going there will ease my mind and reveal why I've been dreaming about it."
+ VIET_decision_strange_trails_effect_tooltip:0 "You will follow the strange trails to find the place you've been dreaming about."
+ VIET_decision_strange_trails_confirm:0 "I seek answers, but I don't even know the question." 
  
  
  # Character Interactions
- VIET_gift_baklava:0 "Regalar pasteles especiales"
- VIET_gift_baklava_desc:0 "Comprar varios pasteles, postres y dulces hechos por el famoso pastelero para [recipient.GetShortUINameNoTooltip]"
- VIET_gift_baklava_effect_tooltip:0 "[recipient.GetShortUINameNoTooltip] recibirá tu regalo de postres, lo que le dará a [recipient.Custom('ES_ElElla')] un [character_modifier|E]"
- VIET_gift_spices:0 "Regalar la mezcla de especias especial"
- VIET_gift_spices_desc:0 "Comprar la famosa #V Mezcla de Cinco Especias#! como regalo para [recipient.GetShortUINameNoTooltip]"
- VIET_gift_spices_effect_tooltip:0 "[recipient.GetShortUINameNoTooltip] recibirá un [character_modifier|E] especial representando la #V Mezcla de Cinco Especias#!"
+ VIET_gift_baklava:0 "Present Gift of Special Pastries"
+ VIET_gift_baklava_desc:0 "Buy various pastries, confectionary, and desserts made by a famous patissier as a gift for [recipient.GetShortUINameNoTooltip]"
+ VIET_gift_baklava_effect_tooltip:0 "[recipient.GetShortUINameNoTooltip] will receive your chosen gift of desserts, which will give [recipient.GetHerHim] a [character_modifier|E]"
+ VIET_gift_spices:0 "Present Gift of the Special Spice Blend"
+ VIET_gift_spices_desc:0 "Buy the famed #V Five Spice Blend#! as a gift for [recipient.GetShortUINameNoTooltip]"
+ VIET_gift_spices_effect_tooltip:0 "[recipient.GetShortUINameNoTooltip] will receive a special [character_modifier|E] representing the #V Five Spice Blend#!"
  VIET_decision_xxxxx:0 "xxxxx"
  
  # Character Interactions
