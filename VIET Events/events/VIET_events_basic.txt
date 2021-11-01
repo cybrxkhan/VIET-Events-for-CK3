@@ -37,6 +37,7 @@
 # 0148-0150		Leaves
 # 0151-0154		Bushes
 # 0155-0164		Hundred
+# 0165-0179		Strange Trails (Lord Huron)
 # 
 ############################################################################################################################
 
@@ -238,7 +239,7 @@ VIETmisc.0003 = {
 		name = VIETmisc.0003.a
 		stress_impact = {
 			base = miniscule_stress_impact_loss
-			comfort_eater = minor_stress_loss
+			comfort_eater = minor_stress_impact_loss
 		}			
 	}
 }
@@ -10445,10 +10446,10 @@ VIETmisc.0128 = {
 				}
 			}
 			stress_impact = {
-				base = minor_stress_gain
-				compassionate = massive_stress_gain
-				just = medium_stress_gain
-				generous = medium_stress_gain
+				base = minor_stress_impact_gain
+				compassionate = massive_stress_impact_gain
+				just = medium_stress_impact_gain
+				generous = medium_stress_impact_gain
 			}
 		}
 		hidden_effect = {
@@ -10486,10 +10487,10 @@ VIETmisc.0128 = {
 			years = 10
 		}
 		stress_impact = {
-			callous = major_stress_gain
-			sadistic = medium_stress_gain
-			arbitrary = minor_stress_gain
-			greedy = minor_stress_gain
+			callous = major_stress_impact_gain
+			sadistic = medium_stress_impact_gain
+			arbitrary = minor_stress_impact_gain
+			greedy = minor_stress_impact_gain
 		}
 		hidden_effect = {
 			scope:scope_VIET_abandoned_baby = {
@@ -10557,10 +10558,10 @@ VIETmisc.0128 = {
 			}
 		}
 		stress_impact = {
-			callous = major_stress_gain
-			sadistic = medium_stress_gain
-			arbitrary = minor_stress_gain
-			greedy = minor_stress_gain
+			callous = major_stress_impact_gain
+			sadistic = medium_stress_impact_gain
+			arbitrary = minor_stress_impact_gain
+			greedy = minor_stress_impact_gain
 		}
 		progress_towards_friend_effect = {
 			CHARACTER = scope:scope_VIET_baby_rescuer
@@ -12804,8 +12805,8 @@ VIETmisc.0155 = {
 		name = VIETmisc.0155.a
 		VIET_large_prestige_gain_effect = yes
 		stress_impact = {
-			humble = minor_stress_gain
-			compassionate = minor_stress_gain
+			humble = minor_stress_impact_gain
+			compassionate = minor_stress_impact_gain
 		}
 	}	
 	option = { # Send them a gift
@@ -12835,8 +12836,8 @@ VIETmisc.0155 = {
 			years = 10
 		}
 		stress_impact = {
-			greedy = minor_stress_gain
-			callous = minor_stress_gain
+			greedy = minor_stress_impact_gain
+			callous = minor_stress_impact_gain
 		}
 	}
 }
@@ -12896,10 +12897,10 @@ VIETmisc.0156 = {
 			VIET_huge_piety_gain_effect = yes
 		}
 		stress_impact = {
-			greedy = minor_stress_gain
-			callous = minor_stress_gain
-			arbitrary = minor_stress_gain
-			arrogant = minor_stress_gain
+			greedy = minor_stress_impact_gain
+			callous = minor_stress_impact_gain
+			arbitrary = minor_stress_impact_gain
+			arrogant = minor_stress_impact_gain
 		}
 		add_character_modifier = {
 			modifier = VIET_humble_generosity
@@ -12926,10 +12927,10 @@ VIETmisc.0156 = {
 			VIET_huge_piety_loss_effect = yes
 		}
 		stress_impact = {
-			generous = minor_stress_gain
-			compassionate = minor_stress_gain
-			just = minor_stress_gain
-			humble = minor_stress_gain
+			generous = minor_stress_impact_gain
+			compassionate = minor_stress_impact_gain
+			just = minor_stress_impact_gain
+			humble = minor_stress_impact_gain
 		}
 	}
 }
@@ -13058,7 +13059,7 @@ VIETmisc.0157 = {
 			VIET_medium_piety_gain_effect = yes
 		}
 		stress_impact = {
-			lustful = minor_stress_gain
+			lustful = minor_stress_impact_gain
 		}
 	}	
 	option = { # Call the guy out on it
@@ -13096,7 +13097,7 @@ VIETmisc.0157 = {
 			}		
 		}
 		stress_impact = {
-			lustful = minor_stress_gain
+			lustful = minor_stress_impact_gain
 		}
 	}	
 	option = { # Learn more about it
@@ -13137,8 +13138,8 @@ VIETmisc.0157 = {
 			}		
 		}
 		stress_impact = {
-			chaste = medium_stress_gain
-			celibate = medium_stress_gain
+			chaste = medium_stress_impact_gain
+			celibate = medium_stress_impact_gain
 		}
 	}
 }
@@ -13243,7 +13244,7 @@ VIETmisc.0159 = {
 			years = 10
 		}
 		stress_impact = {
-			sadistic = medium_stress_gain
+			sadistic = medium_stress_impact_gain
 		}
 	}	
 	option = { # Do something about it
@@ -13254,9 +13255,9 @@ VIETmisc.0159 = {
 			years = 10
 		}
 		stress_impact = {
-			just = minor_stress_gain
-			compassionate = minor_stress_gain
-			humble = minor_stress_gain
+			just = minor_stress_impact_gain
+			compassionate = minor_stress_impact_gain
+			humble = minor_stress_impact_gain
 			patient = miniscule_stress_impact_gain
 			calm = miniscule_stress_impact_gain
 			forgiving = miniscule_stress_impact_gain
@@ -13275,11 +13276,11 @@ VIETmisc.0159 = {
 			years = 10
 		}
 		stress_impact = {
-			just = medium_stress_gain
-			humble = medium_stress_gain
-			patient = minor_stress_gain
-			calm = minor_stress_gain
-			forgiving = minor_stress_gain
+			just = medium_stress_impact_gain
+			humble = medium_stress_impact_gain
+			patient = minor_stress_impact_gain
+			calm = minor_stress_impact_gain
+			forgiving = minor_stress_impact_gain
 		}
 	}	
 	option = { # Imprison lady, kill her cats
@@ -13298,11 +13299,11 @@ VIETmisc.0159 = {
 			years = 10
 		}
 		stress_impact = {
-			just = medium_stress_gain
-			humble = medium_stress_gain
-			patient = minor_stress_gain
-			calm = minor_stress_gain
-			forgiving = minor_stress_gain
+			just = medium_stress_impact_gain
+			humble = medium_stress_impact_gain
+			patient = minor_stress_impact_gain
+			calm = minor_stress_impact_gain
+			forgiving = minor_stress_impact_gain
 		}
 	}
 }
@@ -13464,19 +13465,19 @@ VIETmisc.0161 = {
 			}		
 		}
 		stress_impact = {
-			content = minor_stress_gain
-			arrogant = minor_stress_gain
-			greedy = minor_stress_gain
-			forgiving = minor_stress_gain
+			content = minor_stress_impact_gain
+			arrogant = minor_stress_impact_gain
+			greedy = minor_stress_impact_gain
+			forgiving = minor_stress_impact_gain
 		}
 	}	
 	option = { # Not my problem
 		name = VIETmisc.0161.b
 		VIET_huge_prestige_loss_effect = yes
 		stress_impact = {
-			just = minor_stress_gain
-			humble = minor_stress_gain
-			generous = minor_stress_gain
+			just = minor_stress_impact_gain
+			humble = minor_stress_impact_gain
+			generous = minor_stress_impact_gain
 		}
 	}
 }
@@ -13638,4 +13639,1694 @@ VIETmisc.0164 = {
 		}
 	}
 }
+
+
+
+
+##########################################################################################################################
+#
+# STRANGE TRAILS (Lord Huron) 0165-0179
+#
+# Inspired by Lord Huron's Strange Trails album - YouTube links to each song provided here
+# I don't like all of the tracks per se but some are my absolute favorite songs.
+# For any Lord Huron fans who are by chance reading this, the events here are loosely inspired by their songs
+# to varying degrees, some more than the others. I'm not too good with Lord Huron lore so take that what you will,
+# but I did try to give the events a bit of what I feel is an appropriate atmosphere reminiscent of the music. 
+#
+##########################################################################################################################
+
+# Love Like Ghosts - is love rare or not?
+# https://youtu.be/qvYJz_oUGow
+VIETmisc.0165 = {
+	type = character_event
+	title = VIETmisc.0165.t
+	desc = VIETmisc.0165.desc
+	theme = death	
+	override_background = { event_background = garden }
+	
+	left_portrait = { 	
+		character = scope:courtier
+		animation = personality_rational
+	}	
+	right_portrait = root
+	
+
+	trigger = {
+		any_courtier = {
+			is_available_ai_adult = yes
+		}
+	}
+	
+	weight_multiplier = {
+		base = 1
+		modifier = {
+			add = 0.2
+			has_trait = patient
+		}
+		modifier = {
+			add = -0.2
+			has_trait = impatient
+		}
+		modifier = {
+			add = 0.2
+			has_trait = calm
+		}
+		modifier = {
+			add = -0.2
+			has_trait = wrathful
+		}
+		modifier = {
+			add = 0.2
+			has_trait = compassionate
+		}
+		modifier = {
+			add = -0.2
+			has_trait = callous
+		}
+	}
+	
+	immediate = {
+		random_courtier = {
+			limit = {
+				is_available_ai_adult = yes
+			}
+			save_scope_as = courtier
+		}
+	}
+
+	
+	option = { # Who cares
+		name = VIETmisc.0165.a
+		VIET_large_prestige_gain_effect = yes
+		stress_impact = {
+			lazy = minor_stress_impact_loss
+			content = minor_stress_impact_loss
+		}	
+	}	
+	option = { # Bah humbug
+		name = VIETmisc.0165.b
+		add_character_modifier = {
+			modifier = VIET_killjoy_about_love
+			days = 1095
+		}
+		stress_impact = {
+			trusting = minor_stress_impact_gain
+			humble = minor_stress_impact_gain
+			content = minor_stress_impact_gain
+			compassionate = minor_stress_impact_gain
+		}	
+	}	
+	option = { # Maybe
+		name = VIETmisc.0165.c
+		VIET_small_prestige_gain_effect = yes
+		add_character_modifier = {
+			modifier = VIET_idealistic_about_love
+			days = 1095
+		}
+		stress_impact = {
+			wrathful = minor_stress_impact_gain
+			callous = minor_stress_impact_gain
+			sadistic = minor_stress_impact_gain
+			cynical = medium_stress_impact_gain
+		}	
+	}	
+	option = { # Yes
+		name = VIETmisc.0165.d
+		VIET_small_piety_gain_effect = yes
+		add_character_modifier = {
+			modifier = VIET_idealistic_about_love
+			days = 1095
+		}
+		stress_impact = {
+			wrathful = minor_stress_impact_gain
+			callous = minor_stress_impact_gain
+			sadistic = minor_stress_impact_gain
+			cynical = medium_stress_impact_gain
+		}	
+	}
+}
+
+# Until The Night Turns - courtier dreams about the end of the world and enjoys it
+# https://youtu.be/fR821cKklVU
+VIETmisc.0166 = {
+	type = character_event
+	title = VIETmisc.0166.t
+	desc = VIETmisc.0166.desc
+	theme = friendly
+	
+	left_portrait = { 	
+		character = root
+		animation = personality_cynical
+	}	
+	right_portrait = { 	
+		character = scope:world_ender
+		animation = personality_content
+	}	
+	
+
+	trigger = {
+		any_courtier = {
+			is_available_ai_adult = yes
+			has_trait_extroverted_trigger = yes
+		}
+	}
+	
+	weight_multiplier = {
+		base = 1
+		modifier = {
+			add = 0.2
+			has_trait = paranoid
+		}
+		modifier = {
+			add = -0.2
+			has_trait = trusting
+		}
+		modifier = {
+			add = 0.2
+			has_trait = gregarious
+		}
+		modifier = {
+			add = -0.2
+			has_trait = shy
+		}
+		modifier = {
+			add = 0.2
+			has_trait = honest
+		}
+		modifier = {
+			add = -0.2
+			has_trait = deceitful
+		}
+	}
+	
+	immediate = {
+		random_courtier = {
+			limit = {
+				is_available_ai_adult = yes
+				has_trait_extroverted_trigger = yes
+			}
+			save_scope_as = world_ender
+			add_character_modifier = {
+				modifier = VIET_hedonistic_apocalypse
+				years = 4
+			}
+		}
+	}
+
+	
+	option = { # Hedonism bad
+		name = VIETmisc.0166.a
+		VIET_small_piety_gain_effect = yes	
+		scope:world_ender = {
+			add_opinion = {
+				target = root
+				modifier = VIET_opinion_disapproves_viewpoint
+			}		
+		}
+		stress_impact = {
+			brave = miniscule_stress_impact_gain
+			gregarious = miniscule_stress_impact_gain
+			lustful = miniscule_stress_impact_gain
+			cynical = miniscule_stress_impact_gain
+			callous = miniscule_stress_impact_gain
+			gluttonous = miniscule_stress_impact_gain
+		}
+	}	
+	option = { # Hedonism good
+		name = VIETmisc.0166.b
+		VIET_small_prestige_gain_effect = yes	
+		scope:world_ender = {
+			add_opinion = {
+				target = root
+				modifier = VIET_opinion_approves_viewpoint
+			}		
+		}
+		stress_impact = {
+			craven = miniscule_stress_impact_gain
+			shy = miniscule_stress_impact_gain
+			chaste = miniscule_stress_impact_gain
+			zealous = miniscule_stress_impact_gain
+			compassionate = miniscule_stress_impact_gain
+			temperate = miniscule_stress_impact_gain
+		}
+	}
+}
+
+
+
+# Dead Man's Hand - ghost appears in a dream asking not to be buried
+# https://youtu.be/tdP2z4juRHg
+VIETmisc.0167 = {
+	type = character_event
+	title = VIETmisc.0167.t
+	desc = VIETmisc.0167.desc
+	theme = VIET_lord_huron_strange_trails
+	
+	left_portrait = {
+		character = scope:dead_man
+		animation = beg
+	}	
+	right_portrait = { 	
+		character = root
+		animation = paranoia
+	}
+	
+	weight_multiplier = {
+		base = 1
+		modifier = {
+			add = 0.2
+			has_trait = craven
+		}
+		modifier = {
+			add = -0.2
+			has_trait = brave
+		}
+		modifier = {
+			add = 0.2
+			has_trait = compassionate
+		}
+		modifier = {
+			add = -0.2
+			has_trait = callous
+		}
+		modifier = {
+			add = 0.2
+			has_trait = zealous
+		}
+		modifier = {
+			add = -0.2
+			has_trait = cynical
+		}
+	}
+	
+	immediate = {
+		create_character = {
+			location = root.capital_province
+			age = { 20 60 }
+			gender = male
+			faith = root.faith
+			culture = root.culture
+			dynasty = none
+			random_traits = yes
+			save_scope_as = dead_man
+			trait = maimed
+			trait = wounded_3
+		}
+		scope:dead_man = {		
+			death = {
+				death_reason = death_attacked
+			}
+		}	
+	}
+
+	
+	option = { # Help un-bury
+		name = VIETmisc.0167.a
+		VIET_medium_piety_gain_effect = yes
+		hidden_effect = {
+			random = {
+				chance = 50
+				send_interface_toast = {
+					type = event_toast_effect_good
+					left_icon = ROOT
+					title = VIETmisc.0167.a.toast
+					add_character_modifier = {
+						modifier = VIET_wandering_ghost_blessing
+						years = 6
+					}
+				}				
+			}	
+		}
+		stress_impact = {
+			lazy = minor_stress_impact_gain
+			cynical = minor_stress_impact_gain
+			callous = minor_stress_impact_gain
+			arbitrary = minor_stress_impact_gain
+		}
+	}	
+	option = { # Keep buried
+		name = VIETmisc.0167.b
+		VIET_medium_prestige_gain_effect = yes
+		hidden_effect = {
+			random = {
+				chance = 50
+				send_interface_toast = {
+					type = event_toast_effect_bad
+					left_icon = ROOT
+					title = VIETmisc.0167.b.toast
+					add_character_modifier = {
+						modifier = VIET_wandering_ghost_nightmares
+						years = 6
+					}
+				}				
+			}	
+		}
+		stress_impact = {
+			paranoid = minor_stress_impact_gain
+			zealous = minor_stress_impact_gain
+			compassionate = minor_stress_impact_gain
+			just = minor_stress_impact_gain
+		}
+	}
+}
+
+
+# Hurricane - sea merchant tells some anecdotes
+# https://youtu.be/Qg_G9SfdREQ
+VIETmisc.0168 = {
+	type = character_event
+	title = VIETmisc.0168.t
+	desc = VIETmisc.0168.desc
+	theme = party
+	
+	left_portrait = root
+	
+
+	weight_multiplier = {
+		base = 1
+		modifier = {
+			add = 0.2
+			has_trait = patient
+		}
+		modifier = {
+			add = -0.2
+			has_trait = impatient
+		}
+		modifier = {
+			add = 0.2
+			has_trait = gregarious
+		}
+		modifier = {
+			add = -0.2
+			has_trait = shy
+		}
+		modifier = {
+			add = 0.2
+			has_trait = humble
+		}
+		modifier = {
+			add = -0.2
+			has_trait = arrogant
+		}
+	}
+
+	
+	option = { # ok
+		name = VIETmisc.0168.a
+		add_character_modifier = {
+			modifier = VIET_sea_merchant_personal_anecdotes
+			years = 5
+		}
+	}
+}
+
+
+
+# La Belle Fleur Sauvage (The Beautiful Wildflower) - bard talks about his muse
+# https://youtu.be/yZBZWYqLlA0
+VIETmisc.0169 = {
+	type = character_event
+	title = VIETmisc.0169.t
+	desc = VIETmisc.0169.desc
+	theme = VIET_lord_huron_strange_trails
+	override_icon = { reference = "gfx/interface/icons/event_types/type_seduction.dds" }
+	
+	#left_portrait = root
+	
+	
+	weight_multiplier = {
+		base = 1
+		modifier = {
+			add = 0.2
+			has_trait = patient
+		}
+		modifier = {
+			add = -0.2
+			has_trait = impatient
+		}
+		modifier = {
+			add = 0.2
+			has_trait = gregarious
+		}
+		modifier = {
+			add = -0.2
+			has_trait = shy
+		}
+		modifier = {
+			add = 0.2
+			has_trait = humble
+		}
+		modifier = {
+			add = -0.2
+			has_trait = arrogant
+		}
+	}
+	
+	immediate = {		
+		add_character_modifier = {
+			modifier = VIET_la_belle_fleur_sauvage_bard
+			years = 5
+		}
+		every_courtier_or_guest = {
+			limit = { is_available_adult = yes }		
+			add_character_modifier = {
+				modifier = VIET_la_belle_fleur_sauvage_bard
+				years = 5
+			}
+		}
+	}
+
+	
+	option = { # cool story bro
+		name = VIETmisc.0169.a
+		VIET_medium_prestige_gain_effect = yes		
+	}	
+	option = { # i applaud you being a simp
+		name = VIETmisc.0169.b
+		VIET_medium_piety_gain_effect = yes		
+	}
+}
+
+
+
+# Fool for Love (my favorite Lord Huron song!) - meet the Fool for Love by the side of the road
+# https://youtu.be/uLxIYSNoZvw
+VIETmisc.0170 = {
+	type = character_event
+	title = VIETmisc.0170.t
+	desc = VIETmisc.0170.desc
+	theme = VIET_lord_huron_strange_trails
+	
+	left_portrait = {
+		character = scope:dreamer
+		animation = personality_compassionate
+	}	
+	right_portrait = {
+		character = scope:fool_for_love
+		animation = severelywounded
+	}
+	
+	trigger = {
+		has_game_rule = VIET_normal_universe_events
+		num_sinful_traits < 1
+		NOR = {
+			has_trait = callous
+			has_trait = sadistic
+		}
+	}
+	
+	
+	weight_multiplier = {
+		base = 1
+		modifier = {
+			add = 0.3
+			num_virtuous_traits > 1
+		}
+		modifier = {
+			add = -0.3
+			num_virtuous_traits < 1
+		}
+		modifier = {
+			add = 0.2
+			has_trait = humble
+		}
+		modifier = {
+			add = -0.2
+			has_trait = arrogant
+		}
+		modifier = {
+			add = 0.2
+			has_trait = compassionate
+		}
+		modifier = {
+			add = -0.2
+			has_trait = callous
+		}
+		modifier = {
+			add = 0.2
+			has_trait = calm
+		}
+		modifier = {
+			add = -0.2
+			has_trait = wrathful
+		}
+		modifier = {
+			add = 0.2
+			has_trait = content
+		}
+		modifier = {
+			add = -0.2
+			has_trait = ambitious
+		}
+	}
+	
+	immediate = {
+		if = {
+			limit = { NOT = { has_character_flag = VIET_met_the_dreamer } }		
+			add_character_flag = VIET_met_the_dreamer
+		}
+		# Choose whether to meet the male or female Dreamer
+		random_list = {
+			10 = {
+				if = {
+					limit = { NOT = { exists = var:VIET_dreamer_karmic_connection_male } }
+					set_variable = {
+						name = VIET_dreamer_karmic_connection_male
+						value = 1
+					}
+				}
+				else = {
+					change_variable = {
+						name = VIET_dreamer_karmic_connection_male
+						add = 1
+					}		
+				}
+				character:VIET_character_001 = {
+					save_scope_as = dreamer
+				}
+			}
+			10 = {
+				if = {
+					limit = { NOT = { exists = var:VIET_dreamer_karmic_connection_female } }
+					set_variable = {
+						name = VIET_dreamer_karmic_connection_female
+						value = 1
+					}
+				}
+				else = {
+					change_variable = {
+						name = VIET_dreamer_karmic_connection_female
+						add = 1
+					}		
+				}
+				character:VIET_character_002 = {
+					save_scope_as = dreamer
+				}
+			}
+		}
+		hidden_effect = {
+			create_character = {
+				location = root.capital_province
+				age = { 20 35 }
+				gender_female_chance = 0
+				faith = root.faith
+				culture = root.culture
+				save_scope_as = fool_for_love
+				random_traits = yes
+				#random_traits_list = {
+				#	count = 3
+				#	ambitious = {}
+				#	arrogant = {}
+				#	lustful = {}
+				#	brave = {}
+				#	diligent = {}
+				#	wrathful = {}
+				#	trusting = {}
+				#	impatient = {}
+				#	gregarious = {}
+				#}
+				#trait = maimed
+				trait = wounded_2
+			}
+			scope:fool_for_love = {		
+				death = {
+					death_reason = death_disappearance
+				}
+			}			
+		}
+	}
+
+	
+	option = { # I am a fool for love
+		name = VIETmisc.0170.a
+		VIET_medium_piety_gain_effect = yes	
+		if = {
+			limit = { NOT = { exists = var:VIET_dreamer_yang_wisdom } }
+			set_variable = {
+				name = VIET_dreamer_yang_wisdom
+				value = 1
+			}
+		}
+		else = {
+			change_variable = {
+				name = VIET_dreamer_yang_wisdom
+				add = 1
+			}		
+		}
+	}	
+	option = { # I am not a fool for love
+		name = VIETmisc.0170.b
+		VIET_medium_prestige_gain_effect = yes	
+		if = {
+			limit = { NOT = { exists = var:VIET_dreamer_yin_wisdom } }
+			set_variable = {
+				name = VIET_dreamer_yin_wisdom
+				value = 1
+			}
+		}
+		else = {
+			change_variable = {
+				name = VIET_dreamer_yin_wisdom
+				add = 1
+			}		
+		}		
+	}	
+	option = { # The Dreamer???
+		name = VIETmisc.0170.c
+		trigger = {
+			OR = {
+				exists = var:VIET_dreamer_karmic_connection_male
+				exists = var:VIET_dreamer_karmic_connection_female
+			}
+		}
+		random_list = {
+			10 = {
+				VIET_medium_piety_gain_effect = yes
+				if = {
+					limit = { NOT = { exists = var:VIET_dreamer_yang_wisdom } }
+					set_variable = {
+						name = VIET_dreamer_yang_wisdom
+						value = 1
+					}
+				}
+				else = {
+					change_variable = {
+						name = VIET_dreamer_yang_wisdom
+						add = 1
+					}		
+				}
+			}
+			10 = {
+				VIET_medium_prestige_gain_effect = yes
+				if = {
+					limit = { NOT = { exists = var:VIET_dreamer_yin_wisdom } }
+					set_variable = {
+						name = VIET_dreamer_yin_wisdom
+						value = 1
+					}
+				}
+				else = {
+					change_variable = {
+						name = VIET_dreamer_yin_wisdom
+						add = 1
+					}		
+				}
+			}
+		}
+	}
+
+	after = {
+		trigger_event = {
+			id = VIETmisc.0177
+			months = { 12 96 }
+		}	
+	}
+	
+}
+
+
+
+
+# The World Ender - a band of mercenary bullies sweeps by nearby and disappear or are afraid of you
+# https://youtu.be/o62V8LYv7uc
+VIETmisc.0171 = {
+	type = character_event
+	title = VIETmisc.0171.t
+	desc = VIETmisc.0171.desc
+	theme = death
+	override_background = { event_background = throne_room }
+	
+	left_portrait = {
+		character = root
+		animation = worry
+	}
+	
+	
+	weight_multiplier = {
+		base = 1
+		modifier = {
+			add = 0.2
+			has_trait = wrathful
+		}
+		modifier = {
+			add = -0.2
+			has_trait = calm
+		}
+		modifier = {
+			add = 0.2
+			has_trait = just
+		}
+		modifier = {
+			add = -0.2
+			has_trait = arbitrary
+		}
+		modifier = {
+			add = 0.2
+			has_trait = diligent
+		}
+		modifier = {
+			add = -0.2
+			has_trait = lazy
+		}
+	}
+
+	
+	option = { # Ok
+		name = VIETmisc.0171.a
+		VIET_huge_prestige_loss_effect = yes
+		add_character_modifier = {
+			modifier = VIET_world_enders
+			years = 5
+		}
+	}
+}
+
+
+
+# Meet Me In The Woods - should you meet a noble family whose daughter is cursed?
+# https://youtu.be/AJOsLdBqbPA
+VIETmisc.0172 = {
+	type = character_event
+	title = VIETmisc.0172.t
+	desc = VIETmisc.0172.desc
+	theme = death
+	override_background = { event_background = corridor_night }
+	
+	right_portrait = {
+		character = root
+		animation = worry
+	}
+	
+	
+	weight_multiplier = {
+		base = 1
+		modifier = {
+			add = 0.2
+			has_trait = trusting
+		}
+		modifier = {
+			add = -0.2
+			has_trait = paranoid
+		}
+		modifier = {
+			add = 0.2
+			has_trait = zealous
+		}
+		modifier = {
+			add = -0.2
+			has_trait = cynical
+		}
+		modifier = {
+			add = 0.2
+			has_trait = deceitful
+		}
+		modifier = {
+			add = -0.2
+			has_trait = honest
+		}
+	}
+	
+	option = { # Go meet them
+		name = VIETmisc.0172.a
+		VIET_huge_prestige_gain_effect = yes
+		stress_impact = {
+			paranoid = minor_stress_impact_gain
+			zealous = minor_stress_impact_gain
+			craven = minor_stress_impact_gain
+			lazy = minor_stress_impact_gain
+			arrogant = minor_stress_impact_gain
+		}
+		hidden_effect = {
+			random = {
+				chance = 40
+				modifier = {
+					add = 10
+					num_sinful_traits >= 1
+				}
+				modifier = {
+					add = -10				
+					num_virtuous_traits >= 1
+				}
+				modifier = {
+					add = 5
+					has_trait = trusting
+				}
+				modifier = {
+					add = -5				
+					has_trait = paranoid
+				}
+				modifier = {
+					add = 5
+					OR = {
+						has_trait = sadistic
+						has_trait = callous					
+					}
+				}
+				modifier = {
+					add = -5				
+					has_trait = compassionate
+				}
+				modifier = {
+					add = 5
+					has_trait = arrogant
+				}
+				modifier = {
+					add = -5				
+					has_trait = humble
+				}
+				modifier = {
+					add = 5
+					has_trait = arbitrary
+				}
+				modifier = {
+					add = -5				
+					has_trait = just
+				}
+				modifier = {
+					add = 5
+					has_trait = lustful
+				}
+				modifier = {
+					add = -5				
+					has_trait = chaste
+				}
+				modifier = {
+					add = 5
+					has_trait = gregarious
+				}
+				modifier = {
+					add = -5				
+					has_trait = shy
+				}
+				send_interface_toast = {
+					type = event_toast_effect_bad
+					left_icon = ROOT
+					title = VIETmisc.0172.a.toast.title
+					custom_tooltip =  VIETmisc.0172.a.toast
+					add_character_modifier = {
+						modifier = VIET_meet_me_in_the_woods
+					}
+				}
+			}		
+		}
+	}
+	
+	option = { # Don't meet them
+		name = VIETmisc.0172.b
+		VIET_medium_piety_gain_effect = yes
+		stress_impact = {
+			cynical = minor_stress_impact_gain
+			brave = minor_stress_impact_gain
+			diligent = minor_stress_impact_gain
+			ambitious = minor_stress_impact_gain
+			humble = minor_stress_impact_gain
+		}
+		hidden_effect = {
+			random = {
+				chance = 40
+				modifier = {
+					add = 5
+					OR = {
+						has_trait = sadistic
+						has_trait = callous					
+					}
+				}
+				modifier = {
+					add = -5				
+					has_trait = compassionate
+				}
+				modifier = {
+					add = 5
+					has_trait = arrogant
+				}
+				modifier = {
+					add = -5				
+					has_trait = humble
+				}
+				modifier = {
+					add = 5
+					has_trait = arbitrary
+				}
+				modifier = {
+					add = -5				
+					has_trait = just
+				}
+				modifier = {
+					add = 5
+					has_trait = lustful
+				}
+				modifier = {
+					add = -5				
+					has_trait = chaste
+				}
+				modifier = {
+					add = 5
+					has_trait = gregarious
+				}
+				modifier = {
+					add = -5				
+					has_trait = shy
+				}
+				send_interface_toast = {
+					type = event_toast_effect_bad
+					left_icon = ROOT
+					title = VIETmisc.0172.b.toast.title
+					custom_tooltip =  VIETmisc.0172.b.toast
+					VIET_huge_prestige_loss_effect = yes
+				}
+			}		
+		}
+	}
+	
+}
+
+
+
+# Yawning Grave - elder recounts of when he encountered a ghoost (supposedly) in his town's cementary
+# https://youtu.be/fRjjw-pRg4Y
+VIETmisc.0173 = {
+	type = character_event
+	title = VIETmisc.0173.t
+	desc = VIETmisc.0173.desc
+	theme = death
+	override_background = { event_background = council_chamber }
+	
+	right_portrait = {
+		character = root
+		animation = personality_compassionate
+	}
+	
+	
+	weight_multiplier = {
+		base = 1
+		modifier = {
+			add = 0.2
+			has_trait = gregarious
+		}
+		modifier = {
+			add = -0.2
+			has_trait = shy
+		}
+		modifier = {
+			add = 0.2
+			has_trait = patient
+		}
+		modifier = {
+			add = -0.2
+			has_trait = impatient
+		}
+		modifier = {
+			add = 0.2
+			has_trait = humble
+		}
+		modifier = {
+			add = -0.2
+			has_trait = arrogant
+		}
+	}
+	
+	option = { # ok
+		name = VIETmisc.0173.a
+		VIET_small_prestige_gain_effect = yes
+		stress_impact = {
+			trusting = miniscule_stress_impact_gain		
+			zealous = miniscule_stress_impact_gain		
+		}
+	}
+	
+	option = { # ok
+		name = VIETmisc.0173.b
+		VIET_small_piety_gain_effect = yes
+		stress_impact = {
+			cynical = miniscule_stress_impact_gain		
+			arbitrary = miniscule_stress_impact_gain		
+		}
+	}
+}
+
+
+
+# Frozen Pines - wandering a frozen wasteland with another courtier
+# https://youtu.be/UbSsLPBw9l8
+VIETmisc.0174 = {
+	type = character_event
+	title = VIETmisc.0174.t
+	desc = VIETmisc.0174.desc
+	theme = VIET_theme_nightmare
+	
+	left_portrait = {
+		character = root
+		animation = paranoia
+	}	
+	right_portrait = scope:companion
+	
+	
+	weight_multiplier = {
+		base = 1
+		modifier = {
+			add = 0.2
+			has_trait = shy
+		}
+		modifier = {
+			add = -0.2
+			has_trait = gregarious
+		}
+		modifier = {
+			add = 0.2
+			has_trait = craven
+		}
+		modifier = {
+			add = -0.2
+			has_trait = brave
+		}
+		modifier = {
+			add = 0.2
+			has_trait = humble
+		}
+		modifier = {
+			add = -0.2
+			has_trait = arrogant
+		}
+	}
+	
+	immediate = {
+		random_courtier = {
+			limit = {
+				is_available_ai_adult = yes
+			}
+			save_scope_as = companion
+		}
+	}
+	
+	option = { # ok
+		name = VIETmisc.0174.a
+		stress_impact = {
+			base = miniscule_stress_impact_gain		
+			paranoid = miniscule_stress_impact_gain		
+			#compassionate = miniscule_stress_impact_gain		
+			craven = miniscule_stress_impact_gain	
+		}	
+		scope:companion = {
+			add_opinion = {
+				target = root
+				modifier = VIET_opinion_eerie_dreams
+			}
+			reverse_add_opinion = {
+				target = root
+				modifier = VIET_opinion_eerie_dreams
+			}			
+		}
+		progress_towards_friend_effect = {
+			CHARACTER = scope:companion
+			OPINION = no
+		}
+	}
+}
+
+
+
+
+# Cursed - courtier claims to be cursed by a courtesan but seems to be obsessed with her more than anything
+# https://youtu.be/UbSsLPBw9l8
+VIETmisc.0175 = {
+	type = character_event
+	title = VIETmisc.0175.t
+	desc = VIETmisc.0175.desc
+	theme = intrigue_temptation_focus
+	override_background = { event_background = council_chamber }
+	
+	
+	left_portrait = {
+		character = root
+		animation = bored
+	}	
+	right_portrait = {
+		character = scope:horny
+		animation = personality_vengeful
+	}
+	
+	trigger = {
+		any_courtier = {
+			is_available_ai_adult = yes
+			OR = {
+				has_trait_extroverted_trigger = yes
+				has_trait_malicious_trigger = yes
+				has_trait = paranoid
+				has_trait = arrogant
+			}
+			NOR = {
+				has_trait_benevolent_trigger = yes
+				has_trait = humble
+			}	
+			is_female = no
+			is_married = no
+			num_of_relation_lover < 1
+			NOT = { has_sexuality = homosexual }
+			NOT = { has_sexuality = asexual }
+		}	
+	}
+	
+	
+	weight_multiplier = {
+		base = 1
+		modifier = {
+			add = 0.2
+			has_trait = compassionate
+		}
+		modifier = {
+			add = -0.2
+			has_trait = callous
+		}
+		modifier = {
+			add = 0.2
+			has_trait = calm
+		}
+		modifier = {
+			add = -0.2
+			has_trait = wrathful
+		}
+		modifier = {
+			add = 0.2
+			has_trait = chaste
+		}
+		modifier = {
+			add = -0.2
+			has_trait = lustful
+		}
+	}
+	
+	immediate = {
+		random_courtier = {
+			limit = {
+				is_available_ai_adult = yes
+				OR = {
+					has_trait_extroverted_trigger = yes
+					has_trait_malicious_trigger = yes
+					has_trait = paranoid
+					has_trait = arrogant
+				}
+				NOR = {
+					has_trait_benevolent_trigger = yes
+					has_trait = humble
+				}	
+				is_female = no
+				is_married = no
+				num_of_relation_lover < 1
+				NOT = { has_sexuality = homosexual }
+				NOT = { has_sexuality = asexual }
+			}
+			add_character_modifier = {
+				modifier = VIET_obsessed_with_a_courtesan
+				years = 6
+			}
+			save_scope_as = horny
+		}
+	}
+	
+	option = { # naughty naughty
+		name = VIETmisc.0175.a		
+		if = {
+			limit = {
+				faith = {
+					OR = {
+						trait_is_sin = chaste
+						trait_is_virtue = lustful
+					}
+				}
+			}
+			VIET_medium_piety_loss_effect = yes
+		}		
+		else_if = {
+			limit = {
+				faith = {
+					OR = {
+						trait_is_sin = lustful
+						trait_is_virtue = chaste
+					}
+				}
+			}
+			VIET_huge_piety_gain_effect = yes
+		}
+		else = {
+			VIET_medium_piety_gain_effect = yes
+		}
+		stress_impact = {		
+			cynical = miniscule_stress_impact_gain		
+			lustful = minor_stress_impact_gain		
+			gregarious = miniscule_stress_impact_gain	
+		}	
+		scope:horny = {
+			add_opinion = {
+				target = root
+				modifier = VIET_opinion_shamed_courtesan
+			}			
+		}
+	}	
+	option = { # don't go crazy
+		name = VIETmisc.0175.b
+		VIET_medium_prestige_gain_effect = yes
+		stress_impact = {		
+			paranoid = miniscule_stress_impact_gain
+			callous = miniscule_stress_impact_gain	
+		}	
+		scope:horny = {
+			add_opinion = {
+				target = root
+				modifier = VIET_opinion_shamed_courtesan
+			}			
+		}
+	}	
+	option = { # What bad stuff did you do?
+		name = VIETmisc.0175.c
+		trigger = {
+			can_add_hook = {
+				type = threat_hook
+				target = scope:horny
+			}
+		}
+		add_hook = {
+			type = threat_hook
+			target = scope:horny
+			years = 5
+		}
+		VIET_large_prestige_loss_effect = yes
+		stress_impact = {		
+			content = miniscule_stress_impact_gain
+			craven = miniscule_stress_impact_gain	
+			lazy = miniscule_stress_impact_gain	
+			forgiving = miniscule_stress_impact_gain	
+			trusting = miniscule_stress_impact_gain	
+		}	
+		scope:horny = {
+			add_opinion = {
+				target = root
+				modifier = VIET_opinion_suspects_terrible_things
+			}			
+		}
+	}	
+	option = { # I'm horny
+		name = VIETmisc.0175.d
+		trigger = {
+			NOR = {
+				has_trait = eunuch
+				has_trait = celibate
+				has_sexuality = asexual
+			}
+			OR = {
+				AND = {
+					is_female = no
+					NOT = { has_sexuality = homosexual }
+				}
+				AND = {
+					is_female = yes
+					OR = {
+						has_sexuality = homosexual						
+						has_sexuality = bisexual						
+					}
+				}
+			}
+		}
+		add_character_modifier = {
+			modifier = VIET_lustful_ruler
+			years = 5
+		}
+		stress_impact = {		
+			chaste = minor_stress_impact_gain
+		}	
+		scope:horny = {
+			add_opinion = {
+				target = root
+				modifier = VIET_opinion_wants_my_courtesan
+			}			
+		}
+	}
+}
+
+
+
+
+
+# Way Out There - meet a crazy old man talking about the Dreamers and strange trails
+# https://youtu.be/gAbqaW_xLlQ
+VIETmisc.0176 = {
+	type = character_event
+	title = VIETmisc.0176.t
+	desc = VIETmisc.0176.desc
+	theme = death
+	override_background = { event_background = VIET_background_small_town }
+	
+	left_portrait = {
+		character = root
+		animation = worried
+	}	
+	
+	weight_multiplier = {
+		base = 1
+		modifier = {
+			add = 0.2
+			has_trait = compassionate
+		}
+		modifier = {
+			add = -0.2
+			has_trait = callous
+		}
+		modifier = {
+			add = 0.2
+			has_trait = calm
+		}
+		modifier = {
+			add = -0.2
+			has_trait = wrathful
+		}
+		modifier = {
+			add = 0.2
+			has_trait = chaste
+		}
+		modifier = {
+			add = -0.2
+			has_trait = lustful
+		}
+	}
+	
+	immediate = {
+		if = {
+			limit = {
+				exists = var:VIET_dreamer_karmic_connection_male
+			}
+			change_variable = {
+				name = VIET_dreamer_karmic_connection_male
+				add = 1
+			}			
+		}
+		if = {
+			limit = {
+				exists = var:VIET_dreamer_karmic_connection_female
+			}
+			change_variable = {
+				name = VIET_dreamer_karmic_connection_female
+				add = 1
+			}			
+		}
+	}
+	
+	option = { # ok
+		name = VIETmisc.0176.a
+		trigger = {
+			NOR = {
+				exists = var:VIET_dreamer_karmic_connection_male
+				exists = var:VIET_dreamer_karmic_connection_female
+			}
+		}
+		VIET_small_prestige_loss_effect = yes
+	}	
+	option = { # ok
+		name = VIETmisc.0176.b
+		trigger = {
+			NOR = {
+				exists = var:VIET_dreamer_karmic_connection_male
+				exists = var:VIET_dreamer_karmic_connection_female
+			}
+		}
+		VIET_small_piety_loss_effect = yes
+	}	
+	option = { # ok
+		name = VIETmisc.0176.c
+		trigger = {
+			OR = {
+				exists = var:VIET_dreamer_karmic_connection_male
+				exists = var:VIET_dreamer_karmic_connection_female
+			}
+		}
+		VIET_small_piety_loss_effect = yes
+		VIET_small_prestige_loss_effect = yes
+	}
+}
+
+
+
+# Louisa - meet the Fool for Love and Dreamer again
+# https://youtu.be/gAbqaW_xLlQ
+VIETmisc.0177 = {
+	type = character_event
+	title = VIETmisc.0177.t
+	desc = VIETmisc.0177.desc
+	theme = VIET_lord_huron_strange_trails
+	
+	left_portrait = {
+		character = scope:dreamer
+		animation = personality_compassionate
+	}	
+	right_portrait = {
+		character = scope:fool_for_love
+		animation = wounded
+	}
+	
+	#immediate = {
+	#	hidden_effect = {
+	#		if = {
+	#			limit = { scope:fool_for_love = { has_trait = ambitious } }
+	#			remove_trait = ambitious
+	#		}
+	#		if = {
+	#			limit = { scope:fool_for_love = { has_trait = arrogant } }
+	#			remove_trait = arrogant
+	#		}
+	#		if = {
+	#			limit = { scope:fool_for_love = { has_trait = lustful } }
+	#			remove_trait = lustful
+	#		}
+	#		if = {
+	#			limit = { scope:fool_for_love = { has_trait = brave } }
+	#			remove_trait = brave
+	#		}
+	#		if = {
+	#			limit = { scope:fool_for_love = { has_trait = diligent } }
+	#			remove_trait = diligent
+	#		}
+	#		if = {
+	#			limit = { scope:fool_for_love = { has_trait = wrathful } }
+	#			remove_trait = wrathful
+	#		}
+	#		if = {
+	#			limit = { scope:fool_for_love = { has_trait = trusting } }
+	#			remove_trait = trusting
+	#		}
+	#		if = {
+	#			limit = { scope:fool_for_love = { has_trait = impatient } }
+	#			remove_trait = impatient
+	#		}
+	#		if = {
+	#			limit = { scope:fool_for_love = { has_trait = gregarious } }
+	#			remove_trait = gregarious
+	#		}
+	#		remove_trait = maimed
+	#		remove_trait = wounded_3
+	#		add_trait = wounded_1
+	#		add_trait = compassionate
+	#		add_trait = just
+	#		add_trait = humble
+	#		add_trait = patient
+	#		add_trait = calm
+	#	}
+	#}
+	
+	option = { # ok
+		name = VIETmisc.0177.a
+		add_character_flag = {
+			flag = VIET_can_follow_the_strange_trails
+			days = 1888
+		}
+	}
+}
+
+
+
+# Night We Met - courtier wishes he could have done something to save a dead lover
+# https://youtu.be/nG0HrAVIw_c
+VIETmisc.0178 = {
+	type = character_event
+	title = VIETmisc.0178.t
+	desc = VIETmisc.0178.desc
+	theme = death	
+	override_background = { event_background = garden }
+	
+	left_portrait = { 	
+		character = scope:sad_guy
+		animation = grief
+	}	
+	right_portrait = {
+		character = root
+		animation = worry
+	}
+	
+
+	trigger = {
+		any_courtier = {
+			is_available_ai_adult = yes
+			OR = {
+				has_trait_extroverted_trigger = yes
+				has_trait_malicious_trigger = yes
+				has_trait = paranoid
+				has_trait = arrogant
+			}
+			NOR = {
+				has_trait_benevolent_trigger = yes
+				has_trait = humble
+			}	
+			is_female = no
+			is_married = no
+			num_of_relation_lover < 1
+			NOT = { has_sexuality = homosexual }
+			NOT = { has_sexuality = asexual }
+		}	
+	}
+	
+	
+	weight_multiplier = {
+		base = 1
+		modifier = {
+			add = 0.2
+			has_trait = compassionate
+		}
+		modifier = {
+			add = -0.2
+			has_trait = callous
+		}
+		modifier = {
+			add = 0.2
+			has_trait = gregarious
+		}
+		modifier = {
+			add = -0.2
+			has_trait = shy
+		}
+		modifier = {
+			add = 0.2
+			has_trait = humble
+		}
+		modifier = {
+			add = -0.2
+			has_trait = arrogant
+		}
+	}
+	
+	immediate = {
+		#play_music_cue = mx_cue_touching_moment
+		random_courtier = {
+			limit = {
+				is_available_ai_adult = yes
+				OR = {
+					has_trait_extroverted_trigger = yes
+					has_trait_malicious_trigger = yes
+					has_trait = paranoid
+					has_trait = arrogant
+				}
+				NOR = {
+					has_trait_benevolent_trigger = yes
+					has_trait = humble
+				}	
+				is_female = no
+				is_married = no
+				num_of_relation_lover < 1
+				NOT = { has_sexuality = homosexual }
+				NOT = { has_sexuality = asexual }
+			}
+			add_character_modifier = {
+				modifier = VIET_night_we_met
+				years = 8
+			}
+			save_scope_as = sad_guy
+		}
+	}
+
+	
+	option = { # stop obsessing about trying to change the past
+		name = VIETmisc.0178.a
+		random_list = {
+			10 = { VIET_medium_prestige_gain_effect = yes }
+			10 = { VIET_medium_piety_gain_effect = yes }
+		}
+		stress_impact = {		
+			deceitful = miniscule_stress_impact_gain
+			stubborn = miniscule_stress_impact_gain	
+			impatient = miniscule_stress_impact_gain
+		}
+		scope:sad_guy = {
+			add_opinion = {
+				target = root
+				modifier = VIET_opinion_moving_on_advice
+			}		
+		}
+	}	
+	option = { # she's in a better place
+		name = VIETmisc.0178.b
+		VIET_medium_piety_gain_effect = yes
+		stress_impact = {		
+			cynical = miniscule_stress_impact_gain
+			impatient = miniscule_stress_impact_gain	
+			callous = miniscule_stress_impact_gain
+		}	
+		scope:sad_guy = {
+			add_opinion = {
+				target = root
+				modifier = VIET_opinion_moving_on_advice
+			}		
+		}
+	}	
+	option = { # stop being whiny
+		name = VIETmisc.0178.c
+		VIET_medium_prestige_gain_effect = yes
+		stress_impact = {		
+			patient = miniscule_stress_impact_gain
+			calm = miniscule_stress_impact_gain	
+			compassionate = miniscule_stress_impact_gain
+		}	
+		scope:sad_guy = {
+			add_opinion = {
+				target = root
+				modifier = VIET_opinion_moving_on_advice
+			}		
+		}
+	}
+}
+
+
+
+# Strange Trails = find the place where you dreamed of the Fool for Love
+# https://youtu.be/nG0HrAVIw_c
+VIETmisc.0179 = {
+	type = character_event
+	title = VIETmisc.0179.t
+	desc = VIETmisc.0179.desc
+	theme = death
+	override_background = { event_background = VIET_background_tuscan_country }
+	
+	left_portrait = { 	
+		character = root
+		animation = happiness
+	}
+	
+	immediate = {
+		play_music_cue = mx_cue_touching_moment 
+	}
+	
+	option = { # Ok
+		name = VIETmisc.0179.a
+		add_character_modifier = {
+			modifier = VIET_strange_trails
+		}
+		stress_impact = {
+			base = massive_stress_impact_loss
+		}
+	}
+}
+
+
+
+
+
+
+
+
+
 

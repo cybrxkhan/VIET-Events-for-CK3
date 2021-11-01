@@ -321,3 +321,33 @@ VIET_opinion_sell_shoes = {
 	years = 10
 	opinion = -15
 }
+VIET_opinion_disapproves_viewpoint = {
+	years = 10
+	opinion = -10
+}
+VIET_opinion_approves_viewpoint = {
+	years = 10
+	opinion = 10
+}
+VIET_opinion_eerie_dreams = {
+	years = 10
+	decaying = yes
+	opinion = 5
+}
+VIET_opinion_shamed_courtesan = {
+	years = 15
+	opinion = -15
+}
+VIET_opinion_wants_my_courtesan = {
+	years = 15
+	opinion = -25
+}
+VIET_opinion_suspects_terrible_things = {
+	years = 15
+	opinion = -10
+}
+VIET_opinion_moving_on_advice = {
+	years = 10
+	decaying = yes
+	opinion = 10
+}

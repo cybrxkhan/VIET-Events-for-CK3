@@ -2046,12 +2046,12 @@ VIETold.0026 = {
 					}
 				}
 			}
-			VIET_large_piety_gain_effect = yes
+			VIET_huge_piety_gain_effect = yes
 		}
 		else_if = {
-			VIET_medium_piety_gain_effect = yes
+			VIET_large_piety_gain_effect = yes
 		}
-		VIET_small_prestige_loss_effect = yes
+		VIET_large_prestige_loss_effect = yes
 		stress_impact = {
 			cynical = minor_stress_impact_gain
 			lazy = minor_stress_impact_gain
@@ -2078,12 +2078,12 @@ VIETold.0026 = {
 					}
 				}
 			}
-			VIET_large_piety_gain_effect = yes
+			VIET_massive_piety_gain_effect = yes
 		}
 		else_if = {
-			VIET_medium_piety_gain_effect = yes
+			VIET_huge_piety_gain_effect = yes
 		}
-		VIET_small_prestige_loss_effect = yes
+		VIET_massive_prestige_loss_effect = yes
 		stress_impact = {
 			paranoid = minor_stress_impact_gain
 			arrogant = minor_stress_impact_gain

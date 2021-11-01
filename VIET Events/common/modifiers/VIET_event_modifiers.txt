@@ -1130,6 +1130,7 @@ VIET_girl_power = {
 }
 VIET_sexist_against_women = {
 	icon = social_negative
+	monthly_prestige = 0.2
 	attraction_opinion = -10
 }
 VIET_nerd_hates_sports = {
@@ -1547,11 +1548,11 @@ VIET_inspired_by_historical_heroes = {
 }
 VIET_refused_cat_lady_issue = {
 	icon = cat_negative
-	county_opinion_add = -5
+	county_opinion_add = -4
 }
 VIET_did_something_cat_lady_issue = {
 	icon = cat_positive
-	county_opinion_add = 5
+	county_opinion_add = 4
 }
 VIET_hearing_foreign_tall_tales = {
 	icon = social_positive
@@ -1561,7 +1562,7 @@ VIET_hearing_foreign_tall_tales = {
 VIET_owns_a_lot_of_shoes = {
 	icon = stewardship_negative
 	stewardship = -2
-	county_opinion_add = -5
+	county_opinion_add = -3
 }
 VIET_lots_of_calipers = {
 	icon = county_modifier_development_positive
@@ -1641,5 +1642,75 @@ VIET_dreamer = {
 VIET_self_hating_woman = {
 	icon = social_negative
 	diplomacy = -1
+}
+VIET_idealistic_about_love = {
+	icon = love_positive
+	attraction_opinion = 10
+	fertility = 0.02
+	intrigue = -1
+}
+VIET_killjoy_about_love = {
+	icon = cockroach_positive
+	intrigue = 2
+	diplomacy = -1
+	attraction_opinion = -5	
+}
+VIET_hedonistic_apocalypse = {
+	icon = feast_positive
+	stress_gain_mult = -0.25
+	stress_loss_mult = 0.25
+	monthly_piety = -0.3	
+}
+VIET_wandering_ghost_blessing = {
+	icon = magic_positive
+	hostile_scheme_resistance_mult = 0.13
+	monthly_piety = 0.2
+}
+VIET_wandering_ghost_nightmares = {
+	icon = magic_negative
+	stress_gain_mult = 0.1
+	stress_loss_mult = -0.1
+	monthly_lifestyle_xp_gain_mult = -0.13
+}
+VIET_sea_merchant_personal_anecdotes = {
+	icon = social_positive
+	embarkation_cost_mult = -0.15
+	naval_movement_speed_mult = 0.1
+}
+VIET_la_belle_fleur_sauvage_bard = {
+	icon = fertility_positive
+	monthly_piety_gain_mult = 0.04
+}
+VIET_world_enders = {
+	icon = prowess_positive
+	county_opinion_add = 8	
+	general_opinion = 5
+}
+VIET_meet_me_in_the_woods = {
+	icon = magic_negative
+	stress_gain_mult = 0.1
+	stress_loss_mult = -0.1
+	health = -0.2
+	life_expectancy = -3
+}
+VIET_obsessed_with_a_courtesan = {
+	icon = love_negative
+	stress_gain_mult = 0.3
+	stress_loss_mult = -0.3
+	health = -0.1
+	monthly_piety = -0.5
+}
+VIET_night_we_met = {
+	icon = love_negative
+	stress_gain_mult = 0.1
+	stress_loss_mult = -0.1
+}
+VIET_strange_trails = {
+	icon = magic_positive
+	stress_gain_mult = -0.2
+	stress_loss_mult = 0.2
+	life_expectancy = 5
+	monthly_piety_gain_mult = 0.08
+	monthly_lifestyle_xp_gain_mult = 0.05
 }
 

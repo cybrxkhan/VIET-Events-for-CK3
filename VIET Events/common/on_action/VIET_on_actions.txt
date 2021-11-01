@@ -85,7 +85,7 @@ VIET_events_yearly_pulse = {
 			}
 		}
 		
-		30000 = 0
+		32000 = 0
 		
 		#######################################
 		# OLDEST VIET
@@ -327,6 +327,12 @@ VIET_events_yearly_pulse = {
 		# 100 / One Hundred
 		100 = VIETmisc.0158		# Learn about the story of the 100 brave youths
 		100 = VIETmisc.0160		# Hearing about a woman who gave birth to 100 kids
+		# Strange Trails (Lord Huron) inspired
+		100 = VIETmisc.0165		# Love Like Ghosts - is love rare or not?
+		100 = VIETmisc.0166		# Until The Night Turns - courtier dreams about the end of the world and enjoys it
+		100 = VIETmisc.0168		# Hurricane - sea merchant tells some anecdotes
+		100 = VIETmisc.0173		# Yawning Grave - elder recounts of when he encountered a ghoost (supposedly) in his town's cementary
+		100 = VIETmisc.0174		# Frozen Pines - wandering a frozen wasteland with another courtier
 	}
 }
 
@@ -369,7 +375,8 @@ VIET_events_tri_yearly_pulse = {
 				add = 10
 			}
 		}
-		27000 = 0 # 20000?
+		
+		30000 = 0 # 20000?
 		
 		#######################################
 		# OLDEST VIET
@@ -590,6 +597,12 @@ VIET_events_tri_yearly_pulse = {
 		100 = VIETmisc.0157		# Horny courtier talks about a harlot he had sex with
 		100 = VIETmisc.0161		# Spouse has over a hundred fancy shoes
 		100 = VIETmisc.0164		# Successfully resolved a local feud between two noble clans
+		# Strange Trails (Lord Huron) inspired
+		100 = VIETmisc.0169		# La Belle Fleur Sauvage (The Beautiful Wildflower) - bard talks about his muse
+		100 = VIETmisc.0171		# The World Ender - a band of mercenary bullies sweeps by nearby and disappear or are afraid of you
+		100 = VIETmisc.0175		# Cursed - courtier claims to be cursed by a courtesan but seems to be obsessed with her more than anything
+		100 = VIETmisc.0176		# Way Out There - meet a crazy old man talking about the Dreamers and strange trails
+		100 = VIETmisc.0178		# Night We Met - courtier wishes he could have done something to save a dead lover
 	}
 }
 
@@ -633,7 +646,7 @@ VIET_events_five_yearly_pulse = {
 			}
 		}
 		
-		25000 = 0
+		27000 = 0
 		
 		#######################################
 		# OLDEST VIET
@@ -775,6 +788,9 @@ VIET_events_five_yearly_pulse = {
 		100 = VIETmisc.0159		# What do to with a local crazy cat lady?
 		100 = VIETmisc.0162		# Bizarre, dark, and eerie (but benevolent) dream of 100 Spirits
 		100 = VIETmisc.0163		# Found a barrel with 100 calipers inside
+		# Strange Trails (Lord Huron) inspired
+		100 = VIETmisc.0167		# Dead Man's Hand - ghost appears in a dream asking not to be buried
+		100 = VIETmisc.0172		# Meet Me In The Woods - should you meet a noble family whose daughter is cursed?
 	}
 }
 
@@ -787,7 +803,7 @@ VIET_events_event_chain_pulse = {
 	}
 	random_events = {
 		chance_of_no_event = {
-			value = 30
+			value = 40
 			if = {
 				limit = {
 					has_game_rule = VIET_event_frequency_low
@@ -813,7 +829,7 @@ VIET_events_event_chain_pulse = {
 				subtract = 20
 			}
 		}
-		18000 = 0
+		20000 = 0
 		
 		#######################################
 		# OLD VIET
@@ -847,6 +863,9 @@ VIET_events_event_chain_pulse = {
 		100 = VIETmonogatari.0012		# Rumors about Qi Ma the Liar - stewardship
 		100 = VIETmonogatari.0013		# Rumors about Qi Ma the Liar - intrigue
 		100 = VIETmonogatari.0014		# Rumors about Qi Ma the Liar - learning
+		
+		# Strange Trails (Lord Huron) inspired
+		100 = VIETmisc.0170				# Fool for Love (my favorite Lord Huron song!) - meet the Fool for Love by the side of the road
 		
 	}
 }
@@ -884,7 +903,8 @@ VIET_events_common_decisions_pulse = {
 				subtract = 20
 			}
 		}
-		12000 = 0
+		
+		13000 = 0
 		
 		#######################################
 		# OLD VIET (for events converted into decision event chains)
@@ -939,7 +959,8 @@ VIET_events_rare_decisions_pulse = {
 				subtract = 20
 			}
 		}
-		15000 = 0
+		
+		16000 = 0
 		
 		#######################################
 		# OLD VIET (for events converted into decision event chains)
@@ -1006,7 +1027,7 @@ VIET_events_misc_decisions_pulse = {
 		# NEXT GEN VIET
 		#######################################
 		
-		#Meet the Dreamer
+		# Misc
 		100 = VIETmisc.2056		# Crows save you from a bandit attack
 		100 = VIETmisc.2057		# Crows give you some presents
 		

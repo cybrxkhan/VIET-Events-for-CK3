@@ -2897,7 +2897,7 @@ VIETmisc.2055 = {
 					has_any_nickname = no
 				}
 				random = {
-					chance = 65
+					chance = 40
 					send_interface_toast = {
 						left_icon = ROOT
 						title = VIETmisc.2055.toast
@@ -2918,7 +2918,7 @@ VIETmisc.2055 = {
 					has_bad_nickname = yes
 				}
 				random = {
-					chance = 50
+					chance = 30
 					send_interface_toast = {
 						left_icon = ROOT
 						title = VIETmisc.2055.toast
@@ -2936,7 +2936,7 @@ VIETmisc.2055 = {
 			}
 			else = {
 				random = {
-					chance = 35
+					chance = 20
 					send_interface_toast = {
 						left_icon = ROOT
 						title = VIETmisc.2055.toast
