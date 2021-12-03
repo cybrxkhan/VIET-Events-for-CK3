@@ -61,12 +61,19 @@
  VIET_decision_feed_the_crows_desc:0 "I want to go into my garden and feed my friends, the crows. They will undoubtedly appreciate my gesture."
  VIET_decision_feed_the_crows_effect_tooltip:0 "You will lose some [stress|E] and gain a little [dread|E]"
  VIET_decision_feed_the_crows_confirm:0 "Where's my bag of crow food?"
- VIET_decision_feed_the_crows_context_tooltip:0 "#emphasis Historical Context:#! Birds of the #italic Corvus#! genus, known commonly as crows or ravens, are a common part of folklore and religious belief around the world. In many cultures, they are seen as harbingers of ill-omen and symbols of misfortune and death, though in some places or contexts, they are viewed more ambiguously as tricksters or psychopomps. They are known for their intelligence and excellent memory. The distinction between crows and ravens is somewhat inconsistent, but generally, crows are smaller than ravens."
+ VIET_decision_feed_the_crows_context_tooltip:0 "#emphasis Historical Context:#! Birds of the #italic Corvus#! genus, known commonly as crows or ravens, are a common part of folklore and religious belief around the world. In many cultures, they are seen as harbingers of ill-omen and symbols of misfortune and death, though in some places or contexts, they are viewed more ambiguously as tricksters or psychopomps. They are known for their intelligence and excellent memory. The distinction between crows and ravens is somewhat inconsistent, but generally, crows are smaller than ravens." 
  VIET_decision_strange_trails:0 "Follow the Strange Trails"
  VIET_decision_strange_trails_tooltip:0 "My dreams are pointing me to somewhere. They must be."
  VIET_decision_strange_trails_desc:0 "All these dreams I've been having about the fool for love have preoccupied my thoughts as of late. I now think I've been dreaming of a place nearby. I know where it is. I've been there before. I must visit it again. Perhaps going there will ease my mind and reveal why I've been dreaming about it."
  VIET_decision_strange_trails_effect_tooltip:0 "You will follow the strange trails to find the place you've been dreaming about."
  VIET_decision_strange_trails_confirm:0 "I seek answers, but I don't even know the question." 
+ VIET_decision_learn_shorthand_techniques:0 "Learn Shorthand Techniques"
+ VIET_decision_learn_shorthand_techniques_tooltip:0 "I've heard there are some scribes or scholars nearby who can teach me about shorthand."
+ VIET_decision_learn_shorthand_techniques_desc:0 "I've heard there are some scribes or scholars nearby who can teach me advanced shorthand techniques, so that I can write more quickly. It's best I commit to learning more about this while I still have some interest in it."
+ VIET_decision_learn_shorthand_techniques_effect_tooltip:0 "You will gain some kind of #P positive#! [character_modifier|E] increasing some of your [skills|E]"
+ VIET_decision_learn_shorthand_techniques_effect_tooltip_2:0 "How powerful the [character_modifier|E] is depends on your [skills|E], [traits|E], and other factors"
+ VIET_decision_learn_shorthand_techniques_confirm:0 "I think I've found a scribe who's willing to teach."
+ VIET_decision_learn_shorthand_techniques_context_tooltip:0 "#emphasis Historical Context:#! Shorthand is any abbreviated method of writing quickly. These methods were historically developed across many literate cultures. They were - and still are - particularly useful for certain professions like clerks and scribes, where information needed to be recorded swiftly and efficiently." 
  
  
  # Character Interactions
@@ -84,3 +91,4 @@
  activity_VIET_crow_removal:0 "Crow Removal"
  activity_VIET_crow_removal_name:0 "[ACTIVITY.GetOwner.GetNamePossessiveOrMy|U] Crow Removal"
  activity_VIET_xxxxx:0 "xxxxx"
+ 

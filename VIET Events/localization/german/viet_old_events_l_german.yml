@@ -920,6 +920,7 @@
  VIETold.1059.desc:0 ""Goodness gracious!" I exclaim.\n\nThere is an awkward pause.\n\n"Who cut the cheese?" I exclaim.\n\nEveryone looks around nervously.\n\n"I did," a servant admits.\n\nI tell him, "Next time, make sure you cut it into smaller pieces, alright? It’s difficult eating cheese if it’s in giant pieces like this.""
  VIETold.1059.a:0 ""Yes, my [ROOT.Char.GetLadyLord]!""
  # Version 1.4.2 Start Here - Please leave this comment here
+ # Version 1.4.5 Start Here - Please leave this comment here
  VIETold.1060.t:0 "Ha Ha!"
  VIETold.1060.desc:0 ""Don't make me laugh!" I exclaim.\n\n[jokester.GetTitledFirstName] says the joke anyways, and I almost die of laughter. It was a good joke, too good in fact!"
  VIETold.1060.a:0 "Tell it again!"
@@ -927,6 +928,7 @@
  VIETold.1061.desc:0 "I am relaxing on a chair that sits next to a window in my room. Sunlight filters through the window, and shines down on me. I feel it's warmth."
  VIETold.1061.a:0 "Ah...."
  VIETold.1062.t:0 "Not That Memory!"
+ # Version 1.4.6 Start Here - Please leave this comment here
  VIETold.1062.desc:0 "I was minding my own business, doing important things any [ROOT.Char.GetTitleAsNameNoTooltip] would do. And then, out of nowhere, it wove itself into my mind.\n\nI suddenly remembered something extremely embarrassing I did years ago."
  VIETold.1062.a:0 "Please, no, why did I have to remember that...."
  VIETold.1063.t:0 "Choking"
@@ -946,7 +948,7 @@
  VIETold.1067.a:0 "I'll give it back. It's the right thing to do."
  VIETold.1067.b:0 "No one will see me taking it - finders keepers!"
  VIETold.1067.c:0 "Leave it there - who cares? It's just one coin."
- # Version 1.4.3 Start Here - Please leave this comment here
+ # Version 1.4.7 Start Here - Please leave this comment here
  VIETold.1068.t:0 "xxxxx"
  VIETold.1068.desc:0 "xxxxx"
  VIETold.1068.a:0 "xxxxx"
