@@ -673,6 +673,8 @@
  VIETmisc.0180.b:0 "Lightheartedly tease [bad_handwriting.GetHerHim] about it"
  VIETmisc.0180.c:0 "Shrug and provide [bad_handwriting.GetHerHim] a neutral if unsatisfying comment"
  VIETmisc.0180.d:0 "Give [bad_handwriting.GetHerHim] constructive criticism on how to improve [bad_handwriting.GetHerHis] handwriting"
+ VIETmisc.0180.tease_toast_bad:0 "[bad_handwriting.GetTitledFirstName] doesn't like being teased!"
+ VIETmisc.0180.tease_toast_good:0 "[bad_handwriting.GetTitledFirstName] thinks my joke was funny!"
  VIETmisc.0181.t:0 "My Wrists!"
  VIETmisc.0181.desc:0 "I am working on many important official documents today. Alas, I am writing so much that my wrists are getting sore. It is an uncomfortable sensation all said and I don’t know how long I can last. However, these #italic are#! important documents I need to finish…."
  VIETmisc.0181.a:0 "Take a break and start again tomorrow"
