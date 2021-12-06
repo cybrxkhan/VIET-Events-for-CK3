@@ -70,7 +70,7 @@
  VIET_decision_learn_shorthand_techniques:0 "Learn Shorthand Techniques"
  VIET_decision_learn_shorthand_techniques_tooltip:0 "I've heard there are some scribes or scholars nearby who can teach me about shorthand."
  VIET_decision_learn_shorthand_techniques_desc:0 "I've heard there are some scribes or scholars nearby who can teach me advanced shorthand techniques, so that I can write more quickly. It's best I commit to learning more about this while I still have some interest in it."
- VIET_decision_learn_shorthand_techniques_effect_tooltip:0 "You will gain some kind of #P positive#! [character_modifier|E] increasing some of your [skills|E]"
+ VIET_decision_learn_shorthand_techniques_effect_tooltip:0 "After several months of studying, will gain some kind of #P positive#! [character_modifier|E] increasing some of your [skills|E]"
  VIET_decision_learn_shorthand_techniques_effect_tooltip_2:0 "How powerful the [character_modifier|E] is depends on your [skills|E], [traits|E], and other factors"
  VIET_decision_learn_shorthand_techniques_confirm:0 "I think I've found a scribe who's willing to teach."
  VIET_decision_learn_shorthand_techniques_context_tooltip:0 "#emphasis Historical Context:#! Shorthand is any abbreviated method of writing quickly. These methods were historically developed across many literate cultures. They were - and still are - particularly useful for certain professions like clerks and scribes, where information needed to be recorded swiftly and efficiently." 
