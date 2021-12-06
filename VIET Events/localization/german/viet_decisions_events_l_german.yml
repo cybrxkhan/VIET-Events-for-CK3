@@ -247,6 +247,7 @@
  VIETmisc.2061.t:0 "Writing the Right Way"
  VIETmisc.2061.desc:0 "I've recently heard about how there are various techniques to help one write more quickly, such as using abbreviations or modified symbols to represent words. Perhaps taking the time to learn this might be helpful… perhaps it might not. While I am still fascinated by this topic, maybe I can contact a local scholar or scribe who can teach me about these matters."
  VIETmisc.2061.a:0 "Assuming I have time, of course."
+ VIETmisc.2061.tooltip:0 "For as long as you have the [character_modifier|E] #V Interested in Learning Shorthand#!, you will have access to a [decision|E] to do just that. Just be warned, however, that you'll lose interest in doing so eventually, and once the modifier expires, the [decision|E] will no longer be available."
  VIETmisc.2062.t:0 "Writing the Right Way"
  VIETmisc.2062.desc:0 "For several months now, I have studied various shorthand techniques with a local scribe who is said to be a master of this art. I've learned various ways to abbreviate my words, or certain ways to write words more quickly."
  VIETmisc.2062.desc.result_meh:0 "\n\nAfter spending all this time learning, I can now say that while I am not the best at shorthand, I am somewhat capable in using shorthand. I haven’t improved the speed of my writing considerably, but it’s still better than before, so it’s still some handy knowledge to have."
