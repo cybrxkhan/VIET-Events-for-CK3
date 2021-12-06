@@ -578,6 +578,8 @@
  VIET_opinion_tease_handwriting_bad:0 "Teased Me About My Handwriting"
  VIET_opinion_tease_handwriting_good:0 "Teased Me About My Handwriting"
  VIET_opinion_constructive_criticism_handwriting:0 "Gave Me Constructive Criticism About My Handwriting"
+ VIET_horrible_handwriting:0 "Has Terrible Handwriting"
+ VIET_horrible_handwriting_desc:0 "They say you can learn a lot by reading someone's handwriting. That does not apply to this character, given no one can understand what they write. Even this character can't read their horrid handwriting oftentimes!"
  VIET_wrists_hurt:0 "Wrists are Sore"
  VIET_wrists_hurt_desc:0 "Someone's been spending too much time at a desk doing nothing but writing."
  VIET_shorthand_interest:0 "Interested in Learning Shorthand"
