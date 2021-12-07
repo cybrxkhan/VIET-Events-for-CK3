@@ -29,6 +29,7 @@
 # 2039-2042		Baklava Merchant Gifting
 # 2043-2046		Spice Merchant Gifting
 # 2047-2060		Deal with the Crows
+# 2061-2062		Learning Shorthand
 # 
 ############################################################################################################################
 
@@ -2882,8 +2883,16 @@ VIETmisc.2055 = {
 	
 	immediate = {
 		remove_character_modifier = VIET_crows_following
-		add_character_modifier = {
-			modifier = VIET_crow_friend
+		if = {
+			limit = { religion = religion:germanic_religion }
+			add_character_modifier = {
+				modifier = VIET_crow_friend_germanic
+			}
+		}
+		else = {
+			add_character_modifier = {
+				modifier = VIET_crow_friend
+			}		
 		}
 	}
 	
@@ -2978,7 +2987,7 @@ VIETmisc.2056 = {
 	}	
 	
 	trigger = {
-		has_character_modifier = VIET_crow_friend
+		VIET_is_crow_lord_or_lady_trigger = yes
 	}
 	
 	weight_multiplier = {
@@ -3034,7 +3043,7 @@ VIETmisc.2057 = {
 	}
 	
 	trigger = {
-		has_character_modifier = VIET_crow_friend
+		VIET_is_crow_lord_or_lady_trigger = yes
 	}
 	
 	immediate = {
@@ -3210,3 +3219,229 @@ VIETmisc.2060 = {
 
 
 
+
+
+
+##################################################################
+# SHORTHAND 2061-2062
+##################################################################
+
+# Character gains interest in learning how to write shorthand
+VIETmisc.2061 = {
+	type = character_event
+	title = VIETmisc.2061.t
+	desc = VIETmisc.2061.desc
+	theme = learning_scholarship_focus
+	
+	left_portrait = {
+		character = root
+		animation = personality_rational
+	}
+	
+	trigger = {
+		NOR = {
+			has_character_modifier = VIET_currently_learning_shorthand
+			has_character_modifier = VIET_learned_shorthand_1
+			has_character_modifier = VIET_learned_shorthand_2
+			has_character_modifier = VIET_learned_shorthand_3
+			has_character_modifier = VIET_learned_shorthand_4
+		}
+		# Weed out most cultures that probably aren't literate at the game start and wouldn't be writing stuff like letters
+		NOT = { has_government = tribal_government }	
+		# Want someone who's probably literate and who isn't an idiot
+		NOT = { has_trait = blind }
+		probably_unintelligent_trigger = no
+		diplomacy >= low_skill_rating
+		learning >= low_skill_rating
+	}
+	
+	weight_multiplier = {
+		base = 1
+		modifier = {
+			add = 0.2
+			has_trait = impatient
+		}
+		modifier = {
+			add = -0.2
+			has_trait = patient
+		}
+		modifier = {
+			add = 0.2
+			has_trait = diligent
+		}
+		modifier = {
+			add = -0.2
+			has_trait = lazy
+		}
+		modifier = {
+			add = 0.2
+			has_trait = fickle
+		}
+		modifier = {
+			add = -0.2
+			has_trait = stubborn
+		}
+	}
+	
+	immediate = {
+		# Randomize how long the character modifier will be
+		random_list = {
+			10 = {
+				add_character_modifier = {
+					modifier = VIET_shorthand_interest
+					years = 2
+				}
+			}
+			15 = {
+				add_character_modifier = {
+					modifier = VIET_shorthand_interest
+					years = 4
+				}
+			}
+			15 = {
+				add_character_modifier = {
+					modifier = VIET_shorthand_interest
+					years = 6
+				}
+			}
+			15 = {
+				add_character_modifier = {
+					modifier = VIET_shorthand_interest
+					years = 8
+				}
+			}
+			10 = {
+				add_character_modifier = {
+					modifier = VIET_shorthand_interest
+					years = 10
+				}
+			}
+		}
+	}
+	
+	option = { # Ok
+		name = VIETmisc.2061.a
+		custom_tooltip = VIETmisc.2061.tooltip
+	}
+}
+
+# Character learns shorthand
+VIETmisc.2062 = {
+	type = character_event
+	title = VIETmisc.2062.t
+	desc = VIETmisc.2062.desc
+	theme = learning_scholarship_focus
+	
+	left_portrait = {
+		character = root
+		animation = chancellor
+	}
+	
+	immediate = {
+		remove_character_modifier = VIET_currently_learning_shorthand
+		# Randomize how good the character's skill is
+		random_list = {
+			35 = {
+				modifier = {
+					add = 5
+					diplomacy <= mediocre_skill_rating
+				}
+				modifier = {
+					add = 5
+					learning <= mediocre_skill_rating
+				}
+				modifier = {
+					add = 3
+					has_trait = impatient
+				}
+				modifier = {
+					add = 3
+					has_trait = fickle
+				}
+				modifier = {
+					add = 3
+					has_trait = lazy
+				}
+				add_character_modifier = {
+					modifier = VIET_learned_shorthand_1
+				}
+			}
+			45 = {
+				add_character_modifier = {
+					modifier = VIET_learned_shorthand_2
+				}
+			}
+			25 = {
+				modifier = {
+					add = 5
+					diplomacy >= decent_skill_rating
+				}
+				modifier = {
+					add = 5
+					learning >= decent_skill_rating
+				}
+				modifier = {
+					add = 5
+					probably_intelligent_trigger = yes
+				}
+				modifier = {
+					add = 3
+					has_trait = patient
+				}
+				modifier = {
+					add = 3
+					has_trait = diligent
+				}
+				modifier = {
+					add = 3
+					has_trait = ambitious
+				}
+				add_character_modifier = {
+					modifier = VIET_learned_shorthand_3
+				}
+			}
+			10 = {
+				modifier = {
+					add = 5
+					diplomacy >= high_skill_rating
+				}
+				modifier = {
+					add = 5
+					learning >= high_skill_rating
+				}
+				modifier = {
+					add = 5
+					diplomacy >= decent_skill_rating
+				}
+				modifier = {
+					add = 5
+					learning >= decent_skill_rating
+				}
+				modifier = {
+					add = 5
+					probably_intelligent_trigger = yes
+				}
+				modifier = {
+					add = 3
+					has_trait = patient
+				}
+				modifier = {
+					add = 3
+					has_trait = diligent
+				}
+				modifier = {
+					add = 3
+					has_trait = ambitious
+				}
+				add_character_modifier = {
+					modifier = VIET_learned_shorthand_4
+				}
+			}
+		}
+	}
+	
+	option = { # Ok
+		name = VIETmisc.2062.a
+		VIET_large_prestige_gain_effect = yes
+	}
+}

@@ -149,6 +149,8 @@ VIET_events_yearly_pulse = {
 		100 = VIETold.1056		# Sensing someone said something unflattering said about you
 		100 = VIETold.1057		# Something wedged between your teeth
 		100 = VIETold.1058		# Feeling melancholy about growing older
+		100 = VIETold.1060		# Hearing a funny joke from a courtier/guest
+		100 = VIETold.1061		# Feeling the sunlight against your face
 		
 		#######################################
 		# OLD VIET
@@ -333,6 +335,8 @@ VIET_events_yearly_pulse = {
 		100 = VIETmisc.0168		# Hurricane - sea merchant tells some anecdotes
 		100 = VIETmisc.0173		# Yawning Grave - elder recounts of when he encountered a ghoost (supposedly) in his town's cementary
 		100 = VIETmisc.0174		# Frozen Pines - wandering a frozen wasteland with another courtier
+		# Writing
+		100 = VIETmisc.0181		# Writing too much makes your wrists sore
 	}
 }
 
@@ -603,6 +607,8 @@ VIET_events_tri_yearly_pulse = {
 		100 = VIETmisc.0175		# Cursed - courtier claims to be cursed by a courtesan but seems to be obsessed with her more than anything
 		100 = VIETmisc.0176		# Way Out There - meet a crazy old man talking about the Dreamers and strange trails
 		100 = VIETmisc.0178		# Night We Met - courtier wishes he could have done something to save a dead lover
+		# Writing
+		100 = VIETmisc.0180		# Courtier has crappy handwriting
 	}
 }
 
@@ -904,7 +910,7 @@ VIET_events_common_decisions_pulse = {
 			}
 		}
 		
-		13000 = 0
+		16000 = 0
 		
 		#######################################
 		# OLD VIET (for events converted into decision event chains)
@@ -914,13 +920,16 @@ VIET_events_common_decisions_pulse = {
 		# NEXT GEN VIET
 		#######################################
 		
-		#Generic first set
+		# Generic first set
 		100 = VIETmisc.2001		# Traveling baklava merchant arrives in town
 		100 = VIETmisc.2004		# Traveling spice merchant arrives in town
 		100 = VIETmisc.2007		# A ghost seems to be haunting you
 		100 = VIETmisc.2019		# Your servants find a mysterious treasure chest
 		100 = VIETmisc.2021		# Meet the mercenary scholar at an inn
+		# Crows
 		100 = VIETmisc.2047		# Crows keep following you around for some reason
+		# Writing
+		100 = VIETmisc.2060		# Character gains interest in learning how to write shorthand
 		
 	}
 }
@@ -960,7 +969,7 @@ VIET_events_rare_decisions_pulse = {
 			}
 		}
 		
-		16000 = 0
+		20000 = 0
 		
 		#######################################
 		# OLD VIET (for events converted into decision event chains)

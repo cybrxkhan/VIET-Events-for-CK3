@@ -79,3 +79,10 @@ VIET_is_in_broccoli_region_trigger = {
 	}
 }
 
+VIET_is_crow_lord_or_lady_trigger = {
+	OR = {
+		has_character_modifier = VIET_crow_friend
+		has_character_modifier = VIET_crow_friend_germanic
+	}
+}
+

@@ -1,7 +1,8 @@
 [img]http://i.imgur.com/OhIA5bm.jpg[/img]
 
-[h1]Current Version: 1.4.4 "Strange Trails" (Released 10/31/21, Compatible with vanilla patch 1.4.X)[/h1]
-[h1][B][url=https://discord.gg/9KuyXv2uZA]Discord Server for My Mods[/url][/B][/h1]
+[h1]Current Version: 1.4.5 "Chaucher" (Released 12/6/21, Compatible with vanilla patch 1.4.X)[/h1]
+[h1][B][url=https://discord.gg/9KuyXv2uZA]Discord Server for my mods[/url]
+[url=https://cybrxkhansmods.godaddysites.com/]Official Website for my mods[/url][/B][/h1]
 [B][url=https://forum.paradoxplaza.com/forum/threads/mod-viet-events-for-ck3-a-flavor-and-immersion-event-mod.1422081/]Paradox Forum Thread[/url][/B]
 [B]Manual Download/Installation available [url=https://github.com/cybrxkhan/VIET-Events-for-CK3/releases]on Github[/url][/B]
 [B]Paradox Download [url=https://mods.paradoxplaza.com/mods/12992/Any]Available Here[/url][/B]
@@ -21,7 +22,7 @@ Feel free to use my work in your mods - all I ask is that I am credited and (if 
 [img]http://i.imgur.com/EyXurbK.jpg[/img]
 
 [LIST]
-[*]Over [B]582 new flavor events[/B] to experience!
+[*]Over [B]588 new flavor events[/B] to experience!
 [*]Explore new decisions, character interactions, and event chains
 [*]Game rule to disable sillier events for those who don't like them, with three levels to choose from: Balanced (Default), Serious (Restricted), and All Events (Full)
 [*][B]Compatible with almost anything[/B] since it doesn't touch any vanilla files - even with overhaul mods, you can via game rule disable events that reference things specific to our medieval world that wouldn’t make sense in other time periods or universes (like fantasy and sci-fi conversion mods)
@@ -49,27 +50,28 @@ Thanks!
 
 [img]http://i.imgur.com/RQ5QZTF.jpg[/img]
 
-[h1]Version 1.4.4 "Strange Trails"[/h1]
+[h1]Version 1.4.5 "Chaucer"[/h1]
 
-[I]"I stare into the endless sky
-And the sorry tale of my life goes by
-I drift into the great unknown
-I really don’t know where I’m goin'
-I stare into the endless sky
-And the sorry tale of my life goes by
-I drift into the great unknown
-I really don’t know where I’m goin'"[/I]
+[I]“Nowhere so busy a man as he than he, and yet he seemed busier than he was.”
 
-- Fool for Love, Lord Huron
+- The Canterbury Tales
+
+Geoffrey Chaucer was a 15th century English writer, a pioneering figure in the usage of vernacular English in literature. He is best known for the Canterbury Tales.[/I]
 
 [LIST]
-[*]Added 15 Events inspired by Strange Trails
-[*]1 new decision: Follow the Strange Trails
-[*]Jingle for events using the Nightmare theme will be appropriately spoopy instead of neutral as they were previously
-[*]Reduced the chances of events appearing slightly
-[*]Reduced the chances of getting the Lord/Lady of the Crows Nickname from the crows event chain
-[*]Changed bonuses/maluses for beggar orphan event
-[*]Added prestige boost to the Looks Down on Women modifier
+[*]Added 6 new events:
+[LIST]
+[*]4 Writing related
+[*]2 Generic
+[/LIST]
+[*]1 new decision: Learn Shorthand Techniques
+[*]Germanic pagan characters now get a piety boost from the Friends with Crows modifier, rather than a malus (won’t apply to existing characters with the modifier as it’s technically a new modifier in the code)
+[*]Added global variable as an alternative way for other mods to detect VIET (for Stik and other modders who prefer that instead of a scripted trigger)
+[*]Made decision events less somewhat likely to trigger
+[*]Decision to meet Qi Ma the Liar is now a major decision and will be displayed at the top
+[*]Changed a few modifiers’ scheme power and/or resistance bonuses from multipliers to additions
+[*]Changed a few modifiers’ prestige/piety/dread/tax bonuses or maluses from being additive to being multipliers
+[*]Fixed the Dreamer’s parents causing errors in error log because they were too old
 [*]Miscellaneous bugfixes
 [/LIST]
 

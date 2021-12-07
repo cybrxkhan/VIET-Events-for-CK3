@@ -110,8 +110,8 @@ VIET_oblivion_dream_cloud_ruler_temple = {
 }
 VIET_overheard_oblivion_conversation = {
 	icon = social_positive
-	hostile_scheme_power_mult = 0.1
-	personal_scheme_power_mult = 0.1
+	hostile_scheme_power_add = 3
+	personal_scheme_power_add = 3
 }
 VIET_gave_servants_advice = {
 	icon = social_positive
@@ -133,7 +133,7 @@ VIET_dagoth_ur_dream = {
 	learning = 1
 	monthly_piety = -0.1
 	monthly_prestige = 0.1
-	hostile_scheme_resistance_mult = 0.1
+	hostile_scheme_resistance_add = 3
 }
 VIET_has_fruit_loops_poops = {
 	icon = food_negative
@@ -262,7 +262,7 @@ VIET_late_night_work = {
 }
 VIET_gave_cook_advice = {
 	icon = social_positive
-	hostile_scheme_resistance_mult = 0.03
+	hostile_scheme_resistance_add = 4
 }
 VIET_guanz_food = {
 	icon = food_positive
@@ -373,7 +373,7 @@ VIET_noontime_sun_headache = {
 VIET_haunted_by_ghost_for_sin = {
 	icon = stress_negative
 	general_opinion = -10
-	monthly_piety = -0.4
+	monthly_piety_gain_mult = -0.15
 }
 VIET_oblivion_dream_dark_brotherhood = {
 	icon = letter_positive
@@ -415,21 +415,21 @@ VIET_world_war_1_dream = {
 	martial = -1
 	prowess = -1
 	health = -0.1
-	monthly_piety = 0.4
+	monthly_piety_gain_mult = 0.15
 }
 VIET_whore_of_babylon_dream = {
 	icon = piety_negative
-	monthly_piety = -0.1
+	monthly_piety_gain_mult = -0.05
 }
 VIET_dream_future_good = {
 	icon = family_positive
-	monthly_piety = 0.2
-	monthly_prestige = 0.2
+	monthly_piety_gain_mult = 0.08
+	monthly_prestige_gain_mult = 0.08
 }
 VIET_dream_future_bad = {
 	icon = family_negative
-	monthly_piety = -0.2
-	monthly_prestige = -0.2
+	monthly_piety_gain_mult = -0.08
+	monthly_prestige_gain_mult = -0.08
 }
 VIET_memory_of_first_love = {
 	icon = love_positive
@@ -442,7 +442,7 @@ VIET_memory_of_first_love = {
 VIET_small_house_fire = {
 	icon = outdoors_negative
 	stress_gain_mult = 0.1
-	monthly_income = -0.2
+	monthly_income_mult = -0.2
 }
 VIET_chopped_some_wood = {
 	icon = outdoors_positive
@@ -557,13 +557,13 @@ VIET_sinmir_good_defense_advice = {
 	icon = dread_positive
 	martial = 1
 	intrigue = 1
-	hostile_scheme_resistance_mult = 0.05
+	hostile_scheme_resistance_add = 2
 }
 VIET_sinmir_bad_defense_advice = {
 	icon = dread_negative
 	martial = -1
 	intrigue = -1
-	hostile_scheme_resistance_mult = -0.05
+	hostile_scheme_resistance_add = -2
 }
 VIET_moss_exercise = {
 	icon = county_modifier_development_positive
@@ -576,7 +576,7 @@ VIET_outdoors_nap = {
 }
 VIET_ignored_disapproval_and_mockery = {
 	icon = social_positive
-	monthly_prestige = -0.1
+	monthly_prestige_gain_mult = -0.05
 	stress_gain_mult = -0.1
 }
 VIET_cinnamon_toast_crunch_addict = {
@@ -587,9 +587,9 @@ VIET_strange_female_bodyguard = {
 	icon = martial_positive
 	martial = 1
 	intrigue = 1
-	hostile_scheme_power_mult = 0.25
-	hostile_scheme_resistance_mult = 0.25
-	monthly_prestige = -0.3
+	hostile_scheme_power_add = 6
+	hostile_scheme_resistance_add = 6
+	monthly_prestige_gain_mult = -0.2
 }
 VIET_tiring_travel = {
 	icon = health_negative
@@ -603,7 +603,7 @@ VIET_sun_wu_kong_story = {
 VIET_egyptian_sunscreen = {
 	icon = piety_positive
 	health = 0.3
-	personal_scheme_power_mult = 0.08
+	personal_scheme_power_add = 2
 }
 VIET_stared_at_sun = {
 	icon = health_negative
@@ -635,7 +635,7 @@ VIET_advanced_finger_counting = {
 }
 VIET_guards_on_alert = {
 	icon = martial_positive
-	hostile_scheme_resistance_mult = 0.1
+	hostile_scheme_resistance_add = 8
 }
 VIET_special_rock = {
 	icon = rock_positive
@@ -651,7 +651,7 @@ VIET_has_dinosaur_bone = {
 }
 VIET_religiously_tolerant_ruler = {
 	icon = piety_positive
-	monthly_prestige = 0.2
+	monthly_prestige_gain_mult = 0.04
 	monthly_diplomacy_lifestyle_xp_gain_mult = 0.1
 }
 VIET_magical_napkins = {
@@ -662,7 +662,7 @@ VIET_magical_napkins = {
 VIET_bad_acne = {
 	icon = health_negative
 	attraction_opinion = -15
-	seduce_scheme_power_mult = -0.25
+	personal_scheme_power_add = -6
 }
 VIET_skeptical_ruler = {
 	icon = letter_positive
@@ -686,7 +686,7 @@ VIET_purchase_herbs_large = {
 }
 VIET_wolf_protector = {
 	icon = dog_positive
-	hostile_scheme_resistance_mult = 0.1
+	hostile_scheme_resistance_add = 4
 	monthly_intrigue_lifestyle_xp_gain_mult = 0.05
 }
 VIET_impressed_reasoning_skills = {
@@ -706,12 +706,12 @@ VIET_impressed_medical_skills = {
 VIET_notorious_jailbreak = {
 	icon = prison_negative
 	county_opinion_add = -7
-	monthly_prestige = -0.2
+	monthly_prestige_gain_mult = -0.1
 }
 VIET_loves_cute_maids = {
 	icon = love_negative
 	fertility = 0.03
-	monthly_piety = -0.1
+	monthly_piety = -0.3
 }
 VIET_reduce_construction_noise = {
 	icon = county_modifier_development_negative
@@ -875,13 +875,13 @@ VIET_hospitality_spirit_cursed = {
 	icon = prestige_negative
 	intrigue = -1
 	health = -0.3
-	monthly_piety = -0.2
+	monthly_piety_gain_mult = -0.2
 }
 VIET_hospitality_spirit_blessing = {
 	icon = prestige_positive
 	intrigue = 1
 	health = 0.3
-	monthly_piety = 0.2
+	monthly_piety_gain_mult = 0.2
 }
 VIET_party_with_servants = {
 	icon = feast_positive
@@ -906,7 +906,7 @@ VIET_ate_bad_baklava = {
 VIET_sympathetic = {
 	icon = social_positive
 	#general_opinion = 10
-	monthly_dread = -0.1
+	dread_loss_mult = 0.2
 	diplomacy = 2
 	intrigue = -1
 }
@@ -921,8 +921,8 @@ VIET_smuggling_side_business = {
 	intrigue = 1
 	monthly_intrigue_lifestyle_xp_gain_mult = 0.1
 	monthly_income = 0.5
-	monthly_piety = -0.3
-	monthly_prestige = -0.3
+	monthly_piety_gain_mult = -0.2
+	monthly_prestige_gain_mult = -0.2
 }
 VIET_indoors_nap = {
 	icon = stress_positive
@@ -936,7 +936,7 @@ VIET_satisfied_work = {
 	icon = diplomacy_positive
 	diplomacy = 1
 	stewardship = -1
-	monthly_prestige = 0.2
+	monthly_prestige_gain_mult = 0.07
 }
 VIET_feeling_reclusive = {
 	icon = county_modifier_development_positive
@@ -946,7 +946,7 @@ VIET_feeling_reclusive = {
 }
 VIET_taking_a_break = {
 	icon = stress_positive
-	monthly_prestige = -0.2
+	monthly_prestige_gain_mult = -0.16
 	stress_gain_mult = -0.15
 	stress_loss_mult = 0.15
 }
@@ -1000,12 +1000,14 @@ VIET_defeated_bandit = {
 VIET_the_prude = {
 	icon = piety_positive
 	general_opinion = -5
-	monthly_piety = 0.4
+	monthly_piety = 0.1
+	monthly_piety_gain_mult = 0.2
 }
 VIET_loosening_up = {
 	icon = piety_positive
 	general_opinion = 10
 	monthly_piety = -0.2
+	monthly_piety_gain_mult = -0.1
 }
 VIET_miscellaneous_shopping = {
 	icon = economy_positive
@@ -1100,7 +1102,7 @@ VIET_good_mouthwash = {
 	icon = fertility_positive
 	general_opinion = 5
 	health = 0.1
-	seduce_scheme_power_mult = 0.05
+	personal_scheme_power_add = 4
 }
 VIET_teeth_whitening = {
 	icon = fertility_positive
@@ -1212,7 +1214,7 @@ VIET_abaonded_as_a_child = {
 VIET_hired_new_dutiful_servants = {
 	icon = county_modifier_development_positive
 	stewardship = 1
-	monthly_prestige = 0.1
+	monthly_piety_gain_mult = 0.05
 }
 VIET_saved_abandoned_baby = {
 	icon = social_positive
@@ -1253,7 +1255,7 @@ VIET_borissean_scholar_conversations = {
 }
 VIET_hears_voices_like_thamriel = {
 	icon = stress_positive
-	hostile_scheme_resistance_mult = 0.02
+	hostile_scheme_resistance_add = 2
 }
 VIET_drinking_basic_tonic = {
 	icon = drink_positive
@@ -1299,7 +1301,7 @@ VIET_hurt_kids_witnesses = {
 VIET_jaded_about_charity = {
 	icon = intrigue_positive
 	hostile_scheme_resistance_mult = 0.1
-	monthly_piety = -0.1
+	monthly_piety_gain_mult = -0.08
 }
 VIET_beggar_friend = {
 	icon = social_positive
@@ -1443,8 +1445,8 @@ VIET_hired_belrand = {
 	martial = 1
 	intrigue = 1
 	learning = 1
-	hostile_scheme_power_mult = 0.2
-	hostile_scheme_resistance_mult = 0.2
+	hostile_scheme_power_add = 5
+	hostile_scheme_resistance_add = 5
 }
 VIET_chest_ancient_scroll = {
 	icon = learning_positive
@@ -1663,7 +1665,7 @@ VIET_hedonistic_apocalypse = {
 }
 VIET_wandering_ghost_blessing = {
 	icon = magic_positive
-	hostile_scheme_resistance_mult = 0.13
+	hostile_scheme_resistance_add = 5
 	monthly_piety = 0.2
 }
 VIET_wandering_ghost_nightmares = {
@@ -1713,4 +1715,54 @@ VIET_strange_trails = {
 	monthly_piety_gain_mult = 0.08
 	monthly_lifestyle_xp_gain_mult = 0.05
 }
-
+VIET_horrible_handwriting = {
+	icon = letter_negative
+	stewardship = -1
+	learning = -1
+}
+VIET_wrists_hurt = {
+	icon = letter_negative
+	#stewardship = -1
+	stress_gain_mult = 0.1
+	stress_loss_mult = -0.1
+}
+VIET_shorthand_interest = {
+	icon = letter_positive
+}
+VIET_currently_learning_shorthand = {
+	icon = letter_positive
+	monthly_lifestyle_xp_gain_mult = 0.03
+}
+VIET_learned_shorthand_1 = {
+	icon = letter_positive
+	stewardship = 1
+	monthly_lifestyle_xp_gain_mult = 0.04
+}
+VIET_learned_shorthand_2 = {
+	icon = letter_positive
+	stewardship = 1
+	intrigue = 1
+	monthly_lifestyle_xp_gain_mult = 0.08
+}
+VIET_learned_shorthand_3 = {
+	icon = letter_positive
+	stewardship = 1
+	intrigue = 1
+	learning = 1
+	monthly_lifestyle_xp_gain_mult = 0.12
+}
+VIET_learned_shorthand_4 = {
+	icon = letter_positive
+	diplomacy = 1
+	stewardship = 1
+	intrigue = 1
+	learning = 1
+	monthly_lifestyle_xp_gain_mult = 0.16
+}
+VIET_crow_friend_germanic = {
+	icon = asatru_raven_positive
+	intrigue = 1
+	monthly_dread = 0.1
+	monthly_prestige_gain_per_dread_mult = 0.01
+	monthly_piety = 0.3
+}

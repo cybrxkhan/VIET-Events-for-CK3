@@ -38,6 +38,7 @@
 # 0151-0154		Bushes
 # 0155-0164		Hundred
 # 0165-0179		Strange Trails (Lord Huron)
+# 0180-0181		Writing
 # 
 ############################################################################################################################
 
@@ -15322,6 +15323,341 @@ VIETmisc.0179 = {
 }
 
 
+
+
+##########################################################################################################################
+#
+# WRITING 0180-0181
+# To celebrate my best NaNoWriMo ever in 2021 - 225888 words in a month, that's wild
+#
+##########################################################################################################################
+
+
+# Courtier has crappy handwriting
+VIETmisc.0180 = {
+	type = character_event
+	title = VIETmisc.0180.t
+	desc = VIETmisc.0180.desc
+	theme = learning_scholarship_focus
+
+	left_portrait = {
+		character = scope:bad_handwriting	
+		animation = chancellor	
+	}	
+	right_portrait = { 	
+		character = root
+		animation = disapproval
+	}	
+	
+
+	trigger = {
+		any_courtier = {
+			is_available_ai_adult = yes
+			# Want someone who's probably literate
+			NOT = { has_trait = blind }
+			probably_unintelligent_trigger = no
+			OR = {
+				probably_intelligent_trigger = yes
+				diplomacy >= decent_skill_rating
+				learning >= decent_skill_rating
+			}
+		}
+		# Weed out most cultures that probably aren't literate at the game start and wouldn't be writing stuff like letters
+		NOT = { has_government = tribal_government }		
+	}
+	
+	weight_multiplier = {
+		base = 1
+		modifier = {
+			add = 0.2
+			has_trait = patient
+		}
+		modifier = {
+			add = -0.2
+			has_trait = impatient
+		}
+		modifier = {
+			add = 0.2
+			has_trait = content
+		}
+		modifier = {
+			add = -0.2
+			has_trait = ambitious
+		}
+		modifier = {
+			add = 0.2
+			has_trait = gregarious
+		}
+		modifier = {
+			add = -0.2
+			has_trait = shy
+		}
+	}
+	
+	immediate = {
+		random_courtier = {
+			limit = {
+				is_available_ai_adult = yes
+				# Want someone who's probably literate
+				NOT = { has_trait = blind }
+				probably_unintelligent_trigger = no
+				OR = {
+					probably_intelligent_trigger = yes
+					diplomacy >= decent_skill_rating
+					learning >= decent_skill_rating
+				}
+			}
+			save_scope_as = bad_handwriting
+			if = {
+				limit = {
+					NOT = { has_character_modifier = VIET_horrible_handwriting }
+				}
+				add_character_modifier = {
+					modifier = VIET_horrible_handwriting
+				}
+			}
+		}
+	}
+
+	
+	option = { # Mock them
+		name = VIETmisc.0180.a
+		scope:bad_handwriting = {
+			add_opinion = {
+				target = root
+				modifier = VIET_opinion_mocked_handwriting
+			}		
+		}
+		if = {
+			limit = {
+				NOT = { has_trait = compassionate }
+			}
+			stress_impact = {
+				base = minor_stress_impact_loss
+				sadistic = minor_stress_impact_loss
+				arrogant = miniscule_stress_impact_loss
+			}
+		}
+		else_if = {
+			limit = {
+				has_trait = compassionate
+			}
+			stress_impact = {
+				compassionate = minor_stress_impact_gain
+				humble = miniscule_stress_impact_gain
+			}
+		}
+	}	
+	option = { # Tease them
+		name = VIETmisc.0180.b
+		duel = {
+			skill = diplomacy
+			target = scope:bad_handwriting
+			10 = { # Failure
+				compare_modifier = {
+					value = scope:duel_value
+					multiplier = -1.1
+				}
+				desc = VIETmisc.0180.tease_toast_bad
+				send_interface_toast = {
+					type = event_toast_effect_bad
+					left_icon = scope:bad_handwriting
+					title = VIETmisc.0180.tease_toast_bad
+					scope:bad_handwriting = {
+						add_opinion = {
+							target = root
+							modifier = VIET_opinion_tease_handwriting_bad
+						}
+					}
+				}
+			}
+			10 = { # Success
+				compare_modifier = {
+					value = scope:duel_value
+					multiplier = 1.1
+				}
+				desc = VIETmisc.0180.tease_toast_good
+				send_interface_toast = {
+					type = event_toast_effect_good
+					left_icon = scope:bad_handwriting
+					title = VIETmisc.0180.tease_toast_good
+					scope:bad_handwriting = {
+						add_opinion = {
+							target = root
+							modifier = VIET_opinion_tease_handwriting_good
+						}
+					}
+				}
+			}
+		}
+		stress_impact = {
+			sadistic = miniscule_stress_impact_loss
+			compassionate = miniscule_stress_impact_gain
+		}
+	}	
+	option = { # Make no comment
+		name = VIETmisc.0180.c
+		stress_impact = {
+			gregarious = miniscule_stress_impact_gain
+		}
+	}	
+	option = { # Give them advice
+		name = VIETmisc.0180.d
+		trigger = {
+			learning >= decent_skill_rating			
+		}
+		skill = learning
+		scope:bad_handwriting = {
+			add_opinion = {
+				target = root
+				modifier = VIET_opinion_constructive_criticism_handwriting
+			}		
+		}
+		stress_impact = {
+			sadistic = miniscule_stress_impact_gain
+			arrogant = miniscule_stress_impact_gain
+		}
+		VIET_small_prestige_gain_effect = yes
+		random = {
+			chance = 30
+			modifier = {
+				add = 3
+				has_trait = patient
+			}
+			modifier = {
+				add = -3
+				has_trait = impatient
+			}
+			modifier = {
+				add = 3
+				has_trait = calm
+			}
+			modifier = {
+				add = -3
+				has_trait = wrathful
+			}
+			modifier = {
+				add = 3
+				has_trait = diligent
+			}
+			modifier = {
+				add = -3
+				has_trait = lazy
+			}
+			modifier = {
+				add = 4
+				learning >= decent_skill_rating
+			}
+			modifier = {
+				add = -4
+				learning <= low_skill_rating
+			}
+			modifier = {
+				add = 3
+				learning >= medium_skill_rating
+			}
+			modifier = {
+				add = -3
+				learning <= mediocre_skill_rating
+			}
+			modifier = {
+				add = 3
+				stewardship >= decent_skill_rating
+			}
+			modifier = {
+				add = -3
+				stewardship <= low_skill_rating
+			}
+			modifier = {
+				add = 2
+				stewardship >= medium_skill_rating
+			}
+			modifier = {
+				add = -2
+				stewardship <= mediocre_skill_rating
+			}
+			custom_tooltip = VIETmisc.0180.tease_toast_great
+			send_interface_toast = {
+				type = event_toast_effect_good
+				left_icon = scope:bad_handwriting
+				title = VIETmisc.0180.tease_toast_great
+				scope:bad_handwriting = {
+					remove_character_modifier = VIET_horrible_handwriting
+				}
+			}
+		}
+	}	
+}
+
+
+
+
+# Writing too much makes your wrists sore
+VIETmisc.0181 = {
+	type = character_event
+	title = VIETmisc.0181.t
+	desc = VIETmisc.0181.desc
+	theme = learning_scholarship_focus
+	
+	right_portrait = { 	
+		character = root
+		animation = sadness
+	}	
+
+	trigger = {
+		# Weed out most cultures that probably aren't literate at the game start and wouldn't be writing stuff like letters
+		NOT = { has_government = tribal_government }		
+	}
+	
+	weight_multiplier = {
+		base = 1
+		modifier = {
+			add = 0.2
+			has_trait = diligent
+		}
+		modifier = {
+			add = -0.2
+			has_trait = lazy
+		}
+		modifier = {
+			add = 0.2
+			has_trait = ambitious
+		}
+		modifier = {
+			add = -0.2
+			has_trait = content
+		}
+		modifier = {
+			add = 0.2
+			has_trait = honest
+		}
+		modifier = {
+			add = -0.2
+			has_trait = deceitful
+		}
+	}
+
+	
+	option = { # Stop writing
+		name = VIETmisc.0181.a
+		VIET_random_large_prestige_loss_effect = yes
+		stress_impact = {
+			diligent = miniscule_stress_impact_gain
+			ambitious = miniscule_stress_impact_gain
+		}
+	}	
+	option = { # Keep writing!
+		name = VIETmisc.0181.b
+		stress_impact = {
+			base = miniscule_stress_impact_gain
+			lazy = miniscule_stress_impact_gain
+		}
+		add_character_modifier = {
+			modifier = VIET_wrists_hurt
+			days = 365
+		}
+	}
+}
 
 
 

@@ -1,0 +1,15 @@
+﻿on_game_start_after_lobby = {
+	on_actions = {
+		on_VIET_setup
+	}
+}
+
+on_VIET_setup = {
+	effect = {		
+		set_global_variable = {
+			name = VIET_is_active
+			value = yes
+		}
+	}
+	# Potentially have event trigger at game start???
+}

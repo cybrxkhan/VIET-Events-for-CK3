@@ -351,3 +351,21 @@ VIET_opinion_moving_on_advice = {
 	decaying = yes
 	opinion = 10
 }
+VIET_opinion_mocked_handwriting = {
+	years = 10
+	opinion = -15
+}
+VIET_opinion_tease_handwriting_bad = {
+	years = 10
+	decaying = yes
+	opinion = -10
+}
+VIET_opinion_tease_handwriting_good = {
+	years = 10
+	decaying = yes
+	opinion = 10
+}
+VIET_opinion_constructive_criticism_handwriting = {
+	years = 10
+	opinion = 15
+}

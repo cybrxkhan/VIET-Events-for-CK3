@@ -17,7 +17,7 @@
 # 1033-1040		Rocks and Minerals
 # 1041-1043		Monogatari References
 # 1044-1052		Toothbrush/Oral Hygiene
-# 1053-1059		Generic (from Swansong)
+# 1053-1061		Generic (from Swansong)
 # 
 ############################################################################################################################
 
@@ -4245,6 +4245,144 @@ VIETold.1059 = {
 	option = { # ok
 		name = VIETold.1059.a
 		VIET_medium_piety_gain_effect = yes
+	}
+}
+
+
+
+# Hearing a funny joke from a courtier/guest
+VIETold.1060 = {
+	type = character_event
+	title = VIETold.1060.t
+	desc = VIETold.1060.desc
+	theme = friendly
+	override_background = { event_background = throne_room }
+
+	left_portrait = {
+		character = root
+		animation = happiness
+	}
+	right_portrait = {
+		character = scope:jokester
+		animation = happiness
+	}
+	
+	trigger = {
+		any_courtier_or_guest = {
+			is_available_ai_adult = yes
+			has_personality_extroverted_trigger = yes
+			NOT = { has_trait = shy }
+		}
+	}
+	
+	weight_multiplier = {
+		base = 1
+		modifier = {
+			add = 0.2
+			has_trait = gregarious
+		}
+		modifier = {
+			add = -0.2
+			has_trait = shy
+		}
+		modifier = {
+			add = 0.2
+			has_trait = humble
+		}
+		modifier = {
+			add = -0.2
+			has_trait = arrogant
+		}
+		modifier = {
+			add = 0.2
+			has_trait = honest
+		}
+		modifier = {
+			add = -0.2
+			has_trait = deceitful
+		}
+	}
+	
+	immediate = {
+		random_courtier_or_guest = {
+			limit = {
+				is_available_ai_adult = yes
+				has_personality_extroverted_trigger = yes
+				NOT = { has_trait = shy }
+			}
+			save_scope_as = jokester
+		}
+	}
+	
+	option = { # ok
+		name = VIETold.1060.a
+		scope:jokester = {
+			add_opinion = {
+				target = root
+				modifier = VIET_opinion_joking_together
+			}
+			reverse_add_opinion = {
+				target = root
+				modifier = VIET_opinion_joking_together
+			}			
+		}
+		progress_towards_friend_effect = {
+			CHARACTER = scope:jokester
+			OPINION = no
+		}
+	}
+}
+
+
+# Feeling the sunlight against your face
+VIETold.1061 = {
+	type = character_event
+	title = VIETold.1061.t
+	desc = VIETold.1061.desc
+	theme = friendly
+
+	left_portrait = {
+		character = root
+		animation = personality_content
+	}
+	
+	weight_multiplier = {
+		base = 1
+		modifier = {
+			add = 0.2
+			has_trait = shy
+		}
+		modifier = {
+			add = -0.2
+			has_trait = gregarious
+		}
+		modifier = {
+			add = 0.2
+			has_trait = humble
+		}
+		modifier = {
+			add = -0.2
+			has_trait = arrogant
+		}
+		modifier = {
+			add = 0.2
+			has_trait = calm
+		}
+		modifier = {
+			add = -0.2
+			has_trait = wrathful
+		}
+	}
+	
+	option = { # ok
+		name = VIETold.1061.a
+		stress_impact = {
+			base = miniscule_stress_impact_loss
+			calm = miniscule_stress_impact_loss
+			humble = miniscule_stress_impact_loss
+			shy = miniscule_stress_impact_loss
+			content = miniscule_stress_impact_loss
+		}		
 	}
 }
 

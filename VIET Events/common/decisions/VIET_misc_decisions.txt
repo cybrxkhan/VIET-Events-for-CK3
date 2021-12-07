@@ -1,5 +1,45 @@
 ﻿
 
+VIET_decision_meet_qi_ma_the_liar = {
+	picture = "gfx/interface/illustrations/decisions/decision_viet_qi_ma.dds"
+	major = yes
+	desc = VIET_decision_meet_qi_ma_the_liar_desc
+
+	ai_check_interval = 4
+
+	is_shown = {
+		is_landed = yes
+		has_character_modifier = VIET_qi_ma_in_town
+		has_global_variable = VIET_qi_ma_is_active
+	}
+
+	is_valid = {
+		has_character_modifier = VIET_qi_ma_in_town
+	}
+
+	is_valid_showing_failures_only = {
+		is_adult = yes
+		is_available = yes
+	}
+
+	effect = {
+		custom_tooltip = VIET_decision_meet_qi_ma_the_liar_effect_tooltip
+		trigger_event = VIETmonogatari.0005
+	}
+
+	cost = {
+		prestige = { value = medium_prestige_value } # Will depend
+	}
+	
+	ai_potential = {
+		prestige > medium_prestige_value
+	}
+
+	ai_will_do = {
+		base = 30
+	}
+}
+
 
 VIET_decision_strange_trails = {
 	picture = "gfx/interface/illustrations/decisions/decision_viet_lord_huron_strange_trails.dds"
@@ -473,45 +513,6 @@ VIET_decision_ransom_kidnapped_servants = {
 
 
 
-VIET_decision_meet_qi_ma_the_liar = {
-	picture = "gfx/interface/illustrations/decisions/decision_viet_qi_ma.dds"
-	desc = VIET_decision_meet_qi_ma_the_liar_desc
-
-	ai_check_interval = 4
-
-	is_shown = {
-		is_landed = yes
-		has_character_modifier = VIET_qi_ma_in_town
-		has_global_variable = VIET_qi_ma_is_active
-	}
-
-	is_valid = {
-		has_character_modifier = VIET_qi_ma_in_town
-	}
-
-	is_valid_showing_failures_only = {
-		is_adult = yes
-		is_available = yes
-	}
-
-	effect = {
-		custom_tooltip = VIET_decision_meet_qi_ma_the_liar_effect_tooltip
-		trigger_event = VIETmonogatari.0005
-	}
-
-	cost = {
-		prestige = { value = medium_prestige_value } # Will depend
-	}
-	
-	ai_potential = {
-		prestige > medium_prestige_value
-	}
-
-	ai_will_do = {
-		base = 30
-	}
-}
-
 
 VIET_decision_deal_with_crows = {
 	picture = "gfx/interface/illustrations/decisions/decision_viet_crow.dds"
@@ -568,11 +569,11 @@ VIET_decision_feed_the_crows = {
 
 	is_shown = {
 		is_landed = yes
-		has_character_modifier = VIET_crow_friend
+		VIET_is_crow_lord_or_lady_trigger = yes
 	}
 
 	is_valid = {
-		has_character_modifier = VIET_crow_friend
+		VIET_is_crow_lord_or_lady_trigger = yes
 	}
 
 	is_valid_showing_failures_only = {
@@ -601,6 +602,67 @@ VIET_decision_feed_the_crows = {
 
 	ai_will_do = {
 		base = 30
+	}
+}
+
+
+VIET_decision_learn_shorthand_techniques = {
+	picture = "gfx/interface/illustrations/decisions/decision_viet_book.dds"
+	desc = VIET_decision_learn_shorthand_techniques_desc
+
+	ai_check_interval = 24
+
+	is_shown = {
+		is_landed = yes
+		has_character_modifier = VIET_shorthand_interest
+	}
+
+	is_valid = {
+		has_character_modifier = VIET_shorthand_interest
+	}
+
+	is_valid_showing_failures_only = {
+		is_adult = yes
+		is_available = yes
+	}
+
+	effect = {
+		custom_tooltip = VIET_decision_learn_shorthand_techniques_effect_tooltip
+		custom_tooltip = VIET_decision_learn_shorthand_techniques_effect_tooltip_2
+		remove_character_modifier = VIET_shorthand_interest
+		add_character_modifier = {
+			modifier = VIET_currently_learning_shorthand
+		}
+		if = {
+			limit = {
+				has_game_rule = VIET_historical_context_on
+			}
+			custom_tooltip = VIET_decision_learn_shorthand_techniques_context_tooltip
+		}
+		trigger_event = {
+			id = VIETmisc.2062
+			months = { 3 20 }
+		}
+	}
+
+	cost = {
+		gold = { value = minor_gold_value } # Will depend
+	}
+	
+	ai_potential = {
+		gold > minor_gold_value
+	}
+
+	ai_will_do = {
+		base = 30
+		modifier = {
+			add = 10
+			has_trait = diligent
+		}
+		modifier = {
+			add = -10
+			has_trait = lazy
+		}
 	}
 }
 
