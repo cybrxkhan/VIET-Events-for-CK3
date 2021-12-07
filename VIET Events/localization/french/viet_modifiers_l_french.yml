@@ -594,5 +594,7 @@
  VIET_learned_shorthand_3_desc:0 "This character knows quite a number of advanced techniques for writing shorthand. It has helped them write things down quickly, which comes in handy a lot of times."
  VIET_learned_shorthand_4:0 "Excellent Advanced Shorthand Skills"
  VIET_learned_shorthand_4_desc:0 "This character knows many advanced techniques for writing shorthand and is considered a master at it. People tend to watch with awe as they swiftly scribble notes down."
+ VIET_crow_friend_germanic:0 "$VIET_crow_friend$"
+ VIET_crow_friend_germanic_desc:0 "$VIET_crow_friend_desc$"
  # 1.4.6 - please leave this comment here 
  xxxxx:0 "xxxxx"

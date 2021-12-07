@@ -1563,7 +1563,7 @@
  VIETold.2110.b:0 "O es una mentira, o un sueño. ¡Los Myling son seres vengativos, no inofensivos!"
  VIETold.2110.c:0 "¡Por Dios! Al menos el fantasma fue amable."
  VIETold.2111.t:0 "Funeral de Carretera"
- VIETold.2111.desc:0 "En el camino, mi escolta y yo nos topamos con un [ROOT.Char.Custom('DefaultPriestTitle')] [ROOT.Char.GetFaith.GetAdjective] en túnica. Está arrodillado en el suelo, mirando a la nada, mientras reza unos cánticos.\n\nCuando termina, le pregunto qué estaba haciendo. Explica que recientemente, una mujer murió aquí en un accidente. Era una joven sin familia, así que en un arranque de compasión y pena, le dio un modesto pero digno funeral. El sacerdote espera que su espíritu encuentre la paz con [ROOT.Char.GetFaith.GetAdjective]."
+ VIETold.2111.desc:0 "En el camino, mi escolta y yo nos topamos con un [ROOT.Char.Custom('DefaultPriestTitle')] [ROOT.Char.GetFaith.GetAdjective] en túnica. Está arrodillado en el suelo, mirando a la nada, mientras reza unos cánticos.\n\nCuando termina, le pregunto qué estaba haciendo. Explica que recientemente, una mujer murió aquí en un accidente. Era una joven sin familia, así que en un arranque de compasión y pena, le dio un modesto pero digno funeral. El sacerdote espera que su espíritu encuentre la paz con [ROOT.Char.GetFaith.DivineRealm]."
  VIETold.2111.a:0 "¿Por un simple plebeyo? Qué perdida de tiempo."
  VIETold.2111.b:0 "Entiendo. Continuemos entonces. No te molestaremos."
  VIETold.2111.c:0 "¡Qué noble! ¿Podemos unirnos y rezar por su espíritu?"

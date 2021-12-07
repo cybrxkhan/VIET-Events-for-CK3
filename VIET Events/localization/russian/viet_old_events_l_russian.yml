@@ -1564,7 +1564,7 @@
  VIETold.2110.b:0 "It's either a dream or a lie. Mylings are vengeful beings, not harmless!"
  VIETold.2110.c:0 "Oh dear! At least the ghost seemed like a kind one."
  VIETold.2111.t:0 "Roadside Funeral"
- VIETold.2111.desc:0 "On the road, my entourage and I come across a [ROOT.Char.GetFaith.GetAdjective] [ROOT.Char.Custom('DefaultPriestTitle')] in robes. He is kneeling on the ground, looking at nowhere in particular, as he chants some prayers.\n\nAfter he finishes, I ask him what he was doing. He explains that recently, a woman died here in an accident. She was a poor woman with no family, so out of compassion and pity, he gave her a modest but dignified funeral. He hopes her spirit will find peace with [ROOT.Char.GetFaith.GetAdjective]."
+ VIETold.2111.desc:0 "On the road, my entourage and I come across a [ROOT.Char.GetFaith.GetAdjective] [ROOT.Char.Custom('DefaultPriestTitle')] in robes. He is kneeling on the ground, looking at nowhere in particular, as he chants some prayers.\n\nAfter he finishes, I ask him what he was doing. He explains that recently, a woman died here in an accident. She was a poor woman with no family, so out of compassion and pity, he gave her a modest but dignified funeral. He hopes her spirit will find peace in [ROOT.Char.GetFaith.DivineRealm]."
  VIETold.2111.a:0 "For a mere peasant? What a waste of time."
  VIETold.2111.b:0 "I understand. Carry on, then. We shan't bother you."
  VIETold.2111.c:0 "How noble! May we join you in praying for her spirit?"

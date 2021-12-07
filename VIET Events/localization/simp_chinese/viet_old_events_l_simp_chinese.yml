@@ -1832,7 +1832,7 @@
  VIETold.2110.b:0 "要么是做梦，要么就是撒谎。弥灵是复仇心切的存在，才不友好！"
  VIETold.2110.c:0 "哦天哪！至少这鬼魂似乎是善良的。"
  VIETold.2111.t:0 "路边葬礼"
- VIETold.2111.desc:0 "我和我的随从在路上前进时，碰到了一位穿长袍的[ROOT.Char.GetFaith.GetAdjective]，跪在地上，双目涣散，念念有词。\n\n起身后，我问那人在做什么，那人解释道，最近一位女子因意外死于此处。这女人身世贫寒，无夫无子，因而此人出于同情，为她举行了朴素庄重的葬礼。[ROOT.Char.GetFaith.GetAdjective]希望女子的灵魂能在[ROOT.Char.GetFaith.GetAdjective]安息。"
+ VIETold.2111.desc:0 "我和我的随从在路上前进时，碰到了一位穿长袍的[ROOT.Char.GetFaith.GetAdjective]，跪在地上，双目涣散，念念有词。\n\n起身后，我问那人在做什么，那人解释道，最近一位女子因意外死于此处。这女人身世贫寒，无夫无子，因而此人出于同情，为她举行了朴素庄重的葬礼。[ROOT.Char.GetFaith.GetAdjective]希望女子的灵魂能在[ROOT.Char.GetFaith.DivineRealm]安息。"
  VIETold.2111.a:0 "为一个农民举行葬礼？真是浪费时间。"
  VIETold.2111.b:0 "我知道了。那就继续前进吧。我们就不打扰你了。"
  VIETold.2111.c:0 "多么崇高啊。能让我加入你一同为她的灵魂祈祷吗？"
