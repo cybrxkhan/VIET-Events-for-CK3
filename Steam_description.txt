@@ -43,7 +43,7 @@ We now have every official language covered! Due to my irregular schedule for up
 
 [img]https://i.imgur.com/9twioNH.jpg[/img]
 
-Please see [url=https://steamcommunity.com/workshop/filedetails/discussion/2227658180/2943622078759317376/]this discussion thread[/url] for more info.
+Please see the [url=https://cybrxkhansmods.godaddysites.com/faq]FAQ on my mods' website[/url] for more info.
 
 Thanks!
 
@@ -85,6 +85,7 @@ Geoffrey Chaucer was a 15th century English writer, a pioneering figure in the u
 [*][url=https://steamcommunity.com/sharedfiles/filedetails/?id=2217770052]In Taberna (CK2 Edition)[/url] - the classic song from CK2 returns to CK3
 [*][url=https://steamcommunity.com/sharedfiles/filedetails/?id=2218667128]Recruit Courtiers[/url] - simple decision to spawn male or female courtiers in your court for a small price, similar to CK2
 [*][url=https://steamcommunity.com/sharedfiles/filedetails/?id=2219643991]Reduced Injuries and Deaths from Battles[/url] - if you're tired of people dropping like flies in battles
+[*][url=https://steamcommunity.com/sharedfiles/filedetails/?id=2629092890]Rename Tribal Era to Late Antiquity[/url]
 [/LIST]
 
 
