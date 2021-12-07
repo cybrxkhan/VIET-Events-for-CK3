@@ -1,6 +1,6 @@
 # VIET Events for CK3
 
-## Latest Version: 1.4.5 "Chaucer" (Released 10/31/21)
+## Latest Version: 1.4.5 "Chaucer" (Released 12/6/21)
 
 _“Nowhere so busy a man as he than he, and yet he seemed busier than he was.”_
 _- The Canterbury Tales_
@@ -33,7 +33,7 @@ DO NOT manually download the master branch unless you know what you're doing as 
 
 NOTE: If you are re-installing a mod, delete the old version of the mod first before copy and pasting the new one! While it's not always necessary, it's a good habit to do to prevent any potential issues.
 
-## Version 1.4.4 Changelog
+## Version 1.4.5 Changelog
 
 - Added 6 new events:
     - 4 Writing related
