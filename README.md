@@ -37,7 +37,7 @@ NOTE: If you are re-installing a mod, delete the old version of the mod first be
 
 - Added 6 new events:
     - 4 Writing related
-    - 2 Generic
+    - 2 Generic*
 - 1 new decision: Learn Shorthand Techniques
 - Germanic pagan characters now get a piety boost from the Friends with Crows modifier, rather than a malus (won’t apply to existing characters with the modifier as it’s technically a new modifier in the code)
 - Added global variable as an alternative way for other mods to detect VIET (for Stik and other modders who prefer that instead of a scripted trigger)

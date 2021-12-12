@@ -46,30 +46,15 @@ Siéntete libre de usar mi trabajo con tus mods - todo lo que pido es reconocimi
 
 Por favor, echa un vistazo a [url=https://steamcommunity.com/workshop/filedetails/discussion/2227658180/2943622078759317376/]este hilo[/url] para más información.
 
-Gracias.
-
 
 [img]http://i.imgur.com/RQ5QZTF.jpg[/img]
 
-[h1]Versión 1.4.2 "Vạn Tuế"[/h1]
+[h1]Versión 1.4.5 "Chaucer"[/h1]
 
 [I]“Vạn Tuế” el equivalente vietnamita al chino Wansui, al japonés Banzai, y al coreano Manse (escrito 萬歲 en carácteres tradicionales chinos), se traduce como "diez mil años" y se usa en contextos arcaicos para desear una larga vida, en particular al monarca, aunque en algunos países asiáticos se usa como expresión de triunfo.
 
 Esta actualización conmemora los 100k suscriptores en Steam Workshop, tras casi un año del lanzamiento. Gracias a todos por vuestro apoyo, ¡significa mucho! Mi trabajo con los mods para CK3 ha sido una inusual pero divertida forma de disfrutar con la escritura creativa, y espero poder seguir añadiendo nuevos contenidos en el futuro.[/I]
 
-[LIST]
-[*]Añadidos 15 nuevos eventos sobre los siguientes temas:
-[LIST]
-[*]10 sobre el "cien"
-[*]5 rumores sobre Qi Ma el Mentiroso
-[/LIST]
-[*]Añadidos 2 nuevos potenciales resultados en la decisión "Desbloquear Cofre del Tesoro"
-[*]Añadido el padre de Qi Ma, Qi Ma, y el padre de su padre, Qi Ma, en los archivos históricos
-[*]La cadena de Qi Ma no aparecerá en mods de conversión total (por ahora)
-[*]Arreglos varios
-[/LIST]
-
-*Adaptación desde VIET para CK2
 
 
 [img]https://i.imgur.com/6L11s2n.jpg[/img]
@@ -80,7 +65,6 @@ Esta actualización conmemora los 100k suscriptores en Steam Workshop, tras casi
 [*][url=https://steamcommunity.com/sharedfiles/filedetails/?id=2218667128]Recruit Courtiers[/url] - decisión para invocar cortesanos en tu corte por un módico precio, similar a CK2
 [*][url=https://steamcommunity.com/sharedfiles/filedetails/?id=2219643991]Reduced Injuries and Deaths from Battles[/url] - si estás cansado de que la gente caiga como moscas en las guerras
 [/LIST]
-
 
 
 [img]http://i.imgur.com/GlNXL7m.jpg[/img]
