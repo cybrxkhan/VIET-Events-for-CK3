@@ -5,7 +5,7 @@
  VIET_decision_traveling_baklava_merchant_effect_tooltip:0 "An event will appear where you can choose what kinds of desserts to purchase, each giving you a different [character_modifier|E]"
  VIET_decision_traveling_baklava_merchant_desc:0 "A famous traveling patissier from the Middle East is in town, selling various pastries, confectionary, and desserts. Perhaps I should purchase some of his renowned baklava, or one of the other available sweets, before the merchant leaves for elsewhere!"
  VIET_decision_traveling_baklava_merchant_confirm:0 "Let's go before everything sells out!"
- VIET_decision_traveling_baklava_merchant_context_tooltip:0 "#emphasis Historical Context:#! The first desserts were probably fresh fruit and honey, but as various civilizations devleoped more complex cuisines, new methods of cooking and baking goods led to the creation of many different kinds of desserts like pastries. Well-known pastries from the Near East include halwa, kanafeh, and, of course, baklava."
+ VIET_decision_traveling_baklava_merchant_context_tooltip:0 "#emphasis Historical Context:#! The first desserts were probably fresh fruit and honey, but as various civilizations developed more complex cuisines, new methods of cooking and baking goods led to the creation of many different kinds of desserts like pastries. Well-known pastries from the Near East include halwa, kanafeh, and, of course, baklava."
  VIET_decision_traveling_five_spice_merchant:0 "Visit the Famous Spice Merchant"
  VIET_decision_traveling_five_spice_merchant_tooltip:0 "You will visit the popular spice merchant passing through the area"
  VIET_decision_traveling_five_spice_merchant_effect_tooltip:0 "An event will appear where you can purchase the famed #V Five Spice Blend#!"
