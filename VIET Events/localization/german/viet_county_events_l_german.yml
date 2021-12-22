@@ -1,8 +1,8 @@
 ﻿l_german:
 
  # Misc 
- VIET_decrease_county_modifier_time:0 "This option #V decreases#! how long the [county_modifier|E] in question will last"
- VIET_increase_county_modifier_time:0 "This option #V increases#! how long the [county_modifier|E] in question will last"
+ VIET_decrease_county_modifier_time:0 "This option #V decreases#! how long the [county_modifier|E] in question will last compared to the default option"
+ VIET_increase_county_modifier_time:0 "This option #V increases#! how long the [county_modifier|E] in question will last compared to the default option"
  
  # NEW COUNTY/PROVINCE EVENTS
  
@@ -16,7 +16,7 @@
  VIETmisc.3001.b:0 "Send servants to collect some trinkets for me too."
  VIETmisc.3001.c:0 "We should erect a small [ROOT.Char.GetFaith.GetAdjective] shrine in the cave."
  VIETmisc.3002.t:0 "The Good Captain"
- VIETmisc.3002.desc:0 "A captain of the garrison in [county.GetNameNoTier] has gained the admiration of many for his kind and righteous nature. For instance, [captain.GetSheHe] disciplines [captain.GetHerHis] men to be polite and helpful to the locals, and harshly punishes any guards who use their station to bully others, yet this inspires even more loyalty in [captain.GetHerHis] impressed underlings than resentment. Furthermore, [captain.GetSheHe] has done much work defeating several bandit gangs in the area, and is rumored to even have the grudging respect of these ruffians for being a worthy opponent.\n\nI am considering bringing [captain.GetHerHim] to my court - a charismatic, upstanding soldier like that could be of great use, helping whip some of my forces into shape. On the other hand, maybe I should let [captain.GetHerHim] keep [captain.GetHerHis] current post, as [captain.GetSheHe] is doing a good job there."
+ VIETmisc.3002.desc:0 "A garrison captain of a major fort in [county.GetNameNoTier], named [captain.GetFullName], has gained the admiration of many for his kind and righteous nature. For instance, [captain.GetSheHe] disciplines [captain.GetHerHis] men to be polite and helpful to the locals, and harshly punishes any guards who use their station to bully others, yet this inspires even more loyalty in [captain.GetHerHis] impressed underlings than resentment. Furthermore, [captain.GetSheHe] has done much work defeating several bandit gangs in the area, and is rumored to even have the grudging respect of these ruffians for being a worthy opponent.\n\nI am considering bringing [captain.GetHerHim] to my court - a charismatic, upstanding soldier like that could be of great use, helping whip some of my forces into shape. On the other hand, maybe I should let [captain.GetHerHim] keep [captain.GetHerHis] current post, as [captain.GetSheHe] is doing a good job there."
  VIETmisc.3002.a:0 "I need a soldier like that in my employ. Invite [captain.GetHerHim] to my court!"
  VIETmisc.3002.b:0 "The people need [captain.GetHerHim] more. Let [captain.GetHerHim] stay there."
  VIETmisc.3002.c:0 "Grant [county.GetNameNoTier] to [captain.GetHerHim] - a good [ROOT.Char.GetLadyLord] will lead the community well."
