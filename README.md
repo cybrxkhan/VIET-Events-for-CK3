@@ -49,3 +49,5 @@ NOTE: If you are re-installing a mod, delete the old version of the mod first be
     - Examine Ancient Stone Monument
 - Changed pastry icon to a sweetroll
 - Miscellaneous bugfixes
+
+* Adapted from VIET for CK2
