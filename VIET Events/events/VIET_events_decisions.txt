@@ -30,6 +30,7 @@
 # 2043-2046		Spice Merchant Gifting
 # 2047-2060		Deal with the Crows
 # 2061-2062		Learning Shorthand
+# 2063-2072		County Event Decisions
 # 
 ############################################################################################################################
 
@@ -3443,5 +3444,446 @@ VIETmisc.2062 = {
 	option = { # Ok
 		name = VIETmisc.2062.a
 		VIET_large_prestige_gain_effect = yes
+	}
+}
+
+
+##################################################################
+#
+# COUNTY DECISIONS 2063-2072
+#
+##################################################################
+
+# Buy the medicinal berries
+VIETmisc.2063 = {
+	type = character_event
+	title = VIETmisc.2063.t
+	desc = VIETmisc.2063.desc
+	theme = medicine
+	
+	
+	left_portrait = {
+		character = root
+		animation = personality_rational
+	}
+	
+	option = { # Ok
+		name = VIETmisc.2063.a
+		remove_short_term_gold = 15
+		add_character_modifier = {
+			modifier = VIET_berry_good_medicine
+			years = 3
+		}
+	}	
+	option = { # Ok
+		name = VIETmisc.2063.b
+		trigger = {
+			OR = {
+				gold >= 30
+				is_ai = no
+			}
+		}
+		remove_short_term_gold = 30
+		add_character_modifier = {
+			modifier = VIET_berry_good_medicine
+			years = 6
+		}
+	}	
+	option = { # Ok
+		name = VIETmisc.2063.c
+		trigger = {
+			OR = {
+				gold >= 45
+				is_ai = no
+			}
+		}
+		remove_short_term_gold = 45
+		add_character_modifier = {
+			modifier = VIET_berry_good_medicine
+			years = 9
+		}
+	}
+}
+
+# Employ the blacksmiths
+VIETmisc.2064 = {
+	type = character_event
+	title = VIETmisc.2064.t
+	desc = VIETmisc.2064.desc
+	theme = medicine
+	
+	
+	left_portrait = {
+		character = root
+		animation = personality_rational
+	}
+	
+	option = { # Ok
+		name = VIETmisc.2064.a
+		add_character_modifier = {
+			modifier = VIET_employed_renowned_blacksmiths_armor
+			years = 10
+		}
+	}	
+	option = { # Ok
+		name = VIETmisc.2064.b
+		add_character_modifier = {
+			modifier = VIET_employed_renowned_blacksmiths_weapons
+			years = 10
+		}
+	}	
+	option = { # Ok
+		name = VIETmisc.2064.c
+		add_character_modifier = {
+			modifier = VIET_employed_renowned_blacksmiths_supplies
+			years = 10
+		}
+	}
+}
+
+# Visit the burial mound
+VIETmisc.2065 = {
+	type = character_event
+	title = VIETmisc.2065.t	
+	desc = {
+		desc = VIETmisc.2065.desc
+		first_valid = {
+			triggered_desc = {
+				trigger = {
+					scope:county = { has_county_modifier = VIET_tomb_monument_warrior }
+				}
+				desc = VIETmisc.2065.desc.warrior
+			}
+			triggered_desc = {
+				trigger = {
+					scope:county = { has_county_modifier = VIET_tomb_monument_holy }
+				}
+				desc = VIETmisc.2065.desc.holy
+			}
+			triggered_desc = {
+				trigger = {
+					scope:county = { has_county_modifier = VIET_tomb_monument_ruler }
+				}
+				desc = VIETmisc.2065.desc.monarch
+			}
+		}
+	}
+	theme = VIET_theme_ancient_cairn
+	
+	left_portrait = {
+		character = root
+		animation = personality_zealous
+	}
+	
+	immediate = {
+		play_music_cue = mx_cue_sacredrite
+	}
+	
+	option = { # Results
+		name = VIETmisc.2065.a
+		if = {
+			limit = {
+				scope:county = { has_county_modifier = VIET_tomb_monument_warrior }
+			}
+			add_character_modifier = {
+				modifier = VIET_burial_mound_inspired_warrior
+				years = 8
+			}
+		}
+		if = {
+			limit = {
+				scope:county = { has_county_modifier = VIET_tomb_monument_holy }
+			}
+			add_character_modifier = {
+				modifier = VIET_burial_mound_inspired_holy
+				years = 8
+			}
+		}
+		if = {
+			limit = {
+				scope:county = { has_county_modifier = VIET_tomb_monument_ruler }
+			}
+			add_character_modifier = {
+				modifier = VIET_burial_mound_inspired_monarch
+				years = 8
+			}
+		}
+	}
+	
+	after = {
+		hidden_effect = {
+			scope:activity = {
+				complete_activity = yes
+			}		
+		}
+	}
+}
+
+# Ghost hunting
+VIETmisc.2066 = {
+	type = character_event
+	title = VIETmisc.2066.t
+	desc = VIETmisc.2066.desc
+	theme = death
+	override_background = { event_background = alley_night }
+	
+	
+	left_portrait = {
+		character = root
+		animation = paranoia
+	}
+	
+	option = { # Ok
+		name = VIETmisc.2066.a
+		hidden_effect = {
+			random_list = {
+				25 = { trigger_event = VIETmisc.2067 } # See the ghosts
+				50 = { trigger_event = VIETmisc.2068 } # No ghosts show up
+				25 = { trigger_event = VIETmisc.2069 } # Guard claims to see it
+			}
+		}
+	}
+}
+
+# See the ghosts
+VIETmisc.2067 = {
+	type = character_event
+	title = VIETmisc.2067.t
+	desc = VIETmisc.2067.desc
+	theme = death
+	override_background = { event_background = alley_night }
+	
+	
+	left_portrait = {
+		character = root
+		animation = disbelief
+	}
+	
+	immediate = {
+		play_music_cue = mx_cue_touching_moment
+	}
+	
+	option = { # Ok
+		name = VIETmisc.2067.a
+		VIET_massive_piety_gain_effect = yes
+		add_character_modifier = {
+			modifier = VIET_saw_a_ghost_town
+			years = 12
+		}
+	}
+	
+	after = {
+		hidden_effect = {
+			scope:activity = {
+				complete_activity = yes
+			}		
+		}
+	}
+}
+
+# No ghosts show up
+VIETmisc.2068 = {
+	type = character_event
+	title = VIETmisc.2068.t
+	desc = VIETmisc.2068.desc
+	theme = death
+	override_background = { event_background = alley_night }
+	
+	
+	left_portrait = {
+		character = root
+		animation = personality_irrational
+	}
+	
+	option = { # Ok
+		name = VIETmisc.2068.a
+		stress_impact = {
+			base = minor_stress_impact_loss
+			lazy = miniscule_stress_impact_loss
+			content = miniscule_stress_impact_loss
+		}
+	}
+	
+	after = {
+		hidden_effect = {
+			scope:activity = {
+				complete_activity = yes
+			}		
+		}
+	}
+}
+
+# Guard claims to see it
+VIETmisc.2069 = {
+	type = character_event
+	title = VIETmisc.2069.t
+	desc = VIETmisc.2069.desc
+	theme = death
+	override_background = { event_background = alley_night }
+	
+	
+	left_portrait = {
+		character = root
+		animation = personality_cynical
+	}
+	
+	immediate = {
+		play_music_cue = mx_cue_touching_moment
+	}
+	
+	option = { # Believe him
+		name = VIETmisc.2069.a
+		VIET_huge_piety_gain_effect = yes
+		stress_impact = {
+			cynical = miniscule_stress_impact_gain
+			arrogant = miniscule_stress_impact_gain
+		}
+	}	
+	option = { # Don't believe him
+		name = VIETmisc.2069.b
+		VIET_huge_prestige_gain_effect = yes
+		stress_impact = {
+			trusting = miniscule_stress_impact_gain
+			zealous = miniscule_stress_impact_gain
+		}
+	}
+	
+	after = {
+		hidden_effect = {
+			scope:activity = {
+				complete_activity = yes
+			}		
+		}
+	}
+}
+
+# Visit the hermit site
+VIETmisc.2070 = {
+	type = character_event
+	title = VIETmisc.2070.t
+	desc = VIETmisc.2070.desc
+	theme = VIET_theme_ancient_cairn	
+	
+	right_portrait = {
+		character = root
+		animation = personality_zealous
+	}
+	
+	immediate = {
+		play_music_cue = mx_cue_sacredrite
+	}
+	
+	option = { # ok
+		name = VIETmisc.2070.a
+		VIET_huge_piety_gain_effect = yes
+	}	
+	option = { # ok
+		name = VIETmisc.2070.b
+		trigger = {
+			OR = {
+				gold >= 15
+				is_ai = no
+			}
+		}
+		remove_short_term_gold = 15
+		VIET_massive_piety_gain_effect = yes
+		stress_impact = {
+			cynical = minor_stress_impact_gain
+			arrogant = minor_stress_impact_gain
+			greedy = minor_stress_impact_gain
+		}
+	}
+	
+	after = {
+		hidden_effect = {
+			scope:activity = {
+				complete_activity = yes
+			}		
+		}
+	}
+}
+
+
+# Visit the great shade tree
+VIETmisc.2071 = {
+	type = character_event
+	title = VIETmisc.2071.t
+	desc = VIETmisc.2071.desc
+	theme = VIET_theme_small_town	
+	
+	right_portrait = {
+		character = root
+		animation = personality_content
+	}
+	
+	immediate = {
+		play_music_cue = mx_cue_low_key_positive
+	}
+	
+	option = { # ok
+		name = VIETmisc.2071.a
+		stress_impact = {
+			base = minor_stress_impact_loss
+			lazy = minor_stress_impact_loss
+			content = minor_stress_impact_loss
+			calm = miniscule_stress_impact_loss
+			patient = miniscule_stress_impact_loss
+			compassionate = miniscule_stress_impact_loss
+		}
+	}
+	
+	after = {
+		hidden_effect = {
+			scope:activity = {
+				complete_activity = yes
+			}		
+		}
+	}
+}
+
+
+# Visit the ancient stone monument
+VIETmisc.2072 = {
+	type = character_event
+	title = VIETmisc.2072.t
+	desc = VIETmisc.2072.desc
+	theme = VIET_theme_ancient_cairn	
+	
+	right_portrait = {
+		character = root
+		animation = personality_content
+	}
+	
+	immediate = {
+		play_music_cue = mx_cue_sacredrite
+	}
+	
+	option = { # ok
+		name = VIETmisc.2072.a
+		VIET_medium_piety_gain_effect = yes
+		stress_impact = {
+			base = minor_stress_impact_loss
+			lazy = miniscule_stress_impact_loss
+			content = miniscule_stress_impact_loss
+			calm = miniscule_stress_impact_loss
+		}
+	}	
+	option = { # ok
+		name = VIETmisc.2072.b
+		add_character_modifier = {
+			modifier = VIET_examined_ancient_stone_monument
+			years = 5
+		}
+		stress_impact = {
+			lazy = minor_stress_impact_gain
+		}
+	}
+	
+	after = {
+		hidden_effect = {
+			scope:activity = {
+				complete_activity = yes
+			}		
+		}
 	}
 }

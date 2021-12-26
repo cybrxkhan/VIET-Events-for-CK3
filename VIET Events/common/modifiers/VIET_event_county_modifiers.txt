@@ -1,0 +1,600 @@
+﻿#################################################
+# 
+# 
+# MODIFIERS ASSOCIATED WITH COUNTY EVENTS
+# 
+# 
+#################################################
+
+#################################################
+# 
+# MODIFIER LIST
+# 
+# asatru_raven_positive
+# asatru_raven_negative
+# bear_positive
+# bear_negative
+# blood_positive
+# blood_negative
+# cat_positive
+# cat_negative
+# cockroach_positive
+# cockroach_negative
+# county_modifier_control_positive
+# county_modifier_control_negative
+# county_modifier_corruption_positive
+# county_modifier_corruption_negative
+# county_modifier_development_positive
+# county_modifier_development_negative
+# county_modifier_opinion_positive
+# county_modifier_opinion_negative
+# diplomacy_positive
+# diplomacy_negative
+# dog_positive
+# dog_negative
+# dread_positive
+# dread_negative
+# drink_positive
+# drink_negative
+# economy_positive
+# economy_negative
+# family_positive
+# family_negative
+# feast_positive
+# feast_negative
+# fertility_positive
+# fertility_negative
+# food_positive
+# food_negative
+# health_positive
+# health_negative
+# horse_positive
+# horse_negative
+# hunt_positive
+# hunt_negative
+# intrigue_positive
+# intrigue_negative
+# learning_positive
+# learning_negative
+# letter_positive
+# letter_negative
+# love_positive
+# love_negative
+# magic_positive
+# magic_negative
+# martial_positive
+# martial_negative
+# outdoors_positive
+# outdoors_negative
+# piety_positive
+# piety_negative
+# prestige_positive
+# prestige_negative
+# prison_positive
+# prison_negative
+# prowess_positive
+# prowess_negative
+# rat_positive
+# rat_negative
+# rock_positive
+# rock_negative
+# social_positive
+# social_negative
+# spoon_positive
+# spoon_negative
+# stewardship_positive
+# stewardship_negative
+# stress_positive
+# stress_negative
+# treatment_positive
+# treatment_negative
+# 
+#################################################
+
+
+VIET_berry_good_medicine_county = {
+	icon = fertility_positive
+	tax_mult = 0.02
+}
+VIET_trinket_cave = {
+	icon = rock_positive
+	development_growth_factor = 0.01
+}
+VIET_trinket_cave_shrine = {
+	icon = rock_positive
+	development_growth_factor = 0.01
+	county_opinion_add = 1
+}
+VIET_beloved_guard_captain = {
+	icon = prowess_positive
+	county_opinion_add = 3
+	monthly_county_control_change_factor = 0.1
+	levy_reinforcement_rate = 0.1
+}
+VIET_beloved_guard_captain_character = {
+	icon = prowess_positive
+	diplomacy = 1
+	martial = 1
+	prowess = 1
+	county_opinion_add = 10
+}
+VIET_promoted_beloved_guard_captain = {
+	icon = county_modifier_opinion_positive
+	county_opinion_add = 5
+}
+VIET_ennobled_beloved_guard_captain = {
+	icon = county_modifier_opinion_positive
+	county_opinion_add = 10
+}
+VIET_the_rogues = {
+	icon = county_modifier_control_negative
+	county_opinion_add = -2
+	monthly_county_control_change_factor = -0.1	
+}
+VIET_arrested_the_rogues = {
+	icon = county_modifier_control_positive
+	county_opinion_add = 2
+}
+VIET_hired_rogues_county = {
+	icon = county_modifier_control_negative
+	county_opinion_add = -5	
+}
+VIET_hired_rogues = {
+	icon = intrigue_positive
+	intrigue = 3
+	hostile_scheme_power_add = 10
+	hostile_scheme_resistance_add = 10
+	scheme_discovery_chance_mult = 0.1
+	county_opinion_add = -10
+	monthly_prestige = -0.7
+}
+VIET_dimensional_portal = {
+	icon = rock_positive
+	development_growth_factor = 0.01
+	monthly_county_control_change_add = -0.1
+}
+VIET_dimensional_portal_guards = {
+	icon = rock_positive
+	development_growth_factor = 0.03
+}
+VIET_local_feud = {
+	icon = blood_negative
+	development_growth = -0.3
+	monthly_county_control_change_add = -0.5
+}
+VIET_local_feud_averted = {
+	icon = diplomacy_positive
+	monthly_county_control_change_add = 0.1
+}
+VIET_local_feud_averted_character = {
+	icon = diplomacy_positive
+	county_opinion_add = 5
+	monthly_prestige = 0.3
+}
+VIET_town_fire = {
+	icon = outdoors_negative
+	development_growth = -0.2
+	tax_mult = -0.02
+}
+VIET_fire_relief = {
+	icon = stewardship_positive
+	county_opinion_add = 5
+	monthly_piety = 0.4
+}
+VIET_zone_of_death = {
+	icon = magic_negative
+	development_growth_factor = -0.04
+}
+VIET_wooden_rod_relic = {
+	icon = piety_positive
+	county_opinion_add = 3
+	tax_mult = 0.02
+}
+VIET_wooden_rod_relic_study = {
+	icon = learning_positive
+	development_growth_factor = 0.06
+}
+VIET_missing_persons = {
+	icon = stewardship_negative
+	tax_mult = -0.03
+}
+VIET_good_pottery = {
+	icon = stewardship_positive
+	tax_mult = 0.1
+}
+VIET_strange_dark_cloud = {
+	icon = magic_negative
+	monthly_county_control_change_add = -0.1
+}
+VIET_bad_officers = {
+	icon = prowess_negative
+	county_opinion_add = -5
+	levy_reinforcement_rate = -0.3
+	garrison_size = -0.1
+	monthly_county_control_change_add = -0.1
+}
+VIET_bad_officers_replaced_county = {
+	icon = prowess_positive
+	county_opinion_add = 5
+	monthly_county_control_change_add = 0.1	
+}
+VIET_bad_officers_replaced = {
+	icon = diplomacy_positive
+	diplomacy = 1
+	county_opinion_add = 5
+	monthly_prestige = -0.5
+}
+VIET_martyr_commander = {
+	icon = martial_positive
+	monthly_county_control_change_add = 0.3
+}
+VIET_martyr_commander_monument = {
+	icon = martial_positive
+	monthly_county_control_change_add = 0.5
+	development_growth = 0.1
+	county_opinion_add = 4
+}
+VIET_tomb_monument_warrior = {
+	icon = prowess_positive
+	tax_mult = 0.03
+	levy_size = 0.12
+	garrison_size = 0.12
+}
+VIET_tomb_monument_holy = {
+	icon = piety_positive
+	tax_mult = 0.03
+	monthly_county_control_change_add = 0.3
+}
+VIET_tomb_monument_ruler = {
+	icon = prestige_positive
+	tax_mult = 0.03
+	development_growth_factor = 0.15
+}
+VIET_benevolent_spirit = {
+	icon = magic_positive
+	development_growth_factor = 0.02
+}
+VIET_maitreya_cult_repressed = {
+	icon = piety_positive
+	monthly_county_control_change_factor = 0.1
+}
+VIET_maitreya_cult_unrepressed = {
+	icon = piety_negative
+	monthly_county_control_change_add = -0.5
+	monthly_county_control_change_factor = -0.1
+	development_growth_factor = -0.1
+}
+VIET_renowned_blacksmith_region = {
+	icon = horse_positive
+	tax_mult = 0.1
+	development_growth = 0.3
+	levy_reinforcement_rate = 0.3
+	build_gold_cost = -0.05
+	build_piety_cost = -0.05
+	build_prestige_cost = -0.05
+}
+VIET_mad_scientist_rumors = {
+	icon = magic_negative
+	monthly_county_control_change_add = -0.1
+}
+VIET_disappeared_village = {
+	icon = county_modifier_development_negative
+	development_growth = -0.1
+}
+VIET_perfectly_arranged_marriage = {
+	icon = love_positive
+	county_opinion_add = 1
+}
+VIET_spirit_towns = {
+	icon = magic_negative
+	development_growth_factor = -0.01
+}
+VIET_respected_elder_death_grandfather = {
+	icon = magic_positive
+	development_growth_factor = 0.08
+	tax_mult = 0.02
+}
+VIET_respected_elder_death_grandmother = {
+	icon = magic_positive
+	development_growth_factor = 0.08
+	tax_mult = 0.02
+}
+VIET_serial_killer_found = {
+	icon = blood_positive
+	county_opinion_add = 3
+	monthly_county_control_change_add = 0.1
+}
+VIET_death_of_several_officials = {
+	icon = treatment_negative
+	development_growth_factor = -0.15
+	monthly_county_control_change_factor = -0.3
+	build_speed = 0.1
+}
+VIET_secretly_corrupt_official = {
+	icon = county_modifier_corruption_negative
+	county_opinion_add = -5
+	monthly_county_control_change_add = -0.1
+}
+VIET_holy_hermit_passes_away = {
+	icon = piety_positive
+	development_growth_factor = 0.03
+}
+VIET_stone_slab_found = {
+	icon = rock_positive
+	development_growth_factor = 0.01
+}
+VIET_araragi_vampire = {
+	icon = stress_positive
+	county_opinion_add = 1
+	development_growth_factor = 0.04
+}
+VIET_bridge_collapse = {
+	icon = county_modifier_development_negative
+	tax_mult = -0.15
+	development_growth = -0.5
+	development_growth_factor = -0.15
+}
+VIET_mysterious_colors = {
+	icon = magic_positive
+	development_growth_factor = 0.01
+}
+VIET_famous_bard = {
+	icon = diplomacy_positive
+	development_growth = 0.2
+}
+VIET_famous_bard_arrested = {
+	icon = prison_negative
+	county_opinion_add = -5
+	monthly_dread = 0.2
+}
+VIET_haunted_ship = {
+	icon = magic_negative
+	monthly_county_control_change_add = -0.1
+}
+VIET_flat_stone_monument = {
+	icon = rock_positive
+	development_growth_factor = 0.01
+}
+VIET_recent_sandstorm = {
+	icon = rock_negative
+	development_growth = -0.2
+	development_growth_factor = -0.5
+	levy_size = -0.15
+	garrison_size = -0.15
+	levy_reinforcement_rate = -0.5
+}
+VIET_sandstorm_disaster_relief = {
+	icon = county_modifier_opinion_positive
+	county_opinion_add = 5
+	monthly_prestige = 0.2
+	monthly_piety = 0.2
+}
+VIET_sandstorm_not_disaster_relief = {
+	icon = county_modifier_opinion_negative
+	county_opinion_add = -5
+	monthly_prestige = -0.2
+	monthly_piety = -0.2
+}
+VIET_forlorn_watchman = {
+	icon = rock_positive
+	development_growth_factor = 0.02
+	monthly_county_control_change_factor = 0.05	
+}
+VIET_pistachio_land = {
+	icon = fertility_positive
+	tax_mult = 0.04
+}
+VIET_recent_landslide = {
+	icon = rock_negative
+	development_growth = -0.1
+	development_growth_factor = -0.3
+	build_speed = 0.2
+	build_gold_cost = 0.2
+	build_piety_cost = 0.2
+	build_prestige_cost = 0.2
+}
+VIET_landslide_disaster_relief = {
+	icon = county_modifier_opinion_positive
+	county_opinion_add = 5
+	monthly_prestige = 0.2
+	monthly_piety = 0.2
+}
+VIET_landslide_not_disaster_relief = {
+	icon = county_modifier_opinion_negative
+	county_opinion_add = -5
+	monthly_prestige = -0.2
+	monthly_piety = -0.2
+}
+VIET_strong_lads = {
+	icon = prowess_positive
+	levy_reinforcement_rate = 0.2
+	monthly_county_control_change_factor = 0.1
+}
+VIET_giant_shade_tree = {
+	icon = fertility_positive
+	development_growth = 0.1
+}
+VIET_shadow_people = {
+	icon = blood_negative
+	monthly_county_control_change_add = -0.1
+}
+VIET_youth_prank = {
+	icon = social_negative
+	development_growth_factor = -0.02
+	county_opinion_add = -1
+}
+VIET_famous_herbalists = {
+	icon = drink_positive
+	development_growth_factor = 0.02
+	tax_mult = 0.03
+}
+VIET_corrupt_officials = {
+	icon = county_modifier_corruption_negative
+	tax_mult = -0.1
+	county_opinion_add = -5
+	build_gold_cost = 0.1
+	build_piety_cost = 0.1
+	build_prestige_cost = 0.1
+}
+VIET_incorruptible_officials = {
+	icon = prestige_positive
+	development_growth = 0.2
+	county_opinion_add = 5
+}
+VIET_cracking_down_on_corrupt_officials = {
+	icon = dread_positive
+	county_opinion_add = 5
+	monthly_county_control_change_add = 0.1
+}
+VIET_studying_incorruptible_officials = {
+	icon = letter_positive
+	diplomacy = 1
+	stewardship = 1
+	monthly_lifestyle_xp_gain_mult = 0.05
+}
+VIET_renowned_carpenters = {
+	icon = county_modifier_development_positive
+	tax_mult = 0.05
+	build_speed = -0.1
+	build_gold_cost = -0.15
+	build_piety_cost = -0.15
+	build_prestige_cost = -0.15
+}
+VIET_renowned_stonemasons = {
+	icon = county_modifier_development_positive
+	tax_mult = 0.05
+	build_speed = -0.1
+	build_gold_cost = -0.15
+	build_piety_cost = -0.15
+	build_prestige_cost = -0.15
+}
+VIET_famous_courtesan = {
+	icon = love_positive
+	diplomacy = 2
+	attraction_opinion = 15
+	monthly_prestige = 0.3
+	seduce_scheme_power_add = 10
+	seduce_scheme_power_mult = 0.1
+}
+VIET_famous_courtesan_county = {
+	icon = love_positive
+	tax_mult = 0.01
+	county_opinion_add = 1
+}
+VIET_famous_courtesan_sex = {
+	icon = love_positive
+	diplomacy = 1
+	stress_gain_mult = -0.25
+	stress_loss_mult = 0.25
+	spouse_opinion = -10
+}
+VIET_famous_traveler = {
+	icon = outdoors_positive
+	diplomacy = 1
+	learning = 1
+	prowess = 4
+	monthly_lifestyle_xp_gain_mult = 0.1
+	monthly_prestige = 0.1
+}
+VIET_famous_traveler_county = {
+	icon = outdoors_positive
+	development_growth_factor = 0.04
+}
+VIET_recent_building_collapse = {
+	icon = county_modifier_development_negative
+	monthly_county_control_change_add = -0.3
+}
+VIET_generous_donation = {
+	icon = piety_positive
+	county_opinion_add = 3
+	monthly_piety = 0.2
+}
+VIET_great_beauty = {
+	icon = fertility_positive
+	tax_mult = 0.01
+}
+VIET_great_ugly_commoner = {
+	icon = stress_positive
+	diplomacy = 1
+	stewardship = 1
+	intrigue = 3
+	monthly_prestige = 0.1
+}
+VIET_great_beauty_commoner = {
+	icon = fertility_positive
+	diplomacy = 1
+	stewardship = 1
+	intrigue = 1
+	attraction_opinion = 15
+	monthly_prestige = 0.3
+}
+VIET_great_beauty_husband = {
+	icon = fertility_positive
+	diplomacy = 2
+	monthly_prestige = 0.2
+}
+VIET_berry_good_medicine = {
+	icon = health_positive
+	health = 0.3
+	stress_gain_mult = -0.05
+	stress_loss_mult = 0.05
+	fertility = 0.03
+}
+VIET_employed_renowned_blacksmiths_armor = {
+	icon = dread_positive
+	defender_advantage = 10
+}
+VIET_employed_renowned_blacksmiths_weapons = {
+	icon = prowess_positive	
+	attacker_advantage = 10
+}
+VIET_employed_renowned_blacksmiths_supplies = {
+	icon = prowess_positive
+	movement_speed = 0.1
+	men_at_arms_maintenance = -0.1
+}
+VIET_burial_mound_inspired_warrior = {
+	icon = prowess_positive
+	martial = 1
+	prowess = 1
+	monthly_prestige_gain_mult = 0.1
+}
+VIET_burial_mound_inspired_holy = {
+	icon = piety_positive
+	learning = 2
+	monthly_piety_gain_mult = 0.1
+}
+VIET_burial_mound_inspired_monarch = {
+	icon = piety_positive
+	diplomacy = 1
+	stewardship = 1
+	monthly_dynasty_prestige_mult = 0.1
+}
+VIET_saw_a_ghost_town = {
+	icon = social_positive
+	intrigue = 2
+	general_opinion = -5
+}
+VIET_examined_ancient_stone_monument = {
+	icon = rock_positive
+	learning = 1
+	monthly_lifestyle_xp_gain_mult = 0.02
+}
+VIET_recently_hired_ugly_maid = {
+	icon = county_modifier_opinion_positive
+	diplomacy = -1
+	stewardship = 1
+	intrigue = 2
+}
+VIET_recently_hired_couple_servants = {
+	icon = family_positive
+	stewardship = 2
+	intrigue = 2
+}
+VIET_resolved_village_love_story = {
+	icon = love_positive
+	county_opinion_add = 3
+	attraction_opinion = 5
+	monthly_prestige = 0.1
+	monthly_piety = 0.1
+}

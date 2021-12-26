@@ -7956,7 +7956,7 @@ VIETmisc.0098 = {
 
 
 
-# Explore a haunted hosue or not?
+# Explore a haunted house or not?
 VIETmisc.0099 = {
 	type = character_event
 	title = VIETmisc.0099.t
@@ -8447,7 +8447,7 @@ VIETmisc.0106 = {
 	title = VIETmisc.0106.t
 	desc = VIETmisc.0106.desc
 	theme = feast_activity
-	override_background = { event_background = VIET_background_small_town }
+	override_icon = { reference = "gfx/interface/icons/event_types/type_love.dds" } 
 	
 	right_portrait = root
 

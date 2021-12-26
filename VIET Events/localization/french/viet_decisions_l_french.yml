@@ -77,7 +77,7 @@
  VIET_decision_buy_valuable_medicinal_berries:0 "Buy Valuable Medicinal Berries"
  VIET_decision_buy_valuable_medicinal_berries_tooltip:0 "There are berries that have supposed healing properties"
  VIET_decision_buy_valuable_medicinal_berries_desc:0 "It seems there are parts of my realm where the berries are said to possess various medicinal properties. I should buy some for myself!"
- VIET_decision_buy_valuable_medicinal_berries_effect_tooltip:0 "You choose how many berries to purchase, determining how long the [GetModifier('VIET_berry_good_medicine').GetNameWithTooltip] [character_modifier|E] will last #weak (Minimum cost: @gold_icon! 25)#!"
+ VIET_decision_buy_valuable_medicinal_berries_effect_tooltip:0 "You choose how many berries to purchase, determining how long the [GetModifier('VIET_berry_good_medicine').GetNameWithTooltip] [character_modifier|E] will last #weak (Minimum cost: @gold_icon! 15)#!"
  VIET_decision_buy_valuable_medicinal_berries_confirm:0 "Berry good."
  VIET_decision_buy_valuable_medicinal_berries_req:0 "Any [county|E] in your [domain|E] has the [GetModifier('VIET_berry_good_medicine_county').GetNameWithTooltip] [county_modifier|E]"
  VIET_decision_buy_valuable_medicinal_berries_context_tooltip:0 "#emphasis Historical Context:#! Berries have been part of many cultures since the dawn of time, and have been used as food, medicine, a source for dyes, and more." 

@@ -108,3 +108,125 @@ activity_VIET_crow_appeasement = {
 		}	
 	}
 }
+
+activity_VIET_visit_to_a_legendary_burial_mound = {
+	solo = yes
+	color = { 0.01 0.13 0.25 1 } #Dark
+	on_spawn = {
+		invite_character_to_activity = activity_owner
+		accept_invitation_for_character = activity_owner
+	}
+	on_activate = {
+		scope:activity = {
+			activity_province = {
+				county = { save_scope_as = county }
+			}
+		}
+		activity_owner = {
+			trigger_event = VIETmisc.2065
+		}
+	}
+	on_complete = {
+		activity_owner = {
+			remove_character_flag = planning_an_activity
+		}	
+	}
+}
+
+activity_VIET_investigation_of_a_ghost_town = {
+	solo = yes
+	color = { 0.05 0.28 0.13 1 } #Dark
+	on_spawn = {
+		invite_character_to_activity = activity_owner
+		accept_invitation_for_character = activity_owner
+	}
+	on_activate = {
+		scope:activity = {
+			activity_province = {
+				county = { save_scope_as = county }
+			}
+		}
+		activity_owner = {
+			trigger_event = VIETmisc.2066
+		}
+	}
+	on_complete = {
+		activity_owner = {
+			remove_character_flag = planning_an_activity
+		}	
+	}
+}
+
+activity_VIET_veneration_of_a_mummified_hermit = {
+	solo = yes
+	color = { 0.95 0.76 0.18 1 } # Saffron
+	on_spawn = {
+		invite_character_to_activity = activity_owner
+		accept_invitation_for_character = activity_owner
+	}
+	on_activate = {
+		scope:activity = {
+			activity_province = {
+				county = { save_scope_as = county }
+			}
+		}
+		activity_owner = {
+			trigger_event = VIETmisc.2070
+		}
+	}
+	on_complete = {
+		activity_owner = {
+			remove_character_flag = planning_an_activity
+		}	
+	}
+}
+
+
+
+activity_VIET_trip_giant_shade_tree = {
+	solo = yes
+	color = { 0.25 0.41 0.18 1 } # Tree Green
+	on_spawn = {
+		invite_character_to_activity = activity_owner
+		accept_invitation_for_character = activity_owner
+	}
+	on_activate = {
+		scope:activity = {
+			activity_province = {
+				county = { save_scope_as = county }
+			}
+		}
+		activity_owner = {
+			trigger_event = VIETmisc.2071
+		}
+	}
+	on_complete = {
+		activity_owner = {
+			remove_character_flag = planning_an_activity
+		}	
+	}
+}
+
+activity_VIET_trip_examine_ancient_stone_monument = {
+	solo = yes
+	color = { 0.55 0.55 0.55 1 } # Stone grey
+	on_spawn = {
+		invite_character_to_activity = activity_owner
+		accept_invitation_for_character = activity_owner
+	}
+	on_activate = {
+		scope:activity = {
+			activity_province = {
+				county = { save_scope_as = county }
+			}
+		}
+		activity_owner = {
+			trigger_event = VIETmisc.2072
+		}
+	}
+	on_complete = {
+		activity_owner = {
+			remove_character_flag = planning_an_activity
+		}	
+	}
+}

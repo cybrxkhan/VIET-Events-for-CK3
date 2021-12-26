@@ -1,47 +1,39 @@
 ﻿
 
+
 random_yearly_playable_pulse = {
 	on_actions = {
-		delay = { days = 8 }
+		delay = { days = { 8 288 } } # 8
 		VIET_events_yearly_pulse
-		delay = { days = 100 }
+		delay = { days = { 8 288 } }
 		VIET_events_misc_decisions_pulse
-		# For testing purposes
-		#delay = { days = 58 }
-		#VIET_events_event_chain_pulse
 	}
 }
 
 
 three_year_playable_pulse = {
 	on_actions = {
-		delay = { days = 18 }
+		delay = { days = { 8 288 } } # 18
 		VIET_events_tri_yearly_pulse
-		delay = { days = 88 }
+		delay = { days = { 8 288 } } # 88
 		VIET_events_common_decisions_pulse
+		delay = { days = { 8 288 } } # 88
+		VIET_events_common_county_pulse
 	}
 }
 
-# Province Events go on separate pulse
-#five_year_playable_pulse = {
-#	on_actions = {
-#		delay = { days = 5 }
-#		VIET_events_five_yearly_pulse
-#		delay = { days = 8 }
-#		#VIET_events_event_chain_pulse
-#	}
-#}
-
 five_year_playable_pulse = {
 	on_actions = {
-		delay = { days = 28 }
+		delay = { days = { 8 288 } } # 28
 		VIET_events_five_yearly_pulse
-		delay = { days = 58 }
+		delay = { days = { 8 288 } } # 58
 		VIET_events_event_chain_pulse
-		delay = { days = 88 }
+		delay = { days = { 8 288 } } # 88
 		VIET_events_rare_decisions_pulse
-		#delay = { days = 8 }
-		#VIET_events_province_event_pulse
+		delay = { days = { 8 288 } } # 88
+		VIET_events_uncommon_county_pulse
+		delay = { days = { 8 288 } } # 88
+		VIET_events_rare_county_pulse
 	}
 }
 
@@ -151,6 +143,12 @@ VIET_events_yearly_pulse = {
 		100 = VIETold.1058		# Feeling melancholy about growing older
 		100 = VIETold.1060		# Hearing a funny joke from a courtier/guest
 		100 = VIETold.1061		# Feeling the sunlight against your face
+		100 = VIETold.1062		# Scumbag brain reminds you of something
+		100 = VIETold.1063		# Reading a new book/sequel
+		100 = VIETold.1064		# See a servant yawning
+		100 = VIETold.1065		# Envoy has heard about you and your honeyed words
+		100 = VIETold.1066		# Heard an earworm
+		100 = VIETold.1069		# Head feels itchy and scratchy
 		
 		#######################################
 		# OLD VIET
@@ -447,6 +445,10 @@ VIET_events_tri_yearly_pulse = {
 		# Generic (Swansong)
 		100 = VIETold.1054		# Clump of dirt in hair
 		100 = VIETold.1055		# Hearing about people with different number of eyes
+		100 = VIETold.1067		# Coin falls out of courtier's pocket unnoticed
+		100 = VIETold.1068		# Execution of innocent man found after the fact
+		100 = VIETold.1070		# Gift of date based soaps and cosmetics from the Levant
+		100 = VIETold.1073		# Muslim courtier uses too much perfume and is vain
 		
 		#######################################
 		# OLD VIET
@@ -695,6 +697,9 @@ VIET_events_five_yearly_pulse = {
 		# Generic (Swansong)
 		100 = VIETold.1053		# What has more value - the real thing, or a fake?
 		100 = VIETold.1059		# Who cut the cheese? Dumb punny joke lol
+		100 = VIETold.1071		# Creepy horse stares at you
+		100 = VIETold.1072		# Cubeb gift - what to use it for?
+		100 = VIETold.1074		# Reishi/lingzhi mushrooms are given to you as a gift
 		
 		#######################################
 		# OLD VIET
@@ -1043,5 +1048,204 @@ VIET_events_misc_decisions_pulse = {
 	}
 }
 
+# County based events/event chains/mechanics - common occurrences that would feasibly happen more regularly
+VIET_events_common_county_pulse = {
+	random_events = {
+		chance_of_no_event = {
+			value = 50
+			if = {
+				limit = {
+					has_game_rule = VIET_event_frequency_low
+				}
+				add = 10
+			}
+			if = {
+				limit = {
+					has_game_rule = VIET_event_frequency_very_low
+				}
+				add = 20
+			}
+			if = {
+				limit = {
+					has_game_rule = VIET_event_frequency_high
+				}
+				subtract = 10
+			}
+			if = {
+				limit = {
+					has_game_rule = VIET_event_frequency_very_high
+				}
+				subtract = 20
+			}
+		}
+		
+		28000 = 0
+		
+		#######################################
+		# OLD VIET (for events converted into decision event chains)
+		#######################################
+		
+		# Generic
+		100 = VIETmisc.4000		# Protective spirit in the land
+		100 = VIETmisc.4002		# Blacksmiths renowned in county
+		100 = VIETmisc.4007		# Respected elder passes away
+		100 = VIETmisc.4008		# Beloved grandmother passes away
+		100 = VIETmisc.4014		# Stone slab discovered
+		100 = VIETmisc.4016		# Bridge in county collapsed
+		100 = VIETmisc.4017		# Mysterious Colors in the Sky
+		100 = VIETmisc.4020		# Neolithic ancient stone monument found
+		100 = VIETmisc.4021		# Sandstorm strikes a county
+		100 = VIETmisc.4024		# Landslide happens in a county
+		100 = VIETmisc.4025		# Strong lads gain fame and win honor for community
+		100 = VIETmisc.4026		# A village tree provides shade
+		100 = VIETmisc.4028		# Youths prank a village, pretending to be shadow demons
+		100 = VIETmisc.4029		# Herbalists become famous
+		
+		#######################################
+		# NEXT GEN VIET
+		#######################################
+		
+		# Generic
+		100 = VIETmisc.3000		# Berry Good Medicine
+		100 = VIETmisc.3001		# A cave is discovered somewhere
+		100 = VIETmisc.3005		# Recent feud in a town is getting out of hand
+		100 = VIETmisc.3006		# Fire swept through a town
+		100 = VIETmisc.3009		# Missing people - all the people in a caravan go missing, but the caraven items, goods, and animals remain
+		100 = VIETmisc.3010		# County is famous for pottery/ceramics
+		100 = VIETmisc.3011		# Dark cloud casts its shadow over a county
+		100 = VIETmisc.3012		# County suffering from poor military leadership
+		100 = VIETmisc.3015		# Corrupt officials in a county
+		100 = VIETmisc.3016		# Incorruptible officials in a county
+		100 = VIETmisc.3017		# Renowned carpenters in county
+		100 = VIETmisc.3018		# Renowned stonemasons in county
+		100 = VIETmisc.3021		# Building collapses, killing a lot of important community leaders
+		
+		# 27
+    }
+}
 
+# County based events/event chains/mechanics - uncommon, weird occurrences that would happen less regularly
+VIET_events_uncommon_county_pulse = {
+	random_events = {
+		chance_of_no_event = {
+			value = 50
+			if = {
+				limit = {
+					has_game_rule = VIET_event_frequency_low
+				}
+				add = 10
+			}
+			if = {
+				limit = {
+					has_game_rule = VIET_event_frequency_very_low
+				}
+				add = 20
+			}
+			if = {
+				limit = {
+					has_game_rule = VIET_event_frequency_high
+				}
+				subtract = 10
+			}
+			if = {
+				limit = {
+					has_game_rule = VIET_event_frequency_very_high
+				}
+				subtract = 20
+			}
+		}
+		
+		24000 = 0
+		
+		#######################################
+		# OLD VIET (for events converted into decision event chains)
+		#######################################
+		
+		# Generic
+		100 = VIETmisc.4001		# Monk claiming to be Maitreya, the Buddha at the end times, starts a cult
+		100 = VIETmisc.4003		# Rumors of a mad scientist
+		100 = VIETmisc.4004		# Population of an entire village mysteriously disappears
+		100 = VIETmisc.4005		# Perfect wedding
+		100 = VIETmisc.4006		# Ghosts keep visiting a settlement and marching through it
+		100 = VIETmisc.4009		# Locals witness literal ghost towns - ghosts doing daily business
+		100 = VIETmisc.4010		# Serial killer is caught and killed by cunning guards
+		100 = VIETmisc.4011		# Several local officials coincidentally die around the same time (it really is a coincidence)
+		100 = VIETmisc.4012		# Secretly corrupt official passes away
+		100 = VIETmisc.4018		# Famous Bard refuses to play for the rich
+		100 = VIETmisc.4019		# Spoopy ship in the skies
+		100 = VIETmisc.4023		# Pistachios from a county become popular
+		100 = VIETmisc.4027		# Shadows attack villagers - implied to be hysteria from several cases of sleep paralysis
+		
+		#######################################
+		# NEXT GEN VIET
+		#######################################
+		
+		# Generic		
+		100 = VIETmisc.3007		# Zone of Death - perhaps some kind of mysterious radiation caused by Stellaris aliens?
+		100 = VIETmisc.3013		# Heroic garrison commander is martyred by bandits
+		100 = VIETmisc.3014		# Legendary mound is discovered - who is buried under there?
+		100 = VIETmisc.3019		# Courtesan rises in prominence and becomes very famous
+		100 = VIETmisc.3020		# Renowned traveler settles down in a county
+		
+		# 18
+		
+    }
+}
 
+# County based events/event chains/mechanics - really strange rare occurrences that wouldn't happen a lot
+VIET_events_rare_county_pulse = {
+	random_events = {
+		chance_of_no_event = {
+			value = 50
+			if = {
+				limit = {
+					has_game_rule = VIET_event_frequency_low
+				}
+				add = 10
+			}
+			if = {
+				limit = {
+					has_game_rule = VIET_event_frequency_very_low
+				}
+				add = 20
+			}
+			if = {
+				limit = {
+					has_game_rule = VIET_event_frequency_high
+				}
+				subtract = 10
+			}
+			if = {
+				limit = {
+					has_game_rule = VIET_event_frequency_very_high
+				}
+				subtract = 20
+			}
+		}
+		
+		20000 = 0
+		
+		#######################################
+		# OLD VIET (for events converted into decision event chains)
+		#######################################
+		
+		# Generic
+		50 = VIETmisc.4013		# Buddhist/Tibetan Hermit passes away, yet body does not decay
+		50 = VIETmisc.4015		# Araragi-kun and Shinobu are in town
+		50 = VIETmisc.4022		# The forlorn watchman (friendly beach ghost)
+		
+		#######################################
+		# NEXT GEN VIET
+		#######################################
+		
+		# Generic
+		50 = VIETmisc.3002		# A garrison captain is renowned for their ability, charisma, and popularity
+		50 = VIETmisc.3003		# Conmen rogues active in county
+		50 = VIETmisc.3004		# Discovered a gateway that's totally not the Stellaris gateway
+		50 = VIETmisc.3008		# Mysterious supernatural relic found - could it be futuristic equipment left behind by Stellaris aliens?
+		50 = VIETmisc.3022		# You hear rumors of a commoner of peerless beauty in a county
+		
+		# 8
+		
+    }
+}

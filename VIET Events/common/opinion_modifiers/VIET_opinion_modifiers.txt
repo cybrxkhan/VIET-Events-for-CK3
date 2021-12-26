@@ -369,3 +369,44 @@ VIET_opinion_constructive_criticism_handwriting = {
 	years = 10
 	opinion = 15
 }
+VIET_opinion_fellow_tree_lover = {
+	years = 5
+	opinion = 5
+}
+VIET_opinion_tree_hater = {
+	years = 5
+	opinion = -5
+}
+VIET_opinion_courtesan_promote = {
+	years = 100
+	opinion = 15
+}
+VIET_opinion_slept_with_courtesan = {
+	years = 5
+	opinion = -20
+}
+VIET_opinion_approves_invite_courtesan = {
+	years = 15
+	decaying = yes
+	opinion = 10
+}
+VIET_opinion_disapproves_invite_courtesan = {
+	years = 15
+	decaying = yes
+	opinion = -10
+}
+VIET_opinion_great_beauty = {
+	years = 25
+	decaying = yes
+	opinion = 10
+}
+VIET_opinion_returned_coin = {
+	years = 5
+	decaying = yes
+	opinion = 5
+}
+VIET_opinion_date_soaps_cosmetics = {
+	years = 10
+	decaying = yes
+	opinion = 5
+}

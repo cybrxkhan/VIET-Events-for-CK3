@@ -2,6 +2,12 @@
 # 
 # MODIFIER LIST
 # 
+# asatru_raven_positive
+# asatru_raven_negative
+# bear_positive
+# bear_negative
+# blood_positive
+# blood_negative
 # cat_positive
 # cat_negative
 # cockroach_positive
@@ -1765,4 +1771,44 @@ VIET_crow_friend_germanic = {
 	monthly_dread = 0.1
 	monthly_prestige_gain_per_dread_mult = 0.01
 	monthly_piety = 0.3
+}
+VIET_earworm = {
+	icon = county_modifier_opinion_positive
+	stress_gain_mult = -0.05
+	stress_loss_mult = 0.05
+}
+VIET_read_sequel = {
+	icon = learning_positive
+	stress_gain_mult = -0.05
+	stress_loss_mult = 0.05
+}
+VIET_wrongful_execution = {
+	icon = dread_negative
+	county_opinion_add = -10
+	general_opinion = -5
+	monthly_dread = 0.1
+}
+VIET_date_soaps_cosmetics = {
+	icon = fertility_positive
+	diplomacy = 1
+	attraction_opinion = 5
+}
+VIET_cubeb_horny = {
+	icon = fertility_positive
+	diplomacy = 1
+	fertility = 0.05
+}
+VIET_cubeb_exorcism = {
+	icon = magic_positive
+	intrigue = 1
+	monthly_piety = 0.1
+}
+VIET_perfume_obsession = {
+	icon = fertility_negative
+	diplomacy = -1
+}
+VIET_mushrooms_of_immortality = {
+	icon = health_positive
+	health = 0.3
+	life_expectancy = 5
 }

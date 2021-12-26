@@ -1,11 +1,10 @@
 # VIET Events for CK3
 
-## Latest Version: 1.4.5 "Chaucer" (Released 12/6/21)
+## Latest Version: 1.4.6 "Heartland" (Released 12/25/21)
 
-_“Nowhere so busy a man as he than he, and yet he seemed busier than he was.”_
-_- The Canterbury Tales_
+_"Let my delight be the country, and the running streams amid the dells — may I love the waters and the woods, though I be unknown to fame."_
 
-_Geoffrey Chaucer was a 15th century English writer, a pioneering figure in the usage of vernacular English in literature. He is best known for the Canterbury Tales._
+_- Virgil, The Georgics_
 
 Very Immersive Events and Tales (VIET), the sequel to VIET Events Reborn for CK2, is a flavor mod that adds a vast collection of events about everyday life to spice up your game. These events add immersion and a diversity of experiences in between wars and vanilla’s event chains, and cover mundane minutiae ranging from small talk with courtiers and eating local cuisine to epic tales about love, philosophy, and the human condition.
 
@@ -15,7 +14,7 @@ Feel free to use my work in your mods - all I ask is that I am credited and (if 
 
 ## Features
 
-- Over 588 new flavor events to experience!
+- Over 666 new flavor events to experience!
 - Explore new decisions, character interactions, and event chains
 - Game rule to disable sillier events for those who don't like them, with three levels to choose from: Balanced (Default), Serious (Restricted), and All Events (Full)
 - Compatible with almost anything since it doesn't touch any vanilla files - even with overhaul mods, you can via game rule disable events that reference things specific to our medieval world that wouldn’t make sense in other time periods or universes (like fantasy and sci-fi conversion mods)
@@ -33,17 +32,20 @@ DO NOT manually download the master branch unless you know what you're doing as 
 
 NOTE: If you are re-installing a mod, delete the old version of the mod first before copy and pasting the new one! While it's not always necessary, it's a good habit to do to prevent any potential issues.
 
-## Version 1.4.5 Changelog
+## Version 1.4.6 Changelog
 
-- Added 6 new events:
-    - 4 Writing related
-    - 2 Generic*
-- 1 new decision: Learn Shorthand Techniques
-- Germanic pagan characters now get a piety boost from the Friends with Crows modifier, rather than a malus (won’t apply to existing characters with the modifier as it’s technically a new modifier in the code)
-- Added global variable as an alternative way for other mods to detect VIET (for Stik and other modders who prefer that instead of a scripted trigger)
-- Made decision events less somewhat likely to trigger
-- Decision to meet Qi Ma the Liar is now a major decision and will be displayed at the top
-- Changed a few modifiers’ scheme power and/or resistance bonuses from multipliers to additions
-- Changed a few modifiers’ prestige/piety/dread/tax bonuses or maluses from being additive to being multipliers
-- Fixed the Dreamer’s parents causing errors in error log because they were too old
+- Added 78 events with the following themes:
+    - 25 county events
+    - 30 county events from old VIET*
+    - 10 county related decision events
+    - 13 Generic*
+- Added 7 new decisions:
+    - Buy Valuable Medicinal Berries
+    - Employ Renowned Blacksmiths for Armies
+    - Visit a Legendary Burial Mound
+    - Investigate a Ghost Town
+    - Venerate a Mummified Hermit
+    - Relax at a Giant Shade Tree
+    - Examine Ancient Stone Monument
+- Changed pastry icon to a sweetroll
 - Miscellaneous bugfixes

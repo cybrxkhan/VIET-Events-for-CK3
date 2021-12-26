@@ -1,6 +1,6 @@
 [img]http://i.imgur.com/OhIA5bm.jpg[/img]
 
-[h1]Versión actual: 1.4.5 "Chaucer" (Salida 6/12/21, Compatible con versión vanilla 1.4.X)[/h1]
+[h1]Versión actual: 1.4.6 "Heartland" (Salida 25/12/21, Compatible con versión vanilla 1.4.X)[/h1]
 [h1][B][url=https://discord.gg/9KuyXv2uZA]Servidor de Discord de mis Mods[/url][/B][/h1]
 [B]Echa un Vistazo a [url=https://forum.paradoxplaza.com/forum/threads/mod-viet-events-for-ck3-a-flavor-and-immersion-event-mod.1422081/]Tema del Foro[/url] Para Más Información[/B]
 [B]Descarga/Instalación manual [url=https://github.com/cybrxkhan/VIET-Events-for-CK3/releases]en Github[/url][/B]
@@ -23,7 +23,7 @@ Siéntete libre de usar mi trabajo con tus mods - todo lo que pido es reconocimi
 [img]http://i.imgur.com/EyXurbK.jpg[/img]
 
 [LIST]
-[*]¡Más de [B]588 nuevos eventos[/B] para experimentar!
+[*]¡Más de [B]666 nuevos eventos[/B] para experimentar!
 [*]Explora nuevas decisiones, interacciones y cadenas de eventos
 [*]Regla de juego para desactivar los eventos estúpidos para aquellos que no les guste, con tres niveles para escoger entre: Balanceado (Predeterminado), Serio (Restringido), y Todos los eventos (Todo)
 [*][B]Compatible con casi cualquier cosa[/B] ya que no modifico archivos del vanilla - incluso con mods de conversión total puedes desactivar los eventos que hagan referencias a cosas o lugares específicos del mundo medieval que no tendrían sentido en otros periodos o universos (como mods fantásticos o de ciencia ficción)

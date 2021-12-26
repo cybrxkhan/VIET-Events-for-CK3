@@ -1,6 +1,6 @@
 [img]http://i.imgur.com/OhIA5bm.jpg[/img]
 
-[h1]Current Version: 1.4.5 "Chaucher" (Released 12/6/21, Compatible with vanilla patch 1.4.X)[/h1]
+[h1]Current Version: 1.4.6 "Heartland" (Released 12/25/21, Compatible with vanilla patch 1.4.X)[/h1]
 [h1][B][url=https://discord.gg/9KuyXv2uZA]Discord Server for my mods[/url]
 [url=https://cybrxkhansmods.godaddysites.com/]Official Website for my mods[/url][/B][/h1]
 [B][url=https://forum.paradoxplaza.com/forum/threads/mod-viet-events-for-ck3-a-flavor-and-immersion-event-mod.1422081/]Paradox Forum Thread[/url][/B]
@@ -22,7 +22,7 @@ Feel free to use my work in your mods - all I ask is that I am credited and (if 
 [img]http://i.imgur.com/EyXurbK.jpg[/img]
 
 [LIST]
-[*]Over [B]588 new flavor events[/B] to experience!
+[*]Over [B]666 new flavor events[/B] to experience!
 [*]Explore new decisions, character interactions, and event chains
 [*]Game rule to disable sillier events for those who don't like them, with three levels to choose from: Balanced (Default), Serious (Restricted), and All Events (Full)
 [*][B]Compatible with almost anything[/B] since it doesn't touch any vanilla files - even with overhaul mods, you can via game rule disable events that reference things specific to our medieval world that wouldn’t make sense in other time periods or universes (like fantasy and sci-fi conversion mods)
@@ -50,28 +50,31 @@ Thanks!
 
 [img]http://i.imgur.com/RQ5QZTF.jpg[/img]
 
-[h1]Version 1.4.5 "Chaucer"[/h1]
+[h1]Version 1.4.6 "Heartland"[/h1]
 
-[I]“Nowhere so busy a man as he than he, and yet he seemed busier than he was.”
+[I]"Let my delight be the country, and the running streams amid the dells — may I love the waters and the woods, though I be unknown to fame."
 
-- The Canterbury Tales
-
-Geoffrey Chaucer was a 15th century English writer, a pioneering figure in the usage of vernacular English in literature. He is best known for the Canterbury Tales.[/I]
+- Virgil, The Georgics[/I]
 
 [LIST]
-[*]Added 6 new events:
+[*]Added 78 events with the following themes:
 [LIST]
-[*]4 Writing related
-[*]2 Generic
+[*]25 county events
+[*]30 county events from old VIET*
+[*]10 county related decision events
+[*]13 Generic*
 [/LIST]
-[*]1 new decision: Learn Shorthand Techniques
-[*]Germanic pagan characters now get a piety boost from the Friends with Crows modifier, rather than a malus (won’t apply to existing characters with the modifier as it’s technically a new modifier in the code)
-[*]Added global variable as an alternative way for other mods to detect VIET (for Stik and other modders who prefer that instead of a scripted trigger)
-[*]Made decision events less somewhat likely to trigger
-[*]Decision to meet Qi Ma the Liar is now a major decision and will be displayed at the top
-[*]Changed a few modifiers’ scheme power and/or resistance bonuses from multipliers to additions
-[*]Changed a few modifiers’ prestige/piety/dread/tax bonuses or maluses from being additive to being multipliers
-[*]Fixed the Dreamer’s parents causing errors in error log because they were too old
+[*]Added 7 new decisions:
+[LIST]
+[*]Buy Valuable Medicinal Berries
+[*]Employ Renowned Blacksmiths for Armies
+[*]Visit a Legendary Burial Mound
+[*]Investigate a Ghost Town
+[*]Venerate a Mummified Hermit
+[*]Relax at a Giant Shade Tree
+[*]Examine Ancient Stone Monument
+[/LIST]
+[*]Changed pastry icon to a sweetroll
 [*]Miscellaneous bugfixes
 [/LIST]
 

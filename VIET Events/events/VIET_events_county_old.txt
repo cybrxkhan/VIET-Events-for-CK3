@@ -1,0 +1,2353 @@
+﻿############################################################################################################################
+# 
+# 
+# Animations: idle, chancellor, steward, marshal, spymaster, chaplain, anger, rage, disapproval, disbelief, disgust, fear, sadness, shame, shock, worry, boredom, grief, paranoia, dismissal, flirtation, flirtation_left, love, schadenfreude, stress, happiness, ecstasy, admiration, lunatic (?), scheme, beg, pain, newborn, sick, severelywounded, prisonhouse, prisondungeon, war_attacker, war_defender, war_over_tie, war_over_win, war_over_loss, pregnant, personality_honorable, personality_dishonorable, personality_bold, personality_coward, personality_greedy, personality_content, personality_vengeful, personality_forgiving, personality_rational, personality_irrational, personality_compassionate, personality_callous, personality_zealous, personality_cynical
+# 
+# mx_cue_sacredrite = solemn flutes that becomes more orchestral and bigger as it continues
+# mx_cue_epic_sacral_moment = epic stuff, not as epic as 
+# mx_cue_touching_moment = sweeping orchestra
+# mx_cue_positive_effect = triumphant orchestra
+# mx_cue_peace_ensues = deep and calmer horn and brass version of mx_cue_crusade_starts
+# mx_cue_faith_conversion = nice orchestra, a little fantasy like
+# mx_cue_birth = harp and light orchestra theme version
+# mx_cue_seduction = ??? harp and strings??? A little Celtic, and a little bittersweet
+# mx_cue_marriage = low tune of woodwinds and plucked strings that ends somewhat quicklier than the others it seems
+# mx_cue_negative = there is a sad singing wailing woman along with the tragic music - VERY QUICK THOUGH
+# mx_cue_low_key_positive = dance-y kind of tavern theme
+# 
+# 
+# 
+# ##### GRAND LIST OF EVENTS #####
+# 
+# County events adapted from the province events of CK2 VIET
+# 
+# 4000-4029		Generic (Old Stuff)
+# 
+############################################################################################################################
+
+namespace = VIETmisc
+
+##################################################################
+# GENERIC 4000-4029
+##################################################################
+
+# Protective spirit in the land
+VIETmisc.4000 = {
+	type = character_event
+	title = VIETmisc.4000.t
+	desc = VIETmisc.4000.desc
+	theme = faith
+	override_background = { event_background = VIET_background_skyrim_forest }
+	
+	left_portrait = root
+	
+    weight_multiplier = {
+        base = 0
+		modifier = {
+			add = {
+				every_held_title = {
+					limit = { tier = tier_county }
+					add = 1
+				}
+			}		
+		}		
+    }
+	
+	immediate = {
+		random_held_title = {
+			limit = { tier = tier_county }
+			save_scope_as = county
+		}
+		scope:county = {
+			random_list = {
+				10 = {
+					add_county_modifier = {
+						modifier = VIET_benevolent_spirit
+						years = 7
+					}				
+				}
+				10 = {
+					add_county_modifier = {
+						modifier = VIET_benevolent_spirit
+						years = 14
+					}				
+				}
+				10 = {
+					add_county_modifier = {
+						modifier = VIET_benevolent_spirit
+						years = 21
+					}				
+				}
+			}		
+		}	
+	}
+	
+	option = {
+		name = VIETmisc.4000.a
+		stress_impact = {
+			zealous = miniscule_stress_impact_loss
+			trusting = miniscule_stress_impact_loss
+		}
+	}
+}
+
+
+# Monk claiming to be Maitreya, the Buddha at the end times, starts a cult
+VIETmisc.4001 = {
+	type = character_event
+	title = VIETmisc.4001.t
+	desc = VIETmisc.4001.desc
+	theme = faith
+	
+	left_portrait = {
+		character = root
+		animation = worry
+	}
+	
+	trigger = {
+		has_game_rule = VIET_normal_universe_events
+		any_held_title = {
+			tier = tier_county
+			religion = religion:buddhism_religion
+		}	
+	}
+	
+    weight_multiplier = {
+        base = 0
+		modifier = {
+			add = {
+				every_held_title = {
+					limit = { tier = tier_county }
+					add = 1
+				}
+			}		
+		}		
+    }
+	
+	immediate = {
+		random_held_title = {
+			limit = {
+				tier = tier_county
+				religion = religion:buddhism_religion
+			}
+			save_scope_as = county
+		}
+	}
+	
+	option = { # Imprison him and repress the cult
+		name = VIETmisc.4001.a
+		trigger = {
+			OR = {
+				gold >= 25
+				is_ai = no
+			}
+		}
+		remove_short_term_gold = 25
+		scope:county = {
+			add_county_modifier = {
+				modifier = VIET_maitreya_cult_repressed
+				years = 5
+			}		
+		}
+		if = {
+			limit = {
+				has_game_rule = VIET_historical_context_on
+			}
+			custom_tooltip = VIETmisc.4001.info
+		}	
+	}	
+	option = { # Execute him and repress the cult
+		name = VIETmisc.4001.b
+		trigger = {
+			OR = {
+				gold >= 50
+				is_ai = no
+			}
+		}
+		remove_short_term_gold = 50
+		VIET_huge_prestige_gain_effect = yes
+		scope:county = {
+			add_county_modifier = {
+				modifier = VIET_maitreya_cult_repressed
+				years = 10
+			}		
+		}
+		custom_tooltip = VIET_increase_county_modifier_time
+		if = {
+			limit = {
+				has_game_rule = VIET_historical_context_on
+			}
+			custom_tooltip = VIETmisc.4001.info
+		}	
+	}	
+	option = { # Let him go
+		name = VIETmisc.4001.c
+		VIET_huge_piety_loss_effect = yes
+		scope:county = {
+			add_county_modifier = {
+				modifier = VIET_maitreya_cult_unrepressed
+				years = 8
+			}		
+		}
+		stress_impact = {
+			paranoid = miniscule_stress_impact_gain
+			zealous = minor_stress_impact_gain
+			wrathful = miniscule_stress_impact_gain
+			diligent = minor_stress_impact_gain
+		}
+		if = {
+			limit = {
+				has_game_rule = VIET_historical_context_on
+			}
+			custom_tooltip = VIETmisc.4001.info
+		}	
+	}
+}
+
+
+# Blacksmiths renowned in county
+VIETmisc.4002 = {
+	type = character_event
+	title = VIETmisc.4002.t
+	desc = VIETmisc.4002.desc
+	theme = martial
+	override_icon = { reference = "gfx/interface/icons/event_types/type_domain.dds" }
+	
+	left_portrait = root
+	
+    weight_multiplier = {
+        base = 0
+		modifier = {
+			add = {
+				every_held_title = {
+					limit = { tier = tier_county }
+					add = 1
+				}
+			}		
+		}		
+    }
+	
+	immediate = {
+		random_held_title = {
+			limit = { tier = tier_county }
+			save_scope_as = county
+		}
+		scope:county = {
+			random_list = {
+				10 = {
+					add_county_modifier = {
+						modifier = VIET_renowned_blacksmith_region
+						years = 10
+					}				
+				}
+				10 = {
+					add_county_modifier = {
+						modifier = VIET_renowned_blacksmith_region
+						years = 15
+					}				
+				}
+				10 = {
+					add_county_modifier = {
+						modifier = VIET_renowned_blacksmith_region
+						years = 20
+					}				
+				}
+				10 = {
+					add_county_modifier = {
+						modifier = VIET_renowned_blacksmith_region
+						years = 25
+					}				
+				}
+			}		
+		}	
+	}
+	
+	option = { # Ok
+		name = VIETmisc.4002.a
+		custom_tooltip = VIETmisc.4002.tooltip
+	}
+}
+
+
+
+# Rumors of a mad scientist
+VIETmisc.4003 = {
+	type = character_event
+	title = VIETmisc.4003.t
+	desc = VIETmisc.4003.desc
+	theme = realm
+	override_icon = { reference = "gfx/interface/icons/event_types/type_stress.dds" }
+	
+	left_portrait = {
+		character = root
+		animation = personality_rational
+	}
+	
+    weight_multiplier = {
+        base = 0
+		modifier = {
+			add = {
+				every_held_title = {
+					limit = { tier = tier_county }
+					add = 1
+				}
+			}		
+		}		
+    }
+	
+	immediate = {
+		random_held_title = {
+			limit = { tier = tier_county }
+			save_scope_as = county
+		}
+		scope:county = {
+			add_county_modifier = {
+				modifier = VIET_mad_scientist_rumors
+				years = 7
+			}		
+		}	
+	}
+	
+	option = { # Ok
+		name = VIETmisc.4003.a
+		VIET_small_piety_gain_effect = yes
+		stress_impact = {
+			cynical = miniscule_stress_impact_gain
+		}
+	}	
+	option = { # Ok
+		name = VIETmisc.4003.b
+		VIET_small_prestige_gain_effect = yes
+		stress_impact = {
+			trusting = miniscule_stress_impact_gain
+		}
+	}
+}
+
+
+# Population of an entire village mysteriously disappears
+VIETmisc.4004 = {
+	type = character_event
+	title = VIETmisc.4004.t
+	desc = VIETmisc.4004.desc
+	theme = death
+	override_background = { event_background = alley_night }
+	
+	left_portrait = {
+		character = root
+		animation = worry
+	}
+	
+    weight_multiplier = {
+        base = 0
+		modifier = {
+			add = {
+				every_held_title = {
+					limit = { tier = tier_county }
+					add = 1
+				}
+			}		
+		}		
+    }
+	
+	immediate = {
+		random_held_title = {
+			limit = { tier = tier_county }
+			save_scope_as = county
+		}
+		play_music_cue = mx_cue_secret
+		scope:county = {
+			add_county_modifier = {
+				modifier = VIET_disappeared_village
+				years = 8
+			}		
+		}	
+	}
+	
+	option = { # Ok
+		name = VIETmisc.4004.a
+		add_character_modifier = {
+			modifier = VIET_heard_eerie_story
+			days = 365
+		}
+		stress_impact = {
+			paranoid = miniscule_stress_impact_gain
+			craven = miniscule_stress_impact_gain
+		}
+	}
+}
+
+
+# Perfect wedding
+VIETmisc.4005 = {
+	type = character_event
+	title = VIETmisc.4005.t
+	desc = VIETmisc.4005.desc
+	theme = realm
+	override_icon = { reference = "gfx/interface/icons/event_types/type_love.dds" } 
+	
+	left_portrait = root
+	
+    weight_multiplier = {
+        base = 0
+		modifier = {
+			add = {
+				every_held_title = {
+					limit = { tier = tier_county }
+					add = 1
+				}
+			}		
+		}		
+    }
+	
+	immediate = {
+		random_held_title = {
+			limit = { tier = tier_county }
+			save_scope_as = county
+		}
+		play_music_cue = mx_cue_marriage 
+		scope:county = {
+			add_county_modifier = {
+				modifier = VIET_perfectly_arranged_marriage
+				years = 5
+			}		
+		}	
+	}
+	
+	option = { # Ok
+		name = VIETmisc.4005.a
+	}	
+	option = { # send them a present
+		name = VIETmisc.4005.b		
+		trigger = {
+			OR = {
+				gold >= 15
+				is_ai = no
+			}
+		}
+		remove_short_term_gold = 15
+		VIET_large_prestige_gain_effect = yes
+		stress_impact = {
+			generous = minor_stress_impact_loss
+			greedy = minor_stress_impact_gain
+		}
+	}
+}
+
+
+
+# Ghosts keep visiting a settlement and marching through it
+VIETmisc.4006 = {
+	type = character_event
+	title = VIETmisc.4006.t
+	desc = VIETmisc.4006.desc
+	theme = death
+	override_background = { event_background = alley_night }
+	
+	left_portrait = {
+		character = root
+		animation = worry
+	}
+	
+    weight_multiplier = {
+        base = 0
+		modifier = {
+			add = {
+				every_held_title = {
+					limit = { tier = tier_county }
+					add = 1
+				}
+			}		
+		}		
+    }
+	
+	immediate = {
+		random_held_title = {
+			limit = { tier = tier_county }
+			save_scope_as = county
+		}
+		play_music_cue = mx_cue_secret
+		scope:county = {
+			random_list = {
+				10 = {
+					add_county_modifier = {
+						modifier = VIET_spirit_towns
+						years = 4
+					}				
+				}
+				10 = {
+					add_county_modifier = {
+						modifier = VIET_spirit_towns
+						years = 6
+					}				
+				}
+				10 = {
+					add_county_modifier = {
+						modifier = VIET_spirit_towns
+						years = 8
+					}				
+				}
+				10 = {
+					add_county_modifier = {
+						modifier = VIET_spirit_towns
+						years = 10
+					}				
+				}
+				10 = {
+					add_county_modifier = {
+						modifier = VIET_spirit_towns
+						years = 12
+					}				
+				}
+			}		
+		}	
+	}
+	
+	option = { # Ok
+		name = VIETmisc.4006.a
+		add_character_modifier = {
+			modifier = VIET_heard_eerie_story
+			days = 365
+		}
+		custom_tooltip = VIETmisc.4006.tooltip
+	}
+}
+
+
+
+# Respected elder passes away
+VIETmisc.4007 = {
+	type = character_event
+	title = VIETmisc.4007.t
+	desc = VIETmisc.4007.desc
+	theme = death
+	override_background = { event_background = throne_room }
+	
+	right_portrait = root
+	
+    weight_multiplier = {
+        base = 0
+		modifier = {
+			add = {
+				every_held_title = {
+					limit = { tier = tier_county }
+					add = 1
+				}
+			}		
+		}		
+    }
+	
+	immediate = {
+		random_held_title = {
+			limit = { tier = tier_county }
+			save_scope_as = county
+		}
+		scope:county = {
+			random_list = {
+				10 = {
+					add_county_modifier = {
+						modifier = VIET_respected_elder_death_grandfather
+						years = 4
+					}				
+				}
+				10 = {
+					add_county_modifier = {
+						modifier = VIET_respected_elder_death_grandfather
+						years = 6
+					}				
+				}
+				10 = {
+					add_county_modifier = {
+						modifier = VIET_respected_elder_death_grandfather
+						years = 8
+					}				
+				}
+				10 = {
+					add_county_modifier = {
+						modifier = VIET_respected_elder_death_grandfather
+						years = 10
+					}				
+				}
+			}	
+		}	
+	}
+	
+	option = { # Ok
+		name = VIETmisc.4007.a
+	}
+}
+
+
+
+# Beloved grandmother passes away
+VIETmisc.4008 = {
+	type = character_event
+	title = VIETmisc.4008.t
+	desc = VIETmisc.4008.desc
+	theme = death
+	override_background = { event_background = throne_room }
+	
+	right_portrait = root
+	
+    weight_multiplier = {
+        base = 0
+		modifier = {
+			add = {
+				every_held_title = {
+					limit = { tier = tier_county }
+					add = 1
+				}
+			}		
+		}		
+    }
+	
+	immediate = {
+		random_held_title = {
+			limit = { tier = tier_county }
+			save_scope_as = county
+		}
+		scope:county = {
+			random_list = {
+				10 = {
+					add_county_modifier = {
+						modifier = VIET_respected_elder_death_grandmother
+						years = 4
+					}				
+				}
+				10 = {
+					add_county_modifier = {
+						modifier = VIET_respected_elder_death_grandmother
+						years = 6
+					}				
+				}
+				10 = {
+					add_county_modifier = {
+						modifier = VIET_respected_elder_death_grandmother
+						years = 8
+					}				
+				}
+				10 = {
+					add_county_modifier = {
+						modifier = VIET_respected_elder_death_grandmother
+						years = 10
+					}				
+				}
+			}	
+		}	
+	}
+	
+	option = { # Ok
+		name = VIETmisc.4008.a
+	}
+}
+
+
+# Locals witness literal ghost towns - ghosts doing daily business
+VIETmisc.4009 = {
+	type = character_event
+	title = VIETmisc.4009.t
+	desc = VIETmisc.4009.desc
+	theme = death
+	override_background = { event_background = alley_night }
+	
+	left_portrait = {
+		character = root
+		animation = worry
+	}
+	
+    weight_multiplier = {
+        base = 0
+		modifier = {
+			add = {
+				every_held_title = {
+					limit = { tier = tier_county }
+					add = 1
+				}
+			}		
+		}		
+    }
+	
+	immediate = {
+		random_held_title = {
+			limit = { tier = tier_county }
+			save_scope_as = county
+		}
+		play_music_cue = mx_cue_secret
+		scope:county = {
+			random_list = {
+				10 = {
+					add_county_modifier = {
+						modifier = VIET_spirit_towns
+						years = 4
+					}				
+				}
+				10 = {
+					add_county_modifier = {
+						modifier = VIET_spirit_towns
+						years = 6
+					}				
+				}
+				10 = {
+					add_county_modifier = {
+						modifier = VIET_spirit_towns
+						years = 8
+					}				
+				}
+				10 = {
+					add_county_modifier = {
+						modifier = VIET_spirit_towns
+						years = 10
+					}				
+				}
+				10 = {
+					add_county_modifier = {
+						modifier = VIET_spirit_towns
+						years = 12
+					}				
+				}
+			}		
+		}	
+	}
+	
+	option = { # Ok
+		name = VIETmisc.4009.a
+		VIET_small_prestige_gain_effect = yes
+		add_character_modifier = {
+			modifier = VIET_heard_eerie_story
+			days = 365
+		}
+		stress_impact = {
+			cynical = miniscule_stress_impact_gain
+		}
+		custom_tooltip = VIETmisc.4006.tooltip
+	}	
+	option = { # Ok
+		name = VIETmisc.4009.b
+		VIET_small_piety_gain_effect = yes
+		add_character_modifier = {
+			modifier = VIET_heard_eerie_story
+			days = 365
+		}
+		stress_impact = {
+			trusting = miniscule_stress_impact_gain
+		}
+		custom_tooltip = VIETmisc.4006.tooltip
+	}
+}
+
+
+# Serial killer is caught and killed by cunning guards
+VIETmisc.4010 = {
+	type = character_event
+	title = VIETmisc.4010.t
+	desc = VIETmisc.4010.desc
+	theme = skull
+	override_background = { event_background = alley_night }
+	
+	left_portrait = {
+		character = root
+		animation = disgust
+	}
+	
+    weight_multiplier = {
+        base = 0
+		modifier = {
+			add = {
+				every_held_title = {
+					limit = { tier = tier_county }
+					add = 1
+				}
+			}		
+		}		
+    }
+	
+	immediate = {
+		random_held_title = {
+			limit = { tier = tier_county }
+			save_scope_as = county
+		}
+		play_music_cue = mx_cue_murder
+		scope:county = {
+			add_county_modifier = {
+				modifier = VIET_serial_killer_found
+				years = 5
+			}			
+		}	
+	}
+	
+	option = { # Ok
+		name = VIETmisc.4010.a
+	}	
+	option = { # Reward the guards
+		name = VIETmisc.4010.b
+		trigger = {
+			OR = {
+				gold >= 30
+				is_ai = no
+			}
+		}
+		remove_short_term_gold = 30
+		VIET_huge_prestige_gain_effect = yes
+		stress_impact = {
+			greedy = minor_stress_impact_gain
+			arrogant = miniscule_stress_impact_gain
+			callous = miniscule_stress_impact_gain
+		}
+	}
+}
+
+
+# Several local officials coincidentally die around the same time (it really is a coincidence)
+VIETmisc.4011 = {
+	type = character_event
+	title = VIETmisc.4011.t
+	desc = VIETmisc.4011.desc
+	theme = realm
+	
+	left_portrait = {
+		character = root
+		animation = worry
+	}
+	
+    weight_multiplier = {
+        base = 0
+		modifier = {
+			add = {
+				every_held_title = {
+					limit = { tier = tier_county }
+					add = 1
+				}
+			}		
+		}		
+    }
+	
+	immediate = {
+		random_held_title = {
+			limit = { tier = tier_county }
+			save_scope_as = county
+		}
+	}
+	
+	option = { # Ok
+		name = VIETmisc.4011.a
+		scope:county = {
+			add_county_modifier = {
+				modifier = VIET_death_of_several_officials
+				years = 10
+			}			
+		}
+	}	
+	option = { # Reward the guards
+		name = VIETmisc.4011.b
+		trigger = {
+			stewardship >= decent_skill_rating
+		}
+		skill = stewardship
+		VIET_huge_prestige_loss_effect = yes
+		scope:county = {
+			add_county_modifier = {
+				modifier = VIET_death_of_several_officials
+				years = 5
+			}			
+		}
+		custom_tooltip = VIET_decrease_county_modifier_time
+	}
+}
+
+# Secretly corrupt official passes away
+VIETmisc.4012 = {
+	type = character_event
+	title = VIETmisc.4012.t
+	desc = VIETmisc.4012.desc
+	theme = corruption
+	
+	right_portrait = {
+		character = root
+		animation = disapproval
+	}
+	
+    weight_multiplier = {
+        base = 0
+		modifier = {
+			add = {
+				every_held_title = {
+					limit = { tier = tier_county }
+					add = 1
+				}
+			}		
+		}		
+    }
+	
+	immediate = {
+		random_held_title = {
+			limit = { tier = tier_county }
+			save_scope_as = county
+		}
+	}
+
+	
+	option = { # Ok
+		name = VIETmisc.4012.a
+		VIET_huge_prestige_loss_effect = yes
+		scope:county = {
+			add_county_modifier = {
+				modifier = VIET_secretly_corrupt_official
+				years = 7
+			}			
+		}
+	}
+}
+
+
+# Buddhist/Tibetan Hermit passes away, yet body does not decay
+VIETmisc.4013 = {
+	type = character_event
+	title = VIETmisc.4013.t
+	desc = VIETmisc.4013.desc
+	theme = faith
+	override_background = { event_background = VIET_background_skyrim_forest }
+	
+	right_portrait = root
+	
+	trigger = {
+		has_game_rule = VIET_normal_universe_events
+		any_held_title = {
+			tier = tier_county
+			OR = {
+				religion = religion:buddhism_religion
+				religion = religion:bon_religion		
+			}
+		}	
+	}
+	
+    weight_multiplier = {
+        base = 0
+		modifier = {
+			add = {
+				every_held_title = {
+					limit = { tier = tier_county }
+					add = 1
+				}
+			}		
+		}		
+    }
+	
+	immediate = {
+		random_held_title = {
+			limit = {
+				tier = tier_county
+				OR = {
+					religion = religion:buddhism_religion
+					religion = religion:bon_religion		
+				}
+			}	
+			save_scope_as = county
+		}
+		play_music_cue = mx_cue_sacredrite
+		scope:county = {
+			random_list = {
+				10 = {
+					add_county_modifier = {
+						modifier = VIET_holy_hermit_passes_away
+						years = 6
+					}				
+				}
+				10 = {
+					add_county_modifier = {
+						modifier = VIET_holy_hermit_passes_away
+						years = 9
+					}				
+				}
+				10 = {
+					add_county_modifier = {
+						modifier = VIET_holy_hermit_passes_away
+						years = 12
+					}				
+				}
+				10 = {
+					add_county_modifier = {
+						modifier = VIET_holy_hermit_passes_away
+						years = 15
+					}				
+				}
+			}		
+		}
+	}
+	
+	option = { # Ok
+		name = VIETmisc.4013.a
+		custom_tooltip = VIETmisc.4013.tooltip
+	}
+}
+
+
+
+# Stone slab discovered
+VIETmisc.4014 = {
+	type = character_event
+	title = VIETmisc.4014.t
+	desc = VIETmisc.4014.desc
+	theme = VIET_theme_ancient_cairn
+	
+	right_portrait = root
+	
+    weight_multiplier = {
+        base = 0
+		modifier = {
+			add = {
+				every_held_title = {
+					limit = { tier = tier_county }
+					add = 1
+				}
+			}		
+		}		
+    }
+	
+	immediate = {
+		random_held_title = {
+			limit = {
+				tier = tier_county
+			}	
+			save_scope_as = county
+		}
+		scope:county = {
+			random_list = {
+				10 = {
+					add_county_modifier = {
+						modifier = VIET_stone_slab_found
+						years = 6
+					}				
+				}
+				10 = {
+					add_county_modifier = {
+						modifier = VIET_stone_slab_found
+						years = 9
+					}				
+				}
+				10 = {
+					add_county_modifier = {
+						modifier = VIET_stone_slab_found
+						years = 12
+					}				
+				}
+				10 = {
+					add_county_modifier = {
+						modifier = VIET_stone_slab_found
+						years = 15
+					}				
+				}
+			}		
+		}
+	}
+	
+	option = { # Ok
+		name = VIETmisc.4014.a
+	}
+}
+
+# Araragi-kun and Shinobu are in town
+VIETmisc.4015 = {
+	type = character_event
+	title = VIETmisc.4015.t
+	desc = VIETmisc.4015.desc
+	theme = death
+	override_background = { event_background = throne_room }
+	
+	left_portrait = {
+		character = root
+		animation = worry
+	}
+	
+    weight_multiplier = {
+        base = 0
+		modifier = {
+			add = {
+				every_held_title = {
+					limit = { tier = tier_county }
+					add = 1
+				}
+			}		
+		}		
+    }
+	
+	immediate = {
+		random_held_title = {
+			limit = {
+				tier = tier_county
+			}	
+			save_scope_as = county
+		}
+		scope:county = {
+			random_list = {
+				10 = {
+					add_county_modifier = {
+						modifier = VIET_araragi_vampire
+						years = 4
+					}				
+				}
+				10 = {
+					add_county_modifier = {
+						modifier = VIET_araragi_vampire
+						years = 6
+					}				
+				}
+				10 = {
+					add_county_modifier = {
+						modifier = VIET_araragi_vampire
+						years = 8
+					}				
+				}
+			}		
+		}
+	}
+	
+	option = { # Tell me more
+		name = VIETmisc.4015.a
+		add_character_modifier = {
+			modifier = VIET_heard_fantasy_stories
+			years = 3
+		}
+	}	
+	option = { # Skeptical
+		name = VIETmisc.4015.b
+		add_character_modifier = {
+			modifier = VIET_skeptical_about_fantasy_stories
+			years = 3
+		}
+	}	
+	option = { # Zealous
+		name = VIETmisc.4015.c
+		trigger = {
+			religion = { is_in_family = rf_abrahamic }
+			faith = {
+				NOT = { has_doctrine = tenet_unreformed_syncretism }
+			}
+		}
+		VIET_huge_piety_gain_effect = yes
+	}
+}
+
+# Bridge in county collapsed
+VIETmisc.4016 = {
+	type = character_event
+	title = VIETmisc.4016.t
+	desc = VIETmisc.4016.desc
+	theme = VIET_theme_skyrim_forest
+	
+	left_portrait = {
+		character = root
+		animation = worry
+	}
+	
+    weight_multiplier = {
+        base = 0
+		modifier = {
+			add = {
+				every_held_title = {
+					limit = { tier = tier_county }
+					add = 1
+				}
+			}		
+		}		
+    }
+	
+	immediate = {
+		random_held_title = {
+			limit = {
+				tier = tier_county
+			}	
+			save_scope_as = county
+		}
+		play_music_cue = mx_cue_stress 
+	}
+	
+	option = { # Emergency resources
+		name = VIETmisc.4016.a
+		trigger = {
+			OR = {
+				gold >= 100
+				is_ai = no
+			}
+		}
+		remove_short_term_gold = 100
+		VIET_huge_prestige_gain_effect = yes
+		scope:county = {
+			add_county_modifier = {
+				modifier = VIET_bridge_collapse
+				years = 2
+			}		
+		}
+		custom_tooltip = VIETmisc.4016.a.tooltip
+	}	
+	option = { # Send help
+		name = VIETmisc.4016.b
+		trigger = {
+			OR = {
+				gold >= 50
+				is_ai = no
+			}
+		}
+		remove_short_term_gold = 50
+		VIET_medium_prestige_gain_effect = yes
+		scope:county = {
+			add_county_modifier = {
+				modifier = VIET_bridge_collapse
+				years = 5
+			}		
+		}
+		custom_tooltip = VIETmisc.4016.b.tooltip
+	}	
+	option = { # No help
+		name = VIETmisc.4016.c
+		custom_tooltip = VIETmisc.4016.c.tooltip
+		scope:county = {
+			add_county_modifier = {
+				modifier = VIET_bridge_collapse
+				years = 10
+			}		
+		}
+		stress_impact = {
+			diligent = medium_stress_impact_gain
+			ambitious = minor_stress_impact_gain
+			just = minor_stress_impact_gain
+		}	
+	}
+}
+
+
+# Mysterious Colors in the Sky
+VIETmisc.4017 = {
+	type = character_event
+	title = VIETmisc.4017.t
+	desc = VIETmisc.4017.desc
+	theme = realm
+	
+	left_portrait = {
+		character = root
+		animation = personality_irrational
+	}
+	
+    weight_multiplier = {
+        base = 0
+		modifier = {
+			add = {
+				every_held_title = {
+					limit = { tier = tier_county }
+					add = 1
+				}
+			}		
+		}		
+    }
+	
+	immediate = {
+		random_held_title = {
+			limit = {
+				tier = tier_county
+			}	
+			save_scope_as = county
+		}
+		scope:county = {
+			random_list = {
+				10 = {
+					add_county_modifier = {
+						modifier = VIET_mysterious_colors
+						years = 2
+					}				
+				}
+				10 = {
+					add_county_modifier = {
+						modifier = VIET_mysterious_colors
+						years = 4
+					}				
+				}
+				10 = {
+					add_county_modifier = {
+						modifier = VIET_mysterious_colors
+						years = 6
+					}				
+				}
+				10 = {
+					add_county_modifier = {
+						modifier = VIET_mysterious_colors
+						years = 8
+					}				
+				}
+			}		
+		}
+	}
+	
+	option = { # Ok
+		name = VIETmisc.4017.a
+	}
+}
+
+
+# Famous Bard refuses to play for the rich
+VIETmisc.4018 = {
+	type = character_event
+	title = VIETmisc.4018.t
+	desc = VIETmisc.4018.desc
+	theme = feast_activity
+	
+	left_portrait = {
+		character = root
+		animation = personality_cynical
+	}
+	
+    weight_multiplier = {
+        base = 0
+		modifier = {
+			add = {
+				every_held_title = {
+					limit = { tier = tier_county }
+					add = 1
+				}
+			}		
+		}		
+    }
+	
+	immediate = {
+		random_held_title = {
+			limit = {
+				tier = tier_county
+			}	
+			save_scope_as = county
+		}
+		scope:county = {
+			random_list = {
+				10 = {
+					add_county_modifier = {
+						modifier = VIET_famous_bard
+						years = 12
+					}				
+				}
+				10 = {
+					add_county_modifier = {
+						modifier = VIET_famous_bard
+						years = 16
+					}				
+				}
+				10 = {
+					add_county_modifier = {
+						modifier = VIET_famous_bard
+						years = 20
+					}				
+				}
+				10 = {
+					add_county_modifier = {
+						modifier = VIET_famous_bard
+						years = 24
+					}				
+				}
+			}		
+		}
+	}
+	
+	option = { # Arrest
+		name = VIETmisc.4018.a
+		VIET_huge_prestige_gain_effect = yes
+		add_dread = 10		
+		scope:county = {
+			remove_county_modifier = VIET_famous_bard	
+		}	
+		add_character_modifier = {
+			modifier = VIET_famous_bard_arrested
+			years = 8
+		}
+		stress_impact = {
+			just = medium_stress_impact_gain
+			humble = miniscule_stress_impact_gain
+			patient = miniscule_stress_impact_gain
+			calm = miniscule_stress_impact_gain
+			compassionate = miniscule_stress_impact_gain
+		}
+	}	
+	option = { # So be it
+		name = VIETmisc.4018.b
+		stress_impact = {
+			arrogant = miniscule_stress_impact_gain
+			wrathful = miniscule_stress_impact_gain
+			impatient = miniscule_stress_impact_gain
+			callous = miniscule_stress_impact_gain
+			arbitrary = miniscule_stress_impact_gain
+		}
+	}
+	option = { # I can understand his reasons
+		name = VIETmisc.4018.c
+		VIET_medium_piety_gain_effect = yes
+		VIET_medium_prestige_loss_effect = yes
+		stress_impact = {
+			arrogant = miniscule_stress_impact_gain
+			wrathful = miniscule_stress_impact_gain
+			impatient = miniscule_stress_impact_gain
+			callous = miniscule_stress_impact_gain
+			arbitrary = miniscule_stress_impact_gain
+		}
+	}
+}
+
+
+# Spoopy ship in the skies
+VIETmisc.4019 = {
+	type = character_event
+	title = VIETmisc.4019.t
+	desc = VIETmisc.4019.desc
+	theme = realm
+	
+	right_portrait = {
+		character = root
+		animation = paranoia
+	}
+	
+	trigger = {
+		any_held_title = {
+			tier = tier_county
+			is_coastal_county = yes
+		}	
+	}
+	
+    weight_multiplier = {
+        base = 0
+		modifier = {
+			add = {
+				every_held_title = {
+					limit = { tier = tier_county }
+					add = 1
+				}
+			}		
+		}		
+    }
+	
+	immediate = {
+		random_held_title = {
+			limit = {
+				tier = tier_county
+				is_coastal_county = yes
+			}	
+			save_scope_as = county
+		}
+		play_music_cue = mx_cue_secret 
+		scope:county = {
+			random_list = {
+				10 = {
+					add_county_modifier = {
+						modifier = VIET_haunted_ship
+						years = 2
+					}				
+				}
+				10 = {
+					add_county_modifier = {
+						modifier = VIET_haunted_ship
+						years = 4
+					}				
+				}
+				10 = {
+					add_county_modifier = {
+						modifier = VIET_haunted_ship
+						years = 6
+					}				
+				}
+				10 = {
+					add_county_modifier = {
+						modifier = VIET_haunted_ship
+						years = 8
+					}				
+				}
+			}		
+		}
+	}
+	
+	option = { # ok
+		name = VIETmisc.4019.a
+	}
+}
+
+
+
+# Neolithic ancient stone monument found
+VIETmisc.4020 = {
+	type = character_event
+	title = VIETmisc.4020.t
+	desc = VIETmisc.4020.desc
+	theme = VIET_theme_ancient_cairn
+	
+	right_portrait = root
+	
+    weight_multiplier = {
+        base = 0
+		modifier = {
+			add = {
+				every_held_title = {
+					limit = { tier = tier_county }
+					add = 1
+				}
+			}		
+		}		
+    }
+	
+	immediate = {
+		random_held_title = {
+			limit = {
+				tier = tier_county
+			}	
+			save_scope_as = county
+		}
+		scope:county = {
+			random_list = {
+				10 = {
+					add_county_modifier = {
+						modifier = VIET_flat_stone_monument
+						years = 8
+					}				
+				}
+				10 = {
+					add_county_modifier = {
+						modifier = VIET_flat_stone_monument
+						years = 10
+					}				
+				}
+				10 = {
+					add_county_modifier = {
+						modifier = VIET_flat_stone_monument
+						years = 12
+					}				
+				}
+				10 = {
+					add_county_modifier = {
+						modifier = VIET_flat_stone_monument
+						years = 14
+					}				
+				}
+				10 = {
+					add_county_modifier = {
+						modifier = VIET_flat_stone_monument
+						years = 16
+					}				
+				}
+			}		
+		}
+	}
+	
+	option = { # ok
+		name = VIETmisc.4020.a
+		custom_tooltip = VIETmisc.4020.tooltip
+	}
+}
+
+
+
+
+# Sandstorm strikes a county
+VIETmisc.4021 = {
+	type = character_event
+	title = VIETmisc.4021.t
+	desc = VIETmisc.4021.desc
+	theme = death
+	override_background = { event_background = VIET_background_skyrim_forest }
+	
+	right_portrait = root
+	
+	trigger = {
+		any_held_title = {
+			tier = tier_county
+			any_county_province = {
+				OR = {
+					terrain = desert
+					terrain = desert_mountains
+				}			
+			}
+		}	
+	}
+	
+    weight_multiplier = {
+        base = 0
+		modifier = {
+			add = {
+				every_held_title = {
+					limit = { tier = tier_county }
+					add = 1
+				}
+			}		
+		}		
+    }
+	
+	immediate = {
+		random_held_title = {
+			limit = {
+				tier = tier_county
+				any_county_province = {
+					OR = {
+						terrain = desert
+						terrain = desert_mountains
+					}			
+				}
+			}	
+			save_scope_as = county
+		}
+		play_music_cue = mx_cue_stress 
+	}
+	
+	option = { # don't help
+		name = VIETmisc.4024.a
+		scope:county = {
+			add_county_modifier = {
+				modifier = VIET_recent_sandstorm
+				years = 5
+			}		
+		}
+		add_character_modifier = {
+			modifier = VIET_sandstorm_not_disaster_relief
+			years = 5
+		}
+		stress_impact = {
+			just = minor_stress_impact_gain
+			compassionate = minor_stress_impact_gain
+			generous = minor_stress_impact_gain
+			diligent = miniscule_stress_impact_gain
+		}
+	}	
+	option = { # help
+		name = VIETmisc.4024.b
+		trigger = {
+			OR = {
+				gold >= 35
+				is_ai = no
+			}
+		}
+		remove_short_term_gold = 35
+		scope:county = {
+			add_county_modifier = {
+				modifier = VIET_recent_sandstorm
+				years = 2
+			}		
+		}
+		if = {
+			limit = {
+				faith = {
+					OR = {
+						trait_is_virtue = compassionate
+						trait_is_virtue = generous
+						trait_is_virtue = just
+					}
+				}
+			}
+			VIET_massive_piety_gain_effect = yes
+		}
+		else = {
+			VIET_huge_piety_gain_effect = yes
+		}
+		add_character_modifier = {
+			modifier = VIET_sandstorm_disaster_relief
+			years = 5
+		}
+		stress_impact = {
+			arbitrary = miniscule_stress_impact_gain
+			sadistic = miniscule_stress_impact_gain
+			callous = minor_stress_impact_gain
+			greedy = minor_stress_impact_gain
+		}
+		custom_tooltip = VIET_decrease_county_modifier_time
+	}
+}
+
+
+
+# The forlorn watchman (friendly beach ghost)
+VIETmisc.4022 = {
+	type = character_event
+	title = VIETmisc.4022.t
+	desc = VIETmisc.4022.desc
+	theme = death
+	override_background = { event_background = corridor_night }
+	
+	right_portrait = {
+		character = root
+		animation = personality_rational
+	}
+	
+	trigger = {
+		any_held_title = {
+			tier = tier_county
+			is_coastal_county = yes
+		}	
+	}
+	
+    weight_multiplier = {
+        base = 0
+		modifier = {
+			add = {
+				every_held_title = {
+					limit = { tier = tier_county }
+					add = 1
+				}
+			}		
+		}		
+    }
+	
+	immediate = {
+		random_held_title = {
+			limit = {
+				tier = tier_county
+				is_coastal_county = yes
+			}	
+			save_scope_as = county
+		}
+		play_music_cue = mx_cue_secret 
+		scope:county = {
+			random_list = {
+				10 = {
+					add_county_modifier = {
+						modifier = VIET_forlorn_watchman
+						years = 6
+					}				
+				}
+				10 = {
+					add_county_modifier = {
+						modifier = VIET_forlorn_watchman
+						years = 9
+					}				
+				}
+				10 = {
+					add_county_modifier = {
+						modifier = VIET_forlorn_watchman
+						years = 12
+					}				
+				}
+				10 = {
+					add_county_modifier = {
+						modifier = VIET_forlorn_watchman
+						years = 15
+					}				
+				}
+			}		
+		}
+	}
+	
+	option = { # ok
+		name = VIETmisc.4022.a
+		add_character_modifier = {
+			modifier = VIET_heard_eerie_story
+			days = 365
+		}
+	}
+}
+
+
+# Pistachios from a county become popular
+VIETmisc.4023 = {
+	type = character_event
+	title = VIETmisc.4023.t
+	desc = VIETmisc.4023.desc
+	theme = VIET_theme_tuscan_country
+	
+	left_portrait = {
+		character = root
+		animation = happiness
+	}
+	
+	trigger = {
+		any_held_title = {
+			tier = tier_county
+			any_county_province = {
+				OR = {
+					geographical_region = world_africa_north
+					geographical_region = world_middle_east
+					geographical_region = world_middle_east_persia
+					geographical_region = world_asia_minor
+					geographical_region = world_europe_south
+					geographical_region = world_europe_west_iberia
+					geographical_region = world_steppe_tarim
+				}		
+			}
+		}	
+	}
+	
+    weight_multiplier = {
+        base = 0
+		modifier = {
+			add = {
+				every_held_title = {
+					limit = { tier = tier_county }
+					add = 1
+				}
+			}		
+		}		
+    }
+	
+	immediate = {
+		random_held_title = {
+			limit = {
+				tier = tier_county
+				any_county_province = {
+					OR = {
+						geographical_region = world_africa_north
+						geographical_region = world_middle_east
+						geographical_region = world_middle_east_persia
+						geographical_region = world_asia_minor
+						geographical_region = world_europe_south
+						geographical_region = world_europe_west_iberia
+						geographical_region = world_steppe_tarim
+					}		
+				}
+			}	
+			save_scope_as = county
+		}
+		scope:county = {
+			random_list = {
+				10 = {
+					add_county_modifier = {
+						modifier = VIET_pistachio_land
+						years = 6
+					}				
+				}
+				10 = {
+					add_county_modifier = {
+						modifier = VIET_pistachio_land
+						years = 9
+					}				
+				}
+				10 = {
+					add_county_modifier = {
+						modifier = VIET_pistachio_land
+						years = 12
+					}				
+				}
+				10 = {
+					add_county_modifier = {
+						modifier = VIET_pistachio_land
+						years = 15
+					}				
+				}
+				10 = {
+					add_county_modifier = {
+						modifier = VIET_pistachio_land
+						years = 18
+					}				
+				}
+			}		
+		}
+	}
+	
+	option = { # ok
+		name = VIETmisc.4023.a
+	}
+}
+
+
+
+
+# Landslide happens in a county
+VIETmisc.4024 = {
+	type = character_event
+	title = VIETmisc.4024.t
+	desc = VIETmisc.4024.desc
+	theme = death
+	override_background = { event_background = VIET_background_tuscan_country }
+	
+	right_portrait = root
+	
+    weight_multiplier = {
+        base = 0
+		modifier = {
+			add = {
+				every_held_title = {
+					limit = { tier = tier_county }
+					add = 1
+				}
+			}		
+		}		
+    }
+	
+	immediate = {
+		random_held_title = {
+			limit = {
+				tier = tier_county
+			}	
+			save_scope_as = county
+		}
+		play_music_cue = mx_cue_stress
+	}
+	
+	option = { # don't help
+		name = VIETmisc.4024.a
+		scope:county = {
+			add_county_modifier = {
+				modifier = VIET_recent_landslide
+				years = 5
+			}		
+		}
+		add_character_modifier = {
+			modifier = VIET_landslide_not_disaster_relief
+			years = 5
+		}
+		stress_impact = {
+			just = minor_stress_impact_gain
+			compassionate = minor_stress_impact_gain
+			generous = minor_stress_impact_gain
+			diligent = miniscule_stress_impact_gain
+		}
+	}	
+	option = { # help
+		name = VIETmisc.4024.b
+		trigger = {
+			OR = {
+				gold >= 35
+				is_ai = no
+			}
+		}
+		remove_short_term_gold = 35
+		scope:county = {
+			add_county_modifier = {
+				modifier = VIET_recent_landslide
+				years = 2
+			}		
+		}
+		if = {
+			limit = {
+				faith = {
+					OR = {
+						trait_is_virtue = compassionate
+						trait_is_virtue = generous
+						trait_is_virtue = just
+					}
+				}
+			}
+			VIET_massive_piety_gain_effect = yes
+		}
+		else = {
+			VIET_huge_piety_gain_effect = yes
+		}
+		add_character_modifier = {
+			modifier = VIET_landslide_disaster_relief
+			years = 5
+		}
+		stress_impact = {
+			arbitrary = miniscule_stress_impact_gain
+			sadistic = miniscule_stress_impact_gain
+			callous = minor_stress_impact_gain
+			greedy = minor_stress_impact_gain
+		}
+		custom_tooltip = VIET_decrease_county_modifier_time
+	}
+}
+
+
+# Strong lads gain fame and win honor for community
+VIETmisc.4025 = {
+	type = character_event
+	title = VIETmisc.4025.t
+	desc = VIETmisc.4025.desc
+	theme = martial_strategy_focus
+	
+	left_portrait = {
+		character = root
+		animation = personality_bold
+	}
+	
+    weight_multiplier = {
+        base = 0
+		modifier = {
+			add = {
+				every_held_title = {
+					limit = { tier = tier_county }
+					add = 1
+				}
+			}		
+		}		
+    }
+	
+	immediate = {
+		random_held_title = {
+			limit = {
+				tier = tier_county
+			}	
+			save_scope_as = county
+		} 
+		scope:county = {
+			random_list = {
+				10 = {
+					add_county_modifier = {
+						modifier = VIET_strong_lads
+						years = 6
+					}				
+				}
+				10 = {
+					add_county_modifier = {
+						modifier = VIET_strong_lads
+						years = 9
+					}				
+				}
+				10 = {
+					add_county_modifier = {
+						modifier = VIET_strong_lads
+						years = 12
+					}				
+				}
+				10 = {
+					add_county_modifier = {
+						modifier = VIET_strong_lads
+						years = 15
+					}				
+				}
+			}		
+		}
+	}
+	
+	option = { # ok
+		name = VIETmisc.4025.a
+		VIET_huge_prestige_gain_effect = yes
+	}
+}
+
+
+
+# A village tree provides shade
+VIETmisc.4026 = {
+	type = character_event
+	title = VIETmisc.4026.t
+	desc = VIETmisc.4026.desc
+	theme = VIET_theme_small_town
+	
+	left_portrait = root
+	right_portrait = {
+		character = scope:tree_lover
+		animation = personality_content
+	}
+	
+	trigger = {
+		any_courtier = {
+			is_available_ai_adult = yes
+		}
+	}
+	
+    weight_multiplier = {
+        base = 0
+		modifier = {
+			add = {
+				every_held_title = {
+					limit = { tier = tier_county }
+					add = 1
+				}
+			}		
+		}		
+    }
+	
+	immediate = {
+		random_held_title = {
+			limit = {
+				tier = tier_county
+			}	
+			save_scope_as = county
+		}
+		random_courtier = {
+			limit = {
+				is_available_ai_adult = yes
+			}
+			save_scope_as = tree_lover
+		}
+	}
+	
+	option = { # ok
+		name = VIETmisc.4026.a
+		trigger = {
+			OR = {
+				gold >= 30
+				is_ai = no
+			}
+		}
+		remove_short_term_gold = 30
+		VIET_medium_prestige_gain_effect = yes
+		scope:tree_lover = {
+			add_opinion = {
+				target = root
+				modifier = VIET_opinion_fellow_tree_lover
+			}		
+			reverse_add_opinion = {
+				target = root
+				modifier = VIET_opinion_fellow_tree_lover
+			}		
+		}
+		custom_tooltip = VIET_increase_county_modifier_time
+		stress_impact = {
+			greedy = miniscule_stress_impact_gain
+			callous = miniscule_stress_impact_gain
+		}
+		scope:county = {
+			add_county_modifier = {
+				modifier = VIET_giant_shade_tree
+				years = 20
+			}		
+		}
+		custom_tooltip = VIETmisc.4026.tooltip
+	}	
+	option = { # no
+		name = VIETmisc.4026.b
+		scope:tree_lover = {
+			add_opinion = {
+				target = root
+				modifier = VIET_opinion_tree_hater
+			}	
+		}
+		stress_impact = {
+			compassionate = miniscule_stress_impact_gain
+			generous = miniscule_stress_impact_gain
+		}
+		scope:county = {
+			add_county_modifier = {
+				modifier = VIET_giant_shade_tree
+				years = 10
+			}		
+		}
+		custom_tooltip = VIETmisc.4026.tooltip
+	}
+}
+
+
+
+
+# Shadows attack villagers - implied to be hysteria from several cases of sleep paralysis
+VIETmisc.4027 = {
+	type = character_event
+	title = VIETmisc.4027.t
+	desc = VIETmisc.4027.desc
+	theme = intrigue
+	override_background = { event_background = alley_night }
+	
+	left_portrait = {
+		character = root
+		animation = paranoia
+	}
+	
+    weight_multiplier = {
+        base = 0
+		modifier = {
+			add = {
+				every_held_title = {
+					limit = { tier = tier_county }
+					add = 1
+				}
+			}		
+		}		
+    }
+	
+	immediate = {
+		random_held_title = {
+			limit = {
+				tier = tier_county
+			}	
+			save_scope_as = county
+		}
+		play_music_cue = mx_cue_secret 
+	}
+	
+	option = { # ok
+		name = VIETmisc.4027.a
+		scope:county = {
+			add_county_modifier = {
+				modifier = VIET_shadow_people
+				years = 7
+			}		
+		}
+	}	
+	option = { # send in priests!
+		name = VIETmisc.4027.b
+		trigger = {
+			OR = {
+				gold >= 20
+				is_ai = no
+			}
+		}
+		remove_short_term_gold = 20
+		VIET_medium_piety_gain_effect = yes
+		scope:county = {
+			add_county_modifier = {
+				modifier = VIET_shadow_people
+				years = 4
+			}		
+		}
+		custom_tooltip = VIET_decrease_county_modifier_time
+		stress_impact = {
+			cynical = minor_stress_impact_gain
+			lazy = miniscule_stress_impact_gain
+			callous = miniscule_stress_impact_gain
+			arbitrary = miniscule_stress_impact_gain
+		}
+	}	
+	option = { # the scholars are right
+		name = VIETmisc.4027.c
+		VIET_huge_prestige_loss_effect = yes
+		scope:county = {
+			add_county_modifier = {
+				modifier = VIET_shadow_people
+				years = 4
+			}		
+		}
+		custom_tooltip = VIET_decrease_county_modifier_time
+		stress_impact = {
+			zealous = minor_stress_impact_gain
+			paranoid = minor_stress_impact_gain
+		}
+	}
+}
+
+
+# Youths prank a village, pretending to be shadow demons
+VIETmisc.4028 = {
+	type = character_event
+	title = VIETmisc.4028.t
+	desc = VIETmisc.4028.desc
+	theme = intrigue
+	override_background = { event_background = alley_night }
+	
+	left_portrait = {
+		character = root
+		animation = fear
+	}
+	
+    weight_multiplier = {
+        base = 0
+		modifier = {
+			add = {
+				every_held_title = {
+					limit = { tier = tier_county }
+					add = 1
+				}
+			}		
+		}		
+    }
+	
+	immediate = {
+		random_held_title = {
+			limit = {
+				tier = tier_county
+			}	
+			save_scope_as = county
+		}
+	}
+	
+	option = { # No harm done, let them go
+		name = VIETmisc.4028.a
+		scope:county = {
+			add_county_modifier = {
+				modifier = VIET_youth_prank
+				years = 8
+			}		
+		}
+		VIET_medium_prestige_loss_effect = yes
+		stress_impact = {
+			vengeful = minor_stress_impact_gain
+			wrathful = minor_stress_impact_gain
+			just = miniscule_stress_impact_gain
+			diligent = miniscule_stress_impact_gain
+		}
+	}	
+	option = { # Publically humiliate them
+		name = VIETmisc.4028.b
+		scope:county = {
+			add_county_modifier = {
+				modifier = VIET_youth_prank
+				years = 5
+			}		
+		}
+		trigger = {
+			OR = {
+				gold >= 10
+				is_ai = no
+			}
+		}
+		remove_short_term_gold = 10		
+		stress_impact = {
+			forgiving = minor_stress_impact_gain
+			lazy = miniscule_stress_impact_gain
+			calm = miniscule_stress_impact_gain
+		}
+		custom_tooltip = VIET_decrease_county_modifier_time
+	}	
+	option = { # Imprison them
+		name = VIETmisc.4028.c
+		scope:county = {
+			add_county_modifier = {
+				modifier = VIET_youth_prank
+				years = 2
+			}		
+		}
+		trigger = {
+			OR = {
+				gold >= 10
+				is_ai = no
+			}
+		}
+		remove_short_term_gold = 10
+		VIET_huge_prestige_loss_effect = yes
+		add_dread = 10
+		stress_impact = {
+			compassionate = minor_stress_impact_gain
+			forgiving = minor_stress_impact_gain
+			lazy = miniscule_stress_impact_gain
+			calm = miniscule_stress_impact_gain
+		}
+		custom_tooltip = VIET_decrease_county_modifier_time
+	}
+}
+
+
+# Herbalists become famous
+VIETmisc.4029 = {
+	type = character_event
+	title = VIETmisc.4029.t
+	desc = VIETmisc.4029.desc
+	theme = medicine
+	override_background = { event_background = VIET_background_small_town }
+	
+	left_portrait = root
+	
+    weight_multiplier = {
+        base = 0
+		modifier = {
+			add = {
+				every_held_title = {
+					limit = { tier = tier_county }
+					add = 1
+				}
+			}		
+		}		
+    }
+	
+	immediate = {
+		random_held_title = {
+			limit = {
+				tier = tier_county
+			}	
+			save_scope_as = county
+		}
+	}
+	
+	option = { # Ok
+		name = VIETmisc.4029.a
+		scope:county = {
+			add_county_modifier = {
+				modifier = VIET_famous_herbalists
+				years = 6
+			}		
+		}
+	}	
+	option = { # Ok
+		name = VIETmisc.4029.b
+		trigger = {
+			OR = {
+				gold >= 50
+				is_ai = no
+			}
+		}
+		remove_short_term_gold = 50
+		VIET_medium_prestige_gain_effect = yes
+		VIET_medium_piety_gain_effect = yes
+		scope:county = {
+			add_county_modifier = {
+				modifier = VIET_famous_herbalists
+				years = 12
+			}		
+		}
+		custom_tooltip = VIET_increase_county_modifier_time
+	}
+}

@@ -27,30 +27,16 @@
 # African fufu feast - VIETmisc.2005 - Fufu did not exist in Africa at the time, since it relies on a New World plant, cassava
 # Book is 3Deep5Me - VIETmisc.8329 - too similar to new event
 # Courtier picks up games hobby - VIETmisc.8437 - no CK3 equivalent
-# Maitreya Buddha claimant - VIETmisc.8075 - province event, to do later
 # Courtier chokes and dies - VIETmisc.8078-8079 - to do later, need to look more into how to code death and death reasons
 # Child wonders what to do when growing up - VIETMisc.8081 - to do later, will do several childhood events at once
-# Blacksmiths in province become renowned - VIETmisc.8282 - province event, to do later
-# Benevolent spirit residing in forest - VIETmisc.8288 - province event, to do later
-# Mad alchemist living in the wilderness - VIETmisc.8292 - province event, to do later
 # Miscellaneous artifact events - VIETmisc.8297 - VIETmisc.8310 - to do later, when PI adds in a proper official artifact system
-# Village mysteriously disappears - VIETmisc.8314 - province event, to do later
-# Happy perfectly arranged marriage - VIETmisc.8315 - province event, already has similar version in new VIET
 # Kobold mine infestation - VIETmisc.2276 - province event, to do later
-# Blacksmiths in province are renowned - VIETmisc.8282 - province event, to do later
-# Protective spirit in forest - VIETmisc.8288 - province event, to do later
-# Rumors of a mad scientist - VIETmisc.8292 - province event, to do later
 # Misc artifact events - VIETmisc.8297 - VIETmisc.8310 - to do later, when PI adds in a proper official artifact system
-# Population of town disappears - VIETmisc.8314 - province event, to do later
-# A perfect wedding - VIETmisc.8315 - province event, to do later
-# Ghosts keep visiting a province - VIETmisc.8370 - province event, to do later
-# Respected elder passes away - VIETmisc.8371 - province event, to do later
 # Meeting the Lithuanian goddess of death - VIETmisc.8373-8374 - need to revamp, to do later
-# Banshee Event - VIETmisc.8375 - need to revamp for culture province, to do later
-# Misc province events - VIETmisc.8389-8396 - province events, to do later
+# Banshee Event - VIETmisc.8375 - need to revamp for culture province, to do later - NOT COUNTY EVENT TAKE NOTE
+# Ghost - VIETmisc.8391 - province event, combined with another event
 # Black cat events - VIETmisc.8397-8398 - revise, to do later
 # Those are just fantasies for people who don't have brothers/sisters - VIETmisc.2240 - similar event in new VIET
-# Araragi-kun - VIETmisc.2241 - province event, to do later
 # Content - Fine with illness or disability - VIETnam.76 - rework later
 # Craven - foolish while sparring - VIETnam.84 - rework later
 # Proud - Muslim fasting outside Ramadan (problem) - VIETnam.86 - rework later with Ramadan
@@ -59,18 +45,44 @@
 # Deceitful - Never show true self - VIETnam.94 - rework later
 # Cruel - subjects fear character - VIETnam.96 - rework later
 # Hebrew Mouthwash - VIETmisc.2106 - wait until PI develops Jewish flavor/cultures more
-# Old VIET generic province events - VIETmisc.8005-8011 - province events
 # Suspicious courtiers talking - VIETmisc.8013 - too similar to vanilla CK3 event
 # Chamber Pot Docs - VIETmisc.8016 - redo later?
 # Young Musician lady and husband - VIETmisc.8020-8021 - rework later
-# Ghost Sighting - VIETmisc.8028 - province event
 # Misc artifact events - VIETmisc.8033-8036 - to do later, when PI adds in a proper official artifact system
 # Chinese lady visits - VIETmisc.8037-8038 - to do later
+# Trying to remember what thinking about - VIETScarborough.6-7 - needs to be lengthier
+# Choke to death - VIETScarboroughFair.15 -figure out death stuff later
+# Teenage son is fornicating with a maid - VIETScarborough.20 - rework when add in childhood events
+# Noticing pretty maids - VIETScarboroughFair.21 - rework later
+# Supposedly corrupt officials - VIETScarboroughFair.24 - rework later
+# Meta joke about chicken puns (safe) - VIETScarboroughFair.25 - rework later
+# Eating baklava - VIETScarboroughFair.26 - similar to existing events
+# Merchant abacus - VIETScarboroughFair.28 - to do later, when PI adds in a proper official artifact system
+# Misc province events - VIETScarboroughFair.29-31 - province events, to do later
+# Battle/war events - VIETScarboroughFair.33-39 - rework later
+# Strange amber jewelry - VIETScarboroughFair.42 - rework later
+# Misc events - VIETScarboroughFair.44, 46 - rework later
+# Incest - VIETScarborough.47 - province event
+# 
+# Benevolent spirit residing in forest - VIETmisc.8288 - province event, to do later
+# Maitreya Buddha claimant - VIETmisc.8075 - province event, to do later
+# Blacksmiths in province become renowned - VIETmisc.8282 - province event, to do later
+# Mad alchemist living in the wilderness - VIETmisc.8292 - province event, to do later
+# Village mysteriously disappears - VIETmisc.8314 - province event, to do later
+# Happy perfectly arranged marriage - VIETmisc.8315 - province event, already has similar version in new VIET
+# Ghosts keep visiting a province - VIETmisc.8370 - province event, to do later
+# Respected elder passes away - VIETmisc.8371 - province event, to do later
+# Araragi-kun - VIETmisc.2241 - province event, to do later
+# Ghost Sighting - VIETmisc.8028 - province event
 # Pistachio province event - VIETmisc.8049 - province event
 # Landslide - VIETScarborough.2 - province event
 # Local boys win fame in war - VIETScarborough.3 - province event
-# Trying to remember what thinking about - VIETScarborough.6-7 - needs to be lengthier
-# Teenage son is fornicating with a maid - VIETScarborough.20 - rework when add in childhood events
+# 
+# 
+# USED ALREADY PROVINCIAL
+# 8093
+# 8094
+# 8101
 # 
 ###########################################################################################################################
 
@@ -304,45 +316,144 @@ VIETtest.0004 = {
 }
 
 # Music test
-VIETtest.0005 = {
-	type = character_event
-	title = VIETtest.0005.t
-	desc = VIETtest.0005.desc
-	theme = VIET_theme_skyrim_forest
-	
-	left_portrait = root
-	#right_portrait = root
-	
-	on_trigger_fail = {
-		add_gold = 1000
-	}
-	
-	trigger = {
-		is_adult = yes
-	}
-	
-	immediate = {
-		play_music_cue = mx_cue_banquet 
-	}
-	
-	option = {
-		name = "OK"
-		VIET_random_medium_prestige_gain_effect = yes
-		VIET_random_medium_piety_gain_effect = yes
-	}	
-	option = {
-		name = "OK"
-		VIET_random_medium_prestige_loss_effect = yes
-		VIET_random_medium_piety_loss_effect = yes
-	}	
-	option = {
-		name = "OK"
-		VIET_random_large_prestige_gain_effect = yes
-		VIET_random_large_piety_gain_effect = yes
-	}	
-	option = {
-		name = "OK"
-		VIET_random_large_prestige_loss_effect = yes
-		VIET_random_large_piety_loss_effect = yes
-	}
-}
+#VIETtest.0005 = {
+#	type = character_event
+#	title = VIETtest.0006.t
+#	desc = VIETtest.0006.desc
+#	theme = VIET_theme_oblivion_pastoral_dream
+#	
+#	left_portrait = scope:county_holder
+#	
+#	immediate = {
+#		save_scope_as = county
+#		holder = { save_scope_as = county_holder }
+#		play_music_cue = mx_cue_meadandwine
+#	}
+#	
+#	option = {
+#		name = "OK"
+#		add_county_modifier = {
+#			modifier = governance_1041_merchants_guild_modifier
+#			days = 33
+#		}		
+#	}
+#}
+
+# County event test
+#VIETtest.0005  = {
+#	hidden = yes
+#	type = empty
+#	immediate = {
+#		save_scope_as = county
+#		holder = { save_scope_as = ruler }
+#		# send event to county holder
+#		holder = {
+#			trigger_event = VIETtest.0006
+#		}
+#	}
+#}
+#
+## Music test
+#VIETtest.0006 = {
+#	type = character_event
+#	title = VIETtest.0006.t
+#	desc = VIETtest.0006.desc
+#	theme = VIET_theme_oblivion_pastoral_dream
+#	
+#	left_portrait = scope:ruler
+#	
+#	immediate = {
+#		play_music_cue = mx_cue_meadandwine
+#	}
+#	
+#	option = {
+#		name = "OK"
+#		scope:county = {
+#			add_county_modifier = {
+#				modifier = governance_1041_merchants_guild_modifier
+#				days = 33
+#			}		
+#		}
+#	}
+#}
+#
+## County master file test
+#VIETtest.0007 = {
+#	hidden = yes
+#	type = empty
+#	immediate = {
+#        every_county = {
+#            trigger_event = { on_action = VIET_county_events days = { 1 365 } }
+#        }  
+#	}
+#}
+
+# County event tester
+#VIETtest.0008 = {
+#	type = character_event
+#	title = VIETtest.0008.t
+#	desc = VIETtest.0008.desc
+#	theme = VIET_theme_oblivion_pastoral_dream
+#	
+#	left_portrait = root
+#	
+#	#immediate = {
+#	#	random_sub_realm_county = {
+#	#		save_scope_as = random_county
+#	#	}
+#	#}
+#	
+#	option = {
+#		name = "berry"
+#		random_sub_realm_county = {
+#			save_scope_as = county
+#			trigger_event = VIETmisc.3100
+#		}
+#	}	
+#	option = {
+#		name = "blacksmith"
+#		random_sub_realm_county = {
+#			save_scope_as = county
+#			trigger_event = VIETmisc.4102
+#		}
+#	}	
+#	option = {
+#		name = "tumulus"
+#		random_sub_realm_county = {
+#			save_scope_as = county
+#			trigger_event = VIETmisc.3114
+#		}
+#	}	
+#	option = {
+#		name = "ghost"
+#		random_sub_realm_county = {
+#			save_scope_as = county
+#			trigger_event = VIETmisc.4109
+#		}
+#	}	
+#	option = {
+#		name = "monk"
+#		random_sub_realm_county = {
+#			save_scope_as = county
+#			trigger_event = VIETmisc.4113
+#		}
+#	}	
+#	option = {
+#		name = "tree"
+#		random_sub_realm_county = {
+#			save_scope_as = county
+#			trigger_event = VIETmisc.4126
+#		}
+#	}	
+#	option = {
+#		name = "monument"
+#		random_sub_realm_county = {
+#			save_scope_as = county
+#			trigger_event = VIETmisc.4120
+#		}
+#	}
+#}
+
+
+
+

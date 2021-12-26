@@ -1,0 +1,2600 @@
+﻿############################################################################################################################
+# 
+# 
+# Animations: idle, chancellor, steward, marshal, spymaster, chaplain, anger, rage, disapproval, disbelief, disgust, fear, sadness, shame, shock, worry, boredom, grief, paranoia, dismissal, flirtation, flirtation_left, love, schadenfreude, stress, happiness, ecstasy, admiration, lunatic (?), scheme, beg, pain, newborn, sick, severelywounded, prisonhouse, prisondungeon, war_attacker, war_defender, war_over_tie, war_over_win, war_over_loss, pregnant, personality_honorable, personality_dishonorable, personality_bold, personality_coward, personality_greedy, personality_content, personality_vengeful, personality_forgiving, personality_rational, personality_irrational, personality_compassionate, personality_callous, personality_zealous, personality_cynical
+# 
+# mx_cue_sacredrite = solemn flutes that becomes more orchestral and bigger as it continues
+# mx_cue_epic_sacral_moment = epic stuff, not as epic as 
+# mx_cue_touching_moment = sweeping orchestra
+# mx_cue_positive_effect = triumphant orchestra
+# mx_cue_peace_ensues = deep and calmer horn and brass version of mx_cue_crusade_starts
+# mx_cue_faith_conversion = nice orchestra, a little fantasy like
+# mx_cue_birth = harp and light orchestra theme version
+# mx_cue_seduction = ??? harp and strings??? A little Celtic, and a little bittersweet
+# mx_cue_marriage = low tune of woodwinds and plucked strings that ends somewhat quicklier than the others it seems
+# mx_cue_negative = there is a sad singing wailing woman along with the tragic music - VERY QUICK THOUGH
+# mx_cue_low_key_positive = dance-y kind of tavern theme
+# 
+# 
+# 
+# ##### GRAND LIST OF EVENTS #####
+# 
+# County events made for the CK3 version of VIET
+# 
+# 3000-3024		Generic (First new batch)
+# 
+############################################################################################################################
+
+namespace = VIETmisc
+
+##################################################################
+# GENERIC 3000-3024
+##################################################################
+
+# Berry Good Medicine
+VIETmisc.3000 = {
+	type = character_event
+	title = VIETmisc.3000.t
+	desc = VIETmisc.3000.desc
+	theme = VIET_theme_skyrim_forest
+	
+	left_portrait = root
+	
+    weight_multiplier = {
+        base = 0
+		modifier = {
+			add = {
+				every_held_title = {
+					limit = { tier = tier_county }
+					add = 1
+				}
+			}		
+		}
+    }
+	
+	immediate = {
+		random_held_title = {
+			limit = { tier = tier_county }
+			save_scope_as = county
+		}
+		scope:county = {
+			random_list = {
+				10 = {
+					add_county_modifier = {
+						modifier = VIET_berry_good_medicine_county
+						years = 10
+					}				
+				}
+				10 = {
+					add_county_modifier = {
+						modifier = VIET_berry_good_medicine_county
+						years = 15
+					}				
+				}
+				10 = {
+					add_county_modifier = {
+						modifier = VIET_berry_good_medicine_county
+						years = 20
+					}				
+				}
+				10 = {
+					add_county_modifier = {
+						modifier = VIET_berry_good_medicine_county
+						years = 25
+					}				
+				}
+			}	
+		}	
+	}
+	
+	option = {
+		name = VIETmisc.3000.a
+		custom_tooltip = VIETmisc.3000.tooltip
+	}
+}
+
+# A cave is discovered somewhere
+VIETmisc.3001 = {
+	type = character_event
+	title = VIETmisc.3001.t
+	desc = VIETmisc.3001.desc
+	theme = VIET_theme_skyrim_forest
+	
+	right_portrait = root
+
+    weight_multiplier = {
+        base = 0
+		modifier = {
+			add = {
+				every_held_title = {
+					limit = { tier = tier_county }
+					add = 1
+				}
+			}		
+		}		
+    }
+	
+	immediate = {
+		random_held_title = {
+			limit = {
+				tier = tier_county
+			}	
+			save_scope_as = county
+		}
+	}
+	
+	option = { # Ok
+		name = VIETmisc.3001.a
+		scope:county = {
+			add_county_modifier = {
+				modifier = VIET_trinket_cave
+				years = 15
+			}		
+		}
+	}	
+	option = { # Collect trinkets for me
+		name = VIETmisc.3001.b
+		trigger = {
+			OR = {
+				gold >= 10
+				is_ai = no
+			}
+		}
+		remove_short_term_gold = 10
+		VIET_large_prestige_gain_effect = yes
+		stress_impact = {
+			lazy = miniscule_stress_impact_gain
+		}
+		scope:county = {
+			add_county_modifier = {
+				modifier = VIET_trinket_cave
+				years = 15
+			}		
+		}
+	}	
+	option = { # Build a shrine here
+		name = VIETmisc.3001.c
+		trigger = {
+			OR = {
+				gold >= 25
+				is_ai = no
+			}
+		}
+		remove_short_term_gold = 25
+		VIET_huge_piety_gain_effect = yes
+		scope:county = {
+			add_county_modifier = {
+				modifier = VIET_trinket_cave_shrine
+				years = 15
+			}		
+		}
+		stress_impact = {
+			cynical = minor_stress_impact_gain
+			greedy = miniscule_stress_impact_gain
+		}
+	}
+}
+
+
+
+# A garrison captain is renowned for their ability, charisma, and popularity
+VIETmisc.3002 = {
+	type = character_event
+	title = VIETmisc.3002.t
+	desc = VIETmisc.3002.desc
+	theme = VIET_theme_small_town
+	
+	left_portrait = root
+	right_portrait = {
+		character = scope:captain
+		animation = marshal
+	}
+	
+    weight_multiplier = {
+        base = 0
+		modifier = {
+			add = {
+				every_held_title = {
+					limit = { tier = tier_county }
+					add = 1
+				}
+			}		
+		}		
+    }
+	
+	immediate = {
+		random_held_title = {
+			limit = {
+				tier = tier_county
+			}	
+			save_scope_as = county
+		}
+		create_character = {
+			location = root.capital_province
+			template = VIET_popular_captain_template
+			save_scope_as = captain
+		}	
+	}
+	
+	option = { # Invite to court
+		name = VIETmisc.3002.a
+		trigger = {
+			OR = {
+				gold >= 25
+				is_ai = no
+			}
+		}
+		remove_short_term_gold = 25
+		add_courtier = scope:captain
+		if = {
+			limit = {
+				can_add_hook = {
+					target = scope:captain
+					type = favor_hook
+				}
+			}
+			add_hook = {
+				target = scope:captain
+				type = favor_hook
+			}
+		}
+		add_character_modifier = {
+			modifier = VIET_promoted_beloved_guard_captain
+			years = 10
+		}
+	}	
+	option = { # Let the guard captain stay where they are
+		name = VIETmisc.3002.b
+		scope:county = {
+			add_county_modifier = {
+				modifier = VIET_beloved_guard_captain
+				years = 15
+			}		
+		}
+		hidden_effect = {
+			scope:captain = {		
+				death = {
+					death_reason = death_disappearance
+				}
+			}			
+		}
+	}	
+	option = { # Make the guard captain ruler of that county
+		name = VIETmisc.3002.c
+		trigger = {
+			is_ai = no
+			any_held_title = {
+				count >= 2 #Don't give away your only title
+			}
+			highest_held_title_tier >= tier_duchy
+		}
+		# Assign title to captain
+		create_title_and_vassal_change = {
+			type = granted
+			save_scope_as = change
+			add_claim_on_loss = yes
+		}
+		scope:county = {
+			change_title_holder = {
+				holder = scope:captain
+				change = scope:change
+			}		
+		}
+		resolve_title_and_vassal_change = scope:change
+		# Gain a strong hook against the captain.
+		reverse_add_opinion = {
+			modifier = grateful_opinion
+			target = scope:captain
+			opinion = 50
+		}
+		add_hook = {
+			type = loyalty_hook
+			target = scope:captain
+		}
+		#scope:captain = {
+		#	get_title = scope:county	
+		#}
+		add_character_modifier = {
+			modifier = VIET_ennobled_beloved_guard_captain
+			years = 10
+		}
+	}
+}
+
+
+
+# Conmen rogues active in county
+VIETmisc.3003 = {
+	type = character_event
+	title = VIETmisc.3003.t
+	desc = VIETmisc.3003.desc
+	theme = intrigue
+	override_background = { event_background = alley_night }
+	
+	right_portrait = {
+		character = root
+		animation = worry
+	}
+	
+    weight_multiplier = {
+        base = 0
+		modifier = {
+			add = {
+				every_held_title = {
+					limit = { tier = tier_county }
+					add = 1
+				}
+			}		
+		}		
+    }
+	
+	immediate = {
+		random_held_title = {
+			limit = {
+				tier = tier_county
+			}	
+			save_scope_as = county
+		}
+		scope:county = {
+			random_list = {
+				10 = {
+					add_county_modifier = {
+						modifier = VIET_the_rogues
+						years = 4
+					}				
+				}
+				10 = {
+					add_county_modifier = {
+						modifier = VIET_the_rogues
+						years = 7
+					}				
+				}
+				10 = {
+					add_county_modifier = {
+						modifier = VIET_the_rogues
+						years = 10
+					}				
+				}
+				10 = {
+					add_county_modifier = {
+						modifier = VIET_the_rogues
+						years = 13
+					}				
+				}
+				10 = {
+					add_county_modifier = {
+						modifier = VIET_the_rogues
+						years = 16
+					}				
+				}
+			}	
+		}	
+	}
+	
+	option = { # Let local officials deal with it
+		name = VIETmisc.3003.a
+		VIET_huge_prestige_loss_effect = yes
+		stress_impact = {
+			ambitious = miniscule_stress_impact_gain
+			just = miniscule_stress_impact_gain
+			vengeful = miniscule_stress_impact_gain
+		}
+	}	
+	option = { # Arrest them
+		name = VIETmisc.3003.b
+		trigger = {
+			OR = {
+				gold >= 35
+				is_ai = no
+			}
+		}
+		remove_short_term_gold = 35
+		scope:county = {
+			remove_county_modifier = VIET_the_rogues
+			add_county_modifier = {
+				modifier = VIET_arrested_the_rogues
+				years = 10
+			}		
+		}
+		stress_impact = {
+			arbitrary = miniscule_stress_impact_gain
+			lazy = miniscule_stress_impact_gain
+		}
+	}	
+	option = { # Hire them
+		name = VIETmisc.3003.c
+		trigger = {
+			OR = {
+				gold >= 65
+				is_ai = no
+			}
+		}
+		remove_short_term_gold = 65
+		VIET_huge_prestige_loss_effect = yes
+		scope:county = {
+			remove_county_modifier = VIET_the_rogues
+			add_county_modifier = {
+				modifier = VIET_hired_rogues_county
+				years = 10
+			}		
+		}
+		add_character_modifier = {
+			modifier = VIET_hired_rogues
+			years = 25
+		}
+		stress_impact = {
+			just = minor_stress_impact_gain
+			paranoid = miniscule_stress_impact_gain
+		}
+	}
+}
+
+
+
+
+# Discovered a gateway that's totally not the Stellaris dimensional gateway
+VIETmisc.3004 = {
+	type = character_event
+	title = VIETmisc.3004.t
+	desc = VIETmisc.3004.desc
+	theme = VIET_theme_ancient_cairn
+	
+	left_portrait = {
+		character = root
+		animation = personality_rational
+	}
+	
+    weight_multiplier = {
+        base = 0
+		modifier = {
+			add = {
+				every_held_title = {
+					limit = { tier = tier_county }
+					add = 1
+				}
+			}		
+		}		
+    }
+	
+	immediate = {
+		random_held_title = {
+			limit = {
+				tier = tier_county
+			}	
+			save_scope_as = county
+		}
+		scope:county = {
+			add_county_modifier = {
+				modifier = VIET_dimensional_portal
+				years = 20
+			}		
+		}	
+	}
+	
+	option = { # It's just a dumb gate
+		name = VIETmisc.3004.a
+		stress_impact = {
+			paranoid = minor_stress_impact_gain
+		}
+	}	
+	option = { # Assign guards there
+		name = VIETmisc.3004.b
+		trigger = {
+			OR = {
+				gold >= 25
+				is_ai = no
+			}
+		}
+		remove_short_term_gold = 25
+		scope:county = {
+			remove_county_modifier = VIET_dimensional_portal
+			add_county_modifier = {
+				modifier = VIET_dimensional_portal_guards
+				years = 20
+			}		
+		}
+		stress_impact = {
+			arbitrary = miniscule_stress_impact_gain
+		}
+	}
+}
+
+
+
+# Recent feud in a town is getting out of hand
+VIETmisc.3005 = {
+	type = character_event
+	title = VIETmisc.3005.t
+	desc = VIETmisc.3005.desc
+	theme = stewardship_domain_focus
+	
+	right_portrait = {
+		character = root
+		animation = stress
+	}
+	
+    weight_multiplier = {
+        base = 0
+		modifier = {
+			add = {
+				every_held_title = {
+					limit = { tier = tier_county }
+					add = 1
+				}
+			}		
+		}		
+    }
+	
+	immediate = {
+		random_held_title = {
+			limit = {
+				tier = tier_county
+			}	
+			save_scope_as = county
+		}
+	}
+	
+	option = { # Don't do anything
+		name = VIETmisc.3005.a
+		scope:county = {
+			add_county_modifier = {
+				modifier = VIET_local_feud
+				years = 10
+			}		
+		}
+		stress_impact = {
+			just = miniscule_stress_impact_gain
+			diligent = minor_stress_impact_gain
+		}
+	}	
+	option = { # Send in troops
+		name = VIETmisc.3005.c
+		VIET_massive_prestige_loss_effect = yes
+		scope:county = {
+			add_county_modifier = {
+				modifier = VIET_local_feud_averted
+				years = 10
+			}		
+		}
+		add_character_modifier = {
+			modifier = VIET_local_feud_averted_character
+			years = 10
+		}
+		stress_impact = {
+			lazy = minor_stress_impact_gain
+			arbitrary = minor_stress_impact_gain
+		}
+	}	
+	option = { # Try to resolve it diplomatically
+		name = VIETmisc.3005.b
+		trigger = {
+			diplomacy >= decent_skill_rating			
+		}
+		skill = diplomacy
+		VIET_huge_prestige_loss_effect = yes
+		scope:county = {
+			add_county_modifier = {
+				modifier = VIET_local_feud_averted
+				years = 10
+			}		
+		}
+		add_character_modifier = {
+			modifier = VIET_local_feud_averted_character
+			years = 10
+		}
+		stress_impact = {
+			shy = minor_stress_impact_gain
+			craven = minor_stress_impact_gain
+			lazy = minor_stress_impact_gain
+			arbitrary = minor_stress_impact_gain
+		}
+	}
+}
+
+
+
+
+# Fire swept through a town
+VIETmisc.3006 = {
+	type = character_event
+	title = VIETmisc.3006.t
+	desc = VIETmisc.3006.desc
+	theme = stewardship_domain_focus
+	override_background = { event_background = burning_building }
+	
+	right_portrait = {
+		character = root
+		animation = stress
+	}
+	
+    weight_multiplier = {
+        base = 0
+		modifier = {
+			add = {
+				every_held_title = {
+					limit = { tier = tier_county }
+					add = 1
+				}
+			}		
+		}		
+    }
+	
+	immediate = {
+		random_held_title = {
+			limit = {
+				tier = tier_county
+			}	
+			save_scope_as = county
+		}
+		play_music_cue = mx_cue_stress 
+	}
+	
+	option = { # Don't do anything
+		name = VIETmisc.3006.b
+		scope:county = {
+			add_county_modifier = {
+				modifier = VIET_town_fire
+				years = 7
+			}		
+		}
+		stress_impact = {
+			compassionate = minor_stress_impact_gain
+			just = minor_stress_impact_gain
+			generous = minor_stress_impact_gain
+		}
+	}	
+	option = { # Help survivors rebuild
+		name = VIETmisc.3006.a
+		trigger = {
+			OR = {
+				gold >= 60
+				is_ai = no
+			}
+		}
+		remove_short_term_gold = 60
+		VIET_huge_piety_gain_effect = yes
+		scope:county = {
+			add_county_modifier = {
+				modifier = VIET_town_fire
+				years = 3
+			}		
+		}
+		add_character_modifier = {
+			modifier = VIET_fire_relief
+			years = 3
+		}
+		stress_impact = {
+			callous = minor_stress_impact_gain
+			arbitrary = minor_stress_impact_gain
+			greedy = minor_stress_impact_gain
+		}
+		custom_tooltip = VIET_decrease_county_modifier_time
+	}
+}
+
+
+
+
+# Zone of Death - perhaps some kind of mysterious radiation caused by Stellaris aliens?
+VIETmisc.3007 = {
+	type = character_event
+	title = VIETmisc.3007.t
+	desc = VIETmisc.3007.desc
+	theme = death
+	override_background = { event_background = VIET_background_tuscan_country }
+	
+	right_portrait = root
+	
+    weight_multiplier = {
+        base = 0
+		modifier = {
+			add = {
+				every_held_title = {
+					limit = { tier = tier_county }
+					add = 1
+				}
+			}		
+		}		
+    }
+	
+	immediate = {
+		random_held_title = {
+			limit = {
+				tier = tier_county
+			}	
+			save_scope_as = county
+		}
+		scope:county = {
+			random_list = {
+				10 = {
+					add_county_modifier = {
+						modifier = VIET_zone_of_death
+						years = 10
+					}				
+				}
+				10 = {
+					add_county_modifier = {
+						modifier = VIET_zone_of_death
+						years = 12
+					}				
+				}
+				10 = {
+					add_county_modifier = {
+						modifier = VIET_zone_of_death
+						years = 14
+					}				
+				}
+				10 = {
+					add_county_modifier = {
+						modifier = VIET_zone_of_death
+						years = 16
+					}				
+				}
+				10 = {
+					add_county_modifier = {
+						modifier = VIET_zone_of_death
+						years = 18
+					}				
+				}
+				10 = {
+					add_county_modifier = {
+						modifier = VIET_zone_of_death
+						years = 20
+					}				
+				}
+				10 = {
+					add_county_modifier = {
+						modifier = VIET_zone_of_death
+						years = 22
+					}				
+				}
+				10 = {
+					add_county_modifier = {
+						modifier = VIET_zone_of_death
+						years = 24
+					}				
+				}
+			}	
+		}
+		play_music_cue = mx_cue_secret 
+	}
+	
+	option = { # Avoid going there myself
+		name = VIETmisc.3007.a
+		VIET_small_piety_gain_effect = yes
+		stress_impact = {
+			cynical = miniscule_stress_impact_gain
+			brave = miniscule_stress_impact_gain
+		}
+	}	
+	option = { # Superstition
+		name = VIETmisc.3007.b
+		VIET_small_prestige_gain_effect = yes
+		stress_impact = {
+			paranoid = miniscule_stress_impact_gain
+			craven = miniscule_stress_impact_gain
+		}
+	}	
+}
+
+
+
+
+
+# Mysterious supernatural relic found - could it be futuristic equipment left behind by Stellaris aliens?
+VIETmisc.3008 = {
+	type = character_event
+	title = VIETmisc.3008.t
+	desc = VIETmisc.3008.desc
+	theme = death
+	override_background = { event_background = VIET_background_tuscan_country }
+	
+	right_portrait = root
+
+    weight_multiplier = {
+        base = 0
+		modifier = {
+			add = {
+				every_held_title = {
+					limit = { tier = tier_county }
+					add = 1
+				}
+			}		
+		}		
+    }
+	
+	immediate = {
+		random_held_title = {
+			limit = {
+				tier = tier_county
+			}	
+			save_scope_as = county
+		}
+	}
+	
+	option = { # Consecrate the holy relic
+		name = VIETmisc.3008.a
+		VIET_huge_piety_gain_effect = yes
+		scope:county = {
+			add_county_modifier = {
+				modifier = VIET_wooden_rod_relic
+				years = 10
+			}		
+		}
+		stress_impact = {
+			cynical = miniscule_stress_impact_gain
+		}
+	}	
+	option = { # Study the holy relic
+		name = VIETmisc.3008.b
+		VIET_huge_prestige_gain_effect = yes
+		scope:county = {
+			add_county_modifier = {
+				modifier = VIET_wooden_rod_relic_study
+				years = 10
+			}		
+		}
+		stress_impact = {
+			zealous = miniscule_stress_impact_gain
+		}
+	}	
+}
+
+
+
+
+# Missing people - all the people in a caravan go missing, but the caraven items, goods, and animals remain
+VIETmisc.3009 = {
+	type = character_event
+	title = VIETmisc.3009.t
+	desc = VIETmisc.3009.desc
+	theme = death
+	override_background = { event_background = VIET_background_tuscan_country }
+	
+	left_portrait = {
+		character = root
+		animation = worry
+	}
+	
+    weight_multiplier = {
+        base = 0
+		modifier = {
+			add = {
+				every_held_title = {
+					limit = { tier = tier_county }
+					add = 1
+				}
+			}		
+		}		
+    }
+	
+	immediate = {
+		random_held_title = {
+			limit = {
+				tier = tier_county
+			}	
+			save_scope_as = county
+		}
+		scope:county = {
+			add_county_modifier = {
+				modifier = VIET_missing_persons
+				years = 5
+			}		
+		}
+		play_music_cue = mx_cue_secret 
+	}
+	
+	option = { # Give leftover supplies to locals
+		name = VIETmisc.3009.a
+		VIET_huge_prestige_gain_effect = yes
+		stress_impact = {
+			greedy = miniscule_stress_impact_gain
+		}
+	}		
+	option = { # Sell leftover supplies
+		name = VIETmisc.3009.b
+		random_list = {
+			10 = { add_gold = 10 }
+			10 = { add_gold = 20 }
+			10 = { add_gold = 30 }
+		}
+		stress_impact = {
+			generous = miniscule_stress_impact_gain
+		}
+	}	
+}
+
+
+
+
+# County is famous for pottery/ceramics
+VIETmisc.3010 = {
+	type = character_event
+	title = VIETmisc.3010.t
+	desc = VIETmisc.3010.desc
+	theme = VIET_theme_small_town
+	
+	left_portrait = root
+	
+    weight_multiplier = {
+        base = 0
+		modifier = {
+			add = {
+				every_held_title = {
+					limit = { tier = tier_county }
+					add = 1
+				}
+			}		
+		}		
+    }
+	
+	immediate = {
+		random_held_title = {
+			limit = {
+				tier = tier_county
+			}	
+			save_scope_as = county
+		}
+		scope:county = {
+			random_list = {
+				10 = {
+					add_county_modifier = {
+						modifier = VIET_good_pottery
+						years = 8
+					}				
+				}
+				10 = {
+					add_county_modifier = {
+						modifier = VIET_good_pottery
+						years = 12
+					}				
+				}
+				10 = {
+					add_county_modifier = {
+						modifier = VIET_good_pottery
+						years = 16
+					}				
+				}
+				10 = {
+					add_county_modifier = {
+						modifier = VIET_good_pottery
+						years = 20
+					}				
+				}
+			}		
+		}	
+	}
+	
+	option = { # ok
+		name = VIETmisc.3010.a
+	}	
+}
+
+
+
+
+
+
+# Dark cloud casts its shadow over a county
+VIETmisc.3011 = {
+	type = character_event
+	title = VIETmisc.3011.t
+	desc = VIETmisc.3011.desc
+	theme = unfriendly
+	override_background = { event_background = VIET_background_tuscan_country }
+	
+	left_portrait = {
+		character = root
+		animation = worry
+	}
+	
+    weight_multiplier = {
+        base = 0
+		modifier = {
+			add = {
+				every_held_title = {
+					limit = { tier = tier_county }
+					add = 1
+				}
+			}		
+		}		
+    }
+	
+	immediate = {
+		random_held_title = {
+			limit = {
+				tier = tier_county
+			}	
+			save_scope_as = county
+		}
+		scope:county = {
+			random_list = {
+				10 = {
+					add_county_modifier = {
+						modifier = VIET_strange_dark_cloud
+						years = 3
+					}				
+				}
+				10 = {
+					add_county_modifier = {
+						modifier = VIET_strange_dark_cloud
+						years = 4
+					}				
+				}
+				10 = {
+					add_county_modifier = {
+						modifier = VIET_strange_dark_cloud
+						years = 5
+					}				
+				}
+				10 = {
+					add_county_modifier = {
+						modifier = VIET_strange_dark_cloud
+						years = 6
+					}				
+				}
+			}		
+		}	
+	}
+	
+	option = { # ok
+		name = VIETmisc.3011.a
+		VIET_small_piety_gain_effect = yes
+		stress_impact = {
+			cynical = miniscule_stress_impact_gain
+		}
+	}		
+	option = { # ok
+		name = VIETmisc.3011.b
+		VIET_small_prestige_gain_effect = yes
+		stress_impact = {
+			zealous = miniscule_stress_impact_gain
+		}
+	}	
+}
+
+
+
+
+
+
+# County suffering from poor military leadership
+VIETmisc.3012 = {
+	type = character_event
+	title = VIETmisc.3012.t
+	desc = VIETmisc.3012.desc
+	theme = martial_strategy_focus
+	
+	left_portrait = root
+	
+    weight_multiplier = {
+        base = 0
+		modifier = {
+			add = {
+				every_held_title = {
+					limit = { tier = tier_county }
+					add = 1
+				}
+			}		
+		}		
+    }
+	
+	immediate = {
+		random_held_title = {
+			limit = {
+				tier = tier_county
+			}	
+			save_scope_as = county
+		}
+		scope:county = {
+			random_list = {
+				10 = {
+					add_county_modifier = {
+						modifier = VIET_bad_officers
+						years = 6
+					}				
+				}
+				10 = {
+					add_county_modifier = {
+						modifier = VIET_bad_officers
+						years = 9
+					}				
+				}
+				10 = {
+					add_county_modifier = {
+						modifier = VIET_bad_officers
+						years = 12
+					}				
+				}
+				10 = {
+					add_county_modifier = {
+						modifier = VIET_bad_officers
+						years = 15
+					}				
+				}
+			}		
+		}	
+	}
+	
+	option = { # don't do anything
+		name = VIETmisc.3012.a
+		stress_impact = {
+			just = medium_stress_impact_gain
+			compassionate = minor_stress_impact_gain
+			diligent = minor_stress_impact_gain
+			paranoid = miniscule_stress_impact_gain
+		}
+	}		
+	option = { # replace some of the officers
+		name = VIETmisc.3012.b
+		trigger = {
+			OR = {
+				gold >= 30
+				is_ai = no
+			}
+		}
+		remove_short_term_gold = 30
+		VIET_huge_prestige_loss_effect = yes
+		add_character_modifier = {
+			modifier = VIET_bad_officers_replaced
+			years = 5
+		}
+		scope:county = {
+			remove_county_modifier = VIET_bad_officers
+			add_county_modifier = {
+				modifier = VIET_bad_officers_replaced_county
+				years = 5
+			}	
+		}
+		stress_impact = {
+			arbitrary = minor_stress_impact_gain
+			lazy = miniscule_stress_impact_gain
+			cynical = miniscule_stress_impact_gain
+			trusting = miniscule_stress_impact_gain
+			forgiving = miniscule_stress_impact_gain
+		}
+	}	
+}
+
+
+
+
+
+
+# Heroic garrison commander is martyred by bandits
+VIETmisc.3013 = {
+	type = character_event
+	title = VIETmisc.3013.t
+	desc = VIETmisc.3013.desc
+	theme = martial_chivalry_focus
+	override_background = { event_background = throne_room }
+	
+	left_portrait = root
+
+    weight_multiplier = {
+        base = 0
+		modifier = {
+			add = {
+				every_held_title = {
+					limit = { tier = tier_county }
+					add = 1
+				}
+			}		
+		}		
+    }
+	
+	immediate = {
+		random_held_title = {
+			limit = {
+				tier = tier_county
+			}	
+			save_scope_as = county
+		}
+	}
+	
+	option = { # don't do anything
+		name = VIETmisc.3013.a
+		scope:county = {
+			add_county_modifier = {
+				modifier = VIET_martyr_commander
+				years = 15
+			}	
+		}
+	}		
+	option = { # replace some of the officers
+		name = VIETmisc.3013.b
+		trigger = {
+			OR = {
+				gold >= 50
+				is_ai = no
+			}
+		}
+		remove_short_term_gold = 50
+		VIET_huge_prestige_gain_effect = yes
+		scope:county = {
+			add_county_modifier = {
+				modifier = VIET_martyr_commander_monument
+				years = 15
+			}	
+		}
+		stress_impact = {
+			arbitrary = miniscule_stress_impact_gain
+			callous = miniscule_stress_impact_gain
+			greedy = miniscule_stress_impact_gain
+		}
+	}	
+}
+
+
+
+
+# Legendary mound is discovered - who is buried under there?
+VIETmisc.3014 = {
+	type = character_event
+	title = VIETmisc.3014.t
+	desc = VIETmisc.3014.desc
+	theme = VIET_theme_ancient_cairn
+	
+	left_portrait = {
+		character = root
+		animation = personality_rational
+	}	
+	right_portrait = {
+		character = scope:mound_tourist
+		animation = personality_compassionate
+	}
+	
+	trigger = {
+		any_courtier = {
+			is_available_ai_adult = yes
+			OR = {
+				has_trait_extroverted_trigger = yes
+				has_trait = scholar
+				has_trait = adventurer
+				learning >= decent_skill_rating
+			}
+			NOT = { has_council_position = councillor_court_chaplain }
+		}	
+	}
+	
+    weight_multiplier = {
+        base = 0
+		modifier = {
+			add = {
+				every_held_title = {
+					limit = { tier = tier_county }
+					add = 1
+				}
+			}		
+		}		
+    }
+	
+	immediate = {
+		random_held_title = {
+			limit = {
+				tier = tier_county
+			}	
+			save_scope_as = county
+		}
+		random_courtier = {
+			limit = {
+				is_available_ai_adult = yes
+				OR = {
+					has_trait_extroverted_trigger = yes
+					has_trait = scholar
+					has_trait = adventurer
+					learning >= decent_skill_rating
+				}
+				NOT = { has_council_position = councillor_court_chaplain }
+			}
+			save_scope_as = mound_tourist
+		}	
+	}
+	
+	option = { # don't do anything
+		name = VIETmisc.3014.a
+		VIET_huge_prestige_gain_effect = yes
+	}		
+	option = { # build a shrine to a warrior there
+		name = VIETmisc.3014.b
+		trigger = {
+			OR = {
+				gold >= 25
+				is_ai = no
+			}
+		}
+		remove_short_term_gold = 25
+		scope:county = {
+			add_county_modifier = {
+				modifier = VIET_tomb_monument_warrior
+				years = 20
+			}	
+		}
+		custom_tooltip = VIETmisc.3014.tooltip
+	}			
+	option = { # build a shrine to a holy person there
+		name = VIETmisc.3014.c
+		trigger = {
+			OR = {
+				gold >= 25
+				is_ai = no
+			}
+		}
+		remove_short_term_gold = 25
+		scope:county = {
+			add_county_modifier = {
+				modifier = VIET_tomb_monument_holy
+				years = 20
+			}	
+		}
+		custom_tooltip = VIETmisc.3014.tooltip
+	}			
+	option = { # build a shrine to a warrior there
+		name = VIETmisc.3014.d
+		trigger = {
+			OR = {
+				gold >= 25
+				is_ai = no
+			}
+		}
+		remove_short_term_gold = 25
+		scope:county = {
+			add_county_modifier = {
+				modifier = VIET_tomb_monument_ruler
+				years = 20
+			}	
+		}
+		custom_tooltip = VIETmisc.3014.tooltip
+	}	
+}
+
+
+
+
+# Corrupt officials in a county
+VIETmisc.3015 = {
+	type = character_event
+	title = VIETmisc.3015.t
+	desc = VIETmisc.3015.desc
+	theme = corruption
+	
+	right_portrait = {
+		character = root
+		animation = stress
+	}
+	
+    weight_multiplier = {
+        base = 0
+		modifier = {
+			add = {
+				every_held_title = {
+					limit = { tier = tier_county }
+					add = 1
+				}
+			}		
+		}		
+    }
+	
+	immediate = {
+		random_held_title = {
+			limit = {
+				tier = tier_county
+			}	
+			save_scope_as = county
+		}
+		scope:county = {
+			random_list = {
+				10 = {
+					add_county_modifier = {
+						modifier = VIET_corrupt_officials
+						years = 8
+					}				
+				}
+				10 = {
+					add_county_modifier = {
+						modifier = VIET_corrupt_officials
+						years = 12
+					}				
+				}
+				10 = {
+					add_county_modifier = {
+						modifier = VIET_corrupt_officials
+						years = 16
+					}				
+				}
+				10 = {
+					add_county_modifier = {
+						modifier = VIET_corrupt_officials
+						years = 20
+					}				
+				}
+			}	
+		}	
+	}
+	
+	option = { # don't do anything
+		name = VIETmisc.3015.a
+		VIET_huge_prestige_loss_effect = yes
+		stress_impact = {
+			just = minor_stress_impact_gain
+			diligent = miniscule_stress_impact_gain
+		}
+	}		
+	option = { # crack down on them
+		name = VIETmisc.3015.b
+		trigger = {
+			OR = {
+				gold >= 50
+				is_ai = no
+			}
+		}
+		remove_short_term_gold = 50
+		scope:county = {
+			remove_county_modifier = VIET_corrupt_officials
+			add_county_modifier = {
+				modifier = VIET_cracking_down_on_corrupt_officials
+				years = 10
+			}	
+		}
+		stress_impact = {
+			just = minor_stress_impact_loss
+			diligent = miniscule_stress_impact_loss
+		}
+	}		
+}
+
+
+
+
+# Incorruptible officials in a county
+VIETmisc.3016 = {
+	type = character_event
+	title = VIETmisc.3016.t
+	desc = VIETmisc.3016.desc
+	theme = realm
+	
+	right_portrait = {
+		character = root
+		animation = personality_content
+	}
+	
+    weight_multiplier = {
+        base = 0
+		modifier = {
+			add = {
+				every_held_title = {
+					limit = { tier = tier_county }
+					add = 1
+				}
+			}		
+		}		
+    }
+	
+	immediate = {
+		random_held_title = {
+			limit = {
+				tier = tier_county
+			}	
+			save_scope_as = county
+		}
+		VIET_huge_prestige_gain_effect = yes
+		scope:county = {
+			random_list = {
+				10 = {
+					add_county_modifier = {
+						modifier = VIET_incorruptible_officials
+						years = 8
+					}				
+				}
+				10 = {
+					add_county_modifier = {
+						modifier = VIET_incorruptible_officials
+						years = 12
+					}				
+				}
+				10 = {
+					add_county_modifier = {
+						modifier = VIET_incorruptible_officials
+						years = 16
+					}				
+				}
+				10 = {
+					add_county_modifier = {
+						modifier = VIET_incorruptible_officials
+						years = 20
+					}				
+				}
+			}	
+		}	
+	}
+	
+	option = { # cool
+		name = VIETmisc.3016.a
+	}		
+	option = { # study their techniques
+		name = VIETmisc.3016.b
+		trigger = {
+			OR = {
+				gold >= 25
+				is_ai = no
+			}
+		}
+		remove_short_term_gold = 25
+		add_character_modifier = {
+			modifier = VIET_studying_incorruptible_officials
+			years = 5
+		}
+		stress_impact = {
+			lazy = minor_stress_impact_gain
+			arbitrary = minor_stress_impact_gain
+			greedy = minor_stress_impact_gain
+			cynical = miniscule_stress_impact_gain
+			callous = miniscule_stress_impact_gain
+			sadistic = miniscule_stress_impact_gain
+		}
+	}		
+}
+
+
+
+
+
+
+# Renowned carpenters in county
+VIETmisc.3017 = {
+	type = character_event
+	title = VIETmisc.3017.t
+	desc = VIETmisc.3017.desc
+	theme = VIET_theme_small_town
+	
+	right_portrait = root
+	
+    weight_multiplier = {
+        base = 0
+		modifier = {
+			add = {
+				every_held_title = {
+					limit = { tier = tier_county }
+					add = 1
+				}
+			}		
+		}		
+    }
+	
+	immediate = {
+		random_held_title = {
+			limit = {
+				tier = tier_county
+			}	
+			save_scope_as = county
+		}
+		scope:county = {
+			random_list = {
+				10 = {
+					add_county_modifier = {
+						modifier = VIET_renowned_carpenters
+						years = 8
+					}				
+				}
+				10 = {
+					add_county_modifier = {
+						modifier = VIET_renowned_carpenters
+						years = 12
+					}				
+				}
+				10 = {
+					add_county_modifier = {
+						modifier = VIET_renowned_carpenters
+						years = 16
+					}				
+				}
+			}		
+		}	
+	}
+	
+	option = { # cool
+		name = VIETmisc.3017.a
+	}		
+}
+
+
+
+
+# Renowned stonemasons in county
+VIETmisc.3018 = {
+	type = character_event
+	title = VIETmisc.3018.t
+	desc = VIETmisc.3018.desc
+	theme = VIET_theme_small_town
+	
+	left_portrait = root
+	
+    weight_multiplier = {
+        base = 0
+		modifier = {
+			add = {
+				every_held_title = {
+					limit = { tier = tier_county }
+					add = 1
+				}
+			}		
+		}		
+    }
+	
+	immediate = {
+		random_held_title = {
+			limit = {
+				tier = tier_county
+			}	
+			save_scope_as = county
+		}
+		scope:county = {
+			random_list = {
+				10 = {
+					add_county_modifier = {
+						modifier = VIET_renowned_stonemasons
+						years = 8
+					}				
+				}
+				10 = {
+					add_county_modifier = {
+						modifier = VIET_renowned_stonemasons
+						years = 12
+					}				
+				}
+				10 = {
+					add_county_modifier = {
+						modifier = VIET_renowned_stonemasons
+						years = 16
+					}				
+				}
+			}		
+		}	
+	}
+	
+	option = { # cool
+		name = VIETmisc.3018.a
+	}		
+}
+
+
+
+
+# Courtesan rises in prominence and becomes very famous
+VIETmisc.3019 = {
+	type = character_event
+	title = VIETmisc.3019.t
+	desc = VIETmisc.3019.desc
+	theme = feast_activity
+	override_icon = { reference = "gfx/interface/icons/event_types/type_seduction.dds" } 
+	
+	left_portrait = root
+	right_portrait = {
+		character = scope:hooker
+		animation = flirtation_left
+	}
+	
+    weight_multiplier = {
+        base = 0
+		modifier = {
+			add = {
+				every_held_title = {
+					limit = { tier = tier_county }
+					add = 1
+				}
+			}		
+		}		
+    }
+	
+	immediate = {
+		random_held_title = {
+			limit = {
+				tier = tier_county
+			}	
+			save_scope_as = county
+		}
+		create_character = {
+			location = root.capital_province
+			template = VIET_famous_courtesan_template
+			save_scope_as = hooker
+		}
+		scope:county = {
+			random_list = {
+				10 = {
+					add_county_modifier = {
+						modifier = VIET_famous_courtesan_county
+						years = 6
+					}				
+				}
+				10 = {
+					add_county_modifier = {
+						modifier = VIET_famous_courtesan_county
+						years = 8
+					}				
+				}
+				10 = {
+					add_county_modifier = {
+						modifier = VIET_famous_courtesan_county
+						years = 10
+					}				
+				}
+				10 = {
+					add_county_modifier = {
+						modifier = VIET_famous_courtesan_county
+						years = 12
+					}				
+				}
+			}		
+		}	
+	}
+	
+	option = { # Ok cool
+		name = VIETmisc.3019.a
+		hidden_effect = {
+			scope:hooker = {		
+				death = {
+					death_reason = death_disappearance
+				}
+			}			
+		}
+	}	
+	option = { # Get the girlfriend experience
+		name = VIETmisc.3019.b
+		trigger = {
+			OR = {
+				gold >= 50
+				is_ai = no
+			}
+			NOR = {
+				has_trait = eunuch
+				has_trait = celibate
+				has_sexuality = asexual
+			}
+			OR = {
+				AND = {
+					is_female = no
+					NOT = { has_sexuality = homosexual }
+				}
+				AND = {
+					is_female = yes
+					OR = {
+						has_sexuality = homosexual						
+						has_sexuality = bisexual						
+					}
+				}
+			}
+		}
+		remove_short_term_gold = 50
+		add_character_modifier = {
+			modifier = VIET_famous_courtesan_sex
+			years = 10
+		}
+		if = {
+			limit = {
+				faith = {
+					trait_is_virtue = chaste
+				}
+			}
+			VIET_large_piety_loss_effect = yes
+			every_courtier_or_guest = {
+				limit = {
+					OR = {
+						has_trait = zealous
+						has_trait = chaste
+						is_theocratic_lessee = yes
+						betrothed = root
+						is_consort_of = root
+					}
+				}
+				add_opinion = {
+					target = root
+					modifier = VIET_opinion_slept_with_courtesan
+				}
+			}
+		}
+		else_if = {
+			limit = {
+				faith = {
+					trait_is_virtue = lustful
+				}
+			}
+			VIET_large_piety_gain_effect = yes
+			every_courtier_or_guest = {
+				limit = {
+					OR = {
+						betrothed = root
+						is_consort_of = root
+					}
+				}
+				add_opinion = {
+					target = root
+					modifier = VIET_opinion_slept_with_courtesan
+				}
+			}
+		}
+		else_if = {
+			limit = {
+				faith = {
+					trait_is_sin = lustful
+				}
+			}
+			VIET_huge_piety_loss_effect = yes
+			every_courtier_or_guest = {
+				limit = {
+					OR = {
+						has_trait = zealous
+						has_trait = chaste
+						is_theocratic_lessee = yes
+						betrothed = root
+						is_consort_of = root
+					}
+				}
+				add_opinion = {
+					target = root
+					modifier = VIET_opinion_slept_with_courtesan
+				}
+			}
+		}
+		else = {
+			VIET_medium_piety_loss_effect = yes
+			every_courtier_or_guest = {
+				limit = {
+					OR = {
+						has_trait = zealous
+						has_trait = chaste
+						is_theocratic_lessee = yes
+						betrothed = root
+						is_consort_of = root
+					}
+				}
+				add_opinion = {
+					target = root
+					modifier = VIET_opinion_slept_with_courtesan
+				}
+			}
+		}
+		stress_impact = {
+			base = medium_stress_impact_loss
+			lustful = medium_stress_impact_loss
+			gregarious = minor_stress_impact_loss
+			shy = minor_stress_impact_loss
+			lazy = minor_stress_impact_loss
+			content = minor_stress_impact_loss
+			trusting = minor_stress_impact_loss
+		}
+		hidden_effect = {
+			scope:hooker = {		
+				death = {
+					death_reason = death_disappearance
+				}
+			}			
+		}
+	}		
+	option = { # Make her a courtier
+		name = VIETmisc.3019.c
+		VIET_massive_prestige_loss_effect = yes
+		add_courtier = scope:hooker
+		scope:county = {
+			remove_county_modifier = VIET_famous_courtesan_county		
+		}	
+		if = {
+			limit = {
+				can_add_hook = {
+					target = scope:hooker
+					type = favor_hook
+				}
+			}
+			add_hook = {
+				target = scope:hooker
+				type = favor_hook
+			}
+		}
+		every_courtier_or_guest = {
+			limit = {
+				NOR = {
+					has_trait = lustful
+					has_trait = gregarious
+					has_trait = content
+					has_trait = humble
+					has_trait = patient
+					has_trait = fickle
+					has_trait = trusting
+					has_trait = reveler_1
+					has_trait = reveler_2
+					has_trait = reveler_3
+					has_trait = seducer
+				}
+			}
+			add_opinion = {
+				target = root
+				modifier = VIET_opinion_disapproves_invite_courtesan
+			}
+		}
+		every_courtier_or_guest = {
+			limit = {
+				OR = {
+					has_trait = lustful
+					has_trait = gregarious
+					has_trait = reveler_1
+					has_trait = reveler_2
+					has_trait = reveler_3
+					has_trait = seducer
+				}
+			}
+			add_opinion = {
+				target = root
+				modifier = VIET_opinion_approves_invite_courtesan
+			}
+		}
+	}		
+}
+
+
+
+
+
+# Renowned traveler settles down in a county
+VIETmisc.3020 = {
+	type = character_event
+	title = VIETmisc.3020.t
+	desc = VIETmisc.3020.desc
+	theme = realm
+	
+	left_portrait = root
+	right_portrait = scope:traveler
+	
+    weight_multiplier = {
+        base = 0
+		modifier = {
+			add = {
+				every_held_title = {
+					limit = { tier = tier_county }
+					add = 1
+				}
+			}		
+		}		
+    }
+	
+	immediate = {
+		random_held_title = {
+			limit = {
+				tier = tier_county
+			}	
+			save_scope_as = county
+		}
+		create_character = {
+			location = root.capital_province
+			template = VIET_famous_traveler_template
+			save_scope_as = traveler
+		}
+		scope:county = {
+			random_list = {
+				10 = {
+					add_county_modifier = {
+						modifier = VIET_famous_traveler_county
+						years = 6
+					}				
+				}
+				10 = {
+					add_county_modifier = {
+						modifier = VIET_famous_traveler_county
+						years = 10
+					}				
+				}
+				10 = {
+					add_county_modifier = {
+						modifier = VIET_famous_traveler_county
+						years = 14
+					}				
+				}
+				10 = {
+					add_county_modifier = {
+						modifier = VIET_famous_traveler_county
+						years = 18
+					}				
+				}
+			}		
+		}	
+	}
+	
+	option = { # Ok cool
+		name = VIETmisc.3020.a
+		hidden_effect = {
+			scope:traveler = {		
+				death = {
+					death_reason = death_disappearance
+				}
+			}			
+		}
+	}	
+	option = { # Make them a courtier
+		name = VIETmisc.3020.b
+		trigger = {
+			OR = {
+				gold >= 40
+				is_ai = no
+			}
+		}
+		pay_short_term_gold = {
+			target = scope:traveler
+			gold = 40
+		}
+		add_courtier = scope:traveler
+		scope:county = {
+			remove_county_modifier = VIET_famous_traveler_county		
+		}	
+		if = {
+			limit = {
+				can_add_hook = {
+					target = scope:traveler
+					type = favor_hook
+				}
+			}
+			add_hook = {
+				target = scope:traveler
+				type = favor_hook
+			}
+		}
+	}		
+}
+
+
+
+
+
+
+
+# Building collapses, killing a lot of important community leaders
+VIETmisc.3021 = {
+	type = character_event
+	title = VIETmisc.3021.t
+	desc = VIETmisc.3021.desc
+	theme = realm
+	
+	left_portrait = {
+		character = root
+		animation = worry
+	}
+	
+    weight_multiplier = {
+        base = 0
+		modifier = {
+			add = {
+				every_held_title = {
+					limit = { tier = tier_county }
+					add = 1
+				}
+			}		
+		}		
+    }
+	
+	immediate = {
+		random_held_title = {
+			limit = {
+				tier = tier_county
+			}	
+			save_scope_as = county
+		}
+		play_music_cue = mx_cue_stress
+		scope:county = {
+			add_county_modifier = {
+				modifier = VIET_recent_building_collapse
+				years = 5
+			}		
+		}	
+	}
+	
+	option = { # Ok
+		name = VIETmisc.3021.a
+	}	
+	option = { # Ok
+		name = VIETmisc.3021.b
+		trigger = {
+			OR = {
+				gold >= 25
+				is_ai = no
+			}
+		}
+		remove_short_term_gold = 25
+		if = {
+			limit = {
+				faith = {
+					OR = {
+						trait_is_virtue = compassionate
+						trait_is_virtue = generous
+						trait_is_virtue = just
+					}
+				}
+			}
+			VIET_huge_piety_gain_effect = yes
+		}
+		else = {
+			VIET_large_piety_gain_effect = yes
+		}
+		add_character_modifier = {
+			modifier = VIET_generous_donation
+			years = 10
+		}
+	}		
+}
+
+
+
+
+# You hear rumors of a commoner of peerless beauty in a county
+VIETmisc.3022 = {
+	type = character_event
+	title = VIETmisc.3022.t
+	desc = VIETmisc.3022.desc
+	theme = realm
+	
+	left_portrait = {
+		character = root
+		animation = worry
+	}
+	
+    weight_multiplier = {
+        base = 0
+		modifier = {
+			add = {
+				every_held_title = {
+					limit = { tier = tier_county }
+					add = 1
+				}
+			}		
+		}		
+    }
+	
+	immediate = {
+		random_held_title = {
+			limit = {
+				tier = tier_county
+			}	
+			save_scope_as = county
+		}
+		scope:county = {
+			random_list = {
+				10 = {
+					add_county_modifier = {
+						modifier = VIET_great_beauty
+						years = 3
+					}				
+				}
+				10 = {
+					add_county_modifier = {
+						modifier = VIET_great_beauty
+						years = 5
+					}				
+				}
+				10 = {
+					add_county_modifier = {
+						modifier = VIET_great_beauty
+						years = 7
+					}				
+				}
+			}	
+		}	
+	}
+	
+	option = { # Ok
+		name = VIETmisc.3022.a
+		VIET_medium_piety_gain_effect = yes
+	}	
+	option = { # Ok
+		name = VIETmisc.3022.b
+		VIET_medium_prestige_gain_effect = yes
+	}		
+	option = { # Ok
+		name = VIETmisc.3022.c
+		VIET_medium_prestige_loss_effect = yes
+		custom_tooltip = VIETmisc.3022.c.tooltip
+		hidden_effect = {
+			random_list = {
+				10 = { # It turns out the whole thing is malicious rumor and the girl's ugly
+					trigger_event = {
+						id = VIETmisc.3023
+						days = { 5 20 }
+					}				
+				}
+				20 = { # She's the real deal, but she has some (wholesome) relationship drama
+					trigger_event = {
+						id = VIETmisc.3024
+						days = { 5 20 }
+					}				
+				}
+			}
+		}
+	}		
+}
+
+
+
+
+# It turns out the whole thing is malicious rumor and the girl's ugly
+VIETmisc.3023 = {
+	type = character_event
+	title = VIETmisc.3023.t
+	desc = {
+		desc = VIETmisc.3023.desc
+		first_valid = {
+			triggered_desc = {
+				trigger = {
+					has_character_flag = VIET_ugly_beauty_unpleasant_personality_flag
+				}
+				desc = VIETmisc.3023.desc.unpleasant
+			}
+			triggered_desc = {
+				trigger = {
+					has_character_flag = VIET_ugly_beauty_pleasant_personality_flag
+				}
+				desc = VIETmisc.3023.desc.pleasant
+			}
+		}
+	}
+	theme = realm
+	
+	left_portrait = {
+		character = root
+		animation = personality_callous
+	}	
+	right_portrait = {
+		character = scope:beauty
+		triggered_animation = {
+			trigger = { has_character_flag = VIET_ugly_beauty_unpleasant_personality_flag }
+			animation = personality_vengeful
+		}
+		triggered_animation = {
+			trigger = { has_character_flag = VIET_ugly_beauty_pleasant_personality_flag }
+			animation = personality_compassionate
+		}
+	}
+	
+	immediate = {
+		random_list = {
+			10 = {
+				create_character = {
+					location = root.capital_province
+					template = VIET_fake_beauty_unpleasant_template
+					save_scope_as = beauty
+				}
+				add_character_flag = VIET_ugly_beauty_unpleasant_personality_flag
+			}
+			10 = {
+				create_character = {
+					location = root.capital_province
+					template = VIET_fake_beauty_pleasant_template
+					save_scope_as = beauty
+				}
+				add_character_flag = VIET_ugly_beauty_pleasant_personality_flag
+			}
+		}
+		scope:county = {
+			remove_county_modifier = VIET_great_beauty		
+		}
+	}
+	
+	option = { # lol ok, no big deal
+		name = VIETmisc.3023.a
+		VIET_medium_piety_gain_effect = yes
+		stress_impact = {
+			arrogant = minor_stress_impact_gain
+			paranoid = miniscule_stress_impact_gain
+			lustful = miniscule_stress_impact_gain
+			impatient = minor_stress_impact_gain
+			callous = miniscule_stress_impact_gain
+		}
+		hidden_effect = {
+			scope:beauty = {		
+				death = {
+					death_reason = death_disappearance
+				}
+			}			
+		}
+	}	
+	option = { # these idiot peasants!
+		name = VIETmisc.3023.b
+		VIET_medium_prestige_gain_effect = yes
+		stress_impact = {
+			humble = minor_stress_impact_gain
+			compassionate = minor_stress_impact_gain
+			patient = minor_stress_impact_gain
+			forgiving = minor_stress_impact_gain
+		}
+		hidden_effect = {
+			scope:beauty = {		
+				death = {
+					death_reason = death_disappearance
+				}
+			}			
+		}
+	}		
+	option = { # Hire her as a maid
+		name = VIETmisc.3023.c
+		trigger = {
+			OR = {
+				gold >= 20
+				is_ai = no
+			}
+		}
+		remove_short_term_gold = 20
+		add_character_modifier = {
+			modifier = VIET_recently_hired_ugly_maid
+			years = 12
+		}
+		hidden_effect = {
+			scope:beauty = {		
+				death = {
+					death_reason = death_disappearance
+				}
+			}			
+		}
+		stress_impact = {
+			arrogant = minor_stress_impact_gain
+			paranoid = minor_stress_impact_gain
+			callous = minor_stress_impact_gain
+		}
+	}	
+	option = { # Make her your courtier
+		name = VIETmisc.3023.d
+		trigger = {
+			OR = {
+				gold >= 20
+				is_ai = no
+			}
+		}
+		remove_short_term_gold = 20
+		add_courtier = scope:beauty
+		if = {
+			limit = {
+				can_add_hook = {
+					target = scope:beauty
+					type = favor_hook
+				}
+			}
+			add_hook = {
+				target = scope:beauty
+				type = favor_hook
+			}
+		}
+		stress_impact = {
+			arrogant = medium_stress_impact_gain
+			paranoid = minor_stress_impact_gain
+			callous = minor_stress_impact_gain
+		}
+	}
+
+	after = {
+		if = {
+			limit = {
+				has_character_flag = VIET_ugly_beauty_unpleasant_personality_flag
+			}
+			remove_character_flag = VIET_ugly_beauty_unpleasant_personality_flag
+		}
+		if = {
+			limit = {
+				has_character_flag = VIET_ugly_beauty_pleasant_personality_flag
+			}
+			remove_character_flag = VIET_ugly_beauty_pleasant_personality_flag
+		}
+	}
+}
+
+
+
+
+# She's the real deal, but she has some (wholesome) relationship drama
+VIETmisc.3024 = {
+	type = character_event
+	title = VIETmisc.3024.t
+	desc = {
+		desc = VIETmisc.3024.desc
+		first_valid = {
+			triggered_desc = {
+				trigger = {
+					has_character_flag = VIET_beauty_unpleasant_personality_flag
+				}
+				desc = VIETmisc.3024.desc.unpleasant
+			}
+			triggered_desc = {
+				trigger = {
+					has_character_flag = VIET_beauty_pleasant_personality_flag
+				}
+				desc = VIETmisc.3024.desc.pleasant
+			}
+		}
+	}
+	theme = realm
+	
+	left_portrait = {
+		character = root
+		animation = personality_content
+	}	
+	right_portrait = {
+		character = scope:beauty
+		triggered_animation = {
+			trigger = { has_character_flag = VIET_beauty_unpleasant_personality_flag }
+			animation = personality_honorable
+		}
+		triggered_animation = {
+			trigger = { has_character_flag = VIET_beauty_pleasant_personality_flag }
+			animation = personality_compassionate
+		}
+	}
+	lower_center_portrait = scope:childhood_friend
+	
+	immediate = {
+		random_list = {
+			10 = {
+				create_character = {
+					location = root.capital_province
+					template = VIET_real_beauty_unpleasant_template
+					save_scope_as = beauty
+				}
+				add_character_flag = VIET_beauty_unpleasant_personality_flag
+			}
+			10 = {
+				create_character = {
+					location = root.capital_province
+					template = VIET_real_beauty_pleasant_template
+					save_scope_as = beauty
+				}
+				add_character_flag = VIET_beauty_pleasant_personality_flag
+			}
+		}
+		create_character = {
+			location = root.capital_province
+			template = VIET_beauty_husband_template
+			save_scope_as = childhood_friend
+		}
+		scope:beauty = {
+			hidden_effect = {
+				set_relation_best_friend = scope:childhood_friend			
+			}
+		}
+	}
+	
+	option = { # Good luck
+		name = VIETmisc.3024.a
+		VIET_medium_prestige_gain_effect = yes
+		hidden_effect = {
+			random = {
+				chance = 50				
+				scope:beauty = {
+					set_relation_soulmate = scope:childhood_friend
+					marry = scope:childhood_friend 
+				}
+			}
+			scope:beauty = {		
+				death = {
+					death_reason = death_disappearance
+				}
+			}
+			scope:childhood_friend = {		
+				death = {
+					death_reason = death_disappearance
+				}
+			}			
+		}
+	}	
+	option = { # I'll help you guys out
+		name = VIETmisc.3024.b
+		add_character_modifier = {
+			modifier = VIET_resolved_village_love_story
+			years = 6
+		}		
+		scope:beauty = {
+			set_relation_soulmate = scope:childhood_friend
+			marry = scope:childhood_friend 
+		}
+		hidden_effect = {
+			scope:beauty = {		
+				death = {
+					death_reason = death_disappearance
+				}
+			}
+			scope:childhood_friend = {		
+				death = {
+					death_reason = death_disappearance
+				}
+			}			
+		}
+	}
+	option = { # Come work for me
+		name = VIETmisc.3024.c
+		trigger = {
+			OR = {
+				gold >= 30
+				is_ai = no
+			}
+		}
+		remove_short_term_gold = 30
+		VIET_medium_prestige_loss_effect = yes
+		add_character_modifier = {
+			modifier = VIET_resolved_village_love_story
+			years = 6
+		}
+		add_character_modifier = {
+			modifier = VIET_recently_hired_couple_servants
+			years = 12
+		}		
+		scope:beauty = {
+			set_relation_soulmate = scope:childhood_friend
+			marry = scope:childhood_friend 
+		}
+		hidden_effect = {
+			scope:beauty = {		
+				death = {
+					death_reason = death_disappearance
+				}
+			}
+			scope:childhood_friend = {		
+				death = {
+					death_reason = death_disappearance
+				}
+			}			
+		}
+	}
+	option = { # Become my courtiers
+		name = VIETmisc.3024.d
+		trigger = {
+			OR = {
+				gold >= 70
+				is_ai = no
+			}
+		}
+		remove_short_term_gold = 70
+		VIET_huge_prestige_loss_effect = yes	
+		scope:beauty = {
+			set_relation_soulmate = scope:childhood_friend
+			marry = scope:childhood_friend 
+		}
+		add_courtier = scope:beauty
+		add_courtier = scope:childhood_friend
+		add_character_modifier = {
+			modifier = VIET_resolved_village_love_story
+			years = 6
+		}
+		if = {
+			limit = {
+				can_add_hook = {
+					target = scope:beauty
+					type = favor_hook
+				}
+			}
+			add_hook = {
+				target = scope:beauty
+				type = favor_hook
+			}
+		}
+		if = {
+			limit = {
+				can_add_hook = {
+					target = scope:childhood_friend
+					type = favor_hook
+				}
+			}
+			add_hook = {
+				target = scope:childhood_friend
+				type = favor_hook
+			}
+		}
+	}
+
+	after = {
+		if = {
+			limit = {
+				has_character_flag = VIET_beauty_unpleasant_personality_flag
+			}
+			remove_character_flag = VIET_beauty_unpleasant_personality_flag
+		}
+		if = {
+			limit = {
+				has_character_flag = VIET_beauty_pleasant_personality_flag
+			}
+			remove_character_flag = VIET_beauty_pleasant_personality_flag
+		}
+	}		
+}
+
+
+

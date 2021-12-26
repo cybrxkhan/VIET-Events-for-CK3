@@ -756,7 +756,7 @@
  VIET_resolved_village_love_story:0 "Resolved Village Love Story"
  VIET_resolved_village_love_story_desc:0 "This character helped two young commoners find each other in marriage. Who knew this character was capable of such things?"
  VIET_earworm:0 "Earworm"
- VIET_earworm_desc:0 "#italic 'Cause I got spurs that jingle, jangle, jingle#!\n\n#italic I got spurs that jingle, jangle, jingle#!\n\n#italic As I go ridin' merrily along#!\n\n#italic As I go ridin' merrily along"
+ VIET_earworm_desc:0 "#italic 'Cause I got spurs that jingle, jangle, jingle#!\n#italic I got spurs that jingle, jangle, jingle#!\n#italic As I go ridin' merrily along#!\n#italic As I go ridin' merrily along\n\n"
  VIET_read_sequel:0 "Read a Great Sequel Book"
  VIET_opinion_returned_coin:0 "Gave Me Back My Coin"
  VIET_wrongful_execution:0 "Wrongfully Executed an Innocent Man"
