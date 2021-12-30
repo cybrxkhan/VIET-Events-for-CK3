@@ -1,10 +1,8 @@
 ﻿l_simp_chinese:
- # Note to Chinese translators if you ever see this: Qi Ma is a reference to the character M'aiq the Liar from Elder Scrolls
- # Feel free to translate "Qi Ma" to something silly or some kind of pun
- dynn_RICE_qi_ma:0 "Qi"
- RICE_name_ma:0 "Ma"
- RICE_nick_the_liar:0 "the Liar"
- VIET_name_dreamer:0 "The Dreamer"
- VIET_nick_crow_lord:0 "the Lord of the Crows"
- VIET_nick_crow_lady:0 "the Lady of the Crows"
+ dynn_RICE_qi_ma:0 "奎"
+ RICE_name_ma:0 "麦"
+ RICE_nick_the_liar:0 "骗子"
+ VIET_name_dreamer:0 "梦语者"
+ VIET_nick_crow_lord:0 "群鸦领主"
+ VIET_nick_crow_lady:0 "群鸦领主"
  dynn_VIET_dreamer:0 ""
