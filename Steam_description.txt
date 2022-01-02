@@ -56,6 +56,8 @@ Thanks!
 
 - Virgil, The Georgics[/I]
 
+Merry Christmas to everyone! Special thanks to Stik, Vertimnus, and Tobbzn on the CK3 Mod Co-op for helping me figure out how to adapt my CK2 province events and do a system for county events for CK3.
+
 [LIST]
 [*]Added 78 events with the following themes:
 [LIST]
@@ -102,6 +104,8 @@ Credits also to OrdepNM, who was my partner in crime in the early days of VIET f
 Special thanks to Sleight of Hand for pushing me to get into the CK2 modding scene and for other assistance over the years, which is why I am still here for some reason.
 
 Thanks to tora75 for contributing the Norse unique localizations for several events.
+
+Special thanks to Stik, Vertimnus, and Tobbzn on the CK3 Mod Co-op for helping me figure out how to adapt my CK2 province events and do a system for county events for CK3.
 
 Huge thanks also to the various kind souls who are taking the time to translate the mod - you can see the full list of them in the "Features" section in the Steam mod page description.
 
