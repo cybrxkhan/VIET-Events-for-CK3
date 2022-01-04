@@ -261,7 +261,7 @@
  VIET_heartless_towards_servants:0 "Heartless Towards Servants"
  VIET_comforted_servant:0 "Comforted A Servant"
  VIET_tombstones_warning:0 "Thinking About Tombstone's Warning"
- VIET_tombstones_warning_desc:0 ""We are such stuff as dreams are made on, and our little life is rounded with a sleep.""
+ VIET_tombstones_warning_desc:0 "“We are such stuff as dreams are made on, and our little life is rounded with a sleep.”"
  VIET_servants_death_love_lesson:0 "Life Lesson about Lost Love"
  VIET_final_journey_dream_relative:0 "Dream of the Final Journey"
  VIET_final_journey_dream_relative_desc:0 "Before this character's relative died recently, their relative fell into a deep sleep and was heard mumbling a conversation with their deceased grandparent. While they were still unconscious, they muttered some indiscernible words, in a manner which would remind one of the sound of a gentle breeze beneath the azure sky. Their last words, which could barely be heard, was: "I love you.""
@@ -779,4 +779,10 @@
  VIET_perfume_obsession:0 "Uses Perfumes Excessively"
  VIET_mushrooms_of_immortality:0 "Mushrooms of Immortality"
  # 1.4.7 - please leave this comment here 
+ VIET_rehabilitated_submerged_shrine:0 "Submerged Shrine Rehabilitated"
+ VIET_rehabilitated_submerged_shrine_desc:0 "A local shrine that was partially submerged by a lake was recently rehabilitated, and brought back onto land. People in the nearby villages can now worship at this site once more."
+ VIET_burnt_down_tower_renovated:0 "Burtn Down Tower Renovated"
+ VIET_burnt_down_tower_renovated_desc:0 "An abandoned, burnt down tower was found in the wilderness here not too long ago. Local leaders deemed it prudent to restore the tower to its former glory so that it could serve as a strategic watchpost."
+ VIET_opinion_food_chat:0 "Pleasant Chat About Food"
+ # 1.4.8 - please leave this comment here 
  xxxxx:0 "xxxxx"

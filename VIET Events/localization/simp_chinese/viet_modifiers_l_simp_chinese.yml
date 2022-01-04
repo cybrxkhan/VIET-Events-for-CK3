@@ -497,6 +497,7 @@
  VIET_opinion_gifted_spices:0 "Gifted Me a Five Spice Blend"
  VIET_opinion_refused_gift_baklava:0 "Refused My Gift of Delicious Desserts"
  VIET_opinion_refused_gift_spices:0 "Refused My Gift of the Five Spice Blend"
+ # 1.4.2 - please leave this comment here 
  VIET_greatly_respects_elders:0 "Greatly Respects Elders"
  VIET_greatly_respects_elders_desc:0 "This character is seen as someone who holds their elders in high regards, and shows them a lot of respect."
  VIET_humble_generosity:0 "Humble Generosity"
@@ -530,6 +531,7 @@
  VIET_dreamer:0 "Dreamt of the Dreamer"
  VIET_self_hating_woman:0 "Female Misogynist"
  VIET_self_hating_woman_desc:0 "\"I am not like the other women - I prefer the company of menfolk, who are less conniving, hysterical, and vain. Why, if I had my way, I would be a man!\""
+ # 1.4.4 - please leave this comment here 
  VIET_idealistic_about_love:0 "Idealistic About True Love"
  VIET_idealistic_about_love_desc:0 "\"Yes. True love exists. I sincerely believe it. Really! When you feel it in your heart, you'll understand!\""
  VIET_killjoy_about_love:0 "Killjoy About True Love"
@@ -557,6 +559,7 @@
  VIET_night_we_met_desc:0 "\"I don't know what I'm supposed to do, haunted by the ghost of you - take me back to the night we met.\""
  VIET_strange_trails:0 "Followed the Strange Trails"
  VIET_strange_trails_desc:0 "When you follow the strange trails, they will take you to who knows where."
+ # 1.4.5 - please leave this comment here 
  VIET_opinion_mocked_handwriting:0 "Mocked my Handwriting"
  VIET_opinion_tease_handwriting_bad:0 "Teased Me About My Handwriting"
  VIET_opinion_tease_handwriting_good:0 "Teased Me About My Handwriting"
@@ -579,6 +582,7 @@
  VIET_learned_shorthand_4_desc:0 "This character knows many advanced techniques for writing shorthand and is considered a master at it. People tend to watch with awe as they swiftly scribble notes down."
  VIET_crow_friend_germanic:0 "$VIET_crow_friend$"
  VIET_crow_friend_germanic_desc:0 "$VIET_crow_friend_desc$"
+ # 1.4.6 - please leave this comment here 
  VIET_berry_good_medicine_county:0 "Berry Good Medicine"
  VIET_berry_good_medicine_county_desc:0 "Berries in this region are renowned for their medicinal properties. They are sold for good prices, and can be found amongst apothecaries far and wide."
  VIET_trinket_cave:0 "Small Cave Recently Discovered"
@@ -760,3 +764,11 @@
  VIET_cubeb_exorcism:0 "Using Cubeb to Ward Off Evil Spirits"
  VIET_perfume_obsession:0 "Uses Perfumes Excessively"
  VIET_mushrooms_of_immortality:0 "Mushrooms of Immortality"
+ # 1.4.7 - please leave this comment here 
+ VIET_rehabilitated_submerged_shrine:0 "Submerged Shrine Rehabilitated"
+ VIET_rehabilitated_submerged_shrine_desc:0 "A local shrine that was partially submerged by a lake was recently rehabilitated, and brought back onto land. People in the nearby villages can now worship at this site once more."
+ VIET_burnt_down_tower_renovated:0 "Burtn Down Tower Renovated"
+ VIET_burnt_down_tower_renovated_desc:0 "An abandoned, burnt down tower was found in the wilderness here not too long ago. Local leaders deemed it prudent to restore the tower to its former glory so that it could serve as a strategic watchpost."
+ VIET_opinion_food_chat:0 "Pleasant Chat About Food"
+ # 1.4.8 - please leave this comment here 
+ xxxxx:0 "xxxxx"

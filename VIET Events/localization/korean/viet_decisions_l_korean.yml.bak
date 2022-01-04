@@ -1,4 +1,4 @@
-﻿l_french:
+﻿l_korean:
  # Decisions
  VIET_decision_traveling_baklava_merchant:0 "Visit the Famous Patissier"
  VIET_decision_traveling_baklava_merchant_tooltip:0 "You will visit the famous patissier who sells various Middle Eastern desserts and is passing through the area"
@@ -112,7 +112,7 @@
  VIET_decision_venerate_a_mummified_hermit_req:0 "Any [county|E] in your [domain|E] has the [GetModifier('VIET_holy_hermit_passes_away').GetNameWithTooltip] [county_modifier|E]"
  VIET_decision_venerate_a_mummified_hermit_effect_tooltip:0 "You will visit to pay your respects to the mummified hermit, gaining [piety|E] and other boons"
  VIET_decision_venerate_a_mummified_hermit_confirm:0 "Let's go there."
- VIET_decision_venerate_a_mummified_hermit_context_tooltip:0 "#emphasis Historical Context:#! For centuries, there have been reports of Buddhist monks and nuns who died in the middle of meditation, and whose bodies, supposedly, were "naturally" mummified and resistant to decay. These were (and are), unsurprisingly, Buddhist sites of devotion and veneration."    
+ VIET_decision_venerate_a_mummified_hermit_context_tooltip:0 "#emphasis Historical Context:#! For centuries, there have been reports of Buddhist monks and nuns who died in the middle of meditation, and whose bodies, supposedly, were "naturally" mummifed and resistant to decay. These were (and are), unsurprisingly, Buddhist sites of devotion and veneration."    
  VIET_decision_relax_at_a_giant_shade_tree:0 "Relax at a Giant Shade Tree"
  VIET_decision_relax_at_a_giant_shade_tree_tooltip:0 "The tree must be very big"
  VIET_decision_relax_at_a_giant_shade_tree_desc:0 "In my territories, there is a well-known shade tree in one of the villages. I think it's time I visited it and see whether its reputation is well-deserved."

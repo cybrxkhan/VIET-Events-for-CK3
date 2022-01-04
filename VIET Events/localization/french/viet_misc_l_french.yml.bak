@@ -1,4 +1,4 @@
-﻿l_russian:
+﻿l_french:
  rule_VIET_events_atmosphere:0 "VIET Events Atmosphere"
  setting_VIET_balanced_events:0 "Balanced Events (Default)"
  setting_VIET_balanced_events_desc:0 "Most events from VIET events will occur, but the silliest ones that break immersion for some players are disabled. Choose this for the best balance between serious and light-hearted events."
@@ -36,7 +36,7 @@
  setting_VIET_event_frequency_low_desc:0 "VIET Events trigger somewhat less frequently. WARNING: Due to the way RNG works, you may still see many events at once, or no events for long stretches of time."
  setting_VIET_event_frequency_very_low:0 "Very Low"
  setting_VIET_event_frequency_very_low_desc:0 "VIET Events trigger much less frequently. You may rarely see events! WARNING: Due to the way RNG works, you may still see many events at once, or no events for long stretches of time."
- death_VIET_choduke_food:0 "died choking on food"
+ death_VIET_choduke_food:0 "died chooking on food"
  d_VIET_dreamer_male:0 "The Dreamland"
  d_VIET_dreamer_male_adj:0 "Dreamland"
  d_VIET_dreamer_female:0 "The Dreamland"

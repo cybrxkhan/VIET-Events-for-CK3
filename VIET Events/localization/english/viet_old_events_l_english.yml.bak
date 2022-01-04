@@ -1,4 +1,4 @@
-﻿l_korean:
+﻿l_english:
 
  # OG VIET Events for CK2 - these are the oldest, from the earliest, original version of VIET (c. 2012-2014)
  VIETold.0000.t:0 "xxxxx"
@@ -1127,7 +1127,7 @@
  VIETold.2013.a:0 "I never expected to like that kind of story in the first place!"
  VIETold.2014.t:0 "A Simple Story"
  VIETold.2014.desc:0 "I was watching a play a traveling troupe was performing. Though it was a short and simple love story without much drama or conflict, the characters were likeable and realistic in their motivations and desires. Despite its simplicity and lack of tension, many in the audience loved the story."
- VIETold.2014.a:0 "Those plebeians - it's just some banal fluff!"
+ VIETold.2014.a:0 "Those plebians - it's just some banal fluff!"
  VIETold.2014.b:0 "I admit, it brought a smile to my face."
  VIETold.2015.t:0 "Bad History"
  VIETold.2015.desc:0 "A poet is reciting a tale about a historical event long ago before me and an audience. I realize he just made a mistake, and there are some inaccuracies in his retelling of what happened!\n\nPerhaps I should do my duty and inform this poet that his knowledge of the past is faulty, and will cause others to misunderstand those who came before us. On the other hand, maybe people will misinterpret my good intentions as haughtiness. What to do...?"
