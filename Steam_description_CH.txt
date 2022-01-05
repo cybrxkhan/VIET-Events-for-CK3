@@ -1,6 +1,6 @@
 [img]http://i.imgur.com/OhIA5bm.jpg[/img]
 
-[h1]当前版本：1.4.6 "Heartland" (2021.12.25更新，兼容原版1.4.X)[/h1]
+[h1]当前版本：1.4.7 "Saint Valerie" (2022.1.5更新，兼容原版1.4.X)[/h1]
 [h1][B][url=https://discord.gg/9KuyXv2uZA]我模组的Discord服务器[/url]
 [url=https://cybrxkhansmods.godaddysites.com/]我模组的官网[/url][/B][/h1]
 [B]更多信息请见[url=https://forum.paradoxplaza.com/forum/threads/mod-viet-events-for-ck3-a-flavor-and-immersion-event-mod.1422081/]论坛[/url][/B]
@@ -22,7 +22,7 @@ Very Immersive Events and Tales (VIET)是[url=https://steamcommunity.com/sharedf
 [img]http://i.imgur.com/EyXurbK.jpg[/img]
 
 [LIST]
-[*]多达[B]666个新风味事件（链）[/B]，以后的更新中会加入更多
+[*]多达[B]682个新风味事件（链）[/B]，以后的更新中会加入更多
 [*]新决议、角色互动、活动、事件链
 [*]如果你不喜欢某些傻里傻气的事件，你可以在规则里面将它们停用，共有三个等级可供选择：平衡（默认）、严肃（有所限制）、所有事件（不设限）
 [*][B]几乎兼容所有模组[/B]，因为不触及原文件。就算是全局模组，你也可以在规则里禁用提及我们中世纪世界的事件，这样一来在其它世界线（比如奇幻世界或是科幻世界的模组）就显得更为合理了
@@ -49,7 +49,7 @@ Very Immersive Events and Tales (VIET)是[url=https://steamcommunity.com/sharedf
 
 [img]http://i.imgur.com/RQ5QZTF.jpg[/img]
 
-[h1]版本号1.4.6 "Heartland"[/h1]
+[h1]版本号1.4.7 "Saint Valerie"[/h1]
 
 [I]"Let my delight be the country, and the running streams amid the dells — may I love the waters and the woods, though I be unknown to fame."
 

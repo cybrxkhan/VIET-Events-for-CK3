@@ -1,6 +1,6 @@
 [img]http://i.imgur.com/OhIA5bm.jpg[/img]
 
-[h1]Current Version: 1.4.6 "Heartland" (Released 12/25/21, Compatible with vanilla patch 1.4.X)[/h1]
+[h1]Current Version: 1.4.7 "Saint Valerie" (Released 1/5/22, Compatible with vanilla patch 1.4.X)[/h1]
 [h1][B][url=https://discord.gg/9KuyXv2uZA]Discord Server for my mods[/url]
 [url=https://cybrxkhansmods.godaddysites.com/]Official Website for my mods[/url][/B][/h1]
 [B][url=https://forum.paradoxplaza.com/forum/threads/mod-viet-events-for-ck3-a-flavor-and-immersion-event-mod.1422081/]Paradox Forum Thread[/url][/B]
@@ -22,7 +22,7 @@ Feel free to use my work in your mods - all I ask is that I am credited and (if 
 [img]http://i.imgur.com/EyXurbK.jpg[/img]
 
 [LIST]
-[*]Over [B]666 new flavor events[/B] to experience!
+[*]Over [B]682 new flavor events[/B] to experience!
 [*]Explore new decisions, character interactions, activities, and event chains
 [*]Game rule to disable sillier events for those who don't like them, with three levels to choose from: Balanced (Default), Serious (Restricted), and All Events (Full)
 [*][B]Compatible with almost anything[/B] since it doesn't touch any vanilla files - even with overhaul mods, you can via game rule disable events that reference things specific to our medieval world that wouldn’t make sense in other time periods or universes (like fantasy and sci-fi conversion mods)
@@ -50,33 +50,19 @@ Thanks!
 
 [img]http://i.imgur.com/RQ5QZTF.jpg[/img]
 
-[h1]Version 1.4.6 "Heartland"[/h1]
+[h1]Version 1.4.7 "Saint Valerie"[/h1]
 
-[I]"Let my delight be the country, and the running streams amid the dells — may I love the waters and the woods, though I be unknown to fame."
-
-- Virgil, The Georgics[/I]
-
-Merry Christmas to everyone! Special thanks to Stik, Vertimnus, and Tobbzn on the CK3 Mod Co-op for helping me figure out how to adapt my CK2 province events and do a system for county events for CK3.
+[I]Valerie of Limoges is a Christian saint and martyr who was said to have been a follower of Saint Martial, the patron saint of the city of Limoges in France. According to legend, she was beheaded for refusing to marry a pagan lord; after her execution, she carried her head and brought it to Martial, who was then bishop of Limoges. Her cult, and that of Saint Martial, were especially popular in the medieval period.[/I]
 
 [LIST]
-[*]Added 78 events with the following themes:
+[*]Added 16 events with the following themes:
 [LIST]
-[*]25 county events
-[*]30 county events from old VIET*
-[*]10 county related decision events
-[*]13 Generic*
+[*]11 Contemplative Thoughts
+[*]5 inspired by unmarked locations in Oblivion (including 2 county events)
 [/LIST]
-[*]Added 7 new decisions:
-[LIST]
-[*]Buy Valuable Medicinal Berries
-[*]Employ Renowned Blacksmiths for Armies
-[*]Visit a Legendary Burial Mound
-[*]Investigate a Ghost Town
-[*]Venerate a Mummified Hermit
-[*]Relax at a Giant Shade Tree
-[*]Examine Ancient Stone Monument
-[/LIST]
-[*]Changed pastry icon to a sweetroll
+[*]Added a lot of Chinese localization (thanks to Chinese translators!)
+[*]Added a couple new variations of the ancient cairn background
+[*]Modifiers that grant the ability to take various decisions now mention that in their descriptions
 [*]Miscellaneous bugfixes
 [/LIST]
 
