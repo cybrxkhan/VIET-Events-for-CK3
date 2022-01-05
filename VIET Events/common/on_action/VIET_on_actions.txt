@@ -335,6 +335,14 @@ VIET_events_yearly_pulse = {
 		100 = VIETmisc.0174		# Frozen Pines - wandering a frozen wasteland with another courtier
 		# Writing
 		100 = VIETmisc.0181		# Writing too much makes your wrists sore
+		# Contemplative Thoughts
+		100 = VIETmisc.0183		# Thinking about death
+		100 = VIETmisc.0185		# Talking with a courtier when you forgot what you ate yesterday (I hate it when that happens)
+		100 = VIETmisc.0187		# Semantic Satiation (when a word doesn't seem real to you after repeating it)
+		100 = VIETmisc.0191		# Forgot whether you said farewell to someone or not, and worrying about whether you were rude
+		100 = VIETmisc.0192		# Can't fall asleep, so you admire the nighttime solitude
+		# Oblivion Unmarked Locations
+		100 = VIETmisc.0193		# Lonely Grave - south of Boethia's shrine - encounter a lonely grave in the middle of nowhere
 	}
 }
 
@@ -611,6 +619,13 @@ VIET_events_tri_yearly_pulse = {
 		100 = VIETmisc.0178		# Night We Met - courtier wishes he could have done something to save a dead lover
 		# Writing
 		100 = VIETmisc.0180		# Courtier has crappy handwriting
+		# Contemplative Thoughts
+		100 = VIETmisc.0182		# Remembering a toy from your childhood
+		100 = VIETmisc.0184		# Who's tallest and who's shortest?
+		100 = VIETmisc.0186		# If you could read minds, what would you do with such powers?
+		100 = VIETmisc.0190		# Having intrusive thoughts while at a council meeting
+		# Oblivion Unmarked Locations
+		100 = VIETmisc.0194		# Flooded Ruins - a couple examples can be found in the Shivering Isles - soldiers find small chest of coins in underwater ruins
 	}
 }
 
@@ -802,6 +817,11 @@ VIET_events_five_yearly_pulse = {
 		# Strange Trails (Lord Huron) inspired
 		100 = VIETmisc.0167		# Dead Man's Hand - ghost appears in a dream asking not to be buried
 		100 = VIETmisc.0172		# Meet Me In The Woods - should you meet a noble family whose daughter is cursed?
+		# Contemplative Thoughts
+		100 = VIETmisc.0188		# Memories of a childhood friend
+		100 = VIETmisc.0189		# Have an existential crisis while a bard is playing music
+		# Oblivion Unmarked Locations
+		100 = VIETmisc.0195		# Isolated House - halfway between Bravil and Skingrad - soldiers find abandoned house occupied by bandits
 	}
 }
 
@@ -1186,8 +1206,10 @@ VIET_events_uncommon_county_pulse = {
 		100 = VIETmisc.3014		# Legendary mound is discovered - who is buried under there?
 		100 = VIETmisc.3019		# Courtesan rises in prominence and becomes very famous
 		100 = VIETmisc.3020		# Renowned traveler settles down in a county
+		# Oblivion Unmarked Locations
+		100 = VIETmisc.3026		# Burnt Down Tower - on an island in the Niben River south of Fort Irony - old burnt down tower found in wilderness, could be turned into a watchpost
 		
-		# 18
+		# 19
 		
     }
 }
@@ -1244,8 +1266,10 @@ VIET_events_rare_county_pulse = {
 		50 = VIETmisc.3004		# Discovered a gateway that's totally not the Stellaris gateway
 		50 = VIETmisc.3008		# Mysterious supernatural relic found - could it be futuristic equipment left behind by Stellaris aliens?
 		50 = VIETmisc.3022		# You hear rumors of a commoner of peerless beauty in a county
+		# Oblivion Unmarked Locations
+		50 = VIETmisc.3020		# Submerged Shrine - found in Shivering Isles - abandoned wayshrine found underwater, turn it into a proper shrine or not?
 		
-		# 8
+		# 9
 		
     }
 }

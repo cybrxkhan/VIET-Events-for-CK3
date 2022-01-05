@@ -22,6 +22,7 @@
 # County events made for the CK3 version of VIET
 # 
 # 3000-3024		Generic (First new batch)
+# 3025-3026		Oblivion Unmarked Locations
 # 
 ############################################################################################################################
 
@@ -2597,4 +2598,107 @@ VIETmisc.3024 = {
 }
 
 
+
+##################################################################
+# OBLIVION UNMARKED LOCATIONS 3025-3026
+##################################################################
+
+# Submerged Shrine - found in Shivering Isles - abandoned wayshrine found underwater, turn it into a proper shrine or not?
+VIETmisc.3025 = {
+	type = character_event
+	title = VIETmisc.3025.t
+	desc = VIETmisc.3025.desc
+	theme = VIET_theme_ancient_cairn
+	
+	left_portrait = root
+	
+    weight_multiplier = {
+        base = 0
+		modifier = {
+			add = {
+				every_held_title = {
+					limit = { tier = tier_county }
+					add = 1
+				}
+			}		
+		}
+    }
+	
+	immediate = {
+		random_held_title = {
+			limit = { tier = tier_county }
+			save_scope_as = county
+		}	
+	}
+	
+	option = {
+		name = VIETmisc.3025.a
+	}	
+	option = {
+		name = VIETmisc.3025.b
+		trigger = {
+			OR = {
+				gold >= 40
+				is_ai = no
+			}
+		}
+		remove_short_term_gold = 40
+		VIET_huge_piety_gain_effect = yes
+		scope:county = {
+			add_county_modifier = {
+				modifier = VIET_rehabilitated_submerged_shrine
+				years = 10
+			}		
+		}
+	}
+}
+
+# Burnt Down Tower - on an island in the Niben River south of Fort Irony - old burnt down tower found in wilderness, could be turned into a watchpost
+VIETmisc.3026 = {
+	type = character_event
+	title = VIETmisc.3026.t
+	desc = VIETmisc.3026.desc
+	theme = VIET_theme_ancient_cairn
+	
+	left_portrait = root
+	
+    weight_multiplier = {
+        base = 0
+		modifier = {
+			add = {
+				every_held_title = {
+					limit = { tier = tier_county }
+					add = 1
+				}
+			}		
+		}
+    }
+	
+	immediate = {
+		random_held_title = {
+			limit = { tier = tier_county }
+			save_scope_as = county
+		}	
+	}
+	
+	option = {
+		name = VIETmisc.3026.a
+	}	
+	option = {
+		name = VIETmisc.3026.b
+		trigger = {
+			OR = {
+				gold >= 40
+				is_ai = no
+			}
+		}
+		remove_short_term_gold = 40
+		scope:county = {
+			add_county_modifier = {
+				modifier = VIET_burnt_down_tower_renovated
+				years = 10
+			}		
+		}
+	}
+}
 

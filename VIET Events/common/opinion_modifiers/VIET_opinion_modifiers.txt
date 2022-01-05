@@ -410,3 +410,8 @@ VIET_opinion_date_soaps_cosmetics = {
 	decaying = yes
 	opinion = 5
 }
+VIET_opinion_food_chat = {
+	years = 3
+	decaying = yes
+	opinion = 5
+}

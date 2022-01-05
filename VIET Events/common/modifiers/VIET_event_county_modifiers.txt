@@ -598,3 +598,14 @@ VIET_resolved_village_love_story = {
 	monthly_prestige = 0.1
 	monthly_piety = 0.1
 }
+VIET_rehabilitated_submerged_shrine = {
+	icon = rock_positive
+	county_opinion_add = 3
+	development_growth_factor = 0.03
+}
+VIET_burnt_down_tower_renovated = {
+	icon = rock_positive
+	monthly_county_control_change_add = 0.3
+	levy_reinforcement_rate = 0.1
+	hostile_raid_time = 0.1
+}

@@ -39,6 +39,8 @@
 # 0155-0164		Hundred
 # 0165-0179		Strange Trails (Lord Huron)
 # 0180-0181		Writing
+# 0182-0192		Contemplative Thoughts
+# 0193-0195		Oblivion unmarked locations
 # 
 ############################################################################################################################
 
@@ -15660,7 +15662,927 @@ VIETmisc.0181 = {
 }
 
 
+##########################################################################################################################
+#
+# CONTEMPLATIVE THOUGHTS 0182-0192
+#
+##########################################################################################################################
 
+
+
+
+# Remembering a toy from your childhood
+VIETmisc.0182 = {
+	type = character_event
+	title = VIETmisc.0182.t
+	desc = VIETmisc.0182.desc
+	theme = friendly
+	
+	right_portrait = { 	
+		character = root
+		animation = personality_irrational
+	}
+	
+	weight_multiplier = {
+		base = 1
+		modifier = {
+			add = 0.2
+			has_trait = fickle
+		}
+		modifier = {
+			add = -0.2
+			has_trait = stubborn
+		}
+		modifier = {
+			add = 0.2
+			has_trait = content
+		}
+		modifier = {
+			add = -0.2
+			has_trait = ambitious
+		}
+		modifier = {
+			add = 0.2
+			has_trait = deceitful
+		}
+		modifier = {
+			add = -0.2
+			has_trait = honest
+		}
+	}
+
+	
+	option = { # find joy in life
+		name = VIETmisc.0182.a
+		VIET_tiny_piety_gain_effect = yes
+		stress_impact = {		
+			lazy = miniscule_stress_impact_loss
+			content = miniscule_stress_impact_loss
+			calm = miniscule_stress_impact_loss
+			trusting = miniscule_stress_impact_loss
+		}
+	}	
+	option = { # better to be an adult
+		name = VIETmisc.0182.b
+		VIET_tiny_prestige_gain_effect = yes
+		stress_impact = {		
+			diligent = miniscule_stress_impact_loss
+			ambitious = miniscule_stress_impact_loss
+			lustful = miniscule_stress_impact_loss
+			gregarious = miniscule_stress_impact_loss
+		}
+	}
+}
+
+
+
+
+
+# Thinking about death
+VIETmisc.0183 = {
+	type = character_event
+	title = VIETmisc.0183.t
+	desc = VIETmisc.0183.desc
+	theme = death
+	override_background = { event_background = corridor_day }
+	
+	right_portrait = { 	
+		character = root
+		animation = personality_rational
+	}
+	
+	weight_multiplier = {
+		base = 1
+		modifier = {
+			add = 0.2
+			has_trait = paranoid
+		}
+		modifier = {
+			add = -0.2
+			has_trait = trusting
+		}
+		modifier = {
+			add = 0.2
+			has_trait = calm
+		}
+		modifier = {
+			add = -0.2
+			has_trait = wrathful
+		}
+		modifier = {
+			add = 0.2
+			has_trait = zealous
+		}
+		modifier = {
+			add = -0.2
+			has_trait = cynical
+		}
+	}
+
+	
+	option = { # Shouldn't have doubts
+		name = VIETmisc.0183.a
+		VIET_tiny_piety_gain_effect = yes
+		stress_impact = {		
+			zealous = miniscule_stress_impact_loss
+		}
+	}	
+	option = { # Entertain myself
+		name = VIETmisc.0183.b
+		VIET_tiny_prestige_gain_effect = yes
+		stress_impact = {		
+			gregarious = miniscule_stress_impact_loss
+		}
+	}	
+	option = { # Fear it less
+		name = VIETmisc.0183.c
+		random_list = {
+			20 = { VIET_tiny_piety_gain_effect = yes }
+			10 = { VIET_tiny_prestige_gain_effect = yes }
+		}
+		stress_impact = {		
+			content = miniscule_stress_impact_loss
+		}
+	}	
+	option = { # Worry what will become of me
+		name = VIETmisc.0183.d
+		random_list = {
+			20 = { VIET_tiny_prestige_gain_effect = yes }
+			10 = { VIET_tiny_piety_gain_effect = yes }
+		}
+		stress_impact = {		
+			ambitious = miniscule_stress_impact_loss
+		}
+	}
+}
+
+
+
+# Who's tallest and who's shortest?
+VIETmisc.0184 = {
+	type = character_event
+	title = VIETmisc.0184.t
+	desc = VIETmisc.0184.desc
+	theme = family
+	override_background = { event_background = corridor_day }
+	
+	right_portrait = { 	
+		character = root
+		animation = personality_rational
+	}
+	
+	weight_multiplier = {
+		base = 1
+		modifier = {
+			add = 0.2
+			has_trait = lazy
+		}
+		modifier = {
+			add = -0.2
+			has_trait = diligent
+		}
+		modifier = {
+			add = 0.2
+			has_trait = calm
+		}
+		modifier = {
+			add = -0.2
+			has_trait = wrathful
+		}
+		modifier = {
+			add = 0.2
+			has_trait = fickle
+		}
+		modifier = {
+			add = -0.2
+			has_trait = stubborn
+		}
+	}
+
+	
+	option = { # I'd be tall
+		name = VIETmisc.0184.a
+		VIET_tiny_prestige_gain_effect = yes
+	}	
+	option = { # I'd be short
+		name = VIETmisc.0184.b
+		VIET_tiny_piety_gain_effect = yes
+	}	
+	option = { # Waste of time
+		name = VIETmisc.0184.c
+		random_list = {
+			10 = { VIET_tiny_piety_gain_effect = yes }
+			10 = { VIET_tiny_prestige_gain_effect = yes }
+		}
+		stress_impact = {		
+			lazy = miniscule_stress_impact_gain
+			content = miniscule_stress_impact_gain
+		}
+	}
+}
+
+
+# Talking with a courtier when you forgot what you ate yesterday (I hate it when that happens)
+VIETmisc.0185 = {
+	type = character_event
+	title = VIETmisc.0185.t
+	desc = VIETmisc.0185.desc
+	theme = vassal
+	override_background = { event_background = throne_room }
+	
+	left_portrait = { 	
+		character = root
+		animation = schadenfreude
+	}	
+	right_portrait = { 	
+		character = scope:courtier
+		animation = personality_content
+	}
+	
+	trigger = {
+		any_courtier = {
+			is_available_ai_adult = yes
+		}
+	}
+	
+	weight_multiplier = {
+		base = 1
+		modifier = {
+			add = 0.2
+			has_trait = lazy
+		}
+		modifier = {
+			add = -0.2
+			has_trait = diligent
+		}
+		modifier = {
+			add = 0.2
+			has_trait = gregarious
+		}
+		modifier = {
+			add = -0.2
+			has_trait = shy
+		}
+		modifier = {
+			add = 0.2
+			has_trait = gluttonous
+		}
+		modifier = {
+			add = -0.2
+			has_trait = temperate
+		}
+	}
+	
+	immediate = {
+		random_courtier = {
+			limit = {
+				is_available_ai_adult = yes
+			}
+			save_scope_as = courtier
+		}
+	}
+
+	
+	option = { # so weird
+		name = VIETmisc.0185.a
+		scope:courtier = {
+			add_opinion = {
+				target = root
+				modifier = VIET_opinion_food_chat
+			}
+			reverse_add_opinion = {
+				target = root
+				modifier = VIET_opinion_food_chat
+			}			
+		}
+	}
+}
+
+
+
+# If you could read minds, what would you do with such powers?
+VIETmisc.0186 = {
+	type = character_event
+	title = VIETmisc.0186.t
+	desc = VIETmisc.0186.desc
+	theme = friendly
+	
+	left_portrait = { 	
+		character = root
+		animation = personality_cynical
+	}
+	
+	weight_multiplier = {
+		base = 1
+		modifier = {
+			add = 0.2
+			has_trait = lazy
+		}
+		modifier = {
+			add = -0.2
+			has_trait = diligent
+		}
+		modifier = {
+			add = 0.2
+			has_trait = ambitious
+		}
+		modifier = {
+			add = -0.2
+			has_trait = content
+		}
+		modifier = {
+			add = 0.2
+			has_trait = callous
+		}
+		modifier = {
+			add = -0.2
+			has_trait = compassionate
+		}
+	}
+
+	
+	option = { # Manipulate others for personal gain!
+		name = VIETmisc.0186.a
+		add_dread = 5
+		stress_impact = {
+			honest = miniscule_stress_impact_gain
+			just = miniscule_stress_impact_gain
+		}
+	}	
+	option = { # Prank others
+		name = VIETmisc.0186.b
+		VIET_tiny_prestige_gain_effect = yes
+		stress_impact = {		
+			compassionate = miniscule_stress_impact_gain
+			craven = miniscule_stress_impact_gain
+		}
+	}
+	option = { # Help others find happiness
+		name = VIETmisc.0186.c
+		VIET_tiny_piety_gain_effect = yes
+		stress_impact = {		
+			callous = miniscule_stress_impact_gain
+			sadistic = miniscule_stress_impact_gain
+			arbitrary = miniscule_stress_impact_gain
+		}
+	}
+	option = { # Sounds dangerous
+		name = VIETmisc.0186.d
+		random_list = {
+			10 = { VIET_tiny_piety_gain_effect = yes }
+			25 = { VIET_tiny_prestige_gain_effect = yes }
+		}
+		stress_impact = {		
+			brave = miniscule_stress_impact_gain
+			arbitrary = miniscule_stress_impact_gain
+		}
+	}
+	option = { # Who wants to hear other people's thoughts?
+		name = VIETmisc.0186.e
+		random_list = {
+			10 = { VIET_tiny_prestige_gain_effect = yes }
+			25 = { VIET_tiny_piety_gain_effect = yes }
+		}
+		stress_impact = {		
+			ambitious = miniscule_stress_impact_gain
+			vengeful = miniscule_stress_impact_gain
+		}
+	}
+}
+
+# Semantic Satiation (when a word doesn't seem real to you after repeating it)
+VIETmisc.0187 = {
+	type = character_event
+	title = VIETmisc.0187.t
+	desc = VIETmisc.0187.desc
+	theme = unfriendly
+	
+	left_portrait = { 	
+		character = root
+		animation = worry
+	}
+	
+	weight_multiplier = {
+		base = 1
+		modifier = {
+			add = 0.2
+			has_trait = lazy
+		}
+		modifier = {
+			add = -0.2
+			has_trait = diligent
+		}
+		modifier = {
+			add = 0.2
+			has_trait = stubborn
+		}
+		modifier = {
+			add = -0.2
+			has_trait = fickle
+		}
+		modifier = {
+			add = 0.2
+			has_trait = honest
+		}
+		modifier = {
+			add = -0.2
+			has_trait = deceitful
+		}
+	}
+
+	
+	option = { # Weird....
+		name = VIETmisc.0187.a
+		add_stress = 2
+	}
+}
+
+
+
+
+# Memories of a childhood friend
+VIETmisc.0188 = {
+	type = character_event
+	title = VIETmisc.0188.t
+	desc = VIETmisc.0188.desc
+	theme = friendly
+	override_background = { event_background = corridor_night }
+	
+	left_portrait = { 	
+		character = root
+		animation = personality_forgiving
+	}
+	
+	weight_multiplier = {
+		base = 1
+		modifier = {
+			add = 0.2
+			has_trait = gregarious
+		}
+		modifier = {
+			add = -0.2
+			has_trait = shy
+		}
+		modifier = {
+			add = 0.2
+			has_trait = content
+		}
+		modifier = {
+			add = -0.2
+			has_trait = ambitious
+		}
+		modifier = {
+			add = 0.2
+			has_trait = honest
+		}
+		modifier = {
+			add = -0.2
+			has_trait = deceitful
+		}
+	}
+
+	
+	option = { # Hope they're doing fine
+		name = VIETmisc.0188.a
+		VIET_small_piety_gain_effect = yes
+		stress_impact = {		
+			callous = miniscule_stress_impact_gain
+		}
+	}	
+	option = { # Don't care about them
+		name = VIETmisc.0188.b
+		VIET_small_prestige_gain_effect = yes
+		stress_impact = {		
+			compassionate = miniscule_stress_impact_gain
+		}
+	}	
+	option = { # Should go to sleep
+		name = VIETmisc.0188.c
+		stress_impact = {		
+			base = miniscule_stress_impact_loss
+			lazy = miniscule_stress_impact_loss
+		}
+	}
+}
+
+
+# Have an existential crisis while a bard is playing music
+VIETmisc.0189 = {
+	type = character_event
+	title = VIETmisc.0189.t
+	desc = VIETmisc.0189.desc
+	theme = party
+	override_background = { event_background = tavern }
+	
+	left_portrait = { 	
+		character = root
+		animation = worry
+	}
+	
+	weight_multiplier = {
+		base = 1
+		modifier = {
+			add = 0.2
+			has_trait = shy
+		}
+		modifier = {
+			add = -0.2
+			has_trait = gregarious
+		}
+		modifier = {
+			add = 0.2
+			has_trait = zealous
+		}
+		modifier = {
+			add = -0.2
+			has_trait = cynical
+		}
+		modifier = {
+			add = 0.2
+			has_trait = deceitful
+		}
+		modifier = {
+			add = -0.2
+			has_trait = honest
+		}
+	}
+	
+	immediate = {
+		play_music_cue = mx_cue_low_key_positive
+	}
+
+	
+	option = { # Focus on the music
+		name = VIETmisc.0189.a
+		VIET_small_prestige_gain_effect = yes
+	}	
+	option = { # Don't care about them
+		name = VIETmisc.0189.b
+		VIET_small_piety_gain_effect = yes
+	}
+}
+
+# Having intrusive thoughts while at a council meeting
+VIETmisc.0190 = {
+	type = character_event
+	title = VIETmisc.0190.t
+	desc = VIETmisc.0190.desc
+	theme = stewardship_duty_focus
+	
+	left_portrait = { 	
+		character = root
+		animation = personality_irrational
+	}
+	
+	weight_multiplier = {
+		base = 1
+		modifier = {
+			add = 0.2
+			has_trait = lazy
+		}
+		modifier = {
+			add = -0.2
+			has_trait = diligent
+		}
+		modifier = {
+			add = 0.2
+			has_trait = fickle
+		}
+		modifier = {
+			add = -0.2
+			has_trait = stubborn
+		}
+		modifier = {
+			add = 0.2
+			has_trait = impatient
+		}
+		modifier = {
+			add = -0.2
+			has_trait = patient
+		}
+	}
+
+	
+	option = { # ok
+		name = VIETmisc.0190.a
+		add_stress = -2
+	}
+}
+
+
+# Forgot whether you said farewell to someone or not, and worrying about whether you were rude
+VIETmisc.0191 = {
+	type = character_event
+	title = VIETmisc.0191.t
+	desc = VIETmisc.0191.desc
+	theme = VIET_theme_tuscan_country
+	override_icon = { reference = "gfx/interface/icons/event_types/type_domain.dds" } 
+	
+	left_portrait = { 	
+		character = root
+		animation = worry
+	}
+	
+	weight_multiplier = {
+		base = 1
+		modifier = {
+			add = 0.2
+			has_trait = shy
+		}
+		modifier = {
+			add = -0.2
+			has_trait = gregarious
+		}
+		modifier = {
+			add = 0.2
+			has_trait = fickle
+		}
+		modifier = {
+			add = -0.2
+			has_trait = stubborn
+		}
+		modifier = {
+			add = 0.2
+			has_trait = impatient
+		}
+		modifier = {
+			add = -0.2
+			has_trait = patient
+		}
+	}
+
+	
+	option = { # ok
+		name = VIETmisc.0191.a
+		stress_impact = {		
+			base = miniscule_stress_impact_gain
+			shy = miniscule_stress_impact_gain
+			gregarious = miniscule_stress_impact_gain
+		}
+	}	
+	option = { # ok
+		name = VIETmisc.0191.b
+		VIET_medium_prestige_loss_effect = yes
+		stress_impact = {
+			humble = miniscule_stress_impact_gain
+			diligent = miniscule_stress_impact_gain
+			ambitious = miniscule_stress_impact_gain
+		}
+	}
+}
+
+
+# Can't fall asleep, so you admire the nighttime solitude
+VIETmisc.0192 = {
+	type = character_event
+	title = VIETmisc.0192.t
+	desc = VIETmisc.0192.desc
+	theme = friendly
+	override_background = { event_background = corridor_night }
+	
+	left_portrait = { 	
+		character = root
+		animation = personality_content
+	}
+	
+	weight_multiplier = {
+		base = 1
+		modifier = {
+			add = 0.2
+			has_trait = shy
+		}
+		modifier = {
+			add = -0.2
+			has_trait = gregarious
+		}
+		modifier = {
+			add = 0.2
+			has_trait = zealous
+		}
+		modifier = {
+			add = -0.2
+			has_trait = cynical
+		}
+		modifier = {
+			add = 0.2
+			has_trait = compassionate
+		}
+		modifier = {
+			add = -0.2
+			has_trait = sadistic
+		}
+	}
+	
+	immediate = {
+		play_music_cue = mx_cue_touching_moment
+	}
+	
+	option = { # ok
+		name = VIETmisc.0192.a
+		stress_impact = {		
+			base = miniscule_stress_impact_loss
+			shy = miniscule_stress_impact_loss
+			lazy = miniscule_stress_impact_loss
+			content = miniscule_stress_impact_loss
+			calm = miniscule_stress_impact_loss
+		}
+	}
+}
+
+
+
+##########################################################################################################################
+#
+# OBLIVION UNMARKED LOCATIONS 0193-0195
+#
+##########################################################################################################################
+
+
+# Lonely Grave - south of Boethia's shrine - encounter a lonely grave in the middle of nowhere
+VIETmisc.0193 = {
+	type = character_event
+	title = VIETmisc.0193.t
+	desc = VIETmisc.0193.desc
+	theme = VIET_theme_tuscan_country
+	
+	left_portrait = { 	
+		character = root
+		animation = personality_cynical
+	}
+	
+	weight_multiplier = {
+		base = 1
+		modifier = {
+			add = 0.2
+			has_trait = diligent
+		}
+		modifier = {
+			add = -0.2
+			has_trait = lazy
+		}
+		modifier = {
+			add = 0.2
+			has_trait = paranoid
+		}
+		modifier = {
+			add = -0.2
+			has_trait = trusting
+		}
+		modifier = {
+			add = 0.2
+			has_trait = calm
+		}
+		modifier = {
+			add = -0.2
+			has_trait = wrathful
+		}
+	}
+
+	
+	option = { # move on
+		name = VIETmisc.0193.a
+		VIET_medium_prestige_gain_effect = yes
+		stress_impact = {		
+			lazy = miniscule_stress_impact_gain
+			diligent = miniscule_stress_impact_loss
+		}
+	}	
+	option = { # pray
+		name = VIETmisc.0193.b
+		VIET_medium_piety_gain_effect = yes
+		stress_impact = {		
+			cynical = miniscule_stress_impact_gain
+			zealous = miniscule_stress_impact_loss
+		}
+	}
+}
+
+
+
+# Flooded Ruins - a couple examples can be found in the Shivering Isles - soldiers find small chest of coins in underwater ruins
+VIETmisc.0194 = {
+	type = character_event
+	title = VIETmisc.0194.t
+	desc = VIETmisc.0194.desc
+	theme = VIET_theme_ancient_cairn
+	
+	right_portrait = { 	
+		character = root
+		animation = personality_content
+	}
+	
+	weight_multiplier = {
+		base = 1
+		modifier = {
+			add = 0.2
+			has_trait = calm
+		}
+		modifier = {
+			add = -0.2
+			has_trait = wrathful
+		}
+		modifier = {
+			add = 0.2
+			has_trait = patient
+		}
+		modifier = {
+			add = -0.2
+			has_trait = impatient
+		}
+		modifier = {
+			add = 0.2
+			has_trait = zealous
+		}
+		modifier = {
+			add = -0.2
+			has_trait = cynical
+		}
+	}
+
+	
+	option = { # Don't disturb the dead
+		name = VIETmisc.0194.a
+		VIET_large_piety_gain_effect = yes
+		stress_impact = {		
+			cynical = miniscule_stress_impact_gain
+			callous = miniscule_stress_impact_gain
+		}
+	}	
+	option = { # Give it to the guard who found it
+		name = VIETmisc.0194.b
+		VIET_large_prestige_gain_effect = yes
+		stress_impact = {		
+			greedy = miniscule_stress_impact_gain
+			arbitrary = miniscule_stress_impact_gain
+		}
+	}	
+	option = { # Take the coins for yourself
+		name = VIETmisc.0194.c
+		random_list = {
+			10 = { add_gold = 5 }
+			10 = { add_gold = 10 }
+			10 = { add_gold = 15 }
+			10 = { add_gold = 20 }
+			10 = { add_gold = 25 }
+		}
+		stress_impact = {		
+			zealous = miniscule_stress_impact_gain
+			generous = miniscule_stress_impact_gain
+		}
+	}
+}
+
+
+
+
+# Isolated House - halfway between Bravil and Skingrad - soldiers find abandoned house occupied by bandits
+VIETmisc.0195 = {
+	type = character_event
+	title = VIETmisc.0195.t
+	desc = VIETmisc.0195.desc
+	theme = martial_strategy_focus
+	override_background = { event_background = VIET_background_skyrim_forest }
+	
+	right_portrait = root
+	
+	weight_multiplier = {
+		base = 1
+		modifier = {
+			add = 0.2
+			has_trait = diligent
+		}
+		modifier = {
+			add = -0.2
+			has_trait = lazy
+		}
+		modifier = {
+			add = 0.2
+			has_trait = paranoid
+		}
+		modifier = {
+			add = -0.2
+			has_trait = trusting
+		}
+		modifier = {
+			add = 0.2
+			has_trait = brave
+		}
+		modifier = {
+			add = -0.2
+			has_trait = craven
+		}
+	}
+
+	
+	option = { # Sell it off
+		name = VIETmisc.0195.a
+		add_gold = 25
+	}	
+	option = { # Raze it so bandits can't use it
+		name = VIETmisc.0195.b
+		VIET_huge_prestige_gain_effect = yes
+	}
+}
 
 
 

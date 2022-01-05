@@ -182,6 +182,31 @@ VIET_background_tuscan_country = {
 ### ANCIENT CAIRN ###
 VIET_background_ancient_cairn = {
 
+	background = { # Greco-Roman
+		trigger = {
+			capital_province = {
+				OR = {
+					geographical_region = world_asia_minor
+					geographical_region = world_europe_south
+				}
+			}
+		}
+		reference = "gfx/interface/illustrations/event_scenes/VIET_ancient_cairn_italian.dds"
+		environment = "environment_event_forest"
+		ambience = "event:/SFX/Events/Backgrounds/desert_day"
+	}
+
+	background = { # India
+		trigger = {
+			capital_province = {
+				geographical_region = world_india
+			}
+		}
+		reference = "gfx/interface/illustrations/event_scenes/VIET_ancient_cairn_marathi.dds"
+		environment = "environment_event_forest"
+		ambience = "event:/SFX/Events/Backgrounds/deciduous_forest_day"
+	}
+
 	background = { # Tibet
 		trigger = {
 			capital_province = {
