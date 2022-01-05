@@ -784,6 +784,7 @@
  VIET_burnt_down_tower_renovated:0 "Burnt Down Tower Renovated"
  VIET_burnt_down_tower_renovated_desc:0 "An abandoned, burnt down tower was found in the wilderness here not too long ago. Local leaders deemed it prudent to restore the tower to its former glory so that it could serve as a strategic watchpost."
  VIET_opinion_food_chat:0 "Pleasant Chat About Food"
- VIET_mercenary_scholar_in_town_desc:0 "\n\nCan take the [decision|E] to #V Hire the Mercenary Scholar#!"
+ VIET_mercenary_scholar_in_town_desc:0 "Can take the [decision|E] to #V Hire the Mercenary Scholar#!"
+ VIET_renowned_blacksmith_region_desc:0 "The [ruler|E] of this [county|E] can take the [decision|E] to #V Employ Renowned Blacksmiths For Armies#!"
  # 1.4.8 - please leave this comment here 
  xxxxx:0 "xxxxx"
