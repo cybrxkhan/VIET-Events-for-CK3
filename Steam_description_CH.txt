@@ -51,36 +51,26 @@ Very Immersive Events and Tales (VIET)是[url=https://steamcommunity.com/sharedf
 
 [h1]版本号1.4.7 "Saint Valerie"[/h1]
 
-[I]"Let my delight be the country, and the running streams amid the dells — may I love the waters and the woods, though I be unknown to fame."
-
-- 维吉尔，农事诗[/I]
-
+[I]利穆赞的瓦莱丽是一位基督教殉道者和圣人，据说此人是圣马太的追随者，她也是法国利穆赞的主保圣人。据传说，她拒绝嫁给一位原始宗教领主，因此被斩首，死后，她自己把头带给了利穆赞主教马太。中世纪时期，崇敬她和圣马太的教团特别受欢迎。[/I]
 
 [LIST]
-[*]加入78个新事件:
+[*]加入16个新事件:
 [LIST]
-[*]25 伯爵领事件
-[*]30 从老版本转来的伯爵领事件*
+[*]11个沉思事件
+[*]5个收到上古卷轴4未标记地点启发的事件（包括两个伯爵领事件）
 [*]10 和伯爵领有关的决议事件
-[*]13 一般事件*
 [/LIST]
 [*]加入7个新决议:
 [LIST]
-[*]购买高价药用莓果
-[*]给军队雇佣有名铁匠
-[*]拜访传奇墓地
-[*]调查鬼镇
-[*]敬奉隐士肉身
-[*]在大树阴影下休息
-[*]调查古代石碑
-[/LIST]
-[*]把甜点图标换成了甜面包卷
+[*]新增了许多中文本地化内容（感谢汉化！）
+[*]加了几个上古石碑背景
+[*]允许玩家选取特殊决议的修正在其描述中会提到
 [*]杂项修复
 [/LIST]
 
 *由CK2版本VIET改编
 
-、
+
 [img]https://i.imgur.com/6L11s2n.jpg[/img]
 
 [LIST]
