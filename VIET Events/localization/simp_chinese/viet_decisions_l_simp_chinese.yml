@@ -131,7 +131,7 @@
  VIET_decision_relax_at_a_giant_shade_tree_effect_tooltip:0 "你前往著名的大树下放松，失去[stress|E]"
  VIET_decision_relax_at_a_giant_shade_tree_confirm:0 "我等不及啦！"
  VIET_decision_relax_at_a_giant_shade_tree_context_tooltip:0 "#emphasis 历史背景：#!行道树一般种在路旁，以树冠提供遮阳，或者浑然天成，吸引人们来此定居。"
- VIET_decision_examine_ancient_stone_monument:0 "检查上古石碑"
+ VIET_decision_examine_ancient_stone_monument:0 "调查上古石碑"
  VIET_decision_examine_ancient_stone_monument_tooltip:0 "背后有什么秘密呢？"
  VIET_decision_examine_ancient_stone_monument_desc:0 "上古的石碑对于某些学者的价值不亚于真金白银，不过最近出土了这么一尊石碑令我尤其感兴趣。我想要前去欣赏石碑，这样就可以加深理解了。"
  VIET_decision_examine_ancient_stone_monument_req:0 "任意你[domain|E]的[county|E]有[county_modifier|E][GetModifier('VIET_flat_stone_monument').GetNameWithTooltip]"
