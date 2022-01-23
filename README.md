@@ -6,9 +6,7 @@ _“I have loving-kindness for footless creatures; for those with two feet I hav
 
 _- Anguttara Nikaya 4:67 (Part of the Pali Canon of Theravada Buddhism)_
 
-Very Immersive Events and Tales (VIET), the sequel to VIET Events Reborn for CK2, is a flavor mod that adds a vast collection of events about everyday life to spice up your game. These events add immersion and a diversity of experiences in between wars and vanilla’s event chains, and cover mundane minutiae ranging from small talk with courtiers and eating local cuisine to epic tales about love, philosophy, and the human condition.
-
-Alongside many new events, I intend to adapt many of the events from the old VIET for CK2 as possible. I hope the lessons I learned from my eight years (with a hiatus) of modding CK2 will help me deliver a fun experience for any players interested in my mods. Lastly, please note that VIET is not achievement compatible.
+Very Immersive Events and Tales (VIET), the sequel to VIET Events Reborn for CK2, is a flavor mod that adds a vast collection of events about everyday life to spice up your game. These events add immersion and a diversity of experiences in between wars and vanilla’s event chains, and cover mundane minutiae ranging from small talk with courtiers and eating local cuisine to epic tales about love, philosophy, and the human condition. Some of the events unlock new decisions, character interactions, activities, and much more for you to explore! I hope the lessons I learned from my eight years (with a hiatus) of modding CK2 will help me deliver a fun experience for any players interested in my mods. Lastly, please note that VIET is not achievement compatible.
 
 Feel free to use my work in your mods - all I ask is that I am credited and (if possible) to give me a heads up.
 
