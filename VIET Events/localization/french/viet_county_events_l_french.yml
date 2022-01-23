@@ -143,7 +143,7 @@
  VIETmisc.3027.toast.not_killed:0 "The bear still remains at large!"
  VIETmisc.3028.t:0 "Feathered Locusts"
  VIETmisc.3028.desc:0 "[county.GetNameNoTier] is currently suffering from a massive infestation of red billed queleas. These birds, nicknamed “feathered locusts,” are always a nuisance to farmers due to the damage they cause to crops, but it seems especially bad this year. I need to act fast as a leader if we want to reduce the damage done by these pests, even if it means diverting people from other tasks and responsibilities."
- VIETmisc.3028.a:0 "There’s not much we can do about these birds."
+ VIETmisc.3028.a:0 "If only there was an efficient way to get rid of these damn birds...."
  VIETmisc.3028.b:0 "Coordinate with locals to kill them, and sell their meat and feathers."
  VIETmisc.3028.info:0 "#emphasis Biological Context:#! The red billed quelea (#italic Quelea quelea#!), sometimes disparagingly called the feathered locust, is a bird native to much of Sub-Saharan Africa. They feed on various seeds and often cause extensive damage to crops. There are a number of traditional methods used to catch them, as well as modern initiatives by various governments as well, though these only have limited success as it is the most numerous undomesticated bird species on earth."
  VIETmisc.3029.t:0 "Rooks"

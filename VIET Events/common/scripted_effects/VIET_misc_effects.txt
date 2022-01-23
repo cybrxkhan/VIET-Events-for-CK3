@@ -1,0 +1,287 @@
+﻿
+
+#############################################################################################
+# 
+# VIET MISC SCRIPTED EFFECTS
+# 
+#############################################################################################
+
+VIET_immediate_songbird_sound_effect = {
+	stress_impact = {
+		base = minor_stress_impact_loss
+		shy = minor_stress_impact_loss
+		humble = miniscule_stress_impact_loss
+		content = miniscule_stress_impact_loss
+	}
+	random_list = {
+		20 = {
+			modifier = {
+				add = 5
+				has_education_diplomacy_trigger = yes
+			}
+			modifier = {
+				add = 5
+				diplomacy >= medium_skill_rating
+			}
+			modifier = {
+				add = 5
+				diplomacy >= high_skill_rating
+			}
+			modifier = {
+				add = 5
+				has_trait = gregarious
+			}
+			modifier = {
+				add = 5
+				has_trait = ambitious
+			}
+			add_character_modifier = {
+				modifier = VIET_inspired_by_songbird_diplomacy
+				years = 4
+			}
+		}
+		20 = {
+			modifier = {
+				add = 5
+				has_education_martial_trigger = yes
+			}
+			modifier = {
+				add = 5
+				martial >= medium_skill_rating
+			}
+			modifier = {
+				add = 5
+				martial >= high_skill_rating
+			}
+			modifier = {
+				add = 5
+				has_trait = brave
+			}
+			modifier = {
+				add = 5
+				has_trait = vengeful
+			}
+			add_character_modifier = {
+				modifier = VIET_inspired_by_songbird_martial
+				years = 4
+			}
+		}
+		20 = {
+			modifier = {
+				add = 5
+				has_education_stewardship_trigger = yes
+			}
+			modifier = {
+				add = 5
+				stewardship >= medium_skill_rating
+			}
+			modifier = {
+				add = 5
+				stewardship >= high_skill_rating
+			}
+			modifier = {
+				add = 5
+				has_trait = diligent
+			}
+			modifier = {
+				add = 5
+				has_trait = just
+			}
+			add_character_modifier = {
+				modifier = VIET_inspired_by_songbird_stewardship
+				years = 4
+			}
+		}
+		20 = {
+			modifier = {
+				add = 5
+				has_education_intrigue_trigger = yes
+			}
+			modifier = {
+				add = 5
+				intrigue >= medium_skill_rating
+			}
+			modifier = {
+				add = 5
+				intrigue >= high_skill_rating
+			}
+			modifier = {
+				add = 5
+				has_trait = calm
+			}
+			modifier = {
+				add = 5
+				has_trait = patient
+			}
+			add_character_modifier = {
+				modifier = VIET_inspired_by_songbird_intrigue
+				years = 4
+			}
+		}
+		20 = {
+			modifier = {
+				add = 5
+				has_education_learning_trigger = yes
+			}
+			modifier = {
+				add = 5
+				learning >= medium_skill_rating
+			}
+			modifier = {
+				add = 5
+				learning >= high_skill_rating
+			}
+			modifier = {
+				add = 5
+				has_trait = zealous
+			}
+			modifier = {
+				add = 5
+				has_trait = compassionate
+			}
+			add_character_modifier = {
+				modifier = VIET_inspired_by_songbird_learning
+				years = 4
+			}
+		}
+	}
+	random_list = {
+		10 = {
+			add_character_flag = VIET_playing_songbird_song_1
+			play_music_cue = mx_VIET_bird_01			
+		}
+		10 = {
+			add_character_flag = VIET_playing_songbird_song_2
+			play_music_cue = mx_VIET_bird_02			
+		}
+		10 = {
+			add_character_flag = VIET_playing_songbird_song_3
+			play_music_cue = mx_VIET_bird_03			
+		}
+		10 = {
+			add_character_flag = VIET_playing_songbird_song_4
+			play_music_cue = mx_VIET_bird_04			
+		}
+		10 = {
+			add_character_flag = VIET_playing_songbird_song_5
+			play_music_cue = mx_VIET_bird_05			
+		}
+		10 = {
+			add_character_flag = VIET_playing_songbird_song_6
+			play_music_cue = mx_VIET_bird_06			
+		}
+		10 = {
+			add_character_flag = VIET_playing_songbird_song_7
+			play_music_cue = mx_VIET_bird_07			
+		}
+		10 = {
+			add_character_flag = VIET_playing_songbird_song_8
+			play_music_cue = mx_VIET_bird_08			
+		}
+		10 = {
+			add_character_flag = VIET_playing_songbird_song_9
+			play_music_cue = mx_VIET_bird_09			
+		}
+		10 = {
+			add_character_flag = VIET_playing_songbird_song_10
+			play_music_cue = mx_VIET_bird_10			
+		}
+		10 = {
+			add_character_flag = VIET_playing_songbird_song_11
+			play_music_cue = mx_VIET_bird_11			
+		}
+		10 = {
+			add_character_flag = VIET_playing_songbird_song_12
+			play_music_cue = mx_VIET_bird_12			
+		}
+	}	
+}
+
+VIET_option_songbird_sound_effect = {
+	if = {
+		limit = {
+			has_character_flag = VIET_playing_songbird_song_1
+		}
+		custom_tooltip = VIETmisc.2077.info.bird_01
+		remove_character_flag = VIET_playing_songbird_song_1
+	}
+	else_if = {
+		limit = {
+			has_character_flag = VIET_playing_songbird_song_2
+		}
+		custom_tooltip = VIETmisc.2077.info.bird_02
+		remove_character_flag = VIET_playing_songbird_song_2
+	}
+	else_if = {
+		limit = {
+			has_character_flag = VIET_playing_songbird_song_3
+		}
+		custom_tooltip = VIETmisc.2077.info.bird_03
+		remove_character_flag = VIET_playing_songbird_song_3
+	}
+	else_if = {
+		limit = {
+			has_character_flag = VIET_playing_songbird_song_4
+		}
+		custom_tooltip = VIETmisc.2077.info.bird_04
+		remove_character_flag = VIET_playing_songbird_song_4
+	}
+	else_if = {
+		limit = {
+			has_character_flag = VIET_playing_songbird_song_5
+		}
+		custom_tooltip = VIETmisc.2077.info.bird_05
+		remove_character_flag = VIET_playing_songbird_song_5
+	}
+	else_if = {
+		limit = {
+			has_character_flag = VIET_playing_songbird_song_6
+		}
+		custom_tooltip = VIETmisc.2077.info.bird_06
+		remove_character_flag = VIET_playing_songbird_song_6
+	}
+	else_if = {
+		limit = {
+			has_character_flag = VIET_playing_songbird_song_7
+		}
+		custom_tooltip = VIETmisc.2077.info.bird_07
+		remove_character_flag = VIET_playing_songbird_song_7
+	}
+	else_if = {
+		limit = {
+			has_character_flag = VIET_playing_songbird_song_8
+		}
+		custom_tooltip = VIETmisc.2077.info.bird_08
+		remove_character_flag = VIET_playing_songbird_song_8
+	}
+	else_if = {
+		limit = {
+			has_character_flag = VIET_playing_songbird_song_9
+		}
+		custom_tooltip = VIETmisc.2077.info.bird_09
+		remove_character_flag = VIET_playing_songbird_song_9
+	}
+	else_if = {
+		limit = {
+			has_character_flag = VIET_playing_songbird_song_10
+		}
+		custom_tooltip = VIETmisc.2077.info.bird_10
+		remove_character_flag = VIET_playing_songbird_song_10
+	}
+	else_if = {
+		limit = {
+			has_character_flag = VIET_playing_songbird_song_11
+		}
+		custom_tooltip = VIETmisc.2077.info.bird_11
+		remove_character_flag = VIET_playing_songbird_song_11
+	}
+	else_if = {
+		limit = {
+			has_character_flag = VIET_playing_songbird_song_12
+		}
+		custom_tooltip = VIETmisc.2077.info.bird_12
+		remove_character_flag = VIET_playing_songbird_song_12
+	}
+}
+
+

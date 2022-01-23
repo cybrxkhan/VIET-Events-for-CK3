@@ -667,6 +667,59 @@ VIET_decision_learn_shorthand_techniques = {
 }
 
 
+VIET_decision_listen_to_wild_songbirds = {
+	picture = "gfx/interface/illustrations/decisions/decision_viet_bird.dds"
+	desc = VIET_decision_listen_to_wild_songbirds_desc
+
+	ai_check_interval = 36
+	
+	cooldown = { days = 1825 }
+
+	is_shown = {
+		is_landed = yes
+		has_character_modifier = VIET_songbird_enjoyer
+	}
+
+	is_valid = {
+		has_character_modifier = VIET_songbird_enjoyer
+	}
+
+	is_valid_showing_failures_only = {
+		is_adult = yes
+		is_available = yes
+	}
+
+	effect = {
+		custom_tooltip = VIET_decision_listen_to_wild_songbirds_effect_tooltip
+		add_character_flag = planning_an_activity
+		capital_province = {
+			spawn_activity = {
+				type = activity_VIET_relaxation_with_songbirds
+				owner = root
+			}			
+		}
+		if = {
+			limit = {
+				has_game_rule = VIET_historical_context_on
+			}
+			custom_tooltip = VIET_decision_listen_to_wild_songbirds_context_tooltip
+		}
+	}
+
+	cost = {
+		gold = { value = minor_gold_value } # Will depend
+	}
+	
+	ai_potential = {
+		gold > minor_gold_value
+	}
+
+	ai_will_do = {
+		base = 30
+	}
+}
+
+
 #VIET_decision_tester = {
 #	picture = "gfx/interface/illustrations/decisions/decision_viet_qi_ma.dds"
 #	desc = VIET_decision_meet_qi_ma_the_liar_desc

@@ -315,67 +315,48 @@ VIETtest.0004 = {
 	}
 }
 
-# Music test
-#VIETtest.0005 = {
-#	type = character_event
-#	title = VIETtest.0006.t
-#	desc = VIETtest.0006.desc
-#	theme = VIET_theme_oblivion_pastoral_dream
-#	
-#	left_portrait = scope:county_holder
-#	
-#	immediate = {
-#		save_scope_as = county
-#		holder = { save_scope_as = county_holder }
-#		play_music_cue = mx_cue_meadandwine
-#	}
-#	
-#	option = {
-#		name = "OK"
-#		add_county_modifier = {
-#			modifier = governance_1041_merchants_guild_modifier
-#			days = 33
-#		}		
-#	}
-#}
+#Music test
+VIETtest.0005 = {
+	type = character_event
+	title = VIETtest.0006.t
+	desc = "Birdsong testing"
+	theme = VIET_theme_skyrim_forest
+	
+	left_portrait = {
+		character = root
+		animation = happiness
+	}
+	
+	immediate = {
+		VIET_immediate_songbird_sound_effect = yes
+	}
+	
+	option = {
+		name = "OK"
+		VIET_option_songbird_sound_effect = yes	
+	}
+}
 
-# County event test
-#VIETtest.0005  = {
-#	hidden = yes
-#	type = empty
-#	immediate = {
-#		save_scope_as = county
-#		holder = { save_scope_as = ruler }
-#		# send event to county holder
-#		holder = {
-#			trigger_event = VIETtest.0006
-#		}
-#	}
-#}
-#
-## Music test
-#VIETtest.0006 = {
-#	type = character_event
-#	title = VIETtest.0006.t
-#	desc = VIETtest.0006.desc
-#	theme = VIET_theme_oblivion_pastoral_dream
-#	
-#	left_portrait = scope:ruler
-#	
-#	immediate = {
-#		play_music_cue = mx_cue_meadandwine
-#	}
-#	
-#	option = {
-#		name = "OK"
-#		scope:county = {
-#			add_county_modifier = {
-#				modifier = governance_1041_merchants_guild_modifier
-#				days = 33
-#			}		
-#		}
-#	}
-#}
+# Music test
+VIETtest.0006 = {
+	type = character_event
+	title = VIETtest.0006.t
+	desc = "Goose Testing"
+	theme = VIET_theme_small_town
+	
+	left_portrait = {
+		character = root
+		animation = fear
+	}
+	
+	immediate = {
+		play_music_cue = mx_VIET_goose
+	}
+	
+	option = {
+		name = "HONK HONK"
+	}
+}
 #
 ## County master file test
 #VIETtest.0007 = {

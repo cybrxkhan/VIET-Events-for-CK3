@@ -575,5 +575,187 @@ VIET_decision_examine_ancient_stone_monument = {
 
 
 
+VIET_decision_purchase_dependable_donkeys = {
+	picture = "gfx/interface/illustrations/decisions/decision_viet_farm.dds"
+	desc = VIET_decision_purchase_dependable_donkeys_desc
+
+	ai_check_interval = 24
+	
+	cooldown = { days = 3650 }
+
+	is_shown = {
+		is_landed = yes
+		any_directly_owned_province = {
+			county = {
+				has_county_modifier = VIET_reliable_donkeys
+			}
+		}
+	}
+
+	is_valid = {
+		custom_description = {
+			text = VIET_decision_purchase_dependable_donkeys_req
+			any_directly_owned_province = {
+				county = {
+					has_county_modifier = VIET_reliable_donkeys
+				}
+			}
+		}
+		gold >= 30
+	}
+
+	is_valid_showing_failures_only = {
+		is_adult = yes
+		is_available = yes
+	}
+
+	effect = {
+		random_directly_owned_province = {
+			limit = {
+				county = {
+					has_county_modifier = VIET_reliable_donkeys
+				}
+			}
+			county = {
+				save_scope_as = county		
+			}
+		}
+		# Show the possible options.
+		show_as_tooltip = {
+			random_list = {
+				desc = VIET_decision_purchase_dependable_donkeys_effect_tooltip
+				100 = {
+					show_chance = no
+					desc = VIET_decision_purchase_dependable_donkeys_effect_tooltip_small
+					add_character_modifier = {
+						modifier = VIET_small_herd_donkeys
+						years = 10
+					}
+				}
+				100 = {
+					show_chance = no
+					desc = VIET_decision_purchase_dependable_donkeys_effect_tooltip_medium
+					add_character_modifier = {
+						modifier = VIET_medium_herd_donkeys
+						years = 10
+					}
+				}
+				100 = {
+					show_chance = no
+					desc = VIET_decision_purchase_dependable_donkeys_effect_tooltip_large
+					add_character_modifier = {
+						modifier = VIET_large_herd_donkeys
+						years = 10
+					}
+				}
+			}
+		}
+		trigger_event = VIETmisc.2073
+		if = {
+			limit = {
+				has_game_rule = VIET_historical_context_on
+			}
+			custom_tooltip = VIET_decision_purchase_dependable_donkeys_context_tooltip
+		}
+	}
+
+	# cost = {
+	# 	gold = { value = 30 } # Will depend
+	# }
+	
+	ai_potential = {
+		gold > 30
+	}
+
+	ai_will_do = {
+		base = 30
+	}
+}
+
+
+
+
+
+VIET_decision_add_more_dovecotes = {
+	picture = "gfx/interface/illustrations/decisions/decision_viet_farm.dds"
+	desc = VIET_decision_add_more_dovecotes_desc
+
+	ai_check_interval = 24
+	
+	#cooldown = { days = 3650 }
+
+	is_shown = {
+		is_landed = yes
+		has_character_modifier = VIET_dovecote_interest
+	}
+
+	is_valid = {
+		has_character_modifier = VIET_dovecote_interest
+		gold >= 50
+	}
+
+	is_valid_showing_failures_only = {
+		is_adult = yes
+		is_available = yes
+	}
+
+	effect = {
+		remove_character_modifier = VIET_dovecote_interest
+		# Show the possible options.
+		show_as_tooltip = {
+			random_list = {
+				desc = VIET_decision_add_more_dovecotes_effect_tooltip
+				100 = {
+					show_chance = no
+					desc = VIET_decision_add_more_dovecotes_effect_tooltip_small
+					add_character_modifier = {
+						modifier = VIET_built_dovecotes_small
+						years = 15
+					}
+				}
+				100 = {
+					show_chance = no
+					desc = VIET_decision_add_more_dovecotes_effect_tooltip_medium
+					add_character_modifier = {
+						modifier = VIET_built_dovecotes_medium
+						years = 15
+					}
+				}
+				100 = {
+					show_chance = no
+					desc = VIET_decision_add_more_dovecotes_effect_tooltip_large
+					add_character_modifier = {
+						modifier = VIET_built_dovecotes_large
+						years = 15
+					}
+				}
+			}
+		}
+		trigger_event = VIETmisc.2075
+		if = {
+			limit = {
+				has_game_rule = VIET_historical_context_on
+			}
+			custom_tooltip = VIET_decision_add_more_dovecotes_context_tooltip
+		}
+	}
+
+	# cost = {
+	# 	gold = { value = 50 } # Will depend
+	# }
+	
+	ai_potential = {
+		gold > 50
+	}
+
+	ai_will_do = {
+		base = 30
+	}
+}
+
+
+
+
+
 
 

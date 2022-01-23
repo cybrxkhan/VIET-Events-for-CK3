@@ -1,0 +1,114 @@
+﻿
+##### MUSIC CUES
+
+# Oriolus oriolus from Vladimir Yu on Wikicommons
+# https://commons.wikimedia.org/wiki/File:Oriolus_oriolus_voice.ogg
+mx_VIET_bird_01 = {
+	music = "file:/music/VIET_bird_1.ogg"
+	weight = 25
+	# play every time
+}
+
+# Sylvia atricapilla from Vladimir Yu on Wikicommons
+# https://commons.wikimedia.org/wiki/File:Sylvia_atricapilla.ogg
+mx_VIET_bird_02 = {
+	music = "file:/music/VIET_bird_2.ogg"
+	weight = 25
+	# play every time
+}
+
+# Carduelis chloris from Vladimir Yu on Wikicommons
+# https://commons.wikimedia.org/wiki/File:Carduelis_chloris.ogg
+mx_VIET_bird_03 = {
+	music = "file:/music/VIET_bird_3.ogg"
+	weight = 25
+	# play every time
+}
+
+# Turdus philomelos from Alexander Kurthy on Wikicommons
+# https://commons.wikimedia.org/wiki/File:Turdus_philomelos_-_Song_Thrush_XC107864.mp3
+mx_VIET_bird_04 = {
+	music = "file:/music/VIET_bird_4.ogg"
+	weight = 25
+	# play every time
+}
+
+# Turdus philomelos from Benoît Van Hecke on Wikicommons
+# https://commons.wikimedia.org/wiki/File:Turdus_philomelos_-_Song_Thrush_XC541754.mp3
+mx_VIET_bird_05 = {
+	music = "file:/music/VIET_bird_5.ogg"
+	weight = 25
+	# play every time
+}
+
+# Erithacus rubecula from Vladimir Yu on Wikicommons
+# https://commons.wikimedia.org/wiki/File:Erithacus_rubecula.ogg
+mx_VIET_bird_06 = {
+	music = "file:/music/VIET_bird_6.ogg"
+	weight = 25
+	# play every time
+}
+
+# Carduelis spinus from Vladimir Yu on Wikicommons
+# https://commons.wikimedia.org/wiki/File:Carduelis_spinus.ogg
+mx_VIET_bird_07 = {
+	music = "file:/music/VIET_bird_7.ogg"
+	weight = 25
+	# play every time
+}
+
+# Common chaffinch from Dimitǎr Boevski on Wikicommons
+# https://commons.wikimedia.org/wiki/File:Common_chaffinch_singing,_Botevgrad,_Bulgaria.ogg
+mx_VIET_bird_08 = {
+	music = "file:/music/VIET_bird_8.ogg"
+	weight = 25
+	# play every time
+}
+
+# Ficedula hypoleuca from Vladimir Yu on Wikicommons
+# https://commons.wikimedia.org/wiki/File:Ficedula_hypoleuca.ogg
+mx_VIET_bird_09 = {
+	music = "file:/music/VIET_bird_9.ogg"
+	weight = 25
+	# play every time
+}
+
+# Passer montanus from Vladimir Yu on Wikicommons
+# https://commons.wikimedia.org/wiki/File:Passer_montanus.ogg?uselang=mk
+mx_VIET_bird_10 = {
+	music = "file:/music/VIET_bird_10.ogg"
+	weight = 25
+	# play every time
+}
+
+# Hippolais polyglotta from https://waarneming.nl/sounds/36927/ on Wikicommons
+# https://commons.wikimedia.org/wiki/File:Hippolais_polyglotta_song_1.ogg
+mx_VIET_bird_11 = {
+	music = "file:/music/VIET_bird_11.ogg"
+	weight = 25
+	# play every time
+}
+
+# Dicrurus macrocercus from Gypsypkd on Wikicommons
+# https://commons.wikimedia.org/wiki/File:Black_Drongo.ogg
+mx_VIET_bird_12 = {
+	music = "file:/music/VIET_bird_12.ogg"
+	weight = 25
+	# play every time
+}
+
+# Mandrill Baboon Sound Effect
+# https://soundcloud.com/pro-sound-effects/mandrill-baboon-sound-effect
+mx_VIET_mandrill = {
+	music = "file:/music/VIET_mandrill.ogg"
+	weight = 25
+	# play every time
+}
+
+# Goose Honking Noise
+# https://orangefreesounds.com/goose-honking-noise/
+mx_VIET_goose = {
+	music = "file:/music/VIET_goose.ogg"
+	weight = 25
+	# play every time
+}

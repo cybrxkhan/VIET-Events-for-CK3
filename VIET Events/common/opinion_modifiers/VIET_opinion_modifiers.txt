@@ -415,3 +415,34 @@ VIET_opinion_food_chat = {
 	decaying = yes
 	opinion = 5
 }
+VIET_opinion_sympathy_coturnism = {
+	years = 5
+	decaying = yes
+	opinion = 10
+}
+VIET_opinion_lecture_coturnism_bad = {
+	years = 5
+	decaying = yes
+	opinion = -5
+}
+VIET_opinion_lecture_coturnism_good = {
+	years = 5
+	decaying = yes
+	opinion = 5
+}
+VIET_opinion_dovecote_approve = {
+	years = 5
+	opinion = 5
+}
+VIET_opinion_dovecote_heeded = {
+	years = 5
+	opinion = 5
+}
+VIET_opinion_dovecote_disapprove = {
+	years = 5
+	opinion = -5
+}
+VIET_opinion_dovecote_not_heeded = {
+	years = 5
+	opinion = -5
+}

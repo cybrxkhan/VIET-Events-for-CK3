@@ -230,3 +230,25 @@ activity_VIET_trip_examine_ancient_stone_monument = {
 		}	
 	}
 }
+
+activity_VIET_relaxation_with_songbirds = {
+	solo = yes
+	color = { 0.55 0.55 0.55 1 } # Stone grey
+	on_spawn = {
+		invite_character_to_activity = activity_owner
+		accept_invitation_for_character = activity_owner
+	}
+	on_activate = {
+		activity_owner = {
+			trigger_event = {
+				id = VIETmisc.2077
+				days = { 3 9 }				
+			}
+		}
+	}
+	on_complete = {
+		activity_owner = {
+			remove_character_flag = planning_an_activity
+		}	
+	}
+}

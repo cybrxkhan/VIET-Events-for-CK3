@@ -23,6 +23,7 @@
 # 
 # 3000-3024		Generic (First new batch)
 # 3025-3026		Oblivion Unmarked Locations
+# 3027-3030		Animals
 # 
 ############################################################################################################################
 
@@ -2701,4 +2702,531 @@ VIETmisc.3026 = {
 		}
 	}
 }
+
+
+
+##################################################################
+# ANIMALS 3027-3030
+##################################################################
+
+
+
+# Recent bear attacks
+VIETmisc.3027 = {
+	type = character_event
+	title = VIETmisc.3027.t
+	desc = VIETmisc.3027.desc
+	theme = death
+	override_background = { event_background = VIET_background_small_town }
+	
+	left_portrait = {
+		character = root
+		animation = worry
+	}
+	
+	trigger = {
+		any_held_title = {
+			tier = tier_county
+			any_county_province = {
+				NOR = {
+					geographical_region = world_africa_east
+					geographical_region = world_africa_west
+					geographical_region = world_africa_sahara
+					geographical_region = world_middle_east_arabia
+				}		
+			}
+		}	
+	}
+	
+    weight_multiplier = {
+        base = 0
+		modifier = {
+			add = {
+				every_held_title = {
+					limit = { tier = tier_county }
+					add = 1
+				}
+			}		
+		}		
+    }
+	
+	immediate = {
+		random_held_title = {
+			limit = {
+				tier = tier_county
+				any_county_province = {
+					NOR = {
+						geographical_region = world_africa_east
+						geographical_region = world_africa_west
+						geographical_region = world_africa_sahara
+						geographical_region = world_middle_east_arabia
+					}			
+				}
+			}	
+			save_scope_as = county
+		}
+	}
+	
+	option = {
+		name = VIETmisc.3027.a
+		trigger = {
+			OR = {
+				gold >= 20
+				is_ai = no
+			}
+		}
+		remove_short_term_gold = 20
+		random_list = {
+			60 = {
+				modifier = {
+					add = 4
+					intrigue >= decent_skill_rating
+				}
+				modifier = {
+					add = 4
+					intrigue >= very_high_skill_rating
+				}
+				modifier = {
+					add = 4
+					stewardship >= decent_skill_rating
+				}
+				modifier = {
+					add = 4
+					stewardship >= very_high_skill_rating
+				}
+				modifier = {
+					add = 8
+					martial >= decent_skill_rating
+				}
+				modifier = {
+					add = 8
+					martial >= very_high_skill_rating
+				}
+				desc = VIETmisc.3027.toast.killed
+				send_interface_toast = {
+					left_icon = ROOT
+					title = VIETmisc.3027.toast.killed
+					scope:county = {
+						add_county_modifier = {
+							modifier = VIET_bear_attacks_ended
+							years = 5
+						}		
+					}
+				}
+			}
+			40 = {
+				modifier = {
+					add = 4
+					intrigue <= low_skill_rating
+				}
+				modifier = {
+					add = 4
+					intrigue <= mediocre_skill_rating
+				}
+				modifier = {
+					add = 4
+					stewardship <= low_skill_rating
+				}
+				modifier = {
+					add = 4
+					stewardship <= mediocre_skill_rating
+				}
+				modifier = {
+					add = 8
+					martial <= low_skill_rating
+				}
+				modifier = {
+					add = 8
+					martial <= mediocre_skill_rating
+				}
+				desc = VIETmisc.3027.toast.not_killed
+				send_interface_toast = {
+					left_icon = ROOT
+					title = VIETmisc.3027.toast.not_killed
+					scope:county = {
+						add_county_modifier = {
+							modifier = VIET_bear_attacks
+							years = 5
+						}		
+					}
+				}
+			}
+		}
+	}	
+	option = {
+		name = VIETmisc.3027.b
+		trigger = {
+			OR = {
+				gold >= 40
+				is_ai = no
+			}
+		}
+		remove_short_term_gold = 40
+		random_list = {
+			40 = {
+				modifier = {
+					add = 4
+					intrigue >= decent_skill_rating
+				}
+				modifier = {
+					add = 4
+					intrigue >= very_high_skill_rating
+				}
+				modifier = {
+					add = 4
+					stewardship >= decent_skill_rating
+				}
+				modifier = {
+					add = 4
+					stewardship >= very_high_skill_rating
+				}
+				modifier = {
+					add = 8
+					martial >= decent_skill_rating
+				}
+				modifier = {
+					add = 8
+					martial >= very_high_skill_rating
+				}
+				desc = VIETmisc.3027.toast.killed
+				send_interface_toast = {
+					left_icon = ROOT
+					title = VIETmisc.3027.toast.killed
+					scope:county = {
+						add_county_modifier = {
+							modifier = VIET_bear_attacks_ended
+							years = 5
+						}		
+					}
+				}
+			}
+			60 = {
+				modifier = {
+					add = 4
+					intrigue <= low_skill_rating
+				}
+				modifier = {
+					add = 4
+					intrigue <= mediocre_skill_rating
+				}
+				modifier = {
+					add = 4
+					stewardship <= low_skill_rating
+				}
+				modifier = {
+					add = 4
+					stewardship <= mediocre_skill_rating
+				}
+				modifier = {
+					add = 8
+					martial <= low_skill_rating
+				}
+				modifier = {
+					add = 8
+					martial <= mediocre_skill_rating
+				}
+				desc = VIETmisc.3027.toast.not_killed
+				send_interface_toast = {
+					left_icon = ROOT
+					title = VIETmisc.3027.toast.not_killed
+					scope:county = {
+						add_county_modifier = {
+							modifier = VIET_bear_attacks
+							years = 5
+						}		
+					}
+				}
+			}
+		}
+	}
+	option = {
+		name = VIETmisc.3027.c
+		scope:county = {
+			add_county_modifier = {
+				modifier = VIET_bear_attacks
+				years = 5
+			}		
+		}
+	}
+}
+
+
+# Red billed queleas infestation - "feathered locusts" of Africa
+VIETmisc.3028 = {
+	type = character_event
+	title = VIETmisc.3028.t
+	desc = VIETmisc.3028.desc
+	theme = unfriendly
+	override_background = { event_background = VIET_background_small_town }
+	
+	left_portrait = {
+		character = root
+		animation = worry
+	}
+	
+	trigger = {
+		NOT = { has_game_rule = VIET_conversion_universe_events }
+		any_held_title = {
+			tier = tier_county
+			any_county_province = {
+				OR = {
+					geographical_region = ghw_region_ethiopia
+					geographical_region = custom_sahel_proper
+				}		
+			}
+		}	
+	}
+	
+    weight_multiplier = {
+        base = 0
+		modifier = {
+			add = {
+				every_held_title = {
+					limit = { tier = tier_county }
+					add = 1
+				}
+			}		
+		}		
+    }
+	
+	immediate = {
+		random_held_title = {
+			limit = {
+				tier = tier_county
+				any_county_province = {
+					OR = {
+						geographical_region = ghw_region_ethiopia
+						geographical_region = custom_sahel_proper
+					}			
+				}
+			}	
+			save_scope_as = county
+		}
+	}
+	
+	option = {
+		name = VIETmisc.3028.a
+		scope:county = {
+			add_county_modifier = {
+				modifier = VIET_feathered_locusts
+				years = 5
+			}		
+		}
+		if = {
+			limit = {
+				has_game_rule = VIET_historical_context_on
+			}
+			custom_tooltip = VIETmisc.3028.info
+		}
+	}
+	
+	option = {
+		name = VIETmisc.3028.b
+		trigger = {
+			stewardship >= decent_skill_rating			
+		}
+		skill = stewardship
+		add_gold = 30
+		VIET_massive_prestige_loss_effect = yes
+		if = {
+			limit = {
+				has_game_rule = VIET_historical_context_on
+			}
+			custom_tooltip = VIETmisc.3028.info
+		}
+	}
+
+}
+
+
+
+
+
+# Rooks settle in a county in large numbers
+VIETmisc.3029 = {
+	type = character_event
+	title = VIETmisc.3029.t
+	desc = VIETmisc.3029.desc
+	theme = death
+	override_background = { event_background = VIET_background_tuscan_country }
+	
+	left_portrait = {
+		character = root
+		animation = worry
+	}
+	
+	trigger = {
+		NOT = { has_game_rule = VIET_conversion_universe_events }
+		any_held_title = {
+			tier = tier_county
+			any_county_province = {
+				OR = {
+					geographical_region = world_europe
+					geographical_region = custom_outremer
+					geographical_region = world_asia_minor
+					geographical_region = world_steppe
+					geographical_region = world_middle_east_persia
+				}		
+			}
+		}	
+	}
+	
+    weight_multiplier = {
+        base = 0
+		modifier = {
+			add = {
+				every_held_title = {
+					limit = { tier = tier_county }
+					add = 1
+				}
+			}		
+		}		
+    }
+	
+	immediate = {
+		random_held_title = {
+			limit = {
+				tier = tier_county
+				any_county_province = {
+					OR = {
+						geographical_region = world_europe
+						geographical_region = custom_outremer
+						geographical_region = world_asia_minor
+						geographical_region = world_steppe
+						geographical_region = world_middle_east_persia
+					}			
+				}
+			}	
+			save_scope_as = county
+		}
+	}
+	
+	option = {
+		name = VIETmisc.3029.a
+		scope:county = {
+			add_county_modifier = {
+				modifier = VIET_rooks_here
+				years = 10
+			}		
+		}
+		if = {
+			limit = {
+				has_game_rule = VIET_historical_context_on
+			}
+			custom_tooltip = VIETmisc.3029.info
+		}
+	}
+	option = {
+		name = VIETmisc.3029.b
+		scope:county = {
+			add_county_modifier = {
+				modifier = VIET_culling_rooks
+				years = 10
+			}		
+		}
+		if = {
+			limit = {
+				has_game_rule = VIET_historical_context_on
+			}
+			custom_tooltip = VIETmisc.3029.info
+		}
+	}
+	option = {
+		name = VIETmisc.3029.c
+		trigger = {
+			VIET_is_crow_lord_or_lady_trigger = yes
+		}
+		scope:county = {
+			add_county_modifier = {
+				modifier = VIET_rooks_crows
+				years = 10
+			}		
+		}
+		if = {
+			limit = {
+				has_game_rule = VIET_historical_context_on
+			}
+			custom_tooltip = VIETmisc.3029.info
+		}
+	}
+
+}
+
+
+# Donkeys from a county gain a good reputation for being reliable
+VIETmisc.3030 = {
+	type = character_event
+	title = VIETmisc.3030.t
+	desc = VIETmisc.3030.desc
+	theme = VIET_theme_small_town
+	
+	left_portrait = root
+	
+    weight_multiplier = {
+        base = 0
+		modifier = {
+			add = {
+				every_held_title = {
+					limit = { tier = tier_county }
+					add = 1
+				}
+			}		
+		}
+    }
+	
+	immediate = {
+		random_held_title = {
+			limit = { tier = tier_county }
+			save_scope_as = county
+		}
+		scope:county = {
+			random_list = {
+				10 = {
+					add_county_modifier = {
+						modifier = VIET_reliable_donkeys
+						years = 8
+					}				
+				}
+				10 = {
+					add_county_modifier = {
+						modifier = VIET_reliable_donkeys
+						years = 10
+					}				
+				}
+				10 = {
+					add_county_modifier = {
+						modifier = VIET_reliable_donkeys
+						years = 12
+					}				
+				}
+				10 = {
+					add_county_modifier = {
+						modifier = VIET_reliable_donkeys
+						years = 14
+					}				
+				}
+				10 = {
+					add_county_modifier = {
+						modifier = VIET_reliable_donkeys
+						years = 16
+					}				
+				}
+			}	
+		}	
+	}
+	
+	option = {
+		name = VIETmisc.3030.a
+		custom_tooltip = VIETmisc.3030.tooltip
+		if = {
+			limit = {
+				has_game_rule = VIET_historical_context_on
+			}
+			custom_tooltip = VIETmisc.3030.info
+		}
+	}
+
+}
+
+
 

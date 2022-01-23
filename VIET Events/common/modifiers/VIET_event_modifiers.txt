@@ -1812,3 +1812,297 @@ VIET_mushrooms_of_immortality = {
 	health = 0.3
 	life_expectancy = 5
 }
+VIET_avoiding_strange_creatures = {
+	icon = cockroach_positive
+	intrigue = 1
+	stress_gain_mult = 0.05
+	stress_loss_mult = -0.05
+}
+VIET_camels_killed_by_spiders = {
+	icon = cockroach_negative
+	stewardship = -1
+}
+VIET_relaxing_sea_trip = {
+	icon = rock_positive
+	stress_gain_mult = -0.05
+	stress_loss_mult = 0.05
+}
+VIET_snail_slime_learning = {
+	icon = fertility_positive
+	intrigue = 1
+	monthly_stewardship_lifestyle_xp_gain_mult = 0.02
+	monthly_intrigue_lifestyle_xp_gain_mult = 0.02
+}
+VIET_eating_snails = {
+	icon = feast_positive
+	intrigue = 1
+	stress_gain_mult = -0.05
+	stress_loss_mult = 0.05
+}
+VIET_observed_slowworm = {
+	icon = cockroach_positive
+	intrigue = 1
+	monthly_intrigue_lifestyle_xp_gain_mult = 0.03
+}
+VIET_collected_lots_of_honey = {
+	icon = food_positive
+	health = 0.2
+	monthly_prestige = 0.1
+}
+VIET_bought_hinny = {
+	icon = horse_positive
+	stewardship = 1
+}
+VIET_charitable_to_struggling_peasant = {
+	icon = social_positive
+	county_opinion_add = 5
+	monthly_piety = 0.2
+}
+VIET_encountered_a_honey_badger = {
+	icon = stress_negative
+	stress_gain_mult = 0.05
+	stress_loss_mult = -0.05
+}
+VIET_saw_animal_fight = {
+	icon = martial_positive
+	stress_gain_mult = -0.1
+	stress_loss_mult = 0.1
+}
+VIET_eating_sparrow = {
+	icon = food_positive
+	stewardship = 1
+	fertility = 0.03
+}
+VIET_coturnism = {
+	icon = food_negative
+	health = -0.5
+}
+VIET_impressed_others_animal_knowledge = {
+	icon = bear_positive
+	diplomacy = 1
+	monthly_prestige = 0.2
+}
+VIET_learning_about_birds = {
+	icon = asatru_raven_positive
+	diplomacy = 1
+	learning = 1
+	monthly_diplomacy_lifestyle_xp_gain_mult = 0.04
+}
+VIET_protected_sacred_nilgai = {
+	icon = piety_positive
+	county_opinion_add = 6
+	monthly_piety = 0.4
+	monthly_prestige = -0.4
+}
+VIET_let_noble_hunt_nilgai = {
+	icon = piety_negative
+	county_opinion_add = -10
+	monthly_piety = -0.4
+	monthly_prestige = 0.4
+}
+# VIET_mandrill_horde_brave = {
+# 	icon = stress_positive
+# 	monthly_prestige = 0.3
+# 	monthly_martial_lifestyle_xp_gain_mult = 0.03
+# }
+# VIET_mandrill_horde_diplo = {
+# 	icon = social_positive
+# 	diplomacy = 2
+# }
+VIET_amused_by_animal = {
+	icon = rat_positive
+	diplomacy = 1
+}
+VIET_eating_larks = {
+	icon = food_positive
+	stress_loss_mult = 0.1
+	monthly_prestige = 0.2
+}
+VIET_rook_curse = {
+	icon = asatru_raven_negative
+	general_opinion = -5
+	monthly_piety = -0.4
+	stress_gain_mult = 0.1
+	stress_loss_mult = -0.1
+}
+VIET_befriending_rooks = {
+	icon = asatru_raven_positive
+	diplomacy = -1
+	intrigue = 1
+	monthly_dread = 0.2
+	monthly_intrigue_lifestyle_xp_gain_mult = 0.03
+}
+VIET_hoopoe_curse = {
+	icon = asatru_raven_negative
+	monthly_piety = -0.3
+	monthly_prestige = -0.3
+}
+VIET_hoopoe_blessing = {
+	icon = asatru_raven_positive
+	diplomacy = 1
+	monthly_piety = 0.2
+	monthly_prestige = 0.2
+}
+VIET_hoopoe_medicine = {
+	icon = asatru_raven_positive
+	health = 0.5
+	monthly_prestige = 0.2
+}
+VIET_eating_chamois = {
+	icon = feast_positive
+	health = 0.1
+	stress_gain_mult = -0.05
+	stress_loss_mult = 0.05
+}
+VIET_threatened_hunters = {
+	icon = hunt_negative
+	diplomacy = -1
+	county_opinion_add = -7
+}
+VIET_listened_to_yellowhammer = {
+	icon = asatru_raven_positive
+	monthly_piety = 0.1
+	monthly_prestige = 0.1
+}
+VIET_house_bunting_blessing = {
+	icon = asatru_raven_positive
+	diplomacy = 1
+	monthly_piety = 0.3
+}
+VIET_guard_goose = {
+	icon = asatru_raven_positive
+	diplomacy = -1
+	intrigue = 2
+	hostile_scheme_resistance_add = 8
+}
+VIET_bear_attacks = {
+	icon = bear_negative
+	development_growth = -0.1
+	monthly_county_control_change_add = -0.1
+}
+VIET_bear_attacks_ended = {
+	icon = bear_positive
+	county_opinion_add = 10
+}
+VIET_feathered_locusts = {
+	icon = asatru_raven_negative
+	development_growth = -0.1
+	tax_mult = -0.06
+}
+VIET_rooks_here = {
+	icon = asatru_raven_positive
+	development_growth = 0.2
+	monthly_county_control_change_add = -0.2
+}
+VIET_culling_rooks = {
+	icon = asatru_raven_positive
+	tax_mult = -0.02
+	county_opinion_add = 4
+}
+VIET_rooks_crows = {
+	icon = asatru_raven_positive
+	development_growth = 0.3
+	monthly_county_control_change_add = 0.3
+}
+VIET_reliable_donkeys = {
+	icon = horse_positive
+	development_growth_factor = 0.15
+	tax_mult = 0.1
+}
+VIET_small_herd_donkeys = {
+	icon = horse_positive
+	martial = 2
+	stewardship = 2
+	monthly_prestige = 0.1
+}
+VIET_medium_herd_donkeys = {
+	icon = horse_positive
+	martial = 3
+	stewardship = 3
+	monthly_prestige = 0.3
+}
+VIET_large_herd_donkeys = {
+	icon = horse_positive
+	martial = 4
+	stewardship = 4
+	monthly_prestige = 0.5
+}
+VIET_dovecote_interest = {
+	icon = prestige_positive
+}
+VIET_built_dovecotes_small = {
+	icon = asatru_raven_positive
+	diplomacy = 1
+	stewardship = 1
+	monthly_prestige_gain_mult = 0.05
+}
+VIET_built_dovecotes_medium = {
+	icon = asatru_raven_positive
+	diplomacy = 1
+	stewardship = 1
+	intrigue = 1
+	monthly_prestige_gain_mult = 0.1
+}
+VIET_built_dovecotes_large = {
+	icon = asatru_raven_positive
+	diplomacy = 1
+	martial = 1
+	stewardship = 1
+	intrigue = 1
+	monthly_prestige_gain_mult = 0.15
+}
+VIET_songbird_average_fan = {
+	icon = asatru_raven_positive
+	diplomacy = 1
+	learning = 1
+	monthly_prestige_gain_mult = 0.05
+}
+VIET_songbird_enjoyer = {
+	icon = asatru_raven_positive
+	diplomacy = 1
+	stress_gain_mult = -0.05
+	stress_loss_mult = 0.05
+}
+VIET_inspired_by_songbird_diplomacy = {
+	icon = diplomacy_positive
+	diplomacy = 1
+	monthly_diplomacy_lifestyle_xp_gain_mult = 0.1
+}
+VIET_inspired_by_songbird_martial = {
+	icon = martial_positive
+	martial = 1
+	monthly_martial_lifestyle_xp_gain_mult = 0.1
+}
+VIET_inspired_by_songbird_stewardship = {
+	icon = stewardship_positive
+	stewardship = 1
+	monthly_stewardship_lifestyle_xp_gain_mult = 0.1
+}
+VIET_inspired_by_songbird_intrigue = {
+	icon = intrigue_positive
+	intrigue = 1
+	monthly_intrigue_lifestyle_xp_gain_mult = 0.1
+}
+VIET_inspired_by_songbird_learning = {
+	icon = learning_positive
+	learning = 1
+	monthly_learning_lifestyle_xp_gain_mult = 0.1
+}
+VIET_swimming_camels = {
+	icon = horse_positive
+	martial = 1
+	stewardship = 1
+	monthly_prestige = 0.2
+}
+VIET_listened_to_saint_francis = {
+	icon = piety_positive
+	learning = 1
+	monthly_prestige = -0.3
+	monthly_piety = 0.3
+	monthly_piety_gain_mult = 0.1
+}
+
+
+
+
+

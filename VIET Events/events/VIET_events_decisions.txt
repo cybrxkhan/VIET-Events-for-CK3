@@ -31,6 +31,7 @@
 # 2047-2060		Deal with the Crows
 # 2061-2062		Learning Shorthand
 # 2063-2072		County Event Decisions
+# 2073-2077		Animals
 # 
 ############################################################################################################################
 
@@ -3887,3 +3888,351 @@ VIETmisc.2072 = {
 		}
 	}
 }
+
+
+
+##################################################################
+#
+# ANIMAL DECISIONS 2073-2077
+#
+##################################################################
+
+# Buy the donkeys
+VIETmisc.2073 = {
+	type = character_event
+	title = VIETmisc.2073.t
+	desc = VIETmisc.2073.desc
+	theme = VIET_theme_small_town
+	
+	
+	left_portrait = root
+	
+	option = { # Ok
+		name = VIETmisc.2073.a
+		remove_short_term_gold = 30
+		add_character_modifier = {
+			modifier = VIET_small_herd_donkeys
+			years = 10
+		}
+	}	
+	option = { # Ok
+		name = VIETmisc.2073.b
+		trigger = {
+			OR = {
+				gold >= 60
+				is_ai = no
+			}
+		}
+		remove_short_term_gold = 60
+		add_character_modifier = {
+			modifier = VIET_medium_herd_donkeys
+			years = 10
+		}
+	}	
+	option = { # Ok
+		name = VIETmisc.2073.c
+		trigger = {
+			OR = {
+				gold >= 90
+				is_ai = no
+			}
+		}
+		remove_short_term_gold = 90
+		add_character_modifier = {
+			modifier = VIET_large_herd_donkeys
+			years = 10
+		}
+	}
+}
+
+
+
+# Courtier suggests you add dovecotes to your residence
+VIETmisc.2074 = {
+	type = character_event
+	title = VIETmisc.2074.t
+	desc = VIETmisc.2074.desc
+	theme = realm
+
+	left_portrait = { 	
+		character = scope:courtier
+		animation = personality_forgiving
+	}	
+	right_portrait = {
+		character = root
+		animation = personality_rational
+	}
+	
+
+	trigger = {
+		has_game_rule = VIET_normal_universe_events
+		NOT = { has_government = tribal_government }
+		any_courtier = {
+			is_available_ai_adult = yes
+			# Want someone for whom it'd make sense to suggest this
+			probably_unintelligent_trigger = no
+			OR = {
+				probably_intelligent_trigger = yes
+				stewardship >= medium_skill_rating
+				intrigue >= medium_skill_rating
+			}
+		}
+	}
+	
+	weight_multiplier = {
+		base = 1
+		modifier = {
+			add = 0.2
+			has_trait = lazy
+		}
+		modifier = {
+			add = -0.2
+			has_trait = diligent
+		}
+		modifier = {
+			add = 0.2
+			has_trait = calm
+		}
+		modifier = {
+			add = -0.2
+			has_trait = wrathful
+		}
+		modifier = {
+			add = 0.2
+			has_trait = humble
+		}
+		modifier = {
+			add = -0.2
+			has_trait = arrogant
+		}
+	}
+	
+	immediate = {
+		random_courtier = {
+			limit = {
+				is_available_ai_adult = yes
+				# Want someone for whom it'd make sense to suggest this
+				probably_unintelligent_trigger = no
+				OR = {
+					probably_intelligent_trigger = yes
+					stewardship >= medium_skill_rating
+					intrigue >= medium_skill_rating
+				}
+			}
+			save_scope_as = courtier
+		}
+		random_list = {
+			10 = {				
+				add_character_modifier = {
+					modifier = VIET_dovecote_interest
+					years = 4
+				}
+			}
+			10 = {				
+				add_character_modifier = {
+					modifier = VIET_dovecote_interest
+					years = 5
+				}
+			}
+			10 = {				
+				add_character_modifier = {
+					modifier = VIET_dovecote_interest
+					years = 6
+				}
+			}
+			10 = {				
+				add_character_modifier = {
+					modifier = VIET_dovecote_interest
+					years = 7
+				}
+			}
+			10 = {				
+				add_character_modifier = {
+					modifier = VIET_dovecote_interest
+					years = 8
+				}
+			}
+			10 = {				
+				add_character_modifier = {
+					modifier = VIET_dovecote_interest
+					years = 9
+				}
+			}
+			10 = {				
+				add_character_modifier = {
+					modifier = VIET_dovecote_interest
+					years = 10
+				}
+			}
+		}
+	}
+
+	option = { # Ok
+		name = VIETmisc.2074.a
+		custom_tooltip = VIETmisc.2074.tooltip
+		VIET_medium_piety_gain_effect = yes
+		stress_impact = {
+			arrogant = miniscule_stress_impact_gain
+			ambitious = miniscule_stress_impact_gain
+			diligent = miniscule_stress_impact_gain
+			gluttonous = miniscule_stress_impact_gain
+		}
+		scope:courtier = {
+			add_opinion = {
+				target = root
+				modifier = VIET_opinion_dovecote_not_heeded
+			}
+			reverse_add_opinion = {
+				target = root
+				modifier = VIET_opinion_dovecote_disapprove
+			}			
+		}
+		if = {
+			limit = {
+				has_game_rule = VIET_historical_context_on
+			}
+			custom_tooltip = VIETmisc.2074.info
+		}
+	}
+	option = { # Ok
+		name = VIETmisc.2074.b
+		custom_tooltip = VIETmisc.2074.tooltip
+		VIET_medium_prestige_gain_effect = yes
+		stress_impact = {
+			humble = miniscule_stress_impact_gain
+			content = miniscule_stress_impact_gain
+			lazy = miniscule_stress_impact_gain
+			temperate = miniscule_stress_impact_gain
+		}
+		scope:courtier = {
+			add_opinion = {
+				target = root
+				modifier = VIET_opinion_dovecote_heeded
+			}
+			reverse_add_opinion = {
+				target = root
+				modifier = VIET_opinion_dovecote_approve
+			}			
+		}
+		if = {
+			limit = {
+				has_game_rule = VIET_historical_context_on
+			}
+			custom_tooltip = VIETmisc.2074.info
+		}
+	}
+}
+
+
+
+# Build the dovecotes
+VIETmisc.2075 = {
+	type = character_event
+	title = VIETmisc.2075.t
+	desc = VIETmisc.2075.desc
+	theme = diplomacy_majesty_focus	
+	
+	left_portrait = root
+	
+	option = { # Ok
+		name = VIETmisc.2075.a
+		remove_short_term_gold = 50
+		add_character_modifier = {
+			modifier = VIET_built_dovecotes_small
+			years = 15
+		}
+	}	
+	option = { # Ok
+		name = VIETmisc.2075.b
+		trigger = {
+			OR = {
+				gold >= 100
+				is_ai = no
+			}
+		}
+		remove_short_term_gold = 100
+		add_character_modifier = {
+			modifier = VIET_built_dovecotes_medium
+			years = 15
+		}
+	}	
+	option = { # Ok
+		name = VIETmisc.2075.c
+		trigger = {
+			OR = {
+				gold >= 150
+				is_ai = no
+			}
+		}
+		remove_short_term_gold = 150
+		add_character_modifier = {
+			modifier = VIET_built_dovecotes_large
+			years = 15
+		}
+	}
+}
+
+
+# Will you become a songbird fan or enjoyer?
+VIETmisc.2076 = {
+	type = character_event
+	title = VIETmisc.2076.t
+	desc = VIETmisc.2076.desc
+	theme = VIET_theme_skyrim_forest	
+	
+	left_portrait = {
+		character = root
+		animation = personality_content
+	}
+	
+	option = { # Ok
+		name = VIETmisc.2076.a
+		custom_tooltip = VIETmisc.2076.tooltip
+		add_character_modifier = {
+			modifier = VIET_songbird_enjoyer
+		}
+	}
+	option = { # Ok
+		name = VIETmisc.2076.b
+		add_character_modifier = {
+			modifier = VIET_songbird_average_fan
+			years = 10
+		}
+	}
+}
+
+
+# Listen to the songbirds
+VIETmisc.2077 = {
+	type = character_event
+	title = VIETmisc.2077.t
+	desc = VIETmisc.2077.desc
+	theme = VIET_theme_skyrim_forest	
+	
+	left_portrait = {
+		character = root
+		animation = admiration
+	}
+
+	immediate = {
+		VIET_immediate_songbird_sound_effect = yes
+	}
+	
+	option = { # Ok
+		name = VIETmisc.2077.a
+		VIET_option_songbird_sound_effect = yes
+	}
+
+	after = {
+		hidden_effect = {
+			scope:activity = {
+				complete_activity = yes
+			}		
+		}
+	}
+
+}
+
+
+
+

@@ -136,16 +136,30 @@ VIET_background_tuscan_country = {
 		ambience = "event:/SFX/Events/Backgrounds/castle_garden_day"
 	}
 
-	background = { # Indian
+	background = { # West Indian
 		trigger = {
 			capital_province = {
 				OR = {
-					geographical_region = world_burma
-					geographical_region = world_india
+					geographical_region = world_india_rajastan
+					geographical_region = world_india_deccan
 				}
 			}
 		}
 		reference = "gfx/interface/illustrations/event_scenes/VIET_tuscan_country_marathi.dds"
+		environment = "environment_event_garden"
+		ambience = "event:/SFX/Events/Backgrounds/castle_garden_day"
+	}
+
+	background = { # East Indian
+		trigger = {
+			capital_province = {
+				OR = {
+					geographical_region = world_burma
+					geographical_region = world_india_bengal
+				}
+			}
+		}
+		reference = "gfx/interface/illustrations/event_scenes/VIET_tuscan_country_bengali.dds"
 		environment = "environment_event_garden"
 		ambience = "event:/SFX/Events/Backgrounds/castle_garden_day"
 	}
@@ -499,16 +513,28 @@ VIET_background_skyrim_forest = {
 		ambience = "event:/SFX/Events/Backgrounds/steppe_day"
 	}
 
-	background = { # India
+	background = { # Northwest India
 		trigger = {
 			capital_province = {
-				OR = {
-					geographical_region = world_burma
-					geographical_region = world_india
-				}
+				geographical_region = world_india_rajastan
 			}
 		}
 		reference = "gfx/interface/illustrations/event_scenes/VIET_skyrim_forest_marathi.dds"
+		environment = "environment_event_forest"
+		ambience = "event:/SFX/Events/Backgrounds/deciduous_forest_day"
+	}
+
+	background = { # East and South India
+		trigger = {
+			capital_province = {
+				OR = {
+					geographical_region = world_india_bengal
+					geographical_region = world_india_deccan
+					geographical_region = world_burma
+				}
+			}
+		}
+		reference = "gfx/interface/illustrations/event_scenes/VIET_skyrim_forest_tamil.dds"
 		environment = "environment_event_forest"
 		ambience = "event:/SFX/Events/Backgrounds/deciduous_forest_day"
 	}
@@ -559,7 +585,7 @@ VIET_background_skyrim_forest = {
 			}
 		}
 		reference = "gfx/interface/illustrations/event_scenes/VIET_skyrim_forest_castilian.dds"
-		environment = "environment_event_garden"
+		environment = "environment_event_steppe"
 		ambience = "event:/SFX/Events/Backgrounds/desert_day"
 	}
 

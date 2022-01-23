@@ -343,6 +343,20 @@ VIET_events_yearly_pulse = {
 		100 = VIETmisc.0192		# Can't fall asleep, so you admire the nighttime solitude
 		# Oblivion Unmarked Locations
 		100 = VIETmisc.0193		# Lonely Grave - south of Boethia's shrine - encounter a lonely grave in the middle of nowhere
+		# Animals
+		100 = VIETmisc.0196		# Spooked by a frogmouth bird
+		100 = VIETmisc.0200		# Meet a commoner looking for snail slime
+		100 = VIETmisc.0202		# Almost mistook a slowworm for a snake
+		100 = VIETmisc.0204		# Encountering some onagers (Asiatic wild ass) in the wilderness
+		100 = VIETmisc.0205		# Scared by the red eyes of an apollo butterfly
+		100 = VIETmisc.0208		# Hyrax is chilling on the rocks
+		100 = VIETmisc.0213		# Say hello to a fennec fox
+		100 = VIETmisc.0216		# Encounter black winged stilts by some ponds
+		100 = VIETmisc.0220		# Character sees a lark flying overhead
+		100 = VIETmisc.0222		# Hoopoes are hanging around and you're of a culture that sees them negatively
+		100 = VIETmisc.0223		# Hoopoes are hanging around and you're of a culture that sees them positively
+		100 = VIETmisc.0226		# Heard some yellowhammer songbird singing
+		100 = VIETmisc.0227		# House bunting makes itself at home in your residence which is lucky
 	}
 }
 
@@ -626,6 +640,20 @@ VIET_events_tri_yearly_pulse = {
 		100 = VIETmisc.0190		# Having intrusive thoughts while at a council meeting
 		# Oblivion Unmarked Locations
 		100 = VIETmisc.0194		# Flooded Ruins - a couple examples can be found in the Shivering Isles - soldiers find small chest of coins in underwater ruins
+		# Animals
+		100 = VIETmisc.0197		# Camels killed by karakurt spiders
+		100 = VIETmisc.0198		# Courtier tells you about witnessing a basking shark
+		100 = VIETmisc.0199		# Witness hunters failing to catch a Chevrotain/Mouse-Deer that goes into a lake
+		100 = VIETmisc.0201		# Encounter commoners collecting some snails - buy some for food?
+		100 = VIETmisc.0203		# Greater Honeyguide helping villagers find some sweet sweet honey
+		100 = VIETmisc.0210		# Honey badger don't care - it killed a lot of chickens belonging to a farmer
+		100 = VIETmisc.0212		# Come across a mongoose and a cobra "dueling"
+		100 = VIETmisc.0214		# Solve sparrow problem by setting up sparrow traps at home to catch them for their meat?
+		100 = VIETmisc.0218		# Traveler claims to have met a horde of monkeys
+		100 = VIETmisc.0219		# Langur monkey street performance
+		100 = VIETmisc.0221		# Servant sees a parliament of rooks in your garden
+		100 = VIETmisc.0224		# Come across some hunters hunting chamois
+		100 = VIETmisc.0225		# Town notable invites you to participate in caracal pigeon hunting blood sport gambling
 	}
 }
 
@@ -822,6 +850,18 @@ VIET_events_five_yearly_pulse = {
 		100 = VIETmisc.0189		# Have an existential crisis while a bard is playing music
 		# Oblivion Unmarked Locations
 		100 = VIETmisc.0195		# Isolated House - halfway between Bravil and Skingrad - soldiers find abandoned house occupied by bandits
+		# Animals
+		100 = VIETmisc.0206		# Older woman has weird fascination with watching African helmeted turtle attacking other animals
+		100 = VIETmisc.0207		# Hear the cry of a sambar deer - is a deer or a tiger pretending to be one?
+		100 = VIETmisc.0209		# Confused a hinny (horse father, donkey mother) with a mule
+		100 = VIETmisc.0211		# Honey badger don't care - and it don't care about your status
+		100 = VIETmisc.0215		# Courtier suffers from coturnism - poisoning from eating quail
+		100 = VIETmisc.0217		# Noble wants to hunt nilgai that is sacred to a village
+		100 = VIETmisc.0228		# Farmer's loud guard goose thinks you're an intruder
+		100 = VIETmisc.0229		# Pig is put on trial for the murder of a child
+		100 = VIETmisc.0230		# Butcher is giving up trade to become a wandering preacher and care for animals
+		100 = VIETmisc.0231		# Traveling merchant offers to sell you swimming kharai camels from Gujarat
+		100 = VIETmisc.0232		# Come across a traveling cleric preaching to the animals
 	}
 }
 
@@ -955,6 +995,9 @@ VIET_events_common_decisions_pulse = {
 		100 = VIETmisc.2047		# Crows keep following you around for some reason
 		# Writing
 		100 = VIETmisc.2060		# Character gains interest in learning how to write shorthand
+		# Animals
+		100 = VIETmisc.2074		# Courtier suggests you add dovecotes to your residence
+		100 = VIETmisc.2076		# Will you become a songbird fan or enjoyer?
 		
 	}
 }
@@ -1139,8 +1182,11 @@ VIET_events_common_county_pulse = {
 		100 = VIETmisc.3017		# Renowned carpenters in county
 		100 = VIETmisc.3018		# Renowned stonemasons in county
 		100 = VIETmisc.3021		# Building collapses, killing a lot of important community leaders
+		# Animals
+		100 = VIETmisc.3027		# Recent bear attacks
+		100 = VIETmisc.3030		# Donkeys from a county gain a good reputation for being reliable
 		
-		# 27
+		# 29
     }
 }
 
@@ -1208,8 +1254,10 @@ VIET_events_uncommon_county_pulse = {
 		100 = VIETmisc.3020		# Renowned traveler settles down in a county
 		# Oblivion Unmarked Locations
 		100 = VIETmisc.3026		# Burnt Down Tower - on an island in the Niben River south of Fort Irony - old burnt down tower found in wilderness, could be turned into a watchpost
+		# Animals
+		100 = VIETmisc.3028		# Red billed queleas infestation - "feathered locusts" of Africa
 		
-		# 19
+		# 20
 		
     }
 }
@@ -1268,8 +1316,10 @@ VIET_events_rare_county_pulse = {
 		50 = VIETmisc.3022		# You hear rumors of a commoner of peerless beauty in a county
 		# Oblivion Unmarked Locations
 		50 = VIETmisc.3020		# Submerged Shrine - found in Shivering Isles - abandoned wayshrine found underwater, turn it into a proper shrine or not?
+		# Animals
+		50 = VIETmisc.3029		# Rooks settle in a county in large numbers
 		
-		# 9
+		# 10
 		
     }
 }

@@ -41,6 +41,7 @@
 # 0180-0181		Writing
 # 0182-0192		Contemplative Thoughts
 # 0193-0195		Oblivion unmarked locations
+# 0196-0232		Animals
 # 
 ############################################################################################################################
 
@@ -16584,6 +16585,3766 @@ VIETmisc.0195 = {
 	}
 }
 
+
+
+
+##########################################################################################################################
+#
+# ANIMALS	0196-0232
+#
+##########################################################################################################################
+
+
+
+# Spooked by a frogmouth bird
+VIETmisc.0196 = {
+	type = character_event
+	title = VIETmisc.0196.t
+	desc = VIETmisc.0196.desc
+	theme = death
+	override_background = { event_background = VIET_background_skyrim_forest }
+	
+	right_portrait = {
+		character = root
+		animation = fear
+	}
+
+	trigger = {
+		NOT = { has_game_rule = VIET_conversion_universe_events }
+		any_held_title = {
+			tier = tier_county
+			any_county_province = {
+				OR = {
+					geographical_region = world_india
+					geographical_region = world_burma
+				}		
+			}
+		}		
+	}
+	
+	weight_multiplier = {
+		base = 1
+		modifier = {
+			add = 0.2
+			has_trait = paranoid
+		}
+		modifier = {
+			add = -0.2
+			has_trait = trusting
+		}
+		modifier = {
+			add = 0.2
+			has_trait = diligent
+		}
+		modifier = {
+			add = -0.2
+			has_trait = lazy
+		}
+		modifier = {
+			add = 0.2
+			has_trait = honest
+		}
+		modifier = {
+			add = -0.2
+			has_trait = deceitful
+		}
+	}
+
+	
+	option = { # ok
+		name = VIETmisc.0196.a
+		add_character_modifier = {
+			modifier = VIET_amused_by_animal
+			years = 3
+		}
+		stress_impact = {		
+			paranoid = miniscule_stress_impact_gain
+			craven = miniscule_stress_impact_gain
+			callous = miniscule_stress_impact_gain
+			wrathful = miniscule_stress_impact_gain
+			vengeful = miniscule_stress_impact_gain
+		}
+		if = {
+			limit = {
+				has_game_rule = VIET_historical_context_on
+			}
+			custom_tooltip = VIETmisc.0196.info
+		}
+	}	
+	option = { # ok
+		name = VIETmisc.0196.b
+		add_character_modifier = {
+			modifier = VIET_avoiding_strange_creatures
+			years = 3
+		}
+		stress_impact = {		
+			trusting = miniscule_stress_impact_gain
+			brave = miniscule_stress_impact_gain
+			content = miniscule_stress_impact_gain
+			calm = miniscule_stress_impact_gain
+			forgiving = miniscule_stress_impact_gain
+		}
+		if = {
+			limit = {
+				has_game_rule = VIET_historical_context_on
+			}
+			custom_tooltip = VIETmisc.0196.info
+		}
+	}
+}
+
+
+# Camels killed by karakurt spiders
+VIETmisc.0197 = {
+	type = character_event
+	title = VIETmisc.0197.t
+	desc = VIETmisc.0197.desc
+	theme = death
+	override_background = { event_background = courtyard }
+	
+	right_portrait = {
+		character = root
+		animation = worry
+	}
+
+	trigger = {
+		NOT = { has_game_rule = VIET_conversion_universe_events }
+		capital_province = {
+			OR = {
+				geographical_region = world_middle_east_persia
+				geographical_region = ghw_region_transoxiana
+				geographical_region = ghw_region_siberia
+				geographical_region = special_mongol_empire_chagatai_region
+			}
+		}		
+	}
+	
+	weight_multiplier = {
+		base = 1
+		modifier = {
+			add = 0.2
+			has_trait = lazy
+		}
+		modifier = {
+			add = -0.2
+			has_trait = diligent
+		}
+		modifier = {
+			add = 0.2
+			has_trait = greedy
+		}
+		modifier = {
+			add = -0.2
+			has_trait = generous
+		}
+		modifier = {
+			add = 0.2
+			has_trait = craven
+		}
+		modifier = {
+			add = -0.2
+			has_trait = brave
+		}
+	}
+
+	
+	option = { # ok
+		name = VIETmisc.0197.a
+		add_character_modifier = {
+			modifier = VIET_camels_killed_by_spiders
+			years = 5
+		}
+		if = {
+			limit = {
+				has_game_rule = VIET_historical_context_on
+			}
+			custom_tooltip = VIETmisc.0197.info
+		}
+	}
+}
+
+
+
+# Courtier tells you about witnessing a basking shark
+VIETmisc.0198 = {
+	type = character_event
+	title = VIETmisc.0198.t
+	desc = VIETmisc.0198.desc
+	theme = realm
+	override_background = { event_background = fp1_ocean }
+	
+	left_portrait = {
+		character = scope:courtier
+		animation = admiration
+	}
+
+	trigger = {
+		NOT = { has_game_rule = VIET_conversion_universe_events }
+		any_courtier = {
+			is_available_ai_adult = yes
+		}
+		any_held_title = {
+			tier = tier_county
+			any_county_province = {
+				OR = {
+					geographical_region = world_middle_east_jerusalem
+					geographical_region = world_europe
+					geographical_region = world_africa_north
+				}
+			}
+		}
+		
+	}
+	
+	weight_multiplier = {
+		base = 1
+		modifier = {
+			add = 0.2
+			has_trait = gregarious
+		}
+		modifier = {
+			add = -0.2
+			has_trait = shy
+		}
+		modifier = {
+			add = 0.2
+			has_trait = patient
+		}
+		modifier = {
+			add = -0.2
+			has_trait = impatient
+		}
+		modifier = {
+			add = 0.2
+			has_trait = compassionate
+		}
+		modifier = {
+			add = -0.2
+			has_trait = callous
+		}
+	}
+
+	immediate = {
+		random_courtier = {
+			limit = {
+				is_available_ai_adult = yes
+			}
+			save_scope_as = courtier
+			add_character_modifier = {
+				modifier = VIET_relaxing_sea_trip
+				years = 5
+			}
+		}
+	}
+
+	
+	option = { # ok
+		name = VIETmisc.0198.a
+		VIET_medium_prestige_gain_effect = yes
+		if = {
+			limit = {
+				has_game_rule = VIET_historical_context_on
+			}
+			custom_tooltip = VIETmisc.0198.info
+		}
+	}
+}
+
+
+
+# Witness hunters failing to catch a Chevrotain/Mouse-Deer that goes into a lake
+VIETmisc.0199 = {
+	type = character_event
+	title = VIETmisc.0199.t
+	desc = VIETmisc.0199.desc
+	theme = hunt_activity
+	override_background = { event_background = VIET_background_skyrim_forest }
+	
+	left_portrait = {
+		character = root
+		animation = personality_rational
+	}
+
+	trigger = {
+		NOT = { has_game_rule = VIET_conversion_universe_events }
+		capital_province = {
+			OR = {
+				geographical_region = world_india
+				geographical_region = world_burma
+				geographical_region = ghw_region_subsahelian_africa # One species found in parts of tropical West and Central Africa
+			}
+		}		
+	}
+	
+	weight_multiplier = {
+		base = 1
+		modifier = {
+			add = 0.2
+			has_trait = gregarious
+		}
+		modifier = {
+			add = -0.2
+			has_trait = shy
+		}
+		modifier = {
+			add = 0.2
+			has_trait = brave
+		}
+		modifier = {
+			add = -0.2
+			has_trait = craven
+		}
+		modifier = {
+			add = 0.2
+			has_trait = trusting
+		}
+		modifier = {
+			add = -0.2
+			has_trait = paranoid
+		}
+	}
+
+	
+	option = { # ok
+		name = VIETmisc.0199.a
+		VIET_small_prestige_gain_effect = yes
+		stress_impact = {		
+			callous = miniscule_stress_impact_gain
+			sadistic = miniscule_stress_impact_gain
+		}
+		if = {
+			limit = {
+				has_game_rule = VIET_historical_context_on
+			}
+			custom_tooltip = VIETmisc.0199.info
+		}
+	}
+	
+	option = { # ok
+		name = VIETmisc.0199.b
+		VIET_small_piety_gain_effect = yes
+		stress_impact = {		
+			ambitious = miniscule_stress_impact_gain
+			gluttonous = miniscule_stress_impact_gain
+		}
+		if = {
+			limit = {
+				has_game_rule = VIET_historical_context_on
+			}
+			custom_tooltip = VIETmisc.0199.info
+		}
+	}
+
+}
+
+
+# Meet a commoner looking for snail slime
+VIETmisc.0200 = {
+	type = character_event
+	title = VIETmisc.0200.t
+	desc = VIETmisc.0200.desc
+	theme = VIET_theme_skyrim_forest
+	
+	left_portrait = {
+		character = root
+		animation = disgust
+	}
+	
+	weight_multiplier = {
+		base = 1
+		modifier = {
+			add = 0.2
+			has_trait = gregarious
+		}
+		modifier = {
+			add = -0.2
+			has_trait = shy
+		}
+		modifier = {
+			add = 0.2
+			has_trait = humble
+		}
+		modifier = {
+			add = -0.2
+			has_trait = arrogant
+		}
+		modifier = {
+			add = 0.2
+			has_trait = trusting
+		}
+		modifier = {
+			add = -0.2
+			has_trait = paranoid
+		}
+	}
+
+	
+	option = { # ok
+		name = VIETmisc.0200.a
+		VIET_small_prestige_gain_effect = yes
+		stress_impact = {		
+			humble = miniscule_stress_impact_gain
+			content = miniscule_stress_impact_gain
+		}
+		if = {
+			limit = {
+				has_game_rule = VIET_historical_context_on
+			}
+			custom_tooltip = VIETmisc.0200.info
+		}
+	}
+	
+	option = { # ok
+		name = VIETmisc.0200.b
+		VIET_small_piety_gain_effect = yes
+		stress_impact = {		
+			arrogant = miniscule_stress_impact_gain
+			paranoid = miniscule_stress_impact_gain
+		}
+		if = {
+			limit = {
+				has_game_rule = VIET_historical_context_on
+			}
+			custom_tooltip = VIETmisc.0200.info
+		}
+	}
+	
+	option = { # ok
+		name = VIETmisc.0200.c
+		VIET_huge_prestige_loss_effect = yes
+		add_character_modifier = {
+			modifier = VIET_snail_slime_learning
+			years = 8
+		}
+		stress_impact = {		
+			arrogant = minor_stress_impact_gain
+			paranoid = miniscule_stress_impact_gain
+			craven = minor_stress_impact_gain
+			lazy = miniscule_stress_impact_gain
+		}
+		if = {
+			limit = {
+				has_game_rule = VIET_historical_context_on
+			}
+			custom_tooltip = VIETmisc.0200.info
+		}
+	}
+}
+
+
+# Encounter commoners collecting some snails - buy some for food?
+VIETmisc.0201 = {
+	type = character_event
+	title = VIETmisc.0201.t
+	desc = VIETmisc.0201.desc
+	theme = VIET_theme_skyrim_forest
+	
+	left_portrait = root
+	
+	weight_multiplier = {
+		base = 1
+		modifier = {
+			add = 0.2
+			has_trait = gregarious
+		}
+		modifier = {
+			add = -0.2
+			has_trait = shy
+		}
+		modifier = {
+			add = 0.2
+			has_trait = humble
+		}
+		modifier = {
+			add = -0.2
+			has_trait = arrogant
+		}
+		modifier = {
+			add = 0.2
+			has_trait = trusting
+		}
+		modifier = {
+			add = -0.2
+			has_trait = paranoid
+		}
+	}
+
+	
+	option = { # ok
+		name = VIETmisc.0201.a		
+		if = {
+			limit = {
+				has_game_rule = VIET_historical_context_on
+			}
+			custom_tooltip = VIETmisc.0201.info
+		}
+	}
+	
+	option = { # ok
+		name = VIETmisc.0201.b
+		trigger = {
+			OR = {
+				gold >= 20
+				is_ai = no
+			}
+		}
+		remove_short_term_gold = 20
+		add_character_modifier = {
+			modifier = VIET_eating_snails
+			years = 3
+		}
+		if = {
+			limit = {
+				has_game_rule = VIET_historical_context_on
+			}
+			custom_tooltip = VIETmisc.0201.info
+		}
+	}
+}
+
+
+# Almost mistook a slowworm for a snake
+VIETmisc.0202 = {
+	type = character_event
+	title = VIETmisc.0202.t
+	desc = VIETmisc.0202.desc
+	theme = VIET_theme_garden_generic
+	
+	left_portrait = {
+		character = root
+		animation = fear
+	}
+
+	trigger = {
+		NOT = { has_game_rule = VIET_conversion_universe_events }
+		capital_province = {
+			OR = {
+				geographical_region = world_europe
+				geographical_region = world_asia_minor
+				geographical_region = world_daylam
+			}
+			NOT = { geographical_region = custom_ireland }
+			NOT = { geographical_region = custom_andalusian }
+		}		
+	}
+	
+	weight_multiplier = {
+		base = 1
+		modifier = {
+			add = 0.2
+			has_trait = paranoid
+		}
+		modifier = {
+			add = -0.2
+			has_trait = trusting
+		}
+		modifier = {
+			add = 0.2
+			has_trait = craven
+		}
+		modifier = {
+			add = -0.2
+			has_trait = brave
+		}
+		modifier = {
+			add = 0.2
+			has_trait = gregarious
+		}
+		modifier = {
+			add = -0.2
+			has_trait = shy
+		}
+	}
+
+	immediate = {
+		play_music_cue = mx_cue_stress 
+	}
+
+	
+	option = { # ok
+		name = VIETmisc.0202.a
+		VIET_small_piety_gain_effect = yes
+		stress_impact = {		
+			brave = miniscule_stress_impact_gain
+			trusting = miniscule_stress_impact_gain
+		}
+		if = {
+			limit = {
+				has_game_rule = VIET_historical_context_on
+			}
+			custom_tooltip = VIETmisc.0202.info
+		}
+	}
+	
+	option = { # ok
+		name = VIETmisc.0202.b
+		VIET_small_prestige_gain_effect = yes
+		stress_impact = {		
+			compassionate = miniscule_stress_impact_gain
+			content = miniscule_stress_impact_gain
+		}
+		if = {
+			limit = {
+				has_game_rule = VIET_historical_context_on
+			}
+			custom_tooltip = VIETmisc.0202.info
+		}
+	}
+
+	option = { # ok
+		name = VIETmisc.0202.c
+		VIET_huge_prestige_loss_effect = yes
+		stress_impact = {		
+			paranoid = miniscule_stress_impact_gain
+			craven = miniscule_stress_impact_gain
+			lazy = miniscule_stress_impact_gain
+			arrogant = miniscule_stress_impact_gain
+		}
+		add_character_modifier = {
+			modifier = VIET_observed_slowworm
+			years = 3
+		}
+		if = {
+			limit = {
+				has_game_rule = VIET_historical_context_on
+			}
+			custom_tooltip = VIETmisc.0202.info
+		}
+	}
+}
+
+
+# Greater Honeyguide helping villagers find some sweet sweet honey
+VIETmisc.0203 = {
+	type = character_event
+	title = VIETmisc.0203.t
+	desc = VIETmisc.0203.desc
+	theme = VIET_theme_tuscan_country
+	
+	right_portrait = root
+
+	trigger = {
+		NOT = { has_game_rule = VIET_conversion_universe_events }
+		capital_province = {
+			OR = {
+				geographical_region = world_africa_west
+				geographical_region = world_africa_east
+			}
+		}	
+	}
+	
+	weight_multiplier = {
+		base = 1
+		modifier = {
+			add = 0.2
+			has_trait = paranoid
+		}
+		modifier = {
+			add = -0.2
+			has_trait = trusting
+		}
+		modifier = {
+			add = 0.2
+			has_trait = gregarious
+		}
+		modifier = {
+			add = -0.2
+			has_trait = shy
+		}
+		modifier = {
+			add = 0.2
+			has_trait = lazy
+		}
+		modifier = {
+			add = -0.2
+			has_trait = ambitious
+		}
+	}
+
+	
+	option = { # ok
+		name = VIETmisc.0203.a
+		VIET_huge_prestige_loss_effect = yes
+		add_character_modifier = {
+			modifier = VIET_collected_lots_of_honey
+			years = 4
+		}
+		stress_impact = {		
+			arrogant = minor_stress_impact_gain
+			diligent = miniscule_stress_impact_gain
+			ambitious = miniscule_stress_impact_gain
+			paranoid = miniscule_stress_impact_gain
+		}
+		if = {
+			limit = {
+				has_game_rule = VIET_historical_context_on
+			}
+			custom_tooltip = VIETmisc.0203.info
+		}
+	}
+	
+	option = { # ok
+		name = VIETmisc.0203.b
+		VIET_medium_piety_gain_effect = yes
+		stress_impact = {		
+			arrogant = miniscule_stress_impact_gain
+			callous = miniscule_stress_impact_gain
+			wrathful = miniscule_stress_impact_gain
+		}
+		if = {
+			limit = {
+				has_game_rule = VIET_historical_context_on
+			}
+			custom_tooltip = VIETmisc.0203.info
+		}
+	}
+	
+	option = { # ok
+		name = VIETmisc.0203.c
+		VIET_medium_prestige_gain_effect = yes
+		stress_impact = {		
+			humble = miniscule_stress_impact_gain
+			compassionate = miniscule_stress_impact_gain
+			calm = miniscule_stress_impact_gain
+		}
+		if = {
+			limit = {
+				has_game_rule = VIET_historical_context_on
+			}
+			custom_tooltip = VIETmisc.0203.info
+		}
+	}
+}
+
+
+# Encountering some onagers (Asiatic wild ass) in the wilderness
+VIETmisc.0204 = {
+	type = character_event
+	title = VIETmisc.0204.t
+	desc = VIETmisc.0204.desc
+	theme = VIET_theme_tuscan_country
+	
+	right_portrait = root
+
+	trigger = {
+		NOT = { has_game_rule = VIET_conversion_universe_events }
+		any_held_title = {
+			tier = tier_county
+			any_county_province = {
+				OR = {
+					geographical_region = custom_outremer
+					geographical_region = world_middle_east_persia
+					geographical_region = special_mongol_empire_start_region
+					geographical_region = special_mongol_empire_conquest_region_prio_1
+					geographical_region = special_mongol_empire_conquest_region_prio_2
+					geographical_region = world_steppe_tarim
+					geographical_region = world_india_rajastan
+				}
+			}
+		}		
+	}
+	
+	weight_multiplier = {
+		base = 1
+		modifier = {
+			add = 0.2
+			has_trait = diligent
+		}
+		modifier = {
+			add = -0.2
+			has_trait = lazy
+		}
+		modifier = {
+			add = 0.2
+			has_trait = calm
+		}
+		modifier = {
+			add = -0.2
+			has_trait = callous
+		}
+		modifier = {
+			add = 0.2
+			has_trait = patient
+		}
+		modifier = {
+			add = -0.2
+			has_trait = impatient
+		}
+	}
+
+	
+	option = { # ok
+		name = VIETmisc.0204.a
+		VIET_tiny_prestige_gain_effect = yes
+		if = {
+			limit = {
+				has_game_rule = VIET_historical_context_on
+			}
+			custom_tooltip = VIETmisc.0204.info
+		}
+	}
+}
+
+
+# Scared by the red eyes of an apollo butterfly
+VIETmisc.0205 = {
+	type = character_event
+	title = VIETmisc.0205.t
+	desc = VIETmisc.0205.desc
+	theme = VIET_theme_garden_generic
+	
+	left_portrait = {
+		character = root
+		animation = fear
+	}
+	right_portrait = {
+		character = scope:courtier
+		animation = schadenfreude
+	}
+
+	trigger = {
+		NOT = { has_game_rule = VIET_conversion_universe_events }
+		any_courtier = {
+			is_available_ai_adult = yes
+			OR = {
+				has_trait = brave
+				has_trait = calm
+				has_trait = content
+				has_trait = patient
+				has_trait = trusting
+				probably_intelligent_trigger = yes
+				learning >= decent_skill_rating
+			}
+			NOT = { has_trait = craven }
+		}
+		capital_province = {
+			OR = {
+				geographical_region = world_europe
+				geographical_region = world_asia_minor
+				geographical_region = world_middle_east_persia
+				geographical_region = custom_outremer
+				geographical_region = world_steppe
+				geographical_region = world_tibet
+			}
+			NOT = { geographical_region = world_europe_west_britannia }
+		}		
+	}
+	
+	weight_multiplier = {
+		base = 1
+		modifier = {
+			add = 0.2
+			has_trait = paranoid
+		}
+		modifier = {
+			add = -0.2
+			has_trait = trusting
+		}
+		modifier = {
+			add = 0.2
+			has_trait = craven
+		}
+		modifier = {
+			add = -0.2
+			has_trait = brave
+		}
+		modifier = {
+			add = 0.2
+			has_trait = wrathful
+		}
+		modifier = {
+			add = -0.2
+			has_trait = calm
+		}
+	}
+
+	immediate = {
+		play_music_cue = mx_cue_stress 
+		random_courtier = {
+			limit = {
+				is_available_ai_adult = yes
+				OR = {
+					has_trait = brave
+					has_trait = calm
+					has_trait = content
+					has_trait = patient
+					has_trait = trusting
+					probably_intelligent_trigger = yes
+					learning >= decent_skill_rating
+				}
+				NOT = { has_trait = craven }
+			}
+			save_scope_as = courtier
+		}
+		VIET_medium_prestige_loss_effect = yes
+	}
+
+	
+	option = { # ok
+		name = VIETmisc.0205.a
+		VIET_medium_prestige_gain_effect = yes
+		stress_impact = {		
+			humble = miniscule_stress_impact_gain
+			wrathful = miniscule_stress_impact_gain
+			honest = miniscule_stress_impact_gain
+		}
+		if = {
+			limit = {
+				has_game_rule = VIET_historical_context_on
+			}
+			custom_tooltip = VIETmisc.0205.info
+		}
+	}
+	
+	option = { # ok
+		name = VIETmisc.0205.b
+		stress_impact = {		
+			base = miniscule_stress_impact_loss
+			humble = miniscule_stress_impact_loss
+			calm = miniscule_stress_impact_loss
+			content = miniscule_stress_impact_loss
+		}
+		if = {
+			limit = {
+				has_game_rule = VIET_historical_context_on
+			}
+			custom_tooltip = VIETmisc.0205.info
+		}
+	}
+
+}
+
+
+
+
+# Older woman has weird fascination with watching African helmeted turtle attacking other animals
+VIETmisc.0206 = {
+	type = character_event
+	title = VIETmisc.0206.t
+	desc = VIETmisc.0206.desc
+	theme = VIET_theme_small_town
+	
+	right_portrait = {
+		character = root
+		animation = disbelief
+	}
+
+	trigger = {
+		NOT = { has_game_rule = VIET_conversion_universe_events }
+		any_held_title = {
+			tier = tier_county
+			any_county_province = {
+				OR = {
+					geographical_region = world_africa_east
+					geographical_region = world_africa_west
+				}
+			}
+		}		
+	}
+	
+	weight_multiplier = {
+		base = 1
+		modifier = {
+			add = 0.2
+			has_trait = diligent
+		}
+		modifier = {
+			add = -0.2
+			has_trait = lazy
+		}
+		modifier = {
+			add = 0.2
+			has_trait = content
+		}
+		modifier = {
+			add = -0.2
+			has_trait = ambitious
+		}
+		modifier = {
+			add = 0.2
+			has_trait = humble
+		}
+		modifier = {
+			add = -0.2
+			has_trait = shy
+		}
+	}
+
+	
+	option = { # ok
+		name = VIETmisc.0206.a
+		VIET_small_piety_gain_effect = yes
+		if = {
+			limit = {
+				has_game_rule = VIET_historical_context_on
+			}
+			custom_tooltip = VIETmisc.0206.info
+		}
+	}
+	
+	option = { # ok
+		name = VIETmisc.0206.b
+		VIET_small_prestige_gain_effect = yes
+		if = {
+			limit = {
+				has_game_rule = VIET_historical_context_on
+			}
+			custom_tooltip = VIETmisc.0206.info
+		}
+	}
+
+}
+
+
+
+# Hear the cry of a sambar deer - is a deer or a tiger pretending to be one?
+VIETmisc.0207 = {
+	type = character_event
+	title = VIETmisc.0207.t
+	desc = VIETmisc.0207.desc
+	theme = VIET_theme_tuscan_country
+	
+	right_portrait = {
+		character = root
+		animation = paranoia
+	}
+
+	trigger = {
+		NOT = { has_game_rule = VIET_conversion_universe_events }
+		capital_province = {
+			OR = {
+				geographical_region = world_india
+				geographical_region = world_burma
+			}
+		}		
+	}
+	
+	weight_multiplier = {
+		base = 1
+		modifier = {
+			add = 0.2
+			has_trait = paranoid
+		}
+		modifier = {
+			add = -0.2
+			has_trait = trusting
+		}
+		modifier = {
+			add = 0.2
+			has_trait = diligent
+		}
+		modifier = {
+			add = -0.2
+			has_trait = lazy
+		}
+		modifier = {
+			add = 0.2
+			has_trait = patient
+		}
+		modifier = {
+			add = -0.2
+			has_trait = impatient
+		}
+	}
+
+	
+	option = { # ok
+		name = VIETmisc.0207.a
+		VIET_huge_prestige_gain_effect = yes
+		show_as_tooltip = {
+			random_list = {
+				50 = { # Turns out to be a deer
+					show_chance = no
+					desc = VIETmisc.0207.toast.its_not_a_tiger
+					custom_tooltip = VIETmisc.0207.toast.its_not_a_tiger_name
+				}
+				50 = { # Tiger attacks you
+					show_chance = no
+					desc = VIETmisc.0207.toast.its_a_tiger
+					custom_tooltip = VIETmisc.0207.toast.its_a_tiger_name
+				}
+			}
+		}
+		hidden_effect = {
+			random_list = {
+				50 = { # Tiger attacks you
+					send_interface_toast = {
+						type = event_toast_effect_bad
+						left_icon = ROOT
+						title = VIETmisc.0207.toast.its_a_tiger
+						custom_tooltip = VIETmisc.0207.toast.its_a_tiger_desc
+						random = {
+							chance = 33
+							increase_wounds_effect = { REASON = accident }
+						}
+						stress_impact = {		
+							base = medium_stress_impact_gain
+							craven = medium_stress_impact_gain
+						}
+					}
+				}
+				50 = { # Turns out to be a deer
+					send_interface_toast = {
+						type = event_toast_effect_good
+						left_icon = ROOT
+						title = VIETmisc.0207.toast.its_not_a_tiger
+						custom_tooltip = VIETmisc.0207.toast.its_not_a_tiger_desc
+						VIET_huge_piety_gain_effect = yes
+					}
+				}		
+			}
+		}
+		stress_impact = {		
+			craven = medium_stress_impact_gain
+			paranoid = minor_stress_impact_gain
+			lazy = miniscule_stress_impact_gain
+		}
+		if = {
+			limit = {
+				has_game_rule = VIET_historical_context_on
+			}
+			custom_tooltip = VIETmisc.0207.info
+		}
+	}
+	
+	option = { # ok
+		name = VIETmisc.0207.b
+		stress_impact = {		
+			brave = medium_stress_impact_gain
+			arrogant = minor_stress_impact_loss
+			stubborn = miniscule_stress_impact_loss
+		}
+		if = {
+			limit = {
+				has_game_rule = VIET_historical_context_on
+			}
+			custom_tooltip = VIETmisc.0207.info
+		}
+	}
+
+}
+
+
+
+# Hyrax is chilling on the rocks
+VIETmisc.0208 = {
+	type = character_event
+	title = VIETmisc.0208.t
+	desc = VIETmisc.0208.desc
+	theme = VIET_theme_skyrim_forest
+	
+	left_portrait = root
+	right_portrait = {
+		character = scope:hyrax_watcher
+		animation = disapproval
+	}
+
+	trigger = {
+		NOT = { has_game_rule = VIET_conversion_universe_events }
+		any_courtier = {
+			is_available_ai_adult = yes
+		}
+		any_held_title = {
+			tier = tier_county
+			any_county_province = {
+				OR = {
+					geographical_region = world_africa_sahara
+					geographical_region = world_africa_west
+					geographical_region = world_africa_east
+					geographical_region = ghw_region_egypt
+					geographical_region = world_middle_east_jerusalem
+					geographical_region = world_middle_east_arabia
+				}
+			}
+		}		
+	}
+	
+	weight_multiplier = {
+		base = 1
+		modifier = {
+			add = 0.2
+			has_trait = paranoid
+		}
+		modifier = {
+			add = -0.2
+			has_trait = trusting
+		}
+		modifier = {
+			add = 0.2
+			has_trait = lazy
+		}
+		modifier = {
+			add = -0.2
+			has_trait = diligent
+		}
+		modifier = {
+			add = 0.2
+			has_trait = brave
+		}
+		modifier = {
+			add = -0.2
+			has_trait = craven
+		}
+	}
+
+	immediate = {
+		random_courtier = {
+			limit = {
+				is_available_ai_adult = yes
+			}
+			save_scope_as = hyrax_watcher
+		}
+	}
+	
+	option = { # ok
+		name = VIETmisc.0208.a
+		VIET_tiny_piety_gain_effect = yes
+		stress_impact = {
+			diligent = miniscule_stress_impact_gain
+			ambitious = miniscule_stress_impact_gain
+		}
+		if = {
+			limit = {
+				has_game_rule = VIET_historical_context_on
+			}
+			custom_tooltip = VIETmisc.0208.info
+		}
+	}
+	
+	option = { # ok
+		name = VIETmisc.0208.b
+		VIET_tiny_prestige_gain_effect = yes
+		stress_impact = {
+			lazy = miniscule_stress_impact_gain
+			content = miniscule_stress_impact_gain
+		}
+		if = {
+			limit = {
+				has_game_rule = VIET_historical_context_on
+			}
+			custom_tooltip = VIETmisc.0208.info
+		}
+	}
+
+}
+
+
+
+
+
+# Confused a hinny (horse father, donkey mother) with a mule
+VIETmisc.0209 = {
+	type = character_event
+	title = VIETmisc.0209.t
+	desc = VIETmisc.0209.desc
+	theme = VIET_theme_tuscan_country
+	
+	left_portrait = root
+	
+	weight_multiplier = {
+		base = 1
+		modifier = {
+			add = 0.2
+			has_trait = gregarious
+		}
+		modifier = {
+			add = -0.2
+			has_trait = shy
+		}
+		modifier = {
+			add = 0.2
+			has_trait = patient
+		}
+		modifier = {
+			add = -0.2
+			has_trait = impatient
+		}
+		modifier = {
+			add = 0.2
+			has_trait = trusting
+		}
+		modifier = {
+			add = -0.2
+			has_trait = arrogant
+		}
+	}
+	
+	option = { # ok
+		name = VIETmisc.0209.a
+		VIET_tiny_prestige_gain_effect = yes
+		stress_impact = {
+			arrogant = miniscule_stress_impact_loss
+			stubborn = miniscule_stress_impact_loss
+		}
+		if = {
+			limit = {
+				has_game_rule = VIET_historical_context_on
+			}
+			custom_tooltip = VIETmisc.0209.info
+		}
+	}
+	
+	option = { # ok
+		name = VIETmisc.0209.b
+		VIET_tiny_piety_gain_effect = yes
+		stress_impact = {
+			humble = miniscule_stress_impact_loss
+			content = miniscule_stress_impact_loss
+		}
+		if = {
+			limit = {
+				has_game_rule = VIET_historical_context_on
+			}
+			custom_tooltip = VIETmisc.0209.info
+		}
+	}
+	
+	option = { # ok
+		name = VIETmisc.0209.c
+		trigger = {
+			OR = {
+				gold >= 15
+				is_ai = no
+			}
+		}
+		remove_short_term_gold = 15
+		add_character_modifier = {
+			modifier = VIET_bought_hinny
+			years = 6
+		}
+		if = {
+			limit = {
+				has_game_rule = VIET_historical_context_on
+			}
+			custom_tooltip = VIETmisc.0209.info
+		}
+	}
+
+}
+
+
+
+# Honey badger don't care - it killed a lot of chickens belonging to a farmer
+VIETmisc.0210 = {
+	type = character_event
+	title = VIETmisc.0210.t
+	desc = VIETmisc.0210.desc
+	theme = VIET_theme_small_town
+	
+	left_portrait = root
+
+	trigger = {
+		NOT = { has_game_rule = VIET_conversion_universe_events }
+		any_held_title = {
+			tier = tier_county
+			any_county_province = {
+				OR = {
+					geographical_region = world_africa_sahara
+					geographical_region = custom_sahara_proper
+					geographical_region = world_africa_west
+					geographical_region = world_africa_east
+					geographical_region = world_middle_east_jerusalem
+					geographical_region = world_middle_east_arabia
+					geographical_region = ghw_region_persia
+					geographical_region = world_transoxiana
+					geographical_region = world_india
+				}
+			}
+		}		
+	}
+	
+	weight_multiplier = {
+		base = 1
+		modifier = {
+			add = 0.2
+			has_trait = diligent
+		}
+		modifier = {
+			add = -0.2
+			has_trait = lazy
+		}
+		modifier = {
+			add = 0.2
+			has_trait = just
+		}
+		modifier = {
+			add = -0.2
+			has_trait = arbitrary
+		}
+		modifier = {
+			add = 0.2
+			has_trait = humble
+		}
+		modifier = {
+			add = -0.2
+			has_trait = arrogant
+		}
+	}
+	
+	option = { # ok
+		name = VIETmisc.0210.a
+		stress_impact = {
+			generous = miniscule_stress_impact_gain
+			compassionate = miniscule_stress_impact_gain
+		}
+		if = {
+			limit = {
+				has_game_rule = VIET_historical_context_on
+			}
+			custom_tooltip = VIETmisc.0210.info
+		}
+	}
+	
+	option = { # ok
+		name = VIETmisc.0210.b
+		VIET_medium_piety_gain_effect = yes
+		VIET_medium_prestige_loss_effect = yes
+		stress_impact = {
+			callous = miniscule_stress_impact_gain
+			sadistic = miniscule_stress_impact_gain
+			arbitrary = miniscule_stress_impact_gain
+			cynical = miniscule_stress_impact_gain
+		}
+		if = {
+			limit = {
+				has_game_rule = VIET_historical_context_on
+			}
+			custom_tooltip = VIETmisc.0210.info
+		}
+	}
+	
+	option = { # ok
+		name = VIETmisc.0210.c
+		trigger = {
+			OR = {
+				gold >= 25
+				is_ai = no
+			}
+		}
+		remove_short_term_gold = 25
+		if = {
+			limit = {
+				faith = {
+					trait_is_virtue = generous
+				}
+			}
+			VIET_huge_piety_gain_effect = yes
+		}
+		else = {
+			VIET_large_piety_gain_effect = yes
+		}
+		add_character_modifier = {
+			modifier = VIET_charitable_to_struggling_peasant
+			years = 5
+		}
+		stress_impact = {
+			greedy = medium_stress_impact_gain
+			callous = miniscule_stress_impact_gain
+			sadistic = miniscule_stress_impact_gain
+			arbitrary = miniscule_stress_impact_gain
+		}
+		if = {
+			limit = {
+				has_game_rule = VIET_historical_context_on
+			}
+			custom_tooltip = VIETmisc.0210.info
+		}
+	}
+
+}
+
+
+
+
+# Honey badger don't care - and it don't care about your status
+VIETmisc.0211 = {
+	type = character_event
+	title = VIETmisc.0211.t
+	desc = VIETmisc.0211.desc
+	theme = VIET_theme_ancient_cairn
+	
+	left_portrait = {
+		character = root
+		animation = fear
+	}
+
+	trigger = {
+		NOT = { has_game_rule = VIET_conversion_universe_events }
+		capital_province = {
+			OR = {
+				geographical_region = world_africa_sahara
+				geographical_region = custom_sahara_proper
+				geographical_region = world_africa_west
+				geographical_region = world_africa_east
+				geographical_region = world_middle_east_jerusalem
+				geographical_region = world_middle_east_arabia
+				geographical_region = ghw_region_persia
+				geographical_region = world_transoxiana
+				geographical_region = world_india
+			}
+		}	
+	}
+	
+	weight_multiplier = {
+		base = 1
+		modifier = {
+			add = 0.2
+			has_trait = diligent
+		}
+		modifier = {
+			add = -0.2
+			has_trait = lazy
+		}
+		modifier = {
+			add = 0.2
+			has_trait = ambitious
+		}
+		modifier = {
+			add = -0.2
+			has_trait = content
+		}
+		modifier = {
+			add = 0.2
+			has_trait = callous
+		}
+		modifier = {
+			add = -0.2
+			has_trait = compassionate
+		}
+	}
+	
+	option = { # ok
+		name = VIETmisc.0211.a
+		add_character_modifier = {
+			modifier = VIET_encountered_a_honey_badger
+			years = 3
+		}
+		stress_impact = {
+			paranoid = miniscule_stress_impact_gain
+			craven = miniscule_stress_impact_gain
+		}
+		if = {
+			limit = {
+				has_game_rule = VIET_historical_context_on
+			}
+			custom_tooltip = VIETmisc.0210.info
+		}
+	}
+
+}
+
+
+
+
+# Come across a mongoose and a cobra "dueling"
+VIETmisc.0212 = {
+	type = character_event
+	title = VIETmisc.0212.t
+	desc = VIETmisc.0212.desc
+	theme = martial
+	override_background = { event_background = VIET_background_tuscan_country }
+	
+	left_portrait = {
+		character = root
+		animation = personality_rational
+	}
+
+	trigger = {
+		NOT = { has_game_rule = VIET_conversion_universe_events }
+		any_held_title = {
+			tier = tier_county
+			any_county_province = {
+				OR = {
+					geographical_region = world_africa_west
+					geographical_region = world_africa_east
+					geographical_region = world_middle_east_jerusalem
+					geographical_region = world_middle_east_arabia
+					geographical_region = ghw_region_persia
+					geographical_region = world_india
+					geographical_region = world_burma
+				}
+			}
+		}		
+	}
+	
+	weight_multiplier = {
+		base = 1
+		modifier = {
+			add = 0.2
+			has_trait = fickle
+		}
+		modifier = {
+			add = -0.2
+			has_trait = stubborn
+		}
+		modifier = {
+			add = 0.2
+			has_trait = patient
+		}
+		modifier = {
+			add = -0.2
+			has_trait = impatient
+		}
+		modifier = {
+			add = 0.2
+			has_trait = calm
+		}
+		modifier = {
+			add = -0.2
+			has_trait = wrathful
+		}
+	}
+	
+	option = { # ok
+		name = VIETmisc.0212.a
+		add_character_modifier = {
+			modifier = VIET_saw_animal_fight
+			years = 3
+		}
+		if = {
+			limit = {
+				has_game_rule = VIET_historical_context_on
+			}
+			custom_tooltip = VIETmisc.0212.info
+		}
+	}
+
+}
+
+
+
+
+# Say hello to a fennec fox
+VIETmisc.0213 = {
+	type = character_event
+	title = VIETmisc.0213.t
+	desc = VIETmisc.0213.desc
+	theme = martial
+	override_background = { event_background = VIET_background_tuscan_country }
+	
+	left_portrait = {
+		character = root
+		animation = personality_rational
+	}
+
+	trigger = {
+		NOT = { has_game_rule = VIET_conversion_universe_events }
+		any_held_title = {
+			tier = tier_county
+			any_county_province = {
+				OR = {
+					geographical_region = world_africa
+					geographical_region = ghw_region_holy_land
+				}
+			}
+		}		
+	}
+	
+	weight_multiplier = {
+		base = 1
+		modifier = {
+			add = 0.2
+			has_trait = content
+		}
+		modifier = {
+			add = -0.2
+			has_trait = ambitious
+		}
+		modifier = {
+			add = 0.2
+			has_trait = gregarious
+		}
+		modifier = {
+			add = -0.2
+			has_trait = shy
+		}
+		modifier = {
+			add = 0.2
+			has_trait = brave
+		}
+		modifier = {
+			add = -0.2
+			has_trait = craven
+		}
+	}
+	
+	option = { # ok
+		name = VIETmisc.0213.a
+		VIET_small_piety_gain_effect = yes
+		if = {
+			limit = {
+				has_game_rule = VIET_historical_context_on
+			}
+			custom_tooltip = VIETmisc.0213.info
+		}
+	}
+	
+	option = { # ok
+		name = VIETmisc.0213.b
+		VIET_small_prestige_gain_effect = yes
+		if = {
+			limit = {
+				has_game_rule = VIET_historical_context_on
+			}
+			custom_tooltip = VIETmisc.0213.info
+		}
+	}
+
+}
+
+
+# Solve sparrow problem by setting up sparrow traps at home to catch them for their meat?
+VIETmisc.0214 = {
+	type = character_event
+	title = VIETmisc.0214.t
+	desc = VIETmisc.0214.desc
+	theme = stewardship_domain_focus
+	override_icon = { reference = "gfx/interface/icons/event_types/type_feast.dds" } 
+	
+	left_portrait = {
+		character = scope:sparrow_eater
+		animation = personality_content
+	}
+	right_portrait = root
+
+	trigger = {
+		NOT = { has_game_rule = VIET_conversion_universe_events }
+		any_courtier_or_guest = {
+			is_available_ai_adult = yes
+			OR = {
+				has_trait = gluttonous
+				has_trait = diligent
+				has_trait = sadistic
+				has_trait = gregarious
+				has_trait = generous
+			}
+		}
+		capital_province = {
+			NOR = { # Places with no house sparrows
+				geographical_region = world_africa_west
+				geographical_region = world_africa_east
+				geographical_region = world_tibet
+			}
+		}	
+	}
+	
+	weight_multiplier = {
+		base = 1
+		modifier = {
+			add = 0.2
+			has_trait = content
+		}
+		modifier = {
+			add = -0.2
+			has_trait = ambitious
+		}
+		modifier = {
+			add = 0.2
+			has_trait = gregarious
+		}
+		modifier = {
+			add = -0.2
+			has_trait = shy
+		}
+		modifier = {
+			add = 0.2
+			has_trait = brave
+		}
+		modifier = {
+			add = -0.2
+			has_trait = craven
+		}
+	}
+
+	immediate = {
+		random_courtier_or_guest = {
+			limit = {
+				is_available_ai_adult = yes
+				OR = {
+					has_trait = gluttonous
+					has_trait = diligent
+					has_trait = sadistic
+					has_trait = gregarious
+					has_trait = generous
+				}
+			}
+			# add_character_modifier = {
+			# 	modifier = VIET_eating_sparrow
+			# 	years = 8
+			# }
+			save_scope_as = sparrow_eater
+		}
+	}
+	
+	option = { # ok
+		name = VIETmisc.0214.a
+		VIET_medium_prestige_loss_effect = yes
+		stress_impact = {
+			gluttonous = minor_stress_impact_gain
+			diligent = miniscule_stress_impact_gain
+		}
+		scope:sparrow_eater = {
+			add_opinion = {
+				target = root
+				modifier = VIET_opinion_disapproves_viewpoint
+			}		
+		}
+		if = {
+			limit = {
+				has_game_rule = VIET_historical_context_on
+			}
+			custom_tooltip = VIETmisc.0214.info
+		}
+	}
+	
+	option = { # ok
+		name = VIETmisc.0214.b
+		trigger = {
+			OR = {
+				gold >= 25
+				is_ai = no
+			}
+		}
+		remove_short_term_gold = 25
+		stress_impact = {
+			lazy = miniscule_stress_impact_gain
+			content = miniscule_stress_impact_gain
+		}
+		add_character_modifier = {
+			modifier = VIET_eating_sparrow
+			years = 8
+		}
+		scope:sparrow_eater = {
+			add_opinion = {
+				target = root
+				modifier = VIET_opinion_approves_viewpoint
+			}		
+		}
+		if = {
+			limit = {
+				has_game_rule = VIET_historical_context_on
+			}
+			custom_tooltip = VIETmisc.0214.info
+		}
+	}
+
+}
+
+
+
+
+# Courtier suffers from coturnism - poisoning from eating quail
+VIETmisc.0215 = {
+	type = character_event
+	title = VIETmisc.0215.t
+	desc = VIETmisc.0215.desc
+	theme = healthcare
+	override_icon = { reference = "gfx/interface/icons/event_types/type_feast.dds" } 
+	
+	left_portrait = {
+		character = scope:quail_eater
+		animation = sick
+	}
+	right_portrait = root
+
+	trigger = {
+		NOT = { has_game_rule = VIET_conversion_universe_events }
+		any_courtier = {
+			is_available_ai_adult = yes
+			OR = {
+				has_trait = gluttonous
+				has_trait = impatient
+				has_trait = lustful
+				has_trait = gregarious
+				has_trait = trusting
+			}
+			NOT = { has_trait = paranoid }
+			NOT = { has_trait = temperate }
+		}
+		any_held_title = {
+			tier = tier_county
+			any_county_province = {
+				OR = {
+					geographical_region = world_africa_east
+					geographical_region = ghw_region_egypt
+					geographical_region = world_africa_north_west
+					geographical_region = world_europe
+					geographical_region = world_steppe
+					geographical_region = world_asia_minor
+					geographical_region = world_middle_east_persia
+					geographical_region = world_india
+				}
+			}
+		}		
+	}
+	
+	weight_multiplier = {
+		base = 1
+		modifier = {
+			add = 0.2
+			has_trait = gluttonous
+		}
+		modifier = {
+			add = -0.2
+			has_trait = temperate
+		}
+		modifier = {
+			add = 0.2
+			has_trait = gregarious
+		}
+		modifier = {
+			add = -0.2
+			has_trait = shy
+		}
+		modifier = {
+			add = 0.2
+			has_trait = lazy
+		}
+		modifier = {
+			add = -0.2
+			has_trait = diligent
+		}
+	}
+
+	immediate = {
+		random_courtier = {
+			limit = {
+				is_available_ai_adult = yes
+				OR = {
+					has_trait = gluttonous
+					has_trait = impatient
+					has_trait = lustful
+					has_trait = gregarious
+					has_trait = trusting
+				}
+				NOT = { has_trait = paranoid }
+				NOT = { has_trait = temperate }
+			}
+			add_character_modifier = {
+				modifier = VIET_coturnism
+				years = 2
+			}
+			save_scope_as = quail_eater
+		}
+	}
+	
+	option = { # ok
+		name = VIETmisc.0215.a
+		VIET_medium_piety_gain_effect = yes
+		scope:quail_eater = {
+			add_opinion = {
+				target = root
+				modifier = VIET_opinion_sympathy_coturnism
+			}		
+		}
+		if = {
+			limit = {
+				has_game_rule = VIET_historical_context_on
+			}
+			custom_tooltip = VIETmisc.0215.info
+		}
+	}
+	
+	option = { # ok
+		name = VIETmisc.0215.b
+		VIET_huge_prestige_gain_effect = yes
+		duel = {
+			skill = diplomacy
+			target = scope:quail_eater
+			10 = { # Failure
+				compare_modifier = {
+					value = scope:duel_value
+					multiplier = -1.1
+				}
+				send_interface_toast = {
+					type = event_toast_effect_bad
+					left_icon = scope:quail_eater
+					title = VIETmisc.0215.b.tooltip.bad
+					scope:quail_eater = {
+						add_opinion = {
+							target = root
+							modifier = VIET_opinion_lecture_coturnism_bad
+						}
+					}
+				}
+			}
+			10 = { # Success
+				compare_modifier = {
+					value = scope:duel_value
+					multiplier = 1.1
+				}
+				send_interface_toast = {
+					type = event_toast_effect_good
+					left_icon = scope:quail_eater
+					title = VIETmisc.0215.b.tooltip.good
+					scope:quail_eater = {
+						add_opinion = {
+							target = root
+							modifier = VIET_opinion_lecture_coturnism_good
+						}
+					}
+				}
+			}
+		}
+		if = {
+			limit = {
+				has_game_rule = VIET_historical_context_on
+			}
+			custom_tooltip = VIETmisc.0215.info
+		}
+	}
+}
+
+
+
+# Encounter black winged stilts by some ponds
+VIETmisc.0216 = {
+	type = character_event
+	title = VIETmisc.0216.t
+	desc = VIETmisc.0216.desc
+	theme = VIET_theme_skyrim_forest 
+	
+	left_portrait = {
+		character = root
+		animation = personality_rational
+	}
+
+	trigger = {
+		NOT = { has_game_rule = VIET_conversion_universe_events }
+		any_held_title = {
+			tier = tier_county
+			any_county_province = {
+				OR = {
+					geographical_region = world_africa_east
+					geographical_region = world_africa_north
+					geographical_region = world_africa_west
+					geographical_region = world_europe_west_francia
+					geographical_region = world_europe_west_iberia
+					geographical_region = world_europe_south
+					geographical_region = world_middle_east
+					geographical_region = world_asia_minor
+					geographical_region = world_middle_east_persia
+					geographical_region = world_india
+					geographical_region = world_burma
+				}
+			}
+		}		
+	}
+	
+	weight_multiplier = {
+		base = 1
+		modifier = {
+			add = 0.2
+			has_trait = patient
+		}
+		modifier = {
+			add = -0.2
+			has_trait = impatient
+		}
+		modifier = {
+			add = 0.2
+			has_trait = content
+		}
+		modifier = {
+			add = -0.2
+			has_trait = ambitious
+		}
+		modifier = {
+			add = 0.2
+			has_trait = fickle
+		}
+		modifier = {
+			add = -0.2
+			has_trait = stubborn
+		}
+	}
+	
+	option = { # ok
+		name = VIETmisc.0216.a
+		trigger = {
+			learning < decent_skill_rating	
+		}
+		VIET_medium_prestige_gain_effect = yes
+		if = {
+			limit = {
+				has_game_rule = VIET_historical_context_on
+			}
+			custom_tooltip = VIETmisc.0216.info
+		}
+	}
+	
+	option = { # ok
+		name = VIETmisc.0216.b
+		trigger = {
+			learning < decent_skill_rating	
+		}
+		VIET_huge_prestige_loss_effect = yes
+		add_character_modifier = {
+			modifier = VIET_learning_about_birds
+			years = 5
+		}
+		stress_impact = {
+			lazy = miniscule_stress_impact_gain
+		}
+		if = {
+			limit = {
+				has_game_rule = VIET_historical_context_on
+			}
+			custom_tooltip = VIETmisc.0216.info
+		}
+	}
+	
+	option = { # ok
+		name = VIETmisc.0216.c
+		trigger = {
+			learning >= decent_skill_rating			
+		}
+		skill = learning
+		add_character_modifier = {
+			modifier = VIET_impressed_others_animal_knowledge
+			years = 5
+		}
+		if = {
+			limit = {
+				has_game_rule = VIET_historical_context_on
+			}
+			custom_tooltip = VIETmisc.0216.info
+		}
+	}
+}
+
+
+
+
+# Noble wants to hunt nilgai that is sacred to a village
+VIETmisc.0217 = {
+	type = character_event
+	title = VIETmisc.0217.t
+	desc = VIETmisc.0217.desc
+	theme = hunt_activity
+	override_background = { event_background = VIET_background_small_town }
+	
+	right_portrait = root
+
+	trigger = {
+		NOT = { has_game_rule = VIET_conversion_universe_events }
+		any_held_title = {
+			tier = tier_county
+			any_county_province = {
+				OR = {
+					geographical_region = world_india
+					geographical_region = world_burma
+				}
+			}
+		}		
+	}
+	
+	weight_multiplier = {
+		base = 1
+		modifier = {
+			add = 0.2
+			has_trait = just
+		}
+		modifier = {
+			add = -0.2
+			has_trait = arbitrary
+		}
+		modifier = {
+			add = 0.2
+			has_trait = humble
+		}
+		modifier = {
+			add = -0.2
+			has_trait = arrogant
+		}
+		modifier = {
+			add = 0.2
+			has_trait = diligent
+		}
+		modifier = {
+			add = -0.2
+			has_trait = lazy
+		}
+	}
+	
+	option = { # ok
+		name = VIETmisc.0217.a
+		stress_impact = {
+			diligent = miniscule_stress_impact_gain
+			just = miniscule_stress_impact_gain
+			humble = miniscule_stress_impact_gain
+		}
+		if = {
+			limit = {
+				has_game_rule = VIET_historical_context_on
+			}
+			custom_tooltip = VIETmisc.0217.info
+		}
+	}
+	
+	option = { # ok
+		name = VIETmisc.0217.b
+		VIET_huge_prestige_gain_effect = yes
+		VIET_huge_piety_loss_effect = yes
+		add_character_modifier = {
+			modifier = VIET_let_noble_hunt_nilgai
+			years = 10
+		}
+		stress_impact = {
+			zealous = miniscule_stress_impact_gain
+			just = miniscule_stress_impact_gain
+			humble = miniscule_stress_impact_gain
+			compassionate = miniscule_stress_impact_gain
+		}
+		if = {
+			limit = {
+				has_game_rule = VIET_historical_context_on
+			}
+			custom_tooltip = VIETmisc.0217.info
+		}
+	}
+	
+	option = { # ok
+		name = VIETmisc.0217.c
+		VIET_huge_piety_gain_effect = yes
+		VIET_huge_prestige_loss_effect = yes
+		add_character_modifier = {
+			modifier = VIET_protected_sacred_nilgai
+			years = 10
+		}
+		stress_impact = {
+			cynical = miniscule_stress_impact_gain
+			arrogant = miniscule_stress_impact_gain
+			callous = miniscule_stress_impact_gain
+			sadistic = miniscule_stress_impact_gain
+		}
+		if = {
+			limit = {
+				has_game_rule = VIET_historical_context_on
+			}
+			custom_tooltip = VIETmisc.0217.info
+		}
+	}
+}
+
+
+
+# Traveler claims to have met a horde of monkeys
+VIETmisc.0218 = {
+	type = character_event
+	title = VIETmisc.0218.t
+	desc = VIETmisc.0218.desc
+	theme = diplomacy_foreign_affairs_focus
+	
+	left_portrait = {
+		character = root
+		animation = personality_cynical
+	}
+	
+	weight_multiplier = {
+		base = 1
+		modifier = {
+			add = 0.2
+			has_trait = gregarious
+		}
+		modifier = {
+			add = -0.2
+			has_trait = shy
+		}
+		modifier = {
+			add = 0.2
+			has_trait = generous
+		}
+		modifier = {
+			add = -0.2
+			has_trait = greedy
+		}
+		modifier = {
+			add = 0.2
+			has_trait = ambitious
+		}
+		modifier = {
+			add = -0.2
+			has_trait = lazy
+		}
+	}
+	
+	option = { # ok
+		name = VIETmisc.0218.a
+		add_character_modifier = {
+			modifier = VIET_thinking_about_foreign_lands
+			days = 789
+		}
+	}
+	
+	option = { # ok
+		name = VIETmisc.0218.b
+		add_character_modifier = {
+			modifier = VIET_skeptical_ruler
+			days = 789
+		}
+	}
+}
+
+
+# Langur monkey street performance
+VIETmisc.0219 = {
+	type = character_event
+	title = VIETmisc.0219.t
+	desc = VIETmisc.0219.desc
+	theme = friendly
+	override_background = { event_background = VIET_background_small_town }
+	
+	right_portrait = root
+
+	trigger = {
+		NOT = { has_game_rule = VIET_conversion_universe_events }
+		capital_province = {
+			OR = {
+				geographical_region = world_india
+				geographical_region = world_burma
+			}
+		}		
+	}
+	
+	weight_multiplier = {
+		base = 1
+		modifier = {
+			add = 0.2
+			has_trait = trusting
+		}
+		modifier = {
+			add = -0.2
+			has_trait = paranoid
+		}
+		modifier = {
+			add = 0.2
+			has_trait = patient
+		}
+		modifier = {
+			add = -0.2
+			has_trait = impatient
+		}
+		modifier = {
+			add = 0.2
+			has_trait = diligent
+		}
+		modifier = {
+			add = -0.2
+			has_trait = lazy
+		}
+	}
+	
+	option = { # ok
+		name = VIETmisc.0219.a
+		VIET_large_piety_loss_effect = yes
+		add_character_modifier = {
+			modifier = VIET_amused_by_animal
+			years = 2
+		}
+		stress_impact = {
+			zealous = miniscule_stress_impact_gain
+		}
+		if = {
+			limit = {
+				has_game_rule = VIET_historical_context_on
+			}
+			custom_tooltip = VIETmisc.0219.info
+		}
+	}
+	
+	option = { # ok
+		name = VIETmisc.0219.b
+		VIET_large_piety_gain_effect = yes
+		stress_impact = {
+			cynical = miniscule_stress_impact_gain
+			gregarious = miniscule_stress_impact_gain
+		}
+		if = {
+			limit = {
+				has_game_rule = VIET_historical_context_on
+			}
+			custom_tooltip = VIETmisc.0219.info
+		}
+	}
+}
+
+
+# Character sees a lark flying overhead
+VIETmisc.0220 = {
+	type = character_event
+	title = VIETmisc.0220.t
+	desc = VIETmisc.0220.desc
+	theme = VIET_theme_tuscan_country
+	
+	left_portrait = {
+		character = root
+		animation = admiration
+	}
+	
+	weight_multiplier = {
+		base = 1
+		modifier = {
+			add = 0.2
+			has_trait = trusting
+		}
+		modifier = {
+			add = -0.2
+			has_trait = paranoid
+		}
+		modifier = {
+			add = 0.2
+			has_trait = patient
+		}
+		modifier = {
+			add = -0.2
+			has_trait = impatient
+		}
+		modifier = {
+			add = 0.2
+			has_trait = diligent
+		}
+		modifier = {
+			add = -0.2
+			has_trait = lazy
+		}
+	}
+	
+	option = { # ok
+		name = VIETmisc.0220.a
+		VIET_medium_piety_gain_effect = yes
+		stress_impact = {
+			base = miniscule_stress_impact_loss
+			zealous = miniscule_stress_impact_loss
+			calm = miniscule_stress_impact_loss
+			content = miniscule_stress_impact_loss
+		}
+		if = {
+			limit = {
+				has_game_rule = VIET_historical_context_on
+			}
+			custom_tooltip = VIETmisc.0220.info
+		}
+	}
+	
+	option = { # ok
+		name = VIETmisc.0220.b
+		add_character_modifier = {
+			modifier = VIET_eating_larks
+			years = 2
+		}
+		stress_impact = {
+			gluttonous = minor_stress_impact_loss
+			gregarious = minor_stress_impact_loss
+		}
+		if = {
+			limit = {
+				has_game_rule = VIET_historical_context_on
+			}
+			custom_tooltip = VIETmisc.0220.info
+		}
+	}
+}
+
+
+# Servant sees a parliament of rooks in your garden
+VIETmisc.0221 = {
+	type = character_event
+	title = VIETmisc.0221.t
+	desc = VIETmisc.0221.desc
+	theme = death
+	override_background = { event_background = garden }
+	
+	left_portrait = {
+		character = root
+		animation = worry
+	}
+
+	trigger = {
+		NOT = { has_game_rule = VIET_conversion_universe_events }
+		capital_province = {
+			OR = {
+				geographical_region = world_europe
+				geographical_region = custom_outremer
+				geographical_region = world_asia_minor
+				geographical_region = world_steppe
+				geographical_region = world_middle_east_persia
+			}
+		}		
+	}
+	
+	weight_multiplier = {
+		base = 1
+		modifier = {
+			add = 0.2
+			has_trait = zealous
+		}
+		modifier = {
+			add = -0.2
+			has_trait = cynical
+		}
+		modifier = {
+			add = 0.2
+			has_trait = patient
+		}
+		modifier = {
+			add = -0.2
+			has_trait = impatient
+		}
+		modifier = {
+			add = 0.2
+			has_trait = lazy
+		}
+		modifier = {
+			add = -0.2
+			has_trait = diligent
+		}
+	}
+	
+	option = { # ok
+		name = VIETmisc.0221.a
+		VIET_medium_prestige_loss_effect = yes
+		stress_impact = {
+			cynical = miniscule_stress_impact_gain
+			compassionate = miniscule_stress_impact_gain
+			content = miniscule_stress_impact_gain
+		}
+		if = {
+			limit = {
+				has_game_rule = VIET_historical_context_on
+			}
+			custom_tooltip = VIETmisc.0221.info
+		}
+	}
+	option = { # ok
+		name = VIETmisc.0221.b
+		VIET_medium_piety_loss_effect = yes
+		stress_impact = {
+			zealous = miniscule_stress_impact_gain
+			paranoid = miniscule_stress_impact_gain
+			wrathful = miniscule_stress_impact_gain
+		}
+		hidden_effect = {
+			random = {
+				chance = 40
+				modifier = {
+					add = 15
+					num_sinful_traits >= 1
+				}
+				modifier = {
+					add = -15				
+					num_virtuous_traits >= 1
+				}
+				send_interface_toast = {
+					left_icon = ROOT
+					title = VIETmisc.0221.b.tooltip
+					add_character_modifier = {
+						modifier = VIET_rook_curse
+						years = 3
+					}
+				}
+			}
+		}
+		if = {
+			limit = {
+				has_game_rule = VIET_historical_context_on
+			}
+			custom_tooltip = VIETmisc.0221.info
+		}
+	}
+	option = { # ok
+		name = VIETmisc.0221.c
+		trigger = {
+			VIET_is_crow_lord_or_lady_trigger = yes
+		}
+		VIET_large_prestige_loss_effect = yes
+		VIET_large_piety_loss_effect = yes
+		add_character_modifier = {
+			modifier = VIET_befriending_rooks
+			years = 8
+		}
+		if = {
+			limit = {
+				has_game_rule = VIET_historical_context_on
+			}
+			custom_tooltip = VIETmisc.0221.info
+		}
+	}
+}
+
+
+# Hoopoes are hanging around and you're of a culture that sees them negatively
+VIETmisc.0222 = {
+	type = character_event
+	title = VIETmisc.0222.t
+	desc = VIETmisc.0222.desc
+	theme = unfriendly
+	override_background = { event_background = garden }
+	
+	left_portrait = {
+		character = root
+		animation = worry
+	}
+
+	trigger = {
+		NOT = { has_game_rule = VIET_conversion_universe_events }
+		capital_province = {
+			NOR = {
+				geographical_region = world_africa_sahara
+				geographical_region = world_europe_north
+				geographical_region = world_europe_west_britannia
+			}
+		}
+		VIET_is_european_culture_trigger = yes	
+	}
+	
+	weight_multiplier = {
+		base = 1
+		modifier = {
+			add = 0.2
+			has_trait = zealous
+		}
+		modifier = {
+			add = -0.2
+			has_trait = cynical
+		}
+		modifier = {
+			add = 0.2
+			has_trait = patient
+		}
+		modifier = {
+			add = -0.2
+			has_trait = impatient
+		}
+		modifier = {
+			add = 0.2
+			has_trait = lazy
+		}
+		modifier = {
+			add = -0.2
+			has_trait = diligent
+		}
+	}
+	
+	option = { # ok
+		name = VIETmisc.0222.a
+		VIET_medium_prestige_loss_effect = yes
+		stress_impact = {
+			cynical = miniscule_stress_impact_gain
+			compassionate = miniscule_stress_impact_gain
+			content = miniscule_stress_impact_gain
+		}
+		if = {
+			limit = {
+				has_game_rule = VIET_historical_context_on
+			}
+			custom_tooltip = VIETmisc.0222.info
+		}
+	}
+	option = { # ok
+		name = VIETmisc.0222.b
+		stress_impact = {
+			zealous = miniscule_stress_impact_gain
+			paranoid = miniscule_stress_impact_gain
+			wrathful = miniscule_stress_impact_gain
+		}
+		custom_tooltip = VIETmisc.0222.b.tooltip
+		hidden_effect = {
+			random = {
+				chance = 40
+				modifier = {
+					add = 15
+					num_sinful_traits >= 1
+				}
+				modifier = {
+					add = -15				
+					num_virtuous_traits >= 1
+				}
+				send_interface_toast = {
+					left_icon = ROOT
+					title = VIET_hoopoe_curse
+					add_character_modifier = {
+						modifier = VIET_hoopoe_curse
+						years = 3
+					}
+				}
+			}
+		}
+		if = {
+			limit = {
+				has_game_rule = VIET_historical_context_on
+			}
+			custom_tooltip = VIETmisc.0222.info
+		}
+	}
+}
+
+
+
+# Hoopoes are hanging around and you're of a culture that sees them positively
+VIETmisc.0223 = {
+	type = character_event
+	title = VIETmisc.0223.t
+	desc = VIETmisc.0223.desc
+	theme = diplomacy_majesty_focus
+	override_background = { event_background = garden }
+	
+	left_portrait = {
+		character = root
+		animation = personality_content
+	}
+
+	trigger = {
+		NOT = { has_game_rule = VIET_conversion_universe_events }
+		capital_province = {
+			NOR = {
+				geographical_region = world_africa_sahara
+				geographical_region = world_europe_north
+				geographical_region = world_europe_west_britannia
+			}
+		}
+		VIET_is_european_culture_trigger = no	
+	}
+	
+	weight_multiplier = {
+		base = 1
+		modifier = {
+			add = 0.2
+			has_trait = zealous
+		}
+		modifier = {
+			add = -0.2
+			has_trait = cynical
+		}
+		modifier = {
+			add = 0.2
+			has_trait = just
+		}
+		modifier = {
+			add = -0.2
+			has_trait = arbitrary
+		}
+		modifier = {
+			add = 0.2
+			has_trait = compassionate
+		}
+		modifier = {
+			add = -0.2
+			has_trait = sadistic
+		}
+	}
+	
+	option = { # ok
+		name = VIETmisc.0223.a
+		add_character_modifier = {
+			modifier = VIET_hoopoe_blessing
+			years = 5
+		}
+		if = {
+			limit = {
+				has_game_rule = VIET_historical_context_on
+			}
+			custom_tooltip = VIETmisc.0222.info
+		}
+	}
+	option = { # ok
+		name = VIETmisc.0223.b
+		add_character_modifier = {
+			modifier = VIET_hoopoe_medicine
+			years = 5
+		}
+		if = {
+			limit = {
+				has_game_rule = VIET_historical_context_on
+			}
+			custom_tooltip = VIETmisc.0222.info
+		}
+	}
+}
+
+
+
+
+# Come across some hunters hunting chamois
+VIETmisc.0224 = {
+	type = character_event
+	title = VIETmisc.0224.t
+	desc = VIETmisc.0224.desc
+	theme = hunt_activity
+	override_background = { event_background = VIET_background_skyrim_forest }
+	
+	right_portrait = root
+
+	trigger = {
+		NOT = { has_game_rule = VIET_conversion_universe_events }
+		capital_province = {
+			OR = {
+				geographical_region = special_cagot_region
+				geographical_region = custom_burgundy
+				geographical_region = world_europe_south_italy
+				geographical_region = custom_bavaria
+				geographical_region = custom_core_switzerland
+				geographical_region = world_europe_south_east
+				geographical_region = world_asia_minor
+				geographical_region = custom_hungary
+			}
+		}
+	}
+	
+	weight_multiplier = {
+		base = 1
+		modifier = {
+			add = 0.2
+			has_trait = diligent
+		}
+		modifier = {
+			add = -0.2
+			has_trait = lazy
+		}
+		modifier = {
+			add = 0.2
+			has_trait = trusting
+		}
+		modifier = {
+			add = -0.2
+			has_trait = paranoid
+		}
+		modifier = {
+			add = 0.2
+			has_trait = humble
+		}
+		modifier = {
+			add = -0.2
+			has_trait = arrogant
+		}
+	}
+	
+	option = { # buy the meat
+		name = VIETmisc.0224.a
+		trigger = {
+			OR = {
+				gold >= 15
+				is_ai = no
+			}
+		}
+		remove_short_term_gold = 15
+		add_character_modifier = {
+			modifier = VIET_eating_chamois
+			years = 3
+		}
+		if = {
+			limit = {
+				has_game_rule = VIET_historical_context_on
+			}
+			custom_tooltip = VIETmisc.0224.info
+		}
+	}
+	option = { # threaten the hunters to give you the meat
+		name = VIETmisc.0224.b
+		trigger = {
+			NOR = {
+				has_trait = compassionate
+				has_trait = just
+			}
+		}
+		if = {
+			limit = {
+				faith = {
+					OR = {
+						trait_is_sin = greedy
+						trait_is_sin = callous
+						trait_is_sin = sadistic
+						trait_is_sin = arbitrary
+					}
+				}
+			}
+			VIET_massive_piety_loss_effect = yes
+		}
+		else = {
+			VIET_huge_piety_loss_effect = yes
+		}
+		add_dread = 10
+		add_character_modifier = {
+			modifier = VIET_eating_chamois
+			years = 3
+		}
+		add_character_modifier = {
+			modifier = VIET_threatened_hunters
+			years = 6
+		}
+		stress_impact = {
+			temperate = miniscule_stress_impact_gain
+			calm = miniscule_stress_impact_gain
+		}
+		if = {
+			limit = {
+				has_game_rule = VIET_historical_context_on
+			}
+			custom_tooltip = VIETmisc.0224.info
+		}
+	}
+	option = { # Ok cool story bro
+		name = VIETmisc.0224.c
+		if = {
+			limit = {
+				has_game_rule = VIET_historical_context_on
+			}
+			custom_tooltip = VIETmisc.0224.info
+		}
+	}
+	option = { # Share hunting tips
+		name = VIETmisc.0224.d
+		trigger = {
+			has_trait = lifestyle_hunter
+		}
+		#trait = lifestyle_hunter
+		random_list = {
+			70 = { }
+			15 = { add_martial_skill = 1 }
+			15 = { add_prowess_skill = 1 }
+		}
+		stress_impact = {
+			shy = minor_stress_impact_gain
+			paranoid = miniscule_stress_impact_gain
+			arrogant = miniscule_stress_impact_gain
+			impatient = miniscule_stress_impact_gain
+			lazy = miniscule_stress_impact_gain
+		}
+		if = {
+			limit = {
+				has_game_rule = VIET_historical_context_on
+			}
+			custom_tooltip = VIETmisc.0224.info
+		}
+	}
+}
+
+
+# Town notable invites you to participate in caracal pigeon hunting blood sport gambling
+VIETmisc.0225 = {
+	type = character_event
+	title = VIETmisc.0225.t
+	desc = VIETmisc.0225.desc
+	theme = hunt_activity
+	override_background = { event_background = VIET_background_small_town }
+	
+	right_portrait = root
+
+	trigger = {
+		NOT = { has_game_rule = VIET_conversion_universe_events }
+		any_held_title = {
+			tier = tier_county
+			any_county_province = {
+				OR = { # Mainly seems to be a India/Central Asian phenomenon
+					geographical_region = world_india
+					geographical_region = world_middle_east_persia
+					geographical_region = world_steppe_tarim
+				}		
+			}
+		}
+	}
+	
+	weight_multiplier = {
+		base = 1
+		modifier = {
+			add = 0.2
+			has_trait = diligent
+		}
+		modifier = {
+			add = -0.2
+			has_trait = lazy
+		}
+		modifier = {
+			add = 0.2
+			has_trait = ambitious
+		}
+		modifier = {
+			add = -0.2
+			has_trait = shy
+		}
+		modifier = {
+			add = 0.2
+			has_trait = just
+		}
+		modifier = {
+			add = -0.2
+			has_trait = arbitrary
+		}
+	}
+	
+	option = { # observe
+		name = VIETmisc.0225.a
+		VIET_huge_prestige_loss_effect = yes
+		stress_impact = {
+			base = miniscule_stress_impact_loss
+			sadistic = miniscule_stress_impact_loss
+			gregarious = miniscule_stress_impact_loss
+		}
+		if = {
+			limit = {
+				has_game_rule = VIET_historical_context_on
+			}
+			custom_tooltip = VIETmisc.0225.info
+		}
+	}
+	option = { # bet on the winner
+		name = VIETmisc.0225.b
+		VIET_huge_prestige_loss_effect = yes
+		random_list = {
+			50 = {
+				modifier = {
+					add = 8
+					intrigue >= decent_skill_rating
+				}
+				modifier = {
+					add = 8
+					intrigue >= very_high_skill_rating
+				}
+				modifier = {
+					add = 4
+					martial >= decent_skill_rating
+				}
+				modifier = {
+					add = 4
+					martial >= very_high_skill_rating
+				}
+				desc = VIETmisc.0225.toast.good
+				send_interface_toast = {
+					left_icon = ROOT
+					title = VIETmisc.0225.toast.good
+					random_list = {
+						40 = { add_gold = 15 }
+						30 = { add_gold = 25 }
+						20 = { add_gold = 35 }
+						10 = { add_gold = 45 }
+					}
+				}
+			}
+			50 = {
+				modifier = {
+					add = 8
+					intrigue <= low_skill_rating
+				}
+				modifier = {
+					add = 8
+					intrigue <= mediocre_skill_rating
+				}
+				modifier = {
+					add = 4
+					martial <= low_skill_rating
+				}
+				modifier = {
+					add = 4
+					martial <= mediocre_skill_rating
+				}
+				desc = VIETmisc.0225.toast.bad
+				send_interface_toast = {
+					left_icon = ROOT
+					title = VIETmisc.0225.toast.bad
+					stress_impact = {
+						base = minor_stress_impact_gain
+						greedy = minor_stress_impact_gain
+						wrathful = minor_stress_impact_gain
+					}
+					random_list = {
+						40 = { remove_short_term_gold = 15 }
+						30 = { remove_short_term_gold = 25 }
+						20 = { remove_short_term_gold = 35 }
+						10 = { remove_short_term_gold = 45 }
+					}
+				}
+			}
+		}
+		if = {
+			limit = {
+				has_game_rule = VIET_historical_context_on
+			}
+			custom_tooltip = VIETmisc.0225.info
+		}
+	}
+	option = { # have other business to take care of
+		name = VIETmisc.0225.c
+		if = {
+			limit = {
+				has_game_rule = VIET_historical_context_on
+			}
+			custom_tooltip = VIETmisc.0225.info
+		}
+	}
+}
+
+
+
+# Heard some yellowhammer songbird singing
+VIETmisc.0226 = {
+	type = character_event
+	title = VIETmisc.0226.t
+	desc = VIETmisc.0226.desc
+	theme = VIET_theme_tuscan_country
+	
+	left_portrait = {
+		character = scope:courtier
+		animation = happiness
+	}
+	right_portrait = root
+
+	trigger = {
+		NOT = { has_game_rule = VIET_conversion_universe_events }
+		any_courtier = {
+			is_available_ai_adult = yes
+		}
+		any_held_title = {
+			tier = tier_county
+			any_county_province = {
+				OR = {
+					geographical_region = world_europe
+					geographical_region = world_asia_minor
+					geographical_region = ghw_region_holy_land
+					geographical_region = world_middle_east_persia
+					geographical_region = world_steppe_west
+					geographical_region = world_steppe_east
+				}		
+			}
+		}
+	}
+	
+	weight_multiplier = {
+		base = 1
+		modifier = {
+			add = 0.2
+			has_trait = diligent
+		}
+		modifier = {
+			add = -0.2
+			has_trait = lazy
+		}
+		modifier = {
+			add = 0.2
+			has_trait = impatient
+		}
+		modifier = {
+			add = -0.2
+			has_trait = impatient
+		}
+		modifier = {
+			add = 0.2
+			has_trait = stubborn
+		}
+		modifier = {
+			add = -0.2
+			has_trait = fickle
+		}
+	}
+
+	immediate = {
+		random_courtier = {
+			limit = {
+				is_available_ai_adult = yes
+			}
+			save_scope_as = courtier
+		}
+	}
+	
+	option = { # ok
+		name = VIETmisc.0226.a
+		VIET_medium_prestige_gain_effect = yes
+		if = {
+			limit = {
+				has_game_rule = VIET_historical_context_on
+			}
+			custom_tooltip = VIETmisc.0226.info
+		}
+	}
+	option = { # ok
+		name = VIETmisc.0226.b
+		VIET_medium_prestige_loss_effect = yes
+		stress_impact = {
+			base = miniscule_stress_impact_loss
+			content = miniscule_stress_impact_loss
+			compassionate = miniscule_stress_impact_loss
+		}
+		add_character_modifier = {
+			modifier = VIET_listened_to_yellowhammer
+			years = 4
+		}
+		scope:courtier = {
+			stress_impact = {
+				base = miniscule_stress_impact_loss
+				content = miniscule_stress_impact_loss
+				compassionate = miniscule_stress_impact_loss
+			}
+			add_character_modifier = {
+				modifier = VIET_listened_to_yellowhammer
+				years = 4
+			}
+		}
+		if = {
+			limit = {
+				has_game_rule = VIET_historical_context_on
+			}
+			custom_tooltip = VIETmisc.0226.info
+		}
+	}
+}
+
+
+
+# House bunting makes itself at home in your residence which is lucky
+VIETmisc.0227 = {
+	type = character_event
+	title = VIETmisc.0227.t
+	desc = VIETmisc.0227.desc
+	theme = friendly
+	
+	left_portrait = root
+
+	trigger = {
+		NOT = { has_game_rule = VIET_conversion_universe_events }
+		capital_province = {
+			OR = {
+				geographical_region = world_africa_north
+				geographical_region = world_africa_sahara
+			}		
+		}
+	}
+	
+	weight_multiplier = {
+		base = 1
+		modifier = {
+			add = 0.2
+			has_trait = diligent
+		}
+		modifier = {
+			add = -0.2
+			has_trait = lazy
+		}
+		modifier = {
+			add = 0.2
+			has_trait = impatient
+		}
+		modifier = {
+			add = -0.2
+			has_trait = impatient
+		}
+		modifier = {
+			add = 0.2
+			has_trait = stubborn
+		}
+		modifier = {
+			add = -0.2
+			has_trait = fickle
+		}
+	}
+
+	option = { # ok
+		name = VIETmisc.0227.a
+		VIET_huge_prestige_loss_effect = yes
+		stress_impact = {
+			cynical = miniscule_stress_impact_gain
+			paranoid = miniscule_stress_impact_gain
+		}
+		add_character_modifier = {
+			modifier = VIET_house_bunting_blessing
+			years = 6
+		}
+		if = {
+			limit = {
+				has_game_rule = VIET_historical_context_on
+			}
+			custom_tooltip = VIETmisc.0227.info
+		}
+	}
+	option = { # ok
+		name = VIETmisc.0227.b
+		stress_impact = {
+			zealous = miniscule_stress_impact_gain
+			compassionate = miniscule_stress_impact_gain
+			content = miniscule_stress_impact_gain
+		}
+		if = {
+			limit = {
+				has_game_rule = VIET_historical_context_on
+			}
+			custom_tooltip = VIETmisc.0227.info
+		}
+	}
+}
+
+
+
+
+# Farmer's loud guard goose thinks you're an intruder
+VIETmisc.0228 = {
+	type = character_event
+	title = VIETmisc.0228.t
+	desc = VIETmisc.0228.desc
+	theme = unfriendly
+	override_background = { event_background = VIET_background_small_town }
+	
+	right_portrait = {
+		character = root
+		animation = personality_vengeful
+	}
+	
+	weight_multiplier = {
+		base = 1
+		modifier = {
+			add = 0.2
+			has_trait = wrathful
+		}
+		modifier = {
+			add = -0.2
+			has_trait = calm
+		}
+		modifier = {
+			add = 0.2
+			has_trait = sadistic
+		}
+		modifier = {
+			add = -0.2
+			has_trait = compassionate
+		}
+		modifier = {
+			add = 0.2
+			has_trait = paranoid
+		}
+		modifier = {
+			add = -0.2
+			has_trait = trusting
+		}
+	}
+
+	immediate = {
+		play_music_cue = mx_VIET_goose 
+	}
+
+	option = { # ok
+		name = VIETmisc.0228.a
+		VIET_small_piety_gain_effect = yes
+		VIET_small_prestige_loss_effect = yes
+		stress_impact = {
+			vengeful = miniscule_stress_impact_gain
+			wrathful = miniscule_stress_impact_gain
+			arrogant = miniscule_stress_impact_gain
+			callous = miniscule_stress_impact_gain
+		}
+		if = {
+			limit = {
+				has_game_rule = VIET_historical_context_on
+			}
+			custom_tooltip = VIETmisc.0228.info
+		}
+	}
+	option = { # ok
+		name = VIETmisc.0228.b
+		VIET_small_prestige_gain_effect = yes
+		VIET_small_piety_loss_effect = yes
+		stress_impact = {
+			forgiving = miniscule_stress_impact_gain
+			calm = miniscule_stress_impact_gain
+			humble = miniscule_stress_impact_gain
+			compassionate = miniscule_stress_impact_gain
+		}
+		if = {
+			limit = {
+				has_game_rule = VIET_historical_context_on
+			}
+			custom_tooltip = VIETmisc.0228.info
+		}
+	}
+	option = { # ok
+		name = VIETmisc.0228.c
+		trigger = {
+			OR = {
+				gold >= 15
+				is_ai = no
+			}
+		}
+		remove_short_term_gold = 15
+		stress_impact = {
+			vengeful = miniscule_stress_impact_gain
+			wrathful = miniscule_stress_impact_gain
+		}
+		add_character_modifier = {
+			modifier = VIET_guard_goose
+			years = 10
+		}
+		if = {
+			limit = {
+				has_game_rule = VIET_historical_context_on
+			}
+			custom_tooltip = VIETmisc.0228.info
+		}
+	}
+}
+
+
+
+
+# Pig is put on trial for the murder of a child
+VIETmisc.0229 = {
+	type = character_event
+	title = VIETmisc.0229.t
+	desc = VIETmisc.0229.desc
+	theme = intrigue_skulduggery_focus
+	override_background = { event_background = gallows }
+	
+	right_portrait = {
+		character = root
+		animation = personality_vengeful
+	}
+
+	trigger = {
+		OR = {
+			NOT = { has_game_rule = VIET_normal_universe_events }
+			VIET_is_european_culture_trigger = yes
+		}
+		# Weed out cultures that wouldn't have these kinds of legal proceedings
+		NOT = { has_government = tribal_government }
+		# Wouldn't make sense for these religions
+		NOR = { 
+			religion = religion:islam_religion
+			religion = religion:judaism_religion
+		}
+	}
+	
+	weight_multiplier = {
+		base = 1
+		modifier = {
+			add = 0.2
+			has_trait = just
+		}
+		modifier = {
+			add = -0.2
+			has_trait = arbitrary
+		}
+		modifier = {
+			add = 0.2
+			has_trait = content
+		}
+		modifier = {
+			add = -0.2
+			has_trait = ambitious
+		}
+		modifier = {
+			add = 0.2
+			has_trait = gregarious
+		}
+		modifier = {
+			add = -0.2
+			has_trait = shy
+		}
+	}
+
+	immediate = {
+		play_music_cue = mx_cue_murder
+	}
+
+	option = { # ok
+		name = VIETmisc.0229.a
+		VIET_huge_prestige_gain_effect = yes
+		if = {
+			limit = {
+				has_game_rule = VIET_historical_context_on
+			}
+			custom_tooltip = VIETmisc.0229.info
+		}
+	}
+}
+
+
+
+
+# Butcher is giving up trade to become a wandering preacher and care for animals
+VIETmisc.0230 = {
+	type = character_event
+	title = VIETmisc.0230.t
+	desc = VIETmisc.0230.desc
+	theme = faith
+	override_background = { event_background = VIET_background_small_town }
+	
+	right_portrait = {
+		character = root
+		animation = personality_rational
+	}
+
+	trigger = {
+		# Pick religions for which it would make sense
+		OR = {
+			religion = { is_in_family = rf_abrahamic }
+			religion = { is_in_family = rf_eastern }
+			faith = {
+				OR = {
+					has_doctrine = tenet_dharmic_pacifism
+					has_doctrine = tenet_pacifism
+					has_doctrine = tenet_reincarnation
+					trait_is_sin = gluttonous
+					trait_is_sin = sadistic
+					trait_is_sin = callous
+					trait_is_sin = wrathful
+					trait_is_virtue = compassionate
+					trait_is_virtue = temperate
+					trait_is_virtue = generous
+				}
+			}
+		}
+		NOT = { faith = { has_doctrine_parameter = gruesome_festivals_active } }
+		NOT = { faith = { has_doctrine_parameter = human_sacrifice_active } }
+	}
+	
+	weight_multiplier = {
+		base = 1
+		modifier = {
+			add = 0.2
+			has_trait = just
+		}
+		modifier = {
+			add = -0.2
+			has_trait = arbitrary
+		}
+		modifier = {
+			add = 0.2
+			has_trait = compassionate
+		}
+		modifier = {
+			add = -0.2
+			has_trait = callous
+		}
+		modifier = {
+			add = 0.2
+			has_trait = diligent
+		}
+		modifier = {
+			add = -0.2
+			has_trait = lazy
+		}
+	}
+
+	option = { # ok
+		name = VIETmisc.0230.a
+		stress_impact = {
+			gregarious = miniscule_stress_impact_gain
+			stubborn = miniscule_stress_impact_gain
+		}
+	}
+	option = { # ok
+		name = VIETmisc.0230.b
+		VIET_medium_piety_gain_effect = yes
+		VIET_medium_prestige_loss_effect = yes
+		stress_impact = {
+			cynical = miniscule_stress_impact_gain
+			callous = miniscule_stress_impact_gain
+			sadistic = miniscule_stress_impact_gain
+			gluttonous = miniscule_stress_impact_gain
+			arrogant = miniscule_stress_impact_gain
+		}
+	}
+	option = { # ok
+		name = VIETmisc.0230.c
+		VIET_medium_piety_loss_effect = yes
+		VIET_medium_prestige_gain_effect = yes
+		stress_impact = {
+			compassionate = miniscule_stress_impact_gain
+			zealous = miniscule_stress_impact_gain
+			humble = miniscule_stress_impact_gain
+			temperate = miniscule_stress_impact_gain
+		}
+	}
+}
+
+
+# Traveling merchant offers to sell you swimming kharai camels from Gujarat
+VIETmisc.0231 = {
+	type = character_event
+	title = VIETmisc.0231.t
+	desc = VIETmisc.0231.desc
+	theme = realm
+	
+	right_portrait = {
+		character = root
+		animation = personality_rational
+	}
+
+	trigger = {
+		NOT = { has_game_rule = VIET_conversion_universe_events }
+		# Pick regions close to India (sort of - Tibet for example wouldn't make sense)
+		capital_province = {
+			OR = {
+				geographical_region = world_india
+				geographical_region = world_burma
+				geographical_region = world_middle_east_persia
+				geographical_region = world_middle_east
+				geographical_region = world_africa_east
+				geographical_region = world_steppe_tarim
+			}
+		}
+	}
+	
+	weight_multiplier = {
+		base = 1
+		modifier = {
+			add = 0.2
+			has_trait = ambitious
+		}
+		modifier = {
+			add = -0.2
+			has_trait = content
+		}
+		modifier = {
+			add = 0.2
+			has_trait = gregarious
+		}
+		modifier = {
+			add = -0.2
+			has_trait = shy
+		}
+		modifier = {
+			add = 0.2
+			has_trait = diligent
+		}
+		modifier = {
+			add = -0.2
+			has_trait = lazy
+		}
+	}
+
+	option = { # ok
+		name = VIETmisc.0231.a
+		if = {
+			limit = {
+				has_game_rule = VIET_historical_context_on
+			}
+			custom_tooltip = VIETmisc.0231.info
+		}
+	}
+	option = { # ok
+		name = VIETmisc.0231.b
+		trigger = {
+			OR = {
+				gold >= 50
+				is_ai = no
+			}
+		}
+		remove_short_term_gold = 50
+		VIET_huge_prestige_gain_effect = yes
+		add_character_modifier = {
+			modifier = VIET_swimming_camels
+			years = 10
+		}
+		if = {
+			limit = {
+				has_game_rule = VIET_historical_context_on
+			}
+			custom_tooltip = VIETmisc.0231.info
+		}
+	}
+}
+
+
+
+# Come across a traveling cleric preaching to the animals
+VIETmisc.0232 = {
+	type = character_event
+	title = VIETmisc.0232.t
+	desc = VIETmisc.0232.desc
+	theme = faith
+	override_background = { event_background = VIET_background_tuscan_country }
+	
+	right_portrait = {
+		character = root
+		animation = personality_rational
+	}
+
+	trigger = {
+		# Pick religions for which it would make sense
+		OR = {
+			religion = { is_in_family = rf_abrahamic }
+			religion = { is_in_family = rf_eastern }
+			faith = {
+				OR = {
+					has_doctrine = tenet_dharmic_pacifism
+					has_doctrine = tenet_pacifism
+					has_doctrine = tenet_mendicant_preachers
+					has_doctrine = tenet_monasticism
+					has_doctrine = tenet_asceticism
+					has_doctrine = tenet_sanctity_of_nature
+					trait_is_sin = sadistic
+					trait_is_sin = callous
+					trait_is_virtue = compassionate
+					trait_is_virtue = generous
+					trait_is_virtue = humble
+				}
+			}
+		}
+		NOT = { faith = { has_doctrine_parameter = gruesome_festivals_active } }
+		NOT = { faith = { has_doctrine_parameter = human_sacrifice_active } }
+	}
+	
+	weight_multiplier = {
+		base = 1
+		modifier = {
+			add = 0.2
+			has_trait = zealous
+		}
+		modifier = {
+			add = -0.2
+			has_trait = cynical
+		}
+		modifier = {
+			add = 0.2
+			has_trait = gregarious
+		}
+		modifier = {
+			add = -0.2
+			has_trait = shy
+		}
+		modifier = {
+			add = 0.2
+			has_trait = calm
+		}
+		modifier = {
+			add = -0.2
+			has_trait = paranoid
+		}
+	}
+
+	option = { # ok
+		name = VIETmisc.0232.a
+		VIET_large_prestige_gain_effect = yes
+		stress_impact = {
+			zealous = miniscule_stress_impact_gain
+			humble = miniscule_stress_impact_gain
+			compassionate = miniscule_stress_impact_gain
+		}
+	}
+	option = { # ok
+		name = VIETmisc.0232.b
+		VIET_large_piety_gain_effect = yes
+		stress_impact = {
+			cynical = miniscule_stress_impact_gain
+			callous = miniscule_stress_impact_gain
+			sadistic = miniscule_stress_impact_gain
+			arrogant = miniscule_stress_impact_gain
+		}
+	}
+	option = { # ok
+		name = VIETmisc.0232.c
+		VIET_massive_piety_gain_effect = yes
+		VIET_massive_prestige_loss_effect = yes
+		add_character_modifier = {
+			modifier = VIET_listened_to_saint_francis
+			years = 10
+		}
+		stress_impact = {
+			cynical = miniscule_stress_impact_gain
+			callous = medium_stress_impact_gain
+			sadistic = medium_stress_impact_gain
+			arrogant = minor_stress_impact_gain
+			impatient = miniscule_stress_impact_gain
+			paranoid = minor_stress_impact_gain
+		}
+	}
+}
 
 
 
