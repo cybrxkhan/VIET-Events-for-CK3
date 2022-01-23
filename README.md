@@ -42,4 +42,4 @@ NOTE: If you are re-installing a mod, delete the old version of the mod first be
 - Added a few new event backgrounds for the Indian region
 - Miscellaneous bugfixes
 
-* Adapted from VIET for CK2
+\* Adapted from VIET for CK2
