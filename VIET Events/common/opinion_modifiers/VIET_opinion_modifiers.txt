@@ -446,3 +446,15 @@ VIET_opinion_dovecote_not_heeded = {
 	years = 5
 	opinion = -5
 }
+VIET_opinion_rejected_my_gift = {
+	years = 3
+	decaying = yes
+	opinion = -10
+	stacking = yes
+}
+VIET_opinion_accepted_my_gift = {
+	years = 3
+	decaying = yes
+	opinion = 10
+	stacking = yes
+}

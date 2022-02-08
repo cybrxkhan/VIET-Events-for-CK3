@@ -3,3 +3,11 @@ qi_ma_the_liar = {
 	texture = "gfx/interface/icons/modifiers/cat_positive.dds"
 	alias = { qi_ma }
 }
+
+clutter_artifact = {
+	alias = { clutter_artifacts }
+	texture = "gfx/interface/icons/roco_tabs/roco_artifact.dds"
+	framesize = { 140 140 }
+
+	frame = 2
+}

@@ -19,6 +19,8 @@ three_year_playable_pulse = {
 		VIET_events_common_decisions_pulse
 		delay = { days = { 8 288 } } # 88
 		VIET_events_common_county_pulse
+		delay = { days = { 8 288 } } # 88
+		VIET_events_common_artifact_pulse
 	}
 }
 
@@ -34,6 +36,10 @@ five_year_playable_pulse = {
 		VIET_events_uncommon_county_pulse
 		delay = { days = { 8 288 } } # 88
 		VIET_events_rare_county_pulse
+		delay = { days = { 8 288 } } # 88
+		VIET_events_uncommon_artifact_pulse
+		delay = { days = { 8 288 } } # 88
+		VIET_events_rare_artifact_pulse
 	}
 }
 
@@ -227,6 +233,7 @@ VIET_events_yearly_pulse = {
 		# Medicine
 		100 = VIETold.2162		# Drinking an herbal tonic
 		100 = VIETold.2164		# Two physicians debate treatments
+		100 = VIETold.2166		# Servant forgets how many spoons of medicine to take
 		100 = VIETold.2167		# Courtier takes wrong type and dosage of medicine by accident
 		100 = VIETold.2168		# Spilled the herbal tea and burning yourself by accident
 		100 = VIETold.2170		# Took medicine for sore throat
@@ -991,10 +998,8 @@ VIET_events_common_decisions_pulse = {
 		100 = VIETmisc.2007		# A ghost seems to be haunting you
 		100 = VIETmisc.2019		# Your servants find a mysterious treasure chest
 		100 = VIETmisc.2021		# Meet the mercenary scholar at an inn
-		# Crows
-		100 = VIETmisc.2047		# Crows keep following you around for some reason
 		# Writing
-		100 = VIETmisc.2060		# Character gains interest in learning how to write shorthand
+		100 = VIETmisc.2061		# Character gains interest in learning how to write shorthand
 		# Animals
 		100 = VIETmisc.2074		# Courtier suggests you add dovecotes to your residence
 		100 = VIETmisc.2076		# Will you become a songbird fan or enjoyer?
@@ -1053,6 +1058,8 @@ VIET_events_rare_decisions_pulse = {
 		#Generic first set
 		100 = VIETmisc.2014		# Your soldiers find Shadowbanish Wine
 		100 = VIETmisc.2023		# Servants are kidnapped - start the countdown
+		# Crows
+		100 = VIETmisc.2047		# Crows keep following you around for some reason
 		
 		#Meet the Dreamer
 		100 = VIETmisc.8000		# You meet the Dreamer
@@ -1315,11 +1322,187 @@ VIET_events_rare_county_pulse = {
 		50 = VIETmisc.3008		# Mysterious supernatural relic found - could it be futuristic equipment left behind by Stellaris aliens?
 		50 = VIETmisc.3022		# You hear rumors of a commoner of peerless beauty in a county
 		# Oblivion Unmarked Locations
-		50 = VIETmisc.3020		# Submerged Shrine - found in Shivering Isles - abandoned wayshrine found underwater, turn it into a proper shrine or not?
+		50 = VIETmisc.3025		# Submerged Shrine - found in Shivering Isles - abandoned wayshrine found underwater, turn it into a proper shrine or not?
 		# Animals
 		50 = VIETmisc.3029		# Rooks settle in a county in large numbers
 		
 		# 10
 		
+    }
+}
+
+# Common artifacts - everyday objects
+VIET_events_common_artifact_pulse = {
+	random_events = {
+		chance_of_no_event = {
+			value = 50
+			if = {
+				limit = {
+					has_game_rule = VIET_event_frequency_low
+				}
+				add = 10
+			}
+			if = {
+				limit = {
+					has_game_rule = VIET_event_frequency_very_low
+				}
+				add = 20
+			}
+			if = {
+				limit = {
+					has_game_rule = VIET_event_frequency_high
+				}
+				subtract = 10
+			}
+			if = {
+				limit = {
+					has_game_rule = VIET_event_frequency_very_high
+				}
+				subtract = 20
+			}
+		}
+		
+		30000 = 0
+		
+		#######################################
+		# BOTH GEN VIET
+		#######################################
+		
+		# Generic
+		100 = VIETmisc.5004		# Nutcracker - courtier gives a gift
+		100 = VIETmisc.5008		# Beautiful Pitcher - gifted by nobles
+		100 = VIETmisc.5009		# Common Pitcher - artisans provide a beautiful wooden pitcher as a gift to commemorate your visit
+		100 = VIETmisc.5011		# Hand mirror - glass smith has good quality stuff
+		100 = VIETmisc.5013		# Wood chess set - get local artisans to make it?
+		100 = VIETmisc.5015		# Bone Dice - get a spare pair from an acquaintance?
+		100 = VIETmisc.5016		# Wood Dice - get a spare pair from an acquaintance?
+		100 = VIETmisc.5018		# Pewter Spoon - keep it around or not?
+		100 = VIETmisc.5019		# Measuring rod - see it lying around and find in intriguing
+		100 = VIETmisc.5021		# Weighing scales = merchants offer you a reliable one
+		100 = VIETmisc.5022		# Commoner hammer - inspecting servants at work
+		100 = VIETmisc.5023		# Trusty shovel - house undergoing repairs, see a laborer with a cool shovel
+		100 = VIETmisc.5024		# Leather knapsack - adventurer gifts you with it
+		100 = VIETmisc.5025		# Wooden bowl - last minute gift by tavern staff who didn't know you were coming
+		100 = VIETmisc.5027		# Ceramic tankard - noble gifts you one
+		100 = VIETmisc.5028		# Wooden tankard - noble gifts you one
+		100 = VIETmisc.5029		# Convenient backscratcher - you're feeling itchy
+		100 = VIETmisc.5030		# Rugged walking stick - find a good walking stick on the ground while walking
+		100 = VIETmisc.5031		# Simple Gloves - visiting a leathersmith who has a pair of gloves they made for someone who canceled their order
+		100 = VIETmisc.5032		# Elegant candlestick - visiting a house of worship, one of the local clergy offers to give you a candlestick they use for reading
+		100 = VIETmisc.5033		# Basic Lantern - guard has a spare lantern you notice while being escorted by them
+		100 = VIETmisc.5034		# Favored handkerchief - you like a handkerchief you're using
+		100 = VIETmisc.5036		# Wooden Whistle - bored while inspecting troops
+		100 = VIETmisc.5037		# Simple Waterskin - traveling a lot lately and grow fond of the waterskin you've been using
+		100 = VIETmisc.5039		# Decorated Broom - servants find a nice broom while cleaning your rooms
+		
+		# 25
+    }
+}
+
+# Uncommon artifacts - more oddball everyday objects
+VIET_events_uncommon_artifact_pulse = {
+	random_events = {
+		chance_of_no_event = {
+			value = 55
+			if = {
+				limit = {
+					has_game_rule = VIET_event_frequency_low
+				}
+				add = 10
+			}
+			if = {
+				limit = {
+					has_game_rule = VIET_event_frequency_very_low
+				}
+				add = 20
+			}
+			if = {
+				limit = {
+					has_game_rule = VIET_event_frequency_high
+				}
+				subtract = 10
+			}
+			if = {
+				limit = {
+					has_game_rule = VIET_event_frequency_very_high
+				}
+				subtract = 20
+			}
+		}
+		
+		20000 = 0
+		
+		#######################################
+		# BOTH GEN VIET
+		#######################################
+		
+		# Generic
+		100 = VIETmisc.5000		# Abacus - Merchant offers you his old abacus
+		100 = VIETmisc.5001		# Calipers - Find some cool calipers
+		100 = VIETmisc.5002		# Magnifying Glass - Wandering scholar shows off his stuff
+		100 = VIETmisc.5003		# Hourglass - merchant sells hourglass
+		100 = VIETmisc.5005		# Star Chart - local astronomer offers you a star chart
+		100 = VIETmisc.5006		# Silverware set - buy a nice one from a smith
+		100 = VIETmisc.5007		# Exotic Quill - buy it or not?
+		100 = VIETmisc.5010		# Secure Chest - locksmith offers to make it for you
+		100 = VIETmisc.5012		# Ivory chess set - traveling merchant, buy from?
+		100 = VIETmisc.5014		# Porcelain chopsticks - present from a traveling scholar
+		100 = VIETmisc.5017		# Silk Slippers - buy some to keep your feet comfy?
+		100 = VIETmisc.5026		# Reliable lockpick - retired guard captain offers you a useful one
+		100 = VIETmisc.5035		# Candy Jar - likes to eat candy, found a nice jar that would suffice for that
+		100 = VIETmisc.5040		# Traveling Inkwell - you're visiting a scholar and they want to give you a gift for the occasion
+		100 = VIETmisc.5041		# Ancient coin - your servant finds an ancient coin while gardening
+		100 = VIETmisc.5042		# Baklava recipe
+		100 = VIETmisc.5043		# Sweetroll recipe
+		100 = VIETmisc.5044		# Hummus recipe
+		
+		# 18
+		
+    }
+}
+
+# Rare artifacts - weird stuff you shouldn't find a lot of
+VIET_events_rare_artifact_pulse = {
+	random_events = {
+		chance_of_no_event = {
+			value = 70
+			if = {
+				limit = {
+					has_game_rule = VIET_event_frequency_low
+				}
+				add = 10
+			}
+			if = {
+				limit = {
+					has_game_rule = VIET_event_frequency_very_low
+				}
+				add = 20
+			}
+			if = {
+				limit = {
+					has_game_rule = VIET_event_frequency_high
+				}
+				subtract = 10
+			}
+			if = {
+				limit = {
+					has_game_rule = VIET_event_frequency_very_high
+				}
+				subtract = 20
+			}
+		}
+		
+		30000 = 0
+		
+		#######################################
+		# BOTH GEN VIET
+		#######################################
+		
+		# Generic
+		100 = VIETmisc.5020		# Prehistoric bone flute - a hunter in your realm finds it and it is offered to you
+		100 = VIETmisc.5038		# Hollow doll - weird merchant wants to sell it to you
+		100 = VIETmisc.5045		# Lusty Argonian Maid - find a very interesting play
+		
+		# 3
     }
 }

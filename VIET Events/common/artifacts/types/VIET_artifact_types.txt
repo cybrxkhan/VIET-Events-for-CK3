@@ -1,0 +1,11 @@
+﻿
+# Trinkets
+VIET_clutter = {
+	slot = miscellaneous
+	can_reforge = no
+}
+
+VIET_recipe = {
+	slot = miscellaneous
+	can_reforge = no
+}

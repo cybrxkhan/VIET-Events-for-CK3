@@ -1,0 +1,24 @@
+﻿##############################################################################################
+# 
+# VIET Setup
+# 
+# These events set up various aspects of the mod at the start of the game.
+# 
+##############################################################################################
+
+namespace = VIETintro
+
+# Event to set things up
+VIETintro.0001 = {
+	type = empty
+	hidden = yes
+	
+	immediate = {
+		character:VIET_character_001 = { make_unprunable = yes }
+		character:VIET_character_002 = { make_unprunable = yes }
+		character:VIET_character_003 = { make_unprunable = yes }
+		character:VIET_character_004 = { make_unprunable = yes }
+		character:VIET_character_005 = { make_unprunable = yes }
+	}
+
+}

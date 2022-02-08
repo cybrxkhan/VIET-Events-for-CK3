@@ -1,37 +1,37 @@
 ﻿
-d_VIET_dreamer_male = {
-	color = { 225 225 225 }
-	landless = yes
-	ruler_uses_title_name = no
-	can_be_named_after_dynasty = no
+# d_VIET_dreamer_male = {
+# 	color = { 225 225 225 }
+# 	landless = yes
+# 	ruler_uses_title_name = no
+# 	can_be_named_after_dynasty = no
 	
-	#capital = c_byzantion
+# 	#capital = c_byzantion
 	
-	definite_form = yes
+# 	definite_form = yes
 	
-	can_create = { always = no }
-}
-d_VIET_dreamer_female = {
-	color = { 225 225 225 }
-	landless = yes
-	ruler_uses_title_name = no
-	can_be_named_after_dynasty = no
+# 	can_create = { always = no }
+# }
+# d_VIET_dreamer_female = {
+# 	color = { 225 225 225 }
+# 	landless = yes
+# 	ruler_uses_title_name = no
+# 	can_be_named_after_dynasty = no
 	
-	#capital = c_byzantion
+# 	#capital = c_byzantion
 	
-	definite_form = yes
+# 	definite_form = yes
 	
-	can_create = { always = no }
-}
-d_VIET_elsewhere = {
-	color = { 225 225 225 }
-	landless = yes
-	ruler_uses_title_name = no
-	can_be_named_after_dynasty = no
+# 	can_create = { always = no }
+# }
+# d_VIET_elsewhere = {
+# 	color = { 225 225 225 }
+# 	landless = yes
+# 	ruler_uses_title_name = no
+# 	can_be_named_after_dynasty = no
 	
-	#capital = c_byzantion
+# 	#capital = c_byzantion
 	
-	definite_form = yes
+# 	definite_form = yes
 	
-	can_create = { always = no }
-}
+# 	can_create = { always = no }
+# }

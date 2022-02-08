@@ -8,12 +8,13 @@ VIET_basic_is_available_adult_trigger = {
 
 VIET_is_baklava_culture_trigger = {
 	OR = {
-		culture_group = culture_group:byzantine_group
-		culture_group = culture_group:turkic_group
-		culture_group = culture_group:south_slavic_group 
-		culture_group = culture_group:iranian_group 
-		culture_group = culture_group:berber_group 
-		culture_group = culture_group:arabic_group 
+		culture = { has_cultural_pillar = heritage_byzantine }
+		culture = { has_cultural_pillar = heritage_turkic }
+		culture = { has_cultural_pillar = heritage_south_slavic }
+		culture = { has_cultural_pillar = heritage_iranian }
+		culture = { has_cultural_pillar = heritage_berber }
+		culture = { has_cultural_pillar = heritage_arabic }
+		culture = { has_cultural_pillar = heritage_israelite }
 	}
 }
 
@@ -48,7 +49,7 @@ VIET_is_unattractive_trigger = {
 VIET_norse_localization_trigger = {
 	OR = {
 		AND = {
-			culture_group = culture_group:north_germanic_group
+			culture = { has_cultural_pillar = heritage_north_germanic }
 			faith = { has_doctrine_parameter = unreformed }
 		}
 		faith = faith:norse_pagan
@@ -58,11 +59,11 @@ VIET_norse_localization_trigger = {
 
 VIET_is_sinosphere_trigger = {
 	OR = {
-		culture_group = culture_group:chinese_group
-		culture_group = culture_group:mongolic_group
-		culture_group = culture_group:qiangic_group
+		culture = { has_cultural_pillar = heritage_chinese }
+		culture = { has_cultural_pillar = heritage_mongolic }
+		culture = { has_cultural_pillar = heritage_qiangic }
+		culture = { has_cultural_pillar = heritage_tocharian }
 		culture = culture:sogdian
-		culture = culture:tocharian
 		culture = culture:saka
 		culture = culture:uyghur
 		culture = culture:yughur
@@ -86,24 +87,29 @@ VIET_is_crow_lord_or_lady_trigger = {
 	}
 }
 
-VIET_is_european_culture_trigger = {
-	OR = {
-		has_culture_group = culture_group:baltic_group
-		has_culture_group = culture_group:balto_finnic_group
-		has_culture_group = culture_group:brythonic_group
-		has_culture_group = culture_group:byzantine_group
-		has_culture_group = culture_group:central_germanic_group
-		has_culture_group = culture_group:east_slavic_group
-		has_culture_group = culture_group:frankish_group
-		has_culture_group = culture_group:goidelic_group
-		has_culture_group = culture_group:iberian_group
-		has_culture_group = culture_group:latin_group
-		has_culture_group = culture_group:magyar_group
-		has_culture_group = culture_group:north_germanic_group
-		has_culture_group = culture_group:south_slavic_group
-		has_culture_group = culture_group:volga_finnic_group
-		has_culture_group = culture_group:west_germanic_group
-		has_culture_group = culture_group:west_slavic_group
+
+# VIET_is_european_culture_trigger replaced with culture_has_european_heritage_pillar_trigger
+
+VIET_has_4_clutter_artifacts_trigger = {
+	any_character_artifact = {
+		count >= 4
+		artifact_type = VIET_clutter
 	}
 }
 
+VIET_has_2_clutter_artifacts_trigger = {
+	any_character_artifact = {
+		count >= 2
+		artifact_type = VIET_clutter
+	}
+}
+
+VIET_is_hummus_culture_trigger = {
+	OR = {
+		culture = { has_cultural_pillar = heritage_byzantine }
+		culture = { has_cultural_pillar = heritage_turkic }
+		culture = { has_cultural_pillar = heritage_iranian }
+		culture = { has_cultural_pillar = heritage_arabic }
+		culture = { has_cultural_pillar = heritage_israelite }
+	}
+}

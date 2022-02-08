@@ -151,7 +151,7 @@
  VIET_decision_listen_to_wild_songbirds_desc:0 "I have heard there is a spot in the wilderness nearby where one can often encounter wild songbirds. As someone who enjoys hearing these lovely creatures sing, I should visit that location soon."
  VIET_decision_listen_to_wild_songbirds_effect_tooltip:0 "You will lose some [stress|E] and maybe even be inspired and get a [character_modifier|E]"
  VIET_decision_listen_to_wild_songbirds_confirm:0 "I do need the time off."
- VIET_decision_listen_to_wild_songbirds_context_tooltip:0 "#emphasis Biological Context:#! The #italic Passeri#! suborder of perching birds are known as songbirds, colloquially speaking. Consisting of over 5000 species, they are found all over the world, and famous for their diverse and elaborate bird songs, which have been admired by humans in many different cultures and time periods."  
+ VIET_decision_listen_to_wild_songbirds_context_tooltip:0 "#emphasis Biological Context:#! The #italic Passeri#! suborder of perching birds are known as songbirds, colloquially speaking. Consisting of over 5000 species, they are found all over the world, and famous for their diverse and elaborate bird songs, which have been admired by humans in many different cultures and time periods." 
  
  
  # Character Interactions

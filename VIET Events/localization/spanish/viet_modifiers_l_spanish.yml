@@ -875,5 +875,8 @@
  VIET_inspired_by_songbird_learning:0 "Songbirds Inspire Spiritual Devotion"
  VIET_swimming_camels:0 "Owns a Few Swimming Camels from India"
  VIET_listened_to_saint_francis:0 "Listened to a Sermon with Animals"
- # 1.5.0 - please leave this comment here 
+ # 1.5.0 - please leave this comment here
+ VIET_opinion_rejected_my_gift:0 "Rejected My Gift"
+ VIET_opinion_accepted_my_gift:0 "Accepted My Gift"
+ # 1.5.1 - please leave this comment here
  xxxxx:0 "xxxxx"

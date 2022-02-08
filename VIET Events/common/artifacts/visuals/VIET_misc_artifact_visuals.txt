@@ -1,0 +1,253 @@
+﻿
+
+VIET_placeholder_artifact = {
+	icon = "artifact_VIET_placeholder.dds"
+	asset = ep1_western_box_small_basic_01_a_entity	
+}
+
+VIET_book_placeholder = {
+	icon = "artifact_VIET_book_placeholder.dds"
+	asset = ep1_mena_book_big_01_a_entity	
+}
+
+
+# RECIPES
+
+VIET_cool_baklava = {
+	icon = "artifact_VIET_cool_baklava.dds"
+	asset = ep1_western_box_small_basic_01_a_entity	
+}
+
+VIET_legendary_sweetroll = {
+	icon = "artifact_VIET_legendary_sweetroll.dds"
+	asset = ep1_western_box_small_basic_01_a_entity	
+}
+
+VIET_hummus = {
+	icon = "artifact_VIET_recipe_hummus.dds"
+	asset = ep1_western_box_small_basic_01_a_entity	
+}
+
+
+
+# RECIPES
+
+VIET_abacus = {
+	icon = "artifact_VIET_abacus.dds"
+	asset = ep1_western_box_small_basic_01_a_entity	
+}
+
+VIET_calipers = {
+	icon = "artifact_VIET_calipers.dds"
+	asset = ep1_western_box_small_basic_01_a_entity	
+}
+
+VIET_magnifying_glass = {
+	icon = "artifact_VIET_magnifying_glass.dds"
+	asset = ep1_western_box_small_basic_01_a_entity	
+}
+
+VIET_hourglass = {
+	icon = "artifact_VIET_hourglass.dds"
+	asset = ep1_western_box_small_basic_01_a_entity	
+}
+
+VIET_nutcracker = {
+	icon = "artifact_VIET_nutcracker.dds"
+	asset = ep1_western_box_small_basic_01_a_entity	
+}
+
+VIET_star_chart = {
+	icon = "artifact_VIET_star_chart.dds"
+	asset = ep1_western_box_small_basic_01_a_entity	
+}
+
+VIET_silverware_set = {
+	icon = "artifact_VIET_silverware_set.dds"
+	asset = ep1_western_box_small_basic_01_a_entity	
+}
+
+VIET_exotic_quill_pen = {
+	icon = "artifact_VIET_exotic_quill_pen.dds"
+	asset = ep1_western_box_small_basic_01_a_entity	
+}
+
+VIET_beautiful_pitcher = {
+	icon = "artifact_VIET_beautiful_pitcher.dds"
+	asset = ep1_western_box_small_basic_01_a_entity	
+}
+
+VIET_basic_pitcher = {
+	icon = "artifact_VIET_basic_pitcher.dds"
+	asset = ep1_western_box_small_basic_01_a_entity	
+}
+
+VIET_secure_chest = {
+	icon = "artifact_VIET_secure_chest.dds"
+	asset = ep1_western_box_small_basic_01_a_entity	
+}
+
+VIET_hand_mirror = {
+	icon = "artifact_VIET_hand_mirror.dds"
+	asset = ep1_western_box_small_basic_01_a_entity	
+}
+
+VIET_ivory_chess_set = {
+	icon = "artifact_VIET_ivory_chess_set.dds"
+	asset = ep1_western_box_small_basic_01_a_entity	
+}
+
+VIET_wooden_chess_set = {
+	icon = "artifact_VIET_wooden_chess_set.dds"
+	asset = ep1_western_box_small_basic_01_a_entity	
+}
+
+VIET_porcelain_chopsticks = {
+	icon = "artifact_VIET_porcelain_chopsticks.dds"
+	asset = ep1_western_box_small_basic_01_a_entity	
+}
+
+VIET_bone_dice = {
+	icon = "artifact_VIET_bone_dice.dds"
+	asset = ep1_western_box_small_basic_01_a_entity	
+}
+
+VIET_wood_dice = {
+	icon = "artifact_VIET_wood_dice.dds"
+	asset = ep1_western_box_small_basic_01_a_entity	
+}
+
+VIET_silk_slippers = {
+	icon = "artifact_VIET_silk_slippers.dds"
+	asset = ep1_western_box_small_basic_01_a_entity	
+}
+
+VIET_pewter_spoon = {
+	icon = "artifact_VIET_pewter_spoon.dds"
+	asset = ep1_western_box_small_basic_01_a_entity	
+}
+
+VIET_measuring_rod = {
+	icon = "artifact_VIET_measuring_rod.dds"
+	asset = ep1_western_box_small_basic_01_a_entity	
+}
+
+VIET_prehistoric_bone_flute = {
+	icon = "artifact_VIET_prehistoric_bone_flute.dds"
+	asset = ep1_western_box_small_basic_01_a_entity	
+}
+
+VIET_weighing_scales = {
+	icon = "artifact_VIET_weighing_scales.dds"
+	asset = ep1_western_box_small_basic_01_a_entity	
+}
+
+VIET_common_hammer = {
+	icon = "artifact_VIET_common_hammer.dds"
+	asset = ep1_western_box_small_basic_01_a_entity	
+}
+
+VIET_trusty_shovel = {
+	icon = "artifact_VIET_trusty_shovel.dds"
+	asset = ep1_western_box_small_basic_01_a_entity	
+}
+
+VIET_leather_knapsack = {
+	icon = "artifact_VIET_leather_knapsack.dds"
+	asset = ep1_western_box_small_basic_01_a_entity	
+}
+
+VIET_wooden_bowl = {
+	icon = "artifact_VIET_wooden_bowl.dds"
+	asset = ep1_western_box_small_basic_01_a_entity	
+}
+
+VIET_reliable_lockpick = {
+	icon = "artifact_VIET_reliable_lockpick.dds"
+	asset = ep1_western_box_small_basic_01_a_entity	
+}
+
+VIET_ceramic_tankard = {
+	icon = "artifact_VIET_ceramic_tankard.dds"
+	asset = ep1_western_box_small_basic_01_a_entity	
+}
+
+VIET_wooden_tankard = {
+	icon = "artifact_VIET_wooden_tankard.dds"
+	asset = ep1_western_box_small_basic_01_a_entity	
+}
+
+VIET_convenient_backscratcher = {
+	icon = "artifact_VIET_convenient_backscratcher.dds"
+	asset = ep1_western_box_small_basic_01_a_entity	
+}
+
+VIET_rugged_walking_stick = {
+	icon = "artifact_VIET_rugged_walking_stick.dds"
+	asset = ep1_western_box_small_basic_01_a_entity	
+}
+
+VIET_simple_gloves = {
+	icon = "artifact_VIET_simple_gloves.dds"
+	asset = ep1_western_box_small_basic_01_a_entity	
+}
+
+VIET_elegant_candlestick = {
+	icon = "artifact_VIET_elegant_candlestick.dds"
+	asset = ep1_western_box_small_basic_01_a_entity	
+}
+
+VIET_basic_lantern = {
+	icon = "artifact_VIET_basic_lantern.dds"
+	asset = ep1_western_box_small_basic_01_a_entity	
+}
+
+VIET_favored_handkerchief = {
+	icon = "artifact_VIET_favored_handkerchief.dds"
+	asset = ep1_western_box_small_basic_01_a_entity	
+}
+
+VIET_candy_jar = {
+	icon = "artifact_VIET_candy_jar.dds"
+	asset = ep1_western_box_small_basic_01_a_entity	
+}
+
+VIET_wooden_whistle = {
+	icon = "artifact_VIET_wooden_whistle.dds"
+	asset = ep1_western_box_small_basic_01_a_entity	
+}
+
+VIET_simple_waterskin = {
+	icon = "artifact_VIET_simple_waterskin.dds"
+	asset = ep1_western_box_small_basic_01_a_entity	
+}
+
+VIET_hollow_doll = {
+	icon = "artifact_VIET_hollow_doll.dds"
+	asset = ep1_western_box_small_basic_01_a_entity	
+}
+
+VIET_decorated_broom = {
+	icon = "artifact_VIET_decorated_broom.dds"
+	asset = ep1_western_box_small_basic_01_a_entity	
+}
+
+VIET_traveling_inkwell = {
+	icon = "artifact_VIET_traveling_inkwell.dds"
+	asset = ep1_western_box_small_basic_01_a_entity	
+}
+
+VIET_ancient_coin = {
+	icon = "artifact_VIET_ancient_coin.dds"
+	asset = ep1_western_box_small_basic_01_a_entity	
+}
+
+
+
+
+
+
+
+
+
+

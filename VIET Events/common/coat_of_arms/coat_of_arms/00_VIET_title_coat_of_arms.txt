@@ -1,36 +1,36 @@
 
 
-d_VIET_dreamer_male = {
-	pattern="pattern_solid.dds"
-	color1="purple"
-	color2="purple"	
-	colored_emblem = {
-		texture = "ce_eagle_double.dds"
-		color1 = "white"
-		color2 = "white"
-		instance = { position = { 0.5 0.5 } scale = { 0.9 1.0 }  }		
-	}
-}
-d_VIET_dreamer_female = {
-	pattern="pattern_solid.dds"
-	color1="purple"
-	color2="purple"	
-	colored_emblem = {
-		texture = "ce_eagle_double.dds"
-		color1 = "white"
-		color2 = "white"
-		instance = { position = { 0.5 0.5 } scale = { 0.9 1.0 }  }		
-	}
-}
-d_VIET_elsewhere = {
-	pattern="pattern_solid.dds"
-	color1="purple"
-	color2="purple"	
-	colored_emblem = {
-		texture = "ce_eagle_double.dds"
-		color1 = "white"
-		color2 = "white"
-		instance = { position = { 0.5 0.5 } scale = { 0.9 1.0 }  }		
-	}
-}
+# d_VIET_dreamer_male = {
+# 	pattern="pattern_solid.dds"
+# 	color1="purple"
+# 	color2="purple"	
+# 	colored_emblem = {
+# 		texture = "ce_eagle_double.dds"
+# 		color1 = "white"
+# 		color2 = "white"
+# 		instance = { position = { 0.5 0.5 } scale = { 0.9 1.0 }  }		
+# 	}
+# }
+# d_VIET_dreamer_female = {
+# 	pattern="pattern_solid.dds"
+# 	color1="purple"
+# 	color2="purple"	
+# 	colored_emblem = {
+# 		texture = "ce_eagle_double.dds"
+# 		color1 = "white"
+# 		color2 = "white"
+# 		instance = { position = { 0.5 0.5 } scale = { 0.9 1.0 }  }		
+# 	}
+# }
+# d_VIET_elsewhere = {
+# 	pattern="pattern_solid.dds"
+# 	color1="purple"
+# 	color2="purple"	
+# 	colored_emblem = {
+# 		texture = "ce_eagle_double.dds"
+# 		color1 = "white"
+# 		color2 = "white"
+# 		instance = { position = { 0.5 0.5 } scale = { 0.9 1.0 }  }		
+# 	}
+# }
 

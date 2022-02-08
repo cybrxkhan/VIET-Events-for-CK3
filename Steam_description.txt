@@ -1,6 +1,6 @@
-[img]https://i.imgur.com/e3qA5i6.jpg[/img]
+[img]https://i.imgur.com/hZydmbv.png[/img]
 
-[h1]Current Version: 1.4.8 "Animalia" (Released 1/22/22, Compatible with vanilla patch 1.4.X)[/h1]
+[h1]Current Version: 1.5.0 "Zhao Mingcheng" (Released 2/8/22, Compatible with vanilla patch 1.5.X)[/h1]
 [h1][B][url=https://discord.gg/9KuyXv2uZA]Discord Server for my mods[/url]
 [url=https://cybrxkhansmods.godaddysites.com/]Official Website for my mods[/url][/B][/h1]
 [B][url=https://forum.paradoxplaza.com/forum/threads/mod-viet-events-for-ck3-a-flavor-and-immersion-event-mod.1422081/]Paradox Forum Thread[/url][/B]
@@ -24,21 +24,21 @@ Feel free to use my work in your mods - all I ask is that I am credited and (if 
 [img]http://i.imgur.com/EyXurbK.jpg[/img]
 
 [LIST]
-[*]Over [B]728 new flavor events[/B] to experience!
-[*]Explore new decisions, character interactions, activities, and event chains
+[*]Over [B]774 new flavor events[/B] to experience!
+[*]Explore new decisions, artifacts, character interactions, activities, and more!
 [*]Game rule to disable sillier events for those who don't like them, with three levels to choose from: Balanced (Default), Serious (Restricted), and All Events (Full)
 [*][B]Compatible with almost anything[/B] since it doesn't touch any vanilla files - even with overhaul mods, you can via game rule disable events that reference things specific to our medieval world that wouldn’t make sense in other time periods or universes (like fantasy and sci-fi conversion mods)
 [*]Learn history with [B]Historical Context tooltips[/B] that provide information about what inspired some of the events - sometimes, reality is stranger than fiction! (These can be disabled via game rule for those who find it immersion breaking.)
 [/LIST]
 
 [h1]TRANSLATIONS AVAILABLE[/h1]
-We now have every official language covered! Due to my irregular schedule for updating my mods, and the fact that people are kindly spending their own free time and effort to work on them, [B]please be aware that the folks working on these translations may or may not be up to date with the latest version of VIET[/B]. Do note that all non-English languages available in the vanilla game has placeholder English localization in the base version of VIET so they can be safely run, it will just display everything in English.
+Because people are kindly spending their own free time and effort to work on these transations, [B]please be aware that the folks working on these translations may or may not be up to date with the latest version of VIET[/B]. Do note that all non-English languages available in the vanilla game has placeholder English localization in the base version of VIET, so they can be safely run, it will just display untranslated text in English (instead of gibberish).
 [LIST]
 [*]Chinese - [url=https://paratranz.cn/projects/1580]a team led by Tbeabm[/url] has provided translation which is integrated into base VIET.
 [*]French - [url=https://steamcommunity.com/sharedfiles/filedetails/?id=2234027514]Available as sub-mod here[/url], thanks to Mouchi
 [*]German - [url=https://steamcommunity.com/sharedfiles/filedetails/?id=2447914570]Available as sub-mod here[/url], thanks to Illusive
 [*]Korean - [url=https://steamcommunity.com/sharedfiles/filedetails/?id=2227982565]Available as sub-mod here[/url], thanks to Ohboksu
-[*]Russian - [url=https://steamcommunity.com/sharedfiles/filedetails/?id=2230011509]Available as sub-mod here[/url], thanks to Alesha_Popvich
+[*]Russian - AmoreLibre has provided translation which is integrated into base VIET
 [*]Spanish - Sourenics has provided translation which is integrated into base VIET.
 [/LIST]
 
@@ -52,22 +52,20 @@ Thanks!
 
 [img]http://i.imgur.com/RQ5QZTF.jpg[/img]
 
-[h1]Version 1.4.8 "Saint Valerie"[/h1]
+[h1]Version 1.5.0 "Zhao Mingcheng"[/h1]
 
-[I]“I have loving-kindness for footless creatures; for those with two feet I have loving-kindness. I have loving-kindness for those with four feet; for those with many feet I have loving-kindness. May all beings, all living beings, all creatures, every one, meet with good fortune; may nothing bad come to anyone.”
-
-- Anguttara Nikaya 4:67 (Part of the Pali Canon of Theravada Buddhism)[/I]
+[I]Zhao Mingcheng was a Chinese poet, politician, scholar, and antiquarian of the Song Dynasty. He was the husband and lover of Li Qingzhao, one of the greatest female poets in Chinese literary history. The couple spent years amassing and cataloging a large collection of ancient art and artifacts. Contrary to other scholars of his day, Zhao stressed the importance of ancient inscriptions and objects as primary historical sources. Sadly, the two lost much of their collection during the Jurchen invasion of Song China, and Zhao passed away shortly afterwards, leaving his widow to continue his legacy.[/I]
 
 [LIST]
-[*]Added 46 animal themed events
-[*]Added 3 new decisions:
-[LIST]
-[*]Purchase Dependable Donkeys
-[*]Construct More Dovecotes on Residence
-[*]Listen to Wild Songbirds
-[/LIST]
-[*]Added a few new event backgrounds for the Indian region
-[*]Miscellaneous bugfixes
+[*]Updated to vanilla patch 1.5 “Fleur de Lis”
+[*]Added 46 artifacts, that can be gained via 46 various events, including 3 recipes and 1 book: 26 from old CK2 VIET and 20 brand new ones
+[*]Added new game concept: Clutter Artifacts
+[*]AAdded two new artifact types: Clutter Artifacts and Recipes
+[*]AMade the crow event chain rarer
+[*]ARemoved a few unused modifiers
+[*]AChanged the Dreamer and Qi Ma the Liar NPCs a bit so I wouldn’t have to use a roundabout method to make them unpruneable
+[*]AFixed several events not triggering: interest in shorthand, submerged shrine, servant forgets how many spoons of medicine to take
+[*]AMiscellaneous bugfixes
 [/LIST]
 
 *Adapted from VIET for CK2

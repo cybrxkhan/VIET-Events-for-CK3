@@ -889,7 +889,7 @@ VIETmisc.2018 = {
 	type = character_event
 	title = VIETmisc.2018.t
 	desc = VIETmisc.2018.desc
-	theme = VIET_background_skyrim_forest
+	theme = VIET_theme_skyrim_forest
 	
 	left_portrait = {
 		character = root

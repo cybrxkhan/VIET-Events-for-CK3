@@ -680,11 +680,11 @@ VIET_purchase_herbs_small = {
 	negate_health_penalty_add = 0.1
 	fertility = 0.02
 }
-VIET_purchase_herbs_medium = {
-	icon = health_positive
-	negate_health_penalty_add = 0.3
-	fertility = 0.05
-}
+# VIET_purchase_herbs_medium = {
+# 	icon = health_positive
+# 	negate_health_penalty_add = 0.3
+# 	fertility = 0.05
+# }
 VIET_purchase_herbs_large = {
 	icon = health_positive
 	negate_health_penalty_add = 0.5
@@ -857,10 +857,10 @@ VIET_servants_death_love_lesson = {
 	icon = love_positive
 	monthly_piety = 0.5
 }
-VIET_final_journey_dream_relative = {
-	icon = love_positive
-	monthly_piety = 0.2
-}
+# VIET_final_journey_dream_relative = {
+# 	icon = love_positive
+# 	monthly_piety = 0.2
+# }
 VIET_scooby_doo_villain_let_go = {
 	icon = county_modifier_opinion_negative
 	county_opinion_add = -5
@@ -916,12 +916,12 @@ VIET_sympathetic = {
 	diplomacy = 2
 	intrigue = -1
 }
-VIET_admits_mistakes = {
-	icon = social_positive
-	monthly_lifestyle_xp_gain_mult = 0.03
-	monthly_piety = 0.2
-	monthly_prestige = -0.2
-}
+# VIET_admits_mistakes = {
+# 	icon = social_positive
+# 	monthly_lifestyle_xp_gain_mult = 0.03
+# 	monthly_piety = 0.2
+# 	monthly_prestige = -0.2
+# }
 VIET_smuggling_side_business = {
 	icon = social_positive
 	intrigue = 1
@@ -1212,11 +1212,11 @@ VIET_abandoned_a_baby = {
 	county_opinion_add = -5
 	general_opinion = -10
 }
-VIET_abaonded_as_a_child = {
-	icon = social_positive
-	diplomacy = -1
-	intrigue = 1
-}
+# VIET_abaonded_as_a_child = {
+# 	icon = social_positive
+# 	diplomacy = -1
+# 	intrigue = 1
+# }
 VIET_hired_new_dutiful_servants = {
 	icon = county_modifier_development_positive
 	stewardship = 1
@@ -1640,13 +1640,13 @@ VIET_crow_gift_plants = {
 	icon = asatru_raven_positive
 	health = 0.3
 }
-VIET_dreamer = {
-	icon = magic_positive
-	monthly_piety = 0.3
-	hostile_scheme_resistance_mult = 0.2
-	stress_gain_mult = -0.1
-	stress_loss_mult = 0.1
-}
+# VIET_dreamer = {
+# 	icon = magic_positive
+# 	monthly_piety = 0.3
+# 	hostile_scheme_resistance_mult = 0.2
+# 	stress_gain_mult = -0.1
+# 	stress_loss_mult = 0.1
+# }
 VIET_self_hating_woman = {
 	icon = social_negative
 	diplomacy = -1

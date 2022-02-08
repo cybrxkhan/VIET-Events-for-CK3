@@ -296,20 +296,7 @@ VIETold.1005 = {
 
 	trigger = {
 		NOT = { has_game_rule = VIET_conversion_universe_events }
-		OR = {
-			has_culture_group = culture_group:baltic_group
-			has_culture_group = culture_group:byzantine_group
-			has_culture_group = culture_group:central_germanic_group
-			has_culture_group = culture_group:east_slavic_group
-			has_culture_group = culture_group:magyar_group
-			has_culture_group = culture_group:south_slavic_group
-			has_culture_group = culture_group:west_slavic_group
-			has_culture_group = culture_group:latin_group
-			has_culture_group = culture_group:frankish_group
-			has_culture_group = culture_group:balto_finnic_group
-			has_culture_group = culture_group:volga_finnic_group
-			has_culture_group = culture_group:north_germanic_group
-		}
+		culture_has_european_heritage_pillar_trigger = yes
 	}
 	
 	weight_multiplier = {
@@ -372,7 +359,7 @@ VIETold.1006 = {
 
 	trigger = {
 		NOT = { has_game_rule = VIET_conversion_universe_events }
-		has_culture_group = culture_group:byzantine_group
+		culture = { has_cultural_pillar = heritage_byzantine }
 	}
 	
 	weight_multiplier = {
@@ -642,9 +629,8 @@ VIETold.1011 = {
 	trigger = {
 		NOT = { has_game_rule = VIET_conversion_universe_events }
 		NOT = { has_character_flag = VIET_byzantine_bitter_vegetables_happened }
-		NOT = { has_culture_group = culture_group:byzantine_group }
+		NOT = { culture = { has_cultural_pillar = heritage_byzantine } }
 		capital_province = {
-			#has_culture_group = culture_group:byzantine_group # Apparently this doesn't work in CK3, even though the equivalent worked in CK2?
 			OR = {
 				geographical_region = world_europe_south_east
 				geographical_region = world_asia_minor			
@@ -718,10 +704,8 @@ VIETold.1012 = {
 	trigger = {
 		NOT = { has_game_rule = VIET_conversion_universe_events }
 		OR = {
-			has_culture_group = culture_group:arabic_group
-			has_culture_group = culture_group:east_african_group
-			has_culture_group = culture_group:berber_group
-			has_culture_group = culture_group:somalian_group
+			culture_has_mena_heritage_pillar_trigger = yes
+			culture_has_east_african_heritage_pillar_trigger = yes
 		}		
 	}
 	
@@ -780,15 +764,9 @@ VIETold.1013 = {
 	trigger = {
 		NOT = { has_game_rule = VIET_conversion_universe_events }
 		OR = {
-			has_culture_group = culture_group:arabic_group
-			has_culture_group = culture_group:east_african_group
-			has_culture_group = culture_group:somalian_group
-			has_culture_group = culture_group:berber_group
-			has_culture_group = culture_group:byzantine_group
-			has_culture_group = culture_group:frankish_group
-			has_culture_group = culture_group:iberian_group
-			has_culture_group = culture_group:latin_group
-			has_culture_group = culture_group:south_slavic_group
+			culture_has_east_african_heritage_pillar_trigger = yes
+			culture_has_south_european_heritage_pillar_trigger = yes
+			culture_has_north_african_heritage_pillar_trigger = yes
 		}		
 	}
 	
@@ -2478,10 +2456,9 @@ VIETold.1038 = {
 	trigger = {
 		NOT = { has_game_rule = VIET_conversion_universe_events }
 		NOR = {
-			has_culture_group = culture_group:dravidian_group
-			has_culture_group = culture_group:indo_aryan_group
-			has_culture_group = culture_group:burman_group
-			has_culture_group = culture_group:tibetan_group
+			culture_has_south_asian_heritage_pillar_trigger = yes
+			culture = { has_cultural_pillar = heritage_burman }
+			culture = { has_cultural_pillar = heritage_tibetan }
 			religion = { is_in_family = rf_eastern }
 			capital_province = {
 				geographical_region = graphical_india
@@ -3094,38 +3071,6 @@ VIETold.1044 = {
 				is_available_ai_adult = yes
 			}
 			save_scope_as = scope_VIET_bad_teeth_person
-			#random_list = {
-			#	50 = {
-			#		modifier = {
-			#			add = 5
-			#			has_trait = diligent
-			#		}
-			#		modifier = {
-			#			add = 5
-			#			has_trait = zealous
-			#		}
-			#		modifier = {
-			#			add = 5
-			#			has_trait = trusting
-			#		}
-			#		add_character_flag = VIET_followed_miswak_advice
-			#	}
-			#	50 = {
-			#		modifier = {
-			#			add = 5
-			#			has_trait = lazy
-			#		}
-			#		modifier = {
-			#			add = 5
-			#			has_trait = stubborn
-			#		}
-			#		modifier = {
-			#			add = 5
-			#			has_trait = content
-			#		}
-			#		add_character_flag = VIET_did_not_follow_miswak_advice
-			#	}
-			#}
 		}
 	}
 	
@@ -3190,37 +3135,6 @@ VIETold.1044 = {
 				}
 			}
 		}
-		#if = {
-		#	limit = {
-		#		scope:scope_VIET_bad_teeth_person = {
-		#			has_character_flag = VIET_followed_miswak_advice
-		#		}
-		#	}
-		#	VIET_medium_prestige_gain_effect = yes
-		#	scope:scope_VIET_bad_teeth_person = {
-		#		add_character_modifier = {
-		#			modifier = VIET_using_miswak_more
-		#			years = 5
-		#		}
-		#		add_opinion = {
-		#			target = root
-		#			modifier = VIET_opinion_miswak_advice_good
-		#		}			
-		#	}
-		#}
-		#if = {
-		#	limit = {
-		#		scope:scope_VIET_bad_teeth_person = {
-		#			has_character_flag = VIET_did_not_follow_miswak_advice
-		#		}
-		#	}
-		#	scope:scope_VIET_bad_teeth_person = {
-		#		add_opinion = {
-		#			target = root
-		#			modifier = VIET_opinion_miswak_advice_bad
-		#		}			
-		#	}		
-		#}
 		if = {
 			limit = {
 				has_game_rule = VIET_historical_context_on
@@ -3229,28 +3143,6 @@ VIETold.1044 = {
 		}
 	}
 
-	after = {
-		if = {
-			limit = {
-				scope:scope_VIET_bad_teeth_person = {
-					has_character_flag = VIET_followed_miswak_advice
-				}
-			}
-			scope:scope_VIET_bad_teeth_person = {
-				remove_character_flag = VIET_followed_miswak_advice
-			}
-		}
-		if = {
-			limit = {
-				scope:scope_VIET_bad_teeth_person = {
-					has_character_flag = VIET_did_not_follow_miswak_advice
-				}
-			}
-			scope:scope_VIET_bad_teeth_person = {
-				remove_character_flag = VIET_did_not_follow_miswak_advice
-			}
-		}
-	}
 }
 
 

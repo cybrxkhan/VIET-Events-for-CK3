@@ -87,6 +87,31 @@
 ###########################################################################################################################
 
 
+###########################################################################################################################
+# 
+# ARTIFACTS LEFT OUT FOR NOW
+# 
+# Ancient Pottery
+# Ancient Ostracon
+# African (Nok) Terracotta Figure
+# Cuneiform Tablet
+# Wolf Pelt
+# Decorative Lute
+# Female Marble Statue (Hellenic)
+# Male Marble Statue (Hellenic)
+# Mythical Creature's Bone
+# Statue of Guan Yu
+# Flower Vase
+# Ancient Statue Desert
+# Ancient Stone Head (Celtic)
+# Landscape Painting (Lake)
+# Landscape Painting (Ruin)
+# Landscape Painting (Forest)
+# Recipe for "Shadow Banish" Wine
+# 
+###########################################################################################################################
+
+
 
 #################################################################################################################################
 # 
@@ -104,49 +129,16 @@
 
 
 
-#	title = {
-#		first_valid = {
-#			triggered_desc = {
-#				trigger = {
-#					VIET_norse_localization_trigger = yes
-#				}
-#				desc = VIETmisc.0018.t.norse
-#			}
-#			desc = VIETmisc.0018.t
-#		}
-#	}
-#
-#	desc = {
-#		first_valid = {
-#			triggered_desc = {
-#				trigger = {
-#					VIET_norse_localization_trigger = yes
-#				}
-#				desc = VIETmisc.0005.desc.norse
-#			}
-#			desc = VIETmisc.0005.desc
-#		}
-#	}
-#
-#
-#		name = {
-#			trigger = { VIET_norse_localization_trigger = no }
-#			text = VIETmisc.0005.a
-#		}
-#		name = {
-#			trigger = { VIET_norse_localization_trigger = yes }
-#			text = VIETmisc.0005.a.norse
-#		}
-
 namespace = VIETtest
 
 
 # Prestige and piety test
 VIETtest.0001 = {
 	type = character_event
-	title = VIETtest.0001.t
-	desc = VIETtest.0001.desc
+	title = VIETmisc.0001.t
+	desc = VIETmisc.0001.desc
 	theme = VIET_theme_tuscan_country
+	orphan = yes 
 	
 	left_portrait = root
 	#right_portrait = root
@@ -157,284 +149,192 @@ VIETtest.0001 = {
 	
 	trigger = {
 		is_adult = yes
+		has_global_variable = VIET_is_active
 	}
 	
 	option = {
-		name = "OK"		
-		VIET_tiny_prestige_gain_effect = yes
-		VIET_tiny_piety_gain_effect = yes
-	}	
-	option = {
-		name = "OK"		
-		VIET_tiny_prestige_loss_effect = yes
-		VIET_tiny_piety_loss_effect = yes
-	}	
-	option = {
-		name = "OK"		
-		VIET_small_prestige_gain_effect = yes
-		VIET_small_piety_gain_effect = yes
-	}	
-	option = {
-		name = "OK"		
-		VIET_small_prestige_loss_effect = yes
-		VIET_small_piety_loss_effect = yes
-	}	
-	option = {
-		name = "OK"		
-		VIET_medium_prestige_gain_effect = yes
-		VIET_medium_piety_gain_effect = yes
-	}	
-	option = {
-		name = "OK"		
-		VIET_medium_prestige_loss_effect = yes
-		VIET_medium_piety_loss_effect = yes
+		name = VIETmisc.0001.a
+		add_stress = 1
 	}
 }
 
-# Gold test
-VIETtest.0002 = {
+# Artifact test
+VIETtest.0008 = {
 	type = character_event
-	title = VIETtest.0002.t
-	desc = VIETtest.0002.desc
-	theme = VIET_theme_ancient_cairn
-	
-	#left_portrait = root
-	right_portrait = root
-	
-	on_trigger_fail = {
-		add_gold = 1000
-	}
-	
-	trigger = {
-		is_adult = yes
-	}
-	
-	option = {
-		name = "OK"
-		add_gold = 100
-		#show_as_tooltip - what do?
-	}
-}
-
-# Stress and toast test
-VIETtest.0003 = {
-	type = character_event
-	title = VIETtest.0003.t
-	desc = VIETtest.0003.desc
-	theme = VIET_theme_small_town
-	
-	left_portrait = root
-	#right_portrait = root
-	
-	on_trigger_fail = {
-		add_gold = 1000
-	}
-	
-	trigger = {
-		is_adult = yes
-	}
-	
-	option = {
-		name = "OK"
-		
-		random_list = {
-			10 = {
-				desc = VIETtest.0003.a.a
-				send_interface_toast = {
-					left_icon = ROOT
-					title = VIETtest.0003.toast.a
-					add_stress = 10
-					add_gold = 100
-				}
-			}
-			10 = {
-				desc = VIETtest.0003.a.b
-				send_interface_toast = {
-					left_icon = ROOT
-					right_icon = ROOT
-					title = VIETtest.0003.toast.b
-					add_stress = -10
-					add_gold = 1000
-				}
-			}
-		}
-	}
-}
-
-# Music test
-VIETtest.0004 = {
-	type = character_event
-	title = VIETtest.0004.t
-	desc = VIETtest.0004.desc
-	theme = VIET_theme_oblivion_pastoral_dream
-	
-	left_portrait = root
-	#right_portrait = root
-	
-	on_trigger_fail = {
-		add_gold = 1000
-	}
-	
-	trigger = {
-		is_adult = yes
-	}
-	
-	immediate = {
-		play_music_cue = mx_cue_meadandwine
-	}
-	
-	option = {
-		name = "OK"
-		VIET_large_prestige_gain_effect = yes
-		VIET_large_piety_gain_effect = yes
-	}		
-	option = {
-		name = "OK"
-		VIET_large_prestige_loss_effect = yes
-		VIET_large_piety_loss_effect = yes
-	}	
-	option = {
-		name = "OK"
-		VIET_huge_prestige_gain_effect = yes
-		VIET_huge_piety_gain_effect = yes
-	}		
-	option = {
-		name = "OK"
-		VIET_huge_prestige_loss_effect = yes
-		VIET_huge_piety_loss_effect = yes
-	}	
-	option = {
-		name = "OK"
-		VIET_random_small_prestige_gain_effect = yes
-		VIET_random_small_piety_gain_effect = yes
-	}	
-	option = {
-		name = "OK"
-		VIET_random_small_prestige_loss_effect = yes
-		VIET_random_small_piety_loss_effect = yes
-	}
-}
-
-#Music test
-VIETtest.0005 = {
-	type = character_event
-	title = VIETtest.0006.t
-	desc = "Birdsong testing"
-	theme = VIET_theme_skyrim_forest
+	title = VIETtest.0008.t
+	desc = VIETtest.0008.desc
+	theme = VIET_theme_tuscan_country
+	orphan = yes 
 	
 	left_portrait = {
 		character = root
 		animation = happiness
 	}
-	
+	artifact = { # To display the artifact in the event-window
+        target = scope:VIET_baklava_test
+        position = lower_center_portrait
+    }
+
 	immediate = {
-		VIET_immediate_songbird_sound_effect = yes
+		hidden_effect_new_artifact = {
+			create_artifact = {	
+				name = VIET_recipe_baklava_name
+				description = VIET_recipe_baklava_desc
+				rarity = illustrious
+				type = VIET_recipe
+				visuals = VIET_cool_baklava
+				quality = 2
+				wealth = 2
+				modifier = artifact_monthly_prestige_5_modifier
+				save_scope_as = VIET_baklava_test
+				decaying = no
+			}
+			scope:VIET_baklava_test = {
+				add_artifact_modifier = artifact_diplomacy_per_prestige_level_modifier
+			}
+		}
+		# hidden_effect_new_artifact = {
+		# 	create_artifact = {	
+		# 		name = VIET_recipe_sweetroll_name
+		# 		description = VIET_recipe_sweetroll_desc
+		# 		#rarity = masterwork
+		# 		type = VIET_recipe
+		# 		visuals = VIET_legendary_sweetroll
+		# 		quality = 2
+		# 		wealth = 2
+		# 		modifier = artifact_monthly_piety_8_modifier
+		# 		save_scope_as = VIET_baklava_test
+		# 	}
+		# 	scope:VIET_baklava_test = {
+		# 		flag_as_trash_artifact = yes
+		# 		add_artifact_modifier = artifact_diplomacy_per_prestige_level_modifier
+		# 	}
+		# }
 	}
 	
 	option = {
-		name = "OK"
-		VIET_option_songbird_sound_effect = yes	
+		name = VIETtest.0008.a
+		show_as_tooltip = {
+			scope:VIET_baklava_test = {
+				set_owner = {
+					target = root
+				}
+			}
+		}
+	}
+	option = {
+		name = VIETmisc.5005.b		
+		hidden_effect = {
+			destroy_artifact = scope:VIET_baklava_test
+		}
 	}
 }
 
-# Music test
-VIETtest.0006 = {
+# Artifact test
+VIETtest.0009 = {
 	type = character_event
-	title = VIETtest.0006.t
-	desc = "Goose Testing"
-	theme = VIET_theme_small_town
+	title = VIETtest.0009.t
+	desc = VIETtest.0009.desc
+	theme = VIET_theme_skyrim_forest
+	orphan = yes 
 	
 	left_portrait = {
 		character = root
-		animation = fear
+		animation = happiness
 	}
-	
+	artifact = { # To display the artifact in the event-window
+        target = scope:VIET_hummus_test
+        position = lower_center_portrait
+    }
+
 	immediate = {
-		play_music_cue = mx_VIET_goose
+		hidden_effect_new_artifact = {
+			create_artifact = {	
+				name = VIET_recipe_hummus_name
+				description = VIET_recipe_hummus_desc
+				rarity = famed
+				type = VIET_recipe
+				visuals = VIET_hummus
+				quality = 15
+				wealth = 15
+				modifier = artifact_diplomacy_per_prestige_level_modifier
+				modifier = artifact_killer_4_artifact_modifier
+				save_scope_as = VIET_hummus_test
+				decaying = no
+				history = {
+					type = created_before_history
+				}
+			}
+		}
 	}
 	
 	option = {
-		name = "HONK HONK"
+		name = VIETtest.0009.a
+		show_as_tooltip = {
+			scope:VIET_hummus_test = {
+				set_owner = {
+					target = root
+				}
+			}
+		}
+	}
+	option = {
+		name = VIETtest.0008.a
+		destroy_artifact = scope:VIET_hummus_test
 	}
 }
-#
-## County master file test
-#VIETtest.0007 = {
-#	hidden = yes
-#	type = empty
-#	immediate = {
-#        every_county = {
-#            trigger_event = { on_action = VIET_county_events days = { 1 365 } }
-#        }  
-#	}
-#}
 
-# County event tester
-#VIETtest.0008 = {
-#	type = character_event
-#	title = VIETtest.0008.t
-#	desc = VIETtest.0008.desc
-#	theme = VIET_theme_oblivion_pastoral_dream
-#	
-#	left_portrait = root
-#	
-#	#immediate = {
-#	#	random_sub_realm_county = {
-#	#		save_scope_as = random_county
-#	#	}
-#	#}
-#	
-#	option = {
-#		name = "berry"
-#		random_sub_realm_county = {
-#			save_scope_as = county
-#			trigger_event = VIETmisc.3100
-#		}
-#	}	
-#	option = {
-#		name = "blacksmith"
-#		random_sub_realm_county = {
-#			save_scope_as = county
-#			trigger_event = VIETmisc.4102
-#		}
-#	}	
-#	option = {
-#		name = "tumulus"
-#		random_sub_realm_county = {
-#			save_scope_as = county
-#			trigger_event = VIETmisc.3114
-#		}
-#	}	
-#	option = {
-#		name = "ghost"
-#		random_sub_realm_county = {
-#			save_scope_as = county
-#			trigger_event = VIETmisc.4109
-#		}
-#	}	
-#	option = {
-#		name = "monk"
-#		random_sub_realm_county = {
-#			save_scope_as = county
-#			trigger_event = VIETmisc.4113
-#		}
-#	}	
-#	option = {
-#		name = "tree"
-#		random_sub_realm_county = {
-#			save_scope_as = county
-#			trigger_event = VIETmisc.4126
-#		}
-#	}	
-#	option = {
-#		name = "monument"
-#		random_sub_realm_county = {
-#			save_scope_as = county
-#			trigger_event = VIETmisc.4120
-#		}
-#	}
-#}
+# Artifact book test
+VIETtest.0010 = {
+	type = character_event
+	title = VIETtest.0010.t
+	desc = VIETtest.0010.desc
+	theme = seduction
+	orphan = yes 
+	
+	left_portrait = {
+		character = root
+		animation = schadenfreude
+	}
+	artifact = { # To display the artifact in the event-window
+        target = scope:VIET_lusty_argonian_maid
+        position = lower_center_portrait
+    }
 
-
-
-
+	immediate = {
+		hidden_effect_new_artifact = {
+			create_artifact = {	
+				name = VIET_lusty_argonian_maid_name
+				description = VIET_lusty_argonian_maid_desc
+				#rarity = illustrious
+				type = book
+				visuals = book
+				quality = 65
+				wealth = 65
+				modifier = artifact_fertility_gain_1_modifier
+				modifier = artifact_courting_scheme_power_add_1_modifier
+				modifier = artifact_seduce_scheme_power_add_1_modifier
+				save_scope_as = VIET_lusty_argonian_maid
+				decaying = no
+				history = {
+					type = created_before_history
+				}
+			}
+		}
+	}
+	
+	option = {
+		name = VIETtest.0010.a
+		show_as_tooltip = {
+			scope:VIET_lusty_argonian_maid = {
+				set_owner = {
+					target = root
+				}
+			}
+		}
+	}
+	option = {
+		name = VIETtest.0010.b
+		destroy_artifact = scope:VIET_lusty_argonian_maid
+	}
+}

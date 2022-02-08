@@ -6547,27 +6547,8 @@ VIETold.2088 = {
 					geographical_region = world_steppe_west
 				}
 			}
-			has_culture_group = culture_group:baltic_group
-			has_culture_group = culture_group:byzantine_group
-			has_culture_group = culture_group:central_germanic_group
-			has_culture_group = culture_group:east_slavic_group
-			has_culture_group = culture_group:magyar_group
-			has_culture_group = culture_group:south_slavic_group
-			has_culture_group = culture_group:west_slavic_group
-			has_culture_group = culture_group:latin_group
-			has_culture_group = culture_group:frankish_group
-			has_culture_group = culture_group:west_germanic_group
-			has_culture_group = culture_group:arabic_group
-			has_culture_group = culture_group:balto_finnic_group
-			has_culture_group = culture_group:volga_finnic_group
-			has_culture_group = culture_group:berber_group
-			has_culture_group = culture_group:brythonic_group
-			has_culture_group = culture_group:east_african_group
-			has_culture_group = culture_group:goidelic_group
-			has_culture_group = culture_group:iberian_group
-			has_culture_group = culture_group:iranian_group
-			has_culture_group = culture_group:israelite_group
-			has_culture_group = culture_group:north_germanic_group
+			culture_has_european_heritage_pillar_trigger = yes
+			culture_has_mena_heritage_pillar_trigger = yes
 		}
 	}
 
@@ -6695,36 +6676,6 @@ VIETold.2089 = {
 					geographical_region = world_india
 				}
 			}
-			has_culture_group = culture_group:baltic_group
-			has_culture_group = culture_group:byzantine_group
-			has_culture_group = culture_group:central_germanic_group
-			has_culture_group = culture_group:east_slavic_group
-			has_culture_group = culture_group:magyar_group
-			has_culture_group = culture_group:south_slavic_group
-			has_culture_group = culture_group:west_slavic_group
-			has_culture_group = culture_group:latin_group
-			has_culture_group = culture_group:frankish_group
-			has_culture_group = culture_group:west_germanic_group
-			has_culture_group = culture_group:arabic_group
-			has_culture_group = culture_group:balto_finnic_group
-			has_culture_group = culture_group:volga_finnic_group
-			has_culture_group = culture_group:berber_group
-			has_culture_group = culture_group:brythonic_group
-			has_culture_group = culture_group:east_african_group
-			has_culture_group = culture_group:goidelic_group
-			has_culture_group = culture_group:iberian_group
-			has_culture_group = culture_group:iranian_group
-			has_culture_group = culture_group:israelite_group
-			has_culture_group = culture_group:north_germanic_group
-			has_culture_group = culture_group:dravidian_group
-			has_culture_group = culture_group:indo_aryan_group
-			has_culture_group = culture_group:akan_group
-			has_culture_group = culture_group:sahelian_group
-			has_culture_group = culture_group:senegambian_group
-			has_culture_group = culture_group:somalian_group
-			has_culture_group = culture_group:west_african_group
-			has_culture_group = culture_group:yoruba_group
-			has_culture_group = culture_group:central_african_group
 		}
 	}
 
@@ -6774,10 +6725,8 @@ VIETold.2089 = {
 		name = VIETold.2089.c
 		trigger = {
 			OR = {
-				has_culture_group = culture_group:sahelian_group
-				has_culture_group = culture_group:senegambian_group
-				has_culture_group = culture_group:west_african_group
-				has_culture_group = culture_group:central_african_group			
+				culture_has_west_african_heritage_pillar_trigger = yes
+				culture_has_central_african_heritage_pillar_trigger = yes		
 			}
 		}
 		VIET_small_prestige_gain_effect = yes
@@ -7944,13 +7893,13 @@ VIETold.2110 = {
 		NOT = { has_game_rule = VIET_conversion_universe_events }
 		OR = {
 			faith = faith:norse_pagan
-			has_culture_group = culture_group:north_germanic_group
+			culture = { has_cultural_pillar = heritage_north_germanic }
 		}
 		any_courtier_or_guest = {
 			OR = {
 				is_available_ai_adult = yes
 				faith = faith:norse_pagan
-				has_culture_group = culture_group:north_germanic_group
+				culture = { has_cultural_pillar = heritage_north_germanic }
 			}
 		}
 	}
@@ -7989,7 +7938,7 @@ VIETold.2110 = {
 				is_available_ai_adult = yes
 				OR = {
 					faith = faith:norse_pagan
-					has_culture_group = culture_group:north_germanic_group
+					culture = { has_cultural_pillar = heritage_north_germanic }
 				}
 			}
 			save_scope_as = scope_VIET_myling_courtier
@@ -9771,15 +9720,10 @@ VIETold.2138 = {
 	trigger = {
 		#VIET_is_sinosphere_trigger = no
 		NOT = { has_game_rule = VIET_conversion_universe_events }
+		NOT = { culture = { has_cultural_pillar = heritage_chinese } }
 		OR = {
-			has_culture_group = culture_group:byzantine_group
-			has_culture_group = culture_group:arabic_group
-			has_culture_group = culture_group:iranian_group
-			has_culture_group = culture_group:indo_aryan_group
-			has_culture_group = culture_group:mongolic_group
-			has_culture_group = culture_group:qiangic_group
-			has_culture_group = culture_group:tibetan_group
-			has_culture_group = culture_group:turkic_group
+			culture_has_asian_heritage_pillar_trigger = yes
+			culture = { has_cultural_pillar = heritage_byzantine }
 		}
 	}
 
@@ -11248,10 +11192,12 @@ VIETold.2158 = {
 	
 	trigger = {
 		NOT = { has_game_rule = VIET_conversion_universe_events }
-		OR = {
-			has_culture_group = culture_group:iranian_group
-			has_culture_group = culture_group:dravidian_group
-			has_culture_group = culture_group:indo_aryan_group
+		culture = {
+			OR = {
+				has_cultural_pillar = heritage_iranian
+				has_cultural_pillar = heritage_indo_aryan
+				has_cultural_pillar = heritage_dravidian
+			}
 		}		
 	}
 

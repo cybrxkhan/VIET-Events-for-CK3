@@ -1,26 +1,26 @@
 ﻿
 
-d_VIET_dreamer_male = {
-	1.1.1={
-		holder = VIET_character_006
-	}
-	88.8.8={
-		holder = 0
-	}
-}
-d_VIET_dreamer_female = {
-	1.1.1={
-		holder = VIET_character_007
-	}
-	88.8.8={
-		holder = 0
-	}
-}
-d_VIET_elsewhere = {
-	88.1.8={
-		holder = VIET_character_005
-	}
-	88.8.8={
-		holder = 0
-	}
-}
+# d_VIET_dreamer_male = {
+# 	1.1.1={
+# 		holder = VIET_character_006
+# 	}
+# 	88.8.8={
+# 		holder = 0
+# 	}
+# }
+# d_VIET_dreamer_female = {
+# 	1.1.1={
+# 		holder = VIET_character_007
+# 	}
+# 	88.8.8={
+# 		holder = 0
+# 	}
+# }
+# d_VIET_elsewhere = {
+# 	88.1.8={
+# 		holder = VIET_character_005
+# 	}
+# 	88.8.8={
+# 		holder = 0
+# 	}
+# }

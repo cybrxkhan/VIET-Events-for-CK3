@@ -2234,13 +2234,6 @@ VIETmisc.0028 = {
 		name = VIETmisc.0028.a
 		random = {
 			chance = 25
-			#modifier = {
-			#	add = 5
-			#	OR = {
-			#		culture_group = indo_aryan_group
-			#		culture_group = dravidian_group
-			#	}
-			#}
 			add_diplomacy_skill = 1
 		}
 	}	
@@ -2248,10 +2241,6 @@ VIETmisc.0028 = {
 		name = VIETmisc.0028.b
 		random = {
 			chance = 25
-			#modifier = {
-			#	add = 5
-			#	culture_group = byzantine_group
-			#}
 			add_martial_skill = 1
 		}
 	}	
@@ -2259,10 +2248,6 @@ VIETmisc.0028 = {
 		name = VIETmisc.0028.c
 		random = {
 			chance = 25
-			#modifier = {
-			#	add = 5
-			#	culture_group = arabic_group
-			#}
 			add_stewardship_skill = 1
 		}
 	}	
@@ -2270,10 +2255,6 @@ VIETmisc.0028 = {
 		name = VIETmisc.0028.d
 		random = {
 			chance = 25
-			#modifier = {
-			#	add = 5
-			#	culture_group = iranian_group
-			#}
 			add_intrigue_skill = 1
 		}
 	}	
@@ -2281,10 +2262,6 @@ VIETmisc.0028 = {
 		name = VIETmisc.0028.e
 		random = {
 			chance = 25
-			#modifier = {
-			#	add = 5
-			#	culture_group = chinese_group
-			#}
 			add_learning_skill = 1
 		}
 	}	
@@ -2292,14 +2269,6 @@ VIETmisc.0028 = {
 		name = VIETmisc.0028.f
 		random = {
 			chance = 25
-			#modifier = {
-			#	add = 5
-			#	OR = {
-			#		culture_group = magyar_group
-			#		culture_group = mongolic_group
-			#		culture_group = turkic_group
-			#	}
-			#}
 			add_prowess_skill = 1
 		}
 	}
@@ -8793,7 +8762,9 @@ scripted_trigger VIETmisc0111_foreign_traveler_trigger = {
 	is_adult = yes
 	OR = {
 		faith.religion = root.faith.religion
-		has_same_culture_group_as = root
+		culture = {
+			has_same_culture_heritage = root.culture
+		}
 	}
 }
 
@@ -8801,7 +8772,9 @@ scripted_trigger VIETmisc0111_foreign_ruler_for_creation_trigger = {
 	in_diplomatic_range = root
 	OR = {
 		faith.religion = root.faith.religion
-		has_same_culture_group_as = root
+		culture = {
+			has_same_culture_heritage = root.culture
+		}
 	}
 }
 
@@ -10320,7 +10293,7 @@ VIETmisc.0128 = {
 	type = character_event
 	title = VIETmisc.0128.t
 	desc = VIETmisc.0128.desc
-	theme = type_family
+	theme = family
 	override_background = { event_background = VIET_background_skyrim_forest }
 	
 	left_portrait = root
@@ -10410,7 +10383,12 @@ VIETmisc.0128 = {
 				culture = root.culture
 				save_scope_as = scope_VIET_abandoned_baby
 				random_traits = yes
-			}	
+			}
+			# scope:scope_VIET_abandoned_baby = {
+			# 	add_character_modifier = {
+			# 		modifier = VIET_abaonded_as_a_child
+			# 	}
+			# }
 		}
 	}
 	
@@ -19195,7 +19173,7 @@ VIETmisc.0222 = {
 				geographical_region = world_europe_west_britannia
 			}
 		}
-		VIET_is_european_culture_trigger = yes	
+		culture_has_european_heritage_pillar_trigger = yes	
 	}
 	
 	weight_multiplier = {
@@ -19303,7 +19281,7 @@ VIETmisc.0223 = {
 				geographical_region = world_europe_west_britannia
 			}
 		}
-		VIET_is_european_culture_trigger = no	
+		culture_has_european_heritage_pillar_trigger = no	
 	}
 	
 	weight_multiplier = {
@@ -19997,7 +19975,7 @@ VIETmisc.0229 = {
 	trigger = {
 		OR = {
 			NOT = { has_game_rule = VIET_normal_universe_events }
-			VIET_is_european_culture_trigger = yes
+			culture_has_european_heritage_pillar_trigger = yes
 		}
 		# Weed out cultures that wouldn't have these kinds of legal proceedings
 		NOT = { has_government = tribal_government }
