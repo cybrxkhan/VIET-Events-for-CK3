@@ -2,7 +2,7 @@
  # MISC
  artifact_VIET_clutter:0 "Clutter"
  artifact_VIET_recipe:0 "Recipe"
- VIET_artifact_limit_warning:0 "Adding this [clutter_artifact|E] to your inventory #X reduces#!#! the chances you'll encounter other [clutter_artifacts|E]"
+ VIET_artifact_limit_warning:0 "Adding this [clutter_artifact|E] to your inventory #X reduces#! the chances you'll encounter other [clutter_artifacts|E]"
 
  # Special Artifacts
  VIET_baklava_test_name:0 "Holy Slice of Baklava"
