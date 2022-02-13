@@ -1,6 +1,6 @@
 [img]https://i.imgur.com/hZydmbv.png[/img]
 
-[h1]Current Version: 1.5.0 "Zhao Mingcheng" (Released 2/8/22, Compatible with vanilla patch 1.5.X)[/h1]
+[h1]Current Version: 1.5.1 "Taillevent" (Released 2/12/22, Compatible with vanilla patch 1.5.X)[/h1]
 [h1][B][url=https://discord.gg/9KuyXv2uZA]Discord Server for my mods[/url]
 [url=https://cybrxkhansmods.godaddysites.com/]Official Website for my mods[/url][/B][/h1]
 [B][url=https://forum.paradoxplaza.com/forum/threads/mod-viet-events-for-ck3-a-flavor-and-immersion-event-mod.1422081/]Paradox Forum Thread[/url][/B]
@@ -24,7 +24,7 @@ Feel free to use my work in your mods - all I ask is that I am credited and (if 
 [img]http://i.imgur.com/EyXurbK.jpg[/img]
 
 [LIST]
-[*]Over [B]774 new flavor events[/B] to experience!
+[*]Over [B]783 new flavor events[/B] to experience!
 [*]Explore new decisions, artifacts, character interactions, activities, and more!
 [*]Game rule to disable sillier events for those who don't like them, with three levels to choose from: Balanced (Default), Serious (Restricted), and All Events (Full)
 [*][B]Compatible with almost anything[/B] since it doesn't touch any vanilla files - even with overhaul mods, you can via game rule disable events that reference things specific to our medieval world that wouldn’t make sense in other time periods or universes (like fantasy and sci-fi conversion mods)
@@ -52,20 +52,22 @@ Thanks!
 
 [img]http://i.imgur.com/RQ5QZTF.jpg[/img]
 
-[h1]Version 1.5.0 "Zhao Mingcheng"[/h1]
+[h1]Version 1.5.1 "Taillevent"[/h1]
 
-[I]Zhao Mingcheng was a Chinese poet, politician, scholar, and antiquarian of the Song Dynasty. He was the husband and lover of Li Qingzhao, one of the greatest female poets in Chinese literary history. The couple spent years amassing and cataloging a large collection of ancient art and artifacts. Contrary to other scholars of his day, Zhao stressed the importance of ancient inscriptions and objects as primary historical sources. Sadly, the two lost much of their collection during the Jurchen invasion of Song China, and Zhao passed away shortly afterwards, leaving his widow to continue his legacy.[/I]
+[I]Guillaume Tirel (c. 1310-1395 CE), better known as Taillevent, was a 14th century French cook at the French royal court. He is credited with writing Le Viandier, one of the earliest surviving medieval cookbooks.[/I]
 
 [LIST]
-[*]Updated to vanilla patch 1.5 “Fleur de Lis”
-[*]Added 46 artifacts, that can be gained via 46 various events, including 3 recipes and 1 book: 26 from old CK2 VIET and 20 brand new ones
-[*]Added new game concept: Clutter Artifacts
-[*]AAdded two new artifact types: Clutter Artifacts and Recipes
-[*]AMade the crow event chain rarer
-[*]ARemoved a few unused modifiers
-[*]AChanged the Dreamer and Qi Ma the Liar NPCs a bit so I wouldn’t have to use a roundabout method to make them unpruneable
-[*]AFixed several events not triggering: interest in shorthand, submerged shrine, servant forgets how many spoons of medicine to take
-[*]AMiscellaneous bugfixes
+[*]Added 9 new events:
+[LIST]
+[*]4 new recipe events
+[*]5 more potential events for Qi Ma the Liar about Royal Court
+[/LIST]
+[*]Added 4 recipe artifacts: Yogurt, Savory Pie, Sweet Pie, Bean Soup
+[*]Added Chinese localization for most new stuff
+[*]Tweaked Sinosphere trigger slightly and it now also accounts for descendant cultures
+[*]Moved Abacus and Ancient Coin artifacts from uncommon artifacts on actions to common artifacts on actions
+[*]Fixed issues with Russian localization
+[*]Miscellaneous bugfixes
 [/LIST]
 
 *Adapted from VIET for CK2

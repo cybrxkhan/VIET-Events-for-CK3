@@ -1,40 +1,40 @@
 ﻿l_russian:
 rule_VIET_events_atmosphere:0 "Атмосфера событий VIET"
-setting_VIET_balanced_events:0 «Сбалансированные события (по умолчанию)»
-setting_VIET_balanced_events_desc:0 «Большинство событий из событий VIET будут происходить, но самые глупые, которые нарушают погружение для некоторых игроков, отключены. Выберите это для наилучшего баланса между серьезными и беззаботными событиями».
+setting_VIET_balanced_events:0 "Сбалансированные события (по умолчанию)"
+setting_VIET_balanced_events_desc:0 "Большинство событий из событий VIET будут происходить, но самые глупые, которые нарушают погружение для некоторых игроков, отключены. Выберите это для наилучшего баланса между серьезными и беззаботными событиями".
 setting_VIET_all_events:0 "#high All Events#!"
 setting_VIET_all_events_desc:0 "Будут происходить все события VIET, в том числе и юмористические. Выберите это, если хотите получить полный опыт событий VIET."
 setting_VIET_serious_events:0 "#высокие серьезные события (с ограничениями)#!"
 setting_VIET_serious_events_desc:0 "Отключает большинство беззаботных событий из VIET. Выберите это, если вам нужны только серьезные, приземленные события."
 rule_VIET_universe_setting:0 "Настройка вселенной VIET"
-setting_VIET_normal_universe_events:0 «Настройка по умолчанию»
-setting_VIET_normal_universe_events_desc:0 «Выберите этот параметр, если вы играете в средневековом историческом сеттинге Crusader Kings 3 по умолчанию. События включены в соответствии с правилом VIET Events Atmosphere».
+setting_VIET_normal_universe_events:0 "Настройка по умолчанию"
+setting_VIET_normal_universe_events_desc:0 "Выберите этот параметр, если вы играете в средневековом историческом сеттинге Crusader Kings 3 по умолчанию. События включены в соответствии с правилом VIET Events Atmosphere".
 setting_VIET_historical_universe_events:0 "#высокая другая историческая настройка#!"
-setting_VIET_historical_universe_events_desc:0 «Выберите этот параметр, если вы играете с модом преобразования, действие которого происходит на Земле, но в другой период времени. Это отключает несколько событий, которые не имеют смысла вне средневекового периода».
+setting_VIET_historical_universe_events_desc:0 "Выберите этот параметр, если вы играете с модом преобразования, действие которого происходит на Земле, но в другой период времени. Это отключает несколько событий, которые не имеют смысла вне средневекового периода".
 setting_VIET_conversion_universe_events:0 "#Настройка мода высокой конверсии#!"
-setting_VIET_conversion_universe_events_desc:0 «Выберите этот параметр, если вы играете с модом преобразования, который меняет всю обстановку, например фэнтезийный или научно-фантастический мир. Это отключает события, относящиеся к местам, культурам, религиям и т . д . на Земле».
+setting_VIET_conversion_universe_events_desc:0 "Выберите этот параметр, если вы играете с модом преобразования, который меняет всю обстановку, например фэнтезийный или научно-фантастический мир. Это отключает события, относящиеся к местам, культурам, религиям и т . д . на Земле".
 rule_VIET_historical_context:0 "Подсказки исторического контекста VIET"
-setting_VIET_historical_context_on:0 «Вкл.»
-setting_VIET_historical_context_on_desc:0 «Иногда появляются всплывающие подсказки, которые дают контекст о том, что послужило причиной рассматриваемого события. Иногда реальность более странна, чем вымысел, поэтому некоторая информация может помочь игрокам понять историю, стоящую за кажущимися странными событиями».
-setting_VIET_historical_context_off:0 «Выкл.»
-setting_VIET_historical_context_off_desc:0 «Случайные всплывающие подсказки, которые предоставляют исторический контекст некоторых событий, не будут отображаться. Это для пуристов погружения, которые считают, что эти всплывающие подсказки нарушают погружение».
+setting_VIET_historical_context_on:0 "Вкл."
+setting_VIET_historical_context_on_desc:0 "Иногда появляются всплывающие подсказки, которые дают контекст о том, что послужило причиной рассматриваемого события. Иногда реальность более странна, чем вымысел, поэтому некоторая информация может помочь игрокам понять историю, стоящую за кажущимися странными событиями".
+setting_VIET_historical_context_off:0 "Выкл."
+setting_VIET_historical_context_off_desc:0 "Случайные всплывающие подсказки, которые предоставляют исторический контекст некоторых событий, не будут отображаться. Это для пуристов погружения, которые считают, что эти всплывающие подсказки нарушают погружение".
 rule_VIET_resource_amounts:0 "Прибыль/потеря ресурсов VIET"
-setting_VIET_resource_default:0 «По умолчанию»
-setting_VIET_resource_default_desc:0 «Единовременные суммы престижа или благочестия, полученные или потерянные в событиях, добавленных VIET, сохраняются в их значениях по умолчанию (в диапазоне от 1 до 50 прироста или убытка в зависимости от события), что является предполагаемым балансом VIET».
-setting_VIET_resource_one_and_a_half:0 «1,5x»
-setting_VIET_resource_one_and_a_half_desc:0 «Единая сумма престижа или благочестия, полученная или потерянная в большинстве событий VIET, примерно в 1,5 раза больше, чем по умолчанию (т. е. 15 благочестия вместо 10 благочестия). Это для игроков, которые считают значения по умолчанию слишком низкими».
+setting_VIET_resource_default:0 "По умолчанию"
+setting_VIET_resource_default_desc:0 "Единовременные суммы престижа или благочестия, полученные или потерянные в событиях, добавленных VIET, сохраняются в их значениях по умолчанию (в диапазоне от 1 до 50 прироста или убытка в зависимости от события), что является предполагаемым балансом VIET".
+setting_VIET_resource_one_and_a_half:0 "1,5x"
+setting_VIET_resource_one_and_a_half_desc:0 "Единая сумма престижа или благочестия, полученная или потерянная в большинстве событий VIET, примерно в 1,5 раза больше, чем по умолчанию (т. е. 15 благочестия вместо 10 благочестия). Это для игроков, которые считают значения по умолчанию слишком низкими".
 setting_VIET_resource_twice:0 "2x"
 setting_VIET_resource_twice_desc:0 "Единовременные суммы престижа или благочестия, полученные или потерянные в большинстве событий VIET, примерно в два раза больше, чем по умолчанию (т. е. 20 благочестия вместо 10 благочестия). Этот вариант несбалансирован и НЕ рекомендуется."
 rule_VIET_event_frequency:0 "Частота событий VIET"
-setting_VIET_event_frequency_default:0 «По умолчанию»
-setting_VIET_event_frequency_default_desc:0 «События VIET запускаются с частотой по умолчанию».
-setting_VIET_event_frequency_high:0 «Высокая»
+setting_VIET_event_frequency_default:0 "По умолчанию"
+setting_VIET_event_frequency_default_desc:0 "События VIET запускаются с частотой по умолчанию".
+setting_VIET_event_frequency_high:0 "Высокая"
 setting_VIET_event_frequency_high_desc:0 "События VIET запускаются несколько чаще. ВНИМАНИЕ: из-за того, как работает генератор случайных чисел, вы все еще можете видеть много событий одновременно или не видеть событий в течение длительных промежутков времени."
-setting_VIET_event_frequency_very_high:0 «Очень высокая»
+setting_VIET_event_frequency_very_high:0 "Очень высокая"
 setting_VIET_event_frequency_very_high_desc:0 "События VIET запускаются гораздо чаще. Это может привести к спаму событий! ПРЕДУПРЕЖДЕНИЕ. Из-за того, как работает генератор случайных чисел, вы можете по-прежнему видеть много событий одновременно или не видеть событий в течение длительных промежутков времени."
-setting_VIET_event_frequency_low:0 «Низкий»
+setting_VIET_event_frequency_low:0 "Низкий"
 setting_VIET_event_frequency_low_desc:0 "События VIET запускаются несколько реже. ВНИМАНИЕ: из-за того, как работает ГСЧ, вы все еще можете видеть много событий одновременно или не видеть событий в течение длительных промежутков времени."
-setting_VIET_event_frequency_very_low:0 «Очень низкая»
+setting_VIET_event_frequency_very_low:0 "Очень низкая"
 setting_VIET_event_frequency_very_low_desc:0 "События VIET запускаются намного реже. Вы можете редко видеть события! ПРЕДУПРЕЖДЕНИЕ. Из-за того, как работает генератор случайных чисел, вы все еще можете видеть много событий одновременно или не видеть событий в течение длительного времени."
 death_VIET_choduke_food:0 "умер, подавившись едой"
 d_VIET_dreamer_male:0 "Страна грез"
@@ -49,21 +49,11 @@ duke_feudal_male_d_VIET_dreamer_female:0 ""
 duke_feudal_female_d_VIET_dreamer_female:0 ""
 Duke_feudal_male_d_VIET_elsewhere:0 ""
 Duke_feudal_female_d_VIET_elsewhere:0 ""
- VIETtest.0008.t:0 "King of Kings of Desserts"
- VIETtest.0008.desc:0 "I have found the greatest holy relic known to [ROOT.Char.GetFaith.GetName]: the [VIET_baklava_test.GetName]!"
- VIETtest.0008.a:0 "How ironic I can worship this baklava, yet not eat it...."
- VIETtest.0009.t:0 "Legendary Sweetroll"
- VIETtest.0009.desc:0 "I have found a pastry from another dimension, that is clearly filled with great magical powers: the [VIET_sweetroll_test.GetName]!"
- VIETtest.0009.a:0 "I should avoid eating this."
- VIETtest.0010.t:0 "What's This?"
- VIETtest.0010.desc:0 "I have found a very interesting book in the [ROOT.Char.GetCulture.GetLanguage.GetName] language...."
- VIETtest.0010.a:0 "Oh ho ho... what's this?"
- VIETtest.0010.b:0 "This is blasphemy! I must cleanse my mind of this filth!"
  
-# Концепции игры
-game_concept_qi_ma_the_liar:0 "Лжец Ци Ма"
-game_concept_qi_ma:0 "Ци Ма"
-game_concept_qi_ma_the_liar_desc:0 "$ game_concept_qi_ma_the_liar $ — загадочный путешественник, с которым [ruler|E] могут иногда столкнуться в результате случайного события. Одни говорят, что он божество в земной форме, другие говорят, что он бессмертный, проклятый небесами скитаться вечно, или возможно, члены долгоживущей династии авантюристов, или, возможно, что-то еще.\n\ nХотя он никогда не останется надолго, его присутствие дает доступ к особому [decision|E] нанести ему визит. [ruler|E] с некоторыми мудрыми, но часто загадочными советами или мыслями, которые дадут им небольшое усиление одного из пяти [skills|E].\n\ nТем , кто не хочет встречаться с этой фигурой, он не станет появляется, если в начале игры выбрано игровое правило #V Серьезные события (с ограничениями)#!».
+ # Концепции игры
+ game_concept_qi_ma_the_liar:0 "Лжец Ци Ма"
+ game_concept_qi_ma:0 "Ци Ма"
+ game_concept_qi_ma_the_liar_desc:0 "$ game_concept_qi_ma_the_liar $ — загадочный путешественник, с которым [ruler|E] могут иногда столкнуться в результате случайного события. Одни говорят, что он божество в земной форме, другие говорят, что он бессмертный, проклятый небесами скитаться вечно, или возможно, члены долгоживущей династии авантюристов, или, возможно, что-то еще.\n\nХотя он никогда не останется надолго, его присутствие дает доступ к особому [decision|E] нанести ему визит. [ruler|E] с некоторыми мудрыми, но часто загадочными советами или мыслями, которые дадут им небольшое усиление одного из пяти [skills|E].\n\nТем , кто не хочет встречаться с этой фигурой, он не станет появляется, если в начале игры выбрано игровое правило #V Серьезные события (с ограничениями)#!."
  game_concept_clutter_artifact:0 "Clutter Artifact"
  game_concept_clutter_artifacts:0 "Clutter Artifacts"
  game_concept_clutter_artifact_desc:0 "$game_concept_clutter_artifacts$ are a type of [inventory_artifact|E] introduced by the VIET mod that are often found through occasional events. They represent miscellaneous, everyday items a [character|E] is currently either using often in their life, are very fond of, or which others strongly associate with them.\n\nWhile there is no limit to the number you could theoretically own, the likelihood of encountering them is #X decreased#! noticeably if you already own a few - carefully consider which ones you feel are important to you and your character's lifestyle!"

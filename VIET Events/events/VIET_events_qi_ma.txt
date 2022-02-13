@@ -747,6 +747,36 @@ VIETmonogatari.0102 = {
 	}
 }
 
+# Is Royal Court DLC good or not?
+VIETmonogatari.0103 = {
+	type = character_event
+	title = VIETmonogatari.0103.t
+	desc = VIETmonogatari.0103.desc
+	theme = new_royal_court
+	
+	left_portrait = {
+		character = root
+		animation = personality_rational
+	}	
+	right_portrait = {
+		character = scope:qi_ma
+		animation = throne_room_bow_1
+	}
+	
+	option = { # Ok
+		name = VIETmonogatari.0103.a
+		VIET_qi_ma_diplomacy_advice_effect = yes
+	}
+	option = { # Ok
+		name = VIETmonogatari.0103.b
+		VIET_qi_ma_diplomacy_advice_effect = yes
+	}
+	
+	after = {
+		trigger_event = VIETmonogatari.0006
+	}
+}
+
 
 
 
@@ -864,6 +894,37 @@ VIETmonogatari.0202 = {
 }
 
 
+# Displaying artifacts in court sounds vain
+VIETmonogatari.0203 = {
+	type = character_event
+	title = VIETmonogatari.0203.t
+	desc = VIETmonogatari.0203.desc
+	theme = realm
+	
+	left_portrait = {
+		character = root
+		animation = personality_rational
+	}	
+	right_portrait = {
+		character = scope:qi_ma
+		animation = disapproval
+	}
+	
+	option = { # Ok
+		name = VIETmonogatari.0203.a
+		VIET_qi_ma_martial_advice_effect = yes
+	}
+	option = { # Ok
+		name = VIETmonogatari.0203.b
+		VIET_qi_ma_martial_advice_effect = yes
+	}
+	
+	after = {
+		trigger_event = VIETmonogatari.0006
+	}
+}
+
+
 
 
 
@@ -966,6 +1027,33 @@ VIETmonogatari.0302 = {
 }
 
 
+# Stairs
+VIETmonogatari.0303 = {
+	type = character_event
+	title = VIETmonogatari.0303.t
+	desc = VIETmonogatari.0303.desc
+	theme = new_royal_court
+	
+	left_portrait = {
+		character = root
+		animation = personality_rational
+	}	
+	right_portrait = {
+		character = scope:qi_ma
+		animation = throne_room_bow_1
+	}
+	
+	option = { # Ok
+		name = VIETmonogatari.0303.a
+		VIET_qi_ma_stewardship_advice_effect = yes
+	}	
+	
+	after = {
+		trigger_event = VIETmonogatari.0006
+	}
+}
+
+
 
 
 ##################################################################
@@ -1048,6 +1136,38 @@ VIETmonogatari.0402 = {
 	}	
 	option = { # Ok
 		name = VIETmonogatari.0402.b
+		VIET_qi_ma_intrigue_advice_effect = yes
+	}
+	
+	after = {
+		trigger_event = VIETmonogatari.0006
+	}
+}
+
+
+
+# No need for mysticism/supernatural
+VIETmonogatari.0403 = {
+	type = character_event
+	title = VIETmonogatari.0403.t
+	desc = VIETmonogatari.0403.desc
+	theme = witchcraft
+	
+	left_portrait = {
+		character = root
+		animation = personality_rational
+	}	
+	right_portrait = {
+		character = scope:qi_ma
+		animation = personality_cynical
+	}
+	
+	option = { # Ok
+		name = VIETmonogatari.0403.a
+		VIET_qi_ma_intrigue_advice_effect = yes
+	}	
+	option = { # Ok
+		name = VIETmonogatari.0403.b
 		VIET_qi_ma_intrigue_advice_effect = yes
 	}
 	
@@ -1143,3 +1263,32 @@ VIETmonogatari.0502 = {
 		trigger_event = VIETmonogatari.0006
 	}
 }
+
+
+# Creating hybrid/divergent cultures
+VIETmonogatari.0503 = {
+	type = character_event
+	title = VIETmonogatari.0503.t
+	desc = VIETmonogatari.0503.desc
+	theme = culture_change
+	
+	left_portrait = {
+		character = root
+		animation = personality_rational
+	}	
+	right_portrait = {
+		character = scope:qi_ma
+		animation = dismissal
+	}
+	
+	option = { # Ok
+		name = VIETmonogatari.0503.a
+		VIET_qi_ma_learning_advice_effect = yes
+	}
+	
+	after = {
+		trigger_event = VIETmonogatari.0006
+	}
+}
+
+

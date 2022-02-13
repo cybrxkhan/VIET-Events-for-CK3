@@ -1,40 +1,40 @@
 ﻿l_russian:
  # Decisions
- VIET_decision_traveling_baklava_merchant:0 «Посетите знаменитую кондитерскую»
+ VIET_decision_traveling_baklava_merchant:0 "Посетите знаменитую кондитерскую"
 VIET_decision_traveling_baklava_merchant_tooltip:0 "Вы посетите известного кондитера, который продает различные ближневосточные десерты и проезжает мимо"
 VIET_decision_traveling_baklava_merchant_effect_tooltip:0 "Появится событие, где вы сможете выбрать, какие десерты покупать, каждый из которых дает вам разные [character_modifier|E]"
 VIET_decision_traveling_baklava_merchant_desc:0 "Знаменитый странствующий кондитер с Ближнего Востока находится в городе и продает различную выпечку, кондитерские изделия и десерты. Возможно, мне следует купить немного его знаменитой пахлавы или какие-либо другие доступные сладости, прежде чем торговец уедет куда-нибудь еще! "
 VIET_decision_traveling_baklava_merchant_confirm:0 "Поехали, пока все не раскупили!"
-VIET_decision_traveling_baklava_merchant_context_tooltip:0 "#emphasis Исторический контекст:#! Первыми десертами, вероятно, были свежие фрукты и мед, но по мере того, как различные цивилизации развивали более сложную кухню, новые методы приготовления и выпечки продуктов привели к созданию множества различных видов десертов, таких как выпечка. Известная выпечка Ближнего Востока включает халву, канафе и, конечно же, пахлаву».
-VIET_decision_traveling_five_spice_merchant:0 «Посетите известного торговца специями»
+VIET_decision_traveling_baklava_merchant_context_tooltip:0 "#emphasis Исторический контекст:#! Первыми десертами, вероятно, были свежие фрукты и мед, но по мере того, как различные цивилизации развивали более сложную кухню, новые методы приготовления и выпечки продуктов привели к созданию множества различных видов десертов, таких как выпечка. Известная выпечка Ближнего Востока включает халву, канафе и, конечно же, пахлаву".
+VIET_decision_traveling_five_spice_merchant:0 "Посетите известного торговца специями"
 VIET_decision_traveling_five_spice_merchant_tooltip:0 "Вы посетите популярного торговца специями, проходящего через этот район"
 VIET_decision_traveling_five_spice_merchant_effect_tooltip:0 "Появится событие, на котором вы сможете приобрести знаменитую #V Five Spice Blend#!"
 VIET_decision_traveling_five_spice_merchant_desc:0 "Знаменитый странствующий торговец специями находится в городе. Он продает уникальную смесь специй, которую он называет смесью пяти специй. Возможно, мне следует купить эту знаменитую смесь для моих поваров, прежде чем этот торговец уйдет куда-нибудь еще! "
 VIET_decision_traveling_five_spice_merchant_confirm:0 "Поехали, пока все не раскупили!"
-VIET_decision_traveling_five_spice_merchant_context_tooltip:0 "#emphasis Исторический контекст:#! С тех пор, как люди начали использовать специи для придания вкуса пище, различные культуры разработали различные смеси специй для использования в своих кухнях. С ростом торговых сетей на протяжении веков кухни всего мира получат доступ к большему разнообразию специй, чем те, которые доступны в их родных регионах».
-VIET_decision_exorcise_ghost_follower:0 «Изгнать призрака, следующего за вами»
+VIET_decision_traveling_five_spice_merchant_context_tooltip:0 "#emphasis Исторический контекст:#! С тех пор, как люди начали использовать специи для придания вкуса пище, различные культуры разработали различные смеси специй для использования в своих кухнях. С ростом торговых сетей на протяжении веков кухни всего мира получат доступ к большему разнообразию специй, чем те, которые доступны в их родных регионах".
+VIET_decision_exorcise_ghost_follower:0 "Изгнать призрака, следующего за вами"
 VIET_decision_exorcise_ghost_follower_tooltip:0 "Есть ли там [ROOT.Char.Custom('MyPriestTitle')], который знает, как изгнать этого призрака?"
 VIET_decision_exorcise_ghost_follower_effect_tooltip:0 "Вы обратитесь за помощью к [ROOT.Char.Custom('MyPriestTitle')], чтобы узнать, возможно ли изгнать призрака, с надеждой на #P положительных#! результатов вместо #N отрицательных# ! один"
 VIET_decision_exorcise_ghost_follower_desc:0 "Ходят слухи, что моя недавняя череда неудач и проблем связана с проблематичным призраком, который преследует меня повсюду. Такой призрак вообще существует? И могу ли я найти способ решить эту проблему?"
 VIET_decision_exorcise_ghost_follower_confirm:0 "Ищите [ROOT.Char.Custom('MyPriestTitle')]!"
-VIET_decision_exorcise_ghost_follower_context_tooltip:0 "#emphasis Исторический контекст:#! Духи мертвых фигурируют в фольклоре и мифологии практически всех культур мира с незапамятных времен. Иногда они были дружелюбны, а часто нет, и каждая культура развивалась. свои особые методы обращения с такими духами, когда они кажутся причиняющими неприятности».
-VIET_decision_drink_shadowbanish_wine:0 «Выпить вино изгнания теней»
+VIET_decision_exorcise_ghost_follower_context_tooltip:0 "#emphasis Исторический контекст:#! Духи мертвых фигурируют в фольклоре и мифологии практически всех культур мира с незапамятных времен. Иногда они были дружелюбны, а часто нет, и каждая культура развивалась. свои особые методы обращения с такими духами, когда они кажутся причиняющими неприятности".
+VIET_decision_drink_shadowbanish_wine:0 "Выпить вино изгнания теней"
 VIET_decision_drink_shadowbanish_wine_tooltip:0 "Это вино даст мне удивительные способности?"
-VIET_decision_drink_shadowbanish_wine_effect_tooltip:0 «Вы выпьете эту необычную бутылку вина, которая у вас есть, и обретете ее уникальные преимущества»
+VIET_decision_drink_shadowbanish_wine_effect_tooltip:0 "Вы выпьете эту необычную бутылку вина, которая у вас есть, и обретете ее уникальные преимущества"
 VIET_decision_drink_shadowbanish_wine_desc:0 "Мне сказали выпить это вино до того, как истечет срок действия его магических веществ. Может ли оно мне помочь?"
 VIET_decision_drink_shadowbanish_wine_confirm:0 "Ура!"
-VIET_decision_drink_shadowbanish_wine_context_tooltip:0 "#emphasis Исторический контекст:#! С тех пор, как люди начали варить свои собственные напитки, алкогольные и безалкогольные, ходили легенды и мифы об особых напитках, которые наделяли великими способностями тех, кто их пьет. Известным примером может быть нектар олимпийских богов, который считается источником их бессмертия».
-VIET_decision_destroy_shadowbanish_wine:0 «Уничтожить вино изгнания теней»
+VIET_decision_drink_shadowbanish_wine_context_tooltip:0 "#emphasis Исторический контекст:#! С тех пор, как люди начали варить свои собственные напитки, алкогольные и безалкогольные, ходили легенды и мифы об особых напитках, которые наделяли великими способностями тех, кто их пьет. Известным примером может быть нектар олимпийских богов, который считается источником их бессмертия".
+VIET_decision_destroy_shadowbanish_wine:0 "Уничтожить вино изгнания теней"
 VIET_decision_destroy_shadowbanish_wine_tooltip:0 "В честь [ROOT.Char.GetFaith.HighGodName] я должен уничтожить это вино!"
-VIET_decision_destroy_shadowbanish_wine_effect_tooltip:0 «Вы уничтожите эту необычную бутылку вина, которая у вас есть»
-VIET_decision_destroy_shadowbanish_wine_desc:0 "Как уважающий себя [ROOT.Char.GetFaith.GetAdherentNameNoTooltip] и последователь [ROOT.Char.GetFaith.HighGodName], как я могу пить алкоголь, даже если это может дать мне могущественные силы? Вместо этого я уничтожит это опасное вещество».
+VIET_decision_destroy_shadowbanish_wine_effect_tooltip:0 "Вы уничтожите эту необычную бутылку вина, которая у вас есть"
+VIET_decision_destroy_shadowbanish_wine_desc:0 "Как уважающий себя [ROOT.Char.GetFaith.GetAdherentNameNoTooltip] и последователь [ROOT.Char.GetFaith.HighGodName], как я могу пить алкоголь, даже если это может дать мне могущественные силы? Вместо этого я уничтожит это опасное вещество".
 VIET_decision_destroy_shadowbanish_wine_confirm:0 "Разбей!"
 VIET_decision_destroy_shadowbanish_wine_context_tooltip:0 "#emphasis Исторический контекст:#! Некоторые религии запрещают или, по крайней мере, предостерегают от употребления алкоголя, в том числе многие секты ислама, джайнизма, буддизма и т. д. Обычно считается, что алкоголь подрывает рассудок и нравственность ."
-VIET_decision_hire_belrand:0 «Нанять ученого-наемника»
+VIET_decision_hire_belrand:0 "Нанять ученого-наемника"
 VIET_decision_hire_belrand_tooltip:0 "Ученый-наемник, которого я встретил на днях, произвел на меня очень сильное впечатление..."
-VIET_decision_hire_belrand_desc:0 «После встречи с ученым-наемником и подтверждения из других источников, что он законный ученый и воин, возможно, мне следует нанять его, чтобы он был рядом со мной».
-VIET_decision_hire_belrand_confirm:0 «Давайте встретимся с ним».
-VIET_decision_unlock_mysterious_chest:0 «Открой таинственный сундук»
+VIET_decision_hire_belrand_desc:0 "После встречи с ученым-наемником и подтверждения из других источников, что он законный ученый и воин, возможно, мне следует нанять его, чтобы он был рядом со мной".
+VIET_decision_hire_belrand_confirm:0 "Давайте встретимся с ним".
+VIET_decision_unlock_mysterious_chest:0 "Открой таинственный сундук"
 VIET_decision_unlock_mysterious_chest_tooltip:0 "Что может быть внутри этого странного сундука?"
 VIET_decision_unlock_mysterious_chest_effect_tooltip:0 "Вы узнаете, что находится в сундуке - может быть, это какие-то #V богатства#!, бесполезные #V безделушки#! или вообще #V ничего#!?"
 VIET_decision_unlock_mysterious_chest_desc:0 "Я должен найти опытного слесаря, который сможет открыть загадочный сундук, который был найден в моей собственности, прежде чем я полностью о нем забуду."
@@ -46,90 +46,90 @@ VIET_decision_ransom_kidnapped_servants_desc:0 "Несколько моих сл
 VIET_decision_ransom_kidnapped_servants_confirm:0 "Мы должны спасти их!"
 VIET_decision_meet_qi_ma_the_liar:0 "Встретьтесь с лжецом Ци Ма"
 VIET_decision_meet_qi_ma_the_liar_tooltip:0 "Знаменитый иностранный авантюрист в городе может наделить меня своей нетрадиционной мудростью."
-VIET_decision_meet_qi_ma_the_liar_effect_tooltip:0 «Вы получаете некоторое представление о вселенной благодаря [qi_ma_the_liar|E]».
+VIET_decision_meet_qi_ma_the_liar_effect_tooltip:0 "Вы получаете некоторое представление о вселенной благодаря [qi_ma_the_liar|E]".
 VIET_decision_meet_qi_ma_the_liar_desc:0 "Хотя знаменитый, но загадочный путешественник [qi_ma|E] странный, если не сумасшедший, я должен спросить его совета, прежде чем он отправится в неизвестное."
 VIET_decision_meet_qi_ma_the_liar_confirm:0 "Есть ли у него новости из других провинций?"
 VIET_decision_meet_qi_ma_the_liar_context_tooltip:0 "#emphasis Исторический контекст:#! Ци Ма много знает и кое-что рассказывает, и он знает многое из того, чего не знают другие - часть из этого подтверждена реальными фактами."
-VIET_decision_deal_with_crows:0 «Разобраться с убийством ворон»
+VIET_decision_deal_with_crows:0 "Разобраться с убийством ворон"
 VIET_decision_deal_with_crows_tooltip:0 "В последнее время вы привлекаете много ворон."
-VIET_decision_deal_with_crows_effect_tooltip:0 «Вы сами выбираете, как обращаться с воронами, которые в последнее время преследуют вас».
+VIET_decision_deal_with_crows_effect_tooltip:0 "Вы сами выбираете, как обращаться с воронами, которые в последнее время преследуют вас".
 VIET_decision_deal_with_crows_desc:0 "В последнее время везде, где я бываю, появляется большое количество ворон. Ходят слухи о том, почему это происходит, и они не обязательно хорошие. Мне нужно как-то с этим позаботиться."
-VIET_decision_deal_with_crows_confirm:0 «О воронах нужно позаботиться».
-VIET_decision_deal_with_crows_context_tooltip:0 "#emphasis Исторический контекст:#! Птицы рода #italic Corvus#!, известные как вороны, являются частью фольклора и религиозных верований во всем мире. Во многих культурах они считаются предвестниками дурных предзнаменований и символов несчастья и смерти, хотя в некоторых местах или контекстах они рассматриваются более двусмысленно как обманщики или психопомпы. Они известны своим умом и отличной памятью. Различие между воронами и воронами несколько непоследовательно, но в целом , вороны меньше воронов».
+VIET_decision_deal_with_crows_confirm:0 "О воронах нужно позаботиться".
+VIET_decision_deal_with_crows_context_tooltip:0 "#emphasis Исторический контекст:#! Птицы рода #italic Corvus#!, известные как вороны, являются частью фольклора и религиозных верований во всем мире. Во многих культурах они считаются предвестниками дурных предзнаменований и символов несчастья и смерти, хотя в некоторых местах или контекстах они рассматриваются более двусмысленно как обманщики или психопомпы. Они известны своим умом и отличной памятью. Различие между воронами и воронами несколько непоследовательно, но в целом , вороны меньше воронов".
 VIET_decision_feed_the_crows:0 "Накормить ворон"
 VIET_decision_feed_the_crows_tooltip:0 "Покормите ворон, когда они в следующий раз придут к вам"
 VIET_decision_feed_the_crows_desc:0 "Я хочу пойти в свой сад и накормить своих друзей, ворон. Они, несомненно, оценят мой жест."
-VIET_decision_feed_the_crows_effect_tooltip:0 «Вы немного потеряете [стресс|E] и получите немного [страха|E]»
+VIET_decision_feed_the_crows_effect_tooltip:0 "Вы немного потеряете [стресс|E] и получите немного [страха|E]"
 VIET_decision_feed_the_crows_confirm:0 "Где моя сумка с вороньей едой?"
-VIET_decision_feed_the_crows_context_tooltip:0 "#emphasis Исторический контекст:#! Птицы рода #italic Corvus#!, известные как вороны, являются частью фольклора и религиозных верований во всем мире. Во многих культурах они считаются предвестниками дурных предзнаменований и символов несчастья и смерти, хотя в некоторых местах или контекстах они рассматриваются более двусмысленно как обманщики или психопомпы. Они известны своим умом и отличной памятью. Различие между воронами и воронами несколько непоследовательно, но в целом , вороны меньше воронов».
-VIET_decision_strange_trails:0 «По странным тропам»
+VIET_decision_feed_the_crows_context_tooltip:0 "#emphasis Исторический контекст:#! Птицы рода #italic Corvus#!, известные как вороны, являются частью фольклора и религиозных верований во всем мире. Во многих культурах они считаются предвестниками дурных предзнаменований и символов несчастья и смерти, хотя в некоторых местах или контекстах они рассматриваются более двусмысленно как обманщики или психопомпы. Они известны своим умом и отличной памятью. Различие между воронами и воронами несколько непоследовательно, но в целом , вороны меньше воронов".
+VIET_decision_strange_trails:0 "По странным тропам"
 VIET_decision_strange_trails_tooltip:0 "Мои сны указывают мне куда-то. Должно быть."
-VIET_decision_strange_trails_desc:0 "Все эти сны, которые мне снились о дураке из-за любви, в последнее время занимали мои мысли. Теперь мне кажется, что мне снилось место поблизости. Я знаю, где оно находится. Я был там раньше Я должен посетить его снова. Может быть, посещение его облегчит мой разум и откроет, почему я мечтал об этом».
-VIET_decision_strange_trails_effect_tooltip:0 «Вы пойдете по странным тропам, чтобы найти место, о котором мечтали».
-VIET_decision_strange_trails_confirm:0 «Я ищу ответы, но даже не знаю вопроса».
-VIET_decision_learn_shorthand_techniques:0 «Изучите приемы стенографии»
+VIET_decision_strange_trails_desc:0 "Все эти сны, которые мне снились о дураке из-за любви, в последнее время занимали мои мысли. Теперь мне кажется, что мне снилось место поблизости. Я знаю, где оно находится. Я был там раньше Я должен посетить его снова. Может быть, посещение его облегчит мой разум и откроет, почему я мечтал об этом".
+VIET_decision_strange_trails_effect_tooltip:0 "Вы пойдете по странным тропам, чтобы найти место, о котором мечтали".
+VIET_decision_strange_trails_confirm:0 "Я ищу ответы, но даже не знаю вопроса".
+VIET_decision_learn_shorthand_techniques:0 "Изучите приемы стенографии"
 VIET_decision_learn_shorthand_techniques_tooltip:0 "Я слышал, что поблизости есть писцы или ученые, которые могут научить меня стенографии."
 VIET_decision_learn_shorthand_techniques_desc:0 "Я слышал, что поблизости есть несколько писцов или ученых, которые могут научить меня продвинутым методам стенографии, чтобы я мог писать быстрее. Лучше я постараюсь узнать больше об этом, пока у меня есть к этому интерес."
 VIET_decision_learn_shorthand_techniques_effect_tooltip:0 "После нескольких месяцев обучения вы получите своего рода #P положительный#! [character_modifier|E], увеличив некоторые из ваших [навыков|E]"
-VIET_decision_learn_shorthand_techniques_effect_tooltip_2:0 «Насколько силен [character_modifier|E] зависит от ваших [навыков|E], [черт|E] и других факторов»
-VIET_decision_learn_shorthand_techniques_confirm:0 «Кажется, я нашел писца, который готов учить».
-VIET_decision_learn_shorthand_techniques_context_tooltip:0 "#emphasis Исторический контекст:#! Стенография — это любой сокращенный метод быстрого письма. Эти методы были исторически разработаны во многих культурах, где существовала письменность. Они были и остаются особенно полезными для определенных профессий, таких как клерки и писцы, где необходима информация быть записаны быстро и эффективно».
-VIET_decision_buy_valueable_medicinal_berries:0 «Купить ценные лекарственные ягоды»
+VIET_decision_learn_shorthand_techniques_effect_tooltip_2:0 "Насколько силен [character_modifier|E] зависит от ваших [навыков|E], [черт|E] и других факторов"
+VIET_decision_learn_shorthand_techniques_confirm:0 "Кажется, я нашел писца, который готов учить".
+VIET_decision_learn_shorthand_techniques_context_tooltip:0 "#emphasis Исторический контекст:#! Стенография — это любой сокращенный метод быстрого письма. Эти методы были исторически разработаны во многих культурах, где существовала письменность. Они были и остаются особенно полезными для определенных профессий, таких как клерки и писцы, где необходима информация быть записаны быстро и эффективно".
+VIET_decision_buy_valueable_medicinal_berries:0 "Купить ценные лекарственные ягоды"
 VIET_decision_buy_valueable_medicinal_berries_tooltip:0 "Есть ягоды с предполагаемыми целебными свойствами"
 VIET_decision_buy_valueable_medicinal_berries_desc:0 "Кажется, есть части моего царства, где ягоды, как говорят, обладают различными целебными свойствами. Я должен купить их себе!"
 VIET_decision_buy_valueable_medicinal_berries_effect_tooltip:0 "Вы выбираете, сколько ягод купить, определяя, как долго будет действовать [GetModifier('VIET_berry_good_medicine').GetNameWithTooltip] [character_modifier|E] #weak (Минимальная стоимость: @gold_icon! 15)#!"
 VIET_decision_buy_valueable_medicinal_berries_confirm:0 "Хорошая ягода."
 VIET_decision_buy_valueable_medicinal_berries_req:0 "Любой [графство|E] в вашем [домене|E] имеет [GetModifier('VIET_berry_good_medicine_county').GetNameWithTooltip] [county_modifier|E]"
 VIET_decision_buy_valueable_medicinal_berries_context_tooltip:0 "#emphasis Исторический контекст: #! Ягоды были частью многих культур с незапамятных времен и использовались в качестве пищи, лекарств, источника красителей и многого другого."
-VIET_decision_employ_renowned_blacksmiths:0 «Нанимайте известных кузнецов для армий»
-VIET_decision_employ_renowned_blacksmiths_tooltip:0 «Мои солдаты всегда могут использовать лучшее оружие и доспехи».
-VIET_decision_employ_renowned_blacksmiths_desc:0 «В моем королевстве есть кузнецы. Возможно, я смогу использовать некоторых из них в своей армии, чтобы они могли создавать, ремонтировать и обслуживать оружие и доспехи моих войск».
+VIET_decision_employ_renowned_blacksmiths:0 "Нанимайте известных кузнецов для армий"
+VIET_decision_employ_renowned_blacksmiths_tooltip:0 "Мои солдаты всегда могут использовать лучшее оружие и доспехи".
+VIET_decision_employ_renowned_blacksmiths_desc:0 "В моем королевстве есть кузнецы. Возможно, я смогу использовать некоторых из них в своей армии, чтобы они могли создавать, ремонтировать и обслуживать оружие и доспехи моих войск".
 VIET_decision_employ_renowned_blacksmiths_req:0 "Любой [графство|E] в вашем [домене|E] имеет [GetModifier('VIET_renowned_blacksmith_region').GetNameWithTooltip] [county_modifier|E]"
 VIET_decision_employ_renowned_blacksmiths_effect_tooltip:0 "Вы сами выбираете, на чем будут работать кузнецы, которых вы нанимаете:"
 VIET_decision_employ_renowned_blacksmiths.armor:0 "Броня"
 VIET_decision_employ_renowned_blacksmiths.weapons:0 "Оружие"
 VIET_decision_employ_renowned_blacksmiths.supplies:0 "Принадлежности"
-VIET_decision_employ_renowned_blacksmiths_confirm:0 «Давайте встретимся с ними».
-VIET_decision_employ_renowned_blacksmiths_context_tooltip:0 "#emphasis Исторический контекст:#! Кузнечное дело было основным ремеслом во многих обществах Старого Света с древних времен. Каждая деревня и армия нуждались в ком-то, кто мог бы перековать железо в полезные инструменты (включая оружие и доспехи), или починить указанные инструменты».
-VIET_decision_visit_legendary_burial_mound:0 «Посетите легендарный курган»
-VIET_decision_visit_legendary_burial_mound_tooltip:0 «Я должен посетить одно из этих легендарных мест хотя бы раз в жизни».
+VIET_decision_employ_renowned_blacksmiths_confirm:0 "Давайте встретимся с ними".
+VIET_decision_employ_renowned_blacksmiths_context_tooltip:0 "#emphasis Исторический контекст:#! Кузнечное дело было основным ремеслом во многих обществах Старого Света с древних времен. Каждая деревня и армия нуждались в ком-то, кто мог бы перековать железо в полезные инструменты (включая оружие и доспехи), или починить указанные инструменты".
+VIET_decision_visit_legendary_burial_mound:0 "Посетите легендарный курган"
+VIET_decision_visit_legendary_burial_mound_tooltip:0 "Я должен посетить одно из этих легендарных мест хотя бы раз в жизни".
 VIET_decision_visit_legendary_burial_mound_desc:0 "Недавно я посвятил святилище легендарному персонажу, который, как говорят, похоронен под курганом или холмом, расположенным в одной из частей моих владений. Возможно, мне следует посетить святилище, чтобы засвидетельствовать свое почтение."
 VIET_decision_visit_legendary_burial_mound_req:0 "Любой [графство|E] в вашем [domain|E] имеет [GetModifier('VIET_tomb_monument_warrior').GetNameWithTooltip], [GetModifier('VIET_tomb_monument_holy').GetNameWithTooltip] или [GetModifier('VIET_ruet_monument_monument). GetNameWithTooltip] [county_modifier|E]"
 VIET_decision_visit_legendary_burial_mound_effect_tooltip:0 "Во время посещения вы будете вдохновлены, что даст вам положительный #P#! [character_modifier|E], преимущества которого будут зависеть от того, кто там похоронен"
-VIET_decision_visit_legendary_burial_mound_confirm:0 «Пойдем в это место».
-VIET_decision_visit_legendary_burial_mound_context_tooltip:0 "#emphasis Исторический контекст:#! Курганы или курганы (единственное число #курсив tumulus#!) можно найти практически в любой части мира, а некоторые датируются тысячами лет. легенды и мифы, связанные с этими местами».
-VIET_decision_investigate_a_ghost_town:0 «Исследуйте город-призрак»
+VIET_decision_visit_legendary_burial_mound_confirm:0 "Пойдем в это место".
+VIET_decision_visit_legendary_burial_mound_context_tooltip:0 "#emphasis Исторический контекст:#! Курганы или курганы (единственное число #курсив tumulus#!) можно найти практически в любой части мира, а некоторые датируются тысячами лет. легенды и мифы, связанные с этими местами".
+VIET_decision_investigate_a_ghost_town:0 "Исследуйте город-призрак"
 VIET_decision_investigate_a_ghost_town_tooltip:0 "Я хочу увидеть призраков!"
-VIET_decision_investigate_a_ghost_town_desc:0 "В моем владении есть область, где много рассказов о привидениях. Говорят, что в некоторых поселениях в этой области есть так называемые "города-призраки", где местные жители утверждают, что видели, как перемещаются духи. I В последнее время я набрался храбрости и хочу разобраться в этом — неужели там действительно есть такие призраки?»
+VIET_decision_investigate_a_ghost_town_desc:0 "В моем владении есть область, где много рассказов о привидениях. Говорят, что в некоторых поселениях в этой области есть так называемые "города-призраки", где местные жители утверждают, что видели, как перемещаются духи. I В последнее время я набрался храбрости и хочу разобраться в этом — неужели там действительно есть такие призраки?"
 VIET_decision_investigate_a_ghost_town_req:0 "Любой [графство|E] в вашем [домене|E] имеет [GetModifier('VIET_spirit_towns').GetNameWithTooltip] [county_modifier|E]"
-VIET_decision_investigate_a_ghost_town_effect_tooltip_1:0 «Вы отправитесь в один из этих так называемых городов-призраков и, надеюсь, встретитесь с призраками».
+VIET_decision_investigate_a_ghost_town_effect_tooltip_1:0 "Вы отправитесь в один из этих так называемых городов-призраков и, надеюсь, встретитесь с призраками".
 VIET_decision_investigate_a_ghost_town_effect_tooltip_2:0 "#N Вы получите заметное количество [стресс|E], потому что вы [GetTrait('craven').GetName( GetPlayer )]#!"
 VIET_decision_investigate_a_ghost_town_confirm:0 "Я обязательно увижу их мельком."
-VIET_decision_investigate_a_ghost_town_context_tooltip:0 "#emphasis Исторический контекст:#! Духи мертвых фигурируют в фольклоре и мифологии практически каждой культуры мира с незапамятных времен. Точно так же у каждой культуры были свои легенды о местах, где призраки собирались и заботились о них. их сверхъестественного бизнеса».
-VIET_decision_venerate_a_mummified_hermit:0 «Поклониться мумифицированному отшельнику»
+VIET_decision_investigate_a_ghost_town_context_tooltip:0 "#emphasis Исторический контекст:#! Духи мертвых фигурируют в фольклоре и мифологии практически каждой культуры мира с незапамятных времен. Точно так же у каждой культуры были свои легенды о местах, где призраки собирались и заботились о них. их сверхъестественного бизнеса".
+VIET_decision_venerate_a_mummified_hermit:0 "Поклониться мумифицированному отшельнику"
 VIET_decision_venerate_a_mummified_hermit_tooltip:0 "Я хочу засвидетельствовать свое почтение"
-VIET_decision_venerate_a_mummified_hermit_desc:0 "Не так давно знаменитый отшельник скончался во время медитации на одной из территорий, которыми я управляю. Его труп чудесным образом все еще стоит прямо и каким-то образом сопротивляется любому разложению - возможно, это признак духовной силы этого человека. ... Место, где он скончался, стало второстепенным местом паломничества, которое я намерен посетить».
+VIET_decision_venerate_a_mummified_hermit_desc:0 "Не так давно знаменитый отшельник скончался во время медитации на одной из территорий, которыми я управляю. Его труп чудесным образом все еще стоит прямо и каким-то образом сопротивляется любому разложению - возможно, это признак духовной силы этого человека. ... Место, где он скончался, стало второстепенным местом паломничества, которое я намерен посетить".
 VIET_decision_venerate_a_mummified_hermit_req:0 "Любой [графство|E] в вашем [домене|E] имеет [GetModifier('VIET_holy_hermit_passes_away').GetNameWithTooltip] [county_modifier|E]"
-VIET_decision_venerate_a_mummified_hermit_effect_tooltip:0 «Вы посетите, чтобы засвидетельствовать свое почтение мумифицированному отшельнику, получив [благочестие|E] и другие блага»
+VIET_decision_venerate_a_mummified_hermit_effect_tooltip:0 "Вы посетите, чтобы засвидетельствовать свое почтение мумифицированному отшельнику, получив [благочестие|E] и другие блага"
 VIET_decision_venerate_a_mummified_hermit_confirm:0 "Пойдем туда."
-VIET_decision_venerate_a_mummified_hermit_context_tooltip:0 "#emphasis Исторический контекст:#! На протяжении веков поступали сообщения о буддийских монахах и монахинях, умерших во время медитации, чьи тела предположительно были мумифицированы "естественным образом" и не поддавались разложению. Это были ( и являются), что неудивительно, буддийскими местами поклонения и почитания».
-VIET_decision_relax_at_a_giant_shade_tree:0 «Отдохните у гигантского тенистого дерева»
+VIET_decision_venerate_a_mummified_hermit_context_tooltip:0 "#emphasis Исторический контекст:#! На протяжении веков поступали сообщения о буддийских монахах и монахинях, умерших во время медитации, чьи тела предположительно были мумифицированы "естественным образом" и не поддавались разложению. Это были ( и являются), что неудивительно, буддийскими местами поклонения и почитания".
+VIET_decision_relax_at_a_giant_shade_tree:0 "Отдохните у гигантского тенистого дерева"
 VIET_decision_relax_at_a_giant_shade_tree_tooltip:0 "Дерево должно быть очень большим"
 VIET_decision_relax_at_a_giant_shade_tree_desc:0 "На моих территориях в одной из деревень растет известное тенистое дерево. Думаю, пришло время посетить его и проверить, заслужена ли его репутация."
 VIET_decision_relax_at_a_giant_shade_tree_req:0 "Любой [county|E] в вашем [domain|E] имеет [GetModifier('VIET_giant_shade_tree').GetNameWithTooltip] [county_modifier|E]"
-VIET_decision_relax_at_a_giant_shade_tree_effect_tooltip:0 «Вы отправитесь к известному тенистому дереву в своем домене, чтобы расслабиться и избавиться от [стресс|E]»
+VIET_decision_relax_at_a_giant_shade_tree_effect_tooltip:0 "Вы отправитесь к известному тенистому дереву в своем домене, чтобы расслабиться и избавиться от [стресс|E]"
 VIET_decision_relax_at_a_giant_shade_tree_confirm:0 "Не могу дождаться, когда увижу это!"
 VIET_decision_relax_at_a_giant_shade_tree_context_tooltip:0 "#emphasis Исторический контекст:#! Теневые деревья — это большие деревья, которые были посажены с целью создания тени под своей кроной или кроной или же выросли в месте, где они стали таковыми для людей, живущих поблизости."
-VIET_decision_examine_ancient_stone_monument:0 «Осмотреть древний каменный монумент»
+VIET_decision_examine_ancient_stone_monument:0 "Осмотреть древний каменный монумент"
 VIET_decision_examine_ancient_stone_monument_tooltip:0 "Какие секреты они могут хранить?"
 VIET_decision_examine_ancient_stone_monument_desc:0 "Древних каменных памятников может быть пруд пруди для некоторых ученых, но есть один, который был недавно обнаружен и заинтриговал меня. Я намерен посетить его, просто полюбоваться им и попытаться лучше понять его."
 VIET_decision_examine_ancient_stone_monument_req:0 "Любой [графство|E] в вашем [домене|E] имеет [GetModifier('VIET_flat_stone_monument').GetNameWithTooltip] [county_modifier|E]"
-VIET_decision_examine_ancient_stone_monument_effect_tooltip:0 «Вы отправитесь и осмотрите древний каменный монумент в своих владениях, чтобы сбросить [стресс|E] и получить [престиж|E] и [благочестие|E]»
-VIET_decision_examine_ancient_stone_monument_confirm:0 «Давайте готовиться».
+VIET_decision_examine_ancient_stone_monument_effect_tooltip:0 "Вы отправитесь и осмотрите древний каменный монумент в своих владениях, чтобы сбросить [стресс|E] и получить [престиж|E] и [благочестие|E]"
+VIET_decision_examine_ancient_stone_monument_confirm:0 "Давайте готовиться".
 VIET_decision_examine_ancient_stone_monument_context_tooltip:0 "#emphasis Исторический контекст:#! Доисторические каменные монументы можно найти во многих местах по всему миру. Эти монолиты, предназначение которых часто неясно или, по крайней мере, оспаривается, породили множество легенд и мифов для более поздних культур, которые их открыли."
 VIET_decision_purchase_dependable_donkeys:0 "Купить надежных ослов"
 VIET_decision_purchase_dependable_donkeys_tooltip:0 "Мне не помешало бы больше ослов..."
-VIET_decision_purchase_dependable_donkeys_desc:0 «Ослов часто недооценивают в нашем сообществе. Часть моего королевства известна тем, что у них есть очень надежные и способные ослы. Иметь некоторых из них может быть полезно, так как они могут иметь множество применений для моих солдат или моих слуг в домой."
+VIET_decision_purchase_dependable_donkeys_desc:0 "Ослов часто недооценивают в нашем сообществе. Часть моего королевства известна тем, что у них есть очень надежные и способные ослы. Иметь некоторых из них может быть полезно, так как они могут иметь множество применений для моих солдат или моих слуг в домой."
 VIET_decision_purchase_dependable_donkeys_req:0 "Любой [county|E] в вашем [domain|E] имеет [GetModifier('VIET_reliable_donkeys').GetNameWithTooltip] [county_modifier|E]"
 VIET_decision_purchase_dependable_donkeys_effect_tooltip:0 "Вы сами выбираете, сколько ослов вы хотите купить"
 VIET_decision_purchase_dependable_donkeys_effect_tooltip_small:0 "#weak Cost @gold_icon! 30#!"
@@ -137,21 +137,21 @@ VIET_decision_purchase_dependable_donkeys_effect_tooltip_medium:0 "#weak Cost @g
 VIET_decision_purchase_dependable_donkeys_effect_tooltip_large:0 "#weak Cost @gold_icon! 90#!"
 VIET_decision_purchase_dependable_donkeys_confirm:0 "Эти ослы нам очень помогут."
 VIET_decision_purchase_dependable_donkeys_context_tooltip:0 "$VIETmisc.3030.info$"
-VIET_decision_add_more_dovecotes:0 «Добавьте больше голубятни в свою резиденцию»
+VIET_decision_add_more_dovecotes:0 "Добавьте больше голубятни в свою резиденцию"
 VIET_decision_add_more_dovecotes_tooltip:0 "Это сделало бы меня более престижным."
 VIET_decision_add_more_dovecotes_desc:0 "Несмотря на то, что у меня уже есть несколько голубятней в моей резиденции, в последнее время я подумывал над тем, чтобы построить больше, чтобы разместить здесь еще больше голубей. Это повысило бы мой статус и репутацию, а также было бы практично."
-VIET_decision_add_more_dovecotes_effect_tooltip:0 «Вы сами выбираете, сколько голубятней вы хотите построить»
+VIET_decision_add_more_dovecotes_effect_tooltip:0 "Вы сами выбираете, сколько голубятней вы хотите построить"
 VIET_decision_add_more_dovecotes_effect_tooltip_small:0 "#weak Cost @gold_icon! 50#!"
 VIET_decision_add_more_dovecotes_effect_tooltip_medium:0 "#weak Cost @gold_icon! 100#!"
 VIET_decision_add_more_dovecotes_effect_tooltip_large:0 "#weak Cost @gold_icon! 150#!"
-VIET_decision_add_more_dovecotes_confirm:0 «Давайте сделаем это».
+VIET_decision_add_more_dovecotes_confirm:0 "Давайте сделаем это".
 VIET_decision_add_more_dovecotes_context_tooltip:0 "$VIETmisc.2074.info$"
-VIET_decision_listen_to_wild_songbirds:0 «Слушайте диких певчих птиц»
-VIET_decision_listen_to_wild_songbirds_tooltip:0 «Их песни великолепны».
+VIET_decision_listen_to_wild_songbirds:0 "Слушайте диких певчих птиц"
+VIET_decision_listen_to_wild_songbirds_tooltip:0 "Их песни великолепны".
 VIET_decision_listen_to_wild_songbirds_desc:0 "Я слышал, что поблизости есть место в пустыне, где часто можно встретить диких певчих птиц. Как человеку, которому нравится слушать пение этих милых существ, я должен посетить это место в ближайшее время."
-VIET_decision_listen_to_wild_songbirds_effect_tooltip:0 «Вы немного потеряете [стресс|E] и, возможно, даже вдохновитесь и получите [character_modifier|E]»
+VIET_decision_listen_to_wild_songbirds_effect_tooltip:0 "Вы немного потеряете [стресс|E] и, возможно, даже вдохновитесь и получите [character_modifier|E]"
 VIET_decision_listen_to_wild_songbirds_confirm:0 "Мне нужен отпуск."
-VIET_decision_listen_to_wild_songbirds_context_tooltip:0 "#emphasis Биологический контекст:#! Подотряд птиц-птиц #italic Passeri#! в просторечии известен как певчие птицы. Насчитывая более 5000 видов, они встречаются по всему миру и славятся своим разнообразием и сложностью. песни птиц, которыми люди восхищались во многих разных культурах и периодах времени».
+VIET_decision_listen_to_wild_songbirds_context_tooltip:0 "#emphasis Биологический контекст:#! Подотряд птиц-птиц #italic Passeri#! в просторечии известен как певчие птицы. Насчитывая более 5000 видов, они встречаются по всему миру и славятся своим разнообразием и сложностью. песни птиц, которыми люди восхищались во многих разных культурах и периодах времени".
  
  
 # Взаимодействие с персонажами
@@ -164,21 +164,21 @@ VIET_gift_spices_effect_tooltip:0 "[recipient.GetShortUINameNoTooltip] полу�
 VIET_decision_xxxxx:0 "ххххх"
  
 # Мероприятия
-activity_VIET_crow_appeasement:0 «Умиротворение вороны»
+activity_VIET_crow_appeasement:0 "Умиротворение вороны"
 activity_VIET_crow_appeasement_name:0 "[ACTIVITY.GetOwner.GetNamePossessiveOrMy|U] Умиротворение вороны"
-activity_VIET_crow_removal:0 «Удаление вороны»
+activity_VIET_crow_removal:0 "Удаление вороны"
 activity_VIET_crow_removal_name:0 "[ACTIVITY.GetOwner.GetNamePossessiveOrMy|U] Удаление Crow"
-activity_VIET_visit_to_a_legendary_burial_mound:0 «Посетить легендарный курган»
+activity_VIET_visit_to_a_legendary_burial_mound:0 "Посетить легендарный курган"
 activity_VIET_visit_to_a_legendary_burial_mound_name:0 "[ACTIVITY.GetOwner.GetNamePossessiveOrMy|U] Посещение легендарного кургана"
-activity_VIET_investigation_of_a_ghost_town:0 «Расследование города-призрака»
+activity_VIET_investigation_of_a_ghost_town:0 "Расследование города-призрака"
 activity_VIET_Investigation_of_a_ghost_town_name:0 "[ACTIVITY.GetOwner.GetNamePossessiveOrMy|U] Исследование города-призрака"
-activity_VIET_veneration_of_a_mummified_hermit:0 «Почитание мумифицированного отшельника»
+activity_VIET_veneration_of_a_mummified_hermit:0 "Почитание мумифицированного отшельника"
 activity_VIET_veneration_of_a_mummified_hermit_name:0 "[ACTIVITY.GetOwner.GetNamePossessiveOrMy|U] Почитание мумифицированного отшельника"
-activity_VIET_trip_giant_shade_tree:0 «Путешествие к гигантскому тенистому дереву»
+activity_VIET_trip_giant_shade_tree:0 "Путешествие к гигантскому тенистому дереву"
 activity_VIET_trip_giant_shade_tree_name:0 "[ACTIVITY.GetOwner.GetNamePossessiveOrMy|U] Поездка к гигантскому тенистому дереву"
-activity_VIET_trip_examine_ancient_stone_monument:0 «Поездка для осмотра древнего каменного монумента»
+activity_VIET_trip_examine_ancient_stone_monument:0 "Поездка для осмотра древнего каменного монумента"
 activity_VIET_trip_examine_ancient_stone_monument_name:0 "[ACTIVITY.GetOwner.GetNamePossessiveOrMy|U] Поездка для осмотра древнего каменного памятника"
-activity_VIET_relaxation_with_songbirds:0 «Экскурсия, чтобы послушать певчих птиц»
+activity_VIET_relaxation_with_songbirds:0 "Экскурсия, чтобы послушать певчих птиц"
 activity_VIET_relaxation_with_songbirds_desc:0 "[ACTIVITY.GetOwner.GetNamePossessiveOrMy|U] Экскурсия, чтобы послушать певчих птиц"
 
  activity_VIET_xxxxx:0 "xxxxx"

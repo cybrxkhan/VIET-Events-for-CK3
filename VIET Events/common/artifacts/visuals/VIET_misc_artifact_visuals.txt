@@ -28,6 +28,26 @@ VIET_hummus = {
 	asset = ep1_western_box_small_basic_01_a_entity	
 }
 
+VIET_yogurt = {
+	icon = "artifact_VIET_recipe_yogurt.dds"
+	asset = ep1_western_box_small_basic_01_a_entity	
+}
+
+VIET_savory_pie = {
+	icon = "artifact_VIET_recipe_savory_pie.dds"
+	asset = ep1_western_box_small_basic_01_a_entity	
+}
+
+VIET_fruit_pie = {
+	icon = "artifact_VIET_recipe_fruit_pie.dds"
+	asset = ep1_western_box_small_basic_01_a_entity	
+}
+
+VIET_bean_soup = {
+	icon = "artifact_VIET_recipe_bean_soup.dds"
+	asset = ep1_western_box_small_basic_01_a_entity	
+}
+
 
 
 # RECIPES

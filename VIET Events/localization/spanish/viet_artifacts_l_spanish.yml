@@ -113,3 +113,13 @@
  VIET_recipe_sweetroll_desc:0 "Cooks provided with this recipe can bake a delicious sweet roll. "One taste, and you are in heaven... on top of the world, yes!""
  VIET_recipe_hummus_name:0 "Hummus Recipe"
  VIET_recipe_hummus_desc:0 "Cooks using this recipe will know the secrets to making a good hummus, and how to adapt it to any occasion. It's more than just mixing in together some chickpeas, tahini, and lemon juice - it's also about knowing the right spices, garnishes, and more to use."
+ # 1.5.1 - please leave this comment here
+ VIET_recipe_yogurt_name:0 "Yogurt Recipe"
+ VIET_recipe_yogurt_desc:0 "Cooks who use this recipe know that it is more than just a recipe for yogurt. This recipe stands above many others in showing the best ways to make yogurt out of fermented milk - to ensure it has excellent texture, consistency, and taste, and that it can also be used to prepare a variety of tasty dishes, both savory and sweet."
+ VIET_recipe_savory_pie_name:0 "Savory Pie Recipe"
+ VIET_recipe_savory_pie_desc:0 "Cooks with this recipe can make savory pies like no other! Whether filled with meat, vegetables, spices, beans, and more, this pie is unmatched in providing those who eat it with a culinary treasure that is sure to delight the taste buds."
+ VIET_recipe_fruit_pie_name:0 "Fruit Pie Recipe"
+ VIET_recipe_fruit_pie_desc:0 "Cooks with this recipe can make fruit pies like no other! These mildly sweet pies will likely be the centerpiece dessert at any grand feast or gathering, ensuring the host will earn the praise and respect of all their guests for providing such delicious pie."
+ VIET_recipe_bean_soup_name:0 "Bean Soup Recipe"
+ VIET_recipe_bean_soup_desc:0 "Cooks who have this recipe will know how to make a simple, hearty, rustic bean soup. Though denigrated by some elites as food fit only for peasants, with the right herbs, spices, vegetables, and preparation, any bean soup can become a healthy and scrumptious part of any meal."
+ # 1.5.2 - please leave this comment here

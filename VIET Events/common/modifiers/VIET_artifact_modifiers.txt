@@ -73,6 +73,84 @@ artifact_VIET_hummus_recipe_modifier_4 = {
 	stress_loss_mult = 0.12
 }
 
+artifact_VIET_yogurt_recipe_modifier_1 = {
+	health = 0.2
+	negate_health_penalty_add = 0.1
+}
+artifact_VIET_yogurt_recipe_modifier_2 = {
+	health = 0.3
+	negate_health_penalty_add = 0.2
+}
+artifact_VIET_yogurt_recipe_modifier_3 = {
+	health = 0.4
+	negate_health_penalty_add = 0.3
+}
+artifact_VIET_yogurt_recipe_modifier_4 = {
+	health = 0.5
+	negate_health_penalty_add = 0.4
+}
+
+artifact_VIET_savory_pie_recipe_modifier_1 = {
+	monthly_prestige = 0.04
+}
+artifact_VIET_savory_pie_recipe_modifier_2 = {
+	monthly_prestige = 0.08
+}
+artifact_VIET_savory_pie_recipe_modifier_3 = {
+	monthly_prestige = 0.12
+	monthly_court_grandeur_change_add = 0.1
+}
+artifact_VIET_savory_pie_recipe_modifier_4 = {
+	monthly_prestige = 0.16
+	monthly_court_grandeur_change_add = 0.2
+}
+
+artifact_VIET_fruit_pie_recipe_modifier_1 = {
+	courtier_and_guest_opinion = 2
+	hostile_scheme_power_add = 1
+	personal_scheme_power_add = 1
+}
+artifact_VIET_fruit_pie_recipe_modifier_2 = {
+	courtier_and_guest_opinion = 4
+	hostile_scheme_power_add = 2
+	personal_scheme_power_add = 2
+}
+artifact_VIET_fruit_pie_recipe_modifier_3 = {
+	courtier_and_guest_opinion = 6
+	hostile_scheme_power_add = 3
+	personal_scheme_power_add = 3
+}
+artifact_VIET_fruit_pie_recipe_modifier_4 = {
+	courtier_and_guest_opinion = 8
+	hostile_scheme_power_add = 4
+	personal_scheme_power_add = 4
+}
+
+artifact_VIET_bean_soup_recipe_modifier_1 = {
+	negate_health_penalty_add = 0.1
+	county_opinion_add = 1
+	monthly_piety = 0.1
+	monthly_prestige = -0.5
+}
+artifact_VIET_bean_soup_recipe_modifier_2 = {
+	negate_health_penalty_add = 0.2
+	county_opinion_add = 2
+	monthly_piety = 0.2
+	monthly_prestige = -0.4
+}
+artifact_VIET_bean_soup_recipe_modifier_3 = {
+	negate_health_penalty_add = 0.3
+	county_opinion_add = 3
+	monthly_piety = 0.3
+	monthly_prestige = -0.3
+}
+artifact_VIET_bean_soup_recipe_modifier_4 = {
+	negate_health_penalty_add = 0.4
+	county_opinion_add = 4
+	monthly_piety = 0.4
+	monthly_prestige = -0.2
+}
+
 # Clutter Artifacts
 
 artifact_VIET_abacus_modifier = {

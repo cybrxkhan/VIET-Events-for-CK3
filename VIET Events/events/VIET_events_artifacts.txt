@@ -24,6 +24,7 @@
 # 5000-5041		Generic (First batch, made for Royal Court release)
 # 5042-5044		Recipes (First batch, made for Royal Court release)
 # 5045			Lusty Argonian Maid
+# 5046-5049		Recipes
 # 
 ############################################################################################################################
 
@@ -4877,14 +4878,6 @@ VIETmisc.5042 = {
 			}
 		}
 		modifier = {
-			add = -0.4
-			VIET_has_2_clutter_artifacts_trigger = yes	
-		}
-		modifier = {
-			add = -0.5
-			VIET_has_4_clutter_artifacts_trigger = yes	
-		}
-		modifier = {
 			add = 0.2
 			has_trait = gluttonous
 		}
@@ -5229,14 +5222,6 @@ VIETmisc.5043 = {
 			any_character_artifact = {
 				has_variable = VIET_recipe_sweetroll_variable
 			}
-		}
-		modifier = {
-			add = -0.4
-			VIET_has_2_clutter_artifacts_trigger = yes	
-		}
-		modifier = {
-			add = -0.5
-			VIET_has_4_clutter_artifacts_trigger = yes	
 		}
 		modifier = {
 			add = 0.2
@@ -5585,14 +5570,6 @@ VIETmisc.5044 = {
 			}
 		}
 		modifier = {
-			add = -0.4
-			VIET_has_2_clutter_artifacts_trigger = yes	
-		}
-		modifier = {
-			add = -0.5
-			VIET_has_4_clutter_artifacts_trigger = yes	
-		}
-		modifier = {
 			add = 0.2
 			has_trait = gluttonous
 		}
@@ -5938,14 +5915,6 @@ VIETmisc.5045 = {
     weight_multiplier = {
         base = 1
 		modifier = {
-			add = -0.4
-			VIET_has_2_clutter_artifacts_trigger = yes	
-		}
-		modifier = {
-			add = -0.5
-			VIET_has_4_clutter_artifacts_trigger = yes	
-		}
-		modifier = {
 			add = 0.2
 			has_trait = lustful
 		}
@@ -6030,5 +5999,1384 @@ VIETmisc.5045 = {
 		add_character_flag = VIET_lusty_argonian_maid_happened 
 	}
 }
+
+
+
+
+##################################################################
+# RECIPES 5046-5049
+##################################################################
+
+
+# Yogurt recipe
+VIETmisc.5046 = {
+	type = character_event
+	title = VIETmisc.5046.t
+	desc = VIETmisc.5046.desc
+	theme = feast_activity
+	
+	left_portrait = {
+		character = root
+		animation = personality_rational
+	}
+	artifact = { # To display the artifact in the event-window
+        target = scope:VIET_recipe_artifact
+        position = lower_center_portrait
+    }
+
+    weight_multiplier = {
+        base = 1
+		# Reduce spam
+		modifier = {
+			add = -0.9
+			any_character_artifact = {
+				has_variable = VIET_recipe_yogurt_variable
+			}
+		}
+		modifier = {
+			add = 0.2
+			has_trait = gluttonous
+		}
+		modifier = {
+			add = -0.2
+			has_trait = temperate
+		}
+		modifier = {
+			add = 0.2
+			has_trait = gregarious
+		}
+		modifier = {
+			add = -0.2
+			has_trait = shy
+		}
+		modifier = {
+			add = 0.2
+			has_trait = ambitious
+		}
+		modifier = {
+			add = -0.2
+			has_trait = content
+		}
+    }
+	
+	immediate = {
+		play_music_cue = mx_cue_touching_moment	
+		random_list = {
+			60 = {
+				hidden_effect_new_artifact = {
+					create_artifact = {	
+						name = VIET_recipe_yogurt_name
+						description = VIET_recipe_yogurt_desc
+						type = VIET_recipe
+						visuals = VIET_yogurt
+						quality = 15
+						wealth = 15
+						modifier = artifact_VIET_yogurt_recipe_modifier_1
+						#max_durability = 40
+						decaying = no
+						save_scope_as = VIET_recipe_artifact
+						history = {
+							type = created_before_history
+						}
+					}
+					scope:VIET_recipe_artifact = {
+						set_variable = VIET_recipe_yogurt_variable
+					}
+				}
+			}
+			45 = {
+				hidden_effect_new_artifact = {
+					create_artifact = {	
+						name = VIET_recipe_yogurt_name
+						description = VIET_recipe_yogurt_desc
+						type = VIET_recipe
+						visuals = VIET_yogurt
+						quality = 30
+						wealth = 30
+						modifier = artifact_VIET_yogurt_recipe_modifier_2
+						#max_durability = 40
+						decaying = no
+						save_scope_as = VIET_recipe_artifact
+						history = {
+							type = created_before_history
+						}
+					}
+					scope:VIET_recipe_artifact = {
+						set_variable = VIET_recipe_yogurt_variable
+					}
+				}
+			}
+			30 = {
+				hidden_effect_new_artifact = {
+					create_artifact = {	
+						name = VIET_recipe_yogurt_name
+						description = VIET_recipe_yogurt_desc
+						type = VIET_recipe
+						visuals = VIET_yogurt
+						quality = 65
+						wealth = 65
+						modifier = artifact_VIET_yogurt_recipe_modifier_3
+						#max_durability = 40
+						decaying = no
+						save_scope_as = VIET_recipe_artifact
+						history = {
+							type = created_before_history
+						}
+					}
+					scope:VIET_recipe_artifact = {
+						set_variable = VIET_recipe_yogurt_variable
+					}
+				}
+			}
+			15 = {
+				hidden_effect_new_artifact = {
+					create_artifact = {	
+						name = VIET_recipe_yogurt_name
+						description = VIET_recipe_yogurt_desc
+						type = VIET_recipe
+						visuals = VIET_yogurt
+						quality = 95
+						wealth = 95
+						modifier = artifact_VIET_yogurt_recipe_modifier_4
+						#max_durability = 40
+						decaying = no
+						save_scope_as = VIET_recipe_artifact
+						history = {
+							type = created_before_history
+						}
+					}
+					scope:VIET_recipe_artifact = {
+						set_variable = VIET_recipe_yogurt_variable
+					}
+				}
+			}
+		}
+
+	}
+	
+	option = { # Pay
+		name = VIETmisc.5046.a
+		trigger = {
+			OR = {
+				is_ai = no
+				gold >= 40
+			}
+		}
+		remove_short_term_gold = 40
+		show_as_tooltip = {
+			scope:VIET_recipe_artifact = {
+				set_owner = {
+					target = root
+				}
+			}
+		}
+		stress_impact = {
+			temperate = miniscule_stress_impact_gain
+			greedy = miniscule_stress_impact_gain
+		}
+		ai_chance = {
+			base = 50
+		}
+	}
+	
+	option = { # Negotiate
+		name = VIETmisc.5046.b
+		trigger = {
+			OR = {
+				is_ai = no
+				gold >= 25
+			}
+			diplomacy >= decent_skill_rating
+		}
+		skill = diplomacy
+		remove_short_term_gold = 25
+		show_as_tooltip = {
+			scope:VIET_recipe_artifact = {
+				set_owner = {
+					target = root
+				}
+			}
+		}
+		stress_impact = {
+			temperate = miniscule_stress_impact_gain
+			greedy = miniscule_stress_impact_gain
+		}
+		ai_chance = {
+			base = 50
+		}
+	}
+	
+	option = { # Steal
+		name = VIETmisc.5046.c
+		VIET_massive_piety_loss_effect = yes
+		random_list = {
+			15 = { # Get the recipe without getting caught 
+				desc = VIETmisc.recipe_steal.toast.success.not_caught
+				modifier = {
+					add = 7
+					intrigue >= decent_skill_rating
+				}
+				modifier = {
+					add = 5
+					intrigue >= very_high_skill_rating
+				}
+				send_interface_toast = {
+					type = event_toast_effect_good
+					left_icon = ROOT
+					title = VIETmisc.recipe_steal.toast.success.not_caught
+					show_as_tooltip = {
+						scope:VIET_recipe_artifact = {
+							set_owner = {
+								target = root
+							}
+						}
+					}
+				}
+			}
+			25 = { # Get the recipe but get caught
+				desc = VIETmisc.recipe_steal.toast.success.caught
+				modifier = {
+					add = 7
+					intrigue >= decent_skill_rating
+				}
+				modifier = {
+					add = 5
+					intrigue >= very_high_skill_rating
+				}
+				send_interface_toast = {
+					type = event_toast_effect_good
+					left_icon = ROOT
+					title = VIETmisc.recipe_steal.toast.success.caught
+					show_as_tooltip = {
+						scope:VIET_recipe_artifact = {
+							set_owner = {
+								target = root
+							}
+						}
+					}
+					VIET_huge_prestige_loss_effect = yes
+					stress_impact = {		
+						base = miniscule_stress_impact_gain
+					}
+				}
+			}		
+			50 = { # Fail to get the recipe
+				desc = VIETmisc.recipe_steal.toast.failure
+				modifier = {
+					add = 45
+					intrigue <= low_skill_rating
+				}
+				modifier = {
+					add = 25
+					intrigue <= mediocre_skill_rating
+				}
+				send_interface_toast = {
+					type = event_toast_effect_bad
+					left_icon = ROOT
+					title = VIETmisc.recipe_steal.toast.failure
+					custom_tooltip = VIETmisc.recipe_steal.toast.failure_tooltip
+					VIET_huge_prestige_loss_effect = yes
+					stress_impact = {		
+						base = minor_stress_impact_gain
+					}
+					hidden_effect = {
+						destroy_artifact = scope:VIET_recipe_artifact
+					}
+				}
+			}	
+		}
+		stress_impact = {
+			zealous = miniscule_stress_impact_gain
+			compassionate = miniscule_stress_impact_gain
+			honest = miniscule_stress_impact_gain
+			just = minor_stress_impact_gain
+			generous = miniscule_stress_impact_gain
+		}
+		ai_chance = {
+			base = 20
+			modifier = {
+				add = 10
+				has_trait = deceitful
+			}
+			modifier = {
+				add = 10
+				has_trait = callous
+			}
+			modifier = {
+				add = 10
+				has_trait = arbitrary
+			}
+			modifier = {
+				add = -15
+				has_trait = just
+			}
+			modifier = {
+				add = -15
+				has_trait = generous
+			}
+			modifier = {
+				add = -15
+				has_trait = honest
+			}
+		}
+	}
+	
+	option = { # Ignore
+		name = VIETmisc.5046.d
+		hidden_effect = {
+			destroy_artifact = scope:VIET_recipe_artifact
+		}
+		stress_impact = {
+			gluttonous = minor_stress_impact_gain
+		}
+		ai_chance = {
+			base = 100
+			modifier = {
+				add = 10
+				has_trait = greedy
+			}
+			modifier = {
+				add = 10
+				has_trait = temperate
+			}
+			modifier = {
+				add = 10
+				has_trait = content
+			}
+		}
+	}
+}
+
+
+
+
+# Savory Pie Recipe
+VIETmisc.5047 = {
+	type = character_event
+	title = VIETmisc.5047.t
+	desc = VIETmisc.5047.desc
+	theme = feast_activity
+	#override_background = { event_background = tavern }
+	
+	left_portrait = {
+		character = root
+		animation = personality_forgiving
+	}
+	artifact = { # To display the artifact in the event-window
+        target = scope:VIET_recipe_artifact
+        position = lower_center_portrait
+    }
+
+    weight_multiplier = {
+        base = 1
+		# Reduce spam
+		modifier = {
+			add = -0.9
+			any_character_artifact = {
+				has_variable = VIET_recipe_savory_pie_variable
+			}
+		}
+		modifier = {
+			add = 0.2
+			has_trait = gluttonous
+		}
+		modifier = {
+			add = -0.2
+			has_trait = temperate
+		}
+		modifier = {
+			add = 0.2
+			has_trait = gregarious
+		}
+		modifier = {
+			add = -0.2
+			has_trait = shy
+		}
+		modifier = {
+			add = 0.2
+			has_trait = humble
+		}
+		modifier = {
+			add = -0.2
+			has_trait = arrogant
+		}
+    }
+	
+	immediate = {
+		play_music_cue = mx_cue_touching_moment	
+		random_list = {
+			60 = {
+				hidden_effect_new_artifact = {
+					create_artifact = {	
+						name = VIET_recipe_savory_pie_name
+						description = VIET_recipe_savory_pie_desc
+						type = VIET_recipe
+						visuals = VIET_savory_pie
+						quality = 15
+						wealth = 15
+						modifier = artifact_VIET_savory_pie_recipe_modifier_1
+						#max_durability = 40
+						decaying = no
+						save_scope_as = VIET_recipe_artifact
+						history = {
+							type = created_before_history
+						}
+					}
+					scope:VIET_recipe_artifact = {
+						set_variable = VIET_recipe_savory_pie_variable
+					}
+				}
+			}
+			45 = {
+				hidden_effect_new_artifact = {
+					create_artifact = {	
+						name = VIET_recipe_savory_pie_name
+						description = VIET_recipe_savory_pie_desc
+						type = VIET_recipe
+						visuals = VIET_savory_pie
+						quality = 30
+						wealth = 30
+						modifier = artifact_VIET_savory_pie_recipe_modifier_2
+						#max_durability = 40
+						decaying = no
+						save_scope_as = VIET_recipe_artifact
+						history = {
+							type = created_before_history
+						}
+					}
+					scope:VIET_recipe_artifact = {
+						set_variable = VIET_recipe_savory_pie_variable
+					}
+				}
+			}
+			30 = {
+				hidden_effect_new_artifact = {
+					create_artifact = {	
+						name = VIET_recipe_savory_pie_name
+						description = VIET_recipe_savory_pie_desc
+						type = VIET_recipe
+						visuals = VIET_savory_pie
+						quality = 65
+						wealth = 65
+						modifier = artifact_VIET_savory_pie_recipe_modifier_3
+						#max_durability = 40
+						decaying = no
+						save_scope_as = VIET_recipe_artifact
+						history = {
+							type = created_before_history
+						}
+					}
+					scope:VIET_recipe_artifact = {
+						set_variable = VIET_recipe_savory_pie_variable
+					}
+				}
+			}
+			15 = {
+				hidden_effect_new_artifact = {
+					create_artifact = {	
+						name = VIET_recipe_savory_pie_name
+						description = VIET_recipe_savory_pie_desc
+						type = VIET_recipe
+						visuals = VIET_savory_pie
+						quality = 95
+						wealth = 95
+						modifier = artifact_VIET_savory_pie_recipe_modifier_4
+						#max_durability = 40
+						decaying = no
+						save_scope_as = VIET_recipe_artifact
+						history = {
+							type = created_before_history
+						}
+					}
+					scope:VIET_recipe_artifact = {
+						set_variable = VIET_recipe_savory_pie_variable
+					}
+				}
+			}
+		}
+
+	}
+	
+	option = { # Pay
+		name = VIETmisc.5047.a
+		trigger = {
+			OR = {
+				is_ai = no
+				gold >= 40
+			}
+		}
+		remove_short_term_gold = 40
+		show_as_tooltip = {
+			scope:VIET_recipe_artifact = {
+				set_owner = {
+					target = root
+				}
+			}
+		}
+		stress_impact = {
+			temperate = miniscule_stress_impact_gain
+			greedy = miniscule_stress_impact_gain
+		}
+		ai_chance = {
+			base = 50
+		}
+	}
+	
+	option = { # Negotiate
+		name = VIETmisc.5047.b
+		trigger = {
+			OR = {
+				is_ai = no
+				gold >= 25
+			}
+			diplomacy >= decent_skill_rating
+		}
+		skill = diplomacy
+		remove_short_term_gold = 25
+		show_as_tooltip = {
+			scope:VIET_recipe_artifact = {
+				set_owner = {
+					target = root
+				}
+			}
+		}
+		stress_impact = {
+			temperate = miniscule_stress_impact_gain
+			greedy = miniscule_stress_impact_gain
+		}
+		ai_chance = {
+			base = 50
+		}
+	}
+	
+	option = { # Steal
+		name = VIETmisc.5047.c
+		VIET_massive_piety_loss_effect = yes
+		random_list = {
+			15 = { # Get the recipe without getting caught 
+				desc = VIETmisc.recipe_steal.toast.success.not_caught
+				modifier = {
+					add = 7
+					intrigue >= decent_skill_rating
+				}
+				modifier = {
+					add = 5
+					intrigue >= very_high_skill_rating
+				}
+				send_interface_toast = {
+					type = event_toast_effect_good
+					left_icon = ROOT
+					title = VIETmisc.recipe_steal.toast.success.not_caught
+					show_as_tooltip = {
+						scope:VIET_recipe_artifact = {
+							set_owner = {
+								target = root
+							}
+						}
+					}
+				}
+			}
+			25 = { # Get the recipe but get caught
+				desc = VIETmisc.recipe_steal.toast.success.caught
+				modifier = {
+					add = 7
+					intrigue >= decent_skill_rating
+				}
+				modifier = {
+					add = 5
+					intrigue >= very_high_skill_rating
+				}
+				send_interface_toast = {
+					type = event_toast_effect_good
+					left_icon = ROOT
+					title = VIETmisc.recipe_steal.toast.success.caught
+					show_as_tooltip = {
+						scope:VIET_recipe_artifact = {
+							set_owner = {
+								target = root
+							}
+						}
+					}
+					VIET_huge_prestige_loss_effect = yes
+					stress_impact = {		
+						base = miniscule_stress_impact_gain
+					}
+				}
+			}		
+			50 = { # Fail to get the recipe
+				desc = VIETmisc.recipe_steal.toast.failure
+				modifier = {
+					add = 45
+					intrigue <= low_skill_rating
+				}
+				modifier = {
+					add = 25
+					intrigue <= mediocre_skill_rating
+				}
+				send_interface_toast = {
+					type = event_toast_effect_bad
+					left_icon = ROOT
+					title = VIETmisc.recipe_steal.toast.failure
+					custom_tooltip = VIETmisc.recipe_steal.toast.failure_tooltip
+					VIET_huge_prestige_loss_effect = yes
+					stress_impact = {		
+						base = minor_stress_impact_gain
+					}
+					hidden_effect = {
+						destroy_artifact = scope:VIET_recipe_artifact
+					}
+				}
+			}	
+		}
+		stress_impact = {
+			zealous = miniscule_stress_impact_gain
+			compassionate = miniscule_stress_impact_gain
+			honest = miniscule_stress_impact_gain
+			just = minor_stress_impact_gain
+			generous = miniscule_stress_impact_gain
+		}
+		ai_chance = {
+			base = 20
+			modifier = {
+				add = 10
+				has_trait = deceitful
+			}
+			modifier = {
+				add = 10
+				has_trait = callous
+			}
+			modifier = {
+				add = 10
+				has_trait = arbitrary
+			}
+			modifier = {
+				add = -15
+				has_trait = just
+			}
+			modifier = {
+				add = -15
+				has_trait = generous
+			}
+			modifier = {
+				add = -15
+				has_trait = honest
+			}
+		}
+	}
+	
+	option = { # Ignore
+		name = VIETmisc.5047.d
+		hidden_effect = {
+			destroy_artifact = scope:VIET_recipe_artifact
+		}
+		stress_impact = {
+			gluttonous = minor_stress_impact_gain
+		}
+		ai_chance = {
+			base = 100
+			modifier = {
+				add = 10
+				has_trait = greedy
+			}
+			modifier = {
+				add = 10
+				has_trait = temperate
+			}
+			modifier = {
+				add = 10
+				has_trait = content
+			}
+		}
+	}
+}
+
+
+
+
+# Fruit Pie Recipe recipe
+VIETmisc.5048 = {
+	type = character_event
+	title = VIETmisc.5048.t
+	desc = VIETmisc.5048.desc
+	theme = feast_activity
+	
+	left_portrait = {
+		character = root
+		animation = personality_content
+	}
+	artifact = { # To display the artifact in the event-window
+        target = scope:VIET_recipe_artifact
+        position = lower_center_portrait
+    }
+
+    weight_multiplier = {
+        base = 1
+		# Reduce spam
+		modifier = {
+			add = -0.9
+			any_character_artifact = {
+				has_variable = VIET_recipe_fruit_pie_variable
+			}
+		}
+		modifier = {
+			add = 0.2
+			has_trait = gluttonous
+		}
+		modifier = {
+			add = -0.2
+			has_trait = temperate
+		}
+		modifier = {
+			add = 0.2
+			has_trait = gregarious
+		}
+		modifier = {
+			add = -0.2
+			has_trait = shy
+		}
+		modifier = {
+			add = 0.2
+			has_trait = greedy
+		}
+		modifier = {
+			add = -0.2
+			has_trait = temperate
+		}
+    }
+	
+	immediate = {
+		play_music_cue = mx_cue_touching_moment	
+		random_list = {
+			60 = {
+				hidden_effect_new_artifact = {
+					create_artifact = {	
+						name = VIET_recipe_fruit_pie_name
+						description = VIET_recipe_fruit_pie_desc
+						type = VIET_recipe
+						visuals = VIET_fruit_pie
+						quality = 15
+						wealth = 15
+						modifier = artifact_VIET_fruit_pie_recipe_modifier_1
+						#max_durability = 40
+						decaying = no
+						save_scope_as = VIET_recipe_artifact
+						history = {
+							type = created_before_history
+						}
+					}
+					scope:VIET_recipe_artifact = {
+						set_variable = VIET_recipe_fruit_pie_variable
+					}
+				}
+			}
+			45 = {
+				hidden_effect_new_artifact = {
+					create_artifact = {	
+						name = VIET_recipe_fruit_pie_name
+						description = VIET_recipe_fruit_pie_desc
+						type = VIET_recipe
+						visuals = VIET_fruit_pie
+						quality = 30
+						wealth = 30
+						modifier = artifact_VIET_fruit_pie_recipe_modifier_2
+						#max_durability = 40
+						decaying = no
+						save_scope_as = VIET_recipe_artifact
+						history = {
+							type = created_before_history
+						}
+					}
+					scope:VIET_recipe_artifact = {
+						set_variable = VIET_recipe_fruit_pie_variable
+					}
+				}
+			}
+			30 = {
+				hidden_effect_new_artifact = {
+					create_artifact = {	
+						name = VIET_recipe_fruit_pie_name
+						description = VIET_recipe_fruit_pie_desc
+						type = VIET_recipe
+						visuals = VIET_fruit_pie
+						quality = 65
+						wealth = 65
+						modifier = artifact_VIET_fruit_pie_recipe_modifier_3
+						#max_durability = 40
+						decaying = no
+						save_scope_as = VIET_recipe_artifact
+						history = {
+							type = created_before_history
+						}
+					}
+					scope:VIET_recipe_artifact = {
+						set_variable = VIET_recipe_fruit_pie_variable
+					}
+				}
+			}
+			15 = {
+				hidden_effect_new_artifact = {
+					create_artifact = {	
+						name = VIET_recipe_fruit_pie_name
+						description = VIET_recipe_fruit_pie_desc
+						type = VIET_recipe
+						visuals = VIET_fruit_pie
+						quality = 95
+						wealth = 95
+						modifier = artifact_VIET_fruit_pie_recipe_modifier_4
+						#max_durability = 40
+						decaying = no
+						save_scope_as = VIET_recipe_artifact
+						history = {
+							type = created_before_history
+						}
+					}
+					scope:VIET_recipe_artifact = {
+						set_variable = VIET_recipe_fruit_pie_variable
+					}
+				}
+			}
+		}
+
+	}
+	
+	option = { # Pay
+		name = VIETmisc.5048.a
+		trigger = {
+			OR = {
+				is_ai = no
+				gold >= 40
+			}
+		}
+		remove_short_term_gold = 40
+		show_as_tooltip = {
+			scope:VIET_recipe_artifact = {
+				set_owner = {
+					target = root
+				}
+			}
+		}
+		stress_impact = {
+			temperate = miniscule_stress_impact_gain
+			greedy = miniscule_stress_impact_gain
+		}
+		ai_chance = {
+			base = 50
+		}
+	}
+	
+	option = { # Negotiate
+		name = VIETmisc.5048.b
+		trigger = {
+			OR = {
+				is_ai = no
+				gold >= 25
+			}
+			diplomacy >= decent_skill_rating
+		}
+		skill = diplomacy
+		remove_short_term_gold = 25
+		show_as_tooltip = {
+			scope:VIET_recipe_artifact = {
+				set_owner = {
+					target = root
+				}
+			}
+		}
+		stress_impact = {
+			temperate = miniscule_stress_impact_gain
+			greedy = miniscule_stress_impact_gain
+		}
+		ai_chance = {
+			base = 50
+		}
+	}
+	
+	option = { # Steal
+		name = VIETmisc.5048.c
+		VIET_massive_piety_loss_effect = yes
+		random_list = {
+			15 = { # Get the recipe without getting caught 
+				desc = VIETmisc.recipe_steal.toast.success.not_caught
+				modifier = {
+					add = 7
+					intrigue >= decent_skill_rating
+				}
+				modifier = {
+					add = 5
+					intrigue >= very_high_skill_rating
+				}
+				send_interface_toast = {
+					type = event_toast_effect_good
+					left_icon = ROOT
+					title = VIETmisc.recipe_steal.toast.success.not_caught
+					show_as_tooltip = {
+						scope:VIET_recipe_artifact = {
+							set_owner = {
+								target = root
+							}
+						}
+					}
+				}
+			}
+			25 = { # Get the recipe but get caught
+				desc = VIETmisc.recipe_steal.toast.success.caught
+				modifier = {
+					add = 7
+					intrigue >= decent_skill_rating
+				}
+				modifier = {
+					add = 5
+					intrigue >= very_high_skill_rating
+				}
+				send_interface_toast = {
+					type = event_toast_effect_good
+					left_icon = ROOT
+					title = VIETmisc.recipe_steal.toast.success.caught
+					show_as_tooltip = {
+						scope:VIET_recipe_artifact = {
+							set_owner = {
+								target = root
+							}
+						}
+					}
+					VIET_huge_prestige_loss_effect = yes
+					stress_impact = {		
+						base = miniscule_stress_impact_gain
+					}
+				}
+			}		
+			50 = { # Fail to get the recipe
+				desc = VIETmisc.recipe_steal.toast.failure
+				modifier = {
+					add = 45
+					intrigue <= low_skill_rating
+				}
+				modifier = {
+					add = 25
+					intrigue <= mediocre_skill_rating
+				}
+				send_interface_toast = {
+					type = event_toast_effect_bad
+					left_icon = ROOT
+					title = VIETmisc.recipe_steal.toast.failure
+					custom_tooltip = VIETmisc.recipe_steal.toast.failure_tooltip
+					VIET_huge_prestige_loss_effect = yes
+					stress_impact = {		
+						base = minor_stress_impact_gain
+					}
+					hidden_effect = {
+						destroy_artifact = scope:VIET_recipe_artifact
+					}
+				}
+			}	
+		}
+		stress_impact = {
+			zealous = miniscule_stress_impact_gain
+			compassionate = miniscule_stress_impact_gain
+			honest = miniscule_stress_impact_gain
+			just = minor_stress_impact_gain
+			generous = miniscule_stress_impact_gain
+		}
+		ai_chance = {
+			base = 20
+			modifier = {
+				add = 10
+				has_trait = deceitful
+			}
+			modifier = {
+				add = 10
+				has_trait = callous
+			}
+			modifier = {
+				add = 10
+				has_trait = arbitrary
+			}
+			modifier = {
+				add = -15
+				has_trait = just
+			}
+			modifier = {
+				add = -15
+				has_trait = generous
+			}
+			modifier = {
+				add = -15
+				has_trait = honest
+			}
+		}
+	}
+	
+	option = { # Ignore
+		name = VIETmisc.5048.d
+		hidden_effect = {
+			destroy_artifact = scope:VIET_recipe_artifact
+		}
+		stress_impact = {
+			gluttonous = minor_stress_impact_gain
+		}
+		ai_chance = {
+			base = 100
+			modifier = {
+				add = 10
+				has_trait = greedy
+			}
+			modifier = {
+				add = 10
+				has_trait = temperate
+			}
+			modifier = {
+				add = 10
+				has_trait = content
+			}
+		}
+	}
+}
+
+
+
+
+# Bean Soup Recipe
+VIETmisc.5049 = {
+	type = character_event
+	title = VIETmisc.5049.t
+	desc = VIETmisc.5049.desc
+	theme = feast_activity
+	override_background = { event_background = tavern }
+	
+	left_portrait = {
+		character = root
+		animation = personality_content
+	}
+	artifact = { # To display the artifact in the event-window
+        target = scope:VIET_recipe_artifact
+        position = lower_center_portrait
+    }
+
+    weight_multiplier = {
+        base = 1
+		# Reduce spam
+		modifier = {
+			add = -0.9
+			any_character_artifact = {
+				has_variable = VIET_recipe_bean_soup_variable
+			}
+		}
+		modifier = {
+			add = 0.2
+			has_trait = gluttonous
+		}
+		modifier = {
+			add = -0.2
+			has_trait = temperate
+		}
+		modifier = {
+			add = 0.2
+			has_trait = gregarious
+		}
+		modifier = {
+			add = -0.2
+			has_trait = shy
+		}
+		modifier = {
+			add = 0.2
+			has_trait = greedy
+		}
+		modifier = {
+			add = -0.2
+			has_trait = temperate
+		}
+    }
+	
+	immediate = {
+		play_music_cue = mx_cue_touching_moment	
+		random_list = {
+			60 = {
+				hidden_effect_new_artifact = {
+					create_artifact = {	
+						name = VIET_recipe_bean_soup_name
+						description = VIET_recipe_bean_soup_desc
+						type = VIET_recipe
+						visuals = VIET_bean_soup
+						quality = 15
+						wealth = 15
+						modifier = artifact_VIET_bean_soup_recipe_modifier_1
+						#max_durability = 40
+						decaying = no
+						save_scope_as = VIET_recipe_artifact
+						history = {
+							type = created_before_history
+						}
+					}
+					scope:VIET_recipe_artifact = {
+						set_variable = VIET_recipe_bean_soup_variable
+					}
+				}
+			}
+			45 = {
+				hidden_effect_new_artifact = {
+					create_artifact = {	
+						name = VIET_recipe_bean_soup_name
+						description = VIET_recipe_bean_soup_desc
+						type = VIET_recipe
+						visuals = VIET_bean_soup
+						quality = 30
+						wealth = 30
+						modifier = artifact_VIET_bean_soup_recipe_modifier_2
+						#max_durability = 40
+						decaying = no
+						save_scope_as = VIET_recipe_artifact
+						history = {
+							type = created_before_history
+						}
+					}
+					scope:VIET_recipe_artifact = {
+						set_variable = VIET_recipe_bean_soup_variable
+					}
+				}
+			}
+			30 = {
+				hidden_effect_new_artifact = {
+					create_artifact = {	
+						name = VIET_recipe_bean_soup_name
+						description = VIET_recipe_bean_soup_desc
+						type = VIET_recipe
+						visuals = VIET_bean_soup
+						quality = 65
+						wealth = 65
+						modifier = artifact_VIET_bean_soup_recipe_modifier_3
+						#max_durability = 40
+						decaying = no
+						save_scope_as = VIET_recipe_artifact
+						history = {
+							type = created_before_history
+						}
+					}
+					scope:VIET_recipe_artifact = {
+						set_variable = VIET_recipe_bean_soup_variable
+					}
+				}
+			}
+			15 = {
+				hidden_effect_new_artifact = {
+					create_artifact = {	
+						name = VIET_recipe_bean_soup_name
+						description = VIET_recipe_bean_soup_desc
+						type = VIET_recipe
+						visuals = VIET_bean_soup
+						quality = 95
+						wealth = 95
+						modifier = artifact_VIET_bean_soup_recipe_modifier_4
+						#max_durability = 40
+						decaying = no
+						save_scope_as = VIET_recipe_artifact
+						history = {
+							type = created_before_history
+						}
+					}
+					scope:VIET_recipe_artifact = {
+						set_variable = VIET_recipe_bean_soup_variable
+					}
+				}
+			}
+		}
+
+	}
+	
+	option = { # Pay
+		name = VIETmisc.5049.a
+		trigger = {
+			OR = {
+				is_ai = no
+				gold >= 40
+			}
+		}
+		remove_short_term_gold = 40
+		show_as_tooltip = {
+			scope:VIET_recipe_artifact = {
+				set_owner = {
+					target = root
+				}
+			}
+		}
+		stress_impact = {
+			temperate = miniscule_stress_impact_gain
+			greedy = miniscule_stress_impact_gain
+		}
+		ai_chance = {
+			base = 50
+		}
+	}
+	
+	option = { # Negotiate
+		name = VIETmisc.5049.b
+		trigger = {
+			OR = {
+				is_ai = no
+				gold >= 25
+			}
+			diplomacy >= decent_skill_rating
+		}
+		skill = diplomacy
+		remove_short_term_gold = 25
+		show_as_tooltip = {
+			scope:VIET_recipe_artifact = {
+				set_owner = {
+					target = root
+				}
+			}
+		}
+		stress_impact = {
+			temperate = miniscule_stress_impact_gain
+			greedy = miniscule_stress_impact_gain
+		}
+		ai_chance = {
+			base = 50
+		}
+	}
+	
+	option = { # Steal
+		name = VIETmisc.5049.c
+		VIET_massive_piety_loss_effect = yes
+		random_list = {
+			15 = { # Get the recipe without getting caught 
+				desc = VIETmisc.recipe_steal.toast.success.not_caught
+				modifier = {
+					add = 7
+					intrigue >= decent_skill_rating
+				}
+				modifier = {
+					add = 5
+					intrigue >= very_high_skill_rating
+				}
+				send_interface_toast = {
+					type = event_toast_effect_good
+					left_icon = ROOT
+					title = VIETmisc.recipe_steal.toast.success.not_caught
+					show_as_tooltip = {
+						scope:VIET_recipe_artifact = {
+							set_owner = {
+								target = root
+							}
+						}
+					}
+				}
+			}
+			25 = { # Get the recipe but get caught
+				desc = VIETmisc.recipe_steal.toast.success.caught
+				modifier = {
+					add = 7
+					intrigue >= decent_skill_rating
+				}
+				modifier = {
+					add = 5
+					intrigue >= very_high_skill_rating
+				}
+				send_interface_toast = {
+					type = event_toast_effect_good
+					left_icon = ROOT
+					title = VIETmisc.recipe_steal.toast.success.caught
+					show_as_tooltip = {
+						scope:VIET_recipe_artifact = {
+							set_owner = {
+								target = root
+							}
+						}
+					}
+					VIET_huge_prestige_loss_effect = yes
+					stress_impact = {		
+						base = miniscule_stress_impact_gain
+					}
+				}
+			}		
+			50 = { # Fail to get the recipe
+				desc = VIETmisc.recipe_steal.toast.failure
+				modifier = {
+					add = 45
+					intrigue <= low_skill_rating
+				}
+				modifier = {
+					add = 25
+					intrigue <= mediocre_skill_rating
+				}
+				send_interface_toast = {
+					type = event_toast_effect_bad
+					left_icon = ROOT
+					title = VIETmisc.recipe_steal.toast.failure
+					custom_tooltip = VIETmisc.recipe_steal.toast.failure_tooltip
+					VIET_huge_prestige_loss_effect = yes
+					stress_impact = {		
+						base = minor_stress_impact_gain
+					}
+					hidden_effect = {
+						destroy_artifact = scope:VIET_recipe_artifact
+					}
+				}
+			}	
+		}
+		stress_impact = {
+			zealous = miniscule_stress_impact_gain
+			compassionate = miniscule_stress_impact_gain
+			honest = miniscule_stress_impact_gain
+			just = minor_stress_impact_gain
+			generous = miniscule_stress_impact_gain
+		}
+		ai_chance = {
+			base = 20
+			modifier = {
+				add = 10
+				has_trait = deceitful
+			}
+			modifier = {
+				add = 10
+				has_trait = callous
+			}
+			modifier = {
+				add = 10
+				has_trait = arbitrary
+			}
+			modifier = {
+				add = -15
+				has_trait = just
+			}
+			modifier = {
+				add = -15
+				has_trait = generous
+			}
+			modifier = {
+				add = -15
+				has_trait = honest
+			}
+		}
+	}
+	
+	option = { # Ignore
+		name = VIETmisc.5049.d
+		hidden_effect = {
+			destroy_artifact = scope:VIET_recipe_artifact
+		}
+		stress_impact = {
+			gluttonous = minor_stress_impact_gain
+		}
+		ai_chance = {
+			base = 100
+			modifier = {
+				add = 10
+				has_trait = greedy
+			}
+			modifier = {
+				add = 10
+				has_trait = temperate
+			}
+			modifier = {
+				add = 10
+				has_trait = content
+			}
+		}
+	}
+}
+
+
+
+
 
 

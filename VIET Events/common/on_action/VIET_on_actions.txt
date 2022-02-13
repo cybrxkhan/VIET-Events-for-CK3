@@ -1369,6 +1369,7 @@ VIET_events_common_artifact_pulse = {
 		#######################################
 		
 		# Generic
+		100 = VIETmisc.5000		# Abacus - Merchant offers you his old abacus
 		100 = VIETmisc.5004		# Nutcracker - courtier gives a gift
 		100 = VIETmisc.5008		# Beautiful Pitcher - gifted by nobles
 		100 = VIETmisc.5009		# Common Pitcher - artisans provide a beautiful wooden pitcher as a gift to commemorate your visit
@@ -1394,8 +1395,9 @@ VIET_events_common_artifact_pulse = {
 		100 = VIETmisc.5036		# Wooden Whistle - bored while inspecting troops
 		100 = VIETmisc.5037		# Simple Waterskin - traveling a lot lately and grow fond of the waterskin you've been using
 		100 = VIETmisc.5039		# Decorated Broom - servants find a nice broom while cleaning your rooms
+		100 = VIETmisc.5041		# Ancient coin - your servant finds an ancient coin while gardening
 		
-		# 25
+		# 27
     }
 }
 
@@ -1437,7 +1439,6 @@ VIET_events_uncommon_artifact_pulse = {
 		#######################################
 		
 		# Generic
-		100 = VIETmisc.5000		# Abacus - Merchant offers you his old abacus
 		100 = VIETmisc.5001		# Calipers - Find some cool calipers
 		100 = VIETmisc.5002		# Magnifying Glass - Wandering scholar shows off his stuff
 		100 = VIETmisc.5003		# Hourglass - merchant sells hourglass
@@ -1451,12 +1452,15 @@ VIET_events_uncommon_artifact_pulse = {
 		100 = VIETmisc.5026		# Reliable lockpick - retired guard captain offers you a useful one
 		100 = VIETmisc.5035		# Candy Jar - likes to eat candy, found a nice jar that would suffice for that
 		100 = VIETmisc.5040		# Traveling Inkwell - you're visiting a scholar and they want to give you a gift for the occasion
-		100 = VIETmisc.5041		# Ancient coin - your servant finds an ancient coin while gardening
 		100 = VIETmisc.5042		# Baklava recipe
 		100 = VIETmisc.5043		# Sweetroll recipe
 		100 = VIETmisc.5044		# Hummus recipe
+		100 = VIETmisc.5046		# Yogurt recipe
+		100 = VIETmisc.5047		# Savory Pie Recipe
+		100 = VIETmisc.5048		# Fruit Pie Recipe recipe
+		100 = VIETmisc.5049		# Bean Soup Recipe
 		
-		# 18
+		# 20
 		
     }
 }

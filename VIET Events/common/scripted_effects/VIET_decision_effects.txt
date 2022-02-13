@@ -50,6 +50,7 @@ VIET_trigger_qi_ma_diplomacy_effect = {
 		10 = { trigger_event = VIETmonogatari.0100 }
 		10 = { trigger_event = VIETmonogatari.0101 }
 		10 = { trigger_event = VIETmonogatari.0102 }
+		10 = { trigger_event = VIETmonogatari.0103 }
 	}
 }
 
@@ -58,6 +59,7 @@ VIET_trigger_qi_ma_martial_effect = {
 		10 = { trigger_event = VIETmonogatari.0200 }
 		10 = { trigger_event = VIETmonogatari.0201 }
 		10 = { trigger_event = VIETmonogatari.0202 }
+		10 = { trigger_event = VIETmonogatari.0203 }
 	}
 }
 
@@ -66,6 +68,7 @@ VIET_trigger_qi_ma_stewardship_effect = {
 		10 = { trigger_event = VIETmonogatari.0300 }
 		10 = { trigger_event = VIETmonogatari.0301 }
 		10 = { trigger_event = VIETmonogatari.0302 }
+		10 = { trigger_event = VIETmonogatari.0303 }
 	}
 }
 
@@ -74,6 +77,7 @@ VIET_trigger_qi_ma_intrigue_effect = {
 		10 = { trigger_event = VIETmonogatari.0400 }
 		10 = { trigger_event = VIETmonogatari.0401 }
 		10 = { trigger_event = VIETmonogatari.0402 }
+		10 = { trigger_event = VIETmonogatari.0403 }
 	}
 }
 
@@ -82,6 +86,7 @@ VIET_trigger_qi_ma_learning_effect = {
 		10 = { trigger_event = VIETmonogatari.0500 }
 		10 = { trigger_event = VIETmonogatari.0501 }
 		10 = { trigger_event = VIETmonogatari.0502 }
+		10 = { trigger_event = VIETmonogatari.0503 }
 	}
 }
 
