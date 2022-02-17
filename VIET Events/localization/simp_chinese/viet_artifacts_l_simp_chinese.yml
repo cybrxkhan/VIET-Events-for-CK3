@@ -79,7 +79,7 @@
  VIET_simple_gloves_name:0 "简易手套"
  VIET_simple_gloves_desc:0 "一对简易皮制手套，并不算出众，但其主人却看中了它的实用。"
  VIET_elegant_candlestick_name:0 "优雅烛台"
- VIET_elegant_candlestick_desc:0 "用来放蜡烛的台子，这样一来拥有者就可以在晚间阅读或是进食了。"
+ VIET_elegant_candlestick_desc:0 "用来放蜡烛的台子，陶瓷做的，这样一来拥有者就可以在晚间阅读或是进食了。"
  VIET_basic_lantern_name:0 "简易灯"
  VIET_basic_lantern_desc:0 "一只便于使用的灯，把某种兽角打磨至半透明，让光能透过，提着它，在夜晚就不会感到害怕了，大概吧。"
  VIET_favored_handkerchief_name:0 "钟爱的手巾"
@@ -98,23 +98,17 @@
  VIET_traveling_inkwell_desc:0 "一只小瓶，不知道是用玻璃、黄铜、锡还是其他什么金属制成，点缀着少许装饰，上面是一个解释的螺旋盖子，这样一来，拥有着就能随身携带墨水，无需担心泄露了。"
  VIET_ancient_coin_name:0 "古币"
  VIET_ancient_coin_desc:0 "这枚钱币少说也得有一百年了，表面磨损的很厉害，不仔细看很难辨别上面的内容。这枚铅钱牵动着别人的好奇心，是极佳的聊天材料。"
- # 1.5.1 - please leave this comment here
- # 42 Basic
-
- # RECIPE ARTIFACTS
  VIET_recipe_baklava_name:0 "果仁蜜饼菜谱"
  VIET_recipe_baklava_desc:0 "这张菜谱上记载了制作果仁蜜饼的方法：面怎么和、糖浆放多少、加什么香料、点缀什么坚果。定然，只要有了这张菜谱，就能为客人呈现出傲视群雄的甜蜜佳品！"
  VIET_recipe_sweetroll_name:0 "面包卷菜谱"
  VIET_recipe_sweetroll_desc:0 "这张菜谱上记载了制作甜甜卷的方法。“只消一口，身处天堂！”"
  VIET_recipe_hummus_name:0 "鹰嘴豆泥菜谱"
  VIET_recipe_hummus_desc:0 "上好鹰嘴豆泥可不仅仅是把鹰嘴豆、麻酱和柠檬汁拌在一块那么简单，这张菜谱上就记载了随时随地制作上号鹰嘴豆泥的秘密：加什么香料，用什么做点缀，等等。"
- # 1.5.1 - please leave this comment here
- VIET_recipe_yogurt_name:0 "Yogurt Recipe"
- VIET_recipe_yogurt_desc:0 "Cooks who use this recipe know that it is more than just a recipe for yogurt. This recipe stands above many others in showing the best ways to make yogurt out of fermented milk - to ensure it has excellent texture, consistency, and taste, and that it can also be used to prepare a variety of tasty dishes, both savory and sweet."
- VIET_recipe_savory_pie_name:0 "Savory Pie Recipe"
- VIET_recipe_savory_pie_desc:0 "Cooks with this recipe can make savory pies like no other! Whether filled with meat, vegetables, spices, beans, and more, this pie is unmatched in providing those who eat it with a culinary treasure that is sure to delight the taste buds."
- VIET_recipe_fruit_pie_name:0 "Fruit Pie Recipe"
- VIET_recipe_fruit_pie_desc:0 "Cooks with this recipe can make fruit pies like no other! These mildly sweet pies will likely be the centerpiece dessert at any grand feast or gathering, ensuring the host will earn the praise and respect of all their guests for providing such delicious pie."
- VIET_recipe_bean_soup_name:0 "Bean Soup Recipe"
- VIET_recipe_bean_soup_desc:0 "Cooks who have this recipe will know how to make a simple, hearty, rustic bean soup. Though denigrated by some elites as food fit only for peasants, with the right herbs, spices, vegetables, and preparation, any bean soup can become a healthy and scrumptious part of any meal."
- # 1.5.2 - please leave this comment here
+ VIET_recipe_yogurt_name:0 "酸奶菜谱"
+ VIET_recipe_yogurt_desc:0 "采用此菜谱的厨子都知道它不仅仅是一份酸奶的配方。这道菜谱在各路方子中脱颖而出，展示了利用发酵乳制备酸奶的最佳工艺——保证了产物具有绝佳的质构、稠度以及口味，也能被用于搭配多种美味菜肴，咸甜皆宜。"
+ VIET_recipe_savory_pie_name:0 "咸味派菜谱"
+ VIET_recipe_savory_pie_desc:0 "持有这道菜谱的厨子所做出的咸味派可称一绝！不论是采用肉糜、蔬菜、香料、豆子还是其它馅料，这道菜在给食客提供打开味蕾的餐肴盛宴上无可匹敌。"
+ VIET_recipe_fruit_pie_name:0 "水果派菜谱"
+ VIET_recipe_fruit_pie_desc:0 "持有这道菜谱的厨子所做出的水果派可称一绝！这些微甜的馅饼可以充当任何盛宴或集会的压轴甜品，保证能让主人因为提供如此可口的馅饼而得到宾客的褒赞和尊敬。"
+ VIET_recipe_bean_soup_name:0 "豆汤菜谱"
+ VIET_recipe_bean_soup_desc:0 "持有这份菜谱的厨子会知道如何制作一道简单，纯朴而不失丰盛的豆汤。尽管有些精英将其贬斥为农民的糙食，但佐以合适的药草、香料、蔬菜还有精心准备，任何豆汤都能成为任意一顿饭中健康而可口的组成部分。"
