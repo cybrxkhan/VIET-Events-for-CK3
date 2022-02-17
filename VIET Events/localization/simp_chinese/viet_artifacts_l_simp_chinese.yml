@@ -1,7 +1,7 @@
 ﻿l_simp_chinese:
  artifact_VIET_clutter:0 "杂物"
  artifact_VIET_recipe:0 "菜谱"
- VIET_artifact_limit_warning:0 "把这件[clutter_artifact|E]放入你的宝库，会#X 减少#!#!你得到其他[clutter_artifacts|E]的机会。"
+ VIET_artifact_limit_warning:0 "把这件[clutter_artifact|E]放入你的宝库，会#X 减少#!你得到其他[clutter_artifacts|E]的机会。"
  VIET_baklava_test_name:0 "一片圣果仁蜜饼"
  VIET_baklava_test_desc:0 "一般人拿果仁蜜饼是用来吃的，这片果仁蜜饼却成了人们的崇拜之物，只因果仁蜜饼是神圣的，果仁蜜饼是始亦是终，这片果仁蜜饼是无上尊贵的，这片果仁蜜饼生来就是要主宰一切的。"
  VIET_sweetroll_test_name:0 "传奇御制面包卷"

@@ -2,7 +2,7 @@
  # MISC
  artifact_VIET_clutter:0 "Clutter"
  artifact_VIET_recipe:0 "Recipe"
- VIET_artifact_limit_warning:0 "Adding this [clutter_artifact|E] to your inventory #X reduces#!#! the chances you'll encounter other [clutter_artifacts|E]"
+ VIET_artifact_limit_warning:0 "Adding this [clutter_artifact|E] to your inventory #X reduces#! the chances you'll encounter other [clutter_artifacts|E]"
 
  # Special Artifacts
  VIET_baklava_test_name:0 "Holy Slice of Baklava"
@@ -84,7 +84,7 @@
  VIET_simple_gloves_name:0 "Simple Gloves"
  VIET_simple_gloves_desc:0 "An ordinary pair of gloves, made out of leather. They aren't flashy, but their owner seems to prefer them over other gloves given how reliable they are in everyday life."
  VIET_elegant_candlestick_name:0 "Elegant Candlestick"
- VIET_elegant_candlestick_desc:0 "A device used to hold candles, particularly to help its owner do everyday activities such as reading or eating in the late hours of the evening. It is made of "
+ VIET_elegant_candlestick_desc:0 "A device used to hold candles, particularly to help its owner do everyday activities such as reading or eating in the late hours of the evening. It is made of ceramic."
  VIET_basic_lantern_name:0 "Basic Lantern"
  VIET_basic_lantern_desc:0 "A handy lantern made using animal horn scraped thin and flattened to create a translucent window for a candle to shine through. Its owner will have nothing to fear at night with it around. Probably."
  VIET_favored_handkerchief_name:0 "Favored Handkerchief"
