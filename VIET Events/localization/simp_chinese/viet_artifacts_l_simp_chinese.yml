@@ -98,6 +98,27 @@
  VIET_traveling_inkwell_desc:0 "一只小瓶，不知道是用玻璃、黄铜、锡还是其他什么金属制成，点缀着少许装饰，上面是一个解释的螺旋盖子，这样一来，拥有着就能随身携带墨水，无需担心泄露了。"
  VIET_ancient_coin_name:0 "古币"
  VIET_ancient_coin_desc:0 "这枚钱币少说也得有一百年了，表面磨损的很厉害，不仔细看很难辨别上面的内容。这枚铅钱牵动着别人的好奇心，是极佳的聊天材料。"
+ 
+  # 1.5.2 - please leave this comment here
+ VIET_special_rock_name:0 "Special Rock"
+ VIET_special_rock_desc:0 "An odd but beautiful rock found by [ROOT.Char.GetTitledFirstName] in [ROOT.Char.GetHerHis] garden."
+ VIET_dinosaur_bone_name:0 "Ancient Creature's Bone"
+ VIET_dinosaur_bone_desc:0 "The bones of some legendary or mythical beast. Scholars have not been able to determine exactly what manner of creature it came from, and if such a creature might still be around."
+ VIET_magical_napkin_name:0 "Fireproof Napkin"
+ VIET_magical_napkin_desc:0 "A unique napkin that is designed to be fire-resistant. Made with a type of rock called abestos, it can be cleaned simply by throwing it into a fire, after which all the dirt and grime will magically vanish after a short wait. Besides being good for cleaning oneself after a meal, it is sure to be a source of great entertainment at any gathering!"
+ VIET_thunderstone_talisman_name:0 "Thunderstone Talisman"
+ VIET_thunderstone_talisman_desc:0 "A protective talisman made using a thunderstone, special stones of unknown origin - perhaps supernatural, even."
+ VIET_patchwork_quilt_name:0 "Patchwork Quilt"
+ VIET_patchwork_quilt_desc:0 "A simple but beautiful quilt, decorated with traditional [ROOT.Char.GetCulture.GetName] patterns and designs"
+ VIET_leather_ball_name:0 "Leather Ball"
+ VIET_leather_ball_desc:0 "A ball made from a patchwork of leather stuffed with feathers. It is great for playing games and keeping oneself fit."
+ # 1.5.3 - please leave this comment here
+ VIET_xxxxx_name:0 "xxxxx"
+ VIET_xxxxx_desc:0 "xxxxx"
+ # 44 Basic
+
+ # RECIPE ARTIFACTS
+ 
  VIET_recipe_baklava_name:0 "果仁蜜饼菜谱"
  VIET_recipe_baklava_desc:0 "这张菜谱上记载了制作果仁蜜饼的方法：面怎么和、糖浆放多少、加什么香料、点缀什么坚果。定然，只要有了这张菜谱，就能为客人呈现出傲视群雄的甜蜜佳品！"
  VIET_recipe_sweetroll_name:0 "面包卷菜谱"

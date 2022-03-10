@@ -6,12 +6,20 @@
 # asatru_raven_negative
 # bear_positive
 # bear_negative
+# beast_positive (dragon)
+# beast_negative (dragon)
+# bed_positive
+# bed_negative
+# bird_positive
+# bird_negative
 # blood_positive
 # blood_negative
 # cat_positive
 # cat_negative
 # cockroach_positive
 # cockroach_negative
+# compass_positive
+# compass_negative
 # county_modifier_control_positive
 # county_modifier_control_negative
 # county_modifier_corruption_positive
@@ -30,18 +38,28 @@
 # drink_negative
 # economy_positive
 # economy_negative
+# excrement_positive
+# excrement_negative
 # family_positive
 # family_negative
+# fashion_positive
+# fashion_negative
 # feast_positive
 # feast_negative
 # fertility_positive
 # fertility_negative
 # food_positive
 # food_negative
+# goods_positive (trade camel)
+# goods_negative (trade camel)
+# grandeur_positive (ring)
+# grandeur_negative (ring)
 # health_positive
 # health_negative
 # horse_positive
 # horse_negative
+# horse_dead_positive
+# horse_dead_negative
 # hunt_positive
 # hunt_negative
 # intrigue_positive
@@ -56,6 +74,8 @@
 # magic_negative
 # martial_positive
 # martial_negative
+# mask_positive
+# mask_negative
 # outdoors_positive
 # outdoors_negative
 # piety_positive
@@ -78,6 +98,8 @@
 # stewardship_negative
 # stress_positive
 # stress_negative
+# treat_positive (cake)
+# treat_negative (cake)
 # treatment_positive
 # treatment_negative
 # 
@@ -142,7 +164,7 @@ VIET_dagoth_ur_dream = {
 	hostile_scheme_resistance_add = 3
 }
 VIET_has_fruit_loops_poops = {
-	icon = food_negative
+	icon = excrement_negative
 	health = -0.5
 	fertility = -0.1
 }
@@ -267,7 +289,7 @@ VIET_late_night_work = {
 	stress_gain_mult = 0.2
 }
 VIET_gave_cook_advice = {
-	icon = social_positive
+	icon = treat_positive
 	hostile_scheme_resistance_add = 4
 }
 VIET_guanz_food = {
@@ -300,7 +322,7 @@ VIET_interesting_talk_with_stranger = {
 	diplomacy = 2
 }
 VIET_thinking_about_foreign_lands = {
-	icon = diplomacy_positive
+	icon = compass_positive
 	learning = 1
 	different_culture_opinion = 10
 	opinion_of_different_culture = 10
@@ -350,16 +372,16 @@ VIET_abstract_religious_art = {
 	religious_vassal_opinion = 3
 }
 VIET_examined_old_ruins = {
-	icon = rock_positive
+	icon = compass_positive
 	monthly_lifestyle_xp_gain_mult = 0.08
 }
 VIET_memorable_dramatic_play = {
-	icon = county_modifier_opinion_positive
+	icon = mask_positive
 	diplomacy = 1
 	monthly_piety = 0.1
 }
 VIET_simple_doesnt_like_drama_play = {
-	icon = social_positive
+	icon = mask_positive
 	general_opinion = -5
 	intrigue = 1
 }
@@ -402,7 +424,7 @@ VIET_oblivion_dream_thieves_guild = {
 	intrigue = 1
 }
 VIET_oblivion_dream_arena = {
-	icon = economy_positive
+	icon = prowess_positive
 	prowess = 2
 	health = 0.2
 }
@@ -412,7 +434,7 @@ VIET_values_scholarly_perspectives = {
 	monthly_lifestyle_xp_gain_mult = 0.2
 }
 VIET_values_adventurer_experiences = {
-	icon = horse_positive
+	icon = compass_positive
 	monthly_prestige = 0.2
 	mercenary_hire_cost_mult = -0.15
 }
@@ -480,20 +502,20 @@ VIET_friend_of_beggars = {
 	county_opinion_add = 10
 }
 VIET_bought_baklava_normal = {
-	icon = food_positive
+	icon = treat_positive
 	stress_gain_mult = -0.1
 	stress_loss_mult = 0.1
 	monthly_prestige = 0.1
 }
 VIET_bought_baklava_sweet_cheese = {
-	icon = food_positive
+	icon = treat_positive
 	stress_gain_mult = -0.1
 	stress_loss_mult = 0.1
 	monthly_prestige = 0.2
 	monthly_piety = 0.3
 }
 VIET_bought_baklava_spices = {
-	icon = food_positive
+	icon = treat_positive
 	stress_gain_mult = -0.1
 	stress_loss_mult = 0.1
 	monthly_prestige = 0.2
@@ -501,7 +523,7 @@ VIET_bought_baklava_spices = {
 	health = 0.2
 }
 VIET_bought_baklava_fruits = {
-	icon = food_positive
+	icon = treat_positive
 	stress_gain_mult = -0.1
 	stress_loss_mult = 0.1
 	monthly_prestige = 0.2
@@ -509,29 +531,29 @@ VIET_bought_baklava_fruits = {
 	fertility = 0.1
 }
 VIET_baklava_fanatic = {
-	icon = food_positive
+	icon = treat_positive
 	stress_gain_mult = -0.1
 	stress_loss_mult = 0.1
 	#monthly_prestige = -0.2
 }
 VIET_baklava_envoy_gifts = {
-	icon = food_positive
+	icon = treat_positive
 	diplomacy = 1
 	monthly_prestige = 0.2
 }
 VIET_baklava_guests_banquets = {
-	icon = food_positive
+	icon = treat_positive
 	diplomacy = 1
 	intrigue = 1
 }
 VIET_baklava_donate_to_poor = {
-	icon = food_positive
+	icon = treat_positive
 	diplomacy = 1
 	stewardship = 1
 	monthly_piety = 0.2
 }
 VIET_baklava_keep_for_self = {
-	icon = food_positive
+	icon = treat_positive
 	health = 0.1
 	stress_gain_mult = -0.1
 	stress_loss_mult = 0.1	
@@ -586,7 +608,7 @@ VIET_ignored_disapproval_and_mockery = {
 	stress_gain_mult = -0.1
 }
 VIET_cinnamon_toast_crunch_addict = {
-	icon = food_positive
+	icon = treat_positive
 	negate_health_penalty_add = 0.2
 }
 VIET_strange_female_bodyguard = {
@@ -602,12 +624,12 @@ VIET_tiring_travel = {
 	health = -0.3
 }
 VIET_sun_wu_kong_story = {
-	icon = piety_positive
+	icon = mask_positive
 	diplomacy = 1
 	monthly_piety = 0.2
 }
 VIET_egyptian_sunscreen = {
-	icon = piety_positive
+	icon = fashion_positive
 	health = 0.3
 	personal_scheme_power_add = 2
 }
@@ -671,7 +693,7 @@ VIET_bad_acne = {
 	personal_scheme_power_add = -6
 }
 VIET_skeptical_ruler = {
-	icon = letter_positive
+	icon = mask_positive
 	intrigue = 1
 	monthly_piety = -0.1
 }
@@ -741,7 +763,7 @@ VIET_talked_about_sand = {
 	monthly_diplomacy_lifestyle_xp_gain_mult = 0.05
 }
 VIET_studying_ancient_clothes = {
-	icon = learning_positive
+	icon = fashion_positive
 	diplomacy = 1
 	monthly_learning_lifestyle_xp_gain_mult = 0.15
 }
@@ -752,7 +774,7 @@ VIET_helped_solve_old_murder_mystery = {
 	monthly_prestige = 0.4
 }
 VIET_explored_cave = {
-	icon = rock_positive
+	icon = compass_positive
 	stewardship = 1
 	monthly_stewardship_lifestyle_xp_gain_mult = 0.1
 }
@@ -778,7 +800,7 @@ VIET_comforting_dream_deceased = {
 	monthly_piety = 0.1
 }
 VIET_deathbed_wisdom = {
-	icon = social_positive
+	icon = bed_positive
 	monthly_prestige = 0.2
 	monthly_piety = 0.2
 	monthly_lifestyle_xp_gain_mult = 0.12
@@ -834,7 +856,7 @@ VIET_executed_necrophiliac = {
 	monthly_dread = 0.2
 }
 VIET_imprisoned_necrophiliac = {
-	icon = dread_positive
+	icon = prison_positive
 	county_opinion_add = 6
 	monthly_prestige = 0.1
 }
@@ -901,12 +923,12 @@ VIET_forbade_effigy_celebration = {
 	monthly_prestige = 0.3
 }
 VIET_bad_hangover = {
-	icon = feast_negative
+	icon = drink_negative
 	stress_gain_mult = 0.1
 	health = -0.1
 }
 VIET_ate_bad_baklava = {
-	icon = food_negative
+	icon = treat_negative
 	health = -0.1
 }
 VIET_sympathetic = {
@@ -923,7 +945,7 @@ VIET_sympathetic = {
 # 	monthly_prestige = -0.2
 # }
 VIET_smuggling_side_business = {
-	icon = social_positive
+	icon = goods_positive
 	intrigue = 1
 	monthly_intrigue_lifestyle_xp_gain_mult = 0.1
 	monthly_income = 0.5
@@ -935,7 +957,7 @@ VIET_indoors_nap = {
 	stress_gain_mult = -0.1
 }
 VIET_tasty_snack = {
-	icon = stress_positive
+	icon = treat_positive
 	stress_loss_mult = 0.1
 }
 VIET_satisfied_work = {
@@ -1010,7 +1032,7 @@ VIET_the_prude = {
 	monthly_piety_gain_mult = 0.2
 }
 VIET_loosening_up = {
-	icon = piety_positive
+	icon = mask_positive
 	general_opinion = 10
 	monthly_piety = -0.2
 	monthly_piety_gain_mult = -0.1
@@ -1029,7 +1051,7 @@ VIET_blacksmith_discussion = {
 	monthly_stewardship_lifestyle_xp_gain_mult = 0.1
 }
 VIET_adventurer_left_for_dead_origin = {
-	icon = hunt_positive
+	icon = compass_positive
 	martial = 1
 	prowess = 1
 	monthly_prestige = 0.1
@@ -1182,7 +1204,7 @@ VIET_read_book_gritty = {
 	personal_scheme_power_mult = 0.1
 }
 VIET_read_book_fantasy = {
-	icon = outdoors_positive
+	icon = compass_positive
 	martial = 1
 	learning = 1
 }
@@ -1247,7 +1269,7 @@ VIET_incest_debate = {
 	fertility = 0.02
 }
 VIET_otumeel_prankster = {
-	icon = county_modifier_control_positive
+	icon = mask_positive
 	intrigue = 2
 	hostile_scheme_power_mult = 0.04
 	hostile_scheme_resistance_mult = 0.02
@@ -1341,7 +1363,7 @@ VIET_almshouse_donation = {
 	county_opinion_add = 15
 }
 VIET_new_ornamental_bushes = {
-	icon = prestige_positive
+	icon = grandeur_positive
 	monthly_prestige = 0.3
 	monthly_dynasty_prestige = 0.1
 }
@@ -1364,40 +1386,40 @@ VIET_eating_healthy_vegetables = {
 	negate_health_penalty_add = 0.1
 }
 VIET_traveling_baklava_merchant_in_town = {
-	icon = food_positive
+	icon = treat_positive
 	county_opinion_add = 1
 }
 VIET_bought_traveling_merchant_baklava = {
-	icon = food_positive
+	icon = treat_positive
 	monthly_prestige = 0.3
 	diplomacy = 1
 }
 VIET_bought_traveling_merchant_lokma = {
-	icon = food_positive
+	icon = treat_positive
 	monthly_prestige = 0.3
 	martial = 1
 }
 VIET_bought_traveling_merchant_kanafeh = {
-	icon = food_positive
+	icon = treat_positive
 	monthly_prestige = 0.3
 	stewardship = 1
 }
 VIET_bought_traveling_merchant_halwa = {
-	icon = food_positive
+	icon = treat_positive
 	monthly_prestige = 0.3
 	intrigue = 1
 }
 VIET_bought_traveling_merchant_qatayef = {
-	icon = food_positive
+	icon = treat_positive
 	monthly_prestige = 0.3
 	learning = 1
 }
 VIET_traveling_spice_merchant_in_town = {
-	icon = food_positive
+	icon = treat_positive
 	county_opinion_add = 1
 }
 VIET_bought_five_spice_blend = {
-	icon = food_positive
+	icon = treat_positive
 	monthly_prestige = 0.2
 	health = 0.1
 	diplomacy_per_prestige_level = 1
@@ -1444,7 +1466,7 @@ VIET_has_mysterious_chest = {
 	icon = stewardship_positive
 }
 VIET_mercenary_scholar_in_town = {
-	icon = social_positive
+	icon = compass_positive
 }
 VIET_hired_belrand = {
 	icon = prowess_positive
@@ -1460,7 +1482,7 @@ VIET_chest_ancient_scroll = {
 	monthly_lifestyle_xp_gain_mult = 0.03
 }
 VIET_chest_golden_rose = {
-	icon = prestige_positive
+	icon = fertility_positive
 	monthly_prestige = 0.3
 }
 VIET_servant_hostage_countdown = {
@@ -1563,12 +1585,12 @@ VIET_did_something_cat_lady_issue = {
 	county_opinion_add = 4
 }
 VIET_hearing_foreign_tall_tales = {
-	icon = social_positive
+	icon = compass_positive
 	diplomacy = 1
 	monthly_lifestyle_xp_gain_mult = 0.03	
 }
 VIET_owns_a_lot_of_shoes = {
-	icon = stewardship_negative
+	icon = fashion_negative
 	stewardship = -2
 	county_opinion_add = -3
 }
@@ -1714,7 +1736,7 @@ VIET_night_we_met = {
 	stress_loss_mult = -0.1
 }
 VIET_strange_trails = {
-	icon = magic_positive
+	icon = compass_positive
 	stress_gain_mult = -0.2
 	stress_loss_mult = 0.2
 	life_expectancy = 5
@@ -1845,7 +1867,7 @@ VIET_observed_slowworm = {
 	monthly_intrigue_lifestyle_xp_gain_mult = 0.03
 }
 VIET_collected_lots_of_honey = {
-	icon = food_positive
+	icon = treat_positive
 	health = 0.2
 	monthly_prestige = 0.1
 }
@@ -1859,17 +1881,17 @@ VIET_charitable_to_struggling_peasant = {
 	monthly_piety = 0.2
 }
 VIET_encountered_a_honey_badger = {
-	icon = stress_negative
+	icon = beast_negative
 	stress_gain_mult = 0.05
 	stress_loss_mult = -0.05
 }
 VIET_saw_animal_fight = {
-	icon = martial_positive
+	icon = beast_positive
 	stress_gain_mult = -0.1
 	stress_loss_mult = 0.1
 }
 VIET_eating_sparrow = {
-	icon = food_positive
+	icon = bird_positive
 	stewardship = 1
 	fertility = 0.03
 }
@@ -1883,7 +1905,7 @@ VIET_impressed_others_animal_knowledge = {
 	monthly_prestige = 0.2
 }
 VIET_learning_about_birds = {
-	icon = asatru_raven_positive
+	icon = bird_positive
 	diplomacy = 1
 	learning = 1
 	monthly_diplomacy_lifestyle_xp_gain_mult = 0.04
@@ -1914,7 +1936,7 @@ VIET_amused_by_animal = {
 	diplomacy = 1
 }
 VIET_eating_larks = {
-	icon = food_positive
+	icon = bird_positive
 	stress_loss_mult = 0.1
 	monthly_prestige = 0.2
 }
@@ -1933,18 +1955,18 @@ VIET_befriending_rooks = {
 	monthly_intrigue_lifestyle_xp_gain_mult = 0.03
 }
 VIET_hoopoe_curse = {
-	icon = asatru_raven_negative
+	icon = bird_negative
 	monthly_piety = -0.3
 	monthly_prestige = -0.3
 }
 VIET_hoopoe_blessing = {
-	icon = asatru_raven_positive
+	icon = bird_positive
 	diplomacy = 1
 	monthly_piety = 0.2
 	monthly_prestige = 0.2
 }
 VIET_hoopoe_medicine = {
-	icon = asatru_raven_positive
+	icon = bird_positive
 	health = 0.5
 	monthly_prestige = 0.2
 }
@@ -1960,17 +1982,17 @@ VIET_threatened_hunters = {
 	county_opinion_add = -7
 }
 VIET_listened_to_yellowhammer = {
-	icon = asatru_raven_positive
+	icon = bird_positive
 	monthly_piety = 0.1
 	monthly_prestige = 0.1
 }
 VIET_house_bunting_blessing = {
-	icon = asatru_raven_positive
+	icon = bird_positive
 	diplomacy = 1
 	monthly_piety = 0.3
 }
 VIET_guard_goose = {
-	icon = asatru_raven_positive
+	icon = bird_positive
 	diplomacy = -1
 	intrigue = 2
 	hostile_scheme_resistance_add = 8
@@ -1985,7 +2007,7 @@ VIET_bear_attacks_ended = {
 	county_opinion_add = 10
 }
 VIET_feathered_locusts = {
-	icon = asatru_raven_negative
+	icon = bird_negative
 	development_growth = -0.1
 	tax_mult = -0.06
 }
@@ -2028,23 +2050,23 @@ VIET_large_herd_donkeys = {
 	monthly_prestige = 0.5
 }
 VIET_dovecote_interest = {
-	icon = prestige_positive
+	icon = grandeur_positive
 }
 VIET_built_dovecotes_small = {
-	icon = asatru_raven_positive
+	icon = bird_positive
 	diplomacy = 1
 	stewardship = 1
 	monthly_prestige_gain_mult = 0.05
 }
 VIET_built_dovecotes_medium = {
-	icon = asatru_raven_positive
+	icon = bird_positive
 	diplomacy = 1
 	stewardship = 1
 	intrigue = 1
 	monthly_prestige_gain_mult = 0.1
 }
 VIET_built_dovecotes_large = {
-	icon = asatru_raven_positive
+	icon = bird_positive
 	diplomacy = 1
 	martial = 1
 	stewardship = 1
@@ -2052,13 +2074,13 @@ VIET_built_dovecotes_large = {
 	monthly_prestige_gain_mult = 0.15
 }
 VIET_songbird_average_fan = {
-	icon = asatru_raven_positive
+	icon = bird_positive
 	diplomacy = 1
 	learning = 1
 	monthly_prestige_gain_mult = 0.05
 }
 VIET_songbird_enjoyer = {
-	icon = asatru_raven_positive
+	icon = bird_positive
 	diplomacy = 1
 	stress_gain_mult = -0.05
 	stress_loss_mult = 0.05
@@ -2100,6 +2122,22 @@ VIET_listened_to_saint_francis = {
 	monthly_prestige = -0.3
 	monthly_piety = 0.3
 	monthly_piety_gain_mult = 0.1
+}
+VIET_veterans_anecdotes = {
+	icon = martial_positive
+	martial = 1
+	monthly_martial_lifestyle_xp_gain_mult = 0.03
+}
+VIET_resolved_peasant_argument = {
+	icon = social_positive
+	monthly_piety = 0.1
+	monthly_diplomacy_lifestyle_xp_gain_mult = 0.1
+	county_opinion_add = 4
+}
+VIET_charity_to_servant = {
+	icon = family_positive
+	monthly_piety = 0.3
+	county_opinion_add = 3
 }
 
 

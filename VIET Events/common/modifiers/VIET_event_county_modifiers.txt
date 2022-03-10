@@ -14,12 +14,20 @@
 # asatru_raven_negative
 # bear_positive
 # bear_negative
+# beast_positive (dragon)
+# beast_negative (dragon)
+# bed_positive
+# bed_negative
+# bird_positive
+# bird_negative
 # blood_positive
 # blood_negative
 # cat_positive
 # cat_negative
 # cockroach_positive
 # cockroach_negative
+# compass_positive
+# compass_negative
 # county_modifier_control_positive
 # county_modifier_control_negative
 # county_modifier_corruption_positive
@@ -38,18 +46,28 @@
 # drink_negative
 # economy_positive
 # economy_negative
+# excrement_positive
+# excrement_negative
 # family_positive
 # family_negative
+# fashion_positive
+# fashion_negative
 # feast_positive
 # feast_negative
 # fertility_positive
 # fertility_negative
 # food_positive
 # food_negative
+# goods_positive (trade camel)
+# goods_negative (trade camel)
+# grandeur_positive (ring)
+# grandeur_negative (ring)
 # health_positive
 # health_negative
 # horse_positive
 # horse_negative
+# horse_dead_positive
+# horse_dead_negative
 # hunt_positive
 # hunt_negative
 # intrigue_positive
@@ -64,6 +82,8 @@
 # magic_negative
 # martial_positive
 # martial_negative
+# mask_positive
+# mask_negative
 # outdoors_positive
 # outdoors_negative
 # piety_positive
@@ -86,6 +106,8 @@
 # stewardship_negative
 # stress_positive
 # stress_negative
+# treat_positive (cake)
+# treat_negative (cake)
 # treatment_positive
 # treatment_negative
 # 
@@ -127,7 +149,7 @@ VIET_ennobled_beloved_guard_captain = {
 	county_opinion_add = 10
 }
 VIET_the_rogues = {
-	icon = county_modifier_control_negative
+	icon = mask_negative
 	county_opinion_add = -2
 	monthly_county_control_change_factor = -0.1	
 }
@@ -136,11 +158,11 @@ VIET_arrested_the_rogues = {
 	county_opinion_add = 2
 }
 VIET_hired_rogues_county = {
-	icon = county_modifier_control_negative
+	icon = mask_negative
 	county_opinion_add = -5	
 }
 VIET_hired_rogues = {
-	icon = intrigue_positive
+	icon = mask_positive
 	intrigue = 3
 	hostile_scheme_power_add = 10
 	hostile_scheme_resistance_add = 10
@@ -195,7 +217,7 @@ VIET_wooden_rod_relic_study = {
 	development_growth_factor = 0.06
 }
 VIET_missing_persons = {
-	icon = stewardship_negative
+	icon = goods_negative
 	tax_mult = -0.03
 }
 VIET_good_pottery = {
@@ -324,7 +346,7 @@ VIET_stone_slab_found = {
 	development_growth_factor = 0.01
 }
 VIET_araragi_vampire = {
-	icon = stress_positive
+	icon = beast_positive
 	county_opinion_add = 1
 	development_growth_factor = 0.04
 }
@@ -356,7 +378,7 @@ VIET_flat_stone_monument = {
 	development_growth_factor = 0.01
 }
 VIET_recent_sandstorm = {
-	icon = rock_negative
+	icon = compass_negative
 	development_growth = -0.2
 	development_growth_factor = -0.5
 	levy_size = -0.15
@@ -489,7 +511,7 @@ VIET_famous_courtesan_sex = {
 	spouse_opinion = -10
 }
 VIET_famous_traveler = {
-	icon = outdoors_positive
+	icon = compass_positive
 	diplomacy = 1
 	learning = 1
 	prowess = 4
@@ -497,7 +519,7 @@ VIET_famous_traveler = {
 	monthly_prestige = 0.1
 }
 VIET_famous_traveler_county = {
-	icon = outdoors_positive
+	icon = compass_positive
 	development_growth_factor = 0.04
 }
 VIET_recent_building_collapse = {
@@ -510,7 +532,7 @@ VIET_generous_donation = {
 	monthly_piety = 0.2
 }
 VIET_great_beauty = {
-	icon = fertility_positive
+	icon = fashion_positive
 	tax_mult = 0.01
 }
 VIET_great_ugly_commoner = {
@@ -549,7 +571,7 @@ VIET_employed_renowned_blacksmiths_weapons = {
 	attacker_advantage = 10
 }
 VIET_employed_renowned_blacksmiths_supplies = {
-	icon = prowess_positive
+	icon = goods_positive
 	movement_speed = 0.1
 	men_at_arms_maintenance = -0.1
 }
@@ -599,12 +621,12 @@ VIET_resolved_village_love_story = {
 	monthly_piety = 0.1
 }
 VIET_rehabilitated_submerged_shrine = {
-	icon = rock_positive
+	icon = compass_positive
 	county_opinion_add = 3
 	development_growth_factor = 0.03
 }
 VIET_burnt_down_tower_renovated = {
-	icon = rock_positive
+	icon = compass_positive
 	monthly_county_control_change_add = 0.3
 	levy_reinforcement_rate = 0.1
 	hostile_raid_time = 0.1

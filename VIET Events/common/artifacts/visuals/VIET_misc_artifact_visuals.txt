@@ -262,6 +262,36 @@ VIET_ancient_coin = {
 	asset = ep1_western_box_small_basic_01_a_entity	
 }
 
+VIET_special_rock = {
+	icon = "artifact_VIET_special_rock.dds"
+	asset = ep1_western_box_small_basic_01_a_entity	
+}
+
+VIET_dinosaur_bone = {
+	icon = "artifact_VIET_dinosaur_bone.dds"
+	asset = ep1_western_box_small_basic_01_a_entity	
+}
+
+VIET_magical_napkin = {
+	icon = "artifact_VIET_magical_napkin.dds"
+	asset = ep1_western_box_small_basic_01_a_entity	
+}
+
+VIET_thunderstone_talisman = {
+	icon = "artifact_VIET_thunderstone_talisman.dds"
+	asset = ep1_western_box_small_basic_01_a_entity	
+}
+
+VIET_patchwork_quilt = {
+	icon = "artifact_VIET_patchwork_quilt.dds"
+	asset = ep1_western_box_small_basic_01_a_entity	
+}
+
+VIET_leather_ball = {
+	icon = "artifact_VIET_leather_ball.dds"
+	asset = ep1_western_box_small_basic_01_a_entity	
+}
+
 
 
 

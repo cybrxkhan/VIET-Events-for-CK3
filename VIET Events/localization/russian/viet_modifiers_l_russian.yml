@@ -876,5 +876,13 @@ VIET_inspired_by_songbird_learning:0 "Певчие птицы пробуждаю
 VIET_swimming_camels:0 "Владелец нескольких плавающих верблюдов из Индии"
 VIET_listened_to_saint_francis:0 "Прослушал проповедь с животными"
 
- # 1.5.0 - please leave this comment here 
+ # 1.5.0 - please leave this comment here
+ VIET_opinion_rejected_my_gift:0 "Rejected My Gift"
+ VIET_opinion_accepted_my_gift:0 "Accepted My Gift"
+ # 1.5.1 - please leave this comment here
+ # 1.5.2 - please leave this comment here
+ VIET_veterans_anecdotes:0 "Listened to a Veteran's Anecdotes"
+ VIET_resolved_peasant_argument:0 "Resolved an Argument Between Two Peasants"
+ VIET_charity_to_servant:0 "Charitable to a Servant"
+ # 1.5.3 - please leave this comment here
  xxxxx:0 "xxxxx"

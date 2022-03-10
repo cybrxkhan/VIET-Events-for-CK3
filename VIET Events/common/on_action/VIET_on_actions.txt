@@ -50,7 +50,7 @@ VIET_events_yearly_pulse = {
 	}
 	random_events = {
 		chance_of_no_event = {
-			value = 30
+			value = 40
 			if = {
 				limit = {
 					has_game_rule = VIET_event_frequency_low
@@ -463,7 +463,6 @@ VIET_events_tri_yearly_pulse = {
 		100 = VIETold.1030		# Moss on walls - do you want to clean up or not?
 		# Rocks and Minerals
 		100 = VIETold.1035		# Character comes across a boulder believed to have spiritual properties
-		100 = VIETold.1036		# Farmers find the bones of a mystical beast
 		100 = VIETold.1040		# Sulfur treatment for acne
 		# Toothbrush
 		100 = VIETold.1044		# Convince a courtier to use miswak more
@@ -593,7 +592,6 @@ VIET_events_tri_yearly_pulse = {
 		100 = VIETmisc.0088		# Gambling with loaded dice in the market
 		# Earth
 		100 = VIETmisc.0089		# I hate sand, it's corase and is irritating and gets everywhere
-		100 = VIETmisc.0094		# Thunderstones found near the area
 		100 = VIETmisc.0095		# Courtier dreams of the sandman
 		# Spooky
 		100 = VIETmisc.0099		# Explore a haunted house or not?
@@ -661,6 +659,9 @@ VIET_events_tri_yearly_pulse = {
 		100 = VIETmisc.0221		# Servant sees a parliament of rooks in your garden
 		100 = VIETmisc.0224		# Come across some hunters hunting chamois
 		100 = VIETmisc.0225		# Town notable invites you to participate in caracal pigeon hunting blood sport gambling
+		# Patch
+		100 = VIETmisc.0234		# Two peasant women arguing about a patch of cabbages
+		100 = VIETmisc.0235		# Notice your servant is wearing patchy clothing
 	}
 }
 
@@ -737,9 +738,7 @@ VIET_events_five_yearly_pulse = {
 		# Time
 		100 = VIETold.1028		# Fire in village doesn't spiral out of control because of water in the clock tower
 		# Rocks and Minerals
-		100 = VIETold.1034		# Find a special rock
 		100 = VIETold.1038		# Your character hears about lingams and yoni
-		100 = VIETold.1039		# Merchant shows off a fire-proof napkin
 		# Toothbrush
 		100 = VIETold.1048		# Courtier talks about toothbrush sexy times
 		100 = VIETold.1050		# Old people with bad teeth scare you and inspire you to do more cleaning
@@ -869,6 +868,8 @@ VIET_events_five_yearly_pulse = {
 		100 = VIETmisc.0230		# Butcher is giving up trade to become a wandering preacher and care for animals
 		100 = VIETmisc.0231		# Traveling merchant offers to sell you swimming kharai camels from Gujarat
 		100 = VIETmisc.0232		# Come across a traveling cleric preaching to the animals
+		# Patch
+		100 = VIETmisc.0233		# Met a Veteran who wears an eyepatch
 	}
 }
 
@@ -1367,6 +1368,12 @@ VIET_events_common_artifact_pulse = {
 		#######################################
 		# BOTH GEN VIET
 		#######################################
+
+		# Rocks and Minerals
+		100 = VIETold.1034		# Special rock - find a nice looking rock in the garden
+
+		# Rocks
+		100 = VIETmisc.0094		# Thunderstones found near the area
 		
 		# Generic
 		100 = VIETmisc.5000		# Abacus - Merchant offers you his old abacus
@@ -1396,8 +1403,10 @@ VIET_events_common_artifact_pulse = {
 		100 = VIETmisc.5037		# Simple Waterskin - traveling a lot lately and grow fond of the waterskin you've been using
 		100 = VIETmisc.5039		# Decorated Broom - servants find a nice broom while cleaning your rooms
 		100 = VIETmisc.5041		# Ancient coin - your servant finds an ancient coin while gardening
+		# Patch
+		100 = VIETmisc.5051		# Leather ball - consider buying one?
 		
-		# 27
+		# 30
     }
 }
 
@@ -1437,6 +1446,10 @@ VIET_events_uncommon_artifact_pulse = {
 		#######################################
 		# BOTH GEN VIET
 		#######################################
+
+		# Rocks and Minerals
+		100 = VIETold.1036		# Dinosaur Bone - Farmers find the bones of a mystical beast
+		100 = VIETold.1039		# Fireproof Napkin - Merchant shows off a fire-proof napkin
 		
 		# Generic
 		100 = VIETmisc.5001		# Calipers - Find some cool calipers
@@ -1459,8 +1472,11 @@ VIET_events_uncommon_artifact_pulse = {
 		100 = VIETmisc.5047		# Savory Pie Recipe
 		100 = VIETmisc.5048		# Fruit Pie Recipe recipe
 		100 = VIETmisc.5049		# Bean Soup Recipe
+
+		# Patch
+		100 = VIETmisc.5050		# Patchwork quilt - villagers offer you one as a gift
 		
-		# 20
+		# 23
 		
     }
 }

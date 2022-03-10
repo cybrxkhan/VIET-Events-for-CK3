@@ -25,6 +25,7 @@
 # 5042-5044		Recipes (First batch, made for Royal Court release)
 # 5045			Lusty Argonian Maid
 # 5046-5049		Recipes
+# 5050-5051		Patch
 # 
 ############################################################################################################################
 
@@ -2579,7 +2580,7 @@ VIETmisc.5021 = {
 	}
 	
 	option = {
-		name = VIETmisc.5021.b
+		name = VIETmisc.5007.b
 		hidden_effect = {
 			destroy_artifact = scope:VIET_clutter_artifact
 		}
@@ -5907,6 +5908,7 @@ VIETmisc.5045 = {
     }
 
 	trigger = {
+		NOT = { has_game_rule = VIET_serious_events }
 		NOT = { has_character_flag = VIET_lusty_argonian_maid_happened }
 		# Weed out most cultures that probably aren't literate at the game start
 		NOT = { has_government = tribal_government }	
@@ -7377,6 +7379,257 @@ VIETmisc.5049 = {
 
 
 
+##################################################################
+# PATCH 5050-5051
+##################################################################
+
+
+# Patchwork quilt - villagers offer you one as a gift
+VIETmisc.5050 = {
+	type = character_event
+	title = VIETmisc.5050.t
+	desc = VIETmisc.5050.desc
+	theme = vassal
+	override_background = { event_background = VIET_background_small_town }
+	
+	left_portrait = {
+		character = root
+		animation = happiness
+	}
+	artifact = { # To display the artifact in the event-window
+        target = scope:VIET_clutter_artifact
+        position = lower_center_portrait
+    }
+
+    weight_multiplier = {
+        base = 1
+		# Reduce spam
+		modifier = {
+			add = -0.9
+			any_character_artifact = {
+				has_variable = VIET_patchwork_quilt_variable
+			}
+		}
+		modifier = {
+			add = -0.4
+			VIET_has_2_clutter_artifacts_trigger = yes	
+		}
+		modifier = {
+			add = -0.5
+			VIET_has_4_clutter_artifacts_trigger = yes	
+		}
+		modifier = {
+			add = 0.2
+			has_trait = compassionate
+		}
+		modifier = {
+			add = -0.2
+			has_trait = sadistic
+		}
+		modifier = {
+			add = 0.2
+			has_trait = just
+		}
+		modifier = {
+			add = -0.2
+			has_trait = arbitrary
+		}
+		modifier = {
+			add = 0.2
+			has_trait = generous
+		}
+		modifier = {
+			add = -0.2
+			has_trait = greedy
+		}
+    }
+	
+	immediate = {	
+		hidden_effect_new_artifact = {
+			create_artifact = {	
+				name = VIET_patchwork_quilt_name
+				description = VIET_patchwork_quilt_desc
+				type = VIET_clutter
+				visuals = VIET_patchwork_quilt
+				quality = 15
+				wealth = 15
+				modifier = artifact_VIET_patchwork_quilt_modifier
+				max_durability = 40
+				save_scope_as = VIET_clutter_artifact
+				history = {
+					type = created_before_history
+				}
+			}
+			scope:VIET_clutter_artifact = {
+				set_variable = VIET_patchwork_quilt_variable
+			}
+		}
+	}
+	
+	option = {
+		name = VIETmisc.5050.a
+		VIET_medium_prestige_loss_effect = yes
+		show_as_tooltip = {
+			scope:VIET_clutter_artifact = {
+				set_owner = {
+					target = root
+				}
+			}
+		}
+		stress_impact = {
+			arrogant = minor_stress_impact_gain
+			callous = miniscule_stress_impact_gain
+		}
+		custom_tooltip = VIET_artifact_limit_warning
+	}
+	
+	option = {
+		name = VIETmisc.5050.b
+		random_list = {
+			10 = { add_gold = 2 }
+			10 = { add_gold = 5 }
+			10 = { add_gold = 8 }
+			10 = { add_gold = 10 }
+			10 = { add_gold = 12 }
+			10 = { add_gold = 15 }
+		}	
+		hidden_effect = {
+			destroy_artifact = scope:VIET_clutter_artifact
+		}
+		stress_impact = {
+			humble = miniscule_stress_impact_gain
+			compassionate = miniscule_stress_impact_gain
+			temperate = miniscule_stress_impact_gain
+		}
+	}
+}
+
+
+
+# Leather ball - consider buying one?
+VIETmisc.5051 = {
+	type = character_event
+	title = VIETmisc.5051.t
+	desc = VIETmisc.5051.desc
+	theme = friendly
+	override_background = { event_background = garden }
+	
+	left_portrait = root
+	artifact = { # To display the artifact in the event-window
+        target = scope:VIET_clutter_artifact
+        position = lower_center_portrait
+    }
+
+    weight_multiplier = {
+        base = 1
+		# Reduce spam
+		modifier = {
+			add = -0.9
+			any_character_artifact = {
+				has_variable = VIET_leather_ball_variable
+			}
+		}
+		modifier = {
+			add = -0.4
+			VIET_has_2_clutter_artifacts_trigger = yes	
+		}
+		modifier = {
+			add = -0.5
+			VIET_has_4_clutter_artifacts_trigger = yes	
+		}
+		modifier = {
+			add = 0.2
+			has_trait = gregarious
+		}
+		modifier = {
+			add = -0.2
+			has_trait = shy
+		}
+		modifier = {
+			add = 0.2
+			has_trait = content
+		}
+		modifier = {
+			add = -0.2
+			has_trait = ambitious
+		}
+		modifier = {
+			add = 0.2
+			has_trait = trusting
+		}
+		modifier = {
+			add = -0.2
+			has_trait = paranoid
+		}
+    }
+	
+	immediate = {	
+		hidden_effect_new_artifact = {
+			create_artifact = {	
+				name = VIET_leather_ball_name
+				description = VIET_leather_ball_desc
+				type = VIET_clutter
+				visuals = VIET_leather_ball
+				quality = 15
+				wealth = 15
+				modifier = artifact_VIET_leather_ball_modifier
+				max_durability = 40
+				save_scope_as = VIET_clutter_artifact
+				history = {
+					type = created_before_history
+				}
+			}
+			scope:VIET_clutter_artifact = {
+				set_variable = VIET_leather_ball_variable
+			}
+		}
+	}
+	
+	option = {
+		name = VIETmisc.5051.a
+		trigger = {
+			OR = {
+				is_ai = no
+				gold >= 20
+			}
+		}
+		remove_short_term_gold = 20
+		show_as_tooltip = {
+			scope:VIET_clutter_artifact = {
+				set_owner = {
+					target = root
+				}
+			}
+		}
+		stress_impact = {
+			lazy = minor_stress_impact_gain
+		}
+		custom_tooltip = VIET_artifact_limit_warning
+		if = {
+			limit = {
+				has_game_rule = VIET_historical_context_on
+			}
+			custom_tooltip = VIETmisc.5051.info
+		}
+	}
+	
+	option = {
+		name = VIETmisc.5051.b	
+		hidden_effect = {
+			destroy_artifact = scope:VIET_clutter_artifact
+		}
+		stress_impact = {
+			athletic = minor_stress_impact_gain
+			gregarious = miniscule_stress_impact_gain
+		}
+		if = {
+			limit = {
+				has_game_rule = VIET_historical_context_on
+			}
+			custom_tooltip = VIETmisc.5051.info
+		}
+	}
+}
 
 
 

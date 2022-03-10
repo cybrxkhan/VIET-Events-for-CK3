@@ -104,7 +104,23 @@
  VIET_ancient_coin_name:0 "Ancient Coin"
  VIET_ancient_coin_desc:0 "This coin, which is perhaps centuries old if not more, is so worn out that one can barely make out its features. Still, it is an amusing curiosity that will certainly serve as a great conversation starter for its owner."
  # 1.5.1 - please leave this comment here
- # 42 Basic
+ # 1.5.2 - please leave this comment here
+ VIET_special_rock_name:0 "Special Rock"
+ VIET_special_rock_desc:0 "An odd but beautiful rock found by [ROOT.Char.GetTitledFirstName] in [ROOT.Char.GetHerHis] garden."
+ VIET_dinosaur_bone_name:0 "Ancient Creature's Bone"
+ VIET_dinosaur_bone_desc:0 "The bones of some legendary or mythical beast. Scholars have not been able to determine exactly what manner of creature it came from, and if such a creature might still be around."
+ VIET_magical_napkin_name:0 "Fireproof Napkin"
+ VIET_magical_napkin_desc:0 "A unique napkin that is designed to be fire-resistant. Made with a type of rock called abestos, it can be cleaned simply by throwing it into a fire, after which all the dirt and grime will magically vanish after a short wait. Besides being good for cleaning oneself after a meal, it is sure to be a source of great entertainment at any gathering!"
+ VIET_thunderstone_talisman_name:0 "Thunderstone Talisman"
+ VIET_thunderstone_talisman_desc:0 "A protective talisman made using a thunderstone, special stones of unknown origin - perhaps supernatural, even."
+ VIET_patchwork_quilt_name:0 "Patchwork Quilt"
+ VIET_patchwork_quilt_desc:0 "A simple but beautiful quilt, decorated with traditional [ROOT.Char.GetCulture.GetName] patterns and designs"
+ VIET_leather_ball_name:0 "Leather Ball"
+ VIET_leather_ball_desc:0 "A ball made from a patchwork of leather stuffed with feathers. It is great for playing games and keeping oneself fit."
+ # 1.5.3 - please leave this comment here
+ VIET_xxxxx_name:0 "xxxxx"
+ VIET_xxxxx_desc:0 "xxxxx"
+ # 44 Basic
 
  # RECIPE ARTIFACTS
  VIET_recipe_baklava_name:0 "Baklava Recipe"
@@ -122,4 +138,4 @@
  VIET_recipe_fruit_pie_desc:0 "Cooks with this recipe can make fruit pies like no other! These mildly sweet pies will likely be the centerpiece dessert at any grand feast or gathering, ensuring the host will earn the praise and respect of all their guests for providing such delicious pie."
  VIET_recipe_bean_soup_name:0 "Bean Soup Recipe"
  VIET_recipe_bean_soup_desc:0 "Cooks who have this recipe will know how to make a simple, hearty, rustic bean soup. Though denigrated by some elites as food fit only for peasants, with the right herbs, spices, vegetables, and preparation, any bean soup can become a healthy and scrumptious part of any meal."
- # 1.5.2 - please leave this comment here
+ # 1.5.3 - please leave this comment here

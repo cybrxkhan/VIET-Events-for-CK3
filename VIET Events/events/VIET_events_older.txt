@@ -2181,7 +2181,7 @@ VIETold.1033 = {
 }
 
 
-# Find a special rock
+# Special rock - find a nice looking rock in the garden
 VIETold.1034 = {
 	type = character_event
 	title = VIETold.1034.t
@@ -2192,13 +2192,32 @@ VIETold.1034 = {
 		character = root
 		animation = personality_rational
 	}	
+	artifact = { # To display the artifact in the event-window
+        target = scope:VIET_clutter_artifact
+        position = lower_center_portrait
+    }
 	
-	trigger = {
-		NOT = { has_character_modifier = VIET_special_rock }
-	}
+	# trigger = {
+	# 	NOT = { has_character_modifier = VIET_special_rock }
+	# }
 	
 	weight_multiplier = {
 		base = 1
+		# Reduce spam
+		modifier = {
+			add = -0.9
+			any_character_artifact = {
+				has_variable = VIET_special_rock_variable
+			}
+		}
+		modifier = {
+			add = -0.4
+			VIET_has_2_clutter_artifacts_trigger = yes	
+		}
+		modifier = {
+			add = -0.5
+			VIET_has_4_clutter_artifacts_trigger = yes	
+		}
 		modifier = {
 			add = 0.2
 			has_trait = patient
@@ -2224,13 +2243,62 @@ VIETold.1034 = {
 			has_trait = trusting
 		}
 	}
+
+	immediate = {	
+		hidden_effect_new_artifact = {
+			create_artifact = {
+				name = VIET_special_rock_name
+				description = VIET_special_rock_desc
+				type = VIET_clutter
+				visuals = VIET_special_rock
+				quality = 15
+				wealth = 15
+				modifier = artifact_VIET_special_rock_modifier
+				#max_durability = 40
+				save_scope_as = VIET_clutter_artifact
+				history = {
+					type = created_before_history
+				}
+			}
+			scope:VIET_clutter_artifact = {
+				set_variable = VIET_special_rock_variable
+			}
+		}
+	}
 	
 	option = { # Cool
 		name = VIETold.1034.a
-		add_character_modifier = {
-			modifier = VIET_special_rock
+		# add_character_modifier = {
+		# 	modifier = VIET_special_rock
+		# }
+		show_as_tooltip = {
+			scope:VIET_clutter_artifact = {
+				set_owner = {
+					target = root
+				}
+			}
+		}
+		VIET_huge_prestige_loss_effect = yes
+		stress_impact = {
+			arrogant = miniscule_stress_impact_gain
+			fickle = miniscule_stress_impact_gain
+			impatient = miniscule_stress_impact_gain
+			ambitious = miniscule_stress_impact_gain
+		}
+		custom_tooltip = VIET_artifact_limit_warning
+	}
+
+	option = {
+		name = VIETmisc.5007.b		
+		hidden_effect = {
+			destroy_artifact = scope:VIET_clutter_artifact
+		}
+		stress_impact = {
+			arrogant = miniscule_stress_impact_loss
+			impatient = miniscule_stress_impact_loss
 		}
 	}
+
 }
 
 
@@ -2303,7 +2371,7 @@ VIETold.1035 = {
 
 
 
-# Farmers find the bones of a mystical beast
+# Dinosaur Bone - Farmers find the bones of a mystical beast
 VIETold.1036 = {
 	type = character_event
 	title = VIETold.1036.t
@@ -2313,10 +2381,29 @@ VIETold.1036 = {
 	left_portrait = {
 		character = root
 		animation = personality_rational
-	}	
+	}
+	artifact = { # To display the artifact in the event-window
+        target = scope:VIET_clutter_artifact
+        position = lower_center_portrait
+    }
 	
 	weight_multiplier = {
 		base = 1
+		# Reduce spam
+		modifier = {
+			add = -0.9
+			any_character_artifact = {
+				has_variable = VIET_dinosaur_bone_variable
+			}
+		}
+		modifier = {
+			add = -0.4
+			VIET_has_2_clutter_artifacts_trigger = yes	
+		}
+		modifier = {
+			add = -0.5
+			VIET_has_4_clutter_artifacts_trigger = yes	
+		}
 		modifier = {
 			add = 0.2
 			has_trait = humble
@@ -2342,9 +2429,35 @@ VIETold.1036 = {
 			has_trait = arbitrary
 		}
 	}
+
+	immediate = {	
+		hidden_effect_new_artifact = {
+			create_artifact = {
+				name = VIET_dinosaur_bone_name
+				description = VIET_dinosaur_bone_desc
+				type = VIET_clutter
+				visuals = VIET_dinosaur_bone
+				quality = 15
+				wealth = 15
+				modifier = artifact_VIET_dinosaur_bone_modifier
+				#max_durability = 40
+				save_scope_as = VIET_clutter_artifact
+				history = {
+					type = created_before_history
+				}
+			}
+			scope:VIET_clutter_artifact = {
+				set_variable = VIET_dinosaur_bone_variable
+			}
+		}
+	}
 	
 	option = { # Study it
 		name = VIETold.1036.a
+		hidden_effect = {
+			destroy_artifact = scope:VIET_clutter_artifact
+		}
+		VIET_huge_prestige_gain_effect = yes
 		random_list = {
 			25 = { add_learning_skill = 1 }
 			75 = { add_learning_lifestyle_xp = medium_lifestyle_xp }
@@ -2352,6 +2465,9 @@ VIETold.1036 = {
 	}	
 	option = { # Get rid of it
 		name = VIETold.1036.b
+		hidden_effect = {
+			destroy_artifact = scope:VIET_clutter_artifact
+		}
 		add_gold = 25
 		stress_impact = {
 			diligent = miniscule_stress_impact_gain
@@ -2360,10 +2476,18 @@ VIETold.1036 = {
 	}
 	option = { # Use it as decoration
 		name = VIETold.1036.c
-		add_character_modifier = {
-			modifier = VIET_has_dinosaur_bone
-			years = 10
+		show_as_tooltip = {
+			scope:VIET_clutter_artifact = {
+				set_owner = {
+					target = root
+				}
+			}
 		}
+		custom_tooltip = VIET_artifact_limit_warning
+		# add_character_modifier = {
+		# 	modifier = VIET_has_dinosaur_bone
+		# 	years = 10
+		# }
 		stress_impact = {
 			humble = miniscule_stress_impact_gain
 		}
@@ -2544,7 +2668,7 @@ VIETold.1038 = {
 
 
 
-# Merchant shows off a fire-proof napkin
+# Fireproof Napkin - Merchant shows off a fire-proof napkin
 VIETold.1039 = {
 	type = character_event
 	title = VIETold.1039.t
@@ -2555,9 +2679,28 @@ VIETold.1039 = {
 		character = root
 		animation = admiration
 	}
+	artifact = { # To display the artifact in the event-window
+        target = scope:VIET_clutter_artifact
+        position = lower_center_portrait
+    }
 	
 	weight_multiplier = {
 		base = 1
+		# Reduce spam
+		modifier = {
+			add = -0.9
+			any_character_artifact = {
+				has_variable = VIET_magical_napkin_variable
+			}
+		}
+		modifier = {
+			add = -0.4
+			VIET_has_2_clutter_artifacts_trigger = yes	
+		}
+		modifier = {
+			add = -0.5
+			VIET_has_4_clutter_artifacts_trigger = yes	
+		}
 		modifier = {
 			add = 0.2
 			has_trait = gregarious
@@ -2583,20 +2726,50 @@ VIETold.1039 = {
 			has_trait = generous
 		}
 	}
+
+	immediate = {	
+		hidden_effect_new_artifact = {
+			create_artifact = {
+				name = VIET_magical_napkin_name
+				description = VIET_magical_napkin_desc
+				type = VIET_clutter
+				visuals = VIET_magical_napkin
+				quality = 30
+				wealth = 30
+				modifier = artifact_VIET_magical_napkin_modifier
+				#max_durability = 40
+				save_scope_as = VIET_clutter_artifact
+				history = {
+					type = created_before_history
+				}
+			}
+			scope:VIET_clutter_artifact = {
+				set_variable = VIET_magical_napkin_variable
+			}
+		}
+	}
 	
 	option = { # Cool story bro
 		name = VIETold.1039.a
 		trigger = {
 			OR = {
 				is_ai = no
-				gold >= 15
+				gold >= 30
 			}
 		}
-		remove_short_term_gold = 15
-		add_character_modifier = {
-			modifier = VIET_magical_napkins
-			years = 7
+		remove_short_term_gold = 30
+		show_as_tooltip = {
+			scope:VIET_clutter_artifact = {
+				set_owner = {
+					target = root
+				}
+			}
 		}
+		custom_tooltip = VIET_artifact_limit_warning
+		# add_character_modifier = {
+		# 	modifier = VIET_magical_napkins
+		# 	years = 7
+		# }
 		if = {
 			limit = {
 				has_game_rule = VIET_historical_context_on
@@ -2606,6 +2779,9 @@ VIETold.1039 = {
 	}	
 	option = { # Cool story bro
 		name = VIETold.1039.b
+		hidden_effect = {
+			destroy_artifact = scope:VIET_clutter_artifact
+		}
 		if = {
 			limit = {
 				has_game_rule = VIET_historical_context_on

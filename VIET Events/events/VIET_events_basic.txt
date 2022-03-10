@@ -42,6 +42,7 @@
 # 0182-0192		Contemplative Thoughts
 # 0193-0195		Oblivion unmarked locations
 # 0196-0232		Animals
+# 0233-0235		Patch
 # 
 ############################################################################################################################
 
@@ -7380,7 +7381,7 @@ VIETmisc.0093 = {
 
 
 
-# Thunderstones found near the area
+# Thunderstone Talisman - Thunderstones found near the area
 VIETmisc.0094 = {
 	type = character_event
 	title = VIETmisc.0094.t
@@ -7388,9 +7389,28 @@ VIETmisc.0094 = {
 	theme = learning
 	
 	right_portrait = root
+	artifact = { # To display the artifact in the event-window
+		target = scope:VIET_clutter_artifact
+		position = lower_center_portrait
+	}
 	
 	weight_multiplier = {
 		base = 1
+		# Reduce spam
+		modifier = {
+			add = -0.9
+			any_character_artifact = {
+				has_variable = VIET_thunderstone_talisman_variable
+			}
+		}
+		modifier = {
+			add = -0.4
+			VIET_has_2_clutter_artifacts_trigger = yes	
+		}
+		modifier = {
+			add = -0.5
+			VIET_has_4_clutter_artifacts_trigger = yes	
+		}
 		modifier = {
 			add = 0.2
 			has_trait = diligent
@@ -7417,10 +7437,35 @@ VIETmisc.0094 = {
 		}
 	}
 
+	immediate = {	
+		hidden_effect_new_artifact = {
+			create_artifact = {
+				name = VIET_thunderstone_talisman_name
+				description = VIET_thunderstone_talisman_desc
+				type = VIET_clutter
+				visuals = VIET_thunderstone_talisman
+				quality = 15
+				wealth = 15
+				modifier = artifact_VIET_thunderstone_talisman_modifier
+				#max_durability = 40
+				save_scope_as = VIET_clutter_artifact
+				history = {
+					type = created_before_history
+				}
+			}
+			scope:VIET_clutter_artifact = {
+				set_variable = VIET_thunderstone_talisman_variable
+			}
+		}
+	}
+
 	
 	option = { # Give them to farmers
 		name = VIETmisc.0094.a
 		VIET_huge_prestige_gain_effect = yes
+		hidden_effect = {
+			destroy_artifact = scope:VIET_clutter_artifact
+		}
 		if = {
 			limit = {
 				has_game_rule = VIET_historical_context_on
@@ -7431,6 +7476,9 @@ VIETmisc.0094 = {
 	option = { # Give them to local temple
 		name = VIETmisc.0094.b
 		VIET_huge_piety_gain_effect = yes
+		hidden_effect = {
+			destroy_artifact = scope:VIET_clutter_artifact
+		}
 		if = {
 			limit = {
 				has_game_rule = VIET_historical_context_on
@@ -7440,10 +7488,18 @@ VIETmisc.0094 = {
 	}	
 	option = { # Use as charms to ward off bad luck
 		name = VIETmisc.0094.c
-		add_character_modifier = {
-			modifier = VIET_thunderstone_talisman
-			years = 8
+		show_as_tooltip = {
+			scope:VIET_clutter_artifact = {
+				set_owner = {
+					target = root
+				}
+			}
 		}
+		custom_tooltip = VIET_artifact_limit_warning
+		# add_character_modifier = {
+		# 	modifier = VIET_thunderstone_talisman
+		# 	years = 8
+		# }
 		if = {
 			limit = {
 				has_game_rule = VIET_historical_context_on
@@ -7455,7 +7511,10 @@ VIETmisc.0094 = {
 		name = VIETmisc.0094.d
 		add_character_modifier = {
 			modifier = VIET_thunderstone_studies
-			years = 8
+			years = 10
+		}
+		hidden_effect = {
+			destroy_artifact = scope:VIET_clutter_artifact
 		}
 		if = {
 			limit = {
@@ -20324,6 +20383,259 @@ VIETmisc.0232 = {
 	}
 }
 
+##########################################################################################################################
+#
+# PATCH		0233-0235
+#
+##########################################################################################################################
+
+
+
+# Met a Veteran who wears an eyepatch
+VIETmisc.0233 = {
+	type = character_event
+	title = VIETmisc.0233.t
+	desc = VIETmisc.0233.desc
+	theme = martial_strategy_focus
+	
+	left_portrait = {
+		character = root
+		animation = personality_compassionate
+	}
+	
+	weight_multiplier = {
+		base = 1
+		modifier = {
+			add = 0.2
+			has_trait = diligent
+		}
+		modifier = {
+			add = -0.2
+			has_trait = lazy
+		}
+		modifier = {
+			add = 0.2
+			has_trait = gregarious
+		}
+		modifier = {
+			add = -0.2
+			has_trait = shy
+		}
+		modifier = {
+			add = 0.2
+			has_trait = brave
+		}
+		modifier = {
+			add = -0.2
+			has_trait = craven
+		}
+	}
+
+	
+	option = { # I will continue to listen
+		name = VIETmisc.0233.a
+		VIET_large_prestige_loss_effect = yes
+		add_character_modifier = {
+			modifier = VIET_veterans_anecdotes
+			years = 3
+		}
+		stress_impact = {
+			impatient = miniscule_stress_impact_gain
+			arrogant = miniscule_stress_impact_gain
+			diligent = miniscule_stress_impact_gain
+		}	
+	}	
+	option = { # Move along
+		name = VIETmisc.0233.b
+		VIET_large_prestige_gain_effect = yes
+		stress_impact = {
+			lazy = miniscule_stress_impact_gain
+			humble = miniscule_stress_impact_gain
+			brave = miniscule_stress_impact_gain
+		}	
+	}
+}
+
+
+# Two peasant women arguing about a patch of cabbages
+VIETmisc.0234 = {
+	type = character_event
+	title = VIETmisc.0234.t
+	desc = VIETmisc.0234.desc
+	theme = VIET_theme_small_town
+	
+	left_portrait = {
+		character = root
+		animation = personality_irrational
+	}
+	
+	weight_multiplier = {
+		base = 1
+		modifier = {
+			add = 0.2
+			has_trait = patient
+		}
+		modifier = {
+			add = -0.2
+			has_trait = impatient
+		}
+		modifier = {
+			add = 0.2
+			has_trait = fickle
+		}
+		modifier = {
+			add = -0.2
+			has_trait = stubborn
+		}
+		modifier = {
+			add = 0.2
+			has_trait = brave
+		}
+		modifier = {
+			add = -0.2
+			has_trait = craven
+		}
+	}
+
+	
+	option = { # Tell them to shut up
+		name = VIETmisc.0234.a
+		VIET_medium_piety_loss_effect = yes
+		VIET_medium_prestige_gain_effect = yes
+		stress_impact = {
+			patient = miniscule_stress_impact_gain
+			calm = miniscule_stress_impact_gain
+			forgiving = miniscule_stress_impact_gain
+		}	
+	}	
+	option = { # Move along
+		name = VIETmisc.0234.b
+		stress_impact = {
+			wrathful = miniscule_stress_impact_gain
+			arrogant = miniscule_stress_impact_gain
+			impatient = miniscule_stress_impact_gain
+		}
+	}
+	option = { # Help them talk it out
+		name = VIETmisc.0234.c
+		trigger = {
+			diplomacy >= decent_skill_rating			
+		}
+		skill = diplomacy
+		VIET_medium_prestige_gain_effect = yes
+		add_character_modifier = {
+			modifier = VIET_resolved_peasant_argument
+			days = 1453
+		}
+	}		
+	option = { # Realize that animals caused it
+		name = VIETmisc.0234.d
+		trigger = {
+			learning >= decent_skill_rating			
+		}
+		skill = learning
+		VIET_medium_prestige_gain_effect = yes
+		add_character_modifier = {
+			modifier = VIET_resolved_peasant_argument
+			days = 1453
+		}
+	}		
+}
+
+
+
+
+# Notice your servant is wearing patchy clothing
+VIETmisc.0235 = {
+	type = character_event
+	title = VIETmisc.0235.t
+	desc = VIETmisc.0235.desc
+	theme = unfriendly
+	override_background = { event_background = corridor_day }
+	
+	left_portrait = {
+		character = root
+		animation = disapproval
+	}
+	
+	weight_multiplier = {
+		base = 1
+		modifier = {
+			add = 0.2
+			has_trait = paranoid
+		}
+		modifier = {
+			add = -0.2
+			has_trait = trusting
+		}
+		modifier = {
+			add = 0.2
+			has_trait = compassionate
+		}
+		modifier = {
+			add = -0.2
+			has_trait = callous
+		}
+		modifier = {
+			add = 0.2
+			has_trait = honest
+		}
+		modifier = {
+			add = -0.2
+			has_trait = deceitful
+		}
+	}
+
+	
+	option = { # It's okay, I don't mind
+		name = VIETmisc.0235.a
+		VIET_medium_piety_gain_effect = yes
+		stress_impact = {
+			arrogant = minor_stress_impact_gain
+			diligent = minor_stress_impact_gain
+			ambitious = minor_stress_impact_gain
+		}	
+	}	
+	
+	option = { # Wear proper clothes!
+		name = VIETmisc.0235.b
+		VIET_medium_prestige_gain_effect = yes
+		stress_impact = {
+			humble = minor_stress_impact_gain
+			content = minor_stress_impact_gain
+			compassionate = minor_stress_impact_gain
+		}	
+	}
+	
+	option = { # Help her buy clothes
+		name = VIETmisc.0235.c
+		trigger = {
+			has_trait = generous
+		}
+		trait = generous
+		remove_short_term_gold = 10
+		if = {
+			limit = {
+				faith = {
+					trait_is_virtue = generous
+				}
+			}
+			VIET_huge_piety_gain_effect = yes
+		}
+		else = {
+			VIET_medium_piety_gain_effect = yes
+		}
+		add_character_modifier = {
+			modifier = VIET_charity_to_servant
+			years = 4
+		}
+		stress_impact = {
+			callous = miniscule_stress_impact_gain
+			arrogant = miniscule_stress_impact_gain
+		}	
+	}
+
+}
 
 
 

@@ -362,3 +362,36 @@ artifact_VIET_ancient_coin_modifier = {
 	monthly_stewardship_lifestyle_xp_gain_mult = 0.01
 	monthly_learning_lifestyle_xp_gain_mult = 0.01	
 }
+
+artifact_VIET_special_rock_modifier = {
+	monthly_piety = 0.1	
+	stress_gain_mult = -0.03
+}
+
+artifact_VIET_dinosaur_bone_modifier = {
+	monthly_prestige = 0.08
+	monthly_learning_lifestyle_xp_gain_mult = 0.01
+}
+
+artifact_VIET_magical_napkin_modifier = {
+	monthly_prestige = 0.1
+	courtier_and_guest_opinion = 3	
+}
+
+artifact_VIET_thunderstone_talisman_modifier = {
+	monthly_piety = 0.1
+	county_opinion_add = 1
+}
+
+artifact_VIET_patchwork_quilt_modifier = {
+	monthly_prestige = 0.01
+	stress_loss_mult = 0.03
+	stress_gain_mult = -0.03
+	hostile_scheme_resistance_add = 1
+}
+
+artifact_VIET_leather_ball_modifier = {
+	health = 0.1
+	stress_loss_mult = 0.05
+	courtier_and_guest_opinion = 2
+}
