@@ -123,6 +123,14 @@
  VIET_patchwork_quilt_name:0 "拼接褥"
  VIET_patchwork_quilt_desc:0 "朴素而美丽的被子，装饰着传统[ROOT.Char.GetCulture.GetName]样式和图案。"
  VIET_leather_ball_name:0 "皮球"
- VIET_leather_ball_desc:0 "一个皮革拼接成的，中间塞满羽毛，可以用来玩耍，保持身材。"
+ VIET_leather_ball_desc:0 "一个皮革拼接成的，中间塞满羽毛，可以用来玩耍，保持身材。" # 1.5.3 - please leave this comment here
+ VIET_small_seashell_name:0 "Small Seashell"
+ VIET_small_seashell_desc:0 "A lovely seashell that is small enough that it can fit in the palm of one's hands. It has an exquisite, natural beauty."
+ VIET_useless_map_name:0 "Useless Map"
+ VIET_useless_map_desc:0 "A map depicting a fictitious, utopian realm. This realm represents one potential conception of what an ideal society would be like."
+ VIET_house_vase_name:0 "[ROOT.Char.GetCulture.GetNameNoTooltip] House Vase"
+ VIET_house_vase_desc:0 "Simple but elegant, this vase was made by [ROOT.Char.GetCulture.GetNameNoTooltip] artisans, and is decorated with various scenes of everyday life."
+ # 1.5.4 - please leave this comment here
  VIET_xxxxx_name:0 "xxxxx"
  VIET_xxxxx_desc:0 "xxxxx"
+ # 47 Basic

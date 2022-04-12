@@ -151,7 +151,13 @@
  VIET_decision_listen_to_wild_songbirds_desc:0 "I have heard there is a spot in the wilderness nearby where one can often encounter wild songbirds. As someone who enjoys hearing these lovely creatures sing, I should visit that location soon."
  VIET_decision_listen_to_wild_songbirds_effect_tooltip:0 "You will lose some [stress|E] and maybe even be inspired and get a [character_modifier|E]"
  VIET_decision_listen_to_wild_songbirds_confirm:0 "I do need the time off."
- VIET_decision_listen_to_wild_songbirds_context_tooltip:0 "#emphasis Biological Context:#! The #italic Passeri#! suborder of perching birds are known as songbirds, colloquially speaking. Consisting of over 5000 species, they are found all over the world, and famous for their diverse and elaborate bird songs, which have been admired by humans in many different cultures and time periods."  
+ VIET_decision_listen_to_wild_songbirds_context_tooltip:0 "#emphasis Biological Context:#! The #italic Passeri#! suborder of perching birds are known as songbirds, colloquially speaking. Consisting of over 5000 species, they are found all over the world, and famous for their diverse and elaborate bird songs, which have been admired by humans in many different cultures and time periods." 
+ VIET_decision_view_flower_meadows_in_bloom:0 "View Flower Meadows in Bloom"
+ VIET_decision_view_flower_meadows_in_bloom_tooltip:0 "A pure expression of nature's majesty"
+ VIET_decision_view_flower_meadows_in_bloom_desc:0 "There is a part of my realm that is famous for the beauty of its meadows and fields in springtime, when the flowers are in full bloom. Why don't I travel there one of these days, to witness such beauty for myself?"
+ VIET_decision_view_flower_meadows_in_bloom_effect_tooltip:0 "You will lose some [stress|E] and you might also gain a random amount of [piety|E]"
+ VIET_decision_view_flower_meadows_in_bloom_req_tooltip:0 "Month is March, April, or May"
+ VIET_decision_view_flower_meadows_in_bloom_confirm:0 "Make preparations to go."
  
  
  # Character Interactions
@@ -180,5 +186,7 @@
  activity_VIET_trip_examine_ancient_stone_monument_name:0 "[ACTIVITY.GetOwner.GetNamePossessiveOrMy|U] Trip to Examine an Ancient Stone Monument"
  activity_VIET_relaxation_with_songbirds:0 "Excursion to Listen to Songbirds"
  activity_VIET_relaxation_with_songbirds_desc:0 "[ACTIVITY.GetOwner.GetNamePossessiveOrMy|U] Excursion to Listen to Songbirds"
+ activity_VIET_trip_flower_meadows:0 "Trip to View the Flower Meadows in Bloom"
+ activity_VIET_trip_flower_meadows_desc:0 "[ACTIVITY.GetOwner.GetNamePossessiveOrMy|U] Trip to View the Flower Meadows in Bloom"
  activity_VIET_xxxxx:0 "xxxxx"
  

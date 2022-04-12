@@ -292,6 +292,21 @@ VIET_leather_ball = {
 	asset = ep1_western_box_small_basic_01_a_entity	
 }
 
+VIET_house_vase = {
+	icon = "artifact_VIET_house_vase.dds"
+	asset = ep1_western_box_small_basic_01_a_entity	
+}
+
+VIET_small_seashell = {
+	icon = "artifact_VIET_small_seashell.dds"
+	asset = ep1_western_box_small_basic_01_a_entity	
+}
+
+VIET_useless_map = {
+	icon = "artifact_VIET_useless_map.dds"
+	asset = ep1_western_box_small_basic_01_a_entity	
+}
+
 
 
 

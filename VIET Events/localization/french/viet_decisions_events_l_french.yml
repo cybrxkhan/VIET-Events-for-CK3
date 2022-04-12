@@ -335,9 +335,11 @@
  VIETmisc.2077.info.bird_11:0 "#emphasis Biological Context:#! The bird heard singing just now was the #bold Melodious Warbler#! (#italic Hippolais polyglotta#!)."
  VIETmisc.2077.info.bird_12:0 "#emphasis Biological Context:#! The bird heard singing just now was the #bold Black Drongo#! (#italic Dicrurus macrocercus#!)."
  # 1.5.0 - please leave this comment here and do not remove it
- VIETmisc.2078.t:0 "xxxxx"
- VIETmisc.2078.desc:0 "xxxxx"
- VIETmisc.2078.a:0 "xxxxx"
+ # 1.5.3 - please leave this comment here and do not remove it
+ VIETmisc.2078.t:0 "The Flower Meadows"
+ VIETmisc.2078.desc:0 "Today, I’ve taken time to visit the spring meadows of [county.GetName], famous for the beauty of their flowers. I am not disappointed.\n\nFrom one end of the horizon to another, there are hundreds if not thousands of small, lovely wildflowers, each their own unique hue of color. With all these flowers together like this, when the wind blows even slightly, they look like a moving tapestry woven by [ROOT.Char.GetFaith.HighGodName]!\n\nI sit on the ground atop a hill, and just gaze in wonder at the majesty beauty of nature before me."
+ VIETmisc.2078.a:0 "Simply amazing."
+ # 1.5.4 - please leave this comment here and do not remove it
  VIETmisc.2079.t:0 "xxxxx"
  VIETmisc.2079.desc:0 "xxxxx"
  VIETmisc.2079.a:0 "xxxxx"

@@ -152,6 +152,12 @@ VIET_decision_listen_to_wild_songbirds_desc:0 "Я слышал, что побл�
 VIET_decision_listen_to_wild_songbirds_effect_tooltip:0 "Вы немного потеряете [стресс|E] и, возможно, даже вдохновитесь и получите [character_modifier|E]"
 VIET_decision_listen_to_wild_songbirds_confirm:0 "Мне нужен отпуск."
 VIET_decision_listen_to_wild_songbirds_context_tooltip:0 "#emphasis Биологический контекст:#! Подотряд птиц-птиц #italic Passeri#! в просторечии известен как певчие птицы. Насчитывая более 5000 видов, они встречаются по всему миру и славятся своим разнообразием и сложностью. песни птиц, которыми люди восхищались во многих разных культурах и периодах времени".
+ VIET_decision_view_flower_meadows_in_bloom:0 "View Flower Meadows in Bloom"
+ VIET_decision_view_flower_meadows_in_bloom_tooltip:0 "A pure expression of nature's majesty"
+ VIET_decision_view_flower_meadows_in_bloom_desc:0 "There is a part of my realm that is famous for the beauty of its meadows and fields in springtime, when the flowers are in full bloom. Why don't I travel there one of these days, to witness such beauty for myself?"
+ VIET_decision_view_flower_meadows_in_bloom_effect_tooltip:0 "You will lose some [stress|E] and you might also gain a random amount of [piety|E]"
+ VIET_decision_view_flower_meadows_in_bloom_req_tooltip:0 "Month is March, April, or May"
+ VIET_decision_view_flower_meadows_in_bloom_confirm:0 "Make preparations to go."
  
  
 # Взаимодействие с персонажами
@@ -180,6 +186,7 @@ activity_VIET_trip_examine_ancient_stone_monument:0 "Поездка для ос�
 activity_VIET_trip_examine_ancient_stone_monument_name:0 "[ACTIVITY.GetOwner.GetNamePossessiveOrMy|U] Поездка для осмотра древнего каменного памятника"
 activity_VIET_relaxation_with_songbirds:0 "Экскурсия, чтобы послушать певчих птиц"
 activity_VIET_relaxation_with_songbirds_desc:0 "[ACTIVITY.GetOwner.GetNamePossessiveOrMy|U] Экскурсия, чтобы послушать певчих птиц"
-
+ activity_VIET_trip_flower_meadows:0 "Trip to View the Flower Meadows in Bloom"
+ activity_VIET_trip_flower_meadows_desc:0 "[ACTIVITY.GetOwner.GetNamePossessiveOrMy|U] Trip to View the Flower Meadows in Bloom"
  activity_VIET_xxxxx:0 "xxxxx"
  

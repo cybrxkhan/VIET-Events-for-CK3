@@ -860,3 +860,14 @@
  VIET_veterans_anecdotes:0 "听到老兵轶事"
  VIET_resolved_peasant_argument:0 "解决农民冲突"
  VIET_charity_to_servant:0 "对仆人慷慨"
+ # 1.5.3 - please leave this comment here
+ VIET_spunky_girl:0 "Full of Spunk"
+ VIET_infamously_loud_sneezer:0 "Infamous Loud Sneezer"
+ VIET_opinion_shares_my_opinions:0 "Shares My Opinions"
+ VIET_smuggling_ring_arrested:0 "Smuggling Ring Arrested"
+ VIET_haunted_fortress:0 "Haunted Abandoned Fortress"
+ VIET_haunted_fortress_desc:0 "According to local legend, an abandoned fortress in this county was built long ago by a mad king, who was ruthless and cruel as he was capricious. It is said the place is still haunted by this king and his retinue of ghastly soldiers. While the locals are obviously nervous about the prospect of the ghost of a vengeful bloodthirsty madman dwelling in the region, it will also likely frighten any foreigners who pass by - including other invaders. Plus, despite its poor condition, the fortress is still serviceable as an outpost."
+ VIET_famous_flower_meadows:0 "Famous Flower Meadows"
+ VIET_famous_flower_meadows_desc:0 "The meadows and fields of this land are renowned throughout the region for their beauty in springtime, when thousands upon thousands of flowers are in bloom. Many from near and far come to witness this dazzling spectacle.\n\nThe [ruler|E] of this [county|E] can take the [decision|E] to #V View Flower Meadows in Bloom#!"
+ # 1.5.4 - please leave this comment here
+ xxxxx:0 "xxxxx"
