@@ -2,7 +2,7 @@
 
 ## Latest Version: 1.5.3 "Quilt" (Released 3/10/22)
 
-_““Facing my wine, I did not see the dusk,
+_“Facing my wine, I did not see the dusk,
 Falling blossoms have filled the folds of my clothes.
 Drunk, I rise and approach the moon in the stream,
 Birds are far off, people too are few.”_
