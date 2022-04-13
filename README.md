@@ -1,6 +1,6 @@
 # VIET Events for CK3
 
-## Latest Version: 1.5.3 "Quilt" (Released 3/10/22)
+## Latest Version: 1.5.3 "Li Bai" (Released 3/10/22)
 
 _“Facing my wine, I did not see the dusk,
 Falling blossoms have filled the folds of my clothes.
