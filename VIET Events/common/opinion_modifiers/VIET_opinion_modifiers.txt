@@ -458,3 +458,9 @@ VIET_opinion_accepted_my_gift = {
 	opinion = 10
 	stacking = yes
 }
+VIET_opinion_shares_my_opinions = {
+	years = 5
+	decaying = yes
+	opinion = 5
+	stacking = yes
+}

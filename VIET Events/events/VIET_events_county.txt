@@ -24,6 +24,7 @@
 # 3000-3024		Generic (First new batch)
 # 3025-3026		Oblivion Unmarked Locations
 # 3027-3030		Animals
+# 3031-3033		Generic
 # 
 ############################################################################################################################
 
@@ -3229,4 +3230,213 @@ VIETmisc.3030 = {
 }
 
 
+
+
+
+##################################################################
+# GENERIC 3031-3033
+##################################################################
+
+
+# Smuggling Ring Arrested
+VIETmisc.3031 = {
+	type = character_event
+	title = VIETmisc.3031.t
+	desc = VIETmisc.3031.desc
+	theme = corruption
+	
+	left_portrait = root
+	
+    weight_multiplier = {
+        base = 0
+		modifier = {
+			add = {
+				every_held_title = {
+					limit = { tier = tier_county }
+					add = 1
+				}
+			}		
+		}
+    }
+	
+	immediate = {
+		random_held_title = {
+			limit = { tier = tier_county }
+			save_scope_as = county
+		}
+		scope:county = {
+			random_list = {
+				10 = {
+					add_county_modifier = {
+						modifier = VIET_smuggling_ring_arrested
+						years = 3
+					}				
+				}
+				10 = {
+					add_county_modifier = {
+						modifier = VIET_smuggling_ring_arrested
+						years = 6
+					}				
+				}
+				10 = {
+					add_county_modifier = {
+						modifier = VIET_smuggling_ring_arrested
+						years = 9
+					}				
+				}
+				10 = {
+					add_county_modifier = {
+						modifier = VIET_smuggling_ring_arrested
+						years = 12
+					}				
+				}
+			}	
+		}
+	}
+	
+	option = {
+		name = VIETmisc.3031.a
+		VIET_huge_prestige_gain_effect = yes
+	}
+}
+
+
+
+# Haunted Fortress
+VIETmisc.3032 = {
+	type = character_event
+	title = VIETmisc.3032.t
+	desc = VIETmisc.3032.desc
+	theme = death
+	override_background = { event_background = VIET_background_ancient_cairn }
+	
+	left_portrait = root
+	
+    weight_multiplier = {
+        base = 0
+		modifier = {
+			add = {
+				every_held_title = {
+					limit = { tier = tier_county }
+					add = 1
+				}
+			}		
+		}
+    }
+	
+	immediate = {
+		random_held_title = {
+			limit = { tier = tier_county }
+			save_scope_as = county
+		}
+		scope:county = {
+			random_list = {
+				10 = {
+					add_county_modifier = {
+						modifier = VIET_haunted_fortress
+						years = 5
+					}				
+				}
+				10 = {
+					add_county_modifier = {
+						modifier = VIET_haunted_fortress
+						years = 10
+					}				
+				}
+				10 = {
+					add_county_modifier = {
+						modifier = VIET_haunted_fortress
+						years = 15
+					}				
+				}
+				10 = {
+					add_county_modifier = {
+						modifier = VIET_haunted_fortress
+						years = 20
+					}				
+				}
+			}	
+		}
+	}
+	
+	option = {
+		name = VIETmisc.3032.a
+	}
+}
+
+
+# Famous flower meadows
+VIETmisc.3033 = {
+	type = character_event
+	title = VIETmisc.3033.t
+	desc = VIETmisc.3033.desc
+	theme = VIET_theme_skyrim_forest
+	
+	left_portrait = root
+
+	trigger = {
+		any_held_title = {
+			tier = tier_county
+			any_county_province = {
+				OR = {
+					terrain = plains
+					terrain = farmlands
+					terrain = hills
+					terrain = mountains
+					terrain = forest
+					terrain = taiga
+					terrain = wetlands
+					terrain = steppe
+					terrain = floodplains
+				}			
+			}
+		}	
+	}
+	
+    weight_multiplier = {
+        base = 0
+		modifier = {
+			add = {
+				every_held_title = {
+					limit = { tier = tier_county }
+					add = 1
+				}
+			}		
+		}
+    }
+	
+	immediate = {
+		random_held_title = {
+			limit = { tier = tier_county }
+			save_scope_as = county
+		}
+		scope:county = {
+			random_list = {
+				10 = {
+					add_county_modifier = {
+						modifier = VIET_famous_flower_meadows
+						years = 10
+					}				
+				}
+				10 = {
+					add_county_modifier = {
+						modifier = VIET_famous_flower_meadows
+						years = 15
+					}				
+				}
+				10 = {
+					add_county_modifier = {
+						modifier = VIET_famous_flower_meadows
+						years = 20
+					}				
+				}
+			}	
+		}
+	}
+	
+	option = {
+		name = VIETmisc.3033.a
+		custom_tooltip =  VIETmisc.3033.tooltip
+	}
+}
 

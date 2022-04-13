@@ -252,3 +252,30 @@ activity_VIET_relaxation_with_songbirds = {
 		}	
 	}
 }
+
+activity_VIET_trip_flower_meadows = {
+	solo = yes
+	color = { 200 50 80 } # Pink-Red
+	on_spawn = {
+		invite_character_to_activity = activity_owner
+		accept_invitation_for_character = activity_owner
+	}
+	on_activate = {
+		scope:activity = {
+			activity_province = {
+				county = { save_scope_as = county }
+			}
+		}
+		activity_owner = {
+			trigger_event = {
+				id = VIETmisc.2078
+				days = { 5 13 }				
+			}
+		}
+	}
+	on_complete = {
+		activity_owner = {
+			remove_character_flag = planning_an_activity
+		}	
+	}
+}

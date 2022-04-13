@@ -26,6 +26,7 @@
 # 5045			Lusty Argonian Maid
 # 5046-5049		Recipes
 # 5050-5051		Patch
+# 5052-5054		Generic
 # 
 ############################################################################################################################
 
@@ -7627,6 +7628,354 @@ VIETmisc.5051 = {
 				has_game_rule = VIET_historical_context_on
 			}
 			custom_tooltip = VIETmisc.5051.info
+		}
+	}
+}
+
+
+
+
+
+##################################################################
+# GENERIC 5052-5054
+##################################################################
+
+# Small Seashell - find one by the beach
+VIETmisc.5052 = {
+	type = character_event
+	title = VIETmisc.5052.t
+	desc = VIETmisc.5052.desc
+	theme = VIET_theme_skyrim_forest
+	override_background = { event_background = fp1_beached_longships }
+	
+	left_portrait = {
+		character = root
+		animation = happiness
+	}
+	artifact = { # To display the artifact in the event-window
+        target = scope:VIET_clutter_artifact
+        position = lower_center_portrait
+    }
+
+    weight_multiplier = {
+        base = 1
+		# Reduce spam
+		modifier = {
+			add = -0.9
+			any_character_artifact = {
+				has_variable = VIET_small_seashell_variable
+			}
+		}
+		modifier = {
+			add = -0.4
+			VIET_has_2_clutter_artifacts_trigger = yes	
+		}
+		modifier = {
+			add = -0.5
+			VIET_has_4_clutter_artifacts_trigger = yes	
+		}
+		modifier = {
+			add = 0.2
+			has_trait = compassionate
+		}
+		modifier = {
+			add = -0.2
+			has_trait = sadistic
+		}
+		modifier = {
+			add = 0.2
+			has_trait = just
+		}
+		modifier = {
+			add = -0.2
+			has_trait = arbitrary
+		}
+		modifier = {
+			add = 0.2
+			has_trait = generous
+		}
+		modifier = {
+			add = -0.2
+			has_trait = greedy
+		}
+    }
+	
+	immediate = {	
+		hidden_effect_new_artifact = {
+			create_artifact = {	
+				name = VIET_small_seashell_name
+				description = VIET_small_seashell_desc
+				type = VIET_clutter
+				visuals = VIET_small_seashell
+				quality = 15
+				wealth = 15
+				modifier = artifact_VIET_small_seashell_modifier
+				max_durability = 40
+				save_scope_as = VIET_clutter_artifact
+				history = {
+					type = created_before_history
+				}
+			}
+			scope:VIET_clutter_artifact = {
+				set_variable = VIET_small_seashell_variable
+			}
+		}
+	}
+	
+	option = {
+		name = VIETmisc.5052.a
+		VIET_medium_prestige_loss_effect = yes
+		show_as_tooltip = {
+			scope:VIET_clutter_artifact = {
+				set_owner = {
+					target = root
+				}
+			}
+		}
+		stress_impact = {
+			arrogant = minor_stress_impact_gain
+		}
+		custom_tooltip = VIET_artifact_limit_warning
+	}
+	
+	option = {
+		name = VIETmisc.5052.b	
+		hidden_effect = {
+			destroy_artifact = scope:VIET_clutter_artifact
+		}
+		stress_impact = {
+			humble = miniscule_stress_impact_gain
+		}
+	}
+}
+
+
+# Useless map - scholar offers a fictional map depicting an ideal country
+VIETmisc.5053 = {
+	type = character_event
+	title = VIETmisc.5053.t
+	desc = VIETmisc.5053.desc
+	theme = realm
+	override_icon = { reference = "gfx/interface/icons/event_types/type_learning.dds" }
+	
+	left_portrait = {
+		character = root
+		animation = happiness
+	}
+	artifact = { # To display the artifact in the event-window
+        target = scope:VIET_clutter_artifact
+        position = lower_center_portrait
+    }
+
+    weight_multiplier = {
+        base = 1
+		# Reduce spam
+		modifier = {
+			add = -0.9
+			any_character_artifact = {
+				has_variable = VIET_useless_map_variable
+			}
+		}
+		modifier = {
+			add = -0.4
+			VIET_has_2_clutter_artifacts_trigger = yes	
+		}
+		modifier = {
+			add = -0.5
+			VIET_has_4_clutter_artifacts_trigger = yes	
+		}
+		modifier = {
+			add = 0.2
+			has_trait = compassionate
+		}
+		modifier = {
+			add = -0.2
+			has_trait = sadistic
+		}
+		modifier = {
+			add = 0.2
+			has_trait = just
+		}
+		modifier = {
+			add = -0.2
+			has_trait = arbitrary
+		}
+		modifier = {
+			add = 0.2
+			has_trait = generous
+		}
+		modifier = {
+			add = -0.2
+			has_trait = greedy
+		}
+    }
+	
+	immediate = {	
+		hidden_effect_new_artifact = {
+			create_artifact = {	
+				name = VIET_useless_map_name
+				description = VIET_useless_map_desc
+				type = VIET_clutter
+				visuals = VIET_useless_map
+				quality = 30
+				wealth = 30
+				modifier = artifact_VIET_useless_map_modifier
+				max_durability = 40
+				save_scope_as = VIET_clutter_artifact
+				history = {
+					type = created_before_history
+				}
+			}
+			scope:VIET_clutter_artifact = {
+				set_variable = VIET_useless_map_variable
+			}
+		}
+	}
+	
+	option = {
+		name = VIETmisc.5053.a		
+		VIET_huge_prestige_loss_effect = yes
+		show_as_tooltip = {
+			scope:VIET_clutter_artifact = {
+				set_owner = {
+					target = root
+				}
+			}
+		}
+		stress_impact = {
+			lazy = miniscule_stress_impact_gain
+			arbitrary = miniscule_stress_impact_gain
+			arrogant = miniscule_stress_impact_gain
+		}
+		custom_tooltip = VIET_artifact_limit_warning
+	}
+	
+	option = {
+		name = VIETmisc.5053.b	
+		VIET_huge_prestige_gain_effect = yes
+		hidden_effect = {
+			destroy_artifact = scope:VIET_clutter_artifact
+		}
+		stress_impact = {
+			diligent = miniscule_stress_impact_gain
+			just = miniscule_stress_impact_gain
+			humble = miniscule_stress_impact_gain
+		}
+	}
+}
+
+
+
+# House Vase - buy one or not
+VIETmisc.5054 = {
+	type = character_event
+	title = VIETmisc.5054.t
+	desc = VIETmisc.5054.desc
+	theme = VIET_theme_small_town
+	
+	left_portrait = {
+		character = root
+		animation = happiness
+	}
+	artifact = { # To display the artifact in the event-window
+        target = scope:VIET_clutter_artifact
+        position = lower_center_portrait
+    }
+
+    weight_multiplier = {
+        base = 1
+		# Reduce spam
+		modifier = {
+			add = -0.9
+			any_character_artifact = {
+				has_variable = VIET_house_vase_variable
+			}
+		}
+		modifier = {
+			add = -0.4
+			VIET_has_2_clutter_artifacts_trigger = yes	
+		}
+		modifier = {
+			add = -0.5
+			VIET_has_4_clutter_artifacts_trigger = yes	
+		}
+		modifier = {
+			add = 0.2
+			has_trait = compassionate
+		}
+		modifier = {
+			add = -0.2
+			has_trait = sadistic
+		}
+		modifier = {
+			add = 0.2
+			has_trait = just
+		}
+		modifier = {
+			add = -0.2
+			has_trait = arbitrary
+		}
+		modifier = {
+			add = 0.2
+			has_trait = generous
+		}
+		modifier = {
+			add = -0.2
+			has_trait = greedy
+		}
+    }
+	
+	immediate = {	
+		hidden_effect_new_artifact = {
+			create_artifact = {	
+				name = VIET_house_vase_name
+				description = VIET_house_vase_desc
+				type = VIET_clutter
+				visuals = VIET_house_vase
+				quality = 15
+				wealth = 15
+				modifier = artifact_VIET_house_vase_modifier
+				max_durability = 40
+				save_scope_as = VIET_clutter_artifact
+				history = {
+					type = created_before_history
+				}
+			}
+			scope:VIET_clutter_artifact = {
+				set_variable = VIET_house_vase_variable
+			}
+		}
+	}
+	
+	option = {
+		name = VIETmisc.5054.a		
+		trigger = {
+			OR = {
+				is_ai = no
+				gold >= 20
+			}
+		}
+		remove_short_term_gold = 20
+		show_as_tooltip = {
+			scope:VIET_clutter_artifact = {
+				set_owner = {
+					target = root
+				}
+			}
+		}
+		stress_impact = {
+			greedy = miniscule_stress_impact_gain
+		}
+		custom_tooltip = VIET_artifact_limit_warning
+	}
+	
+	option = {
+		name = VIETmisc.5054.b
+		hidden_effect = {
+			destroy_artifact = scope:VIET_clutter_artifact
+		}
+		stress_impact = {
+			ambitious = miniscule_stress_impact_gain
 		}
 	}
 }

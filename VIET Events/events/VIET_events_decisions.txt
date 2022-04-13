@@ -32,6 +32,7 @@
 # 2061-2062		Learning Shorthand
 # 2063-2072		County Event Decisions
 # 2073-2077		Animals
+# 2078			Generic
 # 
 ############################################################################################################################
 
@@ -4221,6 +4222,48 @@ VIETmisc.2077 = {
 	option = { # Ok
 		name = VIETmisc.2077.a
 		VIET_option_songbird_sound_effect = yes
+	}
+
+	after = {
+		hidden_effect = {
+			scope:activity = {
+				complete_activity = yes
+			}		
+		}
+	}
+
+}
+
+##################################################################
+#
+# GENERIC DECISIONS 2078
+#
+##################################################################
+
+# Enjoy the flowers
+VIETmisc.2078 = {
+	type = character_event
+	title = VIETmisc.2078.t
+	desc = VIETmisc.2078.desc
+	theme = VIET_theme_skyrim_forest	
+	
+	left_portrait = {
+		character = root
+		animation = admiration
+	}
+
+	immediate = {
+		VIET_random_small_piety_gain_effect = yes
+	}
+	
+	option = { # Ok
+		name = VIETmisc.2078.a
+		stress_impact = {
+			base = miniscule_stress_impact_loss
+			content = miniscule_stress_impact_loss
+			humble = miniscule_stress_impact_loss
+			zealous = miniscule_stress_impact_loss
+		}
 	}
 
 	after = {

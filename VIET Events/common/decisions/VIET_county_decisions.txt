@@ -756,6 +756,87 @@ VIET_decision_add_more_dovecotes = {
 
 
 
+VIET_decision_view_flower_meadows_in_bloom = {
+	picture = "gfx/interface/illustrations/decisions/decision_viet_meadow.dds"
+	desc = VIET_decision_view_flower_meadows_in_bloom_desc
+
+	ai_check_interval = 24
+	
+	cooldown = { days = 1825 }
+
+	is_shown = {
+		is_landed = yes
+		any_directly_owned_province = {
+			county = {
+				has_county_modifier = VIET_famous_flower_meadows
+			}
+		}
+	}
+
+	is_valid = {
+		custom_description = {
+			text = VIET_decision_view_flower_meadows_in_bloom_req
+			any_directly_owned_province = {
+				county = {
+					has_county_modifier = VIET_famous_flower_meadows
+				}
+			}
+		}
+		custom_description = {
+			text = VIET_decision_view_flower_meadows_in_bloom_req_tooltip
+			OR = {
+				current_month = 3
+				current_month = 4			
+				current_month = 5			
+			}
+		}
+	}
+
+	is_valid_showing_failures_only = {
+		is_adult = yes
+		is_available = yes
+	}
+
+	effect = {
+		custom_tooltip = VIET_decision_view_flower_meadows_in_bloom_effect_tooltip
+		# if = {
+		# 	limit = {
+		# 		has_game_rule = VIET_historical_context_on
+		# 	}
+		# 	custom_tooltip = VIET_decision_view_flower_meadows_in_bloom_context_tooltip
+		# }
+		add_character_flag = planning_an_activity
+		random_directly_owned_province = {
+			limit = {
+				county = {
+					has_county_modifier = VIET_famous_flower_meadows
+				}
+			}
+			county = {
+				save_scope_as = county
+				county.title_province = {
+					spawn_activity = {
+						type = activity_VIET_trip_flower_meadows
+						owner = root
+					}			
+				}		
+			}
+		}
+	}
+
+	cost = {
+		gold = { value = minor_gold_value } # Will depend
+	}
+	
+	ai_potential = {
+		gold > minor_gold_value
+	}
+
+	ai_will_do = {
+		base = 30
+	}
+}
+
 
 
 

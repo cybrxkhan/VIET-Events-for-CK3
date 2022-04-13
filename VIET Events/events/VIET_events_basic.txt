@@ -43,6 +43,7 @@
 # 0193-0195		Oblivion unmarked locations
 # 0196-0232		Animals
 # 0233-0235		Patch
+# 0236-0240		Generic
 # 
 ############################################################################################################################
 
@@ -1627,9 +1628,7 @@ VIETmisc.0022 = {
 		}
 	}
 	theme = vassal
-	override_background = {
-		event_background = council_chamber
-	}
+	override_background = { event_background = council_chamber }
 	
 	right_portrait = {
 		character = root
@@ -10743,6 +10742,18 @@ VIETmisc.0129 = {
 			wrathful = minor_stress_impact_gain
 		}		
 		add_courtier = scope:scope_VIET_otumeel_prankster
+		if = {
+			limit = {
+				can_add_hook = {
+					target = scope:scope_VIET_otumeel_prankster
+					type = loyalty_hook
+				}
+			}
+			add_hook = {
+				target = scope:scope_VIET_otumeel_prankster
+				type = loyalty_hook
+			}
+		}
 	}	
 }
 
@@ -20636,6 +20647,485 @@ VIETmisc.0235 = {
 	}
 
 }
+
+
+
+
+##########################################################################################################################
+#
+# GENERIC	0236-0240
+#
+##########################################################################################################################
+
+
+# Bickering Couple at your Court
+VIETmisc.0236 = {
+	type = character_event
+	title = VIETmisc.0236.t
+	desc = VIETmisc.0236.desc
+	theme = friendly
+	
+	left_portrait = {
+		character = root
+		animation = personality_compassionate
+	}
+	
+	weight_multiplier = {
+		base = 1
+		modifier = {
+			add = 0.2
+			has_trait = content
+		}
+		modifier = {
+			add = -0.2
+			has_trait = vengeful
+		}
+		modifier = {
+			add = 0.2
+			has_trait = patient
+		}
+		modifier = {
+			add = -0.2
+			has_trait = impatient
+		}
+		modifier = {
+			add = 0.2
+			has_trait = humble
+		}
+		modifier = {
+			add = -0.2
+			has_trait = arrogant
+		}
+	}
+
+	
+	option = { # Funny
+		name = VIETmisc.0236.a
+		add_character_modifier = {
+			modifier = VIET_amused_ruler
+			years = 5
+		}
+		VIET_huge_prestige_loss_effect = yes
+		stress_impact = {
+			impatient = miniscule_stress_impact_gain
+			arrogant = miniscule_stress_impact_gain
+		}	
+	}
+	
+	option = { # No Funny
+		name = VIETmisc.0236.b
+		VIET_huge_prestige_gain_effect = yes
+		stress_impact = {
+			patient = miniscule_stress_impact_gain
+			forgiving = miniscule_stress_impact_gain
+		}
+	}
+}
+
+
+# Prisoner is on friendly terms with guards and is a regular who gets imprisoned a lot for silly reasons
+VIETmisc.0237 = {
+	type = character_event
+	title = VIETmisc.0237.t
+	desc = VIETmisc.0237.desc
+	theme = prison
+	override_icon = { reference = "gfx/interface/icons/event_types/type_relation_friendly.dds" } 
+	
+	left_portrait = root
+	right_portrait = {
+		character = scope:spunky
+		animation = happiness
+	}
+	
+	weight_multiplier = {
+		base = 1
+		modifier = {
+			add = 0.2
+			has_trait = just
+		}
+		modifier = {
+			add = -0.2
+			has_trait = arbitrary
+		}
+		modifier = {
+			add = 0.2
+			has_trait = compassionate
+		}
+		modifier = {
+			add = -0.2
+			has_trait = callous
+		}
+		modifier = {
+			add = 0.2
+			has_trait = humble
+		}
+		modifier = {
+			add = -0.2
+			has_trait = arrogant
+		}
+	}
+
+	immediate = {
+		hidden_effect = {
+			create_character = {
+				location = root.capital_province
+				age = { 18 30 }
+				gender_female_chance = 100
+				faith = root.faith
+				culture = root.culture
+				save_scope_as = spunky
+				random_traits = no
+				#trait = education_diplomacy_3
+				trait = gregarious
+				trait = just
+				trait = brave				
+				trait = honest			
+			}
+			scope:spunky = {
+				add_character_modifier = {
+					modifier = VIET_spunky_girl
+				}
+				random_list = {
+					10 = { add_trait = education_diplomacy_1 }
+					10 = { add_trait = education_diplomacy_2 }
+					10 = { add_trait = education_diplomacy_3 }
+					10 = { add_trait = education_stewardship_1 }
+					10 = { add_trait = education_stewardship_2 }
+					10 = { add_trait = education_stewardship_3 }
+					10 = { add_trait = education_intrigue_1 }
+					10 = { add_trait = education_intrigue_2 }
+					10 = { add_trait = education_intrigue_3 }
+					10 = { add_trait = education_learning_1 }
+					10 = { add_trait = education_learning_2 }
+					10 = { add_trait = education_learning_3 }
+				}
+				random_list = {
+					70 = { }
+					30 = { add_trait = intellect_good_1 }
+					20 = { add_trait = intellect_good_2 }
+					10 = { add_trait = intellect_good_3 }
+				}
+				random_list = {
+					70 = { }
+					30 = { add_trait = beauty_good_1 }
+					20 = { add_trait = beauty_good_2 }
+					10 = { add_trait = beauty_good_3 }
+				}
+			}
+		}
+	}
+	
+	option = { # Ok
+		name = VIETmisc.0237.a
+		VIET_huge_piety_gain_effect = yes
+		stress_impact = {
+			callous = miniscule_stress_impact_gain
+			lazy = miniscule_stress_impact_gain
+			craven = miniscule_stress_impact_gain
+		}
+		hidden_effect = {
+			scope:spunky = {
+				death = {
+					death_reason = death_disappearance
+				}			
+			}
+		}
+	}
+	option = { # Ok
+		name = VIETmisc.0237.b
+		VIET_huge_prestige_gain_effect = yes
+		stress_impact = {
+			just = miniscule_stress_impact_gain
+			diligent = miniscule_stress_impact_gain
+			compassionate = miniscule_stress_impact_gain
+		}
+		hidden_effect = {
+			scope:spunky = {
+				death = {
+					death_reason = death_disappearance
+				}			
+			}
+		}
+	}
+	option = { # Ok
+		name = VIETmisc.0237.c
+		trigger = {
+			OR = {
+				gold >= 25
+				is_ai = no
+			}
+		}
+		remove_short_term_gold = 25
+		VIET_huge_prestige_loss_effect = yes
+		stress_impact = {
+			greedy = minor_stress_impact_gain
+			paranoid = minor_stress_impact_gain
+			arrogant = miniscule_stress_impact_gain
+			arbitrary = miniscule_stress_impact_gain
+		}
+		add_courtier = scope:spunky
+		if = {
+			limit = {
+				can_add_hook = {
+					target = scope:spunky
+					type = loyalty_hook
+				}
+			}
+			add_hook = {
+				target = scope:spunky
+				type = loyalty_hook
+			}
+		}
+	}
+}
+
+
+# Courtier sneezes loudly
+VIETmisc.0238 = {
+	type = character_event
+	title = VIETmisc.0238.t
+	desc = VIETmisc.0238.desc
+	theme = friendly
+	override_background = { event_background = council_chamber }
+	
+	left_portrait = {
+		character = root
+		animation = schadenfreude
+	}
+	right_portrait = {
+		character = scope:sneezer
+		animation = shame
+	}
+
+	trigger = {
+		any_courtier = {
+			is_available_ai_adult = yes
+		}
+	}
+	
+	weight_multiplier = {
+		base = 1
+		modifier = {
+			add = 0.2
+			has_trait = gregarious
+		}
+		modifier = {
+			add = -0.2
+			has_trait = shy
+		}
+		modifier = {
+			add = 0.2
+			has_trait = patient
+		}
+		modifier = {
+			add = -0.2
+			has_trait = impatient
+		}
+		modifier = {
+			add = 0.2
+			has_trait = trusting
+		}
+		modifier = {
+			add = -0.2
+			has_trait = paranoid
+		}
+	}
+
+	immediate = {
+		random_courtier = {
+			limit = {
+				is_available_ai_adult = yes
+			}
+			save_scope_as = sneezer
+			add_character_modifier = {
+				modifier = VIET_infamously_loud_sneezer
+				years = 9
+			}
+		}
+	}
+	
+	option = { # Ok
+		name = VIETmisc.0238.a
+	}
+}
+
+
+# Discussion about whether it is better to be a master of something or a jack of all trades
+VIETmisc.0239 = {
+	type = character_event
+	title = VIETmisc.0239.t
+	desc = VIETmisc.0239.desc
+	theme = friendly
+	override_background = { event_background = garden }
+	
+	left_portrait = {
+		character = scope:generalist
+		animation = personality_rational
+	}
+	right_portrait = {
+		character = scope:specialist
+		animation = disapproval
+	}
+
+	trigger = {
+		any_courtier = {
+			is_available_ai_adult = yes
+			OR = {
+				has_trait = arrogant
+				has_trait = stubborn
+				has_trait = ambitious
+				has_trait = impatient
+			}
+		}
+		any_courtier = {
+			is_available_ai_adult = yes
+			NOR = {
+				has_trait = arrogant
+				has_trait = stubborn
+				has_trait = ambitious
+				has_trait = impatient
+			}
+		}
+	}
+	
+	weight_multiplier = {
+		base = 1
+		modifier = {
+			add = 0.2
+			has_trait = gregarious
+		}
+		modifier = {
+			add = -0.2
+			has_trait = shy
+		}
+		modifier = {
+			add = 0.2
+			has_trait = lazy
+		}
+		modifier = {
+			add = -0.2
+			has_trait = diligent
+		}
+		modifier = {
+			add = 0.2
+			has_trait = trusting
+		}
+		modifier = {
+			add = -0.2
+			has_trait = paranoid
+		}
+	}
+
+	immediate = {
+		random_courtier = {
+			limit = {
+				is_available_ai_adult = yes
+				OR = {
+					has_trait = arrogant
+					has_trait = stubborn
+					has_trait = ambitious
+					has_trait = impatient
+				}
+			}
+			save_scope_as = specialist
+		}
+		random_courtier = {
+			limit = {
+				is_available_ai_adult = yes
+				NOR = {
+					has_trait = arrogant
+					has_trait = stubborn
+					has_trait = ambitious
+					has_trait = impatient
+				}
+			}
+			save_scope_as = generalist
+		}
+	}
+	
+	option = { # Master one thing
+		name = VIETmisc.0239.a
+		scope:specialist = {
+			add_opinion = {
+				target = root
+				modifier = VIET_opinion_shares_my_opinions
+			}
+			reverse_add_opinion = {
+				target = root
+				modifier = VIET_opinion_shares_my_opinions
+			}			
+		}
+	}
+	
+	option = { # Jack of all trades
+		name = VIETmisc.0239.b
+		scope:generalist = {
+			add_opinion = {
+				target = root
+				modifier = VIET_opinion_shares_my_opinions
+			}
+			reverse_add_opinion = {
+				target = root
+				modifier = VIET_opinion_shares_my_opinions
+			}			
+		}
+	}
+}
+
+
+# Witch's Stew - is it a sign of love from your maid to your manservant or not?
+# (Got this idea from a C-Drama, dunno if it's some actual folklore thing IRL)
+VIETmisc.0240 = {
+	type = character_event
+	title = VIETmisc.0240.t
+	desc = VIETmisc.0240.desc
+	theme = seduction
+	override_background = { event_background = feast }
+	
+	right_portrait = {
+		character = root
+		animation = personality_cynical
+	}
+	
+	weight_multiplier = {
+		base = 1
+		modifier = {
+			add = 0.2
+			has_trait = gregarious
+		}
+		modifier = {
+			add = -0.2
+			has_trait = shy
+		}
+		modifier = {
+			add = 0.2
+			has_trait = gluttonous
+		}
+		modifier = {
+			add = -0.2
+			has_trait = temperate
+		}
+		modifier = {
+			add = 0.2
+			has_trait = lustful
+		}
+		modifier = {
+			add = -0.2
+			has_trait = chaste
+		}
+	}
+	
+	option = { # She loves you!
+		name = VIETmisc.0240.a
+		VIET_small_piety_gain_effect = yes
+	}
+	
+	option = { # She loves you not!
+		name = VIETmisc.0240.b
+		VIET_small_prestige_gain_effect = yes
+	}
+}
+
 
 
 

@@ -631,3 +631,19 @@ VIET_burnt_down_tower_renovated = {
 	levy_reinforcement_rate = 0.1
 	hostile_raid_time = 0.1
 }
+VIET_smuggling_ring_arrested = {
+	icon = goods_positive
+	monthly_county_control_change_add = 0.2
+	county_opinion_add = 3
+}
+VIET_haunted_fortress = {
+	icon = county_modifier_development_negative
+	monthly_county_control_change_add = -0.3
+	fort_level = 1
+	hostile_raid_time = 0.05
+}
+VIET_famous_flower_meadows = {
+	icon = fertility_positive
+	tax_mult = 0.01
+	development_growth = 0.1
+}

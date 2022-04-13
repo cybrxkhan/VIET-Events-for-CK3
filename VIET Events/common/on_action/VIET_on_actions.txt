@@ -364,6 +364,9 @@ VIET_events_yearly_pulse = {
 		100 = VIETmisc.0223		# Hoopoes are hanging around and you're of a culture that sees them positively
 		100 = VIETmisc.0226		# Heard some yellowhammer songbird singing
 		100 = VIETmisc.0227		# House bunting makes itself at home in your residence which is lucky
+		# Generic
+		100 = VIETmisc.0238		# Courtier sneezes loudly
+		100 = VIETmisc.0239		# Discussion about whether it is better to be a master of something or a jack of all trades
 	}
 }
 
@@ -662,6 +665,9 @@ VIET_events_tri_yearly_pulse = {
 		# Patch
 		100 = VIETmisc.0234		# Two peasant women arguing about a patch of cabbages
 		100 = VIETmisc.0235		# Notice your servant is wearing patchy clothing
+		# Generic
+		100 = VIETmisc.0236		# Bickering Couple at your Court
+		100 = VIETmisc.0240		# Witch's Stew - is it a sign of love from your maid to your manservant or not?
 	}
 }
 
@@ -870,6 +876,8 @@ VIET_events_five_yearly_pulse = {
 		100 = VIETmisc.0232		# Come across a traveling cleric preaching to the animals
 		# Patch
 		100 = VIETmisc.0233		# Met a Veteran who wears an eyepatch
+		# Generic
+		100 = VIETmisc.0237		# Prisoner is on friendly terms with guards and is a regular who gets imprisoned a lot for silly reasons
 	}
 }
 
@@ -1193,8 +1201,12 @@ VIET_events_common_county_pulse = {
 		# Animals
 		100 = VIETmisc.3027		# Recent bear attacks
 		100 = VIETmisc.3030		# Donkeys from a county gain a good reputation for being reliable
+		# Generic
+		100 = VIETmisc.3031		# Smuggling Ring Arrested
+		100 = VIETmisc.3032		# Haunted Fortress
+		100 = VIETmisc.3033		# Famous flower meadows
 		
-		# 29
+		# 32
     }
 }
 
@@ -1405,8 +1417,11 @@ VIET_events_common_artifact_pulse = {
 		100 = VIETmisc.5041		# Ancient coin - your servant finds an ancient coin while gardening
 		# Patch
 		100 = VIETmisc.5051		# Leather ball - consider buying one?
+		# Generic
+		100 = VIETmisc.5052		# Small Seashell - find one by the beach
+		100 = VIETmisc.5054		# House Vase - buy one or not
 		
-		# 30
+		# 31
     }
 }
 
@@ -1522,7 +1537,9 @@ VIET_events_rare_artifact_pulse = {
 		100 = VIETmisc.5020		# Prehistoric bone flute - a hunter in your realm finds it and it is offered to you
 		100 = VIETmisc.5038		# Hollow doll - weird merchant wants to sell it to you
 		100 = VIETmisc.5045		# Lusty Argonian Maid - find a very interesting play
+		# Generic
+		100 = VIETmisc.5053		# Useless map - scholar offers a fictional map depicting an ideal country
 		
-		# 3
+		# 4
     }
 }
