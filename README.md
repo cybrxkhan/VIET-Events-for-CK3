@@ -40,6 +40,7 @@ NOTE: If you are re-installing a mod, delete the old version of the mod first be
 
 - Added 8 positivity events
 - VIET’s Sinosphere scripted trigger now correctly includes various cultures it didn’t before
+- Fixed GitHub version missing some code for some reason
 - Miscellaneous bugfixes
 
 \* Adapted from VIET for CK2

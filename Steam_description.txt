@@ -66,6 +66,7 @@ Rumi was a 13th century Persian poet, scholar, and mystic. His works are conside
 [LIST]
 [*]Added 8 positivity events
 [*]VIET’s Sinosphere scripted trigger now correctly includes various cultures it didn’t before
+[*]Fixed GitHub version missing some code for some reason
 [*]Miscellaneous bugfixes
 [/LIST]
 
