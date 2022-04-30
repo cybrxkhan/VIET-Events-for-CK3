@@ -6,6 +6,20 @@
 # 
 #############################################################################################
 
+# This is literally needed for the error log to not show this message, even though it literally does nothing and wastes space
+VIET_setup_no_modifier_silliness_effect = {
+	if = {
+		limit = {
+			OR = {
+				has_character_modifier = VIET_special_rock
+				has_character_modifier = VIET_has_dinosaur_bone
+				has_character_modifier = VIET_magical_napkins
+				has_character_modifier = VIET_thunderstone_talisman
+			}
+		}
+	}
+}
+
 VIET_immediate_songbird_sound_effect = {
 	stress_impact = {
 		base = minor_stress_impact_loss

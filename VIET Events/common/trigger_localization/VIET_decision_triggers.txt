@@ -30,3 +30,11 @@ VIET_decision_examine_ancient_stone_monument_req = {
 VIET_decision_purchase_dependable_donkeys_req = {
 	global = VIET_decision_purchase_dependable_donkeys_req
 }
+
+VIET_decision_view_flower_meadows_in_bloom_req = {
+	global = VIET_decision_view_flower_meadows_in_bloom_req
+}
+
+VIET_decision_view_flower_meadows_in_bloom_req_tooltip = {
+	global = VIET_decision_view_flower_meadows_in_bloom_req_tooltip
+}

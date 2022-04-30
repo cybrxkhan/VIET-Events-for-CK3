@@ -295,6 +295,17 @@ VIET_background_ancient_cairn = {
 ### SMALL TOWN ###
 VIET_background_small_town = {
 
+	background = { # Iberian
+		trigger = {
+			capital_province = {
+				geographical_region = world_europe_west_iberia
+			}
+		}
+		reference = "gfx/interface/illustrations/event_scenes/VIET_small_town_castilian.dds"
+		environment = "environment_event_garden"
+		ambience = "event:/SFX/Events/Backgrounds/townmarket_western_day"
+	}
+
 	background = { # Non-Tropical African
 		trigger = {
 			capital_province = {
@@ -304,7 +315,7 @@ VIET_background_small_town = {
 		}
 		reference = "gfx/interface/illustrations/event_scenes/VIET_small_town_african.dds"
 		environment = "environment_event_garden"
-		ambience = "event:/SFX/Events/Backgrounds/townmarket_western_day"
+		ambience = "event:/SFX/Events/Backgrounds/townmarket_day_tribal_pagan"
 	}
 
 	background = { # Tropical African
@@ -315,7 +326,7 @@ VIET_background_small_town = {
 		}
 		reference = "gfx/interface/illustrations/event_scenes/VIET_small_town_akan.dds"
 		environment = "environment_event_garden"
-		ambience = "event:/SFX/Events/Backgrounds/townmarket_western_day"
+		ambience = "event:/SFX/Events/Backgrounds/townmarket_day_tribal_pagan"
 	}
 
 	background = { # Eastern Mediterranean (Greece, Turkey, Sicily, etc.)
@@ -338,7 +349,6 @@ VIET_background_small_town = {
 		trigger = {
 			capital_province = {
 				OR = {
-					geographical_region = world_europe_west_iberia
 					geographical_region = ghw_region_balkans
 					geographical_region = ghw_region_caucasus
 				}
@@ -449,6 +459,17 @@ VIET_background_small_town = {
 ### SKYRIM FOREST ###
 VIET_background_skyrim_forest = {
 
+	background = { # Hungary/Carpathia
+		trigger = {
+			capital_province = {
+				geographical_region = custom_carpathia
+			}
+		}
+		reference = "gfx/interface/illustrations/event_scenes/VIET_skyrim_forest_hungarian.dds"
+		environment = "environment_event_steppe"
+		ambience = "event:/SFX/Events/Backgrounds/steppe_day"
+	}
+
 	background = { # Iranian
 		trigger = {
 			capital_province = {
@@ -479,6 +500,7 @@ VIET_background_skyrim_forest = {
 					geographical_region = world_europe_north
 					geographical_region = world_steppe_west
 				}
+				NOT = { geographical_region = custom_carpathia }
 			}
 		}
 		reference = "gfx/interface/illustrations/event_scenes/VIET_skyrim_forest_siberian.dds"

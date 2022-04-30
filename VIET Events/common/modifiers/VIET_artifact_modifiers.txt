@@ -395,3 +395,18 @@ artifact_VIET_leather_ball_modifier = {
 	stress_loss_mult = 0.05
 	courtier_and_guest_opinion = 2
 }
+
+artifact_VIET_small_seashell_modifier = {
+	monthly_piety = 0.1
+	monthly_prestige = 0.01
+}
+
+artifact_VIET_useless_map_modifier = {
+	monthly_lifestyle_xp_gain_mult = 0.03
+	monthly_prestige = 0.04
+}
+
+artifact_VIET_house_vase_modifier = {
+	monthly_prestige = 0.05
+	monthly_court_grandeur_change_add = 0.1
+}

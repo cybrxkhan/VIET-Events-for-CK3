@@ -2151,6 +2151,55 @@ VIET_infamously_loud_sneezer = {
 	icon = social_negative
 	diplomacy = -1
 }
+VIET_defended_servants_honor = {
+	icon = family_positive
+	county_opinion_add = 3
+	monthly_piety = 0.2
+}
+VIET_positive_mindset = {
+	icon = social_positive
+	monthly_lifestyle_xp_gain_mult = 0.03
+	personal_scheme_power_mult = 0.05
+	intrigue = -1
+	hostile_scheme_resistance_mult = -0.05
+}
+VIET_realist_mindset = {
+	icon = mask_positive
+	diplomacy = 1
+	intrigue = 1
+	general_opinion = -5
+}
+VIET_benevolently_intervened_locals = {
+	icon = family_positive
+	county_opinion_add = 4
+	monthly_prestige = 0.05
+	monthly_piety = 0.1
+}
+VIET_staying_inside = {
+	icon = learning_positive
+	diplomacy = -2
+	learning = 1
+	monthly_lifestyle_xp_gain_mult = 0.03
+	stress_gain_mult = -0.1
+	stress_loss_mult = 0.1
+}
+VIET_encouraged_by_others = {
+	icon = love_positive
+	monthly_lifestyle_xp_gain_mult = 0.04
+	personal_scheme_power_mult = 0.04
+	intrigue = -1
+}
+VIET_suspicious_of_praise = {
+	icon = mask_positive
+	diplomacy = -1
+	intrigue = 1
+	hostile_scheme_resistance_mult = 0.05
+}
+VIET_positive_inspiring_dream = {
+	icon = piety_positive
+	monthly_piety_gain_mult = 0.03
+	monthly_lifestyle_xp_gain_mult = 0.03
+}
 
 
 

@@ -464,3 +464,21 @@ VIET_opinion_shares_my_opinions = {
 	opinion = 5
 	stacking = yes
 }
+VIET_opinion_encouragement = {
+	years = 5
+	decaying = yes
+	opinion = 10
+	stacking = yes
+}
+VIET_opinion_suspects_ulterior_motives = {
+	years = 5
+	decaying = yes
+	opinion = -10
+	stacking = yes
+}
+VIET_opinion_awkward_silence = {
+	years = 5
+	decaying = yes
+	opinion = -5
+	stacking = yes
+}
