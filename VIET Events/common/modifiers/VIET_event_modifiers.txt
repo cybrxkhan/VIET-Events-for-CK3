@@ -2165,12 +2165,12 @@ VIET_positive_mindset = {
 }
 VIET_realist_mindset = {
 	icon = mask_positive
-	diplomacy = 1
 	intrigue = 1
 	general_opinion = -5
 }
 VIET_benevolently_intervened_locals = {
 	icon = family_positive
+	general_opinion = 5
 	county_opinion_add = 4
 	monthly_prestige = 0.05
 	monthly_piety = 0.1
@@ -2182,6 +2182,7 @@ VIET_staying_inside = {
 	monthly_lifestyle_xp_gain_mult = 0.03
 	stress_gain_mult = -0.1
 	stress_loss_mult = 0.1
+	general_opinion = -5
 }
 VIET_encouraged_by_others = {
 	icon = love_positive

@@ -367,6 +367,11 @@ VIET_events_yearly_pulse = {
 		# Generic
 		100 = VIETmisc.0238		# Courtier sneezes loudly
 		100 = VIETmisc.0239		# Discussion about whether it is better to be a master of something or a jack of all trades
+		# Positivity
+		100 = VIETmisc.0242		# Good day
+		100 = VIETmisc.0243		# Two courtiers debate the merit of staying positive
+		100 = VIETmisc.0247		# Courtier praises you, which sounds suspicious
+		100 = VIETmisc.0248		# You have a strangely positive dream
 	}
 }
 
@@ -668,6 +673,9 @@ VIET_events_tri_yearly_pulse = {
 		# Generic
 		100 = VIETmisc.0236		# Bickering Couple at your Court
 		100 = VIETmisc.0240		# Witch's Stew - is it a sign of love from your maid to your manservant or not?
+		# Positivity
+		100 = VIETmisc.0244		# You meet a cheerful beggar who's content with her predicament
+		100 = VIETmisc.0246		# You meet a scholar who likes to stay inside all day
 	}
 }
 
@@ -878,6 +886,9 @@ VIET_events_five_yearly_pulse = {
 		100 = VIETmisc.0233		# Met a Veteran who wears an eyepatch
 		# Generic
 		100 = VIETmisc.0237		# Prisoner is on friendly terms with guards and is a regular who gets imprisoned a lot for silly reasons
+		# Positivity
+		100 = VIETmisc.0241		# A maidservant got rejected hard
+		100 = VIETmisc.0245		# You see a guard give a street urchin some candy and food
 	}
 }
 
