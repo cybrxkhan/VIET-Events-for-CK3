@@ -1,6 +1,6 @@
-[img]https://i.imgur.com/ep5Ikb9.png[/img]
+[img]https://i.imgur.com/cdJAolI.png[/img]
 
-[h1]Current Version: 1.5.3 "Li Bai" (Released 4/12/22, Compatible with vanilla patch 1.5.X)[/h1]
+[h1]Current Version: 1.5.4 "Rumi" (Released 4/30/22, Compatible with vanilla patch 1.5.X)[/h1]
 [h1][B][url=https://discord.gg/9KuyXv2uZA]Discord Server for my mods[/url]
 [url=https://cybrxkhansmods.godaddysites.com/]Official Website for my mods[/url][/B][/h1]
 [B][url=https://forum.paradoxplaza.com/forum/threads/mod-viet-events-for-ck3-a-flavor-and-immersion-event-mod.1422081/]Paradox Forum Thread[/url][/B]
@@ -24,7 +24,7 @@ Feel free to use my work in your mods - all I ask is that I am credited and (if 
 [img]http://i.imgur.com/EyXurbK.jpg[/img]
 
 [LIST]
-[*]Over [B]800 new flavor events[/B] to experience!
+[*]Over [B]808 new flavor events[/B] to experience!
 [*]Explore new decisions, artifacts, character interactions, activities, and more!
 [*]Game rule to disable sillier events for those who don't like them, with three levels to choose from: Balanced (Default), Serious (Restricted), and All Events (Full)
 [*][B]Compatible with almost anything[/B] since it doesn't touch any vanilla files - even with overhaul mods, you can via game rule disable events that reference things specific to our medieval world that wouldn’t make sense in other time periods or universes (like fantasy and sci-fi conversion mods)
@@ -53,24 +53,19 @@ Thanks!
 
 [img]http://i.imgur.com/RQ5QZTF.jpg[/img]
 
-[h1]Version 1.5.3 "Li Bai"[/h1]
+[h1]Version 1.5.4 "Rumi"[/h1]
 
-[I]“Facing my wine, I did not see the dusk,
-Falling blossoms have filled the folds of my clothes.
-Drunk, I rise and approach the moon in the stream,
-Birds are far off, people too are few.”
+[I]“Love rests on no foundation.
+It is an endless ocean,
+with no beginning or end.”
 
-- ‘Amusing Myself’, by Li Bai
+- Rumi
 
-Li Bai was an 8th century poet, considered to have been one of the greatest Chinese poets alongside his friend Du Fu, even during his lifetime. Themes commonly found in his poetry include friendship, solitude, drinking, the moon, nature, and more.[/I]
+Rumi was a 13th century Persian poet, scholar, and mystic. His works are considered some of the best poetry not only among Iranian communities, but around the world as well.[/I]
 
 [LIST]
-[*]Added 12 new generic events
-[*]Added 3 new artifacts: Small Seashell, Useless Map, House Vase
-[*]Added new decision: View Flower Meadows in Bloom
-[*]Added several new regional variations of event backgrounds
-[*]Recruiting the imprisoned prankster now gives you a loyalty hook on them
-[*]Changed sound ambience for a few event backgrounds
+[*]Added 8 positivity events
+[*]VIET’s Sinosphere scripted trigger now correctly includes various cultures it didn’t before
 [*]Miscellaneous bugfixes
 [/LIST]
 
