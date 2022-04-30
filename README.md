@@ -8,8 +8,7 @@ with no beginning or end.”_
 
 _- Rumi_
 
-_Rumi was a 13th century Persian poet, scholar, and mystic. His works are considered some of the best poetry not only among Iranian communities, but around the world as well.
-_
+_Rumi was a 13th century Persian poet, scholar, and mystic. His works are considered some of the best poetry not only among Iranian communities, but around the world as well._
 
 Very Immersive Events and Tales (VIET), the sequel to VIET Events Reborn for CK2, is a flavor mod that adds a vast collection of events about everyday life to spice up your game. They add immersion and a diversity of experiences in between wars and vanilla’s event chains, and cover mundane minutiae ranging from small talk with courtiers and eating local cuisine to epic tales about love, philosophy, and the human condition. Some of the events unlock new decisions, character interactions, activities, and much more for you to explore!
 
