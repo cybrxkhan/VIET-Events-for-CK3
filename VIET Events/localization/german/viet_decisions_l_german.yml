@@ -138,7 +138,7 @@
  VIET_decision_purchase_dependable_donkeys_confirm:0 "These donkeys will help us a lot."
  VIET_decision_purchase_dependable_donkeys_context_tooltip:0 "$VIETmisc.3030.info$"      
  VIET_decision_add_more_dovecotes:0 "Add More Dovecotes To Your Residence"
- VIET_decision_add_more_dovecotes_tooltip:0 "It would make me look more prestiguous."
+ VIET_decision_add_more_dovecotes_tooltip:0 "It would make me look more prestigious."
  VIET_decision_add_more_dovecotes_desc:0 "Even though I already have some dovecotes at my residence, lately I've considered building more, to house even greater numbers of pigeons here. It would increase my status and reputation, besides being practical too."
  VIET_decision_add_more_dovecotes_effect_tooltip:0 "You will choose how many dovecotes you wish to build"
  VIET_decision_add_more_dovecotes_effect_tooltip_small:0 "#weak Cost @gold_icon! 50#!"

@@ -75,19 +75,19 @@ artifact_VIET_hummus_recipe_modifier_4 = {
 
 artifact_VIET_yogurt_recipe_modifier_1 = {
 	health = 0.2
-	negate_health_penalty_add = 0.1
+	negate_health_penalty_add = 0.05
 }
 artifact_VIET_yogurt_recipe_modifier_2 = {
 	health = 0.3
-	negate_health_penalty_add = 0.2
+	negate_health_penalty_add = 0.1
 }
 artifact_VIET_yogurt_recipe_modifier_3 = {
 	health = 0.4
-	negate_health_penalty_add = 0.3
+	negate_health_penalty_add = 0.15
 }
 artifact_VIET_yogurt_recipe_modifier_4 = {
 	health = 0.5
-	negate_health_penalty_add = 0.4
+	negate_health_penalty_add = 0.2
 }
 
 artifact_VIET_savory_pie_recipe_modifier_1 = {
@@ -127,25 +127,25 @@ artifact_VIET_fruit_pie_recipe_modifier_4 = {
 }
 
 artifact_VIET_bean_soup_recipe_modifier_1 = {
-	negate_health_penalty_add = 0.1
+	negate_health_penalty_add = 0.05
 	county_opinion_add = 1
 	monthly_piety = 0.1
 	monthly_prestige = -0.5
 }
 artifact_VIET_bean_soup_recipe_modifier_2 = {
-	negate_health_penalty_add = 0.2
+	negate_health_penalty_add = 0.1
 	county_opinion_add = 2
 	monthly_piety = 0.2
 	monthly_prestige = -0.4
 }
 artifact_VIET_bean_soup_recipe_modifier_3 = {
-	negate_health_penalty_add = 0.3
+	negate_health_penalty_add = 0.15
 	county_opinion_add = 3
 	monthly_piety = 0.3
 	monthly_prestige = -0.3
 }
 artifact_VIET_bean_soup_recipe_modifier_4 = {
-	negate_health_penalty_add = 0.4
+	negate_health_penalty_add = 0.2
 	county_opinion_add = 4
 	monthly_piety = 0.4
 	monthly_prestige = -0.2
@@ -304,7 +304,7 @@ artifact_VIET_convenient_backscratcher_modifier = {
 }
 
 artifact_VIET_rugged_walking_stick_modifier = {
-	negate_health_penalty_add = 0.1
+	negate_health_penalty_add = 0.05
 	stress_gain_mult = -0.1
 }
 
@@ -323,7 +323,7 @@ artifact_VIET_basic_lantern_modifier = {
 }
 
 artifact_VIET_favored_handkerchief_modifier = {
-	negate_health_penalty_add = 0.2
+	negate_health_penalty_add = 0.05
 	stress_gain_mult = -0.04
 }
 
@@ -349,7 +349,7 @@ artifact_VIET_hollow_doll_modifier = {
 }
 
 artifact_VIET_decorated_broom_modifier = {
-	negate_health_penalty_add = 0.1
+	negate_health_penalty_add = 0.05
 	monthly_prestige = 0.05
 }
 

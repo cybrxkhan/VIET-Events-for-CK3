@@ -609,7 +609,7 @@ VIET_ignored_disapproval_and_mockery = {
 }
 VIET_cinnamon_toast_crunch_addict = {
 	icon = treat_positive
-	negate_health_penalty_add = 0.2
+	negate_health_penalty_add = 0.1
 }
 VIET_strange_female_bodyguard = {
 	icon = martial_positive
@@ -709,7 +709,7 @@ VIET_purchase_herbs_small = {
 # }
 VIET_purchase_herbs_large = {
 	icon = health_positive
-	negate_health_penalty_add = 0.5
+	negate_health_penalty_add = 0.25
 	fertility = 0.1
 }
 VIET_wolf_protector = {
@@ -1062,7 +1062,7 @@ VIET_smelling_smells = {
 }
 VIET_elderberry_tea = {
 	icon = drink_positive
-	negate_health_penalty_add = 0.3
+	negate_health_penalty_add = 0.2
 }
 VIET_prison_ghost_curse = {
 	icon = prison_negative
@@ -1081,7 +1081,7 @@ VIET_threesome_with_commoners = {
 VIET_cook_knowledge = {
 	icon = food_positive
 	intrigue = 1
-	negate_health_penalty_add = 0.1
+	negate_health_penalty_add = 0.05
 }
 VIET_using_miswak_more = {
 	icon = health_positive
@@ -1287,7 +1287,7 @@ VIET_hears_voices_like_thamriel = {
 }
 VIET_drinking_basic_tonic = {
 	icon = drink_positive
-	negate_health_penalty_add = 0.3
+	negate_health_penalty_add = 0.2
 }
 VIET_punished_quack_doctor = {
 	icon = prison_positive
@@ -2200,6 +2200,56 @@ VIET_positive_inspiring_dream = {
 	icon = piety_positive
 	monthly_piety_gain_mult = 0.03
 	monthly_lifestyle_xp_gain_mult = 0.03
+}
+VIET_liege_awkward_talk = {
+	icon = social_negative
+	diplomacy = -1
+}
+VIET_thinks_love_is_struggle = {
+	icon = love_positive
+	attraction_opinion = 3
+	personal_scheme_power_add = 1
+	intrigue = -1
+}
+VIET_thinks_pragmatic_on_love = {
+	icon = stress_positive
+	diplomacy = -1
+	intrigue = 1
+	personal_scheme_resistance_mult = 0.1
+	attraction_opinion = -3
+}
+VIET_new_young_foreign_servant = {
+	icon = mask_positive
+	intrigue = 1
+	learn_language_scheme_power_mult = 0.05
+}
+VIET_awkward_laughter = {
+	icon = social_positive
+	general_opinion = 3
+	stress_gain_mult = 0.05
+}
+VIET_liege_didnt_like_joke = {
+	icon = negative_positive
+	diplomacy = -1
+}
+VIET_struggles_everywhere = {
+	icon = dread_positive
+	stress_gain_mult = -0.05
+	monthly_lifestyle_xp_gain_mult = 0.01
+}
+VIET_struggles_skepticism = {
+	icon = stress_positive
+	intrigue = 1
+}
+VIET_murderer_execution = {
+	icon = county_modifier_control_positive
+	county_opinion_add = 4
+}
+VIET_shy_hermit = {
+	icon = piety_positive
+	development_growth_factor = 0.01
+	monthly_county_control_change_add = 0.03
+	county_opinion_add = 2
 }
 
 

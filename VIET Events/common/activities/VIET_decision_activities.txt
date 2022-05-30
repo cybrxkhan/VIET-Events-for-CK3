@@ -1,6 +1,7 @@
 ﻿
 
 activity_VIET_crow_removal = {
+	expiration_days = 180
 	solo = yes
 	color = { 0.18 0.17 0.21 1 } #Dark
 	on_spawn = {
@@ -82,10 +83,16 @@ activity_VIET_crow_removal = {
 			remove_character_flag = VIET_doing_crow_activities
 		}	
 	}
+	on_expire = { # Should never happen - kept as fallback for weirdness only
+		activity_owner = {
+			remove_character_flag = planning_an_activity
+		}
+	}
 }
 
 
 activity_VIET_crow_appeasement = {
+	expiration_days = 180
 	solo = yes
 	color = { 0.22 0.23 0.24 1 } #Dark
 	on_spawn = {
@@ -107,9 +114,15 @@ activity_VIET_crow_appeasement = {
 			remove_character_flag = VIET_doing_crow_activities
 		}	
 	}
+	on_expire = { # Should never happen - kept as fallback for weirdness only
+		activity_owner = {
+			remove_character_flag = planning_an_activity
+		}
+	}
 }
 
 activity_VIET_visit_to_a_legendary_burial_mound = {
+	expiration_days = 180
 	solo = yes
 	color = { 0.01 0.13 0.25 1 } #Dark
 	on_spawn = {
@@ -131,9 +144,15 @@ activity_VIET_visit_to_a_legendary_burial_mound = {
 			remove_character_flag = planning_an_activity
 		}	
 	}
+	on_expire = { # Should never happen - kept as fallback for weirdness only
+		activity_owner = {
+			remove_character_flag = planning_an_activity
+		}
+	}
 }
 
 activity_VIET_investigation_of_a_ghost_town = {
+	expiration_days = 180
 	solo = yes
 	color = { 0.05 0.28 0.13 1 } #Dark
 	on_spawn = {
@@ -155,9 +174,15 @@ activity_VIET_investigation_of_a_ghost_town = {
 			remove_character_flag = planning_an_activity
 		}	
 	}
+	on_expire = { # Should never happen - kept as fallback for weirdness only
+		activity_owner = {
+			remove_character_flag = planning_an_activity
+		}
+	}
 }
 
 activity_VIET_veneration_of_a_mummified_hermit = {
+	expiration_days = 180
 	solo = yes
 	color = { 0.95 0.76 0.18 1 } # Saffron
 	on_spawn = {
@@ -179,11 +204,17 @@ activity_VIET_veneration_of_a_mummified_hermit = {
 			remove_character_flag = planning_an_activity
 		}	
 	}
+	on_expire = { # Should never happen - kept as fallback for weirdness only
+		activity_owner = {
+			remove_character_flag = planning_an_activity
+		}
+	}
 }
 
 
 
 activity_VIET_trip_giant_shade_tree = {
+	expiration_days = 180
 	solo = yes
 	color = { 0.25 0.41 0.18 1 } # Tree Green
 	on_spawn = {
@@ -205,9 +236,15 @@ activity_VIET_trip_giant_shade_tree = {
 			remove_character_flag = planning_an_activity
 		}	
 	}
+	on_expire = { # Should never happen - kept as fallback for weirdness only
+		activity_owner = {
+			remove_character_flag = planning_an_activity
+		}
+	}
 }
 
 activity_VIET_trip_examine_ancient_stone_monument = {
+	expiration_days = 180
 	solo = yes
 	color = { 0.55 0.55 0.55 1 } # Stone grey
 	on_spawn = {
@@ -229,9 +266,15 @@ activity_VIET_trip_examine_ancient_stone_monument = {
 			remove_character_flag = planning_an_activity
 		}	
 	}
+	on_expire = { # Should never happen - kept as fallback for weirdness only
+		activity_owner = {
+			remove_character_flag = planning_an_activity
+		}
+	}
 }
 
 activity_VIET_relaxation_with_songbirds = {
+	expiration_days = 180
 	solo = yes
 	color = { 0.55 0.55 0.55 1 } # Stone grey
 	on_spawn = {
@@ -251,9 +294,15 @@ activity_VIET_relaxation_with_songbirds = {
 			remove_character_flag = planning_an_activity
 		}	
 	}
+	on_expire = { # Should never happen - kept as fallback for weirdness only
+		activity_owner = {
+			remove_character_flag = planning_an_activity
+		}
+	}
 }
 
 activity_VIET_trip_flower_meadows = {
+	expiration_days = 180
 	solo = yes
 	color = { 200 50 80 } # Pink-Red
 	on_spawn = {
@@ -277,5 +326,10 @@ activity_VIET_trip_flower_meadows = {
 		activity_owner = {
 			remove_character_flag = planning_an_activity
 		}	
+	}
+	on_expire = { # Should never happen - kept as fallback for weirdness only
+		activity_owner = {
+			remove_character_flag = planning_an_activity
+		}
 	}
 }

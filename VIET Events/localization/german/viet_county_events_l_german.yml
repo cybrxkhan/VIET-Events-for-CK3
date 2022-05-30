@@ -170,12 +170,16 @@
  VIETmisc.3033.a:0 "Fascinating…. Perhaps I shall visit these flower meadows one day."
  VIETmisc.3033.tooltip:0 "For as long as any [county|E] in your [domain|E] has the [GetModifier('VIET_famous_flower_meadows').GetNameWithTooltip] [county_modifier|E], you will have access to the [decision|E] to #V View Flower Meadows in Bloom#!."
  # Version 1.5.4 Start Here - Please leave this comment and do not remove it
- VIETmisc.3034.t:0 "xxxxx"
- VIETmisc.3034.desc:0 "xxxxx"
- VIETmisc.3034.a:0 "xxxxx"
- VIETmisc.3035.t:0 "xxxxx"
- VIETmisc.3035.desc:0 "xxxxx"
- VIETmisc.3035.a:0 "xxxxx"
+ # Version 1.6.0 Start Here - Please leave this comment and do not remove it
+ VIETmisc.3034.t:0 "Struggle to the Death"
+ VIETmisc.3034.desc:0 "Today I am witnessing the execution of a heinous murderer who killed many in [county.GetNameNoTier]. This man’s guilt is assured without a doubt, and many are happy to see him die.\n\nBefore he was caught, my officials could not catch this criminal. However, he made a mistake when he murdered an old man who turned out to be a veteran of many battles. The old soldier put up a good struggle after being assailed by the murderer’s weapon, and he managed to maim the criminal before he perished.\n\nThanks to this, the local guards were able to track the vile man down and make an arrest. It’s a pity that the old veteran died, but his death was not in vain, as thanks to him, our struggle to find this criminal ended."
+ VIETmisc.3034.a:0 "The deaths of the murder victims are avenged!"
+ VIETmisc.3034.b:0 "How sad. Truly, what a cruel world we live in."
+ VIETmisc.3035.t:0 "A Struggle to Avoid People"
+ VIETmisc.3035.desc:0 "I’ve recently heard rumors about a famous hermit who resides in [county.GetNameNoTier]. Many details about this mystic’s identity are contradictory - for example, some say the hermit is a man, others a woman, and yet others that this hermit neither or both! What most of the stories agree on, however, is that this haggard fellow is full of wisdom and understanding about the truth of the universe, as taught in the [ROOT.Char.GetFaith.ReligiousText].\n\nHowever, the thing is, everyone seeks an audience with this hermit. As a result, it is said this hermit struggles to find peace and quiet to do their spiritual practices. The hermit always tries to hide elsewhere, but is found again by intrepid zealots.\n\nAnyways, the rumors or legends of this hermit are certainly inspiring locals to dedicate themselves more to religious matters."
+ VIETmisc.3035.a:0 "An odd story! Is the hermit even real?"
+ VIETmisc.3035.b:0 "I understand how much a struggle it is to avoid #italic people#!."
+ # Version 1.6.1 Start Here - Please leave this comment and do not remove it
  VIETmisc.3036.t:0 "xxxxx"
  VIETmisc.3036.desc:0 "xxxxx"
  VIETmisc.3036.a:0 "xxxxx"

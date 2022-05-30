@@ -482,3 +482,32 @@ VIET_opinion_awkward_silence = {
 	opinion = -5
 	stacking = yes
 }
+VIET_opinion_struggle_discussion_agree = {
+	years = 3
+	opinion = 5
+}
+VIET_opinion_struggle_discussion_disagree = {
+	years = 3
+	opinion = -5
+}
+VIET_opinion_love_discussion_agree = {
+	years = 3
+	opinion = 5
+}
+VIET_opinion_love_discussion_disagree = {
+	years = 3
+	opinion = -5
+}
+VIET_opinion_doesnt_like_me_talking = {
+	years = 6
+	opinion = -10
+	stacking = yes
+}
+VIET_opinion_didnt_like_my_joke = {
+	years = 10
+	opinion = -10
+	decaying = yes
+	stacking = yes
+}
+
+
