@@ -176,9 +176,9 @@
  VIETmisc.3034.a:0 "The deaths of the murder victims are avenged!"
  VIETmisc.3034.b:0 "How sad. Truly, what a cruel world we live in."
  VIETmisc.3035.t:0 "A Struggle to Avoid People"
- VIETmisc.3035.desc:0 "I’ve recently heard rumors about a famous hermit who resides in [county.GetNameNoTier]. Many details about this mystic’s identity are contradictory - for example, some say the hermit is a man, others a woman, and yet others that this hermit neither or both! What most of the stories agree on, however, is that this haggard fellow is full of wisdom and understanding about the truth of the universe, as taught in the [ROOT.Char.GetFaith.ReligiousText].\n\nHowever, the thing is, everyone seeks an audience with this hermit. As a result, it is said this hermit struggles to find peace and quiet to do their spiritual practices. The hermit always tries to hide elsewhere, but is found again by intrepid zealots.\n\nAnyways, the rumors or legends of this hermit are certainly inspiring locals to dedicate themselves more to religious matters."
+ VIETmisc.3035.desc:0 "I’m hearing rumors about a hermit who resides in [county.GetNameNoTier]. Many details about this mystic’s identity are contradictory - for example, some say the hermit is a man, others a woman, and yet others that this hermit is neither or both! What most of the stories agree on, however, is that this holy person is a true believer who is full of wisdom and understanding about the truth of the universe, as taught in the [ROOT.Char.GetFaith.ReligiousText].\n\nHowever, the thing is, everyone wants to seek an audience with this hermit. As a result, it is said this hermit struggles to find peace and quiet to do their spiritual practices. The hermit always tries to hide elsewhere, but is found again by intrepid zealots.\n\nAnyways, the rumors or legends of this hermit are certainly inspiring locals to dedicate themselves more to religious matters."
  VIETmisc.3035.a:0 "An odd story! Is the hermit even real?"
- VIETmisc.3035.b:0 "I understand how much a struggle it is to avoid #italic people#!."
+ VIETmisc.3035.b:0 "I understand the struggle it can be to avoid #italic people#!."
  # Version 1.6.1 Start Here - Please leave this comment and do not remove it
  VIETmisc.3036.t:0 "xxxxx"
  VIETmisc.3036.desc:0 "xxxxx"
