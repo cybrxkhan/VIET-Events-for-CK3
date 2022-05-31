@@ -1,6 +1,6 @@
 [img]https://i.imgur.com/cdJAolI.png[/img]
 
-[h1]Versión actual: 1.5.4 "Rumi" (Salida 30/4/22, Compatible con versión vanilla 1.5.X)[/h1]
+[h1]Versión actual: 1.6.0 "Struggle" (Salida 31/5/22, Compatible con versión vanilla 1.6.X)[/h1]
 [h1][B][url=https://discord.gg/9KuyXv2uZA]Servidor de Discord de mis Mods[/url][/B][/h1]
 [B]Echa un Vistazo a [url=https://forum.paradoxplaza.com/forum/threads/mod-viet-events-for-ck3-a-flavor-and-immersion-event-mod.1422081/]Tema del Foro[/url] Para Más Información[/B]
 [B]Descarga/Instalación manual [url=https://github.com/cybrxkhan/VIET-Events-for-CK3/releases]en Github[/url][/B]
@@ -19,11 +19,13 @@ Siéntete libre de usar mi trabajo con tus mods - todo lo que pido es reconocimi
 
 [img]http://i.imgur.com/FaFtOmm.gif[/img]
 
+[url=https://steamcommunity.com/sharedfiles/filedetails/?id=2775683808][img]https://i.imgur.com/tHNJOAn.png[/img][/url]
+
 
 [img]http://i.imgur.com/EyXurbK.jpg[/img]
 
 [LIST]
-[*]¡Más de [B]808 nuevos eventos[/B] para experimentar!
+[*]¡Más de [B]818 nuevos eventos[/B] para experimentar!
 [*]Explora nuevas decisiones, artefactos, interacciones y cadenas de eventos
 [*]Regla de juego para desactivar los eventos estúpidos para aquellos que no les guste, con tres niveles para escoger entre: Balanceado (Predeterminado), Serio (Restringido), y Todos los eventos (Todo)
 [*][B]Compatible con casi cualquier cosa[/B] ya que no modifico archivos del vanilla - incluso con mods de conversión total puedes desactivar los eventos que hagan referencias a cosas o lugares específicos del mundo medieval que no tendrían sentido en otros periodos o universos (como mods fantásticos o de ciencia ficción)
@@ -49,15 +51,10 @@ Por favor, echa un vistazo a [url=https://steamcommunity.com/workshop/filedetail
 
 [img]http://i.imgur.com/RQ5QZTF.jpg[/img]
 
-[h1]Versión 1.5.4 "Rumi"[/h1]
+[h1]Versión 1.6.0 "Struggle"[/h1]
 
-[I]“Love rests on no foundation.
-It is an endless ocean,
-with no beginning or end.”
-
-- Rumi
-
-Rumi was a 13th century Persian poet, scholar, and mystic. His works are considered some of the best poetry not only among Iranian communities, but around the world as well.[/I]
+[I][I]“If there is no struggle, there is no progress.”
+Frederick Douglass[/I][/I]
 
 
 

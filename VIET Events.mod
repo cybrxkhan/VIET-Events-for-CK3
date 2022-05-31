@@ -1,9 +1,9 @@
-version="1.5.0"
+version="1.6.0"
 tags={
 	"Events"
 	"Gameplay"
 	"Culture"
 }
 name="VIET Events - A Flavor and Immersion Event Mod"
-supported_version="1.5.*"
+supported_version="1.6.*"
 path="mod/VIET Events"

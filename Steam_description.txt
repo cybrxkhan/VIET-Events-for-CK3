@@ -1,6 +1,10 @@
-[img]https://i.imgur.com/cdJAolI.png[/img]
+[img]https://i.imgur.com/Hy7cTwG.jpg[/img]
 
-[h1]Current Version: 1.5.4 "Rumi" (Released 4/30/22, Compatible with vanilla patch 1.5.X)[/h1]
+[h1]Current Version: 1.6.0 "Struggle" (Released 5/31/22, Compatible with vanilla patch 1.6.X)[/h1]
+
+[h1][B][url=https://forms.gle/KFKWmbffoAAAYY847]Take the VIET/RICE 2022 survey![/url] - let me know what you think of my mods, and enter the VIET Events contest to submit your own event idea for VIET![/B][/h1]
+(Survey closes midnight PST June 11)
+
 [h1][B][url=https://discord.gg/9KuyXv2uZA]Discord Server for my mods[/url]
 [url=https://cybrxkhansmods.godaddysites.com/]Official Website for my mods[/url][/B][/h1]
 [B][url=https://forum.paradoxplaza.com/forum/threads/mod-viet-events-for-ck3-a-flavor-and-immersion-event-mod.1422081/]Paradox Forum Thread[/url][/B]
@@ -20,11 +24,13 @@ Feel free to use my work in your mods - all I ask is that I am credited and (if 
 
 [img]http://i.imgur.com/FaFtOmm.gif[/img]
 
+[url=https://steamcommunity.com/sharedfiles/filedetails/?id=2775683808][img]https://i.imgur.com/tHNJOAn.png[/img][/url]
+
 
 [img]http://i.imgur.com/EyXurbK.jpg[/img]
 
 [LIST]
-[*]Over [B]808 new flavor events[/B] to experience!
+[*]Over [B]818 new flavor events[/B] to experience!
 [*]Explore new decisions, artifacts, character interactions, activities, and more!
 [*]Game rule to disable sillier events for those who don't like them, with three levels to choose from: Balanced (Default), Serious (Restricted), and All Events (Full)
 [*][B]Compatible with almost anything[/B] since it doesn't touch any vanilla files - even with overhaul mods, you can via game rule disable events that reference things specific to our medieval world that wouldn’t make sense in other time periods or universes (like fantasy and sci-fi conversion mods)
@@ -53,20 +59,17 @@ Thanks!
 
 [img]http://i.imgur.com/RQ5QZTF.jpg[/img]
 
-[h1]Version 1.5.4 "Rumi"[/h1]
+[h1]Version 1.6.0 "Struggle"[/h1]
 
-[I]“Love rests on no foundation.
-It is an endless ocean,
-with no beginning or end.”
-
-- Rumi
-
-Rumi was a 13th century Persian poet, scholar, and mystic. His works are considered some of the best poetry not only among Iranian communities, but around the world as well.[/I]
+[I]“If there is no struggle, there is no progress.”
+Frederick Douglass[/I]
 
 [LIST]
-[*]Added 8 positivity events
-[*]VIET’s Sinosphere scripted trigger now correctly includes various cultures it didn’t before
-[*]Fixed GitHub version missing some code for some reason
+[*]Added 10 new struggle themed events
+[*]All activities now have automatic expiration dates in case of weird situations where they don’t end
+[*]Fixed decision to view flowers in bloom requiring donkeys and not flowers
+[*]Nerfed the negate health penalty effect for some modifiers and artifacts
+[*]Changed blacksmith event background from medicine to the more appropriate armory
 [*]Miscellaneous bugfixes
 [/LIST]
 

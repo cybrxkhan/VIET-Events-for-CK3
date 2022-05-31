@@ -1264,7 +1264,7 @@
  VIETmisc.0253.b:0 "Easy now. I’m sure the child will learn in due time."
  VIETmisc.0253.c:0 "If you don’t like the child, can I buy them for my household?"
  VIETmisc.0254.t:0 "A Struggle to Laugh"
- VIETmisc.0254.desc:0 "[jokester.GetTitledFirstName] just told a long-winded joke, and literally everyone at my court who’s present is now laughing loudly at this joke.\n\nExcept me.\n\nI… just don’t get it. I’m struggling to understand why it’s funny.\n\nAnd yet, with each passing second, the fact that I am #italic not#! laughing will become more and more noticeable. Then again, I am a [ROOT.Char.GetTitleAsNameNoTooltip], so if I struggle to find something funny, then so be it - who would dare protest? However, my silence would make things awkward nonetheless."
+ VIETmisc.0254.desc:0 "[jokester.GetTitledFirstName] just told a long-winded joke, and literally everyone at my court who’s present is now laughing loudly at this joke.\n\nExcept me.\n\nI… just don’t get it. I’m struggling to understand why it’s funny.\n\nAnd yet, with each passing second, the fact that I am #italic not#! laughing will become more and more noticeable. Then again, I am the [ROOT.Char.GetTitleAsNameNoTooltip], so if I struggle to find something funny, then so be it - who would dare protest? However, my silence would make things awkward nonetheless."
  VIETmisc.0254.a:0 "I’ll pretend to laugh to make this less awkward."
  VIETmisc.0254.b:0 "I won’t laugh at all. It’s just not a funny joke."
  VIETmisc.0255.t:0 "A Struggle for a Promotion"
