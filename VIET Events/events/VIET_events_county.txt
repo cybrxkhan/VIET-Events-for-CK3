@@ -25,6 +25,7 @@
 # 3025-3026		Oblivion Unmarked Locations
 # 3027-3030		Animals
 # 3031-3033		Generic
+# 3034-3035		Struggle
 # 
 ############################################################################################################################
 
@@ -3440,3 +3441,171 @@ VIETmisc.3033 = {
 	}
 }
 
+
+
+##################################################################
+# STRUGGLE 3034-3035
+##################################################################
+
+
+# Murderer executed
+VIETmisc.3034 = {
+	type = character_event
+	title = VIETmisc.3034.t
+	desc = VIETmisc.3034.desc
+	theme = dread
+	override_background = { event_background = gallows }
+	
+	left_portrait = {
+		character = root
+		animation = personality_rational
+	}
+	
+    weight_multiplier = {
+        base = 0
+		modifier = {
+			add = {
+				every_held_title = {
+					limit = { tier = tier_county }
+					add = 1
+				}
+			}		
+		}
+    }
+	
+	immediate = {
+		random_held_title = {
+			limit = { tier = tier_county }
+			save_scope_as = county
+		}
+
+		VIET_huge_prestige_gain_effect = yes
+
+		scope:county = {
+			random_list = {
+				10 = {
+					add_county_modifier = {
+						modifier = VIET_murderer_execution
+						years = 3
+					}				
+				}
+				10 = {
+					add_county_modifier = {
+						modifier = VIET_murderer_execution
+						years = 6
+					}				
+				}
+				10 = {
+					add_county_modifier = {
+						modifier = VIET_murderer_execution
+						years = 9
+					}				
+				}
+			}	
+		}
+	}
+
+	# They will be avenged!
+	option = {
+		name = VIETmisc.3034.a
+		stress_impact = {
+			vengeful = minor_stress_impact_loss
+			zealous = miniscule_stress_impact_loss
+			wrathful = miniscule_stress_impact_loss
+			just = miniscule_stress_impact_loss
+		}		
+	}
+
+	# Our world is so cruel
+	option = {
+		name = VIETmisc.3034.b
+		stress_impact = {
+			compassionate = minor_stress_impact_loss
+			craven = miniscule_stress_impact_loss
+			forgiving = miniscule_stress_impact_loss
+			trusting = miniscule_stress_impact_loss
+		}		
+	}
+}
+
+
+# Hermit struggles to be alone
+VIETmisc.3035 = {
+	type = character_event
+	title = VIETmisc.3035.t
+	desc = VIETmisc.3035.desc
+	theme = VIET_theme_tuscan_country
+	override_icon = { reference = "gfx/interface/icons/event_types/type_faith.dds" }
+	
+	left_portrait = root
+	
+    weight_multiplier = {
+        base = 0
+		modifier = {
+			add = {
+				every_held_title = {
+					limit = { tier = tier_county }
+					add = 1
+				}
+			}		
+		}
+    }
+	
+	immediate = {
+		random_held_title = {
+			limit = { tier = tier_county }
+			save_scope_as = county
+		}
+
+		VIET_huge_prestige_gain_effect = yes
+
+		scope:county = {
+			random_list = {
+				10 = {
+					add_county_modifier = {
+						modifier = VIET_shy_hermit
+						years = 6
+					}				
+				}
+				10 = {
+					add_county_modifier = {
+						modifier = VIET_shy_hermit
+						years = 9
+					}				
+				}
+				10 = {
+					add_county_modifier = {
+						modifier = VIET_shy_hermit
+						years = 12
+					}				
+				}
+				10 = {
+					add_county_modifier = {
+						modifier = VIET_shy_hermit
+						years = 15
+					}				
+				}
+			}	
+		}
+	}
+
+	# They will be avenged!
+	option = {
+		name = VIETmisc.3035.a
+		trigger = {
+			NOT = { has_trait = shy }
+		}	
+	}
+
+	# Our world is so cruel
+	option = {
+		name = VIETmisc.3035.b
+		trigger = {
+			has_trait = shy
+		}
+		trait = shy
+		stress_impact = {
+			shy = minor_stress_impact_loss
+		}		
+	}
+}

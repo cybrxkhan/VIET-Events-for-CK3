@@ -44,7 +44,8 @@
 # 0196-0232		Animals
 # 0233-0235		Patch
 # 0236-0240		Generic
-# 0241-0249		Positivity
+# 0241-0248		Positivity
+# 0249-0256		Struggle
 # 
 ############################################################################################################################
 
@@ -14811,7 +14812,7 @@ VIETmisc.0175 = {
 	
 	left_portrait = {
 		character = root
-		animation = bored
+		animation = boredom
 	}	
 	right_portrait = {
 		character = scope:horny
@@ -21130,7 +21131,7 @@ VIETmisc.0240 = {
 
 ##########################################################################################################################
 #
-# POSITIVITY	0241-0249
+# POSITIVITY	0241-0248
 #
 ##########################################################################################################################
 
@@ -21952,5 +21953,1008 @@ VIETmisc.0248 = {
 		}
 	}
 }
+
+
+
+
+##########################################################################################################################
+#
+# STRUGGLE	0249-0256
+#
+##########################################################################################################################
+
+
+# Struggling to stay awake at a council meeting
+VIETmisc.0249 = {
+	type = character_event
+	title = VIETmisc.0249.t
+	desc = VIETmisc.0249.desc
+	theme = stewardship_duty_focus
+	
+	left_portrait = {
+		character = scope:councilor
+		animation = throne_room_conversation_2
+	}
+	
+	right_portrait = {
+		character = root
+		animation = boredom
+	}
+
+	trigger = {
+		# OR = {
+		# 	exists = cp:councillor_chancellor
+		# 	exists = cp:councillor_marshal
+		# 	exists = cp:councillor_steward
+		# 	exists = cp:councillor_spymaster
+		# }
+		any_councillor = {
+			is_available_ai_adult = yes
+		}	
+	}
+	
+	weight_multiplier = {
+		base = 1
+		modifier = {
+			add = 0.2
+			has_trait = lazy
+		}
+		modifier = {
+			add = -0.2
+			has_trait = diligent
+		}
+		modifier = {
+			add = 0.2
+			has_trait = content
+		}
+		modifier = {
+			add = -0.2
+			has_trait = paranoid
+		}
+		modifier = {
+			add = 0.2
+			has_trait = cynical
+		}
+		modifier = {
+			add = -0.2
+			has_trait = zealous
+		}
+	}
+
+	immediate = {
+		random_councillor = {
+			limit = {
+				is_available_ai_adult = yes
+			}
+			save_scope_as = councilor
+		}	
+	}
+
+	
+	option = { # Get a nap in
+		name = VIETmisc.0249.a
+		if = {
+			limit = {
+				OR = {
+					has_trait = ambitious
+					has_trait = diligent
+				}
+			}
+			stress_impact = {
+				diligent = minor_stress_impact_gain
+				ambitious = miniscule_stress_impact_gain
+			}
+		}
+		else = {
+			stress_impact = {
+				base = miniscule_stress_impact_loss
+				lazy = miniscule_stress_impact_loss
+			}
+		}
+		scope:councilor = {
+			VIET_huge_prestige_loss_effect = yes
+			add_opinion = {
+				target = root
+				opinion = -10
+				modifier = insulted_opinion
+			}
+		}
+	}
+	
+	option = { # Try to stay awake
+		name = VIETmisc.0249.b
+		VIET_medium_prestige_gain_effect = yes
+		stress_impact = {
+			base = minor_stress_impact_gain
+			lazy = minor_stress_impact_gain
+		}
+	}
+
+}
+
+
+# Struggle to fall asleep
+VIETmisc.0250 = {
+	type = character_event
+	title = VIETmisc.0250.t
+	desc = VIETmisc.0250.desc
+	theme = unfriendly
+	override_background = { event_background = corridor_night }
+	
+	right_portrait = {
+		character = root
+		animation = boredom
+	}
+	
+	weight_multiplier = {
+		base = 1
+		modifier = {
+			add = 0.2
+			has_trait = ambitious
+		}
+		modifier = {
+			add = -0.2
+			has_trait = content
+		}
+		modifier = {
+			add = 0.2
+			has_trait = paranoid
+		}
+		modifier = {
+			add = -0.2
+			has_trait = lazy
+		}
+		modifier = {
+			add = 0.2
+			has_trait = wrathful
+		}
+		modifier = {
+			add = -0.2
+			has_trait = calm
+		}
+	}
+
+	
+	option = { # Bad sleep
+		name = VIETmisc.0250.a
+		stress_impact = {
+			base = minor_stress_impact_gain
+		}
+		add_character_modifier = {
+			modifier = VIET_lack_of_good_sleep
+			days = 234
+		}
+	}
+
+}
+
+
+# Two courtiers debate if struggling in life is good
+VIETmisc.0251 = {
+	type = character_event
+	title = VIETmisc.0251.t
+	desc = VIETmisc.0251.desc
+	theme = mental_break
+	override_background = { event_background = throne_room }
+	
+	left_portrait = {
+		character = scope:struggle_lover
+		animation = personality_greedy
+	}
+	
+	right_portrait = {
+		character = scope:struggle_hater
+		animation = disapproval
+	}
+
+	trigger = {
+		any_courtier = {
+			is_available_ai_adult = yes
+			OR = {
+				has_trait = gluttonous
+				has_trait = gregarious
+				has_trait = stubborn
+				has_trait = arrogant
+				has_trait = brave
+				has_trait = zealous
+			}
+		}
+		any_courtier = {
+			is_available_ai_adult = yes
+			NOR = {
+				has_trait = gluttonous
+				has_trait = gregarious
+				has_trait = stubborn
+				has_trait = arrogant
+				has_trait = brave
+				has_trait = zealous
+			}
+		}
+	}
+	
+	weight_multiplier = {
+		base = 1
+		modifier = {
+			add = 0.2
+			has_trait = content
+		}
+		modifier = {
+			add = -0.2
+			has_trait = ambitious
+		}
+		modifier = {
+			add = 0.2
+			has_trait = patient
+		}
+		modifier = {
+			add = -0.2
+			has_trait = impatient
+		}
+		modifier = {
+			add = 0.2
+			has_trait = calm
+		}
+		modifier = {
+			add = -0.2
+			has_trait = wrathful
+		}
+	}
+
+	immediate = {
+		random_courtier = {
+			limit = {
+				is_available_ai_adult = yes
+				OR = {
+					has_trait = gluttonous
+					has_trait = gregarious
+					has_trait = stubborn
+					has_trait = arrogant
+					has_trait = brave
+					has_trait = zealous
+				}
+			}
+			save_scope_as = struggle_lover
+		}
+		random_courtier = {
+			limit = {
+				is_available_ai_adult = yes
+				NOR = {
+					has_trait = gluttonous
+					has_trait = gregarious
+					has_trait = stubborn
+					has_trait = arrogant
+					has_trait = brave
+					has_trait = zealous
+				}
+			}
+			save_scope_as = struggle_hater
+		}
+		scope:struggle_hater = {
+			add_opinion = {
+				target = scope:struggle_lover
+				modifier = VIET_opinion_struggle_discussion_disagree
+			}
+			reverse_add_opinion = {
+				target = scope:struggle_lover
+				modifier = VIET_opinion_struggle_discussion_disagree
+			}			
+		}
+	}
+
+	
+	option = { # Struggles are good
+		name = VIETmisc.0251.a
+		VIET_medium_prestige_gain_effect = yes
+		scope:struggle_lover = {
+			add_opinion = {
+				target = root
+				modifier = VIET_opinion_struggle_discussion_agree
+			}			
+		}
+		scope:struggle_hater = {
+			add_opinion = {
+				target = root
+				modifier = VIET_opinion_struggle_discussion_disagree
+			}			
+		}
+		stress_impact = {
+			craven = miniscule_stress_impact_gain
+			lazy = miniscule_stress_impact_gain
+		}
+	}
+	
+	option = { # Struggles are bad
+		name = VIETmisc.0251.b
+		VIET_medium_piety_gain_effect = yes
+		scope:struggle_lover = {
+			add_opinion = {
+				target = root
+				modifier = VIET_opinion_struggle_discussion_disagree
+			}			
+		}
+		scope:struggle_hater = {
+			add_opinion = {
+				target = root
+				modifier = VIET_opinion_struggle_discussion_agree
+			}			
+		}
+		stress_impact = {
+			brave = miniscule_stress_impact_gain
+			ambitious = miniscule_stress_impact_gain
+		}
+	}
+	
+	option = { # Both good points
+		name = VIETmisc.0251.c
+	}
+
+}
+
+
+# Two courtiers debate if struggling for love is good
+VIETmisc.0252 = {
+	type = character_event
+	title = VIETmisc.0252.t
+	desc = VIETmisc.0252.desc
+	theme = love
+	override_background = { event_background = feast }
+	
+	left_portrait = {
+		character = scope:lover
+		animation = personality_greedy
+	}
+	
+	right_portrait = {
+		character = scope:cynic
+		animation = disapproval
+	}
+
+	trigger = {
+		any_courtier = {
+			is_available_ai_adult = yes
+			NOT = { has_sexuality = asexual }
+			OR = {
+				has_trait = trusting
+				has_trait = gregarious
+				has_trait = brave
+				has_trait = zealous
+			}
+			NOT = {
+				has_trait = cynical
+			}
+		}
+		any_courtier = {
+			is_available_ai_adult = yes
+			NOR = {
+				has_trait = trusting
+				has_trait = gregarious
+				has_trait = brave
+				has_trait = zealous
+			}
+		}
+	}
+	
+	weight_multiplier = {
+		base = 1
+		modifier = {
+			add = 0.2
+			has_trait = gluttonous
+		}
+		modifier = {
+			add = -0.2
+			has_trait = temperate
+		}
+		modifier = {
+			add = 0.2
+			has_trait = gregarious
+		}
+		modifier = {
+			add = -0.2
+			has_trait = shy
+		}
+		modifier = {
+			add = 0.2
+			has_trait = humble
+		}
+		modifier = {
+			add = -0.2
+			has_trait = arrogant
+		}
+	}
+
+	immediate = {
+		random_courtier = {
+			limit = {
+				is_available_ai_adult = yes
+				NOT = { has_sexuality = asexual }
+				OR = {
+					has_trait = trusting
+					has_trait = gregarious
+					has_trait = brave
+					has_trait = zealous
+				}
+				NOT = {
+					has_trait = cynical
+				}
+			}
+			save_scope_as = lover
+			add_character_modifier = {
+				modifier = VIET_thinks_love_is_struggle
+				years = 5
+			}
+		}
+		random_courtier = {
+			limit = {
+				is_available_ai_adult = yes
+				NOR = {
+					has_trait = trusting
+					has_trait = gregarious
+					has_trait = brave
+					has_trait = zealous
+				}
+			}
+			save_scope_as = cynic
+			add_character_modifier = {
+				modifier = VIET_thinks_pragmatic_on_love
+				years = 5
+			}
+		}
+		scope:cynic = {
+			add_opinion = {
+				target = scope:lover
+				modifier = VIET_opinion_love_discussion_disagree
+			}
+			reverse_add_opinion = {
+				target = scope:lover
+				modifier = VIET_opinion_love_discussion_disagree
+			}			
+		}
+	}
+
+	
+	option = { # Real life is not like romcoms
+		name = VIETmisc.0252.a
+		add_character_modifier = {
+			modifier = VIET_thinks_pragmatic_on_love
+			years = 5
+		}
+		scope:cynic = {
+			add_opinion = {
+				target = root
+				modifier = VIET_opinion_love_discussion_agree
+			}			
+		}
+		scope:lover = {
+			add_opinion = {
+				target = root
+				modifier = VIET_opinion_love_discussion_disagree
+			}			
+		}
+		stress_impact = {
+			lustful = miniscule_stress_impact_gain
+			trusting = miniscule_stress_impact_gain
+		}
+	}
+	
+	option = { # True love can be found through struggle
+		name = VIETmisc.0252.b
+		add_character_modifier = {
+			modifier = VIET_thinks_love_is_struggle
+			years = 5
+		}
+		scope:cynic = {
+			add_opinion = {
+				target = root
+				modifier = VIET_opinion_love_discussion_disagree
+			}			
+		}
+		scope:lover = {
+			add_opinion = {
+				target = root
+				modifier = VIET_opinion_love_discussion_agree
+			}			
+		}
+		stress_impact = {
+			cynical = miniscule_stress_impact_gain
+			craven = miniscule_stress_impact_gain
+		}
+	}
+	
+	option = { # Let me eat goddammit
+		name = VIETmisc.0252.c
+		VIET_huge_prestige_gain_effect = yes
+		add_dread = 5
+		scope:cynic = {
+			add_opinion = {
+				target = root
+				modifier = VIET_opinion_doesnt_like_me_talking
+			}
+			add_character_modifier = {
+				modifier = VIET_liege_awkward_talk
+				years = 10
+			}		
+		}
+		scope:lover = {
+			add_opinion = {
+				target = root
+				modifier = VIET_opinion_doesnt_like_me_talking
+			}	
+			add_character_modifier = {
+				modifier = VIET_liege_awkward_talk
+				years = 10
+			}			
+		}
+		stress_impact = {
+			gregarious = minor_stress_impact_gain
+			humble = miniscule_stress_impact_gain
+			calm = miniscule_stress_impact_gain
+		}
+	}
+
+}
+
+
+
+# Noblewoman is struggling to communicate with her foreign child servant/child
+VIETmisc.0253 = {
+	type = character_event
+	title = VIETmisc.0253.t
+	desc = VIETmisc.0253.desc
+	theme = stewardship_duty_focus
+	override_background = { event_background = garden }
+	
+	left_portrait = root
+	
+	weight_multiplier = {
+		base = 1
+		modifier = {
+			add = 0.2
+			has_trait = gregarious
+		}
+		modifier = {
+			add = -0.2
+			has_trait = shy
+		}
+		modifier = {
+			add = 0.2
+			has_trait = diligent
+		}
+		modifier = {
+			add = -0.2
+			has_trait = lazy
+		}
+		modifier = {
+			add = 0.2
+			has_trait = patient
+		}
+		modifier = {
+			add = -0.2
+			has_trait = impatient
+		}
+	}
+
+	
+	option = { # Oh those silly commoners
+		name = VIETmisc.0253.a
+		VIET_medium_prestige_gain_effect = yes
+		stress_impact = {
+			humble = minor_stress_impact_gain
+			compassionate = miniscule_stress_impact_gain
+			patient = miniscule_stress_impact_gain
+			forgiving = miniscule_stress_impact_gain
+		}
+	}
+	
+	option = { # Chill out Karen
+		name = VIETmisc.0253.b
+		VIET_medium_piety_gain_effect = yes
+		stress_impact = {
+			arrogant = minor_stress_impact_gain
+			callous = miniscule_stress_impact_gain
+			impatient = miniscule_stress_impact_gain
+			wrathful = miniscule_stress_impact_gain
+		}
+	}
+	
+	option = { # I'll buy them for my household
+		name = VIETmisc.0253.c
+		trigger = {
+			OR = {
+				gold >= 25
+				is_ai = no
+			}
+		}
+		remove_short_term_gold = 25
+		add_character_modifier = {
+			modifier = VIET_new_young_foreign_servant
+			years = 8
+		}
+	}
+
+}
+
+
+
+# Struggling to laugh at a joke a courtier told that you don't find funny
+VIETmisc.0254 = {
+	type = character_event
+	title = VIETmisc.0254.t
+	desc = VIETmisc.0254.desc
+	theme = friendly
+	override_background = { event_background = throne_room }
+	
+	left_portrait = {
+		character = root
+		animation = personality_irrational
+	}
+	
+	right_portrait = {
+		character = scope:jokester
+		animation = ecstasy
+	}
+
+	trigger = {
+		any_courtier = {
+			is_available_ai_adult = yes
+			OR = {
+				has_trait = lustful
+				has_trait = gregarious
+				has_trait = trusting
+				has_trait = honest
+			}
+			NOT = {
+				has_trait = shy
+			}
+		}
+	}
+	
+	weight_multiplier = {
+		base = 1
+		modifier = {
+			add = 0.2
+			has_trait = gregarious
+		}
+		modifier = {
+			add = -0.2
+			has_trait = shy
+		}
+		modifier = {
+			add = 0.2
+			has_trait = diligent
+		}
+		modifier = {
+			add = -0.2
+			has_trait = lazy
+		}
+		modifier = {
+			add = 0.2
+			has_trait = patient
+		}
+		modifier = {
+			add = -0.2
+			has_trait = impatient
+		}
+	}
+
+	immediate = {
+		random_courtier = {
+			limit = {
+				is_available_ai_adult = yes
+				OR = {
+					has_trait = lustful
+					has_trait = gregarious
+					has_trait = trusting
+					has_trait = honest
+				}
+				NOT = {
+					has_trait = shy
+				}
+			}
+			save_scope_as = jokester
+		}
+	}
+
+	
+	option = { # Courtesy laugh "hahaha yeah that was totally funny... totally"
+		name = VIETmisc.0254.a
+		VIET_medium_prestige_gain_effect = yes
+		stress_impact = {
+			base = miniscule_stress_impact_gain
+			honest = miniscule_stress_impact_gain
+			callous = miniscule_stress_impact_gain
+			arrogant = miniscule_stress_impact_gain
+		}
+		add_character_modifier = {
+			modifier = VIET_awkward_laughter
+			years = 3
+		}
+	}
+	
+	option = { # Don't laugh at all
+		name = VIETmisc.0254.b
+		add_dread = 10
+		stress_impact = {
+			compassionate = miniscule_stress_impact_gain
+			deceitful = miniscule_stress_impact_gain
+			gregarious = miniscule_stress_impact_gain
+		}
+		scope:jokester = {
+			add_opinion = {
+				target = root
+				modifier = VIET_opinion_didnt_like_my_joke
+			}	
+			add_character_modifier = {
+				modifier = VIET_liege_didnt_like_joke
+				years = 10
+			}			
+		}
+	}
+
+}
+
+
+
+# Struggling for a promotion - meet a woman whose recently promoted brother just died
+VIETmisc.0255 = {
+	type = character_event
+	title = VIETmisc.0255.t
+	desc = VIETmisc.0255.desc
+	theme = death
+	override_background = { event_background = VIET_background_small_town }
+	
+	left_portrait = {
+		character = root
+		animation = personality_zealous
+	}
+	
+	weight_multiplier = {
+		base = 1
+		modifier = {
+			add = 0.2
+			has_trait = gregarious
+		}
+		modifier = {
+			add = -0.2
+			has_trait = shy
+		}
+		modifier = {
+			add = 0.2
+			has_trait = zealous
+		}
+		modifier = {
+			add = -0.2
+			has_trait = cynical
+		}
+		modifier = {
+			add = 0.2
+			has_trait = humble
+		}
+		modifier = {
+			add = -0.2
+			has_trait = arrogant
+		}
+	}
+
+	option = { # Ok
+		name = VIETmisc.0255.a
+	}
+	
+	option = { # Ok
+		name = VIETmisc.0255.b
+		VIET_medium_piety_gain_effect = yes
+		VIET_medium_prestige_loss_effect = yes
+		stress_impact = {
+			cynical = miniscule_stress_impact_gain
+			callous = miniscule_stress_impact_gain
+			arrogant = miniscule_stress_impact_gain
+		}
+	}
+	
+	option = { # Ok
+		name = VIETmisc.0255.c
+		VIET_medium_prestige_gain_effect = yes
+		VIET_medium_piety_loss_effect = yes
+		stress_impact = {
+			zealous = miniscule_stress_impact_gain
+			compassionate = miniscule_stress_impact_gain
+			diligent = miniscule_stress_impact_gain
+			ambitious = miniscule_stress_impact_gain
+		}
+	}
+
+}
+
+
+# Everything in Crusader Kings 3 can be turned into a STRUGGLE mechanic, as One Proud Bavarian says
+VIETmisc.0256 = {
+	type = character_event
+	title = VIETmisc.0256.t
+	desc = VIETmisc.0256.desc
+	theme = mental_break
+	override_background = { event_background = throne_room }
+	
+	left_portrait = {
+		character = scope:one_proud_bavarian
+		animation = schadenfreude
+	}
+	
+	right_portrait = {
+		character = scope:PI_dev
+		animation = disapproval
+	}
+
+
+	trigger = {
+		# OPB
+		any_courtier = {
+			is_available_ai_adult = yes
+			OR = {
+				has_trait = zealous
+				has_trait = brave
+				has_trait = ambitious
+				has_trait = trusting
+			}
+			NOR = {
+				has_trait = cynical
+				has_trait = honest
+				has_trait = content
+				has_trait = stubborn
+			}
+		}
+		# PI Dev
+		any_courtier = {
+			is_available_ai_adult = yes
+			OR = {
+				has_trait = cynical
+				has_trait = honest
+				has_trait = content
+				has_trait = stubborn
+			}
+			NOR = {
+				has_trait = zealous
+				has_trait = brave
+				has_trait = ambitious
+				has_trait = trusting
+			}
+		}
+	}
+	
+	weight_multiplier = {
+		base = 1
+		modifier = {
+			add = 0.2
+			has_trait = diligent
+		}
+		modifier = {
+			add = -0.2
+			has_trait = lazy
+		}
+		modifier = {
+			add = 0.2
+			has_trait = stubborn
+		}
+		modifier = {
+			add = -0.2
+			has_trait = fickle
+		}
+		modifier = {
+			add = 0.2
+			has_trait = compassionate
+		}
+		modifier = {
+			add = -0.2
+			has_trait = callous
+		}
+	}
+
+	immediate = {
+		random_courtier = {
+			limit = {
+				is_available_ai_adult = yes
+				OR = {
+					has_trait = zealous
+					has_trait = brave
+					has_trait = ambitious
+					has_trait = trusting
+				}
+				NOR = {
+					has_trait = cynical
+					has_trait = honest
+					has_trait = content
+					has_trait = stubborn
+				}
+			}
+			save_scope_as = one_proud_bavarian
+			add_character_modifier = {
+				modifier = VIET_struggles_everywhere
+				years = 10
+			}
+		}
+		random_courtier = {
+			limit = {
+				is_available_ai_adult = yes
+				is_available_ai_adult = yes
+				OR = {
+					has_trait = cynical
+					has_trait = honest
+					has_trait = content
+					has_trait = stubborn
+				}
+				NOR = {
+					has_trait = zealous
+					has_trait = brave
+					has_trait = ambitious
+					has_trait = trusting
+				}
+			}
+			save_scope_as = PI_dev
+			add_character_modifier = {
+				modifier = VIET_struggles_skepticism
+				years = 10
+			}
+		}
+		scope:one_proud_bavarian = {
+			add_opinion = {
+				target = scope:PI_dev
+				modifier = VIET_opinion_struggle_discussion_disagree
+			}
+			reverse_add_opinion = {
+				target = scope:PI_dev
+				modifier = VIET_opinion_struggle_discussion_disagree
+			}			
+		}
+	}
+
+	
+	option = { # Anything will be turned into a struggle, Struggle is our new god
+		name = VIETmisc.0256.a
+		add_character_modifier = {
+			modifier = VIET_struggles_everywhere
+			years = 10
+		}
+		scope:one_proud_bavarian = {
+			add_opinion = {
+				target = root
+				modifier = VIET_opinion_struggle_discussion_agree
+			}			
+		}
+		scope:PI_dev = {
+			add_opinion = {
+				target = root
+				modifier = VIET_opinion_struggle_discussion_disagree
+			}			
+		}
+		progress_towards_friend_effect = {
+			CHARACTER = scope:one_proud_bavarian
+			OPINION = no
+		}
+	}
+	
+	option = { # Not everything can be turned into a struggle, silly
+		name = VIETmisc.0256.b
+		add_character_modifier = {
+			modifier = VIET_struggles_skepticism
+			years = 10
+		}
+		scope:one_proud_bavarian = {
+			add_opinion = {
+				target = root
+				modifier = VIET_opinion_struggle_discussion_disagree
+			}			
+		}
+		scope:PI_dev = {
+			add_opinion = {
+				target = root
+				modifier = VIET_opinion_struggle_discussion_agree
+			}			
+		}
+		progress_towards_friend_effect = {
+			CHARACTER = scope:PI_dev
+			OPINION = no
+		}
+	}
+
+}
+
 
 

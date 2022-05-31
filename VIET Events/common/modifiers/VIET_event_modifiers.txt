@@ -2213,7 +2213,7 @@ VIET_thinks_love_is_struggle = {
 }
 VIET_thinks_pragmatic_on_love = {
 	icon = stress_positive
-	diplomacy = -1
+	#diplomacy = -1
 	intrigue = 1
 	personal_scheme_resistance_mult = 0.1
 	attraction_opinion = -3
@@ -2229,7 +2229,7 @@ VIET_awkward_laughter = {
 	stress_gain_mult = 0.05
 }
 VIET_liege_didnt_like_joke = {
-	icon = negative_positive
+	icon = social_negative
 	diplomacy = -1
 }
 VIET_struggles_everywhere = {

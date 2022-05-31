@@ -372,6 +372,11 @@ VIET_events_yearly_pulse = {
 		100 = VIETmisc.0243		# Two courtiers debate the merit of staying positive
 		100 = VIETmisc.0247		# Courtier praises you, which sounds suspicious
 		100 = VIETmisc.0248		# You have a strangely positive dream
+		# Struggles
+		100 = VIETmisc.0249		# Struggling to stay awake at a council meeting
+		100 = VIETmisc.0250		# Struggle to fall asleep
+		100 = VIETmisc.0251		# Two courtiers debate if struggling in life is good
+		100 = VIETmisc.0254		# Struggling to laugh at a joke a courtier told that you don't find funny
 	}
 }
 
@@ -676,6 +681,9 @@ VIET_events_tri_yearly_pulse = {
 		# Positivity
 		100 = VIETmisc.0244		# You meet a cheerful beggar who's content with her predicament
 		100 = VIETmisc.0246		# You meet a scholar who likes to stay inside all day
+		# Struggle
+		100 = VIETmisc.0252		# Two courtiers debate if struggling for love is good
+		100 = VIETmisc.0253		# Noblewoman is struggling to communicate with her foreign child servant/child
 	}
 }
 
@@ -889,6 +897,9 @@ VIET_events_five_yearly_pulse = {
 		# Positivity
 		100 = VIETmisc.0241		# A maidservant got rejected hard
 		100 = VIETmisc.0245		# You see a guard give a street urchin some candy and food
+		# Struggle
+		100 = VIETmisc.0255		# Struggling for a promotion - meet a woman whose recently promoted brother just died
+		100 = VIETmisc.0256		# Everything in Crusader Kings 3 can be turned into a STRUGGLE mechanic, as One Proud Bavarian says
 	}
 }
 
@@ -1287,8 +1298,10 @@ VIET_events_uncommon_county_pulse = {
 		100 = VIETmisc.3026		# Burnt Down Tower - on an island in the Niben River south of Fort Irony - old burnt down tower found in wilderness, could be turned into a watchpost
 		# Animals
 		100 = VIETmisc.3028		# Red billed queleas infestation - "feathered locusts" of Africa
+		# Struggle
+		100 = VIETmisc.3034		# Murderer executed
 		
-		# 20
+		# 21
 		
     }
 }
@@ -1349,8 +1362,10 @@ VIET_events_rare_county_pulse = {
 		50 = VIETmisc.3025		# Submerged Shrine - found in Shivering Isles - abandoned wayshrine found underwater, turn it into a proper shrine or not?
 		# Animals
 		50 = VIETmisc.3029		# Rooks settle in a county in large numbers
+		# Struggle
+		100 = VIETmisc.3035		# Hermit struggles to be alone
 		
-		# 10
+		# 11
 		
     }
 }

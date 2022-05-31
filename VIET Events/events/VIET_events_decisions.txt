@@ -3512,7 +3512,7 @@ VIETmisc.2064 = {
 	type = character_event
 	title = VIETmisc.2064.t
 	desc = VIETmisc.2064.desc
-	theme = medicine
+	theme = martial
 	
 	
 	left_portrait = {
