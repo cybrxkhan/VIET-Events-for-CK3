@@ -271,11 +271,9 @@
  VIETmisc.2077.t:0 "鸣鸟"
  VIETmisc.2077.desc:0 "今天，在几名卫兵的陪同下，我前往了一处静谧而开阔的乡间空地，据说鸣鸟喜欢在那聚集。我一边坐下放松，一边看见数只鸣鸟停栖在附近。当鸟儿啾啾地唱起它们的小曲儿时，一抹微笑也浮现在了我的脸上。"
  VIETmisc.2077.a:0 "多美丽啊，不是嘛？"
- # 1.5.3 - please leave this comment here and do not remove it
- VIETmisc.2078.t:0 "The Flower Meadows"
- VIETmisc.2078.desc:0 "Today, I’ve taken time to visit the spring meadows of [county.GetName], famous for the beauty of their flowers. I am not disappointed.\n\nFrom one end of the horizon to another, there are hundreds if not thousands of small, lovely wildflowers, each their own unique hue of color. With all these flowers together like this, when the wind blows even slightly, they look like a moving tapestry woven by [ROOT.Char.GetFaith.HighGodName]!\n\nI sit on the ground atop a hill, and just gaze in wonder at the majesty beauty of nature before me."
- VIETmisc.2078.a:0 "Simply amazing."
- # 1.5.4 - please leave this comment here and do not remove it
+ VIETmisc.2078.t:0 "花原"
+ VIETmisc.2078.desc:0 "今天，我抽出时间拜访了[county.GetName]的春日原野，欣赏了那里著名的野花，真是不虚此行。\n\n目光所至，原野上开满了野花，成百上千、芬芳艳丽。风轻轻吹拂而过，野花随之起伏，就像[ROOT.Char.GetFaith.HighGodName]编制的一幅挂毯一样！\n\n我登上山丘，席地而坐，醉心于大自然的良辰美景。"
+ VIETmisc.2078.a:0 "美到没话说。"
  VIETmisc.2079.t:0 "xxxxx"
  VIETmisc.2079.desc:0 "xxxxx"
  VIETmisc.2079.a:0 "xxxxx"
