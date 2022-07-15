@@ -338,13 +338,10 @@ VIETmisc.6001 = {
 
 	cooldown = { years = 5 }
 
-	lower_right_portrait = scope:intellectual_1
-	lower_left_portrait = scope:intellectual_2
+	lower_center_portrait = scope:bandit
 
 	court_scene = {
 		button_position_character = scope:bandit
-		show_timeout_info = no
-		should_pause_time = yes
 		roles = {
 			scope:bandit = {
 				group = petitioners_group
