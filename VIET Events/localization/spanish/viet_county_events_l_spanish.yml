@@ -181,7 +181,7 @@
  VIETmisc.3035.b:0 "¡Entiendo lo difícil que puede ser evitar a las #italic personas#!."
  # Version 1.6.1 Start Here - Please leave this comment and do not remove it
  VIETmisc.3036.t:0 "Cave Art"
- VIETmisc.3036.desc:0 "A couple peasants in [county.GetName] stumbled on a cave recently, and discovered something amazing.\n\nWhen these peasants raised their torches to the cavern walls, they were alarmed to see what they initially thought was evidence of dark magic. However, as they investigated more closely, they realized that a beautiful painting was there in front of them, depicting people and all manner of beasts, ranging from rageful predators to peaceful herds, done in some kind of dark black and red pigment.\n\nWho could have made such art? Perhaps we will never know, but this discovery is causing something of a sensation."
+ VIETmisc.3036.desc:0 "A couple peasants in [county.GetNameNoTier] stumbled on a cave recently, and discovered something amazing.\n\nWhen these peasants raised their torches to the cavern walls, they were alarmed to see what they initially thought was evidence of dark magic. However, as they investigated more closely, they realized that a beautiful painting was there in front of them, depicting people and all manner of beasts, ranging from rageful predators to peaceful herds, done in some kind of dark black and red pigment.\n\nWho could have made such art? Perhaps we will never know, but this discovery is causing something of a sensation."
  VIETmisc.3036.a:0 "Maybe one day, we’ll know who made this art."
  VIETmisc.3036.b:0 "I’d like to go and examine the cave myself."
  # Version 1.6.2 Start Here - Please leave this comment and do not remove it

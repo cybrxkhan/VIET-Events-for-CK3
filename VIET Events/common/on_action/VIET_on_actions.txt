@@ -684,6 +684,9 @@ VIET_events_tri_yearly_pulse = {
 		# Struggle
 		100 = VIETmisc.0252		# Two courtiers debate if struggling for love is good
 		100 = VIETmisc.0253		# Noblewoman is struggling to communicate with her foreign child servant/child
+		# VIET Events Contest Winners
+		100 = VIETmisc.0257		# Charlemagne choir event based on the Vita Karoli Magni (Credits to Duke Leo)
+		100 = VIETmisc.0260		# A traveling physician appears with a fully intact mummy (Credits to Anonymous person who took the survey)
 	}
 }
 
@@ -900,6 +903,9 @@ VIET_events_five_yearly_pulse = {
 		# Struggle
 		100 = VIETmisc.0255		# Struggling for a promotion - meet a woman whose recently promoted brother just died
 		100 = VIETmisc.0256		# Everything in Crusader Kings 3 can be turned into a STRUGGLE mechanic, as One Proud Bavarian says
+		# VIET Events Contest Winners
+		100 = VIETmisc.0258		# Baklava nightmare (Credits to Cerbzzz)
+		100 = VIETmisc.0259		# Teddy Roosevelt assassination reference - vassal survives assassination attempt (Credits to Anonymous person who took the survey)
 	}
 }
 
@@ -1300,6 +1306,8 @@ VIET_events_uncommon_county_pulse = {
 		100 = VIETmisc.3028		# Red billed queleas infestation - "feathered locusts" of Africa
 		# Struggle
 		100 = VIETmisc.3034		# Murderer executed
+		# VIET Events Contest Winners
+		100 = VIETmisc.3036		# Prehistoric cave paintings discovered (Credits to Pedrolu)
 		
 		# 21
 		

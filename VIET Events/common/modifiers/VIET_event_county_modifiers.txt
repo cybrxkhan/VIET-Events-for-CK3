@@ -647,3 +647,13 @@ VIET_famous_flower_meadows = {
 	tax_mult = 0.01
 	development_growth = 0.1
 }
+VIET_cave_art = {
+	icon = outdoors_positive
+	monthly_county_control_change_add = 0.1
+	development_growth_factor = 0.01
+}
+VIET_investigated_cave_art = {
+	icon = outdoors_positive
+	learning = 1
+	monthly_lifestyle_xp_gain_mult = 0.01
+}

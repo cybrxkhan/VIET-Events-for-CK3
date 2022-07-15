@@ -2251,6 +2251,50 @@ VIET_shy_hermit = {
 	monthly_county_control_change_add = 0.03
 	county_opinion_add = 2
 }
+VIET_baklava_nightmare = {
+	icon = treat_negative
+	stress_gain_mult = 0.1
+}
+VIET_teddy_roosevelt_assassination = {
+	icon = blood_positive
+	monthly_prestige = 0.5
+	hostile_scheme_resistance_mult = 0.2
+	scheme_discovery_chance_mult = 0.1
+}
+VIET_mummy_medicine = {
+	icon = stress_positive
+	negate_health_penalty_add = 0.25
+	monthly_prestige = 0.3
+	monthly_dread = 0.2
+}
+VIET_traditionalist_intellectual = {
+	icon = learning_positive
+	learning = 1
+	monthly_piety = 0.1
+}
+VIET_innovative_intellectual = {
+	icon = learning_positive
+	learning = 1
+	monthly_prestige = 0.1
+}
+VIET_robber_baron = {
+	icon = county_modifier_corruption_positive
+	martial = 1
+	intrigue = 1
+	monthly_dread = 0.3
+	general_opinion = -10
+	county_opinion_add = -10
+}
+VIET_lenient_robber_baron = {
+	icon = county_modifier_corruption_negative
+	general_opinion = -5
+	county_opinion_add = -10
+}
+VIET_punished_robber_baron = {
+	icon = county_modifier_corruption_negative
+	monthly_prestige = 0.15
+	county_opinion_add = 10
+}
 
 
 

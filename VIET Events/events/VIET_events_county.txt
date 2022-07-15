@@ -26,6 +26,7 @@
 # 3027-3030		Animals
 # 3031-3033		Generic
 # 3034-3035		Struggle
+# 3036			VIET Events Contest Winners
 # 
 ############################################################################################################################
 
@@ -3609,3 +3610,98 @@ VIETmisc.3035 = {
 		}		
 	}
 }
+
+
+
+
+
+##################################################################
+# VIET Events Contest Winners 3036-3036
+##################################################################
+
+
+# Prehistoric cave paintings discovered
+# Credits to Pedrolu
+VIETmisc.3036 = {
+	type = character_event
+	title = VIETmisc.3036.t
+	desc = VIETmisc.3036.desc
+	theme = VIET_theme_skyrim_forest
+	
+	left_portrait = {
+		character = root
+		animation = personality_rational
+	}
+	
+    weight_multiplier = {
+        base = 0
+		modifier = {
+			add = {
+				every_held_title = {
+					limit = { tier = tier_county }
+					add = 1
+				}
+			}		
+		}
+    }
+	
+	immediate = {
+		random_held_title = {
+			limit = { tier = tier_county }
+			save_scope_as = county
+		}
+
+		scope:county = {
+			random_list = {
+				10 = {
+					add_county_modifier = {
+						modifier = VIET_cave_art
+						years = 5
+					}				
+				}
+				10 = {
+					add_county_modifier = {
+						modifier = VIET_cave_art
+						years = 10
+					}				
+				}
+				10 = {
+					add_county_modifier = {
+						modifier = VIET_cave_art
+						years = 15
+					}				
+				}
+			}	
+		}
+	}
+
+	# Ok cool
+	option = {
+		name = VIETmisc.3036.a	
+	}
+
+	# Investigate the cave
+	option = {
+		name = VIETmisc.3036.b
+		VIET_huge_prestige_loss_effect = yes
+		add_character_modifier = {
+			modifier = VIET_investigated_cave_art
+			years = 5
+		}
+		stress_impact = {
+			craven = minor_stress_impact_gain
+			lazy = minor_stress_impact_gain
+		}		
+	}
+}
+
+
+
+
+
+
+
+
+
+
+

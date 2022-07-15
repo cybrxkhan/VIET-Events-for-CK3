@@ -936,7 +936,7 @@
  # 1.6.1 - please leave this comment here
  VIET_cave_art:0 "Antiguo arte rupestre"
  VIET_cave_art_desc:0 "Los lugareños descubrieron recientemente una interesante cueva en esta región, que tiene arte hecho por una raza desconocida de personas hace mucho tiempo".
- VIET_investigated_cave_art_desc:0 "Arte rupestre investigado"
+ VIET_investigated_cave_art:0 "Arte rupestre investigado"
  VIET_opinion_physical_attacked_me:0 "Me atacó físicamente"
  VIET_opinion_dislikes_singing:0 "No le gusta mi forma de cantar"
  VIET_baklava_nightmare:0 "El mundo de la noche sin baklava"

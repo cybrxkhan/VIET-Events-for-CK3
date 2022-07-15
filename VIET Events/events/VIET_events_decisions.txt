@@ -466,6 +466,10 @@ VIETmisc.2008 = {
 		character = root
 		animation = personality_cynical
 	}
+
+	trigger = {
+		NOT = { has_character_modifier = VIET_ghost_haunting }
+	}
 	
 	option = { # Ok
 		name = VIETmisc.2008.a

@@ -936,7 +936,7 @@
  # 1.6.1 - please leave this comment here
  VIET_cave_art:0 "Ancient Cave Art"
  VIET_cave_art_desc:0 "Locals recently discovered an interesting cave in this region, that has art made by an unknown race of peoples long ago."
- VIET_investigated_cave_art_desc:0 "Investigated Cave Art"
+ VIET_investigated_cave_art:0 "Investigated Cave Art"
  VIET_opinion_physically_attacked_me:0 "Physically Attacked Me"
  VIET_opinion_dislikes_singing:0 "Dislikes My Singing"
  VIET_baklava_nightmare:0 "Nightware World of No Baklava"

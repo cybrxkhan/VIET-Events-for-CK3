@@ -1,0 +1,509 @@
+﻿############################################################################################################################
+# 
+# Royal Court Events - VIETmisc.6000-VIETmisc.6999 reserved
+# Fired from the on_actions for every one, two, five, and ten years depending on rarity
+# 
+# Note to self:
+# 
+# is_available_at_peace_adult = yes <-- use as trigger if needed
+# on_actions also has triggers
+# has_game_rule = VIET_all_events / VIET_serious_events / VIET_balanced_events
+# has_game_rule = VIET_normal_universe_events / VIET_historical_universe_events / VIET_conversion_universe_events
+# 
+# base = miniscule_stress_impact_loss
+# content = minor_stress_impact_loss
+# calm = medium_stress_impact_loss
+# 
+# Animations: idle, chancellor, steward, marshal, spymaster, chaplain, anger, rage, disapproval, disbelief, disgust, fear, sadness, shame, shock, worry, boredom, grief, paranoia, dismissal, flirtation, flirtation_left, love, schadenfreude, stress, happiness, ecstasy, admiration, lunatic (?), scheme, beg, pain, newborn, sick, severelywounded, prisonhouse, prisondungeon, war_attacker, war_defender, war_over_tie, war_over_win, war_over_loss, pregnant, personality_honorable, personality_dishonorable, personality_bold, personality_coward, personality_greedy, personality_content, personality_vengeful, personality_forgiving, personality_rational, personality_irrational, personality_compassionate, personality_callous, personality_zealous, personality_cynical
+# 
+# 
+# ##### GRAND LIST OF EVENTS #####
+# 
+# 6000-6001		VIET Events Contest Winners
+# 
+############################################################################################################################
+
+namespace = VIETmisc
+
+##################################################################
+# VIET Events Contest Winners 6000-6001
+##################################################################
+
+
+# Squabble between two intellectuals
+# Credits to Viridianus
+VIETmisc.6000 = {
+	type = court_event
+	title = VIETmisc.6000.t
+	desc = {
+		desc = VIETmisc.6000.desc
+		first_valid = {
+			triggered_desc = {
+				trigger = {
+					has_character_flag = VIET_intellectual_event_prefer_traditionalist
+				}
+				desc = VIETmisc.6000.desc.traditionalist
+			}		
+			triggered_desc = {
+				trigger = {
+					has_character_flag = VIET_intellectual_event_prefer_innovator
+				}
+				desc = VIETmisc.6000.desc.innovator
+			}		
+		}
+	}
+
+	theme = learning
+
+	cooldown = { years = 10 }
+
+	lower_right_portrait = scope:intellectual_1
+	lower_left_portrait = scope:intellectual_2
+	# court_scene = {
+	# 	button_position_character = scope:intellectual_1
+	# 	show_timeout_info = no
+	# 	should_pause_time = yes
+	# 	roles = {
+	# 		scope:intellectual_1 = {
+	# 			group = petitioners_group
+	# 			animation = disapproval
+	# 		}
+	# 		scope:chaplain = {
+	# 			group = petitioners_group
+	# 			animation = personality_rational
+	# 		}
+	# 		scope:intellectual_2 = {
+	# 			group = petitioners_group
+	# 			animation = dismissal
+	# 		}
+	# 	}
+	# }
+	court_scene = {
+		button_position_character = scope:chaplain
+		roles = {
+			scope:intellectual_1 = {
+				group = event_group
+				animation = disapproval
+			}
+			scope:intellectual_2 = {
+				group = event_group
+				animation = dismissal
+			}
+			scope:chaplain = {
+				group = event_group
+				animation = personality_rational
+			}
+		}
+	}
+
+	trigger = {
+		exists = cp:councillor_court_chaplain
+		cp:councillor_court_chaplain = {
+			is_available_healthy_ai_adult = yes
+		}
+	}
+
+	immediate = {
+		create_character = {
+			location = root.location
+			template = VIET_local_scholar_template
+			save_scope_as = intellectual_1
+		}
+		create_character = {
+			location = root.location
+			template = VIET_local_scholar_template
+			save_scope_as = intellectual_2
+		}
+		scope:intellectual_1 = {
+			court_event_character_flag_effect = yes
+		}
+		scope:intellectual_2 = {
+			court_event_character_flag_effect = yes
+		}
+		cp:councillor_court_chaplain = {
+			save_scope_as = chaplain
+			court_event_character_flag_effect = yes
+		}
+		hidden_effect = {
+			scope:intellectual_1 = {
+				add_character_modifier = {
+					modifier = VIET_traditionalist_intellectual
+				}
+			}
+			scope:intellectual_2 = {
+				add_character_modifier = {
+					modifier = VIET_innovative_intellectual
+				}
+			}
+			random_list = {
+				10 = {
+					add_character_flag = VIET_intellectual_event_prefer_traditionalist
+					scope:intellectual_1 = {
+						add_opinion = {
+							target = scope:chaplain
+							modifier = VIET_opinion_agrees_intellectual
+						}
+					}
+					scope:intellectual_2 = {
+						add_opinion = {
+							target = scope:chaplain
+							modifier = VIET_opinion_disagrees_intellectual
+						}
+					}
+				}
+				10 = {
+					add_character_flag = VIET_intellectual_event_prefer_innovator
+					scope:intellectual_1 = {
+						add_opinion = {
+							target = scope:chaplain
+							modifier = VIET_opinion_disagrees_intellectual
+						}
+					}
+					scope:intellectual_2 = {
+						add_opinion = {
+							target = scope:chaplain
+							modifier = VIET_opinion_agrees_intellectual
+						}
+					}
+				}
+			}
+		}
+
+	}
+
+	option = { # Support the traditionalist
+		name = VIETmisc.6000.a
+		VIET_medium_piety_gain_effect = yes
+		scope:intellectual_1 = {
+			add_opinion = {
+				target = root
+				modifier = VIET_opinion_agrees_intellectual
+			}
+		}	
+		if = {
+			limit = {
+				has_character_flag = VIET_intellectual_event_prefer_traditionalist
+			}	
+			scope:chaplain = {
+				add_opinion = {
+					target = root
+					modifier = VIET_opinion_agrees_intellectual
+				}
+			}	
+		}
+		else_if = {
+			limit = {
+				has_character_flag = VIET_intellectual_event_prefer_innovator
+			}	
+			scope:chaplain = {
+				add_opinion = {
+					target = root
+					modifier = VIET_opinion_disagrees_intellectual
+				}
+			}	
+		}
+		random = {
+			chance = 30
+			modifier = {
+				diplomacy >= decent_skill_rating
+				add = 8
+			}
+			modifier = {
+				diplomacy >= high_skill_rating
+				add = 8
+			}
+			send_interface_toast = {
+				left_icon = scope:intellectual_1
+				title = VIETmisc.6000.a.toast
+				add_courtier = scope:intellectual_1
+			}
+		}
+	}
+
+	option = { # Support the Innovator
+		name = VIETmisc.6000.b
+		VIET_medium_piety_gain_effect = yes
+		scope:intellectual_2 = {
+			add_opinion = {
+				target = root
+				modifier = VIET_opinion_agrees_intellectual
+			}
+		}	
+		if = {
+			limit = {
+				has_character_flag = VIET_intellectual_event_prefer_innovator
+			}	
+			scope:chaplain = {
+				add_opinion = {
+					target = root
+					modifier = VIET_opinion_agrees_intellectual
+				}
+			}	
+		}
+		else_if = {
+			limit = {
+				has_character_flag = VIET_intellectual_event_prefer_traditionalist
+			}	
+			scope:chaplain = {
+				add_opinion = {
+					target = root
+					modifier = VIET_opinion_disagrees_intellectual
+				}
+			}	
+		}
+		random = {
+			chance = 30
+			modifier = {
+				diplomacy >= decent_skill_rating
+				add = 8
+			}
+			modifier = {
+				diplomacy >= high_skill_rating
+				add = 8
+			}
+			send_interface_toast = {
+				left_icon = scope:intellectual_2
+				title = VIETmisc.6000.b.toast
+				add_courtier = scope:intellectual_2
+			}
+		}
+	}
+
+	option = { # Support neither
+		name = VIETmisc.6000.c
+		VIET_huge_prestige_gain_effect = yes
+	}
+
+	after = {
+		if = {
+			limit = {
+				has_character_flag = VIET_intellectual_event_prefer_traditionalist
+			}
+			remove_character_flag = VIET_intellectual_event_prefer_traditionalist
+		}
+		if = {
+			limit = {
+				has_character_flag = VIET_intellectual_event_prefer_innovator
+			}
+			remove_character_flag = VIET_intellectual_event_prefer_innovator
+		}
+		hidden_effect = {
+			if = {
+				limit = {
+					scope:intellectual_1 = {
+						NOT = { is_courtier_of = root }
+					}
+				}
+				scope:intellectual_1 = {
+					death = {
+						death_reason = death_vanished
+					}
+				}
+			}
+			if = {
+				limit = {
+					scope:intellectual_2 = {
+						NOT = { is_courtier_of = root }
+					}
+				}
+				scope:intellectual_2 = {
+					death = {
+						death_reason = death_vanished
+					}
+				}
+			}			
+		}
+		scope:chaplain = {
+			clear_court_event_participation = yes
+		}
+		scope:intellectual_1 = {
+			clear_court_event_participation = yes
+		}
+		scope:intellectual_2 = {
+			clear_court_event_participation = yes
+		}
+	}
+
+}
+
+
+# Robber baron afflicting your realm
+# Credits to Ultimatum
+VIETmisc.6001 = {
+	type = court_event
+	title = VIETmisc.6001.t
+	desc = VIETmisc.6001.desc
+
+	theme = court
+
+	cooldown = { years = 5 }
+
+	lower_right_portrait = scope:intellectual_1
+	lower_left_portrait = scope:intellectual_2
+
+	court_scene = {
+		button_position_character = scope:bandit
+		show_timeout_info = no
+		should_pause_time = yes
+		roles = {
+			scope:bandit = {
+				group = petitioners_group
+				animation = beg
+			}
+		}
+	}
+
+	trigger = {
+		is_ruler = yes
+		has_royal_court = yes
+	}
+
+	immediate = {
+		create_character = {
+			location = root.location
+			template = VIET_robber_bandit_template
+			save_scope_as = bandit
+		}
+		scope:bandit = {
+			court_event_character_flag_effect = yes
+		}
+		random_held_title = {
+			limit = { tier = tier_county }
+			save_scope_as = county
+		}
+	}
+
+	option = { # Fine them to teach a lesson
+		name = VIETmisc.6001.a
+		add_gold = { 25 100 }
+		VIET_huge_prestige_loss_effect = yes
+		add_character_modifier = {
+			modifier = VIET_lenient_robber_baron
+			years = 10
+		}
+		hidden_effect = {
+			scope:bandit = {
+				death = {
+					death_reason = death_vanished
+				}
+			}			
+		}
+		stress_impact = {
+			just = minor_stress_impact_gain
+			vengeful = minor_stress_impact_gain
+			wrathful = miniscule_stress_impact_gain
+			ambitious = miniscule_stress_impact_gain
+			diligent = miniscule_stress_impact_gain
+		}
+		
+		if = {
+			limit = {
+				has_game_rule = VIET_historical_context_on
+			}
+			custom_tooltip = VIETmisc.6001.info
+		}
+	}
+
+	option = { # Recruit them to your court
+		name = VIETmisc.6001.b
+		VIET_massive_prestige_loss_effect = yes
+		add_character_modifier = {
+			modifier = VIET_lenient_robber_baron
+			years = 20
+		}
+		add_courtier = scope:bandit
+		if = {
+			limit = {
+				can_add_hook = {
+					target = scope:bandit
+					type = loyalty_hook
+				}
+			}
+			add_hook = {
+				target = scope:bandit
+				type = loyalty_hook
+			}
+		}
+		stress_impact = {
+			just = medium_stress_impact_gain
+			vengeful = minor_stress_impact_gain
+			wrathful = minor_stress_impact_gain
+			ambitious = miniscule_stress_impact_gain
+			diligent = miniscule_stress_impact_gain
+			paranoid = miniscule_stress_impact_gain
+		}
+		
+		if = {
+			limit = {
+				has_game_rule = VIET_historical_context_on
+			}
+			custom_tooltip = VIETmisc.6001.info
+		}
+	}
+
+	option = { # Execute them
+		name = VIETmisc.6001.c
+		VIET_massive_prestige_gain_effect = yes
+		add_character_modifier = {
+			modifier = VIET_punished_robber_baron
+			years = 10
+		}
+		scope:bandit = {
+			death = {
+				killer = root
+				death_reason = death_execution
+			}
+		}
+		stress_impact = {
+			lazy = miniscule_stress_impact_gain
+			content = miniscule_stress_impact_gain
+			forgiving = miniscule_stress_impact_gain
+			compassionate = miniscule_stress_impact_gain
+		}	
+		
+		if = {
+			limit = {
+				has_game_rule = VIET_historical_context_on
+			}
+			custom_tooltip = VIETmisc.6001.info
+		}	
+	}
+
+	option = { # Strip them of their rank and title
+		name = VIETmisc.6001.d
+		VIET_huge_prestige_gain_effect = yes
+		VIET_huge_piety_gain_effect = yes
+		add_character_modifier = {
+			modifier = VIET_punished_robber_baron
+			years = 10
+		}
+		hidden_effect = {
+			random = {
+				chance = 60
+				scope:bandit = {
+					death = {
+						death_reason = death_vanished
+					}
+				}
+			}			
+		}
+		stress_impact = {
+			vengeful = minor_stress_impact_gain
+			forgiving = minor_stress_impact_gain
+		}	
+		
+		if = {
+			limit = {
+				has_game_rule = VIET_historical_context_on
+			}
+			custom_tooltip = VIETmisc.6001.info
+		}		
+	}
+
+	after = {
+		scope:bandit = {
+			clear_court_event_participation = yes
+		}
+	}
+
+}
