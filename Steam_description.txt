@@ -1,9 +1,6 @@
-[img]https://i.imgur.com/Hy7cTwG.jpg[/img]
+[img]https://i.imgur.com/nuOGjHu.jpg[/img]
 
-[h1]Current Version: 1.6.0 "Struggle" (Released 5/31/22, Compatible with vanilla patch 1.6.X)[/h1]
-
-[h1][B][url=https://forms.gle/KFKWmbffoAAAYY847]Take the VIET/RICE 2022 survey![/url] - let me know what you think of my mods, and enter the VIET Events contest to submit your own event idea for VIET![/B][/h1]
-(Survey closes midnight PST June 11)
+[h1]Current Version: 1.6.1 "Survey" (Released 7/15/22, Compatible with vanilla patch 1.6.X)[/h1]
 
 [h1][B][url=https://discord.gg/9KuyXv2uZA]Discord Server for my mods[/url]
 [url=https://cybrxkhansmods.godaddysites.com/]Official Website for my mods[/url][/B][/h1]
@@ -30,7 +27,7 @@ Feel free to use my work in your mods - all I ask is that I am credited and (if 
 [img]http://i.imgur.com/EyXurbK.jpg[/img]
 
 [LIST]
-[*]Over [B]818 new flavor events[/B] to experience!
+[*]Over [B]825 new flavor events[/B] to experience!
 [*]Explore new decisions, artifacts, character interactions, activities, and more!
 [*]Game rule to disable sillier events for those who don't like them, with three levels to choose from: Balanced (Default), Serious (Restricted), and All Events (Full)
 [*][B]Compatible with almost anything[/B] since it doesn't touch any vanilla files - even with overhaul mods, you can via game rule disable events that reference things specific to our medieval world that wouldn’t make sense in other time periods or universes (like fantasy and sci-fi conversion mods)
@@ -59,17 +56,16 @@ Thanks!
 
 [img]http://i.imgur.com/RQ5QZTF.jpg[/img]
 
-[h1]Version 1.6.0 "Struggle"[/h1]
+[h1]Version 1.6.1 "Survey"[/h1]
 
-[I]“If there is no struggle, there is no progress.”
-Frederick Douglass[/I]
+[I]This update includes the 7 winning events from the events contest of the VIET/RICE survey. Thank you for everyone who participated, and thanks in particular to Cerbzzz, Duke Leo, Pedrolu, Ultimatum, Viridianus, and two anonymous players for the winning ideas![/I]
 
 [LIST]
-[*]Added 10 new struggle themed events
-[*]All activities now have automatic expiration dates in case of weird situations where they don’t end
-[*]Fixed decision to view flowers in bloom requiring donkeys and not flowers
-[*]Nerfed the negate health penalty effect for some modifiers and artifacts
-[*]Changed blacksmith event background from medicine to the more appropriate armory
+[*]Added 7 events from the winning submissions for the VIET Events contest
+[*]Added Spanish translations by zubzerozD and Cruzado Blanco, which should cover most remaining untranslated content
+[*]Integrated additional Chinese translation by Tbeabm and Co.
+[*]Rebalanced gold costs of several decisions to be less unrealistically expensive at higher tier levels
+[*]Fixed ghost in the haunting decision chain “disappearing” by itself even after you did a successful exorcism
 [*]Miscellaneous bugfixes
 [/LIST]
 
@@ -90,16 +86,15 @@ Frederick Douglass[/I]
 
 [img]http://i.imgur.com/GlNXL7m.jpg[/img]
 
-A huge thanks to the teams of WTWSMS (especially IlikeTrains and Loup99) and Lux Invicta (including tsf4), as well as M@ni@c, creator of Hide Your Jewelry, for maintaining and improving on VIET for CK2 over the years, which provided me a solid foundation for improved reboot of VIET Events.
+Thanks to all I worked with, took stuff from, and provided me encouragement and feedback over the years. Special thanks in particular to the teams behind WTWSMS (especially IlikeTrains and Loup99) and Lux Invicta (including tsf4), as well as M@ni@c, creator of Hide Your Jewelry, for maintaining and improving on VIET for CK2 over the years, which provided me a solid foundation for improved reboot of VIET Events. Huge thanks also to the kind souls who take the time to translate the mod and put up with my erratic update schedule.
 
-Credits also to OrdepNM, who was my partner in crime in the early days of VIET for CK2 and who stepped up to help maintain it while I had serious medical issues years ago.
+A few other shoutouts in particular:
 
-Special thanks to Sleight of Hand for pushing me to get into the CK2 modding scene and for other assistance over the years, which is why I am still here for some reason.
+[LIST]
+[*]Bonseny for the amazing VIET and RICE logos
+[*]OrdepNM, my partner in crime in the early days of VIET for CK2 and who stepped up to help maintain it while I had serious medical issues years ago.
+[*]Sleight of Hand for pushing me to get into the CK2 modding scene and for other assistance over the years, which is why I am still here for some reason.
+[*]tora75 for contributing the Norse unique localizations for several events.
+[*]Stik, Vertimnus, and Tobbzn on the CK3 Mod Co-op for helping me figure out how to adapt my CK2 province events and do a system for county events for CK3.
+[/LIST]
 
-Thanks to tora75 for contributing the Norse unique localizations for several events.
-
-Special thanks to Stik, Vertimnus, and Tobbzn on the CK3 Mod Co-op for helping me figure out how to adapt my CK2 province events and do a system for county events for CK3.
-
-Huge thanks also to the various kind souls who are taking the time to translate the mod - you can see the full list of them in the "Features" section in the Steam mod page description.
-
-Lastly, thanks to all the people who I worked with, took stuff from over the years, and provided encouragement and feedback.
