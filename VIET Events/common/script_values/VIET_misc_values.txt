@@ -1,0 +1,60 @@
+﻿######################
+# DECISION/ACTIVITY VALUES
+######################
+
+VIET_standard_festival_cooldown_time = {
+	value = 3650
+	if = {
+		limit = {
+			root.culture = {
+				has_cultural_parameter = more_frequent_feasts
+			}
+		}
+		multiply = 0.5
+	}
+}
+
+# Since the vanilla activity costs are unimmersively inflated at higher levels
+VIET_activity_cost = {
+	value = 50
+	multiply = {
+		value = root.primary_title.tier
+		subtract = 1
+		min = 1
+	}
+	if = {
+		limit = {
+			root.primary_title.tier > tier_duchy
+		}
+		add = 25
+	}
+	if = {
+		limit = {
+			root= {
+				exists = dynasty
+				dynasty = {
+					has_dynasty_perk = law_legacy_1
+				}
+			}
+		}
+		multiply = law_legacy_cost_reduction_mult
+	}
+	if = {
+		limit = {
+			root= {
+				has_government = tribal_government
+			}
+		}
+		multiply = 0.5
+	}
+	# Make it a little easier for smaller realms
+	if = {
+		limit = {
+			root= {
+				sub_realm_size < 3
+			}
+		}
+		multiply = 0.8
+	}
+	min = 25
+}

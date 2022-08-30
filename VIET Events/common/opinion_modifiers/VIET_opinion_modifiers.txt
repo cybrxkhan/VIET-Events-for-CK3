@@ -509,5 +509,33 @@ VIET_opinion_didnt_like_my_joke = {
 	decaying = yes
 	stacking = yes
 }
+VIET_opinion_physically_attacked_me = {
+	years = 15
+	opinion = -25
+	stacking = yes
+}
+VIET_opinion_dislikes_singing = {
+	years = 15
+	opinion = -15
+	decaying = yes
+}
+VIET_opinion_praised_me = {
+	years = 10
+	opinion = 10
+	decaying = yes
+	stacking = yes
+}
+VIET_opinion_agrees_intellectual = {
+	years = 10
+	opinion = 10
+	decaying = yes
+	stacking = yes
+}
+VIET_opinion_disagrees_intellectual = {
+	years = 10
+	opinion = -10
+	decaying = yes
+	stacking = yes
+}
 
 

@@ -467,3 +467,117 @@ VIET_beauty_husband_template = {
 		}
 	}
 }
+
+
+
+
+
+VIET_local_scholar_template = {
+	age = { 20 70 }
+	gender_female_chance = root_faith_clergy_gender_female_chance
+	random_traits_list = {
+		education_learning_1 = { weight = { base = 10 } }
+		education_learning_2 = { weight = { base = 10 } }
+		education_learning_3 = { weight = { base = 10 } }
+		education_learning_4 = { weight = { base = 10 } }
+	}
+	random_traits = yes
+	culture = root.culture
+	faith = root.faith
+	learning  = {
+		min_template_decent_skill
+		max_template_decent_skill
+	}
+	dynasty = none
+	after_creation = {
+		if = {
+			limit = {
+				NOR = {
+					has_trait = scholar
+					has_trait = theologian
+				}
+			}
+			random_list = {
+				10 = { add_trait = scholar }
+				10 = { add_trait = theologian }
+			}
+		}
+	}
+}
+
+
+VIET_robber_bandit_template = {
+	age = { 20 60 }
+	gender_female_chance = root_faith_dominant_gender_adjusted_female_chance
+	random_traits_list = {
+		count = 1
+		education_martial_1 = {
+			weight = { base = 35 }
+		}
+		education_martial_2 = {
+			weight = { base = 35 }
+		}
+		education_martial_3 = {
+			weight = { base = 20 }
+		}
+		education_martial_4 = {
+			weight = { base = 10 }
+		}
+	}
+	random_traits = no
+	#Personality
+	random_traits_list = {
+		count = 3
+		ambitious = {}
+		arrogant = {}
+		arbitrary = {}
+		cynical = {}
+		greedy = {}
+		wrathful = {}
+		lustful = {}
+		brave = {}
+		callous = {}
+		sadistic = {}
+		vengeful = {}
+	}
+	culture = root.culture
+	faith = root.faith
+	after_creation = {
+		add_character_modifier = {
+			modifier = VIET_robber_baron
+		}
+	}
+}
+
+VIET_traveling_physician_template = {
+	age = { 16 45 }
+	trait = adventurer
+	gender_female_chance = 33
+	dynasty = none
+	random_traits_list = {
+		count = 1
+		education_learning_1 = {
+			weight = { base = 35 }
+		}
+		education_learning_2 = {
+			weight = { base = 35 }
+		}
+		education_learning_3 = {
+			weight = { base = 20 }
+		}
+		education_learning_4 = {
+			weight = { base = 10 }
+		}
+	}
+	random_traits_list = {
+		count = 1
+		physician_1 = { weight = { base = 50 } }
+		physician_2 = { weight = { base = 20 } }
+		physician_3 = { weight = { base = 10 } }
+		lifestyle_herbalist = { weight = { base = 20 } }
+	}
+	random_traits = yes
+}
+
+
+

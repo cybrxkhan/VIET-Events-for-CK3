@@ -155,6 +155,8 @@
  VIETmisc.3036.t:0 "岩画"
  VIETmisc.3036.desc:0 "最近，[county.GetNameNoTier]的几个农民误打误撞进了一个洞穴，在里面有了不得了的发现。\n\n农民们举起火把凑向岩壁，惊奇地看到了黑魔法的痕迹，可是经过仔细研究，他们才发现这些是精美的画作。红色与黑色的涂料描绘着人类、兽类，包括凶恶的掠食者与和平的兽群。\n\n是谁留下了这些画作呢？或许我们永远不会知晓，但是这一发现确实不容小觑。"
  VIETmisc.3036.a:0 "终有一天我们会搞清楚作者是谁。"
+ VIETmisc.3036.b:0 "I’d like to go and examine the cave myself."
+ # Version 1.6.2 Start Here - Please leave this comment and do not remove it
  VIETmisc.3037.t:0 "xxxxx"
  VIETmisc.3037.desc:0 "xxxxx"
  VIETmisc.3037.a:0 "xxxxx"

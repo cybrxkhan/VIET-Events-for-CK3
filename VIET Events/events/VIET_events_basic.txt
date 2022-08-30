@@ -46,6 +46,7 @@
 # 0236-0240		Generic
 # 0241-0248		Positivity
 # 0249-0256		Struggle
+# 0257-260		VIET Contest Winners
 # 
 ############################################################################################################################
 
@@ -8858,7 +8859,7 @@ VIETmisc.0111 = {
 	left_portrait = root
 	right_portrait = {
 		character = scope:scope_VIET_left_for_dead_person
-		animation = wounded
+		animation = severelywounded
 	}
 
 	weight_multiplier = {
@@ -10368,6 +10369,7 @@ VIETmisc.0128 = {
 	trigger = {
 		any_courtier = {
 			is_available_ai_adult = yes
+			exists = house
 			NOT = { is_close_or_extended_family_of = root }
 			is_married = no
 			is_concubine = no
@@ -10417,6 +10419,7 @@ VIETmisc.0128 = {
 		random_courtier = {
 			limit = {
 				is_available_ai_adult = yes
+				exists = house
 				NOT = { is_close_or_extended_family_of = root }
 				is_married = no
 				is_concubine = no
@@ -11738,7 +11741,7 @@ VIETmisc.0140 = {
 	left_portrait = scope:scope_VIET_helper
 	right_portrait = {
 		character = scope:scope_VIET_tripper
-		animation = wounded
+		animation = severelywounded
 	}
 
 	trigger = {
@@ -15132,7 +15135,7 @@ VIETmisc.0177 = {
 	}	
 	right_portrait = {
 		character = scope:fool_for_love
-		animation = wounded
+		animation = severelywounded
 	}
 	
 	#immediate = {
@@ -22958,3 +22961,643 @@ VIETmisc.0256 = {
 
 
 
+
+
+##########################################################################################################################
+#
+# VIET EVENT CONTEST WINNERS	0257-0260
+#
+##########################################################################################################################
+
+
+# Charlemagne choir event based on the Vita Karoli Magni
+# Credits to Duke Leo
+VIETmisc.0257 = {
+	type = character_event
+	title = VIETmisc.0257.t
+	desc = VIETmisc.0257.desc
+	theme = faith
+	
+	left_portrait = {
+		character = root
+		animation = personality_zealous
+	}
+	
+	right_portrait = {
+		character = scope:chaplain
+		animation = boredom
+	}
+
+	lower_center_portrait = scope:singer
+
+	trigger = {
+		religion = religion:christianity_religion
+		exists = cp:councillor_court_chaplain
+		cp:councillor_court_chaplain = {
+			is_available_healthy_ai_adult = yes
+		}
+		exists = dynasty
+		dynasty = {
+			any_dynasty_member = {
+				is_courtier_of = root
+				is_adult = no
+				age >= 5
+				religion = religion:christianity_religion
+				is_ai = yes
+			}
+		}
+	}
+	
+	weight_multiplier = {
+		base = 1
+		modifier = {
+			add = 0.2
+			has_trait = zealous
+		}
+		modifier = {
+			add = -0.2
+			has_trait = cynical
+		}
+		modifier = {
+			add = 0.2
+			has_trait = patient
+		}
+		modifier = {
+			add = -0.2
+			has_trait = impatient
+		}
+		modifier = {
+			add = 0.2
+			has_trait = gregarious
+		}
+		modifier = {
+			add = -0.2
+			has_trait = shy
+		}
+	}
+
+	immediate = {
+		cp:councillor_court_chaplain = {
+			save_scope_as = chaplain
+		}
+		dynasty = {
+			random_dynasty_member = {
+				limit = {
+					is_courtier_of = root
+					is_adult = no
+					age >= 5
+					religion = religion:christianity_religion
+					is_ai = yes
+				}
+				save_scope_as = singer
+			}
+		}		
+	}
+
+	
+	option = { # Ok
+		name = VIETmisc.0257.a
+		VIET_huge_prestige_gain_effect = yes
+		scope:chaplain = {
+			increase_wounds_no_death_effect = { REASON = beaten }
+			add_opinion = {
+				target = root
+				modifier = VIET_opinion_physically_attacked_me
+			}
+			# random = {
+			# 	chance = 50
+			# 	progress_towards_rival_effect = {
+			# 		CHARACTER = scope:recipient
+			# 		OPINION = no
+			# 	}
+			# }
+		}
+		stress_impact = {
+			craven = miniscule_stress_impact_gain
+			humble = miniscule_stress_impact_gain
+			lazy = miniscule_stress_impact_gain
+			content = miniscule_stress_impact_gain
+			forgiving = minor_stress_impact_gain
+			calm = minor_stress_impact_gain
+		}
+		if = {
+			limit = {
+				has_game_rule = VIET_historical_context_on
+			}
+			custom_tooltip = VIETmisc.0257.info
+		}
+	}
+	
+	option = { # Ok
+		name = VIETmisc.0257.b
+		VIET_huge_prestige_loss_effect = yes
+		scope:singer = {
+			add_opinion = {
+				target = scope:chaplain
+				modifier = VIET_opinion_dislikes_singing
+			}
+		}
+		stress_impact = {
+			base = miniscule_stress_impact_gain
+			wrathful = medium_stress_impact_gain
+			vengeful = minor_stress_impact_gain
+			arbitrary = miniscule_stress_impact_gain
+		}
+		if = {
+			limit = {
+				has_game_rule = VIET_historical_context_on
+			}
+			custom_tooltip = VIETmisc.0257.info
+		}
+	}
+	
+	option = { # Ok
+		name = VIETmisc.0257.c
+		VIET_medium_prestige_loss_effect = yes
+		scope:singer = {
+			add_opinion = {
+				target = scope:chaplain
+				modifier = VIET_opinion_dislikes_singing
+			}
+			add_opinion = {
+				target = root
+				modifier = VIET_opinion_dislikes_singing
+			}
+		}
+		stress_impact = {
+			humble = miniscule_stress_impact_gain
+			content = miniscule_stress_impact_gain
+		}
+		if = {
+			limit = {
+				has_game_rule = VIET_historical_context_on
+			}
+			custom_tooltip = VIETmisc.0257.info
+		}
+	}
+
+}
+
+
+
+
+# Baklava nightmare
+# Credits to Cerbzzz
+VIETmisc.0258 = {
+	type = character_event
+	title = VIETmisc.0258.t
+	desc = VIETmisc.0258.desc
+	theme = death
+	override_background = { event_background = corridor_night }
+	
+	right_portrait = {
+		character = root
+		animation = fear
+	}
+
+	trigger = {
+		NOT = { has_game_rule = VIET_conversion_universe_events }
+		VIET_is_baklava_culture_trigger = yes
+	}
+	
+	weight_multiplier = {
+		base = 1
+		modifier = {
+			add = 0.2
+			has_trait = craven
+		}
+		modifier = {
+			add = -0.2
+			has_trait = brave
+		}
+		modifier = {
+			add = 0.2
+			has_trait = gluttonous
+		}
+		modifier = {
+			add = -0.2
+			has_trait = temperate
+		}
+		modifier = {
+			add = 0.2
+			has_trait = cynical
+		}
+		modifier = {
+			add = -0.2
+			has_trait = zealous
+		}
+	}
+
+	immediate = {
+		play_music_cue = mx_cue_stress 
+	}
+
+	
+	option = { # Ok
+		name = VIETmisc.0258.a
+		add_character_modifier = {
+			modifier = VIET_baklava_nightmare
+			years = 3
+		}
+		stress_impact = {
+			base = miniscule_stress_impact_gain
+			gluttonous = miniscule_stress_impact_gain
+		}
+	}
+
+}
+
+
+
+
+# Teddy Roosevelt assassination reference - vassal survives assassination attempt
+# Credits to Anonymous person who took the survey
+VIETmisc.0259 = {
+	type = character_event
+	title = VIETmisc.0259.t
+	desc = VIETmisc.0259.desc
+	theme = death
+	override_background = { event_background = throne_room }
+	
+	right_portrait = {
+		character = scope:teddy_roosevelt
+		animation = personality_bold
+	}
+
+	trigger = {
+		any_vassal = {
+			is_available_healthy_ai_adult = yes
+			OR = {
+				has_trait = brave
+				has_trait = arrogant
+				has_trait = stubborn
+				has_trait = calm
+				has_trait = paranoid
+				has_trait = content
+			}
+			NOT = {
+				has_trait = craven
+			}
+		}
+	}
+	
+	weight_multiplier = {
+		base = 1
+		modifier = {
+			add = 0.2
+			has_trait = diligent
+		}
+		modifier = {
+			add = -0.2
+			has_trait = lazy
+		}
+		modifier = {
+			add = 0.2
+			has_trait = compassionate
+		}
+		modifier = {
+			add = -0.2
+			has_trait = callous
+		}
+		modifier = {
+			add = 0.2
+			has_trait = ambitious
+		}
+		modifier = {
+			add = -0.2
+			has_trait = content
+		}
+	}
+
+	immediate = {
+		random_vassal = {
+			limit = {
+				is_available_healthy_ai_adult = yes
+				OR = {
+					has_trait = brave
+					has_trait = arrogant
+					has_trait = stubborn
+					has_trait = calm
+					has_trait = paranoid
+					has_trait = content
+				}
+				NOT = {
+					has_trait = craven
+				}
+			}
+			save_scope_as = teddy_roosevelt
+			VIET_huge_prestige_gain_effect = yes
+			add_character_modifier = {
+				modifier = VIET_teddy_roosevelt_assassination
+				years = 10
+			}
+			increase_wounds_no_death_effect = { REASON = assassination }
+		}
+	}
+
+	
+	option = { # Ok
+		name = VIETmisc.0259.a
+		VIET_huge_prestige_loss_effect = yes
+		scope:teddy_roosevelt = {
+			VIET_huge_prestige_gain_effect = yes
+			add_opinion = {
+				target = root
+				modifier = VIET_opinion_praised_me
+			}			
+		}
+		stress_impact = {
+			arrogant = miniscule_stress_impact_gain
+			callous = miniscule_stress_impact_gain
+			sadistic = miniscule_stress_impact_gain
+		}
+	}
+	
+	option = { # Ok
+		name = VIETmisc.0259.b
+	}
+
+}
+
+
+
+# A traveling physician appears with a fully intact mummy
+# Credits to Anonymous person who took the survey
+VIETmisc.0260 = {
+	type = character_event
+	title = VIETmisc.0260.t
+	desc = VIETmisc.0260.desc
+	theme = medicine
+	override_background = { event_background = throne_room }
+	
+	left_portrait = {
+		character = root
+		animation = shock
+	}
+
+	right_portrait = {
+		character = scope:physician
+		animation = schadenfreude
+	}
+
+	# Mainly keep it to Europe and Middle East regions
+	trigger = {
+		capital_province = {
+			OR = {
+				geographical_region = world_middle_east_persia
+				geographical_region = world_middle_east
+				geographical_region = world_india
+				geographical_region = world_asia_minor
+				geographical_region = world_europe
+				geographical_region = world_steppe_west
+				geographical_region = world_africa_north
+				geographical_region = world_africa_east
+				geographical_region = world_africa_sahara
+			}
+		}
+	}
+	
+	weight_multiplier = {
+		base = 1
+		modifier = {
+			add = 0.2
+			has_trait = diligent
+		}
+		modifier = {
+			add = -0.2
+			has_trait = lazy
+		}
+		modifier = {
+			add = 0.2
+			has_trait = trusting
+		}
+		modifier = {
+			add = -0.2
+			has_trait = paranoid
+		}
+		modifier = {
+			add = 0.2
+			has_trait = generous
+		}
+		modifier = {
+			add = -0.2
+			has_trait = greedy
+		}
+	}
+
+	immediate = {
+		every_county_in_region = {
+			region = world_middle_east
+			add_to_list = physician_counties
+		}
+		every_county_in_region = {
+			region = world_middle_east_persia
+			add_to_list = physician_counties
+		}
+		every_county_in_region = {
+			region = world_europe_south
+			add_to_list = physician_counties
+		}
+		every_county_in_region = {
+			region = world_europe_west_iberia
+			add_to_list = physician_counties
+		}
+		every_county_in_region = {
+			region = world_europe_west_francia
+			add_to_list = physician_counties
+		}
+		every_county_in_region = {
+			region = world_africa_north
+			add_to_list = physician_counties
+		}
+		every_county_in_region = {
+			region = world_india_rajastan
+			add_to_list = physician_counties
+		}
+		random_in_list = {
+			list = physician_counties
+			save_scope_as = home_county
+		}
+
+		create_character = {
+			location = root.location
+			template = VIET_traveling_physician_template
+			save_scope_as = physician
+			culture = scope:home_county.culture
+			faith = scope:home_county.faith
+		}
+
+	}
+
+	
+	option = { # Buy the mummy
+		name = VIETmisc.0260.a
+		trigger = {
+			NOT = { has_trait = cannibal }
+			OR = {
+				gold >= 50
+				is_ai = no
+			}
+		}
+
+		ai_chance = {
+			base = 30
+		}
+
+		pay_short_term_gold = {
+			target = scope:physician
+			gold = 50
+		}
+
+		add_character_modifier = {
+			modifier = VIET_mummy_medicine
+			years = 15
+		}
+
+		stress_impact = {
+			paranoid = miniscule_stress_impact_gain
+		}
+
+		hidden_effect = {
+			random = {
+				chance = 75
+				scope:physician = {
+					death = {
+						death_reason = death_vanished
+					}
+				}
+			}
+		}
+
+		if = {
+			limit = {
+				has_game_rule = VIET_historical_context_on
+			}
+			custom_tooltip = VIETmisc.0260.info
+		}
+
+	}
+	
+	
+	option = { # No interest
+		name = VIETmisc.0260.b
+
+		ai_chance = {
+			base = 60
+		}
+
+
+		hidden_effect = {
+			random = {
+				chance = 75
+				scope:physician = {
+					death = {
+						death_reason = death_vanished
+					}
+				}
+			}
+		}
+		
+		if = {
+			limit = {
+				has_game_rule = VIET_historical_context_on
+			}
+			custom_tooltip = VIETmisc.0260.info
+		}
+	}
+
+	
+	option = { # Buy the mummy as a cannibal
+		name = VIETmisc.0260.c
+		trigger = {
+			has_trait = cannibal
+			OR = {
+				gold >= 50
+				is_ai = no
+			}
+		}
+
+		ai_chance = {
+			base = 30
+		}
+
+
+		pay_short_term_gold = {
+			target = scope:physician
+			gold = 50
+		}
+
+		add_character_modifier = {
+			modifier = VIET_mummy_medicine
+			years = 15
+		}
+
+		stress_impact = {
+			cannibal = miniscule_stress_impact_loss
+		}
+
+		hidden_effect = {
+			random = {
+				chance = 75
+				scope:physician = {
+					death = {
+						death_reason = death_vanished
+					}
+				}
+			}
+		}
+		
+		if = {
+			limit = {
+				has_game_rule = VIET_historical_context_on
+			}
+			custom_tooltip = VIETmisc.0260.info
+		}
+
+	}
+	
+	
+	option = { # Invite the Physician to stay
+		name = VIETmisc.0260.d
+		trigger = {
+			OR = {
+				gold >= 100
+				is_ai = no
+			}
+		}
+
+		ai_chance = {
+			base = 10
+		}
+
+
+		pay_short_term_gold = {
+			target = scope:physician
+			gold = 100
+		}
+
+		add_character_modifier = {
+			modifier = VIET_mummy_medicine
+			years = 15
+		}
+
+		set_court_physician_effect = {
+			EMPLOYER = root
+			PHYSICIAN = scope:physician
+		}
+
+		stress_impact = {
+			paranoid = minor_stress_impact_gain
+		}
+		
+		if = {
+			limit = {
+				has_game_rule = VIET_historical_context_on
+			}
+			custom_tooltip = VIETmisc.0260.info
+		}
+
+	}
+
+
+}

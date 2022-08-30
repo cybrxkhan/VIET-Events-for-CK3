@@ -1,20 +1,25 @@
-﻿l_simp_chinese:
- VIETmisc.6000.t:0 "一场公开辩论"
- VIETmisc.6000.desc:0 "两位学者，一人名叫[intellectual_1.GetFirstName]另一人名唤[intellectual_2.GetFirstName]，来到了我的宫廷。他俩的到来众人已经企盼多时，因为在本地的圈子里，二人对于如何解读[ROOT.Char.GetFaith.ReligiousText]文本以及其他神学问题有着激烈的分歧，可是出了名的针尖对麦芒。这两人是不共戴天的仇敌，只要有机会公开辩论，就一定会试图证明对方是错误的，这下轮到我的廷臣们当观众了。\n\n[intellectual_1.GetFirstNameNoTooltip]是出了名的死硬传统派，坚定地站在对于我们信仰的传统解读这一边，可是[intellectual_2.GetFirstNameNoTooltip]正正相反，[intellectual_2.GetSheHe]另辟蹊径，虽然对于[ROOT.Char.GetFaith.GetAdjective]教义的解读更加新颖，但是不构成异端。\n\n争吵正酣的二人，以话语为武器，言辞犀利、思维敏捷、逻辑无懈可击。宫廷众人觉得两人不分伯仲，于是找到我判决胜负。"
- VIETmisc.6000.desc.traditionalist:0 "\n\n我的[chaplain.GetCouncilTitle][chaplain.GetTitledFirstName]似乎支持[intellectual_1.GetFirstNameNoTooltip]。[chaplain.GetSheHe]这样说道：“[intellectual_1.GetSheHe|U]捍卫了对于[ROOT.Char.GetFaith.GetName]的传统解释。[intellectual_2.GetFirstNameNoTooltip]算不上异端，可也只差一步之遥。”"
- VIETmisc.6000.desc.innovator:0 "\n\n我的[chaplain.GetCouncilTitle][chaplain.GetTitledFirstName]似乎支持[intellectual_2.GetFirstNameNoTooltip]。[chaplain.GetSheHe]说道：“[intellectual_2.GetSheHe|U]证明了我们总是能以新颖角度看待[ROOT.Char.GetFaith.GetAdjective]教义。恐怕[intellectual_1.GetFirstNameNoTooltip]只是在固守传统，而忽略了[ROOT.Char.GetFaith.HighGodName]的教导。”"
- VIETmisc.6000.a:0 "捍卫正统教义的[intellectual_1.GetFirstName]说得在理。"
- VIETmisc.6000.a.toast:0 "[intellectual_1.GetFirstName]决定留在你的宫廷！"
- VIETmisc.6000.b:0 "[intellectual_2.GetFirstName]对于信仰新思维的呼吁获胜。"
- VIETmisc.6000.b.toast:0 "[intellectual_2.GetFirstName]决定留在你的宫廷！"
- VIETmisc.6000.c:0 "一场别开生面的辩论，但是他俩都没能是我折服。"
- VIETmisc.6001.t:0 "强盗贵族"
- VIETmisc.6001.desc:0 "过去的几个月，从[county.GetNameNoTier]一直传来一名叫[bandit.GetFullName]的强盗贵族的消息。这玷污#italic 我的权威#!的蠢人此人是个小领主，向来往于[bandit.GetHerHis]采邑的人民收取额外的过路费，过路人不付钱的话，就会被净身出户。\n\n这名狡猾的罪犯，不知怎么着总是能够逃脱追捕……可是躲得过初一躲不过十五。我的官员碰巧抓到[bandit.GetHerHim]，并把[bandit.GetSheHe]带到我的宫廷受审，没有得到我的许可就加收税赋是对我名声的侮辱，[bandit.GetSheHe]必须因此受罚。"
- VIETmisc.6001.a:0 "一小笔罚金足够让[bandit.GetHerHim]喝上一壶！"
- VIETmisc.6001.b:0 "只要[bandit.GetSheHe]为我工作，我就饶了他。"
- VIETmisc.6001.c:0 "法律写的很清楚，杀无赦！"
- VIETmisc.6001.d:0 "把[bandit.GetHerHis]头衔扒光。"
- VIETmisc.6001.info:0 "#emphasis 历史背景：#!中世纪时期，如果中央王室孱弱，某些地主与贵族利用自己位高权重，借机不经领主许可便向旅行者和商人收取高昂的通行税捐。比如说，在十二世纪初期，法国国王路易四世就花了许多年在处理强盗贵族上。在19世纪时的美国，强盗贵族一词死灰复燃，用于称呼那些有钱无德的企业家。"
+﻿l_spanish:
+
+ # Court Events - for courts, duh
+
+ # Version 1.6.1 Start Here - Please leave this comment and do not remove it
+ # VIET/RICE Event Survey Winners
+VIETmisc.6000.t:0 "Un debate público"
+ VIETmisc.6000.desc:0 "Dos intelectuales llamados [intellectual_1.GetFirstName] y [intellectual_2.GetFirstName] han llegado a mi corte. Esperábamos con ansias esta ocasión, ya que se destacan en los círculos locales por sus ideas tremendamente divergentes pero interesantes. interpretaciones del [ROOT.Char.GetFaith.ReligiousText], y otros [ROOT.Char.GetFaith.GetAdjective] asuntos teológicos. Son rivales acérrimos, y buscan probar que el otro está equivocado en un debate público, y yo y el resto de mi tribunal sería de espectadores.\n\n[intellectual_1.GetFirstNameNoTooltip] es conocido por ser un tradicionalista acérrimo y por defender los conceptos clásicos de la fe [ROOT.Char.GetFaith.GetAdjective]. [intellectual_2.GetFirstNameNoTooltip], por el contrario, es visto como algo inconformista y rebelde; aunque [intellectual_2.GetSheHe] no tiene ningún punto de vista herético, está claro que [intellectual_2.GetSheHe] tiene algunas interpretaciones bastante innovadoras de la teología [ROOT.Char.GetFaith.GetAdjective].\n \nDe todos modos Sí, la discusión entre los dos fue animada, ya que ambos eruditos demostraron ser bastante hábiles para discutir, contraargumentar, contraargumentar, etc. Mis cortesanos en su mayoría están de acuerdo en que ninguna de las partes tenía la ventaja en este debate, incluso después de que terminó, por lo que todos esperan que yo declare oficialmente quién ganó".
+ VIETmisc.6000.desc.traditionalist:0 "\n\nMi [chaplain.GetCouncilTitle] [chaplain.GetTitledFirstName] parece admitir [intellectual_1.GetFirstNameNoTooltip], como [chaplain.GetSheHe] me dice, “[intellectual_1.GetSheHe|U] defendió la comprensión ortodoxa de [ROOT.Char.GetFaith.GetName]. [intellectual_2.GetFirstNameNoTooltip] no es hereje, pero se acerca demasiado a la herejía para su comodidad".
+ VIETmisc.6000.desc.innovator:0 "\n\nMi [chaplain.GetCouncilTitle] [chaplain.GetTitledFirstName] parece admitir [intellectual_2.GetFirstNameNoTooltip], como [chaplain.GetSheHe] me dice, “[intellectual_2.GetSheHe|U] demuestra que siempre podemos encontrar nuevas formas de abordar la teología [ROOT.Char.GetFaith.GetAdjective] [intellectual_1.GetFirstNameNoTooltip], me temo decir, se adhiere ciegamente a la tradición, en lugar de considerar lo que [ROOT.Char.GetFaith.HighGodName] quiere que hagamos".
+ VIETmisc.6000.a:0 "[intellectual_1.GetFirstName] presentó los mejores argumentos para defender las ideas ortodoxas."
+ VIETmisc.6000.a.toast:0 "¡[intellectual_1.GetFirstName] decide quedarse en tu corte!"
+ VIETmisc.6000.b:0 "[intellectual_2.GetFirstName] ganó el debate defendiendo creencias religiosas innovadoras."
+ VIETmisc.6000.b.toast:0 "¡[intellectual_2.GetFirstName] decide quedarse en tu corte!"
+ VIETmisc.6000.c:0 "Ninguno de los dos me convenció, ¡pero fue un debate interesante!"
+ VIETmisc.6001.t:0 "El barón ladrón"
+ VIETmisc.6001.desc:0 "En los últimos meses, he oído hablar de un barón ladrón llamado [bandit.GetFullName] que opera en [county.GetNameNoTier]. Este cretino es un noble de poca monta que deseaba desafiar a #cursiva mi# autoridad real al imponer peajes adicionales a las personas que viajan a través del feudo [bandit.GetHerHis], más allá de lo que se le debe legítimamente a [bandit.GetHerHim], dando a los viajeros un ultimátum para pagar el peaje adicional o ser robados o secuestrados a la fuerza para obtener un rescate .\n\nDe todos modos, este escurridizo criminal de alguna manera evadió la captura durante algún tiempo... hasta ahora. Por casualidad, mis funcionarios han detenido a [bandit.GetHerHim], y [bandit.GetSheHe] ha sido llevado ante mí para ser juzgado. Participar en tales actos sin mi autoridad es una mancha en mi reputación, por lo que [bandit.GetSheHe] debe ser castigado en consecuencia".
+ VIETmisc.6001.a:0 "¡Una pequeña multa será suficiente y le enseñará una lección a [bandit.GetHerHim]!"
+ VIETmisc.6001.b:0 "A cambio de clemencia, [bandit.GetSheHe] puede trabajar para mí."
+ VIETmisc.6001.c:0 "La ley es clara. ¡La muerte será el destino de este criminal!"
+ VIETmisc.6001.d:0 "Despojar a [bandit.GetHerHim] de [bandit.GetHerHis] títulos y rango".
+ VIETmisc.6001.info:0 "#énfasis Contexto histórico:#! Robber barons es un término general en inglés que se usa para describir el fenómeno de los terratenientes y nobles medievales que se aprovechaban de su estatus y recursos para imponer altos impuestos y peajes a los viajeros y comerciantes, sin la autorización legal de las autoridades superiores, particularmente en tiempos donde el control real centralizado estaba debilitado. Por ejemplo, Luis VI de Francia pasó muchos años tratando con barones ladrones a principios de 1100. Estas figuras notorias darían lugar más tarde al siglo XIX. Término de la jerga estadounidense para hombres de negocios ricos y sin escrúpulos".
  # Version 1.6.2 Start Here - Please leave this comment and do not remove it
  VIETmisc.6002.t:0 "xxxxx"
  VIETmisc.6002.desc:0 "xxxxx"
@@ -99,7 +104,7 @@
  VIETmisc.6028.a:0 "xxxxx"
  VIETmisc.6029.t:0 "xxxxx"
  VIETmisc.6029.desc:0 "xxxxx"
- VIETmisc.6029.a:0 "xxxxx"
+ VIETmisc.6029.a:0 "xxxxx" 
  VIETmisc.6030.t:0 "xxxxx"
  VIETmisc.6030.desc:0 "xxxxx"
  VIETmisc.6030.a:0 "xxxxx"

@@ -243,11 +243,11 @@ VIET_decision_visit_legendary_burial_mound = {
 	}
 
 	cost = {
-		gold = { value = minor_gold_value } # Will depend
+		gold = { value = VIET_activity_cost } # Will depend
 	}
 	
 	ai_potential = {
-		gold > minor_gold_value
+		gold > VIET_activity_cost
 	}
 
 	ai_will_do = {
@@ -407,11 +407,11 @@ VIET_decision_venerate_a_mummified_hermit = {
 	}
 
 	cost = {
-		gold = { value = minor_gold_value } # Will depend
+		gold = { value = VIET_activity_cost } # Will depend
 	}
 	
 	ai_potential = {
-		gold > minor_gold_value
+		gold > VIET_activity_cost
 	}
 
 	ai_will_do = {
@@ -482,11 +482,11 @@ VIET_decision_relax_at_a_giant_shade_tree = {
 	}
 
 	cost = {
-		gold = { value = minor_gold_value } # Will depend
+		gold = { value = VIET_activity_cost } # Will depend
 	}
 	
 	ai_potential = {
-		gold > minor_gold_value
+		gold > VIET_activity_cost
 	}
 
 	ai_will_do = {
@@ -559,11 +559,11 @@ VIET_decision_examine_ancient_stone_monument = {
 	}
 
 	cost = {
-		gold = { value = minor_gold_value } # Will depend
+		gold = { value = VIET_activity_cost } # Will depend
 	}
 	
 	ai_potential = {
-		gold > minor_gold_value
+		gold > VIET_activity_cost
 	}
 
 	ai_will_do = {
@@ -825,11 +825,11 @@ VIET_decision_view_flower_meadows_in_bloom = {
 	}
 
 	cost = {
-		gold = { value = minor_gold_value } # Will depend
+		gold = { value = VIET_activity_cost } # Will depend
 	}
 	
 	ai_potential = {
-		gold > minor_gold_value
+		gold > VIET_activity_cost
 	}
 
 	ai_will_do = {

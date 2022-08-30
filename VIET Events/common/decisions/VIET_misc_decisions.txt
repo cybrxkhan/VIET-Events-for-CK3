@@ -120,11 +120,11 @@ VIET_decision_traveling_baklava_merchant = {
 	}
 
 	cost = {
-		gold = { value = minor_gold_value } # Will depend
+		gold = { value = VIET_activity_cost } # Will depend
 	}
 	
 	ai_potential = {
-		short_term_gold > minor_gold_value
+		short_term_gold > VIET_activity_cost
 	}
 
 	ai_will_do = {
@@ -175,11 +175,11 @@ VIET_decision_traveling_five_spice_merchant = {
 	}
 
 	cost = {
-		gold = { value = minor_gold_value } # Will depend
+		gold = { value = VIET_activity_cost } # Will depend
 	}
 	
 	ai_potential = {
-		short_term_gold > minor_gold_value
+		short_term_gold > VIET_activity_cost
 	}
 
 	ai_will_do = {
