@@ -20,6 +20,7 @@
 # ##### GRAND LIST OF EVENTS #####
 # 
 # 6000-6001		VIET Events Contest Winners
+# 6002-6017		Generic (2 year anniversary)
 # 
 ############################################################################################################################
 
@@ -100,6 +101,7 @@ VIETmisc.6000 = {
 		exists = cp:councillor_court_chaplain
 		cp:councillor_court_chaplain = {
 			is_available_healthy_ai_adult = yes
+			has_court_event_flag = no
 		}
 	}
 
@@ -504,3 +506,1034 @@ VIETmisc.6001 = {
 	}
 
 }
+
+
+
+##################################################################
+# Generic (2 Year Anniversary) 6002-6017
+##################################################################
+
+
+# Relative with poor behavior at court
+VIETmisc.6002 = {
+	type = court_event
+	title = VIETmisc.6002.t
+	desc = VIETmisc.6002.desc
+
+	theme = diplomacy
+
+	cooldown = { years = 5 }
+
+	lower_right_portrait = scope:relative
+	lower_left_portrait = scope:complainer
+	court_scene = {
+		button_position_character = scope:relative
+		roles = {
+			scope:relative = {
+				group = event_group
+				animation = personality_callous
+			}
+			scope:complainer = {
+				group = event_group
+				animation = disapproval
+			}
+		}
+	}
+
+	trigger = {
+		any_courtier = {
+			is_available_ai_adult = yes
+			has_court_event_flag = no
+			is_close_or_extended_family_of = root
+			OR = {
+				has_trait = arrogant
+				has_trait = lazy
+				has_trait = lunatic_1
+				has_trait = lunatic_genetic
+				has_trait = wrathful
+				has_trait = impatient
+				has_trait = possessed_1
+				has_trait = possessed_genetic
+				has_trait = callous
+			}
+		}
+		any_courtier = {
+			is_available_ai_adult = yes
+			has_court_event_flag = no
+			NOT = { is_close_family_of = root }
+			OR = {
+				has_trait = arrogant
+				has_trait = diligent
+				has_trait = just
+				has_trait = zealous
+				has_trait = impatient
+				has_trait = stubborn
+				has_trait = wrathful
+			}
+			NOR = {
+				has_trait = shy
+				has_trait = craven
+				has_trait = lazy
+			}
+		}
+	}
+
+	immediate = {
+		random_courtier = {
+			limit = {
+				is_available_ai_adult = yes
+				has_court_event_flag = no
+				is_close_or_extended_family_of = root
+				OR = {
+					has_trait = arrogant
+					has_trait = lazy
+					has_trait = lunatic_1
+					has_trait = lunatic_genetic
+					has_trait = wrathful
+					has_trait = impatient
+					has_trait = possessed_1
+					has_trait = possessed_genetic
+					has_trait = callous
+				}				
+			}
+			save_scope_as = relative
+			court_event_character_flag_effect = yes
+			add_character_modifier = {
+				modifier = VIET_improper_court_behavior
+				years = 10
+			}
+		}
+		random_courtier = {
+			limit = {
+				is_available_ai_adult = yes
+				has_court_event_flag = no
+				NOT = { is_close_family_of = root }
+				OR = {
+					has_trait = arrogant
+					has_trait = diligent
+					has_trait = just
+					has_trait = zealous
+					has_trait = impatient
+					has_trait = stubborn
+					has_trait = wrathful
+				}
+				NOR = {
+					has_trait = shy
+					has_trait = craven
+					has_trait = lazy
+				}
+			}
+			save_scope_as = complainer
+			court_event_character_flag_effect = yes
+		}
+
+		scope:complainer = {
+			add_opinion = {
+				target = scope:relative
+				modifier = VIET_opinion_improper_court_behavior
+			}
+		}
+
+	}
+
+	option = { # Stern talking to
+		name = VIETmisc.6002.a
+		custom_tooltip = VIETmisc.6002.a.tooltip
+		stress_impact = {
+			base = miniscule_stress_impact_gain
+			shy = minor_stress_impact_gain
+			lazy = miniscule_stress_impact_gain
+			craven = miniscule_stress_impact_gain
+		}
+		duel = {
+			skill = diplomacy
+			target = scope:relative
+			15 = { # Failure
+				compare_modifier = {
+					value = scope:duel_value
+					multiplier = -1.1
+				}
+				modifier = {
+					add = 1
+					scope:relative = {
+						has_trait = brave
+					}
+				}
+				modifier = {
+					add = 1
+					scope:relative = {
+						has_trait = stubborn
+					}
+				}
+				modifier = {
+					add = 1
+					scope:relative = {
+						has_trait = wrathful
+					}
+				}
+				modifier = {
+					add = 1
+					scope:relative = {
+						has_trait = arrogant
+					}
+				}
+				modifier = {
+					add = 1
+					has_trait = shy
+				}
+				modifier = {
+					add = 1
+					has_trait = compassionate
+				}
+				modifier = {
+					add = 1
+					has_trait = lazy
+				}
+				modifier = {
+					add = 1
+					has_trait = craven
+				}
+				desc = VIETmisc.6002.a.failure
+				send_interface_toast = {
+					left_icon = ROOT
+					title = VIETmisc.6002.a.failure
+					VIET_massive_prestige_loss_effect = yes
+					scope:relative = {
+						add_opinion = {
+							target = root
+							modifier = VIET_opinion_chastised_me_in_public
+						}
+					}
+				}
+			}
+			10 = { # Success
+				compare_modifier = {
+					value = scope:duel_value
+					multiplier = 1.1
+				}
+				modifier = {
+					add = 1
+					scope:relative = {
+						has_trait = craven
+					}
+				}
+				modifier = {
+					add = 1
+					scope:relative = {
+						has_trait = humble
+					}
+				}
+				modifier = {
+					add = 1
+					scope:relative = {
+						has_trait = trusting
+					}
+				}
+				modifier = {
+					add = 1
+					scope:relative = {
+						has_trait = paranoid
+					}
+				}
+				modifier = {
+					add = 1
+					has_trait = wrathful
+				}
+				modifier = {
+					add = 1
+					has_trait = vengeful
+				}
+				modifier = {
+					add = 1
+					has_trait = sadistic
+				}
+				modifier = {
+					add = 1
+					has_trait = brave
+				}
+				desc = VIETmisc.6002.a.success
+				send_interface_toast = {
+					left_icon = ROOT
+					title = VIETmisc.6002.a.success
+					VIET_medium_prestige_gain_effect = yes
+					scope:relative = {
+						remove_character_modifier = VIET_improper_court_behavior
+					}
+				}
+			}
+		}
+	}
+
+	option = { # Try to persuade them
+		name = VIETmisc.6002.b
+		custom_tooltip = VIETmisc.6002.b.tooltip
+		stress_impact = {
+			base = miniscule_stress_impact_gain
+			impatient = minor_stress_impact_gain
+			lazy = miniscule_stress_impact_gain
+			wrathful = miniscule_stress_impact_gain
+		}
+		duel = {
+			skill = diplomacy
+			target = scope:relative
+			15 = { # Failure
+				compare_modifier = {
+					value = scope:duel_value
+					multiplier = -1.1
+				}
+				modifier = {
+					add = 1
+					scope:relative = {
+						has_trait = callous
+					}
+				}
+				modifier = {
+					add = 1
+					scope:relative = {
+						has_trait = stubborn
+					}
+				}
+				modifier = {
+					add = 1
+					scope:relative = {
+						has_trait = arbitrary
+					}
+				}
+				modifier = {
+					add = 1
+					scope:relative = {
+						has_trait = arrogant
+					}
+				}
+				modifier = {
+					add = 1
+					has_trait = shy
+				}
+				modifier = {
+					add = 1
+					has_trait = arrogant
+				}
+				modifier = {
+					add = 1
+					has_trait = impatient
+				}
+				modifier = {
+					add = 1
+					has_trait = wrathful
+				}
+				desc = VIETmisc.6002.b.failure
+				send_interface_toast = {
+					left_icon = ROOT
+					title = VIETmisc.6002.b.failure
+					VIET_massive_prestige_loss_effect = yes
+					scope:relative = {
+						add_opinion = {
+							target = root
+							modifier = VIET_opinion_chastised_me_in_public
+						}
+					}
+				}
+			}
+			10 = { # Success
+				compare_modifier = {
+					value = scope:duel_value
+					multiplier = 1.1
+				}
+				modifier = {
+					add = 1
+					scope:relative = {
+						has_trait = just
+					}
+				}
+				modifier = {
+					add = 1
+					scope:relative = {
+						has_trait = humble
+					}
+				}
+				modifier = {
+					add = 1
+					scope:relative = {
+						has_trait = trusting
+					}
+				}
+				modifier = {
+					add = 1
+					scope:relative = {
+						has_trait = zealous
+					}
+				}
+				modifier = {
+					add = 1
+					has_trait = gregarious
+				}
+				modifier = {
+					add = 1
+					has_trait = compassionate
+				}
+				modifier = {
+					add = 1
+					has_trait = patient
+				}
+				modifier = {
+					add = 1
+					has_trait = calm
+				}
+				desc = VIETmisc.6002.b.success
+				send_interface_toast = {
+					left_icon = ROOT
+					title = VIETmisc.6002.b.success
+					VIET_medium_prestige_gain_effect = yes
+					scope:relative = {
+						remove_character_modifier = VIET_improper_court_behavior
+					}
+				}
+			}
+		}
+	}
+
+
+	option = { # Don't do anything about it
+		name = VIETmisc.6002.c
+		stress_impact = {
+			arrogant = minor_stress_impact_gain
+			diligent = miniscule_stress_impact_gain
+			ambitious = miniscule_stress_impact_gain
+		}
+		VIET_huge_prestige_loss_effect = yes
+		scope:complainer = {
+			add_opinion = {
+				target = root
+				modifier = VIET_opinion_doesnt_care_about_inapproriate_courtiers
+			}
+		}
+		scope:relative = {
+			add_opinion = {
+				target = root
+				modifier = VIET_opinion_didnt_chastise_me
+			}
+		}
+	}
+
+
+	after = {
+		scope:relative = {
+			clear_court_event_participation = yes
+		}
+		scope:complainer = {
+			clear_court_event_participation = yes
+		}
+	}
+
+}
+
+
+
+
+# Courtier forgets minor royal court etiquette/formality
+VIETmisc.6003 = {
+	type = court_event
+	title = VIETmisc.6003.t
+	desc = VIETmisc.6003.desc
+
+	theme = unfriendly
+
+	cooldown = { years = 5 }
+
+	lower_right_portrait = scope:courtier
+	#lower_left_portrait = scope:complainer
+	court_scene = {
+		button_position_character = scope:courtier
+		roles = {
+			scope:courtier = {
+				group = event_group
+				animation = shame
+			}
+		}
+	}
+
+	trigger = {
+		any_courtier = {
+			is_available_ai_adult = yes
+			has_court_event_flag = no
+		}
+	}
+
+	immediate = {
+		random_courtier = {
+			limit = {
+				is_available_ai_adult = yes	
+				has_court_event_flag = no			
+			}
+			save_scope_as = courtier
+			court_event_character_flag_effect = yes
+			add_character_modifier = {
+				modifier = VIET_blunder_court_ceremony
+				years = 10
+			}
+		}
+
+	}
+
+	option = { # Not a big deal at all!
+		name = VIETmisc.6003.a
+		stress_impact = {
+			arrogant = minor_stress_impact_gain
+			diligent = miniscule_stress_impact_gain
+			wrathful = miniscule_stress_impact_gain
+		}
+		VIET_huge_prestige_loss_effect = yes
+		scope:relative = {
+			add_opinion = {
+				target = root
+				modifier = VIET_opinion_didnt_chastise_me
+			}
+		}		
+	}
+
+	option = { # Chastise in public
+		name = VIETmisc.6003.b
+		stress_impact = {
+			shy = miniscule_stress_impact_gain
+			forgiving = miniscule_stress_impact_gain
+			patient = miniscule_stress_impact_gain
+			calm = miniscule_stress_impact_gain
+			content = miniscule_stress_impact_gain
+		}
+		VIET_huge_prestige_gain_effect = yes
+		scope:relative = {
+			add_opinion = {
+				target = root
+				modifier = VIET_opinion_chastised_me_in_public
+			}
+		}		
+	}
+
+	option = { # Chastise in private
+		name = VIETmisc.6003.c
+		stress_impact = {
+			arrogant = miniscule_stress_impact_gain
+			shy = miniscule_stress_impact_gain
+			wrathful = miniscule_stress_impact_gain
+		}
+		VIET_large_prestige_gain_effect = yes
+		scope:relative = {
+			add_opinion = {
+				target = root
+				modifier = VIET_opinion_chastised_me_in_private
+			}
+		}		
+	}
+
+
+	after = {
+		scope:courtier = {
+			clear_court_event_participation = yes
+		}
+	}
+
+}
+
+
+# Visiting envoy says court isn't that different than a mere duke's court
+VIETmisc.6004 = {
+	type = court_event
+	title = VIETmisc.6004.t
+	desc = VIETmisc.6004.desc
+
+	theme = unfriendly
+
+	cooldown = { years = 10 }
+
+	lower_right_portrait = scope:envoy
+	lower_left_portrait = scope:neighbor
+	court_scene = {
+		button_position_character = scope:envoy
+		roles = {
+			scope:envoy = {
+				group = event_group
+				animation = disapproval
+			}
+		}
+		roles = {
+			root = {
+				group = event_group
+				animation = personality_callous
+			}
+		}
+	}
+
+	trigger = {
+		any_neighboring_top_liege_realm_owner = {
+			is_ai = yes
+			NOT = {
+				any_war_enemy = { this = root }
+			}
+		}
+	}
+
+	immediate = {
+		random_neighboring_top_liege_realm_owner = {
+			limit = {
+				is_ai = yes	
+				NOT = {
+					any_war_enemy = { this = root }
+				}			
+			}
+			save_scope_as = neighbor			
+		}
+		create_character = {
+			employer = scope:neighbor
+			template = VIET_neighbor_envoy_template
+			random_traits_list = {
+				count = 2
+				arrogant = {}
+				honest = {}
+				callous = {}
+				arbitrary = {}
+				stubborn = {}
+			}
+			random_traits = yes
+			save_scope_as = envoy
+		}
+		scope:envoy = {			
+			court_event_character_flag_effect = yes
+		}
+
+	}
+
+	option = { # A good point
+		name = VIETmisc.6004.a	
+		trigger = {
+			OR = {
+				gold >= 50
+				is_ai = no
+			}
+		}
+		remove_short_term_gold = 50
+		VIET_huge_prestige_gain_effect = yes
+		change_current_court_grandeur = minor_court_grandeur_gain
+		scope:envoy = {
+			add_opinion = {
+				target = root
+				modifier = VIET_opinion_court_advice_good
+			}
+		}
+		stress_impact = {
+			greedy = minor_stress_impact_gain
+			arrogant = minor_stress_impact_gain
+			wrathful = miniscule_stress_impact_gain
+		}
+	}
+
+	option = { # Disrespectful!
+		name = VIETmisc.6004.b	
+		scope:neighbor = {
+			VIET_massive_prestige_loss_effect = yes
+			add_opinion = {
+				modifier = angry_opinion
+				target = root
+				opinion = -20
+			}
+			reverse_add_opinion = {
+				target = root
+				modifier = VIET_opinion_rude_envoy
+			}
+		}
+		scope:envoy = {
+			VIET_massive_prestige_gain_effect = yes
+			add_opinion = {
+				target = root
+				modifier = VIET_opinion_court_advice_bad
+			}
+			reverse_add_opinion = {
+				target = root
+				modifier = insult_opinion
+				opinion = -40
+			}
+		}
+		stress_impact = {
+			content = miniscule_stress_impact_gain
+			humble = miniscule_stress_impact_gain
+			patient = minor_stress_impact_gain
+			calm = minor_stress_impact_gain
+		}
+	}
+
+	option = { # Let's focus on important things...
+		name = VIETmisc.6004.c
+		VIET_huge_prestige_loss_effect = yes
+		scope:envoy = {
+			add_opinion = {
+				target = root
+				modifier = VIET_opinion_court_advice_bad
+			}
+		}
+		stress_impact = {
+			arrogant = minor_stress_impact_gain
+			wrathful = minor_stress_impact_gain
+			vengeful = miniscule_stress_impact_gain
+		}
+	}
+
+
+	after = {
+		scope:envoy = {
+			clear_court_event_participation = yes
+		}
+	}
+
+}
+
+
+
+# Courtiers debate cutting down on ceremonial fluff - yay or nay?
+VIETmisc.6005 = {
+	type = court_event
+	title = VIETmisc.6005.t
+	desc = VIETmisc.6005.desc
+
+	theme = stewardship
+
+	cooldown = { years = 10 }
+
+	lower_right_portrait = scope:courtier
+	#lower_left_portrait = scope:neighbor
+	court_scene = {
+		button_position_character = scope:courtier
+		roles = {
+			scope:courtier = {
+				group = petitioners_group
+				animation = disapproval
+			}
+		}
+	}
+
+	trigger = {
+		any_courtier = {
+			is_available_ai_adult = yes
+			has_court_event_flag = no
+			NOR = {
+				has_trait = shy
+				has_trait = lazy
+				has_trait = content
+			}
+		}
+	}
+
+	immediate = {
+		random_courtier = {
+			limit = {
+				is_available_ai_adult = yes	
+				has_court_event_flag = no
+				NOR = {
+					has_trait = shy
+					has_trait = lazy
+					has_trait = content
+				}		
+			}
+			court_event_character_flag_effect = yes
+			save_scope_as = courtier			
+		}
+
+	}
+
+	option = { # A good point
+		name = VIETmisc.6005.a
+		add_character_modifier = {
+			modifier = VIET_reduce_royal_ceremonies
+			years = 10
+		}
+		change_current_court_grandeur = minor_court_grandeur_loss
+		scope:courtier = {
+			add_opinion = {
+				target = root
+				modifier = VIET_opinion_ceremony_advice_good
+			}
+		}
+		stress_impact = {
+			ambitious = minor_stress_impact_gain
+			arrogant = minor_stress_impact_gain
+			zealous = miniscule_stress_impact_gain
+		}
+	}
+
+	option = { # Increase it instead
+		name = VIETmisc.6005.b
+		trigger = {
+			OR = {
+				gold >= 50
+				is_ai = no
+			}
+		}
+		remove_short_term_gold = 50
+		add_character_modifier = {
+			modifier = VIET_increase_royal_ceremonies
+			years = 10
+		}
+		change_current_court_grandeur = minor_court_grandeur_gain
+		scope:courtier = {
+			add_opinion = {
+				target = root
+				modifier = VIET_opinion_ceremony_advice_very_bad
+			}
+		}
+		stress_impact = {
+			humble = minor_stress_impact_gain
+			lazy = minor_stress_impact_gain
+		}
+	}
+
+	option = { # Do nothing
+		name = VIETmisc.6005.c
+		VIET_huge_prestige_gain_effect = yes
+		scope:courtier = {
+			add_opinion = {
+				target = root
+				modifier = VIET_opinion_ceremony_advice_bad
+			}
+		}
+	}
+
+
+	after = {
+		scope:courtier = {
+			clear_court_event_participation = yes
+		}
+	}
+
+}
+
+
+
+
+# Child forgets court etiquette, snobbish courtier calls them out on it
+VIETmisc.6006 = {
+	type = court_event
+	title = VIETmisc.6006.t
+	desc = VIETmisc.6006.desc
+
+	theme = stewardship
+
+	cooldown = { years = 5 }
+
+	lower_right_portrait = scope:nice_courtier
+	lower_center_portrait = scope:child
+	lower_left_portrait = scope:mean_courtier
+	court_scene = {
+		button_position_character = scope:child
+		roles = {
+			scope:nice_courtier = {
+				group = petitioners_group
+				animation = personality_forgiving
+			}
+		}
+		roles = {
+			scope:child = {
+				group = petitioners_group
+				animation = ashamed
+			}
+		}
+		roles = {
+			scope:courtier = {
+				group = petitioners_group
+				animation = personality_vengeful
+			}
+		}
+	}
+
+	trigger = {
+		any_courtier = {
+			is_available_ai_child = yes
+			has_court_event_flag = no
+			age >= 4
+			age <= 12
+		}
+		any_courtier = {
+			is_available_ai_adult = yes
+			has_court_event_flag = no
+			OR = {
+				has_trait = forgiving
+				has_trait = lazy
+				has_trait = content
+				has_trait = patient
+				has_trait = calm
+				has_trait = compassionate
+			}
+			NOR = {
+				has_trait = vengeful
+				has_trait = wrathful
+				has_trait = sadistic
+				has_trait = paranoid
+			}
+		}
+		any_courtier = {
+			is_available_ai_adult = yes
+			has_court_event_flag = no
+			OR = {
+				has_trait = arrogant
+				has_trait = zealous
+				has_trait = impatient
+				has_trait = wrathful
+				has_trait = diligent
+				has_trait = ambitious
+			}
+			NOR = {
+				has_trait = content
+				has_trait = forgiving
+				has_trait = lazy
+			}
+		}
+	}
+
+	immediate = {
+		random_courtier = {
+			limit = {
+				is_available_ai_child = yes
+				has_court_event_flag = no
+				age >= 4
+				age <= 12	
+			}
+			court_event_character_flag_effect = yes
+			save_scope_as = child			
+		}
+		random_courtier = {
+			limit = {
+				is_available_ai_adult = yes
+				has_court_event_flag = no
+				OR = {
+					has_trait = forgiving
+					has_trait = lazy
+					has_trait = content
+					has_trait = patient
+					has_trait = calm
+					has_trait = compassionate
+				}
+				NOR = {
+					has_trait = vengeful
+					has_trait = wrathful
+					has_trait = sadistic
+					has_trait = paranoid
+				}	
+			}
+			court_event_character_flag_effect = yes
+			save_scope_as = nice_courtier			
+		}
+		random_courtier = {
+			limit = {
+				is_available_ai_adult = yes
+				has_court_event_flag = no
+				OR = {
+					has_trait = arrogant
+					has_trait = zealous
+					has_trait = impatient
+					has_trait = wrathful
+					has_trait = diligent
+					has_trait = ambitious
+				}
+				NOR = {
+					has_trait = content
+					has_trait = forgiving
+					has_trait = lazy
+				}	
+			}
+			court_event_character_flag_effect = yes
+			save_scope_as = mean_courtier			
+		}
+		scope:mean_courtier = {
+			add_opinion = {
+				target = scope:child
+				modifier = VIET_opinion_improper_court_behavior
+			}
+		}
+		scope:child = {
+			add_opinion = {
+				target = scope:nice_courtier
+				modifier = VIET_opinion_didnt_chastise_me
+			}
+		}
+	}
+
+	option = { # Not a big deal
+		name = VIETmisc.6006.a
+		stress_impact = {
+			base = miniscule_stress_impact_loss
+		}
+		scope:child = {
+			add_opinion = {
+				target = root
+				modifier = VIET_opinion_didnt_chastise_me
+			}
+		}
+		scope:mean_courtier = {
+			add_opinion = {
+				target = root
+				modifier = VIET_opinion_court_advice_bad
+			}
+		}
+	}
+
+	option = { # Punish the child
+		name = VIETmisc.6006.b
+		VIET_medium_prestige_gain_effect = yes
+		stress_impact = {
+			forgiving = miniscule_stress_impact_gain
+			lazy = miniscule_stress_impact_gain
+		}
+		scope:child = {
+			add_opinion = {
+				target = root
+				modifier = VIET_opinion_chastised_me_in_public
+			}
+		}
+		scope:mean_courtier = {
+			add_opinion = {
+				target = root
+				modifier = VIET_opinion_court_advice_good
+			}
+		}
+	}
+
+	option = { # Don't punish the child
+		name = VIETmisc.6006.c
+		VIET_medium_piety_gain_effect = yes
+		stress_impact = {
+			ambitious = miniscule_stress_impact_gain
+			diligent = miniscule_stress_impact_gain
+		}
+		scope:child = {
+			add_opinion = {
+				target = root
+				modifier = VIET_opinion_didnt_chastise_me
+			}
+		}
+		scope:mean_courtier = {
+			add_opinion = {
+				target = root
+				modifier = VIET_opinion_court_advice_bad
+			}
+		}
+	}
+
+
+	after = {
+		scope:courtier = {
+			clear_court_event_participation = yes
+		}
+	}
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+

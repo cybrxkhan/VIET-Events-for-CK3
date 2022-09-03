@@ -580,4 +580,12 @@ VIET_traveling_physician_template = {
 }
 
 
+VIET_neighbor_envoy_template = {
+	age = { 16 70 }
+	faith = scope:neighbor.faith
+	culture = scope:neighbor.culture
+	gender_female_chance = root_faith_dominant_gender_adjusted_female_chance
+	#random_traits = yes
+}
+
 
