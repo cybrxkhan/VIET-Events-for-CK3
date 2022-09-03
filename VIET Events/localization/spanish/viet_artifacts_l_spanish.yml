@@ -125,6 +125,10 @@
  VIET_house_vase_name:0 "Jarrón de cultura [ROOT.Char.GetCulture.GetNameNoTooltip]"
  VIET_house_vase_desc:0 "Simple pero elegante, este jarrón fue hecho por artesanos [ROOT.Char.GetCulture.GetNameNoTooltip] y está decorado con varias escenas de la vida cotidiana."
  # 1.5.4 - please leave this comment here
+ # 1.7.0 - please leave this comment here
+ VIET_golden_rose_name:0 "Golden Rose"
+ VIET_golden_rose_desc:0 "A mysterious and beautiful rose, made out of solid gold. Who made it? When was it made? Where was it made? Who knows...."
+ # 1.7.1 - please leave this comment here
  VIET_xxxxx_name:0 "xxxxx"
  VIET_xxxxx_desc:0 "xxxxx"
  # 47 Basic

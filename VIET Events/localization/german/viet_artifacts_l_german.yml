@@ -124,7 +124,10 @@
  VIET_useless_map_desc:0 "A map depicting a fictitious, utopian realm. This realm represents one potential conception of what an ideal society would be like."
  VIET_house_vase_name:0 "[ROOT.Char.GetCulture.GetNameNoTooltip] House Vase"
  VIET_house_vase_desc:0 "Simple but elegant, this vase was made by [ROOT.Char.GetCulture.GetNameNoTooltip] artisans, and is decorated with various scenes of everyday life."
- # 1.5.4 - please leave this comment here
+ # 1.7.0 - please leave this comment here
+ VIET_golden_rose_name:0 "Golden Rose"
+ VIET_golden_rose_desc:0 "A mysterious and beautiful rose, made out of solid gold. Who made it? When was it made? Where was it made? Who knows...."
+ # 1.7.1 - please leave this comment here
  VIET_xxxxx_name:0 "xxxxx"
  VIET_xxxxx_desc:0 "xxxxx"
  # 47 Basic

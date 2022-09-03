@@ -16,13 +16,13 @@
  VIET_lusty_argonian_maid_name:0 "The Lusty [ROOT.Char.GetCulture.GetNameNoTooltip] Maid"
  VIET_lusty_argonian_maid_desc:0 "A written copy of a raunchy play about the bawdy misadventures of a [ROOT.Char.GetCulture.GetName] maid, as told in several acts."
  VIET_childhood_blanket_name:0 "Childhood Blanket"
- VIET_childhood_blanket_desc:0 "The childhood blanket of [ROOT.Char.GetTitledFirstName]. It is said to have brought [ROOT.Char.GetHerHim] great comfort, even as an adult, embarassing as it may have been to admit to others."
+ VIET_childhood_blanket_desc:0 "The childhood blanket of [ROOT.Char.GetTitledFirstName]. It is said to have brought [ROOT.Char.GetHerHim] great comfort, even as an adult, embarrassing as it may have been to admit to others."
 
  # BASIC ARTIFACTS
  VIET_abacus_name:0 "Abacus"
  VIET_abacus_desc:0 "An abacus, used to do various calculations, ranging from simple addition to determining square roots." 
  VIET_calipers_name:0 "Beautiful Calipers"
- VIET_calipers_desc:0 "Few calipers are as beautiful as this one, but while they #italic are#! useful for measuring the dimensions of vairous objects, one has to ask what sort of eccentric person keeps a caliper close to their side at all times." 
+ VIET_calipers_desc:0 "Few calipers are as beautiful as this one, but while they #italic are#! useful for measuring the dimensions of various objects, one has to ask what sort of eccentric person keeps a caliper close to their side at all times." 
  VIET_magnifying_glass_name:0 "Magnifying Glass"
  VIET_magnifying_glass_desc:0 "A finely made magnifying glass that supposedly helps one read things better, though if the user is lacking intellectually, this won't help them understand the writings any better." 
  VIET_hourglass_name:0 "Hourglass"
@@ -110,7 +110,7 @@
  VIET_dinosaur_bone_name:0 "Ancient Creature's Bone"
  VIET_dinosaur_bone_desc:0 "The bones of some legendary or mythical beast. Scholars have not been able to determine exactly what manner of creature it came from, and if such a creature might still be around."
  VIET_magical_napkin_name:0 "Fireproof Napkin"
- VIET_magical_napkin_desc:0 "A unique napkin that is designed to be fire-resistant. Made with a type of rock called abestos, it can be cleaned simply by throwing it into a fire, after which all the dirt and grime will magically vanish after a short wait. Besides being good for cleaning oneself after a meal, it is sure to be a source of great entertainment at any gathering!"
+ VIET_magical_napkin_desc:0 "A unique napkin that is designed to be fire-resistant. Made with a type of rock called asbestos, it can be cleaned simply by throwing it into a fire, after which all the dirt and grime will magically vanish after a short wait. Besides being good for cleaning oneself after a meal, it is sure to be a source of great entertainment at any gathering!"
  VIET_thunderstone_talisman_name:0 "Thunderstone Talisman"
  VIET_thunderstone_talisman_desc:0 "A protective talisman made using a thunderstone, special stones of unknown origin - perhaps supernatural, even."
  VIET_patchwork_quilt_name:0 "Patchwork Quilt"
@@ -124,7 +124,10 @@
  VIET_useless_map_desc:0 "A map depicting a fictitious, utopian realm. This realm represents one potential conception of what an ideal society would be like."
  VIET_house_vase_name:0 "[ROOT.Char.GetCulture.GetNameNoTooltip] House Vase"
  VIET_house_vase_desc:0 "Simple but elegant, this vase was made by [ROOT.Char.GetCulture.GetNameNoTooltip] artisans, and is decorated with various scenes of everyday life."
- # 1.5.4 - please leave this comment here
+ # 1.7.0 - please leave this comment here
+ VIET_golden_rose_name:0 "Golden Rose"
+ VIET_golden_rose_desc:0 "A mysterious and beautiful rose, made out of solid gold. Who made it? When was it made? Where was it made? Who knows...."
+ # 1.7.1 - please leave this comment here
  VIET_xxxxx_name:0 "xxxxx"
  VIET_xxxxx_desc:0 "xxxxx"
  # 47 Basic

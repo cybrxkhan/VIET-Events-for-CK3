@@ -20,6 +20,7 @@
 # 2151-2161		Generic 2 (part of the first batch of events made for CK2 VIET Events Reborn)
 # 2162-2170		Medicine
 # 2171-2173		Broccoli
+# 2174-21??		Strange Dreams
 # 
 ############################################################################################################################
 
