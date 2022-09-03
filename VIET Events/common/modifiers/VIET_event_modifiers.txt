@@ -665,28 +665,28 @@ VIET_guards_on_alert = {
 	icon = martial_positive
 	hostile_scheme_resistance_add = 8
 }
-VIET_special_rock = {
-	icon = rock_positive
-	monthly_piety = 0.1
-}
+# VIET_special_rock = {
+# 	icon = rock_positive
+# 	monthly_piety = 0.1
+# }
 VIET_boulder_blessing = {
 	icon = rock_positive
 	monthly_piety = 0.2
 }
-VIET_has_dinosaur_bone = {
-	icon = rock_positive
-	monthly_prestige = 0.3
-}
+# VIET_has_dinosaur_bone = {
+# 	icon = rock_positive
+# 	monthly_prestige = 0.3
+# }
 VIET_religiously_tolerant_ruler = {
 	icon = piety_positive
 	monthly_prestige_gain_mult = 0.04
 	monthly_diplomacy_lifestyle_xp_gain_mult = 0.1
 }
-VIET_magical_napkins = {
-	icon = magic_positive
-	monthly_prestige = 0.2
-	general_opinion = 10
-}
+# VIET_magical_napkins = {
+# 	icon = magic_positive
+# 	monthly_prestige = 0.2
+# 	general_opinion = 10
+# }
 VIET_bad_acne = {
 	icon = health_negative
 	attraction_opinion = -15
@@ -784,12 +784,12 @@ VIET_lapidary_study = {
 	learning = 1
 	monthly_lifestyle_xp_gain_mult = 0.03
 }
-VIET_thunderstone_talisman = {
-	icon = rock_positive
-	intrigue = 1
-	hostile_scheme_resistance_mult = 0.15
-	monthly_piety = 0.3
-}
+# VIET_thunderstone_talisman = {
+# 	icon = rock_positive
+# 	intrigue = 1
+# 	hostile_scheme_resistance_mult = 0.15
+# 	monthly_piety = 0.3
+# }
 VIET_thunderstone_studies = {
 	icon = rock_positive
 	stewardship = 2
@@ -1481,10 +1481,10 @@ VIET_chest_ancient_scroll = {
 	learning = 1
 	monthly_lifestyle_xp_gain_mult = 0.03
 }
-VIET_chest_golden_rose = {
-	icon = fertility_positive
-	monthly_prestige = 0.3
-}
+# VIET_chest_golden_rose = {
+# 	icon = fertility_positive
+# 	monthly_prestige = 0.3
+# }
 VIET_servant_hostage_countdown = {
 	icon = prison_negative
 	monthly_prestige = -0.2

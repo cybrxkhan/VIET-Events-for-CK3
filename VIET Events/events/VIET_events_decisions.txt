@@ -1025,12 +1025,17 @@ VIETmisc.2020 = {
 		character = root
 		animation = personality_rational
 	}
+	artifact = { # To display the artifact in the event-window
+		trigger = { exists = scope:VIET_clutter_artifact }
+		target = scope:VIET_clutter_artifact
+		position = lower_center_portrait
+	}
 	
 	immediate = {
 		remove_character_modifier = VIET_has_mysterious_chest
 		random_list = {
 			# Nothing
-			10 = {
+			15 = {
 				add_character_flag = VIET_decision_chest_nothing
 			}
 			# Small amount of gold
@@ -1062,11 +1067,33 @@ VIETmisc.2020 = {
 				}
 			}
 			# Golden Rose
-			10 = {
+			5 = {
+				# Reduce spam
+				modifier = {
+					add = -3
+					any_character_artifact = {
+						has_variable = VIET_golden_rose_variable
+					}
+				}
 				add_character_flag = VIET_decision_chest_golden_rose
-				add_character_modifier = {
-					modifier = VIET_chest_golden_rose
-					years = 10
+				hidden_effect_new_artifact = {
+					create_artifact = {	
+						name = VIET_golden_rose_name
+						description = VIET_golden_rose_desc
+						type = VIET_clutter
+						visuals = VIET_golden_rose
+						quality = 30
+						wealth = 30
+						modifier = artifact_VIET_golden_rose_modifier
+						max_durability = 40
+						save_scope_as = VIET_clutter_artifact
+						history = {
+							type = created_before_history
+						}
+					}
+					scope:VIET_clutter_artifact = {
+						set_variable = VIET_golden_rose_variable
+					}
 				}
 			}
 		}
@@ -1091,6 +1118,13 @@ VIETmisc.2020 = {
 	option = { # Ok
 		name = VIETmisc.2020.e
 		trigger = { has_character_flag = VIET_decision_chest_golden_rose }
+		show_as_tooltip = {
+			scope:VIET_clutter_artifact = {
+				set_owner = {
+					target = root
+				}
+			}
+		}
 	}
 	
 	after = {

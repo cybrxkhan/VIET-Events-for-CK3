@@ -307,6 +307,11 @@ VIET_useless_map = {
 	asset = ep1_western_box_small_basic_01_a_entity	
 }
 
+VIET_golden_rose = {
+	icon = "artifact_VIET_golden_rose.dds"
+	asset = ep1_western_box_small_basic_01_a_entity	
+}
+
 
 
 

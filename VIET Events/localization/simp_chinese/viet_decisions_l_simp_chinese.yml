@@ -180,7 +180,7 @@
  VIET_decision_view_flower_meadows_in_bloom_desc:0 "我领地内有一处原野，当春天到来时，花开遍地，出了名的美丽。我何不趁这几天亲自一探这良辰美景？"
  VIET_decision_view_flower_meadows_in_bloom_effect_tooltip:0 "你会失去些许[stress|E]，获得一些[piety|E]"
  VIET_decision_view_flower_meadows_in_bloom_req_tooltip:0 "在三月、四月或是五月"
- VIET_decision_view_flower_meadows_in_bloom_req:0 "你[domain|E]内[county|E]有[GetModifier('VIET_reliable_donkeys').GetNameWithTooltip]这一[county_modifier|E]"
+ VIET_decision_view_flower_meadows_in_bloom_req:0 "你[domain|E]内[county|E]有[GetModifier('VIET_famous_flower_meadows').GetNameWithTooltip]这一[county_modifier|E]"
  VIET_decision_view_flower_meadows_in_bloom_confirm:0 "准备出发"
  activity_VIET_trip_flower_meadows:0 "出发欣赏花海原野"
  activity_VIET_trip_flower_meadows_desc:0 "[ACTIVITY.GetOwner.GetNamePossessiveOrMy|U]前去欣赏花开原野"

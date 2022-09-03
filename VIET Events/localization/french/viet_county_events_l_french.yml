@@ -135,7 +135,7 @@
  VIETmisc.3026.b:0 "Splendid idea! Reusing an existing tower is smart."
  # 1.4.8 - please leave this comment here
  VIETmisc.3027.t:0 "Bears!"
- VIETmisc.3027.desc:0 "A few bear attacks recently occured at the edge of a town in [county.GetNameNoTier], killing several people each time, including a couple of my minor officials. Though uncommon, such tragedies are not unheard of, and what is more disturbing is that it has been verified by one of my officials who witnessed all of the attacks that the same bear was behind these separate incidents. The bear managed to get away each time before the town guards could do anything about it, so everyone in the area is on edge."
+ VIETmisc.3027.desc:0 "A few bear attacks recently occurred at the edge of a town in [county.GetNameNoTier], killing several people each time, including a couple of my minor officials. Though uncommon, such tragedies are not unheard of, and what is more disturbing is that it has been verified by one of my officials who witnessed all of the attacks that the same bear was behind these separate incidents. The bear managed to get away each time before the town guards could do anything about it, so everyone in the area is on edge."
  VIETmisc.3027.a:0 "Send in some soldiers to help the guards hunt the beast!"
  VIETmisc.3027.b:0 "Just tell local guards to increase patrols in the area."
  VIETmisc.3027.c:0 "It is unfortunate. But alas, it is what it is, isn't it?"
@@ -407,7 +407,7 @@
  VIETmisc.4006.a:0 "Strange stories, indeed! Who knows what the truth is?"
  VIETmisc.4006.tooltip:0 "For as long as any [county|E] in your [domain|E] has the [GetModifier('VIET_spirit_towns').GetNameWithTooltip] [county_modifier|E], you will have access to a [decision|E] to #V Investigate a Ghost Town#! - are you brave enough to dare attempt to contact the otherworld?"
  VIETmisc.4007.t:0 "An Ending"
- VIETmisc.4007.desc:0 "In one of the larger villages of [county.GetNameNoTier], a respected elder recently passed away. He was beloved by all for his virtue and wisdom. As a community leader for many years, he had good relationship with many, and always strived to improve everyone's lives. Few had anything bad to say about him. His funeral attracted many who wished to pay their final respects, and some even claim that his spirit will provide the land with many blessings before he passes into the afterlife."
+ VIETmisc.4007.desc:0 "In one of the larger villages of [county.GetNameNoTier], a respected elder recently passed away. He was beloved by all for his virtue and wisdom. As a community leader for many years, he had good relationship with many, and always strove to improve everyone's lives. Few had anything bad to say about him. His funeral attracted many who wished to pay their final respects, and some even claim that his spirit will provide the land with many blessings before he passes into the afterlife."
  VIETmisc.4007.a:0 "May his soul rest in peace."
  VIETmisc.4008.t:0 "The Grandmother of All"
  VIETmisc.4008.desc:0 "An old woman passed away in [county.GetNameNoTier] recently. Though a humble villager, this beloved "grandmother of all" lived a very long time, more than a century, some claim. She was of a kind and virtuous temperament, and was also quite sharp and assertive, as she did her best to guide the community. She even received visitors from even local nobles from other villages nearby seeking her wise insights. Regardless, there have already been claims that her spirit will bless these lands for many years to come."
