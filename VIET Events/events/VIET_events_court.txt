@@ -1339,7 +1339,7 @@ VIETmisc.6006 = {
 			}
 			scope:child = {
 				group = event_group
-				animation = ashamed
+				animation = shame
 			}
 			scope:mean_courtier = {
 				group = event_group
@@ -2144,7 +2144,7 @@ VIETmisc.6012 = {
 			}
 			scope:official = {
 				group = petitioners_group
-				animation = ashamed
+				animation = shame
 			}
 		}
 	}

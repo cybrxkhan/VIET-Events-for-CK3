@@ -47,6 +47,7 @@
 # 0241-0248		Positivity
 # 0249-0256		Struggle
 # 0257-0260		VIET Contest Winners
+# 0261-0272		Vassals and Courtiers
 # 
 ############################################################################################################################
 
@@ -23601,3 +23602,1326 @@ VIETmisc.0260 = {
 
 
 }
+
+
+
+
+
+
+
+
+##########################################################################################################################
+#
+# VASSALS AND COURTIERS	0261-0272
+#
+##########################################################################################################################
+
+
+# Rumors about a bad vassal
+VIETmisc.0261 = {
+	type = character_event
+	title = VIETmisc.0261.t
+	desc = VIETmisc.0261.desc
+	theme = vassal
+	
+	left_portrait = { 	
+		character = root
+		animation = stress
+	}
+	
+	right_portrait = { 	
+		character = scope:vassal
+		animation = personality_callous
+	}
+
+	trigger = {
+		any_vassal = {
+			is_available_ai_adult = yes
+		}
+	}
+	
+	weight_multiplier = {
+		base = 1
+		modifier = {
+			add = 0.2
+			has_trait = diligent
+		}
+		modifier = {
+			add = -0.2
+			has_trait = lazy
+		}
+		modifier = {
+			add = 0.2
+			has_trait = ambitious
+		}
+		modifier = {
+			add = -0.2
+			has_trait = content
+		}
+		modifier = {
+			add = 0.2
+			has_trait = gregarious
+		}
+		modifier = {
+			add = -0.2
+			has_trait = shy
+		}
+	}
+
+	immediate = {
+		every_vassal = {
+			limit = {
+				is_available_ai_adult = yes
+			}
+			add_to_list = vassal_candidates
+		}	
+		# Be more likely to pick vassals with actual flaws or likely to piss people off, but not necessarily so
+		random_in_list = {
+			list = vassal_candidates
+			weight = {
+				base = 10
+				modifier = {
+					has_trait = ambitious
+					add = 1
+				}
+				modifier = {
+					has_trait = sadistic
+					add = 1
+				}
+				modifier = {
+					has_trait = arbitrary
+					add = 1
+				}
+				modifier = {
+					has_trait = wrathful
+					add = 1
+				}
+				modifier = {
+					has_trait = vengeful
+					add = 1
+				}
+				modifier = {
+					has_trait = impatient
+					add = 1
+				}
+				modifier = {
+					has_trait = paranoid
+					add = 1
+				}
+				modifier = {
+					has_trait = greedy
+					add = 1
+				}
+				modifier = {
+					has_trait = lazy
+					add = -1
+				}
+				modifier = {
+					has_trait = compassionate
+					add = -1
+				}
+				modifier = {
+					has_trait = just
+					add = -1
+				}
+				modifier = {
+					has_trait = generous
+					add = -1
+				}
+				modifier = {
+					has_trait = gregarious
+					add = -1
+				}
+				modifier = {
+					has_trait = temperate
+					add = -1
+				}
+				modifier = {
+					has_trait = calm
+					add = -1
+				}
+			}
+			save_scope_as = vassal
+		}
+		scope:vassal = {
+			add_character_modifier = {
+				modifier = VIET_nasty_rumors
+				years = 10
+			}
+		}	
+	}
+
+	
+	option = { # Ok
+		name = VIETmisc.0261.a
+		VIET_medium_prestige_loss_effect = yes
+		stress_impact = {
+			paranoid = miniscule_stress_impact_gain
+		}
+	}
+	
+	option = { # Ok
+		name = VIETmisc.0261.b
+		stress_impact = {
+			trusting = miniscule_stress_impact_gain
+		}
+		scope:vassal = {
+			add_opinion = {
+				modifier = angry_opinion
+				target = root
+				opinion = -10
+			}
+		}
+	}
+
+}
+
+
+
+# Vassal attacks a peasant
+VIETmisc.0262 = {
+	type = character_event
+	title = VIETmisc.0262.t
+	desc = VIETmisc.0262.desc
+	theme = realm
+	
+	left_portrait = { 	
+		character = root
+		animation = stress
+	}
+	
+	right_portrait = { 	
+		character = scope:vassal
+		animation = personality_callous
+	}
+
+	trigger = {
+		any_vassal = {
+			is_available_ai_adult = yes
+			OR = {
+				has_trait = arrogant
+				has_trait = wrathful
+				has_trait = vengeful
+				has_trait = brave
+				has_trait = impatient
+			}
+			NOR = {
+				has_trait = humble
+				has_trait = calm
+				has_trait = forgiving
+				has_trait = craven
+			}
+		}
+	}
+	
+	weight_multiplier = {
+		base = 1
+		modifier = {
+			add = 0.2
+			has_trait = diligent
+		}
+		modifier = {
+			add = -0.2
+			has_trait = lazy
+		}
+		modifier = {
+			add = 0.2
+			has_trait = just
+		}
+		modifier = {
+			add = -0.2
+			has_trait = arbitrary
+		}
+		modifier = {
+			add = 0.2
+			has_trait = patient
+		}
+		modifier = {
+			add = -0.2
+			has_trait = impatient
+		}
+	}
+
+	immediate = {
+		random_vassal = {
+			limit = {
+				is_available_ai_adult = yes
+				OR = {
+					has_trait = arrogant
+					has_trait = wrathful
+					has_trait = vengeful
+					has_trait = brave
+					has_trait = impatient
+				}
+				NOR = {
+					has_trait = humble
+					has_trait = calm
+					has_trait = forgiving
+					has_trait = craven
+				}
+			}
+			save_scope_as = vassal
+			add_character_modifier = {
+				modifier = VIET_attacked_peasant_leader
+				years = 6
+			}
+		}
+	}
+
+	
+	option = { # Ok
+		name = VIETmisc.0262.a
+		add_character_modifier = {
+			modifier = VIET_vassals_attacked_peasant
+			years = 6
+		}
+	}
+	
+	option = { # Ok
+		name = VIETmisc.0262.b
+		VIET_huge_piety_loss_effect = yes
+		scope:vassal = {
+			add_opinion = {
+				target = root
+				modifier = VIET_opinion_agreed_peasant
+			}
+		}
+		add_character_modifier = {
+			modifier = VIET_vassals_attacked_peasant
+			years = 6
+		}
+	}
+	
+	option = { # Ok
+		name = VIETmisc.0262.c
+		VIET_huge_prestige_gain_effect = yes
+		scope:vassal = {
+			remove_short_term_gold = 20
+			add_opinion = {
+				target = root
+				modifier = VIET_opinion_forced_compensate_peasant
+			}
+		}
+	}
+
+}
+
+
+
+# Courtier has an injury while traveling outside
+VIETmisc.0263 = {
+	type = character_event
+	title = VIETmisc.0263.t
+	desc = VIETmisc.0263.desc
+	theme = medicine
+	
+	left_portrait = root
+	
+	right_portrait = { 	
+		character = scope:courtier
+		animation = severelywounded
+	}
+
+	trigger = {
+		any_courtier = {
+			is_available_ai_adult = yes
+		}
+	}
+	
+	weight_multiplier = {
+		base = 1
+		modifier = {
+			add = 0.2
+			has_trait = humble
+		}
+		modifier = {
+			add = -0.2
+			has_trait = arrogant
+		}
+		modifier = {
+			add = 0.2
+			has_trait = just
+		}
+		modifier = {
+			add = -0.2
+			has_trait = arbitrary
+		}
+		modifier = {
+			add = 0.2
+			has_trait = compassionate
+		}
+		modifier = {
+			add = -0.2
+			has_trait = callous
+		}
+	}
+
+	immediate = {
+		random_courtier = {
+			limit = {
+				is_available_ai_adult = yes
+			}
+			save_scope_as = courtier
+			increase_wounds_no_death_effect = { REASON = fall }
+		}
+	}
+
+	
+	option = { # Ok
+		name = VIETmisc.0263.a
+		stress_impact = {
+			callous = minor_stress_impact_gain
+			arrogant = miniscule_stress_impact_gain
+			shy = miniscule_stress_impact_gain
+		}
+		VIET_huge_prestige_loss_effect = yes
+		scope:courtier = {
+			add_opinion = {
+				target = root
+				modifier = VIET_opinion_cares_about_me
+			}
+		}
+	}
+	
+	option = { # Ok
+		name = VIETmisc.0263.b
+		trigger = {
+			OR = {
+				gold >= 20
+				is_ai = no
+			}
+		}
+		remove_short_term_gold = 20
+		stress_impact = {
+			callous = medium_stress_impact_gain
+			greedy = minor_stress_impact_gain
+			arrogant = miniscule_stress_impact_gain
+			shy = miniscule_stress_impact_gain
+		}
+		scope:courtier = {
+			add_opinion = {
+				target = root
+				modifier = VIET_opinion_really_cares_about_me
+			}
+		}
+	}
+	
+	option = { # Ok
+		name = VIETmisc.0263.c
+		stress_impact = {
+			compassionate = minor_stress_impact_gain
+			gregarious = miniscule_stress_impact_gain
+			just = miniscule_stress_impact_gain
+		}
+		scope:courtier = {
+			add_opinion = {
+				target = root
+				modifier = VIET_opinion_doesnt_care_about_me
+			}
+		}
+	}
+
+}
+
+
+
+
+
+# Vassal is rumored to be a good leader
+VIETmisc.0264 = {
+	type = character_event
+	title = VIETmisc.0264.t
+	desc = VIETmisc.0264.desc
+	theme = vassal
+	
+	left_portrait = root
+	
+	right_portrait = { 	
+		character = scope:vassal
+		animation = personality_compassionate
+	}
+
+	trigger = {
+		any_vassal = {
+			is_available_ai_adult = yes
+		}
+	}
+	
+	weight_multiplier = {
+		base = 1
+		modifier = {
+			add = 0.2
+			has_trait = diligent
+		}
+		modifier = {
+			add = -0.2
+			has_trait = lazy
+		}
+		modifier = {
+			add = 0.2
+			has_trait = ambitious
+		}
+		modifier = {
+			add = -0.2
+			has_trait = content
+		}
+		modifier = {
+			add = 0.2
+			has_trait = gregarious
+		}
+		modifier = {
+			add = -0.2
+			has_trait = shy
+		}
+	}
+
+	immediate = {
+		every_vassal = {
+			limit = {
+				is_available_ai_adult = yes
+			}
+			add_to_list = vassal_candidates
+		}	
+		# Be more likely to pick vassals with an actual good personality, but not necessarily so
+		random_in_list = {
+			list = vassal_candidates
+			weight = {
+				base = 10
+				modifier = {
+					has_trait = ambitious
+					add = -1
+				}
+				modifier = {
+					has_trait = sadistic
+					add = -1
+				}
+				modifier = {
+					has_trait = arbitrary
+					add = -1
+				}
+				modifier = {
+					has_trait = wrathful
+					add = -1
+				}
+				modifier = {
+					has_trait = vengeful
+					add = -1
+				}
+				modifier = {
+					has_trait = impatient
+					add = -1
+				}
+				modifier = {
+					has_trait = paranoid
+					add = -1
+				}
+				modifier = {
+					has_trait = greedy
+					add = -1
+				}
+				modifier = {
+					has_trait = patient
+					add = 1
+				}
+				modifier = {
+					has_trait = compassionate
+					add = 1
+				}
+				modifier = {
+					has_trait = just
+					add = 1
+				}
+				modifier = {
+					has_trait = generous
+					add = 1
+				}
+				modifier = {
+					has_trait = gregarious
+					add = 1
+				}
+				modifier = {
+					has_trait = temperate
+					add = 1
+				}
+				modifier = {
+					has_trait = calm
+					add = 1
+				}
+			}
+			save_scope_as = vassal
+		}
+		scope:vassal = {
+			add_character_modifier = {
+				modifier = VIET_good_vassal_rumors
+				years = 10
+			}
+		}	
+	}
+
+	
+	option = { # Ok
+		name = VIETmisc.0264.a
+		stress_impact = {
+			ambitious = miniscule_stress_impact_gain
+			arrogant = miniscule_stress_impact_gain
+		}
+	}
+	
+	option = { # Ok
+		name = VIETmisc.0264.b
+		VIET_medium_prestige_gain_effect = yes
+		stress_impact = {
+			humble = miniscule_stress_impact_gain
+			content = miniscule_stress_impact_gain
+		}
+		scope:vassal = {
+			reverse_add_opinion = {
+				target = root
+				modifier = envy_opinion
+				opinion = -10
+			}
+		}
+	}
+
+}
+
+
+# Character enjoys composing vulgar music
+VIETmisc.0265 = {
+	type = character_event
+	title = VIETmisc.0265.t
+	desc = VIETmisc.0265.desc
+	theme = friendly
+	override_background = { event_background = throne_room }
+	
+	left_portrait = {
+		character = scope:prude
+		animation = disapproval
+	}
+	
+	right_portrait = { 	
+		character = scope:musician
+		animation = personality_compassionate
+	}
+
+	trigger = {
+		any_courtier = {
+			is_available_ai_adult = yes
+			OR = {
+				has_trait = poet
+				diplomacy >= decent_skill_rating
+				learning >= decent_skill_rating
+			}
+			NOR = {
+				has_trait = stubborn
+				has_trait = chaste
+				has_trait = wrathful
+				has_trait = zealous
+			}
+		}
+		any_courtier = {
+			is_available_ai_adult = yes
+			OR = {
+				has_trait = stubborn
+				has_trait = chaste
+				has_trait = wrathful
+				has_trait = zealous
+			}
+		}
+	}
+	
+	weight_multiplier = {
+		base = 1
+		modifier = {
+			add = 0.2
+			has_trait = patient
+		}
+		modifier = {
+			add = -0.2
+			has_trait = impatient
+		}
+		modifier = {
+			add = 0.2
+			has_trait = just
+		}
+		modifier = {
+			add = -0.2
+			has_trait = arbitrary
+		}
+		modifier = {
+			add = 0.2
+			has_trait = honest
+		}
+		modifier = {
+			add = -0.2
+			has_trait = deceitful
+		}
+	}
+
+	immediate = {
+		random_courtier = {
+			limit = {
+				is_available_ai_adult = yes
+				OR = {
+					has_trait = poet
+					diplomacy >= decent_skill_rating
+				}
+				NOR = {
+					has_trait = stubborn
+					has_trait = chaste
+					has_trait = wrathful
+					has_trait = zealous
+				}
+			}
+			save_scope_as = musician
+			add_character_modifier = {
+				modifier = VIET_vulgar_music
+				years = 9
+			}
+		}
+		random_courtier = {
+			limit = {
+				is_available_ai_adult = yes
+				NOR = {
+					has_trait = poet
+					diplomacy >= decent_skill_rating
+				}
+				OR = {
+					has_trait = stubborn
+					has_trait = chaste
+					has_trait = wrathful
+					has_trait = zealous
+				}
+			}
+			save_scope_as = prude
+			add_opinion = {
+				target = scope:musician
+				modifier = VIET_opinion_composes_vulgar_music
+			}
+			reverse_add_opinion = {
+				target = scope:musician
+				modifier = VIET_opinion_dislikes_my_music
+			}
+		}	
+	}
+
+	
+	option = { # Ok
+		name = VIETmisc.0265.a
+		stress_impact = {
+			chaste = miniscule_stress_impact_gain
+		}
+		scope:prude = {
+			add_opinion = {
+				target = root
+				modifier = VIET_opinion_supports_vulgar_music
+			}
+		}
+		scope:musician = {
+			add_opinion = {
+				target = root
+				modifier = VIET_opinion_supports_music
+			}
+		}
+	}
+	
+	option = { # Ok
+		name = VIETmisc.0265.b
+		stress_impact = {
+			honest = miniscule_stress_impact_gain
+		}
+		scope:musician = {
+			add_opinion = {
+				target = root
+				modifier = VIET_opinion_discreet_vulgar_music
+			}
+		}
+	}
+	
+	option = { # Ok
+		name = VIETmisc.0265.c
+		stress_impact = {
+			shy = miniscule_stress_impact_gain
+		}
+		scope:prude = {
+			add_opinion = {
+				target = root
+				modifier = VIET_opinion_fellow_prude
+			}
+		}
+		scope:musician = {
+			add_opinion = {
+				target = root
+				modifier = VIET_opinion_dislikes_my_music
+			}
+			reverse_add_opinion = {
+				target = root
+				modifier = VIET_opinion_composes_vulgar_music
+			}
+		}
+	}
+
+}
+
+# Vassal is a robber baron
+VIETmisc.0266 = {
+	type = character_event
+	title = VIETmisc.0266.t
+	desc = VIETmisc.0266.desc
+	theme = friendly
+	override_background = { event_background = throne_room }
+	
+	left_portrait = {
+		character = root
+		animation = stress
+	}
+	
+	right_portrait = { 	
+		character = scope:vassal
+		animation = personality_callous
+	}
+
+	trigger = {
+		any_vassal = {
+			is_available_ai_adult = yes
+			is_landed = yes
+			OR = {
+				has_trait = callous
+				has_trait = sadistic
+				has_trait = greedy
+				has_trait = arbitrary
+				has_trait = ambitious
+			}
+			NOR = {
+				has_trait = compassionate
+				has_trait = just
+				has_trait = generous
+				has_trait = lazy
+			}
+		}
+	}
+	
+	weight_multiplier = {
+		base = 1
+		modifier = {
+			add = 0.2
+			has_trait = diligent
+		}
+		modifier = {
+			add = -0.2
+			has_trait = lazy
+		}
+		modifier = {
+			add = 0.2
+			has_trait = just
+		}
+		modifier = {
+			add = -0.2
+			has_trait = arbitrary
+		}
+		modifier = {
+			add = 0.2
+			has_trait = ambitious
+		}
+		modifier = {
+			add = -0.2
+			has_trait = content
+		}
+	}
+
+	immediate = {
+		random_vassal = {
+			limit = {
+				is_available_ai_adult = yes
+				is_landed = yes
+				OR = {
+					has_trait = callous
+					has_trait = sadistic
+					has_trait = greedy
+					has_trait = arbitrary
+					has_trait = ambitious
+				}
+				NOR = {
+					has_trait = compassionate
+					has_trait = just
+					has_trait = generous
+					has_trait = lazy
+				}
+			}
+			save_scope_as = vassal
+			add_character_modifier = {
+				modifier = VIET_robber_baron
+				years = 10
+			}
+		}
+	}
+
+	
+	option = { # Ok
+		name = VIETmisc.0266.a
+		stress_impact = {
+			just = medium_stress_impact_gain
+			compassionate = minor_stress_impact_gain
+			ambitious = minor_stress_impact_gain
+			generous = miniscule_stress_impact_gain
+			vengeful = miniscule_stress_impact_gain
+			wrathful = miniscule_stress_impact_gain
+		}
+		add_character_modifier = {
+			modifier = VIET_lenient_robber_baron
+			years = 10
+		}
+		scope:vassal = {
+			add_opinion = {
+				target = root
+				modifier = VIET_opinion_off_the_hook
+			}
+		}
+	}
+	
+	option = { # Ok
+		name = VIETmisc.0266.b
+		add_character_modifier = {
+			modifier = VIET_punished_robber_baron
+			years = 10
+		}
+		scope:vassal = {
+			remove_short_term_gold = 50
+			# pay_short_term_gold = {
+			# 	target = root
+			# 	gold = 50
+			# }
+			add_opinion = {
+				target = root
+				modifier = VIET_opinion_made_me_pay_fine
+			}
+		}
+	}
+	
+	option = { # Ok
+		name = VIETmisc.0266.c
+		add_dread = 10
+		VIET_huge_prestige_loss_effect = yes
+		stress_impact = {
+			arbitrary = miniscule_stress_impact_gain
+			patient = miniscule_stress_impact_gain
+			forgiving = miniscule_stress_impact_gain
+		}
+		add_character_modifier = {
+			modifier = VIET_punished_robber_baron
+			years = 10
+		}
+		scope:vassal = {
+			add_opinion = {
+				target = root
+				modifier = VIET_opinion_imprisoned_me
+			}
+		}
+		rightfully_imprison_character_effect = {
+			TARGET = scope:vassal
+			IMPRISONER = root
+		}
+	}
+
+}
+
+
+# Vassal has a capable official who might be convinced to work for you
+VIETmisc.0267 = {
+	type = character_event
+	title = VIETmisc.0267.t
+	desc = VIETmisc.0267.desc
+	theme = vassal
+	
+	left_portrait = scope:vassal
+	
+	right_portrait = scope:official
+
+	trigger = {
+		any_vassal = {
+			is_available_ai_adult = yes
+			is_landed = yes
+		}
+	}
+	
+	weight_multiplier = {
+		base = 1
+		modifier = {
+			add = 0.2
+			has_trait = callous
+		}
+		modifier = {
+			add = -0.2
+			has_trait = compassionate
+		}
+		modifier = {
+			add = 0.2
+			has_trait = arbitrary
+		}
+		modifier = {
+			add = -0.2
+			has_trait = just
+		}
+		modifier = {
+			add = 0.2
+			has_trait = ambitious
+		}
+		modifier = {
+			add = -0.2
+			has_trait = content
+		}
+	}
+
+	immediate = {
+		random_vassal = {
+			limit = {
+				is_available_ai_adult = yes
+				is_landed = yes
+			}
+			save_scope_as = vassal
+		}
+		create_character = {
+			employer = scope:vassal
+			template = random_barrel_character
+			gender_female_chance = root_faith_dominant_gender_female_chance
+			faith = scope:vassal.faith
+			culture = scope:vassal.culture
+			save_scope_as = official
+		}
+		hidden_effect = {
+			scope:official = {
+				random_list = {
+					40 = { add_trait = shrewd }
+					30 = { add_trait = intellect_good_1 }
+					20 = { add_trait = intellect_good_2 }
+					10 = { add_trait = intellect_good_3 }
+				}
+			}
+		}
+	}
+
+	
+	option = { # Ok
+		name = VIETmisc.0267.a
+		trigger = {
+			OR = {
+				gold >= 50
+				is_ai = no
+			}
+		}
+		random_list = {
+			50 = { # Failure
+				desc = VIETmisc.0267.a.toast.failure
+				modifier = {
+					add = 10
+					scope:official = {
+						opinion = {
+							target = scope:vassal
+							value > 0
+						}
+					}
+				}
+				modifier = {
+					add = 10
+					scope:official = {
+						opinion = {
+							target = scope:vassal
+							value > 33
+						}
+					}
+				}
+				modifier = {
+					add = 10
+					scope:official = {
+						opinion = {
+							target = scope:vassal
+							value > 66
+						}
+					}
+				}
+				modifier = {
+					add = 10
+					scope:official = {
+						has_trait = content
+					}
+				}
+				modifier = {
+					add = 10
+					scope:official = {
+						has_trait = lazy
+					}
+				}
+				send_interface_toast = {
+					type = event_toast_effect_bad
+					left_icon = scope:official
+					title = VIETmisc.0267.a.toast.failure
+					VIET_medium_prestige_loss_effect = yes
+				}
+			}
+			50 = { # Success
+				desc = VIETmisc.0267.a.toast.success
+				modifier = {
+					add = 10
+					scope:official = {
+						opinion = {
+							target = scope:vassal
+							value < 0
+						}
+					}
+				}
+				modifier = {
+					add = 10
+					scope:official = {
+						opinion = {
+							target = scope:vassal
+							value < -33
+						}
+					}
+				}
+				modifier = {
+					add = 10
+					scope:official = {
+						opinion = {
+							target = scope:vassal
+							value < -66
+						}
+					}
+				}
+				modifier = {
+					add = 10
+					scope:official = {
+						has_trait = ambitious
+					}
+				}
+				modifier = {
+					add = 10
+					scope:official = {
+						has_trait = greedy
+					}
+				}
+				send_interface_toast = {
+					type = event_toast_effect_good
+					left_icon = scope:official
+					title = VIETmisc.0267.a.toast.success
+					add_courtier = scope:official					
+					pay_short_term_gold = {
+						target = scope:official
+						gold = 50
+					}
+					scope:vassal = {
+						add_opinion = {
+							target = root
+							modifier = VIET_opinion_poached_official
+						}
+					}
+				}
+			}
+		}
+		stress_impact = {
+			greedy = minor_stress_impact_gain
+			paranoid = miniscule_stress_impact_gain
+		}
+	}
+	
+	option = { # Ok
+		name = VIETmisc.0267.b
+		duel = {
+			skill = diplomacy
+			target = scope:official
+			10 = { # Failure
+				compare_modifier = {
+					value = scope:duel_value
+					multiplier = -1.1
+				}
+				desc = VIETmisc.0267.b.toast.failure
+				send_interface_toast = {
+					type = event_toast_effect_bad
+					left_icon = scope:official
+					title = VIETmisc.0267.b.toast.failure
+					VIET_medium_prestige_loss_effect = yes
+				}
+			}
+			10 = { # Success
+				compare_modifier = {
+					value = scope:duel_value
+					multiplier = 1.1
+				}
+				desc = VIETmisc.0267.b.toast.success
+				send_interface_toast = {
+					type = event_toast_effect_good
+					left_icon = scope:official
+					title = VIETmisc.0267.b.toast.success
+					add_courtier = scope:official					
+					scope:vassal = {
+						add_opinion = {
+							target = root
+							modifier = VIET_opinion_poached_official
+						}
+					}
+				}
+			}
+		}
+		stress_impact = {
+			shy = minor_stress_impact_gain
+			lazy = miniscule_stress_impact_gain
+		}
+	}
+	
+	option = { # Ok
+		name = VIETmisc.0267.c
+		stress_impact = {
+			ambitious = minor_stress_impact_gain
+		}
+	}
+
+}
+
+
+
+# Vassal recently lost a lot of money and begs for help
+VIETmisc.0268 = {
+	type = character_event
+	title = VIETmisc.0268.t
+	desc = VIETmisc.0268.desc
+	theme = corruption
+	
+	left_portrait = {
+		character = root
+		animation = personality_callous
+	}	
+	right_portrait = {
+		character = scope:vassal
+		animation = beg
+	}	
+
+	trigger = {
+		gold >= 50
+		any_vassal = {
+			is_available_ai_adult = yes
+			gold <= 100
+		}
+	}
+	
+	weight_multiplier = {
+		base = 1
+		modifier = {
+			add = 0.2
+			has_trait = generous
+		}
+		modifier = {
+			add = -0.2
+			has_trait = greedy
+		}
+		modifier = {
+			add = 0.2
+			has_trait = trusting
+		}
+		modifier = {
+			add = -0.2
+			has_trait = paranoid
+		}
+		modifier = {
+			add = 0.2
+			has_trait = humble
+		}
+		modifier = {
+			add = -0.2
+			has_trait = arrogant
+		}
+	}
+
+	immediate = {
+		random_vassal = {
+			limit = {
+				is_available_ai_adult = yes
+				gold <= 100
+			}
+			save_scope_as = vassal
+			remove_short_term_gold = 150
+		}
+	}
+
+	
+	option = { # Ok
+		name = VIETmisc.0268.a
+		scope:vassal = {
+			add_opinion = {
+				target = root
+				modifier = VIET_opinion_refused_to_help_my_debt_problems
+			}
+		}
+		stress_impact = {
+			generous = minor_stress_impact_gain
+			compassionate = miniscule_stress_impact_gain
+			trusting = miniscule_stress_impact_gain
+		}
+	}
+	
+	option = { # Ok
+		name = VIETmisc.0268.b	
+		if = {
+			limit = {
+				can_add_hook = {
+					target = scope:vassal
+					type = indebted_hook
+				}
+			}
+			add_hook = {
+				target = scope:vassal
+				type = indebted_hook
+			}
+		}	
+		pay_short_term_gold = {
+			target = scope:vassal
+			gold = 50
+		}
+		scope:vassal = {
+			add_opinion = {
+				target = root
+				modifier = VIET_opinion_helped_my_debt_problems
+				opinion = 15
+			}
+		}
+		stress_impact = {
+			greedy = minor_stress_impact_gain
+			paranoid = miniscule_stress_impact_gain
+			callous = miniscule_stress_impact_gain
+		}
+	}
+	
+	option = { # Ok
+		name = VIETmisc.0268.c		
+		pay_short_term_gold = {
+			target = scope:vassal
+			gold = 50
+		}
+		scope:vassal = {
+			add_opinion = {
+				target = root
+				modifier = VIET_opinion_helped_my_debt_problems
+				opinion = 50
+			}
+		}
+		progress_towards_friend_effect = {
+			CHARACTER = scope:vassal
+			OPINION = no
+		}
+		stress_impact = {
+			greedy = medium_stress_impact_gain
+			paranoid = minor_stress_impact_gain
+			callous = minor_stress_impact_gain
+			ambitious = miniscule_stress_impact_gain
+		}
+	}
+
+}
+
+
+
+
+
+
+
+
+
+
