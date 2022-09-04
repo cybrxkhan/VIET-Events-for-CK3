@@ -588,3 +588,25 @@ VIET_neighbor_envoy_template = {
 }
 
 
+VIET_corrupt_official_template = {
+	age = { 25 60 }
+	faith = scope:neighbor.faith
+	culture = scope:neighbor.culture
+	gender_female_chance = root_faith_dominant_gender_female_chance
+	#Personality
+	random_traits_list = {
+		count = 3
+		ambitious = {}
+		arrogant = {}
+		arbitrary = {}
+		cynical = {}
+		greedy = {}
+		wrathful = {}
+		lustful = {}
+		callous = {}
+		sadistic = {}
+	}
+	random_traits = yes
+}
+
+
