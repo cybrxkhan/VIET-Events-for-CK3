@@ -1,9 +1,8 @@
 ﻿
 VIET_basic_traveler_template = {
-	age = { 16 45 }
+	age = { 16 60 }
 	trait = adventurer
-	gender_female_chance = 33
-	dynasty = none
+	gender_female_chance = root_faith_dominant_gender_adjusted_female_chance
 	random_traits = yes
 }
 
@@ -139,7 +138,7 @@ VIET_famous_courtesan_template = {
 VIET_famous_traveler_template = {
 	age = { 30 60 }
 	trait = adventurer
-	gender_female_chance = root_faith_dominant_gender_female_chance
+	gender_female_chance = root_faith_dominant_gender_adjusted_female_chance
 	culture = root.culture
 	faith = root.faith
 	random_traits = yes
