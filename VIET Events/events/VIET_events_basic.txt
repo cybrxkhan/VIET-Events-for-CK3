@@ -23915,7 +23915,7 @@ VIETmisc.0263 = {
 	desc = VIETmisc.0263.desc
 	theme = medicine
 	
-	left_portrait = root
+	#left_portrait = root
 	
 	right_portrait = { 	
 		character = scope:courtier
@@ -24170,6 +24170,7 @@ VIETmisc.0264 = {
 	option = { # Ok
 		name = VIETmisc.0264.b
 		VIET_medium_prestige_gain_effect = yes
+		VIET_medium_piety_loss_effect = yes
 		stress_impact = {
 			humble = miniscule_stress_impact_gain
 			content = miniscule_stress_impact_gain
@@ -24911,6 +24912,581 @@ VIETmisc.0268 = {
 			paranoid = minor_stress_impact_gain
 			callous = minor_stress_impact_gain
 			ambitious = miniscule_stress_impact_gain
+		}
+	}
+
+}
+
+
+
+# Courtier recently got some money and wants to give you some
+VIETmisc.0269 = {
+	type = character_event
+	title = VIETmisc.0269.t
+	desc = VIETmisc.0269.desc
+	theme = stewardship_wealth_focus
+	
+	left_portrait = {
+		character = root
+		animation = happiness
+	}	
+	right_portrait = {
+		character = scope:courtier
+		animation = steward
+	}	
+
+	trigger = {
+		any_courtier = {
+			is_available_ai_adult = yes
+			NOT = { is_close_or_extended_family_of = root }
+			# Shouldn't be someone that hates you too much
+			opinion = {
+				target = root
+				value >= -25
+			}
+		}
+	}
+	
+	weight_multiplier = {
+		base = 1
+		modifier = {
+			add = 0.2
+			has_trait = compassionate
+		}
+		modifier = {
+			add = -0.2
+			has_trait = callous
+		}
+		modifier = {
+			add = 0.2
+			has_trait = trusting
+		}
+		modifier = {
+			add = -0.2
+			has_trait = paranoid
+		}
+		modifier = {
+			add = 0.2
+			has_trait = humble
+		}
+		modifier = {
+			add = -0.2
+			has_trait = arrogant
+		}
+	}
+
+	immediate = {
+		random_courtier = {
+			limit = {
+				is_available_ai_adult = yes
+				NOT = { is_close_or_extended_family_of = root }
+				# Shouldn't be someone that hates you too much
+				opinion = {
+					target = root
+					value >= -25
+				}
+			}
+			save_scope_as = courtier
+			add_gold = 200
+		}
+	}
+
+	
+	option = { # Ok
+		name = VIETmisc.0269.a
+		scope:courtier = {
+			pay_short_term_gold = {
+				target = root
+				gold = 50
+			}
+			reverse_add_opinion = {
+				target = root
+				modifier = gift_opinion
+				opinion = 20
+			}
+		}
+		stress_impact = {
+			generous = minor_stress_impact_gain
+			paranoid = minor_stress_impact_gain
+		}
+	}
+	
+	option = { # Ok
+		name = VIETmisc.0269.b
+		VIET_huge_piety_gain_effect = yes
+		scope:courtier = {
+			pay_short_term_gold = {
+				target = root
+				gold = 50
+			}
+			if = {
+				limit = {
+					can_add_hook = {
+						target = root
+						type = indebted_hook
+					}
+				}
+				add_hook = {
+					target = root
+					type = indebted_hook
+				}
+			}
+			add_opinion = {
+				target = root
+				modifier = VIET_opinion_gracious
+			}
+			reverse_add_opinion = {
+				target = root
+				modifier = gift_opinion
+				opinion = 20
+			}
+		}
+		progress_towards_friend_effect = {
+			CHARACTER = scope:courtier
+			OPINION = no
+		}
+		stress_impact = {
+			ambitious = minor_stress_impact_gain
+			arrogant = miniscule_stress_impact_gain
+			paranoid = medium_stress_impact_gain
+		}
+	}
+	
+	option = { # Refuse gift
+		name = VIETmisc.0269.c
+		trigger = {
+			NOT = { has_trait = paranoid }
+		}
+		VIET_huge_prestige_gain_effect = yes
+		scope:courtier = {
+			add_opinion = {
+				target = root
+				modifier = VIET_opinion_rejected_my_gift
+			}
+		}
+		stress_impact = {
+			greedy = minor_stress_impact_gain
+			trusting = minor_stress_impact_gain
+			humble = miniscule_stress_impact_gain
+		}
+	}
+	
+	option = { # Refuse gift
+		name = VIETmisc.0269.d
+		trigger = {
+			has_trait = paranoid 
+		}
+		trait = paranoid
+		VIET_huge_prestige_gain_effect = yes
+		scope:courtier = {
+			add_opinion = {
+				target = root
+				modifier = VIET_opinion_rejected_my_gift
+			}
+		}
+		stress_impact = {
+			greedy = minor_stress_impact_gain
+			trusting = minor_stress_impact_gain
+			humble = miniscule_stress_impact_gain
+		}
+	}
+
+}
+
+
+
+# Courtier sees a strange mysterious woman
+VIETmisc.0270 = {
+	type = character_event
+	title = VIETmisc.0270.t
+	desc = VIETmisc.0270.desc
+	theme = death
+	override_background = { event_background = garden }
+	
+	left_portrait = {
+		character = root
+		animation = shock
+	}	
+	right_portrait = {
+		character = scope:courtier
+		animation = pain
+	}	
+
+	trigger = {
+		any_courtier = {
+			is_available_ai_adult = yes
+		}
+	}
+	
+	weight_multiplier = {
+		base = 1
+		modifier = {
+			add = 0.2
+			has_trait = paranoid
+		}
+		modifier = {
+			add = -0.2
+			has_trait = trusting
+		}
+		modifier = {
+			add = 0.2
+			has_trait = compassionate
+		}
+		modifier = {
+			add = -0.2
+			has_trait = callous
+		}
+		modifier = {
+			add = 0.2
+			has_trait = gregarious
+		}
+		modifier = {
+			add = -0.2
+			has_trait = shy
+		}
+	}
+
+	immediate = {
+		random_courtier = {
+			limit = {
+				is_available_ai_adult = yes
+			}
+			save_scope_as = courtier
+			add_character_modifier = {
+				modifier = VIET_shadowy_mysterious_woman
+				years = 10
+			}
+			stress_impact = {
+				base = minor_stress_impact_gain
+				paranoid = minor_stress_impact_gain
+				craven = minor_stress_impact_gain
+			}
+		}
+	}
+
+	
+	option = { # Ok
+		name = VIETmisc.0270.a
+	}
+
+}
+
+
+
+
+# Councilor feels light-headed and requests to leave to rest, but they're needed for an important meeting
+VIETmisc.0271 = {
+	type = character_event
+	title = VIETmisc.0271.t
+	desc = VIETmisc.0271.desc
+	theme = stewardship_duty_focus
+	
+	left_portrait = root
+	right_portrait = {
+		character = scope:councilor
+		animation = stress
+	}	
+
+	trigger = {
+		any_councillor = {
+			is_available_ai_adult = yes
+		}
+	}
+	
+	weight_multiplier = {
+		base = 1
+		modifier = {
+			add = 0.2
+			has_trait = diligent
+		}
+		modifier = {
+			add = -0.2
+			has_trait = lazy
+		}
+		modifier = {
+			add = 0.2
+			has_trait = ambitious
+		}
+		modifier = {
+			add = -0.2
+			has_trait = content
+		}
+		modifier = {
+			add = 0.2
+			has_trait = humble
+		}
+		modifier = {
+			add = -0.2
+			has_trait = arrogant
+		}
+	}
+
+	immediate = {
+		random_councillor = {
+			limit = {
+				is_available_ai_adult = yes
+			}
+			save_scope_as = councilor
+			add_character_modifier = {
+				modifier = VIET_frequent_light_headedness
+				years = 10
+			}
+		}
+	}
+
+	
+	option = { # Ok
+		name = VIETmisc.0271.a
+		scope:councilor = {
+			add_opinion = {
+				target = root
+				modifier = VIET_opinion_let_leave_meeting
+			}
+			random = {
+				chance = 50
+				remove_character_modifier = VIET_frequent_light_headedness
+			}
+		}
+		progress_towards_friend_effect = {
+			CHARACTER = scope:councilor
+			OPINION = no
+		}
+		stress_impact = {
+			ambitious = minor_stress_impact_gain
+			diligent = minor_stress_impact_gain
+			callous = miniscule_stress_impact_gain
+			impatient = miniscule_stress_impact_gain
+			paranoid = miniscule_stress_impact_gain
+		}
+		custom_tooltip = VIETmisc.0271.a.tooltip
+		random_list = {
+			20 = {
+				modifier = {
+					add = 4
+					diplomacy >= decent_skill_rating
+				}
+				modifier = {
+					add = 4
+					diplomacy >= high_skill_rating
+				}
+				modifier = {
+					add = 4
+					diplomacy >= very_high_skill_rating
+				}
+				show_chance = no
+				desc = VIETmisc.0271.toast.success
+				send_interface_toast = {
+					type = event_toast_effect_good
+					left_icon = ROOT
+					title = VIETmisc.0271.toast.success
+					VIET_massive_prestige_gain_effect = yes
+				}
+			}
+			80 = {
+				show_chance = no
+				desc = VIETmisc.0271.toast.failure
+				send_interface_toast = {
+					type = event_toast_effect_bad
+					left_icon = ROOT
+					title = VIETmisc.0271.toast.failure
+					VIET_massive_prestige_loss_effect = yes
+				}
+			}
+		}
+	}
+	
+	option = { # Ok
+		name = VIETmisc.0271.b		
+		scope:councilor = {
+			add_opinion = {
+				target = root
+				modifier = VIET_opinion_forced_stay_meeting
+			}
+		}
+		progress_towards_rival_effect = {
+			CHARACTER = scope:councilor
+			OPINION = no
+		}
+		stress_impact = {
+			compassionate = minor_stress_impact_gain
+			content = miniscule_stress_impact_gain
+			trusting = miniscule_stress_impact_gain
+		}
+		custom_tooltip = VIETmisc.0271.b.tooltip
+		random_list = {
+			80 = {
+				modifier = {
+					add = 4
+					diplomacy >= decent_skill_rating
+				}
+				modifier = {
+					add = 4
+					diplomacy >= high_skill_rating
+				}
+				modifier = {
+					add = 4
+					diplomacy >= very_high_skill_rating
+				}
+				show_chance = no
+				desc = VIETmisc.0271.toast.success
+				send_interface_toast = {
+					type = event_toast_effect_good
+					left_icon = ROOT
+					title = VIETmisc.0271.toast.success
+					VIET_massive_prestige_gain_effect = yes
+				}
+			}
+			20 = {
+				show_chance = no
+				desc = VIETmisc.0271.toast.failure
+				send_interface_toast = {
+					type = event_toast_effect_bad
+					left_icon = ROOT
+					title = VIETmisc.0271.toast.failure
+					VIET_massive_prestige_loss_effect = yes
+				}
+			}
+		}
+	}
+
+}
+
+
+# Councilor comes extremely tardy
+VIETmisc.0272 = {
+	type = character_event
+	title = VIETmisc.0272.t
+	desc = VIETmisc.0272.desc
+	theme = stewardship_duty_focus
+	
+	left_portrait = {
+		character = root
+		animation = anger
+	}
+	right_portrait = {
+		character = scope:councilor
+		animation = personality_irrational
+	}	
+
+	trigger = {
+		any_councillor = {
+			is_available_ai_adult = yes
+			NOR = {
+				has_trait = diligent
+				has_trait = ambitious
+			}
+		}
+	}
+	
+	weight_multiplier = {
+		base = 1
+		modifier = {
+			add = 0.2
+			has_trait = diligent
+		}
+		modifier = {
+			add = -0.2
+			has_trait = lazy
+		}
+		modifier = {
+			add = 0.2
+			has_trait = calm
+		}
+		modifier = {
+			add = -0.2
+			has_trait = wrathful
+		}
+		modifier = {
+			add = 0.2
+			has_trait = patient
+		}
+		modifier = {
+			add = -0.2
+			has_trait = impatient
+		}
+	}
+
+	immediate = {
+		random_councillor = {
+			limit = {
+				is_available_ai_adult = yes
+				NOR = {
+					has_trait = diligent
+					has_trait = ambitious
+				}
+			}
+			save_scope_as = councilor
+			add_character_modifier = {
+				modifier = VIET_tardy_to_meetings
+				years = 10
+			}
+		}
+	}
+
+	
+	option = { # Ok
+		name = VIETmisc.0272.a
+		VIET_medium_prestige_loss_effect = yes
+		scope:councilor = {
+			add_opinion = {
+				target = root
+				modifier = VIET_opinion_off_the_hook
+			}
+		}
+		every_councillor = {
+			limit = {
+				NOT = { this = scope:councilor }
+			}
+			add_opinion = {
+				target = root
+				modifier = VIET_opinion_didnt_chastise_tardy_councilor
+			}
+		}
+		stress_impact = {
+			vengeful = minor_stress_impact_gain
+			ambitious = minor_stress_impact_gain
+			paranoid = miniscule_stress_impact_gain
+			diligent = miniscule_stress_impact_gain
+			impatient = miniscule_stress_impact_gain
+			wrathful = miniscule_stress_impact_gain
+		}
+	}
+	
+	option = { # Ok
+		name = VIETmisc.0272.b
+		scope:councilor = {
+			add_opinion = {
+				target = root
+				modifier = VIET_opinion_chastise_tardy
+			}
+		}
+		stress_impact = {
+			forgiving = minor_stress_impact_gain
+			trusting = miniscule_stress_impact_gain
+			lazy = miniscule_stress_impact_gain
+			patient = miniscule_stress_impact_gain
+		}
+		random = {
+			chance = 30
+			send_interface_toast = {
+				type = event_toast_effect_good
+				left_icon = ROOT
+				title = VIETmisc.0272.b.tooltip
+				scope:councilor = {
+					remove_character_modifier = VIET_tardy_to_meetings
+				}
+				# if = {
+				# 	limit = {
+				# 		scope:councilor = {
+				# 			has_trait = lazy
+				# 		}
+				# 	}
+				# 	hidden_effect = {
+				# 		remove_trait = lazy
+				# 	}
+				# }
+				# add_trait = diligent
+			}
 		}
 	}
 

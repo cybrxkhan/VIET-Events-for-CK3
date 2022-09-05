@@ -1038,7 +1038,7 @@
  VIET_mysterious_happy_child:0 "Mysterious, Happy Child"
  VIET_mysterious_happy_child_desc:0 "This character claims to have encountered a mysterious child, who, according to this character, appears to have found some kind of happy ending. Regardless, no one has ever seen this child, so it's probable that this was simply some strange dream. Probably."
  VIET_harbor_dream:0 "Dreamt of an Exhilarating Harbor and Ship"
- VIET_shared_dream:0 "Shared a Strange but Pleasant Dream"
+ VIET_opinion_shared_dream:0 "Shared a Strange but Pleasant Dream"
  VIET_kdrama_dream_girls_pov:0 "Dreamt of an Innocent Love Story"
  VIET_kdrama_dream_girls_pov_desc:0 ""He was handsome and brooding, yet she knew there was more that meets the eye when it came to this annoying man who was almost like an arrogant older brother to her. Because, in truth, she saw in him not a brother, but a soulmate.""
  VIET_kdrama_dream_boys_pov:0 "$VIET_kdrama_dream_girls_pov$"

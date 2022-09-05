@@ -537,5 +537,194 @@ VIET_opinion_disagrees_intellectual = {
 	decaying = yes
 	stacking = yes
 }
+VIET_opinion_doesnt_care_about_inapproriate_courtiers = {
+	years = 10
+	opinion = -10
+	decaying = yes
+	stacking = yes
+}
+VIET_opinion_improper_court_behavior = {
+	years = 10
+	opinion = -10
+	decaying = yes
+	stacking = yes
+}
+VIET_opinion_chastised_me_in_private = {
+	years = 10
+	opinion = -5
+	decaying = yes
+	stacking = yes
+}
+VIET_opinion_didnt_chastise_me = {
+	years = 10
+	opinion = 10
+	decaying = yes
+	stacking = yes
+}
+VIET_opinion_rude_envoy = {
+	years = 20
+	opinion = -30
+	decaying = yes
+}
+VIET_opinion_court_advice_good = {
+	years = 10
+	opinion = 10
+	decaying = yes
+	stacking = yes
+}
+VIET_opinion_court_advice_bad = {
+	years = 10
+	opinion = -10
+	decaying = yes
+	stacking = yes
+}
+VIET_opinion_ceremony_advice_good = {
+	years = 10
+	opinion = 10
+	decaying = yes
+}
+VIET_opinion_ceremony_advice_bad = {
+	years = 10
+	opinion = -10
+	decaying = yes
+}
+VIET_opinion_ceremony_advice_very_bad = {
+	years = 10
+	opinion = -20
+	decaying = yes
+}
+VIET_opinion_stupid_sexy_flanders = {
+	years = 100
+	opinion = -20
+}
+VIET_opinion_spoiled_child = {
+	years = 10
+	opinion = -5
+}
+VIET_opinion_nagging_parent = {
+	years = 10
+	opinion = -5
+}
+VIET_opinion_reward_corrupt_official = {
+	years = 10
+	opinion = 15
+}
+VIET_opinion_didnt_punish_corrupt_official = {
+	years = 10
+	opinion = -15
+}
+VIET_opinion_lax_servants = {
+	years = 5
+	opinion = -5
+}
+VIET_opinion_forced_compensate_peasant = {
+	years = 15
+	opinion = -15
+}
+VIET_opinion_agreed_peasant = {
+	years = 15
+	opinion = 10
+}
+VIET_opinion_cares_about_me = {
+	years = 10
+	opinion = 15
+	decaying = yes
+	stacking = yes
+}
+VIET_opinion_really_cares_about_me = {
+	years = 10
+	opinion = 30
+	decaying = yes
+	stacking = yes
+}
+VIET_opinion_stealing_my_thunder = {
+	years = 10
+	opinion = -10
+	decaying = yes
+	stacking = yes
+}
+VIET_opinion_supports_vulgar_music = {
+	years = 10
+	opinion = -10
+}
+VIET_opinion_composes_vulgar_music = {
+	years = 10
+	opinion = -20
+}
+VIET_opinion_dislikes_my_music = {
+	years = 10
+	opinion = -20
+}
+VIET_opinion_fellow_prude = {
+	years = 10
+	opinion = 10
+}
+VIET_opinion_supports_music = {
+	years = 10
+	opinion = 20
+}
+VIET_opinion_discreet_vulgar_music = {
+	years = 10
+	opinion = -5
+}
+VIET_opinion_off_the_hook = {
+	years = 10
+	opinion = 10
+	decaying = yes
+	stacking = yes
+}
+VIET_opinion_imprisoned_me = {
+	years = 100
+	opinion = -40
+}
+VIET_opinion_poached_official = {
+	years = 25
+	opinion = -25
+}
+VIET_opinion_helped_my_debt_problems = {
+	years = 25
+	opinion = 35
+}
+VIET_opinion_refused_to_help_my_debt_problems = {
+	years = 25
+	opinion = -15
+}
+VIET_opinion_gracious = {
+	years = 10
+	opinion = 15
+}
+VIET_opinion_rejected_my_gift = {
+	years = 10
+	opinion = -10
+}
+VIET_opinion_rudely_rejected_my_gift = {
+	years = 10
+	opinion = -25
+}
+VIET_opinion_forced_stay_meeting = {
+	years = 10
+	opinion = -20
+}
+VIET_opinion_let_leave_meeting = {
+	years = 10
+	opinion = 20
+}
+VIET_opinion_didnt_chastise_tardy_councilor = {
+	years = 10
+	opinion = -5
+}
+VIET_opinion_chastise_tardy = {
+	years = 10
+	opinion = -10
+}
+VIET_opinion_shared_dream = {
+	years = 5
+	opinion = 10
+	decaying = yes
+}
+VIET_opinion_made_me_pay_fine = {
+	years = 5
+	opinion = -20
+}
 
 

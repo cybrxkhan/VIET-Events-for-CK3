@@ -2291,9 +2291,201 @@ VIET_lenient_robber_baron = {
 	county_opinion_add = -10
 }
 VIET_punished_robber_baron = {
-	icon = county_modifier_corruption_negative
+	icon = county_modifier_corruption_positive
 	monthly_prestige = 0.15
 	county_opinion_add = 10
+}
+VIET_improper_court_behavior = {
+	icon = social_negative
+	diplomacy_per_prestige_level = -1
+	monthly_prestige_gain_mult = -0.05
+}
+VIET_blunder_court_ceremony = {
+	icon = mask_negative
+	monthly_prestige = -0.3
+}
+VIET_recently_spruced_up_court = {
+	icon = grandeur_positive
+	monthly_prestige_gain_mult = 0.05
+	monthly_court_grandeur_change_add = 0.1
+}
+VIET_reduce_royal_ceremonies = {
+	icon = stewardship_positive
+	tax_mult = 0.04
+	monthly_court_grandeur_change_add = -0.1
+	monthly_prestige_gain_mult = -0.05
+}
+VIET_increase_royal_ceremonies = {
+	icon = stewardship_positive
+	tax_mult = -0.04
+	monthly_court_grandeur_change_add = 0.1
+	monthly_prestige_gain_mult = 0.05
+}
+VIET_distractingly_attractive = {
+	icon = fertility_positive
+	diplomacy = 1
+	intrigue = 1
+	attraction_opinion = 10
+}
+VIET_admits_mistakes = {
+	icon = social_positive
+	diplomacy = 1
+	intrigue = -1
+	monthly_prestige = 0.1
+}
+VIET_recognizes_mistakes = {
+	icon = social_positive
+	intrigue = 1
+	monthly_lifestyle_xp_gain_mult = 0.01
+}
+VIET_more_stairs = {
+	icon = county_modifier_development_positive
+	monthly_court_grandeur_change_add = 0.2
+}
+VIET_overworks_servants = {
+	icon = social_positive
+	general_opinion = -2
+	county_opinion_add = -3
+}
+VIET_obedient_child = {
+	icon = family_positive
+	monthly_piety = 0.2
+	monthly_prestige = -0.2
+}
+VIET_caught_corrupt_official = {
+	icon = dread_positive
+	monthly_prestige = 0.2
+	county_opinion_add = 3
+	general_opinion = 5
+}
+VIET_didnt_punish_corrupt_official = {
+	icon = dread_negative
+	county_opinion_add = -5
+	general_opinion = -5
+}
+VIET_punished_corrupt_official = {
+	icon = dread_positive
+	county_opinion_add = 5
+	general_opinion = 5
+}
+VIET_strict_towards_servants = {
+	icon = dread_negative
+	county_opinion_add = -3
+}
+VIET_ominous_incidents_at_court = {
+	icon = magic_negative
+	diplomacy = -1
+}
+VIET_rumors_bad_courtier = {
+	icon = social_negative
+	diplomacy = -1
+	county_opinion_add = -4
+}
+VIET_rumors_good_courtier = {
+	icon = social_positive
+	diplomacy = 1
+	county_opinion_add = 4
+}
+VIET_songs_good_courtier = {
+	icon = letter_positive
+	diplomacy = 2
+	county_opinion_add = 8
+}
+VIET_nasty_rumors = {
+	icon = social_negative
+	diplomacy = -1
+	county_opinion_add = -3
+}
+VIET_attacked_peasant_leader = {
+	icon = blood_negative
+	diplomacy = -1
+	county_opinion_add = -10
+}
+VIET_vassals_attacked_peasant = {
+	icon = blood_negative
+	county_opinion_add = -3
+}
+VIET_good_vassal_rumors = {
+	icon = prestige_positive
+	diplomacy = 1
+	liege_opinion = 5
+}
+VIET_vulgar_music = {
+	icon = letter_positive
+	monthly_prestige = -0.2
+	monthly_piety = -0.2
+	stress_gain_mult = -0.15
+	stress_loss_mult = 0.15
+}
+VIET_shadowy_mysterious_woman = {
+	icon = magic_negative
+	health = -0.1
+	stress_gain_mult = 0.1
+}
+VIET_frequent_light_headedness = {
+	icon = health_negative
+	health = -0.2
+	stress_gain_mult = 0.15
+	stress_loss_mult = -0.15
+}
+VIET_tardy_to_meetings = {
+	icon = health_negative
+	diplomacy = -1
+	intrigue = -1
+	monthly_prestige = -0.3
+	monthly_prestige_gain_mult = -0.15
+}
+VIET_mysterious_child = {
+	icon = magic_negative
+	monthly_prestige = -0.2
+	health = -0.3
+	stress_gain_mult = 0.25
+	stress_loss_mult = -0.25
+}
+VIET_mysterious_happy_child = {
+	icon = magic_positive
+	monthly_piety = 0.2
+	stress_gain_mult = -0.25
+	stress_loss_mult = 0.25
+}
+VIET_harbor_dream = {
+	icon = compass_positive
+	diplomatic_range_mult = 0.03
+	monthly_lifestyle_xp_gain_mult = 0.01
+}
+VIET_kdrama_dream_girls_pov = {
+	icon = love_positive
+	diplomacy = 1
+	attraction_opinion = 5
+	seduce_scheme_power_mult = 0.05
+}
+VIET_kdrama_dream_boys_pov = {
+	icon = love_positive
+	diplomacy = 1
+	attraction_opinion = 5
+	seduce_scheme_power_mult = 0.05
+}
+VIET_dreamscape_dream = {
+	icon = magic_positive
+	monthly_piety = 0.2
+	monthly_lifestyle_xp_gain_mult = 0.01
+}
+VIET_campfire_dream = {
+	icon = outdoors_positive
+	monthly_piety = 0.1
+	monthly_lifestyle_xp_gain_mult = 0.02
+}
+VIET_vague_dream_of_dreamer_female = {
+	icon = fertility_positive
+	monthly_prestige = 0.1
+	monthly_piety = 0.1
+	monthly_lifestyle_xp_gain_mult = 0.03
+}
+VIET_vague_dream_of_dreamer_male = {
+	icon = fertility_positive
+	monthly_prestige = 0.1
+	monthly_piety = 0.1
+	monthly_lifestyle_xp_gain_mult = 0.03
 }
 
 

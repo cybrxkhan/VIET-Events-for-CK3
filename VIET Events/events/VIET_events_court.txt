@@ -991,7 +991,7 @@ VIETmisc.6003 = {
 			wrathful = miniscule_stress_impact_gain
 		}
 		VIET_huge_prestige_loss_effect = yes
-		scope:relative = {
+		scope:courtier = {
 			add_opinion = {
 				target = root
 				modifier = VIET_opinion_didnt_chastise_me
@@ -1009,7 +1009,7 @@ VIETmisc.6003 = {
 			content = miniscule_stress_impact_gain
 		}
 		VIET_huge_prestige_gain_effect = yes
-		scope:relative = {
+		scope:courtier = {
 			add_opinion = {
 				target = root
 				modifier = VIET_opinion_chastised_me_in_public
@@ -1025,7 +1025,7 @@ VIETmisc.6003 = {
 			wrathful = miniscule_stress_impact_gain
 		}
 		VIET_large_prestige_gain_effect = yes
-		scope:relative = {
+		scope:courtier = {
 			add_opinion = {
 				target = root
 				modifier = VIET_opinion_chastised_me_in_private
@@ -1766,7 +1766,7 @@ VIETmisc.6008 = {
 
 	option = { # Admit your mistake
 		name = VIETmisc.6008.a
-		VIET_medium_prestige_loss_effect = yes
+		VIET_huge_prestige_loss_effect = yes
 		stress_impact = {
 			deceitful = miniscule_stress_impact_gain
 			arrogant = miniscule_stress_impact_gain
@@ -1779,7 +1779,7 @@ VIETmisc.6008 = {
 
 	option = { # Recognize but do not admit your mistake
 		name = VIETmisc.6008.b
-		VIET_medium_prestige_loss_effect = yes
+		VIET_huge_prestige_loss_effect = yes
 		stress_impact = {
 			honest = miniscule_stress_impact_gain
 			impatient = miniscule_stress_impact_gain
@@ -1792,7 +1792,7 @@ VIETmisc.6008 = {
 
 	option = { # Uh... what were we doing?
 		name = VIETmisc.6008.c
-		VIET_medium_prestige_loss_effect = yes
+		#VIET_medium_prestige_loss_effect = yes
 		stress_impact = {
 			honest = miniscule_stress_impact_gain
 			humble = miniscule_stress_impact_gain
@@ -2190,6 +2190,10 @@ VIETmisc.6012 = {
 			}
 			save_scope_as = courtier
 			court_event_character_flag_effect = yes
+			add_character_modifier = {
+				modifier = VIET_caught_corrupt_official
+				years = 10
+			}
 		}	
 		
 		random_held_title = {
@@ -2620,6 +2624,13 @@ VIETmisc.6016 = {
 
 	option = { # Repress mentions of them
 		name = VIETmisc.6016.b
+		trigger = {
+			OR = {
+				gold >= 25
+				is_ai = no
+			}
+		}
+		remove_short_term_gold = 25
 		add_dread = 10
 		VIET_massive_prestige_loss_effect = yes
 	}
@@ -2696,6 +2707,7 @@ VIETmisc.6017 = {
 			}
 		}
 		remove_short_term_gold = 50
+		VIET_massive_prestige_gain_effect = yes
 		add_character_modifier = {
 			modifier = VIET_songs_good_courtier
 			years = 5
