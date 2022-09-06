@@ -7,6 +7,7 @@
 # 1023-1029		Cinnamon Addict (Cinnamon Toast Crunch)
 # 1030-1035		Lost Love - a beloved servant falls ill and is dying
 # 1036-1044		Dream of the Final Journey
+# 1052-1069		Mysterious Child
 # 
 ############################################################################################################################
 
@@ -1796,6 +1797,690 @@ VIETmisc.1044 = {
 		}
 	}
 }
+
+
+
+
+
+
+############################################################################################################
+# 
+# MYSTERIOUS CHILD
+# Your character encounters what appears to be the apparition of a child who does spoopy things -
+# but assuming this isn't a hallucination (a big if) is this spirit actually malevolent?
+# 
+############################################################################################################
+
+
+
+
+# A strange child appears in front of you
+VIETmisc.1052 = {
+	type = court_event
+	title = VIETmisc.1052.t
+	desc = VIETmisc.1052.desc
+	theme = death
+
+	lower_right_portrait = scope:child
+	lower_left_portrait = root
+	court_scene = {
+		button_position_character = root
+		court_event_force_open = yes
+		show_timeout_info = no
+		should_pause_time = yes
+		roles = {
+			scope:child = {
+				group = event_group
+				animation = sick
+			}
+			root = {
+				group = event_group
+				animation = shock
+			}
+		}
+	}
+	
+	trigger = {		
+		is_ruler = yes
+		has_royal_court = yes
+		NOT = { has_character_flag = VIET_mysterious_child_character }
+		NOT = { has_global_variable = VIET_mysterious_child_happened }
+		any_courtier_or_guest = {
+			is_available_ai_adult = yes
+		}
+	}
+	
+	weight_multiplier = {
+		base = 1
+		modifier = {
+			add = 0.2
+			has_trait = paranoid
+		}
+		modifier = {
+			add = -0.2
+			has_trait = trusting
+		}
+		modifier = {
+			add = 0.2
+			has_trait = zealous
+		}
+		modifier = {
+			add = -0.2
+			has_trait = cynical
+		}
+		modifier = {
+			add = 0.2
+			has_trait = compassionate
+		}
+		modifier = {
+			add = -0.2
+			has_trait = sadistic
+		}
+	}
+	
+	immediate = {
+		create_character = {
+			location = root.capital_province
+			culture = root.culture
+			faith = root.faith
+			gender_female_chance = 50
+			age = { 4 10 }
+			random_traits = yes
+			save_scope_as = child
+		}
+		hidden_effect = {
+			scope:child = {
+				death = {
+					death_reason = death_mysterious
+				}
+			}
+		}	
+	}
+	
+	
+	option = {
+		name = VIETmisc.1052.a
+		add_character_flag = VIET_mysterious_child_character
+		trigger_event = VIETmisc.1053
+	}
+}
+
+
+# The child comes closer
+VIETmisc.1053 = {
+	type = court_event
+	title = VIETmisc.1053.t
+	desc = VIETmisc.1053.desc
+	theme = death
+
+	lower_right_portrait = scope:child
+	lower_left_portrait = root
+	court_scene = {
+		button_position_character = root
+		court_event_force_open = yes
+		show_timeout_info = no
+		should_pause_time = yes
+		roles = {
+			scope:child = {
+				group = event_group
+				animation = beg
+			}
+			root = {
+				group = event_group
+				animation = fear
+			}
+		}
+	}
+	
+	
+	option = {
+		name = VIETmisc.1053.a
+		add_character_flag = VIET_mysterious_child_spoopy_ending
+		stress_impact = {
+			trusting = miniscule_stress_impact_gain
+			compassionate = miniscule_stress_impact_gain
+		}
+		custom_description_no_bullet = {
+			text = VIETmisc.1053.a.tooltip
+		}
+		trigger_event = VIETmisc.1054
+	}
+	
+	option = {
+		name = VIETmisc.1053.b
+		#add_character_flag = VIET_mysterious_child_hopeful_ending
+		VIET_massive_prestige_loss_effect = yes
+		stress_impact = {
+			base = miniscule_stress_impact_gain
+			paranoid = minor_stress_impact_gain
+			craven = minor_stress_impact_gain
+			callous = miniscule_stress_impact_gain
+			sadistic = miniscule_stress_impact_gain
+			wrathful = miniscule_stress_impact_gain
+			ambitious = miniscule_stress_impact_gain
+			arrogant = miniscule_stress_impact_gain
+		}
+		custom_description_no_bullet = {
+			text = VIETmisc.1053.b.tooltip
+		}
+		trigger_event = VIETmisc.1064
+	}
+
+}
+
+# You wake up - was the child real?
+VIETmisc.1054 = {
+	type = court_event
+	title = VIETmisc.1054.t
+	desc = VIETmisc.1054.desc
+	theme = death
+
+	lower_right_portrait = scope:courtier
+	lower_left_portrait = root
+	court_scene = {
+		button_position_character = root
+		court_event_force_open = yes
+		show_timeout_info = no
+		should_pause_time = yes
+		roles = {
+			scope:courtier = {
+				group = petitioners_group
+				animation = personality_honorable
+			}
+		}
+	}
+
+	immediate = {
+		random_courtier_or_guest = {
+			limit = {
+				is_available_ai_adult = yes
+			}
+			save_scope_as = courtier
+		}
+	}
+	
+	
+	option = {
+		name = VIETmisc.1054.a
+	}
+
+	after = {
+		if = {
+			limit = {
+				has_character_flag = VIET_mysterious_child_spoopy_ending
+			}
+			trigger_event = VIETmisc.1055
+		}
+		else = {			
+			trigger_event = VIETmisc.1065
+		}
+		clear_saved_scope = courtier
+	}	
+}
+
+
+# Footsteps
+VIETmisc.1055 = {
+	type = character_event
+	title = VIETmisc.1055.t	
+	desc = VIETmisc.1055.desc
+	theme = unfriendly	
+	override_background = { event_background = corridor_day }
+	
+	left_portrait = {
+		character = root
+		animation = paranoia
+	}
+
+	option = { # ok
+		name = VIETmisc.1055.a
+		custom_description_no_bullet = {
+			text = VIETmisc.mysterious_child_song
+		}
+		trigger_event = VIETmisc.1056
+	}
+}
+
+
+# Child's giggle
+VIETmisc.1056 = {
+	type = character_event
+	title = VIETmisc.1056.t	
+	desc = VIETmisc.1056.desc
+	theme = friendly	
+	override_background = { event_background = corridor_night }
+	
+	right_portrait = {
+		character = root
+		animation = paranoia
+	}
+
+	option = { # ok
+		name = VIETmisc.1056.a
+		custom_description_no_bullet = {
+			text = VIETmisc.mysterious_child_song
+		}
+		trigger_event = VIETmisc.1057
+	}
+}
+
+# Hear voices outside
+VIETmisc.1057 = {
+	type = character_event
+	title = VIETmisc.1057.t	
+	desc = VIETmisc.1057.desc
+	theme = unfriendly	
+	override_background = { event_background = corridor_night }
+	
+	left_portrait = {
+		character = root
+		animation = paranoia
+	}
+
+	option = { # ok
+		name = VIETmisc.1057.a		
+		stress_impact = {
+			base = miniscule_stress_impact_gain
+			craven = miniscule_stress_impact_gain
+			paranoid = miniscule_stress_impact_gain
+		}
+		custom_description_no_bullet = {
+			text = VIETmisc.mysterious_child_song
+		}
+		trigger_event = VIETmisc.1058
+	}
+}
+
+# You realize you're hearing it again
+VIETmisc.1058 = {
+	type = character_event
+	title = VIETmisc.1058.t	
+	desc = VIETmisc.1058.desc
+	theme = unfriendly	
+	#override_background = { event_background = corridor_day }
+	
+	right_portrait = {
+		character = root
+		animation = rage
+	}
+
+	option = { # ok
+		name = VIETmisc.1058.a	
+		stress_impact = {
+			base = miniscule_stress_impact_gain
+			craven = miniscule_stress_impact_gain
+			paranoid = miniscule_stress_impact_gain
+		}
+		custom_description_no_bullet = {
+			text = VIETmisc.mysterious_child_song
+		}
+		trigger_event = VIETmisc.1059
+	}
+}
+
+# Someone brings the problem up to you and asks if everything's alright
+VIETmisc.1059 = {
+	type = character_event
+	title = VIETmisc.1059.t	
+	desc = VIETmisc.1059.desc
+	theme = intrigue	
+	override_icon = {
+		reference = "gfx/interface/icons/event_types/type_duty.dds"
+	}
+	
+	left_portrait = {
+		character = root
+		animation = paranoia
+	}
+	right_portrait = {
+		character = scope:courtier
+		animation = worry
+	}
+
+	immediate = {
+		random_courtier_or_guest = {
+			limit = {
+				is_available_ai_adult = yes
+			}
+			save_scope_as = courtier
+		}
+	}
+
+	option = { # ok
+		name = VIETmisc.1059.a
+		custom_description_no_bullet = {
+			text = VIETmisc.mysterious_child_song
+		}
+		trigger_event = VIETmisc.1060
+	}
+
+	after = {
+		clear_saved_scope = courtier
+	}
+}
+
+# No one is in the room with you
+VIETmisc.1060 = {
+	type = character_event
+	title = VIETmisc.1060.t	
+	desc = VIETmisc.1060.desc
+	theme = unfriendly
+	override_icon = {
+		reference = "gfx/interface/icons/event_types/type_stress.dds"
+	}
+	
+	left_portrait = {
+		character = root
+		animation = rage
+	}
+
+	option = { # ok
+		name = VIETmisc.1060.a	
+		stress_impact = {
+			base = miniscule_stress_impact_gain
+			craven = miniscule_stress_impact_gain
+			paranoid = miniscule_stress_impact_gain
+		}
+		custom_description_no_bullet = {
+			text = VIETmisc.mysterious_child_song
+		}
+		trigger_event = VIETmisc.1061
+	}
+}
+
+# Awkward when you're at a feast
+VIETmisc.1061 = {
+	type = character_event
+	title = VIETmisc.1061.t	
+	desc = VIETmisc.1061.desc
+	theme = stress
+	override_background = { event_background = feast }
+	
+	right_portrait = {
+		character = root
+		animation = sadness
+	}
+
+	option = { # ok
+		name = VIETmisc.1061.a	
+		stress_impact = {
+			base = miniscule_stress_impact_gain
+			craven = miniscule_stress_impact_gain
+			paranoid = miniscule_stress_impact_gain
+		}
+		custom_description_no_bullet = {
+			text = VIETmisc.mysterious_child_song
+		}
+		trigger_event = VIETmisc.1062
+	}
+}
+
+# The child returns
+VIETmisc.1062 = {
+	type = character_event
+	title = VIETmisc.1062.t	
+	desc = VIETmisc.1062.desc
+	theme = death
+	override_background = { event_background = corridor_night }
+	
+	left_portrait = {
+		character = root
+		animation = shock
+	}
+	right_portrait = {
+		character = scope:child
+		animation = sadness
+	}
+
+	option = { # ok
+		name = VIETmisc.1062.a
+		custom_description_no_bullet = {
+			text = VIETmisc.mysterious_child_song
+		}
+		trigger_event = VIETmisc.1063
+	}
+}
+
+# You are permanently scarred
+VIETmisc.1063 = {
+	type = character_event
+	title = VIETmisc.1063.t	
+	desc = VIETmisc.1063.desc
+	theme = death
+	override_background = { event_background = bedchamber }
+
+	option = { # ok
+		name = VIETmisc.1063.a	
+		random = {
+			chance = 50
+			add_trait = lunatic_1
+		}
+		stress_impact = {
+			base = medium_stress_impact_gain
+			craven = miniscule_stress_impact_gain
+			paranoid = miniscule_stress_impact_gain
+		}
+		add_character_modifier = {
+			modifier = VIET_mysterious_child
+		}
+		custom_description_no_bullet = {
+			text = VIETmisc.1063.tooltip
+		}
+	}
+}
+
+
+
+# You agree to help the child
+VIETmisc.1064 = {
+	type = court_event
+	title = VIETmisc.1064.t
+	desc = VIETmisc.1064.desc
+	theme = death
+
+	lower_right_portrait = scope:child
+	lower_left_portrait = root
+	court_scene = {
+		button_position_character = root
+		court_event_force_open = yes
+		show_timeout_info = no
+		should_pause_time = yes
+		roles = {
+			scope:child = {
+				group = event_group
+				animation = sadness
+			}
+			root = {
+				group = event_group
+				animation = throne_room_kneel_1
+			}
+		}
+	}
+	
+	
+	option = {
+		name = VIETmisc.1064.a
+		trigger_event = VIETmisc.1054
+	}
+
+}
+
+
+# Mystic claims to help you with your problem
+VIETmisc.1065 = {
+	type = character_event
+	title = VIETmisc.1065.t	
+	desc = VIETmisc.1065.desc
+	theme = diplomacy_foreign_affairs_focus
+	override_icon = {
+		reference = "gfx/interface/icons/event_types/type_stress.dds"
+	}
+
+	left_portrait = {
+		character = root
+		animation = stress
+	}
+	right_portrait = {
+		character = scope:elder
+		animation = personality_content
+	}	
+
+	immediate = {
+		create_character = {
+			location = root.capital_province
+			template = mendicant_mystic_character
+			save_scope_as = elder
+		}		
+	}
+
+	option = { # ok
+		name = VIETmisc.1065.a
+		VIET_huge_prestige_loss_effect = yes
+		remove_short_term_gold = 20
+		stress_impact = {
+			greedy = miniscule_stress_impact_gain
+			cynical = miniscule_stress_impact_gain
+			paranoid = miniscule_stress_impact_gain
+			ambitious = miniscule_stress_impact_gain
+		}
+		trigger_event = VIETmisc.1066
+	}
+
+	option = { # ok
+		name = VIETmisc.1065.b
+		stress_impact = {
+			trusting = miniscule_stress_impact_gain
+			patient = miniscule_stress_impact_gain
+			zealous = miniscule_stress_impact_gain
+			craven = miniscule_stress_impact_gain
+		}
+		trigger_event = VIETmisc.1055
+		hidden_effect = {
+			scope:elder = {		
+				death = {
+					death_reason = death_disappearance
+				}
+			}		
+		}	
+	}
+}
+
+
+
+# Mystic performs rituals
+VIETmisc.1066 = {
+	type = character_event
+	title = VIETmisc.1066.t	
+	desc = VIETmisc.1066.desc
+	theme = faith
+	override_background = { event_background = sitting_room }
+
+	left_portrait = {
+		character = root
+		animation = beg
+	}
+	right_portrait = {
+		character = scope:elder
+		animation = personality_compassionate
+	}	
+
+
+	option = { # ok
+		name = VIETmisc.1066.a
+		stress_impact = {
+			base = miniscule_stress_impact_loss
+			trusting = miniscule_stress_impact_loss
+			zealous = miniscule_stress_impact_loss
+			craven = miniscule_stress_impact_loss
+		}
+		hidden_effect = {
+			scope:elder = {		
+				death = {
+					death_reason = death_disappearance
+				}
+			}		
+		}	
+		trigger_event = VIETmisc.1067
+	}
+}
+
+
+# After the ritual
+VIETmisc.1067 = {
+	type = character_event
+	title = VIETmisc.1067.t	
+	desc = VIETmisc.1067.desc
+	theme = friendly
+
+	right_portrait = {
+		character = root
+		animation = personality_irrational
+	}
+
+
+	option = { # ok
+		name = VIETmisc.1067.a
+		trigger_event = VIETmisc.1068
+	}
+}
+
+# The child appears again... but happy and not as creepy this time
+VIETmisc.1068 = {
+	type = character_event
+	title = VIETmisc.1068.t	
+	desc = VIETmisc.1068.desc
+	theme = friendly
+
+	left_portrait = {
+		character = root
+		animation = shock
+	}
+	right_portrait = {
+		character = scope:child
+		animation = ecstasy
+	}
+
+
+	option = { # ok
+		name = VIETmisc.1068.a
+		custom_description_no_bullet = {
+			text = VIETmisc.happy_child_song
+		}
+		trigger_event = VIETmisc.1069
+	}
+}
+
+# Happy ending
+VIETmisc.1069 = {
+	type = character_event
+	title = VIETmisc.1069.t	
+	desc = VIETmisc.1069.desc
+	theme = friendly
+
+	left_portrait = {
+		character = root
+		animation = personality_content
+	}
+
+
+	option = { # ok
+		name = VIETmisc.1069.a
+		VIET_massive_piety_gain_effect = yes
+		stress_impact = {
+			base = minor_stress_impact_loss
+			compassionate = miniscule_stress_impact_loss
+			zealous = miniscule_stress_impact_loss
+			content = miniscule_stress_impact_loss
+		}
+		add_character_modifier = {
+			modifier = VIET_mysterious_happy_child
+		}
+		custom_description_no_bullet = {
+			text = VIETmisc.1069.tooltip
+		}
+	}
+}
+
 
 
 

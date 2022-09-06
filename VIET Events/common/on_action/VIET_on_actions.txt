@@ -998,7 +998,7 @@ VIET_events_event_chain_pulse = {
 		# Death
 		100 = VIETmisc.0101		# Come across an unknown servant - is he a spirit testing one's hospitality?
 		
-		#Meet the Dreamer
+		# Meet the Dreamer
 		100 = VIETmisc.8000		# You meet the Dreamer
 		
 		# Qi Ma the Liar
@@ -1010,6 +1010,9 @@ VIET_events_event_chain_pulse = {
 		
 		# Strange Trails (Lord Huron) inspired
 		100 = VIETmisc.0170				# Fool for Love (my favorite Lord Huron song!) - meet the Fool for Love by the side of the road
+
+		# Mysterious Child
+		100 = VIETmisc.1052				# A strange child appears in front of you
 		
 	}
 }

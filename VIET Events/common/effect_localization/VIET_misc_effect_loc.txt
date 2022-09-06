@@ -1,0 +1,24 @@
+﻿
+VIETmisc.mysterious_child_song = {
+	first = VIETmisc.mysterious_child_song
+}
+
+VIETmisc.happy_child_song = {
+	first = VIETmisc.happy_child_song
+}
+
+VIETmisc.1053.a.tooltip = {
+	first = VIETmisc.1053.a.tooltip
+}
+
+VIETmisc.1053.b.tooltip = {
+	first = VIETmisc.1053.b.tooltip
+}
+
+VIETmisc.1063.tooltip = {
+	first = VIETmisc.1063.tooltip
+}
+
+VIETmisc.1069.tooltip = {
+	first = VIETmisc.1069.tooltip
+}
