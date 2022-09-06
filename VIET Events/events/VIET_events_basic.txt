@@ -23343,6 +23343,7 @@ VIETmisc.0260 = {
 
 	# Mainly keep it to Europe and Middle East regions
 	trigger = {
+		has_game_rule = VIET_normal_universe_events
 		capital_province = {
 			OR = {
 				geographical_region = world_middle_east_persia

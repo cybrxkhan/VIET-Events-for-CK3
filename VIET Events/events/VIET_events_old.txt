@@ -20,7 +20,7 @@
 # 2151-2161		Generic 2 (part of the first batch of events made for CK2 VIET Events Reborn)
 # 2162-2170		Medicine
 # 2171-2173		Broccoli
-# 2174-21??		Strange Dreams
+# 2174-2188		Strange Dreams
 # 
 ############################################################################################################################
 
@@ -12433,3 +12433,57 @@ VIETold.2173 = {
 	}
 }
 
+
+#############################################
+# Strange Dreams 2174-2188
+#############################################
+
+# Dream of a great ship in a harbor/port
+# VIETold.2174 = {
+# 	type = character_event
+# 	title = VIETold.2174.t	
+# 	desc = VIETold.2174.desc
+# 	theme = friendly
+# 	override_background = { event_background = docks }
+	
+# 	right_portrait = {
+# 		character = root
+# 		animation = happiness
+# 	}
+
+# 	weight_multiplier = {
+# 		base = 1
+# 		modifier = {
+# 			add = 0.2
+# 			has_trait = shy
+# 		}
+# 		modifier = {
+# 			add = -0.2
+# 			has_trait = gregarious
+# 		}
+# 		modifier = {
+# 			add = 0.2
+# 			has_trait = humble
+# 		}
+# 		modifier = {
+# 			add = -0.2
+# 			has_trait = arrogant
+# 		}
+# 		modifier = {
+# 			add = 0.2
+# 			has_trait = honest
+# 		}
+# 		modifier = {
+# 			add = -0.2
+# 			has_trait = deceitful
+# 		}
+# 	}
+
+# 	option = { # ok
+# 		name = VIETold.2174.a
+# 		stress_impact = {
+# 			paranoid = miniscule_stress_impact_gain
+# 			gluttonous = miniscule_stress_impact_loss
+# 		}
+# 	}
+# }

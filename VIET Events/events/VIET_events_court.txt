@@ -516,422 +516,422 @@ VIETmisc.6001 = {
 ##################################################################
 
 
-# # Relative with poor behavior at court
-# VIETmisc.6002 = {
-# 	type = court_event
-# 	title = VIETmisc.6002.t
-# 	desc = VIETmisc.6002.desc
+# Relative with poor behavior at court
+VIETmisc.6002 = {
+	type = court_event
+	title = VIETmisc.6002.t
+	desc = VIETmisc.6002.desc
 
-# 	theme = diplomacy
+	theme = diplomacy
 
-# 	cooldown = { years = 5 }
+	cooldown = { years = 5 }
 
-# 	lower_right_portrait = scope:relative
-# 	lower_left_portrait = scope:complainer
-# 	court_scene = {
-# 		button_position_character = scope:relative
-# 		roles = {
-# 			scope:relative = {
-# 				group = event_group
-# 				animation = personality_callous
-# 			}
-# 			scope:complainer = {
-# 				group = event_group
-# 				animation = disapproval
-# 			}
-# 		}
-# 	}
+	lower_right_portrait = scope:relative
+	lower_left_portrait = scope:complainer
+	court_scene = {
+		button_position_character = scope:relative
+		roles = {
+			scope:relative = {
+				group = event_group
+				animation = personality_callous
+			}
+			scope:complainer = {
+				group = event_group
+				animation = disapproval
+			}
+		}
+	}
 
-# 	trigger = {
-# 		is_ruler = yes
-# 		has_royal_court = yes
-# 		any_courtier = {
-# 			is_available_ai_adult = yes
-# 			has_court_event_flag = no
-# 			is_close_or_extended_family_of = root
-# 			OR = {
-# 				has_trait = arrogant
-# 				has_trait = lazy
-# 				has_trait = lunatic_1
-# 				has_trait = lunatic_genetic
-# 				has_trait = wrathful
-# 				has_trait = impatient
-# 				has_trait = possessed_1
-# 				has_trait = possessed_genetic
-# 				has_trait = callous
-# 				has_trait = sadistic
-# 			}
-# 		}
-# 		any_courtier = {
-# 			is_available_ai_adult = yes
-# 			has_court_event_flag = no
-# 			NOT = { is_close_family_of = root }
-# 			OR = {
-# 				has_trait = arrogant
-# 				has_trait = diligent
-# 				has_trait = just
-# 				has_trait = zealous
-# 				has_trait = impatient
-# 				has_trait = stubborn
-# 				has_trait = wrathful
-# 			}
-# 			NOR = {
-# 				has_trait = shy
-# 				has_trait = craven
-# 				has_trait = lazy
-# 			}
-# 		}
-# 	}
+	trigger = {
+		is_ruler = yes
+		has_royal_court = yes
+		any_courtier = {
+			is_available_ai_adult = yes
+			has_court_event_flag = no
+			is_close_or_extended_family_of = root
+			OR = {
+				has_trait = arrogant
+				has_trait = lazy
+				has_trait = lunatic_1
+				has_trait = lunatic_genetic
+				has_trait = wrathful
+				has_trait = impatient
+				has_trait = possessed_1
+				has_trait = possessed_genetic
+				has_trait = callous
+				has_trait = sadistic
+			}
+		}
+		any_courtier = {
+			is_available_ai_adult = yes
+			has_court_event_flag = no
+			NOT = { is_close_family_of = root }
+			OR = {
+				has_trait = arrogant
+				has_trait = diligent
+				has_trait = just
+				has_trait = zealous
+				has_trait = impatient
+				has_trait = stubborn
+				has_trait = wrathful
+			}
+			NOR = {
+				has_trait = shy
+				has_trait = craven
+				has_trait = lazy
+			}
+		}
+	}
 
-# 	immediate = {
-# 		random_courtier = {
-# 			limit = {
-# 				is_available_ai_adult = yes
-# 				has_court_event_flag = no
-# 				is_close_or_extended_family_of = root
-# 				OR = {
-# 					has_trait = arrogant
-# 					has_trait = lazy
-# 					has_trait = lunatic_1
-# 					has_trait = lunatic_genetic
-# 					has_trait = wrathful
-# 					has_trait = impatient
-# 					has_trait = possessed_1
-# 					has_trait = possessed_genetic
-# 					has_trait = callous
-# 					has_trait = sadistic
-# 				}				
-# 			}
-# 			save_scope_as = relative
-# 			court_event_character_flag_effect = yes
-# 			add_character_modifier = {
-# 				modifier = VIET_improper_court_behavior
-# 				years = 10
-# 			}
-# 		}
-# 		random_courtier = {
-# 			limit = {
-# 				is_available_ai_adult = yes
-# 				has_court_event_flag = no
-# 				NOT = { is_close_family_of = root }
-# 				OR = {
-# 					has_trait = arrogant
-# 					has_trait = diligent
-# 					has_trait = just
-# 					has_trait = zealous
-# 					has_trait = impatient
-# 					has_trait = stubborn
-# 					has_trait = wrathful
-# 				}
-# 				NOR = {
-# 					has_trait = shy
-# 					has_trait = craven
-# 					has_trait = lazy
-# 				}
-# 			}
-# 			save_scope_as = complainer
-# 			court_event_character_flag_effect = yes
-# 		}
+	immediate = {
+		random_courtier = {
+			limit = {
+				is_available_ai_adult = yes
+				has_court_event_flag = no
+				is_close_or_extended_family_of = root
+				OR = {
+					has_trait = arrogant
+					has_trait = lazy
+					has_trait = lunatic_1
+					has_trait = lunatic_genetic
+					has_trait = wrathful
+					has_trait = impatient
+					has_trait = possessed_1
+					has_trait = possessed_genetic
+					has_trait = callous
+					has_trait = sadistic
+				}				
+			}
+			save_scope_as = relative
+			court_event_character_flag_effect = yes
+			add_character_modifier = {
+				modifier = VIET_improper_court_behavior
+				years = 10
+			}
+		}
+		random_courtier = {
+			limit = {
+				is_available_ai_adult = yes
+				has_court_event_flag = no
+				NOT = { is_close_family_of = root }
+				OR = {
+					has_trait = arrogant
+					has_trait = diligent
+					has_trait = just
+					has_trait = zealous
+					has_trait = impatient
+					has_trait = stubborn
+					has_trait = wrathful
+				}
+				NOR = {
+					has_trait = shy
+					has_trait = craven
+					has_trait = lazy
+				}
+			}
+			save_scope_as = complainer
+			court_event_character_flag_effect = yes
+		}
 
-# 		scope:complainer = {
-# 			add_opinion = {
-# 				target = scope:relative
-# 				modifier = VIET_opinion_improper_court_behavior
-# 			}
-# 		}
+		scope:complainer = {
+			add_opinion = {
+				target = scope:relative
+				modifier = VIET_opinion_improper_court_behavior
+			}
+		}
 
-# 	}
+	}
 
-# 	option = { # Stern talking to
-# 		name = VIETmisc.6002.a
-# 		custom_tooltip = VIETmisc.6002.a.tooltip
-# 		stress_impact = {
-# 			base = miniscule_stress_impact_gain
-# 			shy = minor_stress_impact_gain
-# 			lazy = miniscule_stress_impact_gain
-# 			craven = miniscule_stress_impact_gain
-# 		}
-# 		duel = {
-# 			skill = diplomacy
-# 			target = scope:relative
-# 			15 = { # Failure
-# 				compare_modifier = {
-# 					value = scope:duel_value
-# 					multiplier = -1.1
-# 				}
-# 				modifier = {
-# 					add = 3
-# 					scope:relative = {
-# 						has_trait = brave
-# 					}
-# 				}
-# 				modifier = {
-# 					add = 3
-# 					scope:relative = {
-# 						has_trait = stubborn
-# 					}
-# 				}
-# 				modifier = {
-# 					add = 3
-# 					scope:relative = {
-# 						has_trait = wrathful
-# 					}
-# 				}
-# 				modifier = {
-# 					add = 3
-# 					scope:relative = {
-# 						has_trait = arrogant
-# 					}
-# 				}
-# 				modifier = {
-# 					add = 3
-# 					has_trait = shy
-# 				}
-# 				modifier = {
-# 					add = 3
-# 					has_trait = compassionate
-# 				}
-# 				modifier = {
-# 					add = 3
-# 					has_trait = lazy
-# 				}
-# 				modifier = {
-# 					add = 3
-# 					has_trait = craven
-# 				}
-# 				desc = VIETmisc.6002.a.failure
-# 				send_interface_toast = {
-# 					left_icon = ROOT
-# 					title = VIETmisc.6002.a.failure
-# 					VIET_massive_prestige_loss_effect = yes
-# 					scope:relative = {
-# 						add_opinion = {
-# 							target = root
-# 							modifier = VIET_opinion_chastised_me_in_public
-# 						}
-# 					}
-# 				}
-# 			}
-# 			10 = { # Success
-# 				compare_modifier = {
-# 					value = scope:duel_value
-# 					multiplier = 1.1
-# 				}
-# 				modifier = {
-# 					add = 3
-# 					scope:relative = {
-# 						has_trait = craven
-# 					}
-# 				}
-# 				modifier = {
-# 					add = 3
-# 					scope:relative = {
-# 						has_trait = humble
-# 					}
-# 				}
-# 				modifier = {
-# 					add = 3
-# 					scope:relative = {
-# 						has_trait = trusting
-# 					}
-# 				}
-# 				modifier = {
-# 					add = 3
-# 					scope:relative = {
-# 						has_trait = paranoid
-# 					}
-# 				}
-# 				modifier = {
-# 					add = 3
-# 					has_trait = wrathful
-# 				}
-# 				modifier = {
-# 					add = 3
-# 					has_trait = vengeful
-# 				}
-# 				modifier = {
-# 					add = 3
-# 					has_trait = sadistic
-# 				}
-# 				modifier = {
-# 					add = 3
-# 					has_trait = brave
-# 				}
-# 				desc = VIETmisc.6002.a.success
-# 				send_interface_toast = {
-# 					left_icon = ROOT
-# 					title = VIETmisc.6002.a.success
-# 					VIET_medium_prestige_gain_effect = yes
-# 					scope:relative = {
-# 						remove_character_modifier = VIET_improper_court_behavior
-# 					}
-# 				}
-# 			}
-# 		}
-# 	}
+	option = { # Stern talking to
+		name = VIETmisc.6002.a
+		custom_tooltip = VIETmisc.6002.a.tooltip
+		stress_impact = {
+			base = miniscule_stress_impact_gain
+			shy = minor_stress_impact_gain
+			lazy = miniscule_stress_impact_gain
+			craven = miniscule_stress_impact_gain
+		}
+		duel = {
+			skill = intrigue
+			target = scope:relative
+			15 = { # Failure
+				compare_modifier = {
+					value = scope:duel_value
+					multiplier = -1.1
+				}
+				modifier = {
+					add = 3
+					scope:relative = {
+						has_trait = brave
+					}
+				}
+				modifier = {
+					add = 3
+					scope:relative = {
+						has_trait = stubborn
+					}
+				}
+				modifier = {
+					add = 3
+					scope:relative = {
+						has_trait = wrathful
+					}
+				}
+				modifier = {
+					add = 3
+					scope:relative = {
+						has_trait = arrogant
+					}
+				}
+				modifier = {
+					add = 3
+					has_trait = shy
+				}
+				modifier = {
+					add = 3
+					has_trait = compassionate
+				}
+				modifier = {
+					add = 3
+					has_trait = lazy
+				}
+				modifier = {
+					add = 3
+					has_trait = craven
+				}
+				desc = VIETmisc.6002.a.failure
+				send_interface_toast = {
+					left_icon = ROOT
+					title = VIETmisc.6002.a.failure
+					VIET_massive_prestige_loss_effect = yes
+					scope:relative = {
+						add_opinion = {
+							target = root
+							modifier = VIET_opinion_chastised_me_in_public
+						}
+					}
+				}
+			}
+			10 = { # Success
+				compare_modifier = {
+					value = scope:duel_value
+					multiplier = 1.1
+				}
+				modifier = {
+					add = 3
+					scope:relative = {
+						has_trait = craven
+					}
+				}
+				modifier = {
+					add = 3
+					scope:relative = {
+						has_trait = humble
+					}
+				}
+				modifier = {
+					add = 3
+					scope:relative = {
+						has_trait = trusting
+					}
+				}
+				modifier = {
+					add = 3
+					scope:relative = {
+						has_trait = paranoid
+					}
+				}
+				modifier = {
+					add = 3
+					has_trait = wrathful
+				}
+				modifier = {
+					add = 3
+					has_trait = vengeful
+				}
+				modifier = {
+					add = 3
+					has_trait = sadistic
+				}
+				modifier = {
+					add = 3
+					has_trait = brave
+				}
+				desc = VIETmisc.6002.a.success
+				send_interface_toast = {
+					left_icon = ROOT
+					title = VIETmisc.6002.a.success
+					VIET_medium_prestige_gain_effect = yes
+					scope:relative = {
+						remove_character_modifier = VIET_improper_court_behavior
+					}
+				}
+			}
+		}
+	}
 
-# 	option = { # Try to persuade them
-# 		name = VIETmisc.6002.b
-# 		custom_tooltip = VIETmisc.6002.b.tooltip
-# 		stress_impact = {
-# 			base = miniscule_stress_impact_gain
-# 			impatient = minor_stress_impact_gain
-# 			lazy = miniscule_stress_impact_gain
-# 			wrathful = miniscule_stress_impact_gain
-# 		}
-# 		duel = {
-# 			skill = diplomacy
-# 			target = scope:relative
-# 			15 = { # Failure
-# 				compare_modifier = {
-# 					value = scope:duel_value
-# 					multiplier = -1.1
-# 				}
-# 				modifier = {
-# 					add = 3
-# 					scope:relative = {
-# 						has_trait = callous
-# 					}
-# 				}
-# 				modifier = {
-# 					add = 3
-# 					scope:relative = {
-# 						has_trait = stubborn
-# 					}
-# 				}
-# 				modifier = {
-# 					add = 3
-# 					scope:relative = {
-# 						has_trait = arbitrary
-# 					}
-# 				}
-# 				modifier = {
-# 					add = 3
-# 					scope:relative = {
-# 						has_trait = arrogant
-# 					}
-# 				}
-# 				modifier = {
-# 					add = 3
-# 					has_trait = shy
-# 				}
-# 				modifier = {
-# 					add = 3
-# 					has_trait = arrogant
-# 				}
-# 				modifier = {
-# 					add = 3
-# 					has_trait = impatient
-# 				}
-# 				modifier = {
-# 					add = 3
-# 					has_trait = wrathful
-# 				}
-# 				desc = VIETmisc.6002.b.failure
-# 				send_interface_toast = {
-# 					left_icon = ROOT
-# 					title = VIETmisc.6002.b.failure
-# 					VIET_massive_prestige_loss_effect = yes
-# 					scope:relative = {
-# 						add_opinion = {
-# 							target = root
-# 							modifier = VIET_opinion_chastised_me_in_public
-# 						}
-# 					}
-# 				}
-# 			}
-# 			10 = { # Success
-# 				compare_modifier = {
-# 					value = scope:duel_value
-# 					multiplier = 1.1
-# 				}
-# 				modifier = {
-# 					add = 3
-# 					scope:relative = {
-# 						has_trait = just
-# 					}
-# 				}
-# 				modifier = {
-# 					add = 3
-# 					scope:relative = {
-# 						has_trait = humble
-# 					}
-# 				}
-# 				modifier = {
-# 					add = 3
-# 					scope:relative = {
-# 						has_trait = trusting
-# 					}
-# 				}
-# 				modifier = {
-# 					add = 3
-# 					scope:relative = {
-# 						has_trait = zealous
-# 					}
-# 				}
-# 				modifier = {
-# 					add = 3
-# 					has_trait = gregarious
-# 				}
-# 				modifier = {
-# 					add = 3
-# 					has_trait = compassionate
-# 				}
-# 				modifier = {
-# 					add = 3
-# 					has_trait = patient
-# 				}
-# 				modifier = {
-# 					add = 3
-# 					has_trait = calm
-# 				}
-# 				desc = VIETmisc.6002.b.success
-# 				send_interface_toast = {
-# 					left_icon = ROOT
-# 					title = VIETmisc.6002.b.success
-# 					VIET_medium_prestige_gain_effect = yes
-# 					scope:relative = {
-# 						remove_character_modifier = VIET_improper_court_behavior
-# 					}
-# 				}
-# 			}
-# 		}
-# 	}
-
-
-# 	option = { # Don't do anything about it
-# 		name = VIETmisc.6002.c
-# 		stress_impact = {
-# 			arrogant = minor_stress_impact_gain
-# 			diligent = miniscule_stress_impact_gain
-# 			ambitious = miniscule_stress_impact_gain
-# 		}
-# 		VIET_huge_prestige_loss_effect = yes
-# 		scope:complainer = {
-# 			add_opinion = {
-# 				target = root
-# 				modifier = VIET_opinion_doesnt_care_about_inapproriate_courtiers
-# 			}
-# 		}
-# 		scope:relative = {
-# 			add_opinion = {
-# 				target = root
-# 				modifier = VIET_opinion_didnt_chastise_me
-# 			}
-# 		}
-# 	}
+	option = { # Try to persuade them
+		name = VIETmisc.6002.b
+		custom_tooltip = VIETmisc.6002.b.tooltip
+		stress_impact = {
+			base = miniscule_stress_impact_gain
+			impatient = minor_stress_impact_gain
+			lazy = miniscule_stress_impact_gain
+			wrathful = miniscule_stress_impact_gain
+		}
+		duel = {
+			skill = diplomacy
+			target = scope:relative
+			15 = { # Failure
+				compare_modifier = {
+					value = scope:duel_value
+					multiplier = -1.1
+				}
+				modifier = {
+					add = 3
+					scope:relative = {
+						has_trait = callous
+					}
+				}
+				modifier = {
+					add = 3
+					scope:relative = {
+						has_trait = stubborn
+					}
+				}
+				modifier = {
+					add = 3
+					scope:relative = {
+						has_trait = arbitrary
+					}
+				}
+				modifier = {
+					add = 3
+					scope:relative = {
+						has_trait = arrogant
+					}
+				}
+				modifier = {
+					add = 3
+					has_trait = shy
+				}
+				modifier = {
+					add = 3
+					has_trait = arrogant
+				}
+				modifier = {
+					add = 3
+					has_trait = impatient
+				}
+				modifier = {
+					add = 3
+					has_trait = wrathful
+				}
+				desc = VIETmisc.6002.b.failure
+				send_interface_toast = {
+					left_icon = ROOT
+					title = VIETmisc.6002.b.failure
+					VIET_massive_prestige_loss_effect = yes
+					scope:relative = {
+						add_opinion = {
+							target = root
+							modifier = VIET_opinion_chastised_me_in_public
+						}
+					}
+				}
+			}
+			10 = { # Success
+				compare_modifier = {
+					value = scope:duel_value
+					multiplier = 1.1
+				}
+				modifier = {
+					add = 3
+					scope:relative = {
+						has_trait = just
+					}
+				}
+				modifier = {
+					add = 3
+					scope:relative = {
+						has_trait = humble
+					}
+				}
+				modifier = {
+					add = 3
+					scope:relative = {
+						has_trait = trusting
+					}
+				}
+				modifier = {
+					add = 3
+					scope:relative = {
+						has_trait = zealous
+					}
+				}
+				modifier = {
+					add = 3
+					has_trait = gregarious
+				}
+				modifier = {
+					add = 3
+					has_trait = compassionate
+				}
+				modifier = {
+					add = 3
+					has_trait = patient
+				}
+				modifier = {
+					add = 3
+					has_trait = calm
+				}
+				desc = VIETmisc.6002.b.success
+				send_interface_toast = {
+					left_icon = ROOT
+					title = VIETmisc.6002.b.success
+					VIET_medium_prestige_gain_effect = yes
+					scope:relative = {
+						remove_character_modifier = VIET_improper_court_behavior
+					}
+				}
+			}
+		}
+	}
 
 
-# 	after = {
-# 		scope:relative = {
-# 			clear_court_event_participation = yes
-# 		}
-# 		scope:complainer = {
-# 			clear_court_event_participation = yes
-# 		}
-# 	}
+	option = { # Don't do anything about it
+		name = VIETmisc.6002.c
+		stress_impact = {
+			arrogant = minor_stress_impact_gain
+			diligent = miniscule_stress_impact_gain
+			ambitious = miniscule_stress_impact_gain
+		}
+		VIET_huge_prestige_loss_effect = yes
+		scope:complainer = {
+			add_opinion = {
+				target = root
+				modifier = VIET_opinion_doesnt_care_about_inapproriate_courtiers
+			}
+		}
+		scope:relative = {
+			add_opinion = {
+				target = root
+				modifier = VIET_opinion_didnt_chastise_me
+			}
+		}
+	}
 
-# }
+
+	after = {
+		scope:relative = {
+			clear_court_event_participation = yes
+		}
+		scope:complainer = {
+			clear_court_event_participation = yes
+		}
+	}
+
+}
 
 
 

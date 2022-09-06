@@ -657,3 +657,14 @@ VIET_investigated_cave_art = {
 	learning = 1
 	monthly_lifestyle_xp_gain_mult = 0.01
 }
+VIET_imposter_ruler = {
+	icon = mask_negative
+	county_opinion_add = -5
+	monthly_county_control_change_add = -0.3
+	monthly_county_control_change_factor = -0.25
+}
+VIET_tales_holy_person = {
+	icon = piety_positive
+	development_growth_factor = 0.15
+	monthly_county_control_change_add = 0.2
+}
