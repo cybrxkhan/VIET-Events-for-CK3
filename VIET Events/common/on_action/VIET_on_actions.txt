@@ -239,6 +239,10 @@ VIET_events_yearly_pulse = {
 		100 = VIETold.2170		# Took medicine for sore throat
 		# Broccoli
 		100 = VIETold.2173		# Broccoli vs cauliflower
+		# Strange Dreams
+		100 = VIETold.2182		# Exploring the dreamworld at the beginning of time
+		100 = VIETold.2184		# Sunset dream with a companion
+		100 = VIETold.2187		# Dream of the desert campfire that's symbolic for something
 		
 		#######################################
 		# NEXT GEN VIET
@@ -377,6 +381,11 @@ VIET_events_yearly_pulse = {
 		100 = VIETmisc.0250		# Struggle to fall asleep
 		100 = VIETmisc.0251		# Two courtiers debate if struggling in life is good
 		100 = VIETmisc.0254		# Struggling to laugh at a joke a courtier told that you don't find funny
+		# Courtiers and Vassals
+		100 = VIETmisc.0261		# Rumors about a bad vassal
+		100 = VIETmisc.0263		# Courtier has an injury while traveling outside
+		100 = VIETmisc.0264		# Vassal is rumored to be a good leader
+		100 = VIETmisc.0271		# Councilor feels light-headed and requests to leave to rest, but they're needed for an important meeting
 	}
 }
 
@@ -561,7 +570,9 @@ VIET_events_tri_yearly_pulse = {
 		100 = VIETold.2163		# Quack doctor arrested
 		100 = VIETold.2169		# Scholar and merchant debate merits of quarantining
 		# Broccoli
-		100 = VIETold.2172		# Someone doesn't like broccoli
+		100 = VIETold.2172		# Someone doesn't like broccoli 
+		# Strange Dreams
+		100 = VIETold.2174		# Dream of a great ship in a harbor/port
 		
 		#######################################
 		# NEXT GEN VIET
@@ -687,6 +698,13 @@ VIET_events_tri_yearly_pulse = {
 		# VIET Events Contest Winners
 		100 = VIETmisc.0257		# Charlemagne choir event based on the Vita Karoli Magni (Credits to Duke Leo)
 		100 = VIETmisc.0260		# A traveling physician appears with a fully intact mummy (Credits to Anonymous person who took the survey)
+		# Courtiers and Vassals
+		100 = VIETmisc.0262		# Vassal attacks a peasant
+		100 = VIETmisc.0265		# Character enjoys composing vulgar music (Credits to Anonymous person who took the 2022 survey)
+		100 = VIETmisc.0266		# Vassal is a robber baron
+		100 = VIETmisc.0268		# Vassal recently lost a lot of money and begs for help
+		100 = VIETmisc.0269		# Courtier recently got some money and wants to give you some
+		100 = VIETmisc.0272		# Councilor comes extremely tardy
 	}
 }
 
@@ -824,6 +842,9 @@ VIET_events_five_yearly_pulse = {
 		100 = VIETold.2165		# Observing a skilled physician demonstrate surgery
 		# Broccoli
 		100 = VIETold.2171		# Exotic broccoli introduced to character
+		# Strange Dreams
+		100 = VIETold.2175		# Meet someone you know irl in a dream
+		100 = VIETold.2185		# Meeting the Dreamer while lost in a dream - part of VIET lore about the Dreamers
 		
 		#######################################
 		# NEXT GEN VIET
@@ -906,6 +927,9 @@ VIET_events_five_yearly_pulse = {
 		# VIET Events Contest Winners
 		100 = VIETmisc.0258		# Baklava nightmare (Credits to Cerbzzz)
 		100 = VIETmisc.0259		# Teddy Roosevelt assassination reference - vassal survives assassination attempt (Credits to Anonymous person who took the survey)
+		# Courtiers and Vassals
+		100 = VIETmisc.0267		# Vassal has a capable official who might be convinced to work for you
+		100 = VIETmisc.0270		# Courtier sees a strange mysterious woman
 	}
 }
 
@@ -955,6 +979,8 @@ VIET_events_event_chain_pulse = {
 		# Death
 		100 = VIETold.2098		# Witnessing the death of a rat
 		100 = VIETold.2113		# The Grim Reaper is an absentminded girl and she stops by after getting lost
+		# Strange Dreams
+		100 = VIETold.2177		# Dream of a Korean Drama (probably should've been considered an event chain but oh well)
 		
 		# Actual Event Chains
 		100 = VIETmisc.1000		# Kogarashi Sentiment/Fast Love - Character recalls their first love
@@ -971,6 +997,9 @@ VIET_events_event_chain_pulse = {
 		
 		# Death
 		100 = VIETmisc.0101		# Come across an unknown servant - is he a spirit testing one's hospitality?
+		
+		#Meet the Dreamer
+		100 = VIETmisc.8000		# You meet the Dreamer
 		
 		# Qi Ma the Liar
 		100 = VIETmonogatari.0010		# Rumors about Qi Ma the Liar - diplomacy
@@ -1097,9 +1126,6 @@ VIET_events_rare_decisions_pulse = {
 		100 = VIETmisc.2023		# Servants are kidnapped - start the countdown
 		# Crows
 		100 = VIETmisc.2047		# Crows keep following you around for some reason
-		
-		#Meet the Dreamer
-		100 = VIETmisc.8000		# You meet the Dreamer
 		
 	}
 }
@@ -1233,8 +1259,10 @@ VIET_events_common_county_pulse = {
 		100 = VIETmisc.3031		# Smuggling Ring Arrested
 		100 = VIETmisc.3032		# Haunted Fortress
 		100 = VIETmisc.3033		# Famous flower meadows
+		# Local Rumors
+		100 = VIETmisc.3038		# Legends of a nonexistent holy person
 		
-		# 32
+		# 33
     }
 }
 
@@ -1308,8 +1336,10 @@ VIET_events_uncommon_county_pulse = {
 		100 = VIETmisc.3034		# Murderer executed
 		# VIET Events Contest Winners
 		100 = VIETmisc.3036		# Prehistoric cave paintings discovered (Credits to Pedrolu)
+		# Local Rumors
+		100 = VIETmisc.3037		# Conspiracies spread about how you were replaced by an imposter
 		
-		# 21
+		# 22
 		
     }
 }

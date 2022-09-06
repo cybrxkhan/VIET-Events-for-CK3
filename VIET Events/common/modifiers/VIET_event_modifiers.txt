@@ -2480,12 +2480,16 @@ VIET_vague_dream_of_dreamer_female = {
 	monthly_prestige = 0.1
 	monthly_piety = 0.1
 	monthly_lifestyle_xp_gain_mult = 0.03
+	stress_gain_mult = 0.1
+	stress_loss_mult = -0.1
 }
 VIET_vague_dream_of_dreamer_male = {
 	icon = fertility_positive
 	monthly_prestige = 0.1
 	monthly_piety = 0.1
 	monthly_lifestyle_xp_gain_mult = 0.03
+	stress_gain_mult = 0.1
+	stress_loss_mult = -0.1
 }
 
 

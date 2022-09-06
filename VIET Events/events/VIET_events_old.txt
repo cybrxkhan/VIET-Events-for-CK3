@@ -12439,51 +12439,826 @@ VIETold.2173 = {
 #############################################
 
 # Dream of a great ship in a harbor/port
-# VIETold.2174 = {
-# 	type = character_event
-# 	title = VIETold.2174.t	
-# 	desc = VIETold.2174.desc
-# 	theme = friendly
-# 	override_background = { event_background = docks }
+VIETold.2174 = {
+	type = character_event
+	title = VIETold.2174.t	
+	desc = VIETold.2174.desc
+	theme = friendly
+	override_background = { event_background = docks }
 	
-# 	right_portrait = {
-# 		character = root
-# 		animation = happiness
-# 	}
+	right_portrait = {
+		character = root
+		animation = happiness
+	}
 
-# 	weight_multiplier = {
-# 		base = 1
-# 		modifier = {
-# 			add = 0.2
-# 			has_trait = shy
-# 		}
-# 		modifier = {
-# 			add = -0.2
-# 			has_trait = gregarious
-# 		}
-# 		modifier = {
-# 			add = 0.2
-# 			has_trait = humble
-# 		}
-# 		modifier = {
-# 			add = -0.2
-# 			has_trait = arrogant
-# 		}
-# 		modifier = {
-# 			add = 0.2
-# 			has_trait = honest
-# 		}
-# 		modifier = {
-# 			add = -0.2
-# 			has_trait = deceitful
-# 		}
-# 	}
+	weight_multiplier = {
+		base = 1
+		modifier = {
+			add = 0.2
+			has_trait = shy
+		}
+		modifier = {
+			add = -0.2
+			has_trait = gregarious
+		}
+		modifier = {
+			add = 0.2
+			has_trait = humble
+		}
+		modifier = {
+			add = -0.2
+			has_trait = arrogant
+		}
+		modifier = {
+			add = 0.2
+			has_trait = honest
+		}
+		modifier = {
+			add = -0.2
+			has_trait = deceitful
+		}
+	}
 
-# 	option = { # ok
-# 		name = VIETold.2174.a
-# 		stress_impact = {
-# 			paranoid = miniscule_stress_impact_gain
-# 			gluttonous = miniscule_stress_impact_loss
-# 		}
-# 	}
-# }
+	option = { # ok
+		name = VIETold.2174.a
+		add_character_modifier = {
+			modifier = VIET_harbor_dream
+			years = 5
+		}
+		stress_impact = {
+			base = miniscule_stress_impact_loss
+			brave = miniscule_stress_impact_loss
+			content = miniscule_stress_impact_loss
+		}
+	}
+}
+
+
+# Meet someone you know irl in a dream - part 1
+VIETold.2175 = {
+	type = character_event
+	title = VIETold.2175.t	
+	desc = VIETold.2175.desc
+	theme = friendly
+	override_background = { event_background = VIET_background_small_town }
+	
+	right_portrait = {
+		character = root
+		animation = happiness
+	}
+
+	trigger = {
+		any_courtier_or_guest = {
+			is_available_ai_adult = yes
+			opinion = {
+				target = root
+				value > 0
+			}
+		}
+	}
+
+	weight_multiplier = {
+		base = 1
+		modifier = {
+			add = 0.2
+			has_trait = gregarious
+		}
+		modifier = {
+			add = -0.2
+			has_trait = shy
+		}
+		modifier = {
+			add = 0.2
+			has_trait = compassionate
+		}
+		modifier = {
+			add = -0.2
+			has_trait = callous
+		}
+		modifier = {
+			add = 0.2
+			has_trait = content
+		}
+		modifier = {
+			add = -0.2
+			has_trait = ambitious
+		}
+	}
+
+	immediate = {
+		random_courtier_or_guest = {
+			limit = {
+				is_available_ai_adult = yes
+				opinion = {
+					target = root
+					value > 0
+				}
+			}
+			save_scope_as = cafe_friend
+		}
+	}
+
+	option = { # ok
+		name = VIETold.2175.a
+		trigger_event = VIETold.2176
+	}
+}
+
+
+# Meet someone you know irl in a dream - part 2
+VIETold.2176 = {
+	type = character_event
+	title = VIETold.2176.t	
+	desc = VIETold.2176.desc
+	theme = feast_activity
+	override_background = { event_background = tavern }
+	
+	left_portrait = {
+		character = root
+		animation = happiness
+	}
+	
+	right_portrait = {
+		character = scope:cafe_friend
+		animation = personality_content
+	}
+
+	option = { # ok
+		name = VIETold.2176.a
+		progress_towards_friend_effect = {
+			CHARACTER = scope:cafe_friend
+			OPINION = no
+		}
+		scope:cafe_friend = {
+			add_opinion = {
+				target = root
+				modifier = VIET_opinion_shared_dream
+			}
+		}
+	}
+}
+
+
+
+
+# Dream of a Korean Drama (probably should've been considered an event chain but oh well)
+VIETold.2177 = {
+	type = character_event
+	title = VIETold.2177.t	
+	desc = VIETold.2177.desc
+	theme = seduction
+	override_background = { event_background = study }
+
+	trigger = {
+		NOT = { has_character_flag = VIET_generic_kdrama_happened_to_me }
+		NOT = { has_game_rule = VIET_serious_events }
+	}
+
+	weight_multiplier = {
+		base = 1
+		modifier = {
+			add = 0.2
+			has_trait = shy
+		}
+		modifier = {
+			add = -0.2
+			has_trait = gregarious
+		}
+		modifier = {
+			add = 0.2
+			has_trait = compassionate
+		}
+		modifier = {
+			add = -0.2
+			has_trait = callous
+		}
+		modifier = {
+			add = 0.2
+			has_trait = chaste
+		}
+		modifier = {
+			add = -0.2
+			has_trait = lustful
+		}
+	}
+
+	immediate = {
+		hidden_effect = {
+			add_character_flag = VIET_generic_kdrama_happened_to_me
+			random_list = {
+				1 = { add_character_flag = VIET_kdrama_girls_pov }
+				1 = { add_character_flag = VIET_kdrama_boys_pov }
+			}
+		}
+	}
+
+	option = { # Who am I?
+		name = VIETold.2177.a
+		trigger_event = VIETold.2178
+	}
+}
+
+
+
+
+# Reveal of who your character is
+VIETold.2178 = {
+	type = character_event
+	title = VIETold.2178.t	
+	desc = {
+		first_valid = {
+			triggered_desc = {
+				trigger = {
+					has_character_flag = VIET_kdrama_girls_pov
+				}
+				desc = VIETold.2178.desc.female_lead # Enter the plucky determined naive generic female lead
+			}
+			desc = VIETold.2178.desc.male_lead # Enter the hot brooding jerk with a heart of gold who takes hot brooding showers
+		}
+	}
+	theme = seduction
+	override_background = { event_background = study }
+
+	option = { # talk
+		name = VIETold.2178.a
+		trigger_event = VIETold.2179
+	}
+}
+
+
+
+
+# Reveal of your character's love interest
+VIETold.2179 = {
+	type = character_event
+	title = VIETold.2179.t	
+	desc = {
+		first_valid = {
+			triggered_desc = {
+				trigger = {
+					has_character_flag = VIET_kdrama_girls_pov
+				}
+				desc = VIETold.2179.desc.female_lead # Enter the hot brooding jerk with a heart of gold who takes hot brooding showers
+			}
+			desc = VIETold.2179.desc.male_lead # Enter the plucky determined naive generic female lead
+		}
+	}
+	theme = seduction
+	override_background = { event_background = VIET_background_oblivion_pastoral_dream }
+
+	option = { # talk
+		name = VIETold.2179.a
+		trigger_event = VIETold.2180
+	}
+}
+
+
+# Walking along the river
+VIETold.2180 = {
+	type = character_event
+	title = VIETold.2180.t	
+	desc = {
+		first_valid = {
+			triggered_desc = {
+				trigger = {
+					has_character_flag = VIET_kdrama_girls_pov
+				}
+				desc = VIETold.2180.desc.female_lead
+			}
+			desc = VIETold.2180.desc.male_lead
+		}
+	}
+	theme = seduction
+	override_background = { event_background = VIET_background_oblivion_pastoral_dream }
+
+	option = { # ok
+		name = VIETold.2180.a.female
+		trigger = {
+			has_character_flag = VIET_kdrama_girls_pov
+		}
+	}
+
+	option = { # ok
+		name = VIETold.2180.a.male
+		trigger = {
+			has_character_flag = VIET_kdrama_boys_pov
+		}
+	}
+
+	option = { # ok
+		name = VIETold.2180.b.female
+		trigger = {
+			has_character_flag = VIET_kdrama_girls_pov
+		}
+	}
+
+	option = { # ok
+		name = VIETold.2180.b.male
+		trigger = {
+			has_character_flag = VIET_kdrama_boys_pov
+		}
+	}
+
+	option = { # ok
+		name = VIETold.2180.c.female
+		trigger = {
+			has_character_flag = VIET_kdrama_girls_pov
+		}
+	}
+
+	option = { # ok
+		name = VIETold.2180.c.male
+		trigger = {
+			has_character_flag = VIET_kdrama_boys_pov
+		}
+	}
+
+	option = { # ok
+		name = VIETold.2180.d.female
+		trigger = {
+			has_character_flag = VIET_kdrama_girls_pov
+		}
+	}
+
+	option = { # ok
+		name = VIETold.2180.d.male
+		trigger = {
+			has_character_flag = VIET_kdrama_boys_pov
+		}
+	}
+
+	after = {		
+		trigger_event = VIETold.2181
+	}
+}
+
+
+# Wake up
+VIETold.2181 = {
+	type = character_event
+	title = VIETold.2181.t	
+	desc = {
+		first_valid = {
+			triggered_desc = {
+				trigger = {
+					has_character_flag = VIET_kdrama_girls_pov
+				}
+				desc = VIETold.2181.desc.female_lead
+			}
+			desc = VIETold.2181.desc.male_lead
+		}
+	}
+	theme = seduction
+	override_background = { event_background = bedchamber }
+
+	option = { # ok
+		name = VIETold.2181.a
+		stress_impact = {
+			base = miniscule_stress_impact_loss
+			chaste = miniscule_stress_impact_loss
+			shy = miniscule_stress_impact_loss
+			compassionate = miniscule_stress_impact_loss
+			content = miniscule_stress_impact_loss
+			calm = miniscule_stress_impact_loss
+			trusting = miniscule_stress_impact_loss
+			lustful = miniscule_stress_impact_loss
+		}
+		if = {
+			limit = {
+				has_character_flag = VIET_kdrama_girls_pov
+			}
+			remove_character_flag = VIET_kdrama_girls_pov
+			add_character_modifier = {
+				modifier = VIET_kdrama_dream_girls_pov
+				years = 8
+			}
+		}
+		if = {
+			limit = {
+				has_character_flag = VIET_kdrama_boys_pov
+			}
+			remove_character_flag = VIET_kdrama_boys_pov
+			add_character_modifier = {
+				modifier = VIET_kdrama_dream_boys_pov
+				years = 8
+			}
+		}
+	}
+}
+
+
+# Exploring the dreamworld at the beginning of time
+VIETold.2182 = {
+	type = character_event
+	title = VIETold.2182.t	
+	desc = VIETold.2182.desc
+	theme = VIET_theme_good_dream
+	
+	# right_portrait = {
+	# 	character = root
+	# 	animation = happiness
+	# }
+
+	weight_multiplier = {
+		base = 1
+		modifier = {
+			add = 0.2
+			has_trait = zealous
+		}
+		modifier = {
+			add = -0.2
+			has_trait = cynical
+		}
+		modifier = {
+			add = 0.2
+			has_trait = compassionate
+		}
+		modifier = {
+			add = -0.2
+			has_trait = callous
+		}
+		modifier = {
+			add = 0.2
+			has_trait = content
+		}
+		modifier = {
+			add = -0.2
+			has_trait = ambitious
+		}
+	}
+
+	option = { # ok
+		name = VIETold.2182.a
+		trigger_event = VIETold.2183
+	}
+}
+
+
+# Exploring the dreamworld at the beginning of time - waking up 
+VIETold.2183 = {
+	type = character_event
+	title = VIETold.2183.t	
+	desc = VIETold.2183.desc
+	theme = faith
+	override_background = { event_background = bedchamber }
+
+	option = { # ok
+		name = VIETold.2183.a
+		VIET_tiny_piety_gain_effect = yes
+		stress_impact = {
+			base = miniscule_stress_impact_loss
+			zealous = miniscule_stress_impact_loss
+			calm = miniscule_stress_impact_loss
+			patient = miniscule_stress_impact_loss
+			gregarious = miniscule_stress_impact_loss
+			humble = miniscule_stress_impact_loss
+		}
+		add_character_modifier = {
+			modifier = VIET_dreamscape_dream
+			years = 5
+		}
+	}
+}
+
+
+# Sunset dream with a companion
+VIETold.2184 = {
+	type = character_event
+	title = VIETold.2184.t	
+	desc = VIETold.2184.desc
+	theme = VIET_scarborough_fair
+	
+	# right_portrait = {
+	# 	character = root
+	# 	animation = happiness
+	# }
+
+	weight_multiplier = {
+		base = 1
+		modifier = {
+			add = 0.2
+			has_trait = humble
+		}
+		modifier = {
+			add = -0.2
+			has_trait = arrogant
+		}
+		modifier = {
+			add = 0.2
+			has_trait = gregarious
+		}
+		modifier = {
+			add = -0.2
+			has_trait = shy
+		}
+		modifier = {
+			add = 0.2
+			has_trait = content
+		}
+		modifier = {
+			add = -0.2
+			has_trait = ambitious
+		}
+	}
+
+	option = { # ok
+		name = VIETold.2184.a
+		VIET_tiny_piety_gain_effect = yes
+		stress_impact = {
+			base = miniscule_stress_impact_loss
+			zealous = miniscule_stress_impact_loss
+			calm = miniscule_stress_impact_loss
+			patient = miniscule_stress_impact_loss
+			gregarious = miniscule_stress_impact_loss
+			humble = miniscule_stress_impact_loss
+		}
+	}
+}
+
+# Meeting the Dreamer while lost in a dream - part of VIET lore about the Dreamers
+VIETold.2185 = {
+	type = character_event
+	title = VIETold.2185.t	
+	desc = VIETold.2185.desc
+	theme = VIET_scarborough_fair
+	
+	left_portrait = {
+		character = scope:dreamer
+		animation = personality_content
+	}
+
+	weight_multiplier = {
+		base = 1
+		modifier = {
+			add = 0.8
+			has_character_flag = VIET_met_the_dreamer
+		}
+		modifier = {
+			add = 0.2
+			has_trait = humble
+		}
+		modifier = {
+			add = -0.2
+			has_trait = arrogant
+		}
+		modifier = {
+			add = 0.2
+			has_trait = compassionate
+		}
+		modifier = {
+			add = -0.2
+			has_trait = sadistic
+		}
+		modifier = {
+			add = 0.2
+			has_trait = content
+		}
+		modifier = {
+			add = -0.2
+			has_trait = ambitious
+		}
+	}
+
+	immediate = {
+		# Choose whether to meet the male or female Dreamer
+		random_list = {
+			10 = {
+				if = {
+					limit = { NOT = { exists = var:VIET_dreamer_karmic_connection_male } }
+					set_variable = {
+						name = VIET_dreamer_karmic_connection_male
+						value = 1
+					}
+				}
+				else = {
+					change_variable = {
+						name = VIET_dreamer_karmic_connection_male
+						add = 1
+					}		
+				}
+				character:VIET_character_001 = {
+					save_scope_as = dreamer
+				}
+			}
+			10 = {
+				if = {
+					limit = { NOT = { exists = var:VIET_dreamer_karmic_connection_female } }
+					set_variable = {
+						name = VIET_dreamer_karmic_connection_female
+						value = 1
+					}
+				}
+				else = {
+					change_variable = {
+						name = VIET_dreamer_karmic_connection_female
+						add = 1
+					}		
+				}
+				character:VIET_character_002 = {
+					save_scope_as = dreamer
+				}
+			}
+		}
+	}
+
+	option = { # ok
+		name = VIETold.2185.a
+		trigger = {
+			NOT = { has_character_flag = VIET_met_the_dreamer }
+		}
+	}
+
+	option = { # ok
+		name = VIETold.2185.b
+		trigger = {
+			has_character_flag = VIET_met_the_dreamer
+		}
+	}
+
+	after = {
+		trigger_event = VIETold.2186
+	}
+
+}
+
+# Meeting the Dreamer while lost in a dream - part of VIET lore about the Dreamers
+VIETold.2186 = {
+	type = character_event
+	title = VIETold.2186.t	
+	desc = {
+		first_valid = {
+			triggered_desc = {
+				trigger = {
+					has_character_flag = VIET_met_the_dreamer
+				}
+				desc = VIETold.2186.desc.dreamer
+			}
+			desc = VIETold.2186.desc.not_dreamer
+		}
+	}
+	theme = friendly
+	override_background = { event_background = bedchamber }
+
+	option = { # ok
+		name = VIETold.2186.a
+		stress_impact = {
+			base = miniscule_stress_impact_loss
+			compassionate = miniscule_stress_impact_loss
+			content = miniscule_stress_impact_loss
+			patient = miniscule_stress_impact_loss
+			calm = miniscule_stress_impact_loss
+			humble = miniscule_stress_impact_loss
+			lazy = miniscule_stress_impact_loss
+		}
+		if = {
+			limit = {
+				scope:dreamer = {
+					is_female = yes
+				}
+			}
+			add_character_modifier = {
+				modifier = VIET_vague_dream_of_dreamer_female
+				years = 10
+			}
+		}
+		else = {			
+			add_character_modifier = {
+				modifier = VIET_vague_dream_of_dreamer_male
+				years = 10
+			}
+		}
+	}
+
+	option = { # ok
+		name = VIETold.2186.b
+		trigger = {
+			has_character_flag = VIET_met_the_dreamer
+		}
+		stress_impact = {
+			base = miniscule_stress_impact_loss
+			compassionate = miniscule_stress_impact_loss
+			content = miniscule_stress_impact_loss
+			patient = miniscule_stress_impact_loss
+			calm = miniscule_stress_impact_loss
+			humble = miniscule_stress_impact_loss
+			lazy = miniscule_stress_impact_loss
+		}
+		if = {
+			limit = {
+				scope:dreamer = {
+					is_female = yes
+				}
+			}
+			add_character_modifier = {
+				modifier = VIET_vague_dream_of_dreamer_female
+				years = 10
+			}
+		}
+		else = {			
+			add_character_modifier = {
+				modifier = VIET_vague_dream_of_dreamer_male
+				years = 10
+			}
+		}
+	}
+
+}
+
+
+
+
+# Dream of the desert campfire that's symbolic for something
+VIETold.2187 = {
+	type = character_event
+	title = VIETold.2187.t	
+	desc = VIETold.2187.desc
+	theme = faith
+	override_background = { event_background = VIET_background_nightmare }
+	
+	# right_portrait = {
+	# 	character = root
+	# 	animation = happiness
+	# }
+
+	weight_multiplier = {
+		base = 1
+		modifier = {
+			add = 0.2
+			has_trait = craven
+		}
+		modifier = {
+			add = -0.2
+			has_trait = brave
+		}
+		modifier = {
+			add = 0.2
+			has_trait = paranoid
+		}
+		modifier = {
+			add = -0.2
+			has_trait = trusting
+		}
+		modifier = {
+			add = 0.2
+			has_trait = humble
+		}
+		modifier = {
+			add = -0.2
+			has_trait = arrogant
+		}
+	}
+
+	option = { # ok
+		name = VIETold.2187.a
+		trigger_event = VIETold.2188
+	}
+}
+
+
+# Dream of the desert campfire that's symbolic for something
+VIETold.2188 = {
+	type = character_event
+	title = VIETold.2188.t	
+	desc = VIETold.2188.desc
+	theme = friendly
+	override_background = { event_background = bedchamber }
+	
+	# right_portrait = {
+	# 	character = root
+	# 	animation = happiness
+	# }
+
+	immediate = {
+		add_character_modifier = {
+			modifier = VIET_campfire_dream
+			years = 4
+		}
+	}
+
+	option = { # Reality
+		name = VIETold.2188.a
+		VIET_tiny_prestige_gain_effect = yes
+	}
+
+	option = { # Dream
+		name = VIETold.2188.b
+		VIET_tiny_piety_gain_effect = yes
+	}
+
+	option = { # Cannot distinguish between the two
+		name = VIETold.2188.c
+		random_list = {
+			75 = { VIET_tiny_piety_gain_effect = yes }
+			25 = { VIET_tiny_prestige_gain_effect = yes }
+		}
+	}
+
+	option = { # Dream within a dream
+		name = VIETold.2188.d
+		random_list = {
+			75 = { VIET_tiny_prestige_gain_effect = yes }
+			25 = { VIET_tiny_piety_gain_effect = yes }
+		}
+	}
+}
+

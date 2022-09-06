@@ -1722,7 +1722,7 @@ VIETmisc.6007 = {
 }
 
 
-#  Dozing off during important court ceremonies
+# Dozing off during important court ceremonies
 VIETmisc.6008 = {
 	type = court_event
 	title = VIETmisc.6008.t
@@ -1809,7 +1809,7 @@ VIETmisc.6008 = {
 }
 
 
-#  Traveler says more stairs are needed at the court
+# Traveler says more stairs are needed at the court
 VIETmisc.6009 = {
 	type = court_event
 	title = VIETmisc.6009.t
@@ -1897,7 +1897,7 @@ VIETmisc.6009 = {
 }
 
 
-#  Recent minor renovations were botched, making court look like a mess - what to do?
+# Recent minor renovations were botched, making court look like a mess - what to do?
 VIETmisc.6010 = {
 	type = court_event
 	title = VIETmisc.6010.t
@@ -2400,7 +2400,7 @@ VIETmisc.6013 = {
 
 
 
-# Courtier forgets minor royal court etiquette/formality
+# Courtier shames servants for purportedly not being up to par for a royal court
 VIETmisc.6014 = {
 	type = court_event
 	title = VIETmisc.6014.t

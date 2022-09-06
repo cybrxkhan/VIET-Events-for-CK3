@@ -143,36 +143,38 @@ VIETmisc.8001 = {
 	
 	option = {
 		name = VIETmisc.8001.a
-		random_list = {
-			75 = {
-				if = {
-					limit = { NOT = { exists = var:VIET_dreamer_yin_wisdom } }
-					set_variable = {
-						name = VIET_dreamer_yin_wisdom
-						value = 1
+		hidden_effect = {
+			random_list = {
+				75 = {
+					if = {
+						limit = { NOT = { exists = var:VIET_dreamer_yin_wisdom } }
+						set_variable = {
+							name = VIET_dreamer_yin_wisdom
+							value = 1
+						}
 					}
+					else = {
+						change_variable = {
+							name = VIET_dreamer_yin_wisdom
+							add = 1
+						}		
+					}			
 				}
-				else = {
-					change_variable = {
-						name = VIET_dreamer_yin_wisdom
-						add = 1
-					}		
-				}			
-			}
-			25 = {
-				if = {
-					limit = { NOT = { exists = var:VIET_dreamer_yang_wisdom } }
-					set_variable = {
-						name = VIET_dreamer_yang_wisdom
-						value = 1
+				25 = {
+					if = {
+						limit = { NOT = { exists = var:VIET_dreamer_yang_wisdom } }
+						set_variable = {
+							name = VIET_dreamer_yang_wisdom
+							value = 1
+						}
 					}
+					else = {
+						change_variable = {
+							name = VIET_dreamer_yang_wisdom
+							add = 1
+						}		
+					}			
 				}
-				else = {
-					change_variable = {
-						name = VIET_dreamer_yang_wisdom
-						add = 1
-					}		
-				}			
 			}
 		}
 		trigger_event = VIETmisc.8003
@@ -180,36 +182,38 @@ VIETmisc.8001 = {
 	
 	option = {
 		name = VIETmisc.8001.b
-		random_list = {
-			25 = {
-				if = {
-					limit = { NOT = { exists = var:VIET_dreamer_yin_wisdom } }
-					set_variable = {
-						name = VIET_dreamer_yin_wisdom
-						value = 1
+		hidden_effect = {
+			random_list = {
+				25 = {
+					if = {
+						limit = { NOT = { exists = var:VIET_dreamer_yin_wisdom } }
+						set_variable = {
+							name = VIET_dreamer_yin_wisdom
+							value = 1
+						}
 					}
+					else = {
+						change_variable = {
+							name = VIET_dreamer_yin_wisdom
+							add = 1
+						}		
+					}			
 				}
-				else = {
-					change_variable = {
-						name = VIET_dreamer_yin_wisdom
-						add = 1
-					}		
-				}			
-			}
-			75 = {
-				if = {
-					limit = { NOT = { exists = var:VIET_dreamer_yang_wisdom } }
-					set_variable = {
-						name = VIET_dreamer_yang_wisdom
-						value = 1
+				75 = {
+					if = {
+						limit = { NOT = { exists = var:VIET_dreamer_yang_wisdom } }
+						set_variable = {
+							name = VIET_dreamer_yang_wisdom
+							value = 1
+						}
 					}
+					else = {
+						change_variable = {
+							name = VIET_dreamer_yang_wisdom
+							add = 1
+						}		
+					}			
 				}
-				else = {
-					change_variable = {
-						name = VIET_dreamer_yang_wisdom
-						add = 1
-					}		
-				}			
 			}
 		}
 		trigger_event = VIETmisc.8002
@@ -223,6 +227,7 @@ VIETmisc.8002 = {
 	title = VIETmisc.8002.t
 	desc = VIETmisc.8002.desc
 	theme = friendly	
+	override_background = { event_background = bedchamber }
 	
 	option = {
 		name = VIETmisc.8002.a
@@ -237,6 +242,7 @@ VIETmisc.8003 = {
 	title = VIETmisc.8003.t
 	desc = VIETmisc.8003.desc
 	theme = friendly	
+	override_background = { event_background = bedchamber }
 	
 	option = {
 		name = VIETmisc.8003.a

@@ -24189,6 +24189,7 @@ VIETmisc.0264 = {
 
 
 # Character enjoys composing vulgar music
+# Credits to Anonymous person who took the 2022 survey
 VIETmisc.0265 = {
 	type = character_event
 	title = VIETmisc.0265.t

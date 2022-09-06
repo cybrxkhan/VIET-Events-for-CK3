@@ -1393,10 +1393,11 @@ VIETmisc.4019 = {
 	title = VIETmisc.4019.t
 	desc = VIETmisc.4019.desc
 	theme = realm
+	override_background = { event_background = docks }
 	
 	right_portrait = {
 		character = root
-		animation = paranoia
+		animation = personality_cynical
 	}
 	
 	trigger = {

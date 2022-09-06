@@ -45,6 +45,23 @@ VIET_court_event_on_actions = {
 		# VIET Events Contest Winners
 		100 = VIETmisc.6000 			# Squabble between two intellectuals
 		100 = VIETmisc.6001 			# Robber baron afflicting your realm (Credits to Ultimatum)
+		# Generic (for 888/2nd year anniversary)
+		100 = VIETmisc.6002 			# Relative with poor behavior at court
+		100 = VIETmisc.6003 			# Courtier forgets minor royal court etiquette/formality
+		100 = VIETmisc.6004 			# Visiting envoy says court isn't that different than a mere duke's court
+		100 = VIETmisc.6005 			# Courtiers debate cutting down on ceremonial fluff - yay or nay?
+		100 = VIETmisc.6006 			# Child forgets court etiquette, snobbish courtier calls them out on it
+		100 = VIETmisc.6007 			# A servant is too good looking and distracting at the court for someone
+		100 = VIETmisc.6008 			# Dozing off during important court ceremonies
+		100 = VIETmisc.6009 			# Traveler says more stairs are needed at the court
+		100 = VIETmisc.6010 			# Recent minor renovations were botched, making court look like a mess - what to do?
+		100 = VIETmisc.6011 			# Parent embarrasses you in court for not doing proper court etiquette
+		100 = VIETmisc.6012 			# Courtier rescues peasants from a corrupt official
+		100 = VIETmisc.6013 			# A visiting dignitary wants to join your court
+		100 = VIETmisc.6014 			# Courtier shames servants for purportedly not being up to par for a royal court
+		100 = VIETmisc.6015 			# Loud ominous noise in the courtroom
+		100 = VIETmisc.6016 			# Rumors of a bad but nonexistent courtier
+		100 = VIETmisc.6017 			# Rumors of a good but nonexistent courtier
 
 	}
 }
