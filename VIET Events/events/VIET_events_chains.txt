@@ -1933,6 +1933,10 @@ VIETmisc.1053 = {
 		}
 	}
 
+	immediate = {
+		play_music_cue = "mx_VIET_subtle_jump_scare"
+	}
+
 	
 	option = {
 		name = VIETmisc.1053.a
@@ -2014,10 +2018,16 @@ VIETmisc.1054 = {
 			limit = {
 				has_character_flag = VIET_mysterious_child_spoopy_ending
 			}
-			trigger_event = VIETmisc.1055
+			trigger_event = {
+				id = VIETmisc.1055
+				days = { 30 90 }
+			}
 		}
-		else = {			
-			trigger_event = VIETmisc.1065
+		else = {	
+			trigger_event = {
+				id = VIETmisc.1065
+				days = { 30 90 }
+			}		
 		}
 		clear_saved_scope = courtier
 	}	
@@ -2046,7 +2056,10 @@ VIETmisc.1055 = {
 		custom_description_no_bullet = {
 			text = VIETmisc.mysterious_child_song
 		}
-		trigger_event = VIETmisc.1056
+		trigger_event = {
+			id = VIETmisc.1056
+			days = { 15 40 }
+		}
 	}
 }
 
@@ -2073,7 +2086,10 @@ VIETmisc.1056 = {
 		custom_description_no_bullet = {
 			text = VIETmisc.mysterious_child_song
 		}
-		trigger_event = VIETmisc.1057
+		trigger_event = {
+			id = VIETmisc.1057
+			days = { 20 60 }
+		}
 	}
 }
 
@@ -2104,7 +2120,10 @@ VIETmisc.1057 = {
 		custom_description_no_bullet = {
 			text = VIETmisc.mysterious_child_song
 		}
-		trigger_event = VIETmisc.1058
+		trigger_event = {
+			id = VIETmisc.1058
+			days = { 20 60 }
+		}
 	}
 }
 
@@ -2135,7 +2154,10 @@ VIETmisc.1058 = {
 		custom_description_no_bullet = {
 			text = VIETmisc.mysterious_child_song
 		}
-		trigger_event = VIETmisc.1059
+		trigger_event = {
+			id = VIETmisc.1059
+			days = { 20 60 }
+		}
 	}
 }
 
@@ -2172,7 +2194,10 @@ VIETmisc.1059 = {
 		custom_description_no_bullet = {
 			text = VIETmisc.mysterious_child_song
 		}
-		trigger_event = VIETmisc.1060
+		trigger_event = {
+			id = VIETmisc.1060
+			days = { 20 60 }
+		}
 	}
 
 	after = {
@@ -2209,7 +2234,10 @@ VIETmisc.1060 = {
 		custom_description_no_bullet = {
 			text = VIETmisc.mysterious_child_song
 		}
-		trigger_event = VIETmisc.1061
+		trigger_event = {
+			id = VIETmisc.1061
+			days = { 20 60 }
+		}
 	}
 }
 
@@ -2240,7 +2268,10 @@ VIETmisc.1061 = {
 		custom_description_no_bullet = {
 			text = VIETmisc.mysterious_child_song
 		}
-		trigger_event = VIETmisc.1062
+		trigger_event = {
+			id = VIETmisc.1062
+			days = { 30 80 }
+		}
 	}
 }
 
@@ -2281,6 +2312,14 @@ VIETmisc.1063 = {
 	desc = VIETmisc.1063.desc
 	theme = death
 	override_background = { event_background = bedchamber }
+
+	immediate = {
+		play_music_cue = "mx_VIET_creepy_child_giggle"
+		set_global_variable = {
+			name = VIET_mysterious_child_happened
+			value = yes
+		}
+	}
 
 	option = { # ok
 		name = VIETmisc.1063.a	
@@ -2375,7 +2414,7 @@ VIETmisc.1065 = {
 	option = { # ok
 		name = VIETmisc.1065.a
 		VIET_huge_prestige_loss_effect = yes
-		remove_short_term_gold = 20
+		remove_short_term_gold = 44
 		stress_impact = {
 			greedy = miniscule_stress_impact_gain
 			cynical = miniscule_stress_impact_gain
@@ -2393,7 +2432,10 @@ VIETmisc.1065 = {
 			zealous = miniscule_stress_impact_gain
 			craven = miniscule_stress_impact_gain
 		}
-		trigger_event = VIETmisc.1055
+		trigger_event = {
+			id = VIETmisc.1055
+			days = { 15 40 }
+		}
 		hidden_effect = {
 			scope:elder = {		
 				death = {
@@ -2448,7 +2490,10 @@ VIETmisc.1066 = {
 				}
 			}		
 		}	
-		trigger_event = VIETmisc.1067
+		trigger_event = {
+			id = VIETmisc.1067
+			days = 4
+		}
 	}
 }
 
@@ -2467,8 +2512,11 @@ VIETmisc.1067 = {
 
 
 	option = { # ok
-		name = VIETmisc.1067.a
-		trigger_event = VIETmisc.1068
+		name = VIETmisc.1067.a	
+		trigger_event = {
+			id = VIETmisc.1068
+			days = { 15 40 }
+		}
 	}
 }
 
@@ -2488,6 +2536,9 @@ VIETmisc.1068 = {
 		animation = ecstasy
 	}
 
+	immediate = {
+		play_music_cue = "mx_VIET_eerie_ambience"
+	}
 
 	option = { # ok
 		name = VIETmisc.1068.a
@@ -2513,6 +2564,10 @@ VIETmisc.1069 = {
 
 	immediate = {
 		play_music_cue = "mx_cue_peace_ensues"
+		set_global_variable = {
+			name = VIET_mysterious_child_happened
+			value = yes
+		}
 	}
 
 

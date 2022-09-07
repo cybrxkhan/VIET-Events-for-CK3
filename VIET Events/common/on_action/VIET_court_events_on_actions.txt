@@ -1,5 +1,6 @@
 ﻿on_trigger_court_events = {
 	on_actions = {
+		delay = { days = { 88 288 } }
 		VIET_court_event_on_actions
 	}
 }
@@ -7,7 +8,7 @@
 VIET_court_event_on_actions = {
 	random_events = {
 		chance_of_no_event = {
-			value = 50
+			value = 30
 			if = {
 				limit = {
 					has_game_rule = VIET_event_frequency_low
@@ -40,7 +41,7 @@ VIET_court_event_on_actions = {
 			}
 		}
 		
-		20000 = 0
+		10000 = 0
 
 		# VIET Events Contest Winners
 		100 = VIETmisc.6000 			# Squabble between two intellectuals
@@ -62,6 +63,8 @@ VIET_court_event_on_actions = {
 		100 = VIETmisc.6015 			# Loud ominous noise in the courtroom
 		100 = VIETmisc.6016 			# Rumors of a bad but nonexistent courtier
 		100 = VIETmisc.6017 			# Rumors of a good but nonexistent courtier
+
+		# 18
 
 	}
 }

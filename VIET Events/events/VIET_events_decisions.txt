@@ -468,7 +468,7 @@ VIETmisc.2008 = {
 	}
 
 	trigger = {
-		NOT = { has_character_modifier = VIET_ghost_haunting }
+		has_character_modifier = VIET_ghost_haunting
 	}
 	
 	option = { # Ok

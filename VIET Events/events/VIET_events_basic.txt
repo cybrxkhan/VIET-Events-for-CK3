@@ -24268,6 +24268,7 @@ VIETmisc.0265 = {
 				OR = {
 					has_trait = poet
 					diplomacy >= decent_skill_rating
+					learning >= decent_skill_rating
 				}
 				NOR = {
 					has_trait = stubborn
@@ -24285,10 +24286,6 @@ VIETmisc.0265 = {
 		random_courtier = {
 			limit = {
 				is_available_ai_adult = yes
-				NOR = {
-					has_trait = poet
-					diplomacy >= decent_skill_rating
-				}
 				OR = {
 					has_trait = stubborn
 					has_trait = chaste
@@ -24297,6 +24294,8 @@ VIETmisc.0265 = {
 				}
 			}
 			save_scope_as = prude
+		}
+		scope:prude = {			
 			add_opinion = {
 				target = scope:musician
 				modifier = VIET_opinion_composes_vulgar_music
@@ -24305,7 +24304,7 @@ VIETmisc.0265 = {
 				target = scope:musician
 				modifier = VIET_opinion_dislikes_my_music
 			}
-		}	
+		}
 	}
 
 	

@@ -98,8 +98,11 @@ VIETmisc.6000 = {
 	}
 
 	trigger = {
-		is_ruler = yes
-		has_royal_court = yes
+		# # DLC check.
+		# has_royal_court = yes
+		# # Standard checks.
+		# is_available_adult = yes
+		# is_landed = yes
 		exists = cp:councillor_court_chaplain
 		cp:councillor_court_chaplain = {
 			is_available_healthy_ai_adult = yes
@@ -354,10 +357,13 @@ VIETmisc.6001 = {
 		}
 	}
 
-	trigger = {
-		is_ruler = yes
-		has_royal_court = yes
-	}
+	#trigger = {		
+		# # DLC check.
+		# has_royal_court = yes
+		# # Standard checks.
+		# is_available_adult = yes
+		# is_landed = yes
+	#}
 
 	immediate = {
 		create_character = {
@@ -543,8 +549,11 @@ VIETmisc.6002 = {
 	}
 
 	trigger = {
-		is_ruler = yes
-		has_royal_court = yes
+		# # DLC check.
+		# has_royal_court = yes
+		# # Standard checks.
+		# is_available_adult = yes
+		# is_landed = yes
 		any_courtier = {
 			is_available_ai_adult = yes
 			has_court_event_flag = no
@@ -959,8 +968,11 @@ VIETmisc.6003 = {
 	}
 
 	trigger = {
-		is_ruler = yes
-		has_royal_court = yes
+		# # DLC check.
+		# has_royal_court = yes
+		# # Standard checks.
+		# is_available_adult = yes
+		# is_landed = yes
 		any_courtier = {
 			is_available_ai_adult = yes
 			has_court_event_flag = no
@@ -1070,8 +1082,11 @@ VIETmisc.6004 = {
 	}
 
 	trigger = {
-		is_ruler = yes
-		has_royal_court = yes
+		# # DLC check.
+		# has_royal_court = yes
+		# # Standard checks.
+		# is_available_adult = yes
+		# is_landed = yes
 		any_neighboring_top_liege_realm_owner = {
 			is_ai = yes
 			NOT = {
@@ -1120,6 +1135,10 @@ VIETmisc.6004 = {
 		}
 		remove_short_term_gold = 50
 		VIET_huge_prestige_gain_effect = yes
+		add_character_modifier = {
+			modifier = VIET_recently_spruced_up_court
+			years = 6
+		}
 		change_current_court_grandeur = minor_court_grandeur_gain
 		scope:envoy = {
 			add_opinion = {
@@ -1218,8 +1237,11 @@ VIETmisc.6005 = {
 	}
 
 	trigger = {
-		is_ruler = yes
-		has_royal_court = yes
+		# # DLC check.
+		# has_royal_court = yes
+		# # Standard checks.
+		# is_available_adult = yes
+		# is_landed = yes
 		any_courtier = {
 			is_available_ai_adult = yes
 			has_court_event_flag = no
@@ -1349,8 +1371,11 @@ VIETmisc.6006 = {
 	}
 
 	trigger = {
-		is_ruler = yes
-		has_royal_court = yes
+		# # DLC check.
+		# has_royal_court = yes
+		# # Standard checks.
+		# is_available_adult = yes
+		# is_landed = yes
 		any_courtier = {
 			is_available_ai_child = yes
 			has_court_event_flag = no
@@ -1525,7 +1550,13 @@ VIETmisc.6006 = {
 
 
 	after = {
-		scope:courtier = {
+		scope:nice_courtier = {
+			clear_court_event_participation = yes
+		}
+		scope:child = {
+			clear_court_event_participation = yes
+		}
+		scope:mean_courtier = {
 			clear_court_event_participation = yes
 		}
 	}
@@ -1566,8 +1597,11 @@ VIETmisc.6007 = {
 	}
 
 	trigger = {
-		is_ruler = yes
-		has_royal_court = yes
+		# # DLC check.
+		# has_royal_court = yes
+		# # Standard checks.
+		# is_available_adult = yes
+		# is_landed = yes
 		any_courtier = {
 			is_available_ai_adult = yes
 			has_court_event_flag = no
@@ -1745,8 +1779,11 @@ VIETmisc.6008 = {
 	}
 
 	trigger = {
-		is_ruler = yes
-		has_royal_court = yes
+		# # DLC check.
+		# has_royal_court = yes
+		# # Standard checks.
+		# is_available_adult = yes
+		# is_landed = yes
 		any_courtier = {
 			is_available_ai_adult = yes
 			has_court_event_flag = no
@@ -1831,10 +1868,13 @@ VIETmisc.6009 = {
 		}
 	}
 
-	trigger = {
-		is_ruler = yes
-		has_royal_court = yes
-	}
+	#trigger = {		
+		# # DLC check.
+		# has_royal_court = yes
+		# # Standard checks.
+		# is_available_adult = yes
+		# is_landed = yes
+	#}
 
 	immediate = {
 		random_held_title = {
@@ -1919,10 +1959,13 @@ VIETmisc.6010 = {
 		}
 	}
 
-	trigger = {
-		is_ruler = yes
-		has_royal_court = yes
-	}
+	#trigger = {		
+		# # DLC check.
+		# has_royal_court = yes
+		# # Standard checks.
+		# is_available_adult = yes
+		# is_landed = yes
+	#}
 
 	option = { # Hold court elsewhere
 		name = VIETmisc.6010.a
@@ -1985,8 +2028,11 @@ VIETmisc.6011 = {
 	}
 
 	trigger = {
-		is_ruler = yes
-		has_royal_court = yes
+		# # DLC check.
+		# has_royal_court = yes
+		# # Standard checks.
+		# is_available_adult = yes
+		# is_landed = yes
 		OR = {
 			AND = {
 				exists = mother
@@ -2150,8 +2196,11 @@ VIETmisc.6012 = {
 	}
 
 	trigger = {
-		is_ruler = yes
-		has_royal_court = yes
+		# # DLC check.
+		# has_royal_court = yes
+		# # Standard checks.
+		# is_available_adult = yes
+		# is_landed = yes
 		any_courtier = {
 			is_available_ai_adult = yes
 			has_court_event_flag = no
@@ -2204,8 +2253,6 @@ VIETmisc.6012 = {
 		create_character = {
 			location = root.capital_province
 			template = VIET_corrupt_official_template
-			faith = scope:county.faith
-			culture = scope:county.culture
 			save_scope_as = official
 		}
 
@@ -2316,8 +2363,11 @@ VIETmisc.6013 = {
 	}
 
 	trigger = {
-		is_ruler = yes
-		has_royal_court = yes
+		# # DLC check.
+		# has_royal_court = yes
+		# # Standard checks.
+		# is_available_adult = yes
+		# is_landed = yes
 		any_held_title = {
 			tier = tier_county
 			NOT = { this = root.capital_county }
@@ -2388,7 +2438,9 @@ VIETmisc.6013 = {
 				}
 			}
 			else = {
-				clear_court_event_participation = yes
+				scope:dignitary = {
+					clear_court_event_participation = yes
+				}
 			}	
 		}
 		
@@ -2423,8 +2475,11 @@ VIETmisc.6014 = {
 	}
 
 	trigger = {
-		is_ruler = yes
-		has_royal_court = yes
+		# # DLC check.
+		# has_royal_court = yes
+		# # Standard checks.
+		# is_available_adult = yes
+		# is_landed = yes
 		any_courtier = {
 			is_available_ai_adult = yes
 			has_court_event_flag = no
@@ -2536,8 +2591,11 @@ VIETmisc.6015 = {
 	}
 
 	trigger = {
-		is_ruler = yes
-		has_royal_court = yes
+		# # DLC check.
+		# has_royal_court = yes
+		# # Standard checks.
+		# is_available_adult = yes
+		# is_landed = yes
 		any_courtier = {
 			is_available_ai_adult = yes
 			has_court_event_flag = no
@@ -2597,10 +2655,13 @@ VIETmisc.6016 = {
 		}
 	}
 
-	trigger = {
-		is_ruler = yes
-		has_royal_court = yes
-	}
+	#trigger = {		
+		# # DLC check.
+		# has_royal_court = yes
+		# # Standard checks.
+		# is_available_adult = yes
+		# is_landed = yes
+	#}
 
 	immediate = {
 		create_character = {
@@ -2673,10 +2734,13 @@ VIETmisc.6017 = {
 		}
 	}
 
-	trigger = {
-		is_ruler = yes
-		has_royal_court = yes
-	}
+	#trigger = {		
+		# # DLC check.
+		# has_royal_court = yes
+		# # Standard checks.
+		# is_available_adult = yes
+		# is_landed = yes
+	#}
 
 	immediate = {
 		create_character = {
