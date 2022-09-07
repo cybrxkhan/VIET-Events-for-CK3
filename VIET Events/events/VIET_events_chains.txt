@@ -2193,7 +2193,7 @@ VIETmisc.1061 = {
 	type = character_event
 	title = VIETmisc.1061.t	
 	desc = VIETmisc.1061.desc
-	theme = stress
+	theme = mental_health
 	override_background = { event_background = feast }
 	
 	right_portrait = {
@@ -2456,6 +2456,7 @@ VIETmisc.1069 = {
 	title = VIETmisc.1069.t	
 	desc = VIETmisc.1069.desc
 	theme = friendly
+	override_background = { event_background = bedchamber }
 
 	left_portrait = {
 		character = root
