@@ -2491,7 +2491,12 @@ VIET_vague_dream_of_dreamer_male = {
 	stress_gain_mult = 0.1
 	stress_loss_mult = -0.1
 }
-
+VIET_strange_malaise = {
+	icon = health_negative
+	health = -0.4
+	stress_gain_mult = 0.1
+	stress_loss_mult = -0.1
+}
 
 
 

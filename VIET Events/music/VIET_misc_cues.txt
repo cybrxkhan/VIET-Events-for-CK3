@@ -1,0 +1,42 @@
+﻿
+##### MUSIC CUES
+
+# Tunnel Riser - by Magnus Walker
+# https://freesound.org/people/magnuswaker/sounds/581089/
+mx_VIET_eerie_ambience = {
+	music = "file:/music/VIET_eerie_ambience.ogg"
+	pause_factor = 25
+	# play every time
+}
+
+# Scary - by Titus Calen
+# https://soundbible.com/1814-Scary.html
+mx_VIET_eerie_suspense = {
+	music = "file:/music/VIET_eerie_suspense.ogg"
+	pause_factor = 25
+	# play every time
+}
+
+# Creepy Child Giggle with Reverb - by Wolf Doctor
+# https://freesound.org/people/wolfdoctor/sounds/578760/
+mx_VIET_creepy_child_giggle = {
+	music = "file:/music/VIET_creepy_child_giggle.ogg"
+	pause_factor = 25
+	# play every time
+}
+
+# Deep Tapping or Dripping 01 - by MinigunFiend
+# https://freesound.org/people/MinigunFiend/sounds/175215/
+mx_VIET_ominous_footsteps = {
+	music = "file:/music/VIET_ominous_footsteps.ogg"
+	pause_factor = 25
+	# play every time
+}
+
+# Metal Spring Pluck (Horror/Suspense Sting) - by Za-Games
+# https://freesound.org/people/Za-Games/sounds/540213/
+mx_VIET_subtle_jump_scare = {
+	music = "file:/music/VIET_subtle_jump_scare.ogg"
+	pause_factor = 25
+	# play every time
+}

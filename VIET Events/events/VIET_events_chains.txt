@@ -1879,12 +1879,13 @@ VIETmisc.1052 = {
 	}
 	
 	immediate = {
+		play_music_cue = "mx_VIET_eerie_suspense"
 		create_character = {
 			location = root.capital_province
 			culture = root.culture
 			faith = root.faith
 			gender_female_chance = 50
-			age = { 4 10 }
+			age = { 4 9 }
 			random_traits = yes
 			save_scope_as = child
 		}
@@ -1931,7 +1932,7 @@ VIETmisc.1053 = {
 			}
 		}
 	}
-	
+
 	
 	option = {
 		name = VIETmisc.1053.a
@@ -1949,6 +1950,9 @@ VIETmisc.1053 = {
 	option = {
 		name = VIETmisc.1053.b
 		#add_character_flag = VIET_mysterious_child_hopeful_ending
+		add_character_modifier = {
+			modifier = VIET_strange_malaise
+		}
 		VIET_massive_prestige_loss_effect = yes
 		stress_impact = {
 			base = miniscule_stress_impact_gain
@@ -1996,7 +2000,8 @@ VIETmisc.1054 = {
 				is_available_ai_adult = yes
 			}
 			save_scope_as = courtier
-		}
+		}		
+		play_music_cue = "mx_VIET_eerie_ambience"
 	}
 	
 	
@@ -2032,6 +2037,10 @@ VIETmisc.1055 = {
 		animation = paranoia
 	}
 
+	immediate = {
+		play_music_cue = "mx_VIET_ominous_footsteps"
+	}
+
 	option = { # ok
 		name = VIETmisc.1055.a
 		custom_description_no_bullet = {
@@ -2042,7 +2051,7 @@ VIETmisc.1055 = {
 }
 
 
-# Child's giggle
+# Child's giggle/sobbing
 VIETmisc.1056 = {
 	type = character_event
 	title = VIETmisc.1056.t	
@@ -2053,6 +2062,10 @@ VIETmisc.1056 = {
 	right_portrait = {
 		character = root
 		animation = paranoia
+	}
+
+	immediate = {
+		play_music_cue = "mx_VIET_creepy_child_giggle"
 	}
 
 	option = { # ok
@@ -2075,6 +2088,10 @@ VIETmisc.1057 = {
 	left_portrait = {
 		character = root
 		animation = paranoia
+	}
+
+	immediate = {
+		play_music_cue = "mx_VIET_creepy_child_giggle"
 	}
 
 	option = { # ok
@@ -2102,6 +2119,10 @@ VIETmisc.1058 = {
 	right_portrait = {
 		character = root
 		animation = rage
+	}
+
+	immediate = {
+		play_music_cue = "mx_VIET_creepy_child_giggle"
 	}
 
 	option = { # ok
@@ -2174,6 +2195,10 @@ VIETmisc.1060 = {
 		animation = rage
 	}
 
+	immediate = {
+		play_music_cue = "mx_VIET_eerie_ambience"
+	}
+
 	option = { # ok
 		name = VIETmisc.1060.a	
 		stress_impact = {
@@ -2199,6 +2224,10 @@ VIETmisc.1061 = {
 	right_portrait = {
 		character = root
 		animation = sadness
+	}
+
+	immediate = {
+		play_music_cue = "mx_VIET_eerie_ambience"
 	}
 
 	option = { # ok
@@ -2232,6 +2261,10 @@ VIETmisc.1062 = {
 		animation = sadness
 	}
 
+	immediate = {
+		play_music_cue = "mx_VIET_subtle_jump_scare"
+	}
+
 	option = { # ok
 		name = VIETmisc.1062.a
 		custom_description_no_bullet = {
@@ -2259,6 +2292,12 @@ VIETmisc.1063 = {
 			base = medium_stress_impact_gain
 			craven = miniscule_stress_impact_gain
 			paranoid = miniscule_stress_impact_gain
+		}
+		if = {
+			limit = {
+				has_character_modifier = VIET_strange_malaise
+			}
+			remove_character_modifier = VIET_strange_malaise
 		}
 		add_character_modifier = {
 			modifier = VIET_mysterious_child
@@ -2384,9 +2423,18 @@ VIETmisc.1066 = {
 		animation = personality_compassionate
 	}	
 
+	immediate = {
+		play_music_cue = "mx_VIET_eerie_ambience"
+	}
 
 	option = { # ok
 		name = VIETmisc.1066.a
+		if = {
+			limit = {
+				has_character_modifier = VIET_strange_malaise
+			}
+			remove_character_modifier = VIET_strange_malaise
+		}
 		stress_impact = {
 			base = miniscule_stress_impact_loss
 			trusting = miniscule_stress_impact_loss
@@ -2461,6 +2509,10 @@ VIETmisc.1069 = {
 	left_portrait = {
 		character = root
 		animation = personality_content
+	}
+
+	immediate = {
+		play_music_cue = "mx_cue_peace_ensues"
 	}
 
 
