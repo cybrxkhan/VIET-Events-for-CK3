@@ -124,10 +124,6 @@
  VIET_patchwork_quilt_desc:0 "朴素而美丽的被子，装饰着传统[ROOT.Char.GetCulture.GetName]样式和图案。"
  VIET_leather_ball_name:0 "皮球"
  VIET_leather_ball_desc:0 "一个皮革拼接成的，中间塞满羽毛，可以用来玩耍，保持身材。"
- # 1.7.0 - please leave this comment here
- VIET_golden_rose_name:0 "Golden Rose"
- VIET_golden_rose_desc:0 "A mysterious and beautiful rose, made out of solid gold. Who made it? When was it made? Where was it made? Who knows...."
- # 1.7.1 - please leave this comment here
  VIET_xxxxx_name:0 "xxxxx"
  VIET_xxxxx_desc:0 "xxxxx"
  VIET_small_seashell_name:0 "小贝壳"
@@ -136,3 +132,5 @@
  VIET_useless_map_desc:0 "地图上描绘了一个幻想的乌托邦，反映了人们对与理想社会的期许。"
  VIET_house_vase_name:0 "[ROOT.Char.GetCulture.GetNameNoTooltip]宅瓶"
  VIET_house_vase_desc:0 "此瓶由[ROOT.Char.GetCulture.GetNameNoTooltip]匠人制成，简朴而不失雅致，瓶身上装饰着日常生活的图案。"
+ VIET_golden_rose_name:0 "金玫瑰"
+ VIET_golden_rose_desc:0 "一株由纯金打造的玫瑰，神秘而美丽。出自谁之手，何时制成，何处打造？只有天知道……"
