@@ -13101,6 +13101,9 @@ VIETold.2186 = {
 
 	option = { # ok
 		name = VIETold.2186.a
+		trigger = {
+			NOT = { has_character_flag = VIET_met_the_dreamer }
+		}
 		stress_impact = {
 			base = miniscule_stress_impact_loss
 			compassionate = miniscule_stress_impact_loss
