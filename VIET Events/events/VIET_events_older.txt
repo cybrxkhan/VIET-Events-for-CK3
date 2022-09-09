@@ -4397,6 +4397,7 @@ VIETold.1060 = {
 		progress_towards_friend_effect = {
 			CHARACTER = scope:jokester
 			OPINION = no
+			REASON = VIET_friend_reason_placeholder
 		}
 	}
 }

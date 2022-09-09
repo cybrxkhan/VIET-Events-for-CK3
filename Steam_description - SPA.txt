@@ -1,6 +1,6 @@
-[img]https://i.imgur.com/nuOGjHu.jpg[/img]
+[img]https://i.imgur.com/GmgXqF4.jpg[/img]
 
-[h1]Versión actual: 1.6.1 "Encuesta" (Salida 15/7/22, Compatible con versión vanilla 1.6.X)[/h1]
+[h1]Versión actual: 1.7.0 "888" (Salida 8/9/22, Compatible con versión vanilla 1.7.X)[/h1]
 [h1][B][url=https://discord.gg/9KuyXv2uZA]Servidor de Discord de mis Mods[/url][/B][/h1]
 [B]Echa un Vistazo a [url=https://forum.paradoxplaza.com/forum/threads/mod-viet-events-for-ck3-a-flavor-and-immersion-event-mod.1422081/]Tema del Foro[/url] Para Más Información[/B]
 [B]Descarga/Instalación manual [url=https://github.com/cybrxkhan/VIET-Events-for-CK3/releases]en Github[/url][/B]
@@ -25,7 +25,7 @@ Siéntete libre de usar mi trabajo con tus mods - todo lo que pido es reconocimi
 [img]http://i.imgur.com/EyXurbK.jpg[/img]
 
 [LIST]
-[*]¡Más de [B]825 nuevos eventos[/B] para experimentar!
+[*]¡Más de [B][U]888[/U] nuevos eventos[/B] para experimentar!
 [*]Explora nuevas decisiones, artefactos, interacciones y cadenas de eventos
 [*]Regla de juego para desactivar los eventos estúpidos para aquellos que no les guste, con tres niveles para escoger entre: Balanceado (Predeterminado), Serio (Restringido), y Todos los eventos (Todo)
 [*][B]Compatible con casi cualquier cosa[/B] ya que no modifico archivos del vanilla - incluso con mods de conversión total puedes desactivar los eventos que hagan referencias a cosas o lugares específicos del mundo medieval que no tendrían sentido en otros periodos o universos (como mods fantásticos o de ciencia ficción)
@@ -51,9 +51,9 @@ Por favor, echa un vistazo a [url=https://steamcommunity.com/workshop/filedetail
 
 [img]http://i.imgur.com/RQ5QZTF.jpg[/img]
 
-[h1]Versión 1.6.1 "Encuesta"[/h1]
+[h1]Versión 1.7.0 "Encuesta"[/h1]
 
-[I]This update includes the 7 winning events from the events contest of the VIET/RICE survey. Thank you for everyone who participated, and thanks in particular to Cerbzzz, Duke Leo, Pedrolu, Ultimatum, Viridianus, and two anonymous players for the winning ideas![/I]
+[I]In East Asian culture, 8 is a lucky number. With this update, VIET has reached the lucky milestone of adding 888 events into the game, just in time for the two year anniversary of VIET’s release! Thanks as always to all the players and modders who’ve helped and supported me over the years - the past year has seen the introduction of more interesting events like county events and court events, and the mod will certainly continue to grow in its third year with your continued support![/I]
 
 
 

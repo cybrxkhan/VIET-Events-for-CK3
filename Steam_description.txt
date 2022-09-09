@@ -1,6 +1,6 @@
-[img]https://i.imgur.com/nuOGjHu.jpg[/img]
+[img]https://i.imgur.com/GmgXqF4.jpg[/img]
 
-[h1]Current Version: 1.6.1 "Survey" (Released 7/15/22, Compatible with vanilla patch 1.6.X)[/h1]
+[h1]Current Version: 1.7.0 "888" (Released 9/8/22, Compatible with vanilla patch 1.7.X)[/h1]
 
 [h1][B][url=https://discord.gg/9KuyXv2uZA]Discord Server for my mods[/url]
 [url=https://cybrxkhansmods.godaddysites.com/]Official Website for my mods[/url][/B][/h1]
@@ -27,7 +27,7 @@ Feel free to use my work in your mods - all I ask is that I am credited and (if 
 [img]http://i.imgur.com/EyXurbK.jpg[/img]
 
 [LIST]
-[*]Over [B]825 new flavor events[/B] to experience!
+[*]Over [B][U]888[/U] new flavor events[/B] to experience!
 [*]Explore new decisions, artifacts, character interactions, activities, and more!
 [*]Game rule to disable sillier events for those who don't like them, with three levels to choose from: Balanced (Default), Serious (Restricted), and All Events (Full)
 [*][B]Compatible with almost anything[/B] since it doesn't touch any vanilla files - even with overhaul mods, you can via game rule disable events that reference things specific to our medieval world that wouldn’t make sense in other time periods or universes (like fantasy and sci-fi conversion mods)
@@ -56,15 +56,27 @@ Thanks!
 
 [img]http://i.imgur.com/RQ5QZTF.jpg[/img]
 
-[h1]Version 1.6.1 "Survey"[/h1]
+[h1]Version 1.7.0 "888"[/h1]
 
-[I]This update includes the 7 winning events from the events contest of the VIET/RICE survey. Thank you for everyone who participated, and thanks in particular to Cerbzzz, Duke Leo, Pedrolu, Ultimatum, Viridianus, and two anonymous players for the winning ideas![/I]
+[I]In East Asian culture, 8 is a lucky number. With this update, VIET has reached the lucky milestone of adding 888 events into the game, just in time for the two year anniversary of VIET’s release! Thanks as always to all the players and modders who’ve helped and supported me over the years - the past year has seen the introduction of more interesting events like county events and court events, and the mod will certainly continue to grow in its third year with your continued support![/I]
+
+Total New Events Added: [B]63[/B]
 
 [LIST]
-[*]Added 7 events from the winning submissions for the VIET Events contest
-[*]Added Spanish translations by zubzerozD and Cruzado Blanco, which should cover most remaining untranslated content
-[*]Integrated additional Chinese translation by Tbeabm and Co.
-[*]Rebalanced gold costs of several decisions to be less unrealistically expensive at higher tier levels
+[*]Added Mysterious Child court event chain (18 events total)
+[*]Added 45 new events with the following themes:
+[LIST]
+[*]12 vassals and courtiers
+[*]16 court events
+[*]2 Local Rumors
+[*]15 Strange Dreams*
+[/LIST]
+[*]Added a few spoopy sound effects
+[*]Added placeholder friendship/rival reasons (more will be added in the future)
+[*]Made the golden rose result from the Treasure Chest decision an artifact
+[*]Moved the Dreamer mini-event chain to the event chain on_actions
+[*]Slightly decreased chances of some artifact events happening
+[*]Fixed localization in the flower visit decision referring to the donkey county modifier instead of the flower county modifier
 [*]Fixed ghost in the haunting decision chain “disappearing” by itself even after you did a successful exorcism
 [*]Miscellaneous bugfixes
 [/LIST]

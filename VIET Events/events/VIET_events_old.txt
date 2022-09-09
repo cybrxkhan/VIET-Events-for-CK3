@@ -5973,6 +5973,7 @@ VIETold.2081 = {
 		progress_towards_rival_effect = {
 			CHARACTER = scope:scope_VIET_courtier_perving_on_maid
 			OPINION = no
+			REASON = VIET_rival_reason_placeholder
 		}
 		stress_impact = {
 			callous = minor_stress_impact_gain
@@ -12588,6 +12589,7 @@ VIETold.2176 = {
 		progress_towards_friend_effect = {
 			CHARACTER = scope:cafe_friend
 			OPINION = no
+			REASON = VIET_friend_reason_placeholder
 		}
 		scope:cafe_friend = {
 			add_opinion = {

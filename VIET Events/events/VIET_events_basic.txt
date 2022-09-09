@@ -4660,6 +4660,7 @@ VIETmisc.0061 = {
 		progress_towards_friend_effect = {
 			CHARACTER = scope:scope_VIET_haunted_sinner
 			OPINION = no
+			REASON = VIET_friend_reason_placeholder
 		}
 	}	
 	option = { # reform!
@@ -4682,6 +4683,7 @@ VIETmisc.0061 = {
 		progress_towards_friend_effect = {
 			CHARACTER = scope:scope_VIET_haunted_sinner
 			OPINION = no
+			REASON = VIET_friend_reason_placeholder
 		}
 	}
 	option = { # not my problem
@@ -4705,6 +4707,7 @@ VIETmisc.0061 = {
 		progress_towards_rival_effect = {
 			CHARACTER = scope:scope_VIET_haunted_sinner
 			OPINION = no
+			REASON = VIET_rival_reason_placeholder
 		}
 	}
 	option = { # liar
@@ -4728,6 +4731,7 @@ VIETmisc.0061 = {
 		progress_towards_rival_effect = {
 			CHARACTER = scope:scope_VIET_haunted_sinner
 			OPINION = no
+			REASON = VIET_rival_reason_placeholder
 		}
 	}
 }
@@ -5038,6 +5042,7 @@ VIETmisc.0064 = {
 		progress_towards_friend_effect = {
 			CHARACTER = scope:scope_VIET_child_sob_help
 			OPINION = no
+			REASON = VIET_friend_reason_placeholder
 		}
 	}
 	option = { # Who cares about the child
@@ -5062,6 +5067,7 @@ VIETmisc.0064 = {
 		progress_towards_rival_effect = {
 			CHARACTER = scope:scope_VIET_child_sob_help
 			OPINION = no
+			REASON = VIET_rival_reason_placeholder
 		}
 	}
 }
@@ -5222,6 +5228,7 @@ VIETmisc.0066 = {
 		progress_towards_friend_effect = {
 			CHARACTER = scope:scope_VIET_fellow_lost_traveler
 			OPINION = no
+			REASON = VIET_friend_reason_placeholder
 		}
 	}
 }
@@ -6178,6 +6185,7 @@ VIETmisc.0080 = {
 		progress_towards_friend_effect = {
 			CHARACTER = scope:scope_VIET_baklava_fanatic
 			OPINION = no
+			REASON = VIET_friend_reason_placeholder
 		}
 	}
 }
@@ -7818,10 +7826,12 @@ VIETmisc.0097 = {
 		progress_towards_friend_effect = {
 			CHARACTER = scope:scope_VIET_ghost_prank_victim
 			OPINION = no
+			REASON = VIET_friend_reason_placeholder
 		}
 		progress_towards_rival_effect = {
 			CHARACTER = scope:scope_VIET_ghost_prankster
 			OPINION = no
+			REASON = VIET_rival_reason_placeholder
 		}
 	}	
 	option = { # Stop falling for pranks
@@ -7845,10 +7855,12 @@ VIETmisc.0097 = {
 		progress_towards_friend_effect = {
 			CHARACTER = scope:scope_VIET_ghost_prankster
 			OPINION = no
+			REASON = VIET_friend_reason_placeholder
 		}
 		progress_towards_rival_effect = {
 			CHARACTER = scope:scope_VIET_ghost_prank_victim
 			OPINION = no
+			REASON = VIET_rival_reason_placeholder
 		}
 	}
 }
@@ -7965,6 +7977,7 @@ VIETmisc.0098 = {
 		progress_towards_rival_effect = {
 			CHARACTER = scope:scope_VIET_fake_ghost
 			OPINION = no
+			REASON = VIET_rival_reason_placeholder
 		}
 	}
 	option = { # Compensate locals
@@ -7983,6 +7996,7 @@ VIETmisc.0098 = {
 		progress_towards_rival_effect = {
 			CHARACTER = scope:scope_VIET_fake_ghost
 			OPINION = no
+			REASON = VIET_rival_reason_placeholder
 		}
 	}
 }
@@ -8631,6 +8645,7 @@ VIETmisc.0107 = {
 		progress_towards_friend_effect = {
 			CHARACTER = scope:scope_VIET_court_sleepy
 			OPINION = no
+			REASON = VIET_friend_reason_placeholder
 		}
 	}
 	option = { # Have some water
@@ -8645,6 +8660,7 @@ VIETmisc.0107 = {
 		progress_towards_friend_effect = {
 			CHARACTER = scope:scope_VIET_court_sleepy
 			OPINION = no
+			REASON = VIET_friend_reason_placeholder
 		}		
 	}
 	option = { # Ha ha!
@@ -10508,6 +10524,7 @@ VIETmisc.0128 = {
 		progress_towards_rival_effect = {
 			CHARACTER = scope:scope_VIET_baby_rescuer
 			OPINION = no
+			REASON = VIET_rival_reason_placeholder
 		}
 	}		
 	option = { # Let a servant adopt it
@@ -10612,6 +10629,7 @@ VIETmisc.0128 = {
 		progress_towards_friend_effect = {
 			CHARACTER = scope:scope_VIET_baby_rescuer
 			OPINION = no
+			REASON = VIET_friend_reason_placeholder
 		}
 	}	
 }
@@ -11316,6 +11334,7 @@ VIETmisc.0135 = {
 		progress_towards_friend_effect = {
 			CHARACTER = scope:scope_VIET_sad_person
 			OPINION = no
+			REASON = VIET_friend_reason_placeholder
 		}
 		stress_impact = {
 			callous = minor_stress_impact_gain
@@ -11337,6 +11356,7 @@ VIETmisc.0135 = {
 		progress_towards_rival_effect = {
 			CHARACTER = scope:scope_VIET_sad_person
 			OPINION = no
+			REASON = VIET_rival_reason_placeholder
 		}
 		stress_impact = {
 			compassionate = minor_stress_impact_gain
@@ -11421,6 +11441,7 @@ VIETmisc.0136 = {
 		progress_towards_friend_effect = {
 			CHARACTER = scope:scope_VIET_cheer_upper
 			OPINION = no
+			REASON = VIET_friend_reason_placeholder
 		}
 		stress_impact = {
 			base = minor_stress_impact_loss
@@ -14797,6 +14818,7 @@ VIETmisc.0174 = {
 		progress_towards_friend_effect = {
 			CHARACTER = scope:companion
 			OPINION = no
+			REASON = VIET_friend_reason_placeholder
 		}
 	}
 }
@@ -22931,6 +22953,7 @@ VIETmisc.0256 = {
 		progress_towards_friend_effect = {
 			CHARACTER = scope:one_proud_bavarian
 			OPINION = no
+			REASON = VIET_friend_reason_placeholder
 		}
 	}
 	
@@ -22955,6 +22978,7 @@ VIETmisc.0256 = {
 		progress_towards_friend_effect = {
 			CHARACTER = scope:PI_dev
 			OPINION = no
+			REASON = VIET_friend_reason_placeholder
 		}
 	}
 
@@ -23070,6 +23094,7 @@ VIETmisc.0257 = {
 			# 	progress_towards_rival_effect = {
 			# 		CHARACTER = scope:recipient
 			# 		OPINION = no
+			#		REASON = VIET_rival_reason_placeholder
 			# 	}
 			# }
 		}
@@ -24907,6 +24932,7 @@ VIETmisc.0268 = {
 		progress_towards_friend_effect = {
 			CHARACTER = scope:vassal
 			OPINION = no
+			REASON = VIET_friend_reason_placeholder
 		}
 		stress_impact = {
 			greedy = medium_stress_impact_gain
@@ -25045,6 +25071,7 @@ VIETmisc.0269 = {
 		progress_towards_friend_effect = {
 			CHARACTER = scope:courtier
 			OPINION = no
+			REASON = VIET_friend_reason_placeholder
 		}
 		stress_impact = {
 			ambitious = minor_stress_impact_gain
@@ -25251,6 +25278,7 @@ VIETmisc.0271 = {
 		progress_towards_friend_effect = {
 			CHARACTER = scope:councilor
 			OPINION = no
+			REASON = VIET_friend_reason_placeholder
 		}
 		stress_impact = {
 			ambitious = minor_stress_impact_gain
@@ -25307,6 +25335,7 @@ VIETmisc.0271 = {
 		progress_towards_rival_effect = {
 			CHARACTER = scope:councilor
 			OPINION = no
+			REASON = VIET_rival_reason_placeholder
 		}
 		stress_impact = {
 			compassionate = minor_stress_impact_gain

@@ -1,0 +1,4 @@
+﻿l_german:
+
+ VIET_friend_reason_placeholder:0 "[CHARACTER.GetShortUIName|U] and [TARGET_CHARACTER.GetShortUIName] grew to enjoy each other's company."
+ VIET_rival_reason_placeholder:0 "[CHARACTER.GetShortUIName|U] and [TARGET_CHARACTER.GetShortUIName] grew to dislike each other due to some differences."

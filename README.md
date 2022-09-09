@@ -1,10 +1,10 @@
 # VIET Events for CK3
 
-<img src="https://i.imgur.com/nuOGjHu.jpg">
+<img src="https://i.imgur.com/GmgXqF4.jpg">
 
-## Latest Version: 1.6.1 "Survey" (Released 7/15/22)
+## Latest Version: 1.7.0 "888" (Released 9/8/22)
 
-_This update includes the 7 winning events from the events contest of the VIET/RICE survey. Thank you for everyone who participated, and thanks in particular to Cerbzzz, Duke Leo, Pedrolu, Ultimatum, Viridianus, and two anonymous players for the winning ideas!_
+_In East Asian culture, 8 is a lucky number. With this update, VIET has reached the lucky milestone of adding 888 events into the game, just in time for the two year anniversary of VIET’s release! Thanks as always to all the players and modders who’ve helped and supported me over the years - the past year has seen the introduction of more interesting events like county events and court events, and the mod will certainly continue to grow in its third year with your continued support!_
 
 Very Immersive Events and Tales (VIET), the sequel to VIET Events Reborn for CK2, is a flavor mod that adds a vast collection of events about everyday life to spice up your game. They add immersion and a diversity of experiences in between wars and vanilla’s event chains, and cover mundane minutiae ranging from small talk with courtiers and eating local cuisine to epic tales about love, philosophy, and the human condition. Some of the events unlock new decisions, character interactions, activities, and much more for you to explore!
 
@@ -14,7 +14,7 @@ Feel free to use my work in your mods - all I ask is that I am credited and (if 
 
 ## Features
 
-- Over 825 new flavor events to experience!
+- Over **888** new flavor events to experience!
 - Explore new decisions, artifacts, character interactions, activities, and more!
 - Game rule to disable sillier events for those who don't like them, with three levels to choose from: Balanced (Default), Serious (Restricted), and All Events (Full)
 - Compatible with almost anything since it doesn't touch any vanilla files - even with overhaul mods, you can via game rule disable events that reference things specific to our medieval world that wouldn’t make sense in other time periods or universes (like fantasy and sci-fi conversion mods)
@@ -32,12 +32,22 @@ DO NOT manually download the master branch unless you know what you're doing as 
 
 NOTE: If you are re-installing a mod, delete the old version of the mod first before copy and pasting the new one! While it's not always necessary, it's a good habit to do to prevent any potential issues.
 
-## Version 1.6.1 Changelog
+## Version 1.7.0 Changelog
 
-- Added 7 events from the winning submissions for the VIET Events contest
-- Added Spanish translations by zubzerozD and Cruzado Blanco, which should cover most remaining untranslated content
-- Integrated additional Chinese translation by Tbeabm and Co.
-- Rebalanced gold costs of several decisions to be less unrealistically expensive at higher tier levels
+Total New Events Added: **63**
+
+- Added Mysterious Child court event chain (18 events total)
+- Added 45 new events with the following themes:
+    - 12 vassals and courtiers
+    - 16 court events
+    - 2 Local Rumors
+    - 15 Strange Dreams*
+- Added a few spoopy sound effects
+- Added placeholder friendship/rival reasons (more will be added in the future)
+- Made the golden rose result from the Treasure Chest decision an artifact
+- Moved the Dreamer mini-event chain to the event chain on_actions
+- Slightly decreased chances of some artifact events happening
+- Fixed localization in the flower visit decision referring to the donkey county modifier instead of the flower county modifier
 - Fixed ghost in the haunting decision chain “disappearing” by itself even after you did a successful exorcism
 - Miscellaneous bugfixes
 

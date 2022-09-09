@@ -49,7 +49,7 @@ VIET_gift_baklava = {
 	}
 	
 	is_valid_showing_failures_only = {
-		scope:recipient = { is_diplomatically_available = yes }
+		scope:recipient = { is_busy_in_events_localised = yes }
 	}
 	
 	on_accept = {
@@ -122,7 +122,7 @@ VIET_gift_spices = {
 	}
 	
 	is_valid_showing_failures_only = {
-		scope:recipient = { is_diplomatically_available = yes }
+		scope:recipient = { is_busy_in_events_localised = yes }
 	}
 	
 	on_accept = {
