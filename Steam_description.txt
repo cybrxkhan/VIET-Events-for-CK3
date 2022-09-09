@@ -60,7 +60,7 @@ Thanks!
 
 [I]In East Asian culture, 8 is a lucky number. With this update, VIET has reached the lucky milestone of adding 888 events into the game, just in time for the two year anniversary of VIET’s release! Thanks as always to all the players and modders who’ve helped and supported me over the years - the past year has seen the introduction of more interesting events like county events and court events, and the mod will certainly continue to grow in its third year with your continued support![/I]
 
-Total New Events Added: [B]63[/B]
+New events added in this version: [B]63[/B]
 
 [LIST]
 [*]Added Mysterious Child court event chain (18 events total)
