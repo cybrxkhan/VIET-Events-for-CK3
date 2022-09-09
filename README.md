@@ -34,7 +34,7 @@ NOTE: If you are re-installing a mod, delete the old version of the mod first be
 
 ## Version 1.7.0 Changelog
 
-Total New Events Added: **63**
+New events added in this version: **63**
 
 - Added Mysterious Child court event chain (18 events total)
 - Added 45 new events with the following themes:
