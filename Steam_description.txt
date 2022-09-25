@@ -39,7 +39,7 @@ Because people are kindly spending their own free time and effort to work on the
 [LIST]
 [*]Chinese - [url=https://paratranz.cn/projects/1580]a team led by Tbeabm[/url] has provided translation which is integrated into base VIET.
 [*]French - [url=https://steamcommunity.com/sharedfiles/filedetails/?id=2234027514]Available as sub-mod here[/url], thanks to Mouchi
-[*]German - [url=https://steamcommunity.com/sharedfiles/filedetails/?id=2447914570]Available as sub-mod here[/url], thanks to Illusive
+[*]German - [url=https://steamcommunity.com/sharedfiles/filedetails/?id=2865016522]Available as sub-mod here[/url], thanks to Dani
 [*]Japanese - [url=https://steamcommunity.com/sharedfiles/filedetails/?id=2762293648]Available as sub-mod here[/url], thanks to sla_domi
 [*]Korean - [url=https://steamcommunity.com/sharedfiles/filedetails/?id=2227982565]Available as sub-mod here[/url], thanks to Ohboksu
 [*]Russian - AmoreLibre has provided translation which is integrated into base VIET. Further Russian translations can be found in [url=https://steamcommunity.com/sharedfiles/filedetails/?id=2525780456]this sub-mod[/url] thanks to Д.Р.У.И.Д.
@@ -62,24 +62,7 @@ Thanks!
 
 New events added in this version: [B]63[/B]
 
-[LIST]
-[*]Added Mysterious Child court event chain (18 events total)
-[*]Added 45 new events with the following themes:
-[LIST]
-[*]12 vassals and courtiers
-[*]16 court events
-[*]2 Local Rumors
-[*]15 Strange Dreams*
-[/LIST]
-[*]Added a few spoopy sound effects
-[*]Added placeholder friendship/rival reasons (more will be added in the future)
-[*]Made the golden rose result from the Treasure Chest decision an artifact
-[*]Moved the Dreamer mini-event chain to the event chain on_actions
-[*]Slightly decreased chances of some artifact events happening
-[*]Fixed localization in the flower visit decision referring to the donkey county modifier instead of the flower county modifier
-[*]Fixed ghost in the haunting decision chain “disappearing” by itself even after you did a successful exorcism
-[*]Miscellaneous bugfixes
-[/LIST]
+Because changelog is too big to list here, please see the change notes here: https://steamcommunity.com/sharedfiles/filedetails/changelog/2227658180
 
 *Adapted from VIET for CK2
 
@@ -109,4 +92,3 @@ A few other shoutouts in particular:
 [*]tora75 for contributing the Norse unique localizations for several events.
 [*]Stik, Vertimnus, and Tobbzn on the CK3 Mod Co-op for helping me figure out how to adapt my CK2 province events and do a system for county events for CK3.
 [/LIST]
-
