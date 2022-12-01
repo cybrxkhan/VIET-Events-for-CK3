@@ -1,10 +1,10 @@
 # VIET Events for CK3
 
-<img src="https://i.imgur.com/GmgXqF4.jpg">
+<img src="https://i.imgur.com/OQu1I1Z.jpg">
 
-## Latest Version: 1.7.0 "888" (Released 9/8/22)
+## Latest Version: 1.8.0 "Nothing" (Released 12/1/22)
 
-_In East Asian culture, 8 is a lucky number. With this update, VIET has reached the lucky milestone of adding 888 events into the game, just in time for the two year anniversary of VIET’s release! Thanks as always to all the players and modders who’ve helped and supported me over the years - the past year has seen the introduction of more interesting events like county events and court events, and the mod will certainly continue to grow in its third year with your continued support!_
+_As of this update, VIET has passed 200k subscribers on Steam Workshop. Thank you all for your continued support, it means a lot! My CK3 modwork has been an unusual but fun way for me to engage in creative writing, and I hope to continue adding even more content in the future._
 
 Very Immersive Events and Tales (VIET), the sequel to VIET Events Reborn for CK2, is a flavor mod that adds a vast collection of events about everyday life to spice up your game. They add immersion and a diversity of experiences in between wars and vanilla’s event chains, and cover mundane minutiae ranging from small talk with courtiers and eating local cuisine to epic tales about love, philosophy, and the human condition. Some of the events unlock new decisions, character interactions, activities, and much more for you to explore!
 
@@ -32,23 +32,11 @@ DO NOT manually download the master branch unless you know what you're doing as 
 
 NOTE: If you are re-installing a mod, delete the old version of the mod first before copy and pasting the new one! While it's not always necessary, it's a good habit to do to prevent any potential issues.
 
-## Version 1.7.0 Changelog
+## Version 1.8.0 Changelog
 
-New events added in this version: **63**
+New events added in this version: **0**
 
-- Added Mysterious Child court event chain (18 events total)
-- Added 45 new events with the following themes:
-    - 12 vassals and courtiers
-    - 16 court events
-    - 2 Local Rumors
-    - 15 Strange Dreams*
-- Added a few spoopy sound effects
-- Added placeholder friendship/rival reasons (more will be added in the future)
-- Made the golden rose result from the Treasure Chest decision an artifact
-- Moved the Dreamer mini-event chain to the event chain on_actions
-- Slightly decreased chances of some artifact events happening
-- Fixed localization in the flower visit decision referring to the donkey county modifier instead of the flower county modifier
-- Fixed ghost in the haunting decision chain “disappearing” by itself even after you did a successful exorcism
+- Updated to vanilla patch 1.8 “Robe”
 - Miscellaneous bugfixes
 
 \* Adapted from VIET for CK2
