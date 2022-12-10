@@ -2497,6 +2497,43 @@ VIET_strange_malaise = {
 	stress_gain_mult = 0.1
 	stress_loss_mult = -0.1
 }
+VIET_couldnt_remember_ten_commandments = {
+	icon = piety_negative
+	monthly_piety = -0.3
+	christianity_religion_opinion = -10
+	judaism_religion_opinion = -10
+}
+VIET_utilizing_decimation = {
+	icon = dread_negative
+	monthly_dread = 0.4
+	advantage = 4
+	levy_reinforcement_rate = -0.1
+	general_opinion = -5
+}
+VIET_tetractys = {
+	icon = learning_positive
+	learning = 1
+	monthly_learning_lifestyle_xp_gain_mult = 0.02
+}
+VIET_admires_odysseus = {
+	icon = compass_positive
+	intrigue = 1
+}
+VIET_despires_odysseus = {
+	icon = piety_positive
+	diplomacy = 1
+}
+VIET_famous_beggar_charity_story = {
+	icon = stewardship_positive
+	diplomacy = 1
+	monthly_piety = 0.2
+	county_opinion_add = 10
+}
+VIET_impressed_mathematicians = {
+	icon = learning_positive
+	monthly_prestige = 0.35
+	general_opinion = 5
+}
 
 
 

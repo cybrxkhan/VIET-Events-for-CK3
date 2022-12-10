@@ -634,3 +634,123 @@ VIET_local_priest_template = {
 		}
 	}
 }
+
+
+
+
+VIET_skilled_scholar_template = {
+	age = { 20 70 }
+	gender_female_chance = root_faith_clergy_gender_female_chance
+	random_traits_list = {
+		education_learning_3 = { weight = { base = 10 } }
+		education_learning_4 = { weight = { base = 10 } }
+	}
+	random_traits = yes
+	faith = scope:county.faith
+	culture = scope:county.culture
+	after_creation = {
+		if = {
+			limit = {
+				NOT = {
+					has_trait = scholar
+				}
+			}
+			add_trait = scholar
+		}
+	}
+}
+
+VIET_grateful_beggar_template = {
+	age = { 30 50 }
+	gender_female_chance = root_faith_dominant_gender_adjusted_female_chance
+	random_traits = no
+	random_traits_list = {
+		education_stewardship_3 = { weight = { base = 10 } }
+		education_stewardship_4 = { weight = { base = 10 } }
+	}
+	trait = generous
+	#Personality
+	random_traits_list = {
+		count = 2
+		ambitious = {}
+		diligent = {}
+		zealous = {}
+		compassionate = {}
+		forgiving = {}
+		humble = {}
+		patient = {}
+	}
+	stewardship = {
+		min_template_decent_skill
+		max_template_decent_skill
+	}
+	faith = scope:grateful_county.faith
+	culture = scope:grateful_county.culture
+}
+
+
+
+VIET_righteous_local_official_template = {
+	age = { 20 50 }
+	gender_female_chance = root_faith_dominant_gender_female_chance
+	culture = scope:county.culture
+	faith = scope:county.faith
+	#Education
+	random_traits_list = {
+		count = 1
+		education_diplomacy_1 = {
+			weight = { base = 20 }
+		}
+		education_diplomacy_2 = {
+			weight = { base = 20 }
+		}
+		education_diplomacy_3 = {
+			weight = { base = 20 }
+		}
+		education_diplomacy_4 = {
+			weight = { base = 20 }
+		}
+		education_stewardship_1 = {
+			weight = { base = 20 }
+		}
+		education_stewardship_2 = {
+			weight = { base = 20 }
+		}
+		education_stewardship_3 = {
+			weight = { base = 20 }
+		}
+		education_stewardship_4 = {
+			weight = { base = 20 }
+		}
+		education_intrigue_1 = {
+			weight = { base = 20 }
+		}
+		education_intrigue_2 = {
+			weight = { base = 20 }
+		}
+		education_intrigue_3 = {
+			weight = { base = 20 }
+		}
+		education_intrigue_4 = {
+			weight = { base = 20 }
+		}
+	}
+	#Personality
+	random_traits_list = {
+		count = 3
+		brave = {}
+		diligent = {}
+		calm = {}
+		patient = {}
+		compassionate = {}
+		just = {}
+		gregarious = {}
+		generous = {}
+		humble = {}
+		stubborn = {}
+	}
+	intrigue = {
+		min_template_decent_skill
+		max_template_decent_skill
+	}
+}

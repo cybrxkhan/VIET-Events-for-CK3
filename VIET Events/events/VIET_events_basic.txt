@@ -48,6 +48,7 @@
 # 0249-0256		Struggle
 # 0257-0260		VIET Contest Winners
 # 0261-0272		Vassals and Courtiers
+# 0273-0281		10
 # 
 ############################################################################################################################
 
@@ -25527,6 +25528,1069 @@ VIETmisc.0272 = {
 
 
 
+
+
+##########################################################################################################################
+#
+# 10	0273-0281
+#
+##########################################################################################################################
+
+
+# Boastful courtier forgets what the ten commandments are
+VIETmisc.0273 = {
+	type = character_event
+	title = VIETmisc.0273.t
+	desc = VIETmisc.0273.desc
+	theme = faith
+	override_background = { event_background = council_chamber }
+	
+	left_portrait = { 	
+		character = root
+		animation = disapproval
+	}
+	
+	right_portrait = { 	
+		character = scope:forgetful
+		animation = shame
+	}
+
+	trigger = {
+		NOT = { has_game_rule = VIET_conversion_universe_events }
+		OR = {
+			religion = religion:christianity_religion
+			religion = religion:judaism_religion
+		}
+		any_courtier = {
+			is_available_ai_adult = yes
+			faith = root.faith
+			OR = {
+				has_trait = arrogant
+				has_trait = gregarious
+				has_trait = fickle
+				has_trait = wrathful
+				has_trait = ambitious
+				has_trait = impatient
+				has_trait = zealous
+				has_trait = intellect_bad_1
+				has_trait = intellect_bad_2
+				has_trait = intellect_bad_3
+			}
+			NOR = {
+				has_trait = cynical
+				has_trait = humble
+				has_trait = shy
+			}
+			NOT = { has_council_position = councillor_court_chaplain }
+		}
+	}
+	
+	weight_multiplier = {
+		base = 1
+		modifier = {
+			add = 0.2
+			has_trait = chaste
+		}
+		modifier = {
+			add = -0.2
+			has_trait = lustful
+		}
+		modifier = {
+			add = 0.2
+			has_trait = zealous
+		}
+		modifier = {
+			add = -0.2
+			has_trait = cynical
+		}
+		modifier = {
+			add = 0.2
+			has_trait = gregarious
+		}
+		modifier = {
+			add = -0.2
+			has_trait = shy
+		}
+	}
+
+	immediate = {
+		random_courtier = {
+			limit = {
+				is_available_ai_adult = yes
+				faith = root.faith
+				OR = {
+					has_trait = arrogant
+					has_trait = gregarious
+					has_trait = fickle
+					has_trait = wrathful
+					has_trait = ambitious
+					has_trait = impatient
+					has_trait = zealous
+					has_trait = intellect_bad_1
+					has_trait = intellect_bad_2
+					has_trait = intellect_bad_3
+				}
+				NOR = {
+					has_trait = cynical
+					has_trait = humble
+					has_trait = shy
+				}
+				NOT = { has_council_position = councillor_court_chaplain }
+			}
+			save_scope_as = forgetful
+			add_character_modifier = {
+				modifier = VIET_couldnt_remember_ten_commandments
+				years = 5
+			}
+		}
+	}
+
+	
+	option = { # Ok
+		name = VIETmisc.0273.a
+		VIET_medium_piety_gain_effect = yes
+		stress_impact = {
+			arrogant = miniscule_stress_impact_gain
+			callous = miniscule_stress_impact_gain
+			cynical = minor_stress_impact_gain
+		}
+	}
+	
+	option = { # Ok
+		name = VIETmisc.0273.b
+		VIET_medium_prestige_gain_effect = yes
+		stress_impact = {
+			humble = miniscule_stress_impact_gain
+			patient = miniscule_stress_impact_gain
+		}
+		#scope:forgetful = {
+			# reverse_add_opinion = {
+			# 	modifier = disappointed_opinion
+			# 	opinion = -10
+			# 	target = root
+			# }
+			# add_opinion = {
+			# 	modifier = disappointed_opinion
+			# 	opinion = -10
+			# 	target = root
+			# }
+		#}
+	}
+
+}
+
+
+# Hearing about the Roman custom of decimation
+VIETmisc.0274 = {
+	type = character_event
+	title = VIETmisc.0274.t
+	desc = VIETmisc.0274.desc
+	theme = martial_strategy_focus
+	
+	left_portrait = root
+
+	trigger = {
+		NOT = { has_government = tribal_government }	
+		NOT = { has_game_rule = VIET_conversion_universe_events }
+		capital_province = {
+			OR = {
+				geographical_region = world_europe
+				geographical_region = world_africa_north
+				geographical_region = world_africa_sahara
+				geographical_region = world_middle_east
+				geographical_region = world_steppe_west
+				geographical_region = world_asia_minor
+			}
+		}
+	}
+	
+	weight_multiplier = {
+		base = 1
+		modifier = {
+			add = 0.2
+			has_trait = sadistic
+		}
+		modifier = {
+			add = -0.2
+			has_trait = compassionate
+		}
+		modifier = {
+			add = 0.2
+			has_trait = ambitious
+		}
+		modifier = {
+			add = -0.2
+			has_trait = lazy
+		}
+		modifier = {
+			add = 0.2
+			has_trait = arbitrary
+		}
+		modifier = {
+			add = -0.2
+			has_trait = just
+		}
+	}
+
+	
+	option = { # Ok
+		name = VIETmisc.0274.a
+		VIET_small_piety_gain_effect = yes
+		stress_impact = {
+			sadistic = medium_stress_impact_gain
+			vengeful = miniscule_stress_impact_gain
+			callous = miniscule_stress_impact_gain
+			paranoid = miniscule_stress_impact_gain
+		}
+	}
+	
+	option = { # Ok
+		name = VIETmisc.0274.b
+		VIET_small_prestige_gain_effect = yes
+		stress_impact = {
+			compassionate = medium_stress_impact_gain
+			forgiving = minor_stress_impact_gain
+			trusting = miniscule_stress_impact_gain
+		}
+	}
+	
+	option = { # Ok
+		name = VIETmisc.0274.c
+		trigger = {
+			OR = {
+				has_trait = sadistic
+				has_trait = arbitrary
+				has_trait = torturer
+			}
+		}
+		trait = sadistic
+		trait = arbitrary
+		trait = torturer
+		VIET_massive_prestige_loss_effect = yes	
+		if = {
+			limit = {
+				faith = {
+					OR = {
+						trait_is_sin = wrathful
+						trait_is_sin = vengeful
+						trait_is_sin = sadistic
+						trait_is_sin = arbitrary
+					}
+				}
+			}
+			VIET_huge_piety_loss_effect = yes
+		}
+		add_character_modifier = {
+			modifier = VIET_utilizing_decimation
+			years = 15
+		}
+		stress_impact = {
+			compassionate = massive_stress_impact_gain
+			forgiving = major_stress_impact_gain
+			trusting = medium_stress_impact_gain
+		}
+	}
+
+}
+
+
+# Learning about Tetractys
+VIETmisc.0275 = {
+	type = character_event
+	title = VIETmisc.0275.t
+	desc = VIETmisc.0275.desc
+	theme = learning_scholarship_focus
+	override_background = { event_background = throne_room }
+	
+	left_portrait = { 	
+		character = root
+		animation = personality_rational
+	}
+	
+	right_portrait = { 	
+		character = scope:scholar
+		animation = chancellor
+	}
+
+	trigger = {	
+		capital_province = {
+			OR = {
+				geographical_region = world_europe
+				geographical_region = world_africa_north
+				geographical_region = world_africa_sahara
+				geographical_region = world_middle_east
+				geographical_region = world_steppe_west
+				geographical_region = world_asia_minor
+				geographical_region = world_africa_east
+				geographical_region = world_middle_east_persia
+			}
+		}
+		# Weed out most cultures that probably aren't literate at the game start and wouldn't be writing stuff like letters
+		NOT = { has_government = tribal_government }
+	}
+	
+	weight_multiplier = {
+		base = 1
+		modifier = {
+			add = 0.2
+			has_trait = gregarious
+		}
+		modifier = {
+			add = -0.2
+			has_trait = shy
+		}
+		modifier = {
+			add = 0.2
+			has_trait = patient
+		}
+		modifier = {
+			add = -0.2
+			has_trait = impatient
+		}
+		modifier = {
+			add = 0.2
+			has_trait = diligent
+		}
+		modifier = {
+			add = -0.2
+			has_trait = lazy
+		}
+	}
+
+	immediate = {		
+		random_realm_county = {
+			limit = { tier = tier_county }
+			save_scope_as = county
+		}
+		create_character = {
+			location = root.location
+			template = VIET_skilled_scholar_template
+			save_scope_as = scholar
+		}
+	}
+
+	
+	option = { # Ok
+		name = VIETmisc.0275.a
+		add_character_modifier = {
+			modifier = VIET_tetractys
+			years = 10
+		}
+		stress_impact = {
+			lazy = medium_stress_impact_gain
+			impatient = miniscule_stress_impact_gain
+		}
+	}
+	
+	option = { # Ok
+		name = VIETmisc.0275.b
+		if = {
+			limit = {
+				has_trait = diligent
+			}
+			stress_impact = {
+				diligent = minor_stress_impact_gain
+			}
+		}
+		else = {			
+			stress_impact = {
+				base = medium_stress_impact_loss
+				lazy = minor_stress_impact_loss
+				impatient = miniscule_stress_impact_loss
+			}
+		}
+	}
+
+	after = {		
+		hidden_effect = {
+			random = {
+				chance = 75
+				scope:scholar = {
+					death = {
+						death_reason = death_vanished
+					}
+				}
+			}			
+		}
+	}
+
+}
+
+
+
+# Child at court asks why we have ten fingers and ten toes
+VIETmisc.0276 = {
+	type = character_event
+	title = VIETmisc.0276.t
+	desc = VIETmisc.0276.desc
+	theme = friendly
+	override_background = { event_background = relaxing_room }
+	
+	left_portrait = root
+	
+	right_portrait = { 	
+		character = scope:child
+		animation = personality_rational
+	}
+
+	trigger = {
+		any_courtier = {
+			is_adult = no
+			age >= 3
+			is_ai = yes
+		}
+	}
+	
+	weight_multiplier = {
+		base = 1
+		modifier = {
+			add = 0.2
+			has_trait = gregarious
+		}
+		modifier = {
+			add = -0.2
+			has_trait = shy
+		}
+		modifier = {
+			add = 0.2
+			has_trait = patient
+		}
+		modifier = {
+			add = -0.2
+			has_trait = impatient
+		}
+		modifier = {
+			add = 0.2
+			has_trait = calm
+		}
+		modifier = {
+			add = -0.2
+			has_trait = wrathful
+		}
+	}
+
+	immediate = {		
+		random_courtier = {
+			limit = {
+				is_adult = no
+				age >= 3
+				is_ai = yes
+			}
+			save_scope_as = child
+		}
+	}
+
+	
+	option = { # Ok
+		name = VIETmisc.0276.a
+		random_list = {
+			50 = {
+				modifier = {
+					add = 4
+					scope:child = {
+						has_trait = cynical
+					}
+				}
+				modifier = {
+					add = 4
+					scope:child = {
+						has_trait = paranoid
+					}
+				}
+				modifier = {
+					add = 4
+					scope:child = {
+						has_trait = curious
+					}
+				}
+				modifier = {
+					add = 4
+					scope:child = {
+						has_trait = rowdy
+					}
+				}
+				show_chance = no
+				desc = VIETmisc.0276.a.failure
+				send_interface_toast = {
+					type = event_toast_effect_bad
+					left_icon = ROOT
+					title = VIETmisc.0276.a.failure
+					VIET_medium_prestige_loss_effect = yes
+					scope:child = {
+						add_opinion = {
+							modifier = disappointed_opinion
+							opinion = -10
+							target = root
+						}
+					}
+				}
+			}
+			50 = {
+				modifier = {
+					add = 4
+					diplomacy >= decent_skill_rating
+				}
+				modifier = {
+					add = 4
+					diplomacy >= high_skill_rating
+				}
+				modifier = {
+					add = 4
+					diplomacy >= very_high_skill_rating
+				}
+				show_chance = no
+				desc = VIETmisc.0276.a.success
+				send_interface_toast = {
+					type = event_toast_effect_good
+					left_icon = ROOT
+					title = VIETmisc.0276.a.success
+					VIET_medium_prestige_gain_effect = yes
+					scope:child = {
+						add_opinion = {
+							modifier = pleased_opinion
+							opinion = 10
+							target = root
+						}
+					}
+				}
+			}
+		}
+	}
+	
+	option = { # Ok
+		name = VIETmisc.0276.b
+		random_list = {
+			50 = {
+				modifier = {
+					add = 4
+					scope:child = {
+						has_trait = shy
+					}
+				}
+				modifier = {
+					add = 4
+					scope:child = {
+						has_trait = wrathful
+					}
+				}
+				modifier = {
+					add = 4
+					scope:child = {
+						has_trait = pensive
+					}
+				}
+				modifier = {
+					add = 4
+					scope:child = {
+						has_trait = bossy
+					}
+				}
+				show_chance = no
+				desc = VIETmisc.0276.b.failure
+				send_interface_toast = {
+					type = event_toast_effect_bad
+					left_icon = ROOT
+					title = VIETmisc.0276.b.failure
+					VIET_medium_prestige_loss_effect = yes
+					scope:child = {
+						add_opinion = {
+							modifier = disappointed_opinion
+							opinion = -10
+							target = root
+						}
+					}
+				}
+			}
+			50 = {
+				modifier = {
+					add = 4
+					diplomacy >= decent_skill_rating
+				}
+				modifier = {
+					add = 4
+					diplomacy >= high_skill_rating
+				}
+				modifier = {
+					add = 4
+					diplomacy >= very_high_skill_rating
+				}
+				show_chance = no
+				desc = VIETmisc.0276.b.success
+				send_interface_toast = {
+					type = event_toast_effect_good
+					left_icon = ROOT
+					title = VIETmisc.0276.b.success
+					VIET_medium_prestige_gain_effect = yes
+					scope:child = {
+						add_opinion = {
+							modifier = pleased_opinion
+							opinion = 10
+							target = root
+						}
+					}
+				}
+			}
+		}
+	}
+
+}
+
+
+
+
+# Visiting a local school where two scholars are arguing about decimal fractions
+VIETmisc.0277 = {
+	type = character_event
+	title = VIETmisc.0277.t
+	desc = VIETmisc.0277.desc
+	theme = learning_scholarship_focus
+	override_background = { event_background = garden }
+		
+	right_portrait = { 	
+		character = root
+		animation = personality_rational
+	}
+
+	trigger = {
+		# Weed out most cultures that probably aren't literate and don't have scholars running around
+		NOT = { has_government = tribal_government }		
+	}
+	
+	weight_multiplier = {
+		base = 1
+		modifier = {
+			add = 0.2
+			has_trait = gregarious
+		}
+		modifier = {
+			add = -0.2
+			has_trait = shy
+		}
+		modifier = {
+			add = 0.2
+			has_trait = patient
+		}
+		modifier = {
+			add = -0.2
+			has_trait = impatient
+		}
+		modifier = {
+			add = 0.2
+			has_trait = diligent
+		}
+		modifier = {
+			add = -0.2
+			has_trait = lazy
+		}
+	}
+
+	
+	option = { # Ok
+		name = VIETmisc.0277.a
+		VIET_large_prestige_gain_effect = yes
+	}
+	
+	option = { # Ok
+		name = VIETmisc.0277.b
+		random = {
+			chance = 20
+			add_learning_skill = 1
+		}
+		stress_impact = {
+			base = miniscule_stress_impact_gain
+			lazy = minor_stress_impact_gain
+			arrogant = miniscule_stress_impact_gain
+			impatient = miniscule_stress_impact_gain
+			intellect_good_1 = miniscule_stress_impact_gain
+			intellect_good_2 = minor_stress_impact_gain
+			intellect_good_3 = medium_stress_impact_gain
+		}
+	}
+	
+	option = { # Ok
+		name = VIETmisc.0277.c
+		trigger = {
+			learning >= decent_skill_rating			
+		}
+		skill = learning
+		stress_impact = {
+			base = miniscule_stress_impact_gain
+			shy = miniscule_stress_impact_gain
+			craven = miniscule_stress_impact_gain
+		}
+		duel = {
+			skill = learning
+			value = 15
+			10 = { # Failure - they're not impressed
+				#show_chance = no
+				custom_tooltip = VIETmisc.0277.c.failure
+				compare_modifier = {
+					value = scope:duel_value
+					multiplier = -0.7
+				}
+				send_interface_toast = {
+					type = event_toast_effect_bad
+					left_icon = ROOT
+					title = VIETmisc.0277.c.failure
+					VIET_huge_prestige_loss_effect = yes
+				}
+			}
+			10 = { # Success - interested in trade
+				#show_chance = no
+				custom_tooltip = VIETmisc.0277.c.success
+				compare_modifier = {
+					value = scope:duel_value
+					multiplier = 0.7
+				}
+				send_interface_toast = {
+					type = event_toast_effect_good
+					left_icon = ROOT
+					title = VIETmisc.0277.c.success
+					add_character_modifier = {
+						modifier = VIET_impressed_mathematicians
+						years = 10
+					}
+				}
+			}
+		}
+	}
+
+}
+
+
+# Congratulating two servants on their tenth anniversary
+VIETmisc.0278 = {
+	type = character_event
+	title = VIETmisc.0278.t
+	desc = VIETmisc.0278.desc
+	theme = marriage
+		
+	right_portrait = { 	
+		character = root
+		animation = happiness
+	}
+	
+	weight_multiplier = {
+		base = 1
+		modifier = {
+			add = 0.2
+			has_trait = humble
+		}
+		modifier = {
+			add = -0.2
+			has_trait = arrogant
+		}
+		modifier = {
+			add = 0.2
+			has_trait = calm
+		}
+		modifier = {
+			add = -0.2
+			has_trait = vengeful
+		}
+		modifier = {
+			add = 0.2
+			has_trait = generous
+		}
+		modifier = {
+			add = -0.2
+			has_trait = greedy
+		}
+	}
+
+	
+	option = { # Ok
+		name = VIETmisc.0278.a
+		stress_impact = {
+			arrogant = miniscule_stress_impact_gain
+			shy = miniscule_stress_impact_gain
+			lazy = miniscule_stress_impact_gain
+			callous = miniscule_stress_impact_gain
+			sadistic = miniscule_stress_impact_gain
+		}
+	}
+	
+	option = { # Ok
+		name = VIETmisc.0278.b
+		VIET_medium_prestige_loss_effect = yes
+		VIET_medium_piety_gain_effect = yes
+		stress_impact = {
+			arrogant = minor_stress_impact_gain
+			callous = miniscule_stress_impact_gain
+			sadistic = minor_stress_impact_gain
+			greedy = miniscule_stress_impact_gain
+		}
+	}
+	
+	option = { # Ok
+		name = VIETmisc.0278.c
+		VIET_medium_prestige_loss_effect = yes
+		remove_short_term_gold = 10
+		stress_impact = {
+			arrogant = minor_stress_impact_gain
+			callous = minor_stress_impact_gain
+			sadistic = miniscule_stress_impact_gain
+			greedy = minor_stress_impact_gain
+		}
+	}
+	
+	option = { # Ok
+		name = VIETmisc.0278.d
+		VIET_medium_piety_loss_effect = yes
+		VIET_medium_prestige_gain_effect = yes
+		stress_impact = {
+			humble = minor_stress_impact_gain
+			compassionate = minor_stress_impact_gain
+			chaste = miniscule_stress_impact_gain
+		}
+	}
+
+}
+
+
+
+
+
+# Hearing about the story of Odysseus
+VIETmisc.0279 = {
+	type = character_event
+	title = VIETmisc.0279.t
+	desc = VIETmisc.0279.desc
+	theme = diplomacy_foreign_affairs_focus
+		
+	right_portrait = root
+
+	trigger = {		
+		NOT = { has_game_rule = VIET_conversion_universe_events }
+		capital_province = {
+			OR = {
+				geographical_region = world_europe
+				geographical_region = world_africa_north
+				geographical_region = world_africa_sahara
+				geographical_region = world_middle_east
+				geographical_region = world_steppe_west
+				geographical_region = world_asia_minor
+			}
+		}
+	}
+	
+	weight_multiplier = {
+		base = 1
+		modifier = {
+			add = 0.2
+			has_trait = gregarious
+		}
+		modifier = {
+			add = -0.2
+			has_trait = shy
+		}
+		modifier = {
+			add = 0.2
+			has_trait = calm
+		}
+		modifier = {
+			add = -0.2
+			has_trait = vengeful
+		}
+		modifier = {
+			add = 0.2
+			has_trait = generous
+		}
+		modifier = {
+			add = -0.2
+			has_trait = greedy
+		}
+	}
+
+	
+	option = { # Ok
+		name = VIETmisc.0279.a
+		stress_impact = {
+			humble = miniscule_stress_impact_gain
+			deceitful = minor_stress_impact_gain
+			ambitious = miniscule_stress_impact_gain
+			cynical = miniscule_stress_impact_gain
+		}
+		add_character_modifier = {
+			modifier = VIET_despires_odysseus
+			years = 10
+		}
+		if = {
+			limit = {
+				has_game_rule = VIET_historical_context_on
+			}
+			custom_tooltip = VIETmisc.0279.info
+		}
+	}
+	
+	option = { # Ok
+		name = VIETmisc.0279.b
+		stress_impact = {
+			arrogant = miniscule_stress_impact_gain
+			honest = minor_stress_impact_gain
+			brave = miniscule_stress_impact_gain
+			zealous = miniscule_stress_impact_gain
+		}
+		add_character_modifier = {
+			modifier = VIET_admires_odysseus
+			years = 10
+		}
+		if = {
+			limit = {
+				has_game_rule = VIET_historical_context_on
+			}
+			custom_tooltip = VIETmisc.0279.info
+		}
+	}
+
+}
+
+
+
+
+# Come across a beggar in a town who asks for 10 gold coins
+VIETmisc.0280 = {
+	type = character_event
+	title = VIETmisc.0280.t
+	desc = VIETmisc.0280.desc
+	theme = VIET_theme_small_town
+		
+	right_portrait = root
+	
+	weight_multiplier = {
+		base = 1
+		modifier = {
+			add = 0.2
+			has_trait = diligent
+		}
+		modifier = {
+			add = -0.2
+			has_trait = lazy
+		}
+		modifier = {
+			add = 0.2
+			has_trait = ambitious
+		}
+		modifier = {
+			add = -0.2
+			has_trait = content
+		}
+		modifier = {
+			add = 0.2
+			has_trait = just
+		}
+		modifier = {
+			add = -0.2
+			has_trait = arbitrary
+		}
+	}
+
+	immediate = {		
+		random_held_title = {
+			limit = {
+				tier = tier_county
+			}	
+			save_scope_as = grateful_county
+		}	
+	}
+	
+	option = { # Ok
+		name = VIETmisc.0280.a
+		stress_impact = {
+			compassionate = minor_stress_impact_gain
+			generous = medium_stress_impact_gain
+			humble = minor_stress_impact_gain
+		}
+	}
+	
+	option = { # Ok
+		name = VIETmisc.0280.b	
+		remove_short_term_gold = 10
+		stress_impact = {
+			arrogant = minor_stress_impact_gain
+			greedy = medium_stress_impact_gain
+			callous = minor_stress_impact_gain
+			sadistic = minor_stress_impact_gain
+		}
+		trigger_event = {
+			id = VIETmisc.0281
+			years = 1
+		}
+		custom_tooltip = VIETmisc.0280.b.tooltip
+	}
+
+}
+
+
+# ... and the beggar returns 10 years later to give you a crapload of money
+VIETmisc.0281 = {
+	type = character_event
+	title = VIETmisc.0281.t
+	desc = VIETmisc.0281.desc
+	theme = stewardship_duty_focus
+	override_background = { event_background = throne_room }
+		
+	right_portrait = {
+		character = scope:grateful
+		animation = personality_compassionate
+	}
+	
+	weight_multiplier = {
+		base = 1
+		modifier = {
+			add = 0.2
+			has_trait = diligent
+		}
+		modifier = {
+			add = -0.2
+			has_trait = lazy
+		}
+		modifier = {
+			add = 0.2
+			has_trait = ambitious
+		}
+		modifier = {
+			add = -0.2
+			has_trait = content
+		}
+		modifier = {
+			add = 0.2
+			has_trait = just
+		}
+		modifier = {
+			add = -0.2
+			has_trait = arbitrary
+		}
+	}
+
+	immediate = {
+		create_character = {
+			location = root.location
+			template = VIET_grateful_beggar_template
+			save_scope_as = grateful
+		}
+	}
+
+	
+	option = { # Ok
+		name = VIETmisc.0281.a
+		add_gold = { 100 1000 }
+		add_character_modifier = {
+			modifier = VIET_famous_beggar_charity_story
+		}
+	}
+
+	after = {		
+		hidden_effect = {
+			scope:grateful = {
+				death = {
+					death_reason = death_vanished
+				}
+			}			
+		}
+	}
+
+}
 
 
 

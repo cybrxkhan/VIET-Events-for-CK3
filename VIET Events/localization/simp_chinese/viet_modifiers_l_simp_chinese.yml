@@ -1048,5 +1048,7 @@
  VIET_heroic_official_rescues_children_county_desc:0 "An official working in this region's administration was recently lauded for their efforts to successfully locate ten children who had gone missing. The children, it turned out, were kidnapped by a bandit gang that almost sold them into slavery. This official is commended by many for rescuing the children, and continues to work diligently for the betterment of the people."
  VIET_heroic_official_rescues_children:0 "$VIET_heroic_official_rescues_children_county$"
  VIET_heroic_official_rescues_children_desc:0 "This character was originally a minor official who made a great effort to successfully locate ten children who had gone missing. The children, it turned out, were kidnapped by a bandit gang that almost sold them into slavery. As such, this character is still commended by many for rescuing the children."
+ VIET_heroic_official_promoted:0 "Heroic Official Promoted"
+ VIET_heroic_official_promoted_children_desc:0 "An official working in this region's administration was recently lauded for their efforts to successfully locate ten children who had gone missing. The children, it turned out, were kidnapped by a bandit gang that almost sold them into slavery. This official is commended by many for rescuing the children, and in fact was promoted to a higher position of power."
  # 1.8.2 - please leave this comment here
  xxxxx:0 "xxxxx"

@@ -668,3 +668,43 @@ VIET_tales_holy_person = {
 	development_growth_factor = 0.15
 	monthly_county_control_change_add = 0.2
 }
+VIET_decade_specter_vengeful = {
+	icon = piety_negative
+	development_growth_factor = -0.1
+	monthly_county_control_change_add = -0.1
+}
+VIET_decade_specter_helpful = {
+	icon = piety_positive
+	development_growth_factor = 0.1
+	monthly_county_control_change_add = 0.1
+}
+VIET_officials_resign_in_protest = {
+	icon = county_modifier_corruption_negative
+	county_opinion_add = -5
+	tax_mult = -0.01
+	monthly_county_control_change_add = -0.2
+}
+VIET_officials_resign_in_protest_something_done = {
+	icon = county_modifier_control_positive
+	county_opinion_add = 2
+}
+VIET_officials_resign_in_protest_something_done_happy = {
+	icon = county_modifier_control_positive
+	county_opinion_add = 5
+	monthly_county_control_change_add = 0.1
+}
+VIET_heroic_official_rescues_children_county = {
+	icon = family_positive
+	county_opinion_add = 4
+}
+VIET_heroic_official_rescues_children = {
+	icon = family_positive
+	county_opinion_add = 10
+	general_opinion = 5
+	monthly_prestige = 0.1
+	monthly_piety = 0.1
+}
+VIET_heroic_official_promoted = {
+	icon = family_positive
+	county_opinion_add = 7
+}

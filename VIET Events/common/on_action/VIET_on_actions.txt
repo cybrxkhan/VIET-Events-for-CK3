@@ -386,6 +386,8 @@ VIET_events_yearly_pulse = {
 		100 = VIETmisc.0263		# Courtier has an injury while traveling outside
 		100 = VIETmisc.0264		# Vassal is rumored to be a good leader
 		100 = VIETmisc.0271		# Councilor feels light-headed and requests to leave to rest, but they're needed for an important meeting
+		# 10
+		100 = VIETmisc.0276		# Child at court asks why we have ten fingers and ten toes
 	}
 }
 
@@ -705,6 +707,11 @@ VIET_events_tri_yearly_pulse = {
 		100 = VIETmisc.0268		# Vassal recently lost a lot of money and begs for help
 		100 = VIETmisc.0269		# Courtier recently got some money and wants to give you some
 		100 = VIETmisc.0272		# Councilor comes extremely tardy
+		# 10
+		100 = VIETmisc.0273		# Boastful courtier forgets what the ten commandments are
+		100 = VIETmisc.0275		# Learning about Tetractys
+		100 = VIETmisc.0278		# Congratulating two servants on their tenth anniversary
+		100 = VIETmisc.0279		# Hearing about the story of Odysseus
 	}
 }
 
@@ -930,6 +937,9 @@ VIET_events_five_yearly_pulse = {
 		# Courtiers and Vassals
 		100 = VIETmisc.0267		# Vassal has a capable official who might be convinced to work for you
 		100 = VIETmisc.0270		# Courtier sees a strange mysterious woman
+		# 10
+		100 = VIETmisc.0274 	# Hearing about the Roman custom of decimation
+		100 = VIETmisc.0277 	# Visiting a local school where two scholars are arguing about decimal fractions
 	}
 }
 
@@ -1013,6 +1023,9 @@ VIET_events_event_chain_pulse = {
 
 		# Mysterious Child
 		100 = VIETmisc.1052				# A strange child appears in front of you
+
+		# 10
+		100 = VIETmisc.0280				# Come across a beggar in a town who asks for 10 gold coins
 		
 	}
 }
@@ -1264,8 +1277,10 @@ VIET_events_common_county_pulse = {
 		100 = VIETmisc.3033		# Famous flower meadows
 		# Local Rumors
 		100 = VIETmisc.3038		# Legends of a nonexistent holy person
+		# 10
+		100 = VIETmisc.3040 	# 10 officials resign to protest a bad official
 		
-		# 33
+		# 34
     }
 }
 
@@ -1341,8 +1356,10 @@ VIET_events_uncommon_county_pulse = {
 		100 = VIETmisc.3036		# Prehistoric cave paintings discovered (Credits to Pedrolu)
 		# Local Rumors
 		100 = VIETmisc.3037		# Conspiracies spread about how you were replaced by an imposter
+		# 10
+		100 = VIETmisc.3039 	# 10 Year specter is about to reappear
 		
-		# 22
+		# 23
 		
     }
 }
@@ -1405,8 +1422,10 @@ VIET_events_rare_county_pulse = {
 		50 = VIETmisc.3029		# Rooks settle in a county in large numbers
 		# Struggle
 		100 = VIETmisc.3035		# Hermit struggles to be alone
+		# 10
+		100 = VIETmisc.3041		# A heroic official rescues 10 kidnapped children
 		
-		# 11
+		# 12
 		
     }
 }

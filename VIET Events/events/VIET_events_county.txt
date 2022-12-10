@@ -28,6 +28,7 @@
 # 3034-3035		Struggle
 # 3036			VIET Events Contest Winners
 # 3037-3038		Local Rumors
+# 3039-3041		10
 # 
 ############################################################################################################################
 
@@ -3899,6 +3900,327 @@ VIETmisc.3038 = {
 
 
 
+
+
+##################################################################
+# 10 3039-3041
+##################################################################
+
+
+# 10 Year specter is about to reappear
+VIETmisc.3039 = {
+	type = character_event
+	title = VIETmisc.3039.t
+	desc = VIETmisc.3039.desc
+	theme = intrigue
+	override_background = { event_background = alley_night }
+	
+	right_portrait = {
+		character = root
+		animation = worry
+	}
+	
+    weight_multiplier = {
+        base = 0
+		modifier = {
+			add = {
+				every_held_title = {
+					limit = { tier = tier_county }
+					add = 1
+				}
+			}		
+		}
+    }
+	
+	immediate = {
+		random_held_title = {
+			limit = { tier = tier_county }
+			save_scope_as = county
+		}
+
+	}
+
+	# Ok
+	option = {
+		name = VIETmisc.3039.a	
+		random_list = {
+			50 = {
+				custom_tooltip = VIETmisc.3039.failure
+				send_interface_toast = {
+					left_icon = ROOT
+					type = event_toast_effect_bad
+					title = VIETmisc.3039.failure
+					scope:county = {
+						add_county_modifier = {
+							modifier = VIET_decade_specter_vengeful
+							years = 5
+						}	
+					}
+				}
+			}
+			50 = {
+				custom_tooltip = VIETmisc.3039.success
+				send_interface_toast = {
+					left_icon = ROOT
+					type = event_toast_effect_good
+					title = VIETmisc.3039.success
+					scope:county = {
+						add_county_modifier = {
+							modifier = VIET_decade_specter_helpful
+							years = 5
+						}	
+					}
+				}
+			}
+		}
+	}
+}
+
+
+# 10 officials resign to protest a bad official
+VIETmisc.3040 = {
+	type = character_event
+	title = VIETmisc.3040.t
+	desc = VIETmisc.3040.desc
+	theme = corruption
+	
+	right_portrait = {
+		character = root
+		animation = stress
+	}
+	
+    weight_multiplier = {
+        base = 0
+		modifier = {
+			add = {
+				every_held_title = {
+					limit = { tier = tier_county }
+					add = 1
+				}
+			}		
+		}
+    }
+	
+	immediate = {
+		random_held_title = {
+			limit = { tier = tier_county }
+			save_scope_as = county
+		}
+		scope:county = {
+			random_list = {
+				10 = {
+					add_county_modifier = {
+						modifier = VIET_officials_resign_in_protest
+						years = 4
+					}				
+				}
+				10 = {
+					add_county_modifier = {
+						modifier = VIET_officials_resign_in_protest
+						years = 6
+					}				
+				}
+				10 = {
+					add_county_modifier = {
+						modifier = VIET_officials_resign_in_protest
+						years = 8
+					}				
+				}
+			}	
+		}
+	}
+
+	# Ok
+	option = {
+		name = VIETmisc.3040.a
+		add_character_modifier = {
+			modifier = VIET_didnt_punish_corrupt_official
+			years = 10
+		}
+	}
+
+	# Ok
+	option = {
+		name = VIETmisc.3040.b
+		VIET_huge_prestige_loss_effect = yes
+	}
+
+	# Ok
+	option = {
+		name = VIETmisc.3040.c
+		remove_short_term_gold = 25
+		VIET_massive_prestige_loss_effect = yes
+		scope:county = {
+			remove_county_modifier = VIET_officials_resign_in_protest
+		}
+		random_list = {
+			50 = {
+				custom_tooltip = VIETmisc.3040.c.failure
+				send_interface_toast = {
+					left_icon = ROOT
+					type = event_toast_effect_bad
+					title = VIETmisc.3040.c.failure
+					scope:county = {
+						add_county_modifier = {
+							modifier = VIET_officials_resign_in_protest_something_done
+							years = 10
+						}	
+					}
+				}
+			}
+			50 = {
+				custom_tooltip = VIETmisc.3040.c.success
+				send_interface_toast = {
+					left_icon = ROOT
+					type = event_toast_effect_good
+					title = VIETmisc.3040.c.success
+					scope:county = {
+						add_county_modifier = {
+							modifier = VIET_officials_resign_in_protest_something_done_happy
+							years = 10
+						}	
+					}
+				}
+			}
+		}
+	}
+}
+
+
+# A heroic official rescues 10 kidnapped children
+VIETmisc.3041 = {
+	type = character_event
+	title = VIETmisc.3041.t
+	desc = VIETmisc.3041.desc
+	theme = corruption
+	
+	left_portrait = root
+	right_portrait = {
+		character = scope:official
+		animation = personality_honorable
+	}
+	
+    weight_multiplier = {
+        base = 0
+		modifier = {
+			add = {
+				every_held_title = {
+					limit = { tier = tier_county }
+					add = 1
+				}
+			}		
+		}		
+    }
+	
+	immediate = {
+		random_held_title = {
+			limit = {
+				tier = tier_county
+			}	
+			save_scope_as = county
+		}
+		create_character = {
+			location = root.capital_province
+			template = VIET_righteous_local_official_template
+			save_scope_as = official
+		}	
+		hidden_effect = {
+			scope:official = {
+				add_character_modifier = {
+					modifier = VIET_heroic_official_rescues_children
+				}
+			}
+		}
+	}
+	
+	option = { # Let the guard captain stay where they are
+		name = VIETmisc.3041.a
+		scope:county = {
+			add_county_modifier = {
+				modifier = VIET_heroic_official_rescues_children_county
+				years = 15
+			}		
+		}
+		hidden_effect = {
+			scope:official = {		
+				death = {
+					death_reason = death_disappearance
+				}
+			}			
+		}
+	}	
+
+	
+	option = { # Invite to court
+		name = VIETmisc.3041.b
+		trigger = {
+			OR = {
+				gold >= 40
+				is_ai = no
+			}
+		}
+		remove_short_term_gold = 40
+		add_courtier = scope:official
+		if = {
+			limit = {
+				can_add_hook = {
+					target = scope:official
+					type = favor_hook
+				}
+			}
+			add_hook = {
+				target = scope:official
+				type = favor_hook
+			}
+		}
+		scope:county = {
+			add_county_modifier = {
+				modifier = VIET_heroic_official_promoted
+				years = 15
+			}		
+		}
+	}
+
+	option = { # Make the official ruler of that county
+		name = VIETmisc.3041.c
+		trigger = {
+			is_ai = no
+			any_held_title = {
+				count >= 2 #Don't give away your only title
+			}
+			highest_held_title_tier >= tier_duchy
+		}
+		# Assign title to official
+		create_title_and_vassal_change = {
+			type = granted
+			save_scope_as = change
+			add_claim_on_loss = yes
+		}
+		scope:county = {
+			change_title_holder = {
+				holder = scope:official
+				change = scope:change
+			}		
+		}
+		resolve_title_and_vassal_change = scope:change
+		# Gain a strong hook against the official.
+		reverse_add_opinion = {
+			modifier = grateful_opinion
+			target = scope:official
+			opinion = 50
+		}
+		add_hook = {
+			type = loyalty_hook
+			target = scope:official
+		}
+		scope:county = {
+			add_county_modifier = {
+				modifier = VIET_heroic_official_promoted
+				years = 15
+			}		
+		}
+	}
+}
 
 
 
