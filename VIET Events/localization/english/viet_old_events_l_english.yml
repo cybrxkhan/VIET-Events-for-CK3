@@ -1536,7 +1536,7 @@
  VIETold.2101.a:0 "Strangely, his advice turned out to be actually very helpful."
  VIETold.2102.t:0 "A Night Visit?"
  VIETold.2102.desc:0 "I am pouring over a document at my desk at night when I see an adorable little girl scurrying back and forth in my room. Upon seeing each other, we both stare in confusion, so I ask her who she is and why she's here. "I'm cold and hungry," she mumbles shyly. Feeling sorry for her, I point to some food I had left on my table, and tell her to eat some."
- VIETold.2102.a:0 ""Thank you, my [ROOT.Char.GetLadyLord]," she squeaks, before  eating."
+ VIETold.2102.a:0 ""Thank you, my [THIS.Char.GetLadyLord]," she squeaks, before  eating."
  VIETold.2103.t:0 "A Night Visit?"
  VIETold.2103.desc:0 "I suddenly wake up, realizing I must have dozed off while reading, and that the little girl must have been from a dream I had. I go to finish the rest of my food, but contrary to what I remember, none of my meal is left, save for a few crumbs.\n\nThe next morning, when I ask about her, I learned her appearance matched one of my guard's daughters, who passed away from illness a few days ago. The guard, a devout [ROOT.Char.GetFaith.GetAdjective] believer, tells me he is certain I helped his child's soul pass into the afterlife, and thanks me."
  VIETold.2103.a:0 "She was a polite, kind child. She is surely now at peace in [ROOT.Char.GetFaith.DivineRealm]."

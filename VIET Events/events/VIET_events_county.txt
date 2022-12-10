@@ -4042,13 +4042,13 @@ VIETmisc.3040 = {
 	# Ok
 	option = {
 		name = VIETmisc.3040.b
-		VIET_huge_prestige_loss_effect = yes
+		VIET_massive_prestige_loss_effect = yes
 	}
 
 	# Ok
 	option = {
 		name = VIETmisc.3040.c
-		remove_short_term_gold = 25
+		remove_short_term_gold = 35
 		VIET_massive_prestige_loss_effect = yes
 		scope:county = {
 			remove_county_modifier = VIET_officials_resign_in_protest

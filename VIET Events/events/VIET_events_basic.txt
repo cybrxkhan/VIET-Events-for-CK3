@@ -25894,7 +25894,7 @@ VIETmisc.0275 = {
 		}
 		else = {			
 			stress_impact = {
-				base = medium_stress_impact_loss
+				base = minor_stress_impact_loss
 				lazy = minor_stress_impact_loss
 				impatient = miniscule_stress_impact_loss
 			}
@@ -26313,7 +26313,7 @@ VIETmisc.0278 = {
 	option = { # Ok
 		name = VIETmisc.0278.b
 		VIET_medium_prestige_loss_effect = yes
-		VIET_medium_piety_gain_effect = yes
+		VIET_large_piety_gain_effect = yes
 		stress_impact = {
 			arrogant = minor_stress_impact_gain
 			callous = miniscule_stress_impact_gain
@@ -26324,7 +26324,7 @@ VIETmisc.0278 = {
 	
 	option = { # Ok
 		name = VIETmisc.0278.c
-		VIET_medium_prestige_loss_effect = yes
+		VIET_large_piety_gain_effect = yes
 		remove_short_term_gold = 10
 		stress_impact = {
 			arrogant = minor_stress_impact_gain
@@ -26337,7 +26337,7 @@ VIETmisc.0278 = {
 	option = { # Ok
 		name = VIETmisc.0278.d
 		VIET_medium_piety_loss_effect = yes
-		VIET_medium_prestige_gain_effect = yes
+		VIET_large_prestige_gain_effect = yes
 		stress_impact = {
 			humble = minor_stress_impact_gain
 			compassionate = minor_stress_impact_gain
