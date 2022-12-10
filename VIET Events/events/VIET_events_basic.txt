@@ -26514,7 +26514,7 @@ VIETmisc.0280 = {
 		}
 		trigger_event = {
 			id = VIETmisc.0281
-			years = 1
+			years = 10
 		}
 		custom_tooltip = VIETmisc.0280.b.tooltip
 	}
