@@ -1,10 +1,12 @@
 # VIET Events for CK3
 
-<img src="https://i.imgur.com/OQu1I1Z.jpg">
+<img src="https://i.imgur.com/Q8RSmC4.jpg">
 
-## Latest Version: 1.8.0 "Nothing" (Released 12/1/22)
+<img src="https://i.imgur.com/IyTLL0C.jpg">
 
-_As of this update, VIET has passed 200k subscribers on Steam Workshop. Thank you all for your continued support, it means a lot! My CK3 modwork has been an unusual but fun way for me to engage in creative writing, and I hope to continue adding even more content in the future._
+## Latest Version: 1.8.1 "Decade" (Released 12/11/22)
+
+_The new VIET update commemorates the 10th anniversary of the release of the first version of VIET for CK2 on 12/11/12. VIETerans who've been around long enough might recall how back then, VIET was more like VIET+RICE, but the mod has grown and changed a lot in the past 10 years. As always, thanks all for your help and support over the past decade!_
 
 Very Immersive Events and Tales (VIET), the sequel to VIET Events Reborn for CK2, is a flavor mod that adds a vast collection of events about everyday life to spice up your game. They add immersion and a diversity of experiences in between wars and vanilla’s event chains, and cover mundane minutiae ranging from small talk with courtiers and eating local cuisine to epic tales about love, philosophy, and the human condition. Some of the events unlock new decisions, character interactions, activities, and much more for you to explore!
 
@@ -14,7 +16,7 @@ Feel free to use my work in your mods - all I ask is that I am credited and (if 
 
 ## Features
 
-- Over **888** new flavor events to experience!
+- Over **900** new flavor events to experience!
 - Explore new decisions, artifacts, character interactions, activities, and more!
 - Game rule to disable sillier events for those who don't like them, with three levels to choose from: Balanced (Default), Serious (Restricted), and All Events (Full)
 - Compatible with almost anything since it doesn't touch any vanilla files - even with overhaul mods, you can via game rule disable events that reference things specific to our medieval world that wouldn’t make sense in other time periods or universes (like fantasy and sci-fi conversion mods)
@@ -32,11 +34,14 @@ DO NOT manually download the master branch unless you know what you're doing as 
 
 NOTE: If you are re-installing a mod, delete the old version of the mod first before copy and pasting the new one! While it's not always necessary, it's a good habit to do to prevent any potential issues.
 
-## Version 1.8.0 Changelog
+## Version 1.8.1 Changelog
 
-New events added in this version: **0**
+New events added in this version: **12**
 
-- Updated to vanilla patch 1.8 “Robe”
+- Added 12 events themed around the number 10
+- Added a few new Middle Eastern event backgrounds
+- Investigate a Ghost Town decision now has a visible cooldown of 10 years, rather than a hidden cooldown of 20 years
+- Fixed Dreamer characters not appearing properly because they were pruned when they shouldn’t be
 - Miscellaneous bugfixes
 
 \* Adapted from VIET for CK2

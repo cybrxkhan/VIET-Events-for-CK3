@@ -1,6 +1,6 @@
-[img]https://i.imgur.com/GmgXqF4.jpg[/img]
+[img]https://i.imgur.com/IyTLL0C.jpg[/img]
 
-[h1]当前版本：1.7.0 "八百八十八" (2022.9.8更新，兼容原版1.7.X)[/h1]
+[h1]当前版本：1.8.1 "十年" (2022.12.10更新，兼容原版1.8.X)[/h1]
 [h1][B][url=https://discord.gg/9KuyXv2uZA]我模组的Discord服务器[/url]
 [url=https://cybrxkhansmods.godaddysites.com/]我模组的官网[/url][/B][/h1]
 [B]更多信息请见[url=https://forum.paradoxplaza.com/forum/threads/mod-viet-events-for-ck3-a-flavor-and-immersion-event-mod.1422081/]论坛[/url][/B]
@@ -51,9 +51,9 @@ Very Immersive Events and Tales (VIET)是[url=https://steamcommunity.com/sharedf
 
 [img]http://i.imgur.com/RQ5QZTF.jpg[/img]
 
-[h1]版本号1.7.0 "八百八十八"[/h1]
+[h1]版本号1.8.1 "十年"[/h1]
 
-[I]In East Asian culture, 8 is a lucky number. With this update, VIET has reached the lucky milestone of adding 888 events into the game, just in time for the two year anniversary of VIET’s release! Thanks as always to all the players and modders who’ve helped and supported me over the years - the past year has seen the introduction of more interesting events like county events and court events, and the mod will certainly continue to grow in its third year with your continued support![/I]
+[I]新的 VIET 更新是为了纪念 CK2 的第一个 VIET 版本于 2012 年 12 月 11 日发布 10 周年。 已经存在足够长的 VIETerans 可能会记得当时，VIET 更像是 VIET+RICE，但在我看来，该模式在过去 10 年中有所发展，变得更好了。 在过去的十年里，世界可能发生了巨大的变化，但我一直很感激这些年来我得到的帮助和支持——谢谢大家！[/I]
 
 *由CK2版本VIET改编
 

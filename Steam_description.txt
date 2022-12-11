@@ -1,6 +1,6 @@
-[img]https://i.imgur.com/OQu1I1Z.jpg[/img]
+[img]https://i.imgur.com/IyTLL0C.jpg[/img]
 
-[h1]Current Version: 1.8.0 "Nothing" (Released 12/1/22, Compatible with vanilla patch 1.8.X)[/h1]
+[h1]Current Version: 1.8.1 "Decade" (Released 12/11/22, Compatible with vanilla patch 1.8.X)[/h1]
 
 [h1][B][url=https://discord.gg/9KuyXv2uZA]Discord Server for my mods[/url]
 [url=https://cybrxkhansmods.godaddysites.com/]Official Website for my mods[/url][/B][/h1]
@@ -27,7 +27,7 @@ Feel free to use my work in your mods - all I ask is that I am credited and (if 
 [img]http://i.imgur.com/EyXurbK.jpg[/img]
 
 [LIST]
-[*]Over [B][U]888[/U] new flavor events[/B] to experience!
+[*]Over [B][U]900[/U] new flavor events[/B] to experience!
 [*]Explore new decisions, artifacts, character interactions, activities, and more!
 [*]Game rule to disable sillier events for those who don't like them, with three levels to choose from: Balanced (Default), Serious (Restricted), and All Events (Full)
 [*][B]Compatible with almost anything[/B] since it doesn't touch any vanilla files - even with overhaul mods, you can via game rule disable events that reference things specific to our medieval world that wouldn’t make sense in other time periods or universes (like fantasy and sci-fi conversion mods)
@@ -56,14 +56,17 @@ Thanks!
 
 [img]http://i.imgur.com/RQ5QZTF.jpg[/img]
 
-[h1]Version 1.8.0 "Nothing"[/h1]
+[h1]Version 1.8.1 "Decade"[/h1]
 
-[I]As of this update, VIET has passed 200k subscribers on Steam Workshop. Thank you all for your continued support, it means a lot! My CK3 modwork has been an unusual but fun way for me to engage in creative writing, and I hope to continue adding even more content in the future.[/I]
+[I]The new VIET update commemorates the 10th anniversary of the release of the first version of VIET for CK2 on 12/11/12. VIETerans who've been around long enough might recall how back then, VIET was more like VIET+RICE, but the mod has grown in the past 10 years, for the better in my opinion. The world may have changed significantly in the past decade, but I am always grateful for the help and support I’ve received over the years – thank you all![/I]
 
-New events added in this version: [B]0[/B]
+New events added in this version: [B]12[/B]
 
 [LIST]
-[*]Updated to vanilla patch 1.8 “Robe”
+[*]Added 12 events themed around the number 10
+[*]Added a few new Middle Eastern event backgrounds
+[*]Investigate a Ghost Town decision now has a visible cooldown of 10 years, rather than a hidden cooldown of 20 years
+[*]Fixed Dreamer characters not appearing properly because they were pruned when they shouldn’t be
 [*]Miscellaneous bugfixes
 [/LIST]
 
