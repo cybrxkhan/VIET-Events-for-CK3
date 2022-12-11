@@ -4093,6 +4093,7 @@ VIETmisc.3041 = {
 	title = VIETmisc.3041.t
 	desc = VIETmisc.3041.desc
 	theme = corruption
+	override_background = { event_background = VIET_background_small_town }
 	
 	left_portrait = root
 	right_portrait = {

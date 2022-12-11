@@ -196,6 +196,28 @@ VIET_background_tuscan_country = {
 ### ANCIENT CAIRN ###
 VIET_background_ancient_cairn = {
 
+	background = { # Iranian
+		trigger = {
+			capital_province = {
+				geographical_region = world_middle_east_persia
+			}
+		}
+		reference = "gfx/interface/illustrations/event_scenes/VIET_ancient_cairn_persian.dds"
+		environment = "environment_event_desert"
+		ambience = "event:/SFX/Events/Backgrounds/desert_day"
+	}
+
+	background = { # Levant
+		trigger = {
+			capital_province = {
+				geographical_region = world_middle_east_jerusalem
+			}
+		}
+		reference = "gfx/interface/illustrations/event_scenes/VIET_ancient_cairn_levantine.dds"
+		environment = "environment_event_desert"
+		ambience = "event:/SFX/Events/Backgrounds/desert_day"
+	}
+
 	background = { # Greco-Roman
 		trigger = {
 			capital_province = {
@@ -236,6 +258,8 @@ VIET_background_ancient_cairn = {
 		trigger = {
 			capital_province = {
 				geographical_region = graphical_mena
+				NOT = { geographical_region = world_middle_east_jerusalem }
+				NOT = { geographical_region = world_middle_east_persia }
 			}
 		}
 		reference = "gfx/interface/illustrations/event_scenes/VIET_ancient_cairn_arabic.dds"
@@ -458,6 +482,17 @@ VIET_background_small_town = {
 
 ### SKYRIM FOREST ###
 VIET_background_skyrim_forest = {
+
+	background = { # Levant
+		trigger = {
+			capital_province = {
+				geographical_region = world_middle_east_jerusalem
+			}
+		}
+		reference = "gfx/interface/illustrations/event_scenes/VIET_skyrim_forest_levantine.dds"
+		environment = "environment_event_desert"
+		ambience = "event:/SFX/Events/Backgrounds/desert_day"
+	}
 
 	background = { # Hungary/Carpathia
 		trigger = {
