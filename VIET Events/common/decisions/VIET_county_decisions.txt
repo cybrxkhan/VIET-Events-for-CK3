@@ -262,7 +262,7 @@ VIET_decision_investigate_a_ghost_town = {
 
 	ai_check_interval = 24
 	
-	#cooldown = { days = 3650 }
+	cooldown = { days = 3650 }
 
 	is_shown = {
 		is_landed = yes
@@ -271,7 +271,7 @@ VIET_decision_investigate_a_ghost_town = {
 				has_county_modifier = VIET_spirit_towns
 			}
 		}
-		NOT = { has_character_flag = VIET_already_investigated_ghost_town }
+		#NOT = { has_character_flag = VIET_already_investigated_ghost_town }
 	}
 
 	is_valid = {
@@ -294,10 +294,10 @@ VIET_decision_investigate_a_ghost_town = {
 		stress_impact = {
 			craven = major_stress_impact_gain
 		}
-		add_character_flag = {
-			flag = VIET_already_investigated_ghost_town
-			years = 20
-		}
+		#add_character_flag = {
+		#	flag = VIET_already_investigated_ghost_town
+		#	years = 20
+		#}
 		custom_tooltip = VIET_decision_investigate_a_ghost_town_effect_tooltip_1
 		#custom_tooltip = VIET_decision_investigate_a_ghost_town_effect_tooltip_2
 		if = {
