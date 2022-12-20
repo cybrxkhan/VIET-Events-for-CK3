@@ -1,0 +1,6 @@
+﻿
+
+death_VIET_dream = {
+	public_knowledge = yes
+	icon = "death_unknown.dds"
+}

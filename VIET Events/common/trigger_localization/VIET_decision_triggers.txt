@@ -38,3 +38,11 @@ VIET_decision_view_flower_meadows_in_bloom_req = {
 VIET_decision_view_flower_meadows_in_bloom_req_tooltip = {
 	global = VIET_decision_view_flower_meadows_in_bloom_req_tooltip
 }
+
+VIET_decision_oblivion_dream_req_tooltip = {
+	global = VIET_decision_oblivion_dream_req_tooltip
+}
+
+VIET_decision_oblivion_dream_current_req_tooltip = {
+	global = VIET_decision_oblivion_dream_current_req_tooltip
+}

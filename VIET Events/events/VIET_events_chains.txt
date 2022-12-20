@@ -8,6 +8,7 @@
 # 1030-1035		Lost Love - a beloved servant falls ill and is dying
 # 1036-1044		Dream of the Final Journey
 # 1052-1069		Mysterious Child
+# 1070-10??		Dream of Oblivion
 # 
 ############################################################################################################################
 
@@ -2590,7 +2591,234 @@ VIETmisc.1069 = {
 }
 
 
+############################################################################################################
+# 
+# DREAM OF OBLIVION
+# Basically the plot of Oblivion's tutorial.
+# Character has a dream that is suspiciously similar to Elder Scroll Oblivion's storyline.
+# 
+############################################################################################################
 
 
+# Wake up and reach the save point/checkpoint
+VIETmisc.1070 = {
+	type = character_event
+	title = VIETmisc.1070.t	
+	desc = {
+		desc = VIETmisc.1070.desc.intro
+		first_valid = {
+			triggered_desc = {
+				trigger = {
+					var:VIET_oblivion_dream_counter = 1
+				}
+				desc = VIETmisc.1070.desc.1
+			}
+			triggered_desc = {
+				trigger = {
+					var:VIET_oblivion_dream_counter = 2
+				}
+				desc = VIETmisc.1070.desc.2
+			}
+			triggered_desc = {
+				trigger = {
+					var:VIET_oblivion_dream_counter = 3
+				}
+				desc = VIETmisc.1070.desc.3
+			}
+			triggered_desc = {
+				trigger = {
+					var:VIET_oblivion_dream_counter = 4
+				}
+				desc = VIETmisc.1070.desc.4
+			}
+			triggered_desc = {
+				trigger = {
+					var:VIET_oblivion_dream_counter = 5
+				}
+				desc = VIETmisc.1070.desc.5
+			}
+		}
+	}
+	theme = memory_positive
+	override_background = { event_background = bedchamber }
+
+	left_portrait = {
+		character = root
+		animation = personality_rational
+	}
+
+	option = { # ok
+		name = VIETmisc.1070.a
+		if = {
+			limit = {
+				var:VIET_oblivion_dream_counter = 1
+			}
+			custom_tooltip = VIETmisc.1070.tooltip.first
+		}
+		else = {
+			custom_tooltip = VIETmisc.1070.tooltip.regular
+		}
+	}
+
+	# Re-enable dream decision
+	after = {
+		if = {
+			limit = {
+				has_character_flag = VIET_currently_doing_oblivion_dream
+			}
+			remove_character_flag = VIET_currently_doing_oblivion_dream
+		}
+	}
+
+}
+
+
+
+
+# Dreaming of a prison cell
+VIETmisc.1071 = {
+	type = character_event
+	title = VIETmisc.1071.t
+	desc = VIETmisc.1071.desc
+	theme = prison
+	
+	trigger = {
+		NOT = { exists = var:VIET_oblivion_dream_counter }
+		NOT = { has_global_variable = VIET_Oblivion_dream_completed }	
+		NOT = { has_game_rule = VIET_serious_events }
+	}
+	
+	weight_multiplier = {
+		base = 1
+		modifier = {
+			add = 0.2
+			has_trait = humble
+		}
+		modifier = {
+			add = -0.2
+			has_trait = arrogant
+		}
+		modifier = {
+			add = 0.2
+			has_trait = compassionate
+		}
+		modifier = {
+			add = -0.2
+			has_trait = sadistic
+		}
+		modifier = {
+			add = 0.2
+			has_trait = just
+		}
+		modifier = {
+			add = -0.2
+			has_trait = arbitrary
+		}
+	}
+	
+	immediate = {
+		set_global_variable = {
+			name = VIET_Oblivion_dream_completed
+			value = yes
+		}	
+		set_variable = {
+			name = VIET_oblivion_dream_counter
+			value = 1
+		}
+		# Disable the decision for now
+		add_character_flag = VIET_currently_doing_oblivion_dream
+		# Generate the Emperor VIET_uriel_septim_template
+		hidden_effect = {
+			# 50/50 the Emperor is your culture, or a random culture
+			random_list = {
+				50 = {
+					create_character = {
+						location = root.capital_province
+						template = VIET_uriel_septim_template
+						culture = root.culture
+						save_scope_as = uriel
+					}
+				}
+				50 = {
+					random_county = {
+						limit = {
+							NOT = {
+								culture = root.culture
+							}
+						}
+						save_scope_as = county
+					}
+					create_character = {
+						location = root.capital_province
+						template = VIET_uriel_septim_template
+						culture = scope:county.culture
+						save_scope_as = uriel
+					}
+				}
+			}
+			scope:uriel = {
+				death = {
+					death_reason = death_VIET_dream
+					killer = root
+				}
+			}			
+		}
+	}
+	
+	
+	option = {
+		name = VIETmisc.1071.a
+		trigger_event = VIETmisc.1072
+	}
+}
+
+
+# Guards and Emperor enter the cell
+VIETmisc.1072 = {
+	type = character_event
+	title = VIETmisc.1072.t
+	desc = VIETmisc.1072.desc
+	theme = prison
+
+	left_portrait = {
+		character = root
+		animation = idle
+		outfit_tags = { beggar_rags }
+	}
+
+	right_portrait = {
+		character = scope:uriel
+		animation = personality_content
+	}
+	
+	option = {
+		name = VIETmisc.1072.a
+		trigger_event = VIETmisc.1073
+	}
+}
+
+# "You are the one from my dreams"
+VIETmisc.1073 = {
+	type = character_event
+	title = VIETmisc.1073.t
+	desc = VIETmisc.1073.desc
+	theme = prison
+
+	left_portrait = {
+		character = root
+		animation = paranoia
+		outfit_tags = { beggar_rags }
+	}
+
+	right_portrait = {
+		character = scope:uriel
+		animation = personality_honorable
+	}
+
+	option = {
+		name = VIETmisc.1073.a
+		trigger_event = VIETmisc.1070
+	}
+}
 
 
