@@ -2625,19 +2625,20 @@ VIETmisc.1070 = {
 				}
 				desc = VIETmisc.1070.desc.3
 			}
-			triggered_desc = {
-				trigger = {
-					var:VIET_oblivion_dream_counter = 4
-				}
-				desc = VIETmisc.1070.desc.4
-			}
-			triggered_desc = {
-				trigger = {
-					var:VIET_oblivion_dream_counter = 5
-				}
-				desc = VIETmisc.1070.desc.5
-			}
+			# triggered_desc = {
+			# 	trigger = {
+			# 		var:VIET_oblivion_dream_counter = 4
+			# 	}
+			# 	desc = VIETmisc.1070.desc.4
+			# }
+			# triggered_desc = {
+			# 	trigger = {
+			# 		var:VIET_oblivion_dream_counter = 5
+			# 	}
+			# 	desc = VIETmisc.1070.desc.5
+			# }
 		}
+		desc = VIETmisc.1070.desc.conclusion
 	}
 	theme = memory_positive
 	override_background = { event_background = bedchamber }
@@ -2740,6 +2741,13 @@ VIETmisc.1071 = {
 					}
 				}
 				50 = {
+					trigger = {
+						any_county = {
+							NOT = {
+								culture = root.culture
+							}
+						}
+					}
 					random_county = {
 						limit = {
 							NOT = {
@@ -2755,13 +2763,137 @@ VIETmisc.1071 = {
 						save_scope_as = uriel
 					}
 				}
+			}		
+			# Generate Baurus
+			random_list = {
+				# VIET_baurus_template
+				33 = {
+					create_character = {
+						location = root.capital_province
+						template = VIET_baurus_template
+						culture = root.culture
+						save_scope_as = baurus
+					}
+				}
+				66 = {
+					trigger = {
+						any_county = {
+							NOT = {
+								culture = root.culture
+							}
+							NOT = {
+								culture = scope:uriel.culture
+							}
+						}
+					}
+					random_county = {
+						limit = {
+							NOT = {
+								culture = root.culture
+							}
+							NOT = {
+								culture = scope:uriel.culture
+							}
+						}
+						save_scope_as = county
+					}
+					create_character = {
+						location = root.capital_province
+						template = VIET_baurus_template
+						culture = scope:county.culture
+						save_scope_as = baurus
+					}
+				}
 			}
-			scope:uriel = {
+			# Generate Jauffre
+			random_list = {
+				33 = {
+					create_character = {
+						location = root.capital_province
+						template = VIET_jauffre_template
+						culture = root.culture
+						save_scope_as = jauffre
+					}
+				}
+				66 = {
+					trigger = {
+						any_county = {
+							NOT = {
+								culture = root.culture
+							}
+							NOT = {
+								culture = scope:uriel.culture
+							}
+						}
+					}
+					random_county = {
+						limit = {
+							NOT = {
+								culture = root.culture
+							}
+							NOT = {
+								culture = scope:uriel.culture
+							}
+						}
+						save_scope_as = county
+					}
+					create_character = {
+						location = root.capital_province
+						template = VIET_jauffre_template
+						culture = scope:county.culture
+						save_scope_as = jauffre
+					}
+				}
+			}
+			# Generate Martin
+			create_character = {
+				location = root.capital_province
+				template = VIET_martin_template
+				culture = scope:uriel.culture
+				father = scope:uriel
+				dynasty = scope:uriel.dynasty
+				save_scope_as = martin
+			}
+			scope:uriel = {				
+				add_to_global_variable_list = {
+					name = VIET_uriel_septim_person # Dunno how else to do this
+					target = this
+				}	
 				death = {
 					death_reason = death_VIET_dream
 					killer = root
 				}
-			}			
+			}
+			scope:baurus = {				
+				add_to_global_variable_list = {
+					name = VIET_baurus_septim_person # Dunno how else to do this
+					target = this
+				}	
+				death = {
+					death_reason = death_VIET_dream
+					killer = root
+				}
+			}
+			scope:jauffre = {				
+				add_to_global_variable_list = {
+					name = VIET_jauffre_septim_person # Dunno how else to do this
+					target = this
+				}	
+				death = {
+					death_reason = death_VIET_dream
+					killer = root
+				}
+			}
+			scope:martin = {				
+				add_to_global_variable_list = {
+					name = VIET_martin_septim_person # Dunno how else to do this
+					target = this
+				}	
+				death = {
+					death_reason = death_VIET_dream
+					killer = root
+				}
+			}
 		}
 	}
 	
@@ -2769,6 +2901,21 @@ VIETmisc.1071 = {
 	option = {
 		name = VIETmisc.1071.a
 		trigger_event = VIETmisc.1072
+	}
+
+	after = {
+		scope:uriel = {
+			make_unprunable = yes
+		}
+		scope:baurus = {
+			make_unprunable = yes
+		}
+		scope:jauffre = {
+			make_unprunable = yes
+		}
+		scope:martin = {
+			make_unprunable = yes
+		}
 	}
 }
 
@@ -2820,5 +2967,463 @@ VIETmisc.1073 = {
 		trigger_event = VIETmisc.1070
 	}
 }
+
+# The Nine Divines
+VIETmisc.1074 = {
+	type = character_event
+	title = VIETmisc.1074.t
+	desc = VIETmisc.1074.desc
+	theme = VIET_theme_oblivion_prison_sewer	
+	override_icon = {
+		reference = "gfx/interface/icons/event_types/type_faith.dds"
+	}
+
+	left_portrait = {
+		character = root
+		animation = idle
+		outfit_tags = { beggar_rags }
+	}
+
+	right_portrait = {
+		character = scope:uriel
+		animation = worry
+	}
+
+	immediate = {
+		ordered_in_global_list = {
+			variable = VIET_uriel_septim_person
+			save_scope_as = uriel
+		}
+		# Disable the decision for now
+		add_character_flag = VIET_currently_doing_oblivion_dream
+		if = {
+			limit = { NOT = { exists = var:VIET_oblivion_dream_counter } }
+			set_variable = {
+				name = VIET_oblivion_dream_counter
+				value = 2
+			}
+		}
+		else = {
+			change_variable = {
+				name = VIET_oblivion_dream_counter
+				add = 1
+			}		
+		}
+	}
+
+	option = {
+		name = VIETmisc.1074.a
+		stress_impact = {
+			cynical = minor_stress_impact_gain
+			callous = miniscule_stress_impact_gain
+		}
+	}
+
+	option = {
+		name = VIETmisc.1074.b
+		stress_impact = {
+			zealous = minor_stress_impact_gain
+			trusting = miniscule_stress_impact_gain
+		}
+	}
+
+	option = {
+		name = VIETmisc.1074.c
+		stress_impact = {
+			zealous = minor_stress_impact_gain
+			humble = miniscule_stress_impact_gain
+		}
+	}
+
+	after = {
+		trigger_event = VIETmisc.1075
+	}
+}
+
+# Patrick Stewart saying cool things
+VIETmisc.1075 = {
+	type = character_event
+	title = VIETmisc.1075.t
+	desc = VIETmisc.1075.desc
+	theme = VIET_theme_oblivion_prison_sewer	
+	override_icon = {
+		reference = "gfx/interface/icons/event_types/type_learning.dds"
+	}
+
+	left_portrait = {
+		character = root
+		animation = idle
+		outfit_tags = { beggar_rags }
+	}
+
+	right_portrait = {
+		character = scope:uriel
+		animation = personality_content
+	}
+
+	option = {
+		name = VIETmisc.1075.a
+		trigger_event = VIETmisc.1076
+	}
+}
+
+# Patrick Stewart's Shakespeare Quote
+VIETmisc.1076 = {
+	type = character_event
+	title = VIETmisc.1076.t
+	desc = VIETmisc.1076.desc
+	theme = VIET_theme_oblivion_prison_sewer	
+	override_icon = {
+		reference = "gfx/interface/icons/event_types/type_duty.dds"
+	}
+
+	left_portrait = {
+		character = root
+		animation = shock
+		outfit_tags = { beggar_rags }
+	}
+
+	right_portrait = {
+		character = scope:uriel
+		animation = personality_bold
+	}
+
+	option = {
+		name = VIETmisc.1076.a
+		trigger_event = VIETmisc.1070
+	}
+}
+
+
+# Farewell to the Emperor
+VIETmisc.1077 = {
+	type = duel_event
+	title = VIETmisc.1077.t
+	desc = VIETmisc.1077.desc
+	theme = VIET_theme_oblivion_prison_sewer
+
+	left_portrait = {
+		character = root
+		animation = aggressive_sword
+		outfit_tags = { beggar_rags }
+	}
+
+	right_portrait = {
+		character = scope:uriel
+		animation = personality_bold
+	}
+
+	immediate = {
+		ordered_in_global_list = {
+			variable = VIET_uriel_septim_person
+			save_scope_as = uriel
+		}
+		ordered_in_global_list = {
+			variable = VIET_baurus_septim_person
+			save_scope_as = baurus
+		}
+		ordered_in_global_list = {
+			variable = VIET_jauffre_septim_person
+			save_scope_as = jauffre
+		}
+		# Disable the decision for now
+		add_character_flag = VIET_currently_doing_oblivion_dream
+		if = {
+			limit = { NOT = { exists = var:VIET_oblivion_dream_counter } }
+			set_variable = {
+				name = VIET_oblivion_dream_counter
+				value = 3
+			}
+		}
+		else = {
+			change_variable = {
+				name = VIET_oblivion_dream_counter
+				add = 1
+			}		
+		}
+	}
+
+	option = {
+		name = VIETmisc.1077.a		
+		VIET_tiny_piety_gain_effect = yes
+		VIET_tiny_prestige_gain_effect = yes
+		set_variable = {
+			name = VIET_emperor_farewell
+			value = flag:noble
+		}
+		stress_impact = {
+			just = miniscule_stress_impact_loss
+			calm = miniscule_stress_impact_loss
+		}
+	}
+
+	option = {
+		name = VIETmisc.1077.b
+		VIET_small_piety_gain_effect = yes
+		set_variable = {
+			name = VIET_emperor_farewell
+			value = flag:sentimental
+		}
+		stress_impact = {
+			compassionate = miniscule_stress_impact_loss
+			humble = miniscule_stress_impact_loss
+		}
+	}
+
+	option = {
+		name = VIETmisc.1077.c
+		VIET_small_prestige_gain_effect = yes
+		set_variable = {
+			name = VIET_emperor_farewell
+			value = flag:determined
+		}
+		stress_impact = {
+			diligent = miniscule_stress_impact_loss
+			brave = miniscule_stress_impact_loss
+		}
+	}
+
+	after = {		
+		trigger_event = VIETmisc.1078
+	}
+
+}
+
+
+# Boink
+VIETmisc.1078 = {
+	type = duel_event
+	title = VIETmisc.1078.t
+	desc = {
+		first_valid = {
+			triggered_desc = {
+				trigger = {
+					var:VIET_emperor_farewell = flag:noble
+				}
+				desc = VIETmisc.1078.desc.1
+			}
+			triggered_desc = {
+				trigger = {
+					var:VIET_emperor_farewell = flag:sentimental
+				}
+				desc = VIETmisc.1078.desc.2
+			}
+			triggered_desc = {
+				trigger = {
+					var:VIET_emperor_farewell = flag:determined
+				}
+				desc = VIETmisc.1078.desc.3
+			}
+		}
+		desc = VIETmisc.1078.desc
+	}
+	theme = VIET_theme_oblivion_prison_sewer
+
+	left_portrait = {
+		character = root
+		animation = throne_room_one_handed_passive_1
+		outfit_tags = { beggar_rags }
+	}
+
+	right_portrait = {
+		character = scope:baurus
+		animation = sadness
+	}
+
+	option = {
+		name = VIETmisc.1078.a
+		if = {
+			limit = { has_variable = VIET_emperor_farewell }
+			remove_variable = VIET_emperor_farewell
+		}		
+		trigger_event = VIETmisc.1079
+	}
+
+}
+
+# The Amulet
+VIETmisc.1079 = {
+	type = character_event
+	title = VIETmisc.1079.t
+	desc = VIETmisc.1079.desc
+	theme = VIET_theme_oblivion_prison_sewer	
+	override_icon = {
+		reference = "gfx/interface/icons/event_types/type_duty.dds"
+	}
+
+	left_portrait = {
+		character = root
+		animation = personality_rational
+		outfit_tags = { beggar_rags }
+	}
+
+	right_portrait = {
+		character = scope:baurus
+		animation = personality_cynical
+	}
+
+	option = {
+		name = VIETmisc.1079.a	
+		trigger_event = VIETmisc.1070
+	}
+
+}
+
+# Splitting Up
+VIETmisc.1080 = {
+	type = character_event
+	title = VIETmisc.1080.t
+	desc = VIETmisc.1080.desc
+	theme = VIET_theme_oblivion_prison_sewer	
+	override_icon = {
+		reference = "gfx/interface/icons/event_types/type_duty.dds"
+	}
+
+	left_portrait = {
+		character = root
+		animation = personality_bold
+		outfit_tags = { beggar_rags }
+	}
+
+	right_portrait = {
+		character = scope:baurus
+		animation = personality_honorable
+	}
+
+
+	immediate = {
+		ordered_in_global_list = {
+			variable = VIET_uriel_septim_person
+			save_scope_as = uriel
+		}
+		ordered_in_global_list = {
+			variable = VIET_baurus_septim_person
+			save_scope_as = baurus
+		}
+		ordered_in_global_list = {
+			variable = VIET_jauffre_septim_person
+			save_scope_as = jauffre
+		}
+		ordered_in_global_list = {
+			variable = VIET_martin_septim_person
+			save_scope_as = martin
+		}
+		# Disable the decision for now
+		add_character_flag = VIET_currently_doing_oblivion_dream
+		if = {
+			limit = { NOT = { exists = var:VIET_oblivion_dream_counter } }
+			set_variable = {
+				name = VIET_oblivion_dream_counter
+				value = 4
+			}
+		}
+		else = {
+			change_variable = {
+				name = VIET_oblivion_dream_counter
+				add = 1
+			}		
+		}
+	}
+
+	option = {
+		name = VIETmisc.1080.a		
+		trigger_event = VIETmisc.1081
+	}
+
+}
+
+# Emerge from the Sewers and see Vilverin
+VIETmisc.1081 = {
+	type = character_event
+	title = VIETmisc.1081.t
+	desc = VIETmisc.1081.desc
+	theme = VIET_theme_oblivion_pastoral_dream
+
+	left_portrait = {
+		character = root
+		animation = happiness
+		outfit_tags = { beggar_rags }
+	}
+
+	option = {
+		name = VIETmisc.1081.a		
+		stress_impact = {
+			diligent = miniscule_stress_impact_loss
+			just = miniscule_stress_impact_loss
+			zealous = miniscule_stress_impact_loss
+		}
+		trigger_event = VIETmisc.1082
+	}
+
+	option = {
+		name = VIETmisc.1081.b		
+		stress_impact = {
+			lazy = miniscule_stress_impact_loss
+			fickle = miniscule_stress_impact_loss
+			brave = miniscule_stress_impact_loss
+		}	
+		trigger_event = VIETmisc.1083
+	}
+
+}
+
+# Brief Summary of Oblivion's Plot
+VIETmisc.1082 = {
+	type = character_event
+	title = VIETmisc.1082.t
+	desc = VIETmisc.1082.desc
+	theme = VIET_theme_oblivion_pastoral_dream
+
+	right_portrait = {
+		character = root
+		animation = happiness
+	}
+
+	option = {
+		name = VIETmisc.1082.a	
+	}
+
+	after = {
+		if = {
+			limit = {
+				has_character_flag = VIET_currently_doing_oblivion_dream
+			}
+			remove_character_flag = VIET_currently_doing_oblivion_dream
+		}
+		add_character_flag = VIET_oblivion_dream_done
+	}
+
+}
+
+# Brief Summary of Oblivion's Plot... if you didn't bother with the main quest
+# Credits to this_anon from this reddit thread, the text was mostly their idea, with some minor tweaks and changes on my part:
+# https://www.reddit.com/r/CrusaderKings/comments/dhi7v2/cant_wait_for_the_elder_scrolls_vi_wallachia/f3p3t9t/
+VIETmisc.1083 = {
+	type = character_event
+	title = VIETmisc.1083.t
+	desc = VIETmisc.1083.desc
+	theme = VIET_theme_oblivion_pastoral_dream
+
+	right_portrait = {
+		character = root
+		animation = happiness
+	}
+
+	option = {
+		name = VIETmisc.1083.a	
+	}
+
+	after = {
+		if = {
+			limit = {
+				has_character_flag = VIET_currently_doing_oblivion_dream
+			}
+			remove_character_flag = VIET_currently_doing_oblivion_dream
+		}
+		add_character_flag = VIET_oblivion_dream_done
+	}
+
+}
+
 
 

@@ -178,6 +178,18 @@ VIET_lord_huron_strange_trails = {
 	}
 }
 
+VIET_theme_oblivion_prison_sewer = {
+	icon = {
+		reference = "gfx/interface/icons/event_types/type_prison.dds"
+	}
+	sound = {
+		reference = @generic_event_theme_sound
+	}
+	background = {
+		event_background = VIET_background_oblivion_prison_sewer
+	}
+}
+
 
 #######################
 #### HOME AND COURT	### 

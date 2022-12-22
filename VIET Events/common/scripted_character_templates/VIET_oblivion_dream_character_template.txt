@@ -1,0 +1,164 @@
+﻿
+VIET_uriel_septim_template = {
+	age = { 60 88 }
+	gender_female_chance = 0
+	#culture = scope:county.culture
+	faith = root.faith
+	#Education
+	random_traits_list = {
+		education_diplomacy_4 = { weight = { base = 10 } }
+		education_martial_4 = { weight = { base = 10 } }
+		education_stewardship_4 = { weight = { base = 10 } }
+		education_intrigue_4 = { weight = { base = 10 } }
+		education_learning_4 = { weight = { base = 10 } }
+	}
+	random_traits_list = {
+		count = 1
+		beauty_good_2 = {}
+		beauty_good_3 = {}
+	}
+	random_traits_list = {
+		count = 1
+		intellect_good_2 = {}
+		intellect_good_3 = {}
+	}
+	#Personality - some randomness
+	random_traits_list = {
+		count = 3
+		zealous = {}
+		diligent = {}
+		calm = {}
+		compassionate = {}
+		humble = {}
+		just = {}
+		generous = {}
+		content = {}
+		brave = {}
+	}
+}
+
+
+VIET_baurus_template = {
+	age = { 18 30 }
+	gender_female_chance = root_soldier_female_chance
+	#culture = root.culture
+	faith = root.faith
+	#Education
+	random_traits_list = {
+		count = 1
+		education_martial_1 = {
+			weight = { base = 10 }
+		}
+		education_martial_2 = {
+			weight = { base = 10 }
+		}
+		education_martial_3 = {
+			weight = { base = 10 }
+		}
+		education_martial_4 = {
+			weight = { base = 10 }
+		}
+	}
+	#Personality
+	random_traits_list = {
+		count = 3
+		brave = {}
+		diligent = {}
+		calm = {}
+		patient = {}
+		compassionate = {}
+		just = {}
+		gregarious = {}
+		content = {}
+		humble = {}
+	}
+	prowess = {
+		min_template_high_skill
+		max_template_high_skill
+	}
+}
+
+VIET_jauffre_template = {
+	age = { 55 80 }
+	gender_female_chance = root_faith_clergy_gender_female_chance
+	#culture = root.culture
+	faith = root.faith
+	#Education
+	random_traits_list = {
+		count = 1
+		education_martial_1 = {
+			weight = { base = 10 }
+		}
+		education_martial_2 = {
+			weight = { base = 10 }
+		}
+		education_martial_3 = {
+			weight = { base = 10 }
+		}
+		education_martial_4 = {
+			weight = { base = 10 }
+		}
+	}
+	#Personality
+	random_traits_list = {
+		count = 3
+		brave = {}
+		diligent = {}
+		calm = {}
+		patient = {}
+		compassionate = {}
+		just = {}
+		gregarious = {}
+		content = {}
+		humble = {}
+	}
+	learning = {
+		min_template_high_skill
+		max_template_high_skill
+	}
+	prowess = {
+		min_template_high_skill
+		max_template_high_skill
+	}
+}
+
+VIET_martin_template = {
+	age = { 20 40 }
+	gender_female_chance = 0
+	#culture = root.culture
+	faith = root.faith
+	trait = legitimized_bastard
+	#Education
+	random_traits_list = {
+		education_diplomacy_4 = { weight = { base = 10 } }
+		education_stewardship_4 = { weight = { base = 10 } }
+		education_learning_4 = { weight = { base = 10 } }
+	}
+	random_traits_list = {
+		count = 1
+		beauty_good_2 = {}
+		beauty_good_3 = {}
+	}
+	random_traits_list = {
+		count = 1
+		intellect_good_2 = {}
+		intellect_good_3 = {}
+	}
+	#Personality - some randomness
+	random_traits_list = {
+		count = 3
+		zealous = {}
+		diligent = {}
+		calm = {}
+		compassionate = {}
+		humble = {}
+		just = {}
+		generous = {}
+		content = {}
+		brave = {}
+	}
+	learning = {
+		min_template_high_skill
+		max_template_high_skill
+	}
+}

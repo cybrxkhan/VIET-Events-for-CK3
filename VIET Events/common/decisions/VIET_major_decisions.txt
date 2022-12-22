@@ -11,6 +11,7 @@ VIET_decision_oblivion_dream = {
 		is_landed = yes
 		exists = var:VIET_oblivion_dream_counter
 		NOT = { has_character_flag = VIET_currently_doing_oblivion_dream }
+		NOT = { has_character_flag = VIET_oblivion_dream_done }
 	}
 
 	is_valid = {
@@ -31,7 +32,24 @@ VIET_decision_oblivion_dream = {
 
 	effect = {
 		custom_tooltip = VIET_decision_oblivion_dream_effect_tooltip
-		trigger_event = VIETmisc.8888
+		if = {
+			limit = {
+				var:VIET_oblivion_dream_counter = 1
+			}
+			trigger_event = VIETmisc.1074
+		}
+		else_if = {
+			limit = {
+				var:VIET_oblivion_dream_counter = 2
+			}
+			trigger_event = VIETmisc.1077
+		}
+		else_if = {
+			limit = {
+				var:VIET_oblivion_dream_counter = 3
+			}
+			trigger_event = VIETmisc.1080
+		}
 	}
 
 	cost = {

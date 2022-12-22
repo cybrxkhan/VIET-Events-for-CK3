@@ -6,6 +6,8 @@
 # VIET_background_ancient_cairn
 # VIET_background_small_town
 # VIET_background_scarborough_fair
+# VIET_background_lord_huron_strange_trails
+# VIET_background_oblivion_prison_sewer
 
 
 ### OBLIVION PASTORAL ###
@@ -678,7 +680,6 @@ VIET_background_scarborough_fair = {
 
 
 
-
 ### STRANGE TRAILS (LORD HURON) ###
 VIET_background_lord_huron_strange_trails = {
 	background = {
@@ -687,4 +688,15 @@ VIET_background_lord_huron_strange_trails = {
 		ambience = "event:/SFX/Events/Backgrounds/coniferous_forest_day"
 	}
 }
+
+
+### OBLIVION PRISON SEWER ###
+VIET_background_oblivion_prison_sewer = {
+	background = {
+		reference = "gfx/interface/illustrations/event_scenes/VIET_oblivion_prison_sewer.dds"
+		environment = "environment_event_corridor"
+		ambience = "event:/SFX/Events/Backgrounds/castle_corridor_night"
+	}
+}
+
 
