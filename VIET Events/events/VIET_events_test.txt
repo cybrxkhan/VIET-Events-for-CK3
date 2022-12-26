@@ -63,6 +63,28 @@
 # Strange amber jewelry - VIETScarboroughFair.42 - rework later
 # Misc events - VIETScarboroughFair.44, 46 - rework later
 # Incest - VIETScarborough.47 - province event
+# Spice Merchant - VIETmisc.8157 - superceded by decision event
+# Pasta spice - VIETmisc.8158 - needs to be lengthier
+# Type of onion - VIETmisc.8161 - needs to be lengthier
+# Bathing in saffron to reduce melancholia - VIETmisc.8165 - good but need to look at how depression workss
+# Asafoetida spice = VIETmisc.8167 - need to rethink this event
+# Alkanet prank - VIETmisc.8169 - rework when add in childhood events
+# Cardamom in Scandinavia - VIETmisc.8170 - not sure why I have this, too weirdly specific?
+# Chopped Cilantro - VIETmisc.8175 - ?????
+# Leyden Cheese - VIETmisc.8178 - might be anachronistic
+# Juniper Berry male version - VIETmisc.8183 - no need for extra now
+# Holy Tulsi/Basil - VIETmisc.8189 - ????
+# Rosewater handwashing - VIETmisc.8193 - ????
+# Rosewater funeral - VIETmisc.8195 - ????
+# 
+# 
+# 
+# 
+# 
+# 
+# 
+# 
+# 
 # 
 # Benevolent spirit residing in forest - VIETmisc.8288 - province event, to do later
 # Maitreya Buddha claimant - VIETmisc.8075 - province event, to do later
