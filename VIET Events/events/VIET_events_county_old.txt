@@ -22,6 +22,8 @@
 # County events adapted from the province events of CK2 VIET
 # 
 # 4000-4029		Generic (Old Stuff)
+# 4030-4033		Oblivion Inspired
+# 4033-4035		Generic (more old stuff)
 # 
 ############################################################################################################################
 

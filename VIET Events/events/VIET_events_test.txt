@@ -76,6 +76,24 @@
 # Holy Tulsi/Basil - VIETmisc.8189 - ????
 # Rosewater handwashing - VIETmisc.8193 - ????
 # Rosewater funeral - VIETmisc.8195 - ????
+# Mazoga the Orc - VIETmisc.8343-8345 - wait for a better system for determining champions
+# Misplaced ring - VIETmisc.2050, VIETmisc.2056 - nah
+# Kid throws up on you - VIETmisc.2055 - rework later when add in childhood events
+# Sunset/sunrise color wondering - VIETmisc.2061 - ????
+# Noise event - VIETmisc.2062 - already done in a way
+# Sunset Watcher - VIETmisc.2064-2068 - turn into decision
+# Itching Event - VIETmisc.2069 - already have one
+# Arrival of Baklava - VIETmisc.2074 - kinda overlap
+# Village disappearance - VIETmisc.2078 - redundant with other similar events
+# Too much salt - VIETmisc.2079 - redundant
+# Courtier nose-picking - VIETmisc.2080 - redundant
+# Missing baklava - VIETmisc.2081 - ?????
+# Sex event - VIETmisc.2082 - ?????
+# More sex stuff - VIETmisc.2087-VIETmisc.2091 - too lazy to reword
+# Can't remember a dream - VIETmisc.2092 - already put back in
+# Loud fart - VIETold.2094-VIETmisc.2095 - I think vanilla has something like this
+# 
+# 
 # 
 # 
 # 
