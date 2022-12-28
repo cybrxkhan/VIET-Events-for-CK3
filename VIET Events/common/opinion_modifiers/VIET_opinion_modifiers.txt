@@ -727,4 +727,19 @@ VIET_opinion_made_me_pay_fine = {
 	opinion = -20
 }
 
+VIET_opinion_kicked_out_of_mosque = {
+	years = 5
+	opinion = -10
+}
+
+VIET_opinion_corrected_error = {
+	years = 5
+	opinion = 5
+}
+
+VIET_opinion_cinnamon_agree = {
+	years = 3
+	opinion = 5
+}
+
 

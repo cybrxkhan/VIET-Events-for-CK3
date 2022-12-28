@@ -83,7 +83,7 @@ VIET_events_yearly_pulse = {
 			}
 		}
 		
-		32000 = 0
+		36000 = 0
 		
 		#######################################
 		# OLDEST VIET
@@ -243,6 +243,24 @@ VIET_events_yearly_pulse = {
 		100 = VIETold.2182		# Exploring the dreamworld at the beginning of time
 		100 = VIETold.2184		# Sunset dream with a companion
 		100 = VIETold.2187		# Dream of the desert campfire that's symbolic for something
+
+		# Spices and Herbs (A-L mostly)
+		100 = VIETold.2191		# Debating about where cinnamon comes from
+		100 = VIETold.2193		# Drinking Jira Water, a traditional South Indian drink
+		100 = VIETold.2194		# Bathe in saffron as an aphrodasiac?
+		100 = VIETold.2195		# Wood avens growing at home
+		100 = VIETold.2196		# Caraway seed as a breath freshener
+		100 = VIETold.2197		# Snack of quark cheese and chives
+		100 = VIETold.2199		# Adding more cumin to food
+		100 = VIETold.2201		# Chewing on fennel seeds to freshen breath
+		100 = VIETold.2202		# Drink ginger tea for stomachache
+		100 = VIETold.2208		# Eating lavender flavored cake with lavender flavored tea
+
+		# Rosewater
+		100 = VIETold.2211		# Eating rose water cookies
+
+		# Oblivion Inspired
+		100 = VIETold.2215		# Pass by a wayshrine - pray to the Nine Divines!
 		
 		#######################################
 		# NEXT GEN VIET
@@ -431,7 +449,7 @@ VIET_events_tri_yearly_pulse = {
 			}
 		}
 		
-		30000 = 0 # 20000?
+		33000 = 0 # 20000?
 		
 		#######################################
 		# OLDEST VIET
@@ -575,6 +593,25 @@ VIET_events_tri_yearly_pulse = {
 		100 = VIETold.2172		# Someone doesn't like broccoli 
 		# Strange Dreams
 		100 = VIETold.2174		# Dream of a great ship in a harbor/port
+
+		# Spices and Herbs (A-L mostly)
+		100 = VIETold.2189		# In eastern religions, garlic and onion makes you horny - cut down on it?
+		100 = VIETold.2190		# Courtier comes to a mosque after eating garlic
+		100 = VIETold.2192		# Gift of Dhana Jiru from merchants
+		100 = VIETold.2198		# Visiting someone hanging chives from their doorways
+		100 = VIETold.2200		# Clove oil to help with headaches
+		100 = VIETold.2204		# Meet a maiden picking juniper berries
+		100 = VIETold.2205		# Iberian marquetry from bay leaf hardwood
+		100 = VIETold.2207		# Use koseret, an Ethiopian herb, as insecticide
+		100 = VIETold.2209		# Using tulsi/holy basil for pest control
+		100 = VIETold.2210		# Someone places basil on dead peron before funeral
+
+		# Rosewater
+		100 = VIETold.2212		# Skin ointment made from rose water
+		100 = VIETold.2213		# Sprinkle rose water for funeral of a nobleman
+
+		# Oblivion Inspired
+		100 = VIETold.2214		# Two servants exchange awkward small talk like Oblivion NPCs
 		
 		#######################################
 		# NEXT GEN VIET
@@ -755,7 +792,7 @@ VIET_events_five_yearly_pulse = {
 			}
 		}
 		
-		27000 = 0
+		30000 = 0
 		
 		#######################################
 		# OLDEST VIET
@@ -852,6 +889,10 @@ VIET_events_five_yearly_pulse = {
 		# Strange Dreams
 		100 = VIETold.2175		# Meet someone you know irl in a dream
 		100 = VIETold.2185		# Meeting the Dreamer while lost in a dream - part of VIET lore about the Dreamers
+
+		# Spices and Herbs (A-L mostly)
+		100 = VIETold.2203		# Courtier thinks the grains of paradise actually came from heaven
+		100 = VIETold.2206		# Heartbroken servant can't afford herbal concoction to heal wounded heart (gender not specified)
 		
 		#######################################
 		# NEXT GEN VIET

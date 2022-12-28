@@ -96,6 +96,18 @@ VIET_theme_garden_generic = { # For when I don't want the lovey-dovey extras
 	}
 }
 
+VIET_theme_kitchen_generic = {
+	icon = {
+		reference = "gfx/interface/icons/event_types/type_feast.dds"
+	}
+	sound = {
+		reference = "event:/SFX/Events/Themes/sfx_event_theme_type_activity"
+	}
+	background = {
+		event_background = bp1_kitchen_western
+	}
+}
+
 
 #######################
 #### SETTLEMENTS	### 

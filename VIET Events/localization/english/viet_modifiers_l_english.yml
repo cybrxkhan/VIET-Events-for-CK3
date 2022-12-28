@@ -1093,7 +1093,7 @@
  VIET_opinion_cinnamon_agree:0 "Agreed with my theory on cinnamon's origin"
  VIET_saffron_aphrodisiac:0 "Saffron Aphrodisiac"
  VIET_wood_avens:0 "Wood Avens Growing Near Residence"
- VIET_caraway_seeds:0 "Caraway Seeds to Freshen Breath"
+ VIET_caraway_seeds:0 "Using Caraway Seeds to Freshen Breath"
  VIET_chives_everywhere:0 "Chives Everywhere"
  VIET_chives_everywhere_desc:0 "To ward off evil and disease, this character is putting up dried bunches of chives all over their house."
  VIET_mild_headaches:0 "Mild Headaches"
@@ -1164,7 +1164,8 @@
  VIET_rose_tea_desc:0 "This character likes drinking herbal tea made from the petals and fruit of the rose, mixed together with other herbs."
  VIET_uplifting_lesson:0 "Uplifting Lesson"
  VIET_uplifting_lesson_desc:0 "This character has recently learned an important, uplifting lesson about the positive side of life."
- xxxxx:0 "xxxxx"
+ VIET_dhana_jiru:0 "Supplied with Dhana Jiru"
+ VIET_dhana_jiru_desc:0 "Dhana Jiru is a traditional spice mix from Western India. Its two main ingredients are cumin and coriander."
  xxxxx:0 "xxxxx"
  # 1.8.3 - please leave this comment here
  xxxxx:0 "xxxxx"

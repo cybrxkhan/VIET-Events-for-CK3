@@ -2534,6 +2534,134 @@ VIET_impressed_mathematicians = {
 	monthly_prestige = 0.35
 	general_opinion = 5
 }
+VIET_reducing_garlic_onion = {
+	icon = piety_positive
+	#stress_gain_mult = -0.1
+	#stress_loss_mult = 0.1
+	monthly_lifestyle_xp_gain_mult = 0.01
+	monthly_piety = 0.2
+	monthly_prestige = -0.1
+	fertility = -0.02
+	#jainism_religion_opinion = 5
+	#hinduism_religion_opinion = 5
+	#buddhism_religion_opinion = 5
+	#taoism_religion_opinion = 5
+}
+
+VIET_avoiding_garlic_onion = {
+	icon = piety_positive
+	#stress_gain_mult = -0.1
+	#stress_loss_mult = 0.1
+	monthly_lifestyle_xp_gain_mult = 0.02
+	monthly_piety = 0.4
+	monthly_prestige = -0.2
+	fertility = -0.04
+	#jainism_religion_opinion = 5
+	#hinduism_religion_opinion = 5
+	#buddhism_religion_opinion = 5
+	#taoism_religion_opinion = 5
+}
+
+VIET_ate_garlic_mosque = {
+	icon = piety_negative
+	monthly_piety = -0.1
+	islam_religion_opinion = -5
+}
+
+VIET_dhana_jiru = {
+	icon = food_positive
+	monthly_prestige = 0.05
+	negate_health_penalty_add = 0.05
+}
+
+VIET_saffron_aphrodisiac = {
+	icon = love_positive
+	fertility = 0.04
+	attraction_opinion = 3
+}
+
+VIET_wood_avens = {
+	icon = fertility_positive
+	monthly_piety = 0.1
+}
+
+VIET_caraway_seeds = {
+	icon = fertility_positive
+	attraction_opinion = 3
+	stress_gain_mult = -0.03
+	stress_loss_mult = 0.03
+}
+
+VIET_chives_everywhere = {
+	icon = piety_positive
+	monthly_piety = 0.1
+	negate_health_penalty_add = 0.05
+}
+
+VIET_mild_headaches = {
+	icon = stress_negative
+	monthly_lifestyle_xp_gain_mult = -0.01
+	stress_gain_mult = 0.04
+	stress_loss_mult = -0.04
+}
+
+VIET_fennel_seeds_breath = {
+	icon = fertility_positive
+	attraction_opinion = 3
+	stress_gain_mult = -0.03
+	stress_loss_mult = 0.03
+}
+
+VIET_mild_stomachaches = {
+	icon = stress_negative
+	health = -0.1
+	stress_gain_mult = 0.04
+	stress_loss_mult = -0.04
+}
+
+VIET_juniper_berries = {
+	icon = food_positive
+	stress_gain_mult = -0.03
+	stress_loss_mult = 0.03
+}
+
+VIET_juniper_berry_servant = {
+	icon = food_positive
+	diplomacy = 1
+	intrigue = 1
+	stress_gain_mult = -0.03
+	stress_loss_mult = 0.03
+}
+
+VIET_bay_leaf_woodwork = {
+	icon = prestige_positive
+	diplomacy = 1
+}
+
+VIET_effective_pest_control = {
+	icon = cockroach_positive
+	diplomacy = 1
+	health = 0.1
+}
+
+VIET_lavender_eating_drinking = {
+	icon = food_positive
+	stress_gain_mult = -0.05
+	stress_loss_mult = 0.05
+}
+
+VIET_annoying_insects = {
+	icon = cockroach_negative
+	monthly_prestige = -0.25
+	stress_gain_mult = 0.05
+	stress_loss_mult = -0.05
+}
+
+VIET_rose_water_ointment = {
+	icon = fertility_positive
+	attraction_opinion = 5
+	monthly_prestige = 0.05
+}
 
 
 

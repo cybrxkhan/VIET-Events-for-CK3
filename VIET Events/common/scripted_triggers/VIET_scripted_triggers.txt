@@ -133,3 +133,24 @@ VIET_is_hummus_culture_trigger = {
 		culture = { has_cultural_pillar = heritage_israelite }
 	}
 }
+
+VIET_sexual_character_trigger = {
+	NOT = { has_trait = eunuch }
+	NOT = { has_trait = celibate }
+	NOT = { has_sexuality = asexual }
+}
+
+VIET_indian_or_in_india_trigger = {
+	OR = {
+		culture = {
+			OR = {
+				has_cultural_pillar = heritage_indo_aryan
+				has_cultural_pillar = heritage_dravidian
+			}
+		}
+		capital_province = {
+			geographical_region = world_india
+		}
+	}
+}
+
