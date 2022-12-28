@@ -59,6 +59,8 @@
  VIETtest.0010.desc:0 "I have found a very interesting book in the [ROOT.Char.GetCulture.GetLanguage.GetName] language...."
  VIETtest.0010.a:0 "Oh ho ho... what's this?"
  VIETtest.0010.b:0 "This is blasphemy! I must cleanse my mind of this filth!"
+ death_VIET_dream:0 "appeared in a dream"
+ death_VIET_dream_killer:0 "appeared in [TARGET_CHARACTER.GetUINamePossessive] dream"
  
  # Game Concepts 
  game_concept_qi_ma_the_liar:0 "Qi Ma the Liar"

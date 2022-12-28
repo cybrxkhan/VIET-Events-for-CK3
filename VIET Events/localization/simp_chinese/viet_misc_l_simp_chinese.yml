@@ -62,6 +62,13 @@
  VIETtest.0010.desc:0 "我找到了一本十分有趣的书，用[ROOT.Char.GetCulture.GetLanguage.GetName]写就……"
  VIETtest.0010.a:0 "哦吼吼……这是什么？"
  VIETtest.0010.b:0 "这是亵渎！我得把此等污秽从脑中逐出！"
+ death_VIET_dream:0 "appeared in a dream"
+ death_VIET_dream_killer:0 "appeared in [TARGET_CHARACTER.GetUINamePossessive] dream"
+ 
+ # Game Concepts 
+ game_concept_qi_ma_the_liar:0 "Qi Ma the Liar"
+ game_concept_qi_ma:0 "Qi Ma"
+ game_concept_qi_ma_the_liar_desc:0 "$game_concept_qi_ma_the_liar$ is an enigmatic traveler who [rulers|E] can sometimes encounter via a random event. Some say he is a deity in earthly form; others say an immortal, cursed by heaven to wander for all eternity, or perhaps members of a long-lived dynasty of adventurers; or perhaps something else.\n\nThough he will never stay for too long, his presence grants access to a special [decision|E] to pay him a visit. He will provide the [ruler|E] with some sagely but oftentimes cryptic advice or thoughts, which will grant them a small boost to one of the five [skills|E].\n\nFor those who do not wish to encounter this figure, he will not appear if the #V Serious Events (Restricted)#! game rule is chosen at game start."
  game_concept_clutter_artifact:0 "杂物"
  game_concept_clutter_artifacts:0 "杂物"
  game_concept_clutter_artifact_desc:0 "VIET模组添加了一类可以在随机事件中获得的[inventory_artifact|E]——$game_concept_clutter_artifacts$。$game_concept_clutter_artifacts$代表着每日都会用到的东西，[character|E]会对他们产生情感，就此强烈联系起来。\n\n尽管在理论上，你可以拥有无数$game_concept_clutter_artifacts$，可要是你已经拥有了数个$game_concept_clutter_artifacts$的话，你获得下一个$game_concept_clutter_artifacts$的概率就会大幅#X 减少#!——请慎重考虑：哪个$game_concept_clutter_artifacts$对你和你角色的生活方式重要！"

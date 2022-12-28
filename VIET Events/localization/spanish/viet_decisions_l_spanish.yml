@@ -159,6 +159,13 @@
  VIET_decision_view_flower_meadows_in_bloom_req_tooltip:0 "El mes es marzo, abril o mayo."
  VIET_decision_view_flower_meadows_in_bloom_req:0 "Algún [county|E] de tu [domain|E] tiene [GetModifier('VIET_famous_flower_meadows').GetNameWithTooltip] como [county_modifier|E]"
  VIET_decision_view_flower_meadows_in_bloom_confirm:0 "Haz los preparativos para ir."
+ VIET_decision_oblivion_dream:0 "Contemplate Your Strange Dream"
+ VIET_decision_oblivion_dream_tooltip:0 "There must be more to this dream!"
+ VIET_decision_oblivion_dream_desc:0 "I've had [ROOT.Char.MakeScope.Var('VIET_oblivion_dream_counter').GetValue] strange dreams about another world, involving a story about an Emperor and a great danger. It's all quite intriguing! Maybe if I try hard enough, I'll have another dream about that world and find out what happens next."
+ VIET_decision_oblivion_dream_req_tooltip:0 "You have had at least 1 dream in this event chain"
+ VIET_decision_oblivion_dream_current_req_tooltip:0 "Currently not contemplating the strange dream"
+ VIET_decision_oblivion_dream_effect_tooltip:0 "You will continue the story you have been dreaming about."
+ VIET_decision_oblivion_dream_confirm:0 "I'm feeling sleepy...."
  
  
  # Character Interactions
