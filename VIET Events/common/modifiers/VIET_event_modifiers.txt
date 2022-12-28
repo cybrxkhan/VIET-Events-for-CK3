@@ -2663,6 +2663,36 @@ VIET_rose_water_ointment = {
 	monthly_prestige = 0.05
 }
 
+VIET_bought_discount_merchandise = {
+	icon = grandeur_positive
+	stewardship = 1
+	monthly_prestige = -0.25
+}
+
+VIET_ontus_vanin = {
+	icon = learning_positive
+	diplomacy = -1
+	martial = -1
+	stewardship = -1
+	intrigue = -1
+	learning = 4
+	monthly_prestige = 0.15
+}
+
+VIET_runs_in_circles = {
+	icon = stress_positive
+	diplomacy = -1
+	intrigue = -1
+	monthly_prestige = -0.35
+}
+
+VIET_minor_curse = {
+	icon = magic_negative
+	general_opinion = -5
+	monthly_piety = -0.1
+	stress_gain_mult = 0.03
+	stress_loss_mult = -0.03
+}
 
 
 

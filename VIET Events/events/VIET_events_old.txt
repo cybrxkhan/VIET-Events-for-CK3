@@ -15663,6 +15663,605 @@ VIETold.2215 = {
 }
 
 
+# Edgar Vautrine sells cheap spells
+VIETold.2216 = {
+	type = character_event
+	title = VIETold.2216.t	
+	desc = VIETold.2216.desc
+	theme = VIET_theme_small_town
+	
+	right_portrait = {
+		character = root
+		animation = personality_cynical
+	}
+
+	#trigger = {
+	#	has_game_rule = VIET_normal_universe_events
+	#}
+
+	weight_multiplier = {
+		base = 1
+		modifier = {
+			add = 0.2
+			has_trait = lazy
+		}
+		modifier = {
+			add = -0.2
+			has_trait = diligent
+		}
+		modifier = {
+			add = 0.2
+			has_trait = fickle
+		}
+		modifier = {
+			add = -0.2
+			has_trait = stubborn
+		}
+		modifier = {
+			add = 0.2
+			has_trait = patient
+		}
+		modifier = {
+			add = -0.2
+			has_trait = impatient
+		}
+	}
+
+	option = { # ok
+		name = VIETold.2216.a
+		trigger = {
+			OR = {
+				is_ai = no
+				gold >= 15
+			}
+		}
+		remove_short_term_gold = 15
+		add_character_modifier = {
+			modifier = VIET_bought_discount_merchandise
+			years = 6
+		}
+		stress_impact = {
+			paranoid = miniscule_stress_impact_gain
+			arrogant = minor_stress_impact_gain
+		}
+	}
+
+	option = { # ok
+		name = VIETold.2216.b
+	}
+
+}
+
+
+# Come across a circle of burnt trees with a treasure on top - based on an unmarked location in Oblivion
+VIETold.2217 = {
+	type = character_event
+	title = VIETold.2217.t	
+	desc = VIETold.2217.desc
+	theme = death
+	override_background = { event_background = VIET_background_skyrim_forest }
+	
+	right_portrait = {
+		character = root
+		animation = paranoia
+	}
+
+	weight_multiplier = {
+		base = 1
+		modifier = {
+			add = 0.2
+			has_trait = trusting
+		}
+		modifier = {
+			add = -0.2
+			has_trait = paranoid
+		}
+		modifier = {
+			add = 0.2
+			has_trait = brave
+		}
+		modifier = {
+			add = -0.2
+			has_trait = craven
+		}
+		modifier = {
+			add = 0.2
+			has_trait = content
+		}
+		modifier = {
+			add = -0.2
+			has_trait = ambitious
+		}
+	}
+
+	option = { # ok
+		name = VIETold.2217.a
+		stress_impact = {
+			brave = miniscule_stress_impact_gain
+			greedy = miniscule_stress_impact_gain
+			cynical = miniscule_stress_impact_gain
+		}
+	}
+
+	option = { # ok
+		name = VIETold.2217.b
+		add_gold = { 5 50 } # 
+		random = {
+			chance = 33
+			send_interface_toast = {
+				type = event_toast_effect_bad
+				left_icon = ROOT
+				title = VIETold.2217.b.toast
+				add_character_modifier = {
+					modifier = VIET_minor_curse
+					years = 5
+				}
+			}
+		}
+		stress_impact = {
+			craven = miniscule_stress_impact_gain
+			zealous = miniscule_stress_impact_gain
+			just = miniscule_stress_impact_gain
+		}
+	}
+
+}
+
+
+# Misanthropic dog trainer Ganredhel
+VIETold.2218 = {
+	type = character_event
+	title = VIETold.2218.t	
+	desc = VIETold.2218.desc
+	theme = VIET_theme_small_town
+	
+	right_portrait = {
+		character = root
+		animation = personality_rational
+	}
+
+	weight_multiplier = {
+		base = 1
+		modifier = {
+			add = 0.2
+			has_trait = trusting
+		}
+		modifier = {
+			add = -0.2
+			has_trait = paranoid
+		}
+		modifier = {
+			add = 0.2
+			has_trait = gregarious
+		}
+		modifier = {
+			add = -0.2
+			has_trait = shy
+		}
+		modifier = {
+			add = 0.2
+			has_trait = brave
+		}
+		modifier = {
+			add = -0.2
+			has_trait = craven
+		}
+	}
+
+	option = { # ok
+		name = VIETold.2218.a
+		VIET_medium_prestige_gain_effect = yes
+		VIET_medium_piety_loss_effect = yes
+		stress_impact = {
+			trusting = miniscule_stress_impact_gain
+			forgiving = miniscule_stress_impact_gain
+		}
+	}
+
+	option = { # ok
+		name = VIETold.2218.b
+	}
+
+	option = { # ok
+		name = VIETold.2218.c
+		VIET_medium_piety_gain_effect = yes
+		VIET_medium_prestige_loss_effect = yes
+		stress_impact = {
+			deceitful = miniscule_stress_impact_gain
+			paranoid = miniscule_stress_impact_gain
+		}
+	}
+
+}
+
+
+
+
+
+# Guard comes to relieve another one
+VIETold.2219 = {
+	type = character_event
+	title = VIETold.2219.t	
+	desc = VIETold.2219.desc
+	theme = martial
+	override_background = { event_background = corridor_day }
+	
+	left_portrait = root
+
+	weight_multiplier = {
+		base = 1
+		modifier = {
+			add = 0.2
+			has_trait = lazy
+		}
+		modifier = {
+			add = -0.2
+			has_trait = diligent
+		}
+		modifier = {
+			add = 0.2
+			has_trait = honest
+		}
+		modifier = {
+			add = -0.2
+			has_trait = deceitful
+		}
+		modifier = {
+			add = 0.2
+			has_trait = content
+		}
+		modifier = {
+			add = -0.2
+			has_trait = ambitious
+		}
+	}
+
+	option = { # ok
+		name = VIETold.2219.a
+		VIET_small_piety_gain_effect = yes
+		stress_impact = {
+			callous = miniscule_stress_impact_gain
+			arrogant = miniscule_stress_impact_gain
+		}
+	}
+
+	option = { # ok
+		name = VIETold.2219.b
+		VIET_small_prestige_gain_effect = yes
+		stress_impact = {
+			trusting = miniscule_stress_impact_gain
+			humble = miniscule_stress_impact_gain
+		}
+	}
+
+}
+
+
+
+
+# Ontus Vanin - scholar who's retired, stays behind and reads trashy books
+VIETold.2220 = {
+	type = character_event
+	title = VIETold.2220.t	
+	desc = VIETold.2220.desc
+	theme = learning
+	
+	left_portrait = root
+	right_portrait = {
+		character = scope:ontus_vanin
+		animation = personality_content
+	}
+
+	weight_multiplier = {
+		base = 1
+		modifier = {
+			add = 0.2
+			has_trait = lazy
+		}
+		modifier = {
+			add = -0.2
+			has_trait = diligent
+		}
+		modifier = {
+			add = 0.2
+			has_trait = honest
+		}
+		modifier = {
+			add = -0.2
+			has_trait = deceitful
+		}
+		modifier = {
+			add = 0.2
+			has_trait = content
+		}
+		modifier = {
+			add = -0.2
+			has_trait = ambitious
+		}
+	}
+
+	immediate = {	
+		random_realm_county = {
+			limit = { tier = tier_county }
+			save_scope_as = county
+		}
+		create_character = {
+			location = root.location
+			template = VIET_ontus_vanin_template
+			save_scope_as = ontus_vanin
+		}
+	}
+
+	option = { # ok
+		name = VIETold.2220.a
+		VIET_medium_prestige_gain_effect = yes
+		stress_impact = {
+			lazy = minor_stress_impact_gain
+			content = miniscule_stress_impact_gain
+			humble = miniscule_stress_impact_gain
+		}		
+		hidden_effect = {
+			scope:ontus_vanin = {
+				death = {
+					death_reason = death_vanished
+				}
+			}			
+		}
+	}
+
+	option = { # ok
+		name = VIETold.2220.b
+		VIET_medium_piety_gain_effect = yes
+		stress_impact = {
+			diligent = minor_stress_impact_gain
+			ambitious = miniscule_stress_impact_gain
+			arrogant = miniscule_stress_impact_gain
+		}		
+		hidden_effect = {
+			scope:ontus_vanin = {
+				death = {
+					death_reason = death_vanished
+				}
+			}			
+		}
+	}
+
+	option = { # ok
+		name = VIETold.2220.c		
+		VIET_huge_prestige_loss_effect = yes
+		duel = {
+			skill = diplomacy
+			target = scope:ontus_vanin
+			15 = { # Failure
+				compare_modifier = {
+					value = scope:duel_value
+					multiplier = -1.1
+				}
+				desc = VIETold.2220.c.toast.failure
+				send_interface_toast = {
+					type = event_toast_effect_bad
+					left_icon = scope:ontus_vanin
+					title = VIETold.2220.c.toast.failure		
+					hidden_effect = {
+						scope:ontus_vanin = {
+							death = {
+								death_reason = death_vanished
+							}
+						}			
+					}
+				}
+			}
+			10 = { # Success
+				compare_modifier = {
+					value = scope:duel_value
+					multiplier = 1.1
+				}
+				desc = VIETold.2220.c.toast.success
+				send_interface_toast = {
+					type = event_toast_effect_good
+					left_icon = scope:ontus_vanin
+					title = VIETold.2220.c.toast.success
+					add_courtier = scope:ontus_vanin					
+				}
+			}
+		}
+	}
+
+}
+
+
+
+
+# Meeting Else God-Hater
+VIETold.2221 = {
+	type = character_event
+	title = VIETold.2221.t	
+	desc = VIETold.2221.desc
+	theme = faith
+	override_background = { event_background = tavern }
+	
+	right_portrait = {
+		character = root
+		animation = personality_cynical
+	}
+
+	weight_multiplier = {
+		base = 1
+		modifier = {
+			add = 0.2
+			has_trait = humble
+		}
+		modifier = {
+			add = -0.2
+			has_trait = arrogant
+		}
+		modifier = {
+			add = 0.2
+			has_trait = patient
+		}
+		modifier = {
+			add = -0.2
+			has_trait = impatient
+		}
+		modifier = {
+			add = 0.2
+			has_trait = lustful
+		}
+		modifier = {
+			add = -0.2
+			has_trait = chaste
+		}
+	}
+
+	option = { # ok
+		name = VIETold.2221.a
+		VIET_huge_piety_gain_effect = yes
+		VIET_huge_prestige_loss_effect = yes
+		stress_impact = {
+			cynical = minor_stress_impact_gain
+			forgiving = minor_stress_impact_gain
+			lazy = miniscule_stress_impact_gain
+		}
+	}
+
+	option = { # ok
+		name = VIETold.2221.b
+		stress_impact = {
+			zealous = minor_stress_impact_gain
+			diligent = miniscule_stress_impact_gain
+		}
+	}
+
+	option = { # ok
+		name = VIETold.2221.c
+		trigger = {
+			has_trait = cynical
+		}
+		trait = cynical
+		VIET_huge_prestige_gain_effect = yes
+		VIET_huge_piety_loss_effect = yes
+	}
+
+}
+
+
+
+# Meet a crazy madwoman - Runs-In-Circles
+# VIET_nick_rins_in_circles
+VIETold.2222 = {
+	type = character_event
+	title = VIETold.2222.t	
+	desc = VIETold.2222.desc
+	theme = mental_health
+	override_background = { event_background = VIET_background_small_town }
+	
+	left_portrait = {
+		character = root
+		animation = schadenfreude
+	}
+	right_portrait = {
+		character = scope:runs_in_circles
+		animation = paranoia
+	}
+
+	weight_multiplier = {
+		base = 1
+		modifier = {
+			add = 0.2
+			has_trait = humble
+		}
+		modifier = {
+			add = -0.2
+			has_trait = arrogant
+		}
+		modifier = {
+			add = 0.2
+			has_trait = patient
+		}
+		modifier = {
+			add = -0.2
+			has_trait = impatient
+		}
+		modifier = {
+			add = 0.2
+			has_trait = gregarious
+		}
+		modifier = {
+			add = -0.2
+			has_trait = shy
+		}
+	}
+
+	immediate = {	
+		create_character = {
+			location = root.location
+			template = VIET_runs_in_circles_template
+			save_scope_as = runs_in_circles
+		}
+		create_character = {
+			location = root.location
+			template = VIET_generic_middle_aged_male_template
+			save_scope_as = runs_in_circles_husband			
+		}
+		hidden_effect = {
+			give_nickname = runs_in_circles
+			scope:runs_in_circles = {
+				marry = scope:runs_in_circles_husband
+			}
+			scope:runs_in_circles_husband = {
+				death = {
+					death_reason = death_natural_causes
+				}
+			}
+		}
+	}
+
+	option = { # ok
+		name = VIETold.2222.a
+		VIET_huge_prestige_gain_effect = yes
+		VIET_huge_piety_loss_effect = yes
+		stress_impact = {
+			compassionate = minor_stress_impact_gain
+			lazy = miniscule_stress_impact_gain
+			humble = miniscule_stress_impact_gain
+		}
+		hidden_effect = {
+			scope:runs_in_circles = {
+				death = {
+					death_reason = death_vanished
+				}
+			}
+		}
+	}
+
+	option = { # ok
+		name = VIETold.2222.b
+		VIET_huge_piety_gain_effect = yes
+		VIET_huge_prestige_loss_effect = yes
+		stress_impact = {
+			callous = minor_stress_impact_gain
+			sadistic = minor_stress_impact_gain
+			arbitrary = miniscule_stress_impact_gain
+			arrogant = miniscule_stress_impact_gain
+		}
+		hidden_effect = {
+			scope:runs_in_circles = {
+				death = {
+					death_reason = death_vanished
+				}
+			}
+		}
+	}
+
+	option = { # ok
+		name = VIETold.2222.c
+		VIET_massive_prestige_loss_effect = yes
+		add_courtier = scope:runs_in_circles
+	}
+
+}
+
+
 
 
 

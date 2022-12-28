@@ -755,3 +755,93 @@ VIET_righteous_local_official_template = {
 	}
 }
 
+
+VIET_ontus_vanin_template = {
+	age = { 50 75 }
+	gender_female_chance = root_faith_clergy_gender_female_chance
+	random_traits_list = {
+		education_learning_3 = { weight = { base = 10 } }
+		education_learning_4 = { weight = { base = 10 } }
+	}
+	random_traits = no	
+	trait = lazy
+	#Personality
+	random_traits_list = {
+		count = 2
+		content = {}
+		calm = {}
+		patient = {}
+		compassionate = {}
+		gregarious = {}
+		humble = {}
+		stubborn = {}
+		arbitrary = {}
+		fickle = {}
+	}
+	faith = scope:county.faith
+	culture = scope:county.culture
+	after_creation = {
+		if = {
+			limit = {
+				NOT = {
+					has_trait = scholar
+				}
+			}
+			add_trait = scholar
+		}
+	}
+}
+
+VIET_runs_in_circles_template = {
+	age = { 25 50 }
+	gender_female_chance = 100
+	random_traits_list = {
+		education_intrigue_3 = { weight = { base = 10 } }
+		education_intrigue_2 = { weight = { base = 10 } }
+		education_stewardship_3 = { weight = { base = 10 } }
+		education_stewardship_2 = { weight = { base = 10 } }
+		education_diplomacy_3 = { weight = { base = 10 } }
+		education_diplomacy_2 = { weight = { base = 10 } }
+	}
+	random_traits = no	
+	trait = lunatic_1
+	#Personality
+	random_traits_list = {
+		count = 3
+		content = {}
+		impatient = {}
+		compassionate = {}
+		gregarious = {}
+		humble = {}
+		just = {}
+		generous = {}
+		fickle = {}
+		trusting = {}
+	}
+	faith = root.faith
+	culture = root.culture
+	after_creation = {
+		add_character_modifier = {
+			modifier = VIET_runs_in_circles
+		}
+		random_list = {
+			50 = { }
+			10 = { add_trait = intellect_good_1 }
+			10 = { add_trait = intellect_good_2 }
+		}
+		random_list = {
+			90 = { }
+			30 = { add_trait = beauty_good_1 }
+			30 = { add_trait = beauty_good_2 }
+		}
+	}
+}
+
+
+VIET_generic_middle_aged_male_template = {
+	age = { 35 60 }
+	random_traits = yes
+	culture = root.culture
+	faith = root.faith
+	gender_female_chance = 0
+}
