@@ -845,3 +845,12 @@ VIET_generic_middle_aged_male_template = {
 	faith = root.faith
 	gender_female_chance = 0
 }
+
+VIET_old_beggar_male_template = {
+	age = { 60 80 }
+	culture = scope:county.culture
+	faith = scope:county.faith
+	gender_female_chance = 0
+	dynasty = none
+	random_traits = yes
+}

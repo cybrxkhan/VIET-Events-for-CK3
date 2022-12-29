@@ -15546,9 +15546,9 @@ VIETold.2214 = {
 		animation = eavesdrop
 	}
 
-	#trigger = {
-	#	has_game_rule = VIET_normal_universe_events
-	#}
+	trigger = {
+		NOT = { has_game_rule = VIET_serious_events }
+	}
 
 	weight_multiplier = {
 		base = 1
@@ -15670,9 +15670,13 @@ VIETold.2216 = {
 	desc = VIETold.2216.desc
 	theme = VIET_theme_small_town
 	
-	right_portrait = {
+	left_portrait = {
 		character = root
 		animation = personality_cynical
+	}
+	right_portrait = {
+		character = scope:edgar
+		animation = personality_greedy
 	}
 
 	#trigger = {
@@ -15707,6 +15711,18 @@ VIETold.2216 = {
 		}
 	}
 
+	immediate = {	
+		random_held_title = {
+			limit = { tier = tier_county }
+			save_scope_as = county
+		}
+		create_character = {
+			location = root.location
+			template = VIET_generic_middle_aged_male_template
+			save_scope_as = edgar
+		}
+	}
+
 	option = { # ok
 		name = VIETold.2216.a
 		trigger = {
@@ -15728,6 +15744,16 @@ VIETold.2216 = {
 
 	option = { # ok
 		name = VIETold.2216.b
+	}
+
+	after = {			
+		hidden_effect = {
+			scope:edgar = {
+				death = {
+					death_reason = death_vanished
+				}
+			}			
+		}
 	}
 
 }
@@ -15952,6 +15978,8 @@ VIETold.2220 = {
 		animation = personality_content
 	}
 
+
+
 	weight_multiplier = {
 		base = 1
 		modifier = {
@@ -15981,7 +16009,7 @@ VIETold.2220 = {
 	}
 
 	immediate = {	
-		random_realm_county = {
+		random_sub_realm_county = {
 			limit = { tier = tier_county }
 			save_scope_as = county
 		}
@@ -16164,6 +16192,10 @@ VIETold.2222 = {
 		animation = paranoia
 	}
 
+	trigger = {
+		has_game_rule = VIET_all_events
+	}
+
 	weight_multiplier = {
 		base = 1
 		modifier = {
@@ -16262,7 +16294,651 @@ VIETold.2222 = {
 }
 
 
+# Dream of Aleswell, the village with invisible people
+VIETold.2223 = {
+	type = character_event
+	title = VIETold.2223.t	
+	desc = VIETold.2223.desc
+	theme = mental_health
+	override_background = { event_background = VIET_background_small_town }
+	
+	left_portrait = {
+		character = root
+		animation = personality_cynical
+	}
 
+	trigger = {
+		NOT = { has_game_rule = VIET_serious_events }
+	}
+
+	weight_multiplier = {
+		base = 1
+		modifier = {
+			add = 0.2
+			has_trait = humble
+		}
+		modifier = {
+			add = -0.2
+			has_trait = arrogant
+		}
+		modifier = {
+			add = 0.2
+			has_trait = compassionate
+		}
+		modifier = {
+			add = -0.2
+			has_trait = callous
+		}
+		modifier = {
+			add = 0.2
+			has_trait = just
+		}
+		modifier = {
+			add = -0.2
+			has_trait = arbitrary
+		}
+	}
+
+	option = { # ok
+		name = VIETold.2223.a
+		VIET_small_piety_gain_effect = yes
+		stress_impact = {
+			deceitful = minor_stress_impact_gain
+			paranoid = miniscule_stress_impact_gain
+			arrogant = miniscule_stress_impact_gain
+		}
+	}
+
+	option = { # ok
+		name = VIETold.2223.b
+		VIET_small_prestige_gain_effect = yes
+		stress_impact = {
+			forgiving = minor_stress_impact_gain
+			trusting = miniscule_stress_impact_gain
+			craven = miniscule_stress_impact_gain
+		}
+	}
+
+	option = { # ok
+		name = VIETold.2223.c
+		stress_impact = {
+			base = miniscule_stress_impact_loss
+			content = miniscule_stress_impact_loss
+			lazy = miniscule_stress_impact_loss
+		}
+	}
+
+}
+
+
+
+# Dream of visiting Anvil
+VIETold.2224 = {
+	type = character_event
+	title = VIETold.2224.t	
+	desc = VIETold.2224.desc
+	theme = memory_positive
+	override_background = { event_background = docks }
+	
+	left_portrait = {
+		character = root
+		animation = personality_forgiving
+	}
+
+	weight_multiplier = {
+		base = 1
+		modifier = {
+			add = 0.2
+			has_trait = humble
+		}
+		modifier = {
+			add = -0.2
+			has_trait = arrogant
+		}
+		modifier = {
+			add = 0.2
+			has_trait = content
+		}
+		modifier = {
+			add = -0.2
+			has_trait = ambitious
+		}
+		modifier = {
+			add = 0.2
+			has_trait = patient
+		}
+		modifier = {
+			add = -0.2
+			has_trait = impatient
+		}
+	}
+
+	option = { # ok
+		name = VIETold.2224.a
+		add_character_modifier = {
+			modifier = VIET_anvil_dream_gold_coast
+			years = 5
+		}
+	}
+
+	option = { # ok
+		name = VIETold.2224.b
+		add_character_modifier = {
+			modifier = VIET_anvil_dream_ladys_stone
+			years = 5
+		}
+	}
+
+	option = { # ok
+		name = VIETold.2224.c
+		add_character_modifier = {
+			modifier = VIET_anvil_dream_docks
+			years = 5
+		}
+	}
+
+	option = { # ok
+		name = VIETold.2224.d
+		add_character_modifier = {
+			modifier = VIET_anvil_dream_streets
+			years = 5
+		}
+	}
+
+}
+
+
+
+#############################################
+# Rose 2225-2231
+#############################################
+
+# Secret admirer gives a letter with a rose
+VIETold.2225 = {
+	type = character_event
+	title = VIETold.2225.t	
+	desc = VIETold.2225.desc
+	theme = seduction
+	override_background = { event_background = relaxing_room }
+	
+	right_portrait = {
+		character = root
+		animation = disgust
+	}
+
+	
+	trigger = {
+		NOT = { has_game_rule = VIET_serious_events }
+	}
+
+	weight_multiplier = {
+		base = 1
+		modifier = {
+			add = 0.2
+			has_trait = lazy
+		}
+		modifier = {
+			add = -0.2
+			has_trait = diligent
+		}
+		modifier = {
+			add = 0.2
+			has_trait = trusting
+		}
+		modifier = {
+			add = -0.2
+			has_trait = paranoid
+		}
+		modifier = {
+			add = 0.2
+			has_trait = patient
+		}
+		modifier = {
+			add = -0.2
+			has_trait = impatient
+		}
+	}
+
+	option = { # ok
+		name = VIETold.2225.a
+		add_character_modifier = {
+			modifier = VIET_mysterious_rose_gift
+			years = 10
+		}
+		stress_impact = {
+			paranoid = medium_stress_impact_gain
+		}
+	}
+
+	option = { # ok
+		name = VIETold.2225.b
+		stress_impact = {
+			base = minor_stress_impact_loss
+			paranoid = minor_stress_impact_loss
+		}
+	}
+
+}
+
+
+# Female ruler considers using rosehip oil to look youthful
+VIETold.2226 = {
+	type = character_event
+	title = VIETold.2226.t	
+	desc = VIETold.2226.desc
+	theme = seduction
+	override_background = { event_background = relaxing_room }
+	
+	right_portrait = {
+		character = root
+		animation = personality_rational
+	}
+
+	trigger = {
+		is_female = yes
+	}
+
+	weight_multiplier = {
+		base = 1
+		modifier = {
+			add = 0.2
+			has_trait = lustful
+		}
+		modifier = {
+			add = -0.2
+			has_trait = chaste
+		}
+		modifier = {
+			add = 0.2
+			has_trait = arrogant
+		}
+		modifier = {
+			add = -0.2
+			has_trait = humble
+		}
+		modifier = {
+			add = 0.2
+			has_trait = ambitious
+		}
+		modifier = {
+			add = -0.2
+			has_trait = content
+		}
+	}
+
+	option = { # ok
+		name = VIETold.2226.a
+		trigger = {
+			OR = {
+				is_ai = no
+				gold >= 40
+			}
+		}
+		remove_short_term_gold = 40
+		add_character_modifier = {
+			modifier = VIET_rosehip_oil
+			years = 10
+		}
+		stress_impact = {
+			temperate = minor_stress_impact_gain
+			humble = miniscule_stress_impact_gain
+			greedy = miniscule_stress_impact_gain
+		}
+	}
+
+	option = { # ok
+		name = VIETold.2226.b
+		stress_impact = {
+			lustful = minor_stress_impact_gain
+			arrogant = miniscule_stress_impact_gain
+			ambitious = miniscule_stress_impact_gain
+		}
+	}
+
+}
+
+
+
+# Stumble on two servants in love
+VIETold.2227 = {
+	type = character_event
+	title = VIETold.2227.t	
+	desc = VIETold.2227.desc
+	theme = love
+	override_background = { event_background = garden }
+	
+	right_portrait = {
+		character = root
+		animation = eavesdrop
+	}
+
+	weight_multiplier = {
+		base = 1
+		modifier = {
+			add = 0.2
+			has_trait = calm
+		}
+		modifier = {
+			add = -0.2
+			has_trait = wrathful
+		}
+		modifier = {
+			add = 0.2
+			has_trait = shy
+		}
+		modifier = {
+			add = -0.2
+			has_trait = gregarious
+		}
+		modifier = {
+			add = 0.2
+			has_trait = paranoid
+		}
+		modifier = {
+			add = -0.2
+			has_trait = trusting
+		}
+	}
+
+	option = { # ok
+		name = VIETold.2227.a
+		VIET_medium_piety_gain_effect = yes
+		stress_impact = {
+			cynical = minor_stress_impact_gain
+			callous = miniscule_stress_impact_gain
+			arrogant = miniscule_stress_impact_gain
+		}
+	}
+
+	option = { # ok
+		name = VIETold.2227.b
+		VIET_medium_prestige_gain_effect = yes
+		stress_impact = {
+			chaste = miniscule_stress_impact_gain
+			trusting = miniscule_stress_impact_gain
+		}
+	}
+
+	option = { # ok
+		name = VIETold.2227.c
+		VIET_medium_prestige_gain_effect = yes
+		stress_impact = {
+			chaste = miniscule_stress_impact_gain
+			trusting = miniscule_stress_impact_gain
+		}
+	}
+
+	option = { # ok
+		name = VIETold.2227.d
+		VIET_huge_prestige_loss_effect = yes
+		add_character_modifier = {
+			modifier = VIET_charity_to_servant
+			years = 5
+		}
+		stress_impact = {
+			greedy = minor_stress_impact_gain
+			arrogant = miniscule_stress_impact_gain
+			callous = miniscule_stress_impact_gain
+			cynical = miniscule_stress_impact_gain
+		}
+	}
+
+}
+
+
+
+
+# Drinking rose tea
+VIETold.2228 = {
+	type = character_event
+	title = VIETold.2228.t	
+	desc = VIETold.2228.desc
+	theme = friendly
+	override_background = { event_background = relaxing_room }
+	
+	right_portrait = {
+		character = root
+		animation = drink_goblet
+	}
+
+	weight_multiplier = {
+		base = 1
+		modifier = {
+			add = 0.2
+			has_trait = calm
+		}
+		modifier = {
+			add = -0.2
+			has_trait = wrathful
+		}
+		modifier = {
+			add = 0.2
+			has_trait = patient
+		}
+		modifier = {
+			add = -0.2
+			has_trait = impatient
+		}
+		modifier = {
+			add = 0.2
+			has_trait = content
+		}
+		modifier = {
+			add = -0.2
+			has_trait = ambitious
+		}
+	}
+
+	option = { # ok
+		name = VIETold.2228.a
+		add_character_modifier = {
+			modifier = VIET_rose_tea
+			years = 7
+		}
+		stress_impact = {
+			base = miniscule_stress_impact_loss
+			content = miniscule_stress_impact_loss
+			calm = miniscule_stress_impact_loss
+		}
+	}
+
+}
+
+
+
+# Monk explains rose's significance as a symbol of the Virgin Mary
+VIETold.2229 = {
+	type = character_event
+	title = VIETold.2229.t	
+	desc = VIETold.2229.desc
+	theme = faith
+	override_background = { event_background = garden }
+	
+	right_portrait = {
+		character = root
+		animation = personality_content
+	}
+
+	trigger = {
+		religion = religion:christianity_religion
+	}
+
+	weight_multiplier = {
+		base = 1
+		modifier = {
+			add = 0.2
+			has_trait = calm
+		}
+		modifier = {
+			add = -0.2
+			has_trait = wrathful
+		}
+		modifier = {
+			add = 0.2
+			has_trait = gregarious
+		}
+		modifier = {
+			add = -0.2
+			has_trait = shy
+		}
+		modifier = {
+			add = 0.2
+			has_trait = zealous
+		}
+		modifier = {
+			add = -0.2
+			has_trait = cynical
+		}
+	}
+
+	option = { # ok
+		name = VIETold.2229.a
+		VIET_large_prestige_gain_effect = yes
+		stress_impact = {
+			arrogant = miniscule_stress_impact_gain
+			impatient = miniscule_stress_impact_gain
+		}
+	}
+
+	option = { # ok
+		name = VIETold.2229.b
+		VIET_large_piety_gain_effect = yes
+		stress_impact = {
+			content = miniscule_stress_impact_gain
+			cynical = miniscule_stress_impact_gain
+		}
+	}
+
+	option = { # ok
+		name = VIETold.2229.c
+		random = {
+			chance = 15
+			add_stewardship_skill = 1
+		}
+		stress_impact = {
+			zealous = miniscule_stress_impact_gain
+			lazy = miniscule_stress_impact_gain
+		}
+	}
+
+}
+
+
+# Meet an old villager admiring a flower
+VIETold.2230 = {
+	type = character_event
+	title = VIETold.2230.t	
+	desc = VIETold.2230.desc
+	theme = VIET_theme_small_town
+	
+	left_portrait = {
+		character = root
+		animation = personality_rational
+	}
+
+	weight_multiplier = {
+		base = 1
+		modifier = {
+			add = 0.2
+			has_trait = calm
+		}
+		modifier = {
+			add = -0.2
+			has_trait = wrathful
+		}
+		modifier = {
+			add = 0.2
+			has_trait = gregarious
+		}
+		modifier = {
+			add = -0.2
+			has_trait = shy
+		}
+		modifier = {
+			add = 0.2
+			has_trait = humble
+		}
+		modifier = {
+			add = -0.2
+			has_trait = arrogant
+		}
+	}
+
+	option = { # ok
+		name = VIETold.2230.a
+		#VIET_large_prestige_loss_effect = yes
+		trigger_event = VIETold.2231
+		stress_impact = {
+			arrogant = miniscule_stress_impact_gain
+			impatient = miniscule_stress_impact_gain
+			diligent = miniscule_stress_impact_gain
+			paranoid = miniscule_stress_impact_gain
+		}
+	}
+
+	option = { # ok
+		name = VIETold.2230.b
+		VIET_large_prestige_gain_effect = yes
+		stress_impact = {
+			humble = miniscule_stress_impact_gain
+			lazy = miniscule_stress_impact_gain
+			patient = miniscule_stress_impact_gain
+			trusting = miniscule_stress_impact_gain
+		}
+	}
+
+}
+
+
+# Meet an old villager admiring a flower
+VIETold.2231 = {
+	type = character_event
+	title = VIETold.2231.t	
+	desc = VIETold.2231.desc
+	theme = VIET_theme_small_town
+	
+	left_portrait = {
+		character = root
+		animation = personality_rational
+	}
+
+	weight_multiplier = {
+		base = 1
+		modifier = {
+			add = 0.2
+			has_trait = calm
+		}
+		modifier = {
+			add = -0.2
+			has_trait = wrathful
+		}
+		modifier = {
+			add = 0.2
+			has_trait = gregarious
+		}
+		modifier = {
+			add = -0.2
+			has_trait = shy
+		}
+		modifier = {
+			add = 0.2
+			has_trait = humble
+		}
+		modifier = {
+			add = -0.2
+			has_trait = arrogant
+		}
+	}
+
+	option = { # ok
+		name = VIETold.2231.a
+		add_character_modifier = {
+			modifier = VIET_uplifting_lesson
+			years = 10
+		}
+	}
+
+}
 
 
 

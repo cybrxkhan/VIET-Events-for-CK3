@@ -10,6 +10,11 @@ VIET_book_placeholder = {
 	asset = ep1_mena_book_big_01_a_entity	
 }
 
+VIET_oblivion_scroll = {
+	icon = "artifact_VIET_scroll_oblivion.dds"
+	asset = ep1_mena_book_big_01_a_entity	
+}
+
 
 # RECIPES
 
@@ -50,7 +55,7 @@ VIET_bean_soup = {
 
 
 
-# RECIPES
+# CLUTTER
 
 VIET_abacus = {
 	icon = "artifact_VIET_abacus.dds"

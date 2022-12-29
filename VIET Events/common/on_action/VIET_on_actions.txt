@@ -155,6 +155,15 @@ VIET_events_yearly_pulse = {
 		100 = VIETold.1065		# Envoy has heard about you and your honeyed words
 		100 = VIETold.1066		# Heard an earworm
 		100 = VIETold.1069		# Head feels itchy and scratchy
+		# Generic
+		100 = VIETold.1081		# You like other people suffering
+		100 = VIETold.1082		# Feeling like you're just a character in a bard's tale
+		100 = VIETold.1083		# Relaxing somewhere in nature
+		100 = VIETold.1085		# Forgot what you were saying in the middle of a conversation
+		100 = VIETold.1086		# An intrusive thought entered your head
+		100 = VIETold.1092		# What if my life were a bard's tale?
+		# Bread
+		100 = VIETold.1093		# Giving trenchers to the poor and needy
 		
 		#######################################
 		# OLD VIET
@@ -261,6 +270,12 @@ VIET_events_yearly_pulse = {
 
 		# Oblivion Inspired
 		100 = VIETold.2215		# Pass by a wayshrine - pray to the Nine Divines!
+		100 = VIETold.2219		# Guard comes to relieve another one
+
+		# Rose
+		100 = VIETold.2226		# Female ruler considers using rosehip oil to look youthful
+		100 = VIETold.2228		# Drinking rose tea
+		100 = VIETold.2229		# Monk explains rose's significance as a symbol of the Virgin Mary
 		
 		#######################################
 		# NEXT GEN VIET
@@ -519,6 +534,18 @@ VIET_events_tri_yearly_pulse = {
 		100 = VIETold.1068		# Execution of innocent man found after the fact
 		100 = VIETold.1070		# Gift of date based soaps and cosmetics from the Levant
 		100 = VIETold.1073		# Muslim courtier uses too much perfume and is vain
+		# Generic
+		100 = VIETold.1075		# Courtier's horse will pass away soon
+		100 = VIETold.1076		# Exhausted with life
+		100 = VIETold.1084		# Smelling an odd smell
+		100 = VIETold.1087		# Good weather arrives in your region after some bad weather
+		100 = VIETold.1088		# Your character notices they can last longer in bed now
+		100 = VIETold.1090		# Emotional erotic dream
+		# Bread
+		100 = VIETold.1094		# Eating bread crusts is good for you apparently
+		100 = VIETold.1095		# Should you be eating some hardtack for stomach problems?
+		100 = VIETold.1096		# You enjoy eating sangak, a traditional type of Iranian bread
+		100 = VIETold.1098		# Courtier is bird feeding
 		
 		#######################################
 		# OLD VIET
@@ -612,6 +639,15 @@ VIET_events_tri_yearly_pulse = {
 
 		# Oblivion Inspired
 		100 = VIETold.2214		# Two servants exchange awkward small talk like Oblivion NPCs
+		100 = VIETold.2216		# Edgar Vautrine sells cheap spells
+		100 = VIETold.2217		# Come across a circle of burnt trees with a treasure on top - based on an unmarked location in Oblivion
+		100 = VIETold.2218		# Misanthropic dog trainer Ganredhel
+		100 = VIETold.2223		# Dream of Aleswell, the village with invisible people
+		100 = VIETold.2224		# Dream of visiting Anvil
+
+		# Rose
+		100 = VIETold.2227		# Stumble on two servants in love
+		100 = VIETold.2230		# Meet an old villager admiring a flower
 		
 		#######################################
 		# NEXT GEN VIET
@@ -836,6 +872,13 @@ VIET_events_five_yearly_pulse = {
 		100 = VIETold.1071		# Creepy horse stares at you
 		100 = VIETold.1072		# Cubeb gift - what to use it for?
 		100 = VIETold.1074		# Reishi/lingzhi mushrooms are given to you as a gift
+		# Generic
+		100 = VIETold.1077		# Find a beggar's corpse
+		100 = VIETold.1089		# Learning about the supposed harems of China's Emperors
+		100 = VIETold.1091		# Witness someone playing a prank where they pretend a live bird is dead
+		# Bread
+		100 = VIETold.1097		# Fraudulent baker is punished
+		100 = VIETold.1099		# You learn some facts about bread
 		
 		#######################################
 		# OLD VIET
@@ -893,6 +936,14 @@ VIET_events_five_yearly_pulse = {
 		# Spices and Herbs (A-L mostly)
 		100 = VIETold.2203		# Courtier thinks the grains of paradise actually came from heaven
 		100 = VIETold.2206		# Heartbroken servant can't afford herbal concoction to heal wounded heart (gender not specified)
+
+		# Oblivion Inspired
+		100 = VIETold.2220		# Ontus Vanin - scholar who's retired, stays behind and reads trashy books
+		100 = VIETold.2221		# Meeting Else God-Hater
+		100 = VIETold.2222		# Meet a crazy madwoman - Runs-In-Circles
+
+		# Rose
+		100 = VIETold.2225		# Secret admirer gives a letter with a rose
 		
 		#######################################
 		# NEXT GEN VIET

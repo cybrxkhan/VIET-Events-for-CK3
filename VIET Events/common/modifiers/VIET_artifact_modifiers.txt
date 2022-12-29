@@ -415,3 +415,11 @@ artifact_VIET_golden_rose_modifier = {
 	monthly_prestige = 0.1
 	seduce_scheme_power_add = 2
 }
+
+artifact_VIET_oblivion_dream_modifier = {
+	diplomacy = 1
+	martial = 1
+	learning = 1
+	monthly_prestige_gain_mult = 0.01
+	monthly_lifestyle_xp_gain_mult = 0.01
+}

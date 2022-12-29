@@ -11434,7 +11434,7 @@ VIETmisc.0136 = {
 	option = { # Comforted
 		name = VIETmisc.0136.a
 		scope:scope_VIET_cheer_upper = {
-			reverse_add_opinion = {
+			add_opinion = {
 				target = root
 				modifier = VIET_opinion_comforted_me
 			}		
@@ -25858,7 +25858,7 @@ VIETmisc.0275 = {
 	}
 
 	immediate = {		
-		random_realm_county = {
+		random_sub_realm_county = {
 			limit = { tier = tier_county }
 			save_scope_as = county
 		}

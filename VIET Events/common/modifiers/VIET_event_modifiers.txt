@@ -392,7 +392,7 @@ VIET_efficient_time = {
 }
 VIET_caring_leader = {
 	icon = county_modifier_control_positive
-	county_opinion_add = 15
+	county_opinion_add = 10
 }
 VIET_noontime_sun_headache = {
 	icon = stress_negative
@@ -494,12 +494,12 @@ VIET_house_fire_safety_measures = {
 VIET_dislikes_commoners = {
 	icon = county_modifier_opinion_negative
 	diplomacy = -1
-	county_opinion_add = -20
+	county_opinion_add = -10
 }
 VIET_friend_of_beggars = {
 	icon = social_positive
 	monthly_piety = 0.1
-	county_opinion_add = 10
+	county_opinion_add = 5
 }
 VIET_bought_baklava_normal = {
 	icon = treat_positive
@@ -2692,6 +2692,139 @@ VIET_minor_curse = {
 	monthly_piety = -0.1
 	stress_gain_mult = 0.03
 	stress_loss_mult = -0.03
+}
+
+VIET_anvil_dream_gold_coast = {
+	icon = compass_positive
+	monthly_prestige = 0.1
+	diplomatic_range_mult = 0.05
+}
+
+VIET_anvil_dream_ladys_stone = {
+	icon = rock_positive
+	monthly_piety = 0.1
+	monthly_lifestyle_xp_gain_mult = 0.01
+}
+
+VIET_anvil_dream_docks = {
+	icon = stewardship_positive
+	stewardship = 1
+}
+
+VIET_anvil_dream_streets = {
+	icon = county_modifier_development_positive
+	intrigue = 1
+}
+
+VIET_mysterious_rose_gift = {
+	icon = fertility_positive
+	monthly_prestige = 0.2
+}
+
+VIET_rosehip_oil = {
+	icon = fertility_positive
+	diplomacy = 1
+	monthly_prestige = 0.2
+	attraction_opinion = 5
+}
+
+VIET_rose_tea = {
+	icon = drink_positive
+	negate_health_penalty_add = 0.05
+	stress_gain_mult = -0.03
+	stress_loss_mult = 0.03
+}
+
+VIET_uplifting_lesson = {
+	icon = love_positive
+	diplomacy = 1
+	stress_gain_mult = -0.1
+	stress_loss_mult = 0.1
+}
+
+VIET_exhausted_with_life = {
+	icon = stress_negative
+	stress_gain_mult = 0.1
+	stress_loss_mult = -0.1
+}
+
+VIET_ridiculous_greed = {
+	icon = economy_negative
+	general_opinion = -5
+}
+
+VIET_freqent_intrusive_thoughts = {
+	icon = county_modifier_opinion_negative
+	stress_gain_mult = 0.15
+}
+
+VIET_sexual_stamina = {
+	icon = love_positive
+	attraction_opinion = 3
+	fertility = 0.01
+	stress_loss_mult = 0.02
+}
+
+VIET_harem_fantasies = {
+	icon = love_positive
+	fertility = 0.01
+	stress_loss_mult = 0.01
+}
+
+VIET_satisfaction_with_existing_relationships = {
+	icon = family_positive
+	spouse_opinion = 5
+	stress_gain_mult = -0.05
+}
+
+VIET_skeptical_of_harems = {
+	icon = county_modifier_opinion_positive
+	intrigue = 1
+}
+
+VIET_disapproves_large_harems = {
+	icon = rock_positive
+	monthly_piety = 0.1
+}
+
+VIET_dead_bird_live_bird = {
+	icon = asatru_raven_positive
+	stress_loss_mult = 0.05
+	general_opinion = -3
+}
+
+VIET_enjoys_bread_crusts = {
+	icon = food_positive
+	health = 0.2
+}
+
+VIET_eating_hardtack = {
+	icon = food_positive
+	health = 0.2
+	monthly_prestige = -0.02
+}
+
+VIET_sangak_eater = {
+	icon = food_positive
+	health = 0.2
+	county_opinion_add = 1
+}
+
+VIET_enjoys_feeding_birds = {
+	icon = asatru_raven_positive
+	stress_loss_mult = 0.05
+}
+
+VIET_bread_knowledge = {
+	icon = food_positive
+	stewardship = 1
+	intrigue = 1
+}
+
+VIET_emotional_erotic_dream = {
+	icon = love_positive
+	attraction_opinion = 1
+	stress_loss_mult = 0.05
 }
 
 

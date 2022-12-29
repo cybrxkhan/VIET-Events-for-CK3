@@ -3379,8 +3379,27 @@ VIETmisc.1082 = {
 		animation = happiness
 	}
 
+	immediate = {
+		save_scope_as = oblivion_dreamer
+	}
+
 	option = {
-		name = VIETmisc.1082.a	
+		name = VIETmisc.1082.a
+		create_artifact = {	
+			name = VIET_oblivion_dream_book_name
+			description = VIET_oblivion_dream_book_desc
+			type = miscellaneous
+			visuals = VIET_oblivion_scroll
+			quality = 65
+			wealth = 65
+			modifier = artifact_VIET_oblivion_dream_modifier
+			#max_durability = 40
+			decaying = no
+			save_scope_as = VIET_oblivion_artifact
+		}
+		scope:VIET_oblivion_artifact = {
+			set_variable = VIET_oblivion_artifact_variable
+		}
 	}
 
 	after = {
@@ -3409,8 +3428,27 @@ VIETmisc.1083 = {
 		animation = happiness
 	}
 
+	immediate = {
+		save_scope_as = oblivion_dreamer
+	}
+
 	option = {
 		name = VIETmisc.1083.a	
+		create_artifact = {	
+			name = VIET_oblivion_dream_book_alt_name
+			description = VIET_oblivion_dream_book_alt_desc
+			type = miscellaneous
+			visuals = VIET_oblivion_scroll
+			quality = 65
+			wealth = 65
+			modifier = artifact_VIET_oblivion_dream_modifier
+			#max_durability = 40
+			decaying = no
+			save_scope_as = VIET_oblivion_artifact
+		}
+		scope:VIET_oblivion_artifact = {
+			set_variable = VIET_oblivion_artifact_variable
+		}
 	}
 
 	after = {
