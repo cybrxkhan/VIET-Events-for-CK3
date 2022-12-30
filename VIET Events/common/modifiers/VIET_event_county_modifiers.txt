@@ -708,3 +708,64 @@ VIET_heroic_official_promoted = {
 	icon = family_positive
 	county_opinion_add = 7
 }
+
+VIET_wayshrine_county = {
+	icon = piety_positive
+	monthly_county_control_change_add = 0.1
+	tax_mult = 0.02
+}
+
+VIET_demon_sightings = {
+	icon = beast_negative
+	monthly_county_control_change_add = -0.2
+	tax_mult = -0.01
+}
+
+VIET_rebuilt_old_fort = {
+	icon = county_modifier_control_positive
+	monthly_county_control_change_add = 0.2
+	fort_level = 1
+}
+
+VIET_old_fort_discovered = {
+	icon = county_modifier_control_positive
+	build_gold_cost = -0.05
+}
+
+VIET_giant_mudcrab = {
+	icon = cockroach_negative
+	development_growth = -0.1
+}
+
+VIET_mysterious_night_noises = {
+	icon = magic_negative
+	development_growth = -0.1
+	monthly_county_control_change_add = -0.1
+}
+
+VIET_brilliant_light = {
+	icon = magic_positive
+	county_opinion_add = 2
+	monthly_county_control_change_add = 0.1
+}
+
+VIET_lake_dried_up = {
+	icon = fertility_negative
+	monthly_county_control_change_add = -0.2
+	development_growth = -0.4
+	tax_mult = -0.02
+}
+
+VIET_lake_dried_up_resettled = {
+	icon = fertility_negative
+	county_opinion_add = 4
+	monthly_county_control_change_add = -0.1
+	development_growth = -0.2
+	tax_mult = -0.01
+}
+
+VIET_mysterious_conman = {
+	icon = mask_negative
+	monthly_county_control_change_add = -0.1
+	development_growth = -0.1
+}

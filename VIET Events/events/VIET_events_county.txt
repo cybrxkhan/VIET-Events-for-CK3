@@ -29,6 +29,7 @@
 # 3036			VIET Events Contest Winners
 # 3037-3038		Local Rumors
 # 3039-3041		10
+# 3042-3043		Generic
 # 
 ############################################################################################################################
 
@@ -4226,5 +4227,150 @@ VIETmisc.3041 = {
 
 
 
+
+##################################################################
+# Generic 3042-3043
+##################################################################
+
+
+# Brilliant light appears
+VIETmisc.3042 = {
+	type = character_event
+	title = VIETmisc.3042.t
+	desc = VIETmisc.3042.desc
+	theme = faith
+	override_background = { event_background = VIET_background_tuscan_country }
+	
+	right_portrait = {
+		character = root
+		animation = happiness
+	}
+	
+    weight_multiplier = {
+        base = 0
+		modifier = {
+			add = {
+				every_held_title = {
+					limit = { tier = tier_county }
+					add = 1
+				}
+			}		
+		}
+    }
+	
+	immediate = {
+		random_held_title = {
+			limit = { tier = tier_county }
+			save_scope_as = county
+		}
+		scope:county = {
+			random_list = {
+				10 = {
+					add_county_modifier = {
+						modifier = VIET_brilliant_light
+						years = 4
+					}				
+				}
+				10 = {
+					add_county_modifier = {
+						modifier = VIET_brilliant_light
+						years = 6
+					}				
+				}
+				10 = {
+					add_county_modifier = {
+						modifier = VIET_brilliant_light
+						years = 8
+					}				
+				}
+				10 = {
+					add_county_modifier = {
+						modifier = VIET_brilliant_light
+						years = 10
+					}				
+				}
+			}		
+		}
+
+	}
+
+	# Ok
+	option = {
+		name = VIETmisc.3042.a	
+	}
+}
+
+# Lake dried up
+VIETmisc.3043 = {
+	type = character_event
+	title = VIETmisc.3043.t
+	desc = VIETmisc.3043.desc
+	theme = VIET_theme_tuscan_country
+	
+	right_portrait = {
+		character = root
+		animation = worry
+	}
+	
+    weight_multiplier = {
+        base = 0
+		modifier = {
+			add = {
+				every_held_title = {
+					limit = { tier = tier_county }
+					add = 1
+				}
+			}		
+		}
+    }
+	
+	immediate = {
+		random_held_title = {
+			limit = { tier = tier_county }
+			save_scope_as = county
+		}
+
+	}
+
+	# Ok
+	option = {
+		name = VIETmisc.3043.a	
+		scope:county = {
+			add_county_modifier = {
+				modifier = VIET_lake_dried_up
+				years = 15
+			}	
+		}
+		stress_impact = {
+			generous = minor_stress_impact_gain
+			compassionate = minor_stress_impact_gain
+			just = minor_stress_impact_gain
+		}
+	}
+
+	# Ok
+	option = {
+		name = VIETmisc.3043.b	
+		trigger = {
+			OR = {
+				gold >= 60
+				is_ai = no
+			}
+		}
+		remove_short_term_gold = 60
+		scope:county = {
+			add_county_modifier = {
+				modifier = VIET_lake_dried_up_resettled
+				years = 15
+			}	
+		}
+		stress_impact = {
+			greedy = minor_stress_impact_gain
+			callous = minor_stress_impact_gain
+		}
+	}
+
+
+}
 
 

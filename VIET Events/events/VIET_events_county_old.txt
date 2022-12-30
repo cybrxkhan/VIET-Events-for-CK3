@@ -23,7 +23,7 @@
 # 
 # 4000-4029		Generic (Old Stuff)
 # 4030-4033		Oblivion Inspired
-# 4033-4035		Generic (more old stuff)
+# 4034-4035		Generic (more old stuff)
 # 
 ############################################################################################################################
 
@@ -2353,5 +2353,413 @@ VIETmisc.4029 = {
 			}		
 		}
 		custom_tooltip = VIET_increase_county_modifier_time
+	}
+}
+
+
+
+
+##################################################################
+# Oblivion Inspired 4030-4033
+##################################################################
+
+# Wayshrine becomes popular
+VIETmisc.4030 = {
+	type = character_event
+	title = VIETmisc.4030.t
+	desc = VIETmisc.4030.desc
+	theme = faith
+	override_background = { event_background = VIET_background_ancient_cairn }
+	
+	left_portrait = root
+	
+    weight_multiplier = {
+        base = 0
+		modifier = {
+			add = {
+				every_held_title = {
+					limit = { tier = tier_county }
+					add = 1
+				}
+			}		
+		}		
+    }
+	
+	immediate = {
+		random_held_title = {
+			limit = { tier = tier_county }
+			save_scope_as = county
+		}
+		scope:county = {
+			random_list = {
+				10 = {
+					add_county_modifier = {
+						modifier = VIET_wayshrine_county
+						years = 10
+					}				
+				}
+				10 = {
+					add_county_modifier = {
+						modifier = VIET_wayshrine_county
+						years = 15
+					}				
+				}
+				10 = {
+					add_county_modifier = {
+						modifier = VIET_wayshrine_county
+						years = 20
+					}				
+				}
+			}		
+		}	
+	}
+	
+	option = {
+		name = VIETmisc.4030.a
+	}
+}
+
+# Daedra sightings
+VIETmisc.4031 = {
+	type = character_event
+	title = VIETmisc.4031.t
+	desc = VIETmisc.4031.desc
+	theme = death
+	override_background = { event_background = VIET_background_small_town }
+	
+	left_portrait = root
+	
+    weight_multiplier = {
+        base = 0
+		modifier = {
+			add = {
+				every_held_title = {
+					limit = { tier = tier_county }
+					add = 1
+				}
+			}		
+		}		
+    }
+	
+	immediate = {
+		random_held_title = {
+			limit = { tier = tier_county }
+			save_scope_as = county
+		}
+	}
+	
+	option = {
+		name = VIETmisc.4031.a
+		VIET_medium_piety_gain_effect = yes
+		scope:county = {
+			add_county_modifier = {
+				modifier = VIET_demon_sightings
+				years = 12
+			}			
+		}	
+	}
+	
+	option = {
+		name = VIETmisc.4031.b
+		VIET_medium_prestige_gain_effect = yes
+		scope:county = {
+			add_county_modifier = {
+				modifier = VIET_demon_sightings
+				years = 12
+			}
+		}
+	}
+	
+	option = {
+		name = VIETmisc.4031.c
+		trigger = {
+			OR = {
+				gold >= 50
+				is_ai = no
+			}
+		}
+		remove_short_term_gold = 50
+		scope:county = {
+			add_county_modifier = {
+				modifier = VIET_demon_sightings
+				years = 6
+			}			
+		}
+		custom_tooltip = VIET_decrease_county_modifier_time
+	}
+}
+
+# Old fort with loot discovered
+VIETmisc.4032 = {
+	type = character_event
+	title = VIETmisc.4032.t
+	desc = VIETmisc.4032.desc
+	theme = death
+	override_background = { event_background = VIET_background_small_town }
+	
+	left_portrait = root
+	
+    weight_multiplier = {
+        base = 0
+		modifier = {
+			add = {
+				every_held_title = {
+					limit = { tier = tier_county }
+					add = 1
+				}
+			}		
+		}		
+    }
+	
+	immediate = {
+		random_held_title = {
+			limit = { tier = tier_county }
+			save_scope_as = county
+		}
+		scope:county = {
+			add_county_modifier = {
+				modifier = VIET_old_fort_discovered
+				years = 10
+			}			
+		}	
+	}
+	
+	option = {
+		name = VIETmisc.4032.a
+		add_gold = { 5 25 }
+	}
+	
+	option = {
+		name = VIETmisc.4032.b
+		VIET_huge_piety_gain_effect = yes		
+	}
+	
+	option = {
+		name = VIETmisc.4032.c
+		trigger = {
+			OR = {
+				gold >= 50
+				is_ai = no
+			}
+		}
+		remove_short_term_gold = 50
+		scope:county = {
+			remove_county_modifier = VIET_old_fort_discovered
+			add_county_modifier = {
+				modifier = VIET_rebuilt_old_fort
+				years = 10
+			}			
+		}
+		custom_tooltip = VIET_decrease_county_modifier_time
+	}
+}
+
+
+
+
+# Giant mudcrab spotted
+VIETmisc.4033 = {
+	type = character_event
+	title = VIETmisc.4033.t
+	desc = VIETmisc.4033.desc
+	theme = death
+	override_background = { event_background = VIET_background_small_town }
+	
+	left_portrait = root
+	
+    weight_multiplier = {
+        base = 0
+		modifier = {
+			add = {
+				every_held_title = {
+					limit = { tier = tier_county }
+					add = 1
+				}
+			}		
+		}		
+    }
+	
+	immediate = {
+		random_held_title = {
+			limit = { tier = tier_county }
+			save_scope_as = county
+		}
+		scope:county = {
+			random_list = {
+				10 = {
+					add_county_modifier = {
+						modifier = VIET_giant_mudcrab
+						years = 4
+					}				
+				}
+				10 = {
+					add_county_modifier = {
+						modifier = VIET_giant_mudcrab
+						years = 8
+					}				
+				}
+				10 = {
+					add_county_modifier = {
+						modifier = VIET_giant_mudcrab
+						years = 12
+					}				
+				}
+			}		
+		}	
+	}
+	
+	option = {
+		name = VIETmisc.4033.a
+		add_gold = { 5 25 }
+	}
+	
+	option = {
+		name = VIETmisc.4031.b
+		VIET_huge_piety_gain_effect = yes		
+	}
+	
+	option = {
+		name = VIETmisc.4031.c
+		trigger = {
+			OR = {
+				gold >= 50
+				is_ai = no
+			}
+		}
+		remove_short_term_gold = 50
+		scope:county = {
+			remove_county_modifier = VIET_old_fort_discovered
+			add_county_modifier = {
+				modifier = VIET_rebuilt_old_fort
+				years = 10
+			}			
+		}
+		custom_tooltip = VIET_decrease_county_modifier_time
+	}
+}
+
+
+
+
+
+##################################################################
+# Generic 4034-4035
+##################################################################
+
+# Mysterious noises and colors in the sky at night
+VIETmisc.4034 = {
+	type = character_event
+	title = VIETmisc.4034.t
+	desc = VIETmisc.4034.desc
+	theme = death
+	override_background = { event_background = alley_night }
+	
+	left_portrait = root
+	
+    weight_multiplier = {
+        base = 0
+		modifier = {
+			add = {
+				every_held_title = {
+					limit = { tier = tier_county }
+					add = 1
+				}
+			}		
+		}		
+    }
+	
+	immediate = {
+		random_held_title = {
+			limit = { tier = tier_county }
+			save_scope_as = county
+		}
+		scope:county = {
+			random_list = {
+				10 = {
+					add_county_modifier = {
+						modifier = VIET_mysterious_night_noises
+						years = 4
+					}				
+				}
+				10 = {
+					add_county_modifier = {
+						modifier = VIET_mysterious_night_noises
+						years = 8
+					}				
+				}
+				10 = {
+					add_county_modifier = {
+						modifier = VIET_mysterious_night_noises
+						years = 12
+					}				
+				}
+			}		
+		}	
+	}
+	
+	option = {
+		name = VIETmisc.4034.a
+	}
+}
+
+# Kaiki the mysterious conman
+VIETmisc.4035 = {
+	type = character_event
+	title = VIETmisc.4035.t
+	desc = VIETmisc.4035.desc
+	theme = corruption
+	override_background = { event_background = alley_night }
+	
+	left_portrait = root
+	
+    weight_multiplier = {
+        base = 0
+		modifier = {
+			add = {
+				every_held_title = {
+					limit = { tier = tier_county }
+					add = 1
+				}
+			}		
+		}		
+    }
+	
+	immediate = {
+		random_held_title = {
+			limit = { tier = tier_county }
+			save_scope_as = county
+		}
+		scope:county = {
+			random_list = {
+				10 = {
+					add_county_modifier = {
+						modifier = VIET_mysterious_conman
+						years = 4
+					}				
+				}
+				10 = {
+					add_county_modifier = {
+						modifier = VIET_mysterious_conman
+						years = 6
+					}				
+				}
+				10 = {
+					add_county_modifier = {
+						modifier = VIET_mysterious_conman
+						years = 8
+					}				
+				}
+				10 = {
+					add_county_modifier = {
+						modifier = VIET_mysterious_conman
+						years = 10
+					}				
+				}
+			}		
+		}	
+	}
+	
+	option = {
+		name = VIETmisc.4035.a
 	}
 }
