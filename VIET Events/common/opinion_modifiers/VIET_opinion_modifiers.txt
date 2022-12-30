@@ -742,4 +742,9 @@ VIET_opinion_cinnamon_agree = {
 	opinion = 5
 }
 
+VIET_opinion_fruit_juice = {
+	years = 5
+	opinion = 5
+}
+
 

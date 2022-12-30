@@ -49,6 +49,8 @@
 # 0257-0260		VIET Contest Winners
 # 0261-0272		Vassals and Courtiers
 # 0273-0281		10
+# 0282-0286		Generic
+# 0287-0292		New vanilla animations
 # 
 ############################################################################################################################
 
@@ -26593,5 +26595,800 @@ VIETmisc.0281 = {
 }
 
 
+##################################################################
+# GENERIC 0282-0286
+##################################################################
+
+
+# Get ambushed by pathetic bandits
+VIETmisc.0282 = {
+	type = character_event
+	title = VIETmisc.0282.t
+	desc = VIETmisc.0282.desc
+	theme = VIET_theme_tuscan_country
+	
+	left_portrait = {
+		character = root
+		animation = laugh
+	}	
+	
+	weight_multiplier = {
+		base = 1
+		modifier = {
+			add = 0.2
+			has_trait = trusting
+		}
+		modifier = {
+			add = -0.2
+			has_trait = paranoid
+		}
+		modifier = {
+			add = 0.2
+			has_trait = lazy
+		}
+		modifier = {
+			add = -0.2
+			has_trait = diligent
+		}
+		modifier = {
+			add = 0.2
+			has_trait = craven
+		}
+		modifier = {
+			add = -0.2
+			has_trait = brave
+		}
+	}
+	
+	option = { # ok
+		name = VIETmisc.0282.a
+		VIET_large_prestige_gain_effect = yes
+		add_gold = { 2 9 }
+		stress_impact = {
+			vengeful = minor_stress_impact_gain
+			sadistic = minor_stress_impact_gain
+			wrathful = minor_stress_impact_gain
+		}
+	}
+	
+	option = { # ok
+		name = VIETmisc.0282.b
+		VIET_large_prestige_gain_effect = yes
+		add_dread = 10
+		stress_impact = {
+			forgiving = minor_stress_impact_gain
+			compassionate = minor_stress_impact_gain
+			calm = minor_stress_impact_gain
+		}
+	}
+	
+	option = { # ok
+		name = VIETmisc.0282.c
+		VIET_large_prestige_loss_effect = yes
+		add_character_modifier = {
+			modifier = VIET_hired_deserpate_servants
+			years = 5
+		}
+		stress_impact = {
+			paranoid = miniscule_stress_impact_gain
+			shy = miniscule_stress_impact_gain
+			vengeful = minor_stress_impact_gain
+			sadistic = minor_stress_impact_gain
+			wrathful = medium_stress_impact_gain
+		}
+	}
+}
+
+
+# Maid turns the tables on manservants who try to prank her
+# This idea came from a C-Drama scene
+VIETmisc.0283 = {
+	type = character_event
+	title = VIETmisc.0283.t
+	desc = VIETmisc.0283.desc
+	theme = friendly
+	override_background = { event_background = relaxing_room }
+	
+	left_portrait = {
+		character = root
+		animation = throne_room_applaud_1
+	}	
+	
+	right_portrait = {
+		character = scope:maid
+		animation = laugh
+	}	
+	
+	weight_multiplier = {
+		base = 1
+		modifier = {
+			add = 0.2
+			has_trait = humble
+		}
+		modifier = {
+			add = -0.2
+			has_trait = arrogant
+		}
+		modifier = {
+			add = 0.2
+			has_trait = lazy
+		}
+		modifier = {
+			add = -0.2
+			has_trait = diligent
+		}
+		modifier = {
+			add = 0.2
+			has_trait = calm
+		}
+		modifier = {
+			add = -0.2
+			has_trait = wrathful
+		}
+	}
+
+	immediate = {		
+		create_character = {
+			location = root.location
+			template = VIET_feisty_young_maid_template
+			save_scope_as = maid
+		}
+	}
+	
+	option = { # haha that was funny
+		name = VIETmisc.0283.a
+		VIET_medium_prestige_gain_effect = yes
+		hidden_effect = {
+			scope:maid = {
+				death = {
+					death_reason = death_vanished
+				}
+			}			
+		}
+	}
+	
+	option = { # stop pranking her
+		name = VIETmisc.0283.b
+		VIET_medium_piety_gain_effect = yes
+		stress_impact = {
+			callous = minor_stress_impact_gain
+		}
+		hidden_effect = {
+			scope:maid = {
+				death = {
+					death_reason = death_vanished
+				}
+			}			
+		}
+	}
+	
+	option = { # just promote her
+		name = VIETmisc.0283.c
+		trigger = {
+			OR = {
+				gold >= 25
+				is_ai = no
+			}
+		}
+		remove_short_term_gold = 25
+		VIET_huge_prestige_loss_effect = yes
+		add_courtier = scope:maid
+	}
+}
+
+
+
+# Come across some fairy rings
+VIETmisc.0284 = {
+	type = character_event
+	title = VIETmisc.0284.t
+	desc = VIETmisc.0284.desc
+	theme = VIET_theme_skyrim_forest
+	
+	right_portrait = root
+	
+	weight_multiplier = {
+		base = 1
+		modifier = {
+			add = 0.2
+			has_trait = shy
+		}
+		modifier = {
+			add = -0.2
+			has_trait = gregarious
+		}
+		modifier = {
+			add = 0.2
+			has_trait = lazy
+		}
+		modifier = {
+			add = -0.2
+			has_trait = diligent
+		}
+		modifier = {
+			add = 0.2
+			has_trait = brave
+		}
+		modifier = {
+			add = -0.2
+			has_trait = craven
+		}
+	}
+	
+	option = { # ok
+		name = VIETmisc.0284.a
+		VIET_small_piety_gain_effect = yes
+		stress_impact = {
+			cynical = miniscule_stress_impact_gain
+		}
+		if = {
+			limit = {
+				has_game_rule = VIET_historical_context_on
+			}
+			custom_tooltip = VIETmisc.0284.info
+		}
+	}
+	
+	option = { # ok
+		name = VIETmisc.0284.b
+		VIET_small_prestige_gain_effect = yes
+		stress_impact = {
+			zealous = miniscule_stress_impact_gain
+		}
+		if = {
+			limit = {
+				has_game_rule = VIET_historical_context_on
+			}
+			custom_tooltip = VIETmisc.0284.info
+		}
+	}
+
+}
+
+
+
+# Overhear an awkward Oblivion conversation
+VIETmisc.0285 = {
+	type = character_event
+	title = VIETmisc.0285.t
+	desc = VIETmisc.0285.desc
+	theme = memory_diplomacy
+	override_background = { event_background = VIET_background_small_town }
+	
+	right_portrait = {
+		character = root
+		animation = disgust
+	}
+	
+	weight_multiplier = {
+		base = 1
+		modifier = {
+			add = 0.2
+			has_trait = shy
+		}
+		modifier = {
+			add = -0.2
+			has_trait = gregarious
+		}
+		modifier = {
+			add = 0.2
+			has_trait = lazy
+		}
+		modifier = {
+			add = -0.2
+			has_trait = diligent
+		}
+		modifier = {
+			add = 0.2
+			has_trait = humble
+		}
+		modifier = {
+			add = -0.2
+			has_trait = arrogant
+		}
+	}
+	
+	option = { # ok
+		name = VIETmisc.0285.a
+		VIET_small_piety_gain_effect = yes
+		add_character_modifier = {
+			modifier = VIET_overheard_an_interesting_conversation
+			years = 2
+		}
+	}
+	
+	option = { # ok
+		name = VIETmisc.0285.b
+		VIET_small_prestige_gain_effect = yes
+		add_character_modifier = {
+			modifier = VIET_overheard_an_interesting_conversation
+			years = 2
+		}
+	}
+
+}
+
+
+# Come across an ancient inscription on a ruin
+VIETmisc.0286 = {
+	type = character_event
+	title = VIETmisc.0286.t
+	desc = VIETmisc.0286.desc
+	theme = VIET_theme_ancient_cairn
+	override_icon = { reference = "gfx/interface/icons/event_types/type_learning.dds" } 
+	
+	right_portrait = {
+		character = root
+		animation = personality_rational
+	}
+	
+	trigger = {
+		# Want someone who's probably literate
+		NOT = { has_trait = blind }
+		probably_unintelligent_trigger = no
+		# Weed out most cultures that probably aren't literate at the game start and wouldn't be writing stuff like letters
+		NOT = { has_government = tribal_government }
+	}
+	
+	weight_multiplier = {
+		base = 1
+		modifier = {
+			add = 0.2
+			has_trait = shy
+		}
+		modifier = {
+			add = -0.2
+			has_trait = gregarious
+		}
+		modifier = {
+			add = 0.2
+			has_trait = patient
+		}
+		modifier = {
+			add = -0.2
+			has_trait = impatient
+		}
+		modifier = {
+			add = 0.2
+			has_trait = humble
+		}
+		modifier = {
+			add = -0.2
+			has_trait = arrogant
+		}
+	}
+	
+	option = { # ok
+		name = VIETmisc.0286.a
+		add_character_modifier = {
+			modifier = VIET_found_ancient_inscription
+			years = 5
+		}
+	}
+	
+	option = { # ok
+		name = VIETmisc.0286.b
+		trigger = {
+			learning >= decent_skill_rating			
+		}
+		skill = learning		
+		add_character_modifier = {
+			modifier = VIET_deciphered_ancient_inscription
+			years = 5
+		}
+	}
+
+}
+
+
+
+
+##################################################################
+# New vanilla animations 0287-0292
+##################################################################
+
+
+# Overhear servants talking about an adulterous affair
+VIETmisc.0287 = {
+	type = character_event
+	title = VIETmisc.0287.t
+	desc = VIETmisc.0287.desc
+	theme = memory_diplomacy
+	override_background = { event_background = relaxing_room }
+
+	
+	right_portrait = {
+		character = root
+		animation = eavesdrop
+	}
+
+	trigger = {
+		# Event doesn't make sense if you don't care about cheating
+		NOT = { faith = { has_doctrine_parameter = no_unfaithfulness_penalty_active } }
+	}
+	
+	weight_multiplier = {
+		base = 1
+		modifier = {
+			add = 0.2
+			has_trait = lazy
+		}
+		modifier = {
+			add = -0.2
+			has_trait = diligent
+		}
+		modifier = {
+			add = 0.2
+			has_trait = content
+		}
+		modifier = {
+			add = -0.2
+			has_trait = ambitious
+		}
+		modifier = {
+			add = 0.2
+			has_trait = paranoid
+		}
+		modifier = {
+			add = -0.2
+			has_trait = trusting
+		}
+	}
+	
+	option = { # ok
+		name = VIETmisc.0287.a
+		stress_impact = {
+			chaste = miniscule_stress_impact_gain
+			zealous = minor_stress_impact_gain
+		}
+	}
+	
+	option = { # ok
+		name = VIETmisc.0287.b
+		VIET_large_piety_gain_effect = yes
+		VIET_large_prestige_loss_effect = yes
+		stress_impact = {
+			lustful = miniscule_stress_impact_gain
+			cynical = miniscule_stress_impact_gain
+			callous = miniscule_stress_impact_gain
+		}
+	}
+
+}
+
+
+
+# A medieval Karen comes to complain
+VIETmisc.0288 = {
+	type = character_event
+	title = VIETmisc.0288.t
+	desc = VIETmisc.0288.desc
+	theme = vassal
+
+	
+	right_portrait = {
+		character = root
+		animation = eyeroll
+	}
+
+	trigger = {
+		# Event doesn't make sense if you don't care about cheating
+		NOT = { faith = { has_doctrine_parameter = no_unfaithfulness_penalty_active } }
+	}
+	
+	weight_multiplier = {
+		base = 1
+		modifier = {
+			add = 0.2
+			has_trait = just
+		}
+		modifier = {
+			add = -0.2
+			has_trait = arbitrary
+		}
+		modifier = {
+			add = 0.2
+			has_trait = patient
+		}
+		modifier = {
+			add = -0.2
+			has_trait = impatient
+		}
+		modifier = {
+			add = 0.2
+			has_trait = diligent
+		}
+		modifier = {
+			add = -0.2
+			has_trait = lazy
+		}
+	}
+
+	immediate = {
+		random_held_title = {
+			limit = {
+				tier = tier_county
+			}	
+			save_scope_as = county
+		}
+	}
+	
+	option = { # Tell her to get lost
+		name = VIETmisc.0288.a
+		VIET_huge_prestige_loss_effect = yes
+		add_character_modifier = {
+			modifier = VIET_dismissed_karen
+			years = 10
+		}
+	}
+	
+	option = { # Accept her demands
+		name = VIETmisc.0288.b
+		add_character_modifier = {
+			modifier = VIET_listened_to_karen
+			years = 10
+		}
+	}
+	
+	option = { # Tell her to get lost... diplomatically
+		name = VIETmisc.0288.c
+		trigger = {
+			diplomacy >= very_high_skill_rating			
+		}
+		skill = diplomacy
+		show_as_unavailable = {
+			diplomacy < very_high_skill_rating
+		}
+		add_character_modifier = {
+			modifier = VIET_diplomatically_dismissed_karen
+			years = 10
+		}
+	}
+
+}
+
+
+
+# Remembered a great joke
+VIETmisc.0289 = {
+	type = character_event
+	title = VIETmisc.0289.t
+	desc = VIETmisc.0289.desc
+	theme = feast_activity
+	
+	right_portrait = {
+		character = root
+		animation = laugh
+	}
+	
+	weight_multiplier = {
+		base = 1
+		modifier = {
+			add = 0.2
+			has_trait = shy
+		}
+		modifier = {
+			add = -0.2
+			has_trait = gregarious
+		}
+		modifier = {
+			add = 0.2
+			has_trait = lustful
+		}
+		modifier = {
+			add = -0.2
+			has_trait = chaste
+		}
+		modifier = {
+			add = 0.2
+			has_trait = fickle
+		}
+		modifier = {
+			add = -0.2
+			has_trait = stubborn
+		}
+	}
+	
+	option = { # hahah
+		name = VIETmisc.0289.a
+		VIET_medium_prestige_loss_effect = yes
+		add_character_modifier = {
+			modifier = VIET_remembered_joke
+			years = 2
+		}
+	}
+
+}
+
+
+
+# Your vassal thinks your fruit juice is great
+VIETmisc.0290 = {
+	type = character_event
+	title = VIETmisc.0290.t
+	desc = VIETmisc.0290.desc
+	theme = feast_activity
+	
+	left_portrait = {
+		character = root
+		animation = drink_goblet
+	}
+	right_portrait = {
+		character = scope:vassal
+		animation = toast_goblet
+	}
+
+	trigger = {
+		any_vassal = {
+			is_available_healthy_ai_adult = yes
+		}
+	}
+	
+	weight_multiplier = {
+		base = 1
+		modifier = {
+			add = 0.2
+			has_trait = shy
+		}
+		modifier = {
+			add = -0.2
+			has_trait = gregarious
+		}
+		modifier = {
+			add = 0.2
+			has_trait = lustful
+		}
+		modifier = {
+			add = -0.2
+			has_trait = chaste
+		}
+		modifier = {
+			add = 0.2
+			has_trait = fickle
+		}
+		modifier = {
+			add = -0.2
+			has_trait = stubborn
+		}
+	}
+
+	immediate = {
+		random_vassal = {
+			limit = {
+				is_available_healthy_ai_adult = yes
+			}
+			save_scope_as = vassal
+		}
+		scope:vassal = {
+			add_opinion = {
+				target = root
+				modifier = VIET_opinion_fruit_juice
+			}
+		}
+	}
+	
+	option = { # ok
+		name = VIETmisc.0290.a
+	}
+	
+	option = { # ok
+		name = VIETmisc.0290.b
+		VIET_huge_prestige_loss_effect = yes		
+		progress_towards_friend_effect = {
+			REASON = VIET_friend_reason_placeholder
+			CHARACTER = scope:vassal
+			OPINION = no
+		}
+	}
+
+}
+
+
+# You hear a noise at night but it's just one of your guards
+VIETmisc.0291 = {
+	type = character_event
+	title = VIETmisc.0291.t
+	desc = VIETmisc.0291.desc
+	theme = unfriendly
+	override_background = { event_background = corridor_night }
+	
+	right_portrait = {
+		character = root
+		animation = lantern
+	}
+	
+	weight_multiplier = {
+		base = 1
+		modifier = {
+			add = 0.2
+			has_trait = paranoid
+		}
+		modifier = {
+			add = -0.2
+			has_trait = trusting
+		}
+		modifier = {
+			add = 0.2
+			has_trait = brave
+		}
+		modifier = {
+			add = -0.2
+			has_trait = craven
+		}
+		modifier = {
+			add = 0.2
+			has_trait = diligent
+		}
+		modifier = {
+			add = -0.2
+			has_trait = lazy
+		}
+	}
+	
+	option = { # ok
+		name = VIETmisc.0291.a
+		VIET_small_piety_gain_effect = yes
+	}
+	
+	option = { # ok
+		name = VIETmisc.0291.b
+		VIET_small_prestige_gain_effect = yes
+
+	}
+
+}
+
+
+# Sleepwalking while holding a knife in the basement
+VIETmisc.0292 = {
+	type = character_event
+	title = VIETmisc.0292.t
+	desc = VIETmisc.0292.desc
+	theme = unfriendly
+	override_background = { event_background = bp1_wine_cellar }
+	
+	left_portrait = {
+		character = root
+		animation = assassin
+	}
+	
+	weight_multiplier = {
+		base = 1
+		modifier = {
+			add = 0.2
+			has_trait = paranoid
+		}
+		modifier = {
+			add = -0.2
+			has_trait = trusting
+		}
+		modifier = {
+			add = 0.2
+			has_trait = vengeful
+		}
+		modifier = {
+			add = -0.2
+			has_trait = forgiving
+		}
+		modifier = {
+			add = 0.2
+			has_trait = wrathful
+		}
+		modifier = {
+			add = -0.2
+			has_trait = calm
+		}
+	}
+	
+	option = { # ok
+		name = VIETmisc.0292.a
+		add_character_modifier = {
+			modifier = VIET_caught_sleepwalking
+			years = 5
+		}
+
+	}
+
+}
 
 

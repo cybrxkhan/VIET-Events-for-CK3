@@ -421,6 +421,11 @@ VIET_events_yearly_pulse = {
 		100 = VIETmisc.0271		# Councilor feels light-headed and requests to leave to rest, but they're needed for an important meeting
 		# 10
 		100 = VIETmisc.0276		# Child at court asks why we have ten fingers and ten toes
+		# Generic
+		100 = VIETmisc.0284		# Come across some fairy rings
+		100 = VIETmisc.0285		# Overhear an awkward Oblivion conversation
+		# Animation
+		100 = VIETmisc.0289		# Remembered a great joke
 	}
 }
 
@@ -785,6 +790,14 @@ VIET_events_tri_yearly_pulse = {
 		100 = VIETmisc.0275		# Learning about Tetractys
 		100 = VIETmisc.0278		# Congratulating two servants on their tenth anniversary
 		100 = VIETmisc.0279		# Hearing about the story of Odysseus
+		# Generic
+		100 = VIETmisc.0282		# Get ambushed by pathetic bandits
+		100 = VIETmisc.0286		# Come across an ancient inscription on a ruin
+		# Animation
+		100 = VIETmisc.0287		# Overhear servants talking about an adulterous affair
+		100 = VIETmisc.0290		# Your vassal thinks your fruit juice is great
+		100 = VIETmisc.0291		# You hear a noise at night but it's just one of your guards
+		100 = VIETmisc.0292		# Sleepwalking while holding a knife in the basement
 	}
 }
 
@@ -1032,6 +1045,10 @@ VIET_events_five_yearly_pulse = {
 		# 10
 		100 = VIETmisc.0274 	# Hearing about the Roman custom of decimation
 		100 = VIETmisc.0277 	# Visiting a local school where two scholars are arguing about decimal fractions
+		# Generic
+		100 = VIETmisc.0283 	# Maid turns the tables on manservants who try to prank her
+		# Animation
+		100 = VIETmisc.0288 	# A medieval Karen comes to complain
 	}
 }
 

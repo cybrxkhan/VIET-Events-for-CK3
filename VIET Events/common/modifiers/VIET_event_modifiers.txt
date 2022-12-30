@@ -2827,6 +2827,75 @@ VIET_emotional_erotic_dream = {
 	stress_loss_mult = 0.05
 }
 
+VIET_overheard_an_interesting_conversation = {
+	icon = social_positive
+	diplomacy = 1
+}
+
+VIET_found_ancient_inscription = {
+	icon = learning_positive
+	learning = 1
+}
+
+VIET_deciphered_ancient_inscription = {
+	icon = learning_positive
+	learning = 2
+	monthly_prestige = 0.25
+}
+
+VIET_dismissed_karen = {
+	icon = social_positive
+	county_opinion_add = 3
+}
+
+VIET_listened_to_karen = {
+	icon = social_negative
+	county_opinion_add = -3
+}
+
+VIET_diplomatically_dismissed_karen = {
+	icon = social_positive
+	county_opinion_add = 3
+	monthly_prestige = 0.25
+}
+
+VIET_remembered_joke = {
+	icon = social_positive
+	stress_loss_mult = 0.02
+}
+
+# VIET_great_speech = {
+# 	icon = social_positive
+# 	general_opinion = 5
+# 	monthly_prestige = 0.3
+# }
+
+# VIET_appreciates_others_praise = {
+# 	icon = social_positive
+# 	diplomacy = 1
+# 	stress_loss_mult = 0.05
+# }
+
+VIET_caught_sleepwalking = {
+	icon = stress_negative
+	intrigue = -1
+	stress_loss_mult = -0.1
+}
+
+VIET_hired_deserpate_servants = {
+	icon = family_negative
+	intrigue = 1
+	monthly_prestige = -0.3
+}
+
+VIET_feisty_maid = {
+	icon = family_positive
+	diplomacy = 1
+	intrigue = 2
+	monthly_prestige = 0.1
+	monthly_lifestyle_xp_gain_mult = 0.05
+}
+
 
 
 
