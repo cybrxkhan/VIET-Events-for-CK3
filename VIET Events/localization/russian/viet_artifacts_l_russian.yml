@@ -12,7 +12,7 @@
  VIET_oblivion_dream_book_name:0 "Dreams of Another World"
  VIET_oblivion_dream_book_desc:0 "This scroll recounts a dream [oblivion_dreamer.GetTitledFirstName] had where [oblivion_dreamer.GetSheHe] helped a long-lost Prince and his allies defend their home and Empire from the hordes of hell led by [oblivion_dreamer.GetFaith.DevilName]."
  VIET_oblivion_dream_book_alt_name:0 "Dreams of Another World"
- VIET_oblivion_dream_book_alt_desc:0 "This scroll recounts a dream [oblivion_dreamer.GetTitledFirstName] had where [oblivion_dreamer.GetSheHe] was supposed to help a long-lost Prince and defeat the hordes of hell led by [oblivion_dreamer.GetFaith.DevilName] but instead got distracted, running around doing random odd jobs and errands for the locals."
+ VIET_oblivion_dream_book_alt_desc:0 "This scroll recounts a dream [oblivion_dreamer.GetTitledFirstName] had where [oblivion_dreamer.GetSheHe] was supposed to help a long-lost Princ and his allies defend their home and Empire from the hordes of hell led by [oblivion_dreamer.GetFaith.DevilName]. Instead, [oblivion_dreamer.GetSheHe] got distracted, running around doing random odd jobs and errands for the locals."
  VIET_lusty_argonian_maid_name:0 "The Lusty [ROOT.Char.GetCulture.GetNameNoTooltip] Maid"
  VIET_lusty_argonian_maid_desc:0 "A written copy of a raunchy play about the bawdy misadventures of a [ROOT.Char.GetCulture.GetName] maid, as told in several acts."
  VIET_childhood_blanket_name:0 "Childhood Blanket"

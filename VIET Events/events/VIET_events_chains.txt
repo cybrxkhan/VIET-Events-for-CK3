@@ -3228,6 +3228,7 @@ VIETmisc.1078 = {
 	right_portrait = {
 		character = scope:baurus
 		animation = sadness
+		outfit_tags = { military_outfit }
 	}
 
 	option = {
@@ -3260,6 +3261,7 @@ VIETmisc.1079 = {
 	right_portrait = {
 		character = scope:baurus
 		animation = personality_cynical
+		outfit_tags = { military_outfit }
 	}
 
 	option = {
@@ -3288,6 +3290,7 @@ VIETmisc.1080 = {
 	right_portrait = {
 		character = scope:baurus
 		animation = personality_honorable
+		outfit_tags = { military_outfit }
 	}
 
 
@@ -3379,12 +3382,13 @@ VIETmisc.1082 = {
 		animation = happiness
 	}
 
-	immediate = {
-		save_scope_as = oblivion_dreamer
+	artifact = { # To display the artifact in the event-window
+		target = scope:VIET_oblivion_artifact
+		position = lower_center_portrait
 	}
 
-	option = {
-		name = VIETmisc.1082.a
+	immediate = {
+		save_scope_as = oblivion_dreamer
 		create_artifact = {	
 			name = VIET_oblivion_dream_book_name
 			description = VIET_oblivion_dream_book_desc
@@ -3400,6 +3404,10 @@ VIETmisc.1082 = {
 		scope:VIET_oblivion_artifact = {
 			set_variable = VIET_oblivion_artifact_variable
 		}
+	}
+
+	option = {
+		name = VIETmisc.1082.a
 	}
 
 	after = {
@@ -3428,12 +3436,13 @@ VIETmisc.1083 = {
 		animation = happiness
 	}
 
-	immediate = {
-		save_scope_as = oblivion_dreamer
+	artifact = { # To display the artifact in the event-window
+		target = scope:VIET_oblivion_artifact
+		position = lower_center_portrait
 	}
 
-	option = {
-		name = VIETmisc.1083.a	
+	immediate = {
+		save_scope_as = oblivion_dreamer	
 		create_artifact = {	
 			name = VIET_oblivion_dream_book_alt_name
 			description = VIET_oblivion_dream_book_alt_desc
@@ -3449,6 +3458,10 @@ VIETmisc.1083 = {
 		scope:VIET_oblivion_artifact = {
 			set_variable = VIET_oblivion_artifact_variable
 		}
+	}
+
+	option = {
+		name = VIETmisc.1083.a
 	}
 
 	after = {

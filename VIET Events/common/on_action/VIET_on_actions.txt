@@ -1089,6 +1089,7 @@ VIET_events_event_chain_pulse = {
 		100 = VIETmisc.1023		# Begin the swirls of cinnamon in every bite
 		100 = VIETmisc.1030		# Lost Love - a beloved servant falls ill and is dying
 		100 = VIETmisc.1036		# Dream of the Final Journey - beloved grandparent returns to guide character into the afterlife
+		100 = VIETmisc.1071		# Dream of Oblivion
 		
 		#######################################
 		# NEXT GEN VIET
@@ -1341,6 +1342,11 @@ VIET_events_common_county_pulse = {
 		100 = VIETmisc.4026		# A village tree provides shade
 		100 = VIETmisc.4028		# Youths prank a village, pretending to be shadow demons
 		100 = VIETmisc.4029		# Herbalists become famous
+		# Oblivion Inspired
+		100 = VIETmisc.4030		# Wayshrine becomes popular
+		100 = VIETmisc.4031		# Daedra sightings
+		# Generic
+		100 = VIETmisc.4034		# Mysterious noises and colors in the sky at night
 		
 		#######################################
 		# NEXT GEN VIET
@@ -1372,7 +1378,7 @@ VIET_events_common_county_pulse = {
 		# 10
 		100 = VIETmisc.3040 	# 10 officials resign to protest a bad official
 		
-		# 34
+		# 37
     }
 }
 
@@ -1427,6 +1433,8 @@ VIET_events_uncommon_county_pulse = {
 		100 = VIETmisc.4019		# Spoopy ship in the skies
 		100 = VIETmisc.4023		# Pistachios from a county become popular
 		100 = VIETmisc.4027		# Shadows attack villagers - implied to be hysteria from several cases of sleep paralysis
+		# Oblivion Inspired
+		100 = VIETmisc.4032		# Old fort with loot discovered
 		
 		#######################################
 		# NEXT GEN VIET
@@ -1450,8 +1458,11 @@ VIET_events_uncommon_county_pulse = {
 		100 = VIETmisc.3037		# Conspiracies spread about how you were replaced by an imposter
 		# 10
 		100 = VIETmisc.3039 	# 10 Year specter is about to reappear
+		# Generic
+		100 = VIETmisc.3042 	# Brilliant light appears
+		100 = VIETmisc.3043 	# Lake dried up
 		
-		# 23
+		# 25
 		
     }
 }
@@ -1497,6 +1508,10 @@ VIET_events_rare_county_pulse = {
 		50 = VIETmisc.4013		# Buddhist/Tibetan Hermit passes away, yet body does not decay
 		50 = VIETmisc.4015		# Araragi-kun and Shinobu are in town
 		50 = VIETmisc.4022		# The forlorn watchman (friendly beach ghost)
+		# Oblivion Inspired
+		50 = VIETmisc.4033		# Giant mudcrab spotted
+		# Generic
+		50 = VIETmisc.4035		# Kaiki the mysterious conman
 		
 		#######################################
 		# NEXT GEN VIET
@@ -1517,7 +1532,7 @@ VIET_events_rare_county_pulse = {
 		# 10
 		100 = VIETmisc.3041		# A heroic official rescues 10 kidnapped children
 		
-		# 12
+		# 14
 		
     }
 }
