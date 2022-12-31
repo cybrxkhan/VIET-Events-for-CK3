@@ -6,9 +6,9 @@
 
 ## Latest Version: 1.8.2 "Oblivion" (Released 12/11/22)
 
-_"I've heard others say the same."
+_"I've heard others say the same."_
 
-VIET has now officially passed a milestone of 1000 events! Thank you all as always!_
+_VIET has now officially passed a milestone of 1000 events! Thank you all as always!_
 
 Very Immersive Events and Tales (VIET), the sequel to VIET Events Reborn for CK2, is a flavor mod that adds a vast collection of events about everyday life to spice up your game. They add immersion and a diversity of experiences in between wars and vanilla’s event chains, and cover mundane minutiae ranging from small talk with courtiers and eating local cuisine to epic tales about love, philosophy, and the human condition. Some of the events unlock new decisions, character interactions, activities, and much more for you to explore!
 
