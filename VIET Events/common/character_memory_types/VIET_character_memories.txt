@@ -1,0 +1,26 @@
+﻿
+VIET_memory_oblivion_dream = {
+	categories = { minor positive } 
+	icon = "_default.dds"
+	description = {
+		first_valid = {
+			desc = VIET_memory_oblivion_dream_desc
+		}
+	}
+
+	second_perspective_description = {
+		first_valid = {
+			desc = VIET_memory_oblivion_dream_desc_second_perspective
+		}
+	}
+
+	third_perspective_description = {
+		first_valid = {
+			desc = VIET_memory_oblivion_dream_desc_third_perspective
+		}
+	}
+
+	duration = {
+		years = memory_default_duration
+	}
+}

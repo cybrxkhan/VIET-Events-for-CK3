@@ -299,3 +299,14 @@ VIET_option_songbird_sound_effect = {
 }
 
 
+VIET_ek_character_setup_effect = {
+	if = {
+		limit = {
+			exists = culture:heartlander
+		}
+		ek_character_setup_effect = yes
+	}
+}
+
+
+

@@ -35,6 +35,9 @@ VIET_uriel_septim_template = {
 		content = {}
 		brave = {}
 	}
+	after_creation = {
+		VIET_ek_character_setup_effect = yes
+	}
 }
 
 
@@ -75,6 +78,9 @@ VIET_baurus_template = {
 	prowess = {
 		min_template_high_skill
 		max_template_high_skill
+	}
+	after_creation = {
+		VIET_ek_character_setup_effect = yes
 	}
 }
 
@@ -120,6 +126,9 @@ VIET_jauffre_template = {
 		min_template_high_skill
 		max_template_high_skill
 	}
+	after_creation = {
+		VIET_ek_character_setup_effect = yes
+	}
 }
 
 VIET_martin_template = {
@@ -160,5 +169,8 @@ VIET_martin_template = {
 	learning = {
 		min_template_high_skill
 		max_template_high_skill
+	}
+	after_creation = {
+		VIET_ek_character_setup_effect = yes
 	}
 }

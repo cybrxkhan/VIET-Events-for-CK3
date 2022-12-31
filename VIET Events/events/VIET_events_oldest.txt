@@ -1999,6 +1999,9 @@ VIETold.0026 = {
 				culture = root.culture
 				save_scope_as = scope_VIET_beggar_orphan
 				random_traits = yes
+			}
+			scope:scope_VIET_beggar_orphan = {
+				VIET_ek_character_setup_effect = yes
 			}	
 		}	
 	}
@@ -2655,6 +2658,7 @@ VIETold.0033 = {
 				random_traits = yes
 			}
 			scope:scope_VIET_noble_orphan = {
+				VIET_ek_character_setup_effect = yes
 				add_character_modifier = {
 					modifier = VIET_orphan_noble_boy
 				}

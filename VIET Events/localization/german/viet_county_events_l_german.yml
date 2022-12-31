@@ -525,7 +525,7 @@
  VIETmisc.4030.desc:0 "A wayshrine in [county.GetNameNoTier] has recently gained fame for the blessings it supposedly granted to those who pray at it. Pilgrims and travelers are making their way there in droves, seeking the boons it provides."
  VIETmisc.4030.a:0 "Interesting!"
  VIETmisc.4031.t:0 "Demon Sightings"
- VIETmisc.4031.desc:0 "On a visit to a village of my realm, in [county.GetNameNoTier], I am talking with a guardsman stationed there. He looks around, eyes fearful, as he tells me: "If you have to travel in these parts, by [county.GetFaith.HighGodName] stay on the roads. The wilderness just isn't safe anymore. We've had sightings, you see... the demons.""
+ VIETmisc.4031.desc:0 "On a visit to a village of my realm, in [county.GetNameNoTier], I am talking with a guardsman stationed there. He looks around, eyes fearful, as he tells me: "If you have to travel in these parts, by [county.GetProvince.GetCounty.GetFaith.HighGodName] stay on the roads. The wilderness just isn't safe anymore. We've had sightings, you see... the demons.""
  VIETmisc.4031.a:0 "If demons are about, they're no match for brave men like you."
  VIETmisc.4031.b:0 "Hah! That's just paranoia. Demons here? That's ridiculous."
  VIETmisc.4031.c:0 "Perhaps we should increase patrols and bring in holy men from elsewhere."

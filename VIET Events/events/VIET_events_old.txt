@@ -3960,6 +3960,7 @@ VIETold.2056 = {
 				random_traits = yes
 			}
 			scope:scope_VIET_nice_day_girl = {
+				VIET_ek_character_setup_effect = yes
 				random_list = {
 					40 = { }
 					40 = { add_trait = beauty_good_1 }
@@ -4342,6 +4343,7 @@ VIETold.2061 = {
 				random_traits = yes
 			}
 			scope:scope_VIET_jon_battle_born = {
+				VIET_ek_character_setup_effect = yes
 				random_list = {
 					40 = { }
 					40 = { add_trait = physique_good_1 }
@@ -4483,6 +4485,7 @@ VIETold.2063 = {
 				random_traits = yes
 			}
 			scope:scope_VIET_skyrim_lydia = {
+				VIET_ek_character_setup_effect = yes
 				random_list = {
 					60 = { }
 					40 = { add_trait = physique_good_1 }
@@ -5976,7 +5979,7 @@ VIETold.2081 = {
 		}
 		progress_towards_rival_effect = {
 			CHARACTER = scope:scope_VIET_courtier_perving_on_maid
-			OPINION = no
+			OPINION = 0
 			REASON = VIET_rival_reason_placeholder
 		}
 		stress_impact = {
@@ -6986,6 +6989,7 @@ VIETold.2093 = {
 				random_traits = yes
 			}
 			scope:scope_VIET_nobleman_refugee = {
+				VIET_ek_character_setup_effect = yes
 				add_character_modifier = {
 					modifier = VIET_nobleman_with_criminal_problems
 				}
@@ -8175,6 +8179,9 @@ VIETold.2113 = {
 			trait = compassionate
 			trait = gregarious
 			trait = humble
+		}
+		scope:scope_VIET_cute_death = {
+			VIET_ek_character_setup_effect = yes
 		}
 	}
 
@@ -12592,7 +12599,7 @@ VIETold.2176 = {
 		name = VIETold.2176.a
 		progress_towards_friend_effect = {
 			CHARACTER = scope:cafe_friend
-			OPINION = no
+			OPINION = 0
 			REASON = VIET_friend_reason_placeholder
 		}
 		scope:cafe_friend = {
@@ -13788,6 +13795,7 @@ VIETold.2192 = {
 					geographical_region = world_burma
 					geographical_region = world_middle_east_arabia
 					geographical_region = world_africa_east
+					geographical_region = world_steppe_tarim
 				}
 			}
 
@@ -16175,7 +16183,7 @@ VIETold.2221 = {
 
 
 # Meet a crazy madwoman - Runs-In-Circles
-# VIET_nick_rins_in_circles
+# VIET_nick_runs_in_circles
 VIETold.2222 = {
 	type = character_event
 	title = VIETold.2222.t	
@@ -16236,8 +16244,8 @@ VIETold.2222 = {
 			save_scope_as = runs_in_circles_husband			
 		}
 		hidden_effect = {
-			give_nickname = runs_in_circles
 			scope:runs_in_circles = {
+				give_nickname = VIET_nick_runs_in_circles
 				marry = scope:runs_in_circles_husband
 			}
 			scope:runs_in_circles_husband = {

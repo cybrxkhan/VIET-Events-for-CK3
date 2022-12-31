@@ -4398,7 +4398,7 @@ VIETold.1060 = {
 		}
 		progress_towards_friend_effect = {
 			CHARACTER = scope:jokester
-			OPINION = no
+			OPINION = 0
 			REASON = VIET_friend_reason_placeholder
 		}
 	}
@@ -7048,7 +7048,7 @@ VIETold.1098 = {
 		}
 		progress_towards_friend_effect = {
 			CHARACTER = scope:courtier
-			OPINION = no
+			OPINION = 0
 			REASON = VIET_friend_reason_placeholder
 		}
 		stress_impact = {

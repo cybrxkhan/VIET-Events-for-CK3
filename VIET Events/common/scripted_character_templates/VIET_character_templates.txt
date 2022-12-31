@@ -4,6 +4,10 @@ VIET_basic_traveler_template = {
 	trait = adventurer
 	gender_female_chance = root_faith_dominant_gender_adjusted_female_chance
 	random_traits = yes
+	
+	after_creation = {
+		VIET_ek_character_setup_effect = yes
+	}
 }
 
 VIET_heroic_servant_template = {
@@ -41,6 +45,7 @@ VIET_heroic_servant_template = {
 	}
 	intrigue = { 6 12 }
 	after_creation = {
+		VIET_ek_character_setup_effect = yes
 		random_list = {
 			100 = { }
 			10 = { add_trait = physique_good_1 }
@@ -97,6 +102,7 @@ VIET_popular_captain_template = {
 		max_template_decent_skill
 	}
 	after_creation = {
+		VIET_ek_character_setup_effect = yes
 		add_character_modifier = {
 			modifier = VIET_beloved_guard_captain_character
 		}
@@ -129,6 +135,7 @@ VIET_famous_courtesan_template = {
 		max_template_decent_skill
 	}
 	after_creation = {
+		VIET_ek_character_setup_effect = yes
 		add_character_modifier = {
 			modifier = VIET_famous_courtesan
 		}
@@ -151,6 +158,7 @@ VIET_famous_traveler_template = {
 		max_template_decent_skill
 	}
 	after_creation = {
+		VIET_ek_character_setup_effect = yes
 		add_character_modifier = {
 			modifier = VIET_famous_traveler
 		}
@@ -198,6 +206,7 @@ VIET_fake_beauty_unpleasant_template = {
 		max_template_decent_skill
 	}
 	after_creation = {
+		VIET_ek_character_setup_effect = yes
 		add_character_modifier = {
 			modifier = VIET_great_ugly_commoner
 		}
@@ -261,6 +270,7 @@ VIET_fake_beauty_pleasant_template = {
 		max_template_decent_skill
 	}
 	after_creation = {
+		VIET_ek_character_setup_effect = yes
 		add_character_modifier = {
 			modifier = VIET_great_ugly_commoner
 		}
@@ -321,6 +331,7 @@ VIET_real_beauty_unpleasant_template = {
 		max_template_decent_skill
 	}
 	after_creation = {
+		VIET_ek_character_setup_effect = yes
 		add_character_modifier = {
 			modifier = VIET_great_beauty_commoner
 		}
@@ -384,6 +395,7 @@ VIET_real_beauty_pleasant_template = {
 		max_template_decent_skill
 	}
 	after_creation = {
+		VIET_ek_character_setup_effect = yes
 		add_character_modifier = {
 			modifier = VIET_great_beauty_commoner
 		}
@@ -439,6 +451,7 @@ VIET_beauty_husband_template = {
 		just = {}
 	}
 	after_creation = {
+		VIET_ek_character_setup_effect = yes
 		add_character_modifier = {
 			modifier = VIET_great_beauty_husband
 		}
@@ -489,6 +502,7 @@ VIET_local_scholar_template = {
 	}
 	dynasty = none
 	after_creation = {
+		VIET_ek_character_setup_effect = yes
 		if = {
 			limit = {
 				NOR = {
@@ -542,6 +556,7 @@ VIET_robber_bandit_template = {
 	culture = root.culture
 	faith = root.faith
 	after_creation = {
+		VIET_ek_character_setup_effect = yes
 		add_character_modifier = {
 			modifier = VIET_robber_baron
 		}
@@ -576,6 +591,9 @@ VIET_traveling_physician_template = {
 		lifestyle_herbalist = { weight = { base = 20 } }
 	}
 	random_traits = yes
+	after_creation = {		
+		VIET_ek_character_setup_effect = yes
+	}
 }
 
 
@@ -585,6 +603,9 @@ VIET_neighbor_envoy_template = {
 	culture = scope:neighbor.culture
 	gender_female_chance = root_faith_dominant_gender_adjusted_female_chance
 	#random_traits = yes
+	after_creation = {		
+		VIET_ek_character_setup_effect = yes
+	}
 }
 
 
@@ -607,6 +628,9 @@ VIET_corrupt_official_template = {
 		sadistic = {}
 	}
 	random_traits = yes
+	after_creation = {		
+		VIET_ek_character_setup_effect = yes
+	}
 }
 
 
@@ -629,6 +653,7 @@ VIET_local_priest_template = {
 	}
 
 	after_creation = {
+		VIET_ek_character_setup_effect = yes
 		add_character_flag = {
 			flag = need_priest_outfit
 		}
@@ -649,6 +674,7 @@ VIET_skilled_scholar_template = {
 	faith = scope:county.faith
 	culture = scope:county.culture
 	after_creation = {
+		VIET_ek_character_setup_effect = yes
 		if = {
 			limit = {
 				NOT = {
@@ -686,6 +712,9 @@ VIET_grateful_beggar_template = {
 	}
 	faith = scope:grateful_county.faith
 	culture = scope:grateful_county.culture
+	after_creation = {		
+		VIET_ek_character_setup_effect = yes
+	}
 }
 
 
@@ -753,6 +782,9 @@ VIET_righteous_local_official_template = {
 		min_template_decent_skill
 		max_template_decent_skill
 	}
+	after_creation = {		
+		VIET_ek_character_setup_effect = yes
+	}
 }
 
 
@@ -781,6 +813,10 @@ VIET_ontus_vanin_template = {
 	faith = scope:county.faith
 	culture = scope:county.culture
 	after_creation = {
+		VIET_ek_character_setup_effect = yes
+		add_character_modifier = {
+			modifier = VIET_ontus_vanin
+		}
 		if = {
 			limit = {
 				NOT = {
@@ -821,6 +857,7 @@ VIET_runs_in_circles_template = {
 	faith = root.faith
 	culture = root.culture
 	after_creation = {
+		VIET_ek_character_setup_effect = yes
 		add_character_modifier = {
 			modifier = VIET_runs_in_circles
 		}
@@ -844,6 +881,9 @@ VIET_generic_middle_aged_male_template = {
 	culture = root.culture
 	faith = root.faith
 	gender_female_chance = 0
+	after_creation = {		
+		VIET_ek_character_setup_effect = yes
+	}
 }
 
 VIET_old_beggar_male_template = {
@@ -853,6 +893,9 @@ VIET_old_beggar_male_template = {
 	gender_female_chance = 0
 	dynasty = none
 	random_traits = yes
+	after_creation = {		
+		VIET_ek_character_setup_effect = yes
+	}
 }
 
 VIET_feisty_young_maid_template = {
@@ -877,6 +920,7 @@ VIET_feisty_young_maid_template = {
 		max_template_decent_skill
 	}
 	after_creation = {
+		VIET_ek_character_setup_effect = yes
 		random_list = {
 			30 = { }
 			10 = { add_trait = shrewd }

@@ -4662,7 +4662,7 @@ VIETmisc.0061 = {
 		}
 		progress_towards_friend_effect = {
 			CHARACTER = scope:scope_VIET_haunted_sinner
-			OPINION = no
+			OPINION = 0
 			REASON = VIET_friend_reason_placeholder
 		}
 	}	
@@ -4685,7 +4685,7 @@ VIETmisc.0061 = {
 		}
 		progress_towards_friend_effect = {
 			CHARACTER = scope:scope_VIET_haunted_sinner
-			OPINION = no
+			OPINION = 0
 			REASON = VIET_friend_reason_placeholder
 		}
 	}
@@ -4709,7 +4709,7 @@ VIETmisc.0061 = {
 		}
 		progress_towards_rival_effect = {
 			CHARACTER = scope:scope_VIET_haunted_sinner
-			OPINION = no
+			OPINION = 0
 			REASON = VIET_rival_reason_placeholder
 		}
 	}
@@ -4733,7 +4733,7 @@ VIETmisc.0061 = {
 		}
 		progress_towards_rival_effect = {
 			CHARACTER = scope:scope_VIET_haunted_sinner
-			OPINION = no
+			OPINION = 0
 			REASON = VIET_rival_reason_placeholder
 		}
 	}
@@ -5044,7 +5044,7 @@ VIETmisc.0064 = {
 		}
 		progress_towards_friend_effect = {
 			CHARACTER = scope:scope_VIET_child_sob_help
-			OPINION = no
+			OPINION = 0
 			REASON = VIET_friend_reason_placeholder
 		}
 	}
@@ -5069,7 +5069,7 @@ VIETmisc.0064 = {
 		}
 		progress_towards_rival_effect = {
 			CHARACTER = scope:scope_VIET_child_sob_help
-			OPINION = no
+			OPINION = 0
 			REASON = VIET_rival_reason_placeholder
 		}
 	}
@@ -5230,7 +5230,7 @@ VIETmisc.0066 = {
 		}
 		progress_towards_friend_effect = {
 			CHARACTER = scope:scope_VIET_fellow_lost_traveler
-			OPINION = no
+			OPINION = 0
 			REASON = VIET_friend_reason_placeholder
 		}
 	}
@@ -6187,7 +6187,7 @@ VIETmisc.0080 = {
 		}
 		progress_towards_friend_effect = {
 			CHARACTER = scope:scope_VIET_baklava_fanatic
-			OPINION = no
+			OPINION = 0
 			REASON = VIET_friend_reason_placeholder
 		}
 	}
@@ -7828,12 +7828,12 @@ VIETmisc.0097 = {
 		}
 		progress_towards_friend_effect = {
 			CHARACTER = scope:scope_VIET_ghost_prank_victim
-			OPINION = no
+			OPINION = 0
 			REASON = VIET_friend_reason_placeholder
 		}
 		progress_towards_rival_effect = {
 			CHARACTER = scope:scope_VIET_ghost_prankster
-			OPINION = no
+			OPINION = 0
 			REASON = VIET_rival_reason_placeholder
 		}
 	}	
@@ -7857,12 +7857,12 @@ VIETmisc.0097 = {
 		}
 		progress_towards_friend_effect = {
 			CHARACTER = scope:scope_VIET_ghost_prankster
-			OPINION = no
+			OPINION = 0
 			REASON = VIET_friend_reason_placeholder
 		}
 		progress_towards_rival_effect = {
 			CHARACTER = scope:scope_VIET_ghost_prank_victim
-			OPINION = no
+			OPINION = 0
 			REASON = VIET_rival_reason_placeholder
 		}
 	}
@@ -7979,7 +7979,7 @@ VIETmisc.0098 = {
 		}
 		progress_towards_rival_effect = {
 			CHARACTER = scope:scope_VIET_fake_ghost
-			OPINION = no
+			OPINION = 0
 			REASON = VIET_rival_reason_placeholder
 		}
 	}
@@ -7998,7 +7998,7 @@ VIETmisc.0098 = {
 		}
 		progress_towards_rival_effect = {
 			CHARACTER = scope:scope_VIET_fake_ghost
-			OPINION = no
+			OPINION = 0
 			REASON = VIET_rival_reason_placeholder
 		}
 	}
@@ -8647,7 +8647,7 @@ VIETmisc.0107 = {
 		}
 		progress_towards_friend_effect = {
 			CHARACTER = scope:scope_VIET_court_sleepy
-			OPINION = no
+			OPINION = 0
 			REASON = VIET_friend_reason_placeholder
 		}
 	}
@@ -8662,7 +8662,7 @@ VIETmisc.0107 = {
 		}
 		progress_towards_friend_effect = {
 			CHARACTER = scope:scope_VIET_court_sleepy
-			OPINION = no
+			OPINION = 0
 			REASON = VIET_friend_reason_placeholder
 		}		
 	}
@@ -10467,6 +10467,9 @@ VIETmisc.0128 = {
 				save_scope_as = scope_VIET_abandoned_baby
 				random_traits = yes
 			}
+			scope:scope_VIET_abandoned_baby = {				
+				VIET_ek_character_setup_effect = yes
+			}
 			# scope:scope_VIET_abandoned_baby = {
 			# 	add_character_modifier = {
 			# 		modifier = VIET_abaonded_as_a_child
@@ -10526,7 +10529,7 @@ VIETmisc.0128 = {
 		}
 		progress_towards_rival_effect = {
 			CHARACTER = scope:scope_VIET_baby_rescuer
-			OPINION = no
+			OPINION = 0
 			REASON = VIET_rival_reason_placeholder
 		}
 	}		
@@ -10631,7 +10634,7 @@ VIETmisc.0128 = {
 		}
 		progress_towards_friend_effect = {
 			CHARACTER = scope:scope_VIET_baby_rescuer
-			OPINION = no
+			OPINION = 0
 			REASON = VIET_friend_reason_placeholder
 		}
 	}	
@@ -10699,6 +10702,7 @@ VIETmisc.0129 = {
 				trait = content				
 			}
 			scope:scope_VIET_otumeel_prankster = {
+				VIET_ek_character_setup_effect = yes
 				add_character_modifier = {
 					modifier = VIET_otumeel_prankster
 				}	
@@ -11336,7 +11340,7 @@ VIETmisc.0135 = {
 		}
 		progress_towards_friend_effect = {
 			CHARACTER = scope:scope_VIET_sad_person
-			OPINION = no
+			OPINION = 0
 			REASON = VIET_friend_reason_placeholder
 		}
 		stress_impact = {
@@ -11358,7 +11362,7 @@ VIETmisc.0135 = {
 		}
 		progress_towards_rival_effect = {
 			CHARACTER = scope:scope_VIET_sad_person
-			OPINION = no
+			OPINION = 0
 			REASON = VIET_rival_reason_placeholder
 		}
 		stress_impact = {
@@ -11443,7 +11447,7 @@ VIETmisc.0136 = {
 		}
 		progress_towards_friend_effect = {
 			CHARACTER = scope:scope_VIET_cheer_upper
-			OPINION = no
+			OPINION = 0
 			REASON = VIET_friend_reason_placeholder
 		}
 		stress_impact = {
@@ -14014,7 +14018,8 @@ VIETmisc.0167 = {
 			trait = maimed
 			trait = wounded_3
 		}
-		scope:dead_man = {		
+		scope:dead_man = {
+			VIET_ek_character_setup_effect = yes		
 			death = {
 				death_reason = death_attacked
 			}
@@ -14330,7 +14335,8 @@ VIETmisc.0170 = {
 				#trait = maimed
 				trait = wounded_2
 			}
-			scope:fool_for_love = {		
+			scope:fool_for_love = {	
+				VIET_ek_character_setup_effect = yes	
 				death = {
 					death_reason = death_disappearance
 				}
@@ -14820,7 +14826,7 @@ VIETmisc.0174 = {
 		}
 		progress_towards_friend_effect = {
 			CHARACTER = scope:companion
-			OPINION = no
+			OPINION = 0
 			REASON = VIET_friend_reason_placeholder
 		}
 	}
@@ -20813,6 +20819,7 @@ VIETmisc.0237 = {
 				trait = honest			
 			}
 			scope:spunky = {
+				VIET_ek_character_setup_effect = yes
 				add_character_modifier = {
 					modifier = VIET_spunky_girl
 				}
@@ -22955,7 +22962,7 @@ VIETmisc.0256 = {
 		}
 		progress_towards_friend_effect = {
 			CHARACTER = scope:one_proud_bavarian
-			OPINION = no
+			OPINION = 0
 			REASON = VIET_friend_reason_placeholder
 		}
 	}
@@ -22980,7 +22987,7 @@ VIETmisc.0256 = {
 		}
 		progress_towards_friend_effect = {
 			CHARACTER = scope:PI_dev
-			OPINION = no
+			OPINION = 0
 			REASON = VIET_friend_reason_placeholder
 		}
 	}
@@ -23096,7 +23103,7 @@ VIETmisc.0257 = {
 			# 	chance = 50
 			# 	progress_towards_rival_effect = {
 			# 		CHARACTER = scope:recipient
-			# 		OPINION = no
+			# 		OPINION = 0
 			#		REASON = VIET_rival_reason_placeholder
 			# 	}
 			# }
@@ -24934,7 +24941,7 @@ VIETmisc.0268 = {
 		}
 		progress_towards_friend_effect = {
 			CHARACTER = scope:vassal
-			OPINION = no
+			OPINION = 0
 			REASON = VIET_friend_reason_placeholder
 		}
 		stress_impact = {
@@ -25073,7 +25080,7 @@ VIETmisc.0269 = {
 		}
 		progress_towards_friend_effect = {
 			CHARACTER = scope:courtier
-			OPINION = no
+			OPINION = 0
 			REASON = VIET_friend_reason_placeholder
 		}
 		stress_impact = {
@@ -25280,7 +25287,7 @@ VIETmisc.0271 = {
 		}
 		progress_towards_friend_effect = {
 			CHARACTER = scope:councilor
-			OPINION = no
+			OPINION = 0
 			REASON = VIET_friend_reason_placeholder
 		}
 		stress_impact = {
@@ -25337,7 +25344,7 @@ VIETmisc.0271 = {
 		}
 		progress_towards_rival_effect = {
 			CHARACTER = scope:councilor
-			OPINION = no
+			OPINION = 0
 			REASON = VIET_rival_reason_placeholder
 		}
 		stress_impact = {
@@ -27070,11 +27077,6 @@ VIETmisc.0288 = {
 		character = root
 		animation = eyeroll
 	}
-
-	trigger = {
-		# Event doesn't make sense if you don't care about cheating
-		NOT = { faith = { has_doctrine_parameter = no_unfaithfulness_penalty_active } }
-	}
 	
 	weight_multiplier = {
 		base = 1
@@ -27277,7 +27279,7 @@ VIETmisc.0290 = {
 		progress_towards_friend_effect = {
 			REASON = VIET_friend_reason_placeholder
 			CHARACTER = scope:vassal
-			OPINION = no
+			OPINION = 0
 		}
 	}
 

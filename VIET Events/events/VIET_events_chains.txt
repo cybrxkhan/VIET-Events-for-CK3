@@ -1892,6 +1892,7 @@ VIETmisc.1052 = {
 		}
 		hidden_effect = {
 			scope:child = {
+				VIET_ek_character_setup_effect = yes
 				death = {
 					death_reason = death_mysterious
 				}
@@ -2742,18 +2743,19 @@ VIETmisc.1071 = {
 				}
 				50 = {
 					trigger = {
-						any_county = {
-							NOT = {
-								culture = root.culture
-							}
-						}
+						NOT = { has_game_rule = VIET_serious_events } # No weirdness
+						# any_county = {
+						# 	NOT = {
+						# 		culture = root.culture
+						# 	}
+						# }
 					}
 					random_county = {
-						limit = {
-							NOT = {
-								culture = root.culture
-							}
-						}
+						# limit = {
+						# 	NOT = {
+						# 		culture = root.culture
+						# 	}
+						# }
 						save_scope_as = county
 					}
 					create_character = {
@@ -2777,24 +2779,25 @@ VIETmisc.1071 = {
 				}
 				66 = {
 					trigger = {
-						any_county = {
-							NOT = {
-								culture = root.culture
-							}
-							NOT = {
-								culture = scope:uriel.culture
-							}
-						}
+						NOT = { has_game_rule = VIET_serious_events } # No weirdness
+						# any_county = {
+						# 	NOT = {
+						# 		culture = root.culture
+						# 	}
+						# 	NOT = {
+						# 		culture = scope:uriel.culture
+						# 	}
+						# }
 					}
 					random_county = {
-						limit = {
-							NOT = {
-								culture = root.culture
-							}
-							NOT = {
-								culture = scope:uriel.culture
-							}
-						}
+						# limit = {
+						# 	NOT = {
+						# 		culture = root.culture
+						# 	}
+						# 	NOT = {
+						# 		culture = scope:uriel.culture
+						# 	}
+						# }
 						save_scope_as = county
 					}
 					create_character = {
@@ -2817,24 +2820,25 @@ VIETmisc.1071 = {
 				}
 				66 = {
 					trigger = {
-						any_county = {
-							NOT = {
-								culture = root.culture
-							}
-							NOT = {
-								culture = scope:uriel.culture
-							}
-						}
+						NOT = { has_game_rule = VIET_serious_events } # No weirdness
+						# any_county = {
+						# 	NOT = {
+						# 		culture = root.culture
+						# 	}
+						# 	NOT = {
+						# 		culture = scope:uriel.culture
+						# 	}
+						# }
 					}
 					random_county = {
-						limit = {
-							NOT = {
-								culture = root.culture
-							}
-							NOT = {
-								culture = scope:uriel.culture
-							}
-						}
+						# limit = {
+						# 	NOT = {
+						# 		culture = root.culture
+						# 	}
+						# 	NOT = {
+						# 		culture = scope:uriel.culture
+						# 	}
+						# }
 						save_scope_as = county
 					}
 					create_character = {
@@ -3388,6 +3392,7 @@ VIETmisc.1082 = {
 	}
 
 	immediate = {
+		play_music_cue = "mx_cue_positive_effect"
 		save_scope_as = oblivion_dreamer
 		create_artifact = {	
 			name = VIET_oblivion_dream_book_name
@@ -3401,13 +3406,16 @@ VIETmisc.1082 = {
 			decaying = no
 			save_scope_as = VIET_oblivion_artifact
 		}
-		scope:VIET_oblivion_artifact = {
-			set_variable = VIET_oblivion_artifact_variable
-		}
+		#scope:VIET_oblivion_artifact = {
+		#	set_variable = VIET_oblivion_artifact_variable
+		#}
 	}
 
 	option = {
 		name = VIETmisc.1082.a
+		create_character_memory = {
+			type = VIET_memory_oblivion_dream
+		}
 	}
 
 	after = {
@@ -3442,6 +3450,7 @@ VIETmisc.1083 = {
 	}
 
 	immediate = {
+		play_music_cue = "mx_cue_positive_effect"
 		save_scope_as = oblivion_dreamer	
 		create_artifact = {	
 			name = VIET_oblivion_dream_book_alt_name
@@ -3455,13 +3464,16 @@ VIETmisc.1083 = {
 			decaying = no
 			save_scope_as = VIET_oblivion_artifact
 		}
-		scope:VIET_oblivion_artifact = {
-			set_variable = VIET_oblivion_artifact_variable
-		}
+		#scope:VIET_oblivion_artifact = {
+		#	set_variable = VIET_oblivion_artifact_variable
+		#}
 	}
 
 	option = {
 		name = VIETmisc.1083.a
+		create_character_memory = {
+			type = VIET_memory_oblivion_dream
+		}
 	}
 
 	after = {

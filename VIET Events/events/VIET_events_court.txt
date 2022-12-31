@@ -2672,6 +2672,9 @@ VIETmisc.6016 = {
 			age = 28
 			save_scope_as = fake
 		}
+		scope:fake = {
+			VIET_ek_character_setup_effect = yes
+		}
 
 	}
 
@@ -2750,6 +2753,9 @@ VIETmisc.6017 = {
 			gender_female_chance = 50
 			age = 28
 			save_scope_as = fake
+		}
+		scope:fake = {
+			VIET_ek_character_setup_effect = yes
 		}
 
 	}
