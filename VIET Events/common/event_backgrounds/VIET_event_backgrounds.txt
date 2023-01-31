@@ -40,6 +40,17 @@ VIET_background_nightmare = {
 ### TUSCAN COUNTRY ###
 VIET_background_tuscan_country = {
 
+	background = { # France
+		trigger = {
+			capital_province = {
+				geographical_region = world_europe_west_francia
+			}
+		}
+		reference = "gfx/interface/illustrations/event_scenes/VIET_tuscan_country_french.dds"
+		environment = "environment_event_garden"
+		ambience = "event:/SFX/Events/Backgrounds/castle_garden_day"
+	}
+
 	background = { # Central European
 		trigger = {
 			capital_province = {
@@ -127,10 +138,10 @@ VIET_background_tuscan_country = {
 	background = { # Western Europe
 		trigger = {
 			capital_province = {
-				OR = {
+				#OR = {
 					geographical_region = world_europe_west_britannia
-					geographical_region = world_europe_west_francia				
-				}
+					#geographical_region = world_europe_west_francia				
+				#}
 			}
 		}
 		reference = "gfx/interface/illustrations/event_scenes/VIET_tuscan_country_english.dds"
@@ -488,6 +499,17 @@ VIET_background_skyrim_forest = {
 	background = { # Levant
 		trigger = {
 			capital_province = {
+				geographical_region = world_europe_west_francia
+			}
+		}
+		reference = "gfx/interface/illustrations/event_scenes/VIET_skyrim_forest_french.dds"
+		environment = "environment_event_forest"
+		ambience = "event:/SFX/Events/Backgrounds/deciduous_forest_day"
+	}
+
+	background = { # Levant
+		trigger = {
+			capital_province = {
 				geographical_region = world_middle_east_jerusalem
 			}
 		}
@@ -549,7 +571,7 @@ VIET_background_skyrim_forest = {
 		trigger = {
 			capital_province = {
 				geographical_region = world_europe_west_britannia
-				geographical_region = world_europe_west_francia
+				#geographical_region = world_europe_west_francia
 				#NOT = { geographical_region = world_europe_west_iberia } # Mediterranean
 			}
 		}

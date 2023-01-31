@@ -101,12 +101,16 @@
  VIETmisc.6017.a:0 "I guess people think highly of me and my court?"
  VIETmisc.6017.b:0 "Patronize bards to compose songs about [fake.GetFirstNameNoTooltip]!"
  # Version 1.7.1 Start Here - Please leave this comment and do not remove it
- VIETmisc.6018.t:0 "xxxxx"
- VIETmisc.6018.desc:0 "xxxxx"
- VIETmisc.6018.a:0 "xxxxx"
- VIETmisc.6019.t:0 "xxxxx"
- VIETmisc.6019.desc:0 "xxxxx"
- VIETmisc.6019.a:0 "xxxxx"
+ # Version 1.8.3 Start Here - Please leave this comment and do not remove it
+ VIETmisc.6018.t:0 "Excellent Oratory Skills"
+ VIETmisc.6018.desc:0 "As part of today's court proceedings, [orator.GetTitledFirstName] was required to give a speech to some visiting foreign dignitaries. To our surprise, [orator.GetSheHe] actually did a great job; although [orator.GetHerHis] skill in rhetoric could be better, the dignitaries were impressed with what they said was the eloquence and tact of [orator.GetFirstNamePossessiveNoTooltip] words, and that it reflects well on the grandeur of my royal court."
+ VIETmisc.6018.a:0 "A commendable job today, [orator.GetFirstNameNoTooltip]!"
+ VIETmisc.6018.b:0 "Why would anyone praise such an average speech?"
+ VIETmisc.6019.t:0 "Popular Folk Music"
+ VIETmisc.6019.desc:0 "The traditional folk music of [county.GetNameNoTier] has acquired some fame as of late, as its unique style is spreading throughout the land. Today, [courtier.GetTitledFirstName], who is a fan of this style of folk music, is encouraging me to tell my royal court musicians to compose or play music in the [county.GetAdjectiveNoTooltip] manner."
+ VIETmisc.6019.a:0 "I’ve listened to the music before, but I don’t get the appeal."
+ VIETmisc.6019.b:0 "Yes! Let us embrace the [county.GetAdjectiveNoTooltip] style of music."
+ # Version 1.8.4 Start Here - Please leave this comment and do not remove it
  VIETmisc.6020.t:0 "xxxxx"
  VIETmisc.6020.desc:0 "xxxxx"
  VIETmisc.6020.a:0 "xxxxx"
