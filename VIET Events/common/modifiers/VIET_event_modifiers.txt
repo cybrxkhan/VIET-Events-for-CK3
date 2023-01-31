@@ -2896,6 +2896,45 @@ VIET_feisty_maid = {
 	monthly_lifestyle_xp_gain_mult = 0.05
 }
 
+VIET_well_regarded_speech = {
+	icon = social_positive
+	diplomacy = 1
+	monthly_prestige = 0.3
+}
+
+VIET_popular_folk_music = {
+	icon = social_positive
+	development_growth = 0.1
+}
+
+VIET_popular_folk_music_court = {
+	icon = social_positive
+	county_opinion_add = 3
+	monthly_prestige = 0.3
+	monthly_court_grandeur_change_add = 0.1	
+}
+
+VIET_popular_folk_music_court = {
+	icon = social_positive
+	monthly_prestige = 0.3
+	monthly_court_grandeur_change_add = 0.1	
+}
+
+VIET_bridge_knowledge = {
+	icon = county_modifier_development_positive
+	stewardship = 1
+	monthly_stewardship_lifestyle_xp_gain_mult = 0.05
+}
+
+VIET_unsatisfied_horny = {
+	icon = love_negative
+	#spouse_opinion = -5
+	stress_gain_mult = 0.15
+	stress_loss_mult = -0.15
+	seduce_scheme_power_add = 3
+	#seduce_scheme_resistance_mult = -0.1
+}
+
 
 
 

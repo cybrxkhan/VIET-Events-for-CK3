@@ -63,8 +63,11 @@ VIET_court_event_on_actions = {
 		100 = VIETmisc.6015 			# Loud ominous noise in the courtroom
 		100 = VIETmisc.6016 			# Rumors of a bad but nonexistent courtier
 		100 = VIETmisc.6017 			# Rumors of a good but nonexistent courtier
+		# Simple
+		100 = VIETmisc.6018 			# Courtier not known for making good speeches makes a good speech
+		100 = VIETmisc.6019 			# Folk music from a region is becoming popular at court
 
-		# 18
+		# 20
 
 	}
 }

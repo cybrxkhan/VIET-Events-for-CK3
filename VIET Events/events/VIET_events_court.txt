@@ -21,6 +21,7 @@
 # 
 # 6000-6001		VIET Events Contest Winners
 # 6002-6017		Generic (2 year anniversary)
+# 6018-6019		Short
 # 
 ############################################################################################################################
 
@@ -2803,6 +2804,220 @@ VIETmisc.6017 = {
 
 
 
+
+##################################################################
+# Short 6018-6019
+##################################################################
+
+
+
+# Courtier not known for making good speeches makes a good speech
+VIETmisc.6018 = {
+	type = court_event
+	title = VIETmisc.6018.t
+	desc = VIETmisc.6018.desc
+
+	theme = diplomacy_foreign_affairs_focus
+
+	cooldown = { years = 5 }
+
+	lower_right_portrait = scope:orator
+	#lower_left_portrait = scope:complainer
+	court_scene = {
+		button_position_character = scope:orator
+		roles = {
+			scope:orator = {
+				group = event_group
+				animation = throne_room_conversation
+			}
+		}
+	}
+
+	trigger = {
+		# # DLC check.
+		# has_royal_court = yes
+		# # Standard checks.
+		# is_available_adult = yes
+		# is_landed = yes
+		any_courtier = {
+			is_available_ai_adult = yes
+			has_court_event_flag = no
+			diplomacy < medium_skill_rating
+			NOR = {
+				has_trait = education_diplomacy_1
+				has_trait = education_diplomacy_2
+				has_trait = education_diplomacy_3
+				has_trait = education_diplomacy_4
+			}
+		}
+	}
+
+	immediate = {
+		random_courtier = {
+			limit = {
+				is_available_ai_adult = yes
+				has_court_event_flag = no
+				diplomacy < medium_skill_rating
+				NOR = {
+					has_trait = education_diplomacy_1
+					has_trait = education_diplomacy_2
+					has_trait = education_diplomacy_3
+					has_trait = education_diplomacy_4
+				}		
+			}
+			save_scope_as = orator
+			court_event_character_flag_effect = yes
+			add_character_modifier = {
+				modifier = VIET_well_regarded_speech
+				years = 10
+			}
+		}
+		change_current_court_grandeur = minor_court_grandeur_gain
+
+	}
+
+	option = { # Great job!
+		name = VIETmisc.6018.a
+		stress_impact = {
+			arrogant = minor_stress_impact_gain
+		}
+		VIET_huge_prestige_loss_effect = yes	
+		scope:orator = {
+			add_opinion = {
+				target = root
+				modifier = VIET_opinion_praised_me
+			}
+		}	
+	}
+
+	option = { # Don't care
+		name = VIETmisc.6018.b
+		stress_impact = {
+			humble = minor_stress_impact_gain
+		}
+	}
+
+
+	after = {
+		scope:orator = {
+			clear_court_event_participation = yes
+		}
+	}
+
+}
+
+
+# Folk music from a region is becoming popular at court
+VIETmisc.6019 = {
+	type = court_event
+	title = VIETmisc.6019.t
+	desc = VIETmisc.6019.desc
+
+	theme = friendly
+
+	cooldown = { years = 10 }
+
+	lower_right_portrait = scope:courtier
+	#lower_left_portrait = scope:complainer
+	court_scene = {
+		button_position_character = scope:courtier
+		roles = {
+			scope:courtier = {
+				group = petitioners_group
+				animation = personality_bold
+			}
+		}
+	}
+
+	trigger = {
+		# # DLC check.
+		# has_royal_court = yes
+		# # Standard checks.
+		# is_available_adult = yes
+		# is_landed = yes
+		any_courtier = {
+			is_available_ai_adult = yes
+			has_court_event_flag = no
+			NOR = {
+				has_trait = shy
+				has_trait = arrogant
+			}
+		}
+	}
+
+	immediate = {
+		random_courtier = {
+			limit = {
+				is_available_ai_adult = yes
+				has_court_event_flag = no
+				NOR = {
+					has_trait = shy
+					has_trait = arrogant
+				}		
+			}
+			save_scope_as = courtier
+			court_event_character_flag_effect = yes
+		}
+		random_held_title = {
+			limit = { tier = tier_county }
+			save_scope_as = county
+			add_county_modifier = {
+				modifier = VIET_popular_folk_music
+				years = 10
+			}
+		}
+	}
+
+	option = { # I don't get the appeal
+		name = VIETmisc.6019.a
+		stress_impact = {
+			arrogant = minor_stress_impact_gain
+		}
+		scope:courtier = {
+			add_opinion = {
+				target = root
+				modifier = VIET_opinion_folk_music_dislike
+			}
+		}	
+	}
+
+	option = { # Ok let's do it
+		name = VIETmisc.6019.b
+		stress_impact = {
+			paranoid = miniscule_stress_impact_gain
+		}
+		trigger = {
+			OR = {
+				gold >= 50
+				is_ai = no
+			}
+		}
+		remove_short_term_gold = 50
+		change_current_court_grandeur = minor_court_grandeur_gain
+		add_character_modifier = {
+			modifier = VIET_popular_folk_music_court
+			years = 10
+		}
+		scope:courtier = {
+			add_opinion = {
+				target = root
+				modifier = VIET_opinion_folk_music_like
+			}
+			reverse_add_opinion = {
+				target = root
+				modifier = VIET_opinion_folk_music_like
+			}
+		}
+	}
+
+
+	after = {
+		scope:courtier = {
+			clear_court_event_participation = yes
+		}
+	}
+
+}
 
 
 

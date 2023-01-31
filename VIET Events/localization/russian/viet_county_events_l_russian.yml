@@ -227,8 +227,8 @@ VIETmisc.3030.info:0 "#emphasis Исторический контекст:#! Х�
  VIETmisc.3044.a:0 "Nothing I can do about such a thing."
  VIETmisc.3044.b:0 "Send funds to support rebuilding the academy."
  VIETmisc.3045.t:0 "Amazing Ingredients"
- VIETmisc.3045.desc:0 "Recently, I had noticed how the quality of some of my cooks’ dishes had improved (not that they weren’t bad before), so I decided to pay a visit to my kitchens today since I had nothing better to do. When I asked my cooks why the dishes were better, the head cook explained, “My [ROOT.Char.GetLadyLord], I wish we could take all the credit, but you see, lately, a few towns in [county.GetNameNoTier] have become famous for producing some quality ingredients – be it spices, herbs, nuts, vegetables, or fruits – that we now use frequently in our dishes, to great effect.”"
- VIETmisc.3045.a:0 "To think one region could be responsible for such culinary delights."
+ VIETmisc.3045.desc:0 "Recently, I had noticed how the quality of some of my cooks’ dishes had improved (not that they weren’t bad before), so I decided to pay a visit to my kitchens today since I had nothing better to do.\n\nWhen I asked my cooks why the dishes were better, the head cook explained, “My [ROOT.Char.GetLadyLord], I wish we could take all the credit, but you see, lately, a few towns in [county.GetNameNoTier] have become famous for producing some quality ingredients – be it spices, herbs, nuts, vegetables, or fruits – that we now use frequently in our dishes, to great effect.”"
+ VIETmisc.3045.a:0 "This region produces truly wonderful culinary delights!"
  # Version 1.8.4 Start Here - Please leave this comment and do not remove it
  VIETmisc.3046.t:0 "xxxxx"
  VIETmisc.3046.desc:0 "xxxxx"

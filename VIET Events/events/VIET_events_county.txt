@@ -30,6 +30,7 @@
 # 3037-3038		Local Rumors
 # 3039-3041		10
 # 3042-3043		Generic
+# 3044-3045		Simple
 # 
 ############################################################################################################################
 
@@ -4372,5 +4373,161 @@ VIETmisc.3043 = {
 
 
 }
+
+
+
+
+
+##################################################################
+# Simple 3044-3045
+##################################################################
+
+
+# Local academy is pillaged by brigands
+VIETmisc.3044 = {
+	type = character_event
+	title = VIETmisc.3044.t
+	desc = VIETmisc.3044.desc
+	theme = learning_scholarship_focus
+	override_background = { event_background = burning_building }
+	
+	right_portrait = {
+		character = root
+		animation = stress
+	}
+
+	trigger = {
+		# Should be a literate culture
+		NOT = { has_government = tribal_government }	
+	}
+	
+    weight_multiplier = {
+        base = 0
+		modifier = {
+			add = {
+				every_held_title = {
+					limit = { tier = tier_county }
+					add = 1
+				}
+			}		
+		}
+    }
+	
+	immediate = {
+		random_held_title = {
+			limit = {
+				tier = tier_county
+			}	
+			save_scope_as = county
+		}
+		play_music_cue = mx_cue_stress
+
+	}
+
+	# Ok
+	option = {
+		name = VIETmisc.3044.a
+		scope:county = {
+			add_county_modifier = {
+				modifier = VIET_pillaged_academy
+				years = 10
+			}
+		}	
+	}
+	# Ok
+	option = {
+		name = VIETmisc.3044.b
+		trigger = {
+			OR = {
+				gold >= 50
+				is_ai = no
+			}
+		}
+		remove_short_term_gold = 50
+		scope:county = {
+			add_county_modifier = {
+				modifier = VIET_rebuilt_academy
+				years = 10
+			}
+		}	
+	}
+}
+
+
+# Ingredients from a region become popular
+VIETmisc.3045 = {
+	type = character_event
+	title = VIETmisc.3045.t
+	desc = VIETmisc.3045.desc
+	theme = VIET_theme_kitchen_generic
+	
+	left_portrait = {
+		character = root
+		animation = toast
+	}
+	
+    weight_multiplier = {
+        base = 0
+		modifier = {
+			add = {
+				every_held_title = {
+					limit = { tier = tier_county }
+					add = 1
+				}
+			}		
+		}
+    }
+	
+	immediate = {
+		random_held_title = {
+			limit = {
+				tier = tier_county
+			}	
+			save_scope_as = county
+		}
+		scope:county = {
+			random_list = {
+				10 = {
+					add_county_modifier = {
+						modifier = VIET_famous_ingredients
+						years = 8
+					}				
+				}
+				10 = {
+					add_county_modifier = {
+						modifier = VIET_famous_ingredients
+						years = 12
+					}				
+				}
+				10 = {
+					add_county_modifier = {
+						modifier = VIET_famous_ingredients
+						years = 16
+					}				
+				}
+			}	
+		}
+
+	}
+
+	# Ok
+	option = {
+		name = VIETmisc.3045.a
+		stress_impact = {
+			base = miniscule_stress_impact_loss
+			gluttonous = minor_stress_impact_loss
+			gregarious = miniscule_stress_impact_loss
+		}
+	}
+}
+
+
+
+
+
+
+
+
+
 
 

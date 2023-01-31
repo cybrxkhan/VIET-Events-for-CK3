@@ -747,4 +747,26 @@ VIET_opinion_fruit_juice = {
 	opinion = 5
 }
 
+VIET_opinion_folk_music_like = {
+	years = 5
+	opinion = 5
+}
+
+VIET_opinion_folk_music_dislike = {
+	years = 5
+	opinion = -5
+}
+
+VIET_opinion_not_in_mood = {
+	years = 5
+	opinion = -5
+	decaying = yes
+}
+
+VIET_opinion_snuggling = {
+	years = 5
+	opinion = 5
+	decaying = yes
+}
+
 

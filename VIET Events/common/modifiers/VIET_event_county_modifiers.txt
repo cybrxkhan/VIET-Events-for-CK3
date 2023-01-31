@@ -769,3 +769,26 @@ VIET_mysterious_conman = {
 	monthly_county_control_change_add = -0.1
 	development_growth = -0.1
 }
+
+VIET_pillaged_academy = {
+	icon = outdoors_negative
+	development_growth = -0.1
+	development_growth_factor = -0.15
+	church_holding_build_gold_cost = 0.05
+}
+
+VIET_rebuilt_academy = {
+	icon = learning_positive
+	development_growth = 0.2
+	monthly_county_control_change_add = 0.1
+}
+
+VIET_famous_ingredients = {
+	icon = food_positive
+	development_growth = 0.2
+	tax_mult = 0.01
+}
+
+
+
+

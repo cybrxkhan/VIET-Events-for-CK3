@@ -426,6 +426,9 @@ VIET_events_yearly_pulse = {
 		100 = VIETmisc.0285		# Overhear an awkward Oblivion conversation
 		# Animation
 		100 = VIETmisc.0289		# Remembered a great joke
+		# Simple
+		100 = VIETmisc.0294		# Lover is not in the mood
+		100 = VIETmisc.0295		# Dream of a monk
 	}
 }
 
@@ -798,6 +801,8 @@ VIET_events_tri_yearly_pulse = {
 		100 = VIETmisc.0290		# Your vassal thinks your fruit juice is great
 		100 = VIETmisc.0291		# You hear a noise at night but it's just one of your guards
 		100 = VIETmisc.0292		# Sleepwalking while holding a knife in the basement
+		# Simple
+		100 = VIETmisc.0293		# Inspecting bridges
 	}
 }
 
@@ -1394,6 +1399,8 @@ VIET_events_common_county_pulse = {
 		100 = VIETmisc.3038		# Legends of a nonexistent holy person
 		# 10
 		100 = VIETmisc.3040 	# 10 officials resign to protest a bad official
+		# Simple
+		100 = VIETmisc.3045 	# Ingredients from a region become popular
 		
 		# 37
     }
@@ -1548,8 +1555,10 @@ VIET_events_rare_county_pulse = {
 		100 = VIETmisc.3035		# Hermit struggles to be alone
 		# 10
 		100 = VIETmisc.3041		# A heroic official rescues 10 kidnapped children
+		# Simple
+		100 = VIETmisc.3044		# Local academy is pillaged by brigands
 		
-		# 14
+		# 15
 		
     }
 }

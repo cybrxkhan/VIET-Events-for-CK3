@@ -51,6 +51,7 @@
 # 0273-0281		10
 # 0282-0286		Generic
 # 0287-0292		New vanilla animations
+# 0293-0295		Simple
 # 
 ############################################################################################################################
 
@@ -27392,5 +27393,293 @@ VIETmisc.0292 = {
 	}
 
 }
+
+
+
+##################################################################
+# Simple 0293-0295
+##################################################################
+
+
+# Inspecting bridges
+VIETmisc.0293 = {
+	type = character_event
+	title = VIETmisc.0293.t
+	desc = VIETmisc.0293.desc
+	theme = VIET_theme_tuscan_country
+
+	
+	right_portrait = {
+		character = root
+		animation = personality_rational
+	}
+	
+	weight_multiplier = {
+		base = 1
+		modifier = {
+			add = 0.2
+			has_trait = diligent
+		}
+		modifier = {
+			add = -0.2
+			has_trait = lazy
+		}
+		modifier = {
+			add = 0.2
+			has_trait = patient
+		}
+		modifier = {
+			add = -0.2
+			has_trait = impatient
+		}
+		modifier = {
+			add = 0.2
+			has_trait = just
+		}
+		modifier = {
+			add = -0.2
+			has_trait = arbitrary
+		}
+	}
+	
+	option = { # ok
+		name = VIETmisc.0293.a
+		add_character_modifier = {
+			modifier = VIET_bridge_knowledge
+			years = 10
+		}
+	}
+
+}
+
+
+
+# Lover is not in the mood
+VIETmisc.0294 = {
+	type = character_event
+	title = VIETmisc.0294.t
+	desc = VIETmisc.0294.desc
+	theme = seduction
+	override_background = { event_background = bedchamber }
+
+	
+	left_portrait = {
+		character = scope:lover
+		animation = dismissal
+	}
+	
+	right_portrait = {
+		character = root
+		animation = sadness
+	}
+
+	trigger = {
+		VIET_sexual_character_trigger = yes
+		#OR = {
+		#	num_of_relation_soulmate > 0
+		#	num_of_relation_lover > 0
+		#}
+		OR = {
+			any_relation = {
+				type = soulmate
+				VIET_sexual_character_trigger = yes
+				is_available_ai_adult = yes
+			}
+			any_relation = {
+				type = lover
+				VIET_sexual_character_trigger = yes
+				is_available_ai_adult = yes
+			}
+		}
+	}
+	
+	weight_multiplier = {
+		base = 1
+		modifier = {
+			add = 0.2
+			has_trait = lustful
+		}
+		modifier = {
+			add = -0.2
+			has_trait = chaste
+		}
+		modifier = {
+			add = 0.2
+			has_trait = stubborn
+		}
+		modifier = {
+			add = -0.2
+			has_trait = fickle
+		}
+		modifier = {
+			add = 0.2
+			has_trait = impatient
+		}
+		modifier = {
+			add = -0.2
+			has_trait = patient
+		}
+	}
+
+	immediate = {
+		random_list = {
+			50 = {
+				trigger = {
+					any_relation = {
+						type = soulmate
+						VIET_sexual_character_trigger = yes
+						is_available_ai_adult = yes
+					}
+				}
+				random_relation = {
+					type = soulmate
+					limit = {
+						VIET_sexual_character_trigger = yes
+						is_available_ai_adult = yes
+					}
+					save_scope_as = lover
+				}
+			}
+			50 = {
+				trigger = {
+					any_relation = {
+						type = lover
+						VIET_sexual_character_trigger = yes
+						is_available_ai_adult = yes
+					}
+				}
+				random_relation = {
+					type = lover
+					limit = {
+						VIET_sexual_character_trigger = yes
+						is_available_ai_adult = yes
+					}
+					save_scope_as = lover
+				}
+			}
+		}
+	}
+	
+	option = { # ok
+		name = VIETmisc.0294.a
+		if = {
+			limit = {
+				has_trait = lustful
+			}
+			stress_impact = {
+				lustful = medium_stress_impact_gain
+			}
+		}
+		else = {
+			stress_impact = {
+				base = miniscule_stress_impact_loss
+			}
+		}
+		scope:lover = {
+			add_opinion = {
+				target = root
+				modifier = VIET_opinion_snuggling
+			}
+			reverse_add_opinion = {
+				target = root
+				modifier = VIET_opinion_snuggling
+			}
+		}
+	}
+	
+	option = { # ok
+		name = VIETmisc.0294.b
+		stress_impact = {
+			chaste = minor_stress_impact_gain
+		}
+		scope:lover = {
+			reverse_add_opinion = {
+				target = root
+				modifier = VIET_opinion_not_in_mood
+			}
+		}
+		add_character_modifier = {
+			modifier = VIET_unsatisfied_horny
+			years = 3
+		}
+	}
+
+}
+
+
+
+# Dream of a monk
+VIETmisc.0295 = {
+	type = character_event
+	title = VIETmisc.0295.t
+	desc = VIETmisc.0295.desc
+	theme = faith
+	override_background = { event_background = VIET_background_skyrim_forest }
+
+	
+	left_portrait = {
+		character = root
+		animation = personality_zealous
+	}
+
+	trigger = {
+		religion = religion:buddhism_religion
+	}
+	
+	weight_multiplier = {
+		base = 1
+		modifier = {
+			add = 0.2
+			has_trait = zealous
+		}
+		modifier = {
+			add = -0.2
+			has_trait = cynical
+		}
+		modifier = {
+			add = 0.2
+			has_trait = compassionate
+		}
+		modifier = {
+			add = -0.2
+			has_trait = sadistic
+		}
+		modifier = {
+			add = 0.2
+			has_trait = calm
+		}
+		modifier = {
+			add = -0.2
+			has_trait = wrathful
+		}
+	}
+
+	
+	option = { # ok
+		name = VIETmisc.0295.a
+		VIET_small_piety_gain_effect = yes
+		stress_impact = {
+			base = miniscule_stress_impact_loss
+			zealous = miniscule_stress_impact_loss
+			compassionate = miniscule_stress_impact_loss
+			content = miniscule_stress_impact_loss
+			calm = miniscule_stress_impact_loss
+		}
+	}
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
