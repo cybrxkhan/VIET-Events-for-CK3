@@ -1,6 +1,6 @@
-[img]https://i.imgur.com/xb3Y3bN.jpg[/img]
+[img]https://i.imgur.com/3hfbhs6.jpg[/img]
 
-[h1]Current Version: 1.8.2 "Oblivion" (Released 12/30/22, Compatible with vanilla patch 1.8.X)[/h1]
+[h1]Current Version: 1.8.3 "William of Ockham" (Released 1/31/23, Compatible with vanilla patch 1.8.X)[/h1]
 
 [h1][B][url=https://discord.gg/9KuyXv2uZA]Discord Server for my mods[/url]
 [url=https://cybrxkhansmods.godaddysites.com/]Official Website for my mods[/url][/B][/h1]
@@ -27,7 +27,7 @@ Feel free to use my work in your mods - all I ask is that I am credited and (if 
 [img]http://i.imgur.com/EyXurbK.jpg[/img]
 
 [LIST]
-[*]Over [B][U]1001[/U] new flavor events[/B] to experience!
+[*]Over [B][U]1008[/U] new flavor events[/B] to experience!
 [*]Explore new decisions, artifacts, character interactions, activities, and more!
 [*]Game rule to disable sillier events for those who don't like them, with three levels to choose from: Balanced (Default), Serious (Restricted), and All Events (Full)
 [*][B]Compatible with almost anything[/B] since it doesn't touch any vanilla files - even with overhaul mods, you can via game rule disable events that reference things specific to our medieval world that wouldn’t make sense in other time periods or universes (like fantasy and sci-fi conversion mods)
@@ -56,36 +56,16 @@ Thanks!
 
 [img]http://i.imgur.com/RQ5QZTF.jpg[/img]
 
-[h1]Version 1.8.2 "Oblivion"[/h1]
+[h1]Version 1.8.3 "William of Ockham"[/h1]
 
-[I]"I've heard others say the same."
+[I]“It is pointless to do with more what can be done with fewer.”
+- William of Ockham (1287–1347 CE), English theologian, scholar, and friar best known as a proponent for the concept that would later be known as Ockham’s Razor[/I]
 
-VIET has now officially surpassed a milestone of 1000 events! Thank you all as always![/I]
-
-New events added in this version: [B]101[/B]
+New events added in this version: [B]7[/B]
 
 [LIST]
-[*]Added Dream of Oblivion event chain (14 events)
-[*]Added events with the following themes:
-[LIST]
-[*]22 Spices and Herbs A-L*
-[*]3 Rosewater*
-[*]11 Oblivion Inspired*
-[*]18 Generic (old)*
-[*]7 Bread*
-[*]7 Rose*
-[*]5 Generic
-[*]6 revolving around new vanilla animations
-[/LIST]
-[*]Added county events with the following themes:
-[LIST]
-[*]4 Oblivion Inspired*
-[*]2 Generic (old)*
-[*]2 Generic
-[/LIST]
-[*]Decisions to Follow the Strange Trails and Meet with Qi Ma the Liar are now in a separate file
-[*]Fixed errors with friend/rival progress
-[*]Fixed characters not spawning with proper birthsigns and other traits when running VIET with EK2
+[*]Added 7 simple events (two sentences max)
+[*]Added a couple French variations of event backgrounds
 [*]Miscellaneous bugfixes
 [/LIST]
 

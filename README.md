@@ -1,14 +1,12 @@
 # VIET Events for CK3
 
-<img src="https://i.imgur.com/Q8RSmC4.jpg">
+<img src="https://i.imgur.com/3hfbhs6.jpg">
 
-<img src="https://i.imgur.com/xb3Y3bN.jpg">
+## Latest Version: 1.8.3 "William of Ockham" (Released 1/31/23)
 
-## Latest Version: 1.8.2 "Oblivion" (Released 12/11/22)
+_“It is pointless to do with more what can be done with fewer.”_
 
-_"I've heard others say the same."_
-
-_VIET has now officially passed a milestone of 1000 events! Thank you all as always!_
+_- William of Ockham (1287–1347 CE), English theologian, scholar, and friar best known as a proponent for the concept that would later be known as Ockham’s Razor_
 
 Very Immersive Events and Tales (VIET), the sequel to VIET Events Reborn for CK2, is a flavor mod that adds a vast collection of events about everyday life to spice up your game. They add immersion and a diversity of experiences in between wars and vanilla’s event chains, and cover mundane minutiae ranging from small talk with courtiers and eating local cuisine to epic tales about love, philosophy, and the human condition. Some of the events unlock new decisions, character interactions, activities, and much more for you to explore!
 
@@ -18,7 +16,7 @@ Feel free to use my work in your mods - all I ask is that I am credited and (if 
 
 ## Features
 
-- Over **1001** new flavor events to experience!
+- Over **1008** new flavor events to experience!
 - Explore new decisions, artifacts, character interactions, activities, and more!
 - Game rule to disable sillier events for those who don't like them, with three levels to choose from: Balanced (Default), Serious (Restricted), and All Events (Full)
 - Compatible with almost anything since it doesn't touch any vanilla files - even with overhaul mods, you can via game rule disable events that reference things specific to our medieval world that wouldn’t make sense in other time periods or universes (like fantasy and sci-fi conversion mods)
@@ -36,27 +34,12 @@ DO NOT manually download the master branch unless you know what you're doing as 
 
 NOTE: If you are re-installing a mod, delete the old version of the mod first before copy and pasting the new one! While it's not always necessary, it's a good habit to do to prevent any potential issues.
 
-## Version 1.8.2 Changelog
+## Version 1.8.3 Changelog
 
-New events added in this version: **101**
+New events added in this version: **7**
 
-- Added Dream of Oblivion event chain (14 events)
-- Added events with the following themes:
-    - 22 Spices and Herbs A-L*
-    - 3 Rosewater*
-    - 11 Oblivion Inspired*
-    - 18 Generic (old)*
-    - 7 Bread*
-    - 7 Rose*
-    - 5 Generic
-    - 6 revolving around new vanilla animations
-- Added county events with the following themes:
-    - 4 Oblivion Inspired*
-    - 2 Generic (old)*
-    - 2 Generic
-- Decisions to Follow the Strange Trails and Meet with Qi Ma the Liar are now in a separate file
-- Fixed errors with friend/rival progress
-- Fixed characters not spawning with proper birthsigns and other traits when running VIET with EK2
+- Added 7 simple events (two sentences max)
+- Added a couple French variations of event backgrounds
 - Miscellaneous bugfixes
 
 \* Adapted from VIET for CK2
