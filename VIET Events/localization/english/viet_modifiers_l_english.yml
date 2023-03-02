@@ -227,8 +227,8 @@
  VIET_lapidary_study:0 "Studying A Lapidary"
  VIET_lapidary_study_desc:0 "It's crystal clear that unearthing more grounded information about stones is a process that can get off to a rocky start for the inexperienced, but if one can find hidden gems of knowledge, these will be a stepping stone towards discovering the rock-solid truths about the secrets of the earth."
  # Note to translators - no idea how well the above puns can translate to your language
- VIET_thunderstone_talisman:0 "Talismans Made From Thunderstones"
- VIET_thunderstone_talisman_desc:0 "Thunderstones were recently found in land belonging to this character, who used them to make some protective talismans."
+ #VIET_thunderstone_talisman:0 "Talismans Made From Thunderstones"
+ #VIET_thunderstone_talisman_desc:0 "Thunderstones were recently found in land belonging to this character, who used them to make some protective talismans."
  VIET_thunderstone_studies:0 "Donated Thunderstones to Local Scholars"
  VIET_thunderstone_studies_desc:0 "Thunderstones were recently found in land belonging to this character, who decided to give them to scholars in the area to study."
  VIET_opinion_believed_sandman_story:0 "Believed My Sandman Story"

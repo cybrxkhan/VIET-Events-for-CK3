@@ -169,7 +169,7 @@
  VIETmisc.3039.success:0 "Most locals believe the specter is helpful!"
  VIETmisc.3040.t:0 "Ten Resignations"
  VIETmisc.3040.desc:0 "I have received word that ten of my minor officials in [county.GetNameNoTier] have formally resigned their positions. It appears the chief official in charge of them is very corrupt, and they were unable to do anything about it, and their attempts to reach out to me were foiled by the chief official’s minions. However, I have managed to hear about these resignations, and word on the street is that the chief official is very nervous about how I will react to it."
- VIETmisc.3040.a:0 "I honestly could care less about what’s going on."
+ VIETmisc.3040.a:0 "I honestly couldn't care less about what’s going on."
  VIETmisc.3040.b:0 "Strongly reprimand the chief official, but do no more."
  VIETmisc.3040.c:0 "Arrest the chief official, and offer the resignees their jobs back."
  VIETmisc.3040.c.failure:0 "The resignees don't want their jobs back."
