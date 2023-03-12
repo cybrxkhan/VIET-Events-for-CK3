@@ -1,4 +1,3 @@
 ﻿l_simp_chinese:
-
- VIET_friend_reason_placeholder:0 "[CHARACTER.GetShortUIName|U] and [TARGET_CHARACTER.GetShortUIName] grew to enjoy each other's company."
- VIET_rival_reason_placeholder:0 "[CHARACTER.GetShortUIName|U] and [TARGET_CHARACTER.GetShortUIName] grew to dislike each other due to some differences."
+ VIET_friend_reason_placeholder:0 "[CHARACTER.GetShortUIName|U]和[TARGET_CHARACTER.GetShortUIName]越来越享受彼此的陪伴。"
+ VIET_rival_reason_placeholder:0 "[CHARACTER.GetShortUIName|U]和[TARGET_CHARACTER.GetShortUIName]出于一些分歧，逐渐不喜欢对方了。"

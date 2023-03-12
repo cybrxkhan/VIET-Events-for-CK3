@@ -1,7 +1,5 @@
 ﻿l_simp_chinese:
-
- # Special Memories
- VIET_memory_oblivion_dream:0 "dreamt of an epic adventure in another world, where I helped a long-lost Prince defeat an invasion by the forces of [owner.GetFaith.DevilName]"
- VIET_memory_oblivion_dream_desc:0 "I dreamt of an epic adventure in another world, where I helped a long-lost Prince defeat an invasion by the forces of [owner.GetFaith.DevilName]"
- VIET_memory_oblivion_dream_desc_second_perspective:0 "you dreamt of an epic adventure in another world, where you helped a long-lost Prince defeat an invasion by the forces of [owner.GetFaith.DevilName]"
- VIET_memory_oblivion_dream_desc_third_perspective:0 "[owner.GetName] dreamt of an epic adventure in another world, where [owner.GetSheHe] helped a long-lost Prince defeat an invasion by the forces of [owner.GetFaith.DevilName]"
+ VIET_memory_oblivion_dream:0 "梦想着在另一个世界历经一场史诗般的冒险，我在那儿会帮助一个流浪多年的王子击败来犯的[owner.GetFaith.DevilName]大军"
+ VIET_memory_oblivion_dream_desc:0 "我梦想着在另一个世界历经一场史诗般的冒险，我在那儿会帮助一个流浪多年的王子击败来犯的[owner.GetFaith.DevilName]大军"
+ VIET_memory_oblivion_dream_desc_second_perspective:0 "你梦想着在另一个世界历经一场史诗般的冒险，在那帮助一个流浪多年的王子击败来犯的[owner.GetFaith.DevilName]大军"
+ VIET_memory_oblivion_dream_desc_third_perspective:0 "[owner.GetName]梦想着在另一个世界历经一场史诗般的冒险，[owner.GetSheHe]在那帮助一个流浪多年的王子击败来犯的[owner.GetFaith.DevilName]大军"
