@@ -9,7 +9,7 @@
  VIET_oblivion_dream_book_name:0 "异世界之梦"
  VIET_oblivion_dream_book_desc:0 "这卷轴记载了[oblivion_dreamer.GetTitledFirstName]做的一个梦，[oblivion_dreamer.GetSheHe]梦见自己帮助了一位流浪多年的王子和他的盟友保卫家园和帝国不受[oblivion_dreamer.GetFaith.DevilName]领导的地狱大军荼毒。"
  VIET_oblivion_dream_book_alt_name:0 "异世界之梦"
- VIET_oblivion_dream_book_alt_desc:0 "这卷轴记载了[oblivion_dreamer.GetTitledFirstName]做的一个梦，在梦里，[oblivion_dreamer.GetSheHe]本应本应帮助一位流浪多年的王子和他的盟友击败[oblivion_dreamer.GetFaith.DevilName]领导的地狱大军，结果却四处为当地人做一些随机的任务当跑腿。"
+ VIET_oblivion_dream_book_alt_desc:0 "这卷轴记载了[oblivion_dreamer.GetTitledFirstName]做的一个梦，在梦里，[oblivion_dreamer.GetSheHe]本应帮助一位流浪多年的王子和其盟友保卫王子的家园免受[oblivion_dreamer.GetFaith.DevilName]领导的地狱大军来袭，结果[oblivion_dreamer.GetSheHe]却四处为当地人做一些鸡毛蒜皮的任务和当跑腿。"
  VIET_lusty_argonian_maid_name:0 "元气满满的[ROOT.Char.GetCulture.GetNameNoTooltip]女仆"
  VIET_lusty_argonian_maid_desc:0 "一篇低俗的剧本，用几幕讲述了一位[ROOT.Char.GetCulture.GetName]女仆色情而荒唐的遭遇。"
  VIET_childhood_blanket_name:0 "儿时毯子"
