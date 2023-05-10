@@ -1,6 +1,7 @@
 [img]https://i.imgur.com/3hfbhs6.jpg[/img]
 
 [h1]当前版本：1.8.3 "奥卡姆的威廉" (2023.1.31更新，兼容原版1.8.X)[/h1]
+
 [h1][B][url=https://discord.gg/9KuyXv2uZA]我模组的Discord服务器[/url]
 [url=https://cybrxkhansmods.godaddysites.com/]我模组的官网[/url][/B][/h1]
 [B]更多信息请见[url=https://forum.paradoxplaza.com/forum/threads/mod-viet-events-for-ck3-a-flavor-and-immersion-event-mod.1422081/]论坛[/url][/B]
@@ -10,9 +11,11 @@
 
 Very Immersive Events and Tales (VIET)是[url=https://steamcommunity.com/sharedfiles/filedetails/?id=1601402546]CK2版本VIET Events Reborn[/url]的续作，这一风味模组加入了大量日常事件，从廷臣间的悄悄话，到品尝当地美食，甚至经历刻骨铭心的爱情，让你思考哲学和人生，提升你的游戏体验。在你倾泻战火和体验原版时，这些事件提供了更为多样的感受，增强带入感。
 
-若在游玩时遇到任何漏洞，请告诉我。[B]每次更新都会加入更多事件！[/B] 请注意 [B][U]VIET不支持取得成就！[/U][/B]
+我希望这八年来断断续续的CK2模组经验能为感兴趣的玩家带来有趣的体验。
 
-[B][U]VIET[I]兼容[/I]已有存档！[/U][/B]要是在已有存档使用的话，最好还是备份一下。
+[B]每次更新都会加入更多事件！[/B] 请注意 [B][U]VIET不支持取得成就！[/U][/B]
+
+[B][U]VIET[I]兼容[/I]已有存档！[/U][/B]（要是在已有存档使用的话，最好还是备份一下。）
 
 请随意使用我的模组——只要将我署名并（如有可能的话）告知我一声。如你喜欢这个模组，还请点个赞！
 
@@ -24,28 +27,29 @@ Very Immersive Events and Tales (VIET)是[url=https://steamcommunity.com/sharedf
 [img]http://i.imgur.com/EyXurbK.jpg[/img]
 
 [LIST]
-[*]多达[B][U]1008[/U]个新风味事件（链）[/B]，以后的更新中会加入更多
-[*]新决议、角色互动、活动、事件链
+[*]多达[B][U]1008[/U]个新风味事件（链）[/B]！
+[*]新决议、宝物、角色互动、活动等等！
 [*]如果你不喜欢某些傻里傻气的事件，你可以在规则里面将它们停用，共有三个等级可供选择：平衡（默认）、严肃（有所限制）、所有事件（不设限）
 [*][B]几乎兼容所有模组[/B]，因为不触及原文件。就算是全局模组，你也可以在规则里禁用提及我们中世纪世界的事件，这样一来在其它世界线（比如奇幻世界或是科幻世界的模组）就显得更为合理了
 [*]用[B]历史背景提示[/B]学习历史。提示里包含了启发某一事件的历史背景——有时候，现实比幻想更为荒诞不经！（如你认为这有损带入感，可以在规则中禁用。）
 [/LIST]
 
 [h1]可用语种[/h1]
-我们现在包括了游戏的所有官方语言！要注意，由于我会不定期更新模组，负责翻译的人或许无法紧跟最新版本的进度，毕竟他们花的是自己的闲暇时间。因此请注意所有的非英文事件都会有占位符。
+要注意，[B]由于我会不定期更新模组，负责翻译的人或许无法紧跟最新版本的进度[/B]，毕竟这些善良人们花的是自己的闲暇时间。因此请注意所有的未翻译事件都会暂以英文替代。
 [LIST]
-[*]中文——本模组自带中文，由[url=https://paratranz.cn/projects/1580]Tbeabm等人的项目组[/url]帮助翻译。
+[*]中文——本模组自带中文，由[url=https://paratranz.cn/projects/1580]牛奶大魔王领导的项目组[/url]帮助翻译。
 [*]法文——[url=https://steamcommunity.com/sharedfiles/filedetails/?id=2234027514]在此订阅子模组[/url]，感谢Mouchi
-[*]德文——[url=https://steamcommunity.com/sharedfiles/filedetails/?id=2229986442]在此订阅子模组[/url]，感谢Thomsen
+[*]德文——[url=https://steamcommunity.com/sharedfiles/filedetails/?id=2865016522]在此订阅子模组[/url]，感谢Dani
+[*]日文——[url=https://steamcommunity.com/sharedfiles/filedetails/?id=2762293648]在此订阅子模组[/url]，感谢sla_domi
 [*]韩文——[url=https://steamcommunity.com/sharedfiles/filedetails/?id=2227982565]在此订阅子模组[/url]，感谢Ohboksu
-[*]俄文——本模组自带西文，由AmoreLibre帮助翻译。
+[*]俄文——本模组自带俄文，由AmoreLibre帮助翻译。完整俄文子模组[url=https://steamcommunity.com/sharedfiles/filedetails/?id=2525780456]在此订阅[/url]，感谢Д.Р.У.И.Д.
 [*]西文——本模组自带西文，由Sourenics帮助翻译。
 [/LIST]
 
 
 [img]https://i.imgur.com/9twioNH.jpg[/img]
 
-更多信息请见[url=https://steamcommunity.com/workshop/filedetails/discussion/2227658180/2943622078759317376/]此帖[/url]。
+更多信息请见[url=https://cybrxkhansmods.godaddysites.com/faq]我模组网站的指南[/url]。
 
 谢谢！
 
@@ -53,7 +57,19 @@ Very Immersive Events and Tales (VIET)是[url=https://steamcommunity.com/sharedf
 
 [h1]版本号1.8.3 "奥卡姆的威廉"[/h1]
 
-[I][/I]
+[I]“满招损，谦受益。”
+——奥卡姆的威廉（1287–1347 CE）, 英国神学家、学者，最为著名的事迹是提出了“奥卡姆剃刀”[/I]
+
+该版本新增了[B]7[/B]个事件
+
+[LIST]
+[*]增加了7个小事件（顶多两句话）
+[*]增加了几个法国事件背景图
+[*]修复小漏洞
+[/LIST]
+
+完整更新日志请见此处：https://steamcommunity.com/sharedfiles/filedetails/changelog/2227658180
+
 
 *由CK2版本VIET改编
 
@@ -68,16 +84,18 @@ Very Immersive Events and Tales (VIET)是[url=https://steamcommunity.com/sharedf
 [*][url=https://steamcommunity.com/sharedfiles/filedetails/?id=2629092890]Rename Tribal Era to Late Antiquity[/url]把部落时代改成了古典时代晚期
 [/LIST]
 
+
+
 [img]http://i.imgur.com/GlNXL7m.jpg[/img]
 
-十分感谢WTWSMS团队（特别是ILikeTrians和Loup99）和Lux Invicta团队（包括tsf4），还有Hide Your Jewelry的制作者M@ni@c，他们数年以来对于CK2版本VIET的维护与改进，为我重制VIET Events提供了坚实基础。
+感谢多年以来所有与我共事的人、为我提供借鉴的人、鼓励我的人。十分感谢WTWSMS团队（特别是ILikeTrians和Loup99）和Lux Invicta团队（包括tsf4），也感谢“Hide Your Jewelry”的作者M@ni@c数年以来对于CK2版本VIET的维护与改进，为我重制VIET Events提供了坚实基础。我自知更新节奏古怪，所以非常感谢那些迁就我花时间翻译本模组的善良人们。
 
-也感谢OrdepNM，我CK2版本VIET早期的“同谋”，在我几年前健康状况堪忧时，也是OrdepNM站出来帮助维护这一模组的。
+特别感谢：
 
-特别感谢Sleight of Hand将我带入CK2模组制作的领域以及多年以来的帮助，我今天能在这里此人功不可没。
-
-感谢tora75给几个事件提供诺尔斯语本地化帮助。
-
-非常感谢花时间翻译本模组的善良人们——在Steam描述界面的"Features"栏中，能找到他们的名单。
-
-最后，感谢所有与我共事过的人、为我提供借鉴的人、鼓励我的人，还有向我提出反馈的人。
+[LIST]
+[*]制作精美VIET和RICE图标的Bonseny。
+[*]我CK2版本VIET早期的“同谋”——OrdepNM，在我几年前健康状况堪忧时站出来帮助维护这一模组。
+[*]特别感谢将我带入CK2模组制作的领域以及多年以来提供帮助的Sleight of Hand，我能有今天此人功不可没。
+[*]给几个事件提供诺尔斯语本地化帮助的tora75。
+[*]与我合作研究出如何将CK2省份事件代入CK3伯爵领事件的Stik、Vertimnus和Tobbzn。
+[/LIST]
