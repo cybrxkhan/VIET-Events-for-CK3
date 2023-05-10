@@ -37,7 +37,7 @@ Feel free to use my work in your mods - all I ask is that I am credited and (if 
 [h1]TRANSLATIONS AVAILABLE[/h1]
 Because people are kindly spending their own free time and effort to work on these transations, [B]please be aware that the folks working on these translations may or may not be up to date with the latest version of VIET[/B]. Do note that all non-English languages available in the vanilla game has placeholder English localization in the base version of VIET, so they can be safely run, it will just display untranslated text in English (instead of gibberish).
 [LIST]
-[*]Chinese - [url=https://paratranz.cn/projects/1580]a team led by Tbeabm[/url] has provided translation which is integrated into base VIET.
+[*]Chinese - [url=https://paratranz.cn/projects/1580]a team led by 9Milk(牛奶大魔王)[/url] has provided translation which is integrated into base VIET.
 [*]French - [url=https://steamcommunity.com/sharedfiles/filedetails/?id=2234027514]Available as sub-mod here[/url], thanks to Mouchi
 [*]German - [url=https://steamcommunity.com/sharedfiles/filedetails/?id=2865016522]Available as sub-mod here[/url], thanks to Dani
 [*]Japanese - [url=https://steamcommunity.com/sharedfiles/filedetails/?id=2762293648]Available as sub-mod here[/url], thanks to sla_domi
