@@ -35,7 +35,7 @@ Siéntete libre de usar mi trabajo con tus mods - todo lo que pido es reconocimi
 [h1]TRADUCCIONES DISPONIBLES[/h1]
 ¡Ahora tenemos cubiertos los idiomas oficiales! Por favvor, tened en cuenta que debido a mi horario irregular a la hora de actualizar los mods, los compañeros trabajando en las traducciones pueden o no estar al tanto de las últimas versiones de VIET, dado que están cediendo su tiempo amablemente para traducirlo desinteresadamente.. Tened en cuenta que todo el texto que no sea Inglés tiene un marcador de posición en la versión base de VIET.
 [LIST]
-[*]Chino - [url=https://paratranz.cn/projects/1580]un equipo liderado por Tbeabm ha proporcionado la traducción, integrada en VIET.
+[*]Chino - [url=https://paratranz.cn/projects/1580]un equipo liderado por 9Milk(牛奶大魔王) ha proporcionado la traducción, integrada en VIET.
 [*]Francés - [url=https://steamcommunity.com/sharedfiles/filedetails/?id=2234027514]Disponible como sub-mod aquí[/url], gracias a Mouchi
 [*]Alemán - [url=https://steamcommunity.com/sharedfiles/filedetails/?id=2447914570]Disponible como sub-mod aquí[/url], gracias a Ilusive
 [*]Coreano - [url=https://steamcommunity.com/sharedfiles/filedetails/?id=2227982565]Disponible como sub-mod aquí[/url], gracias a Ohboksu
