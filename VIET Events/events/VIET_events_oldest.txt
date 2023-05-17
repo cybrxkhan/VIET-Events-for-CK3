@@ -143,7 +143,7 @@ VIETold.0003 = {
 	title = VIETold.0003.t
 	desc = VIETold.0003.desc
 	theme = VIET_theme_tuscan_country
-	override_background = { event_background = wilderness_desert }
+	override_background = { reference = wilderness_desert }
 	
 	right_portrait = root
 
@@ -559,7 +559,7 @@ VIETold.0010 = {
 	title = VIETold.0010.t
 	desc = VIETold.0010.desc
 	theme = realm
-	override_background = { event_background = terrain }
+	override_background = { reference = terrain }
 	
 	right_portrait = root
 	
@@ -1229,7 +1229,7 @@ VIETold.0017 = {
 	title = VIETold.0017.t
 	desc = VIETold.0017.desc
 	theme = feast_activity
-	override_background = { event_background = tavern }
+	override_background = { reference = tavern }
 	
 	left_portrait = root
 
@@ -1328,7 +1328,7 @@ VIETold.0018 = {
 	title = VIETold.0018.t
 	desc = VIETold.0018.desc
 	theme = unfriendly
-	override_background = { event_background = throne_room }
+	override_background = { reference = throne_room }
 	
 	left_portrait = {
 		character = root
@@ -1563,7 +1563,7 @@ VIETold.0021 = {
 	title = VIETold.0021.t
 	desc = VIETold.0021.desc
 	theme = faith
-	override_background = { event_background = market }
+	override_background = { reference = market }
 	
 	left_portrait = {
 		character = root
@@ -1635,7 +1635,7 @@ VIETold.0022 = {
 	title = VIETold.0022.t
 	desc = VIETold.0022.desc
 	theme = faith
-	override_background = { event_background = throne_room }
+	override_background = { reference = throne_room }
 	
 	left_portrait = {
 		character = root
@@ -1660,7 +1660,7 @@ VIETold.0023 = {
 	title = VIETold.0023.t
 	desc = VIETold.0023.desc
 	theme = realm
-	override_background = { event_background = study }
+	override_background = { reference = study }
 	
 	left_portrait = {
 		character = root
@@ -1762,7 +1762,7 @@ VIETold.0024 = {
 	title = VIETold.0024.t
 	desc = VIETold.0024.desc
 	theme = realm
-	override_background = { event_background = study }
+	override_background = { reference = study }
 	
 	left_portrait = {
 		character = root
@@ -1832,7 +1832,7 @@ VIETold.0025 = {
 	title = VIETold.0025.t
 	desc = VIETold.0025.desc
 	theme = realm
-	override_background = { event_background = market }
+	override_background = { reference = market }
 	
 	left_portrait = {
 		character = root
@@ -1945,7 +1945,7 @@ VIETold.0026 = {
 	title = VIETold.0026.t
 	desc = VIETold.0026.desc
 	theme = friendly
-	override_background = { event_background = market }
+	override_background = { reference = market }
 	
 	left_portrait = {
 		character = root
@@ -2523,7 +2523,7 @@ VIETold.0032 = {
 	title = VIETold.0032.t
 	desc = VIETold.0032.desc
 	theme = unfriendly
-	override_background = { event_background = sitting_room }
+	override_background = { reference = sitting_room }
 	
 	left_portrait = {
 		character = root
@@ -2756,7 +2756,7 @@ VIETold.0034 = {
 	title = VIETold.0034.t
 	desc = VIETold.0034.desc
 	theme = battle
-	override_background = { event_background = VIET_background_tuscan_country }	
+	override_background = { reference = VIET_background_tuscan_country }	
 	
 	left_portrait = {
 		character = root
@@ -2924,7 +2924,7 @@ VIETold.0036 = {
 	title = VIETold.0036.t
 	desc = VIETold.0036.desc
 	theme = seduction
-	override_background = { event_background = tavern }	
+	override_background = { reference = tavern }	
 	
 	left_portrait = root
 	
@@ -3045,7 +3045,7 @@ VIETold.0037 = {
 	title = VIETold.0037.t
 	desc = VIETold.0037.desc
 	theme = seduction
-	override_background = { event_background = corridor_day }	
+	override_background = { reference = corridor_day }	
 	
 	left_portrait = root
 	
@@ -3218,7 +3218,7 @@ VIETold.0039 = {
 	title = VIETold.0039.t
 	desc = VIETold.0039.desc
 	theme = intrigue
-	override_background = { event_background = garden }	
+	override_background = { reference = garden }	
 	
 	left_portrait = {
 		character = root
@@ -3292,7 +3292,7 @@ VIETold.0040 = {
 	title = VIETold.0040.t
 	desc = VIETold.0040.desc
 	theme = unfriendly
-	override_background = { event_background = market }	
+	override_background = { reference = market }	
 	
 	left_portrait = {
 		character = root

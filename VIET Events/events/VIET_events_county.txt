@@ -318,7 +318,7 @@ VIETmisc.3003 = {
 	title = VIETmisc.3003.t
 	desc = VIETmisc.3003.desc
 	theme = intrigue
-	override_background = { event_background = alley_night }
+	override_background = { reference = alley_night }
 	
 	right_portrait = {
 		character = root
@@ -609,7 +609,7 @@ VIETmisc.3006 = {
 	title = VIETmisc.3006.t
 	desc = VIETmisc.3006.desc
 	theme = stewardship_domain_focus
-	override_background = { event_background = burning_building }
+	override_background = { reference = burning_building }
 	
 	right_portrait = {
 		character = root
@@ -690,7 +690,7 @@ VIETmisc.3007 = {
 	title = VIETmisc.3007.t
 	desc = VIETmisc.3007.desc
 	theme = death
-	override_background = { event_background = VIET_background_tuscan_country }
+	override_background = { reference = VIET_background_tuscan_country }
 	
 	right_portrait = root
 	
@@ -796,7 +796,7 @@ VIETmisc.3008 = {
 	title = VIETmisc.3008.t
 	desc = VIETmisc.3008.desc
 	theme = death
-	override_background = { event_background = VIET_background_tuscan_country }
+	override_background = { reference = VIET_background_tuscan_country }
 	
 	right_portrait = root
 
@@ -858,7 +858,7 @@ VIETmisc.3009 = {
 	title = VIETmisc.3009.t
 	desc = VIETmisc.3009.desc
 	theme = death
-	override_background = { event_background = VIET_background_tuscan_country }
+	override_background = { reference = VIET_background_tuscan_country }
 	
 	left_portrait = {
 		character = root
@@ -990,7 +990,7 @@ VIETmisc.3011 = {
 	title = VIETmisc.3011.t
 	desc = VIETmisc.3011.desc
 	theme = unfriendly
-	override_background = { event_background = VIET_background_tuscan_country }
+	override_background = { reference = VIET_background_tuscan_country }
 	
 	left_portrait = {
 		character = root
@@ -1176,7 +1176,7 @@ VIETmisc.3013 = {
 	title = VIETmisc.3013.t
 	desc = VIETmisc.3013.desc
 	theme = martial_chivalry_focus
-	override_background = { event_background = throne_room }
+	override_background = { reference = throne_room }
 	
 	left_portrait = root
 
@@ -2724,7 +2724,7 @@ VIETmisc.3027 = {
 	title = VIETmisc.3027.t
 	desc = VIETmisc.3027.desc
 	theme = death
-	override_background = { event_background = VIET_background_small_town }
+	override_background = { reference = VIET_background_small_town }
 	
 	left_portrait = {
 		character = root
@@ -2964,7 +2964,7 @@ VIETmisc.3028 = {
 	title = VIETmisc.3028.t
 	desc = VIETmisc.3028.desc
 	theme = unfriendly
-	override_background = { event_background = VIET_background_small_town }
+	override_background = { reference = VIET_background_small_town }
 	
 	left_portrait = {
 		character = root
@@ -3055,7 +3055,7 @@ VIETmisc.3029 = {
 	title = VIETmisc.3029.t
 	desc = VIETmisc.3029.desc
 	theme = death
-	override_background = { event_background = VIET_background_tuscan_country }
+	override_background = { reference = VIET_background_tuscan_country }
 	
 	left_portrait = {
 		character = root
@@ -3314,7 +3314,7 @@ VIETmisc.3032 = {
 	title = VIETmisc.3032.t
 	desc = VIETmisc.3032.desc
 	theme = death
-	override_background = { event_background = VIET_background_ancient_cairn }
+	override_background = { reference = VIET_background_ancient_cairn }
 	
 	left_portrait = root
 	
@@ -3459,7 +3459,7 @@ VIETmisc.3034 = {
 	title = VIETmisc.3034.t
 	desc = VIETmisc.3034.desc
 	theme = dread
-	override_background = { event_background = gallows }
+	override_background = { reference = gallows }
 	
 	left_portrait = {
 		character = root
@@ -3793,7 +3793,7 @@ VIETmisc.3038 = {
 	title = VIETmisc.3038.t
 	desc = VIETmisc.3038.desc
 	theme = faith
-	override_background = { event_background = VIET_background_small_town }
+	override_background = { reference = VIET_background_small_town }
 	
 	right_portrait = {
 		character = root
@@ -3915,7 +3915,7 @@ VIETmisc.3039 = {
 	title = VIETmisc.3039.t
 	desc = VIETmisc.3039.desc
 	theme = intrigue
-	override_background = { event_background = alley_night }
+	override_background = { reference = alley_night }
 	
 	right_portrait = {
 		character = root
@@ -4095,7 +4095,7 @@ VIETmisc.3041 = {
 	title = VIETmisc.3041.t
 	desc = VIETmisc.3041.desc
 	theme = corruption
-	override_background = { event_background = VIET_background_small_town }
+	override_background = { reference = VIET_background_small_town }
 	
 	left_portrait = root
 	right_portrait = {
@@ -4240,7 +4240,7 @@ VIETmisc.3042 = {
 	title = VIETmisc.3042.t
 	desc = VIETmisc.3042.desc
 	theme = faith
-	override_background = { event_background = VIET_background_tuscan_country }
+	override_background = { reference = VIET_background_tuscan_country }
 	
 	right_portrait = {
 		character = root
@@ -4389,7 +4389,7 @@ VIETmisc.3044 = {
 	title = VIETmisc.3044.t
 	desc = VIETmisc.3044.desc
 	theme = learning_scholarship_focus
-	override_background = { event_background = burning_building }
+	override_background = { reference = burning_building }
 	
 	right_portrait = {
 		character = root

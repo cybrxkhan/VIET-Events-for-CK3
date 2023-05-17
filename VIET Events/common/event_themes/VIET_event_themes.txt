@@ -56,7 +56,7 @@ VIET_theme_tuscan_country = {
 		reference = "event:/SFX/Events/Themes/sfx_event_theme_type_activity" #reference = @generic_event_theme_sound
 	}
 	background = {
-		event_background = VIET_background_tuscan_country
+		reference = VIET_background_tuscan_country
 	}
 }
 
@@ -68,7 +68,7 @@ VIET_theme_skyrim_forest = {
 		reference = "event:/SFX/Events/Themes/sfx_event_theme_type_activity"
 	}
 	background = {
-		event_background = VIET_background_skyrim_forest
+		reference = VIET_background_skyrim_forest
 	}
 }
 
@@ -80,7 +80,7 @@ VIET_theme_ancient_cairn = {
 		reference = "event:/SFX/Events/Themes/sfx_event_theme_type_activity"
 	}
 	background = {
-		event_background = VIET_background_ancient_cairn
+		reference = VIET_background_ancient_cairn
 	}
 }
 
@@ -92,7 +92,7 @@ VIET_theme_garden_generic = { # For when I don't want the lovey-dovey extras
 		reference = @generic_event_theme_sound
 	}
 	background = {
-		event_background = garden
+		reference = garden
 	}
 }
 
@@ -104,9 +104,10 @@ VIET_theme_kitchen_generic = {
 		reference = "event:/SFX/Events/Themes/sfx_event_theme_type_activity"
 	}
 	background = {
-		event_background = bp1_kitchen_western
+		reference = bp1_kitchen_western
 	}
 }
+
 
 
 #######################
@@ -121,7 +122,7 @@ VIET_theme_small_town = {
 		reference = @generic_event_theme_sound
 	}
 	background = {
-		event_background = VIET_background_small_town
+		reference = VIET_background_small_town
 	}
 }
 
@@ -138,7 +139,7 @@ VIET_theme_good_dream = {
 		reference = @generic_event_theme_sound
 	}
 	background = {
-		event_background = VIET_background_light_dream
+		reference = VIET_background_light_dream
 	}
 }
 
@@ -150,7 +151,7 @@ VIET_theme_nightmare = {
 		reference = "event:/SFX/Events/Themes/sfx_event_theme_type_health_bad"
 	}
 	background = {
-		event_background = VIET_background_nightmare
+		reference = VIET_background_nightmare
 	}
 }
 
@@ -162,7 +163,7 @@ VIET_theme_oblivion_pastoral_dream = {
 		reference = @generic_event_theme_sound
 	}
 	background = {
-		event_background = VIET_background_oblivion_pastoral_dream
+		reference = VIET_background_oblivion_pastoral_dream
 	}
 }
 
@@ -174,7 +175,7 @@ VIET_scarborough_fair = {
 		reference = "event:/SFX/Events/Themes/sfx_event_theme_type_activity"
 	}
 	background = {
-		event_background = VIET_background_scarborough_fair
+		reference = VIET_background_scarborough_fair
 	}
 }
 
@@ -186,7 +187,7 @@ VIET_lord_huron_strange_trails = {
 		reference = "event:/SFX/Events/Themes/sfx_event_theme_type_health_bad"
 	}
 	background = {
-		event_background = VIET_background_lord_huron_strange_trails
+		reference = VIET_background_lord_huron_strange_trails
 	}
 }
 
@@ -198,7 +199,7 @@ VIET_theme_oblivion_prison_sewer = {
 		reference = @generic_event_theme_sound
 	}
 	background = {
-		event_background = VIET_background_oblivion_prison_sewer
+		reference = VIET_background_oblivion_prison_sewer
 	}
 }
 
@@ -215,6 +216,6 @@ VIET_theme_office = {
 		reference = @generic_event_theme_sound
 	}
 	background = {
-		event_background = study
+		reference = study
 	}
 }

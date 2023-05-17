@@ -1371,7 +1371,7 @@ VIETmisc.0232.c:0 "Можно я тоже останусь послушать в
  VIETmisc.0275.a:0 "An interesting lesson! I learned quite a bit."
  VIETmisc.0275.b:0 "What boring nonsense! I fell asleep during the lesson."
  VIETmisc.0276.t:0 "Our Digits"
- VIETmisc.0276.desc:0 "One day, [child.GetFirstName] approaches me and asks, “Why do we have ten fingers and ten legs?”\n\nIt seems like such a simple question, but thinking about it further, I realize I don’t have a good answer for that off the top of my head."
+ VIETmisc.0276.desc:0 "One day, [child.GetFirstName] approaches me and asks, “Why do we have ten fingers and ten toes?”\n\nIt seems like such a simple question, but thinking about it further, I realize I don’t have a good answer for that off the top of my head."
  VIETmisc.0276.a:0 "[ROOT.Char.GetFaith.HighGodName] made humans that way, I’m sure."
  VIETmisc.0276.a.failure:0 "[child.GetFirstNameNoTooltip] is not convinced by the explanation"
  VIETmisc.0276.a.success:0 "[child.GetFirstNameNoTooltip] is convinced by the explanation"

@@ -227,7 +227,7 @@ VIETmisc.8002 = {
 	title = VIETmisc.8002.t
 	desc = VIETmisc.8002.desc
 	theme = friendly	
-	override_background = { event_background = bedchamber }
+	override_background = { reference = bedchamber }
 	
 	option = {
 		name = VIETmisc.8002.a
@@ -242,7 +242,7 @@ VIETmisc.8003 = {
 	title = VIETmisc.8003.t
 	desc = VIETmisc.8003.desc
 	theme = friendly	
-	override_background = { event_background = bedchamber }
+	override_background = { reference = bedchamber }
 	
 	option = {
 		name = VIETmisc.8003.a

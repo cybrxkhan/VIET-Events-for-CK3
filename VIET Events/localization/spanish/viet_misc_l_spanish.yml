@@ -69,3 +69,7 @@
  game_concept_clutter_artifact:0 "Artefacto curioso"
  game_concept_clutter_artifacts:0 "Artefactos curiosos"
  game_concept_clutter_artifact_desc:0 "Los $game_concept_clutter_artifacts$ son un tipo de [inventory_artifact|E] introducido por el mod VIET que a menudo se encuentran a través de eventos ocasionales. Representan diversos elementos cotidianos de un [character|E] que actualmente está usando en su vida, le gusta mucho, o que otros asocian a ellos.\n\nSi bien no hay límite para el número que teóricamente podría poseer, la probabilidad de encontrarlos #X decrece#! notablemente si ya tienes algunos, ¡considera cuidadosamente cuáles crees que son importantes para ti y el estilo de vida de tu personaje!"
+
+ VIETintro.0011.t:0 "The Journey Begins"
+ VIETintro.0011.desc:0 "It is time to start the journey to [ROOT.Char.GetTravelPlan.GetData.GetNextDestination.GetProvince.GetName] for the [ROOT.Char.GetInvolvedActivity.GetShortName]. I am sure the headache and hassle of organizing this trip will be worth it in the end when we reach our destination... or at least I'll have to hope that is the case, because otherwise all this stress over preparing for the trip would have been for nothing."
+ VIETintro.0011.a:0 "We go through these hassles for a good reason."

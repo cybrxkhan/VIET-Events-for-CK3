@@ -1,16 +1,14 @@
 ﻿##############################################################################################
 # 
-# VIET Setup
-# 
-# These events set up various aspects of the mod at the start of the game.
+# Miscellaneous important events
 # 
 ##############################################################################################
 
-namespace = VIETintro
+namespace = VIETmisc
 
 # Event to set things up
 VIETintro.0001 = {
-	type = empty
+	scope = none
 	hidden = yes
 	
 	immediate = {
@@ -21,4 +19,43 @@ VIETintro.0001 = {
 		character:VIET_character_005 = { make_unprunable = yes }
 	}
 
+}
+
+
+
+
+#Generic placeholder start
+VIETintro.0011 = {
+	type = character_event
+	title = VIETintro.0011.t
+	desc = VIETintro.0011.desc
+	theme = travel
+
+	left_portrait = root
+
+	
+	trigger = {
+		is_available_travelling = yes
+		is_landed = yes
+		involved_activity ?= {
+			OR = {
+				has_activity_type = activity_VIET_ancient_stone_monument_examination
+				has_activity_type = activity_VIET_burial_mound_visit
+				has_activity_type = activity_VIET_ghost_town_investigation
+				has_activity_type = activity_VIET_giant_shade_tree_visit
+				has_activity_type = activity_VIET_view_flower_meadows_in_bloom
+			}
+		}
+		# If running RICE, you'll use the RICE version since it's identical
+		NOT = { has_global_variable = is_RICE_loaded_global_variable }
+	}
+
+	immediate = {
+		play_music_cue = mx_cue_travel_start
+	}
+
+	# Ok
+	option = { 
+		name = VIETintro.0011.a
+	}
 }

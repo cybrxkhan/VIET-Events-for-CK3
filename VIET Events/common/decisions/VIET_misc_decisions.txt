@@ -605,13 +605,17 @@ VIET_decision_listen_to_wild_songbirds = {
 
 	effect = {
 		custom_tooltip = VIET_decision_listen_to_wild_songbirds_effect_tooltip
-		add_character_flag = planning_an_activity
-		capital_province = {
-			spawn_activity = {
-				type = activity_VIET_relaxation_with_songbirds
-				owner = root
-			}			
+		add_character_flag = {
+			flag = planning_an_activity
+			days = 1
 		}
+		# capital_province = {
+		# 	spawn_activity = {
+		# 		type = activity_VIET_relaxation_with_songbirds
+		# 		owner = root
+		# 	}			
+		# }
+		trigger_event = VIETmisc.2077
 		if = {
 			limit = {
 				has_game_rule = VIET_historical_context_on
@@ -633,40 +637,6 @@ VIET_decision_listen_to_wild_songbirds = {
 	}
 }
 
-
-#VIET_decision_tester = {
-#	picture = "gfx/interface/illustrations/decisions/decision_viet_qi_ma.dds"
-#	desc = VIET_decision_meet_qi_ma_the_liar_desc
-#
-#	ai_check_interval = 4 # Due to small timeframe, AI will choose whether to do it immediately
-#	
-#	cooldown = { days = 365 }
-#
-#	is_shown = {
-#		is_landed = yes
-#		debug_only = yes
-#	}
-#
-#	is_valid = {
-#		has_global_variable = VIET_qi_ma_is_active
-#	}
-#
-#	effect = {
-#		add_gold = 1
-#	}
-#
-#	cost = {
-#		gold = 1
-#	}
-#	
-#	ai_potential = {
-#		gold > 1
-#	}
-#
-#	ai_will_do = {
-#		base = 30
-#	}
-#}
 
 
 

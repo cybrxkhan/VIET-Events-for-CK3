@@ -1,0 +1,111 @@
+﻿
+
+VIET_view_flower_meadows_in_bloom_admiration_intent = {
+	icon = seduce_intent
+
+	auto_complete = yes
+
+	is_shown = {
+		
+	}
+
+	on_invalidated = {
+		trigger_event = activity_system.0090
+	}
+
+	ai_will_do = {
+		value = 1
+	}
+
+	scripted_animation = {
+		animation = happiness
+	}
+}
+
+VIET_burial_mound_visit_visitation_intent = {
+	icon = worldly_intent
+
+	auto_complete = yes
+
+	is_shown = {
+		
+	}
+
+	on_invalidated = {
+		trigger_event = activity_system.0090
+	}
+
+	ai_will_do = {
+		value = 1
+	}
+
+	scripted_animation = {
+		animation = happiness
+	}
+}
+
+VIET_ghost_town_investigation_curiosity_intent = {
+	icon = worldly_intent
+
+	auto_complete = yes
+
+	is_shown = {
+		
+	}
+
+	on_invalidated = {
+		trigger_event = activity_system.0090
+	}
+
+	ai_will_do = {
+		value = 1
+	}
+
+	scripted_animation = {
+		animation = happiness
+	}
+}
+
+VIET_giant_shade_tree_visit_relaxation_intent = {
+	icon = worldly_intent
+
+	auto_complete = yes
+
+	is_shown = {
+		
+	}
+
+	on_invalidated = {
+		trigger_event = activity_system.0090
+	}
+
+	ai_will_do = {
+		value = 1
+	}
+
+	scripted_animation = {
+		animation = happiness
+	}
+}
+
+VIET_ancient_stone_monument_examination_curiosity_intent = {
+	icon = worldly_intent
+
+	auto_complete = yes
+
+	is_shown = {
+		
+	}
+
+	on_invalidated = {
+		trigger_event = activity_system.0090
+	}
+
+	ai_will_do = {
+		value = 1
+	}
+
+	scripted_animation = {
+		animation = happiness
+	}
+}

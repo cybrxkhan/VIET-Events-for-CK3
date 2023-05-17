@@ -216,7 +216,7 @@ VIETtest.0008 = {
     }
 
 	immediate = {
-		hidden_effect_new_artifact = {
+		hidden_effect_new_object = {
 			create_artifact = {	
 				name = VIET_recipe_baklava_name
 				description = VIET_recipe_baklava_desc
@@ -233,7 +233,7 @@ VIETtest.0008 = {
 				add_artifact_modifier = artifact_diplomacy_per_prestige_level_modifier
 			}
 		}
-		# hidden_effect_new_artifact = {
+		# hidden_effect_new_object = {
 		# 	create_artifact = {	
 		# 		name = VIET_recipe_sweetroll_name
 		# 		description = VIET_recipe_sweetroll_desc
@@ -288,7 +288,7 @@ VIETtest.0009 = {
     }
 
 	immediate = {
-		hidden_effect_new_artifact = {
+		hidden_effect_new_object = {
 			create_artifact = {	
 				name = VIET_recipe_hummus_name
 				description = VIET_recipe_hummus_desc
@@ -342,7 +342,7 @@ VIETtest.0010 = {
     }
 
 	immediate = {
-		hidden_effect_new_artifact = {
+		hidden_effect_new_object = {
 			create_artifact = {	
 				name = VIET_lusty_argonian_maid_name
 				description = VIET_lusty_argonian_maid_desc

@@ -437,7 +437,7 @@ VIETold.2006 = {
 	title = VIETold.2006.t
 	desc = VIETold.2006.desc
 	theme = friendly	
-	override_background = { event_background = corridor_day }
+	override_background = { reference = corridor_day }
 	
 	right_portrait = root
 	
@@ -709,7 +709,7 @@ VIETold.2010 = {
 	title = VIETold.2010.t
 	desc = VIETold.2010.desc
 	theme = VIET_theme_small_town
-	override_background = { event_background = market }
+	override_background = { reference = market }
 	
 	left_portrait = {
 		character = root
@@ -987,7 +987,7 @@ VIETold.2014 = {
 	title = VIETold.2014.t
 	desc = VIETold.2014.desc
 	theme = seduction
-	override_background = { event_background = market }
+	override_background = { reference = market }
 	
 	left_portrait = {
 		character = root
@@ -1329,7 +1329,7 @@ VIETold.2019 = {
 	title = VIETold.2019.t
 	desc = VIETold.2019.desc
 	theme = realm	
-	override_background = { event_background = corridor_day }
+	override_background = { reference = corridor_day }
 	
 	left_portrait = {
 		character = root
@@ -1742,7 +1742,7 @@ VIETold.2025 = {
 	title = VIETold.2025.t
 	desc = VIETold.2025.desc
 	theme = unfriendly	
-	override_background = { event_background = corridor_day }
+	override_background = { reference = corridor_day }
 	
 	right_portrait = {
 		character = root
@@ -2598,7 +2598,7 @@ VIETold.2036 = {
 	title = VIETold.2036.t
 	desc = VIETold.2036.desc
 	theme = skull	
-	override_background = { event_background = corridor_day }
+	override_background = { reference = corridor_day }
 	
 	left_portrait = root
 
@@ -2673,7 +2673,7 @@ VIETold.2037 = {
 	title = VIETold.2037.t
 	desc = VIETold.2037.desc
 	theme = friendly	
-	override_background = { event_background = corridor_day }
+	override_background = { reference = corridor_day }
 	
 	left_portrait = root
 
@@ -3157,7 +3157,7 @@ VIETold.2045 = {
 	title = VIETold.2045.t
 	desc = VIETold.2045.desc
 	theme = war
-	override_background = { event_background = throne_room }
+	override_background = { reference = throne_room }
 	
 	left_portrait = {
 		character = root
@@ -3416,7 +3416,7 @@ VIETold.2049 = {
 	title = VIETold.2049.t
 	desc = VIETold.2049.desc
 	theme = faith
-	override_background = { event_background = throne_room }
+	override_background = { reference = throne_room }
 	
 	left_portrait = {
 		character = root
@@ -3492,7 +3492,7 @@ VIETold.2050 = {
 	title = VIETold.2050.t
 	desc = VIETold.2050.desc
 	theme = faith
-	override_background = { event_background = throne_room }
+	override_background = { reference = throne_room }
 	
 	left_portrait = {
 		character = root
@@ -3534,7 +3534,7 @@ VIETold.2051 = {
 	title = VIETold.2051.t
 	desc = VIETold.2051.desc
 	theme = faith
-	override_background = { event_background = market }
+	override_background = { reference = market }
 	
 	left_portrait = {
 		character = root
@@ -3595,7 +3595,7 @@ VIETold.2052 = {
 	title = VIETold.2052.t
 	desc = VIETold.2052.desc
 	theme = seduction
-	override_background = { event_background = corridor_night }
+	override_background = { reference = corridor_night }
 	
 	left_portrait = {
 		character = root
@@ -3723,7 +3723,7 @@ VIETold.2054 = {
 	title = VIETold.2054.t
 	desc = VIETold.2054.desc
 	theme = friendly	
-	override_background = { event_background = tavern }
+	override_background = { reference = tavern }
 	
 	right_portrait = root
 	
@@ -4152,7 +4152,7 @@ VIETold.2059 = {
 	title = VIETold.2059.t
 	desc = VIETold.2059.desc
 	theme = VIET_theme_small_town
-	override_background = { event_background = market }
+	override_background = { reference = market }
 	
 	right_portrait = {
 		character = root
@@ -4230,7 +4230,7 @@ VIETold.2060 = {
 	title = VIETold.2060.t
 	desc = VIETold.2060.desc
 	theme = friendly	
-	override_background = { event_background = corridor_day }
+	override_background = { reference = corridor_day }
 	
 	left_portrait = {
 		character = root
@@ -4300,7 +4300,7 @@ VIETold.2061 = {
 	title = VIETold.2061.t
 	desc = VIETold.2061.desc
 	theme = friendly	
-	override_background = { event_background = corridor_day }
+	override_background = { reference = corridor_day }
 	
 	left_portrait = {
 		character = root
@@ -4683,7 +4683,7 @@ VIETold.2065 = {
 	title = VIETold.2065.t
 	desc = VIETold.2065.desc
 	theme = martial_strategy_focus	
-	override_background = { event_background = tavern }
+	override_background = { reference = tavern }
 	
 	left_portrait = root
 	
@@ -5086,7 +5086,7 @@ VIETold.2070 = {
 	title = VIETold.2070.t
 	desc = VIETold.2070.desc
 	theme = friendly
-	override_background = { event_background = market }
+	override_background = { reference = market }
 	
 	left_portrait = {
 		character = root
@@ -5206,7 +5206,7 @@ VIETold.2072 = {
 	title = VIETold.2072.t
 	desc = VIETold.2072.desc
 	theme = love
-	override_background = { event_background = throne_room }
+	override_background = { reference = throne_room }
 	
 	left_portrait = {
 		character = root
@@ -5617,7 +5617,7 @@ VIETold.2077 = {
 	title = VIETold.2077.t	
 	desc = VIETold.2077.desc
 	theme = intrigue
-	#override_background = { event_background = sitting_room }
+	#override_background = { reference = sitting_room }
 	
 	right_portrait = {
 		character = root
@@ -5827,7 +5827,7 @@ VIETold.2080 = {
 	title = VIETold.2080.t	
 	desc = VIETold.2080.desc
 	theme = realm
-	override_background = { event_background = sitting_room }
+	override_background = { reference = sitting_room }
 	
 	left_portrait = {
 		character = root
@@ -5997,7 +5997,7 @@ VIETold.2082 = {
 	title = VIETold.2082.t	
 	desc = VIETold.2082.desc
 	theme = medicine
-	override_background = { event_background = throne_room }
+	override_background = { reference = throne_room }
 	
 	left_portrait = {
 		character = root
@@ -6148,7 +6148,7 @@ VIETold.2084 = {
 	title = VIETold.2084.t	
 	desc = VIETold.2084.desc
 	theme = family
-	override_background = { event_background = VIET_background_tuscan_country }
+	override_background = { reference = VIET_background_tuscan_country }
 	
 	left_portrait = root
 
@@ -7261,7 +7261,7 @@ VIETold.2097 = {
 	title = VIETold.2097.t	
 	desc = VIETold.2097.desc
 	theme = faith
-	override_background = { event_background = VIET_background_oblivion_pastoral_dream }
+	override_background = { reference = VIET_background_oblivion_pastoral_dream }
 	
 	left_portrait = {
 		character = root
@@ -7471,7 +7471,7 @@ VIETold.2102 = {
 	title = VIETold.2102.t	
 	desc = VIETold.2102.desc
 	theme = death
-	override_background = { event_background = corridor_night }
+	override_background = { reference = corridor_night }
 	
 	left_portrait = root
 
@@ -7517,7 +7517,7 @@ VIETold.2103 = {
 	title = VIETold.2103.t	
 	desc = VIETold.2103.desc
 	theme = death
-	override_background = { event_background = corridor_day }
+	override_background = { reference = corridor_day }
 	
 	left_portrait = {
 		character = root
@@ -7548,7 +7548,7 @@ VIETold.2104 = {
 	title = VIETold.2104.t	
 	desc = VIETold.2104.desc
 	theme = death
-	override_background = { event_background = sitting_room }
+	override_background = { reference = sitting_room }
 	
 	left_portrait = root
 
@@ -7623,7 +7623,7 @@ VIETold.2105 = {
 	title = VIETold.2105.t	
 	desc = VIETold.2105.desc
 	theme = death
-	override_background = { event_background = sitting_room }
+	override_background = { reference = sitting_room }
 	
 	left_portrait = {
 		character = root
@@ -7703,7 +7703,7 @@ VIETold.2107 = {
 	title = VIETold.2107.t	
 	desc = VIETold.2107.desc
 	theme = death
-	override_background = { event_background = throne_room }
+	override_background = { reference = throne_room }
 	
 	left_portrait = {
 		character = root
@@ -7888,7 +7888,7 @@ VIETold.2110 = {
 		}
 	}
 	theme = death
-	override_background = { event_background = feast }
+	override_background = { reference = feast }
 	
 	left_portrait = {
 		character = root
@@ -8197,7 +8197,7 @@ VIETold.2114 = {
 	title = VIETold.2114.t	
 	desc = VIETold.2114.desc
 	theme = friendly
-	override_background = { event_background = corridor_night }
+	override_background = { reference = corridor_night }
 	
 	left_portrait = {
 		character = scope:scope_VIET_cute_death
@@ -8217,7 +8217,7 @@ VIETold.2115 = {
 	title = VIETold.2115.t	
 	desc = VIETold.2115.desc
 	theme = death
-	override_background = { event_background = throne_room }
+	override_background = { reference = throne_room }
 	
 	left_portrait = {
 		character = root
@@ -8312,7 +8312,7 @@ VIETold.2117 = {
 	title = VIETold.2117.t	
 	desc = VIETold.2117.desc
 	theme = death
-	override_background = { event_background = throne_room }
+	override_background = { reference = throne_room }
 	
 	right_portrait = root
 
@@ -8380,7 +8380,7 @@ VIETold.2118 = {
 	title = VIETold.2118.t	
 	desc = VIETold.2118.desc
 	theme = faith
-	override_background = { event_background = study }
+	override_background = { reference = study }
 	
 	left_portrait = {
 		character = root
@@ -8432,7 +8432,7 @@ VIETold.2119 = {
 	title = VIETold.2119.t	
 	desc = VIETold.2119.desc
 	theme = faith
-	override_background = { event_background = sitting_room }
+	override_background = { reference = sitting_room }
 	
 	left_portrait = {
 		character = root
@@ -8727,7 +8727,7 @@ VIETold.2124 = {
 	title = VIETold.2124.t	
 	desc = VIETold.2124.desc
 	theme = faith
-	override_background = { event_background = market }
+	override_background = { reference = market }
 	
 	left_portrait = {
 		character = root
@@ -8778,7 +8778,7 @@ VIETold.2125 = {
 	title = VIETold.2125.t	
 	desc = VIETold.2125.desc
 	theme = death
-	override_background = { event_background = throne_room }
+	override_background = { reference = throne_room }
 	
 	left_portrait = {
 		character = root
@@ -8866,7 +8866,7 @@ VIETold.2126 = {
 	title = VIETold.2126.t	
 	desc = VIETold.2126.desc
 	theme = unfriendly
-	override_background = { event_background = corridor_day }
+	override_background = { reference = corridor_day }
 	
 	right_portrait = root
 
@@ -8960,7 +8960,7 @@ VIETold.2127 = {
 	title = VIETold.2127.t	
 	desc = VIETold.2127.desc
 	theme = death
-	override_background = { event_background = VIET_background_ancient_cairn }
+	override_background = { reference = VIET_background_ancient_cairn }
 	
 	left_portrait = {
 		character = root
@@ -9145,7 +9145,7 @@ VIETold.2130 = {
 	title = VIETold.2130.t	
 	desc = VIETold.2130.desc
 	theme = seduction
-	override_background = { event_background = throne_room }
+	override_background = { reference = throne_room }
 	
 	left_portrait = {
 		character = root
@@ -9262,7 +9262,7 @@ VIETold.2132 = {
 	title = VIETold.2132.t	
 	desc = VIETold.2132.desc
 	theme = unfriendly
-	override_background = { event_background = VIET_background_skyrim_forest }
+	override_background = { reference = VIET_background_skyrim_forest }
 	
 	left_portrait = {
 		character = root
@@ -9872,7 +9872,7 @@ VIETold.2139 = {
 	title = VIETold.2139.t	
 	desc = VIETold.2139.desc
 	theme = death
-	override_background = { event_background = fp1_ocean }
+	override_background = { reference = fp1_ocean }
 	
 	left_portrait = {
 		character = root
@@ -10241,7 +10241,7 @@ VIETold.2144 = {
 	title = VIETold.2144.t	
 	desc = VIETold.2144.desc
 	theme = unfriendly
-	override_background = { event_background = corridor_day }
+	override_background = { reference = corridor_day }
 	
 	left_portrait = {
 		character = root
@@ -10783,7 +10783,7 @@ VIETold.2151 = {
 	title = VIETold.2151.t	
 	desc = VIETold.2151.desc
 	theme = unfriendly
-	override_background = { event_background = corridor_night }
+	override_background = { reference = corridor_night }
 	
 	right_portrait = {
 		character = root
@@ -11403,7 +11403,7 @@ VIETold.2161 = {
 	title = VIETold.2161.t	
 	desc = VIETold.2161.desc
 	theme = faith
-	override_background = { event_background = garden }
+	override_background = { reference = garden }
 	
 	left_portrait = {
 		character = root
@@ -11656,7 +11656,7 @@ VIETold.2164 = {
 	title = VIETold.2164.t	
 	desc = VIETold.2164.desc
 	theme = medicine
-	override_background = { event_background = council_chamber }
+	override_background = { reference = council_chamber }
 	
 	left_portrait = {
 		character = root
@@ -11813,7 +11813,7 @@ VIETold.2166 = {
 	title = VIETold.2166.t	
 	desc = VIETold.2166.desc
 	theme = medicine	
-	override_background = { event_background = corridor_day }
+	override_background = { reference = corridor_day }
 	
 	right_portrait = root
 
@@ -12016,7 +12016,7 @@ VIETold.2169 = {
 	title = VIETold.2169.t	
 	desc = VIETold.2169.desc
 	theme = medicine
-	override_background = { event_background = tavern }
+	override_background = { reference = tavern }
 	
 	left_portrait = {
 		character = root
@@ -12366,7 +12366,7 @@ VIETold.2173 = {
 	title = VIETold.2173.t	
 	desc = VIETold.2173.desc
 	theme = feast_activity
-	override_background = { event_background = corridor_day }
+	override_background = { reference = corridor_day }
 	
 	left_portrait = root
 	
@@ -12456,7 +12456,7 @@ VIETold.2174 = {
 	title = VIETold.2174.t	
 	desc = VIETold.2174.desc
 	theme = friendly
-	override_background = { event_background = docks }
+	override_background = { reference = docks }
 	
 	right_portrait = {
 		character = root
@@ -12512,7 +12512,7 @@ VIETold.2175 = {
 	title = VIETold.2175.t	
 	desc = VIETold.2175.desc
 	theme = friendly
-	override_background = { event_background = VIET_background_small_town }
+	override_background = { reference = VIET_background_small_town }
 	
 	right_portrait = {
 		character = root
@@ -12583,7 +12583,7 @@ VIETold.2176 = {
 	title = VIETold.2176.t	
 	desc = VIETold.2176.desc
 	theme = feast_activity
-	override_background = { event_background = tavern }
+	override_background = { reference = tavern }
 	
 	left_portrait = {
 		character = root
@@ -12620,7 +12620,7 @@ VIETold.2177 = {
 	title = VIETold.2177.t	
 	desc = VIETold.2177.desc
 	theme = seduction
-	override_background = { event_background = study }
+	override_background = { reference = study }
 
 	trigger = {
 		NOT = { has_character_flag = VIET_generic_kdrama_happened_to_me }
@@ -12690,7 +12690,7 @@ VIETold.2178 = {
 		}
 	}
 	theme = seduction
-	override_background = { event_background = study }
+	override_background = { reference = study }
 
 	option = { # talk
 		name = VIETold.2178.a
@@ -12717,7 +12717,7 @@ VIETold.2179 = {
 		}
 	}
 	theme = seduction
-	override_background = { event_background = VIET_background_oblivion_pastoral_dream }
+	override_background = { reference = VIET_background_oblivion_pastoral_dream }
 
 	option = { # talk
 		name = VIETold.2179.a
@@ -12742,7 +12742,7 @@ VIETold.2180 = {
 		}
 	}
 	theme = seduction
-	override_background = { event_background = VIET_background_oblivion_pastoral_dream }
+	override_background = { reference = VIET_background_oblivion_pastoral_dream }
 
 	option = { # ok
 		name = VIETold.2180.a.female
@@ -12822,7 +12822,7 @@ VIETold.2181 = {
 		}
 	}
 	theme = seduction
-	override_background = { event_background = bedchamber }
+	override_background = { reference = bedchamber }
 
 	option = { # ok
 		name = VIETold.2181.a
@@ -12913,7 +12913,7 @@ VIETold.2183 = {
 	title = VIETold.2183.t	
 	desc = VIETold.2183.desc
 	theme = faith
-	override_background = { event_background = bedchamber }
+	override_background = { reference = bedchamber }
 
 	option = { # ok
 		name = VIETold.2183.a
@@ -13110,7 +13110,7 @@ VIETold.2186 = {
 		}
 	}
 	theme = friendly
-	override_background = { event_background = bedchamber }
+	override_background = { reference = bedchamber }
 
 	option = { # ok
 		name = VIETold.2186.a
@@ -13189,7 +13189,7 @@ VIETold.2187 = {
 	title = VIETold.2187.t	
 	desc = VIETold.2187.desc
 	theme = faith
-	override_background = { event_background = VIET_background_nightmare }
+	override_background = { reference = VIET_background_nightmare }
 	
 	# right_portrait = {
 	# 	character = root
@@ -13237,7 +13237,7 @@ VIETold.2188 = {
 	title = VIETold.2188.t	
 	desc = VIETold.2188.desc
 	theme = friendly
-	override_background = { event_background = bedchamber }
+	override_background = { reference = bedchamber }
 	
 	# right_portrait = {
 	# 	character = root
@@ -13291,7 +13291,7 @@ VIETold.2189 = {
 	title = VIETold.2189.t	
 	desc = VIETold.2189.desc
 	theme = faith
-	override_background = { event_background = bp1_kitchen_western }
+	override_background = { reference = bp1_kitchen_western }
 	
 	left_portrait = {
 		character = root
@@ -13850,7 +13850,7 @@ VIETold.2193 = {
 	title = VIETold.2193.t	
 	desc = VIETold.2193.desc
 	theme = feast_activity
-	override_background = { event_background = relaxing_room }
+	override_background = { reference = relaxing_room }
 	
 	right_portrait = {
 		character = root
@@ -13910,7 +13910,7 @@ VIETold.2194 = {
 	title = VIETold.2194.t	
 	desc = VIETold.2194.desc
 	theme = seduction
-	override_background = { event_background = relaxing_room }
+	override_background = { reference = relaxing_room }
 	
 	right_portrait = {
 		character = root
@@ -14571,7 +14571,7 @@ VIETold.2202 = {
 	title = VIETold.2202.t	
 	desc = VIETold.2202.desc
 	theme = medicine
-	override_background = { event_background = bp1_kitchen_western }
+	override_background = { reference = bp1_kitchen_western }
 	
 	left_portrait = {
 		character = root
@@ -14886,7 +14886,7 @@ VIETold.2205 = {
 	title = VIETold.2205.t	
 	desc = VIETold.2205.desc
 	theme = diplomacy_majesty_focus
-	override_background = { event_background = corridor_day }
+	override_background = { reference = corridor_day }
 	
 	right_portrait = {
 		character = root
@@ -14949,7 +14949,7 @@ VIETold.2206 = {
 	title = VIETold.2206.t	
 	desc = VIETold.2206.desc
 	theme = unfriendly
-	override_background = { event_background = corridor_day }
+	override_background = { reference = corridor_day }
 	
 	right_portrait = {
 		character = root
@@ -15046,7 +15046,7 @@ VIETold.2207 = {
 	title = VIETold.2207.t	
 	desc = VIETold.2207.desc
 	theme = unfriendly
-	override_background = { event_background = corridor_day }
+	override_background = { reference = corridor_day }
 	
 	right_portrait = {
 		character = root
@@ -15132,7 +15132,7 @@ VIETold.2208 = {
 	title = VIETold.2208.t	
 	desc = VIETold.2208.desc
 	theme = friendly
-	override_background = { event_background = relaxing_room }
+	override_background = { reference = relaxing_room }
 	
 	right_portrait = {
 		character = root
@@ -15191,7 +15191,7 @@ VIETold.2209 = {
 	title = VIETold.2209.t	
 	desc = VIETold.2209.desc
 	theme = friendly
-	override_background = { event_background = relaxing_room }
+	override_background = { reference = relaxing_room }
 	
 	right_portrait = {
 		character = root
@@ -15346,7 +15346,7 @@ VIETold.2211 = {
 	title = VIETold.2211.t	
 	desc = VIETold.2211.desc
 	theme = stewardship_duty_focus
-	override_background = { event_background = study }
+	override_background = { reference = study }
 	
 	left_portrait = {
 		character = root
@@ -15547,7 +15547,7 @@ VIETold.2214 = {
 	title = VIETold.2214.t	
 	desc = VIETold.2214.desc
 	theme = memory_diplomacy
-	override_background = { event_background = relaxing_room }
+	override_background = { reference = relaxing_room }
 	
 	right_portrait = {
 		character = root
@@ -15773,7 +15773,7 @@ VIETold.2217 = {
 	title = VIETold.2217.t	
 	desc = VIETold.2217.desc
 	theme = death
-	override_background = { event_background = VIET_background_skyrim_forest }
+	override_background = { reference = VIET_background_skyrim_forest }
 	
 	right_portrait = {
 		character = root
@@ -15918,7 +15918,7 @@ VIETold.2219 = {
 	title = VIETold.2219.t	
 	desc = VIETold.2219.desc
 	theme = martial
-	override_background = { event_background = corridor_day }
+	override_background = { reference = corridor_day }
 	
 	left_portrait = root
 
@@ -16114,7 +16114,7 @@ VIETold.2221 = {
 	title = VIETold.2221.t	
 	desc = VIETold.2221.desc
 	theme = faith
-	override_background = { event_background = tavern }
+	override_background = { reference = tavern }
 	
 	right_portrait = {
 		character = root
@@ -16189,7 +16189,7 @@ VIETold.2222 = {
 	title = VIETold.2222.t	
 	desc = VIETold.2222.desc
 	theme = mental_health
-	override_background = { event_background = VIET_background_small_town }
+	override_background = { reference = VIET_background_small_town }
 	
 	left_portrait = {
 		character = root
@@ -16308,7 +16308,7 @@ VIETold.2223 = {
 	title = VIETold.2223.t	
 	desc = VIETold.2223.desc
 	theme = mental_health
-	override_background = { event_background = VIET_background_small_town }
+	override_background = { reference = VIET_background_small_town }
 	
 	left_portrait = {
 		character = root
@@ -16386,7 +16386,7 @@ VIETold.2224 = {
 	title = VIETold.2224.t	
 	desc = VIETold.2224.desc
 	theme = memory_positive
-	override_background = { event_background = docks }
+	override_background = { reference = docks }
 	
 	left_portrait = {
 		character = root
@@ -16467,7 +16467,7 @@ VIETold.2225 = {
 	title = VIETold.2225.t	
 	desc = VIETold.2225.desc
 	theme = seduction
-	override_background = { event_background = relaxing_room }
+	override_background = { reference = relaxing_room }
 	
 	right_portrait = {
 		character = root
@@ -16535,7 +16535,7 @@ VIETold.2226 = {
 	title = VIETold.2226.t	
 	desc = VIETold.2226.desc
 	theme = seduction
-	override_background = { event_background = relaxing_room }
+	override_background = { reference = relaxing_room }
 	
 	right_portrait = {
 		character = root
@@ -16613,7 +16613,7 @@ VIETold.2227 = {
 	title = VIETold.2227.t	
 	desc = VIETold.2227.desc
 	theme = love
-	override_background = { event_background = garden }
+	override_background = { reference = garden }
 	
 	right_portrait = {
 		character = root
@@ -16702,7 +16702,7 @@ VIETold.2228 = {
 	title = VIETold.2228.t	
 	desc = VIETold.2228.desc
 	theme = friendly
-	override_background = { event_background = relaxing_room }
+	override_background = { reference = relaxing_room }
 	
 	right_portrait = {
 		character = root
@@ -16760,7 +16760,7 @@ VIETold.2229 = {
 	title = VIETold.2229.t	
 	desc = VIETold.2229.desc
 	theme = faith
-	override_background = { event_background = garden }
+	override_background = { reference = garden }
 	
 	right_portrait = {
 		character = root

@@ -42,7 +42,7 @@ VIET_background_tuscan_country = {
 
 	background = { # France
 		trigger = {
-			capital_province = {
+			location = {
 				geographical_region = world_europe_west_francia
 			}
 		}
@@ -53,7 +53,7 @@ VIET_background_tuscan_country = {
 
 	background = { # Central European
 		trigger = {
-			capital_province = {
+			location = {
 				OR = {
 					geographical_region = world_europe_west_germania
 					geographical_region = custom_hungary
@@ -67,7 +67,7 @@ VIET_background_tuscan_country = {
 
 	background = { # Northern European
 		trigger = {
-			capital_province = {
+			location = {
 				OR = {
 					geographical_region = world_europe_north
 					geographical_region = ghw_region_baltic
@@ -81,7 +81,7 @@ VIET_background_tuscan_country = {
 
 	background = { # Tibetan
 		trigger = {
-			capital_province = {
+			location = {
 				geographical_region = world_tibet
 			}
 		}
@@ -92,7 +92,7 @@ VIET_background_tuscan_country = {
 
 	background = { # Eastern Mediterranean
 		trigger = {
-			capital_province = {
+			location = {
 				OR = {
 					geographical_region = world_asia_minor
 					geographical_region = world_middle_east_jerusalem
@@ -107,7 +107,7 @@ VIET_background_tuscan_country = {
 
 	background = { # Middle Eastern/Tarim
 		trigger = {
-			capital_province = {
+			location = {
 				OR = {
 					geographical_region = world_middle_east
 					geographical_region = world_middle_east_persia
@@ -121,7 +121,7 @@ VIET_background_tuscan_country = {
 
 	background = { # Eastern Europe/Steppe/Siberia
 		trigger = {
-			capital_province = {
+			location = {
 				OR = {
 					geographical_region = world_steppe_west
 					geographical_region = world_steppe_east
@@ -137,7 +137,7 @@ VIET_background_tuscan_country = {
 
 	background = { # Western Europe
 		trigger = {
-			capital_province = {
+			location = {
 				#OR = {
 					geographical_region = world_europe_west_britannia
 					#geographical_region = world_europe_west_francia				
@@ -151,7 +151,7 @@ VIET_background_tuscan_country = {
 
 	background = { # West Indian
 		trigger = {
-			capital_province = {
+			location = {
 				OR = {
 					geographical_region = world_india_rajastan
 					geographical_region = world_india_deccan
@@ -165,7 +165,7 @@ VIET_background_tuscan_country = {
 
 	background = { # East Indian
 		trigger = {
-			capital_province = {
+			location = {
 				OR = {
 					geographical_region = world_burma
 					geographical_region = world_india_bengal
@@ -179,7 +179,7 @@ VIET_background_tuscan_country = {
 
 	background = { # Iberian
 		trigger = {
-			capital_province = {
+			location = {
 				geographical_region = world_europe_west_iberia
 			}
 		}
@@ -190,7 +190,7 @@ VIET_background_tuscan_country = {
 
 	background = { # Tarim Basin
 		trigger = {
-			capital_province = {
+			location = {
 				geographical_region = world_steppe_tarim
 			}
 		}
@@ -211,7 +211,7 @@ VIET_background_ancient_cairn = {
 
 	background = { # Iranian
 		trigger = {
-			capital_province = {
+			location = {
 				geographical_region = world_middle_east_persia
 			}
 		}
@@ -222,7 +222,7 @@ VIET_background_ancient_cairn = {
 
 	background = { # Levant
 		trigger = {
-			capital_province = {
+			location = {
 				geographical_region = world_middle_east_jerusalem
 			}
 		}
@@ -233,7 +233,7 @@ VIET_background_ancient_cairn = {
 
 	background = { # Greco-Roman
 		trigger = {
-			capital_province = {
+			location = {
 				OR = {
 					geographical_region = world_asia_minor
 					geographical_region = world_europe_south
@@ -247,7 +247,7 @@ VIET_background_ancient_cairn = {
 
 	background = { # India
 		trigger = {
-			capital_province = {
+			location = {
 				geographical_region = world_india
 			}
 		}
@@ -258,7 +258,7 @@ VIET_background_ancient_cairn = {
 
 	background = { # Tibet
 		trigger = {
-			capital_province = {
+			location = {
 				geographical_region = ghw_region_tibet
 			}
 		}
@@ -269,7 +269,7 @@ VIET_background_ancient_cairn = {
 
 	background = { # Middle Eastern/Africa
 		trigger = {
-			capital_province = {
+			location = {
 				geographical_region = graphical_mena
 				NOT = { geographical_region = world_middle_east_jerusalem }
 				NOT = { geographical_region = world_middle_east_persia }
@@ -282,7 +282,7 @@ VIET_background_ancient_cairn = {
 
 	background = { # Tarim
 		trigger = {
-			capital_province = {
+			location = {
 				geographical_region = world_steppe_tarim
 			}
 		}
@@ -293,7 +293,7 @@ VIET_background_ancient_cairn = {
 
 	background = { # Northern European
 		trigger = {
-			capital_province = {
+			location = {
 				OR = {
 					geographical_region = world_europe_north				
 					geographical_region = world_europe_east				
@@ -309,7 +309,7 @@ VIET_background_ancient_cairn = {
 
 	background = { # Celtic
 		trigger = {
-			capital_province = {
+			location = {
 				OR = {
 					geographical_region = custom_ireland
 					geographical_region = custom_scotland
@@ -334,7 +334,7 @@ VIET_background_small_town = {
 
 	background = { # Iberian
 		trigger = {
-			capital_province = {
+			location = {
 				geographical_region = world_europe_west_iberia
 			}
 		}
@@ -345,7 +345,7 @@ VIET_background_small_town = {
 
 	background = { # Non-Tropical African
 		trigger = {
-			capital_province = {
+			location = {
 				geographical_region = world_africa
 				NOT = { geographical_region = ghw_region_subsahelian_africa }
 			}
@@ -357,7 +357,7 @@ VIET_background_small_town = {
 
 	background = { # Tropical African
 		trigger = {
-			capital_province = {
+			location = {
 				geographical_region = ghw_region_subsahelian_africa
 			}
 		}
@@ -368,7 +368,7 @@ VIET_background_small_town = {
 
 	background = { # Eastern Mediterranean (Greece, Turkey, Sicily, etc.)
 		trigger = {
-			capital_province = {
+			location = {
 				OR = {
 					geographical_region = world_asia_minor
 					geographical_region = world_europe_south
@@ -384,7 +384,7 @@ VIET_background_small_town = {
 
 	background = { # Northern Mediterranean
 		trigger = {
-			capital_province = {
+			location = {
 				OR = {
 					geographical_region = ghw_region_balkans
 					geographical_region = ghw_region_caucasus
@@ -398,7 +398,7 @@ VIET_background_small_town = {
 
 	background = { # Tarim Basin/Steppe/Tibet
 		trigger = {
-			capital_province = {
+			location = {
 				OR = {
 					geographical_region = world_steppe_tarim
 					geographical_region = world_steppe_west
@@ -414,7 +414,7 @@ VIET_background_small_town = {
 
 	background = { # India
 		trigger = {
-			capital_province = {
+			location = {
 				OR = {
 					geographical_region = world_india
 					geographical_region = world_burma
@@ -428,7 +428,7 @@ VIET_background_small_town = {
 
 	background = { # Middle East
 		trigger = {
-			capital_province = {
+			location = {
 				OR = {
 					geographical_region = world_middle_east
 					geographical_region = world_middle_east_persia
@@ -442,7 +442,7 @@ VIET_background_small_town = {
 
 	background = { # Northern/Eastern European
 		trigger = {
-			capital_province = {
+			location = {
 				OR = {
 					geographical_region = world_europe_north
 					geographical_region = world_europe_east
@@ -457,7 +457,7 @@ VIET_background_small_town = {
 
 	background = { # Celtic
 		trigger = {
-			capital_province = {
+			location = {
 				OR = {
 					geographical_region = custom_ireland
 					geographical_region = custom_scotland
@@ -472,7 +472,7 @@ VIET_background_small_town = {
 
 	background = { # English
 		trigger = {
-			capital_province = {
+			location = {
 				OR = {
 					geographical_region = custom_england
 					geographical_region = dlc_fp1_region_western_adventure_targets_northern_france_brittany
@@ -498,7 +498,7 @@ VIET_background_skyrim_forest = {
 
 	background = { # Levant
 		trigger = {
-			capital_province = {
+			location = {
 				geographical_region = world_europe_west_francia
 			}
 		}
@@ -509,7 +509,7 @@ VIET_background_skyrim_forest = {
 
 	background = { # Levant
 		trigger = {
-			capital_province = {
+			location = {
 				geographical_region = world_middle_east_jerusalem
 			}
 		}
@@ -520,7 +520,7 @@ VIET_background_skyrim_forest = {
 
 	background = { # Hungary/Carpathia
 		trigger = {
-			capital_province = {
+			location = {
 				geographical_region = custom_carpathia
 			}
 		}
@@ -531,7 +531,7 @@ VIET_background_skyrim_forest = {
 
 	background = { # Iranian
 		trigger = {
-			capital_province = {
+			location = {
 				geographical_region = world_middle_east_persia
 			}
 		}
@@ -542,7 +542,7 @@ VIET_background_skyrim_forest = {
 
 	background = { # East African
 		trigger = {
-			capital_province = {
+			location = {
 				geographical_region = world_africa_east
 			}
 		}
@@ -553,7 +553,7 @@ VIET_background_skyrim_forest = {
 	
 	background = { # Eastern European
 		trigger = {
-			capital_province = {
+			location = {
 				OR = {
 					geographical_region = world_europe_east
 					geographical_region = world_europe_north
@@ -569,7 +569,7 @@ VIET_background_skyrim_forest = {
 
 	background = { # Western European
 		trigger = {
-			capital_province = {
+			location = {
 				geographical_region = world_europe_west_britannia
 				#geographical_region = world_europe_west_francia
 				#NOT = { geographical_region = world_europe_west_iberia } # Mediterranean
@@ -582,7 +582,7 @@ VIET_background_skyrim_forest = {
 
 	background = { # Steppe/Tibet
 		trigger = {
-			capital_province = {
+			location = {
 				OR = {
 					geographical_region = world_steppe_east
 					geographical_region = world_tibet
@@ -596,7 +596,7 @@ VIET_background_skyrim_forest = {
 
 	background = { # Northwest India
 		trigger = {
-			capital_province = {
+			location = {
 				geographical_region = world_india_rajastan
 			}
 		}
@@ -607,7 +607,7 @@ VIET_background_skyrim_forest = {
 
 	background = { # East and South India
 		trigger = {
-			capital_province = {
+			location = {
 				OR = {
 					geographical_region = world_india_bengal
 					geographical_region = world_india_deccan
@@ -622,7 +622,7 @@ VIET_background_skyrim_forest = {
 
 	background = { # Sub-Saharan West Africa
 		trigger = {
-			capital_province = {
+			location = {
 				geographical_region = world_africa_west
 			}
 		}
@@ -633,7 +633,7 @@ VIET_background_skyrim_forest = {
 
 	background = { # Mediterranean
 		trigger = {
-			capital_province = {
+			location = {
 				geographical_region = graphical_mediterranean
 				NOT = { geographical_region = world_europe_west_iberia }
 			}
@@ -645,7 +645,7 @@ VIET_background_skyrim_forest = {
 
 	background = { # Middle Eastern/North Africa
 		trigger = {
-			capital_province = {
+			location = {
 				OR = {
 					geographical_region = world_middle_east_jerusalem
 					geographical_region = world_middle_east_arabia
@@ -661,7 +661,7 @@ VIET_background_skyrim_forest = {
 
 	background = { # Iberian
 		trigger = {
-			capital_province = {
+			location = {
 				geographical_region = world_europe_west_iberia
 			}
 		}
@@ -672,7 +672,7 @@ VIET_background_skyrim_forest = {
 
 	background = { # Tarim Basin
 		trigger = {
-			capital_province = {
+			location = {
 				geographical_region = world_steppe_tarim
 			}
 		}

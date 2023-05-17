@@ -39,7 +39,7 @@ VIETmisc.4000 = {
 	title = VIETmisc.4000.t
 	desc = VIETmisc.4000.desc
 	theme = faith
-	override_background = { event_background = VIET_background_skyrim_forest }
+	override_background = { reference = VIET_background_skyrim_forest }
 	
 	left_portrait = root
 	
@@ -333,7 +333,7 @@ VIETmisc.4004 = {
 	title = VIETmisc.4004.t
 	desc = VIETmisc.4004.desc
 	theme = death
-	override_background = { event_background = alley_night }
+	override_background = { reference = alley_night }
 	
 	left_portrait = {
 		character = root
@@ -444,7 +444,7 @@ VIETmisc.4006 = {
 	title = VIETmisc.4006.t
 	desc = VIETmisc.4006.desc
 	theme = death
-	override_background = { event_background = alley_night }
+	override_background = { reference = alley_night }
 	
 	left_portrait = {
 		character = root
@@ -523,7 +523,7 @@ VIETmisc.4007 = {
 	title = VIETmisc.4007.t
 	desc = VIETmisc.4007.desc
 	theme = death
-	override_background = { event_background = throne_room }
+	override_background = { reference = throne_room }
 	
 	right_portrait = root
 	
@@ -587,7 +587,7 @@ VIETmisc.4008 = {
 	title = VIETmisc.4008.t
 	desc = VIETmisc.4008.desc
 	theme = death
-	override_background = { event_background = throne_room }
+	override_background = { reference = throne_room }
 	
 	right_portrait = root
 	
@@ -650,7 +650,7 @@ VIETmisc.4009 = {
 	title = VIETmisc.4009.t
 	desc = VIETmisc.4009.desc
 	theme = death
-	override_background = { event_background = alley_night }
+	override_background = { reference = alley_night }
 	
 	left_portrait = {
 		character = root
@@ -744,7 +744,7 @@ VIETmisc.4010 = {
 	title = VIETmisc.4010.t
 	desc = VIETmisc.4010.desc
 	theme = skull
-	override_background = { event_background = alley_night }
+	override_background = { reference = alley_night }
 	
 	left_portrait = {
 		character = root
@@ -907,7 +907,7 @@ VIETmisc.4013 = {
 	title = VIETmisc.4013.t
 	desc = VIETmisc.4013.desc
 	theme = faith
-	override_background = { event_background = VIET_background_skyrim_forest }
+	override_background = { reference = VIET_background_skyrim_forest }
 	
 	right_portrait = root
 	
@@ -1053,7 +1053,7 @@ VIETmisc.4015 = {
 	title = VIETmisc.4015.t
 	desc = VIETmisc.4015.desc
 	theme = death
-	override_background = { event_background = throne_room }
+	override_background = { reference = throne_room }
 	
 	left_portrait = {
 		character = root
@@ -1395,7 +1395,7 @@ VIETmisc.4019 = {
 	title = VIETmisc.4019.t
 	desc = VIETmisc.4019.desc
 	theme = realm
-	override_background = { event_background = docks }
+	override_background = { reference = docks }
 	
 	right_portrait = {
 		character = root
@@ -1546,7 +1546,7 @@ VIETmisc.4021 = {
 	title = VIETmisc.4021.t
 	desc = VIETmisc.4021.desc
 	theme = death
-	override_background = { event_background = VIET_background_skyrim_forest }
+	override_background = { reference = VIET_background_skyrim_forest }
 	
 	right_portrait = root
 	
@@ -1661,7 +1661,7 @@ VIETmisc.4022 = {
 	title = VIETmisc.4022.t
 	desc = VIETmisc.4022.desc
 	theme = death
-	override_background = { event_background = corridor_night }
+	override_background = { reference = corridor_night }
 	
 	right_portrait = {
 		character = root
@@ -1846,7 +1846,7 @@ VIETmisc.4024 = {
 	title = VIETmisc.4024.t
 	desc = VIETmisc.4024.desc
 	theme = death
-	override_background = { event_background = VIET_background_tuscan_country }
+	override_background = { reference = VIET_background_tuscan_country }
 	
 	right_portrait = root
 	
@@ -2115,7 +2115,7 @@ VIETmisc.4027 = {
 	title = VIETmisc.4027.t
 	desc = VIETmisc.4027.desc
 	theme = intrigue
-	override_background = { event_background = alley_night }
+	override_background = { reference = alley_night }
 	
 	left_portrait = {
 		character = root
@@ -2201,7 +2201,7 @@ VIETmisc.4028 = {
 	title = VIETmisc.4028.t
 	desc = VIETmisc.4028.desc
 	theme = intrigue
-	override_background = { event_background = alley_night }
+	override_background = { reference = alley_night }
 	
 	left_portrait = {
 		character = root
@@ -2301,7 +2301,7 @@ VIETmisc.4029 = {
 	title = VIETmisc.4029.t
 	desc = VIETmisc.4029.desc
 	theme = medicine
-	override_background = { event_background = VIET_background_small_town }
+	override_background = { reference = VIET_background_small_town }
 	
 	left_portrait = root
 	
@@ -2369,7 +2369,7 @@ VIETmisc.4030 = {
 	title = VIETmisc.4030.t
 	desc = VIETmisc.4030.desc
 	theme = faith
-	override_background = { event_background = VIET_background_ancient_cairn }
+	override_background = { reference = VIET_background_ancient_cairn }
 	
 	left_portrait = root
 	
@@ -2425,7 +2425,7 @@ VIETmisc.4031 = {
 	title = VIETmisc.4031.t
 	desc = VIETmisc.4031.desc
 	theme = death
-	override_background = { event_background = VIET_background_small_town }
+	override_background = { reference = VIET_background_small_town }
 	
 	left_portrait = root
 	
@@ -2495,7 +2495,7 @@ VIETmisc.4032 = {
 	title = VIETmisc.4032.t
 	desc = VIETmisc.4032.desc
 	theme = death
-	override_background = { event_background = VIET_background_ancient_cairn }
+	override_background = { reference = VIET_background_ancient_cairn }
 	
 	left_portrait = root
 	
@@ -2562,7 +2562,7 @@ VIETmisc.4033 = {
 	title = VIETmisc.4033.t
 	desc = VIETmisc.4033.desc
 	theme = death
-	override_background = { event_background = VIET_background_small_town }
+	override_background = { reference = VIET_background_small_town }
 	
 	left_portrait = root
 	
@@ -2626,7 +2626,7 @@ VIETmisc.4034 = {
 	title = VIETmisc.4034.t
 	desc = VIETmisc.4034.desc
 	theme = death
-	override_background = { event_background = alley_night }
+	override_background = { reference = alley_night }
 	
 	left_portrait = root
 	
@@ -2682,7 +2682,7 @@ VIETmisc.4035 = {
 	title = VIETmisc.4035.t
 	desc = VIETmisc.4035.desc
 	theme = corruption
-	override_background = { event_background = alley_night }
+	override_background = { reference = alley_night }
 	
 	left_portrait = root
 	

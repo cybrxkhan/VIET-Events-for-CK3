@@ -168,7 +168,7 @@ VIETmisc.3030.info:0 "#emphasis Исторический контекст:#! Х�
  VIETmisc.3033.t:0 "Flowers in Bloom"
  VIETmisc.3033.desc:0 "Lately, [county.GetNameNoTier] has become famous throughout the region for its flowers. There are certain meadows and fields in [county.GetNameNoTier] that are renowned for their natural beauty during springtime. As a result, many affluent locals like traveling to these meadows to witness to gaze upon a wondrous vision of color and life. "
  VIETmisc.3033.a:0 "Fascinating…. Perhaps I shall visit these flower meadows one day."
- VIETmisc.3033.tooltip:0 "For as long as any [county|E] in your [domain|E] has the [GetModifier('VIET_famous_flower_meadows').GetNameWithTooltip] [county_modifier|E], you will have access to the [decision|E] to #V View Flower Meadows in Bloom#!."
+ VIETmisc.3033.tooltip:0 "For as long as any [county|E] in your [domain|E] has the [GetModifier('VIET_famous_flower_meadows').GetNameWithTooltip] [county_modifier|E], you have access to the [GetActivityType( 'activity_VIET_view_flower_meadows_in_bloom' ).GetName] [activity|E]."
  # Version 1.5.4 Start Here - Please leave this comment and do not remove it
  # Version 1.6.0 Start Here - Please leave this comment and do not remove it
  VIETmisc.3034.t:0 "Struggle to the Death"

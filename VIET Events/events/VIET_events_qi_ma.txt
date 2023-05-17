@@ -166,7 +166,7 @@ VIETmonogatari.0001 = {
 
 # Ping to check if Qi Ma is gone
 VIETmonogatari.0002 = {
-	type = empty
+	scope = none
 	hidden = yes
 	
 	immediate = {	
@@ -201,7 +201,7 @@ VIETmonogatari.0003 = {
 
 # Qi Ma at the funeral (failsafe in case character dies before global variable can be reset)
 VIETmonogatari.0004 = {
-	type = empty
+	scope = none
 	hidden = yes
 	
 	trigger = {
@@ -220,7 +220,7 @@ VIETmonogatari.0005 = {
 	title = VIETmonogatari.0005.t
 	desc = VIETmonogatari.0005.desc
 	theme = crown
-	override_background = { event_background = tavern }
+	override_background = { reference = tavern }
 	
 	left_portrait = root
 	
@@ -842,7 +842,7 @@ VIETmonogatari.0201 = {
 	title = VIETmonogatari.0201.t
 	desc = VIETmonogatari.0201.desc
 	theme = realm
-	override_background = { event_background = fp1_ocean }
+	override_background = { reference = fp1_ocean }
 		
 	left_portrait = {
 		character = root
@@ -940,7 +940,7 @@ VIETmonogatari.0300 = {
 	title = VIETmonogatari.0300.t
 	desc = VIETmonogatari.0300.desc
 	theme = crown
-	override_background = { event_background = VIET_background_oblivion_pastoral_dream  }
+	override_background = { reference = VIET_background_oblivion_pastoral_dream  }
 	
 	left_portrait = {
 		character = root

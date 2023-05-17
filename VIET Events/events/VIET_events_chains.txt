@@ -121,7 +121,7 @@ VIETmisc.1001 = {
 	title = VIETmisc.1001.t
 	desc = VIETmisc.1001.desc
 	theme = love
-	override_background = { event_background = sitting_room }
+	override_background = { reference = sitting_room }
 	
 	left_portrait = {
 		character = root
@@ -183,7 +183,7 @@ VIETmisc.1002 = {
 		}
 	}
 	theme = love
-	override_background = { event_background = market }
+	override_background = { reference = market }
 	
 	#left_portrait = root
 	
@@ -220,7 +220,7 @@ VIETmisc.1003 = {
 		}
 	}
 	theme = love
-	override_background = { event_background = alley_day }
+	override_background = { reference = alley_day }
 	
 	#left_portrait = root
 	
@@ -256,7 +256,7 @@ VIETmisc.1004 = {
 		}
 	}
 	theme = love
-	override_background = { event_background = sitting_room }
+	override_background = { reference = sitting_room }
 	
 	left_portrait = {
 		character = root
@@ -295,7 +295,7 @@ VIETmisc.1005 = {
 		}
 	}
 	theme = love
-	override_background = { event_background = throne_room }
+	override_background = { reference = throne_room }
 	
 	option = {
 		name = VIETmisc.1005.a
@@ -329,7 +329,7 @@ VIETmisc.1006 = {
 		}
 	}
 	theme = love
-	override_background = { event_background = VIET_background_skyrim_forest }
+	override_background = { reference = VIET_background_skyrim_forest }
 	
 	left_portrait = {
 		character = root
@@ -351,7 +351,7 @@ VIETmisc.1007 = {
 	title = VIETmisc.1007.t
 	desc = VIETmisc.1007.desc
 	theme = love
-	override_background = { event_background = VIET_background_skyrim_forest }
+	override_background = { reference = VIET_background_skyrim_forest }
 	
 	#left_portrait = {
 	#	character = root
@@ -389,7 +389,7 @@ VIETmisc.1008 = {
 		}
 	}
 	theme = love
-	override_background = { event_background = VIET_background_skyrim_forest }
+	override_background = { reference = VIET_background_skyrim_forest }
 	
 	#left_portrait = root
 	
@@ -424,7 +424,7 @@ VIETmisc.1009 = {
 		}
 	}
 	theme = love
-	override_background = { event_background = VIET_background_skyrim_forest }
+	override_background = { reference = VIET_background_skyrim_forest }
 	
 	#left_portrait = root
 	
@@ -460,7 +460,7 @@ VIETmisc.1010 = {
 		}
 	}
 	theme = love
-	override_background = { event_background = VIET_background_skyrim_forest }
+	override_background = { reference = VIET_background_skyrim_forest }
 	
 	#left_portrait = root
 	
@@ -496,7 +496,7 @@ VIETmisc.1011 = {
 		}
 	}
 	theme = love
-	override_background = { event_background = VIET_background_skyrim_forest }
+	override_background = { reference = VIET_background_skyrim_forest }
 	
 	#left_portrait = root
 	
@@ -532,7 +532,7 @@ VIETmisc.1012 = {
 		}
 	}
 	theme = love
-	override_background = { event_background = garden }
+	override_background = { reference = garden }
 	
 	left_portrait = {
 		character = root
@@ -571,7 +571,7 @@ VIETmisc.1013 = {
 		}
 	}
 	theme = love
-	override_background = { event_background = garden }
+	override_background = { reference = garden }
 	
 	#left_portrait = {
 	#	character = root
@@ -633,7 +633,7 @@ VIETmisc.1014 = {
 		}
 	}
 	theme = love
-	override_background = { event_background = VIET_background_skyrim_forest }
+	override_background = { reference = VIET_background_skyrim_forest }
 	
 	#left_portrait = root
 	
@@ -669,7 +669,7 @@ VIETmisc.1015 = {
 		}
 	}
 	theme = love
-	override_background = { event_background = sitting_room }
+	override_background = { reference = sitting_room }
 	
 	left_portrait = {
 		character = root
@@ -732,7 +732,7 @@ VIETmisc.1016 = {
 		}
 	}
 	theme = love
-	override_background = { event_background = garden }
+	override_background = { reference = garden }
 	
 	#left_portrait = root
 	
@@ -768,7 +768,7 @@ VIETmisc.1017 = {
 		}
 	}
 	theme = love
-	override_background = { event_background = garden }
+	override_background = { reference = garden }
 	
 	#left_portrait = root
 	
@@ -804,7 +804,7 @@ VIETmisc.1018 = {
 		}
 	}
 	theme = love
-	override_background = { event_background = corridor_day }
+	override_background = { reference = corridor_day }
 	
 	#left_portrait = root
 	
@@ -841,7 +841,7 @@ VIETmisc.1019 = {
 		}
 	}
 	theme = love
-	override_background = { event_background = corridor_day }
+	override_background = { reference = corridor_day }
 	
 	#left_portrait = root
 	
@@ -876,7 +876,7 @@ VIETmisc.1020 = {
 		}
 	}
 	theme = love
-	override_background = { event_background = throne_room }
+	override_background = { reference = throne_room }
 	
 	left_portrait = {
 		character = root
@@ -938,7 +938,7 @@ VIETmisc.1021 = {
 		}
 	}
 	theme = love
-	override_background = { event_background = VIET_background_skyrim_forest }
+	override_background = { reference = VIET_background_skyrim_forest }
 	
 	#left_portrait = {
 	#	character = root
@@ -977,7 +977,7 @@ VIETmisc.1022 = {
 		}
 	}
 	theme = love
-	override_background = { event_background = VIET_background_skyrim_forest }
+	override_background = { reference = VIET_background_skyrim_forest }
 	
 	#left_portrait = root
 	
@@ -1014,7 +1014,7 @@ VIETmisc.1023 = {
 	title = VIETmisc.1023.t
 	desc = VIETmisc.1023.desc
 	theme = feast_activity
-	override_background = { event_background = sitting_room }
+	override_background = { reference = sitting_room }
 	
 	left_portrait = {
 		character = root
@@ -1077,7 +1077,7 @@ VIETmisc.1024 = {
 	title = VIETmisc.1024.t
 	desc = VIETmisc.1024.desc
 	theme = feast_activity
-	override_background = { event_background = throne_room }
+	override_background = { reference = throne_room }
 	
 	left_portrait = {
 		character = root
@@ -1190,7 +1190,7 @@ VIETmisc.1029 = {
 	title = VIETmisc.1029.t
 	desc = VIETmisc.1029.desc
 	theme = feast_activity
-	override_background = { event_background = sitting_room }
+	override_background = { reference = sitting_room }
 	
 	left_portrait = {
 		character = root
@@ -1244,7 +1244,7 @@ VIETmisc.1030 = {
 		}
 	}
 	theme = family
-	override_background = { event_background = sitting_room }
+	override_background = { reference = sitting_room }
 	
 	left_portrait = {
 		character = root
@@ -1312,7 +1312,7 @@ VIETmisc.1031 = {
 		}
 	}
 	theme = family
-	override_background = { event_background = sitting_room }
+	override_background = { reference = sitting_room }
 	
 	left_portrait = {
 		character = root
@@ -1352,7 +1352,7 @@ VIETmisc.1032 = {
 		}
 	}
 	theme = seduction
-	override_background = { event_background = sitting_room }
+	override_background = { reference = sitting_room }
 	
 	left_portrait = {
 		character = root
@@ -1396,7 +1396,7 @@ VIETmisc.1033 = {
 		}
 	}
 	theme = family
-	override_background = { event_background = sitting_room }
+	override_background = { reference = sitting_room }
 	
 	left_portrait = {
 		character = root
@@ -1427,7 +1427,7 @@ VIETmisc.1034 = {
 		}
 	}
 	theme = seduction
-	override_background = { event_background = sitting_room }
+	override_background = { reference = sitting_room }
 	
 	left_portrait = {
 		character = root
@@ -1458,7 +1458,7 @@ VIETmisc.1035 = {
 		}
 	}
 	theme = seduction
-	override_background = { event_background = sitting_room }
+	override_background = { reference = sitting_room }
 	
 	left_portrait = {
 		character = root
@@ -1622,7 +1622,7 @@ VIETmisc.1037 = {
 	title = VIETmisc.1037.t
 	desc = VIETmisc.1037.desc
 	theme = family
-	override_background = { event_background = VIET_background_oblivion_pastoral_dream }
+	override_background = { reference = VIET_background_oblivion_pastoral_dream }
 	
 	left_portrait = {
 		character = scope:scope_VIET_grandparent_dream
@@ -1642,7 +1642,7 @@ VIETmisc.1038 = {
 	title = VIETmisc.1038.t
 	desc = VIETmisc.1038.desc
 	theme = family
-	override_background = { event_background = VIET_background_oblivion_pastoral_dream }
+	override_background = { reference = VIET_background_oblivion_pastoral_dream }
 	
 	left_portrait = {
 		character = scope:scope_VIET_grandparent_dream
@@ -1662,7 +1662,7 @@ VIETmisc.1039 = {
 	title = VIETmisc.1039.t
 	desc = VIETmisc.1039.desc
 	theme = death
-	override_background = { event_background = sitting_room }
+	override_background = { reference = sitting_room }
 	
 	left_portrait = {
 		character = root
@@ -1714,7 +1714,7 @@ VIETmisc.1041 = {
 	title = VIETmisc.1041.t
 	desc = VIETmisc.1041.desc
 	theme = faith
-	override_background = { event_background = VIET_background_oblivion_pastoral_dream }
+	override_background = { reference = VIET_background_oblivion_pastoral_dream }
 	
 	left_portrait = {
 		character = scope:scope_VIET_grandparent_dream
@@ -1734,7 +1734,7 @@ VIETmisc.1042 = {
 	title = VIETmisc.1042.t
 	desc = VIETmisc.1042.desc
 	theme = death
-	override_background = { event_background = sitting_room }
+	override_background = { reference = sitting_room }
 	
 	left_portrait = {
 		character = root
@@ -1760,7 +1760,7 @@ VIETmisc.1043 = {
 	title = VIETmisc.1043.t
 	desc = VIETmisc.1043.desc
 	theme = faith
-	override_background = { event_background = sitting_room }
+	override_background = { reference = sitting_room }
 	
 	left_portrait = {
 		character = root
@@ -1780,7 +1780,7 @@ VIETmisc.1044 = {
 	title = VIETmisc.1044.t
 	desc = VIETmisc.1044.desc
 	theme = death
-	override_background = { event_background = VIET_background_light_dream }
+	override_background = { reference = VIET_background_light_dream }
 	
 	right_portrait = {
 		character = scope:scope_VIET_grandparent_dream
@@ -2042,7 +2042,7 @@ VIETmisc.1055 = {
 	title = VIETmisc.1055.t	
 	desc = VIETmisc.1055.desc
 	theme = unfriendly	
-	override_background = { event_background = corridor_day }
+	override_background = { reference = corridor_day }
 	
 	left_portrait = {
 		character = root
@@ -2072,7 +2072,7 @@ VIETmisc.1056 = {
 	title = VIETmisc.1056.t	
 	desc = VIETmisc.1056.desc
 	theme = friendly	
-	override_background = { event_background = corridor_night }
+	override_background = { reference = corridor_night }
 	
 	right_portrait = {
 		character = root
@@ -2101,7 +2101,7 @@ VIETmisc.1057 = {
 	title = VIETmisc.1057.t	
 	desc = VIETmisc.1057.desc
 	theme = unfriendly	
-	override_background = { event_background = corridor_night }
+	override_background = { reference = corridor_night }
 	
 	left_portrait = {
 		character = root
@@ -2135,7 +2135,7 @@ VIETmisc.1058 = {
 	title = VIETmisc.1058.t	
 	desc = VIETmisc.1058.desc
 	theme = unfriendly	
-	#override_background = { event_background = corridor_day }
+	#override_background = { reference = corridor_day }
 	
 	right_portrait = {
 		character = root
@@ -2249,7 +2249,7 @@ VIETmisc.1061 = {
 	title = VIETmisc.1061.t	
 	desc = VIETmisc.1061.desc
 	theme = mental_health
-	override_background = { event_background = feast }
+	override_background = { reference = feast }
 	
 	right_portrait = {
 		character = root
@@ -2283,7 +2283,7 @@ VIETmisc.1062 = {
 	title = VIETmisc.1062.t	
 	desc = VIETmisc.1062.desc
 	theme = death
-	override_background = { event_background = corridor_night }
+	override_background = { reference = corridor_night }
 	
 	left_portrait = {
 		character = root
@@ -2313,7 +2313,7 @@ VIETmisc.1063 = {
 	title = VIETmisc.1063.t	
 	desc = VIETmisc.1063.desc
 	theme = death
-	override_background = { event_background = bedchamber }
+	override_background = { reference = bedchamber }
 
 	immediate = {
 		play_music_cue = "mx_VIET_creepy_child_giggle"
@@ -2456,7 +2456,7 @@ VIETmisc.1066 = {
 	title = VIETmisc.1066.t	
 	desc = VIETmisc.1066.desc
 	theme = faith
-	override_background = { event_background = sitting_room }
+	override_background = { reference = sitting_room }
 
 	left_portrait = {
 		character = root
@@ -2557,7 +2557,7 @@ VIETmisc.1069 = {
 	title = VIETmisc.1069.t	
 	desc = VIETmisc.1069.desc
 	theme = friendly
-	override_background = { event_background = bedchamber }
+	override_background = { reference = bedchamber }
 
 	left_portrait = {
 		character = root
@@ -2642,7 +2642,7 @@ VIETmisc.1070 = {
 		desc = VIETmisc.1070.desc.conclusion
 	}
 	theme = memory_positive
-	override_background = { event_background = bedchamber }
+	override_background = { reference = bedchamber }
 
 	left_portrait = {
 		character = root
@@ -3101,7 +3101,8 @@ VIETmisc.1076 = {
 
 # Farewell to the Emperor
 VIETmisc.1077 = {
-	type = duel_event
+	type = character_event
+	window = duel_event
 	title = VIETmisc.1077.t
 	desc = VIETmisc.1077.desc
 	theme = VIET_theme_oblivion_prison_sewer
@@ -3196,7 +3197,8 @@ VIETmisc.1077 = {
 
 # Boink
 VIETmisc.1078 = {
-	type = duel_event
+	type = character_event
+	window = duel_event
 	title = VIETmisc.1078.t
 	desc = {
 		first_valid = {

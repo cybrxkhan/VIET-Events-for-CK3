@@ -1,0 +1,301 @@
+﻿
+
+VIET_view_flower_meadows_in_bloom_completed_log_entry_effect = {
+	scope:activity = {
+		add_activity_log_entry = {
+			key = VIET_view_flower_meadows_in_bloom_completed_log
+			tags = { completed }
+			# this line below adds the entry to the Effects section of the conclusion UI
+			show_in_conclusion = yes
+			character = root
+			show_as_tooltip = {
+				scope:host = {
+					custom_tooltip = VIET_activity_result_gained_piety
+					stress_impact = {
+						base = miniscule_stress_impact_loss
+						content = miniscule_stress_impact_loss
+						humble = miniscule_stress_impact_loss
+						zealous = miniscule_stress_impact_loss
+					}
+				}
+				every_attending_character = {
+					limit = { NOT = { this = scope:host } }
+					custom = EVERY_ACTIVITY_PARTICIPANT_EFFECT
+					custom_tooltip = VIET_activity_result_gained_smaller_piety
+				}					
+			}
+		}
+	}
+}
+
+VIET_burial_mound_visit_completed_log_entry_effect = {
+	scope:activity = {
+		add_activity_log_entry = {
+			key = VIET_burial_mound_visit_completed_log
+			tags = { completed }
+			# this line below adds the entry to the Effects section of the conclusion UI
+			show_in_conclusion = yes
+			character = root
+			scope:host = {
+				VIET_huge_prestige_gain_effect = yes
+				if = {
+					limit = {
+						scope:county = { has_county_modifier = VIET_tomb_monument_warrior }
+					}
+					add_character_modifier = {
+						modifier = VIET_burial_mound_inspired_warrior
+						years = 8
+					}
+				}
+				else_if = {
+					limit = {
+						scope:county = { has_county_modifier = VIET_tomb_monument_holy }
+					}
+					add_character_modifier = {
+						modifier = VIET_burial_mound_inspired_holy
+						years = 8
+					}
+				}
+				else_if = {
+					limit = {
+						scope:county = { has_county_modifier = VIET_tomb_monument_ruler }
+					}
+					add_character_modifier = {
+						modifier = VIET_burial_mound_inspired_monarch
+						years = 8
+					}
+				}
+				if = {
+					limit = {
+						scope:activity = {
+							has_activity_option = {
+								category = special_type
+								option = VIET_burial_mound_visit_type_relax
+							}
+						}				
+					}
+					stress_impact = {
+						base = miniscule_stress_impact_loss
+						lazy = miniscule_stress_impact_loss
+					}
+				}
+				else_if = {
+					limit = {
+						scope:activity = {
+							has_activity_option = {
+								category = special_type
+								option = VIET_burial_mound_visit_type_investigate
+							}
+						}				
+					}
+					VIET_major_lifestyle_experience_gain_effect = yes
+				}
+				else_if = {
+					limit = {
+						scope:activity = {
+							has_activity_option = {
+								category = special_type
+								option = VIET_burial_mound_visit_type_venerate
+							}
+						}				
+					}
+					VIET_huge_piety_gain_effect = yes
+				}				
+			}
+			every_attending_character = {
+				limit = { NOT = { this = scope:host } }
+				custom = EVERY_ACTIVITY_PARTICIPANT_EFFECT
+				VIET_medium_prestige_gain_effect = yes
+			}
+		}
+	}
+}
+
+VIET_ghost_town_investigation_saw_something_completed_log_entry_effect = {
+	scope:activity = {
+		add_activity_log_entry = {
+			key = VIET_ghost_town_investigation_saw_something_completed_log
+			tags = { completed }
+			# this line below adds the entry to the Effects section of the conclusion UI
+			show_in_conclusion = yes
+			character = root
+			scope:host = {
+				VIET_massive_piety_gain_effect = yes
+				add_character_modifier = {
+					modifier = VIET_saw_a_ghost_town
+					years = 12
+				}
+			}
+			every_attending_character = {
+				limit = { NOT = { this = scope:host } }
+				custom = EVERY_ACTIVITY_PARTICIPANT_EFFECT
+				VIET_medium_piety_gain_effect = yes
+			}
+		}
+	}
+}
+
+VIET_ghost_town_investigation_nothing_completed_log_entry_effect = {
+	scope:activity = {
+		add_activity_log_entry = {
+			key = VIET_ghost_town_investigation_nothing_completed_log
+			tags = { completed }
+			# this line below adds the entry to the Effects section of the conclusion UI
+			show_in_conclusion = yes
+			character = root
+			scope:host = {
+				stress_impact = {
+					base = minor_stress_impact_loss
+					lazy = miniscule_stress_impact_loss
+					content = miniscule_stress_impact_loss
+				}
+			}
+			every_attending_character = {
+				limit = { NOT = { this = scope:host } }
+				custom = EVERY_ACTIVITY_PARTICIPANT_EFFECT
+				stress_impact = {
+					base = miniscule_stress_impact_loss
+				}
+			}
+		}
+	}
+}
+
+VIET_ghost_town_investigation_guard_saw_something_belief_completed_log_entry_effect = {
+	scope:activity = {
+		add_activity_log_entry = {
+			key = VIET_ghost_town_investigation_guard_saw_something_belief_completed_log
+			tags = { completed }
+			# this line below adds the entry to the Effects section of the conclusion UI
+			show_in_conclusion = yes
+			character = root
+			scope:host = {
+				VIET_huge_piety_gain_effect = yes
+				stress_impact = {
+					cynical = miniscule_stress_impact_gain
+					arrogant = miniscule_stress_impact_gain
+				}
+			}
+			every_attending_character = {
+				limit = { NOT = { this = scope:host } }
+				custom = EVERY_ACTIVITY_PARTICIPANT_EFFECT
+				VIET_small_piety_gain_effect = yes
+			}
+		}
+	}
+}
+
+VIET_ghost_town_investigation_guard_saw_something_disbelief_completed_log_entry_effect = {
+	scope:activity = {
+		add_activity_log_entry = {
+			key = VIET_ghost_town_investigation_guard_saw_something_disbelief_completed_log
+			tags = { completed }
+			# this line below adds the entry to the Effects section of the conclusion UI
+			show_in_conclusion = yes
+			character = root
+			scope:host = {
+				VIET_huge_prestige_gain_effect = yes
+				stress_impact = {
+					trusting = miniscule_stress_impact_gain
+					zealous = miniscule_stress_impact_gain
+				}
+			}
+			every_attending_character = {
+				limit = { NOT = { this = scope:host } }
+				custom = EVERY_ACTIVITY_PARTICIPANT_EFFECT
+				VIET_small_prestige_gain_effect = yes
+			}
+		}
+	}
+}
+
+VIET_giant_shade_tree_visit_completed_log_entry_effect = {
+	scope:activity = {
+		add_activity_log_entry = {
+			key = VIET_giant_shade_tree_visit_completed_log
+			tags = { completed }
+			# this line below adds the entry to the Effects section of the conclusion UI
+			show_in_conclusion = yes
+			character = root
+			scope:host = {
+				stress_impact = {
+					base = medium_stress_impact_loss
+					lazy = minor_stress_impact_loss
+					content = minor_stress_impact_loss
+					calm = miniscule_stress_impact_loss
+					patient = miniscule_stress_impact_loss
+					compassionate = miniscule_stress_impact_loss
+				}
+			}
+			every_attending_character = {
+				limit = { NOT = { this = scope:host } }
+				custom = EVERY_ACTIVITY_PARTICIPANT_EFFECT
+				stress_impact = {
+					base = miniscule_stress_impact_loss
+				}
+			}
+		}
+	}
+}
+
+VIET_ancient_stone_monument_relax_completed_log_entry_effect = {
+	scope:activity = {
+		add_activity_log_entry = {
+			key = VIET_ancient_stone_monument_relax_completed_log
+			tags = { completed }
+			# this line below adds the entry to the Effects section of the conclusion UI
+			show_in_conclusion = yes
+			character = root
+			scope:host = {
+				VIET_huge_piety_gain_effect = yes
+				stress_impact = {
+					base = minor_stress_impact_loss
+					lazy = miniscule_stress_impact_loss
+					content = miniscule_stress_impact_loss
+					calm = miniscule_stress_impact_loss
+				}
+			}
+			every_attending_character = {
+				limit = { NOT = { this = scope:host } }
+				custom = EVERY_ACTIVITY_PARTICIPANT_EFFECT
+				VIET_medium_piety_gain_effect = yes
+				stress_impact = {
+					base = miniscule_stress_impact_loss
+				}
+			}
+		}
+	}
+}
+
+VIET_ancient_stone_monument_study_completed_log_entry_effect = {
+	scope:activity = {
+		add_activity_log_entry = {
+			key = VIET_ancient_stone_monument_study_completed_log
+			tags = { completed }
+			# this line below adds the entry to the Effects section of the conclusion UI
+			show_in_conclusion = yes
+			character = root
+			scope:host = {
+				VIET_medium_prestige_gain_effect = yes
+				add_character_modifier = {
+					modifier = VIET_examined_ancient_stone_monument
+					years = 10
+				}
+				stress_impact = {
+					lazy = minor_stress_impact_gain
+				}
+			}
+			every_attending_character = {
+				limit = { NOT = { this = scope:host } }
+				custom = EVERY_ACTIVITY_PARTICIPANT_EFFECT
+				VIET_small_prestige_gain_effect = yes
+			}
+		}
+	}
+}
+
+
+
+
+
+

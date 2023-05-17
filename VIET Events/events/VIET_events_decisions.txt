@@ -157,7 +157,7 @@ VIETmisc.2002 = {
 	desc = VIETmisc.2002.desc
 	theme = VIET_theme_small_town #feast_activity
 	override_icon = { reference = "gfx/interface/icons/event_types/type_feast.dds" }
-	#override_background = { event_background = market }
+	#override_background = { reference = market }
 	
 	left_portrait = {
 		character = root
@@ -324,7 +324,7 @@ VIETmisc.2005 = {
 	desc = VIETmisc.2005.desc
 	theme = VIET_theme_small_town #feast_activity
 	override_icon = { reference = "gfx/interface/icons/event_types/type_feast.dds" }
-	#override_background = { event_background = market }
+	#override_background = { reference = market }
 	
 	left_portrait = {
 		character = root
@@ -841,7 +841,7 @@ VIETmisc.2017 = {
 		}
 	}
 	theme = friendly
-	override_background = { event_background = corridor_night }
+	override_background = { reference = corridor_night }
 	
 	left_portrait = {
 		character = root
@@ -1076,7 +1076,7 @@ VIETmisc.2020 = {
 					}
 				}
 				add_character_flag = VIET_decision_chest_golden_rose
-				hidden_effect_new_artifact = {
+				hidden_effect_new_object = {
 					create_artifact = {	
 						name = VIET_golden_rose_name
 						description = VIET_golden_rose_desc
@@ -1166,7 +1166,7 @@ VIETmisc.2021 = {
 	title = VIETmisc.2021.t
 	desc = VIETmisc.2021.desc
 	theme = martial_chivalry_focus
-	override_background = { event_background = tavern }
+	override_background = { reference = tavern }
 	
 	
 	left_portrait = root
@@ -1240,7 +1240,7 @@ VIETmisc.2022 = {
 	title = VIETmisc.2022.t
 	desc = VIETmisc.2022.desc
 	theme = martial_chivalry_focus
-	override_background = { event_background = tavern }
+	override_background = { reference = tavern }
 	
 	
 	left_portrait = {
@@ -1273,7 +1273,7 @@ VIETmisc.2023 = {
 	title = VIETmisc.2023.t
 	desc = VIETmisc.2023.desc
 	theme = corruption
-	override_background = { event_background = throne_room }
+	override_background = { reference = throne_room }
 	
 	
 	left_portrait = {
@@ -1401,7 +1401,7 @@ VIETmisc.2024 = {
 	title = VIETmisc.2024.t
 	desc = VIETmisc.2024.desc
 	theme = corruption
-	override_background = { event_background = throne_room }
+	override_background = { reference = throne_room }
 	
 	
 	left_portrait = {
@@ -1549,7 +1549,7 @@ VIETmisc.2025 = {
 	title = VIETmisc.2025.t
 	desc = VIETmisc.2025.desc
 	theme = corruption
-	override_background = { event_background = VIET_background_skyrim_forest }
+	override_background = { reference = VIET_background_skyrim_forest }
 	
 	
 	right_portrait = {
@@ -1575,7 +1575,7 @@ VIETmisc.2026 = {
 	title = VIETmisc.2026.t
 	desc = VIETmisc.2026.desc
 	theme = corruption
-	override_background = { event_background = VIET_background_skyrim_forest }
+	override_background = { reference = VIET_background_skyrim_forest }
 	
 	
 	right_portrait = {
@@ -1663,7 +1663,7 @@ VIETmisc.2027 = {
 	title = VIETmisc.2027.t
 	desc = VIETmisc.2027.desc
 	theme = battle
-	override_background = { event_background = VIET_background_skyrim_forest }	
+	override_background = { reference = VIET_background_skyrim_forest }	
 	
 	right_portrait = {
 		character = root
@@ -1685,7 +1685,7 @@ VIETmisc.2028 = {
 	title = VIETmisc.2028.t
 	desc = VIETmisc.2028.desc
 	theme = battle
-	override_background = { event_background = VIET_background_skyrim_forest }	
+	override_background = { reference = VIET_background_skyrim_forest }	
 	
 	right_portrait = {
 		character = root
@@ -1717,7 +1717,7 @@ VIETmisc.2029 = {
 	title = VIETmisc.2029.t
 	desc = VIETmisc.2029.desc
 	theme = battle
-	override_background = { event_background = VIET_background_skyrim_forest }	
+	override_background = { reference = VIET_background_skyrim_forest }	
 	
 	right_portrait = {
 		character = root
@@ -1750,7 +1750,7 @@ VIETmisc.2030 = {
 	title = VIETmisc.2030.t
 	desc = VIETmisc.2030.desc
 	theme = battle
-	override_background = { event_background = VIET_background_skyrim_forest }
+	override_background = { reference = VIET_background_skyrim_forest }
 	
 	right_portrait = {
 		character = root
@@ -1772,7 +1772,7 @@ VIETmisc.2031 = {
 	title = VIETmisc.2031.t
 	desc = VIETmisc.2031.desc
 	theme = battle
-	override_background = { event_background = VIET_background_skyrim_forest }
+	override_background = { reference = VIET_background_skyrim_forest }
 	
 	right_portrait = {
 		character = root
@@ -1796,7 +1796,7 @@ VIETmisc.2031 = {
 
 # Ping for outcome if nothing is done
 VIETmisc.2032 = {
-	type = empty
+	scope = none
 	hidden = yes
 	
 	immediate = {	
@@ -1879,7 +1879,7 @@ VIETmisc.2034 = {
 
 # Ping for unexpected outcome
 VIETmisc.2035 = {
-	type = empty
+	scope = none
 	hidden = yes
 	
 	immediate = {
@@ -2468,7 +2468,7 @@ VIETmisc.2047 = {
 	title = VIETmisc.2047.t
 	desc = VIETmisc.2047.desc
 	theme = skull
-	override_background = { event_background = courtyard }
+	override_background = { reference = courtyard }
 	
 	right_portrait = {
 		character = root
@@ -2560,7 +2560,7 @@ VIETmisc.2048 = {
 	title = VIETmisc.2048.t
 	desc = VIETmisc.2048.desc
 	theme = skull
-	override_background = { event_background = courtyard }
+	override_background = { reference = courtyard }
 	
 	left_portrait = {
 		character = root
@@ -2584,7 +2584,7 @@ VIETmisc.2049 = {
 	title = VIETmisc.2049.t
 	desc = VIETmisc.2049.desc
 	theme = skull
-	override_background = { event_background = council_chamber }
+	override_background = { reference = council_chamber }
 	
 	left_portrait = {
 		character = root
@@ -2594,7 +2594,7 @@ VIETmisc.2049 = {
 	immediate = {
 		capital_province = { save_scope_as = capital_province } #For loc.
 		# Stop characters from planning multiple activities at once.
-		add_character_flag = planning_an_activity
+		#add_character_flag = planning_an_activity
 		add_character_flag = VIET_doing_crow_activities
 	}
 	
@@ -2610,11 +2610,77 @@ VIETmisc.2049 = {
 		}
 		custom_tooltip = VIETmisc.2049.a.tooltip
 		# Choose appropriate location
-		scope:capital_province = {	
-			spawn_activity = {
-				owner = root
-				type = activity_VIET_crow_removal
-			}	
+		# scope:capital_province = {	
+		# 	spawn_activity = {
+		# 		owner = root
+		# 		type = activity_VIET_crow_removal
+		# 	}	
+		# }
+		hidden_effect = {
+			random_list = {
+				# Crows are gone for good
+				40 = {
+					modifier = {
+						add = 4
+						dread > 25
+					}
+					modifier = {
+						add = 6
+						dread > 50
+					}
+					modifier = {
+						add = 8
+						dread > 75
+					}
+					modifier = {
+						add = 5
+						num_virtuous_traits >= 1
+					}
+					modifier = {
+						add = 5
+						has_trait = humble
+					}
+					modifier = {
+						add = 5
+						has_trait = compassionate
+					}
+					modifier = {
+						add = 5
+						has_trait = patient
+					}
+					trigger_event = {
+						id = VIETmisc.2050
+						days = { 20 60 }
+					}				
+				}
+				# Crows take revenge on you
+				60 = {
+					modifier = {
+						add = 4
+						num_sinful_traits >= 1
+					}
+					modifier = {
+						add = 4
+						has_trait = arrogant
+					}
+					modifier = {
+						add = 4
+						has_trait = sadistic
+					}
+					modifier = {
+						add = 4
+						has_trait = wrathful
+					}
+					modifier = {
+						add = 4
+						has_trait = vengeful
+					}
+					trigger_event = {
+						id = VIETmisc.2051
+						days = { 20 60 }
+					}				
+				}
+			}
 		}
 	}	
 	option = { # Try to make peace with them
@@ -2630,11 +2696,17 @@ VIETmisc.2049 = {
 		}
 		custom_tooltip = VIETmisc.2049.b.tooltip
 		# Choose appropriate location
-		scope:capital_province = {	
-			spawn_activity = {
-				owner = root
-				type = activity_VIET_crow_appeasement
-			}	
+		# scope:capital_province = {	
+		# 	spawn_activity = {
+		# 		owner = root
+		# 		type = activity_VIET_crow_appeasement
+		# 	}	
+		# }
+		hidden_effect = {
+			trigger_event = {
+				id = VIETmisc.2052
+				days = { 15 35 }
+			}
 		}
 	}
 }
@@ -2646,7 +2718,7 @@ VIETmisc.2050 = {
 	title = VIETmisc.2050.t
 	desc = VIETmisc.2050.desc
 	theme = skull
-	override_background = { event_background = garden }
+	override_background = { reference = garden }
 	
 	left_portrait = {
 		character = root
@@ -2676,7 +2748,7 @@ VIETmisc.2051 = {
 	title = VIETmisc.2051.t
 	desc = VIETmisc.2051.desc
 	theme = skull
-	override_background = { event_background = garden }
+	override_background = { reference = garden }
 	
 	left_portrait = {
 		character = root
@@ -2766,7 +2838,7 @@ VIETmisc.2052 = {
 	title = VIETmisc.2052.t
 	desc = VIETmisc.2052.desc
 	theme = skull
-	override_background = { event_background = garden }
+	override_background = { reference = garden }
 	
 	left_portrait = {
 		character = root
@@ -2860,7 +2932,7 @@ VIETmisc.2053 = {
 	title = VIETmisc.2053.t
 	desc = VIETmisc.2053.desc
 	theme = skull
-	override_background = { event_background = garden }
+	override_background = { reference = garden }
 	
 	left_portrait = {
 		character = root
@@ -2885,7 +2957,7 @@ VIETmisc.2054 = {
 	title = VIETmisc.2054.t
 	desc = VIETmisc.2054.desc
 	theme = skull
-	override_background = { event_background = garden }
+	override_background = { reference = garden }
 	
 	left_portrait = {
 		character = root
@@ -2915,7 +2987,7 @@ VIETmisc.2055 = {
 	title = VIETmisc.2055.t
 	desc = VIETmisc.2055.desc
 	theme = skull
-	override_background = { event_background = garden }
+	override_background = { reference = garden }
 	
 	left_portrait = {
 		character = root
@@ -3020,7 +3092,7 @@ VIETmisc.2056 = {
 	title = VIETmisc.2056.t
 	desc = VIETmisc.2056.desc
 	theme = battle	
-	override_background = { event_background = VIET_background_tuscan_country }
+	override_background = { reference = VIET_background_tuscan_country }
 	
 	right_portrait = {
 		character = root
@@ -3076,7 +3148,7 @@ VIETmisc.2057 = {
 	title = VIETmisc.2057.t
 	desc = VIETmisc.2057.desc
 	theme = skull
-	override_background = { event_background = garden }
+	override_background = { reference = garden }
 	
 	left_portrait = {
 		character = root
@@ -3211,7 +3283,7 @@ VIETmisc.2058 = {
 	title = VIETmisc.2058.t
 	desc = VIETmisc.2058.desc
 	theme = skull
-	override_background = { event_background = garden }
+	override_background = { reference = garden }
 	
 	left_portrait = {
 		character = root
@@ -3583,7 +3655,7 @@ VIETmisc.2064 = {
 
 # Visit the burial mound
 VIETmisc.2065 = {
-	type = character_event
+	type = activity_event
 	title = VIETmisc.2065.t	
 	desc = {
 		desc = VIETmisc.2065.desc
@@ -3617,69 +3689,172 @@ VIETmisc.2065 = {
 	
 	immediate = {
 		play_music_cue = mx_cue_sacredrite
+		scope:activity.activity_location.county = {
+			save_scope_as = county			
+		}		
 	}
 	
 	option = { # Results
 		name = VIETmisc.2065.a
-		if = {
-			limit = {
-				scope:county = { has_county_modifier = VIET_tomb_monument_warrior }
-			}
-			add_character_modifier = {
-				modifier = VIET_burial_mound_inspired_warrior
-				years = 8
-			}
-		}
-		if = {
-			limit = {
-				scope:county = { has_county_modifier = VIET_tomb_monument_holy }
-			}
-			add_character_modifier = {
-				modifier = VIET_burial_mound_inspired_holy
-				years = 8
-			}
-		}
-		if = {
-			limit = {
-				scope:county = { has_county_modifier = VIET_tomb_monument_ruler }
-			}
-			add_character_modifier = {
-				modifier = VIET_burial_mound_inspired_monarch
-				years = 8
-			}
-		}
+		VIET_burial_mound_visit_completed_log_entry_effect = yes
+		# if = {
+		# 	limit = {
+		# 		scope:county = { has_county_modifier = VIET_tomb_monument_warrior }
+		# 	}
+		# 	add_character_modifier = {
+		# 		modifier = VIET_burial_mound_inspired_warrior
+		# 		years = 8
+		# 	}
+		# }
+		# else_if = {
+		# 	limit = {
+		# 		scope:county = { has_county_modifier = VIET_tomb_monument_holy }
+		# 	}
+		# 	add_character_modifier = {
+		# 		modifier = VIET_burial_mound_inspired_holy
+		# 		years = 8
+		# 	}
+		# }
+		# else_if = {
+		# 	limit = {
+		# 		scope:county = { has_county_modifier = VIET_tomb_monument_ruler }
+		# 	}
+		# 	add_character_modifier = {
+		# 		modifier = VIET_burial_mound_inspired_monarch
+		# 		years = 8
+		# 	}
+		# }
+		# if = {
+		# 	limit = {
+		# 		scope:activity = {
+		# 			has_activity_option = {
+		# 				category = special_type
+		# 				option = VIET_burial_mound_visit_type_relax
+		# 			}
+		# 		}				
+		# 	}
+		# 	stress_impact = {
+		# 		base = miniscule_stress_impact_loss
+		# 		lazy = miniscule_stress_impact_loss
+		# 	}
+		# }
+		# else_if = {
+		# 	limit = {
+		# 		scope:activity = {
+		# 			has_activity_option = {
+		# 				category = special_type
+		# 				option = VIET_burial_mound_visit_type_investigate
+		# 			}
+		# 		}				
+		# 	}
+		# 	VIET_major_lifestyle_experience_gain_effect = yes
+		# }
+		# else_if = {
+		# 	limit = {
+		# 		scope:activity = {
+		# 			has_activity_option = {
+		# 				category = special_type
+		# 				option = VIET_burial_mound_visit_type_venerate
+		# 			}
+		# 		}				
+		# 	}
+		# 	VIET_huge_piety_gain_effect = yes
+		# }
 	}
 	
 	after = {
-		hidden_effect = {
+		if = {
+			limit = {
+				root = scope:host
+			}
 			scope:activity = {
-				complete_activity = yes
-			}		
-		}
-	}
+				# every_attending_character = {
+				# 	limit = { NOT = { this = scope:host } }
+				# 	custom = EVERY_ACTIVITY_PARTICIPANT_EFFECT
+				# 	VIET_medium_prestige_gain_effect = yes
+				# }
+				hidden_effect = { skip_activity_phase = yes }
+			}
+		}	
+	}	
 }
 
-# Ghost hunting
+# Ghost Town Investigation
 VIETmisc.2066 = {
-	type = character_event
+	type = activity_event
 	title = VIETmisc.2066.t
 	desc = VIETmisc.2066.desc
 	theme = death
-	override_background = { event_background = alley_night }
+	override_background = { reference = alley_night }
 	
 	
 	left_portrait = {
 		character = root
 		animation = paranoia
 	}
+
+	immediate = {
+		scope:activity.activity_location.county = {
+			save_scope_as = county			
+		}
+	}
 	
 	option = { # Ok
 		name = VIETmisc.2066.a
 		hidden_effect = {
 			random_list = {
-				25 = { trigger_event = VIETmisc.2067 } # See the ghosts
-				50 = { trigger_event = VIETmisc.2068 } # No ghosts show up
-				25 = { trigger_event = VIETmisc.2069 } # Guard claims to see it
+
+				# See the ghosts
+				25 = {					
+					modifier = {
+						add = 5
+						scope:activity = {
+							has_activity_option = {
+								category = VIET_ghost_town_investigation_sincerity_type
+								option = VIET_ghost_town_investigation_sincerity_type_serious
+							}
+						}
+					}
+					modifier = {
+						add = 10
+						scope:activity = {
+							has_activity_option = {
+								category = VIET_ghost_town_investigation_sincerity_type
+								option = VIET_ghost_town_investigation_sincerity_type_obsessed
+							}
+						}
+					}
+					trigger_event = VIETmisc.2067
+				} 
+
+				# No ghosts show up
+				50 = {
+					trigger_event = VIETmisc.2068
+				} 
+
+				# Guard claims to see it
+				25 = {
+					modifier = {
+						add = 5
+						scope:activity = {
+							has_activity_option = {
+								category = VIET_ghost_town_investigation_sincerity_type
+								option = VIET_ghost_town_investigation_sincerity_type_serious
+							}
+						}
+					}
+					modifier = {
+						add = 10
+						scope:activity = {
+							has_activity_option = {
+								category = VIET_ghost_town_investigation_sincerity_type
+								option = VIET_ghost_town_investigation_sincerity_type_obsessed
+							}
+						}
+					}
+					trigger_event = VIETmisc.2069
+				} 
+
 			}
 		}
 	}
@@ -3687,11 +3862,11 @@ VIETmisc.2066 = {
 
 # See the ghosts
 VIETmisc.2067 = {
-	type = character_event
+	type = activity_event
 	title = VIETmisc.2067.t
 	desc = VIETmisc.2067.desc
 	theme = death
-	override_background = { event_background = alley_night }
+	override_background = { reference = alley_night }
 	
 	
 	left_portrait = {
@@ -3704,30 +3879,29 @@ VIETmisc.2067 = {
 	}
 	
 	option = { # Ok
-		name = VIETmisc.2067.a
-		VIET_massive_piety_gain_effect = yes
-		add_character_modifier = {
-			modifier = VIET_saw_a_ghost_town
-			years = 12
-		}
+		name = VIETmisc.2067.a		
+		VIET_ghost_town_investigation_saw_something_completed_log_entry_effect = yes
 	}
 	
 	after = {
-		hidden_effect = {
+		if = {
+			limit = {
+				root = scope:host
+			}
 			scope:activity = {
-				complete_activity = yes
-			}		
-		}
+				hidden_effect = { skip_activity_phase = yes }
+			}
+		}	
 	}
 }
 
 # No ghosts show up
 VIETmisc.2068 = {
-	type = character_event
+	type = activity_event
 	title = VIETmisc.2068.t
 	desc = VIETmisc.2068.desc
 	theme = death
-	override_background = { event_background = alley_night }
+	override_background = { reference = alley_night }
 	
 	
 	left_portrait = {
@@ -3737,29 +3911,28 @@ VIETmisc.2068 = {
 	
 	option = { # Ok
 		name = VIETmisc.2068.a
-		stress_impact = {
-			base = minor_stress_impact_loss
-			lazy = miniscule_stress_impact_loss
-			content = miniscule_stress_impact_loss
-		}
+		VIET_ghost_town_investigation_nothing_completed_log_entry_effect = yes
 	}
 	
 	after = {
-		hidden_effect = {
+		if = {
+			limit = {
+				root = scope:host
+			}
 			scope:activity = {
-				complete_activity = yes
-			}		
+				hidden_effect = { skip_activity_phase = yes }
+			}
 		}
 	}
 }
 
 # Guard claims to see it
 VIETmisc.2069 = {
-	type = character_event
+	type = activity_event
 	title = VIETmisc.2069.t
 	desc = VIETmisc.2069.desc
 	theme = death
-	override_background = { event_background = alley_night }
+	override_background = { reference = alley_night }
 	
 	
 	left_portrait = {
@@ -3773,26 +3946,21 @@ VIETmisc.2069 = {
 	
 	option = { # Believe him
 		name = VIETmisc.2069.a
-		VIET_huge_piety_gain_effect = yes
-		stress_impact = {
-			cynical = miniscule_stress_impact_gain
-			arrogant = miniscule_stress_impact_gain
-		}
+		VIET_ghost_town_investigation_guard_saw_something_belief_completed_log_entry_effect = yes
 	}	
 	option = { # Don't believe him
 		name = VIETmisc.2069.b
-		VIET_huge_prestige_gain_effect = yes
-		stress_impact = {
-			trusting = miniscule_stress_impact_gain
-			zealous = miniscule_stress_impact_gain
-		}
+		VIET_ghost_town_investigation_guard_saw_something_disbelief_completed_log_entry_effect = yes
 	}
 	
 	after = {
-		hidden_effect = {
+		if = {
+			limit = {
+				root = scope:host
+			}
 			scope:activity = {
-				complete_activity = yes
-			}		
+				hidden_effect = { skip_activity_phase = yes }
+			}
 		}
 	}
 }
@@ -3834,19 +4002,12 @@ VIETmisc.2070 = {
 		}
 	}
 	
-	after = {
-		hidden_effect = {
-			scope:activity = {
-				complete_activity = yes
-			}		
-		}
-	}
 }
 
 
 # Visit the great shade tree
 VIETmisc.2071 = {
-	type = character_event
+	type = activity_event
 	title = VIETmisc.2071.t
 	desc = VIETmisc.2071.desc
 	theme = VIET_theme_small_town	
@@ -3858,25 +4019,25 @@ VIETmisc.2071 = {
 	
 	immediate = {
 		play_music_cue = mx_cue_low_key_positive
+		scope:activity.activity_location.county = {
+			save_scope_as = county			
+		}
 	}
 	
 	option = { # ok
 		name = VIETmisc.2071.a
-		stress_impact = {
-			base = minor_stress_impact_loss
-			lazy = minor_stress_impact_loss
-			content = minor_stress_impact_loss
-			calm = miniscule_stress_impact_loss
-			patient = miniscule_stress_impact_loss
-			compassionate = miniscule_stress_impact_loss
-		}
+		VIET_giant_shade_tree_visit_completed_log_entry_effect = yes
+
 	}
 	
 	after = {
-		hidden_effect = {
+		if = {
+			limit = {
+				root = scope:host
+			}
 			scope:activity = {
-				complete_activity = yes
-			}		
+				hidden_effect = { skip_activity_phase = yes }
+			}
 		}
 	}
 }
@@ -3884,7 +4045,7 @@ VIETmisc.2071 = {
 
 # Visit the ancient stone monument
 VIETmisc.2072 = {
-	type = character_event
+	type = activity_event
 	title = VIETmisc.2072.t
 	desc = VIETmisc.2072.desc
 	theme = VIET_theme_ancient_cairn	
@@ -3896,34 +4057,28 @@ VIETmisc.2072 = {
 	
 	immediate = {
 		play_music_cue = mx_cue_sacredrite
+		scope:activity.activity_location.county = {
+			save_scope_as = county			
+		}
 	}
 	
 	option = { # ok
 		name = VIETmisc.2072.a
-		VIET_medium_piety_gain_effect = yes
-		stress_impact = {
-			base = minor_stress_impact_loss
-			lazy = miniscule_stress_impact_loss
-			content = miniscule_stress_impact_loss
-			calm = miniscule_stress_impact_loss
-		}
+		VIET_ancient_stone_monument_relax_completed_log_entry_effect = yes
 	}	
 	option = { # ok
 		name = VIETmisc.2072.b
-		add_character_modifier = {
-			modifier = VIET_examined_ancient_stone_monument
-			years = 5
-		}
-		stress_impact = {
-			lazy = minor_stress_impact_gain
-		}
+		VIET_ancient_stone_monument_study_completed_log_entry_effect = yes
 	}
 	
 	after = {
-		hidden_effect = {
+		if = {
+			limit = {
+				root = scope:host
+			}
 			scope:activity = {
-				complete_activity = yes
-			}		
+				hidden_effect = { skip_activity_phase = yes }
+			}
 		}
 	}
 }
@@ -4227,6 +4382,7 @@ VIETmisc.2076 = {
 	option = { # Ok
 		name = VIETmisc.2076.a
 		custom_tooltip = VIETmisc.2076.tooltip
+		VIET_massive_prestige_loss_effect = yes
 		add_character_modifier = {
 			modifier = VIET_songbird_enjoyer
 		}
@@ -4263,10 +4419,11 @@ VIETmisc.2077 = {
 	}
 
 	after = {
-		hidden_effect = {
-			scope:activity = {
-				complete_activity = yes
-			}		
+		if = {
+			limit = {
+				has_character_flag = planning_an_activity
+			}
+			remove_character_flag = planning_an_activity
 		}
 	}
 
@@ -4280,18 +4437,21 @@ VIETmisc.2077 = {
 
 # Enjoy the flowers
 VIETmisc.2078 = {
-	type = character_event
+	type = activity_event
 	title = VIETmisc.2078.t
 	desc = VIETmisc.2078.desc
 	theme = VIET_theme_skyrim_forest	
 	
 	left_portrait = {
-		character = root
+		character = scope:host
 		animation = admiration
 	}
 
 	immediate = {
-		VIET_random_small_piety_gain_effect = yes
+		scope:activity.activity_location.county = {
+			save_scope_as = county			
+		}
+		VIET_random_medium_piety_gain_effect = yes
 	}
 	
 	option = { # Ok
@@ -4305,12 +4465,20 @@ VIETmisc.2078 = {
 	}
 
 	after = {
-		hidden_effect = {
+		if = {
+			limit = {
+				root = scope:host
+			}
 			scope:activity = {
-				complete_activity = yes
-			}		
-		}
-	}
+				every_attending_character = {
+					limit = { NOT = { this = scope:host } }
+					custom = EVERY_ACTIVITY_PARTICIPANT_EFFECT
+					VIET_random_small_piety_gain_effect = yes
+				}
+				hidden_effect = { skip_activity_phase = yes }
+			}
+		}	
+	}	
 
 }
 

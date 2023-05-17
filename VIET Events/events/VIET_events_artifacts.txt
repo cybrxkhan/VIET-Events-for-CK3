@@ -43,7 +43,7 @@ VIETmisc.5000 = {
 	title = VIETmisc.5000.t
 	desc = VIETmisc.5000.desc
 	theme = stewardship
-	override_background = { event_background = council_chamber }
+	override_background = { reference = council_chamber }
 	
 	left_portrait = root
 	artifact = { # To display the artifact in the event-window
@@ -95,7 +95,7 @@ VIETmisc.5000 = {
     }
 	
 	immediate = {	
-		hidden_effect_new_artifact = {
+		hidden_effect_new_object = {
 			create_artifact = {	
 				name = VIET_abacus_name
 				description = VIET_abacus_desc
@@ -205,7 +205,7 @@ VIETmisc.5001 = {
     }
 	
 	immediate = {	
-		hidden_effect_new_artifact = {
+		hidden_effect_new_object = {
 			create_artifact = {	
 				name = VIET_calipers_name
 				description = VIET_calipers_desc
@@ -260,7 +260,7 @@ VIETmisc.5002 = {
 	title = VIETmisc.5002.t
 	desc = VIETmisc.5002.desc
 	theme = learning
-	override_background = { event_background = throne_room }
+	override_background = { reference = throne_room }
 	
 	left_portrait = {
 		character = root
@@ -315,7 +315,7 @@ VIETmisc.5002 = {
     }
 	
 	immediate = {	
-		hidden_effect_new_artifact = {
+		hidden_effect_new_object = {
 			create_artifact = {	
 				name = VIET_magnifying_glass_name
 				description = VIET_magnifying_glass_desc
@@ -439,7 +439,7 @@ VIETmisc.5003 = {
     }
 	
 	immediate = {	
-		hidden_effect_new_artifact = {
+		hidden_effect_new_object = {
 			create_artifact = {	
 				name = VIET_hourglass_name
 				description = VIET_hourglass_desc
@@ -570,7 +570,7 @@ VIETmisc.5004 = {
 			}
 			save_scope_as = nutgifter
 		}
-		hidden_effect_new_artifact = {
+		hidden_effect_new_object = {
 			create_artifact = {	
 				name = VIET_nutcracker_name
 				description = VIET_nutcracker_desc
@@ -703,7 +703,7 @@ VIETmisc.5005 = {
     }
 	
 	immediate = {	
-		hidden_effect_new_artifact = {
+		hidden_effect_new_object = {
 			create_artifact = {
 				name = VIET_star_chart_name
 				description = VIET_star_chart_desc
@@ -820,7 +820,7 @@ VIETmisc.5006 = {
     }
 	
 	immediate = {	
-		hidden_effect_new_artifact = {
+		hidden_effect_new_object = {
 			create_artifact = {
 				name = VIET_silverware_set_name
 				description = VIET_silverware_set_desc
@@ -937,7 +937,7 @@ VIETmisc.5007 = {
     }
 	
 	immediate = {	
-		hidden_effect_new_artifact = {
+		hidden_effect_new_object = {
 			create_artifact = {
 				name = VIET_exotic_quill_pen_name
 				description = VIET_exotic_quill_pen_desc
@@ -1053,7 +1053,7 @@ VIETmisc.5008 = {
     }
 	
 	immediate = {	
-		hidden_effect_new_artifact = {
+		hidden_effect_new_object = {
 			create_artifact = {
 				name = VIET_beautiful_pitcher_name
 				description = VIET_beautiful_pitcher_desc
@@ -1112,7 +1112,7 @@ VIETmisc.5009 = {
 	title = VIETmisc.5009.t
 	desc = VIETmisc.5009.desc
 	theme = feast_activity
-	override_background = { event_background = VIET_background_small_town }
+	override_background = { reference = VIET_background_small_town }
 	
 	right_portrait = root
 	artifact = { # To display the artifact in the event-window
@@ -1164,7 +1164,7 @@ VIETmisc.5009 = {
     }
 	
 	immediate = {	
-		hidden_effect_new_artifact = {
+		hidden_effect_new_object = {
 			create_artifact = {
 				name = VIET_basic_pitcher_name
 				description = VIET_basic_pitcher_desc
@@ -1228,7 +1228,7 @@ VIETmisc.5010 = {
 	title = VIETmisc.5010.t
 	desc = VIETmisc.5010.desc
 	theme = intrigue
-	override_background = { event_background = throne_room }
+	override_background = { reference = throne_room }
 	
 	left_portrait = {
 		character = root
@@ -1283,7 +1283,7 @@ VIETmisc.5010 = {
     }
 	
 	immediate = {	
-		hidden_effect_new_artifact = {
+		hidden_effect_new_object = {
 			create_artifact = {
 				name = VIET_secure_chest_name
 				description = VIET_secure_chest_desc
@@ -1403,7 +1403,7 @@ VIETmisc.5011 = {
     }
 	
 	immediate = {	
-		hidden_effect_new_artifact = {
+		hidden_effect_new_object = {
 			create_artifact = {
 				name = VIET_hand_mirror_name
 				description = VIET_hand_mirror_desc
@@ -1521,7 +1521,7 @@ VIETmisc.5012 = {
     }
 	
 	immediate = {	
-		hidden_effect_new_artifact = {
+		hidden_effect_new_object = {
 			create_artifact = {
 				name = VIET_ivory_chess_set_name
 				description = VIET_ivory_chess_set_desc
@@ -1630,7 +1630,7 @@ VIETmisc.5013 = {
     }
 	
 	immediate = {	
-		hidden_effect_new_artifact = {
+		hidden_effect_new_object = {
 			create_artifact = {
 				name = VIET_wooden_chess_set_name
 				description = VIET_wooden_chess_set_desc
@@ -1753,7 +1753,7 @@ VIETmisc.5014 = {
     }
 	
 	immediate = {	
-		hidden_effect_new_artifact = {
+		hidden_effect_new_object = {
 			create_artifact = {
 				name = VIET_porcelain_chopsticks_name
 				description = VIET_porcelain_chopsticks_desc
@@ -1876,7 +1876,7 @@ VIETmisc.5015 = {
     }
 	
 	immediate = {	
-		hidden_effect_new_artifact = {
+		hidden_effect_new_object = {
 			create_artifact = {
 				name = VIET_bone_dice_name
 				description = VIET_bone_dice_desc
@@ -1986,7 +1986,7 @@ VIETmisc.5016 = {
     }
 	
 	immediate = {	
-		hidden_effect_new_artifact = {
+		hidden_effect_new_object = {
 			create_artifact = {
 				name = VIET_wood_dice_name
 				description = VIET_wood_dice_desc
@@ -2094,7 +2094,7 @@ VIETmisc.5017 = {
     }
 	
 	immediate = {	
-		hidden_effect_new_artifact = {
+		hidden_effect_new_object = {
 			create_artifact = {
 				name = VIET_silk_slippers_name
 				description = VIET_silk_slippers_desc
@@ -2211,7 +2211,7 @@ VIETmisc.5018 = {
     }
 	
 	immediate = {	
-		hidden_effect_new_artifact = {
+		hidden_effect_new_object = {
 			create_artifact = {
 				name = VIET_pewter_spoon_name
 				description = VIET_pewter_spoon_desc
@@ -2320,7 +2320,7 @@ VIETmisc.5019 = {
     }
 	
 	immediate = {	
-		hidden_effect_new_artifact = {
+		hidden_effect_new_object = {
 			create_artifact = {
 				name = VIET_measuring_rod_name
 				description = VIET_measuring_rod_desc
@@ -2374,7 +2374,7 @@ VIETmisc.5020 = {
 	title = VIETmisc.5020.t
 	desc = VIETmisc.5020.desc
 	theme = hunting
-	override_background = { event_background = VIET_background_small_town }
+	override_background = { reference = VIET_background_small_town }
 	
 	left_portrait = {
 		character = root
@@ -2429,7 +2429,7 @@ VIETmisc.5020 = {
     }
 	
 	immediate = {	
-		hidden_effect_new_artifact = {
+		hidden_effect_new_object = {
 			create_artifact = {
 				name = VIET_prehistoric_bone_flute_name
 				description = VIET_prehistoric_bone_flute_desc
@@ -2487,7 +2487,7 @@ VIETmisc.5021 = {
 	title = VIETmisc.5021.t
 	desc = VIETmisc.5021.desc
 	theme = stewardship
-	override_background = { event_background = council_chamber }
+	override_background = { reference = council_chamber }
 	
 	left_portrait = {
 		character = root
@@ -2542,7 +2542,7 @@ VIETmisc.5021 = {
     }
 	
 	immediate = {	
-		hidden_effect_new_artifact = {
+		hidden_effect_new_object = {
 			create_artifact = {
 				name = VIET_weighing_scales_name
 				description = VIET_weighing_scales_desc
@@ -2601,7 +2601,7 @@ VIETmisc.5022 = {
 	title = VIETmisc.5022.t
 	desc = VIETmisc.5022.desc
 	theme = realm
-	override_background = { event_background = corridor_day }
+	override_background = { reference = corridor_day }
 	
 	left_portrait = {
 		character = root
@@ -2656,7 +2656,7 @@ VIETmisc.5022 = {
     }
 	
 	immediate = {	
-		hidden_effect_new_artifact = {
+		hidden_effect_new_object = {
 			create_artifact = {
 				name = VIET_common_hammer_name
 				description = VIET_common_hammer_desc
@@ -2713,7 +2713,7 @@ VIETmisc.5023 = {
 	title = VIETmisc.5023.t
 	desc = VIETmisc.5023.desc
 	theme = realm
-	override_background = { event_background = courtyard }
+	override_background = { reference = courtyard }
 	
 	left_portrait = {
 		character = root
@@ -2768,7 +2768,7 @@ VIETmisc.5023 = {
     }
 	
 	immediate = {	
-		hidden_effect_new_artifact = {
+		hidden_effect_new_object = {
 			create_artifact = {
 				name = VIET_trusty_shovel_name
 				description = VIET_trusty_shovel_desc
@@ -2877,7 +2877,7 @@ VIETmisc.5024 = {
     }
 	
 	immediate = {	
-		hidden_effect_new_artifact = {
+		hidden_effect_new_object = {
 			create_artifact = {
 				name = VIET_leather_knapsack_name
 				description = VIET_leather_knapsack_desc
@@ -2934,7 +2934,7 @@ VIETmisc.5025 = {
 	title = VIETmisc.5025.t
 	desc = VIETmisc.5025.desc
 	theme = stewardship_duty_focus
-	override_background = { event_background = tavern }
+	override_background = { reference = tavern }
 	
 	left_portrait = {
 		character = root
@@ -2989,7 +2989,7 @@ VIETmisc.5025 = {
     }
 	
 	immediate = {	
-		hidden_effect_new_artifact = {
+		hidden_effect_new_object = {
 			create_artifact = {
 				name = VIET_wooden_bowl_name
 				description = VIET_wooden_bowl_desc
@@ -3050,7 +3050,7 @@ VIETmisc.5026 = {
 	title = VIETmisc.5026.t
 	desc = VIETmisc.5026.desc
 	theme = intrigue_skulduggery_focus
-	override_background = { event_background = garden }
+	override_background = { reference = garden }
 	
 	left_portrait = {
 		character = root
@@ -3105,7 +3105,7 @@ VIETmisc.5026 = {
     }
 	
 	immediate = {	
-		hidden_effect_new_artifact = {
+		hidden_effect_new_object = {
 			create_artifact = {
 				name = VIET_reliable_lockpick_name
 				description = VIET_reliable_lockpick_desc
@@ -3220,7 +3220,7 @@ VIETmisc.5027 = {
     }
 	
 	immediate = {	
-		hidden_effect_new_artifact = {
+		hidden_effect_new_object = {
 			create_artifact = {
 				name = VIET_ceramic_tankard_name
 				description = VIET_ceramic_tankard_desc
@@ -3335,7 +3335,7 @@ VIETmisc.5028 = {
     }
 	
 	immediate = {	
-		hidden_effect_new_artifact = {
+		hidden_effect_new_object = {
 			create_artifact = {
 				name = VIET_wooden_tankard_name
 				description = VIET_wooden_tankard_desc
@@ -3396,7 +3396,7 @@ VIETmisc.5029 = {
 	title = VIETmisc.5029.t
 	desc = VIETmisc.5029.desc
 	theme = unfriendly
-	override_background = { event_background = VIET_background_small_town }
+	override_background = { reference = VIET_background_small_town }
 	
 	right_portrait = {
 		character = root
@@ -3451,7 +3451,7 @@ VIETmisc.5029 = {
     }
 	
 	immediate = {	
-		hidden_effect_new_artifact = {
+		hidden_effect_new_object = {
 			create_artifact = {
 				name = VIET_convenient_backscratcher_name
 				description = VIET_convenient_backscratcher_desc
@@ -3564,7 +3564,7 @@ VIETmisc.5030 = {
     }
 	
 	immediate = {	
-		hidden_effect_new_artifact = {
+		hidden_effect_new_object = {
 			create_artifact = {
 				name = VIET_rugged_walking_stick_name
 				description = VIET_rugged_walking_stick_desc
@@ -3681,7 +3681,7 @@ VIETmisc.5031 = {
     }
 	
 	immediate = {	
-		hidden_effect_new_artifact = {
+		hidden_effect_new_object = {
 			create_artifact = {
 				name = VIET_simple_gloves_name
 				description = VIET_simple_gloves_desc
@@ -3791,7 +3791,7 @@ VIETmisc.5032 = {
     }
 	
 	immediate = {	
-		hidden_effect_new_artifact = {
+		hidden_effect_new_object = {
 			create_artifact = {
 				name = VIET_elegant_candlestick_name
 				description = VIET_elegant_candlestick_desc
@@ -3841,7 +3841,7 @@ VIETmisc.5033 = {
 	title = VIETmisc.5033.t
 	desc = VIETmisc.5033.desc
 	theme = friendly
-	override_background = { event_background = corridor_night }
+	override_background = { reference = corridor_night }
 	
 	left_portrait = {
 		character = root
@@ -3896,7 +3896,7 @@ VIETmisc.5033 = {
     }
 	
 	immediate = {	
-		hidden_effect_new_artifact = {
+		hidden_effect_new_object = {
 			create_artifact = {
 				name = VIET_basic_lantern_name
 				description = VIET_basic_lantern_desc
@@ -4006,7 +4006,7 @@ VIETmisc.5034 = {
     }
 	
 	immediate = {	
-		hidden_effect_new_artifact = {
+		hidden_effect_new_object = {
 			create_artifact = {
 				name = VIET_favored_handkerchief_name
 				description = VIET_favored_handkerchief_desc
@@ -4117,7 +4117,7 @@ VIETmisc.5035 = {
     }
 	
 	immediate = {	
-		hidden_effect_new_artifact = {
+		hidden_effect_new_object = {
 			create_artifact = {
 				name = VIET_candy_jar_name
 				description = VIET_candy_jar_desc
@@ -4230,7 +4230,7 @@ VIETmisc.5036 = {
     }
 	
 	immediate = {	
-		hidden_effect_new_artifact = {
+		hidden_effect_new_object = {
 			create_artifact = {
 				name = VIET_wooden_whistle_name
 				description = VIET_wooden_whistle_desc
@@ -4339,7 +4339,7 @@ VIETmisc.5037 = {
     }
 	
 	immediate = {	
-		hidden_effect_new_artifact = {
+		hidden_effect_new_object = {
 			create_artifact = {
 				name = VIET_simple_waterskin_name
 				description = VIET_simple_waterskin_desc
@@ -4394,7 +4394,7 @@ VIETmisc.5038 = {
 	title = VIETmisc.5038.t
 	desc = VIETmisc.5038.desc
 	theme = intrigue_skulduggery_focus
-	override_background = { event_background = market }
+	override_background = { reference = market }
 	
 	left_portrait = {
 		character = root
@@ -4449,7 +4449,7 @@ VIETmisc.5038 = {
     }
 	
 	immediate = {	
-		hidden_effect_new_artifact = {
+		hidden_effect_new_object = {
 			create_artifact = {
 				name = VIET_hollow_doll_name
 				description = VIET_hollow_doll_desc
@@ -4557,7 +4557,7 @@ VIETmisc.5039 = {
     }
 	
 	immediate = {	
-		hidden_effect_new_artifact = {
+		hidden_effect_new_object = {
 			create_artifact = {
 				name = VIET_decorated_broom_name
 				description = VIET_decorated_broom_desc
@@ -4670,7 +4670,7 @@ VIETmisc.5040 = {
     }
 	
 	immediate = {	
-		hidden_effect_new_artifact = {
+		hidden_effect_new_object = {
 			create_artifact = {
 				name = VIET_traveling_inkwell_name
 				description = VIET_traveling_inkwell_desc
@@ -4776,7 +4776,7 @@ VIETmisc.5041 = {
     }
 	
 	immediate = {	
-		hidden_effect_new_artifact = {
+		hidden_effect_new_object = {
 			create_artifact = {
 				name = VIET_ancient_coin_name
 				description = VIET_ancient_coin_desc
@@ -4854,7 +4854,7 @@ VIETmisc.5042 = {
 	title = VIETmisc.5042.t
 	desc = VIETmisc.5042.desc
 	theme = feast_activity
-	override_background = { event_background = council_chamber }
+	override_background = { reference = council_chamber }
 	
 	left_portrait = {
 		character = root
@@ -4909,7 +4909,7 @@ VIETmisc.5042 = {
 		play_music_cue = mx_cue_touching_moment	
 		random_list = {
 			60 = {
-				hidden_effect_new_artifact = {
+				hidden_effect_new_object = {
 					create_artifact = {	
 						name = VIET_recipe_baklava_name
 						description = VIET_recipe_baklava_desc
@@ -4931,7 +4931,7 @@ VIETmisc.5042 = {
 				}
 			}
 			45 = {
-				hidden_effect_new_artifact = {
+				hidden_effect_new_object = {
 					create_artifact = {	
 						name = VIET_recipe_baklava_name
 						description = VIET_recipe_baklava_desc
@@ -4953,7 +4953,7 @@ VIETmisc.5042 = {
 				}
 			}
 			30 = {
-				hidden_effect_new_artifact = {
+				hidden_effect_new_object = {
 					create_artifact = {	
 						name = VIET_recipe_baklava_name
 						description = VIET_recipe_baklava_desc
@@ -4975,7 +4975,7 @@ VIETmisc.5042 = {
 				}
 			}
 			15 = {
-				hidden_effect_new_artifact = {
+				hidden_effect_new_object = {
 					create_artifact = {	
 						name = VIET_recipe_baklava_name
 						description = VIET_recipe_baklava_desc
@@ -5200,7 +5200,7 @@ VIETmisc.5043 = {
 	title = VIETmisc.5043.t
 	desc = VIETmisc.5043.desc
 	theme = feast_activity
-	override_background = { event_background = market }
+	override_background = { reference = market }
 	
 	left_portrait = {
 		character = root
@@ -5255,7 +5255,7 @@ VIETmisc.5043 = {
 		play_music_cue = mx_cue_touching_moment	
 		random_list = {
 			60 = {
-				hidden_effect_new_artifact = {
+				hidden_effect_new_object = {
 					create_artifact = {	
 						name = VIET_recipe_sweetroll_name
 						description = VIET_recipe_sweetroll_desc
@@ -5277,7 +5277,7 @@ VIETmisc.5043 = {
 				}
 			}
 			45 = {
-				hidden_effect_new_artifact = {
+				hidden_effect_new_object = {
 					create_artifact = {	
 						name = VIET_recipe_sweetroll_name
 						description = VIET_recipe_sweetroll_desc
@@ -5299,7 +5299,7 @@ VIETmisc.5043 = {
 				}
 			}
 			30 = {
-				hidden_effect_new_artifact = {
+				hidden_effect_new_object = {
 					create_artifact = {	
 						name = VIET_recipe_sweetroll_name
 						description = VIET_recipe_sweetroll_desc
@@ -5321,7 +5321,7 @@ VIETmisc.5043 = {
 				}
 			}
 			15 = {
-				hidden_effect_new_artifact = {
+				hidden_effect_new_object = {
 					create_artifact = {	
 						name = VIET_recipe_sweetroll_name
 						description = VIET_recipe_sweetroll_desc
@@ -5546,7 +5546,7 @@ VIETmisc.5044 = {
 	title = VIETmisc.5044.t
 	desc = VIETmisc.5044.desc
 	theme = feast_activity
-	override_background = { event_background = market }
+	override_background = { reference = market }
 	
 	left_portrait = {
 		character = root
@@ -5601,7 +5601,7 @@ VIETmisc.5044 = {
 		play_music_cue = mx_cue_touching_moment	
 		random_list = {
 			60 = {
-				hidden_effect_new_artifact = {
+				hidden_effect_new_object = {
 					create_artifact = {	
 						name = VIET_recipe_hummus_name
 						description = VIET_recipe_hummus_desc
@@ -5623,7 +5623,7 @@ VIETmisc.5044 = {
 				}
 			}
 			45 = {
-				hidden_effect_new_artifact = {
+				hidden_effect_new_object = {
 					create_artifact = {	
 						name = VIET_recipe_hummus_name
 						description = VIET_recipe_hummus_desc
@@ -5645,7 +5645,7 @@ VIETmisc.5044 = {
 				}
 			}
 			30 = {
-				hidden_effect_new_artifact = {
+				hidden_effect_new_object = {
 					create_artifact = {	
 						name = VIET_recipe_hummus_name
 						description = VIET_recipe_hummus_desc
@@ -5667,7 +5667,7 @@ VIETmisc.5044 = {
 				}
 			}
 			15 = {
-				hidden_effect_new_artifact = {
+				hidden_effect_new_object = {
 					create_artifact = {	
 						name = VIET_recipe_hummus_name
 						description = VIET_recipe_hummus_desc
@@ -5897,7 +5897,7 @@ VIETmisc.5045 = {
 	title = VIETmisc.5045.t
 	desc = VIETmisc.5045.desc
 	theme = seduction
-	override_background = { event_background = study }
+	override_background = { reference = study }
 	
 	left_portrait = {
 		character = root
@@ -5944,7 +5944,7 @@ VIETmisc.5045 = {
     }
 	
 	immediate = {
-		hidden_effect_new_artifact = {
+		hidden_effect_new_object = {
 			create_artifact = {	
 				name = VIET_lusty_argonian_maid_name
 				description = VIET_lusty_argonian_maid_desc
@@ -6066,7 +6066,7 @@ VIETmisc.5046 = {
 		play_music_cue = mx_cue_touching_moment	
 		random_list = {
 			60 = {
-				hidden_effect_new_artifact = {
+				hidden_effect_new_object = {
 					create_artifact = {	
 						name = VIET_recipe_yogurt_name
 						description = VIET_recipe_yogurt_desc
@@ -6088,7 +6088,7 @@ VIETmisc.5046 = {
 				}
 			}
 			45 = {
-				hidden_effect_new_artifact = {
+				hidden_effect_new_object = {
 					create_artifact = {	
 						name = VIET_recipe_yogurt_name
 						description = VIET_recipe_yogurt_desc
@@ -6110,7 +6110,7 @@ VIETmisc.5046 = {
 				}
 			}
 			30 = {
-				hidden_effect_new_artifact = {
+				hidden_effect_new_object = {
 					create_artifact = {	
 						name = VIET_recipe_yogurt_name
 						description = VIET_recipe_yogurt_desc
@@ -6132,7 +6132,7 @@ VIETmisc.5046 = {
 				}
 			}
 			15 = {
-				hidden_effect_new_artifact = {
+				hidden_effect_new_object = {
 					create_artifact = {	
 						name = VIET_recipe_yogurt_name
 						description = VIET_recipe_yogurt_desc
@@ -6359,7 +6359,7 @@ VIETmisc.5047 = {
 	title = VIETmisc.5047.t
 	desc = VIETmisc.5047.desc
 	theme = feast_activity
-	#override_background = { event_background = tavern }
+	#override_background = { reference = tavern }
 	
 	left_portrait = {
 		character = root
@@ -6409,7 +6409,7 @@ VIETmisc.5047 = {
 		play_music_cue = mx_cue_touching_moment	
 		random_list = {
 			60 = {
-				hidden_effect_new_artifact = {
+				hidden_effect_new_object = {
 					create_artifact = {	
 						name = VIET_recipe_savory_pie_name
 						description = VIET_recipe_savory_pie_desc
@@ -6431,7 +6431,7 @@ VIETmisc.5047 = {
 				}
 			}
 			45 = {
-				hidden_effect_new_artifact = {
+				hidden_effect_new_object = {
 					create_artifact = {	
 						name = VIET_recipe_savory_pie_name
 						description = VIET_recipe_savory_pie_desc
@@ -6453,7 +6453,7 @@ VIETmisc.5047 = {
 				}
 			}
 			30 = {
-				hidden_effect_new_artifact = {
+				hidden_effect_new_object = {
 					create_artifact = {	
 						name = VIET_recipe_savory_pie_name
 						description = VIET_recipe_savory_pie_desc
@@ -6475,7 +6475,7 @@ VIETmisc.5047 = {
 				}
 			}
 			15 = {
-				hidden_effect_new_artifact = {
+				hidden_effect_new_object = {
 					create_artifact = {	
 						name = VIET_recipe_savory_pie_name
 						description = VIET_recipe_savory_pie_desc
@@ -6751,7 +6751,7 @@ VIETmisc.5048 = {
 		play_music_cue = mx_cue_touching_moment	
 		random_list = {
 			60 = {
-				hidden_effect_new_artifact = {
+				hidden_effect_new_object = {
 					create_artifact = {	
 						name = VIET_recipe_fruit_pie_name
 						description = VIET_recipe_fruit_pie_desc
@@ -6773,7 +6773,7 @@ VIETmisc.5048 = {
 				}
 			}
 			45 = {
-				hidden_effect_new_artifact = {
+				hidden_effect_new_object = {
 					create_artifact = {	
 						name = VIET_recipe_fruit_pie_name
 						description = VIET_recipe_fruit_pie_desc
@@ -6795,7 +6795,7 @@ VIETmisc.5048 = {
 				}
 			}
 			30 = {
-				hidden_effect_new_artifact = {
+				hidden_effect_new_object = {
 					create_artifact = {	
 						name = VIET_recipe_fruit_pie_name
 						description = VIET_recipe_fruit_pie_desc
@@ -6817,7 +6817,7 @@ VIETmisc.5048 = {
 				}
 			}
 			15 = {
-				hidden_effect_new_artifact = {
+				hidden_effect_new_object = {
 					create_artifact = {	
 						name = VIET_recipe_fruit_pie_name
 						description = VIET_recipe_fruit_pie_desc
@@ -7044,7 +7044,7 @@ VIETmisc.5049 = {
 	title = VIETmisc.5049.t
 	desc = VIETmisc.5049.desc
 	theme = feast_activity
-	override_background = { event_background = tavern }
+	override_background = { reference = tavern }
 	
 	left_portrait = {
 		character = root
@@ -7094,7 +7094,7 @@ VIETmisc.5049 = {
 		play_music_cue = mx_cue_touching_moment	
 		random_list = {
 			60 = {
-				hidden_effect_new_artifact = {
+				hidden_effect_new_object = {
 					create_artifact = {	
 						name = VIET_recipe_bean_soup_name
 						description = VIET_recipe_bean_soup_desc
@@ -7116,7 +7116,7 @@ VIETmisc.5049 = {
 				}
 			}
 			45 = {
-				hidden_effect_new_artifact = {
+				hidden_effect_new_object = {
 					create_artifact = {	
 						name = VIET_recipe_bean_soup_name
 						description = VIET_recipe_bean_soup_desc
@@ -7138,7 +7138,7 @@ VIETmisc.5049 = {
 				}
 			}
 			30 = {
-				hidden_effect_new_artifact = {
+				hidden_effect_new_object = {
 					create_artifact = {	
 						name = VIET_recipe_bean_soup_name
 						description = VIET_recipe_bean_soup_desc
@@ -7160,7 +7160,7 @@ VIETmisc.5049 = {
 				}
 			}
 			15 = {
-				hidden_effect_new_artifact = {
+				hidden_effect_new_object = {
 					create_artifact = {	
 						name = VIET_recipe_bean_soup_name
 						description = VIET_recipe_bean_soup_desc
@@ -7391,7 +7391,7 @@ VIETmisc.5050 = {
 	title = VIETmisc.5050.t
 	desc = VIETmisc.5050.desc
 	theme = vassal
-	override_background = { event_background = VIET_background_small_town }
+	override_background = { reference = VIET_background_small_town }
 	
 	left_portrait = {
 		character = root
@@ -7446,7 +7446,7 @@ VIETmisc.5050 = {
     }
 	
 	immediate = {	
-		hidden_effect_new_artifact = {
+		hidden_effect_new_object = {
 			create_artifact = {	
 				name = VIET_patchwork_quilt_name
 				description = VIET_patchwork_quilt_desc
@@ -7513,7 +7513,7 @@ VIETmisc.5051 = {
 	title = VIETmisc.5051.t
 	desc = VIETmisc.5051.desc
 	theme = friendly
-	override_background = { event_background = garden }
+	override_background = { reference = garden }
 	
 	left_portrait = root
 	artifact = { # To display the artifact in the event-window
@@ -7565,7 +7565,7 @@ VIETmisc.5051 = {
     }
 	
 	immediate = {	
-		hidden_effect_new_artifact = {
+		hidden_effect_new_object = {
 			create_artifact = {	
 				name = VIET_leather_ball_name
 				description = VIET_leather_ball_desc
@@ -7646,7 +7646,7 @@ VIETmisc.5052 = {
 	title = VIETmisc.5052.t
 	desc = VIETmisc.5052.desc
 	theme = VIET_theme_skyrim_forest
-	override_background = { event_background = fp1_beached_longships }
+	override_background = { reference = fp1_beached_longships }
 	
 	left_portrait = {
 		character = root
@@ -7701,7 +7701,7 @@ VIETmisc.5052 = {
     }
 	
 	immediate = {	
-		hidden_effect_new_artifact = {
+		hidden_effect_new_object = {
 			create_artifact = {	
 				name = VIET_small_seashell_name
 				description = VIET_small_seashell_desc
@@ -7811,7 +7811,7 @@ VIETmisc.5053 = {
     }
 	
 	immediate = {	
-		hidden_effect_new_artifact = {
+		hidden_effect_new_object = {
 			create_artifact = {	
 				name = VIET_useless_map_name
 				description = VIET_useless_map_desc
@@ -7926,7 +7926,7 @@ VIETmisc.5054 = {
     }
 	
 	immediate = {	
-		hidden_effect_new_artifact = {
+		hidden_effect_new_object = {
 			create_artifact = {	
 				name = VIET_house_vase_name
 				description = VIET_house_vase_desc

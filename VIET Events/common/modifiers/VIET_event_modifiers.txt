@@ -2935,6 +2935,47 @@ VIET_unsatisfied_horny = {
 	#seduce_scheme_resistance_mult = -0.1
 }
 
+VIET_reduced_travel_rations = {
+	icon = food_negative
+	health = -0.2
+}
+
+VIET_supplies_from_locals = {
+	icon = goods_positive
+	travel_speed = 10
+	travel_safety = 5
+}
+
+VIET_respects_the_dead = {
+	icon = piety_positive
+	monthly_piety = 0.2
+	clergy_opinion = 5
+	realm_priest_opinion = 5
+}
+
+VIET_travel_information = {
+	icon = compass_positive
+	travel_safety_mult = 0.15
+	travel_speed_mult = 0.1
+}
+
+VIET_local_entertainment = {
+	icon = mask_positive
+	stress_gain_mult = -0.15
+	stress_loss_mult = 0.15
+}
+
+VIET_local_tour = {
+	icon = compass_positive
+	county_opinion_add = 3
+	stewardship = 1
+}
+
+VIET_traveling_diligently_on_time = {
+	icon = compass_positive
+	travel_speed = 5
+}
+
 
 
 

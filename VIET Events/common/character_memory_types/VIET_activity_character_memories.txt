@@ -1,0 +1,287 @@
+﻿VIET_view_flower_meadows_in_bloom_host_memory = {
+	categories = { positive minor }
+	icon = "VIET_flower.dds"
+
+	description = {
+		random_valid = {
+			desc = VIET_view_flower_meadows_in_bloom_host_memory_first_perspective
+		}
+	}
+
+	second_perspective_description = {
+		random_valid = {
+			desc = VIET_view_flower_meadows_in_bloom_host_memory_second_perspective
+		}
+	}
+
+	third_perspective_description = {
+		random_valid = {
+			desc = VIET_view_flower_meadows_in_bloom_host_memory_third_perspective
+		}
+	}
+
+	duration = {
+		years = memory_default_duration
+	}
+}
+
+VIET_view_flower_meadows_in_bloom_guest_memory = {
+	categories = { positive minor }
+	icon = "VIET_flower.dds"
+
+	description = {
+		random_valid = {
+			desc = VIET_view_flower_meadows_in_bloom_guest_memory_first_perspective
+		}
+	}
+
+	second_perspective_description = {
+		random_valid = {
+			desc = VIET_view_flower_meadows_in_bloom_guest_memory_second_perspective
+		}
+	}
+
+	third_perspective_description = {
+		random_valid = {
+			desc = VIET_view_flower_meadows_in_bloom_guest_memory_third_perspective
+		}
+	}
+
+	participants = { host }
+
+	duration = {
+		years = memory_default_duration
+	}
+}
+
+VIET_burial_mound_visit_host_memory = {
+	categories = { positive minor }
+	icon = "VIET_skull_burial.dds"
+
+	description = {
+		random_valid = {
+			desc = VIET_burial_mound_visit_host_memory_first_perspective
+		}
+	}
+
+	second_perspective_description = {
+		random_valid = {
+			desc = VIET_burial_mound_visit_host_memory_second_perspective
+		}
+	}
+
+	third_perspective_description = {
+		random_valid = {
+			desc = VIET_burial_mound_visit_host_memory_third_perspective
+		}
+	}
+
+	duration = {
+		years = memory_default_duration
+	}
+}
+
+VIET_burial_mound_visit_guest_memory = {
+	categories = { positive minor }
+	icon = "VIET_skull_burial.dds"
+
+	description = {
+		random_valid = {
+			desc = VIET_burial_mound_visit_guest_memory_first_perspective
+		}
+	}
+
+	second_perspective_description = {
+		random_valid = {
+			desc = VIET_burial_mound_visit_guest_memory_second_perspective
+		}
+	}
+
+	third_perspective_description = {
+		random_valid = {
+			desc = VIET_burial_mound_visit_guest_memory_third_perspective
+		}
+	}
+
+	participants = { host }
+
+	duration = {
+		years = memory_default_duration
+	}
+}
+
+
+VIET_ghost_town_investigation_host_memory = {
+	categories = { positive minor }
+	icon = "VIET_ghost.dds"
+
+	description = {
+		random_valid = {
+			desc = VIET_ghost_town_investigation_host_memory_first_perspective
+		}
+	}
+
+	second_perspective_description = {
+		random_valid = {
+			desc = VIET_ghost_town_investigation_host_memory_second_perspective
+		}
+	}
+
+	third_perspective_description = {
+		random_valid = {
+			desc = VIET_ghost_town_investigation_host_memory_third_perspective
+		}
+	}
+
+	duration = {
+		years = memory_default_duration
+	}
+}
+
+VIET_ghost_town_investigation_guest_memory = {
+	categories = { positive minor }
+	icon = "VIET_ghost.dds"
+
+	description = {
+		random_valid = {
+			desc = VIET_ghost_town_investigation_guest_memory_first_perspective
+		}
+	}
+
+	second_perspective_description = {
+		random_valid = {
+			desc = VIET_ghost_town_investigation_guest_memory_second_perspective
+		}
+	}
+
+	third_perspective_description = {
+		random_valid = {
+			desc = VIET_ghost_town_investigation_guest_memory_third_perspective
+		}
+	}
+
+	participants = { host }
+
+	duration = {
+		years = memory_default_duration
+	}
+}
+
+
+VIET_giant_shade_tree_visit_host_memory = {
+	categories = { positive minor }
+	icon = "VIET_tree.dds"
+
+	description = {
+		random_valid = {
+			desc = VIET_giant_shade_tree_visit_host_memory_first_perspective
+		}
+	}
+
+	second_perspective_description = {
+		random_valid = {
+			desc = VIET_giant_shade_tree_visit_host_memory_second_perspective
+		}
+	}
+
+	third_perspective_description = {
+		random_valid = {
+			desc = VIET_giant_shade_tree_visit_host_memory_third_perspective
+		}
+	}
+
+	duration = {
+		years = memory_default_duration
+	}
+}
+
+VIET_giant_shade_tree_visit_guest_memory = {
+	categories = { positive minor }
+	icon = "VIET_tree.dds"
+
+	description = {
+		random_valid = {
+			desc = VIET_giant_shade_tree_visit_guest_memory_first_perspective
+		}
+	}
+
+	second_perspective_description = {
+		random_valid = {
+			desc = VIET_giant_shade_tree_visit_guest_memory_second_perspective
+		}
+	}
+
+	third_perspective_description = {
+		random_valid = {
+			desc = VIET_giant_shade_tree_visit_guest_memory_third_perspective
+		}
+	}
+
+	participants = { host }
+
+	duration = {
+		years = memory_default_duration
+	}
+}
+
+VIET_ancient_stone_monument_examination_host_memory = {
+	categories = { positive minor }
+	icon = "VIET_ruins.dds"
+
+	description = {
+		random_valid = {
+			desc = VIET_ancient_stone_monument_examination_host_memory_first_perspective
+		}
+	}
+
+	second_perspective_description = {
+		random_valid = {
+			desc = VIET_ancient_stone_monument_examination_host_memory_second_perspective
+		}
+	}
+
+	third_perspective_description = {
+		random_valid = {
+			desc = VIET_ancient_stone_monument_examination_host_memory_third_perspective
+		}
+	}
+
+	duration = {
+		years = memory_default_duration
+	}
+}
+
+VIET_ancient_stone_monument_examination_guest_memory = {
+	categories = { positive minor }
+	icon = "VIET_ruins.dds"
+
+	description = {
+		random_valid = {
+			desc = VIET_ancient_stone_monument_examination_guest_memory_first_perspective
+		}
+	}
+
+	second_perspective_description = {
+		random_valid = {
+			desc = VIET_ancient_stone_monument_examination_guest_memory_second_perspective
+		}
+	}
+
+	third_perspective_description = {
+		random_valid = {
+			desc = VIET_ancient_stone_monument_examination_guest_memory_third_perspective
+		}
+	}
+
+	participants = { host }
+
+	duration = {
+		years = memory_default_duration
+	}
+}
+
+
+
+
+
+

@@ -67,3 +67,7 @@
  game_concept_clutter_artifact_desc:0 "VIET模组添加了一类可以在随机事件中获得的[inventory_artifact|E]——$game_concept_clutter_artifacts$。$game_concept_clutter_artifacts$代表着每日都会用到的东西，[character|E]会对他们产生情感，就此强烈联系起来。\n\n尽管在理论上，你可以拥有无数$game_concept_clutter_artifacts$，可要是你已经拥有了数个$game_concept_clutter_artifacts$的话，你获得下一个$game_concept_clutter_artifacts$的概率就会大幅#X 减少#!——请慎重考虑：哪个$game_concept_clutter_artifacts$对你和你角色的生活方式重要！"
  death_VIET_dream:0 "现身于梦中"
  death_VIET_dream_killer:0 "出现在[TARGET_CHARACTER.GetUINamePossessive]梦中"
+
+ VIETintro.0011.t:0 "The Journey Begins"
+ VIETintro.0011.desc:0 "It is time to start the journey to [ROOT.Char.GetTravelPlan.GetData.GetNextDestination.GetProvince.GetName] for the [ROOT.Char.GetInvolvedActivity.GetShortName]. I am sure the headache and hassle of organizing this trip will be worth it in the end when we reach our destination... or at least I'll have to hope that is the case, because otherwise all this stress over preparing for the trip would have been for nothing."
+ VIETintro.0011.a:0 "We go through these hassles for a good reason."
