@@ -36,7 +36,7 @@
  VIETmisc.7007.b:0 "Alas, I have places to go to."
  VIETmisc.7008.t:0 "$travel_event_prefix$ Oversleeping"
  VIETmisc.7008.desc:0 "Yesterday, our travels in [ROOT.Char.GetCurrentLocation.GetName] were rather grueling, and I was so exhausted that I overslept. The rest of my entourage didn’t want to wake me up, saying they worried that I would not be in the right state of mind if they didn’t give me enough time to rest."
- VIETmisc.7008.a:0 "I appreciate it, but next time, wake me up if I oversleep."
+ VIETmisc.7008.a:0 "I'll be careful not to oversleep again."
  VIETmisc.7008.b:0 "Thanks! Now #italic that#! was a good night’s rest."
  VIETmisc.7009.t:0 "$travel_event_prefix$ The Liar"
  VIETmisc.7009.desc:0 "When we set up camp for the night in [ROOT.Char.GetCurrentLocation.GetName], it so happened that a caravan of merchants was camping pretty close to us. They were traveling the opposite direction, and we exchanged some information about conditions on the road for our respective journeys.\n\nAnyhow, the merchants told me they met a most odd fellow several days ago, who went by the nickname of “The Liar.” He told them somewhat nonsensical advice that somehow… also made sense. They’re not sure what to make of him, but the veteran merchants says he is by far the oddest fellow they’ve ever met."

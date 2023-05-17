@@ -2731,6 +2731,12 @@ VIETmisc.2050 = {
 	
 	option = { # Ok
 		name = VIETmisc.2050.a
+		if = {
+			limit = {
+				has_character_flag = VIET_doing_crow_activities
+			}
+			remove_character_flag = VIET_doing_crow_activities
+		}
 	}
 	
 	# after = {
@@ -2819,6 +2825,12 @@ VIETmisc.2051 = {
 			base = minor_stress_impact_gain
 			wrathful = minor_stress_impact_gain
 			paranoid = medium_stress_impact_gain
+		}
+		if = {
+			limit = {
+				has_character_flag = VIET_doing_crow_activities
+			}
+			remove_character_flag = VIET_doing_crow_activities
 		}
 	}
 	
@@ -2970,6 +2982,12 @@ VIETmisc.2054 = {
 	
 	option = { # Ok
 		name = VIETmisc.2054.a
+		if = {
+			limit = {
+				has_character_flag = VIET_doing_crow_activities
+			}
+			remove_character_flag = VIET_doing_crow_activities
+		}
 	}
 	
 	# after = {
@@ -3074,6 +3092,12 @@ VIETmisc.2055 = {
 					}
 				}				
 			}		
+		}
+		if = {
+			limit = {
+				has_character_flag = VIET_doing_crow_activities
+			}
+			remove_character_flag = VIET_doing_crow_activities
 		}
 	}
 	

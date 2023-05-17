@@ -437,6 +437,7 @@ VIET_decision_deal_with_crows = {
 	is_shown = {
 		is_landed = yes
 		has_character_modifier = VIET_crows_following
+		NOT = { has_character_flag = VIET_doing_crow_activities }
 	}
 
 	is_valid = {
