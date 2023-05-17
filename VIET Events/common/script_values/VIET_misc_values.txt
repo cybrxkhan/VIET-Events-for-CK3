@@ -16,7 +16,7 @@ VIET_standard_festival_cooldown_time = {
 
 # Since the vanilla activity costs are unimmersively inflated at higher levels
 VIET_activity_cost = {
-	value = 50
+	value = 25
 	multiply = {
 		value = root.primary_title.tier
 		subtract = 1
@@ -26,7 +26,7 @@ VIET_activity_cost = {
 		limit = {
 			root.primary_title.tier > tier_duchy
 		}
-		add = 25
+		add = 15
 	}
 	if = {
 		limit = {
@@ -51,10 +51,11 @@ VIET_activity_cost = {
 	if = {
 		limit = {
 			root= {
-				sub_realm_size < 3
+				sub_realm_size <= 5
 			}
 		}
-		multiply = 0.8
+		multiply = 0.75
 	}
 	min = 25
+	max = 100
 }

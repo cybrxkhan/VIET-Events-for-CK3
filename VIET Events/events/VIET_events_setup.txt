@@ -37,7 +37,8 @@ VIETintro.0011 = {
 	trigger = {
 		is_available_travelling = yes
 		is_landed = yes
-		involved_activity ?= {
+		exists = involved_activity
+		involved_activity = {
 			OR = {
 				has_activity_type = activity_VIET_ancient_stone_monument_examination
 				has_activity_type = activity_VIET_burial_mound_visit
@@ -45,6 +46,13 @@ VIETintro.0011 = {
 				has_activity_type = activity_VIET_giant_shade_tree_visit
 				has_activity_type = activity_VIET_view_flower_meadows_in_bloom
 			}
+			# NOR = {
+			# 	has_activity_type = activity_feast
+			# 	has_activity_type = activity_gruesome_festival
+			# 	has_activity_type = activity_feast
+			# 	has_activity_type = activity_feast
+			# 	has_activity_type = activity_feast
+			# }
 		}
 		# If running RICE, you'll use the RICE version since it's identical
 		NOT = { has_global_variable = is_RICE_loaded_global_variable }

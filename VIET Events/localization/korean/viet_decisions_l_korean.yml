@@ -91,6 +91,8 @@
  VIET_decision_employ_renowned_blacksmiths.supplies:0 "Supplies"
  VIET_decision_employ_renowned_blacksmiths_confirm:0 "Let's meet them."
  VIET_decision_employ_renowned_blacksmiths_context_tooltip:0 "#emphasis Historical Context:#! Iron smithing has been a major craft in many societies across the Old World since ancient times. Every village and army needed someone around who could forge iron into useful tools (including weapons and armor), or to repair said tools." 
+ VIET_decision_visit_legendary_burial_mound_context_tooltip:0 "#emphasis Historical Context:#! Burial mounds or tumuli (singular #italic tumulus#!) can be found in virtually every part of the world, and some date back thousands of years. As such, there are often many local legends and myths associated with these sites."  
+ VIET_decision_investigate_a_ghost_town_context_tooltip:0 "#emphasis Historical Context:#! The spirits of the dead have featured in the folklore and mythology of virtually every culture around the world since time immemorial. Likewise, every culture had its legends about places where ghosts would congregate and take care of their supernatural business."   
  VIET_decision_venerate_a_mummified_hermit:0 "Venerate a Mummified Hermit"
  VIET_decision_venerate_a_mummified_hermit_tooltip:0 "I wish to pay my respects"
  VIET_decision_venerate_a_mummified_hermit_desc:0 "Not too long ago, a famous hermit passed away while meditating in one of the territories I rule. His corpse, miraculously, is still standing upright and somehow resists any kind of decay - a sign of this man's spiritual strength, perhaps. The place where he passed away has become a minor religious site, and I should provide some offerings to the local shrine."

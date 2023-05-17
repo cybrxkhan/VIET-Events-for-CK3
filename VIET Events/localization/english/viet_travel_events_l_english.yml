@@ -16,7 +16,7 @@
  VIETmisc.7003.desc:0 "Thanks to [master.GetHerHis] diligent efforts, my caravan master [master.GetTitledFirstName] found a safe shortcut in [ROOT.Char.GetCurrentLocation.GetName], which we could use to reduce the time of our journey by quite a bit. How fortunate!"
  VIETmisc.7003.a:0 "Good work!"
  VIETmisc.7004.t:0 "$travel_event_prefix$ Leisure"
- VIETmisc.7004.desc:0 "We stopped by a town in [ROOT.Char.GetCurrentLocation.GetName] for a quick rest.\n\nThis town is known locally for its amenities and being a center of leisure, and several of the guards in my entourage got distracted by the pretty, local [culture.GetName] girls. We need to go soon, but perhaps it wouldn't be a bad idea to rest some more…."
+ VIETmisc.7004.desc:0 "We stopped by a town in [ROOT.Char.GetCurrentLocation.GetName] for a quick rest.\n\nThis town is known locally for its amenities and being a center of leisure, and several of the guards in my entourage got distracted by the pretty, local [ROOT.Char.GetCurrentLocation.GetCulture.GetName] girls. We need to go soon, but perhaps it wouldn't be a bad idea to rest some more…."
  VIETmisc.7004.a:0 "I wouldn't mind some fun with the locals."
  VIETmisc.7004.b:0 "We won't waste time on these frivolities!"
  VIETmisc.7005.t:0 "$travel_event_prefix$ Wayside Shrine"
