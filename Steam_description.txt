@@ -1,8 +1,9 @@
-[img]https://i.imgur.com/3hfbhs6.jpg[/img]
+[img]https://i.imgur.com/AqpLmVF.jpg[/img]
 
-[h1]Current Version: 1.8.3 "William of Ockham" (Released 1/31/23, Compatible with vanilla patch 1.8.X)[/h1]
+[h1]Current Version: 1.9.0 "Xuanzang" (Released 5/17/23, Compatible with vanilla patch 1.9.X)[/h1]
 
-[h1][B][url=https://discord.gg/9KuyXv2uZA]Discord Server for my mods[/url]
+[h1][B][url=https://forms.gle/if7sLCAGpB1G2uJdA]Take the 2023 VIET/RICE Survey![/url]
+[url=https://discord.gg/9KuyXv2uZA]Discord Server for my mods[/url]
 [url=https://cybrxkhansmods.godaddysites.com/]Official Website for my mods[/url][/B][/h1]
 [B][url=https://forum.paradoxplaza.com/forum/threads/mod-viet-events-for-ck3-a-flavor-and-immersion-event-mod.1422081/]Paradox Forum Thread[/url][/B]
 [B]Manual Download/Installation available [url=https://github.com/cybrxkhan/VIET-Events-for-CK3/releases]on Github[/url][/B]
@@ -27,7 +28,7 @@ Feel free to use my work in your mods - all I ask is that I am credited and (if 
 [img]http://i.imgur.com/EyXurbK.jpg[/img]
 
 [LIST]
-[*]Over [B][U]1008[/U] new flavor events[/B] to experience!
+[*]Over [B][U]1018[/U] new flavor events[/B] to experience!
 [*]Explore new decisions, artifacts, character interactions, activities, and more!
 [*]Game rule to disable sillier events for those who don't like them, with three levels to choose from: Balanced (Default), Serious (Restricted), and All Events (Full)
 [*][B]Compatible with almost anything[/B] since it doesn't touch any vanilla files - even with overhaul mods, you can via game rule disable events that reference things specific to our medieval world that wouldn’t make sense in other time periods or universes (like fantasy and sci-fi conversion mods)
@@ -56,16 +57,20 @@ Thanks!
 
 [img]http://i.imgur.com/RQ5QZTF.jpg[/img]
 
-[h1]Version 1.8.3 "William of Ockham"[/h1]
+[h1]Version 1.9.0 "Xuanzang"[/h1]
 
-[I]“It is pointless to do with more what can be done with fewer.”
-- William of Ockham (1287–1347 CE), English theologian, scholar, and friar best known as a proponent for the concept that would later be known as Ockham’s Razor[/I]
+[I]“I wish to go and find out the truth, and so I decided to travel to the West at the risk of my life in order to seek for the teachings of which I have not yet heard.”
+- Xuanzang (602-664 CE), Chinese Buddhist pilgrim, traveler, scholar, and translator[/I]
 
-New events added in this version: [B]7[/B]
+New events added in this version: [B]10[/B]
 
 [LIST]
-[*]Added 7 simple events (two sentences max)
-[*]Added a couple French variations of event backgrounds
+[*]Updated to vanilla patch 1.9 “Lance”
+[*]Added 10 new travel events
+[*]Adapted old activities to the new system
+[*]Added nickname descriptions for VIET’s nicknames
+[*]VIET’s event backgrounds are now based on your character’s location, not capital
+[*]Reduced/rebalanced the costs of various decisions and activities
 [*]Miscellaneous bugfixes
 [/LIST]
 

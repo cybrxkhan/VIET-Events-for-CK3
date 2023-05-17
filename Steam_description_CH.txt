@@ -1,8 +1,9 @@
-[img]https://i.imgur.com/3hfbhs6.jpg[/img]
+[img]https://i.imgur.com/AqpLmVF.jpg[/img]
 
-[h1]当前版本：1.8.3 "奥卡姆的威廉" (2023.1.31更新，兼容原版1.8.X)[/h1]
+[h1]当前版本：1.9.0 "玄奘" (2023.5.17更新，兼容原版1.9.X)[/h1]
 
-[h1][B][url=https://discord.gg/9KuyXv2uZA]我模组的Discord服务器[/url]
+[h1][B][url=https://forms.gle/if7sLCAGpB1G2uJdA]参加 2023 年 VIET/RICE 调查![/url]
+[url=https://discord.gg/9KuyXv2uZA]我模组的Discord服务器[/url]
 [url=https://cybrxkhansmods.godaddysites.com/]我模组的官网[/url][/B][/h1]
 [B]更多信息请见[url=https://forum.paradoxplaza.com/forum/threads/mod-viet-events-for-ck3-a-flavor-and-immersion-event-mod.1422081/]论坛[/url][/B]
 [B]手动下载请见[url=https://github.com/cybrxkhan/VIET-Events-for-CK3/releases]Github[/url]
@@ -27,7 +28,7 @@ Very Immersive Events and Tales (VIET)是[url=https://steamcommunity.com/sharedf
 [img]http://i.imgur.com/EyXurbK.jpg[/img]
 
 [LIST]
-[*]多达[B][U]1008[/U]个新风味事件（链）[/B]！
+[*]多达[B][U]1018[/U]个新风味事件（链）[/B]！
 [*]新决议、宝物、角色互动、活动等等！
 [*]如果你不喜欢某些傻里傻气的事件，你可以在规则里面将它们停用，共有三个等级可供选择：平衡（默认）、严肃（有所限制）、所有事件（不设限）
 [*][B]几乎兼容所有模组[/B]，因为不触及原文件。就算是全局模组，你也可以在规则里禁用提及我们中世纪世界的事件，这样一来在其它世界线（比如奇幻世界或是科幻世界的模组）就显得更为合理了
@@ -55,18 +56,10 @@ Very Immersive Events and Tales (VIET)是[url=https://steamcommunity.com/sharedf
 
 [img]http://i.imgur.com/RQ5QZTF.jpg[/img]
 
-[h1]版本号1.8.3 "奥卡姆的威廉"[/h1]
+[h1]版本号1.9.0 "玄奘"[/h1]
 
-[I]“满招损，谦受益。”
-——奥卡姆的威廉（1287–1347 CE）, 英国神学家、学者，最为著名的事迹是提出了“奥卡姆剃刀”[/I]
+该版本新增了[B]10[/B]个事件
 
-该版本新增了[B]7[/B]个事件
-
-[LIST]
-[*]增加了7个小事件（顶多两句话）
-[*]增加了几个法国事件背景图
-[*]修复小漏洞
-[/LIST]
 
 完整更新日志请见此处：https://steamcommunity.com/sharedfiles/filedetails/changelog/2227658180
 
