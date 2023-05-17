@@ -1,6 +1,6 @@
 # VIET Events for CK3
 
-<img src="http://i.imgur.com/RQ5QZTF.jpg">
+<img src="https://i.imgur.com/AqpLmVF.jpg">
 
 ## Latest Version: 1.9.0 "Xuanzang" (Released 5/17/23)
 
