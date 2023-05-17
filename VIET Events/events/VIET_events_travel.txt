@@ -221,6 +221,7 @@ VIETmisc.7003 = {
 
 	trigger = {
 		is_location_valid_for_travel_event_on_land = yes
+		exists = current_travel_plan.travel_leader
 	}
 	
 	weight_multiplier = {

@@ -5468,9 +5468,7 @@ VIETold.2075 = {
 			trigger = {
 				OR = {
 					learning >= medium_skill_rating
-					has_trait = physician_1
-					has_trait = physician_2
-					has_trait = physician_3
+					has_trait = lifestyle_physician
 					has_trait = lifestyle_herbalist
 				}
 			}

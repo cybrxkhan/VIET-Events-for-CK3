@@ -2733,12 +2733,12 @@ VIETmisc.2050 = {
 		name = VIETmisc.2050.a
 	}
 	
-	after = {
-		trigger_event = {
-			id = VIETmisc.2059
-			days = 1
-		}
-	}
+	# after = {
+	# 	trigger_event = {
+	# 		id = VIETmisc.2059
+	# 		days = 1
+	# 	}
+	# }
 }
 
 
@@ -2822,12 +2822,12 @@ VIETmisc.2051 = {
 		}
 	}
 	
-	after = {
-		trigger_event = {
-			id = VIETmisc.2059
-			days = 1
-		}
-	}
+	# after = {
+	# 	trigger_event = {
+	# 		id = VIETmisc.2059
+	# 		days = 1
+	# 	}
+	# }
 }
 
 
@@ -2972,12 +2972,12 @@ VIETmisc.2054 = {
 		name = VIETmisc.2054.a
 	}
 	
-	after = {
-		trigger_event = {
-			id = VIETmisc.2059
-			days = 1
-		}
-	}
+	# after = {
+	# 	trigger_event = {
+	# 		id = VIETmisc.2059
+	# 		days = 1
+	# 	}
+	# }
 }
 
 
@@ -3077,12 +3077,12 @@ VIETmisc.2055 = {
 		}
 	}
 	
-	after = {
-		trigger_event = {
-			id = VIETmisc.2059
-			days = 1
-		}
-	}
+	# after = {
+	# 	trigger_event = {
+	# 		id = VIETmisc.2059
+	# 		days = 1
+	# 	}
+	# }
 }
 
 
@@ -3303,14 +3303,14 @@ VIETmisc.2058 = {
 
 
 # Misc cleanup
-VIETmisc.2059 = {
-	hidden = yes	
-	immediate = {
-		scope:activity = {
-			complete_activity = yes
-		}
-	}
-}
+# VIETmisc.2059 = {
+# 	hidden = yes	
+# 	immediate = {
+# 		scope:activity = {
+# 			complete_activity = yes
+# 		}
+# 	}
+# }
 
 
 # Ping to check if currently doing anything with crows or if crow situation is resolved

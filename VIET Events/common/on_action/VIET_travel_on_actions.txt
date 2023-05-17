@@ -1,11 +1,5 @@
 ﻿# Arrival in any province during travel
 on_travel_plan_movement = {
-	# It should be more likely to fire a danger event if it's valid for the given province
-	trigger = {
-		is_landed = yes
-		is_adult = yes 
-	}
-
 	on_actions = {
 		delay = { days = { 2 28 } }
 		VIET_travel_event_tombola		
@@ -68,7 +62,7 @@ VIET_travel_events_common = {
 			# }
 		}
 
-		1 = 0 
+		2000 = 0 
 
 		# Generic
 		100 = VIETmisc.7001		# Food gone bad
@@ -123,7 +117,7 @@ VIET_travel_events_uncommon = {
 			# }
 		}
 
-		1 = 0 
+		3000 = 0 
 
 		# Generic
 		100 = VIETmisc.7002		# A friendly village
@@ -177,7 +171,7 @@ VIET_travel_events_rare = {
 			# }
 		}
 
-		1 = 0 
+		4000 = 0 
 
 		# Generic
 		100 = VIETmisc.7006		# Stumble on the remnants of a bandit ambush of a caravan
@@ -186,7 +180,6 @@ VIET_travel_events_rare = {
 }
 
 on_travel_plan_start = {
-	trigger = { is_ruler = yes }
 	on_actions = {
 		on_travel_plan_start_VIET
 	}

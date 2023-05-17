@@ -10142,11 +10142,9 @@ VIETmisc.0125 = {
 	option = { # I know what to do
 		name = VIETmisc.0125.c
 		trigger = {
-			has_trait = physician_1
+			has_trait = lifestyle_physician
 		}
-		trait = physician_1
-		remove_trait = physician_1
-		add_trait = physician_2
+		trait = lifestyle_physician
 		VIET_medium_prestige_gain_effect = yes
 		VIET_medium_piety_gain_effect = yes
 		stress_impact = {
@@ -10154,34 +10152,34 @@ VIETmisc.0125 = {
 			craven = medium_stress_impact_gain
 		}
 	}
-	option = { # I know what to do
-		name = VIETmisc.0125.c
-		trigger = {
-			has_trait = physician_2
-		}
-		trait = physician_2
-		remove_trait = physician_2
-		add_trait = physician_3
-		VIET_medium_prestige_gain_effect = yes
-		VIET_medium_piety_gain_effect = yes
-		stress_impact = {
-			callous = medium_stress_impact_gain
-			craven = medium_stress_impact_gain
-		}
-	}
-	option = { # I know what to do
-		name = VIETmisc.0125.c
-		trigger = {
-			has_trait = physician_3
-		}
-		trait = physician_3
-		VIET_medium_prestige_gain_effect = yes
-		VIET_medium_piety_gain_effect = yes
-		stress_impact = {
-			callous = medium_stress_impact_gain
-			craven = medium_stress_impact_gain
-		}
-	}
+	# option = { # I know what to do
+	# 	name = VIETmisc.0125.c
+	# 	trigger = {
+	# 		has_trait = physician_2
+	# 	}
+	# 	trait = physician_2
+	# 	remove_trait = physician_2
+	# 	add_trait = physician_3
+	# 	VIET_medium_prestige_gain_effect = yes
+	# 	VIET_medium_piety_gain_effect = yes
+	# 	stress_impact = {
+	# 		callous = medium_stress_impact_gain
+	# 		craven = medium_stress_impact_gain
+	# 	}
+	# }
+	# option = { # I know what to do
+	# 	name = VIETmisc.0125.c
+	# 	trigger = {
+	# 		has_trait = physician_3
+	# 	}
+	# 	trait = physician_3
+	# 	VIET_medium_prestige_gain_effect = yes
+	# 	VIET_medium_piety_gain_effect = yes
+	# 	stress_impact = {
+	# 		callous = medium_stress_impact_gain
+	# 		craven = medium_stress_impact_gain
+	# 	}
+	# }
 	option = { # I know what to do
 		name = VIETmisc.0125.c
 		trigger = {

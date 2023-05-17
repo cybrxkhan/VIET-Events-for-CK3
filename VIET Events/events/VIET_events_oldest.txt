@@ -783,9 +783,9 @@ VIETold.0012 = {
 	option = { # Bad bile
 		name = VIETold.0012.b
 		trigger = {
-			has_trait = physician_1
+			has_trait = lifestyle_physician
 		}
-		trait = physician_1
+		trait = lifestyle_physician
 		scope:scope_VIET_fruit_loop_poop = {
 			add_character_modifier = {
 				modifier = VIET_has_fruit_loops_poops
@@ -797,40 +797,40 @@ VIETold.0012 = {
 			}
 		}
 	}	
-	option = { # Bad bile
-		name = VIETold.0012.b
-		trigger = {
-			has_trait = physician_2
-		}
-		trait = physician_2
-		scope:scope_VIET_fruit_loop_poop = {
-			add_character_modifier = {
-				modifier = VIET_has_fruit_loops_poops
-				days = 365
-			}		
-			add_opinion = {
-				target = root
-				modifier = VIET_opinion_fruit_loops_poops_help
-			}
-		}
-	}	
-	option = { # Bad bile
-		name = VIETold.0012.b
-		trigger = {
-			has_trait = physician_3
-		}
-		trait = physician_3
-		scope:scope_VIET_fruit_loop_poop = {
-			add_character_modifier = {
-				modifier = VIET_has_fruit_loops_poops
-				days = 365
-			}		
-			add_opinion = {
-				target = root
-				modifier = VIET_opinion_fruit_loops_poops_help
-			}
-		}
-	}
+	# option = { # Bad bile
+	# 	name = VIETold.0012.b
+	# 	trigger = {
+	# 		has_trait = physician_2
+	# 	}
+	# 	trait = physician_2
+	# 	scope:scope_VIET_fruit_loop_poop = {
+	# 		add_character_modifier = {
+	# 			modifier = VIET_has_fruit_loops_poops
+	# 			days = 365
+	# 		}		
+	# 		add_opinion = {
+	# 			target = root
+	# 			modifier = VIET_opinion_fruit_loops_poops_help
+	# 		}
+	# 	}
+	# }	
+	# option = { # Bad bile
+	# 	name = VIETold.0012.b
+	# 	trigger = {
+	# 		has_trait = physician_3
+	# 	}
+	# 	trait = physician_3
+	# 	scope:scope_VIET_fruit_loop_poop = {
+	# 		add_character_modifier = {
+	# 			modifier = VIET_has_fruit_loops_poops
+	# 			days = 365
+	# 		}		
+	# 		add_opinion = {
+	# 			target = root
+	# 			modifier = VIET_opinion_fruit_loops_poops_help
+	# 		}
+	# 	}
+	# }
 }
 
 ##################################################

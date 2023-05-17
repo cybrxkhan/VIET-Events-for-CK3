@@ -293,7 +293,6 @@
  VIET_opinion_bad_hangover_mockery:0 "Made Fun Of Me For Hangover"
  VIET_ate_bad_baklava:0 "Ate Bad Baklava"
  VIET_sympathetic:0 "Sympathetic"
- VIET_admits_mistakes:0 "Admits Mistakes"
  VIET_smuggling_side_business:0 "Smuggling Side Business"
  VIET_smuggling_side_business_desc:0 "This character is known to engage in illegal smuggling, even if it is against laws that they are supposed to enforce."
  # 1.2.1 - please leave this comment here
@@ -1023,7 +1022,6 @@
  VIET_opinion_helped_my_debt_problems:0 "Helped Me With My Debt Problems"
  VIET_opinion_refused_to_help_my_debt_problems:0 "Didn't Help Me With My Debt Problems"
  VIET_opinion_gracious:0 "Very Gracious"
- VIET_opinion_rejected_my_gift:0 "Rejected My Gift"
  VIET_opinion_rudely_rejected_my_gift:0 "Rudely Rejected My Gift"
  VIET_shadowy_mysterious_woman:0 "Saw a Shadowy Mysterious Woman"
  VIET_opinion_forced_stay_meeting:0 "Forced me to stay in a meeting despite feeling unwell"

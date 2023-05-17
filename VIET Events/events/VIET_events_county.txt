@@ -1908,9 +1908,7 @@ VIETmisc.3019 = {
 					has_trait = patient
 					has_trait = fickle
 					has_trait = trusting
-					has_trait = reveler_1
-					has_trait = reveler_2
-					has_trait = reveler_3
+					has_trait = lifestyle_reveler
 					has_trait = seducer
 				}
 			}
@@ -1924,9 +1922,7 @@ VIETmisc.3019 = {
 				OR = {
 					has_trait = lustful
 					has_trait = gregarious
-					has_trait = reveler_1
-					has_trait = reveler_2
-					has_trait = reveler_3
+					has_trait = lifestyle_reveler
 					has_trait = seducer
 				}
 			}

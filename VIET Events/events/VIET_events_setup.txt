@@ -4,7 +4,7 @@
 # 
 ##############################################################################################
 
-namespace = VIETmisc
+namespace = VIETintro
 
 # Event to set things up
 VIETintro.0001 = {

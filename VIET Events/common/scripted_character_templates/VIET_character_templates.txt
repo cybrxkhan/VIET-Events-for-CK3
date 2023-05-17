@@ -585,10 +585,8 @@ VIET_traveling_physician_template = {
 	}
 	random_traits_list = {
 		count = 1
-		physician_1 = { weight = { base = 50 } }
-		physician_2 = { weight = { base = 20 } }
-		physician_3 = { weight = { base = 10 } }
-		lifestyle_herbalist = { weight = { base = 20 } }
+		lifestyle_physician = { weight = { base = 70 } }
+		lifestyle_herbalist = { weight = { base = 30 } }
 	}
 	random_traits = yes
 	after_creation = {		

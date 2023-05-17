@@ -1149,9 +1149,7 @@ VIETold.1018 = {
 			has_trait = drunkard
 			has_trait = lustful
 			has_trait = gregarious
-			has_trait = reveler_1
-			has_trait = reveler_2
-			has_trait = reveler_3
+			has_trait = lifestyle_reveler
 			has_trait = gluttonous
 			has_trait = generous
 		}
