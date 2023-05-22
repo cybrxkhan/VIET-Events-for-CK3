@@ -63,7 +63,7 @@
  VIET_trusty_shovel_name:0 "可靠铲子"
  VIET_trusty_shovel_desc:0 "用于挖掘、搬运、填埋材料，有时也可以用来打某人的头。"
  VIET_leather_knapsack_name:0 "皮革背包"
- VIET_leather_knapsack_desc:0 "既然你可以把东西放在这个可靠的背包里，为什么还要把它拿在手里呢?"
+ VIET_leather_knapsack_desc:0 "既然你可以把东西放在这个可靠的背包里，为什么还要把它拿在手里呢？"
  VIET_wooden_bowl_name:0 "木碗"
  VIET_wooden_bowl_desc:0 "虽然这只木碗很朴素，但不要忘记，朴素中也可以透着美丽——这只碗上的[ROOT.Char.GetCulture.GetName]风格装饰就充满了野性的美。碗主人也看重其可靠实用。"
  VIET_reliable_lockpick_name:0 "可靠开锁器"
