@@ -4317,7 +4317,7 @@ VIETold.2061 = {
 				location = root.capital_province
 				age = { 20 35 }
 				gender = male
-				trait = blademaster_2
+				trait = lifestyle_blademaster
 				faith = root.faith
 				culture = root.culture
 				diplomacy = { 8 13 }
@@ -4353,7 +4353,12 @@ VIETold.2061 = {
 				add_character_modifier = {
 					modifier = VIET_jon_battle_born_soldier
 				}
-			}			
+				add_random_tiered_trait_xp_effect = {
+					TRAIT = lifestyle_blademaster
+					LEVEL_1 = yes
+					LEVEL_3 = no
+				}
+			}
 		}
 	}
 
