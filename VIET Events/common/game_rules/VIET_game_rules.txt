@@ -2,6 +2,10 @@
 VIET_events_atmosphere = {
 	default = VIET_balanced_events
 
+	categories = {
+		VIET game_modes flavor GG_can_change_rule
+	}
+
 	VIET_balanced_events = {
 	
 	}
@@ -18,6 +22,10 @@ VIET_events_atmosphere = {
 
 VIET_universe_setting = {
 	default = VIET_normal_universe_events
+
+	categories = {
+		VIET game_modes flavor GG_can_change_rule
+	}
 
 	VIET_normal_universe_events = {
 	
@@ -40,6 +48,10 @@ VIET_universe_setting = {
 VIET_historical_context = {
 	default = VIET_historical_context_on
 
+	categories = {
+		VIET historicity flavor GG_can_change_rule
+	}
+
 	VIET_historical_context_on = {
 	
 	}
@@ -51,6 +63,10 @@ VIET_historical_context = {
 
 VIET_resource_amounts = {
 	default = VIET_resource_default
+
+	categories = {
+		VIET tweaks difficulty GG_can_change_rule
+	}
 
 	VIET_resource_default = {
 	
@@ -67,6 +83,11 @@ VIET_resource_amounts = {
 
 VIET_event_frequency = {
 	default = VIET_event_frequency_default
+
+
+	categories = {
+		VIET tweaks flavor GG_can_change_rule
+	}
 
 	VIET_event_frequency_default = {
 	
