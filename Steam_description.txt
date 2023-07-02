@@ -36,7 +36,7 @@ Feel free to use my work in your mods - all I ask is that I am credited and (if 
 [h1]TRANSLATIONS AVAILABLE[/h1]
 Because people are kindly spending their own free time and effort to work on these transations, [B]please be aware that the folks working on these translations may or may not be up to date with the latest version of VIET[/B]. Do note that all non-English languages available in the vanilla game has placeholder English localization in the base version of VIET, so they can be safely run, it will just display untranslated text in English (instead of gibberish).
 [LIST]
-[*]Chinese - [url=https://paratranz.cn/projects/1580]a team led by 9Milk(牛奶大魔王)[/url] has provided translation which is integrated into base VIET.
+[*]Chinese - [url=https://steamcommunity.com/sharedfiles/filedetails/?id=2997587648]Available as a sub-mod here[/url] thanks to a team led by a team led by 9Milk(牛奶大魔王)
 [*]French - [url=https://steamcommunity.com/sharedfiles/filedetails/?id=2234027514]Available as sub-mod here[/url], thanks to Mouchi
 [*]German - [url=https://steamcommunity.com/sharedfiles/filedetails/?id=2865016522]Available as sub-mod here[/url], thanks to Dani
 [*]Japanese - [url=https://steamcommunity.com/sharedfiles/filedetails/?id=2762293648]Available as sub-mod here[/url], thanks to sla_domi
@@ -72,8 +72,6 @@ New events added in this version: [B]10[/B]
 [*]Miscellaneous bugfixes
 [/LIST]
 
-Because changelog is too big to list here, please see the change notes here: https://steamcommunity.com/sharedfiles/filedetails/changelog/2227658180
-
 *Adapted from VIET for CK2
 
 
@@ -84,6 +82,7 @@ Because changelog is too big to list here, please see the change notes here: htt
 [*][url=https://steamcommunity.com/sharedfiles/filedetails/?id=2217770052]In Taberna (CK2 Edition)[/url] - the classic song from CK2 returns to CK3
 [*][url=https://steamcommunity.com/sharedfiles/filedetails/?id=2218667128]Recruit Courtiers[/url] - simple decision to spawn male or female courtiers in your court for a small price, similar to CK2
 [*][url=https://steamcommunity.com/sharedfiles/filedetails/?id=2219643991]Reduced Injuries and Deaths from Battles[/url] - if you're tired of people dropping like flies in battles
+[*][url=https://steamcommunity.com/sharedfiles/filedetails/?id=2747792660]Rename Egaliatarian Ethos to Cosmopolitan[/url]
 [*][url=https://steamcommunity.com/sharedfiles/filedetails/?id=2629092890]Rename Tribal Era to Late Antiquity[/url]
 [/LIST]
 
