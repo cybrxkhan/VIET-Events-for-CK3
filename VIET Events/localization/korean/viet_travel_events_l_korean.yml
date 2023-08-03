@@ -80,6 +80,7 @@
  VIETmisc.7018.t:0 "$travel_event_prefix$ Local Wedding"
  VIETmisc.7018.desc:0 "What a coincidence! We happened to stop by a certain village in [ROOT.Char.GetCurrentLocation.GetName] right when the locals were holding a wedding between two of the great clans living there.\n\nThe bride is beautiful and graceful in her traditional [culture.GetName] wedding clothes, while the groom is just as handsome and charming. More importantly, this is just the start of a huge and lively feast of epic proportions, and the locals have invited us to join in. There is plenty of food and drink to go around for everyone, even strangers, they say, and the festivities will likely last several days."
  VIETmisc.7018.a:0 "Sounds like a fun occasion! Why not?"
+ VIETmisc.7018.b:0 "We have places to be. We cannot tarry."
  VIETmisc.7019.t:0 "$travel_event_prefix$ Traveling Bard"
  VIETmisc.7019.desc:0 "We were resting along the road in [ROOT.Char.GetCurrentLocation.GetName] when a traveling [culture.GetName] bard happened to pass by. [bard.GetSheHe|U] introduced [bard.GetHerselfHimself] as [bard.GetFullName].\n\nOne of my guards offered the [bard.GetWomanMan] a few coins in exchange for some entertainment. [bard.GetFirstNameNoTooltip] then sang through several songs in the local [culture.GetLanguage.GetName] dialect, and there was little doubt about [bard.GetHerHis] talent. The melancholy songs touched our hearts deeply, and the joyful songs roused our spirits."
  VIETmisc.7019.a:0 "Thank you for the performance!"

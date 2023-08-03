@@ -769,4 +769,16 @@ VIET_opinion_snuggling = {
 	decaying = yes
 }
 
+VIET_talked_about_dreams = {
+	years = 5
+	opinion = 5
+	decaying = yes
+}
+
+VIET_nosy_interference = {
+	years = 5
+	opinion = -10
+	decaying = yes
+}
+
 

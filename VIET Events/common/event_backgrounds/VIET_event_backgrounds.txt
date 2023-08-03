@@ -722,3 +722,33 @@ VIET_background_oblivion_prison_sewer = {
 }
 
 
+### WEDDING ###
+VIET_background_wedding = {
+	background = {	 #Indian
+		trigger = {
+			location.culture = { has_graphical_india_culture_group_trigger = yes }
+		}
+		reference = "gfx/interface/illustrations/event_scenes/ep2_wedding_ceremony_indian.dds"
+		environment = "environment_indian_wedding"
+		ambience = "event:/DLC/EP2/SFX/Events/Grand_Activities/Weddings/ep2_event_grand_wedding"
+	}
+	background = {	 #MENA (also steppes and African )
+		trigger = {
+			OR = {
+				location.culture = { has_graphical_mena_culture_group_trigger = yes }
+				location.culture = { has_graphical_steppe_culture_group_trigger = yes }
+				location.culture = { has_graphical_african_culture_group_trigger = yes }
+			}
+		}
+		reference = "gfx/interface/illustrations/event_scenes/ep2_wedding_ceremony_mena.dds"
+		environment = "environment_mena_wedding"
+		ambience = "event:/DLC/EP2/SFX/Events/Grand_Activities/Weddings/ep2_event_grand_wedding"
+	}
+	background = {	 # Western - Fallback
+		reference = "gfx/interface/illustrations/event_scenes/ep2_wedding_ceremony_western.dds"
+		environment = "environment_western_wedding"
+		ambience = "event:/DLC/EP2/SFX/Events/Grand_Activities/Weddings/ep2_event_grand_wedding"
+	}
+}
+
+

@@ -19,14 +19,15 @@
 # 
 # ##### GRAND LIST OF EVENTS #####
 # 
-# 7001-7008		Generic
+# 7001-7009		Generic
+# 7010-7019		Generic 2
 # 
 ############################################################################################################################
 
 namespace = VIETmisc
 
 ##################################################################
-# GENERIC 7001-7008
+# GENERIC 7001-7009
 ##################################################################
 
 
@@ -860,4 +861,1245 @@ VIETmisc.7009 = {
 	}
 
 }
+
+
+
+
+##################################################################
+# GENERIC 2 7010-7019
+##################################################################
+
+
+# Servant passes away
+VIETmisc.7010 = {
+	type = character_event
+	title = VIETmisc.7010.t
+	desc = VIETmisc.7010.desc
+	theme = travel
+	override_background = { reference = VIET_background_tuscan_country }
+	
+	left_portrait = {
+		character = root
+		animation = worry
+	}	
+
+	trigger = {
+		is_location_valid_for_travel_event_on_land = yes
+	}
+	
+	weight_multiplier = {
+		base = 1
+		modifier = {
+			add = 0.2
+			has_trait = compassionate
+		}
+		modifier = {
+			add = -0.2
+			has_trait = callous
+		}
+		modifier = {
+			add = 0.2
+			has_trait = patient
+		}
+		modifier = {
+			add = -0.2
+			has_trait = impatient
+		}
+		modifier = {
+			add = 0.2
+			has_trait = stubborn
+		}
+		modifier = {
+			add = -0.2
+			has_trait = fickle
+		}
+	}
+	
+	immediate = {
+		play_music_cue = "mx_cue_death"
+	}
+	
+	option = { # Leave them be
+		name = VIETmisc.7010.a		
+		add_character_modifier = {
+			modifier = VIET_heartless_towards_servants
+			days = 3650
+		}
+		stress_impact = {
+			compassionate = major_stress_impact_gain
+			generous = minor_stress_impact_gain
+			just = minor_stress_impact_gain
+		}
+	}
+	
+	option = { # Proper burial
+		name = VIETmisc.7010.b
+		trigger = {
+			OR = {
+				gold >= 15
+				is_ai = no
+			}
+		}
+		remove_short_term_gold = 15
+		VIET_medium_piety_gain_effect = yes
+		stress_impact = {
+			callous = minor_stress_impact_gain
+			sadistic = minor_stress_impact_gain
+			greedy = miniscule_stress_impact_gain
+			arbitrary = miniscule_stress_impact_gain
+		}
+	}
+	
+	option = { # Bring them back
+		name = VIETmisc.7010.c		
+		trigger = {
+			OR = {
+				gold >= 40
+				is_ai = no
+			}
+		}
+		remove_short_term_gold = 40
+		VIET_huge_piety_gain_effect = yes
+		stress_impact = {
+			callous = medium_stress_impact_gain
+			sadistic = medium_stress_impact_gain
+			greedy = minor_stress_impact_gain
+			arbitrary = minor_stress_impact_gain
+			impatient = miniscule_stress_impact_gain
+		}
+		current_travel_plan = {
+			add_travel_plan_modifier = {
+				modifier = VIET_bringing_servant_back
+			}
+		}
+	}
+
+}
+
+
+
+# Animal attack
+VIETmisc.7011 = {
+	type = character_event
+	title = VIETmisc.7011.t
+	desc = VIETmisc.7011.desc
+	theme = travel
+	override_background = { reference = VIET_background_tuscan_country }
+	
+	left_portrait = {
+		character = root
+		animation = stress
+	}	
+
+	trigger = {
+		is_location_valid_for_travel_event_on_land = yes
+	}
+	
+	weight_multiplier = {
+		base = 1
+		modifier = {
+			add = 0.2
+			has_trait = lazy
+		}
+		modifier = {
+			add = -0.2
+			has_trait = diligent
+		}
+		modifier = {
+			add = 0.2
+			has_trait = trusting
+		}
+		modifier = {
+			add = -0.2
+			has_trait = paranoid
+		}
+		modifier = {
+			add = 0.2
+			has_trait = craven
+		}
+		modifier = {
+			add = -0.2
+			has_trait = brave
+		}
+	}
+	
+	immediate = {
+		play_music_cue = "mx_cue_stress"
+	}
+	
+	option = { # Accept it
+		name = VIETmisc.7011.a		
+		stress_impact = {
+			base = miniscule_stress_impact_gain
+			arrogant = minor_stress_impact_gain
+			gluttonous = minor_stress_impact_gain
+		}
+
+		add_character_modifier = {
+			modifier = VIET_reduced_travel_rations
+			years = 5
+		}
+
+		current_travel_plan = {
+			every_entourage_character = {
+				custom = VIET_every_entourage_tt_dislikes_rations
+				limit = {
+					NOR = {
+						has_trait = content
+						has_trait = temperate
+					}
+				}
+				add_character_modifier = {
+					modifier = VIET_reduced_travel_rations
+					years = 5
+				}
+				add_opinion = {
+					target = root
+					modifier = annoyed_opinion
+					opinion = -10
+				}
+			}
+		}
+	}
+	
+	option = { # Buy supplies
+		name = VIETmisc.7011.b
+		trigger = {
+			OR = {
+				gold >= 20
+				is_ai = no
+			}
+		}
+		remove_short_term_gold = 20
+		stress_impact = {
+			greedy = minor_stress_impact_gain
+			paranoid = miniscule_stress_impact_gain
+		}
+	}
+	
+	option = { # Force them to give you supplies
+		name = VIETmisc.7011.c
+		if = {
+			limit = {
+				location.county.holder ?= {
+					is_ai = yes
+					NOT = { this = root }
+				}
+			}			
+			location.county.holder = {
+				add_opinion = {
+					target = root
+					modifier = angry_opinion
+					opinion = -25
+				}
+			}
+		}
+		else_if = {
+			limit = {
+				location.county.holder ?= {
+					this = root
+				}
+			}
+			add_character_modifier = {
+				modifier = VIET_pillaged_own_peasants
+				years = 10
+			}
+		}
+		else = {
+			VIET_huge_prestige_loss_effect = yes
+		}
+		stress_impact = {
+			compassionate = major_stress_impact_gain
+			generous = medium_stress_impact_gain
+			just = medium_stress_impact_gain
+			content = medium_stress_impact_gain
+			patient = medium_stress_impact_gain
+		}
+	}
+
+}
+
+
+
+
+# Terrible Inn
+VIETmisc.7012 = {
+	type = character_event
+	title = VIETmisc.7012.t
+	desc = VIETmisc.7012.desc
+	theme = travel
+	override_background = { reference = VIET_background_small_town }
+	
+	right_portrait = {
+		character = root
+		animation = personality_irrational
+	}	
+
+	trigger = {
+		is_location_valid_for_travel_event_on_land = yes
+	}
+	
+	weight_multiplier = {
+		base = 1
+		modifier = {
+			add = 0.2
+			has_trait = diligent
+		}
+		modifier = {
+			add = -0.2
+			has_trait = lazy
+		}
+		modifier = {
+			add = 0.2
+			has_trait = impatient
+		}
+		modifier = {
+			add = -0.2
+			has_trait = patient
+		}
+		modifier = {
+			add = 0.2
+			has_trait = stubborn
+		}
+		modifier = {
+			add = -0.2
+			has_trait = fickle
+		}
+	}
+	
+	option = { # Accept it
+		name = VIETmisc.7012.a	
+
+		stress_impact = {
+			base = minor_stress_impact_gain
+			arrogant = miniscule_stress_impact_gain
+			lazy = miniscule_stress_impact_gain
+		}
+
+		current_travel_plan = {
+			every_entourage_character = {
+				custom = every_entourage_tt
+				stress_impact = {
+					base = miniscule_stress_impact_gain
+					arrogant = miniscule_stress_impact_gain
+					lazy = miniscule_stress_impact_gain
+				}
+			}
+		}
+	}
+	
+	option = { # Rest at a better inn
+		name = VIETmisc.7012.b
+		trigger = {
+			OR = {
+				gold >= 25
+				is_ai = no
+			}
+		}
+		remove_short_term_gold = 25			
+		stress_impact = {
+			diligent = miniscule_stress_impact_gain
+			impatient = miniscule_stress_impact_gain
+		}
+		current_travel_plan = {
+			delay_travel_plan = { days = 5 }
+			every_entourage_character = {
+				custom = every_entourage_tt
+				add_opinion = {
+					target = root
+					modifier = grateful_opinion
+					opinion = 5
+				}
+			}
+		}
+	}
+
+}
+
+
+# Amazing Inn
+VIETmisc.7013 = {
+	type = character_event
+	title = VIETmisc.7013.t
+	desc = VIETmisc.7013.desc
+	theme = travel
+	override_background = { reference = VIET_background_small_town }
+	
+	right_portrait = {
+		character = root
+		animation = happiness
+	}	
+
+	trigger = {
+		is_location_valid_for_travel_event_on_land = yes
+	}
+	
+	weight_multiplier = {
+		base = 1
+		modifier = {
+			add = 0.2
+			has_trait = diligent
+		}
+		modifier = {
+			add = -0.2
+			has_trait = lazy
+		}
+		modifier = {
+			add = 0.2
+			has_trait = patient
+		}
+		modifier = {
+			add = -0.2
+			has_trait = impatient
+		}
+		modifier = {
+			add = 0.2
+			has_trait = generous
+		}
+		modifier = {
+			add = -0.2
+			has_trait = greedy
+		}
+	}
+	
+	option = { # Yay
+		name = VIETmisc.7013.a	
+
+		stress_impact = {
+			base = miniscule_stress_impact_loss
+			content = miniscule_stress_impact_loss
+			lazy = miniscule_stress_impact_loss
+		}
+
+		current_travel_plan = {
+			every_entourage_character = {
+				custom = every_entourage_tt
+				stress_impact = {
+					base = miniscule_stress_impact_loss
+					content = miniscule_stress_impact_loss
+					lazy = miniscule_stress_impact_loss
+				}
+			}
+		}
+	}
+	
+	option = { # Stay longer
+		name = VIETmisc.7013.b
+		trigger = {
+			OR = {
+				gold >= 25
+				is_ai = no
+			}
+		}
+		remove_short_term_gold = 25
+
+		stress_impact = {
+			base = medium_stress_impact_loss
+			content = miniscule_stress_impact_loss
+			lazy = miniscule_stress_impact_loss
+		}
+
+		current_travel_plan = {
+			delay_travel_plan = { days = 5 }
+			every_entourage_character = {
+				custom = every_entourage_tt
+				stress_impact = {
+					base = medium_stress_impact_loss
+					content = miniscule_stress_impact_loss
+					lazy = miniscule_stress_impact_loss
+				}
+				add_opinion = {
+					target = root
+					modifier = pleased_opinion
+					opinion = 10
+				}
+			}
+		}
+	}
+
+}
+
+
+
+
+
+# Two characters are arguing
+VIETmisc.7014 = {
+	type = character_event
+	title = VIETmisc.7014.t
+	desc = VIETmisc.7014.desc
+	theme = travel
+	override_background = { reference = VIET_background_tuscan_country }
+	
+	left_portrait = {
+		character = scope:traveler_2
+		animation = anger
+	}	
+	
+	right_portrait = {
+		character = scope:traveler_2
+		animation = disapproval
+	}	
+
+	trigger = {
+		is_location_valid_for_travel_event_on_land = yes
+		current_travel_plan = {
+			any_entourage_character = {	
+				count >= 2		
+				is_available_travelling = yes
+			}
+		}
+	}
+	
+	weight_multiplier = {
+		base = 1
+		modifier = {
+			add = 0.2
+			has_trait = calm
+		}
+		modifier = {
+			add = -0.2
+			has_trait = wrathful
+		}
+		modifier = {
+			add = 0.2
+			has_trait = patient
+		}
+		modifier = {
+			add = -0.2
+			has_trait = impatient
+		}
+		modifier = {
+			add = 0.2
+			has_trait = trusting
+		}
+		modifier = {
+			add = -0.2
+			has_trait = paranoid
+		}
+	}
+
+	immediate = {
+		current_travel_plan = {
+			every_entourage_character = {	
+				is_available_travelling = yes
+				add_to_list = entourage_character_candidates
+			}
+		}
+		random_in_list = {
+			list = entourage_character_candidates
+			weight = {
+				base = 50
+				modifier = {
+					has_trait = ambitious
+					add = 10
+				}
+				modifier = {
+					has_trait = wrathful
+					add = 10
+				}
+				modifier = {
+					has_trait = vengeful
+					add = 5
+				}
+				modifier = {
+					has_trait = impatient
+					add = 5
+				}
+				modifier = {
+					has_trait = forgiving
+					add = -5
+				}
+				modifier = {
+					has_trait = patient
+					add = -5
+				}
+				modifier = {
+					has_trait = calm
+					add = -10
+				}
+				modifier = {
+					has_trait = content
+					add = -10
+				}
+			}
+			save_scope_as = traveler_1
+		}
+		random_in_list = {
+			list = entourage_character_candidates
+			limit = {
+				exists = scope:traveler_1
+				NOT = { this = scope:traveler_1 }
+			}
+			weight = {
+				base = 50
+				modifier = {
+					has_trait = ambitious
+					add = 10
+				}
+				modifier = {
+					has_trait = wrathful
+					add = 10
+				}
+				modifier = {
+					has_trait = vengeful
+					add = 5
+				}
+				modifier = {
+					has_trait = impatient
+					add = 5
+				}
+				modifier = {
+					has_trait = forgiving
+					add = -5
+				}
+				modifier = {
+					has_trait = patient
+					add = -5
+				}
+				modifier = {
+					has_trait = calm
+					add = -10
+				}
+				modifier = {
+					has_trait = content
+					add = -10
+				}
+			}
+			save_scope_as = traveler_2
+		}
+	}
+	
+	option = { # Don't do anything
+		name = VIETmisc.7014.a	
+		stress_impact = {
+			just = miniscule_stress_impact_loss
+			diligent = miniscule_stress_impact_loss
+			wrathful = miniscule_stress_impact_loss
+			impatient = miniscule_stress_impact_loss
+		}
+
+	}
+	
+	option = { # Try to intervene
+		name = VIETmisc.7014.b
+		duel = {
+			skill = diplomacy
+			value = VIET_travel_argument_double_diplo_value
+			# Success.
+			50 = {
+				compare_modifier = {
+					value = scope:duel_value
+					multiplier = 2.5
+					min = -49
+				}
+				send_interface_toast = {
+					type = event_toast_effect_good
+					title = VIETmisc.7014.b.success
+					left_icon = root
+					VIET_huge_prestige_gain_effect = yes
+					add_character_modifier = {
+						modifier = VIET_deescalated_situation
+						years = 5
+					}
+				}
+			}
+			# Failure.
+			50 = {
+				compare_modifier = {
+					value = scope:duel_value
+					multiplier = -1.5
+					min = -49
+				}
+				send_interface_toast = {
+					type = event_toast_effect_bad
+					title = VIETmisc.7014.b.failure
+					left_icon = root
+					VIET_huge_prestige_loss_effect = yes
+					scope:traveler_1 = {
+						add_opinion = {
+							target = root
+							modifier = VIET_nosy_interference
+						}
+					}
+					scope:traveler_2 = {
+						add_opinion = {
+							target = root
+							modifier = VIET_nosy_interference
+						}
+					}
+					scope:traveler_1 = {
+						set_relation_rival = {
+							target = scope:traveler_2
+							reason = VIET_travel_argument_reason
+						}
+					}
+				}	
+			}
+		}
+
+
+	}
+
+}
+
+
+
+
+# Two characters become friends
+VIETmisc.7015 = {
+	type = character_event
+	title = VIETmisc.7015.t
+	desc = VIETmisc.7015.desc
+	theme = travel_diplomacy
+	override_background = { reference = VIET_background_tuscan_country }
+	
+	left_portrait = {
+		character = scope:traveler_2
+		animation = happiness
+	}	
+	
+	right_portrait = {
+		character = scope:traveler_2
+		animation = laugh
+	}	
+
+	trigger = {
+		is_location_valid_for_travel_event_on_land = yes
+		current_travel_plan = {
+			any_entourage_character = {	
+				count >= 2		
+				is_available_travelling = yes
+			}
+		}
+	}
+	
+	weight_multiplier = {
+		base = 1
+		modifier = {
+			add = 0.2
+			has_trait = calm
+		}
+		modifier = {
+			add = -0.2
+			has_trait = wrathful
+		}
+		modifier = {
+			add = 0.2
+			has_trait = patient
+		}
+		modifier = {
+			add = -0.2
+			has_trait = impatient
+		}
+		modifier = {
+			add = 0.2
+			has_trait = trusting
+		}
+		modifier = {
+			add = -0.2
+			has_trait = paranoid
+		}
+	}
+
+	immediate = {
+		current_travel_plan = {
+			every_entourage_character = {	
+				is_available_travelling = yes
+				add_to_list = entourage_character_candidates
+			}
+		}
+		random_in_list = {
+			list = entourage_character_candidates
+			weight = {
+				base = 50
+				modifier = {
+					has_trait = gregarious
+					add = 10
+				}
+				modifier = {
+					has_trait = humble
+					add = 5
+				}
+				modifier = {
+					has_trait = content
+					add = 5
+				}
+				modifier = {
+					has_trait = trusting
+					add = 5
+				}
+				modifier = {
+					has_trait = paranoid
+					add = -5
+				}
+				modifier = {
+					has_trait = ambitious
+					add = -5
+				}
+				modifier = {
+					has_trait = arrogant
+					add = -5
+				}
+				modifier = {
+					has_trait = shy
+					add = -10
+				}
+			}
+			save_scope_as = traveler_1
+		}
+		random_in_list = {
+			list = entourage_character_candidates
+			limit = {
+				exists = scope:traveler_1
+				NOT = { this = scope:traveler_1 }
+			}
+			weight = {
+				base = 50
+				modifier = {
+					has_trait = gregarious
+					add = 10
+				}
+				modifier = {
+					has_trait = humble
+					add = 5
+				}
+				modifier = {
+					has_trait = content
+					add = 5
+				}
+				modifier = {
+					has_trait = trusting
+					add = 5
+				}
+				modifier = {
+					has_trait = paranoid
+					add = -5
+				}
+				modifier = {
+					has_trait = ambitious
+					add = -5
+				}
+				modifier = {
+					has_trait = arrogant
+					add = -5
+				}
+				modifier = {
+					has_trait = shy
+					add = -10
+				}
+			}
+			save_scope_as = traveler_2
+		}
+	}
+	
+	option = { # ok
+		name = VIETmisc.7015.a	
+
+		scope:traveler_1 = {
+			set_relation_friend = {
+				target = scope:traveler_2
+				reason = VIET_travel_chat_reason
+			}
+		}
+
+
+	}
+
+}
+
+
+
+# Muddy roads
+VIETmisc.7016 = {
+	type = character_event
+	title = VIETmisc.7016.t
+	desc = VIETmisc.7016.desc
+	theme = travel
+	override_background = { reference = VIET_background_tuscan_country }
+
+	
+	right_portrait = {
+		character = root
+		animation = worry
+	}	
+
+	trigger = {
+		is_location_valid_for_travel_event_on_land = yes
+	}
+	
+	weight_multiplier = {
+		base = 1
+		modifier = {
+			add = 0.2
+			has_trait = impatient
+		}
+		modifier = {
+			add = -0.2
+			has_trait = patient
+		}
+		modifier = {
+			add = 0.2
+			has_trait = wrathful
+		}
+		modifier = {
+			add = -0.2
+			has_trait = calm
+		}
+		modifier = {
+			add = 0.2
+			has_trait = ambitious
+		}
+		modifier = {
+			add = -0.2
+			has_trait = content
+		}
+	}
+	
+	option = { # ok
+		name = VIETmisc.7016.a	
+
+		current_travel_plan = {
+			delay_travel_plan = { days = 5 }
+		}
+
+
+	}
+
+}
+
+# Good dream?
+VIETmisc.7017 = {
+	type = character_event
+	title = VIETmisc.7017.t
+	desc = VIETmisc.7017.desc
+	theme = travel
+	override_background = { reference = VIET_background_skyrim_forest }
+
+	
+	left_portrait = {
+		character = root
+		animation = personality_rational
+	}	
+
+	
+	right_portrait = {
+		character = root
+		animation = happiness
+	}	
+
+	trigger = {
+		is_location_valid_for_travel_event_on_land = yes
+		current_travel_plan = {
+			any_entourage_character = {
+				is_available_travelling = yes
+			}
+		}
+	}
+	
+	weight_multiplier = {
+		base = 1
+		modifier = {
+			add = 0.2
+			has_trait = impatient
+		}
+		modifier = {
+			add = -0.2
+			has_trait = patient
+		}
+		modifier = {
+			add = 0.2
+			has_trait = wrathful
+		}
+		modifier = {
+			add = -0.2
+			has_trait = calm
+		}
+		modifier = {
+			add = 0.2
+			has_trait = ambitious
+		}
+		modifier = {
+			add = -0.2
+			has_trait = content
+		}
+	}
+
+	immediate = {
+		current_travel_plan = {
+			random_entourage_character = {
+				limit = {
+					is_available_travelling = yes
+				}
+				save_scope_as = dreamer
+			}	
+			add_travel_plan_modifier = {
+				modifier = VIET_traveling_good_dream_omen
+			}
+		}		
+	}
+	
+	option = { # ok
+		name = VIETmisc.7017.a	
+	}
+	
+	option = { # ok
+		name = VIETmisc.7017.b
+		stress_impact = {
+			shy = miniscule_stress_impact_gain
+			arrogant = miniscule_stress_impact_gain
+			callous = miniscule_stress_impact_gain
+		}
+		scope:dreamer = {
+			add_opinion = {
+				target = root
+				modifier = VIET_talked_about_dreams
+			}
+		}
+		progress_towards_friend_effect = {
+			CHARACTER = scope:dreamer
+			OPINION = 0
+			REASON = VIET_friend_reason_placeholder
+		}	
+	}
+
+}
+
+
+# Village is having a wedding
+VIETmisc.7018 = {
+	type = character_event
+	title = VIETmisc.7018.t
+	desc = VIETmisc.7018.desc
+	theme = travel
+	override_background = { reference = VIET_background_wedding }
+
+	
+	left_portrait = {
+		character = root
+		animation = admiration
+	}	
+
+	
+	right_portrait = {
+		character = root
+		animation = happiness
+	}	
+
+	trigger = {
+		is_location_valid_for_travel_event_on_land = yes
+	}
+	
+	weight_multiplier = {
+		base = 1
+		modifier = {
+			add = 0.2
+			has_trait = compassionate
+		}
+		modifier = {
+			add = -0.2
+			has_trait = callous
+		}
+		modifier = {
+			add = 0.2
+			has_trait = gregarious
+		}
+		modifier = {
+			add = -0.2
+			has_trait = shy
+		}
+		modifier = {
+			add = 0.2
+			has_trait = humble
+		}
+		modifier = {
+			add = -0.2
+			has_trait = arrogant
+		}
+	}
+
+	immediate = {
+		root.location.culture = {
+			save_scope_as = culture
+		}
+	}
+	
+	
+	option = { # ok
+		name = VIETmisc.7018.a	
+
+		VIET_huge_prestige_loss_effect = yes
+
+		stress_impact = {
+			diligent = minor_stress_impact_gain
+			shy = minor_stress_impact_gain
+			arrogant = miniscule_stress_impact_gain
+			paranoid = miniscule_stress_impact_gain
+		}
+
+		current_travel_plan = {
+			delay_travel_plan = { days = 10 }
+		}
+
+	}
+	
+	option = { # ok
+		name = VIETmisc.7018.b
+		stress_impact = {
+			gregarious = minor_stress_impact_gain
+			lustful = minor_stress_impact_gain
+			lazy = miniscule_stress_impact_gain
+		}
+	}
+
+}
+
+
+
+# Encounter a traveling bard
+VIETmisc.7019 = {
+	type = character_event
+	title = VIETmisc.7019.t
+	desc = VIETmisc.7019.desc
+	theme = travel
+	override_background = { reference = VIET_background_tuscan_country }
+
+	
+	left_portrait = {
+		character = root
+		animation = admiration
+	}	
+
+	
+	# right_portrait = {
+	# 	character = scope:bard
+	# 	animation = happiness
+	# }	
+
+	trigger = {
+		is_location_valid_for_travel_event_on_land = yes
+	}
+	
+	weight_multiplier = {
+		base = 1
+		modifier = {
+			add = 0.2
+			has_trait = compassionate
+		}
+		modifier = {
+			add = -0.2
+			has_trait = callous
+		}
+		modifier = {
+			add = 0.2
+			has_trait = gregarious
+		}
+		modifier = {
+			add = -0.2
+			has_trait = shy
+		}
+		modifier = {
+			add = 0.2
+			has_trait = humble
+		}
+		modifier = {
+			add = -0.2
+			has_trait = arrogant
+		}
+	}
+
+	immediate = {
+		root.location = {
+			save_scope_as = location
+		}
+		root.location.culture = {
+			save_scope_as = culture
+		}
+		create_character = {
+			location = scope:location
+			culture = scope:location.culture
+			faith = scope:location.faith
+			gender_female_chance = 50
+			age = 28
+			save_scope_as = bard
+		}
+		scope:bard = {
+			VIET_ek_character_setup_effect = yes
+		}
+
+		stress_impact = {
+			base = miniscule_stress_impact_loss
+		}
+
+		current_travel_plan = {
+			every_entourage_character = {
+				custom = every_entourage_tt
+				stress_impact = {
+					base = miniscule_stress_impact_loss
+				}
+			}
+		}
+
+	}
+	
+	
+	option = { # ok
+		name = VIETmisc.7019.a	
+
+
+
+	}
+	
+	option = { # ok
+		name = VIETmisc.7019.b
+		
+
+		stress_impact = {
+			base = miniscule_stress_impact_loss
+		}
+
+		current_travel_plan = {
+			every_entourage_character = {
+				custom = every_entourage_tt
+				stress_impact = {
+					base = miniscule_stress_impact_loss
+				}
+			}
+		}
+	}
+	
+	option = { # ok
+		name = VIETmisc.7019.c
+		trigger = {
+			learning >= decent_skill_rating			
+		}
+		skill = learning
+
+		VIET_medium_prestige_loss_effect = yes
+
+		add_character_modifier = {
+			modifier = VIET_favorite_songs
+			years = 10
+		}
+
+	}
+
+	after = {
+		hidden_effect = {
+			scope:bard = {
+				death = {
+					death_reason = death_vanished
+				}
+			}			
+		}
+		# scope:courtier = {
+		# 	clear_court_event_participation = yes
+		# }
+	}
+
+
+}
+
+
+
 

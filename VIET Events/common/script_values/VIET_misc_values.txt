@@ -59,3 +59,10 @@ VIET_activity_cost = {
 	min = 25
 	max = 100
 }
+
+VIET_travel_argument_double_diplo_value = {
+	value = 0
+	add = scope:traveler_1.diplomacy
+	add = scope:traveler_2.diplomacy
+	max = 30
+}

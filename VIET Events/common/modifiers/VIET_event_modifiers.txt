@@ -2976,6 +2976,35 @@ VIET_traveling_diligently_on_time = {
 	travel_speed = 5
 }
 
+VIET_bringing_servant_back = {
+	icon = piety_positive
+	travel_speed = -5
+}
+
+VIET_pillaged_own_peasants = {
+	icon = dread_negative
+	general_opinion = -5
+	county_opinion_add = -5
+}
+
+VIET_traveling_good_dream_omen = {
+	icon = county_modifier_opinion_positive
+	travel_speed = 1
+	travel_safety = 1
+}
+
+VIET_deescalated_situation = {
+	icon = social_positive
+	diplomacy = 1
+	monthly_diplomacy_lifestyle_xp_gain_mult = 0.03
+}
+
+VIET_favorite_songs = {
+	icon = social_positive
+	stress_gain_mult = -0.1
+	stress_loss_mult = 0.1
+}
+
 
 
 
