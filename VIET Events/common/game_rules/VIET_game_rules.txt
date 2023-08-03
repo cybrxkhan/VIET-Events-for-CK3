@@ -3,19 +3,19 @@ VIET_events_atmosphere = {
 	default = VIET_balanced_events
 
 	categories = {
-		VIET game_modes flavor GG_can_change_rule
+		VIET game_modes flavor
 	}
 
 	VIET_balanced_events = {
-	
+		flag = GG_can_change_rule		
 	}
 
 	VIET_all_events = {
-	
+		flag = GG_can_change_rule		
 	}
 
 	VIET_serious_events = {
-	
+		flag = GG_can_change_rule		
 	}
 	
 }
@@ -24,15 +24,15 @@ VIET_universe_setting = {
 	default = VIET_normal_universe_events
 
 	categories = {
-		VIET game_modes flavor GG_can_change_rule
+		VIET game_modes flavor
 	}
 
 	VIET_normal_universe_events = {
-	
+		flag = GG_can_change_rule	
 	}
 
 	VIET_historical_universe_events = {
-	
+		flag = GG_can_change_rule		
 	}
 	
 	#VIET_future_universe_events = {
@@ -40,7 +40,7 @@ VIET_universe_setting = {
 	#}
 
 	VIET_conversion_universe_events = {
-	
+		flag = GG_can_change_rule		
 	}
 	
 }
@@ -49,15 +49,15 @@ VIET_historical_context = {
 	default = VIET_historical_context_on
 
 	categories = {
-		VIET historicity flavor GG_can_change_rule
+		VIET historicity flavor
 	}
 
 	VIET_historical_context_on = {
-	
+		flag = GG_can_change_rule		
 	}
 
 	VIET_historical_context_off = {
-	
+		flag = GG_can_change_rule	
 	}	
 }
 
@@ -65,19 +65,19 @@ VIET_resource_amounts = {
 	default = VIET_resource_default
 
 	categories = {
-		VIET tweaks difficulty GG_can_change_rule
+		VIET tweaks difficulty
 	}
 
 	VIET_resource_default = {
-	
+		flag = GG_can_change_rule		
 	}
 
 	VIET_resource_one_and_a_half = {
-	
+		flag = GG_can_change_rule		
 	}	
 
 	VIET_resource_twice = {
-	
+		flag = GG_can_change_rule		
 	}	
 }
 
@@ -86,27 +86,27 @@ VIET_event_frequency = {
 
 
 	categories = {
-		VIET tweaks flavor GG_can_change_rule
+		VIET tweaks flavor
 	}
 
 	VIET_event_frequency_default = {
-	
+		flag = GG_can_change_rule		
 	}
 
 	VIET_event_frequency_high = {
-	
+		flag = GG_can_change_rule		
 	}	
 
 	VIET_event_frequency_very_high = {
-	
+		flag = GG_can_change_rule		
 	}			
 
 	VIET_event_frequency_very_low = {
-	
+		flag = GG_can_change_rule	
 	}		
 
 	VIET_event_frequency_low = {
-	
+		flag = GG_can_change_rule		
 	}
 }
 

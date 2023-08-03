@@ -978,6 +978,7 @@ VIET_listened_to_saint_francis:0 "Прослушал проповедь с жи�
  VIET_distractingly_attractive:0 "Distractingly Attractive"
  VIET_distractingly_attractive_desc:0 "This character was originally a humble servant serving at the court of a monarch. However, their distractingly good looks earned them enough attention that they were promoted in status."
  VIET_opinion_stupid_sexy_flanders:0 "Being Distractingly Attractive is a Bad Thing"
+ VIET_admits_mistakes:0 "Admits Mistakes"
  VIET_admits_mistakes_desc:0 "This character, despite their high position in society, tends to openly acknowledge the mistakes they made, whether out of genuine conviction or just to look good in the eyes of others. Also, that doesn't necessarily mean they fix their mistakes."
  VIET_recognizes_mistakes:0 "Recognizes But Doesn't Admit Mistakes"
  VIET_recognizes_mistakes_desc:0 "This character firmly believes in this piece of advice: "If you make a mistake, recognize and correct it, but never admit it to anyone.""
@@ -1221,4 +1222,14 @@ VIET_listened_to_saint_francis:0 "Прослушал проповедь с жи�
  VIET_local_tour:0 "Toured Local Settlement"
  VIET_traveling_diligently_on_time:0 "Traveling Diligently on Time"
  # Version 1.9.1 Start Here - Note to translators: Please leave this comment and do not move or remove it
- xxxxx:0 "xxxxx"
+ VIET_bringing_servant_back:0 "Bringing Deceased Servant Home"
+ VIET_bad_inn:0 "Stayed at an Exceptionally Bad Inn"
+ VIET_good_inn:0 "Stayed at an Exceptionally Good Inn"
+ VIET_traveling_good_dream_omen:0 "Auspicous Dream about Traveling"
+ VIET_talked_about_dreams:0 "Talked About Dreams"
+ VIET_nosy_interference:0 "Nosy Interference"
+ VIET_deescalated_situation:0 "Deescalated Situation"
+ VIET_deescalated_situation_desc:0 "This character recently diffused a heated argument between two people in such a manner that won praise and admiration from many for their diplomatic skills."
+ VIET_favorite_songs:0 "Favorite Songs"
+ VIET_favorite_songs_desc:0 "This character recently heard some local folk songs they really liked. They made a note of all they could remember about these songs, even if it's not the same as hearing them in person."
+ # Version 1.10.0 Start Here - Note to translators: Please leave this comment and do not move or remove it

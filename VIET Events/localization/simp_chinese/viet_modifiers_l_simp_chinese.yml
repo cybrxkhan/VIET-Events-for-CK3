@@ -1181,3 +1181,15 @@
  VIET_local_entertainment:0 "本地娱乐"
  VIET_local_tour:0 "参观了当地的居民区"
  VIET_traveling_diligently_on_time:0 "按时旅行"
+ # Version 1.9.1 Start Here - Note to translators: Please leave this comment and do not move or remove it
+ VIET_bringing_servant_back:0 "Bringing Deceased Servant Home"
+ VIET_bad_inn:0 "Stayed at an Exceptionally Bad Inn"
+ VIET_good_inn:0 "Stayed at an Exceptionally Good Inn"
+ VIET_traveling_good_dream_omen:0 "Auspicous Dream about Traveling"
+ VIET_talked_about_dreams:0 "Talked About Dreams"
+ VIET_nosy_interference:0 "Nosy Interference"
+ VIET_deescalated_situation:0 "Deescalated Situation"
+ VIET_deescalated_situation_desc:0 "This character recently diffused a heated argument between two people in such a manner that won praise and admiration from many for their diplomatic skills."
+ VIET_favorite_songs:0 "Favorite Songs"
+ VIET_favorite_songs_desc:0 "This character recently heard some local folk songs they really liked. They made a note of all they could remember about these songs, even if it's not the same as hearing them in person."
+ # Version 1.10.0 Start Here - Note to translators: Please leave this comment and do not move or remove it
