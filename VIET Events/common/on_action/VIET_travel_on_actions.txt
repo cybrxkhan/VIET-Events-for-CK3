@@ -62,13 +62,18 @@ VIET_travel_events_common = {
 			# }
 		}
 
-		2000 = 0 
+		6000 = 0 
 
 		# Generic
 		100 = VIETmisc.7001		# Food gone bad
 		100 = VIETmisc.7003		# Shortcut discovered
 		100 = VIETmisc.7005		# Come across a wayshrine
 		100 = VIETmisc.7008		# Overslept during travels
+		# Generic 2
+		100 = VIETmisc.7011		# Animal attack
+		100 = VIETmisc.7012		# Terrible Inn
+		100 = VIETmisc.7013		# Amazing Inn
+		100 = VIETmisc.7016		# Muddy roads
 	}
 }
 
@@ -117,12 +122,15 @@ VIET_travel_events_uncommon = {
 			# }
 		}
 
-		3000 = 0 
+		8000 = 0 
 
 		# Generic
 		100 = VIETmisc.7002		# A friendly village
 		100 = VIETmisc.7004		# Visit to a town of leisure
 		100 = VIETmisc.7007		# Locals offer to give you a tour
+		# Generic 2
+		100 = VIETmisc.7017		# Good dream?
+		100 = VIETmisc.7019		# Encounter a traveling bard
 	}
 }
 
@@ -171,11 +179,16 @@ VIET_travel_events_rare = {
 			# }
 		}
 
-		4000 = 0 
+		12000 = 0 
 
 		# Generic
 		100 = VIETmisc.7006		# Stumble on the remnants of a bandit ambush of a caravan
 		100 = VIETmisc.7009		# Rumors of Qi Ma the Liar
+		# Generic 2
+		100 = VIETmisc.7010		# Servant passes away
+		100 = VIETmisc.7014		# Two characters are arguing
+		100 = VIETmisc.7015		# Two characters become friends
+		100 = VIETmisc.7018		# Village is having a wedding
 	}
 }
 

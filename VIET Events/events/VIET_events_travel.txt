@@ -1332,7 +1332,7 @@ VIETmisc.7014 = {
 	override_background = { reference = VIET_background_tuscan_country }
 	
 	left_portrait = {
-		character = scope:traveler_2
+		character = scope:traveler_1
 		animation = anger
 	}	
 	
@@ -1382,7 +1382,9 @@ VIETmisc.7014 = {
 	immediate = {
 		current_travel_plan = {
 			every_entourage_character = {	
-				is_available_travelling = yes
+				limit = {
+					is_available_travelling = yes
+				}
 				add_to_list = entourage_character_candidates
 			}
 		}
@@ -1478,6 +1480,12 @@ VIETmisc.7014 = {
 			wrathful = miniscule_stress_impact_loss
 			impatient = miniscule_stress_impact_loss
 		}
+		scope:traveler_1 = {
+			set_relation_rival = {
+				target = scope:traveler_2
+				reason = VIET_travel_argument_reason
+			}
+		}
 
 	}
 	
@@ -1555,7 +1563,7 @@ VIETmisc.7015 = {
 	override_background = { reference = VIET_background_tuscan_country }
 	
 	left_portrait = {
-		character = scope:traveler_2
+		character = scope:traveler_1
 		animation = happiness
 	}	
 	
@@ -1604,8 +1612,10 @@ VIETmisc.7015 = {
 
 	immediate = {
 		current_travel_plan = {
-			every_entourage_character = {	
-				is_available_travelling = yes
+			every_entourage_character = {
+				limit = {
+					is_available_travelling = yes
+				}	
 				add_to_list = entourage_character_candidates
 			}
 		}
@@ -1784,7 +1794,7 @@ VIETmisc.7017 = {
 
 	
 	right_portrait = {
-		character = root
+		character = scope:dreamer
 		animation = happiness
 	}	
 
@@ -1841,6 +1851,7 @@ VIETmisc.7017 = {
 	
 	option = { # ok
 		name = VIETmisc.7017.a	
+		VIET_huge_piety_gain_effect = yes
 	}
 	
 	option = { # ok
@@ -1873,12 +1884,6 @@ VIETmisc.7018 = {
 	desc = VIETmisc.7018.desc
 	theme = travel
 	override_background = { reference = VIET_background_wedding }
-
-	
-	left_portrait = {
-		character = root
-		animation = admiration
-	}	
 
 	
 	right_portrait = {
@@ -1928,13 +1933,46 @@ VIETmisc.7018 = {
 	option = { # ok
 		name = VIETmisc.7018.a	
 
-		VIET_huge_prestige_loss_effect = yes
+		VIET_massive_prestige_loss_effect = yes
 
-		stress_impact = {
-			diligent = minor_stress_impact_gain
-			shy = minor_stress_impact_gain
-			arrogant = miniscule_stress_impact_gain
-			paranoid = miniscule_stress_impact_gain
+		if = {
+			limit = {
+				OR = {
+					has_trait = diligent
+					has_trait = shy
+					has_trait = arrogant
+					has_trait = paranoid
+				}
+			}
+			stress_impact = {
+				diligent = minor_stress_impact_gain
+				shy = minor_stress_impact_gain
+				arrogant = miniscule_stress_impact_gain
+				paranoid = miniscule_stress_impact_gain
+			}
+		}
+		else = {
+			stress_impact = {
+				base = minor_stress_impact_loss
+				gregarious = minor_stress_impact_loss
+				lustful = minor_stress_impact_loss
+				gluttonous = minor_stress_impact_loss
+				lazy = miniscule_stress_impact_loss
+			}
+		}
+
+		current_travel_plan = {
+			every_entourage_character = {
+				custom = every_entourage_tt
+				stress_impact = {
+					base = miniscule_stress_impact_loss
+				}
+				add_opinion = {
+					target = root
+					modifier = happy_opinion
+					opinion = 5
+				}
+			}
 		}
 
 		current_travel_plan = {
@@ -1948,6 +1986,7 @@ VIETmisc.7018 = {
 		stress_impact = {
 			gregarious = minor_stress_impact_gain
 			lustful = minor_stress_impact_gain
+			gluttonous = minor_stress_impact_gain
 			lazy = miniscule_stress_impact_gain
 		}
 	}
@@ -1965,16 +2004,13 @@ VIETmisc.7019 = {
 	override_background = { reference = VIET_background_tuscan_country }
 
 	
-	left_portrait = {
-		character = root
-		animation = admiration
-	}	
+	left_portrait = root
 
 	
-	# right_portrait = {
-	# 	character = scope:bard
-	# 	animation = happiness
-	# }	
+	right_portrait = {
+		character = scope:bard
+		animation = personality_content
+	}	
 
 	trigger = {
 		is_location_valid_for_travel_event_on_land = yes

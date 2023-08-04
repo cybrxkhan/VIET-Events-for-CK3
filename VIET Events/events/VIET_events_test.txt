@@ -220,7 +220,7 @@ VIETtest.0008 = {
 			create_artifact = {	
 				name = VIET_recipe_baklava_name
 				description = VIET_recipe_baklava_desc
-				rarity = illustrious
+				rarity = common
 				type = VIET_recipe
 				visuals = VIET_cool_baklava
 				quality = 2
@@ -376,5 +376,78 @@ VIETtest.0010 = {
 	option = {
 		name = VIETtest.0010.b
 		destroy_artifact = scope:VIET_lusty_argonian_maid
+	}
+}
+
+
+# Artifact test - cost
+VIETtest.0011 = {
+	type = character_event
+	title = VIETtest.0008.t
+	desc = VIETtest.0008.desc
+	theme = VIET_theme_tuscan_country
+	orphan = yes 
+	
+	left_portrait = {
+		character = root
+		animation = happiness
+	}
+	artifact = { # To display the artifact in the event-window
+        target = scope:VIET_baklava_test
+        position = lower_center_portrait
+    }
+
+	immediate = {
+		hidden_effect_new_object = {
+			create_artifact = {	
+				name = VIET_recipe_baklava_name
+				description = VIET_recipe_baklava_desc
+				rarity = common
+				type = VIET_recipe
+				visuals = VIET_cool_baklava
+				quality = 2
+				wealth = 1000
+				modifier = artifact_monthly_prestige_5_modifier
+				save_scope_as = VIET_baklava_test
+				decaying = no
+			}
+			scope:VIET_baklava_test = {
+				add_artifact_modifier = artifact_diplomacy_per_prestige_level_modifier
+			}
+		}
+		# hidden_effect_new_object = {
+		# 	create_artifact = {	
+		# 		name = VIET_recipe_sweetroll_name
+		# 		description = VIET_recipe_sweetroll_desc
+		# 		#rarity = masterwork
+		# 		type = VIET_recipe
+		# 		visuals = VIET_legendary_sweetroll
+		# 		quality = 2
+		# 		wealth = 2
+		# 		modifier = artifact_monthly_piety_8_modifier
+		# 		save_scope_as = VIET_baklava_test
+		# 	}
+		# 	scope:VIET_baklava_test = {
+		# 		flag_as_trash_artifact = yes
+		# 		add_artifact_modifier = artifact_diplomacy_per_prestige_level_modifier
+		# 	}
+		# }
+	}
+	
+	option = {
+		name = VIETtest.0008.a
+		show_as_tooltip = {
+			scope:VIET_baklava_test = {
+				set_owner = {
+					target = root
+				}
+			}
+		}
+	}
+	option = {
+		name = VIETmisc.5005.b		
+		hidden_effect = {
+			destroy_artifact = scope:VIET_baklava_test
+		}
 	}
 }
