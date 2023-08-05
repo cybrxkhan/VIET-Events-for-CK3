@@ -983,7 +983,7 @@ VIETmisc.7011 = {
 	type = character_event
 	title = VIETmisc.7011.t
 	desc = VIETmisc.7011.desc
-	theme = travel
+	theme = travel_martial
 	override_background = { reference = VIET_background_tuscan_country }
 	
 	left_portrait = {
@@ -1328,7 +1328,7 @@ VIETmisc.7014 = {
 	type = character_event
 	title = VIETmisc.7014.t
 	desc = VIETmisc.7014.desc
-	theme = travel
+	theme = travel_intrigue
 	override_background = { reference = VIET_background_tuscan_country }
 	
 	left_portrait = {
@@ -1882,7 +1882,7 @@ VIETmisc.7018 = {
 	type = character_event
 	title = VIETmisc.7018.t
 	desc = VIETmisc.7018.desc
-	theme = travel
+	theme = travel_diplomacy
 	override_background = { reference = VIET_background_wedding }
 
 	
@@ -2000,7 +2000,7 @@ VIETmisc.7019 = {
 	type = character_event
 	title = VIETmisc.7019.t
 	desc = VIETmisc.7019.desc
-	theme = travel
+	theme = travel_diplomacy
 	override_background = { reference = VIET_background_tuscan_country }
 
 	
@@ -2088,7 +2088,13 @@ VIETmisc.7019 = {
 	
 	option = { # ok
 		name = VIETmisc.7019.b
-		
+		trigger = {
+			OR = {
+				gold >= 15
+				is_ai = no
+			}
+		}
+		remove_short_term_gold = 15		
 
 		stress_impact = {
 			base = miniscule_stress_impact_loss
