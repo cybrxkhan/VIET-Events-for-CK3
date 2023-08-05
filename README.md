@@ -1,6 +1,6 @@
 # VIET Events for CK3
 
-<img src="https://i.imgur.com/AqpLmVF.jpg">
+<img src="https://i.imgur.com/rivjDDQ.jpg">
 
 ## Latest Version: 1.9.1 "Ibn Jubayr" (Released 8/5/23)
 
