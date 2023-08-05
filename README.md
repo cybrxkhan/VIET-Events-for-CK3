@@ -24,14 +24,18 @@ Feel free to use my work in your mods - all I ask is that I am credited and (if 
 
 ## Manual Installation Steps
 
-DO NOT manually download the master branch unless you know what you're doing as it is the WIP version that is constantly being updated!
+DO NOT manually download the master branch unless you know what you're doing as it is a WIP version and not necessarily stable!
 
 1. Go to https://github.com/cybrxkhan/VIET-Events-for-CK3/releases and find the latest version you wish to download.
-2. Extract the .zip file to Documents\Paradox Interactive\Crusader Kings III\mod
-3. Launch CKIII and select VIET Events in the launcher.
+2. Extract the "VIET" folder and "VIET.mod" file from the .zip file to Documents\Paradox Interactive\Crusader Kings III\mod
+3. Launch CKIII and select VIET in the launcher.
 4. Enjoy and play!
 
-NOTE: If you are re-installing a mod, delete the old version of the mod first before copy and pasting the new one! While it's not always necessary, it's a good habit to do to prevent any potential issues.
+The mod folder should look something like this:
+
+<img src="https://i.imgur.com/JEGUadr.jpg">
+
+**NOTE**: If you are re-installing a mod, delete the old version of the mod first before copy and pasting the new one! While it's not always necessary, it's a good habit to do to prevent any potential issues.
 
 ## Version 1.9.1 Changelog
 
