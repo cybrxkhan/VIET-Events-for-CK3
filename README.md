@@ -2,10 +2,10 @@
 
 <img src="https://i.imgur.com/AqpLmVF.jpg">
 
-## Latest Version: 1.9.0 "Xuanzang" (Released 5/17/23)
+## Latest Version: 1.9.1 "Ibn Jubayr" (Released 8/5/23)
 
-_“I wish to go and find out the truth, and so I decided to travel to the West at the risk of my life in order to seek for the teachings of which I have not yet heard.”_
-_- Xuanzang (602-664 CE), Chinese Buddhist pilgrim, traveler, scholar, and translator_
+_“One of the astonishing things that is talked of is that though the fires of discord burn between the two parties, Muslim and Christian, two armies of them may meet and dispose themselves in battle array, and yet Muslim and Christian travelers will come and go between them without interference... The soldiers engage themselves in their war, while the people are at peace.”_
+_– Ibn Jubayr (1145-1217), Andalusian pilgrim, traveler, and poet_
 
 Very Immersive Events and Tales (VIET), the sequel to VIET Events Reborn for CK2, is a flavor mod that adds a vast collection of events about everyday life to spice up your game. They add immersion and a diversity of experiences in between wars and vanilla’s event chains, and cover mundane minutiae ranging from small talk with courtiers and eating local cuisine to epic tales about love, philosophy, and the human condition. Some of the events unlock new decisions, character interactions, activities, and much more for you to explore!
 
@@ -15,7 +15,7 @@ Feel free to use my work in your mods - all I ask is that I am credited and (if 
 
 ## Features
 
-- Over **1018** new flavor events to experience!
+- Over **1028** new flavor events to experience!
 - Explore new decisions, artifacts, character interactions, activities, and more!
 - Game rule to disable sillier events for those who don't like them, with three levels to choose from: Balanced (Default), Serious (Restricted), and All Events (Full)
 - Compatible with almost anything since it doesn't touch any vanilla files - even with overhaul mods, you can via game rule disable events that reference things specific to our medieval world that wouldn’t make sense in other time periods or universes (like fantasy and sci-fi conversion mods)
@@ -33,16 +33,17 @@ DO NOT manually download the master branch unless you know what you're doing as 
 
 NOTE: If you are re-installing a mod, delete the old version of the mod first before copy and pasting the new one! While it's not always necessary, it's a good habit to do to prevent any potential issues.
 
-## Version 1.9.0 Changelog
+## Version 1.9.1 Changelog
 
 New events added in this version: **10**
 
-- Updated to vanilla patch 1.9 “Lance”
 - Added 10 new travel events
-- Adapted old activities to the new system
-- Added nickname descriptions for VIET’s nicknames
-- VIET’s event backgrounds are now based on your character’s location, not capital
-- Reduced/rebalanced the costs of various decisions and activities
+- VIET game rules now have categories, including a VIET category
+- VIET now supports the Gamerule Gadget mod
+- Intro event for activities now fires for only VIET’s activities
+- Decreased the chances travel events will fire
+- Fixed Jon Battle-Born event not accounting for the new blademaster lifestyle trait changes
+- Fixed gold costs for Bear attack county event options not making sense
 - Miscellaneous bugfixes
 
 \* Adapted from VIET for CK2

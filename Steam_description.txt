@@ -1,6 +1,6 @@
-[img]https://i.imgur.com/AqpLmVF.jpg[/img]
+[img]https://i.imgur.com/rivjDDQ.jpg[/img]
 
-[h1]Current Version: 1.9.0 "Xuanzang" (Released 5/17/23, Compatible with vanilla patch 1.9.X)[/h1]
+[h1]Current Version: 1.9.1 "Ibn Jubayr" (Released 8/5/23, Compatible with vanilla patch 1.9.X)[/h1]
 
 [h1][B][url=https://forms.gle/if7sLCAGpB1G2uJdA]Take the 2023 VIET/RICE Survey![/url]
 [url=https://discord.gg/9KuyXv2uZA]Discord Server for my mods[/url]
@@ -10,9 +10,9 @@
 [B]Paradox Download [url=https://mods.paradoxplaza.com/mods/12992/Any]Available Here[/url][/B]
 [B][url=https://imgur.com/a/TIePH1f]See All Preview Screenshots Here[/url][/B]
 
-Very Immersive Events and Tales (VIET), the sequel to [url=https://steamcommunity.com/sharedfiles/filedetails/?id=1601402546]VIET Events Reborn for CK2[/url], is a flavor mod that adds a vast collection of events about everyday life to spice up your game. They add immersion and a diversity of experiences in between wars and vanilla’s event chains, and cover mundane minutiae from small talk with courtiers and eating local cuisine to epic tales about love, philosophy, and the human condition. Some events even unlock new decisions, character interactions, activities, and much more for you to explore!
+Very Immersive Events and Tales (VIET), the sequel to [url=https://steamcommunity.com/sharedfiles/filedetails/?id=1601402546]VIET Events Reborn for CK2[/url], is a flavor mod that adds a vast collection of events about everyday life to spice up your game. They add immersion and a diversity of experiences in between wars and vanilla’s event chains, and cover mundane minutiae from small talk with courtiers and eating local cuisine to epic tales about love, philosophy, and the human condition. Some events even unlock new decisions, interactions, activities, and much more for you to explore!
 
-I hope the lessons I learned from my eight years (with a hiatus) of modding CK2 will help me deliver a fun experience for any players interested in my mods. I hope to continue adding more and more events in every update!
+I hope the lessons I learned from my years of modding CK2 will help me deliver a fun experience for those who play  my mods, and I hope to add more and more events in every update.
 
 [B][U]VIET [I]WILL[/I] WORK ON EXISTING SAVES![/U][/B] (Though remember to make a backup copy of your save just in case.)
 
@@ -26,23 +26,23 @@ Feel free to use my work in your mods - all I ask is that I am credited and (if 
 [img]http://i.imgur.com/EyXurbK.jpg[/img]
 
 [LIST]
-[*]Over [B][U]1018[/U] new flavor events[/B] to experience!
+[*]Over [B][U]1028[/U] new flavor events[/B] to experience!
 [*]Explore new decisions, artifacts, character interactions, activities, and more!
 [*]Game rule to disable sillier events for those who don't like them, with three levels to choose from: Balanced (Default), Serious (Restricted), and All Events (Full)
-[*][B]Compatible with almost anything[/B] since it doesn't touch any vanilla files - even with overhaul mods, you can via game rule disable events that reference things specific to our medieval world that wouldn’t make sense in other time periods or universes (like fantasy and sci-fi conversion mods)
+[*][B]Compatible with almost anything[/B] since it doesn't touch any vanilla files - even with overhaul mods, you can via game rule disable events that reference things specific to our medieval world that wouldn’t make sense in other time periods or universes (like fantasy/sci-fi conversion mods)
 [*]Learn history with [B]Historical Context tooltips[/B] that provide information about what inspired some of the events - sometimes, reality is stranger than fiction! (These can be disabled via game rule for those who find it immersion breaking.)
 [/LIST]
 
 [h1]TRANSLATIONS AVAILABLE[/h1]
-Because people are kindly spending their own free time and effort to work on these transations, [B]please be aware that the folks working on these translations may or may not be up to date with the latest version of VIET[/B]. Do note that all non-English languages available in the vanilla game has placeholder English localization in the base version of VIET, so they can be safely run, it will just display untranslated text in English (instead of gibberish).
+Because people are kindly spending their own free time and effort to work on these translations, [B]please be aware that the folks working on these translations may or may not be up to date with the latest version of VIET[/B]. Do note that all non-English languages available in the vanilla game has placeholder English localization in the base version of VIET, so they can be safely run, it will just display untranslated text in English (instead of gibberish).
 [LIST]
-[*]Chinese - [url=https://steamcommunity.com/sharedfiles/filedetails/?id=2997587648]Available as a sub-mod here[/url] thanks to a team led by a team led by 9Milk(牛奶大魔王)
-[*]French - [url=https://steamcommunity.com/sharedfiles/filedetails/?id=2234027514]Available as sub-mod here[/url], thanks to Mouchi
-[*]German - [url=https://steamcommunity.com/sharedfiles/filedetails/?id=2865016522]Available as sub-mod here[/url], thanks to Dani
-[*]Japanese - [url=https://steamcommunity.com/sharedfiles/filedetails/?id=2762293648]Available as sub-mod here[/url], thanks to sla_domi
-[*]Korean - [url=https://steamcommunity.com/sharedfiles/filedetails/?id=2227982565]Available as sub-mod here[/url], thanks to Ohboksu
-[*]Russian - AmoreLibre has provided translation which is integrated into base VIET. Further Russian translations can be found in [url=https://steamcommunity.com/sharedfiles/filedetails/?id=2525780456]this sub-mod[/url] thanks to Д.Р.У.И.Д.
-[*]Spanish - Sourenics has provided translation which is integrated into base VIET.
+[*]Chinese - [url=https://steamcommunity.com/sharedfiles/filedetails/?id=2997587648]Available as a sub-mod[/url] thanks to a team led by 9Milk(牛奶大魔王)
+[*]French - [url=https://steamcommunity.com/sharedfiles/filedetails/?id=2234027514]Available as sub-mod[/url], thanks to Mouchi
+[*]German - [url=https://steamcommunity.com/sharedfiles/filedetails/?id=2865016522]Available as sub-mod[/url], thanks to Dani
+[*]Japanese - [url=https://steamcommunity.com/sharedfiles/filedetails/?id=2762293648]Available as sub-mod[/url], thanks to sla_domi
+[*]Korean - [url=https://steamcommunity.com/sharedfiles/filedetails/?id=2227982565]Available as sub-mod[/url], thanks to Ohboksu
+[*]Russian - AmoreLibre has provided translations integrated into base VIET. More translations can be found in [url=https://steamcommunity.com/sharedfiles/filedetails/?id=2525780456]this sub-mod[/url] thanks to Д.Р.У.И.Д.
+[*]Spanish - Sourenics has provided translations integrated into base VIET.
 [/LIST]
 
 
@@ -50,25 +50,23 @@ Because people are kindly spending their own free time and effort to work on the
 
 Please see the [url=https://cybrxkhansmods.godaddysites.com/faq]FAQ on my mods' website[/url] for more info.
 
-Thanks!
-
-
 [img]http://i.imgur.com/RQ5QZTF.jpg[/img]
 
-[h1]Version 1.9.0 "Xuanzang"[/h1]
+[h1]Version 1.9.1 "Ibn Jubayr"[/h1]
 
-[I]“I wish to go and find out the truth, and so I decided to travel to the West at the risk of my life in order to seek for the teachings of which I have not yet heard.”
-- Xuanzang (602-664 CE), Chinese Buddhist pilgrim, traveler, scholar, and translator[/I]
+[I]“One of the astonishing things that is talked of is that though the fires of discord burn between the two parties, Muslim and Christian, two armies of them may meet and dispose themselves in battle array, and yet Muslim and Christian travelers will come and go between them without interference... The soldiers engage themselves in their war, while the people are at peace.”
+– Ibn Jubayr (1145-1217), Andalusian pilgrim, traveler, and poet[/I]
 
 New events added in this version: [B]10[/B]
 
 [LIST]
-[*]Updated to vanilla patch 1.9 “Lance”
 [*]Added 10 new travel events
-[*]Adapted old activities to the new system
-[*]Added nickname descriptions for VIET’s nicknames
-[*]VIET’s event backgrounds are now based on your character’s location, not capital
-[*]Reduced/rebalanced the costs of various decisions and activities
+[*]VIET game rules now have categories, including a VIET category
+[*]VIET now supports the Gamerule Gadget mod
+[*]Intro event for activities now fires for only VIET’s activities
+[*]Decreased the chances travel events will fire
+[*]Fixed Jon Battle-Born event not accounting for the new blademaster lifestyle trait changes
+[*]Fixed gold costs for Bear attack county event options not making sense
 [*]Miscellaneous bugfixes
 [/LIST]
 
