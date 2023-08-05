@@ -61,6 +61,7 @@
  VIETtest.0010.b:0 "¡Esto es una blasfemia! ¡Debo limpiar mi mente de esta inmundicia!"
  death_VIET_dream:0 "appeared in a dream"
  death_VIET_dream_killer:0 "appeared in [TARGET_CHARACTER.GetUINamePossessive] dream"
+ game_rule_category_VIET: "VIET"
  
  # Game Concepts 
  game_concept_qi_ma_the_liar:0 "Qi Ma el Mentiroso"
