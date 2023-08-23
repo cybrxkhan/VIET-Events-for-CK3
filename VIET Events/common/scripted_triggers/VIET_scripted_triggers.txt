@@ -1,6 +1,7 @@
 ﻿is_VIET_loaded = {
     always = yes
 }
+
 VIET_basic_is_available_adult_trigger = {
 	basic_is_valid_for_yearly_events_trigger = yes
 	is_adult = yes
@@ -153,4 +154,12 @@ VIET_indian_or_in_india_trigger = {
 		}
 	}
 }
+
+VIET_basic_is_available_child_trigger = {
+	is_ruler = yes
+	is_available_child = yes
+	age >= childhood_education_start_age
+}
+
+
 

@@ -52,6 +52,7 @@
 # 0282-0286		Generic
 # 0287-0292		New vanilla animations
 # 0293-0295		Simple
+# 0296-0313		Childhood Generic
 # 
 ############################################################################################################################
 
@@ -27670,14 +27671,1565 @@ VIETmisc.0295 = {
 
 
 
+##################################################################
+# Childhood Events 0296-0313
+##################################################################
+
+
+# Child prefers spending time with adults
+VIETmisc.0296 = {
+	type = character_event
+	title = VIETmisc.0296.t
+	desc = VIETmisc.0296.desc
+	theme = memory_formative
+	override_background = { reference = courtyard }
+
+	
+	right_portrait = {
+		character = root
+		animation = personality_rational
+	}
+	
+	weight_multiplier = {
+		base = 1
+		modifier = {
+			add = 0.2
+			has_trait = pensive
+		}
+		modifier = {
+			add = -0.2
+			has_trait = rowdy
+		}
+		modifier = {
+			add = 0.2
+			has_trait = calm
+		}
+		modifier = {
+			add = -0.2
+			has_trait = wrathful
+		}
+		modifier = {
+			add = 0.2
+			has_trait = patient
+		}
+		modifier = {
+			add = -0.2
+			has_trait = impatient
+		}
+	}
+
+	immediate = {
+		add_character_modifier = {
+			modifier = VIET_old_soul
+			years = 25
+		}
+	}
+	
+	option = { # ok
+		name = VIETmisc.0296.a
+		VIET_large_prestige_gain_effect = yes
+		stress_impact = {
+			rowdy = minor_stress_impact_gain
+			bossy = minor_stress_impact_gain
+			wrathful = miniscule_stress_impact_gain
+			impatient = miniscule_stress_impact_gain
+			arbitrary = miniscule_stress_impact_gain
+		}
+	}
+	
+	option = { # ok
+		name = VIETmisc.0296.b
+		VIET_large_piety_gain_effect = yes
+		stress_impact = {
+			pensive = minor_stress_impact_gain
+			curious = minor_stress_impact_gain
+			stubborn = miniscule_stress_impact_gain
+			arrogant = miniscule_stress_impact_gain
+			shy = miniscule_stress_impact_gain
+		}
+	}
+
+}
+
+
+# Crush is passing by
+VIETmisc.0297 = {
+	type = character_event
+	title = VIETmisc.0297.t
+	desc = VIETmisc.0297.desc
+	theme = romance_scheme
+
+	
+	left_portrait = scope:crush
+	
+	right_portrait = {
+		character = root
+		animation = shame
+	}
+
+	trigger = {
+		OR = {
+			any_vassal = {
+				is_available_ai_child = yes
+				root = { has_relation_crush = prev }
+			}
+			any_vassal = {
+				any_child = {
+					is_available_ai_child = yes
+					root = { has_relation_crush = prev }
+				}
+			}
+			any_courtier_or_guest = {
+				is_available_ai_child = yes
+				root = { has_relation_crush = prev }
+			}
+		}
+	}
+	
+	weight_multiplier = {
+		base = 1
+		modifier = {
+			add = 0.2
+			has_trait = pensive
+		}
+		modifier = {
+			add = -0.2
+			has_trait = charming
+		}
+		modifier = {
+			add = 0.2
+			has_trait = shy
+		}
+		modifier = {
+			add = -0.2
+			has_trait = gregarious
+		}
+		modifier = {
+			add = 0.2
+			has_trait = impatient
+		}
+		modifier = {
+			add = -0.2
+			has_trait = patient
+		}
+	}
+
+	immediate = {
+		every_vassal = {
+			limit = {
+				is_available_ai_child = yes
+				root = { has_relation_crush = prev }
+			}
+			add_to_list = crushes
+		}
+		every_vassal = {
+			every_child = {
+				limit = {
+					is_available_ai_child = yes
+					root = { has_relation_crush = prev }
+				}
+				add_to_list = crushes
+			}
+		}
+		every_courtier_or_guest = {
+			limit = {
+				is_available_ai_child = yes
+				root = { has_relation_crush = prev }
+			}
+			add_to_list = crushes
+		}
+				
+		random_in_list = {
+			list = crushes
+			save_scope_as = crush
+		}
+	}
+	
+	option = { # ok
+		name = VIETmisc.0297.a
+		stress_impact = {
+			base = minor_stress_impact_gain
+			shy = medium_stress_impact_gain
+		}
+		random_list = {
+			10 = {
+				desc = VIETmisc.0297.a.failure
+				send_interface_toast = {
+					type = event_toast_effect_bad
+					left_icon = ROOT
+					title = VIETmisc.0297.a.failure
+					scope:crush = {
+						add_opinion = {
+							target = root
+							modifier = VIET_opinion_awkward
+						}
+					}
+				}
+			}
+			10 = {
+				desc = VIETmisc.0297.a.success
+				send_interface_toast = {
+					type = event_toast_effect_good
+					left_icon = ROOT
+					title = VIETmisc.0297.a.success
+					scope:crush = {
+						add_opinion = {
+							target = root
+							modifier = amused_opinion
+							opinion = 10
+						}
+					}
+				}
+			}
+		}
+	}
+
+}
+
+
+
+# Daydreaming about crush
+VIETmisc.0298 = {
+	type = character_event
+	title = VIETmisc.0298.t
+	desc = VIETmisc.0298.desc
+	theme = romance_scheme
+
+	
+	lower_center_portrait = scope:crush
+	
+	right_portrait = {
+		character = root
+		animation = love
+	}
+
+	trigger = {
+		OR = {
+			any_vassal = {
+				is_available_ai_child = yes
+				root = { has_relation_crush = prev }
+			}
+			any_vassal = {
+				any_child = {
+					is_available_ai_child = yes
+					root = { has_relation_crush = prev }
+				}
+			}
+			any_courtier_or_guest = {
+				is_available_ai_child = yes
+				root = { has_relation_crush = prev }
+			}
+		}
+	}
+	
+	weight_multiplier = {
+		base = 1
+		modifier = {
+			add = 0.2
+			has_trait = pensive
+		}
+		modifier = {
+			add = -0.2
+			has_trait = rowdy
+		}
+		modifier = {
+			add = 0.2
+			has_trait = compassionate
+		}
+		modifier = {
+			add = -0.2
+			has_trait = callous
+		}
+		modifier = {
+			add = 0.2
+			has_trait = lustful
+		}
+		modifier = {
+			add = -0.2
+			has_trait = chaste
+		}
+	}
+
+	immediate = {
+		every_vassal = {
+			limit = {
+				is_available_ai_child = yes
+				root = { has_relation_crush = prev }
+			}
+			add_to_list = crushes
+		}
+		every_vassal = {
+			every_child = {
+				limit = {
+					is_available_ai_child = yes
+					root = { has_relation_crush = prev }
+				}
+				add_to_list = crushes
+			}
+		}
+		every_courtier_or_guest = {
+			limit = {
+				is_available_ai_child = yes
+				root = { has_relation_crush = prev }
+			}
+			add_to_list = crushes
+		}
+				
+		random_in_list = {
+			list = crushes
+			save_scope_as = crush
+		}
+	}
+	
+	option = { # ok
+		name = VIETmisc.0298.a
+		stress_impact = {
+			base = miniscule_stress_impact_loss
+			shy = minor_stress_impact_loss
+			lustful = miniscule_stress_impact_loss
+			content = miniscule_stress_impact_loss
+		}
+		add_character_modifier = {
+			modifier = VIET_crush_daydreams
+			years = 5
+		}
+	}
+
+}
 
 
 
 
 
 
+# Winess an amazing landscape as a child
+VIETmisc.0299 = {
+	type = character_event
+	title = VIETmisc.0299.t
+	desc = VIETmisc.0299.desc
+	theme = VIET_theme_tuscan_country
+
+	
+	right_portrait = {
+		character = root
+		animation = admiration
+	}
+	
+	weight_multiplier = {
+		base = 1
+		modifier = {
+			add = 0.2
+			has_trait = pensive
+		}
+		modifier = {
+			add = -0.2
+			has_trait = rowdy
+		}
+		modifier = {
+			add = 0.2
+			has_trait = patient
+		}
+		modifier = {
+			add = -0.2
+			has_trait = impatient
+		}
+		modifier = {
+			add = 0.2
+			has_trait = content
+		}
+		modifier = {
+			add = -0.2
+			has_trait = ambitious
+		}
+	}
+	
+	option = { # ok
+		name = VIETmisc.0299.a		
+		VIET_medium_piety_gain_effect = yes
+		stress_impact = {
+			base = miniscule_stress_impact_loss
+			pensive = miniscule_stress_impact_loss
+		}
+	}
+
+}
 
 
+
+# Say something insightful to your councilors as a child
+VIETmisc.0300 = {
+	type = character_event
+	title = VIETmisc.0300.t
+	desc = VIETmisc.0300.desc
+	theme = memory_formative
+	override_background = { reference = council_chamber }
+
+	
+	left_portrait = {
+		character = scope:councilor
+		animation = throne_room_applaud_1
+	}
+	
+	right_portrait = {
+		character = root
+		animation = throne_room_conversation_1
+	}
+
+	trigger = {
+		any_councillor = {
+			is_available_ai_adult = yes
+			opinion = {
+				target = root
+				value >= 0
+			}
+		}	
+	}
+	
+	weight_multiplier = {
+		base = 1
+		modifier = {
+			add = 0.2
+			has_trait = pensive
+		}
+		modifier = {
+			add = -0.2
+			has_trait = rowdy
+		}
+		modifier = {
+			add = 0.2
+			has_trait = diligent
+		}
+		modifier = {
+			add = -0.2
+			has_trait = lazy
+		}
+		modifier = {
+			add = 0.2
+			has_trait = calm
+		}
+		modifier = {
+			add = -0.2
+			has_trait = shy
+		}
+	}
+
+	immediate = {
+		random_councillor = {
+			limit = {
+				is_available_ai_adult = yes
+				opinion = {
+					target = root
+					value >= 0
+				}
+			}
+			save_scope_as = councilor
+		}	
+	}
+	
+	option = { # ok
+		name = VIETmisc.0300.a		
+		VIET_huge_prestige_gain_effect = yes
+		every_councillor = {
+			custom = every_councillor
+			add_opinion = {
+				target = root
+				modifier = respect_opinion
+				opinion = 15
+			}
+		}
+	}
+
+}
+
+
+# Starting to get bored of a favorite treat, and talk to an adult about it
+VIETmisc.0301 = {
+	type = character_event
+	title = VIETmisc.0301.t
+	desc = VIETmisc.0301.desc
+	theme = memory_formative
+	override_background = { reference = bp1_kitchen_western }
+
+	
+	left_portrait = {
+		character = scope:courtier
+		animation = laugh
+	}
+	
+	right_portrait = {
+		character = root
+		animation = personality_irrational
+	}
+
+	trigger = {
+		any_courtier = {
+			is_available_ai_adult = yes
+			opinion = {
+				target = root
+				value >= 0
+			}
+		}	
+	}
+	
+	weight_multiplier = {
+		base = 1
+		modifier = {
+			add = 0.2
+			has_trait = rowdy
+		}
+		modifier = {
+			add = -0.2
+			has_trait = curious
+		}
+		modifier = {
+			add = 0.2
+			has_trait = gluttonous
+		}
+		modifier = {
+			add = -0.2
+			has_trait = temperate
+		}
+		modifier = {
+			add = 0.2
+			has_trait = ambitious
+		}
+		modifier = {
+			add = -0.2
+			has_trait = content
+		}
+	}
+
+	immediate = {
+		random_courtier = {
+			limit = {
+				is_available_ai_adult = yes
+				opinion = {
+					target = root
+					value >= 0
+				}
+			}
+			save_scope_as = courtier
+		}	
+	}
+	
+	option = { # ok
+		name = VIETmisc.0301.a		
+		stress_impact = {
+			base = miniscule_stress_impact_loss
+			pensive = miniscule_stress_impact_loss
+			gluttonous = miniscule_stress_impact_loss
+		}		
+	}
+	
+	option = { # ok
+		name = VIETmisc.0301.b		
+		scope:courtier = {
+			add_opinion = {
+				target = root
+				modifier = VIET_opinion_interesting_conversation
+			}
+			reverse_add_opinion = {
+				target = root
+				modifier = VIET_opinion_interesting_conversation
+			}
+		}
+		progress_towards_friend_effect = {
+			CHARACTER = scope:courtier
+			OPINION = 0
+			REASON = VIET_friend_reason_placeholder
+		}
+		stress_impact = {
+			callous = miniscule_stress_impact_gain
+			shy = miniscule_stress_impact_gain
+			impatient = miniscule_stress_impact_gain
+		}
+	}
+
+}
+
+
+# Want to chase birds, but an adult says no
+VIETmisc.0302 = {
+	type = character_event
+	title = VIETmisc.0302.t
+	desc = VIETmisc.0302.desc
+	theme = VIET_theme_tuscan_country
+
+	
+	left_portrait = {
+		character = scope:courtier
+		animation = disapproval
+	}
+	
+	right_portrait = {
+		character = root
+		animation = happiness
+	}
+
+	trigger = {
+		any_courtier = {
+			is_available_ai_adult = yes
+			NOR = {
+				has_trait = gregarious
+				has_trait = lustful
+				has_trait = content
+				has_trait = patient
+			}
+		}	
+	}
+	
+	weight_multiplier = {
+		base = 1
+		modifier = {
+			add = 0.2
+			has_trait = rowdy
+		}
+		modifier = {
+			add = -0.2
+			has_trait = pensive
+		}
+		modifier = {
+			add = 0.2
+			has_trait = sadistic
+		}
+		modifier = {
+			add = -0.2
+			has_trait = compassionate
+		}
+		modifier = {
+			add = 0.2
+			has_trait = arbitrary
+		}
+		modifier = {
+			add = -0.2
+			has_trait = just
+		}
+	}
+
+	immediate = {
+		random_courtier = {
+			limit = {
+				is_available_ai_adult = yes
+				NOR = {
+					has_trait = gregarious
+					has_trait = lustful
+					has_trait = content
+					has_trait = patient
+				}
+			}
+			save_scope_as = courtier
+		}	
+	}
+	
+	option = { # ok
+		name = VIETmisc.0302.a	
+		scope:courtier = {
+			add_opinion = {
+				target = root
+				modifier = VIET_opinion_didnt_heed_me
+			}
+			reverse_add_opinion = {
+				target = root
+				modifier = VIET_opinion_boring_adult
+			}
+		}	
+		stress_impact = {
+			base = minor_stress_impact_loss
+		}		
+	}
+	
+	option = { # ok
+		name = VIETmisc.0302.b		
+		scope:courtier = {
+			add_opinion = {
+				target = root
+				modifier = VIET_opinion_heeded_me
+			}
+			reverse_add_opinion = {
+				target = root
+				modifier = VIET_opinion_boring_adult
+			}
+		}
+		add_character_modifier = {
+			modifier = VIET_observed_birds
+			years = 5
+		}	
+		stress_impact = {
+			rowdy = minor_stress_impact_gain
+			impatient = miniscule_stress_impact_gain
+			sadistic = miniscule_stress_impact_gain
+			callous = miniscule_stress_impact_gain
+			arbitrary = miniscule_stress_impact_gain
+			wrathful = miniscule_stress_impact_gain
+		}
+	}
+
+}
+
+
+
+
+
+# Staring at crush
+VIETmisc.0303 = {
+	type = character_event
+	title = VIETmisc.0303.t
+	desc = VIETmisc.0303.desc
+	theme = romance_scheme
+
+	
+	left_portrait = scope:crush
+	
+	right_portrait = {
+		character = root
+		animation = shame
+	}
+
+	trigger = {
+		OR = {
+			any_vassal = {
+				is_available_ai_child = yes
+				root = { has_relation_crush = prev }
+			}
+			any_vassal = {
+				any_child = {
+					is_available_ai_child = yes
+					root = { has_relation_crush = prev }
+				}
+			}
+			any_courtier_or_guest = {
+				is_available_ai_child = yes
+				root = { has_relation_crush = prev }
+			}
+		}
+	}
+	
+	weight_multiplier = {
+		base = 1
+		modifier = {
+			add = 0.2
+			has_trait = pensive
+		}
+		modifier = {
+			add = -0.2
+			has_trait = charming
+		}
+		modifier = {
+			add = 0.2
+			has_trait = shy
+		}
+		modifier = {
+			add = -0.2
+			has_trait = gregarious
+		}
+		modifier = {
+			add = 0.2
+			has_trait = impatient
+		}
+		modifier = {
+			add = -0.2
+			has_trait = patient
+		}
+	}
+
+	immediate = {
+		every_vassal = {
+			limit = {
+				is_available_ai_child = yes
+				root = { has_relation_crush = prev }
+			}
+			add_to_list = crushes
+		}
+		every_vassal = {
+			every_child = {
+				limit = {
+					is_available_ai_child = yes
+					root = { has_relation_crush = prev }
+				}
+				add_to_list = crushes
+			}
+		}
+		every_courtier_or_guest = {
+			limit = {
+				is_available_ai_child = yes
+				root = { has_relation_crush = prev }
+			}
+			add_to_list = crushes
+		}
+				
+		random_in_list = {
+			list = crushes
+			save_scope_as = crush
+		}
+	}
+	
+	option = { # ok
+		name = VIETmisc.0303.a
+		stress_impact = {
+			base = miniscule_stress_impact_gain
+			shy = miniscule_stress_impact_gain
+		}
+		scope:crush = {
+			add_opinion = {
+				target = root
+				modifier = amused_opinion
+				opinion = 10
+			}
+			reverse_add_opinion = {
+				target = root
+				modifier = VIET_opinion_crush_intensifying
+				opinion = 20
+			}
+		}
+	}
+
+}
+
+
+
+# Building sandcastles with other kids
+VIETmisc.0304 = {
+	type = character_event
+	title = VIETmisc.0304.t
+	desc = VIETmisc.0304.desc
+	theme = VIET_theme_skyrim_forest
+	override_background = { reference = fp1_beached_longships }
+
+	
+	left_portrait = scope:child
+	
+	right_portrait = root
+
+	trigger = {
+		any_courtier_or_guest = {
+			is_available_child = yes
+			age >= childhood_education_start_age
+		}
+		# Must have a coastal capital
+		capital_county = { is_coastal_county = yes }
+	}
+	
+	weight_multiplier = {
+		base = 1
+		modifier = {
+			add = 0.2
+			has_trait = pensive
+		}
+		modifier = {
+			add = -0.2
+			has_trait = charming
+		}
+		modifier = {
+			add = 0.2
+			has_trait = shy
+		}
+		modifier = {
+			add = -0.2
+			has_trait = gregarious
+		}
+		modifier = {
+			add = 0.2
+			has_trait = lustful
+		}
+		modifier = {
+			add = -0.2
+			has_trait = chaste
+		}
+	}
+
+	immediate = {
+		random_courtier_or_guest = {
+			limit = {
+				is_available_child = yes
+				age >= childhood_education_start_age
+			}
+			save_scope_as = child
+		}
+	}
+	
+	option = { # ok
+		name = VIETmisc.0304.a
+		VIET_large_prestige_gain_effect = yes
+		add_character_modifier = {
+			modifier = VIET_conformist_child
+			years = 5
+		}
+		stress_impact = {
+			bossy = miniscule_stress_impact_gain
+			arrogant = miniscule_stress_impact_gain
+			callous = miniscule_stress_impact_gain
+			content = miniscule_stress_impact_gain
+		}
+		if = {
+			limit = {
+				has_game_rule = VIET_historical_context_on
+			}
+			custom_tooltip = VIETmisc.0304.info
+		}
+	}
+	
+	option = { # ok
+		name = VIETmisc.0304.b
+		VIET_large_piety_gain_effect = yes
+		add_character_modifier = {
+			modifier = VIET_not_like_the_other_children
+			years = 5
+		}
+		stress_impact = {
+			charming = miniscule_stress_impact_gain
+			craven = miniscule_stress_impact_gain
+			trusting = miniscule_stress_impact_gain
+		}
+		scope:child = {
+			add_opinion = {
+				target = root
+				modifier = annoyed_opinion
+				opinion = -5
+			}
+		}
+		if = {
+			limit = {
+				has_game_rule = VIET_historical_context_on
+			}
+			custom_tooltip = VIETmisc.0304.info
+		}
+	}
+
+}
+
+
+
+# Do you want to be a kid forever or not?
+VIETmisc.0305 = {
+	type = character_event
+	title = VIETmisc.0305.t
+	desc = VIETmisc.0305.desc
+	theme = memory_formative
+	
+	right_portrait = root
+	
+	weight_multiplier = {
+		base = 1
+		modifier = {
+			add = 0.2
+			has_trait = bossy
+		}
+		modifier = {
+			add = -0.2
+			has_trait = pensive
+		}
+		modifier = {
+			add = 0.2
+			has_trait = ambitious
+		}
+		modifier = {
+			add = -0.2
+			has_trait = content
+		}
+		modifier = {
+			add = 0.2
+			has_trait = lazy
+		}
+		modifier = {
+			add = -0.2
+			has_trait = diligent
+		}
+	}
+	
+	option = { # ok
+		name = VIETmisc.0305.a
+		VIET_small_piety_gain_effect = yes
+		stress_impact = {
+			bossy = miniscule_stress_impact_gain
+			ambitious = miniscule_stress_impact_gain
+			greedy = miniscule_stress_impact_gain
+			impatient = miniscule_stress_impact_gain
+		}
+		if = {
+			limit = {
+				has_game_rule = VIET_historical_context_on
+			}
+			custom_tooltip = VIETmisc.0305.info
+		}
+	}
+	
+	option = { # ok
+		name = VIETmisc.0305.b
+		VIET_small_prestige_gain_effect = yes
+		stress_impact = {
+			pensive = miniscule_stress_impact_gain
+			content = miniscule_stress_impact_gain
+			patient = miniscule_stress_impact_gain
+			trusting = miniscule_stress_impact_gain
+		}
+		if = {
+			limit = {
+				has_game_rule = VIET_historical_context_on
+			}
+			custom_tooltip = VIETmisc.0305.info
+		}
+	}
+
+}
+
+
+# Adult criticizes young girls doing medieval twerking (based on an actual medieval quote)
+VIETmisc.0306 = {
+	type = character_event
+	title = VIETmisc.0306.t
+	desc = VIETmisc.0306.desc
+	theme = party
+
+	
+	left_portrait = {
+		character = scope:courtier
+		animation = disapproval
+	}
+	
+	right_portrait = root
+
+	trigger = {
+		any_courtier = {
+			is_available_ai_adult = yes
+			NOR = {
+				has_trait = gregarious
+				has_trait = lustful
+				has_trait = content
+				has_trait = humble
+			}
+			OR = {
+				has_trait = zealous
+				has_trait = arrogant
+				has_trait = chaste
+				has_trait = impatient
+				has_trait = stubborn
+				has_trait = honest
+			}
+		}	
+	}
+	
+	weight_multiplier = {
+		base = 1
+		modifier = {
+			add = 0.2
+			has_trait = charming
+		}
+		modifier = {
+			add = -0.2
+			has_trait = rowdy
+		}
+		modifier = {
+			add = 0.2
+			has_trait = gregarious
+		}
+		modifier = {
+			add = -0.2
+			has_trait = shy
+		}
+		modifier = {
+			add = 0.2
+			has_trait = patient
+		}
+		modifier = {
+			add = -0.2
+			has_trait = impatient
+		}
+	}
+
+	immediate = {
+		random_courtier = {
+			limit = {
+				is_available_ai_adult = yes
+				NOR = {
+					has_trait = gregarious
+					has_trait = lustful
+					has_trait = content
+					has_trait = humble
+				}
+				OR = {
+					has_trait = zealous
+					has_trait = arrogant
+					has_trait = chaste
+					has_trait = impatient
+					has_trait = stubborn
+					has_trait = honest
+				}
+			}
+			save_scope_as = courtier
+		}	
+	}
+	
+	option = { # ok
+		name = VIETmisc.0306.a	
+		VIET_medium_piety_gain_effect = yes	
+		scope:courtier = {
+			add_opinion = {
+				target = root
+				opinion = 10
+				modifier = pleased_opinion
+			}
+		}
+		stress_impact = {
+			rowdy = minor_stress_impact_gain
+			arrogant = miniscule_stress_impact_gain
+			gregarious = miniscule_stress_impact_gain
+			lustful = miniscule_stress_impact_gain
+		}
+		if = {
+			limit = {
+				has_game_rule = VIET_historical_context_on
+			}
+			custom_tooltip = VIETmisc.0306.info
+		}
+	}
+	
+	option = { # ok
+		name = VIETmisc.0306.b	
+		VIET_medium_prestige_gain_effect = yes	
+		stress_impact = {
+			rowdy = minor_stress_impact_gain
+			humble = miniscule_stress_impact_gain
+			impatient = miniscule_stress_impact_gain
+			fickle = miniscule_stress_impact_gain
+		}
+		scope:courtier = {
+			add_opinion = {
+				target = root
+				opinion = 10
+				modifier = pleased_opinion
+			}
+			if = {
+				limit = {
+					has_game_rule = VIET_historical_context_on
+				}
+				custom_tooltip = VIETmisc.0306.info
+			}
+		}
+	}
+	
+	option = { # ok
+		name = VIETmisc.0306.c	
+		add_character_modifier = {
+			modifier = VIET_dancing_like_hinds
+			years = 5
+		}	
+		stress_impact = {
+			shy = miniscule_stress_impact_gain
+			zealous = miniscule_stress_impact_gain
+		}
+		scope:courtier = {
+			add_opinion = {
+				target = root
+				opinion = -10
+				modifier = disgusted_opinion
+			}
+			if = {
+				limit = {
+					has_game_rule = VIET_historical_context_on
+				}
+				custom_tooltip = VIETmisc.0306.info
+			}
+		}
+	}
+
+}
+
+
+
+
+# Getting bored of an old toy
+VIETmisc.0307 = {
+	type = character_event
+	title = VIETmisc.0307.t
+	desc = VIETmisc.0307.desc
+	theme = memory_formative
+	
+	left_portrait = {
+		character = root
+		animation = clutching_toy
+	}
+	
+	weight_multiplier = {
+		base = 1
+		modifier = {
+			add = 0.2
+			has_trait = rowdy
+		}
+		modifier = {
+			add = -0.2
+			has_trait = pensive
+		}
+		modifier = {
+			add = 0.2
+			has_trait = fickle
+		}
+		modifier = {
+			add = -0.2
+			has_trait = stubborn
+		}
+		modifier = {
+			add = 0.2
+			has_trait = impatient
+		}
+		modifier = {
+			add = -0.2
+			has_trait = patient
+		}
+	}
+
+	option = { # ok
+		name = VIETmisc.0307.a
+		stress_impact = {
+			base = minor_stress_impact_loss
+		}	
+		add_character_modifier = {
+			modifier = VIET_new_toys
+			years = 5
+		}
+	}
+
+	option = { # ok
+		name = VIETmisc.0307.b
+		add_character_modifier = {
+			modifier = VIET_toy_keepsake
+			years = 25
+		}
+	}
+}
+
+
+
+# Lost your favorite toy
+VIETmisc.0308 = {
+	type = character_event
+	title = VIETmisc.0308.t
+	desc = VIETmisc.0308.desc
+	theme = memory_formative
+	
+	left_portrait = {
+		character = root
+		animation = sadness
+	}
+	
+	weight_multiplier = {
+		base = 1
+		modifier = {
+			add = 0.2
+			has_trait = rowdy
+		}
+		modifier = {
+			add = -0.2
+			has_trait = pensive
+		}
+		modifier = {
+			add = 0.2
+			has_trait = wrathful
+		}
+		modifier = {
+			add = -0.2
+			has_trait = calm
+		}
+		modifier = {
+			add = 0.2
+			has_trait = impatient
+		}
+		modifier = {
+			add = -0.2
+			has_trait = patient
+		}
+	}
+
+	option = { # ok
+		name = VIETmisc.0308.a
+		stress_impact = {
+			base = minor_stress_impact_gain
+			bossy = minor_stress_impact_gain
+			rowdy = minor_stress_impact_gain
+			wrathful = minor_stress_impact_gain
+		}	
+	}
+}
+
+
+
+
+# Diplomacy: Vassal teaching you about court etiquette tells you about someone who insulted them
+VIETmisc.0309 = {
+	type = character_event
+	title = VIETmisc.0309.t
+	desc = VIETmisc.0309.desc
+	theme = diplomacy
+	
+	left_portrait = {
+		character = scope:vassal
+		animation = happy_teacher
+	}
+	right_portrait = root
+
+	trigger = {
+		any_vassal = {
+			is_available_healthy_ai_adult = yes
+			opinion = {
+				target = root
+				value >= 0
+			}
+		}
+	}
+	
+	weight_multiplier = {
+		base = 1
+		modifier = {
+			add = 0.2
+			has_trait = charming
+		}
+		modifier = {
+			add = -0.2
+			has_trait = rowdy
+		}
+		modifier = {
+			add = 0.2
+			has_trait = gregarious
+		}
+		modifier = {
+			add = -0.2
+			has_trait = shy
+		}
+		modifier = {
+			add = 0.2
+			has_trait = patient
+		}
+		modifier = {
+			add = -0.2
+			has_trait = impatient
+		}
+	}
+
+	immediate = {
+		random_vassal = {
+			limit = {
+				is_available_healthy_ai_adult = yes
+				opinion = {
+					target = root
+					value >= 0
+				}
+			}
+			save_scope_as = vassal
+		}
+	}
+	
+	option = { # ok
+		name = VIETmisc.0309.a
+		add_diplomacy_skill = 1
+		scope:vassal = {
+			add_opinion = {
+				target = root
+				modifier = VIET_opinion_interesting_conversation
+			}
+			reverse_add_opinion = {
+				target = root
+				modifier = VIET_opinion_interesting_conversation
+			}		
+		}
+		progress_towards_friend_effect = {
+			CHARACTER = scope:vassal
+			OPINION = 0
+			REASON = VIET_friend_reason_placeholder
+		}
+	}
+
+}
+
+# Martial: daydreaming about adventures
+VIETmisc.0310 = {
+	type = character_event
+	title = VIETmisc.0310.t
+	desc = VIETmisc.0310.desc
+	theme = war
+
+	right_portrait = {
+		character = root
+		animation = child_hobby_horse
+	}
+	
+	weight_multiplier = {
+		base = 1
+		modifier = {
+			add = 0.2
+			has_trait = rowdy
+		}
+		modifier = {
+			add = -0.2
+			has_trait = pensive
+		}
+		modifier = {
+			add = 0.2
+			has_trait = brave
+		}
+		modifier = {
+			add = -0.2
+			has_trait = craven
+		}
+		modifier = {
+			add = 0.2
+			has_trait = ambitious
+		}
+		modifier = {
+			add = -0.2
+			has_trait = shy
+		}
+	}
+	
+	option = { # ok
+		name = VIETmisc.0310.a
+		add_martial_skill = 1
+	}
+
+}
+
+# Stewardship: Listening to adults talking about organizing and managing stuff
+VIETmisc.0311 = {
+	type = character_event
+	title = VIETmisc.0311.t
+	desc = VIETmisc.0311.desc
+	theme = stewardship_duty_focus
+	override_background = { reference = relaxing_room }
+
+	right_portrait = {
+		character = root
+		animation = reading
+	}
+
+	
+	weight_multiplier = {
+		base = 1
+		modifier = {
+			add = 0.2
+			has_trait = rowdy
+		}
+		modifier = {
+			add = -0.2
+			has_trait = pensive
+		}
+		modifier = {
+			add = 0.2
+			has_trait = brave
+		}
+		modifier = {
+			add = -0.2
+			has_trait = craven
+		}
+		modifier = {
+			add = 0.2
+			has_trait = ambitious
+		}
+		modifier = {
+			add = -0.2
+			has_trait = shy
+		}
+	}
+	
+	option = { # ok
+		name = VIETmisc.0311.a
+		add_stewardship_skill = 1
+	}
+
+}
+
+# Intrigue: Overhear some juicy gossip
+VIETmisc.0312 = {
+	type = character_event
+	title = VIETmisc.0312.t
+	desc = VIETmisc.0312.desc
+	theme = intrigue
+	override_background = { reference = corridor_day }
+
+	right_portrait = {
+		character = root
+		animation = eavesdrop
+	}
+
+	
+	weight_multiplier = {
+		base = 1
+		modifier = {
+			add = 0.2
+			has_trait = curious
+		}
+		modifier = {
+			add = -0.2
+			has_trait = rowdy
+		}
+		modifier = {
+			add = 0.2
+			has_trait = patient
+		}
+		modifier = {
+			add = -0.2
+			has_trait = impatient
+		}
+		modifier = {
+			add = 0.2
+			has_trait = shy
+		}
+		modifier = {
+			add = -0.2
+			has_trait = gregarious
+		}
+	}
+	
+	option = { # ok
+		name = VIETmisc.0312.a
+		add_intrigue_skill = 1
+	}
+
+}
+
+# Learning: Memorize a prayer
+VIETmisc.0313 = {
+	type = character_event
+	title = VIETmisc.0313.t
+	desc = VIETmisc.0313.desc
+	theme = learning_theology_focus
+
+	right_portrait = {
+		character = root
+		animation = personality_zealous
+	}
+	
+	weight_multiplier = {
+		base = 1
+		modifier = {
+			add = 0.2
+			has_trait = pensive
+		}
+		modifier = {
+			add = -0.2
+			has_trait = rowdy
+		}
+		modifier = {
+			add = 0.2
+			has_trait = zealous
+		}
+		modifier = {
+			add = -0.2
+			has_trait = cynical
+		}
+		modifier = {
+			add = 0.2
+			has_trait = diligent
+		}
+		modifier = {
+			add = -0.2
+			has_trait = lazy
+		}
+	}
+	
+	option = { # ok
+		name = VIETmisc.0313.a
+		add_learning_skill = 1
+	}
+
+}
 
 
 

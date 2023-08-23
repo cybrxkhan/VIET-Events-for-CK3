@@ -781,4 +781,34 @@ VIET_nosy_interference = {
 	decaying = yes
 }
 
+VIET_opinion_awkward = {
+	years = 5
+	opinion = -10
+	decaying = yes
+}
+
+VIET_opinion_didnt_heed_me = {
+	years = 5
+	opinion = -15
+	decaying = yes
+}
+
+VIET_opinion_heeded_me = {
+	years = 5
+	opinion = 15
+	decaying = yes
+}
+
+VIET_opinion_boring_adult = {
+	years = 10
+	opinion = -10
+	decaying = yes
+}
+
+VIET_opinion_crush_intensifying = {
+	years = 5
+	opinion = 30
+	decaying = yes
+}
+
 

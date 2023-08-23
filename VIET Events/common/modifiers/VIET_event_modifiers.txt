@@ -3005,6 +3005,62 @@ VIET_favorite_songs = {
 	stress_loss_mult = 0.1
 }
 
+VIET_old_soul = {
+	icon = stress_positive
+	monthly_lifestyle_xp_gain_mult = 0.05
+}
+
+VIET_crush_daydreams = {
+	icon = love_positive
+	stress_loss_mult = 0.1
+}
+
+VIET_observed_birds = {
+	icon = bird_positive
+	learning = 1
+}
+
+VIET_not_like_the_other_children = {
+	icon = stress_positive
+	intrigue = 1
+}
+
+VIET_conformist_child = {
+	icon = social_positive
+	diplomacy = 1
+}
+
+VIET_dancing_like_hinds = {
+	icon = mask_positive
+	stress_gain_mult = -0.05
+	stress_loss_mult = 0.05
+	monthly_piety = -0.1
+}
+
+VIET_new_toys = {
+	icon = social_positive
+	monthly_prestige = 0.2
+}
+
+VIET_toy_keepsake = {
+	icon = stress_positive
+	stress_gain_mult = -0.05
+	stress_loss_mult = 0.05
+}
+
+VIET_alkanet_prank = {
+	icon = blood_positive
+	stress_gain_mult = -0.15
+	stress_loss_mult = 0.15
+	general_opinion = -5
+	intrigue = -1
+}
+
+VIET_alkanet_study = {
+	icon = fertility_positive
+	learning = 1
+}
+
 
 
 

@@ -25,6 +25,7 @@
 # 2211-2213		Rosewater
 # 2214-2224		Oblivion Inspired
 # 2225-2231		Rose
+# 2232-2233		Childhood Generic
 # 
 ############################################################################################################################
 
@@ -16953,6 +16954,180 @@ VIETold.2231 = {
 
 
 
+#############################################
+# Childhood Generic 2232-2233
+#############################################
+
+
+# Can't wait to grow up!
+VIETold.2232 = {
+	type = character_event
+	title = VIETold.2232.t
+	desc = VIETold.2232.desc
+	theme = memory_formative
+
+	right_portrait = {
+		character = root
+		animation = happiness
+	}
+	
+	weight_multiplier = {
+		base = 1
+		modifier = {
+			add = 0.2
+			has_trait = bossy
+		}
+		modifier = {
+			add = -0.2
+			has_trait = charming
+		}
+		modifier = {
+			add = 0.2
+			has_trait = ambitious
+		}
+		modifier = {
+			add = -0.2
+			has_trait = content
+		}
+		modifier = {
+			add = 0.2
+			has_trait = diligent
+		}
+		modifier = {
+			add = -0.2
+			has_trait = lazy
+		}
+	}
+	
+	option = { # ok
+		name = VIETold.2232.a
+		add_diplomacy_skill = 1
+		stress_impact = {
+			shy = minor_stress_impact_gain
+			arrogant = minor_stress_impact_gain
+		}
+	}
+	
+	option = { # ok
+		name = VIETold.2232.b
+		add_martial_skill = 1
+		stress_impact = {
+			craven = minor_stress_impact_gain
+			lazy = minor_stress_impact_gain
+		}
+	}
+	
+	option = { # ok
+		name = VIETold.2232.c
+		add_stewardship_skill = 1
+		stress_impact = {
+			generous = minor_stress_impact_gain
+			temperate = minor_stress_impact_gain
+		}
+	}
+	
+	option = { # ok
+		name = VIETold.2232.d
+		add_intrigue_skill = 1
+		stress_impact = {
+			just = minor_stress_impact_gain
+			zealous = minor_stress_impact_gain
+		}
+	}
+	
+	option = { # ok
+		name = VIETold.2232.e
+		add_learning_skill = 1
+		stress_impact = {
+			callous = minor_stress_impact_gain
+			arbitrary = minor_stress_impact_gain
+		}
+	}
+
+}
+
+
+# Alkanet Prank
+VIETold.2233 = {
+	type = character_event
+	title = VIETold.2233.t
+	desc = VIETold.2233.desc
+	theme = intrigue_skulduggery_focus
+	override_background = { reference = bp1_kitchen_western }
+
+	right_portrait = {
+		character = root
+		animation = scheme
+	}
+	
+	weight_multiplier = {
+		base = 1
+		modifier = {
+			add = 0.2
+			has_trait = rowdy
+		}
+		modifier = {
+			add = -0.2
+			has_trait = pensive
+		}
+		modifier = {
+			add = 0.2
+			has_trait = sadistic
+		}
+		modifier = {
+			add = -0.2
+			has_trait = compassionate
+		}
+		modifier = {
+			add = 0.2
+			has_trait = arbitrary
+		}
+		modifier = {
+			add = -0.2
+			has_trait = just
+		}
+	}
+	
+	option = { # ok
+		name = VIETold.2233.a
+		add_character_modifier = {
+			modifier = VIET_alkanet_prank
+			years = 10
+		}
+		stress_impact = {
+			just = minor_stress_impact_gain
+			compassionate = minor_stress_impact_gain
+		}
+	}
+	
+	option = { # ok
+		name = VIETold.2233.b
+		VIET_medium_piety_gain_effect = yes
+		VIET_medium_prestige_gain_effect = yes
+		stress_impact = {
+			rowdy = minor_stress_impact_gain
+			sadistic = minor_stress_impact_gain
+			callous = minor_stress_impact_gain
+			arbitrary = minor_stress_impact_gain
+		}
+	}
+	
+	option = { # ok
+		name = VIETold.2233.c
+		add_character_modifier = {
+			modifier = VIET_alkanet_study
+			years = 10
+		}
+		stress_impact = {
+			rowdy = minor_stress_impact_gain
+			impatient = minor_stress_impact_gain
+			arrogant = minor_stress_impact_gain
+			sadistic = minor_stress_impact_gain
+			callous = minor_stress_impact_gain
+		}
+	}
+
+}
 
 
 

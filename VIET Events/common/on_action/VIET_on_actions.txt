@@ -21,6 +21,8 @@ three_year_playable_pulse = {
 		VIET_events_common_county_pulse
 		delay = { days = { 8 288 } } # 88
 		VIET_events_common_artifact_pulse
+		delay = { days = { 8 288 } } # 88
+		VIET_events_common_childhood_pulse
 	}
 }
 
@@ -40,6 +42,10 @@ five_year_playable_pulse = {
 		VIET_events_uncommon_artifact_pulse
 		delay = { days = { 8 288 } } # 88
 		VIET_events_rare_artifact_pulse
+		delay = { days = { 8 288 } } # 88
+		VIET_events_uncommon_childhood_pulse
+		delay = { days = { 8 288 } } # 88
+		VIET_events_rare_childhood_pulse
 	}
 }
 
@@ -1746,7 +1752,7 @@ VIET_events_rare_artifact_pulse = {
 			}
 		}
 		
-		30000 = 0
+		40000 = 0
 		
 		#######################################
 		# BOTH GEN VIET
@@ -1762,3 +1768,229 @@ VIET_events_rare_artifact_pulse = {
 		# 4
     }
 }
+
+
+# Common events - covers the most ordinary and mundane happenings like picking your nose or eating baklava
+VIET_events_common_childhood_pulse = {
+	trigger = {
+		VIET_basic_is_available_child_trigger = yes
+	}
+	random_events = {
+		chance_of_no_event = {
+			value = 40
+			if = {
+				limit = {
+					has_game_rule = VIET_event_frequency_low
+				}
+				add = 10
+			}
+			if = {
+				limit = {
+					has_game_rule = VIET_event_frequency_very_low
+				}
+				add = 20
+			}
+			if = {
+				limit = {
+					has_game_rule = VIET_event_frequency_high
+				}
+				subtract = 10
+			}
+			if = {
+				limit = {
+					has_game_rule = VIET_event_frequency_very_high
+				}
+				subtract = 20
+			}
+			if = {
+				limit = {
+					is_at_war = yes # Won't get spammed while at war
+				}
+				add = 10
+			}
+		}
+		
+		15000 = 0
+		
+		#######################################
+		# OLDEST VIET
+		#######################################
+		
+		#######################################
+		# OLDER VIET
+		#######################################
+		
+		#######################################
+		# OLD VIET
+		#######################################
+
+		# Generic
+		100 = VIETold.2232		# Can't wait to grow up!
+		
+		#######################################
+		# NEXT GEN VIET
+		#######################################
+
+		# Generic
+		100 = VIETmisc.0297		# Crush is passing by
+		100 = VIETmisc.0298		# Daydreaming about crush
+		100 = VIETmisc.0299		# Winess an amazing landscape as a child
+		100 = VIETmisc.0302		# Want to chase birds, but an adult says no
+		100 = VIETmisc.0303		# Staring at crush
+		100 = VIETmisc.0304		# Building sandcastles with other kids
+		100 = VIETmisc.0305		# Do you want to be a kid forever or not?
+		100 = VIETmisc.0307		# Getting bored of an old toy
+		100 = VIETmisc.0308		# Lost your favorite toy
+	}
+}
+
+# Uncommon events - stuff that happens regularly but isn't as frequent
+VIET_events_uncommon_childhood_pulse = {
+	trigger = {
+		VIET_basic_is_available_child_trigger = yes
+	}
+	random_events = {
+		chance_of_no_event = {
+			value = 40
+			if = {
+				limit = {
+					has_game_rule = VIET_event_frequency_low
+				}
+				add = 10
+			}
+			if = {
+				limit = {
+					has_game_rule = VIET_event_frequency_very_low
+				}
+				add = 20
+			}
+			if = {
+				limit = {
+					has_game_rule = VIET_event_frequency_high
+				}
+				subtract = 10
+			}
+			if = {
+				limit = {
+					has_game_rule = VIET_event_frequency_very_high
+				}
+				subtract = 20
+			}
+			if = {
+				limit = {
+					is_at_war = yes # Won't get spammed while at war
+				}
+				add = 10
+			}
+		}
+		
+		15000 = 0 # 20000?
+		
+		#######################################
+		# OLDEST VIET
+		#######################################
+		
+		#######################################
+		# OLDER VIET
+		#######################################
+		
+		#######################################
+		# OLD VIET
+		#######################################
+		
+		#######################################
+		# NEXT GEN VIET
+		#######################################
+		# Generic
+		100 = VIETmisc.0296		# Child prefers spending time with adults
+		100 = VIETmisc.0300		# Say something insightful to your councilors as a child
+		100 = VIETmisc.0301		# Starting to get bored of a favorite treat, and talk to an adult about it
+		100 = VIETmisc.0309		# Diplomacy: Vassal teaching you about court etiquette tells you about someone who insulted them
+		100 = VIETmisc.0310		# Martial: daydreaming about adventures
+		100 = VIETmisc.0311		# Stewardship: Listening to adults talking about organizing and managing stuff
+		100 = VIETmisc.0312		# Intrigue: Overhear some juicy gossip
+		100 = VIETmisc.0313		# Learning: Memorize a prayer
+	}
+}
+
+# Rare events - more unique and unusual happenings
+VIET_events_rare_childhood_pulse = {
+	trigger = {
+		VIET_basic_is_available_child_trigger = yes
+	}
+	random_events = {
+		chance_of_no_event = {
+			value = 60
+			if = {
+				limit = {
+					has_game_rule = VIET_event_frequency_low
+				}
+				add = 10
+			}
+			if = {
+				limit = {
+					has_game_rule = VIET_event_frequency_very_low
+				}
+				add = 20
+			}
+			if = {
+				limit = {
+					has_game_rule = VIET_event_frequency_high
+				}
+				subtract = 10
+			}
+			if = {
+				limit = {
+					has_game_rule = VIET_event_frequency_very_high
+				}
+				subtract = 20
+			}
+			if = {
+				limit = {
+					is_at_war = yes # Won't get spammed while at war
+				}
+				add = 10
+			}
+		}
+		
+		25000 = 0
+		
+		#######################################
+		# OLDEST VIET
+		#######################################
+		
+		#######################################
+		# OLDER VIET
+		#######################################
+		
+		#######################################
+		# OLD VIET
+		#######################################
+		# Generic
+		100 = VIETold.2233 	# Alkanet Prank
+		
+		#######################################
+		# NEXT GEN VIET
+		#######################################
+		# Generic
+		100 = VIETmisc.0306 	# Adult criticizes young girls doing medieval twerking (based on an actual medieval quote)
+	}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
