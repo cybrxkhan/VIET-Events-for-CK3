@@ -1,9 +1,8 @@
-[img]https://i.imgur.com/rivjDDQ.jpg[/img]
+[img]https://i.imgur.com/RVwBLuS.jpg[/img]
 
-[h1]Current Version: 1.9.1 "Ibn Jubayr" (Released 8/5/23, Compatible with vanilla patch 1.9.X)[/h1]
+[h1]Current Version: 1.10.0 "Childhood" (Released 8/22/23, Compatible with vanilla patch 1.10.X)[/h1]
 
-[h1][B][url=https://forms.gle/if7sLCAGpB1G2uJdA]Take the 2023 VIET/RICE Survey![/url]
-[url=https://discord.gg/9KuyXv2uZA]Discord Server for my mods[/url]
+[h1][B][url=https://discord.gg/9KuyXv2uZA]Discord Server for my mods[/url]
 [url=https://cybrxkhansmods.godaddysites.com/]Official Website for my mods[/url][/B][/h1]
 [B][url=https://forum.paradoxplaza.com/forum/threads/mod-viet-events-for-ck3-a-flavor-and-immersion-event-mod.1422081/]Paradox Forum Thread[/url][/B]
 [B]Manual Download/Installation available [url=https://github.com/cybrxkhan/VIET-Events-for-CK3/releases]on Github[/url][/B]
@@ -26,7 +25,7 @@ Feel free to use my work in your mods - all I ask is that I am credited and (if 
 [img]http://i.imgur.com/EyXurbK.jpg[/img]
 
 [LIST]
-[*]Over [B][U]1028[/U] new flavor events[/B] to experience!
+[*]Over [B][U]1048[/U] new flavor events[/B] to experience!
 [*]Explore new decisions, artifacts, character interactions, activities, and more!
 [*]Game rule to disable sillier events for those who don't like them, with three levels to choose from: Balanced (Default), Serious (Restricted), and All Events (Full)
 [*][B]Compatible with almost anything[/B] since it doesn't touch any vanilla files - even with overhaul mods, you can via game rule disable events that reference things specific to our medieval world that wouldn’t make sense in other time periods or universes (like fantasy/sci-fi conversion mods)
@@ -52,21 +51,16 @@ Please see the [url=https://cybrxkhansmods.godaddysites.com/faq]FAQ on my mods' 
 
 [img]http://i.imgur.com/RQ5QZTF.jpg[/img]
 
-[h1]Version 1.9.1 "Ibn Jubayr"[/h1]
+[h1]Version 1.10.0 "Childhood"[/h1]
 
-[I]“One of the astonishing things that is talked of is that though the fires of discord burn between the two parties, Muslim and Christian, two armies of them may meet and dispose themselves in battle array, and yet Muslim and Christian travelers will come and go between them without interference... The soldiers engage themselves in their war, while the people are at peace.”
-– Ibn Jubayr (1145-1217), Andalusian pilgrim, traveler, and poet[/I]
+[I]“It is a wise father that knows his own child.”
+- William Shakespeare, The Merchant of Venice[/I]
 
-New events added in this version: [B]10[/B]
+New events added in this version: [B]20[/B]
 
 [LIST]
-[*]Added 10 new travel events
-[*]VIET game rules now have categories, including a VIET category
-[*]VIET now supports the Gamerule Gadget mod
-[*]Intro event for activities now fires for only VIET’s activities
-[*]Decreased the chances travel events will fire
-[*]Fixed Jon Battle-Born event not accounting for the new blademaster lifestyle trait changes
-[*]Fixed gold costs for Bear attack county event options not making sense
+[*]Updated to vanilla patch 1.10.0
+[*]Added 20 Childhood events
 [*]Miscellaneous bugfixes
 [/LIST]
 
