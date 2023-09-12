@@ -789,6 +789,65 @@ VIET_famous_ingredients = {
 	tax_mult = 0.01
 }
 
+VIET_punished_innocent_officials = {
+	icon = dread_positive
+	county_opinion_add = 10
+	courtier_and_guest_opinion = -5
+	monthly_prestige_gain_mult = -0.01
+}
+
+VIET_did_not_punish_innocent_officials = {
+	icon = letter_positive
+	county_opinion_add = -10
+	monthly_county_control_change_add = -0.1
+	monthly_prestige = 0.1
+}
+
+VIET_innocent_officials_vindicated = {
+	icon = diplomacy_positive
+	county_opinion_add = 5
+	monthly_prestige = 0.2
+}
+
+VIET_incestuous_siblings = {
+	icon = love_negative
+	county_opinion_add = -3
+	monthly_county_control_change_add = -0.05
+}
+
+VIET_calculating_the_apocalypse = {
+	icon = magic_negative
+	county_opinion_add = -6
+	monthly_county_control_change_add = -0.06
+	development_growth_factor = -0.06
+}
+
+VIET_small_observatory = {
+	icon = magic_positive
+	development_growth = 0.1
+	development_growth_factor = 0.03
+}
+
+VIET_observatory_good_omens = {
+	icon = magic_positive
+	diplomacy = 1
+	stewardship = 1
+	monthly_prestige = 0.1
+}
+
+VIET_observatory_bad_omens = {
+	icon = magic_positive
+	intrigue = 2
+	monthly_piety = 0.1
+}
+
+VIET_observatory_revisions = {
+	icon = magic_positive
+	learning = 1
+	character_capital_county_monthly_development_growth_add = 0.15
+}
+
+
 
 
 

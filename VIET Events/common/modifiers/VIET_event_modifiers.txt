@@ -3061,6 +3061,35 @@ VIET_alkanet_study = {
 	learning = 1
 }
 
+VIET_doesnt_do_rosewater_handwashing = {
+	icon = fertility_negative
+	negate_health_penalty_add = -0.1
+}
+
+VIET_black_cat_bad_luck = {
+	icon = magic_negative
+	intrigue = -1
+	monthly_piety_gain_mult = -0.01
+}
+
+VIET_algol_modifier = {
+	icon = magic_negative
+	intrigue = -1
+	advantage = -2
+	monthly_piety = -0.1
+}
+
+VIET_boring_astronomy_interest = {
+	icon = social_negative
+	diplomacy = -1
+}
+
+VIET_sirius_dog_days = {
+	icon = health_negative
+	health = -0.2
+	stress_gain_mult = 0.1
+	stress_loss_mult = -0.1
+}
 
 
 

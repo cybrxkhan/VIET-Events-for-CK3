@@ -239,6 +239,7 @@
  VIETmisc.3047.desc:0 "A few of my officials living in [county.GetNameNoTier], with more academic inclinations, have reported to me of a small, flat area in that region that would be a good place to construct a small observatory.\n\nThe building they propose would not be a grandiose structure by any means, but the location is ideal for gazing at the stars at night. A number of local scholars skilled in the science of astronomy would be grateful if we could spare the funds to assist them in their work."
  VIETmisc.3047.a:0 "Our court astrologers here will suffice."
  VIETmisc.3047.b:0 "Very well, they shall have their funds!"
+ VIETmisc.3047.b.tooltip:0 "This could lead to further developments and boons if the local astronomers make any interesting discoveries."
  VIETmisc.3048.t:0 "Observatory Discovery: Good Omens"
  VIETmisc.3048.desc:0 "The scholars working at the small observatory I funded in [county.GetNameNoTier] a while back recently made some interesting observations, interesting enough that they wished to report it to me directly.\n\nAnyhow, it seems they noted some astrological phenomena that indicates good fortune will come to the realm, in some form or fashion, in the near future."
  VIETmisc.3048.a:0 "Excellent to hear!"
