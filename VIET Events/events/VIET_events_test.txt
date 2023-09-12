@@ -48,7 +48,6 @@
 # Suspicious courtiers talking - VIETmisc.8013 - too similar to vanilla CK3 event
 # Chamber Pot Docs - VIETmisc.8016 - redo later?
 # Young Musician lady and husband - VIETmisc.8020-8021 - rework later
-# Misc artifact events - VIETmisc.8033-8036 - to do later, when PI adds in a proper official artifact system
 # Chinese lady visits - VIETmisc.8037-8038 - to do later
 # Trying to remember what thinking about - VIETScarborough.6-7 - needs to be lengthier
 # Choke to death - VIETScarboroughFair.15 -figure out death stuff later
@@ -68,7 +67,6 @@
 # Type of onion - VIETmisc.8161 - needs to be lengthier
 # Bathing in saffron to reduce melancholia - VIETmisc.8165 - good but need to look at how depression workss
 # Asafoetida spice = VIETmisc.8167 - need to rethink this event
-# Alkanet prank - VIETmisc.8169 - rework when add in childhood events
 # Cardamom in Scandinavia - VIETmisc.8170 - not sure why I have this, too weirdly specific?
 # Chopped Cilantro - VIETmisc.8175 - ?????
 # Leyden Cheese - VIETmisc.8178 - might be anachronistic
@@ -104,19 +102,6 @@
 # 
 # 
 # 
-# Benevolent spirit residing in forest - VIETmisc.8288 - province event, to do later
-# Maitreya Buddha claimant - VIETmisc.8075 - province event, to do later
-# Blacksmiths in province become renowned - VIETmisc.8282 - province event, to do later
-# Mad alchemist living in the wilderness - VIETmisc.8292 - province event, to do later
-# Village mysteriously disappears - VIETmisc.8314 - province event, to do later
-# Happy perfectly arranged marriage - VIETmisc.8315 - province event, already has similar version in new VIET
-# Ghosts keep visiting a province - VIETmisc.8370 - province event, to do later
-# Respected elder passes away - VIETmisc.8371 - province event, to do later
-# Araragi-kun - VIETmisc.2241 - province event, to do later
-# Ghost Sighting - VIETmisc.8028 - province event
-# Pistachio province event - VIETmisc.8049 - province event
-# Landslide - VIETScarborough.2 - province event
-# Local boys win fame in war - VIETScarborough.3 - province event
 # 
 # 
 # USED ALREADY PROVINCIAL

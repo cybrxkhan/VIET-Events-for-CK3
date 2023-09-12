@@ -317,6 +317,11 @@ VIET_golden_rose = {
 	asset = ep1_western_box_small_basic_01_a_entity	
 }
 
+VIET_astrolabe = {
+	icon = "artifact_VIET_astrolabe.dds"
+	asset = ep1_western_box_small_basic_01_a_entity	
+}
+
 
 
 

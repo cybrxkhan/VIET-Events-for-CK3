@@ -1,0 +1,9 @@
+﻿
+
+VIET_full_background_night_sky = {
+	background = {	# Intro
+		reference = "gfx/interface/illustrations/event_story/VIET_night_sky.dds"
+		environment = "environment_event_garden" # added because it is expected in events
+		ambience = "event:/SFX/Events/Backgrounds/desert_day"
+	}
+}

@@ -89,7 +89,7 @@ VIET_events_yearly_pulse = {
 			}
 		}
 		
-		36000 = 0
+		40000 = 0
 		
 		#######################################
 		# OLDEST VIET
@@ -478,7 +478,7 @@ VIET_events_tri_yearly_pulse = {
 			}
 		}
 		
-		33000 = 0 # 20000?
+		36000 = 0 # 20000?
 		
 		#######################################
 		# OLDEST VIET
@@ -852,7 +852,7 @@ VIET_events_five_yearly_pulse = {
 			}
 		}
 		
-		30000 = 0
+		33000 = 0
 		
 		#######################################
 		# OLDEST VIET
@@ -1098,7 +1098,8 @@ VIET_events_event_chain_pulse = {
 				subtract = 20
 			}
 		}
-		20000 = 0
+		
+		22000 = 0
 		
 		#######################################
 		# OLD VIET
@@ -1185,7 +1186,7 @@ VIET_events_common_decisions_pulse = {
 			}
 		}
 		
-		16000 = 0
+		20000 = 0
 		
 		#######################################
 		# OLD VIET (for events converted into decision event chains)
@@ -1245,7 +1246,7 @@ VIET_events_rare_decisions_pulse = {
 			}
 		}
 		
-		20000 = 0
+		22000 = 0
 		
 		#######################################
 		# OLD VIET (for events converted into decision event chains)
@@ -1301,6 +1302,7 @@ VIET_events_misc_decisions_pulse = {
 				subtract = 20
 			}
 		}
+
 		3000 = 0
 		
 		#######################################
@@ -1349,7 +1351,7 @@ VIET_events_common_county_pulse = {
 			}
 		}
 		
-		28000 = 0
+		30000 = 0
 		
 		#######################################
 		# OLD VIET (for events converted into decision event chains)
@@ -1443,7 +1445,7 @@ VIET_events_uncommon_county_pulse = {
 			}
 		}
 		
-		24000 = 0
+		28000 = 0
 		
 		#######################################
 		# OLD VIET (for events converted into decision event chains)
@@ -1528,7 +1530,7 @@ VIET_events_rare_county_pulse = {
 			}
 		}
 		
-		20000 = 0
+		25000 = 0
 		
 		#######################################
 		# OLD VIET (for events converted into decision event chains)
@@ -1600,7 +1602,7 @@ VIET_events_common_artifact_pulse = {
 			}
 		}
 		
-		30000 = 0
+		40000 = 0
 		
 		#######################################
 		# BOTH GEN VIET
@@ -1681,7 +1683,7 @@ VIET_events_uncommon_artifact_pulse = {
 			}
 		}
 		
-		30000 = 0
+		40000 = 0
 		
 		#######################################
 		# BOTH GEN VIET
@@ -1752,7 +1754,7 @@ VIET_events_rare_artifact_pulse = {
 			}
 		}
 		
-		40000 = 0
+		55000 = 0
 		
 		#######################################
 		# BOTH GEN VIET
