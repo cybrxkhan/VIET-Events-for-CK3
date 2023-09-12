@@ -812,13 +812,13 @@ VIET_innocent_officials_vindicated = {
 VIET_incestuous_siblings = {
 	icon = love_negative
 	county_opinion_add = -3
-	monthly_county_control_change_add = -0.05
+	monthly_county_control_change_add = -0.1
 }
 
 VIET_calculating_the_apocalypse = {
 	icon = magic_negative
 	county_opinion_add = -6
-	monthly_county_control_change_add = -0.06
+	monthly_county_control_change_add = -0.1
 	development_growth_factor = -0.06
 }
 

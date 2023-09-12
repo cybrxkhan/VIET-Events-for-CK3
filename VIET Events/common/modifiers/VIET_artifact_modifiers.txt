@@ -423,3 +423,10 @@ artifact_VIET_oblivion_dream_modifier = {
 	monthly_prestige_gain_mult = 0.01
 	monthly_lifestyle_xp_gain_mult = 0.01
 }
+
+artifact_VIET_astrolabe_modifier = {
+	stewardship = 1
+	learning = 1
+	monthly_lifestyle_xp_gain_mult = 0.01
+	travel_speed_mult = 0.05
+}

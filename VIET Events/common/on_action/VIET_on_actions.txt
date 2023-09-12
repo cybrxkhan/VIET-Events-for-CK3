@@ -282,6 +282,10 @@ VIET_events_yearly_pulse = {
 		100 = VIETold.2226		# Female ruler considers using rosehip oil to look youthful
 		100 = VIETold.2228		# Drinking rose tea
 		100 = VIETold.2229		# Monk explains rose's significance as a symbol of the Virgin Mary
+
+		# Generic for 3rd anniversary
+		100 = VIETold.2234		# The pasta you're eating is bland
+		100 = VIETold.2236		# Come across a black cat
 		
 		#######################################
 		# NEXT GEN VIET
@@ -435,6 +439,10 @@ VIET_events_yearly_pulse = {
 		# Simple
 		100 = VIETmisc.0294		# Lover is not in the mood
 		100 = VIETmisc.0295		# Dream of a monk
+		# Astronomy
+		100 = VIETmisc.0315		# The star Algol is in a disadvantageous position for you
+		100 = VIETmisc.0317		# Overhearing a scholar and peasants discussing effects of the moon on agriculture
+		100 = VIETintro.1000	# Dog Days caused by Sirius - triggers VIETmisc.0319
 	}
 }
 
@@ -662,6 +670,9 @@ VIET_events_tri_yearly_pulse = {
 		# Rose
 		100 = VIETold.2227		# Stumble on two servants in love
 		100 = VIETold.2230		# Meet an old villager admiring a flower
+
+		# Generic for 3rd anniversary
+		100 = VIETold.2235		# Vassal does not want to wash hands with rosewater at a feast
 		
 		#######################################
 		# NEXT GEN VIET
@@ -809,6 +820,10 @@ VIET_events_tri_yearly_pulse = {
 		100 = VIETmisc.0292		# Sleepwalking while holding a knife in the basement
 		# Simple
 		100 = VIETmisc.0293		# Inspecting bridges
+		# Astronomy
+		100 = VIETmisc.0314		# Two characters debate about the nature of Venus
+		100 = VIETmisc.0316		# Boring character likes to talk about the moon
+		100 = VIETmisc.0318		# Two characters debate about the reliability of astrology
 	}
 }
 
@@ -1467,6 +1482,8 @@ VIET_events_uncommon_county_pulse = {
 		100 = VIETmisc.4027		# Shadows attack villagers - implied to be hysteria from several cases of sleep paralysis
 		# Oblivion Inspired
 		100 = VIETmisc.4032		# Old fort with loot discovered
+		# Generic for 3rd anniversary
+		100 = VIETmisc.4036		# Good tax officials wrongly accused of corruption by the masses
 		
 		#######################################
 		# NEXT GEN VIET
@@ -1493,8 +1510,10 @@ VIET_events_uncommon_county_pulse = {
 		# Generic
 		100 = VIETmisc.3042 	# Brilliant light appears
 		100 = VIETmisc.3043 	# Lake dried up
+		# Astronomy
+		100 = VIETmisc.3047 	# Local scholars request you build a small observatory somewhere
 		
-		# 25
+		# 27
 		
     }
 }
@@ -1544,6 +1563,8 @@ VIET_events_rare_county_pulse = {
 		50 = VIETmisc.4033		# Giant mudcrab spotted
 		# Generic
 		50 = VIETmisc.4035		# Kaiki the mysterious conman
+		# Generic for 3rd anniversary
+		50 = VIETmisc.4037		# Brother and sister commit incest in a village and run away to elope
 		
 		#######################################
 		# NEXT GEN VIET
@@ -1565,8 +1586,10 @@ VIET_events_rare_county_pulse = {
 		100 = VIETmisc.3041		# A heroic official rescues 10 kidnapped children
 		# Simple
 		100 = VIETmisc.3044		# Local academy is pillaged by brigands
+		# Astronomy
+		100 = VIETmisc.3046		# Local scholar claims the apocalypse will happen in this county soon
 		
-		# 15
+		# 17
 		
     }
 }
@@ -1717,8 +1740,11 @@ VIET_events_uncommon_artifact_pulse = {
 
 		# Patch
 		100 = VIETmisc.5050		# Patchwork quilt - villagers offer you one as a gift
+
+		# Astronomy
+		100 = VIETmisc.5055		# Astrolabe - scholar gives you one
 		
-		# 23
+		# 24
 		
     }
 }

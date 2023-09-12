@@ -53,6 +53,7 @@
 # 0287-0292		New vanilla animations
 # 0293-0295		Simple
 # 0296-0313		Childhood Generic
+# 0314-0319		Astronomy
 # 
 ############################################################################################################################
 
@@ -29232,4 +29233,790 @@ VIETmisc.0313 = {
 }
 
 
+##################################################################
+# Astronomy 0314-0319
+##################################################################
 
+
+# Two characters debate about the nature of Venus
+VIETmisc.0314 = {
+	type = character_event
+	title = VIETmisc.0314.t
+	desc = VIETmisc.0314.desc
+	theme = learning_scholarship_focus
+
+	
+	left_portrait = {
+		character = scope:debater_1
+		animation = throne_room_conversation_3
+	}
+	
+	right_portrait = {
+		character = scope:debater_2
+		animation = laugh
+	}
+
+	trigger = {
+		has_game_rule = VIET_normal_universe_events
+		OR = {
+			any_courtier_or_guest = {
+				count >= 2
+				is_available_ai_adult = yes
+				OR = {
+					learning >= decent_skill_rating
+					has_trait = scholar
+					has_trait = theologian
+					has_trait = education_learning_3
+					has_trait = education_learning_4
+				}
+			}
+			any_vassal = {
+				count >= 2
+				is_available_ai_adult = yes
+				OR = {
+					learning >= decent_skill_rating
+					has_trait = scholar
+					has_trait = theologian
+					has_trait = education_learning_3
+					has_trait = education_learning_4
+				}
+			}
+		}
+	}
+	
+	weight_multiplier = {
+		base = 1
+		modifier = {
+			add = 0.2
+			has_trait = calm
+		}
+		modifier = {
+			add = -0.2
+			has_trait = wrathful
+		}
+		modifier = {
+			add = 0.2
+			has_trait = patient
+		}
+		modifier = {
+			add = -0.2
+			has_trait = impatient
+		}
+		modifier = {
+			add = 0.2
+			has_trait = humble
+		}
+		modifier = {
+			add = -0.2
+			has_trait = arrogant
+		}
+	}
+
+	immediate = {
+		every_courtier_or_guest = {
+			limit = {
+				is_available_ai_adult = yes
+				OR = {
+					learning >= decent_skill_rating
+					has_trait = scholar
+					has_trait = theologian
+					has_trait = education_learning_3
+					has_trait = education_learning_4
+				}
+			}
+			add_to_list = debate_characters
+		}
+		every_vassal = {
+			limit = {
+				is_available_ai_adult = yes
+				OR = {
+					learning >= decent_skill_rating
+					has_trait = scholar
+					has_trait = theologian
+					has_trait = education_learning_3
+					has_trait = education_learning_4
+				}
+			}
+			add_to_list = debate_characters
+		}
+		ordered_in_list = {
+			list = debate_characters
+			max = 2
+			check_range_bounds = no
+			if = {
+				limit = {
+					NOT = { exists = scope:debater_1 }
+				}
+				save_scope_as = debater_1
+			}
+			else = {
+				save_scope_as = debater_2
+			}
+		}
+		if = {
+			limit = {
+				scope:debater_1 = {
+					can_set_relation_friend_trigger = { CHARACTER = scope:debater_2 }
+				}
+			}
+			scope:debater_1 = {
+				set_relation_friend = { reason = VIET_natural_philosophy_interest target = scope:debater_2 }
+			}
+		}
+	}
+	
+	option = { # ok
+		name = VIETmisc.0314.a
+		scope:debater_2 = {
+			add_opinion = {
+				target = root
+				modifier = VIET_opinion_agrees_intellectual
+			}		
+		}
+		progress_towards_friend_effect = {
+			CHARACTER = scope:debater_2
+			OPINION = 0
+			REASON = VIET_natural_philosophy_interest
+		}
+		if = {
+			limit = {
+				has_game_rule = VIET_historical_context_on
+			}
+			custom_description_no_bullet = {
+				text = VIETmisc.0314.info
+			}
+		}
+	}
+	
+	option = { # ok
+		name = VIETmisc.0314.b
+		scope:debater_1 = {
+			add_opinion = {
+				target = root
+				modifier = VIET_opinion_agrees_intellectual
+			}		
+		}
+		progress_towards_friend_effect = {
+			CHARACTER = scope:debater_1
+			OPINION = 0
+			REASON = VIET_natural_philosophy_interest
+		}
+		if = {
+			limit = {
+				has_game_rule = VIET_historical_context_on
+			}
+			custom_description_no_bullet = {
+				text = VIETmisc.0314.info
+			}
+		}
+	}
+
+}
+
+
+# The star Algol is in a disadvantageous position for you
+VIETmisc.0315 = {
+	type = character_event
+	title = VIETmisc.0315.t
+	desc = VIETmisc.0315.desc
+	theme = intrigue_skulduggery_focus
+	override_icon = { reference = "gfx/interface/icons/event_types/type_learning.dds" } 
+
+	right_portrait = {
+		character = root
+		animation = worry
+	}
+
+	trigger = {
+		has_game_rule = VIET_normal_universe_events
+	}
+	
+	weight_multiplier = {
+		base = 1
+		modifier = {
+			add = 0.2
+			has_trait = cynical
+		}
+		modifier = {
+			add = -0.2
+			has_trait = zealous
+		}
+		modifier = {
+			add = 0.2
+			has_trait = callous
+		}
+		modifier = {
+			add = -0.2
+			has_trait = compassionate
+		}
+		modifier = {
+			add = 0.2
+			has_trait = arrogant
+		}
+		modifier = {
+			add = -0.2
+			has_trait = humble
+		}
+	}
+
+	immediate = {
+		add_character_modifier = {
+			modifier = VIET_algol_modifier
+			years = 10
+		}
+	}
+	
+	option = { # ok
+		name = VIETmisc.0315.a
+		VIET_huge_piety_gain_effect = yes
+		stress_impact = {
+			cynical = minor_stress_impact_gain
+			lazy = miniscule_stress_impact_gain
+		}	
+		if = {
+			limit = {
+				has_game_rule = VIET_historical_context_on
+			}
+			custom_description_no_bullet = {
+				text = VIETmisc.0315.info
+			}
+		}
+	}
+	
+	option = { # ok
+		name = VIETmisc.0315.b
+		VIET_huge_prestige_gain_effect = yes
+		stress_impact = {
+			paranoid = minor_stress_impact_gain
+			humble = miniscule_stress_impact_gain
+		}		
+		if = {
+			limit = {
+				has_game_rule = VIET_historical_context_on
+			}
+			custom_description_no_bullet = {
+				text = VIETmisc.0315.info
+			}
+		}
+	}
+
+}
+
+
+# Boring character likes to talk about the moon
+VIETmisc.0316 = {
+	type = character_event
+	title = VIETmisc.0316.t
+	desc = VIETmisc.0316.desc
+	theme = diplomacy 
+
+	left_portrait = {
+		character = scope:boring
+		animation = happiness
+	}
+
+	right_portrait = {
+		character = root
+		animation = boredom
+	}
+
+	trigger = {
+		has_game_rule = VIET_normal_universe_events
+		OR = {
+			any_courtier_or_guest = {
+				is_available_ai_adult = yes
+				OR = {
+					learning >= decent_skill_rating
+					has_trait = scholar
+					has_trait = theologian
+					has_trait = education_learning_3
+					has_trait = education_learning_4
+				}
+				diplomacy <= mediocre_skill_rating
+				NOT = { has_trait = gregarious }
+			}
+			any_vassal = {
+				is_available_ai_adult = yes
+				OR = {
+					learning >= decent_skill_rating
+					has_trait = scholar
+					has_trait = theologian
+					has_trait = education_learning_3
+					has_trait = education_learning_4
+				}
+				diplomacy <= mediocre_skill_rating
+				NOT = { has_trait = gregarious }
+			}
+		}
+	}
+	
+	weight_multiplier = {
+		base = 1
+		modifier = {
+			add = 0.2
+			has_trait = patient
+		}
+		modifier = {
+			add = -0.2
+			has_trait = impatient
+		}
+		modifier = {
+			add = 0.2
+			has_trait = fickle
+		}
+		modifier = {
+			add = -0.2
+			has_trait = stubborn
+		}
+		modifier = {
+			add = 0.2
+			has_trait = humble
+		}
+		modifier = {
+			add = -0.2
+			has_trait = arrogant
+		}
+	}
+
+	immediate = {
+		every_courtier_or_guest = {
+			limit = {
+				is_available_ai_adult = yes
+				OR = {
+					learning >= decent_skill_rating
+					has_trait = scholar
+					has_trait = theologian
+					has_trait = education_learning_3
+					has_trait = education_learning_4
+				}
+				diplomacy <= mediocre_skill_rating
+				NOT = { has_trait = gregarious }
+			}
+			add_to_list = boring_characters
+		}
+		every_vassal = {
+			limit = {
+				is_available_ai_adult = yes
+				OR = {
+					learning >= decent_skill_rating
+					has_trait = scholar
+					has_trait = theologian
+					has_trait = education_learning_3
+					has_trait = education_learning_4
+				}
+				diplomacy <= mediocre_skill_rating
+				NOT = { has_trait = gregarious }
+			}
+			add_to_list = boring_characters
+		}
+		random_in_list = {
+			list = boring_characters
+			save_scope_as = boring
+		}
+		scope:boring = {
+			add_character_modifier = {
+				modifier = VIET_boring_astronomy_interest
+				years = 15
+			}
+		}
+	}
+	
+	option = { # ok
+		name = VIETmisc.0316.a
+		scope:boring = {
+			add_opinion = {
+				target = root
+				modifier = hurt_opinion
+				opinion = -5
+			}			
+		}
+		every_courtier_or_guest = {
+			limit = {
+				NOR = {
+					learning >= decent_skill_rating
+					has_trait = scholar
+					has_trait = theologian
+					has_trait = education_learning_3
+					has_trait = education_learning_4
+				}
+			}
+			custom = VIET_every_courtier_guest_unintellectual
+			add_opinion = {
+				target = root
+				modifier = grateful_opinion
+				opinion = 5
+			}
+			add_opinion = {
+				target = scope:boring
+				modifier = bored_opinion
+				opinion = -10
+			}
+		}
+		stress_impact = {
+			lazy = miniscule_stress_impact_gain
+			content = miniscule_stress_impact_gain
+			shy = miniscule_stress_impact_gain
+		}	
+	}
+	
+	option = { # ok
+		name = VIETmisc.0316.b
+		trigger = {
+			learning >= decent_skill_rating
+		}
+		skill = learning		
+		VIET_huge_prestige_gain_effect = yes
+		add_character_modifier = {
+			modifier = VIET_impressed_others_with_knowledge
+			days = 365
+		}
+		stress_impact = {
+			shy = minor_stress_impact_gain
+		}	
+	}
+	
+	option = { # ok
+		name = VIETmisc.0316.c
+		trigger = {
+			learning < decent_skill_rating
+		}	
+		VIET_huge_prestige_loss_effect = yes		
+		every_courtier_or_guest = {
+			limit = {
+				NOR = {
+					learning >= decent_skill_rating
+					has_trait = scholar
+					has_trait = theologian
+					has_trait = education_learning_3
+					has_trait = education_learning_4
+				}
+			}
+			custom = VIET_every_courtier_guest_unintellectual
+			add_opinion = {
+				target = root
+				modifier = disappointed_opinion
+				opinion = -5
+			}
+			add_opinion = {
+				target = scope:boring
+				modifier = bored_opinion
+				opinion = -10
+			}
+		}	
+		random_list = {
+			10 = {
+				desc = VIETmisc.0316.c.failure
+				send_interface_toast = {
+					type = event_toast_effect_bad
+					left_icon = ROOT
+					title = VIETmisc.0316.c.failure
+					stress_impact = {
+						base = minor_stress_impact_gain
+					}	
+				}
+			}
+			10 = {
+				desc = VIETmisc.0316.c.success
+				send_interface_toast = {
+					type = event_toast_effect_good
+					left_icon = ROOT
+					title = VIETmisc.0316.c.success
+					add_learning_skill = 1
+				}
+			}
+		}
+	}
+
+}
+
+# Overhearing a scholar and peasants discussing effects of the moon on agriculture
+VIETmisc.0317 = {
+	type = character_event
+	title = VIETmisc.0317.t
+	desc = VIETmisc.0317.desc
+	theme = VIET_theme_tuscan_country
+
+	right_portrait = {
+		character = root
+		animation = personality_rational
+	}
+
+	trigger = {
+		has_game_rule = VIET_normal_universe_events
+	}
+	
+	weight_multiplier = {
+		base = 1
+		modifier = {
+			add = 0.2
+			has_trait = humble
+		}
+		modifier = {
+			add = -0.2
+			has_trait = arrogant
+		}
+		modifier = {
+			add = 0.2
+			has_trait = diligent
+		}
+		modifier = {
+			add = -0.2
+			has_trait = lazy
+		}
+		modifier = {
+			add = 0.2
+			has_trait = gregarious
+		}
+		modifier = {
+			add = -0.2
+			has_trait = shy
+		}
+	}
+	
+	option = { # ok
+		name = VIETmisc.0317.a
+		add_character_modifier = {
+			modifier = VIET_moon_agriculture_learning
+			years = 13
+		}	
+		if = {
+			limit = {
+				has_game_rule = VIET_historical_context_on
+			}
+			custom_description_no_bullet = {
+				text = VIETmisc.0317.info
+			}
+		}
+	}
+
+}
+
+
+
+# Two characters debate about the reliability of astrology
+VIETmisc.0318 = {
+	type = character_event
+	title = VIETmisc.0318.t
+	desc = VIETmisc.0318.desc
+	theme = learning_scholarship_focus
+
+	
+	left_portrait = {
+		character = scope:debater_1
+		animation = throne_room_conversation_3
+	}
+	
+	right_portrait = {
+		character = scope:debater_2
+		animation = laugh
+	}
+
+	trigger = {
+		has_game_rule = VIET_normal_universe_events
+		OR = {
+			any_courtier_or_guest = {
+				count >= 2
+				is_available_ai_adult = yes
+				learning >= mediocre_skill_rating
+			}
+			any_vassal = {
+				count >= 2
+				is_available_ai_adult = yes
+				learning >= mediocre_skill_rating
+			}
+		}
+	}
+	
+	weight_multiplier = {
+		base = 1
+		modifier = {
+			add = 0.2
+			has_trait = calm
+		}
+		modifier = {
+			add = -0.2
+			has_trait = wrathful
+		}
+		modifier = {
+			add = 0.2
+			has_trait = patient
+		}
+		modifier = {
+			add = -0.2
+			has_trait = impatient
+		}
+		modifier = {
+			add = 0.2
+			has_trait = humble
+		}
+		modifier = {
+			add = -0.2
+			has_trait = arrogant
+		}
+	}
+
+	immediate = {
+		every_courtier_or_guest = {
+			limit = {
+				is_available_ai_adult = yes
+				learning >= mediocre_skill_rating
+			}
+			add_to_list = debate_characters
+		}
+		every_vassal = {
+			limit = {
+				is_available_ai_adult = yes
+				learning >= mediocre_skill_rating
+			}
+			add_to_list = debate_characters
+		}
+		ordered_in_list = {
+			list = debate_characters
+			max = 2
+			check_range_bounds = no
+			if = {
+				limit = {
+					NOT = { exists = scope:debater_1 }
+				}
+				save_scope_as = debater_1
+			}
+			else = {
+				save_scope_as = debater_2
+			}
+		}
+		scope:debater_1 = {
+			add_opinion = {
+				target = scope:debater_2
+				modifier = VIET_opinion_interesting_conversation
+			}
+			reverse_add_opinion = {
+				target = scope:debater_2
+				modifier = VIET_opinion_interesting_conversation
+			}		
+		}
+	}
+	
+	option = { # ok
+		name = VIETmisc.0318.a
+		scope:debater_1 = {
+			add_opinion = {
+				target = root
+				modifier = VIET_opinion_agrees_intellectual
+			}		
+		}
+		progress_towards_friend_effect = {
+			CHARACTER = scope:debater_1
+			OPINION = 0
+			REASON = VIET_natural_philosophy_interest
+		}
+		if = {
+			limit = {
+				has_game_rule = VIET_historical_context_on
+			}
+			custom_description_no_bullet = {
+				text = VIETmisc.0318.info
+			}
+		}
+	}
+	
+	option = { # ok
+		name = VIETmisc.0318.b
+		scope:debater_2 = {
+			add_opinion = {
+				target = root
+				modifier = VIET_opinion_agrees_intellectual
+			}		
+		}
+		progress_towards_friend_effect = {
+			CHARACTER = scope:debater_2
+			OPINION = 0
+			REASON = VIET_natural_philosophy_interest
+		}
+		if = {
+			limit = {
+				has_game_rule = VIET_historical_context_on
+			}
+			custom_description_no_bullet = {
+				text = VIETmisc.0318.info
+			}
+		}
+	}
+
+}
+
+
+# Dog Days caused by Sirius
+# Triggered by a ping event to get the timing roughly right
+VIETmisc.0319 = {
+	type = character_event
+	title = VIETmisc.0319.t
+	desc = VIETmisc.0319.desc
+	theme = medicine
+	override_background = { event_background = garden }
+
+	
+	left_portrait = {
+		character = scope:physician
+		animation = reading
+	}
+	
+	right_portrait = {
+		character = root
+		animation = pain
+	}
+
+	trigger = {
+		court_physician_available_trigger = yes
+	}
+
+	immediate = {
+		save_court_physician_as_effect = { SCOPE_NAME = physician }
+		stress_impact = {
+			base = miniscule_stress_impact_gain
+		}	
+	}
+	
+	option = { # ok
+		name = VIETmisc.0319.a
+		trigger = {
+			OR = {
+				gold >= 50
+				is_ai = no
+			}
+		}
+		remove_short_term_gold = 50
+		stress_impact = {
+			greedy = miniscule_stress_impact_gain
+			stubborn = miniscule_stress_impact_gain
+		}
+		if = {
+			limit = {
+				has_game_rule = VIET_historical_context_on
+			}
+			custom_description_no_bullet = {
+				text = VIETmisc.0319.info
+			}
+		}
+	}
+	
+	option = { # ok
+		name = VIETmisc.0319.b
+		add_character_modifier = {
+			modifier = VIET_sirius_dog_days
+			years = 5
+		}
+		stress_impact = {
+			diligent = miniscule_stress_impact_gain
+			paranoid = miniscule_stress_impact_gain
+		}
+		if = {
+			limit = {
+				has_game_rule = VIET_historical_context_on
+			}
+			custom_description_no_bullet = {
+				text = VIETmisc.0319.info
+			}
+		}
+	}
+
+}

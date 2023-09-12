@@ -17398,7 +17398,6 @@ VIETold.2236 = {
 	theme = mental_break
 	override_background = { reference = courtyard }
 	
-	left_portrait = root
 	
 	right_portrait = {
 		character = root
@@ -17411,7 +17410,8 @@ VIETold.2236 = {
 		# Won't happen for cultures and faiths where black cats are seen as good, revered, or have a more mixed reputation
 		NOR = {
 			culture = { has_cultural_pillar = heritage_chinese }
-			culture = { has_cultural_pillar = heritage_celtic }
+			culture = { has_cultural_pillar = heritage_goidelic }
+			culture = { has_cultural_pillar = heritage_brythonic }
 			culture = { has_cultural_pillar = heritage_arabic }
 			religion = religion:islam_religion
 			religion = religion:kushitism_religion			

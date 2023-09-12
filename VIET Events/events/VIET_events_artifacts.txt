@@ -27,6 +27,7 @@
 # 5046-5049		Recipes
 # 5050-5051		Patch
 # 5052-5054		Generic
+# 5055			Astornomy
 # 
 ############################################################################################################################
 
@@ -7982,3 +7983,122 @@ VIETmisc.5054 = {
 
 
 
+
+
+
+##################################################################
+# ASTRONOMY 5055
+##################################################################
+
+# Astrolabe - scholar gives you one
+VIETmisc.5055 = {
+	type = character_event
+	title = VIETmisc.5055.t
+	desc = VIETmisc.5055.desc
+	theme = learning_scholarship_focus
+	
+	right_portrait = {
+		character = root
+		animation = reading
+	}
+	artifact = { # To display the artifact in the event-window
+        target = scope:VIET_clutter_artifact
+        position = lower_center_portrait
+    }
+
+	trigger = {
+		# Should be a literate culture
+		NOT = { has_government = tribal_government }	
+	}
+
+    weight_multiplier = {
+        base = 1
+		# Reduce spam
+		modifier = {
+			add = -0.9
+			any_character_artifact = {
+				has_variable = VIET_astrolabe_variable
+			}
+		}
+		modifier = {
+			add = -0.4
+			VIET_has_2_clutter_artifacts_trigger = yes	
+		}
+		modifier = {
+			add = -0.5
+			VIET_has_4_clutter_artifacts_trigger = yes	
+		}
+		modifier = {
+			add = 0.2
+			has_trait = patient
+		}
+		modifier = {
+			add = -0.2
+			has_trait = impatient
+		}
+		modifier = {
+			add = 0.2
+			has_trait = diligent
+		}
+		modifier = {
+			add = -0.2
+			has_trait = lazy
+		}
+		modifier = {
+			add = 0.2
+			has_trait = humble
+		}
+		modifier = {
+			add = -0.2
+			has_trait = arrogant
+		}
+    }
+	
+	immediate = {	
+		hidden_effect_new_object = {
+			create_artifact = {	
+				name = VIET_astrolabe_name
+				description = VIET_astrolabe_desc
+				type = VIET_clutter
+				visuals = VIET_astrolabe
+				quality = 15
+				wealth = 15
+				modifier = artifact_VIET_astrolabe_modifier
+				max_durability = 40
+				save_scope_as = VIET_clutter_artifact
+				history = {
+					type = created_before_history
+				}
+			}
+			scope:VIET_clutter_artifact = {
+				set_variable = VIET_astrolabe_variable
+			}
+		}
+	}
+	
+	option = {
+		name = VIETmisc.5055.a
+		show_as_tooltip = {
+			scope:VIET_clutter_artifact = {
+				set_owner = {
+					target = root
+				}
+			}
+		}
+		custom_tooltip = VIET_artifact_limit_warning
+	}
+	
+	option = {
+		name = VIETmisc.5055.b	
+		add_gold = { 25 100 }
+		hidden_effect = {
+			destroy_artifact = scope:VIET_clutter_artifact
+		}
+		stress_impact = {
+			scholar = miniscule_stress_impact_gain
+			theologian = miniscule_stress_impact_gain
+			education_learning_3 = miniscule_stress_impact_gain
+			education_learning_4 = miniscule_stress_impact_gain
+		}
+	}
+}

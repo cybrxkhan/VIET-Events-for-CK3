@@ -31,6 +31,7 @@
 # 3039-3041		10
 # 3042-3043		Generic
 # 3044-3045		Simple
+# 3046-3050		Astronomy
 # 
 ############################################################################################################################
 
@@ -4518,6 +4519,342 @@ VIETmisc.3045 = {
 }
 
 
+##################################################################
+# Astronomy 3046-3050
+##################################################################
+
+
+# Local scholar claims the apocalypse will happen in this county soon
+VIETmisc.3046 = {
+	type = character_event
+	title = VIETmisc.3046.t
+	desc = VIETmisc.3046.desc
+	theme = learning_scholarship_focus
+	
+	right_portrait = {
+		character = root
+		animation = worry
+	}
+
+	trigger = {
+		# Should be a literate culture
+		NOT = { has_government = tribal_government }	
+	}
+	
+    weight_multiplier = {
+        base = 0
+		modifier = {
+			add = {
+				every_held_title = {
+					limit = { tier = tier_county }
+					add = 1
+				}
+			}		
+		}
+    }
+	
+	immediate = {
+		random_held_title = {
+			limit = {
+				tier = tier_county
+			}	
+			save_scope_as = county
+		}
+		scope:county = {
+			random_list = {
+				10 = {
+					add_county_modifier = {
+						modifier = VIET_calculating_the_apocalypse
+						years = 10
+					}				
+				}
+				10 = {
+					add_county_modifier = {
+						modifier = VIET_calculating_the_apocalypse
+						years = 15
+					}				
+				}
+				10 = {
+					add_county_modifier = {
+						modifier = VIET_calculating_the_apocalypse
+						years = 20
+					}				
+				}
+				10 = {
+					add_county_modifier = {
+						modifier = VIET_calculating_the_apocalypse
+						years = 25
+					}				
+				}
+				10 = {
+					add_county_modifier = {
+						modifier = VIET_calculating_the_apocalypse
+						years = 30
+					}				
+				}
+				10 = {
+					add_county_modifier = {
+						modifier = VIET_calculating_the_apocalypse
+						years = 35
+					}				
+				}
+				10 = {
+					add_county_modifier = {
+						modifier = VIET_calculating_the_apocalypse
+						years = 40
+					}				
+				}
+			}	
+		}
+	}
+
+	# Ok
+	option = {
+		name = VIETmisc.3046.a
+	}
+	# Ok
+	option = {
+		name = VIETmisc.3046.b
+		trigger = {
+			OR = {
+				gold >= 50
+				is_ai = no
+			}
+		}
+		remove_short_term_gold = 50
+		VIET_massive_piety_gain_effect = yes
+		add_learning_lifestyle_xp = major_lifestyle_xp	
+	}
+}
+
+# Local scholars request you build a small observatory somewhere
+VIETmisc.3047 = {
+	type = character_event
+	title = VIETmisc.3047.t
+	desc = VIETmisc.3047.desc
+	theme = learning_scholarship_focus
+	override_background = { event_background = VIET_background_tuscan_country }
+	
+	right_portrait = {
+		character = root
+		animation = personality_rational
+	}
+
+	trigger = {
+		# Should be a literate culture
+		NOT = { has_government = tribal_government }	
+	}
+	
+    weight_multiplier = {
+        base = 0
+		modifier = {
+			add = {
+				every_held_title = {
+					limit = { tier = tier_county }
+					add = 1
+				}
+			}		
+		}
+    }
+	
+	immediate = {
+		random_held_title = {
+			limit = {
+				tier = tier_county
+			}	
+			save_scope_as = county
+		}
+	}
+
+	# Ok
+	option = {
+		name = VIETmisc.3047.a
+		stress_impact = {
+			scholar = minor_stress_impact_gain
+		}
+	}
+	# Build it
+	option = {
+		name = VIETmisc.3047.b
+		trigger = {
+			OR = {
+				gold >= 50
+				is_ai = no
+			}
+		}
+		remove_short_term_gold = 50
+		VIET_massive_prestige_gain_effect = yes
+		scope:county = {
+			add_county_modifier = {
+				modifier = VIET_small_observatory
+				years = 20
+			}		
+		}
+		stress_impact = {
+			greedy = minor_stress_impact_gain
+			callous = miniscule_stress_impact_gain
+		}
+		custom_tooltip = VIETmisc.3047.b.tooltip
+		hidden_effect = {
+			random = {
+				chance = 33
+				trigger_event = VIETmisc.3048
+			}
+			random = {
+				chance = 33
+				trigger_event = VIETmisc.3049
+			}
+			random = {
+				chance = 33
+				trigger_event = VIETmisc.3050
+			}
+		}
+	}
+}
+
+# Local scholars at the observatory report good omens
+VIETmisc.3048 = {
+	type = character_event
+	title = VIETmisc.3048.t
+	desc = VIETmisc.3048.desc
+	theme = learning_scholarship_focus
+	override_background = { event_background = VIET_background_tuscan_country }
+	
+	right_portrait = {
+		character = root
+		animation = happiness
+	}
+
+	immediate = {
+		random_list = {
+			10 = {
+				add_character_modifier = {
+					modifier = VIET_observatory_good_omens
+					years = 5
+				}
+			}
+			10 = {
+				add_character_modifier = {
+					modifier = VIET_observatory_good_omens
+					years = 10
+				}
+			}
+			10 = {
+				add_character_modifier = {
+					modifier = VIET_observatory_good_omens
+					years = 15
+				}
+			}
+			10 = {
+				add_character_modifier = {
+					modifier = VIET_observatory_good_omens
+					years = 20
+				}
+			}
+		}
+	}
+
+	# Ok
+	option = {
+		name = VIETmisc.3048.a
+	}
+}
+
+# Local scholars at the observatory report bad omens
+VIETmisc.3049 = {
+	type = character_event
+	title = VIETmisc.3049.t
+	desc = VIETmisc.3049.desc
+	theme = learning_scholarship_focus
+	override_background = { event_background = VIET_background_tuscan_country }
+	
+	right_portrait = {
+		character = root
+		animation = worry
+	}
+
+	immediate = {
+		random_list = {
+			10 = {
+				add_character_modifier = {
+					modifier = VIET_observatory_bad_omens
+					years = 5
+				}
+			}
+			10 = {
+				add_character_modifier = {
+					modifier = VIET_observatory_bad_omens
+					years = 10
+				}
+			}
+			10 = {
+				add_character_modifier = {
+					modifier = VIET_observatory_bad_omens
+					years = 15
+				}
+			}
+			10 = {
+				add_character_modifier = {
+					modifier = VIET_observatory_bad_omens
+					years = 20
+				}
+			}
+		}
+	}
+
+	# Ok
+	option = {
+		name = VIETmisc.3049.a
+	}
+}
+
+# Local scholars at the observatory report revisions to old astronomical models
+VIETmisc.3050 = {
+	type = character_event
+	title = VIETmisc.3050.t
+	desc = VIETmisc.3050.desc
+	theme = learning_scholarship_focus
+	override_background = { event_background = VIET_background_tuscan_country }
+	
+	right_portrait = {
+		character = root
+		animation = reading
+	}
+
+	immediate = {
+		random_list = {
+			10 = {
+				add_character_modifier = {
+					modifier = VIET_observatory_revisions
+					years = 5
+				}
+			}
+			10 = {
+				add_character_modifier = {
+					modifier = VIET_observatory_revisions
+					years = 10
+				}
+			}
+			10 = {
+				add_character_modifier = {
+					modifier = VIET_observatory_revisions
+					years = 15
+				}
+			}
+			10 = {
+				add_character_modifier = {
+					modifier = VIET_observatory_revisions
+					years = 20
+				}
+			}
+		}
+	}
+
+	# Ok
+	option = {
+		name = VIETmisc.3050.a
+	}
+}
 
 
 

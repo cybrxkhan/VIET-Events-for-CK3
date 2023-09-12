@@ -3091,6 +3091,12 @@ VIET_sirius_dog_days = {
 	stress_loss_mult = -0.1
 }
 
+VIET_moon_agriculture_learning = {
+	icon = fertility_positive
+	stewardship = 1
+	learning = 1
+}
+
 
 
 

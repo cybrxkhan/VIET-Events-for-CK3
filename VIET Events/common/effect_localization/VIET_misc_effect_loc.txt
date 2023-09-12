@@ -22,3 +22,23 @@ VIETmisc.1063.tooltip = {
 VIETmisc.1069.tooltip = {
 	first = VIETmisc.1069.tooltip
 }
+
+VIETmisc.0314.info = {
+	global = VIETmisc.0314.info
+}
+
+VIETmisc.0315.info = {
+	global = VIETmisc.0315.info
+}
+
+VIETmisc.0317.info = {
+	global = VIETmisc.0317.info
+}
+
+VIETmisc.0318.info = {
+	global = VIETmisc.0318.info
+}
+
+VIETmisc.0319.info = {
+	global = VIETmisc.0319.info
+}

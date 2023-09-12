@@ -2,6 +2,8 @@
 # 
 # Miscellaneous important events
 # 
+# VIETIntro.1000-1999 are reserved for ping events that need to have the events trigger at a certain time of year
+# 
 ##############################################################################################
 
 namespace = VIETintro
@@ -67,3 +69,173 @@ VIETintro.0011 = {
 		name = VIETintro.0011.a
 	}
 }
+
+
+
+##################################################################
+#
+# VIETIntro.1000-1999 are reserved for ping events that need to have the events trigger at a certain time of year
+#
+##################################################################
+
+
+
+# Trigger for VIETmisc.0319
+# Event about Sirius dog days
+VIETintro.1000 = {
+	type = character_event
+	hidden = yes
+
+	trigger = {
+		has_game_rule = VIET_normal_universe_events
+		court_physician_available_trigger = yes
+	}
+	
+	weight_multiplier = {
+		base = 1
+		modifier = {
+			add = 0.2
+			has_trait = wrathful
+		}
+		modifier = {
+			add = -0.2
+			has_trait = calm
+		}
+		modifier = {
+			add = 0.2
+			has_trait = paranoid
+		}
+		modifier = {
+			add = -0.2
+			has_trait = content
+		}
+		modifier = {
+			add = 0.2
+			has_trait = impatient
+		}
+		modifier = {
+			add = -0.2
+			has_trait = patient
+		}
+	}
+
+	immediate = {
+		# Trigger event roughly in late summer based on what month it currently is
+		if = {
+			limit = {
+				current_month = 1
+			}
+			trigger_event = {
+				id = VIETmisc.0319
+				months = { 6 8 }
+			}
+		}
+		else_if = {
+			limit = {
+				current_month = 2
+			}
+			trigger_event = {
+				id = VIETmisc.0319
+				months = { 5 7 }
+			}
+		}
+		else_if = {
+			limit = {
+				current_month = 3
+			}
+			trigger_event = {
+				id = VIETmisc.0319
+				months = { 4 6 }
+			}
+		}
+		else_if = {
+			limit = {
+				current_month = 4
+			}
+			trigger_event = {
+				id = VIETmisc.0319
+				months = { 3 5 }
+			}
+		}
+		else_if = {
+			limit = {
+				current_month = 5
+			}
+			trigger_event = {
+				id = VIETmisc.0319
+				months = { 1 3 }
+			}
+		}
+		else_if = {
+			limit = {
+				current_month = 6
+			}
+			trigger_event = {
+				id = VIETmisc.0319
+				months = 1
+			}
+		}
+		else_if = {
+			limit = {
+				current_month = 7
+			}
+			trigger_event = {
+				id = VIETmisc.0319
+				months = 1
+			}
+		}
+		else_if = {
+			limit = {
+				current_month = 8
+			}
+			trigger_event = {
+				id = VIETmisc.0319
+				months = 1
+			}
+		}
+		else_if = {
+			limit = {
+				current_month = 9
+			}
+			trigger_event = {
+				id = VIETmisc.0319
+				months = { 10 12 }
+			}
+		}
+		else_if = {
+			limit = {
+				current_month = 10
+			}
+			trigger_event = {
+				id = VIETmisc.0319
+				months = { 9 11 }
+			}
+		}
+		else_if = {
+			limit = {
+				current_month = 11
+			}
+			trigger_event = {
+				id = VIETmisc.0319
+				months = { 8 10 }
+			}
+		}
+		else_if = {
+			limit = {
+				current_month = 12
+			}
+			trigger_event = {
+				id = VIETmisc.0319
+				months = { 7 9 }
+			}
+		}
+	}
+
+}
+
+
+
+
+
+
+
