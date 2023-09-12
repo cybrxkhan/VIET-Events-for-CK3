@@ -26,6 +26,7 @@
 # 2214-2224		Oblivion Inspired
 # 2225-2231		Rose
 # 2232-2233		Childhood Generic
+# 2234-2236		Generic for 3rd anniversary
 # 
 ############################################################################################################################
 
@@ -17131,4 +17132,363 @@ VIETold.2233 = {
 
 
 
+
+
+#############################################
+# Generic for 3rd anniversary 2234-2236
+#############################################
+
+# The pasta you're eating is bland
+VIETold.2234 = {
+	type = character_event
+	title = VIETold.2234.t	
+	desc = VIETold.2234.desc
+	theme = feast_activity
+	
+	right_portrait = {
+		character = root
+		animation = dismissal
+	}
+
+	
+	trigger = {
+		has_game_rule = VIET_normal_universe_events
+		OR = {
+			culture = { has_cultural_pillar = heritage_latin }
+			capital_province = {
+				geographical_region = world_europe_south_italy
+			}			
+		}
+	}
+
+	weight_multiplier = {
+		base = 1
+		modifier = {
+			add = 0.2
+			has_trait = wrathful
+		}
+		modifier = {
+			add = -0.2
+			has_trait = calm
+		}
+		modifier = {
+			add = 0.2
+			has_trait = gluttonous
+		}
+		modifier = {
+			add = -0.2
+			has_trait = temperate
+		}
+		modifier = {
+			add = 0.2
+			has_trait = ambitious
+		}
+		modifier = {
+			add = -0.2
+			has_trait = content
+		}
+	}
+
+	option = { # ok
+		name = VIETold.2234.a
+		VIET_medium_prestige_loss_effect = yes
+		stress_impact = {
+			base = miniscule_stress_impact_gain
+			wrathful = minor_stress_impact_gain
+			arbitrary = miniscule_stress_impact_gain
+			sadistic = miniscule_stress_impact_gain
+			vengeful = miniscule_stress_impact_gain
+		}
+	}
+
+	option = { # ok
+		name = VIETold.2234.b
+		if = {
+			limit = {
+				OR = {
+					has_trait = wrathful
+					has_trait = sadistic
+					has_trait = arbitrary
+					has_trait = vengeful
+				}
+			}
+			stress_impact = {
+				wrathful = medium_stress_impact_loss
+				arbitrary = minor_stress_impact_loss
+				sadistic = minor_stress_impact_loss
+				vengeful = minor_stress_impact_loss
+			}
+		}
+		else = {
+			stress_impact = {
+				compassionate = minor_stress_impact_gain
+				patient = miniscule_stress_impact_gain
+				calm = miniscule_stress_impact_gain
+				temperate = miniscule_stress_impact_gain
+				content = minor_stress_impact_gain
+			}
+		}
+		add_character_modifier = {
+			modifier = VIET_heartless_towards_servants
+			years = 5
+		}
+	}
+
+	option = { # ok
+		name = VIETold.2234.c
+		if = {
+			limit = {
+				OR = {
+					has_trait = wrathful
+					has_trait = sadistic
+					has_trait = arbitrary
+					has_trait = vengeful
+				}
+			}
+			stress_impact = {
+				wrathful = minor_stress_impact_loss
+				arbitrary = miniscule_stress_impact_loss
+				sadistic = miniscule_stress_impact_loss
+				vengeful = miniscule_stress_impact_loss
+			}
+		}
+		else = {
+			stress_impact = {
+				compassionate = miniscule_stress_impact_gain
+				shy = miniscule_stress_impact_gain
+				craven = miniscule_stress_impact_gain
+				content = minor_stress_impact_gain
+			}
+		}
+		add_dread = 5
+	}
+
+}
+
+# Vassal does not want to wash hands with rosewater at a feast
+VIETold.2235 = {
+	type = character_event
+	title = VIETold.2235.t	
+	desc = VIETold.2235.desc
+	theme = feast_activity
+	
+	left_portrait = root
+	
+	right_portrait = {
+		character = scope:vassal
+		animation = personality_callous
+	}
+
+	
+	trigger = {
+		has_game_rule = VIET_normal_universe_events
+		any_vassal = {
+			is_available_ai_adult = yes
+			NOR = {
+				has_trait = diligent
+				has_trait = scholar
+				has_trait = craven
+				has_trait = humble
+				has_trait = patient
+			}
+		}
+	}
+
+	weight_multiplier = {
+		base = 1
+		modifier = {
+			add = 0.2
+			has_trait = gregarious
+		}
+		modifier = {
+			add = -0.2
+			has_trait = shy
+		}
+		modifier = {
+			add = 0.2
+			has_trait = gluttonous
+		}
+		modifier = {
+			add = -0.2
+			has_trait = temperate
+		}
+		modifier = {
+			add = 0.2
+			has_trait = paranoid
+		}
+		modifier = {
+			add = -0.2
+			has_trait = trusting
+		}
+	}
+
+
+	immediate = {
+		random_vassal = {
+			limit = {
+				is_available_ai_adult = yes
+				NOR = {
+					has_trait = diligent
+					has_trait = scholar
+					has_trait = craven
+					has_trait = humble
+					has_trait = patient
+				}		
+			}
+			save_scope_as = vassal
+			add_character_modifier = {
+				modifier = VIET_doesnt_do_rosewater_handwashing
+				years = 10
+			}
+		}
+	}
+
+	option = { # Don't care
+		name = VIETold.2235.a
+		stress_impact = {
+			arrogant = miniscule_stress_impact_gain
+			paranoid = miniscule_stress_impact_gain
+		}
+	}
+
+	option = { # Chastise them
+		name = VIETold.2235.b
+		VIET_huge_prestige_gain_effect = yes
+		stress_impact = {
+			shy = minor_stress_impact_gain
+			content = miniscule_stress_impact_gain
+		}
+		scope:vassal = {
+			add_opinion = {
+				target = root
+				modifier = VIET_opinion_chastised_me_in_public
+			}
+		}
+	}
+
+	option = { # Copy them
+		name = VIETold.2235.c
+		stress_impact = {
+			base = miniscule_stress_impact_gain
+			humble = miniscule_stress_impact_gain
+			paranoid = miniscule_stress_impact_gain
+			diligent = miniscule_stress_impact_gain
+			ambitious = miniscule_stress_impact_gain
+		}
+		add_character_modifier = {
+			modifier = VIET_doesnt_do_rosewater_handwashing
+			years = 10
+		}
+		scope:vassal = {
+			add_opinion = {
+				modifier = pleased_opinion
+				opinion = 10
+				target = root
+			}
+		}
+	}
+
+}
+
+# Come across a black cat
+VIETold.2236 = {
+	type = character_event
+	title = VIETold.2236.t	
+	desc = VIETold.2236.desc
+	theme = mental_break
+	override_background = { reference = courtyard }
+	
+	left_portrait = root
+	
+	right_portrait = {
+		character = root
+		animation = fear
+	}
+
+	
+	trigger = {
+		NOT = { has_game_rule = VIET_conversion_universe_events }
+		# Won't happen for cultures and faiths where black cats are seen as good, revered, or have a more mixed reputation
+		NOR = {
+			culture = { has_cultural_pillar = heritage_chinese }
+			culture = { has_cultural_pillar = heritage_celtic }
+			culture = { has_cultural_pillar = heritage_arabic }
+			religion = religion:islam_religion
+			religion = religion:kushitism_religion			
+		}
+	}
+
+	weight_multiplier = {
+		base = 1
+		modifier = {
+			add = 0.2
+			has_trait = paranoid
+		}
+		modifier = {
+			add = -0.2
+			has_trait = trusting
+		}
+		modifier = {
+			add = 0.2
+			has_trait = cynical
+		}
+		modifier = {
+			add = -0.2
+			has_trait = zealous
+		}
+		modifier = {
+			add = 0.2
+			has_trait = eccentric
+		}
+		modifier = {
+			add = -0.2
+			has_trait = fickle
+		}
+	}
+
+	option = { # Ahhh
+		name = VIETold.2236.a
+		VIET_small_piety_gain_effect = yes
+		VIET_medium_prestige_loss_effect = yes
+		stress_impact = {
+			cynical = minor_stress_impact_gain
+			brave = minor_stress_impact_gain
+		}
+	}
+
+	option = { # Who cares
+		name = VIETold.2236.b
+		VIET_medium_prestige_gain_effect = yes
+		random = {
+			chance = 40
+			send_interface_toast = {
+				type = event_toast_effect_bad
+				left_icon = ROOT
+				title = VIETold.2236.b.toast.failure
+				add_character_modifier = {
+					modifier = VIET_black_cat_bad_luck
+					years = 5
+				}
+			}
+		}
+		if = {
+			limit = {
+				has_trait = brave
+			}
+			stress_impact = {
+				brave = minor_stress_impact_loss
+				arrogant = miniscule_stress_impact_loss
+				calm = miniscule_stress_impact_loss
+			}
+		}
+		else = {
+			stress_impact = {
+				base = minor_stress_impact_gain
+				craven = minor_stress_impact_gain
+				paranoid = miniscule_stress_impact_gain
+			}
+		}
+	}
+
+}
 

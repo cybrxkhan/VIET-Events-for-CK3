@@ -24,6 +24,7 @@
 # 4000-4029		Generic (Old Stuff)
 # 4030-4033		Oblivion Inspired
 # 4034-4035		Generic (more old stuff)
+# 4036-4037		Generic for 3rd anniversary
 # 
 ############################################################################################################################
 
@@ -2736,4 +2737,202 @@ VIETmisc.4035 = {
 	option = {
 		name = VIETmisc.4035.a
 	}
+}
+
+##################################################################
+# Generic for 3rd anniversary 4036-4037
+##################################################################
+
+# Good tax officials wrongly accused of corruption by the masses
+VIETmisc.4036 = {
+	type = character_event
+	title = VIETmisc.4036.t
+	desc = VIETmisc.4036.desc
+	theme = corruption
+	
+	right_portrait = {
+		character = root
+		animation = worry
+	}
+	
+    weight_multiplier = {
+        base = 0
+		modifier = {
+			add = {
+				every_held_title = {
+					limit = { tier = tier_county }
+					add = 1
+				}
+			}		
+		}		
+    }
+	
+	immediate = {
+		random_held_title = {
+			limit = { tier = tier_county }
+			save_scope_as = county
+		}	
+	}
+	
+	# Punish them anyways
+	option = {
+		name = VIETmisc.4036.a
+		stress_impact = {
+			just = medium_stress_impact_gain
+			compassionate = miniscule_stress_impact_gain
+			calm = miniscule_stress_impact_gain
+			patient = miniscule_stress_impact_gain
+			callous = minor_stress_impact_gain
+			honest = minor_stress_impact_gain
+		}
+		scope:county = {
+			add_county_modifier = {
+				modifier = VIET_punished_innocent_officials
+				years = 10
+			}		
+		}
+	}
+	
+	# Don't punish them
+	option = {
+		name = VIETmisc.4036.b
+		stress_impact = {
+			paranoid = minor_stress_impact_gain
+			craven = minor_stress_impact_gain
+		}
+		scope:county = {
+			add_county_modifier = {
+				modifier = VIET_did_not_punish_innocent_officials
+				years = 10
+			}		
+		}
+	}
+	
+	# Resolve it with high diplomacy
+	option = {
+		name = VIETmisc.4036.c
+		trigger = {
+			diplomacy >= decent_skill_rating			
+		}
+		skill = diplomacy
+		show_as_unavailable = {
+			diplomacy < decent_skill_rating
+		}
+		scope:county = {
+			add_county_modifier = {
+				modifier = VIET_innocent_officials_vindicated
+				years = 10
+			}		
+		}
+	}
+
+
+}
+
+# Brother and sister commit incest in a village and run away to elope
+VIETmisc.4037 = {
+	type = character_event
+	title = VIETmisc.4037.t
+	desc = VIETmisc.4037.desc
+	theme = love
+	override_background = { reference = VIET_background_small_town }
+	
+	left_portrait = {
+		character = root
+		animation = worry
+	}
+
+	trigger = {
+		any_held_title = {
+			tier = tier_county
+			faith = {
+				NOR = {
+					has_doctrine = tenet_divine_marriage
+					has_doctrine = doctrine_consanguinity_unrestricted
+				}		
+			}
+		}	
+		faith = {
+			NOR = {
+				has_doctrine = tenet_divine_marriage
+				has_doctrine = doctrine_consanguinity_unrestricted
+			}		
+		}
+	}
+	
+    weight_multiplier = {
+        base = 0
+		modifier = {
+			add = {
+				every_held_title = {
+					limit = { tier = tier_county }
+					add = 1
+				}
+			}		
+		}		
+    }
+	
+	immediate = {
+		random_held_title = {
+			limit = {
+				tier = tier_county
+				faith = {
+					NOR = {
+						has_doctrine = tenet_divine_marriage
+						has_doctrine = doctrine_consanguinity_unrestricted
+					}		
+				}
+			}
+			save_scope_as = county
+		}	
+		scope:county = {
+			random_list = {
+				10 = {
+					add_county_modifier = {
+						modifier = VIET_incestuous_siblings
+						years = 6
+					}				
+				}
+				10 = {
+					add_county_modifier = {
+						modifier = VIET_incestuous_siblings
+						years = 8
+					}				
+				}
+				10 = {
+					add_county_modifier = {
+						modifier = VIET_incestuous_siblings
+						years = 10
+					}				
+				}
+				10 = {
+					add_county_modifier = {
+						modifier = VIET_incestuous_siblings
+						years = 12
+					}				
+				}
+			}		
+		}
+	}
+	
+	# Ok
+	option = {
+		name = VIETmisc.4037.a
+	}
+	
+	# Ok
+	option = {
+		name = VIETmisc.4037.b
+		VIET_huge_piety_loss_effect = yes
+		stress_impact = {
+			lustful = miniscule_stress_impact_loss
+			chaste = miniscule_stress_impact_gain
+			zealous = miniscule_stress_impact_gain
+		}
+		add_character_modifier = {
+			modifier = VIET_deviant_opinion
+			days = 365
+		}
+	}
+
 }

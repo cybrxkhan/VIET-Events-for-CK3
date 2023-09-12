@@ -2156,7 +2156,7 @@
  VIETold.2234.t:0 "Bland Pasta"
  VIETold.2234.desc:0 "I am eating pasta, and I realize it tastes way, way too bland. But what if... I added something to spice it up?\n\nFirst, though, before I do so, I summon the cook responsible for making this. It is a travesty that such pasta could be so tasteless. They must answer for this grave error."
  VIETold.2234.a:0 "Politely request more salt and spices like basil and oregano"
- VIETold.2234.b:0 "Rudley berate them and toss the plate of pasta in their face"
+ VIETold.2234.b:0 "Rudely berate them and toss the plate of pasta in their face"
  VIETold.2234.c:0 "Intimidatingly say nothing, make them stand there awkwardly"
  VIETold.2235.t:0 "Rosewater"
  VIETold.2235.desc:0 "At a feast like the one I am currently attending, it is customary to use rose water every now and then to wash one's hands during the meal. I notice that [vassal.GetTitledFirstName], who happens to also be present, is not washing [vassal.GetHerHis] hands as much as [vassal.GetSheHe] could."
