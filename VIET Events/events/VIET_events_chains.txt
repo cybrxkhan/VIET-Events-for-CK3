@@ -1,6 +1,6 @@
 ﻿############################################################################################################################
 # 
-# Large Scale Event Chains or Major Events (but not Story Cycles) - VIETmisc.1000-VIETmisc.1999 reserved
+# Large Scale Event Chains or Grand Events (but not Story Cycles) - VIETmisc.1000-VIETmisc.1999 reserved
 # Fired from the on_actions for every one, two, five, and ten years depending on rarity
 # 
 # 1000-1022		Kogarashi Sentiment/Fast Love - Character recalls their first love
@@ -9,6 +9,7 @@
 # 1036-1044		Dream of the Final Journey
 # 1052-1069		Mysterious Child
 # 1070-1083		Dream of Oblivion
+# 1084			Grand Event: Supernova 1006
 # 
 ############################################################################################################################
 
@@ -3492,3 +3493,144 @@ VIETmisc.1083 = {
 
 
 
+############################################################################################################
+# 
+# SUPERNOVA 1006
+# A select few rulers, including all players, get to react to the 1006 Suprenova
+# 
+############################################################################################################
+
+
+
+# 1006 Supernova
+VIETmisc.1084 = { # Fullscreen Intro Event
+	type = character_event
+	window = fullscreen_event
+	title = VIETmisc.1084.t
+	desc = VIETmisc.1084.desc
+	theme = realm
+	override_background = { reference = VIET_full_background_night_sky }
+	#override_sound = { reference = "event:/DLC/FP2/SFX/UI/fp2_struggle_ui_intro_animate" }
+
+	immediate = {
+		play_music_cue = "mx_cue_epic_sacral_moment"
+	}
+
+	# Pay astronomers to record observations about it
+	option = {
+		name = VIETmisc.1084.a
+		trigger = {
+			OR = {
+				gold >= 80
+				is_ai = no
+			}
+		}
+
+		ai_chance = {
+			base = 25
+			modifier = {
+				add = 10
+				learning >= decent_skill_rating
+			}
+			modifier = {
+				add = 10
+				OR = {
+					has_trait = scholar
+					has_trait = theologian
+					has_trait = lifestyle_mystic
+				}
+			}
+		}
+		
+		remove_short_term_gold = 80
+		VIET_massive_prestige_gain_effect = yes
+
+		create_artifact = {
+			name = VIET_supernova_1066_record_name
+			type = miscellaneous
+			description = VIET_supernova_1066_record_desc 
+			visuals = book
+			modifier = artifact_VIET_supernova_1066_record
+			save_scope_as = record
+			wealth = 58
+			quality = 58
+			history = {
+				type = created_before_history
+			}
+		}
+
+		if = {
+			limit = {
+				has_game_rule = VIET_historical_context_on
+			}
+			custom_description_no_bullet = {
+				text = VIETmisc.1084.info
+			}
+		}
+
+		clicksound = "event:/DLC/FP2/SFX/UI/fp2_struggle_start_select"
+	}
+	
+	# Pray for a good omen
+	option = {
+		name = VIETmisc.1084.b
+		trigger = {
+			OR = {
+				gold >= 25
+				is_ai = no
+			}
+		}
+
+		ai_chance = {
+			base = 50
+			modifier = {
+				add = 15
+				has_trait = zealous
+			}
+		}
+
+		remove_short_term_gold = 25
+		VIET_massive_piety_gain_effect = yes
+
+		stress_impact = {
+			cynical = minor_stress_impact_gain
+			zealous = minor_stress_impact_loss
+		}
+
+		if = {
+			limit = {
+				has_game_rule = VIET_historical_context_on
+			}
+			custom_description_no_bullet = {
+				text = VIETmisc.1084.info
+			}
+		}
+	}
+	
+	# Whatever
+	option = {
+		name = VIETmisc.1084.c
+
+		ai_chance = {
+			base = 25
+		}
+
+		if = {
+			limit = {
+				has_game_rule = VIET_historical_context_on
+			}
+			custom_description_no_bullet = {
+				text = VIETmisc.1084.info
+			}
+		}
+
+
+	}
+
+	after = {
+		create_character_memory = {
+			type = VIET_memory_supernova_1006
+		}
+	}
+
+}

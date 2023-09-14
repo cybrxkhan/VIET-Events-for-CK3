@@ -5,6 +5,10 @@
  VIET_memory_oblivion_dream_desc:0 "I dreamt of an epic adventure in another world, where I helped a long-lost Prince defeat an invasion by the forces of [owner.GetFaith.DevilName]"
  VIET_memory_oblivion_dream_desc_second_perspective:0 "you dreamt of an epic adventure in another world, where you helped a long-lost Prince defeat an invasion by the forces of [owner.GetFaith.DevilName]"
  VIET_memory_oblivion_dream_desc_third_perspective:0 "[owner.GetName] dreamt of an epic adventure in another world, where [owner.GetSheHe] helped a long-lost Prince defeat an invasion by the forces of [owner.GetFaith.DevilName]"
+ VIET_memory_supernova_1006:0 "witnessed an extraordinary, once in a lifetime appearance of a "new star" which left a great impression on [owner.GetHerHim]"
+ VIET_memory_supernova_1006_desc:0 "I witnessed an extraordinary, once in a lifetime appearance of a "new star" which left a great impression on me"
+ VIET_memory_supernova_1006_desc_second_perspective:0 "you itnessed an extraordinary, once in a lifetime appearance of a "new star" which left a great impression on yourself"
+ VIET_memory_supernova_1006_desc_third_perspective:0 "[owner.GetName] itnessed an extraordinary, once in a lifetime appearance of a "new star" which left a great impression on [owner.GetHerHim]"
 
  # Activity Memories
  VIET_view_flower_meadows_in_bloom_host_memory:0 "viewed some beautiful flowers in bloom"

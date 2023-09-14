@@ -1,4 +1,22 @@
-﻿
+﻿yearly_global_pulse = {
+	on_actions = { VIET_yearly_epic_global_pulse }
+}
+
+# For epic events
+VIET_yearly_epic_global_pulse = {
+	effect = {
+		if = {
+			limit = {
+				current_year >= 1006
+				NOT = { has_global_variable = VIET_1006_supernova_happened }
+			}
+			trigger_event = {
+				id = VIETintro.1001
+				days = { 1 360 }
+			}
+		}
+	}
+}
 
 
 random_yearly_playable_pulse = {

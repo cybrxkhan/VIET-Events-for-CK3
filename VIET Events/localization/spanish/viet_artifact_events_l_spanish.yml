@@ -249,9 +249,12 @@
  VIETmisc.5054.a:0 "Me has convencido. Lo compraré."
  VIETmisc.5054.b:0 "Está bien, pero no me interesa."
  # 1.5.4 - please leave this comment here 
- VIETmisc.5055.t:0 "xxxxx"
- VIETmisc.5055.desc:0 "xxxxx"
- VIETmisc.5055.a:0 "xxxxx"
+ # Version 1.10.1 Start Here - Note to Translators: please leave this comment here and do not remove it even in your versions of the loc
+ VIETmisc.5055.t:0 "The Astrolabe"
+ VIETmisc.5055.desc:0 "A local astronomer wishes to present me with an astrolabe. This instrument has been used by people of great learning for centuries, and has a variety of functions, mostly associated with astronomy. For example, one can chart the positions of the stars or the sun, or determine the length of day and night. It is also used for surveying and navigation.\n\nAll in all, this is a useful device that the scholar believes I might make good use of."
+ VIETmisc.5055.a:0 "I am very grateful for such a wonderful gift!"
+ VIETmisc.5055.b:0 "Sell it to a scholar who’ll make better use of it."
+ # Version 1.10.2 Start Here - Note to Translators: please leave this comment here and do not remove it even in your versions of the loc
  VIETmisc.5056.t:0 "xxxxx"
  VIETmisc.5056.desc:0 "xxxxx"
  VIETmisc.5056.a:0 "xxxxx"
@@ -384,4 +387,3 @@
  VIETmisc.5099.t:0 "xxxxx"
  VIETmisc.5099.desc:0 "xxxxx"
  VIETmisc.5099.a:0 "xxxxx"
- xxxxx:0 "xxxxx"

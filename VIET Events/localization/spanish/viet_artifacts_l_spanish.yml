@@ -17,6 +17,8 @@
  VIET_lusty_argonian_maid_desc:0 "Una copia escrita de una obscena obra de teatro sobre las obscenas desventuras de una sirvienta [ROOT.Char.GetCulture.GetName], contadas en varios actos."
  VIET_childhood_blanket_name:0 "Manta infantil"
  VIET_childhood_blanket_desc:0 "La manta de la infancia de [ROOT.Char.GetTitledFirstName]. Se dice que le proporcionó a [ROOT.Char.GetHerHim] un gran consuelo, incluso de adulto, por vergonzoso que haya sido admitirlo ante los demás."
+ VIET_supernova_1066_record_name:0 "[ROOT.Char.GetCulture.GetNameNoTooltip] Account of the 1006 Supernova"
+ VIET_supernova_1066_record_desc:0 "This text records the observations various [ROOT.Char.GetCulture.GetName] astronomers made concerning the 1006 Supernova, the brighest observed stellar event in recorded history. A large 'new' star was seen in the sky for up to a few weeks and possibly as long as a couple years. Due to the extraordinary nature of this event, [ROOT.Char.GetTitledFirstName] encouraged local scholars to write down some notes about it for posterity."
 
  # BASIC ARTIFACTS
  VIET_abacus_name:0 "Ábaco"
@@ -129,9 +131,13 @@
  VIET_golden_rose_name:0 "Golden Rose"
  VIET_golden_rose_desc:0 "A mysterious and beautiful rose, made out of solid gold. Who made it? When was it made? Where was it made? Who knows...."
  # 1.7.1 - please leave this comment here
+ # Version 1.10.1 Start Here - Note to Translators: please leave this comment here and do not remove it even in your versions of the loc
+ VIET_astrolabe_name:0 "Astrolabe"
+ VIET_astrolabe_desc:0 "A mechanical device carefully crafted from brass which is used for a variety of functions, most related to astronomical calculations, like charting the stars. It is also used for surveying and navigation."
+ # Version 1.10.2 Start Here - Note to Translators: please leave this comment here and do not remove it even in your versions of the loc
  VIET_xxxxx_name:0 "xxxxx"
  VIET_xxxxx_desc:0 "xxxxx"
- # 47 Basic
+ # 48 Basic
 
  # RECIPE ARTIFACTS
  VIET_recipe_baklava_name:0 "Receta de baklava"

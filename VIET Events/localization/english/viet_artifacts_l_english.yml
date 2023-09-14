@@ -17,6 +17,8 @@
  VIET_lusty_argonian_maid_desc:0 "A written copy of a raunchy play about the bawdy misadventures of a [ROOT.Char.GetCulture.GetName] maid, as told in several acts."
  VIET_childhood_blanket_name:0 "Childhood Blanket"
  VIET_childhood_blanket_desc:0 "The childhood blanket of [ROOT.Char.GetTitledFirstName]. It is said to have brought [ROOT.Char.GetHerHim] great comfort, even as an adult, embarrassing as it may have been to admit to others."
+ VIET_supernova_1066_record_name:0 "[ROOT.Char.GetCulture.GetNameNoTooltip] Account of the 1006 Supernova"
+ VIET_supernova_1066_record_desc:0 "This text records the observations various [ROOT.Char.GetCulture.GetName] astronomers made concerning the 1006 Supernova, the brighest observed stellar event in recorded history. A large 'new' star was seen in the sky for up to a few weeks and possibly as long as a couple years. Due to the extraordinary nature of this event, [ROOT.Char.GetTitledFirstName] encouraged local scholars to write down some notes about it for posterity."
 
  # BASIC ARTIFACTS
  VIET_abacus_name:0 "Abacus"

@@ -2,6 +2,8 @@
  artifact_VIET_clutter:0 "杂物"
  artifact_VIET_recipe:0 "菜谱"
  VIET_artifact_limit_warning:0 "把这件[clutter_artifact|E]放入你的宝库，会#X 减少#!你得到其他[clutter_artifacts|E]的机会。"
+
+ # Special Artifacts
  VIET_baklava_test_name:0 "一片圣果仁蜜饼"
  VIET_baklava_test_desc:0 "一般人拿果仁蜜饼是用来吃的，这片果仁蜜饼却成了人们的崇拜之物，只因果仁蜜饼是神圣的，果仁蜜饼是始亦是终，这片果仁蜜饼是无上尊贵的，这片果仁蜜饼生来就是要主宰一切的。"
  VIET_sweetroll_test_name:0 "传奇御制面包卷"
@@ -14,6 +16,10 @@
  VIET_lusty_argonian_maid_desc:0 "一篇低俗的剧本，用几幕讲述了一位[ROOT.Char.GetCulture.GetName]女仆色情而荒唐的遭遇。"
  VIET_childhood_blanket_name:0 "儿时毯子"
  VIET_childhood_blanket_desc:0 "[ROOT.Char.GetTitledFirstName]小时候盖的毯子，尽管[ROOT.Char.GetHerHim]业已成人，还是能带来安慰，向他人承认这件事会很尴尬。"
+ VIET_supernova_1066_record_name:0 "[ROOT.Char.GetCulture.GetNameNoTooltip] Account of the 1006 Supernova"
+ VIET_supernova_1066_record_desc:0 "This text records the observations various [ROOT.Char.GetCulture.GetName] astronomers made concerning the 1006 Supernova, the brighest observed stellar event in recorded history. A large 'new' star was seen in the sky for up to a few weeks and possibly as long as a couple years. Due to the extraordinary nature of this event, [ROOT.Char.GetTitledFirstName] encouraged local scholars to write down some notes about it for posterity."
+
+ # BASIC ARTIFACTS
  VIET_abacus_name:0 "算盘"
  VIET_abacus_desc:0 "一个算盘，被用来做各种计算，从简单的加法到算出平方根。"
  VIET_calipers_name:0 "漂亮的卡钳"
@@ -124,8 +130,6 @@
  VIET_patchwork_quilt_desc:0 "朴素而美丽的被子，装饰着传统[ROOT.Char.GetCulture.GetName]样式和图案。"
  VIET_leather_ball_name:0 "皮球"
  VIET_leather_ball_desc:0 "一个皮革拼接成的，中间塞满羽毛，可以用来玩耍，保持身材。"
- VIET_xxxxx_name:0 "xxxxx"
- VIET_xxxxx_desc:0 "xxxxx"
  VIET_small_seashell_name:0 "小贝壳"
  VIET_small_seashell_desc:0 "一只小小贝壳，小到可以握在手心里，散发着别致而自然的美丽。"
  VIET_useless_map_name:0 "无用地图"
@@ -134,3 +138,7 @@
  VIET_house_vase_desc:0 "此瓶由[ROOT.Char.GetCulture.GetNameNoTooltip]匠人制成，简朴而不失雅致，瓶身上装饰着日常生活的图案。"
  VIET_golden_rose_name:0 "金玫瑰"
  VIET_golden_rose_desc:0 "一株由纯金打造的玫瑰，神秘而美丽。出自谁之手，何时制成，何处打造？只有天知道……"
+ # Version 1.10.1 Start Here - Note to Translators: please leave this comment here and do not remove it even in your versions of the loc
+ VIET_astrolabe_name:0 "Astrolabe"
+ VIET_astrolabe_desc:0 "A mechanical device carefully crafted from brass which is used for a variety of functions, most related to astronomical calculations, like charting the stars. It is also used for surveying and navigation."
+ # Version 1.10.2 Start Here - Note to Translators: please leave this comment here and do not remove it even in your versions of the loc

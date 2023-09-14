@@ -1,0 +1,6 @@
+﻿l_russian:
+
+ VIET_friend_reason_placeholder:0 "[CHARACTER.GetShortUIName|U] and [TARGET_CHARACTER.GetShortUIName] grew to enjoy each other's company."
+ VIET_rival_reason_placeholder:0 "[CHARACTER.GetShortUIName|U] and [TARGET_CHARACTER.GetShortUIName] grew to dislike each other due to some differences."
+ VIET_travel_argument_reason:0 "[CHARACTER.GetShortUIName|U] and [TARGET_CHARACTER.GetShortUIName] got into a huge argument while [traveling|E]."
+ VIET_travel_chat_reason:0 "[CHARACTER.GetShortUIName|U] and [TARGET_CHARACTER.GetShortUIName] had a wonderful, deep conversation while [traveling|E]."

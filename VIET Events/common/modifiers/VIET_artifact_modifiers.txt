@@ -430,3 +430,9 @@ artifact_VIET_astrolabe_modifier = {
 	monthly_lifestyle_xp_gain_mult = 0.01
 	travel_speed_mult = 0.05
 }
+
+artifact_VIET_supernova_1066_record = {
+	learning = 1
+	monthly_learning_lifestyle_xp_gain_mult = 0.03
+	monthly_prestige = 0.15
+}

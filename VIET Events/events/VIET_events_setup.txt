@@ -236,6 +236,65 @@ VIETintro.1000 = {
 
 
 
+# Trigger for VIETmisc.1084
+# Event for the 1006 Supernova
+VIETintro.1001 = {
+	scope = none
+	hidden = yes
+	
+	immediate = {
 
+		set_global_variable = {
+			name = VIET_1006_supernova_happened
+			value = yes
+		}
+
+		# Send the appropriate notification event to each player.
+		every_ruler = {
+			# Human players will always get it
+			if = {
+				limit = {
+					is_ai = no
+				}
+				trigger_event = VIETmisc.1084
+			}
+			else = {
+				random = {
+					chance = 20
+					modifier = {
+						learning >= decent_skill_rating
+						add = 5
+					}
+					modifier = {
+						has_trait = scholar
+						add = 5
+					}
+					modifier = {
+						has_trait = theologian
+						add = 5
+					}
+					modifier = {
+						has_trait = lifestyle_mystic
+						add = 5
+					}
+					# Most notable records are from China and Japan
+					modifier = {
+						culture_has_east_asian_heritage_pillar_trigger = yes
+						add = 10
+					}
+					# Also noted in the Middle East
+					modifier = {
+						OR = {
+							culture_has_west_asian_heritage_pillar_trigger = yes
+							culture_has_mena_heritage_pillar_trigger = yes
+						}
+						add = 5
+					}
+					trigger_event = VIETmisc.1084
+				} 
+			}
+		}
+	}
+}
 
 
