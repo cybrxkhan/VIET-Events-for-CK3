@@ -1,6 +1,6 @@
-[img]https://i.imgur.com/RVwBLuS.jpg[/img]
+[img]https://i.imgur.com/7Q1OCEQ.jpg[/img]
 
-[h1]Current Version: 1.10.0 "Childhood" (Released 8/22/23, Compatible with vanilla patch 1.10.X)[/h1]
+[h1]Current Version: 1.10.1 "Starfield" (Released 9/13/23, Compatible with vanilla patch 1.10.X)[/h1]
 
 [h1][B][url=https://discord.gg/9KuyXv2uZA]Discord Server for my mods[/url]
 [url=https://cybrxkhansmods.godaddysites.com/]Official Website for my mods[/url][/B][/h1]
@@ -13,7 +13,7 @@ Very Immersive Events and Tales (VIET), the sequel to [url=https://steamcommunit
 
 I hope the lessons I learned from my years of modding CK2 will help me deliver a fun experience for those who play  my mods, and I hope to add more and more events in every update.
 
-[B][U]VIET [I]WILL[/I] WORK ON EXISTING SAVES![/U][/B] (Though remember to make a backup copy of your save just in case.)
+[B][U]VIET WORKS ON EXISTING SAVES![/U][/B] (Though remember to make a backup copy of your save just in case.)
 
 Feel free to use my work in your mods - all I ask is that I am credited and (if possible) to give me a heads up. And if you liked the mod, feel free to favorite and rate it up! 
 
@@ -25,7 +25,7 @@ Feel free to use my work in your mods - all I ask is that I am credited and (if 
 [img]http://i.imgur.com/EyXurbK.jpg[/img]
 
 [LIST]
-[*]Over [B][U]1048[/U] new flavor events[/B] to experience!
+[*]Over [B][U]1066[/U] new flavor events[/B] to experience!
 [*]Explore new decisions, artifacts, character interactions, activities, and more!
 [*]Game rule to disable sillier events for those who don't like them, with three levels to choose from: Balanced (Default), Serious (Restricted), and All Events (Full)
 [*][B]Compatible with almost anything[/B] since it doesn't touch any vanilla files - even with overhaul mods, you can via game rule disable events that reference things specific to our medieval world that wouldn’t make sense in other time periods or universes (like fantasy/sci-fi conversion mods)
@@ -51,16 +51,26 @@ Please see the [url=https://cybrxkhansmods.godaddysites.com/faq]FAQ on my mods' 
 
 [img]http://i.imgur.com/RQ5QZTF.jpg[/img]
 
-[h1]Version 1.10.0 "Childhood"[/h1]
+[h1]Version 1.10.1 "Starfield"[/h1]
 
-[I]“It is a wise father that knows his own child.”
-- William Shakespeare, The Merchant of Venice[/I]
+[I]“May I be like the stars and you the moon,
+Shining and brightening each other night after night.”
 
-New events added in this version: [B]20[/B]
+- Fan Chengda, Chinese poet, official, and geographer (1126 - 1193 CE)[/I]
+
+New events added in this version: [B]18[/B]
 
 [LIST]
-[*]Updated to vanilla patch 1.10.0
-[*]Added 20 Childhood events
+[*]Added 1 Grand Event about the 1006 Supernova
+[*]Added events with the following themes:
+[LIST]
+[*]12 Astronomy
+[*]5 Miscellaneous*
+[/LIST]
+[*]Added a couple new African variants of event backgrounds
+[*]Added icon for the Oblivion dream memory
+[*]Qi Ma now has the eccentric trait
+[*]Rebalanced frequency of events
 [*]Miscellaneous bugfixes
 [/LIST]
 
