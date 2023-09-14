@@ -29952,7 +29952,7 @@ VIETmisc.0319 = {
 	title = VIETmisc.0319.t
 	desc = VIETmisc.0319.desc
 	theme = medicine
-	override_background = { event_background = garden }
+	override_background = { reference = garden }
 
 	
 	left_portrait = {

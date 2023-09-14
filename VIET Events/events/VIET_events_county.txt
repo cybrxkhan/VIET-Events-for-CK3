@@ -4633,7 +4633,7 @@ VIETmisc.3047 = {
 	title = VIETmisc.3047.t
 	desc = VIETmisc.3047.desc
 	theme = learning_scholarship_focus
-	override_background = { event_background = VIET_background_tuscan_country }
+	override_background = { reference = VIET_background_tuscan_country }
 	
 	right_portrait = {
 		character = root
@@ -4718,7 +4718,7 @@ VIETmisc.3048 = {
 	title = VIETmisc.3048.t
 	desc = VIETmisc.3048.desc
 	theme = learning_scholarship_focus
-	override_background = { event_background = VIET_background_tuscan_country }
+	override_background = { reference = VIET_background_tuscan_country }
 	
 	right_portrait = {
 		character = root
@@ -4766,7 +4766,7 @@ VIETmisc.3049 = {
 	title = VIETmisc.3049.t
 	desc = VIETmisc.3049.desc
 	theme = learning_scholarship_focus
-	override_background = { event_background = VIET_background_tuscan_country }
+	override_background = { reference = VIET_background_tuscan_country }
 	
 	right_portrait = {
 		character = root
@@ -4814,7 +4814,7 @@ VIETmisc.3050 = {
 	title = VIETmisc.3050.t
 	desc = VIETmisc.3050.desc
 	theme = learning_scholarship_focus
-	override_background = { event_background = VIET_background_tuscan_country }
+	override_background = { reference = VIET_background_tuscan_country }
 	
 	right_portrait = {
 		character = root

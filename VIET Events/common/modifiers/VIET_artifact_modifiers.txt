@@ -428,7 +428,7 @@ artifact_VIET_astrolabe_modifier = {
 	stewardship = 1
 	learning = 1
 	monthly_lifestyle_xp_gain_mult = 0.01
-	travel_speed_mult = 0.05
+	character_travel_speed_mult = 0.05
 }
 
 artifact_VIET_supernova_1066_record = {

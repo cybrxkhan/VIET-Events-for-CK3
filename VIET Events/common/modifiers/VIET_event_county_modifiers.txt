@@ -792,21 +792,22 @@ VIET_famous_ingredients = {
 VIET_punished_innocent_officials = {
 	icon = dread_positive
 	county_opinion_add = 10
-	courtier_and_guest_opinion = -5
-	monthly_prestige_gain_mult = -0.01
+	monthly_county_control_change_add = -0.1
+	#courtier_and_guest_opinion = -5
+	#monthly_prestige_gain_mult = -0.01
 }
 
 VIET_did_not_punish_innocent_officials = {
-	icon = letter_positive
+	icon = letter_negative
 	county_opinion_add = -10
 	monthly_county_control_change_add = -0.1
-	monthly_prestige = 0.1
+	#monthly_prestige = 0.1
 }
 
 VIET_innocent_officials_vindicated = {
 	icon = diplomacy_positive
 	county_opinion_add = 5
-	monthly_prestige = 0.2
+	#monthly_prestige = 0.2
 }
 
 VIET_incestuous_siblings = {
