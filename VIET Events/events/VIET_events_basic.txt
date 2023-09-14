@@ -29946,7 +29946,7 @@ VIETmisc.0318 = {
 
 
 # Dog Days caused by Sirius
-# Triggered by a ping event to get the timing roughly right
+# Triggered by ping event VIETintro.1000 to get the timing roughly right
 VIETmisc.0319 = {
 	type = character_event
 	title = VIETmisc.0319.t

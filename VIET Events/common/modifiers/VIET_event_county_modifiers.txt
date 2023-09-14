@@ -800,7 +800,7 @@ VIET_punished_innocent_officials = {
 VIET_did_not_punish_innocent_officials = {
 	icon = letter_negative
 	county_opinion_add = -10
-	monthly_county_control_change_add = -0.1
+	#monthly_county_control_change_add = -0.1
 	#monthly_prestige = 0.1
 }
 

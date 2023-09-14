@@ -235,7 +235,7 @@
  VIETmisc.3046.desc:0 "There is a scholar from [county.GetNameNoTier] famed for being well-versed in natural philosophy, particularly astronomy.\n\nThis scholar recently made what some consider to be an alarming discovery: based on their astrological calculations, as well as cross-references with theological scriptures and older astronomical texts by other esteemed scholars, we could be headed towards the apocalypse within a century, and [county.GetNameNoTierNoTooltip] could be the epicenter for such an event!\n\nThis revelation has caused a great sensation not only among intellectuals in the region, who debate the validity of this evidence, but the locals as well."
  VIETmisc.3046.a:0 "Who cares if none of us will be around in a century?"
  VIETmisc.3046.b:0 "We must fund the scholar to find more about this!"
- VIETmisc.3047.t:0 "Building a Small Observatory"
+ VIETmisc.3047.t:0 "Gazing into the Starfields"
  VIETmisc.3047.desc:0 "A few of my officials living in [county.GetNameNoTier], who have academic inclinations, reported to me of a small, flat area in that region that would be a good place to construct a small observatory.\n\nThe building they propose would not be a grandiose structure by any means, but the location is ideal for gazing at the stars at night. A number of local scholars skilled in the science of astronomy would be grateful if we could spare the funds to assist them in their work."
  VIETmisc.3047.a:0 "Our court astrologers here will suffice."
  VIETmisc.3047.b:0 "Very well, they shall have their funds!"

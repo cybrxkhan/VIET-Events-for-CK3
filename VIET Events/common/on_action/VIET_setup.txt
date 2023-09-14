@@ -10,6 +10,16 @@ on_VIET_setup = {
 			name = VIET_is_active
 			value = yes
 		}
+		if = {
+			limit = {
+				game_start_date > 1007.1.1
+				NOT = { has_global_variable = VIET_1006_supernova_happened }
+			}
+			set_global_variable = {
+				name = VIET_1006_supernova_happened
+				value = yes
+			}
+		}
 	}
 	# Potentially have event trigger at game start???
 	events = {

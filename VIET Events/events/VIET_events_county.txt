@@ -4698,15 +4698,24 @@ VIETmisc.3047 = {
 		hidden_effect = {
 			random = {
 				chance = 33
-				trigger_event = VIETmisc.3048
+				trigger_event = {
+					id = VIETmisc.3048
+					months = { 12 60 }
+				}
 			}
 			random = {
 				chance = 33
-				trigger_event = VIETmisc.3049
+				trigger_event = {
+					id = VIETmisc.3049
+					months = { 12 60 }
+				}
 			}
 			random = {
 				chance = 33
-				trigger_event = VIETmisc.3050
+				trigger_event = {
+					id = VIETmisc.3050
+					months = { 12 60 }
+				}
 			}
 		}
 	}
