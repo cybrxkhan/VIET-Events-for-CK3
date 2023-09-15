@@ -224,12 +224,9 @@
  VIETmisc.5054.t:0 "花瓶"
  VIETmisc.5054.desc:0 "“我的[ROOT.Char.GetLadyLord]，这只花瓶您看如何？”商人咧着一嘴歪牙道。\n\n这会儿我正在本地市场闲逛，浏览此人店中的奢侈品，闻听此言，我慎重地看了那人一眼，然后目光移到花瓶上。这枚瓷瓶做工优良，但是也太朴素了，不适合放在宫廷或是宴会厅里，这优雅的外形，倒是卧室里的好摆件。\n\n“这瓶子出自资深[ROOT.Char.GetCulture.GetName]工匠之手。”商人继续道：“看这炉火纯青的技法，无论谁都会被您的品味折服；看这瓶身上的美丽山水人物，简直栩栩如生！”"
  VIETmisc.5054.a:0 "说得好，我买了。"
- # Version 1.10.1 Start Here - Note to Translators: please leave this comment here and do not remove it even in your versions of the loc
- VIETmisc.5055.t:0 "The Astrolabe"
- VIETmisc.5055.desc:0 "A local astronomer wishes to present me with an astrolabe. This instrument has been used by people of great learning for centuries, and has a variety of functions, mostly associated with astronomy. For example, one can chart the positions of the stars or the sun, or determine the length of day and night. It is also used for surveying and navigation.\n\nAll in all, this is a useful device that the scholar believes I might make good use of."
- VIETmisc.5055.a:0 "I am very grateful for such a wonderful gift!"
- VIETmisc.5055.b:0 "Sell it to a scholar who’ll make better use of it."
- # Version 1.10.2 Start Here - Note to Translators: please leave this comment here and do not remove it even in your versions of the loc
+ VIETmisc.5055.t:0 "星盘"
+ VIETmisc.5055.desc:0 "当地的一位天文学家希望向我赠送一个星盘。几个世纪以来多功能的星盘一直为学识渊博的人所使用，其中大部分人用于天文学。例如绘制恒星或太阳的位置图，或确定昼夜长短，甚至还可用于测量和导航。\n\n总而言之，这是一个有用的设备，这位学者认为我可能会很好地利用它。"
+ VIETmisc.5055.a:0 "真是感激不尽！"
  VIETmisc.5056.t:0 "xxxxx"
  VIETmisc.5056.desc:0 "xxxxx"
  VIETmisc.5056.a:0 "xxxxx"
@@ -380,3 +377,4 @@
  VIETmisc.5052.b:0 "很不错，但这仅仅是贝壳。"
  VIETmisc.5053.b:0 "地图你留着吧。"
  VIETmisc.5054.b:0 "挺不错，但我没兴趣。"
+ VIETmisc.5055.b:0 "把它卖给能更好地利用它的学者。"
