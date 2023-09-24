@@ -1,6 +1,6 @@
 [img]https://i.imgur.com/7Q1OCEQ.jpg[/img]
 
-[h1]Current Version: 1.10.1 "Starfield" (Released 9/13/23, Compatible with vanilla patch 1.10.X)[/h1]
+[h1]Current Version: 1.10.1.a Hotfix for "Starfield" (Released 9/23/23, Compatible with vanilla patch 1.10.X)[/h1]
 
 [h1][B][url=https://discord.gg/9KuyXv2uZA]Discord Server for my mods[/url]
 [url=https://cybrxkhansmods.godaddysites.com/]Official Website for my mods[/url][/B][/h1]
@@ -50,6 +50,14 @@ Because people are kindly spending their own free time and effort to work on the
 Please see the [url=https://cybrxkhansmods.godaddysites.com/faq]FAQ on my mods' website[/url] for more info.
 
 [img]http://i.imgur.com/RQ5QZTF.jpg[/img]
+
+[h1]Version 1.10.1.a Hotfix for "Starfield"[/h1]
+
+[LIST]
+[*]Added some Chinese localization
+[*]1066 Supernova Grand Event will now only trigger with the default setting for the VIET Universe Setting game rule (i.e. it won’t appear with the Conversion Mod or other Historical settings)
+[*]Miscellaneous bugfixes
+[/LIST]
 
 [h1]Version 1.10.1 "Starfield"[/h1]
 

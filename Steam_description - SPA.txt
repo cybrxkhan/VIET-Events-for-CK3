@@ -1,6 +1,6 @@
 [img]https://i.imgur.com/RVwBLuS.jpg[/img]
 
-[h1]Versión actual: 1.10.1 "Childhood" (Salida 13/9/23, Compatible con versión vanilla 1.10.X)[/h1]
+[h1]Versión actual: 1.10.1.a "Starfield" (Salida 24/9/23, Compatible con versión vanilla 1.10.X)[/h1]
 [h1][B][url=https://forms.gle/if7sLCAGpB1G2uJdA]Realice la encuesta VIET/RICE de 2023![/url]
 [url=https://discord.gg/9KuyXv2uZA]Servidor de Discord de mis Mods[/url][/B][/h1]
 [B]Echa un Vistazo a [url=https://forum.paradoxplaza.com/forum/threads/mod-viet-events-for-ck3-a-flavor-and-immersion-event-mod.1422081/]Tema del Foro[/url] Para Más Información[/B]
@@ -52,7 +52,7 @@ Por favor, echa un vistazo a [url=https://steamcommunity.com/workshop/filedetail
 
 [img]http://i.imgur.com/RQ5QZTF.jpg[/img]
 
-[h1]Versión 1.10.1 "Starfield"[/h1]
+[h1]Versión 1.10.1.a "Starfield"[/h1]
 
 [I][/I]
 

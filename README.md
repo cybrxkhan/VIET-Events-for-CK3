@@ -2,7 +2,7 @@
 
 <img src="https://i.imgur.com/7Q1OCEQ.jpg">
 
-## Latest Version: 1.10.1 "Starfield" (Released 9/13/23)
+## Latest Version: 1.10.1.a Hotfix for "Starfield" (Released 9/24/23)
 
 _“May I be like the stars and you the moon,_
 _Shining and brightening each other night after night.”_
@@ -39,7 +39,15 @@ The mod folder should look something like this:
 
 **NOTE**: If you are re-installing a mod, delete the old version of the mod first before copy and pasting the new one! While it's not always necessary, it's a good habit to do to prevent any potential issues.
 
-## Version 1.10.1 Changelog
+## Changelog
+
+### Version 1.10.1 Hotfix
+
+- Added some Chinese localization
+- 1066 Supernova Grand Event will now only trigger with the default setting for the VIET Universe Setting game rule (i.e. it won’t appear with the Conversion Mod or other Historical settings)
+- Miscellaneous bugfixes
+
+### Version 1.10.1
 
 New events added in this version: **18**
 
