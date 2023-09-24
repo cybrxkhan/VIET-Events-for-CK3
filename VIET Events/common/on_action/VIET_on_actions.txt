@@ -9,6 +9,7 @@ VIET_yearly_epic_global_pulse = {
 			limit = {
 				current_year >= 1006
 				NOT = { has_global_variable = VIET_1006_supernova_happened }
+				has_game_rule = VIET_normal_universe_events
 			}
 			trigger_event = {
 				id = VIETintro.1001
