@@ -43,3 +43,7 @@
  VIET_ghost_town_investigation_guest_memory_first_perspective:0 "我和[host.GetTitledFirstName]一同调查了所谓的鬼镇"
  VIET_ghost_town_investigation_guest_memory_second_perspective:0 "你和[host.GetTitledFirstName]一同调查了所谓的鬼镇"
  VIET_ghost_town_investigation_guest_memory_third_perspective:0 "[owner.GetName]和[host.GetTitledFirstName]一同调查了所谓的鬼镇"
+ VIET_memory_supernova_1006:0 "目睹了非同寻常、千载难逢的“新星”出现，给[owner.GetHerHim]留下了深刻印象。"
+ VIET_memory_supernova_1006_desc:0 "我亲眼目睹了一颗“新星”的出现，这颗“新星”一生仅见，给我留下了深刻的印象"
+ VIET_memory_supernova_1006_desc_second_perspective:0 "你亲眼目睹了一颗“新星”的出现，这颗“新星”一生仅见，给你留下了深刻的印象"
+ VIET_memory_supernova_1006_desc_third_perspective:0 "[owner.GetName]亲眼目睹了一颗“新星”的出现，这颗“新星”一生仅见，给[owner.GetHerHim]留下了深刻的印象"
