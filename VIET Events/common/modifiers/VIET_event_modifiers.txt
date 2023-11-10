@@ -3097,6 +3097,34 @@ VIET_moon_agriculture_learning = {
 	learning = 1
 }
 
+VIET_drank_bad_water_while_traveling = {
+	icon = health_negative
+	health = -0.4
+}
+
+VIET_repent_bread_water = {
+	icon = piety_positive
+	monthly_piety = 0.2
+	monthly_prestige = -0.05
+}
+
+VIET_swimming_lessons = {
+	icon = compass_positive
+	intrigue = 1
+	character_travel_safety = 5
+}
+
+VIET_learning_about_frauds = {
+	icon = mask_positive
+	monthly_intrigue_lifestyle_xp_gain_mult = 0.1
+}
+
+VIET_detected_fraud = {
+	icon = mask_positive
+	intrigue = 1
+	scheme_discovery_chance_mult = 0.1
+}
+
 
 
 

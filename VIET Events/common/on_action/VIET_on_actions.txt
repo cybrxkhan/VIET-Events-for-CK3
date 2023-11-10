@@ -462,6 +462,8 @@ VIET_events_yearly_pulse = {
 		100 = VIETmisc.0315		# The star Algol is in a disadvantageous position for you
 		100 = VIETmisc.0317		# Overhearing a scholar and peasants discussing effects of the moon on agriculture
 		100 = VIETintro.1000	# Dog Days caused by Sirius - triggers VIETmisc.0319
+		# Water
+		100 = VIETmisc.0320		# Repenting after saying some swears
 	}
 }
 
@@ -843,6 +845,9 @@ VIET_events_tri_yearly_pulse = {
 		100 = VIETmisc.0314		# Two characters debate about the nature of Venus
 		100 = VIETmisc.0316		# Boring character likes to talk about the moon
 		100 = VIETmisc.0318		# Two characters debate about the reliability of astrology
+		# Water
+		100 = VIETmisc.0321		# Pilgrim supposedly turned water into wine... but turns out to be a fraud
+		100 = VIETmisc.0323		# Learning not to drown
 	}
 }
 
@@ -1443,8 +1448,10 @@ VIET_events_common_county_pulse = {
 		100 = VIETmisc.3040 	# 10 officials resign to protest a bad official
 		# Simple
 		100 = VIETmisc.3045 	# Ingredients from a region become popular
+		# Water
+		100 = VIETmisc.3051 	# Seaweed Fertilizer
 		
-		# 37
+		# 38
     }
 }
 
@@ -1531,8 +1538,10 @@ VIET_events_uncommon_county_pulse = {
 		100 = VIETmisc.3043 	# Lake dried up
 		# Astronomy
 		100 = VIETmisc.3047 	# Local scholars request you build a small observatory somewhere
+		# Water
+		100 = VIETmisc.3052 	# Floods caused by garbage
 		
-		# 27
+		# 28
 		
     }
 }

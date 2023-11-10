@@ -54,6 +54,7 @@
 # 0293-0295		Simple
 # 0296-0313		Childhood Generic
 # 0314-0319		Astronomy
+# 0320-0323		Water
 # 
 ############################################################################################################################
 
@@ -30018,5 +30019,313 @@ VIETmisc.0319 = {
 			}
 		}
 	}
+
+}
+
+
+
+
+##################################################################
+# Water 0320-0323
+##################################################################
+
+
+# Repenting after saying some swears
+VIETmisc.0320 = {
+	type = character_event
+	title = VIETmisc.0320.t
+	desc = VIETmisc.0320.desc
+	theme = unfriendly
+
+	
+	left_portrait = {
+		character = root
+		animation = shame
+	}
+	
+	right_portrait = {
+		character = scope:chaplain
+		animation = disapproval
+	}
+
+
+	trigger = {
+		religion = religion:christianity_religion
+		exists = cp:councillor_court_chaplain
+		cp:councillor_court_chaplain = {
+			is_available_healthy_ai_adult = yes
+		}
+	}
+	
+	weight_multiplier = {
+		base = 1
+		modifier = {
+			add = 0.2
+			has_trait = wrathful
+		}
+		modifier = {
+			add = -0.2
+			has_trait = calm
+		}
+		modifier = {
+			add = 0.2
+			has_trait = impatient
+		}
+		modifier = {
+			add = -0.2
+			has_trait = patient
+		}
+		modifier = {
+			add = 0.2
+			has_trait = arbitrary
+		}
+		modifier = {
+			add = -0.2
+			has_trait = just
+		}
+	}
+
+
+	immediate = {
+		cp:councillor_court_chaplain = {
+			save_scope_as = chaplain
+		}	
+	}
+	
+	option = { # ok
+		name = VIETmisc.0320.a
+		VIET_medium_piety_gain_effect = yes
+		VIET_huge_prestige_loss_effect = yes
+		add_character_modifier = {
+			modifier = VIET_repent_bread_water
+			years = 5
+		}
+		stress_impact = {
+			cynical = miniscule_stress_impact_gain
+			gluttonous = minor_stress_impact_gain
+			arrogant = miniscule_stress_impact_gain
+		}		
+		scope:chaplain = {
+			add_opinion = {
+				modifier = pleased_opinion
+				opinion = 10
+				target = root
+			}
+		}
+	}
+	
+	option = { # ok
+		name = VIETmisc.0320.b
+		VIET_huge_piety_loss_effect = yes
+		stress_impact = {
+			temperate = miniscule_stress_impact_gain
+			zealous = minor_stress_impact_gain
+			humble = miniscule_stress_impact_gain
+		}	
+		scope:chaplain = {
+			add_opinion = {
+				modifier = disappointed_opinion
+				opinion = -10
+				target = root
+			}
+		}
+	}
+
+
+	after = {		
+		if = {
+			limit = {
+				has_game_rule = VIET_historical_context_on
+			}
+			custom_tooltip = VIETmisc.0320.info
+		}
+	}
+
+
+}
+
+
+# Pilgrim supposedly turned water into wine...
+VIETmisc.0321 = {
+	type = character_event
+	title = VIETmisc.0321.t
+	desc = VIETmisc.0321.desc
+	theme = diplomacy_foreign_affairs_focus
+
+
+	right_portrait = {
+		character = root
+		triggered_animation = {
+			trigger = {
+				root = {
+					intrigue >= decent_skill_rating
+				}
+			}
+			animation = personality_cynical
+		}
+		animation = shock
+	}
+
+
+	trigger = {
+		faith_forbids_alcohol_trigger = no
+	}
+	
+	weight_multiplier = {
+		base = 1
+		modifier = {
+			add = 0.2
+			has_trait = humble
+		}
+		modifier = {
+			add = -0.2
+			has_trait = arrogant
+		}
+		modifier = {
+			add = 0.2
+			has_trait = generous
+		}
+		modifier = {
+			add = -0.2
+			has_trait = greedy
+		}
+		modifier = {
+			add = 0.2
+			has_trait = compassionate
+		}
+		modifier = {
+			add = -0.2
+			has_trait = callous
+		}
+	}
+	
+	option = { # ok
+		name = VIETmisc.0321.a
+		trigger = {
+			intrigue < decent_skill_rating
+		}
+	}
+	
+	option = { # ok
+		name = VIETmisc.0321.b
+		trigger = {
+			intrigue >= decent_skill_rating
+		}
+		skill = intrigue
+	}
+
+
+	after = {
+		trigger_event = VIETmisc.0322		
+	}
+
+
+}
+
+# ... but turns out to be a fraud
+VIETmisc.0322 = {
+	type = character_event
+	title = VIETmisc.0322.t
+	desc = VIETmisc.0322.desc
+	theme = intrigue
+	override_background = { reference = throne_room }
+
+
+	right_portrait = {
+		character = root
+		animation = thinking
+	}
+
+	option = { # ok
+		name = VIETmisc.0322.a
+		trigger = {
+			intrigue < decent_skill_rating
+		}
+		add_character_modifier = {
+			modifier = VIET_learning_about_frauds
+			years = 7
+		}
+	}
+	
+	option = { # ok
+		name = VIETmisc.0322.b
+		trigger = {
+			intrigue >= decent_skill_rating
+		}
+		skill = intrigue
+		add_character_modifier = {
+			modifier = VIET_detected_fraud
+			years = 7
+		}
+	}
+
+
+	after = {		
+		if = {
+			limit = {
+				has_game_rule = VIET_historical_context_on
+			}
+			custom_tooltip = VIETmisc.0322.info
+		}
+	}
+
+
+}
+
+
+
+# Learning not to drown
+VIETmisc.0323 = {
+	type = character_event
+	title = VIETmisc.0323.t
+	desc = VIETmisc.0323.desc
+	theme = diplomacy_foreign_affairs_focus
+	override_icon = { reference = "gfx/interface/icons/event_types/type_travel_sea.dds" } 
+
+	right_portrait = root
+	
+	weight_multiplier = {
+		base = 1
+		modifier = {
+			add = 0.2
+			has_trait = patient
+		}
+		modifier = {
+			add = -0.2
+			has_trait = impatient
+		}
+		modifier = {
+			add = 0.2
+			has_trait = diligent
+		}
+		modifier = {
+			add = -0.2
+			has_trait = lazy
+		}
+		modifier = {
+			add = 0.2
+			has_trait = gregarious
+		}
+		modifier = {
+			add = -0.2
+			has_trait = shy
+		}
+	}
+	
+	option = { # ok
+		name = VIETmisc.0323.a
+		add_character_modifier = {
+			modifier = VIET_swimming_lessons
+			years = 10
+		}
+		every_courtier_or_guest = {
+			custom = all_courtiers_and_guests
+			add_character_modifier = {
+				modifier = VIET_swimming_lessons
+				years = 10
+			}
+		}
+	}
+
 
 }

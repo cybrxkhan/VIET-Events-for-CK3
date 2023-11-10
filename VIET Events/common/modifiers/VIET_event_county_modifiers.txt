@@ -848,6 +848,25 @@ VIET_observatory_revisions = {
 	character_capital_county_monthly_development_growth_add = 0.15
 }
 
+VIET_seaweed_fertilizer = {
+	icon = fertility_positive
+	development_growth = 0.1
+	tax_mult = 0.03
+}
+
+VIET_flood_prevention_measures = {
+	icon = county_modifier_control_positive
+	build_gold_cost = -0.05
+	monthly_county_control_change_add = 0.1
+	county_opinion_add = -5
+}
+
+VIET_lack_of_flood_prevention_measures = {
+	icon = county_modifier_development_negative
+	build_gold_cost = 0.05
+	development_growth_factor = -0.05
+}
+
 
 
 

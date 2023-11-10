@@ -21,6 +21,7 @@
 # 
 # 7001-7009		Generic
 # 7010-7019		Generic 2
+# 7020-7021		Water
 # 
 ############################################################################################################################
 
@@ -2145,3 +2146,200 @@ VIETmisc.7019 = {
 
 
 
+##################################################################
+# WATER 7020-7021
+##################################################################
+
+
+# Traveler drinks bad water
+VIETmisc.7020 = {
+	type = character_event
+	title = VIETmisc.7020.t
+	desc = VIETmisc.7020.desc
+	theme = travel
+	override_background = { reference = VIET_background_skyrim_forest }
+
+	
+	left_portrait = {
+		character = root
+		animation = stress
+	}	
+
+	
+	right_portrait = {
+		character = scope:drinker
+		animation = sick
+	}	
+
+	trigger = {
+		is_location_valid_for_travel_event_on_land = yes
+		current_travel_plan = {
+			any_entourage_character = {
+				is_available_travelling = yes
+				OR = {
+					has_trait = eccentric
+					has_trait = lazy
+					has_trait = impatient
+					has_trait = gluttonous
+					has_trait = arrogant
+					has_trait = arbitrary
+					has_trait = callous
+					has_trait = trusting
+				}
+			}
+		}
+	}
+	
+	weight_multiplier = {
+		base = 1
+		modifier = {
+			add = 0.2
+			has_trait = impatient
+		}
+		modifier = {
+			add = -0.2
+			has_trait = patient
+		}
+		modifier = {
+			add = 0.2
+			has_trait = lazy
+		}
+		modifier = {
+			add = -0.2
+			has_trait = diligent
+		}
+		modifier = {
+			add = 0.2
+			has_trait = gluttonous
+		}
+		modifier = {
+			add = -0.2
+			has_trait = temperate
+		}
+	}
+
+	immediate = {
+		current_travel_plan = {
+			random_entourage_character = {
+				limit = {
+					is_available_travelling = yes
+					OR = {
+						has_trait = eccentric
+						has_trait = lazy
+						has_trait = impatient
+						has_trait = gluttonous
+						has_trait = arrogant
+						has_trait = arbitrary
+						has_trait = callous
+						has_trait = trusting
+					}
+				}
+				save_scope_as = drinker
+				add_character_modifier = {
+					modifier = VIET_drank_bad_water_while_traveling
+					years = 5
+				}
+			}	
+		}		
+		if = {
+			limit = {
+				has_game_rule = VIET_historical_context_on
+			}
+			custom_tooltip = VIETmisc.7020.info
+		}	
+	}
+	
+	option = { # ok
+		name = VIETmisc.7020.a	
+	}
+	
+	option = { # ok
+		name = VIETmisc.7020.b
+		trigger = {
+			has_trait = lifestyle_physician
+		}
+		trait = lifestyle_physician
+		scope:drinker = {
+			remove_character_modifier = VIET_drank_bad_water_while_traveling
+			add_opinion = {
+				target = root
+				modifier = grateful_opinion
+				opinion = 10
+			}
+		}	
+	}
+	
+	option = { # ok
+		name = VIETmisc.7020.c
+		trigger = {
+			NOT = { has_trait = lifestyle_physician }
+			learning >= decent_skill_rating
+		}
+		skill = learning
+		scope:drinker = {
+			remove_character_modifier = VIET_drank_bad_water_while_traveling
+			add_opinion = {
+				target = root
+				modifier = grateful_opinion
+				opinion = 10
+			}
+		}	
+	}
+
+}
+
+
+# Come across water after a hard day of traveling
+VIETmisc.7021 = {
+	type = character_event
+	title = VIETmisc.7021.t
+	desc = VIETmisc.7021.desc
+	theme = travel
+	override_background = { reference = VIET_background_skyrim_forest }
+
+	
+	right_portrait = {
+		character = root
+		animation = happiness
+	}	
+
+	trigger = {
+		is_location_valid_for_travel_event_on_land = yes
+	}
+	
+	weight_multiplier = {
+		base = 1
+		modifier = {
+			add = 0.2
+			has_trait = patient
+		}
+		modifier = {
+			add = -0.2
+			has_trait = impatient
+		}
+		modifier = {
+			add = 0.2
+			has_trait = lazy
+		}
+		modifier = {
+			add = -0.2
+			has_trait = diligent
+		}
+		modifier = {
+			add = 0.2
+			has_trait = temperate
+		}
+		modifier = {
+			add = -0.2
+			has_trait = gluttonous
+		}
+	}
+	
+	option = { # ok
+		name = VIETmisc.7021.a	
+		stress_impact = {
+			base = minor_stress_impact_loss
+		}
+	}
+
+}

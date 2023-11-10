@@ -62,7 +62,7 @@ VIET_travel_events_common = {
 			# }
 		}
 
-		6000 = 0 
+		7000 = 0 
 
 		# Generic
 		100 = VIETmisc.7001		# Food gone bad
@@ -74,6 +74,10 @@ VIET_travel_events_common = {
 		100 = VIETmisc.7012		# Terrible Inn
 		100 = VIETmisc.7013		# Amazing Inn
 		100 = VIETmisc.7016		# Muddy roads
+		# Water
+		100 = VIETmisc.7021		# Come across water after a hard day of traveling
+
+		# 9
 	}
 }
 
@@ -122,7 +126,7 @@ VIET_travel_events_uncommon = {
 			# }
 		}
 
-		8000 = 0 
+		9000 = 0 
 
 		# Generic
 		100 = VIETmisc.7002		# A friendly village
@@ -131,6 +135,10 @@ VIET_travel_events_uncommon = {
 		# Generic 2
 		100 = VIETmisc.7017		# Good dream?
 		100 = VIETmisc.7019		# Encounter a traveling bard
+		# Water
+		100 = VIETmisc.7020		# Traveler drinks bad water
+
+		# 6
 	}
 }
 
@@ -179,7 +187,7 @@ VIET_travel_events_rare = {
 			# }
 		}
 
-		12000 = 0 
+		13000 = 0 
 
 		# Generic
 		100 = VIETmisc.7006		# Stumble on the remnants of a bandit ambush of a caravan
@@ -189,6 +197,8 @@ VIET_travel_events_rare = {
 		100 = VIETmisc.7014		# Two characters are arguing
 		100 = VIETmisc.7015		# Two characters become friends
 		100 = VIETmisc.7018		# Village is having a wedding
+
+		# 6
 	}
 }
 
