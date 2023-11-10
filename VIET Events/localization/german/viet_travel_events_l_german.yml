@@ -87,12 +87,17 @@
  VIETmisc.7019.b:0 "Have some coins for a few more songs!"
  VIETmisc.7019.c:0 "I’ll try to note down the songs I like."
  # Version 1.10.0 Start Here - Note to translators: Please leave this comment and do not move or remove it
- VIETmisc.7020.t:0 "$travel_event_prefix$ xxxxx"
- VIETmisc.7020.desc:0 "xxxxx"
- VIETmisc.7020.a:0 "xxxxx"
- VIETmisc.7021.t:0 "$travel_event_prefix$ xxxxx"
- VIETmisc.7021.desc:0 "xxxxx"
- VIETmisc.7021.a:0 "xxxxx"
+ # Version 1.11.0 Start Here - Note to Translators: please leave this comment here and do not remove it even in your versions of the loc
+ VIETmisc.7020.t:0 "$travel_event_prefix$ Bad Water"
+ VIETmisc.7020.desc:0 "While resting during our travels, we were resting when [drinker.GetFirstName] went to search for some water. It seems [drinker.GetSheHe] is really thirsty, and didn’t have enough water saved up in [drinker.GetHerHis] waterskin!\n\nUnfortunately, we realized too late that the water [drinker.GetFirstNameNoTooltip] drew from looked like standing water. Many are aware that standing water, such as those found in marshes and wetlands, are often dangerous for drinking. Perhaps [drinker.GetSheHe] was too eager or thirsty, and wasn't thinking straight.\n\nAnyways, [drinker.GetFirstNameNoTooltip] is already feeling a little sick."
+ VIETmisc.7020.a:0 "[drinker.GetFirstNameNoTooltip], you fool!"
+ VIETmisc.7020.b:0 "I know some herbs that can help."
+ VIETmisc.7020.c:0 "$VIETmisc.7020.b$"
+ VIETmisc.7020.info:0 "#emphasis Historical Context:#! There is a stereotype that medieval people only drank alcohol or other drinks besides water, as water back then was of such poor quality. However, medieval people knew how to distinguish between water that could be safely drunk, and water that was not suitable for consumption. As such, they would for example avoid water near urban areas or marshlands, while seeking cleaner water elsewhere. "
+ VIETmisc.7021.t:0 "$travel_event_prefix$ Water, At Last!"
+ VIETmisc.7021.desc:0 "We had been traveling for much of the day, weary and tired, as there hadn’t been a good place to properly rest for several hours. Wasn’t this supposed to be a well-traveled road?\n\nYet lo and behold, we eventually saw a small stream of water, and what more, there were old, worn-out bronze cups hung by chains to a nearby boulder. It seems that the locals, or perhaps whoever was in charge of this region, generously provided these cups to travelers to more easily collect water."
+ VIETmisc.7021.a:0 "Thank [ROOT.Char.GetFaith.HighGodName] for this refreshing water!"
+ # Version 1.11.1 Start Here - Note to Translators: please leave this comment here and do not remove it even in your versions of the loc
  VIETmisc.7022.t:0 "$travel_event_prefix$ xxxxx"
  VIETmisc.7022.desc:0 "xxxxx"
  VIETmisc.7022.a:0 "xxxxx"

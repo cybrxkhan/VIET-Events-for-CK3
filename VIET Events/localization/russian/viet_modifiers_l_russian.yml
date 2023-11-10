@@ -1281,3 +1281,16 @@ VIET_listened_to_saint_francis:0 "Прослушал проповедь с жи�
  VIET_observatory_bad_omens:0 "Obseratory Discovery: Bad Omens Mitigated"
  VIET_observatory_revisions:0 "Obseratory Discovery: Revised Calculations"
  # Version 1.10.2 Start Here - Note to translators: Please leave this comment and do not move or remove it
+ # Version 1.11.0 Start Here - Note to Translators: please leave this comment here and do not remove it even in your versions of the loc
+ VIET_seaweed_fertilizer:0 "Seaweed Fertilizer"
+ VIET_seaweed_fertilizer_desc:0 "The farmers in this region are renowned for their expertise in utilizing seaweed as fertilizer."
+ VIET_flood_prevention_measures:0 "Flood Prevention Measures"
+ VIET_flood_prevention_measures_desc:0 "Recent floods in a major settlement here were said to have been caused or exacerbated by garbage that people left in local waterways. Officials have thus implemented policies to force inhabitants to clean up waterways of garbage when needed."
+ VIET_lack_of_flood_prevention_measures:0 "Lack of Flood Prevention Measures"
+ VIET_drank_bad_water_while_traveling:0 "Drank Bad Water While Traveling"
+ VIET_repent_bread_water:0 "Repented by Subsisting on Bread and Water for a Week"
+ VIET_swimming_lessons:0 "Swimming Techniques"
+ VIET_swimming_lessons_desc:0 "This character recently learned some techniques on how to swim in various bodies of water, in order to reduce the dangers of drowning, such as when traveling by water."
+ VIET_learning_about_frauds:0 "Learning about Frauds"
+ VIET_detected_fraud:0 "Detected a Fraud"
+ # Version 1.11.1 Start Here - Note to Translators: please leave this comment here and do not remove it even in your versions of the loc
