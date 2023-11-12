@@ -1,13 +1,11 @@
 # VIET Events for CK3
 
-<img src="https://i.imgur.com/7Q1OCEQ.jpg">
+<img src="https://i.imgur.com/qyhwEls.jpg">
 
-## Latest Version: 1.10.1.a Hotfix for "Starfield" (Released 9/24/23)
+## Latest Version: 1.11.0 "Qanat" (Released 11/11/23)
 
-_“May I be like the stars and you the moon,_
-_Shining and brightening each other night after night.”_
-
-_- Fan Chengda, Chinese poet, official, and geographer (1126 - 1193 CE)_
+_“Water is everywhere around you, but you see only barriers that keep you from water.”_
+_– Rumi (1207 - 1273 CE), Persian poet, scholar, Sufi mystic_
 
 Very Immersive Events and Tales (VIET), the sequel to VIET Events Reborn for CK2, is a flavor mod that adds a vast collection of events about everyday life to spice up your game. They add immersion and a diversity of experiences in between wars and vanilla’s event chains, and cover mundane minutiae ranging from small talk with courtiers and eating local cuisine to epic tales about love, philosophy, and the human condition. Some of the events unlock new decisions, character interactions, activities, and much more for you to explore!
 
@@ -17,7 +15,7 @@ Feel free to use my work in your mods - all I ask is that I am credited and (if 
 
 ## Features
 
-- Over **1066** new flavor events to experience!
+- Over **1074** new flavor events to experience!
 - Explore new decisions, artifacts, character interactions, activities, and more!
 - Game rule to disable sillier events for those who don't like them, with three levels to choose from: Balanced (Default), Serious (Restricted), and All Events (Full)
 - Compatible with almost anything since it doesn't touch any vanilla files - even with overhaul mods, you can via game rule disable events that reference things specific to our medieval world that wouldn’t make sense in other time periods or universes (like fantasy and sci-fi conversion mods)
@@ -41,24 +39,12 @@ The mod folder should look something like this:
 
 ## Changelog
 
-### Version 1.10.1 Hotfix
+### Version 1.11.0
 
-- Added some Chinese localization
-- 1066 Supernova Grand Event will now only trigger with the default setting for the VIET Universe Setting game rule (i.e. it won’t appear with the Conversion Mod or other Historical settings)
-- Miscellaneous bugfixes
+New events added in this version: **8**
 
-### Version 1.10.1
-
-New events added in this version: **18**
-
-- Added 1 Grand Event about the 1006 Supernova
-- Added events with the following themes:
-    - 12 Astronomy
-    - 5 Miscellaneous*
-- Added a couple new African variants of event backgrounds
-- Added icon for the Oblivion dream memory
-- Qi Ma now has the eccentric trait
-- Rebalanced frequency of events
+- Added 8 water-themed events
+- Slightly reduced the chances of travel events
 - Miscellaneous bugfixes
 
 \* Adapted from VIET for CK2
