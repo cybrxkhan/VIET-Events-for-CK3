@@ -464,6 +464,10 @@ VIET_events_yearly_pulse = {
 		100 = VIETintro.1000	# Dog Days caused by Sirius - triggers VIETmisc.0319
 		# Water
 		100 = VIETmisc.0320		# Repenting after saying some swears
+		# Nuts
+		100 = VIETmisc.0326		# Servant eats poisonous nuts
+		100 = VIETmisc.0327		# Snacking on nuts
+		100 = VIETmisc.0328		# Cutting down on almond milk or not?
 	}
 }
 
@@ -848,6 +852,8 @@ VIET_events_tri_yearly_pulse = {
 		# Water
 		100 = VIETmisc.0321		# Pilgrim supposedly turned water into wine... but turns out to be a fraud
 		100 = VIETmisc.0323		# Learning not to drown
+		# Nuts
+		100 = VIETmisc.0324		# Eating more acorns for food
 	}
 }
 
@@ -1099,6 +1105,8 @@ VIET_events_five_yearly_pulse = {
 		100 = VIETmisc.0283 	# Maid turns the tables on manservants who try to prank her
 		# Animation
 		100 = VIETmisc.0288 	# A medieval Karen comes to complain
+		# Nuts
+		100 = VIETmisc.0325		# Courtier overdoses on marking nuts
 	}
 }
 
@@ -1540,8 +1548,10 @@ VIET_events_uncommon_county_pulse = {
 		100 = VIETmisc.3047 	# Local scholars request you build a small observatory somewhere
 		# Water
 		100 = VIETmisc.3052 	# Floods caused by garbage
+		# Nuts
+		100 = VIETmisc.3053 	# New laws concerning chestnut trees?
 		
-		# 28
+		# 29
 		
     }
 }

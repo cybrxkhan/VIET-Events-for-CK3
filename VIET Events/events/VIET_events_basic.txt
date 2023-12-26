@@ -55,6 +55,7 @@
 # 0296-0313		Childhood Generic
 # 0314-0319		Astronomy
 # 0320-0323		Water
+# 0324-0328		Nuts
 # 
 ############################################################################################################################
 
@@ -15453,7 +15454,7 @@ VIETmisc.0180 = {
 			}
 		}
 		# Weed out most cultures that probably aren't literate at the game start and wouldn't be writing stuff like letters
-		NOT = { has_government = tribal_government }		
+		NOT = { government_has_flag = government_is_tribal }		
 	}
 	
 	weight_multiplier = {
@@ -15696,7 +15697,7 @@ VIETmisc.0181 = {
 
 	trigger = {
 		# Weed out most cultures that probably aren't literate at the game start and wouldn't be writing stuff like letters
-		NOT = { has_government = tribal_government }		
+		NOT = { government_has_flag = government_is_tribal }		
 	}
 	
 	weight_multiplier = {
@@ -20087,7 +20088,7 @@ VIETmisc.0229 = {
 			culture_has_european_heritage_pillar_trigger = yes
 		}
 		# Weed out cultures that wouldn't have these kinds of legal proceedings
-		NOT = { has_government = tribal_government }
+		NOT = { government_has_flag = government_is_tribal }
 		# Wouldn't make sense for these religions
 		NOR = { 
 			religion = religion:islam_religion
@@ -25701,7 +25702,7 @@ VIETmisc.0274 = {
 	left_portrait = root
 
 	trigger = {
-		NOT = { has_government = tribal_government }	
+		NOT = { government_has_flag = government_is_tribal }	
 		NOT = { has_game_rule = VIET_conversion_universe_events }
 		capital_province = {
 			OR = {
@@ -25837,7 +25838,7 @@ VIETmisc.0275 = {
 			}
 		}
 		# Weed out most cultures that probably aren't literate at the game start and wouldn't be writing stuff like letters
-		NOT = { has_government = tribal_government }
+		NOT = { government_has_flag = government_is_tribal }
 	}
 	
 	weight_multiplier = {
@@ -26164,7 +26165,7 @@ VIETmisc.0277 = {
 
 	trigger = {
 		# Weed out most cultures that probably aren't literate and don't have scholars running around
-		NOT = { has_government = tribal_government }		
+		NOT = { government_has_flag = government_is_tribal }		
 	}
 	
 	weight_multiplier = {
@@ -26936,7 +26937,7 @@ VIETmisc.0286 = {
 		NOT = { has_trait = blind }
 		probably_unintelligent_trigger = no
 		# Weed out most cultures that probably aren't literate at the game start and wouldn't be writing stuff like letters
-		NOT = { has_government = tribal_government }
+		NOT = { government_has_flag = government_is_tribal }
 	}
 	
 	weight_multiplier = {
@@ -30329,3 +30330,574 @@ VIETmisc.0323 = {
 
 
 }
+
+
+##################################################################
+# Nuts 0324-0328
+##################################################################
+
+
+# Eating more acorns for food
+VIETmisc.0324 = {
+	type = character_event
+	title = VIETmisc.0324.t
+	desc = VIETmisc.0324.desc
+	theme = feast_activity
+
+	
+	right_portrait = {
+		character = root
+		animation = thinking
+	}
+
+
+	trigger = {
+		capital_province = {
+			OR = {
+				geographical_region = world_europe
+				geographical_region = world_steppe_west
+				geographical_region = world_asia_minor
+				geographical_region = ghw_region_near_east
+				geographical_region = world_africa_north_west
+				geographical_region = ghw_region_southern_middle_east
+			}
+		}
+	}
+	
+	weight_multiplier = {
+		base = 1
+		modifier = {
+			add = 0.2
+			has_trait = fickle
+		}
+		modifier = {
+			add = -0.2
+			has_trait = stubborn
+		}
+		modifier = {
+			add = 0.2
+			has_trait = gregarious
+		}
+		modifier = {
+			add = -0.2
+			has_trait = shy
+		}
+		modifier = {
+			add = 0.2
+			has_trait = ambitious
+		}
+		modifier = {
+			add = -0.2
+			has_trait = content
+		}
+	}
+
+	
+	option = { # ok
+		name = VIETmisc.0324.a
+		add_character_modifier = {
+			modifier = VIET_enjoys_acorns
+			years = 10
+		}
+		stress_impact = {
+			arrogant = minor_stress_impact_gain
+		}	
+	}
+	
+	option = { # ok
+		name = VIETmisc.0324.b
+		VIET_huge_prestige_gain_effect = yes
+		stress_impact = {
+			temperate = minor_stress_impact_gain
+			humble = minor_stress_impact_gain
+		}	
+	}
+
+
+}
+
+
+# Courtier overdoses on marking nuts
+VIETmisc.0325 = {
+	type = character_event
+	title = VIETmisc.0325.t
+	desc = VIETmisc.0325.desc
+	theme = unfriendly
+	override_background = { reference = council_chamber }
+
+	
+	left_portrait = {
+		character = root
+		animation = disapproval
+	}
+	
+	right_portrait = {
+		character = scope:overdosed
+		animation = sick
+	}
+
+
+	trigger = {
+		has_game_rule = VIET_normal_universe_events
+		OR = {
+			any_vassal = {
+				is_available_ai_adult = yes
+				learning >= decent_skill_rating
+
+			}
+			any_courtier_or_guest = {
+				is_available_ai_adult = yes
+				learning >= decent_skill_rating
+			}
+		}
+		capital_province = {
+			OR = {
+				geographical_region = world_asia_minor
+				geographical_region = world_middle_east
+				geographical_region = world_india
+				geographical_region = world_africa_north
+				geographical_region = world_africa_east
+				geographical_region = world_steppe_tarim
+			}
+		}	
+	}
+	
+	weight_multiplier = {
+		base = 1
+		modifier = {
+			add = 0.2
+			has_trait = compassionate
+		}
+		modifier = {
+			add = -0.2
+			has_trait = callous
+		}
+		modifier = {
+			add = 0.2
+			has_trait = gregarious
+		}
+		modifier = {
+			add = -0.2
+			has_trait = shy
+		}
+		modifier = {
+			add = 0.2
+			has_trait = trusting
+		}
+		modifier = {
+			add = -0.2
+			has_trait = paranoid
+		}
+	}
+
+	immediate = {
+		every_vassal = {
+			limit = {
+				is_available_ai_adult = yes
+				learning >= decent_skill_rating
+			}
+			add_to_list = candidates
+		}
+		every_courtier_or_guest = {
+			limit = {
+				is_available_ai_adult = yes
+				learning >= decent_skill_rating
+			}
+			add_to_list = candidates
+		}
+				
+		random_in_list = {
+			list = candidates
+			save_scope_as = overdosed
+			random_list = {
+				10 = {
+					add_character_modifier = {
+						modifier = VIET_overdosed_on_marking_nuts
+						years = 4
+					}
+				}
+				10 = {
+					add_character_modifier = {
+						modifier = VIET_overdosed_on_marking_nuts
+						years = 8
+					}
+				}
+				10 = {
+					add_character_modifier = {
+						modifier = VIET_overdosed_on_marking_nuts
+						years = 12
+					}
+				}
+				10 = {
+					add_character_modifier = {
+						modifier = VIET_overdosed_on_marking_nuts
+						years = 16
+					}
+				}
+				10 = {
+					add_character_modifier = {
+						modifier = VIET_overdosed_on_marking_nuts
+						years = 20
+					}
+				}
+			}
+		}
+	}
+	
+	option = { # ok
+		name = VIETmisc.0325.a
+		VIET_large_prestige_gain_effect = yes
+		scope:overdosed = {
+			add_opinion = {
+				target = root
+				modifier = VIET_showed_no_sympathy
+			}		
+		}
+		stress_impact = {
+			compassionate = miniscule_stress_impact_gain
+			humble = miniscule_stress_impact_gain
+		}	
+	}
+	
+	option = { # ok
+		name = VIETmisc.0325.b
+		VIET_large_piety_gain_effect = yes
+		scope:overdosed = {
+			add_opinion = {
+				target = root
+				modifier = VIET_showed_sympathy
+			}		
+		}
+		stress_impact = {
+			callous = miniscule_stress_impact_gain
+			arrogant = miniscule_stress_impact_gain
+		}	
+	}
+
+	after = {		
+		if = {
+			limit = {
+				has_game_rule = VIET_historical_context_on
+			}
+			custom_tooltip = VIETmisc.0325.info
+		}
+	}
+
+
+}
+
+
+# Servant eats poisonous nuts
+VIETmisc.0326 = {
+	type = character_event
+	title = VIETmisc.0326.t
+	desc = VIETmisc.0326.desc
+	theme = VIET_theme_skyrim_forest
+
+	
+	right_portrait = { 
+		character = root
+		triggered_animation = {
+			trigger = {
+				OR = {
+					has_trait = callous
+					has_trait = sadistic
+					has_trait = arrogant
+					has_trait = paranoid
+				}
+			}
+			animation = eyeroll
+		}
+		triggered_animation = {
+			trigger = {
+				NOR = {
+					has_trait = callous
+					has_trait = sadistic
+					has_trait = arrogant
+					has_trait = paranoid
+				}
+			}
+			animation = worry
+		}
+	}
+	
+	weight_multiplier = {
+		base = 1
+		modifier = {
+			add = 0.2
+			has_trait = diligent
+		}
+		modifier = {
+			add = -0.2
+			has_trait = lazy
+		}
+		modifier = {
+			add = 0.2
+			has_trait = humble
+		}
+		modifier = {
+			add = -0.2
+			has_trait = arrogant
+		}
+		modifier = {
+			add = 0.2
+			has_trait = impatient
+		}
+		modifier = {
+			add = -0.2
+			has_trait = patient
+		}
+	}
+	
+	option = { # ok
+		name = VIETmisc.0326.a
+		add_character_modifier = {
+			modifier = VIET_no_sympathy_servants
+			years = 12
+		}
+		stress_impact = {
+			compassionate = medium_stress_impact_gain
+			humble = miniscule_stress_impact_gain
+		}	
+	}
+	
+	option = { # ok
+		name = VIETmisc.0326.b
+		trigger = {
+			OR = {
+				gold >= 25
+				is_ai = no
+			}
+		}
+		remove_short_term_gold = 25
+		VIET_huge_piety_gain_effect = yes
+		add_character_modifier = {
+			modifier = VIET_sympathy_servants
+			years = 12
+		}
+		stress_impact = {
+			callous = medium_stress_impact_gain
+			sadistic = miniscule_stress_impact_gain
+			arrogant = miniscule_stress_impact_gain
+		}	
+	}
+
+
+}
+
+
+# Snacking on nuts
+VIETmisc.0327 = {
+	type = character_event
+	title = VIETmisc.0327.t
+	desc = VIETmisc.0327.desc
+	theme = friendly
+	override_background = { reference = relaxing_room }
+
+	
+	right_portrait = root
+	
+	weight_multiplier = {
+		base = 1
+		modifier = {
+			add = 0.2
+			has_trait = diligent
+		}
+		modifier = {
+			add = -0.2
+			has_trait = lazy
+		}
+		modifier = {
+			add = 0.2
+			has_trait = temperate
+		}
+		modifier = {
+			add = -0.2
+			has_trait = gluttonous
+		}
+		modifier = {
+			add = 0.2
+			has_trait = shy
+		}
+		modifier = {
+			add = -0.2
+			has_trait = gregarious
+		}
+	}
+	
+	option = { # ok
+		name = VIETmisc.0327.a
+		add_character_modifier = {
+			modifier = VIET_snacking_on_nuts
+			years = 8
+		}
+	}
+
+
+}
+
+# Cutting down on almond milk or not?
+VIETmisc.0328 = {
+	type = character_event
+	title = VIETmisc.0328.t
+	desc = VIETmisc.0328.desc
+	theme = realm
+	
+	left_portrait = root
+	
+	right_portrait = {
+		character = scope:skeptic
+		animation = disapproval
+	}
+	
+	trigger = {
+		has_game_rule = VIET_normal_universe_events
+		OR = {
+			any_vassal = {
+				is_available_ai_adult = yes
+				NOR = {
+					has_trait = temperate
+					has_trait = lazy
+					has_trait = callous
+					has_trait = shy
+				}
+
+			}
+			any_courtier_or_guest = {
+				is_available_ai_adult = yes
+				NOR = {
+					has_trait = temperate
+					has_trait = lazy
+					has_trait = callous
+					has_trait = shy
+				}
+			}
+		}
+	}
+	
+	weight_multiplier = {
+		base = 1
+		modifier = {
+			add = 0.2
+			has_trait = temperate
+		}
+		modifier = {
+			add = -0.2
+			has_trait = gluttonous
+		}
+		modifier = {
+			add = 0.2
+			has_trait = gregarious
+		}
+		modifier = {
+			add = -0.2
+			has_trait = shy
+		}
+		modifier = {
+			add = 0.2
+			has_trait = lustful
+		}
+		modifier = {
+			add = -0.2
+			has_trait = chaste
+		}
+	}
+
+	immediate = {
+		every_vassal = {
+			limit = {
+				is_available_ai_adult = yes
+				NOR = {
+					has_trait = temperate
+					has_trait = lazy
+					has_trait = callous
+					has_trait = shy
+				}
+			}
+			add_to_list = candidates
+		}
+		every_courtier_or_guest = {
+			limit = {
+				is_available_ai_adult = yes
+				NOR = {
+					has_trait = temperate
+					has_trait = lazy
+					has_trait = callous
+					has_trait = shy
+				}
+			}
+			add_to_list = candidates
+		}
+				
+		random_in_list = {
+			list = candidates
+			save_scope_as = skeptic
+		}
+	}
+	
+	option = { # ok
+		name = VIETmisc.0328.a
+		scope:skeptic = {
+			add_opinion = {
+				modifier = pleased_opinion
+				opinion = 10
+				target = root
+			}
+		}
+		stress_impact = {
+			callous = miniscule_stress_impact_gain
+			temperate = miniscule_stress_impact_gain
+			arrogant = miniscule_stress_impact_gain
+			arbitrary = miniscule_stress_impact_gain
+		}	
+	}
+	
+	option = { # ok
+		name = VIETmisc.0328.b
+		add_character_modifier = {
+			modifier = VIET_almond_milk_enjoyer
+			years = 10
+		}
+		scope:skeptic = {
+			add_opinion = {
+				modifier = disappointed_opinion
+				opinion = -10
+				target = root
+			}
+		}
+		stress_impact = {
+			gluttonous = minor_stress_impact_gain
+		}
+	}
+	
+	option = { # ok
+		name = VIETmisc.0328.c
+		# trigger = {
+		# 	intrigue >= medium_skill_rating			
+		# }
+		# skill = intrigue
+		# show_as_unavailable = {
+		# 	intrigue < medium_skill_rating
+		# }
+		add_character_modifier = {
+			modifier = VIET_plant_milk
+			years = 10
+		}
+		stress_impact = {
+			gluttonous = minor_stress_impact_gain
+		}
+	}
+
+	after = {		
+		if = {
+			limit = {
+				has_game_rule = VIET_historical_context_on
+			}
+			custom_tooltip = VIETmisc.0328.info
+		}
+	}
+
+
+}
+
+

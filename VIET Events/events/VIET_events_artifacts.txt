@@ -657,7 +657,7 @@ VIETmisc.5005 = {
 
 	trigger = {
 		# Weed out most cultures that probably aren't literate at the game start
-		NOT = { has_government = tribal_government }		
+		NOT = { government_has_flag = government_is_tribal }		
 	}
 	
     weight_multiplier = {
@@ -4624,7 +4624,7 @@ VIETmisc.5040 = {
 	trigger = {
 		has_game_rule = VIET_normal_universe_events
 		# Weed out most cultures that probably aren't literate at the game start
-		NOT = { has_government = tribal_government }		
+		NOT = { government_has_flag = government_is_tribal }		
 	}
 	
     weight_multiplier = {
@@ -5913,7 +5913,7 @@ VIETmisc.5045 = {
 		NOT = { has_game_rule = VIET_serious_events }
 		NOT = { has_character_flag = VIET_lusty_argonian_maid_happened }
 		# Weed out most cultures that probably aren't literate at the game start
-		NOT = { has_government = tribal_government }	
+		NOT = { government_has_flag = government_is_tribal }	
 	}
 
     weight_multiplier = {
@@ -8008,7 +8008,7 @@ VIETmisc.5055 = {
 
 	trigger = {
 		# Should be a literate culture
-		NOT = { has_government = tribal_government }	
+		NOT = { government_has_flag = government_is_tribal }	
 	}
 
     weight_multiplier = {

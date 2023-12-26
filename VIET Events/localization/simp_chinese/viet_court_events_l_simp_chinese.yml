@@ -69,9 +69,13 @@
  VIETmisc.6019.t:0 "乡间音乐的流行"
  VIETmisc.6019.desc:0 "[county.GetNameNoTier]的传统乡间音乐近来名声大噪，以其独特的风格在领土上广为流传。今天一个乡间音乐爱好者[courtier.GetTitledFirstName]向我请柬，要求宫廷乐师以[county.GetAdjectiveNoTooltip]的方式创作或演奏音乐。"
  VIETmisc.6019.a:0 "我听过，但是我不明白它的魅力所在。"
- VIETmisc.6020.t:0 "xxxxx"
- VIETmisc.6020.desc:0 "xxxxx"
- VIETmisc.6020.a:0 "xxxxx"
+ # Version 1.11.1 Start Here - Please leave this comment and do not remove it
+ VIETmisc.6020.t:0 "Almond Milk"
+ VIETmisc.6020.desc:0 "As a [ROOT.Char.GetFaith.GetReligion.GetAdjective] [ROOT.Char.GetTitleAsNameNoTooltip], I am always in search of ways to improve my image as a devoted follower of [ROOT.Char.GetFaith.HighGodNameAlternate]. My [chaplain.GetCouncilTitle], [chaplain.GetTitledFirstName] has proposed an interesting idea to me today while I was holding court.\n\n“My [ROOT.Char.GetLadyLord],” [chaplain.GetSheHe] explained, “I’m sure you know the value of almond milk, and how we consume it during Lent as a substitute for animal milk, as an act of temperance.”\n\n“Correct,” I say. “What about these almonds, then?”\n\n“Well, why don’t we have your chefs use them more regularly at feasts and other gatherings?” [chaplain.GetFirstNameNoTooltip] asks. “Sure, it would be expensive, since almond milk is a luxury, but it would show that you are trying to practice the teachings of the [ROOT.Char.GetFaith.ReligiousText] throughout the year. This can only reflect well on your image among the [ROOT.Char.GetFaith.GetReligion.GetAdjectiveNoTooltip] courts of the world.”"
+ VIETmisc.6020.a:0 "Great idea! I love almond milk, anyway."
+ VIETmisc.6020.b:0 "I understand your point, but it’s too expensive."
+ VIETmisc.6020.info:0 "#emphasis Historical Context:#! Although almond milk is seen as a modern fad nowadays, it was actually very popular in the medieval period, particularly among the upper classes. In Christian Europe, it was often used as a substitute for animal milk (particularly around Lent). Almond milk featured prominently in medieval cookbooks, used in a variety of savory and sweet dishes, from soups and desserts to seafood or simply by itself."
+ # Version 1.11.2 Start Here - Please leave this comment and do not remove it
  VIETmisc.6021.t:0 "xxxxx"
  VIETmisc.6021.desc:0 "xxxxx"
  VIETmisc.6021.a:0 "xxxxx"

@@ -57,7 +57,7 @@ VIETmisc.2001 = {
 	trigger = {
 		NOT = { has_game_rule = VIET_conversion_universe_events }
 		OR = {
-			NOT = { has_government = tribal_government }			
+			NOT = { government_has_flag = government_is_tribal }			
 			capital_province = {
 				OR = {
 					geographical_region = world_middle_east
@@ -3384,7 +3384,7 @@ VIETmisc.2061 = {
 			has_character_modifier = VIET_learned_shorthand_4
 		}
 		# Weed out most cultures that probably aren't literate at the game start and wouldn't be writing stuff like letters
-		NOT = { has_government = tribal_government }	
+		NOT = { government_has_flag = government_is_tribal }	
 		# Want someone who's probably literate and who isn't an idiot
 		NOT = { has_trait = blind }
 		probably_unintelligent_trigger = no
@@ -4184,7 +4184,7 @@ VIETmisc.2074 = {
 
 	trigger = {
 		has_game_rule = VIET_normal_universe_events
-		NOT = { has_government = tribal_government }
+		NOT = { government_has_flag = government_is_tribal }
 		any_courtier = {
 			is_available_ai_adult = yes
 			# Want someone for whom it'd make sense to suggest this

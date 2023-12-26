@@ -867,6 +867,14 @@ VIET_lack_of_flood_prevention_measures = {
 	development_growth_factor = -0.05
 }
 
+VIET_chestnut_tree_laws = {
+	icon = fertility_positive
+	monthly_county_control_change_add = -0.1
+	county_opinion_add = -5
+	development_growth = 0.1
+	tax_mult = 0.01
+}
+
 
 
 

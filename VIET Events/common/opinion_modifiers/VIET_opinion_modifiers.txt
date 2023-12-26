@@ -811,4 +811,16 @@ VIET_opinion_crush_intensifying = {
 	decaying = yes
 }
 
+VIET_showed_sympathy = {
+	years = 10
+	opinion = 20
+	decaying = yes
+}
+
+VIET_showed_no_sympathy = {
+	years = 10
+	opinion = -20
+	decaying = yes
+}
+
 

@@ -66,8 +66,10 @@ VIET_court_event_on_actions = {
 		# Simple
 		100 = VIETmisc.6018 			# Courtier not known for making good speeches makes a good speech
 		100 = VIETmisc.6019 			# Folk music from a region is becoming popular at court
+		# Nuts
+		100 = VIETmisc.6020 			# More almond milk at court or not?
 
-		# 20
+		# 21
 
 	}
 }

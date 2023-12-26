@@ -33,6 +33,7 @@
 # 3044-3045		Simple
 # 3046-3050		Astronomy
 # 3051-3052		Water
+# 3053			Nuts
 # 
 ############################################################################################################################
 
@@ -4396,7 +4397,7 @@ VIETmisc.3044 = {
 
 	trigger = {
 		# Should be a literate culture
-		NOT = { has_government = tribal_government }	
+		NOT = { government_has_flag = government_is_tribal }	
 	}
 	
     weight_multiplier = {
@@ -4539,7 +4540,7 @@ VIETmisc.3046 = {
 
 	trigger = {
 		# Should be a literate culture
-		NOT = { has_government = tribal_government }	
+		NOT = { government_has_flag = government_is_tribal }	
 	}
 	
     weight_multiplier = {
@@ -4643,7 +4644,7 @@ VIETmisc.3047 = {
 
 	trigger = {
 		# Should be a literate culture
-		NOT = { has_government = tribal_government }	
+		NOT = { government_has_flag = government_is_tribal }	
 	}
 	
     weight_multiplier = {
@@ -4969,7 +4970,7 @@ VIETmisc.3052 = {
 
 	trigger = {
 		# Should be an urbanized culture
-		NOT = { has_government = tribal_government }	
+		NOT = { government_has_flag = government_is_tribal }	
 	}
 	
     weight_multiplier = {
@@ -5031,5 +5032,95 @@ VIETmisc.3052 = {
 
 
 
+##################################################################
+# Nuts 3053
+##################################################################
+
+
+# New laws concerning chestnut trees?
+VIETmisc.3053 = {
+	type = character_event
+	title = VIETmisc.3053.t
+	desc = VIETmisc.3053.desc
+	theme = VIET_theme_tuscan_country
+	
+	right_portrait = {
+		character = root
+		animation = thinking
+	}
+
+	trigger = {
+		has_game_rule = VIET_normal_universe_events
+		any_held_title = {
+			tier = tier_county
+			any_county_province = {
+				OR = {
+					geographical_region = world_europe_west
+					geographical_region = world_europe_south
+					geographical_region = world_asia_minor
+					geographical_region = ghw_region_central_european
+					geographical_region = ghw_region_balkans
+					geographical_region = ghw_region_near_east
+				}		
+			}
+		}	
+	}
+	
+    weight_multiplier = {
+        base = 0
+		modifier = {
+			add = {
+				every_held_title = {
+					limit = { tier = tier_county }
+					add = 1
+				}
+			}		
+		}
+    }
+	
+	immediate = {
+		random_held_title = {
+			limit = {
+				tier = tier_county
+				any_county_province = {
+					OR = {
+						geographical_region = world_europe_west
+						geographical_region = world_europe_south
+						geographical_region = world_asia_minor
+						geographical_region = ghw_region_central_european
+						geographical_region = ghw_region_balkans
+						geographical_region = ghw_region_near_east
+					}		
+				}
+			}	
+			save_scope_as = county
+		}
+	}
+
+	# Ok
+	option = {
+		name = VIETmisc.3053.a
+		VIET_huge_prestige_loss_effect = yes
+		scope:county = {
+			add_county_modifier = {
+				modifier = VIET_chestnut_tree_laws
+				years = 15
+			}	
+		}
+	}
+	# Ok
+	option = {
+		name = VIETmisc.3053.b
+	}
+
+	after = {			
+		if = {
+			limit = {
+				has_game_rule = VIET_historical_context_on
+			}
+			custom_tooltip = VIETmisc.3053.info
+		}
+	}
+}
 
 

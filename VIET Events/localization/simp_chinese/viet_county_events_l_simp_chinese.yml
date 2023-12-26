@@ -203,9 +203,13 @@
  VIETmisc.3052.t:0 "防洪"
  VIETmisc.3052.desc:0 "[county.GetNameNoTier]上的一个小镇被洪水淹没后，我的官员和当地人发生了一些冲突，所幸的是，人员伤亡不大，但洪水还是对居民点造成了破坏。\n\n据官员说，洪水是由于居民随手扔垃圾造成的，他们会把垃圾扔到运河和灌溉渠里，这造成了水道堵塞，让洪水更加严重。\n\n现在官员们希望对居民实施更严格的规定，防止再次发生这种情况。然而，一些当地人声称官员们的行为是不可理喻的，还认为洪水是由[ROOT.Char.GetFaith.HighGodName]意志驱动的，这无法阻挡。"
  VIETmisc.3052.a:0 "“官员们说得对，不能乱丢垃圾！”"
- VIETmisc.3053.t:0 "xxxxx"
- VIETmisc.3053.desc:0 "xxxxx"
- VIETmisc.3053.a:0 "xxxxx"
+ # Version 1.11.1 Start Here - Note to Translators: please leave this comment here and do not remove it even in your versions of the loc
+ VIETmisc.3053.t:0 "Chesnut Laws"
+ VIETmisc.3053.desc:0 "Chestnut trees have been grown in [county.GetNameNoTier] for ages. They aren’t the most profitable export, but still play an important role in the local economy.\n\nMy officials there have proposed passing some laws to protect the trees and their nuts. In certain areas where chestnut groves are prominent, pigs will be banned from wandering near the trees, as they could eat chestnuts. Stricter fines will also be implemented towards people who cut down chestnut trees, or harm them in any way, even if accidentally.\n\nAlas, like with all laws, not everyone is happy about having to follow these restrictions, even if they’ll help the local economy by preventing damage to the trees."
+ VIETmisc.3053.a:0 "Go ahead. These new laws are good."
+ VIETmisc.3053.b:0 "I don’t think those laws are necessary."
+ VIETmisc.3053.info:0 "#emphasis Historical Context:#! Chestnuts were a popular source of food in medieval Europe, especially to make flour for bread. It was considered nutritious; John Evelyn, a 17th century English diarist, official, and gardener, claimed that chestnuts were "a lusty and masculine food for Rustics at all times" for instance. Laws for banning pigs from wandering near chestnut trees, or people from cutting them down, are attested in medieval Europe to protect chestnut trees. Chestnuts were important because in times of famine, or among the poor, they would be a valuable source of food. However, due to its association with poverty, chestnuts declined in popularity by the modern period."
+ # Version 1.11.2 Start Here - Note to Translators: please leave this comment here and do not remove it even in your versions of the loc
  VIETmisc.3054.t:0 "xxxxx"
  VIETmisc.3054.desc:0 "xxxxx"
  VIETmisc.3054.a:0 "xxxxx"

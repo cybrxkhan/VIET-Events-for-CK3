@@ -3125,6 +3125,67 @@ VIET_detected_fraud = {
 	scheme_discovery_chance_mult = 0.1
 }
 
+VIET_enjoys_acorns = {
+	icon = food_positive
+	monthly_prestige = 0.1
+	health = 0.1
+}
+
+VIET_overdosed_on_marking_nuts = {
+	icon = stress_negative
+	health = -0.3
+	diplomacy = -1
+	martial = -1
+	stewardship = -1
+	intrigue = -1
+	learning = -1
+}
+
+VIET_almonds_court_modifier = {
+	icon = feast_positive
+	diplomacy = 1
+	#stress_loss_mult = 0.1
+	monthly_prestige = 0.15
+	monthly_court_grandeur_change_add = 0.2
+	monthly_income = -0.2
+}
+
+VIET_snacking_on_nuts = {
+	icon = food_positive
+	stress_gain_mult = -0.15
+	negate_health_penalty_add = 0.1
+}
+
+VIET_almond_milk_enjoyer = {
+	icon = food_positive
+	monthly_piety = 0.2
+	stress_loss_mult = 0.1
+	monthly_income = -0.2
+}
+
+VIET_plant_milk = {
+	icon = food_positive
+	monthly_piety = 0.1
+	stress_loss_mult = 0.05
+	monthly_income = -0.1
+}
+
+VIET_no_sympathy_servants = {
+	icon = family_negative
+	monthly_piety = 0.1
+	stress_loss_mult = 0.05
+}
+
+VIET_no_sympathy_servants = {
+	icon = family_negative
+	county_opinion_add = -5
+}
+
+VIET_sympathy_servants = {
+	icon = family_positive	
+	county_opinion_add = 5
+}
+
 
 
 
