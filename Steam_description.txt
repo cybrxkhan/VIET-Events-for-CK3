@@ -1,6 +1,6 @@
-[img]https://i.imgur.com/qyhwEls.jpg[/img]
+[img]https://i.imgur.com/IR0i4Kh.jpg[/img]
 
-[h1]Current Version: 1.11.0 "Qanat" (Released 11/11/23, Compatible with vanilla patch 1.11.X)[/h1]
+[h1]Current Version: 1.11.1 "Chestnuts" (Released 12/25/23, Compatible with vanilla patch 1.11.X)[/h1]
 
 [h1][B][url=https://discord.gg/9KuyXv2uZA]Discord Server for my mods[/url]
 [url=https://cybrxkhansmods.godaddysites.com/]Official Website for my mods[/url][/B][/h1]
@@ -25,7 +25,7 @@ Feel free to use my work in your mods - all I ask is that I am credited and (if 
 [img]http://i.imgur.com/EyXurbK.jpg[/img]
 
 [LIST]
-[*]Over [B][U]1074[/U] new flavor events[/B] to experience!
+[*]Over [B][U]1081[/U] new flavor events[/B] to experience!
 [*]Explore new decisions, artifacts, character interactions, activities, and more!
 [*]Game rule to disable sillier events for those who don't like them, with three levels to choose from: Balanced (Default), Serious (Restricted), and All Events (Full)
 [*][B]Compatible with almost anything[/B] since it doesn't touch any vanilla files - even with overhaul mods, you can via game rule disable events that reference things specific to our medieval world that wouldn’t make sense in other time periods or universes (like fantasy/sci-fi conversion mods)
@@ -51,16 +51,15 @@ Please see the [url=https://cybrxkhansmods.godaddysites.com/faq]FAQ on my mods' 
 
 [img]http://i.imgur.com/RQ5QZTF.jpg[/img]
 
-[h1]Version 1.11.0 "Qanat"[/h1]
+[h1]Version 1.11.1 "Chestnuts"[/h1]
 
-[I]“Water is everywhere around you, but you see only barriers that keep you from water.”
-– Rumi (1207 - 1273 CE), Persian poet, scholar, Sufi mystic[/I]
+[I]“If you like the nut, crack it.”
+- Scottish proverb[/I]
 
-New events added in this version: [B]8[/B]
+New events added in this version: [B]7[/B]
 
 [LIST]
-[*]Added 8 water-themed events
-[*]Slightly reduced the chances of travel events
+[*]Added 7 nut flavor events
 [*]Miscellaneous bugfixes
 [/LIST]
 

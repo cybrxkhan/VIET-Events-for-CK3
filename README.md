@@ -1,11 +1,11 @@
 # VIET Events for CK3
 
-<img src="https://i.imgur.com/qyhwEls.jpg">
+<img src="https://i.imgur.com/IR0i4Kh.jpg">
 
-## Latest Version: 1.11.0 "Qanat" (Released 11/11/23)
+## Latest Version: 1.11.1 "Chestnuts" (Released 12/25/23)
 
-_“Water is everywhere around you, but you see only barriers that keep you from water.”_
-_– Rumi (1207 - 1273 CE), Persian poet, scholar, Sufi mystic_
+_“If you like the nut, crack it.”_
+_- Scottish proverb_
 
 Very Immersive Events and Tales (VIET), the sequel to VIET Events Reborn for CK2, is a flavor mod that adds a vast collection of events about everyday life to spice up your game. They add immersion and a diversity of experiences in between wars and vanilla’s event chains, and cover mundane minutiae ranging from small talk with courtiers and eating local cuisine to epic tales about love, philosophy, and the human condition. Some of the events unlock new decisions, character interactions, activities, and much more for you to explore!
 
@@ -15,7 +15,7 @@ Feel free to use my work in your mods - all I ask is that I am credited and (if 
 
 ## Features
 
-- Over **1074** new flavor events to experience!
+- Over **1081** new flavor events to experience!
 - Explore new decisions, artifacts, character interactions, activities, and more!
 - Game rule to disable sillier events for those who don't like them, with three levels to choose from: Balanced (Default), Serious (Restricted), and All Events (Full)
 - Compatible with almost anything since it doesn't touch any vanilla files - even with overhaul mods, you can via game rule disable events that reference things specific to our medieval world that wouldn’t make sense in other time periods or universes (like fantasy and sci-fi conversion mods)
@@ -39,12 +39,11 @@ The mod folder should look something like this:
 
 ## Changelog
 
-### Version 1.11.0
+### Version 1.11.1 "Chestnuts"
 
-New events added in this version: **8**
+New events added in this version: **7**
 
-- Added 8 water-themed events
-- Slightly reduced the chances of travel events
+- Added 7 nut flavor events
 - Miscellaneous bugfixes
 
 \* Adapted from VIET for CK2
