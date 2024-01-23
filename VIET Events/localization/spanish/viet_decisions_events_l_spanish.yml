@@ -208,7 +208,7 @@
  VIETmisc.2052.t:0 "Alimentación"
  VIETmisc.2052.desc:0 "Después de consultar con algunos eruditos versados en animales, decidí intentar alimentar a los cuervos. Hago que mis sirvientes recojan algunas bolsas llenas de semillas, nueces y sobras de comida sin terminar.\n\nUn día, cuando los cuervos pasaron, posados en un árbol no muy lejos de mi habitación, recogí las bolsas y salí a un pequeño trozo de tierra frente a ellos. Allí, silbé para llamar su atención antes de alcanzar la bolsa y tirar la comida al suelo. Los cuervos y yo nos miramos incómodos antes de irme para dejarlos en paz; unos minutos más tarde, desde mi habitación, vi a algunos descender en picado para comer la comida.\n\nEsto continuó durante varias semanas más, y me he dado cuenta... se siente uno bien, en realidad."
  VIETmisc.2052.a:0 "¡Esperemos que esto aplaque a estos cuervos!"
- VIETmisc.2052.b:0 "Estoy pensando en hacer aún más por ellos."
+ VIETmisc.2052.b_:0 "Estoy pensando en hacer aún más por ellos."
  VIETmisc.2052.tooltip.a:0 "Sigues alimentando a los cuervos. Con suerte, esto los convencerá de que te dejen en paz."
  VIETmisc.2052.tooltip.b:0 "Los cuervos no son tan malos, tal vez puedas encontrar una manera de ayudarlos aún más. Esto aumentará la probabilidad de que los cuervos te vean #P positivamente#!."
  VIETmisc.2053.t:0 "Un jardín para cuervos"

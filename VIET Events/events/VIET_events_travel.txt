@@ -22,6 +22,7 @@
 # 7001-7009		Generic
 # 7010-7019		Generic 2
 # 7020-7021		Water
+# 7022-7024		Desert
 # 
 ############################################################################################################################
 
@@ -37,7 +38,7 @@ VIETmisc.7001 = {
 	type = character_event
 	title = VIETmisc.7001.t
 	desc = VIETmisc.7001.desc
-	theme = travel
+	theme = travel_danger
 	override_background = { reference = VIET_background_skyrim_forest }
 	
 	left_portrait = {
@@ -1726,7 +1727,7 @@ VIETmisc.7016 = {
 	type = character_event
 	title = VIETmisc.7016.t
 	desc = VIETmisc.7016.desc
-	theme = travel
+	theme = travel_danger
 	override_background = { reference = VIET_background_tuscan_country }
 
 	
@@ -2057,7 +2058,7 @@ VIETmisc.7019 = {
 			culture = scope:location.culture
 			faith = scope:location.faith
 			gender_female_chance = 50
-			age = 28
+			age = { 16 60 }
 			save_scope_as = bard
 		}
 		scope:bard = {
@@ -2156,7 +2157,7 @@ VIETmisc.7020 = {
 	type = character_event
 	title = VIETmisc.7020.t
 	desc = VIETmisc.7020.desc
-	theme = travel
+	theme = travel_danger
 	override_background = { reference = VIET_background_skyrim_forest }
 
 	
@@ -2343,3 +2344,324 @@ VIETmisc.7021 = {
 	}
 
 }
+
+
+
+
+##################################################################
+# DESERT 7022-7024
+##################################################################
+
+
+# Encounter a mysterious desert girl
+VIETmisc.7022 = {
+	type = character_event
+	title = VIETmisc.7022.t
+	desc = VIETmisc.7022.desc
+	theme = travel_danger
+	override_background = { reference = VIET_background_skyrim_forest }
+
+	
+	right_portrait = {
+		character = root
+		animation = paranoia
+	}	
+
+	
+	lower_center_portrait = scope:trickster
+
+	trigger = {
+		is_location_valid_for_travel_event_on_land = yes
+		location = {
+			OR = {
+				terrain = desert
+				terrain = desert_mountains
+			}
+		}
+	}
+	
+	weight_multiplier = {
+		base = 1
+		modifier = {
+			add = 0.2
+			has_trait = impatient
+		}
+		modifier = {
+			add = -0.2
+			has_trait = patient
+		}
+		modifier = {
+			add = 0.2
+			has_trait = lustful
+		}
+		modifier = {
+			add = -0.2
+			has_trait = chaste
+		}
+		modifier = {
+			add = 0.2
+			has_trait = paranoid
+		}
+		modifier = {
+			add = -0.2
+			has_trait = trusting
+		}
+	}
+
+	immediate = {
+		root.location = {
+			save_scope_as = location
+		}
+		root.location.culture = {
+			save_scope_as = culture
+		}
+		create_character = {
+			location = scope:location
+			template = VIET_seductive_spirit_template
+			culture = scope:location.culture
+			faith = scope:location.faith
+			save_scope_as = trickster
+		}		
+		hidden_effect = {
+			scope:trickster = {
+				death = {
+					death_reason = death_vanished
+				}
+			}
+		}
+	}
+	
+	option = { # ok
+		name = VIETmisc.7022.a	
+		custom_tooltip = VIETmisc.7022.tooltip
+		current_travel_plan = {
+			#delay_travel_plan = { days = 1 }
+			add_travel_plan_modifier = {
+				modifier = VIET_seductive_mirage_travel_plan
+	 			years = 1
+			}
+			every_entourage_character = {
+
+				custom = every_entourage_tt
+
+				limit = {
+					# NOR = {
+					# 	has_sexuality = asexual
+					# 	has_sexuality = homosexual
+					# 	#has_trait = chaste
+					# 	has_trait = celibate
+					# }
+				}
+
+				stress_impact = {
+					base = miniscule_stress_impact_gain
+					lustful = miniscule_stress_impact_gain
+					paranoid = miniscule_stress_impact_gain
+					craven = miniscule_stress_impact_gain
+				}
+
+			# 	add_character_modifier = {
+			# 		modifier = VIET_seductive_mirage
+			# 		years = 5
+			# 	}
+
+			}
+		}
+		
+	}
+
+}
+
+
+# Find remains of travelers in the desert
+VIETmisc.7023 = {
+	type = character_event
+	title = VIETmisc.7023.t
+	desc = VIETmisc.7023.desc
+	theme = travel_danger
+	override_background = { reference = VIET_background_tuscan_country }
+
+	
+	right_portrait = {
+		character = root
+		animation = personality_honorable
+	}	
+
+	trigger = {
+		is_location_valid_for_travel_event_on_land = yes
+		location = {
+			OR = {
+				terrain = desert
+				terrain = desert_mountains
+			}
+		}
+	}
+	
+	weight_multiplier = {
+		base = 1
+		modifier = {
+			add = 0.2
+			has_trait = patient
+		}
+		modifier = {
+			add = -0.2
+			has_trait = impatient
+		}
+		modifier = {
+			add = 0.2
+			has_trait = brave
+		}
+		modifier = {
+			add = -0.2
+			has_trait = craven
+		}
+		modifier = {
+			add = 0.2
+			has_trait = trusting
+		}
+		modifier = {
+			add = -0.2
+			has_trait = paranoid
+		}
+	}
+	
+	option = { # ok
+		name = VIETmisc.7023.a	
+		
+	}
+	
+	option = { # ok
+		name = VIETmisc.7023.b	
+		trigger = {
+			OR = {
+				gold >= 10
+				is_ai = no
+			}
+		}
+		remove_short_term_gold = 10
+		VIET_huge_prestige_gain_effect = yes
+		current_travel_plan = {
+			delay_travel_plan = { days = 3 }
+		}		
+		if = {
+			limit = {
+				OR = {
+					has_trait = zealous
+					has_trait = compassionate
+					has_trait = generous
+				}
+			}
+			stress_impact = {
+				zealous = minor_stress_impact_loss
+				compassionate = minor_stress_impact_loss
+				generous = minor_stress_impact_loss
+			}
+		}
+		else = {
+			stress_impact = {
+				cynical = minor_stress_impact_gain
+				arrogant = minor_stress_impact_gain
+				callous = minor_stress_impact_gain
+			}
+		}
+	}
+
+}
+
+
+
+# Think you are at a mirage, but it's a real oasis
+VIETmisc.7024 = {
+	type = character_event
+	title = VIETmisc.7024.t
+	desc = VIETmisc.7024.desc
+	theme = travel_danger
+	override_background = { reference = VIET_background_tuscan_country }
+
+	
+	left_portrait = {
+		character = root
+		animation = laugh
+	}	
+	
+	right_portrait = {
+		character = scope:person
+		animation = eyeroll
+	}	
+
+	trigger = {
+		is_location_valid_for_travel_event_on_land = yes
+		location = {
+			OR = {
+				terrain = desert
+				terrain = desert_mountains
+			}
+		}
+		current_travel_plan = {
+			any_entourage_character = {	
+				is_available_travelling = yes
+			}
+		}
+	}
+	
+	weight_multiplier = {
+		base = 1
+		modifier = {
+			add = 0.2
+			has_trait = paranoid
+		}
+		modifier = {
+			add = -0.2
+			has_trait = trusting
+		}
+		modifier = {
+			add = 0.2
+			has_trait = diligent
+		}
+		modifier = {
+			add = -0.2
+			has_trait = lazy
+		}
+		modifier = {
+			add = 0.2
+			has_trait = stubborn
+		}
+		modifier = {
+			add = -0.2
+			has_trait = fickle
+		}
+	}
+
+	immediate = {
+		current_travel_plan = {
+			random_entourage_character = {
+				limit = {
+					is_available_travelling = yes
+				}
+				save_scope_as = person
+			}	
+			add_travel_plan_modifier = {
+				modifier = VIET_lush_oasis_stop
+			}
+		}	
+	}
+	
+	option = { # ok
+		name = VIETmisc.7024.a	
+		current_travel_plan = {
+			every_entourage_character = {
+				custom = every_entourage_tt
+				stress_impact = {
+					base = miniscule_stress_impact_loss
+					lazy = minor_stress_impact_loss
+					content = minor_stress_impact_loss
+				}
+
+			}
+		}		
+	}
+
+
+}
+
+

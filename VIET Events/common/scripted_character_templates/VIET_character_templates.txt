@@ -937,3 +937,17 @@ VIET_feisty_young_maid_template = {
 		}
 	}
 }
+
+
+VIET_seductive_spirit_template = {
+	age = { 16 32 }
+	gender_female_chance = 100
+	trait = beauty_good_3
+	dynasty = none
+	random_traits = yes
+	after_creation = {
+		VIET_ek_character_setup_effect = yes
+	}
+}
+
+

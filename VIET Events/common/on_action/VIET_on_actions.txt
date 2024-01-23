@@ -1550,8 +1550,10 @@ VIET_events_uncommon_county_pulse = {
 		100 = VIETmisc.3052 	# Floods caused by garbage
 		# Nuts
 		100 = VIETmisc.3053 	# New laws concerning chestnut trees?
+		# Desert
+		100 = VIETmisc.3054 	# Desert ascetics become popular
 		
-		# 29
+		# 30
 		
     }
 }
@@ -1626,8 +1628,10 @@ VIET_events_rare_county_pulse = {
 		100 = VIETmisc.3044		# Local academy is pillaged by brigands
 		# Astronomy
 		100 = VIETmisc.3046		# Local scholar claims the apocalypse will happen in this county soon
+		# Desert
+		100 = VIETmisc.3055 	# Singing/booming sand dunes
 		
-		# 17
+		# 18
 		
     }
 }

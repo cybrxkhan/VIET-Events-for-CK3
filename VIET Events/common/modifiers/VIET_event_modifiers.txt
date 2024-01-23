@@ -3172,8 +3172,8 @@ VIET_plant_milk = {
 
 VIET_no_sympathy_servants = {
 	icon = family_negative
-	monthly_piety = 0.1
-	stress_loss_mult = 0.05
+	monthly_piety = -0.1
+	stress_loss_mult = -0.05
 }
 
 VIET_no_sympathy_servants = {
@@ -3184,6 +3184,34 @@ VIET_no_sympathy_servants = {
 VIET_sympathy_servants = {
 	icon = family_positive	
 	county_opinion_add = 5
+}
+
+# VIET_seductive_mirage = {
+# 	icon = stress_negative
+# 	stress_loss_mult = -0.03
+# }
+
+VIET_seductive_mirage_travel_plan = {
+	icon = stress_negative	
+	travel_speed = -5
+	travel_safety = -1	
+}
+
+VIET_lush_oasis_stop = {
+	icon = fertility_positive
+	travel_safety = 2
+}
+
+VIET_learning_about_old_world_cactus = {
+	icon = fertility_positive
+	learning = 1
+}
+
+VIET_benevolent_jinn_encounter = {
+	icon = magic_positive
+	monthly_prestige = 0.1
+	monthly_piety = 0.1
+	hostile_scheme_resistance_mult = 0.03
 }
 
 

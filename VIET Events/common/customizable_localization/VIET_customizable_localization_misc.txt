@@ -25,3 +25,27 @@ VIETGrandparentPossessive = {
 		localization_key = relation_grandfather_possessive
 	}
 }
+
+VIET_old_cactus_name = {
+	type = character
+
+	text = {
+		# Tropical West Africa
+		trigger = {
+			capital_province = {
+				geographical_region = ghw_region_subsahelian_africa
+			}				
+		}
+		localization_key = VIET_old_world_cactus_name_west_africa
+	}
+
+	text = {
+		trigger = {
+			capital_province = {
+				geographical_region = custom_lanka
+			}				
+		}
+		localization_key = VIET_old_world_cactus_name_sri_lanka
+		fallback = yes
+	}
+}

@@ -2919,7 +2919,7 @@ VIETmisc.2052 = {
 	}
 	
 	option = { # Ok
-		name = VIETmisc.2052.b
+		name = VIETmisc.2052.b_
 		trigger = {
 			OR = {
 				is_ai = no

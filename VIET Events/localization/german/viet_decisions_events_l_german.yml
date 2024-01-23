@@ -208,7 +208,7 @@
  VIETmisc.2052.t:0 "Feeding"
  VIETmisc.2052.desc:0 "After consulting with some scholars well-versed in animals, I decided to try feeding the crows. I have my servants gather a few bags filled with seeds, nuts, and leftover scraps of food from unfinished meals.\n\nWhen the crows came by one day, perched on a tree not too far from my room, I gathered the bags and walked outside into a small patch of dirt in front of them. There, I whistled to get their attention before reaching into the bag and tossing the food onto the ground. The crows and I stared at each other awkwardly, before I left to let them be; a few minutes later, from my room, I saw a few swoop down to eat the food.\n\nThis went on for several more weeks, and I’ve come to realize… it feels nice, actually."
  VIETmisc.2052.a:0 "Hopefully this will placate these crows!"
- VIETmisc.2052.b:0 "I am thinking of doing even more for them."
+ VIETmisc.2052.b_:0 "I am thinking of doing even more for them."
  VIETmisc.2052.tooltip.a:0 "You continue feeding the crows. Hopefully this will convince them to leave you alone."
  VIETmisc.2052.tooltip.b:0 "The crows aren’t so bad - maybe you can find a way to help them out even more. This will increase the likelihood the crows view you #P positively#!."
  VIETmisc.2053.t:0 "A Garden for Crows"

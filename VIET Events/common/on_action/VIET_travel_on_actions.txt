@@ -76,8 +76,10 @@ VIET_travel_events_common = {
 		100 = VIETmisc.7016		# Muddy roads
 		# Water
 		100 = VIETmisc.7021		# Come across water after a hard day of traveling
+		# Desert
+		100 = VIETmisc.7022		# Find remains of travelers in the desert
 
-		# 9
+		# 10
 	}
 }
 
@@ -137,8 +139,9 @@ VIET_travel_events_uncommon = {
 		100 = VIETmisc.7019		# Encounter a traveling bard
 		# Water
 		100 = VIETmisc.7020		# Traveler drinks bad water
+		100 = VIETmisc.7024		# Think you are at a mirage, but it's a real oasis
 
-		# 6
+		# 7
 	}
 }
 
@@ -196,9 +199,11 @@ VIET_travel_events_rare = {
 		100 = VIETmisc.7010		# Servant passes away
 		100 = VIETmisc.7014		# Two characters are arguing
 		100 = VIETmisc.7015		# Two characters become friends
-		100 = VIETmisc.7018		# Village is having a wedding
+		100 = VIETmisc.7018		# Village is having a wedding 
+		# Desert
+		100 = VIETmisc.7022		# Encounter a mysterious desert girl
 
-		# 6
+		# 7
 	}
 }
 

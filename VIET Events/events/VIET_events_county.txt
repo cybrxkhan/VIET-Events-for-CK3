@@ -34,6 +34,7 @@
 # 3046-3050		Astronomy
 # 3051-3052		Water
 # 3053			Nuts
+# 3054-3055		Desert
 # 
 ############################################################################################################################
 
@@ -3403,7 +3404,9 @@ VIETmisc.3033 = {
 		modifier = {
 			add = {
 				every_held_title = {
-					limit = { tier = tier_county }
+					limit = {
+						tier = tier_county
+					}
 					add = 1
 				}
 			}		
@@ -5119,6 +5122,268 @@ VIETmisc.3053 = {
 				has_game_rule = VIET_historical_context_on
 			}
 			custom_tooltip = VIETmisc.3053.info
+		}
+	}
+}
+
+
+
+
+
+##################################################################
+# Desert 3054-3055
+##################################################################
+
+
+# Desert ascetics become popular
+VIETmisc.3054 = {
+	type = character_event
+	title = VIETmisc.3054.t
+	desc = VIETmisc.3054.desc
+	theme = faith
+	override_background = { event_background = ep2_travel_settlement_desert }
+	
+	right_portrait = root
+
+	trigger = {
+		any_held_title = {
+			tier = tier_county
+			any_county_province = {
+				OR = {
+					terrain = desert
+					terrain = desert_mountains
+				}			
+			}
+		}	
+	}
+	
+    weight_multiplier = {
+        base = 0
+		modifier = {
+			add = {
+				every_held_title = {
+					limit = { tier = tier_county }
+					add = 1
+				}
+			}		
+		}			
+    }
+	
+	immediate = {
+		random_held_title = {
+			limit = {
+				tier = tier_county
+				any_county_province = {
+					OR = {
+						terrain = desert
+						terrain = desert_mountains
+					}			
+				}
+			}	
+			save_scope_as = county
+			add_county_modifier = {
+				modifier = VIET_desert_ascetics
+				years = 20
+			}
+		}
+		scope:county.faith = {
+			save_scope_as = faith
+		}
+	}
+
+	# Ok
+	option = {
+		name = VIETmisc.3054.a
+		if = {
+			limit = {
+				faith = scope:faith
+			}
+			VIET_huge_piety_gain_effect = yes
+		}
+		else = {
+			VIET_huge_prestige_gain_effect = yes
+			stress_impact = {
+				zealous = minor_stress_impact_gain
+			}
+		}
+		stress_impact = {
+			greedy = miniscule_stress_impact_gain
+			arrogant = miniscule_stress_impact_gain
+		}
+		scope:county = {
+			add_county_modifier = {
+				modifier = VIET_protected_desert_ascetics
+				years = 20
+			}	
+		}
+	}
+	# Ok
+	option = {
+		name = VIETmisc.3054.b
+		if = {
+			limit = {
+				faith = scope:faith
+			}
+			VIET_huge_piety_gain_effect = yes
+			VIET_huge_prestige_gain_effect = yes
+		}
+		else = {
+			VIET_huge_prestige_gain_effect = yes
+			stress_impact = {
+				zealous = minor_stress_impact_gain
+			}
+		}
+		stress_impact = {
+			greedy = miniscule_stress_impact_gain
+			arrogant = miniscule_stress_impact_gain
+		}
+		scope:county = {
+			remove_county_modifier = VIET_desert_ascetics
+			add_county_modifier = {
+				modifier = VIET_expanded_ascetics_retreat
+				years = 20
+			}	
+		}
+	}
+	# Ok
+	option = {
+		name = VIETmisc.3054.c
+		trigger = {
+			NOT = { faith = scope:faith }
+		}
+		if = {
+			limit = {
+				faith = scope:faith
+			}
+			VIET_huge_piety_gain_effect = yes
+			VIET_huge_prestige_gain_effect = yes
+		}
+		else = {
+			VIET_huge_prestige_gain_effect = yes
+		}
+		add_gold = { 25 50 }
+		stress_impact = {
+			just = minor_stress_impact_gain
+			generous = miniscule_stress_impact_gain
+			compassionate = miniscule_stress_impact_gain
+			humble = miniscule_stress_impact_gain
+		}
+		scope:county = {
+			remove_county_modifier = VIET_desert_ascetics
+			add_county_modifier = {
+				modifier = VIET_persecuted_desert_ascetics
+				years = 20
+			}	
+		}
+	}
+	# Ok
+	option = {
+		name = VIETmisc.3054.d
+		if = {
+			limit = {
+				faith = scope:faith
+			}
+			stress_impact = {
+				zealous = minor_stress_impact_gain
+				generous = miniscule_stress_impact_gain
+			}
+		}
+	}
+
+
+}
+
+
+
+
+# Singing/booming sand dunes
+VIETmisc.3055 = {
+	type = character_event
+	title = VIETmisc.3055.t
+	desc = VIETmisc.3055.desc
+	theme = faith
+	override_background = { event_background = ep2_travel_settlement_desert }
+	
+	right_portrait = root
+
+	trigger = {
+		any_held_title = {
+			tier = tier_county
+			any_county_province = {
+				OR = {
+					terrain = desert
+					terrain = desert_mountains
+				}			
+			}
+		}	
+	}
+	
+    weight_multiplier = {
+        base = 0
+		modifier = {
+			add = {
+				every_held_title = {
+					limit = { tier = tier_county }
+					add = 1
+				}
+			}		
+		}			
+    }
+	
+	immediate = {
+		random_held_title = {
+			limit = {
+				tier = tier_county
+				any_county_province = {
+					OR = {
+						terrain = desert
+						terrain = desert_mountains
+					}			
+				}
+			}	
+			save_scope_as = county
+		}
+	}
+
+	# Ok
+	option = {
+		name = VIETmisc.3055.a
+		random_list = {
+			50 = {
+				send_interface_toast = {
+					left_icon = ROOT
+					type = event_toast_effect_bad
+					title = VIETmisc.3055.bad
+					scope:county = {
+						add_county_modifier = {
+							modifier = VIET_sand_dunes_bad
+							years = 25
+						}	
+					}
+				}
+			}
+			50 = {
+				send_interface_toast = {
+					left_icon = ROOT
+					type = event_toast_effect_good
+					title = VIETmisc.3055.good
+					scope:county = {
+						add_county_modifier = {
+							modifier = VIET_sand_dunes_good
+							years = 25
+						}	
+					}
+				}
+			}
+		}
+	}
+
+	after = {			
+		if = {
+			limit = {
+				has_game_rule = VIET_historical_context_on
+			}
+			custom_tooltip = VIETmisc.3055.info
 		}
 	}
 }

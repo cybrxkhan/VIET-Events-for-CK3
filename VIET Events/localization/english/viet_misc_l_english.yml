@@ -71,6 +71,11 @@
  game_concept_clutter_artifacts:0 "Clutter Artifacts"
  game_concept_clutter_artifact_desc:0 "$game_concept_clutter_artifacts$ are a type of [inventory_artifact|E] introduced by the VIET mod that are often found through occasional events. They represent miscellaneous, everyday items a [character|E] is currently either using often in their life, are very fond of, or which others strongly associate with them.\n\nWhile there is no limit to the number you could theoretically own, the likelihood of encountering them is #X decreased#! noticeably if you already own a few - carefully consider which ones you feel are important to you and your character's lifestyle!"
 
+ # Custom Loc
+ VIET_old_world_cactus_name_sri_lanka:0 "nawahandi"
+ VIET_old_world_cactus_name_west_africa:0 "igilligilli"
+
+ # Events
  VIETintro.0011.t:0 "The Journey Begins"
  VIETintro.0011.desc:0 "It is time to start the journey to [ROOT.Char.GetTravelPlan.GetData.GetNextDestination.GetProvince.GetName] for the [ROOT.Char.GetInvolvedActivity.GetShortName]. I am sure the headache and hassle of organizing this trip will be worth it in the end when we reach our destination... or at least I'll have to hope that is the case, because otherwise all this stress over preparing for the trip would have been for nothing."
  VIETintro.0011.a:0 "We go through these hassles for a good reason."

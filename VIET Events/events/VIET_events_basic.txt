@@ -56,6 +56,7 @@
 # 0314-0319		Astronomy
 # 0320-0323		Water
 # 0324-0328		Nuts
+# 0329-0332		Desert
 # 
 ############################################################################################################################
 
@@ -30901,3 +30902,342 @@ VIETmisc.0328 = {
 }
 
 
+##################################################################
+# Desert 0329-0330
+##################################################################
+
+
+# There is *one* cactus species in the new world, surprisingly!
+VIETmisc.0329 = {
+	type = character_event
+	title = VIETmisc.0329.t
+	desc = VIETmisc.0329.desc
+	theme = VIET_theme_garden_generic # VIET_theme_courtyard_generic
+
+	
+	left_portrait = {
+		character = root
+		animation = thinking
+	}
+	right_portrait = {
+		character = scope:gardener
+		animation = happiness
+	}
+
+
+	trigger = {
+		capital_province = {
+			OR = {
+				geographical_region = ghw_region_subsahelian_africa
+				geographical_region = custom_lanka
+			}
+		}
+		
+		OR = {
+			any_courtier_or_guest = {
+				is_available_ai_adult = yes
+				OR = {
+					learning >= decent_skill_rating
+					has_trait = scholar
+					has_trait = lifestyle_gardener
+					has_trait = education_learning_3
+					has_trait = education_learning_4
+				}
+			}
+			any_vassal = {
+				is_available_ai_adult = yes
+				OR = {
+					learning >= decent_skill_rating
+					has_trait = scholar
+					has_trait = lifestyle_gardener
+					has_trait = education_learning_3
+					has_trait = education_learning_4
+				}
+			}
+		}
+	}
+	
+	weight_multiplier = {
+		base = 1
+		modifier = {
+			add = 0.2
+			has_trait = fickle
+		}
+		modifier = {
+			add = -0.2
+			has_trait = stubborn
+		}
+		modifier = {
+			add = 0.2
+			has_trait = gregarious
+		}
+		modifier = {
+			add = -0.2
+			has_trait = shy
+		}
+		modifier = {
+			add = 0.2
+			has_trait = ambitious
+		}
+		modifier = {
+			add = -0.2
+			has_trait = content
+		}
+	}
+
+	immediate = {
+		every_courtier_or_guest = {
+			limit = {
+				is_available_ai_adult = yes
+				OR = {
+					learning >= decent_skill_rating
+					has_trait = scholar
+					has_trait = lifestyle_gardener
+					has_trait = education_learning_3
+					has_trait = education_learning_4
+				}
+			}
+			add_to_list = gardener_characters
+		}
+		every_vassal = {
+			limit = {
+				is_available_ai_adult = yes
+				OR = {
+					learning >= decent_skill_rating
+					has_trait = scholar
+					has_trait = lifestyle_gardener
+					has_trait = education_learning_3
+					has_trait = education_learning_4
+				}
+			}
+			add_to_list = gardener_characters
+		}
+		random_in_list = {
+			list = gardener_characters
+			save_scope_as = gardener
+		}
+	}
+
+	
+	option = { # ok
+		name = VIETmisc.0329.a
+		stress_impact = {
+			base = minor_stress_impact_loss
+		}
+	}
+	
+	option = { # ok
+		name = VIETmisc.0329.b
+		add_character_modifier = {
+			modifier = VIET_learning_about_old_world_cactus
+			years = 5
+		}
+		stress_impact = {
+			lazy = miniscule_stress_impact_gain
+			impatient = miniscule_stress_impact_gain
+			callous = miniscule_stress_impact_gain
+		}
+	}
+
+	after = {
+		scope:gardener = {
+			add_character_modifier = {
+				modifier = VIET_impressed_others_with_knowledge
+				days = 365
+			}
+		}
+		if = {
+			limit = {
+				has_game_rule = VIET_historical_context_on
+			}
+			custom_tooltip = VIETmisc.0329.info
+		}
+
+	}
+	
+
+
+}
+
+# Courtier claims to have helped a snake that turned out to be a genie
+VIETmisc.0330 = {
+	type = character_event
+	title = VIETmisc.0330.t
+	desc = VIETmisc.0330.desc
+	theme = memory_positive
+	override_background = { event_background = VIET_background_tuscan_country }
+	
+	left_portrait = {
+		character = root
+		animation = happiness
+	}
+	
+	trigger = {
+		# capital_province = {
+		# 	OR = {
+		# 		terrain = desert
+		# 		terrain = desert_mountains
+		# 	}
+		# }
+		OR = {
+			religion = religion:islam_religion
+			culture = { has_cultural_pillar = heritage_berber }
+			culture = { has_cultural_pillar = heritage_arabic }
+			culture = { has_cultural_pillar = heritage_iranian }
+		}
+		OR = {
+			any_courtier_or_guest = {
+				is_available_ai_adult = yes
+				OR = {
+					has_trait = compassionate
+					has_trait = generous
+					has_trait = just
+				}
+				NOT = { has_trait = sadistic }
+				NOT = { has_trait = callous }
+				NOT = { has_trait = arbitrary }
+				OR = {
+					religion = religion:islam_religion
+					culture = { has_cultural_pillar = heritage_berber }
+					culture = { has_cultural_pillar = heritage_arabic }
+					culture = { has_cultural_pillar = heritage_iranian }
+				}
+			}
+			any_vassal = {
+				is_available_ai_adult = yes
+				OR = {
+					has_trait = compassionate
+					has_trait = generous
+					has_trait = just
+				}
+				NOT = { has_trait = sadistic }
+				NOT = { has_trait = callous }
+				NOT = { has_trait = arbitrary }
+				OR = {
+					religion = religion:islam_religion
+					culture = { has_cultural_pillar = heritage_berber }
+					culture = { has_cultural_pillar = heritage_arabic }
+					culture = { has_cultural_pillar = heritage_iranian }
+				}
+			}
+		}
+	}
+	
+	weight_multiplier = {
+		base = 1
+		modifier = {
+			add = 0.2
+			has_trait = fickle
+		}
+		modifier = {
+			add = -0.2
+			has_trait = stubborn
+		}
+		modifier = {
+			add = 0.2
+			has_trait = gregarious
+		}
+		modifier = {
+			add = -0.2
+			has_trait = shy
+		}
+		modifier = {
+			add = 0.2
+			has_trait = ambitious
+		}
+		modifier = {
+			add = -0.2
+			has_trait = content
+		}
+	}
+
+	immediate = {
+		every_courtier_or_guest = {
+			limit = {
+				is_available_ai_adult = yes
+				OR = {
+					has_trait = compassionate
+					has_trait = generous
+					has_trait = just
+				}
+				NOT = { has_trait = sadistic }
+				NOT = { has_trait = callous }
+				NOT = { has_trait = arbitrary }
+				OR = {
+					religion = religion:islam_religion
+					culture = { has_cultural_pillar = heritage_berber }
+					culture = { has_cultural_pillar = heritage_arabic }
+					culture = { has_cultural_pillar = heritage_iranian }
+				}
+			}
+			add_to_list = kind_candidates
+		}
+		every_vassal = {
+			limit = {
+				is_available_ai_adult = yes
+				OR = {
+					has_trait = compassionate
+					has_trait = generous
+					has_trait = just
+				}
+				NOT = { has_trait = sadistic }
+				NOT = { has_trait = callous }
+				NOT = { has_trait = arbitrary }
+				OR = {
+					religion = religion:islam_religion
+					culture = { has_cultural_pillar = heritage_berber }
+					culture = { has_cultural_pillar = heritage_arabic }
+					culture = { has_cultural_pillar = heritage_iranian }
+				}
+			}
+			add_to_list = kind_candidates
+		}
+		random_in_list = {
+			list = kind_candidates
+			weight = {
+				base = 10
+				modifier = {
+					has_trait = compassionate
+					add = 10
+				}
+			}
+			add_character_modifier = {
+				modifier = VIET_benevolent_jinn_encounter
+				years = 25
+			}
+			save_scope_as = kind
+		}
+	}
+
+	
+	option = { # Okay
+		name = VIETmisc.0330.a
+		add_character_modifier = {
+			modifier = VIET_heard_fantasy_stories
+			years = 3
+		}
+		stress_impact = {
+			cynical = minor_stress_impact_gain
+		}
+	}	
+	
+	option = { # Okay
+		name = VIETmisc.0330.b
+		add_character_modifier = {
+			modifier = VIET_skeptical_about_fantasy_stories
+			years = 3
+		}
+		stress_impact = {
+			zealous = minor_stress_impact_gain
+		}
+	}	
+
+	after = {		
+		if = {
+			limit = {
+				has_game_rule = VIET_historical_context_on
+			}
+			custom_tooltip = VIETmisc.0330.info
+		}
+	}
+}

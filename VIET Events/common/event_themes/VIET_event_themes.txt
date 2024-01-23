@@ -219,3 +219,16 @@ VIET_theme_office = {
 		reference = study
 	}
 }
+
+
+VIET_theme_courtyard_generic = { 
+	icon = {
+		reference = "gfx/interface/icons/event_types/type_love.dds"
+	}
+	sound = {
+		reference = "event:/SFX/Events/Themes/sfx_event_theme_type_activity"
+	}
+	background = {
+		reference = bp2_courtyard
+	}
+}

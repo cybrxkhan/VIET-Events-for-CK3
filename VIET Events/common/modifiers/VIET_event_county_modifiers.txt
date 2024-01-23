@@ -875,6 +875,41 @@ VIET_chestnut_tree_laws = {
 	tax_mult = 0.01
 }
 
+VIET_sand_dunes_bad = {
+	icon = rock_negative
+	travel_danger = 2
+	development_growth_factor = -0.01
+}
+
+VIET_sand_dunes_good = {
+	icon = rock_positive
+	travel_danger = -2
+	development_growth_factor = 0.01
+}
+
+VIET_desert_ascetics = {
+	icon = piety_positive
+	development_growth = 0.025
+	county_opinion_add = 2
+}
+
+VIET_expanded_ascetics_retreat = {
+	icon = piety_positive
+	development_growth = 0.1
+	county_opinion_add = 8
+}
+
+VIET_protected_desert_ascetics = {
+	icon = piety_positive
+	travel_danger = -2
+	monthly_county_control_change_add = 0.1
+}
+
+VIET_persecuted_desert_ascetics = {
+	icon = dread_negative
+	county_opinion_add = -5
+}
+
 
 
 
