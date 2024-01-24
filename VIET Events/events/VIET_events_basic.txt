@@ -31024,6 +31024,12 @@ VIETmisc.0329 = {
 		stress_impact = {
 			base = minor_stress_impact_loss
 		}
+		scope:gardener = {
+			add_character_modifier = {
+				modifier = VIET_impressed_others_with_knowledge
+				days = 365
+			}
+		}
 	}
 	
 	option = { # ok
@@ -31037,15 +31043,15 @@ VIETmisc.0329 = {
 			impatient = miniscule_stress_impact_gain
 			callous = miniscule_stress_impact_gain
 		}
-	}
-
-	after = {
 		scope:gardener = {
 			add_character_modifier = {
 				modifier = VIET_impressed_others_with_knowledge
 				days = 365
 			}
 		}
+	}
+
+	after = {
 		if = {
 			limit = {
 				has_game_rule = VIET_historical_context_on
@@ -31065,10 +31071,15 @@ VIETmisc.0330 = {
 	title = VIETmisc.0330.t
 	desc = VIETmisc.0330.desc
 	theme = memory_positive
-	override_background = { event_background = VIET_background_tuscan_country }
+	override_background = { reference = VIET_background_desert_frontier }
 	
 	left_portrait = {
 		character = root
+		animation = thinking
+	}
+	
+	right_portrait = {
+		character = scope:kind
 		animation = happiness
 	}
 	

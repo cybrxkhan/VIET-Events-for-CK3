@@ -5141,7 +5141,7 @@ VIETmisc.3054 = {
 	title = VIETmisc.3054.t
 	desc = VIETmisc.3054.desc
 	theme = faith
-	override_background = { event_background = ep2_travel_settlement_desert }
+	override_background = { reference = VIET_background_desert_frontier }
 	
 	right_portrait = root
 
@@ -5301,10 +5301,12 @@ VIETmisc.3055 = {
 	type = character_event
 	title = VIETmisc.3055.t
 	desc = VIETmisc.3055.desc
-	theme = faith
-	override_background = { event_background = ep2_travel_settlement_desert }
+	theme = VIET_theme_desert_frontier
 	
-	right_portrait = root
+	right_portrait = {
+		character = root
+		animation = shock
+	}
 
 	trigger = {
 		any_held_title = {

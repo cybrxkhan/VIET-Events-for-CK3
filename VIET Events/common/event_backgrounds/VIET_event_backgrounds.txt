@@ -8,6 +8,7 @@
 # VIET_background_scarborough_fair
 # VIET_background_lord_huron_strange_trails
 # VIET_background_oblivion_prison_sewer
+# VIET_background_desert_frontier
 
 
 ### OBLIVION PASTORAL ###
@@ -773,4 +774,12 @@ VIET_background_wedding = {
 	}
 }
 
+### DESERT FRONTIER ###
+VIET_background_desert_frontier = {
+	background = {
+		reference = "gfx/interface/illustrations/event_scenes/VIET_desert_frontier.dds"
+		environment = "environment_event_desert"
+		ambience = "event:/SFX/Events/Backgrounds/desert_day"
+	}
+}
 

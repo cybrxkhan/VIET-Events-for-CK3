@@ -2359,7 +2359,7 @@ VIETmisc.7022 = {
 	title = VIETmisc.7022.t
 	desc = VIETmisc.7022.desc
 	theme = travel_danger
-	override_background = { reference = VIET_background_skyrim_forest }
+	override_background = { reference = VIET_background_desert_frontier }
 
 	
 	right_portrait = {
@@ -2434,6 +2434,12 @@ VIETmisc.7022 = {
 	option = { # ok
 		name = VIETmisc.7022.a	
 		custom_tooltip = VIETmisc.7022.tooltip
+		stress_impact = {
+			base = miniscule_stress_impact_gain
+			lustful = miniscule_stress_impact_gain
+			paranoid = miniscule_stress_impact_gain
+			craven = miniscule_stress_impact_gain
+		}
 		current_travel_plan = {
 			#delay_travel_plan = { days = 1 }
 			add_travel_plan_modifier = {
@@ -2479,7 +2485,7 @@ VIETmisc.7023 = {
 	title = VIETmisc.7023.t
 	desc = VIETmisc.7023.desc
 	theme = travel_danger
-	override_background = { reference = VIET_background_tuscan_country }
+	override_background = { reference = VIET_background_desert_frontier }
 
 	
 	right_portrait = {
@@ -2539,7 +2545,7 @@ VIETmisc.7023 = {
 			}
 		}
 		remove_short_term_gold = 10
-		VIET_huge_prestige_gain_effect = yes
+		VIET_huge_piety_gain_effect = yes
 		current_travel_plan = {
 			delay_travel_plan = { days = 3 }
 		}		
@@ -2576,7 +2582,7 @@ VIETmisc.7024 = {
 	title = VIETmisc.7024.t
 	desc = VIETmisc.7024.desc
 	theme = travel_danger
-	override_background = { reference = VIET_background_tuscan_country }
+	override_background = { reference = VIET_background_desert_frontier }
 
 	
 	left_portrait = {
@@ -2648,6 +2654,11 @@ VIETmisc.7024 = {
 	
 	option = { # ok
 		name = VIETmisc.7024.a	
+		stress_impact = {
+			base = miniscule_stress_impact_loss
+			lazy = minor_stress_impact_loss
+			content = minor_stress_impact_loss
+		}
 		current_travel_plan = {
 			every_entourage_character = {
 				custom = every_entourage_tt

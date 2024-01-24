@@ -108,6 +108,18 @@ VIET_theme_kitchen_generic = {
 	}
 }
 
+VIET_theme_desert_frontier = {
+	icon = {
+		reference = "gfx/interface/icons/event_types/type_domain.dds"
+	}
+	sound = {
+		reference = "event:/SFX/Events/Themes/sfx_event_theme_type_activity"
+	}
+	background = {
+		reference = VIET_background_desert_frontier
+	}
+}
+
 
 
 #######################
