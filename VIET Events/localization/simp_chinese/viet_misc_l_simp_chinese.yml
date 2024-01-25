@@ -71,3 +71,7 @@
  VIETintro.0011.desc:0 "是时候开始前往[ROOT.Char.GetTravelPlan.GetData.GetNextDestination.GetProvince.GetName]进行一趟[ROOT.Char.GetInvolvedActivity.GetShortName]之旅了。我相信，为此付出的头痛与麻烦终将在目的地后烟消云散......或者至少我得希望是这样，否则所有为旅行的准备都毫无意义。"
  VIETintro.0011.a:0 "我们为此的准备是为了诗与远方"
  game_rule_category_VIET: "VIET"
+
+ # Custom Loc
+ VIET_old_world_cactus_name_sri_lanka:0 "nawahandi"
+ VIET_old_world_cactus_name_west_africa:0 "igilligilli"

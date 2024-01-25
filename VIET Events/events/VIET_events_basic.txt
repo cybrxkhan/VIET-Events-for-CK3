@@ -31084,6 +31084,7 @@ VIETmisc.0330 = {
 	}
 	
 	trigger = {
+		has_game_rule = VIET_normal_universe_events
 		# capital_province = {
 		# 	OR = {
 		# 		terrain = desert

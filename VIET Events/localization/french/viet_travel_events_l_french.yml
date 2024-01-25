@@ -1,6 +1,7 @@
 ﻿l_french:
 
  VIET_every_entourage_tt_dislikes_rations:0 "Every entourage member who is not [GetTrait('temperate').GetName( GetPlayer )] or [GetTrait('content').GetName( GetPlayer )]"
+ every_entourage_tt_attracted_to_women:0 "Every entourage member attracted to women"
  
  # Travel Events
 
@@ -98,15 +99,19 @@
  VIETmisc.7021.desc:0 "We had been traveling for much of the day, weary and tired, as there hadn’t been a good place to properly rest for several hours. Wasn’t this supposed to be a well-traveled road?\n\nYet lo and behold, we eventually saw a small stream of water, and what more, there were old, worn-out bronze cups hung by chains to a nearby boulder. It seems that the locals, or perhaps whoever was in charge of this region, generously provided these cups to travelers to more easily collect water."
  VIETmisc.7021.a:0 "Thank [ROOT.Char.GetFaith.HighGodName] for this refreshing water!"
  # Version 1.11.1 Start Here - Note to Translators: please leave this comment here and do not remove it even in your versions of the loc
- VIETmisc.7022.t:0 "$travel_event_prefix$ xxxxx"
- VIETmisc.7022.desc:0 "xxxxx"
- VIETmisc.7022.a:0 "xxxxx"
- VIETmisc.7023.t:0 "$travel_event_prefix$ xxxxx"
- VIETmisc.7023.desc:0 "xxxxx"
- VIETmisc.7023.a:0 "xxxxx"
- VIETmisc.7024.t:0 "$travel_event_prefix$ xxxxx"
- VIETmisc.7024.desc:0 "xxxxx"
- VIETmisc.7024.a:0 "xxxxx"
+ # Version 1.11.2 Start Here - Note to Translators: please leave this comment here and do not remove it even in your versions of the loc
+ VIETmisc.7022.t:0 "$travel_event_prefix$ The Desert Girl"
+ VIETmisc.7022.desc:0 "While traveling in the desert of [ROOT.Char.GetCurrentLocation.GetName], we met a lovely lass of [culture.GetName] extraction who introduces herself as [trickster.GetFirstName].\n\nAs we approach her, she begins singing and dancing what seems to be a local song, gazing at us seductively as she beckons for us to join her. However, as soon as I reach over to touch her, we all realize there’s nothing but a pile of sand in front of us.\n\nWe only saw a mirage.\n\nProbably."
+ VIETmisc.7022.a:0 "Our next stop isn’t too far away, thank [ROOT.Char.GetFaith.HighGodName]."
+ VIETmisc.7022.tooltip:0 "#weak I swear I hear a giggle on the wind....#!"
+ VIETmisc.7023.t:0 "$travel_event_prefix$ Victims of the Desert"
+ VIETmisc.7023.desc:0 "In one of the harsher parts of the desert in [ROOT.Char.GetCurrentLocation.GetName], we come across the remains of some travelers who must have passed away not too long ago. May [ROOT.Char.GetFaith.HighGodName] bless these unfortunate souls in the afterlife.\n\nAlas, their fate is not uncommon. Few would doubt the fact that these kinds of deserts are unforgiving. After all, even those experienced with such terrain and conditions could meet their untimely end in such barren terrain if they are unlucky.\n\nWe are fortunate that we still have many supplies left."
+ VIETmisc.7023.a:0 "Continue onwards to our destination."
+ VIETmisc.7023.b:0 "Take time to give the deceased a proper funeral."
+ VIETmisc.7024.t:0 "$travel_event_prefix$ A Mirage?"
+ VIETmisc.7024.desc:0 "We've been wandering the desert of [ROOT.Char.GetCurrentLocation.GetName] for hours without rest. We saw a mirage of an oasis up ahead, and bitterly laughed at ourselves for being so helpless, even though things haven't even gotten that bad yet. The mirage was so convincing, we even heard the noise of water and animals!\n\n“Aahhh!” [person.GetFirstName] yells, as [person.GetSheHe] trips over a plant and splashes into water.\n\nHuh. Looks like the mirage was actually real after all – praise [ROOT.Char.GetFaith.HighGodName]!"
+ VIETmisc.7024.a:0 "We laugh heartily as we pull [person.GetFirstNameNoTooltip] out of the oasis waters."
+ # Version 1.11.3 Start Here - Note to Translators: please leave this comment here and do not remove it even in your versions of the loc
  VIETmisc.7025.t:0 "$travel_event_prefix$ xxxxx"
  VIETmisc.7025.desc:0 "xxxxx"
  VIETmisc.7025.a:0 "xxxxx"

@@ -854,6 +854,8 @@ VIET_events_tri_yearly_pulse = {
 		100 = VIETmisc.0323		# Learning not to drown
 		# Nuts
 		100 = VIETmisc.0324		# Eating more acorns for food
+		# Desert
+		100 = VIETmisc.0329		# There is *one* cactus species in the new world, surprisingly!
 	}
 }
 
@@ -1107,6 +1109,8 @@ VIET_events_five_yearly_pulse = {
 		100 = VIETmisc.0288 	# A medieval Karen comes to complain
 		# Nuts
 		100 = VIETmisc.0325		# Courtier overdoses on marking nuts
+		# Desert
+		100 = VIETmisc.0330		# Courtier claims to have helped a snake that turned out to be a genie
 	}
 }
 

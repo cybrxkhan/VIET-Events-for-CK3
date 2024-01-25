@@ -2581,7 +2581,7 @@ VIETmisc.7024 = {
 	type = character_event
 	title = VIETmisc.7024.t
 	desc = VIETmisc.7024.desc
-	theme = travel_danger
+	theme = travel
 	override_background = { reference = VIET_background_desert_frontier }
 
 	

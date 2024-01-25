@@ -1607,7 +1607,7 @@
  VIETmisc.0328.c:0 "I’ll switch to milk made from cheap beans and nuts."
  VIETmisc.0328.info:0 "$VIETmisc.6020.info$"
  # Version 1.11.2 Start Here - Note to Translators: please leave this comment here and do not remove it even in your versions of the loc
- # Version 1.12.0 Start Here - Note to Translators: please leave this comment here and do not remove it even in your versions of the loc
+ # Version 1.11.2 Start Here - Note to Translators: please leave this comment here and do not remove it even in your versions of the loc
  VIETmisc.0329.t:0 "Not Mistletoe"
  VIETmisc.0329.desc:0 "I am outside in the gardens with some of my court, and notice what looks like some mistletoe in some of the nearby foliage. I idly comment on how lush and lovely the mistletoe looks, and everyone around me concurs.\n\n“That's not mistletoe, my [ROOT.Char.GetLadyLord],” [gardener.GetTitledFirstName] corrects us. [gardener.GetSheHe|U] has, every now and then, demonstrated a decent knowledge of some local plants, so we listen to [gardener.GetHerHim] attentively.\n\n“That's #italic [GetPlayer.Custom('VIET_old_cactus_name')]#!, as the people around [ROOT.Char.GetCapitalLocation.GetName] have called it for generations,” [gardener.GetFirstNameNoTooltip] elaborates. “It’s not as useful as other kinds of mistletoe, as it doesn’t have many medicinal properties, and its fruits aren’t that great. Pretty sight, though, I agree.”"
  VIETmisc.0329.a:0 "Huh. You’re right. It looks pleasing, still." 
@@ -1618,7 +1618,7 @@
  VIETmisc.0330.a:0 "Verily, it must have been a good #italic jinn#!."
  VIETmisc.0330.b:0 "That might have been a lucky coincidence."
  VIETmisc.0330.info:0 "#emphasis Historical Context:#! This event is an adaptation of a legend associated with the 8th century Arabic poet Abu Zayd al-Qurashi, who was said to have encountered a benevolent jinn spirit (popularly known as genies in the West) in similar circumstances. In Islamic and Middle Eastern folklore, jinn, like humans, are rational beings with free will who can be good or bad. After the coming of Islam, good jinn were believed to also worship God and be pious Muslims."
- # Version 1.12.1 Start Here - Note to Translators: please leave this comment here and do not remove it even in your versions of the loc
+ # Version 1.11.3 Start Here - Note to Translators: please leave this comment here and do not remove it even in your versions of the loc
  VIETmisc.0331.t:0 "xxxxx"
  VIETmisc.0331.desc:0 "xxxxx"
  VIETmisc.0331.a:0 "xxxxx"
