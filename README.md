@@ -1,11 +1,11 @@
 # VIET Events for CK3
 
-<img src="https://i.imgur.com/IR0i4Kh.jpg">
+<img src="https://i.imgur.com/psqAjdx.jpg">
 
-## Latest Version: 1.11.1 "Chestnuts" (Released 12/25/23)
+## Latest Version: 1.11.2 "Atlas Mountains" (Released 1/24/24)
 
-_“If you like the nut, crack it.”_
-_- Scottish proverb_
+_"I have seen difficult roads and much snow [in other parts of the world], but I never saw a road more difficult than that."_
+_- Ibn Battuta (1304-1369 CE), Moroccan explorer, on traveling in the Atlas Mountains of North Africa_
 
 Very Immersive Events and Tales (VIET), the sequel to VIET Events Reborn for CK2, is a flavor mod that adds a vast collection of events about everyday life to spice up your game. They add immersion and a diversity of experiences in between wars and vanilla’s event chains, and cover mundane minutiae ranging from small talk with courtiers and eating local cuisine to epic tales about love, philosophy, and the human condition. Some of the events unlock new decisions, character interactions, activities, and much more for you to explore!
 
@@ -15,7 +15,7 @@ Feel free to use my work in your mods - all I ask is that I am credited and (if 
 
 ## Features
 
-- Over **1081** new flavor events to experience!
+- Over **1088** new flavor events to experience!
 - Explore new decisions, artifacts, character interactions, activities, and more!
 - Game rule to disable sillier events for those who don't like them, with three levels to choose from: Balanced (Default), Serious (Restricted), and All Events (Full)
 - Compatible with almost anything since it doesn't touch any vanilla files - even with overhaul mods, you can via game rule disable events that reference things specific to our medieval world that wouldn’t make sense in other time periods or universes (like fantasy and sci-fi conversion mods)
@@ -39,11 +39,16 @@ The mod folder should look something like this:
 
 ## Changelog
 
-### Version 1.11.1 "Chestnuts"
+### Version 1.11.2 "Atlas Mountains"
 
 New events added in this version: **7**
 
-- Added 7 nut flavor events
+- Added 7 desert themed events
+- Added new desert event background
+- Random bard from the traveling bard travel event now has randomized age
+- Changed a few older travel events to use the Travel Danger event theme
+- Fixed sandstorm event happening outside of deserts
+- Fixed No Sympathy for Servants modifier having positive rather than negative effects
 - Miscellaneous bugfixes
 
 \* Adapted from VIET for CK2
