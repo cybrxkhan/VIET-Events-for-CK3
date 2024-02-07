@@ -27,6 +27,7 @@
 # 2225-2231		Rose
 # 2232-2233		Childhood Generic
 # 2234-2236		Generic for 3rd anniversary
+# 2237-2244		Night
 # 
 ############################################################################################################################
 
@@ -17491,4 +17492,656 @@ VIETold.2236 = {
 	}
 
 }
+
+
+
+#############################################
+# NIGHT 2237-2244
+#############################################
+
+# Trip at night and cause a minor injury
+VIETold.2237 = {
+	type = character_event
+	title = VIETold.2237.t	
+	desc = VIETold.2237.desc
+	theme = unfriendly
+	override_background = { reference = corridor_night }
+	
+	right_portrait = {
+		character = root
+		outfit_tags = { nightgown }
+		animation = pain
+	}
+
+
+
+	weight_multiplier = {
+		base = 1
+		modifier = {
+			add = 0.2
+			has_trait = wrathful
+		}
+		modifier = {
+			add = -0.2
+			has_trait = calm
+		}
+		modifier = {
+			add = 0.2
+			has_trait = impatient
+		}
+		modifier = {
+			add = -0.2
+			has_trait = patient
+		}
+		modifier = {
+			add = 0.2
+			has_trait = trusting
+		}
+		modifier = {
+			add = -0.2
+			has_trait = paranoid
+		}
+	}
+	
+	immediate = {
+		increase_wounds_no_death_effect = { REASON = fall }
+	}
+
+	option = { # ok
+		name = VIETold.2237.a
+	}
+
+}
+
+# Child is scared of noises at night
+VIETold.2238 = {
+	type = character_event
+	title = VIETold.2238.t	
+	desc = VIETold.2238.desc
+	theme = unfriendly
+	override_background = { reference = corridor_night }
+	
+	right_portrait = {
+		character = root
+		outfit_tags = { nightgown }
+		animation = paranoia
+	}
+
+	weight_multiplier = {
+		base = 1
+		modifier = {
+			add = 0.2
+			has_trait = pensive
+		}
+		modifier = {
+			add = -0.2
+			has_trait = curious
+		}
+		modifier = {
+			add = 0.2
+			has_trait = craven
+		}
+		modifier = {
+			add = -0.2
+			has_trait = brave
+		}
+		modifier = {
+			add = 0.2
+			has_trait = paranoid
+		}
+		modifier = {
+			add = -0.2
+			has_trait = trusting
+		}
+	}
+
+	option = { # ok
+		name = VIETold.2238.a
+		stress_impact = {
+			#base = miniscule_stress_impact_loss
+			brave = minor_stress_impact_gain
+		}
+	}
+
+	option = { # ok
+		name = VIETold.2238.b
+		VIET_small_prestige_gain_effect = yes
+		stress_impact = {
+			base = miniscule_stress_impact_gain
+			brave = minor_stress_impact_loss
+			craven = minor_stress_impact_gain
+		}
+	}
+
+	option = { # ok
+		name = VIETold.2238.c
+		VIET_small_piety_gain_effect = yes
+		stress_impact = {
+			base = miniscule_stress_impact_gain
+			zealous = minor_stress_impact_loss
+			cynical = minor_stress_impact_gain
+		}
+	}
+
+}
+
+# Child considers getting a midnight snack
+VIETold.2239 = {
+	type = character_event
+	title = VIETold.2239.t	
+	desc = VIETold.2239.desc
+	theme = feast_activity
+	override_background = { reference = corridor_night }
+	
+	right_portrait = {
+		character = root
+		outfit_tags = { nightgown }
+		animation = thinking
+	}
+
+	weight_multiplier = {
+		base = 1
+		modifier = {
+			add = 0.2
+			has_trait = bossy
+		}
+		modifier = {
+			add = -0.2
+			has_trait = pensive
+		}
+		modifier = {
+			add = 0.2
+			has_trait = gluttonous
+		}
+		modifier = {
+			add = -0.2
+			has_trait = temperate
+		}
+		modifier = {
+			add = 0.2
+			has_trait = gregarious
+		}
+		modifier = {
+			add = -0.2
+			has_trait = shy
+		}
+	}
+
+	option = { # ok
+		name = VIETold.2239.a
+		random = {
+			chance = 20
+			add_intrigue_skill = 1
+		}
+		stress_impact = {
+			lazy = miniscule_stress_impact_gain
+		}
+	}
+
+	option = { # ok
+		name = VIETold.2239.b
+		VIET_small_prestige_gain_effect = yes
+		stress_impact = {
+			base = miniscule_stress_impact_loss
+			diligent = minor_stress_impact_gain
+		}
+	}
+
+	option = { # ok
+		name = VIETold.2239.c
+		VIET_small_piety_gain_effect = yes
+		stress_impact = {
+			gluttonous = miniscule_stress_impact_gain
+		}
+	}
+
+	option = { # ok
+		name = VIETold.2239.d
+		VIET_tiny_prestige_gain_effect = yes
+		VIET_tiny_piety_gain_effect = yes
+	}
+
+}
+
+
+# Can't fall asleep at night and get distracted by the bed covers
+VIETold.2240 = {
+	type = character_event
+	title = VIETold.2240.t	
+	desc = VIETold.2240.desc
+	theme = unfriendly
+	override_background = { reference = corridor_night }
+	
+	right_portrait = {
+		character = root
+		outfit_tags = { nightgown }
+		animation = boredom
+	}
+
+
+	weight_multiplier = {
+		base = 1
+		modifier = {
+			add = 0.2
+			has_trait = wrathful
+		}
+		modifier = {
+			add = -0.2
+			has_trait = calm
+		}
+		modifier = {
+			add = 0.2
+			has_trait = impatient
+		}
+		modifier = {
+			add = -0.2
+			has_trait = patient
+		}
+		modifier = {
+			add = 0.2
+			has_trait = trusting
+		}
+		modifier = {
+			add = -0.2
+			has_trait = paranoid
+		}
+	}
+
+	immediate = {
+		stress_impact = {
+			base = miniscule_stress_impact_gain
+			lazy = miniscule_stress_impact_gain
+		}
+		add_character_modifier = {
+			modifier = VIET_poor_nights_rest
+			years = 1
+		}
+	}
+
+	option = { # ok
+		name = VIETold.2240.a
+		VIET_tiny_piety_gain_effect = yes
+	}
+
+	option = { # ok
+		name = VIETold.2240.a
+		VIET_tiny_prestige_gain_effect = yes
+	}
+
+}
+
+
+# Watching the Constellations at Night
+VIETold.2241 = {
+	type = character_event
+	title = VIETold.2241.t	
+	desc = VIETold.2241.desc
+	theme = unfriendly
+	override_background = { reference = corridor_night }
+	
+	right_portrait = {
+		character = root
+		outfit_tags = { nightgown }
+		animation = personality_content
+	}
+
+
+	weight_multiplier = {
+		base = 1
+		modifier = {
+			add = 0.2
+			has_trait = calm
+		}
+		modifier = {
+			add = -0.2
+			has_trait = wrathful
+		}
+		modifier = {
+			add = 0.2
+			has_trait = patient
+		}
+		modifier = {
+			add = -0.2
+			has_trait = impatient
+		}
+		modifier = {
+			add = 0.2
+			has_trait = humble
+		}
+		modifier = {
+			add = -0.2
+			has_trait = arrogant
+		}
+	}
+
+
+	option = { # ok
+		name = VIETold.2241.a
+		stress_impact = {
+			base = minor_stress_impact_loss
+			lazy = miniscule_stress_impact_loss
+			humble = miniscule_stress_impact_loss
+			calm = miniscule_stress_impact_loss
+			scholar = minor_stress_impact_loss
+			education_learning_3 = minor_stress_impact_loss
+			education_learning_4 = minor_stress_impact_loss
+		}
+	}
+
+	option = { # ok
+		name = VIETold.2241.b
+		add_character_modifier = {
+			modifier = VIET_observing_the_constellations
+			years = 6
+		}
+	}
+
+}
+
+# Suffering from Insomnia
+VIETold.2242 = {
+	type = character_event
+	title = VIETold.2242.t	
+	desc = VIETold.2242.desc
+	theme = medicine
+	
+	left_portrait = {
+		character = scope:physician
+		animation = thinking
+	}
+	
+	right_portrait = {
+		character = root
+		animation = sadness
+	}
+
+	trigger = {
+		court_physician_available_trigger = yes
+	}
+
+
+	weight_multiplier = {
+		base = 1
+		modifier = {
+			add = 0.2
+			has_trait = wrathful
+		}
+		modifier = {
+			add = -0.2
+			has_trait = calm
+		}
+		modifier = {
+			add = 0.2
+			has_trait = impatient
+		}
+		modifier = {
+			add = -0.2
+			has_trait = patient
+		}
+		modifier = {
+			add = 0.2
+			has_trait = paranoid
+		}
+		modifier = {
+			add = -0.2
+			has_trait = trusting
+		}
+	}
+
+	immediate = {
+		save_court_physician_as_effect = { SCOPE_NAME = physician }
+		random_list = {
+			10 = {
+				add_character_modifier = {
+					modifier = VIET_mild_insomnia
+					years = 5
+				}
+			}
+			10 = {
+				add_character_modifier = {
+					modifier = VIET_mild_insomnia
+					years = 6
+				}
+			}
+			10 = {
+				add_character_modifier = {
+					modifier = VIET_mild_insomnia
+					years = 7
+				}
+			}
+			10 = {
+				add_character_modifier = {
+					modifier = VIET_mild_insomnia
+					years = 8
+				}
+			}
+			10 = {
+				add_character_modifier = {
+					modifier = VIET_mild_insomnia
+					years = 9
+				}
+			}
+			10 = {
+				add_character_modifier = {
+					modifier = VIET_mild_insomnia
+					years = 10
+				}
+			}
+			10 = {
+				add_character_modifier = {
+					modifier = VIET_mild_insomnia
+					years = 11
+				}
+			}
+			10 = {
+				add_character_modifier = {
+					modifier = VIET_mild_insomnia
+					years = 12
+				}
+			}
+			10 = {
+				add_character_modifier = {
+					modifier = VIET_mild_insomnia
+					years = 13
+				}
+			}
+			10 = {
+				add_character_modifier = {
+					modifier = VIET_mild_insomnia
+					years = 14
+				}
+			}
+			10 = {
+				add_character_modifier = {
+					modifier = VIET_mild_insomnia
+					years = 15
+				}
+			}
+		}
+	}
+
+
+	option = { # ok
+		name = VIETold.2242.a
+		trigger = {
+			OR = {
+				gold >= 20
+				is_ai = no
+			}
+		}
+		remove_short_term_gold = 20
+		remove_character_modifier = VIET_mild_insomnia
+		add_character_modifier = {
+			modifier = VIET_valerian_modifier
+			years = 5
+		}
+		stress_impact = {
+			greedy = minor_stress_impact_gain
+			cynical = miniscule_stress_impact_gain
+		}
+	}
+
+	option = { # ok
+		name = VIETold.2242.b
+	}
+
+	after = {		
+		if = {
+			limit = {
+				has_game_rule = VIET_historical_context_on
+			}
+			custom_description_no_bullet = {
+				text = VIETmisc.2242.info
+			}
+		}
+	}
+
+}
+
+# Young servant dies because of his ambitious nature
+VIETold.2243 = {
+	type = character_event
+	title = VIETold.2243.t	
+	desc = VIETold.2243.desc
+	theme = death
+	
+	
+	right_portrait = {
+		character = root
+		triggered_animation = {
+			trigger = { 
+				OR = {
+					has_trait = callous
+					has_trait = sadistic
+				}	
+			}
+			animation = eyeroll
+		}
+		triggered_animation = {
+			trigger = {
+				has_trait = compassionate	
+			} 
+			animation = sadness
+		}
+		animation = disapproval
+	}
+
+
+	weight_multiplier = {
+		base = 1
+		modifier = {
+			add = 0.2
+			has_trait = arbitrary
+		}
+		modifier = {
+			add = -0.2
+			has_trait = just
+		}
+		modifier = {
+			add = 0.2
+			has_trait = callous
+		}
+		modifier = {
+			add = -0.2
+			has_trait = compassionate
+		}
+		modifier = {
+			add = 0.2
+			has_trait = lazy
+		}
+		modifier = {
+			add = -0.2
+			has_trait = diligent
+		}
+	}
+
+
+	option = { # ok
+		name = VIETold.2243.a
+		VIET_large_piety_gain_effect = yes
+		stress_impact = {
+			callous = minor_stress_impact_gain
+			sadistic = minor_stress_impact_gain
+			arrogant = miniscule_stress_impact_gain
+		}
+	}
+
+	option = { # ok
+		name = VIETold.2243.b
+		VIET_large_prestige_gain_effect = yes
+		stress_impact = {
+			compassionate = medium_stress_impact_gain
+			humble = minor_stress_impact_gain
+		}
+	}
+
+}
+
+# Visit the beach at night
+VIETold.2244 = {
+	type = character_event
+	title = VIETold.2244.t	
+	desc = VIETold.2244.desc
+	theme = VIET_theme_night_beach
+	
+	
+	right_portrait = {
+		character = root
+		animation = admiration
+	}
+
+	trigger = {
+		capital_county = { is_coastal_county = yes }
+	}
+
+	weight_multiplier = {
+		base = 1
+		modifier = {
+			add = 0.2
+			has_trait = calm
+		}
+		modifier = {
+			add = -0.2
+			has_trait = wrathful
+		}
+		modifier = {
+			add = 0.2
+			has_trait = humble
+		}
+		modifier = {
+			add = -0.2
+			has_trait = arrogant
+		}
+		modifier = {
+			add = 0.2
+			has_trait = compassionate
+		}
+		modifier = {
+			add = -0.2
+			has_trait = callous
+		}
+	}
+
+
+	option = { # ok
+		name = VIETold.2244.a
+		stress_impact = {
+			base = minor_stress_impact_loss
+			humble = miniscule_stress_impact_loss
+			lazy = miniscule_stress_impact_loss
+			calm = miniscule_stress_impact_loss
+			content = miniscule_stress_impact_loss
+		}
+		add_character_modifier = {
+			modifier = VIET_night_beach_visit
+			years = 5
+		}
+	}
+
+}
+
+
+
+
+
 

@@ -1662,7 +1662,7 @@ VIETmisc.4022 = {
 	title = VIETmisc.4022.t
 	desc = VIETmisc.4022.desc
 	theme = death
-	override_background = { reference = corridor_night }
+	override_background = { reference = VIET_background_night_beach }
 	
 	right_portrait = {
 		character = root

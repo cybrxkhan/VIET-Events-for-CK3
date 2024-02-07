@@ -93,11 +93,11 @@
 # Melon joke - VIETmisc.2199 - not sure why it's in the bread section
 # Rose Garden - VIETmisc.8196 - too complex, try later
 # Marry off girl to an ugly courtier - VIETmisc.8201 - too lazy
-# 
-# 
-# 
-# 
-# 
+# Stumble around at night - VIETmisc.8105 - too similar to previous event
+# Mysterious Visions in County - VIETmisc.4038 - too similar to other events
+# Succubus event - VIETmisc.8107 - ?????
+# Choking on food at night event - VIETmisc.8109 - Eh
+# Grave robbing - VIETmisc.8112, VIETmisc.8113 - maybe try later
 # 
 # 
 # 
