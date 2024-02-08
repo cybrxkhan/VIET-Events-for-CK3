@@ -17670,7 +17670,7 @@ VIETold.2239 = {
 	option = { # ok
 		name = VIETold.2239.a
 		random = {
-			chance = 20
+			chance = 10
 			add_intrigue_skill = 1
 		}
 		stress_impact = {
@@ -17680,7 +17680,7 @@ VIETold.2239 = {
 
 	option = { # ok
 		name = VIETold.2239.b
-		VIET_small_prestige_gain_effect = yes
+		VIET_medium_prestige_gain_effect = yes
 		stress_impact = {
 			base = miniscule_stress_impact_loss
 			diligent = minor_stress_impact_gain
@@ -17689,7 +17689,7 @@ VIETold.2239 = {
 
 	option = { # ok
 		name = VIETold.2239.c
-		VIET_small_piety_gain_effect = yes
+		VIET_huge_piety_gain_effect = yes
 		stress_impact = {
 			gluttonous = miniscule_stress_impact_gain
 		}
@@ -17697,8 +17697,12 @@ VIETold.2239 = {
 
 	option = { # ok
 		name = VIETold.2239.d
-		VIET_tiny_prestige_gain_effect = yes
-		VIET_tiny_piety_gain_effect = yes
+		stress_impact = {
+			base = minor_stress_impact_loss
+			lazy = miniscule_stress_impact_loss
+			content = miniscule_stress_impact_loss
+			pensive = miniscule_stress_impact_loss
+		}
 	}
 
 }
@@ -17754,7 +17758,7 @@ VIETold.2240 = {
 		}
 		add_character_modifier = {
 			modifier = VIET_poor_nights_rest
-			years = 1
+			years = 3
 		}
 	}
 
@@ -17764,7 +17768,7 @@ VIETold.2240 = {
 	}
 
 	option = { # ok
-		name = VIETold.2240.a
+		name = VIETold.2240.b
 		VIET_tiny_prestige_gain_effect = yes
 	}
 
@@ -17852,7 +17856,7 @@ VIETold.2242 = {
 	
 	right_portrait = {
 		character = root
-		animation = sadness
+		animation = stress
 	}
 
 	trigger = {
@@ -17990,9 +17994,7 @@ VIETold.2242 = {
 			limit = {
 				has_game_rule = VIET_historical_context_on
 			}
-			custom_description_no_bullet = {
-				text = VIETmisc.2242.info
-			}
+			custom_tooltip = VIETold.2242.info
 		}
 	}
 
