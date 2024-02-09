@@ -305,6 +305,11 @@ VIET_events_yearly_pulse = {
 		# Generic for 3rd anniversary
 		100 = VIETold.2234		# The pasta you're eating is bland
 		100 = VIETold.2236		# Come across a black cat
+
+		# Night
+		100 = VIETold.2237		# Trip at night and cause a minor injury
+		100 = VIETold.2241		# Watching the Constellations at Night
+		100 = VIETold.2244		# Visit the beach at night
 		
 		#######################################
 		# NEXT GEN VIET
@@ -468,6 +473,9 @@ VIET_events_yearly_pulse = {
 		100 = VIETmisc.0326		# Servant eats poisonous nuts
 		100 = VIETmisc.0327		# Snacking on nuts
 		100 = VIETmisc.0328		# Cutting down on almond milk or not?
+		# Jokes
+		100 = VIETmisc.0333		# Cicero's anecdote about the crappy orator
+		100 = VIETmisc.0334		# Philogelos quip about sea travel
 	}
 }
 
@@ -698,6 +706,10 @@ VIET_events_tri_yearly_pulse = {
 
 		# Generic for 3rd anniversary
 		100 = VIETold.2235		# Vassal does not want to wash hands with rosewater at a feast
+
+		# Night
+		100 = VIETold.2240		# Can't fall asleep at night and get distracted by the bed covers
+		100 = VIETold.2242		# Suffering from Insomnia - Valerian herbal remedy
 		
 		#######################################
 		# NEXT GEN VIET
@@ -856,6 +868,10 @@ VIET_events_tri_yearly_pulse = {
 		100 = VIETmisc.0324		# Eating more acorns for food
 		# Desert
 		100 = VIETmisc.0329		# There is *one* cactus species in the new world, surprisingly!
+		# Jokes
+		100 = VIETmisc.0331		# Anglo-Saxon double entendre riddle about keys
+		100 = VIETmisc.0332		# Joke about the self-castrating husband, from Facetiae, a 15th century Italian joke book
+		100 = VIETmisc.0335		# Joke about fat clergy, from Facetiae, a 15th century Italian joke book
 	}
 }
 
@@ -1015,6 +1031,9 @@ VIET_events_five_yearly_pulse = {
 
 		# Rose
 		100 = VIETold.2225		# Secret admirer gives a letter with a rose
+
+		# Night
+		100 = VIETold.2243		# Young servant dies because of his ambitious nature
 		
 		#######################################
 		# NEXT GEN VIET
@@ -1900,6 +1919,8 @@ VIET_events_common_childhood_pulse = {
 
 		# Generic
 		100 = VIETold.2232		# Can't wait to grow up!
+		# Night
+		100 = VIETold.2238		# Child is scared of noises at night
 		
 		#######################################
 		# NEXT GEN VIET
@@ -1971,10 +1992,14 @@ VIET_events_uncommon_childhood_pulse = {
 		#######################################
 		# OLD VIET
 		#######################################
+
+		# Generic
+		100 = VIETold.2239		# Child considers getting a midnight snack
 		
 		#######################################
 		# NEXT GEN VIET
 		#######################################
+
 		# Generic
 		100 = VIETmisc.0296		# Child prefers spending time with adults
 		100 = VIETmisc.0300		# Say something insightful to your councilors as a child

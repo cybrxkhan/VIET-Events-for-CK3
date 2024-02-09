@@ -17842,7 +17842,7 @@ VIETold.2241 = {
 
 }
 
-# Suffering from Insomnia
+# Suffering from Insomnia - Valerian herbal remedy
 VIETold.2242 = {
 	type = character_event
 	title = VIETold.2242.t	
