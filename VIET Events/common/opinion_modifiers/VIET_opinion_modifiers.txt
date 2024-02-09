@@ -823,4 +823,45 @@ VIET_showed_no_sympathy = {
 	decaying = yes
 }
 
+VIET_opinion_good_joke = {
+	years = 5
+	opinion = 5
+	decaying = yes
+	stacking = yes
+}
+
+VIET_opinion_bad_joke = {
+	years = 5
+	opinion = -5
+	decaying = yes
+	stacking = yes
+}
+
+VIET_opinion_like_my_joke = {
+	years = 10
+	opinion = 10
+	decaying = yes
+	stacking = yes
+}
+
+VIET_opinion_terrible_speech = {
+	years = 10
+	opinion = -10
+}
+
+VIET_opinion_supported_me = {
+	years = 10
+	opinion = 15
+	decaying = yes
+}
+
+VIET_opinion_appreciated_wit = {
+	years = 10
+	opinion = 10
+}
+
+VIET_opinion_touche = {
+	years = 10
+	opinion = 10
+}
 

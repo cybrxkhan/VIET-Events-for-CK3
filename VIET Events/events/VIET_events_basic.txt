@@ -31405,14 +31405,11 @@ VIETmisc.0331 = {
 			reverse_add_opinion = {
 				target = root
 				modifier = VIET_opinion_bad_joke
+			}				
+			add_character_modifier = {
+				modifier = VIET_liege_didnt_like_joke
+				years = 10
 			}	
-			random = {
-				chance = 25				
-				add_character_modifier = {
-					modifier = VIET_liege_didnt_like_joke
-					years = 10
-				}	
-			}
 		}
 	}
 
@@ -31611,7 +31608,7 @@ VIETmisc.0333 = {
 	}
 
 	immediate = {
-		every_any_councillor = {
+		every_councillor = {
 			limit = {
 				is_available_ai_adult = yes
 			}
@@ -31656,7 +31653,7 @@ VIETmisc.0333 = {
 			patient = minor_stress_impact_gain
 			content = miniscule_stress_impact_gain
 		}
-		scope:courtier_1 = {
+		scope:councillor_1 = {
 			add_opinion = {
 				target = root
 				modifier = humiliated_opinion
@@ -31676,7 +31673,7 @@ VIETmisc.0333 = {
 			impatient = minor_stress_impact_gain
 			wrathful = miniscule_stress_impact_gain
 		}
-		scope:courtier_1 = {
+		scope:councillor_1 = {
 			add_opinion = {
 				target = root
 				modifier = VIET_opinion_supported_me
@@ -31849,6 +31846,7 @@ VIETmisc.0334 = {
 	
 	option = { # ok
 		name = VIETmisc.0334.b
+		VIET_huge_prestige_gain_effect = yes
 		stress_impact = {
 			compassionate = miniscule_stress_impact_gain
 			humble = miniscule_stress_impact_gain

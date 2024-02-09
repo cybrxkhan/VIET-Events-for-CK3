@@ -1670,8 +1670,7 @@ VIETmisc.4022 = {
 	}
 	
 	trigger = {
-		any_held_title = {
-			tier = tier_county
+		any_held_county = {
 			is_coastal_county = yes
 		}	
 	}
@@ -1680,8 +1679,8 @@ VIETmisc.4022 = {
         base = 0
 		modifier = {
 			add = {
-				every_held_title = {
-					limit = { tier = tier_county }
+				every_held_county = {
+					#limit = { tier = tier_county }
 					add = 1
 				}
 			}		
@@ -1689,9 +1688,9 @@ VIETmisc.4022 = {
     }
 	
 	immediate = {
-		random_held_title = {
+		random_hheld_county = {
 			limit = {
-				tier = tier_county
+				#tier = tier_county
 				is_coastal_county = yes
 			}	
 			save_scope_as = county
