@@ -1,6 +1,6 @@
-[img]https://i.imgur.com/psqAjdx.jpg[/img]
+[img]https://i.imgur.com/WENd1G5.jpg[/img]
 
-[h1]Current Version: 1.11.2 "Atlas Mountains" (Released 1/24/24, Compatible with vanilla patch 1.11.X)[/h1]
+[h1]Current Version: 1.11.3 "Bache Bene Venies" (Released 2/8/24, Compatible with vanilla patch 1.11.X)[/h1]
 
 [h1][B][url=https://discord.gg/9KuyXv2uZA]Discord Server for my mods[/url]
 [url=https://cybrxkhansmods.godaddysites.com/]Official Website for my mods[/url][/B][/h1]
@@ -25,7 +25,7 @@ Feel free to use my work in your mods - all I ask is that I am credited and (if 
 [img]http://i.imgur.com/EyXurbK.jpg[/img]
 
 [LIST]
-[*]Over [B][U]1088[/U] new flavor events[/B] to experience!
+[*]Over [B][U]1101[/U] new flavor events[/B] to experience!
 [*]Explore new decisions, artifacts, character interactions, activities, and more!
 [*]Game rule to disable sillier events for those who don't like them, with three levels to choose from: Balanced (Default), Serious (Restricted), and All Events (Full)
 [*][B]Compatible with almost anything[/B] since it doesn't touch any vanilla files - even with overhaul mods, you can via game rule disable events that reference things specific to our medieval world that wouldn’t make sense in other time periods or universes (like fantasy/sci-fi conversion mods)
@@ -51,20 +51,20 @@ Please see the [url=https://cybrxkhansmods.godaddysites.com/faq]FAQ on my mods' 
 
 [img]http://i.imgur.com/RQ5QZTF.jpg[/img]
 
-[h1]Version 1.11.2 "Atlas Mountains"[/h1]
+[h1]Version 1.11.3 "Bache Bene Venies"[/h1]
 
-[I]"I have seen difficult roads and much snow [in other parts of the world], but I never saw a road more difficult than that."
-- Ibn Battuta (1304-1369 CE), Moroccan explorer, on traveling in the Atlas Mountains of North Africa[/I]
+[I]“Istud vinum, bonum vinum, vinum generosum, / reddit virum curialem, probum, animosum.”
+[Poetic Translation: This is wine, and this good wine; this is what we're after / Wine, it lets us all be friendly, fills us up with laughter.]
+- From Bache Bene Venies, an 11th - 13th century drinking song by university students[/I]
 
-New events added in this version: [B]7[/B]
+New events added in this version: [B]13[/B]
 
 [LIST]
-[*]Added 7 desert themed events
-[*]Added new desert event background
-[*]Random bard from the traveling bard travel event now has randomized age
-[*]Changed a few older travel events to use the Travel Danger event theme
-[*]Fixed sandstorm event happening outside of deserts
-[*]Fixed No Sympathy for Servants modifier having positive rather than negative effects
+[*]Added events with the following themes:
+[LIST]
+[*]5 Jokes
+[*]8 Night*
+[/LIST]
 [*]Miscellaneous bugfixes
 [/LIST]
 
