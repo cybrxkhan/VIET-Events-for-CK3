@@ -2,7 +2,7 @@
 
 <img src="https://i.imgur.com/WENd1G5.jpg">
 
-## Latest Version: 1.11.2 "Atlas Mountains" (Released 1/24/24)
+## Latest Version: 1.11.3 "Bache Bene Venies" (Released 1/24/24)
 
 _“Istud vinum, bonum vinum, vinum generosum, / reddit virum curialem, probum, animosum.”_
 _[Poetic Translation: This is wine, and this good wine; this is what we're after / Wine, it lets us all be friendly, fills us up with laughter.]_
