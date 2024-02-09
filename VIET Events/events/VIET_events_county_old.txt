@@ -1679,8 +1679,8 @@ VIETmisc.4022 = {
         base = 0
 		modifier = {
 			add = {
-				every_held_county = {
-					#limit = { tier = tier_county }
+				every_held_title = {
+					limit = { tier = tier_county }
 					add = 1
 				}
 			}		
@@ -1688,7 +1688,7 @@ VIETmisc.4022 = {
     }
 	
 	immediate = {
-		random_hheld_county = {
+		random_held_county = {
 			limit = {
 				#tier = tier_county
 				is_coastal_county = yes
