@@ -60,12 +60,16 @@
 # horse_negative
 # horse_dead_positive
 # horse_dead_negative
+# hostage_negative
+# hostage_positive
 # hunt_positive
 # hunt_negative
 # intrigue_positive
 # intrigue_negative
 # learning_positive
 # learning_negative
+# legend_positive
+# legend_negative
 # letter_positive
 # letter_negative
 # love_positive
@@ -76,6 +80,8 @@
 # martial_negative
 # mask_positive
 # mask_negative
+# monkey_positive
+# monkey_negative
 # outdoors_positive
 # outdoors_negative
 # piety_positive
@@ -98,10 +104,22 @@
 # stewardship_negative
 # stress_positive
 # stress_negative
+# tournament_positive
+# tournament_negative
+# travel_positive
+# travel_negative
+# travel_safety_positive
+# travel_safety_negative
+# travel_speed_positive
+# travel_speed_negative
 # treat_positive (cake)
 # treat_negative (cake)
 # treatment_positive
 # treatment_negative
+# wedding_positive
+# wedding_negative
+# wit_positive (chess)
+# wit_negative (chess)
 # 
 #################################################
 
@@ -834,7 +852,7 @@ VIET_deaths_blessing = {
 VIET_zombie_outbreak_stories = {
 	icon = piety_negative
 	development_growth = -0.1
-	monthly_county_control_change_add = -0.1
+	monthly_county_control_decline_add = -0.1
 }
 VIET_happy_memory_of_parents = {
 	icon = family_positive
@@ -2000,7 +2018,7 @@ VIET_guard_goose = {
 VIET_bear_attacks = {
 	icon = bear_negative
 	development_growth = -0.1
-	monthly_county_control_change_add = -0.1
+	monthly_county_control_decline_add = -0.1
 }
 VIET_bear_attacks_ended = {
 	icon = bear_positive
@@ -2014,7 +2032,7 @@ VIET_feathered_locusts = {
 VIET_rooks_here = {
 	icon = asatru_raven_positive
 	development_growth = 0.2
-	monthly_county_control_change_add = -0.2
+	monthly_county_control_decline_add = -0.2
 }
 VIET_culling_rooks = {
 	icon = asatru_raven_positive
@@ -2024,7 +2042,7 @@ VIET_culling_rooks = {
 VIET_rooks_crows = {
 	icon = asatru_raven_positive
 	development_growth = 0.3
-	monthly_county_control_change_add = 0.3
+	monthly_county_control_growth_add = 0.3
 }
 VIET_reliable_donkeys = {
 	icon = horse_positive
@@ -2248,7 +2266,7 @@ VIET_murderer_execution = {
 VIET_shy_hermit = {
 	icon = piety_positive
 	development_growth_factor = 0.01
-	monthly_county_control_change_add = 0.03
+	monthly_county_control_growth_add = 0.03
 	county_opinion_add = 2
 }
 VIET_baklava_nightmare = {
@@ -3264,6 +3282,32 @@ VIET_travel_afraid = {
 	diplomacy = -1
 	diplomatic_range_mult = -0.1
 	character_travel_safety_mult = 0.1
+}
+
+VIET_mouse_dream = {
+	icon = rat_negative
+	monthly_piety = -0.1
+	stress_loss_mult = -0.1
+}
+
+VIET_mouse_herbal_incense = {
+	icon = rat_positive
+	negate_health_penalty_add = 0.1
+	epidemic_resistance = 5
+}
+
+VIET_mice_into_lions = {
+	icon = rat_negative
+	monthly_piety = -0.1
+	stress_gain_mult = 0.1
+}
+
+VIET_trained_rodents = {
+	icon = rat_mixed
+	intrigue = 1
+	hostile_scheme_power_mult = 0.15
+	county_opinion_add = -3
+	legitimacy_gain_mult = -0.05
 }
 
 

@@ -58,6 +58,7 @@
 # 0324-0328		Nuts
 # 0329-0330		Desert
 # 0331-0335		Jokes
+# 0336-0340		Rodent
 # 
 ############################################################################################################################
 
@@ -4444,6 +4445,10 @@ VIETmisc.0058 = {
 			add = -0.2
 			has_trait = chaste
 		}
+	}
+
+	immediate = {
+		play_music_cue = mx_cue_stress 
 	}
 	
 	option = { # ok
@@ -31959,9 +31964,440 @@ VIETmisc.0335 = {
 
 
 
+##################################################################
+# RODENT 0336-0340
+##################################################################
+
+
+# Dreamt of a mouse's lawsuit
+VIETmisc.0336 = {
+	type = character_event
+	title = VIETmisc.0336.t
+	desc = VIETmisc.0336.desc
+	theme = memory_negative
+	override_background = { reference = bedchamber }
+	
+	right_portrait = {
+		character = root
+		animation = paranoia
+	}
+	
+	weight_multiplier = {
+		base = 1
+		modifier = {
+			add = 0.2
+			has_trait = paranoid
+		}
+		modifier = {
+			add = -0.2
+			has_trait = trusting
+		}
+		modifier = {
+			add = 0.2
+			has_trait = wrathful
+		}
+		modifier = {
+			add = -0.2
+			has_trait = calm
+		}
+		modifier = {
+			add = 0.2
+			has_trait = ambitious
+		}
+		modifier = {
+			add = -0.2
+			has_trait = content
+		}
+	}
+
+	immediate = {
+		add_character_modifier = {
+			modifier = VIET_mouse_dream
+			years = 4
+		}
+		play_music_cue = mx_cue_stress 
+	}
+	
+	option = { # ok
+		name = VIETmisc.0336.a
+		VIET_small_piety_gain_effect = yes
+		stress_impact = {
+			arrogant = miniscule_stress_impact_gain
+			callous = miniscule_stress_impact_gain
+			sadistic = miniscule_stress_impact_gain
+			arbitrary = miniscule_stress_impact_gain
+		}
+	}
+	
+	option = { # ok
+		name = VIETmisc.0336.b
+		VIET_small_prestige_gain_effect = yes
+		stress_impact = {
+			humble = miniscule_stress_impact_gain
+			compassionate = miniscule_stress_impact_gain
+			content = miniscule_stress_impact_gain
+		}
+	}
+	
+
+
+}
+
+
+# Servants suggest herbal incense to chase away mice
+VIETmisc.0337 = {
+	type = character_event
+	title = VIETmisc.0337.t
+	desc = VIETmisc.0337.desc
+	theme = friendly
+	override_background = { reference = relaxing_room }
+	
+	right_portrait = {
+		character = root
+		animation = thinking
+	}
+	
+	weight_multiplier = {
+		base = 1
+		modifier = {
+			add = 0.2
+			has_trait = diligent
+		}
+		modifier = {
+			add = -0.2
+			has_trait = lazy
+		}
+		modifier = {
+			add = 0.2
+			has_trait = patient
+		}
+		modifier = {
+			add = -0.2
+			has_trait = impatient
+		}
+		modifier = {
+			add = 0.2
+			has_trait = humble
+		}
+		modifier = {
+			add = -0.2
+			has_trait = arbitrary
+		}
+	}
+
+	
+	option = { # ok
+		name = VIETmisc.0337.a
+		trigger = {
+			OR = {
+				gold >= 25
+				is_ai = no
+			}
+		}
+		remove_short_term_gold = 25
+		add_character_modifier = {
+			modifier = VIET_mouse_herbal_incense
+			years = 10
+		}
+		stress_impact = {
+			lazy = minor_stress_impact_gain
+			greedy = miniscule_stress_impact_gain
+		}
+	}
+	
+	option = { # ok
+		name = VIETmisc.0337.b
+		stress_impact = {
+			diligent = minor_stress_impact_gain
+			content = miniscule_stress_impact_gain
+		}
+	}
+
+	after = {
+		if = {
+			limit = {
+				has_game_rule = VIET_historical_context_on
+			}
+			custom_tooltip = VIETmisc.0337.info
+		}
+	}	
+
+
+}
 
 
 
+
+
+# Child is told Aesop fable involving a cunning cat and mice
+VIETmisc.0338 = {
+	type = character_event
+	title = VIETmisc.0338.t
+	desc = VIETmisc.0338.desc
+	theme = memory_formative
+
+	
+	left_portrait = {
+		character = scope:guardian
+		animation = happy_teacher
+	}
+	
+	right_portrait = {
+		character = root
+		animation = thinking
+	}
+
+	trigger = {
+		any_relation = {
+			type = guardian
+			is_available_ai_adult = yes
+		}
+	}
+	
+	weight_multiplier = {
+		base = 1
+		modifier = {
+			add = 0.2
+			has_trait = pensive
+		}
+		modifier = {
+			add = -0.2
+			has_trait = rowdy
+		}
+		modifier = {
+			add = 0.2
+			has_trait = humble
+		}
+		modifier = {
+			add = -0.2
+			has_trait = arrogant
+		}
+		modifier = {
+			add = 0.2
+			has_trait = patient
+		}
+		modifier = {
+			add = -0.2
+			has_trait = impatient
+		}
+	}
+
+	immediate = {
+		random_relation = {
+			type = guardian
+			limit = {
+				is_available_ai_adult = yes
+			}
+			save_scope_as = guardian
+		}
+	}
+	
+	option = { # ok
+		name = VIETmisc.0338.a
+		VIET_huge_piety_gain_effect = yes
+		scope:guardian = {
+			add_opinion = {
+				target = root
+				modifier = VIET_opinion_paid_attention
+			}
+		}
+		stress_impact = {
+			bossy = minor_stress_impact_gain
+			stubborn = miniscule_stress_impact_gain
+			arrogant = miniscule_stress_impact_gain
+			cynical = miniscule_stress_impact_gain
+		}
+	}
+	
+	option = { # ok
+		name = VIETmisc.0338.b
+		VIET_medium_prestige_gain_effect = yes
+		VIET_medium_piety_gain_effect = yes
+		scope:guardian = {
+			add_opinion = {
+				target = root
+				modifier = VIET_opinion_paid_attention
+			}
+		}
+		stress_impact = {
+			rowdy = minor_stress_impact_gain
+			impatient = miniscule_stress_impact_gain
+			wrathful = miniscule_stress_impact_gain
+			trusting = miniscule_stress_impact_gain
+		}
+	}
+	
+	option = { # ok
+		name = VIETmisc.0338.c
+		VIET_huge_prestige_gain_effect = yes
+		scope:guardian = {
+			add_opinion = {
+				target = root
+				modifier = VIET_opinion_paid_attention
+			}
+		}
+		stress_impact = {
+			charming = minor_stress_impact_gain
+			shy = miniscule_stress_impact_gain
+			lazy = miniscule_stress_impact_gain
+			content = miniscule_stress_impact_gain
+		}
+	}
+	
+	option = { # ok
+		name = VIETmisc.0338.d
+		VIET_huge_prestige_gain_effect = yes
+		scope:guardian = {
+			add_opinion = {
+				target = root
+				modifier = VIET_opinion_didnt_pay_attention
+			}
+		}
+		stress_impact = {
+			base = minor_stress_impact_loss
+			rowdy = miniscule_stress_impact_loss
+			lazy = miniscule_stress_impact_loss
+		}
+	}
+
+	after = {
+		if = {
+			limit = {
+				has_game_rule = VIET_historical_context_on
+			}
+			custom_tooltip = VIETmisc.0338.info
+		}
+	}	
+
+}
+
+
+# Dreamt of mice turning into lions (based on an account by Anna Komnene)
+VIETmisc.0339 = {
+	type = character_event
+	title = VIETmisc.0339.t
+	desc = VIETmisc.0339.desc
+	theme = memory_negative
+	override_background = { reference = bedchamber }
+	
+	right_portrait = {
+		character = root
+		animation = fear
+	}
+	
+	weight_multiplier = {
+		base = 1
+		modifier = {
+			add = 0.2
+			has_trait = arrogant
+		}
+		modifier = {
+			add = -0.2
+			has_trait = humble
+		}
+		modifier = {
+			add = 0.2
+			has_trait = paranoid
+		}
+		modifier = {
+			add = -0.2
+			has_trait = trusting
+		}
+		modifier = {
+			add = 0.2
+			has_trait = sadistic
+		}
+		modifier = {
+			add = -0.2
+			has_trait = compassionate
+		}
+	}
+
+	immediate = {
+		play_music_cue = mx_cue_stress 
+	}
+	
+	option = { # ok
+		name = VIETmisc.0339.a
+		add_character_modifier = {
+			modifier = VIET_mice_into_lions
+			years = 4
+		}
+		stress_impact = {
+			base = miniscule_stress_impact_gain
+			paranoid = minor_stress_impact_gain
+			zealous = miniscule_stress_impact_gain
+		}
+	}
+
+	after = {
+		if = {
+			limit = {
+				has_game_rule = VIET_historical_context_on
+			}
+			custom_tooltip = VIETmisc.0339.info
+		}
+	}	
+
+}
+
+# Criminal caught using training rodents to steal
+VIETmisc.0340 = {
+	type = character_event
+	title = VIETmisc.0340.t
+	desc = VIETmisc.0340.desc
+	theme = corruption
+	
+	right_portrait = {
+		character = root
+		animation = thinking
+	}
+	
+	weight_multiplier = {
+		base = 1
+		modifier = {
+			add = 0.2
+			has_trait = just
+		}
+		modifier = {
+			add = -0.2
+			has_trait = arbitrary
+		}
+		modifier = {
+			add = 0.2
+			has_trait = diligent
+		}
+		modifier = {
+			add = -0.2
+			has_trait = lazy
+		}
+		modifier = {
+			add = 0.2
+			has_trait = patient
+		}
+		modifier = {
+			add = -0.2
+			has_trait = impatient
+		}
+	}
+	
+	option = { # ok
+		name = VIETmisc.0340.a
+		VIET_huge_prestige_gain_effect = yes
+	}
+	
+	option = { # ok
+		name = VIETmisc.0340.b
+		VIET_massive_prestige_loss_effect = yes
+		add_character_modifier = {
+			modifier = VIET_trained_rodents
+			years = 20
+		}
+	}
+
+
+
+}
 
 
 

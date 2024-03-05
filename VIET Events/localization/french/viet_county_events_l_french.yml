@@ -283,12 +283,15 @@
  VIETmisc.3055.bad:0 "The sand dunes are seen as bad signs"
  VIETmisc.3055.good:0 "The sand dunes are seen as good signs"
  # Version 1.11.3 Start Here - Note to Translators: please leave this comment here and do not remove it even in your versions of the loc
- VIETmisc.3056.t:0 "xxxxx"
- VIETmisc.3056.desc:0 "xxxxx"
- VIETmisc.3056.a:0 "xxxxx"
- VIETmisc.3057.t:0 "xxxxx"
- VIETmisc.3057.desc:0 "xxxxx"
- VIETmisc.3057.a:0 "xxxxx"
+ # Version 1.12.0 Start Here - Note to Translators: please leave this comment here and do not remove it even in your versions of the loc
+ VIETmisc.3056.t:0 "More Pests"
+ VIETmisc.3056.desc:0 "Mouse and rat infestations have become a major problem in [county.GetNameNoTier] as of late. Local experts, from rat catchers to scholars and [ROOT.Char.Custom('DefaultPriestTitlePlural')], are trying their best to stem the tide and have met with some limited success, but this will affect the region’s agricultural productivity, at least in the short-term."
+ VIETmisc.3056.a:0 "Those troublesome, dastardly rodents!"
+ VIETmisc.3056.b:0 "Hire even more rat-catchers to take care of them."
+ VIETmisc.3057.t:0 "Rat-Catchers"
+ VIETmisc.3057.desc:0 "The rat-catchers of [county.GetNameNoTier] have earned a positive reputation in the region for their skill at catching rodents. In fact, their services are even occasionally solicited elsewhere. This, of course, can only be a good thing, given these pesky rodents cause much mischief and harm by ruining our crops and spreading disease."
+ VIETmisc.3057.a:0 "The rat-catchers’ services are invaluable!"
+ # Version 1.12.1 Start Here - Note to Translators: please leave this comment here and do not remove it even in your versions of the loc
  VIETmisc.3058.t:0 "xxxxx"
  VIETmisc.3058.desc:0 "xxxxx"
  VIETmisc.3058.a:0 "xxxxx"

@@ -42,6 +42,17 @@ VIET_background_nightmare = {
 ### TUSCAN COUNTRY ###
 VIET_background_tuscan_country = {
 
+	background = { # East African
+		trigger = {
+			location = {
+				geographical_region = world_africa_east
+			}
+		}
+		reference = "gfx/interface/illustrations/event_scenes/VIET_tuscan_country_ethiopian.dds"
+		environment = "environment_event_garden"
+		ambience = "event:/SFX/Events/Backgrounds/castle_garden_day"
+	}
+
 	background = { # France
 		trigger = {
 			location = {
@@ -367,11 +378,13 @@ VIET_background_small_town = {
 		ambience = "event:/SFX/Events/Backgrounds/townmarket_western_day"
 	}
 
+
 	background = { # Non-Tropical African
 		trigger = {
 			location = {
 				geographical_region = world_africa
 				NOT = { geographical_region = ghw_region_subsahelian_africa }
+				NOT = { geographical_region = world_africa_east }
 			}
 		}
 		reference = "gfx/interface/illustrations/event_scenes/VIET_small_town_african.dds"
@@ -386,6 +399,17 @@ VIET_background_small_town = {
 			}
 		}
 		reference = "gfx/interface/illustrations/event_scenes/VIET_small_town_akan.dds"
+		environment = "environment_event_garden"
+		ambience = "event:/SFX/Events/Backgrounds/townmarket_day_tribal_pagan"
+	}
+
+	background = { # East African
+		trigger = {
+			location = {
+				geographical_region = world_africa_east
+			}
+		}
+		reference = "gfx/interface/illustrations/event_scenes/VIET_small_town_ethiopian.dds"
 		environment = "environment_event_garden"
 		ambience = "event:/SFX/Events/Backgrounds/townmarket_day_tribal_pagan"
 	}

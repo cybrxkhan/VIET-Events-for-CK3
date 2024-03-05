@@ -476,6 +476,8 @@ VIET_events_yearly_pulse = {
 		# Jokes
 		100 = VIETmisc.0333		# Cicero's anecdote about the crappy orator
 		100 = VIETmisc.0334		# Philogelos quip about sea travel
+		# Rodent
+		100 = VIETmisc.0337		# Servants suggest herbal incense to chase away mice
 	}
 }
 
@@ -872,6 +874,9 @@ VIET_events_tri_yearly_pulse = {
 		100 = VIETmisc.0331		# Anglo-Saxon double entendre riddle about keys
 		100 = VIETmisc.0332		# Joke about the self-castrating husband, from Facetiae, a 15th century Italian joke book
 		100 = VIETmisc.0335		# Joke about fat clergy, from Facetiae, a 15th century Italian joke book
+		# Rodent
+		100 = VIETmisc.0336		# Dreamt of a mouse's lawsuit
+		100 = VIETmisc.0339		# Dreamt of mice turning into lions (based on an account by Anna Komnene)
 	}
 }
 
@@ -1130,6 +1135,8 @@ VIET_events_five_yearly_pulse = {
 		100 = VIETmisc.0325		# Courtier overdoses on marking nuts
 		# Desert
 		100 = VIETmisc.0330		# Courtier claims to have helped a snake that turned out to be a genie
+		# Rodent
+		100 = VIETmisc.0340		# Criminal caught using training rodents to steal
 	}
 }
 
@@ -1481,8 +1488,11 @@ VIET_events_common_county_pulse = {
 		100 = VIETmisc.3045 	# Ingredients from a region become popular
 		# Water
 		100 = VIETmisc.3051 	# Seaweed Fertilizer
+		# Rodents
+		100 = VIETmisc.3056 	# Increased rodent infestation
+		100 = VIETmisc.3057 	# Rat-catchers in a province become renowned
 		
-		# 38
+		# 40
     }
 }
 
@@ -1936,6 +1946,10 @@ VIET_events_common_childhood_pulse = {
 		100 = VIETmisc.0305		# Do you want to be a kid forever or not?
 		100 = VIETmisc.0307		# Getting bored of an old toy
 		100 = VIETmisc.0308		# Lost your favorite toy
+		# Rodent
+		100 = VIETmisc.0338		# Child is told Aesop fable involving a cunning cat and mice
+
+		# Total: 11
 	}
 }
 
@@ -2009,6 +2023,8 @@ VIET_events_uncommon_childhood_pulse = {
 		100 = VIETmisc.0311		# Stewardship: Listening to adults talking about organizing and managing stuff
 		100 = VIETmisc.0312		# Intrigue: Overhear some juicy gossip
 		100 = VIETmisc.0313		# Learning: Memorize a prayer
+
+		# Total: 9
 	}
 }
 
@@ -2073,6 +2089,8 @@ VIET_events_rare_childhood_pulse = {
 		#######################################
 		# Generic
 		100 = VIETmisc.0306 	# Adult criticizes young girls doing medieval twerking (based on an actual medieval quote)
+
+		# Total: 2
 	}
 }
 

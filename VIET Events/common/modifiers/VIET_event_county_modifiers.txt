@@ -68,12 +68,16 @@
 # horse_negative
 # horse_dead_positive
 # horse_dead_negative
+# hostage_negative
+# hostage_positive
 # hunt_positive
 # hunt_negative
 # intrigue_positive
 # intrigue_negative
 # learning_positive
 # learning_negative
+# legend_positive
+# legend_negative
 # letter_positive
 # letter_negative
 # love_positive
@@ -84,6 +88,8 @@
 # martial_negative
 # mask_positive
 # mask_negative
+# monkey_positive
+# monkey_negative
 # outdoors_positive
 # outdoors_negative
 # piety_positive
@@ -106,10 +112,22 @@
 # stewardship_negative
 # stress_positive
 # stress_negative
+# tournament_positive
+# tournament_negative
+# travel_positive
+# travel_negative
+# travel_safety_positive
+# travel_safety_negative
+# travel_speed_positive
+# travel_speed_negative
 # treat_positive (cake)
 # treat_negative (cake)
 # treatment_positive
 # treatment_negative
+# wedding_positive
+# wedding_negative
+# wit_positive (chess)
+# wit_negative (chess)
 # 
 #################################################
 
@@ -130,7 +148,7 @@ VIET_trinket_cave_shrine = {
 VIET_beloved_guard_captain = {
 	icon = prowess_positive
 	county_opinion_add = 3
-	monthly_county_control_change_factor = 0.1
+	monthly_county_control_growth_factor = 0.1
 	levy_reinforcement_rate = 0.1
 }
 VIET_beloved_guard_captain_character = {
@@ -151,7 +169,7 @@ VIET_ennobled_beloved_guard_captain = {
 VIET_the_rogues = {
 	icon = mask_negative
 	county_opinion_add = -2
-	monthly_county_control_change_factor = -0.1	
+	monthly_county_control_decline_factor = 0.1	
 }
 VIET_arrested_the_rogues = {
 	icon = county_modifier_control_positive
@@ -173,7 +191,7 @@ VIET_hired_rogues = {
 VIET_dimensional_portal = {
 	icon = rock_positive
 	development_growth_factor = 0.01
-	monthly_county_control_change_add = -0.1
+	monthly_county_control_decline_add = -0.1
 }
 VIET_dimensional_portal_guards = {
 	icon = rock_positive
@@ -182,11 +200,11 @@ VIET_dimensional_portal_guards = {
 VIET_local_feud = {
 	icon = blood_negative
 	development_growth = -0.3
-	monthly_county_control_change_add = -0.5
+	monthly_county_control_decline_add = -0.5
 }
 VIET_local_feud_averted = {
 	icon = diplomacy_positive
-	monthly_county_control_change_add = 0.1
+	monthly_county_control_growth_add = 0.1
 }
 VIET_local_feud_averted_character = {
 	icon = diplomacy_positive
@@ -226,19 +244,19 @@ VIET_good_pottery = {
 }
 VIET_strange_dark_cloud = {
 	icon = magic_negative
-	monthly_county_control_change_add = -0.1
+	monthly_county_control_decline_add = -0.1
 }
 VIET_bad_officers = {
 	icon = prowess_negative
 	county_opinion_add = -5
 	levy_reinforcement_rate = -0.3
 	garrison_size = -0.1
-	monthly_county_control_change_add = -0.1
+	monthly_county_control_decline_add = -0.1
 }
 VIET_bad_officers_replaced_county = {
 	icon = prowess_positive
 	county_opinion_add = 5
-	monthly_county_control_change_add = 0.1	
+	monthly_county_control_growth_add = 0.1	
 }
 VIET_bad_officers_replaced = {
 	icon = diplomacy_positive
@@ -248,11 +266,11 @@ VIET_bad_officers_replaced = {
 }
 VIET_martyr_commander = {
 	icon = martial_positive
-	monthly_county_control_change_add = 0.3
+	monthly_county_control_growth_add = 0.3
 }
 VIET_martyr_commander_monument = {
 	icon = martial_positive
-	monthly_county_control_change_add = 0.5
+	monthly_county_control_growth_add = 0.5
 	development_growth = 0.1
 	county_opinion_add = 4
 }
@@ -265,7 +283,7 @@ VIET_tomb_monument_warrior = {
 VIET_tomb_monument_holy = {
 	icon = piety_positive
 	tax_mult = 0.03
-	monthly_county_control_change_add = 0.3
+	monthly_county_control_growth_add = 0.3
 }
 VIET_tomb_monument_ruler = {
 	icon = prestige_positive
@@ -278,12 +296,12 @@ VIET_benevolent_spirit = {
 }
 VIET_maitreya_cult_repressed = {
 	icon = piety_positive
-	monthly_county_control_change_factor = 0.1
+	monthly_county_control_growth_factor = 0.1
 }
 VIET_maitreya_cult_unrepressed = {
 	icon = piety_negative
-	monthly_county_control_change_add = -0.5
-	monthly_county_control_change_factor = -0.1
+	monthly_county_control_decline_add = -0.5
+	monthly_county_control_decline_factor = 0.1
 	development_growth_factor = -0.1
 }
 VIET_renowned_blacksmith_region = {
@@ -297,14 +315,14 @@ VIET_renowned_blacksmith_region = {
 }
 VIET_mad_scientist_rumors = {
 	icon = magic_negative
-	monthly_county_control_change_add = -0.1
+	monthly_county_control_decline_add = -0.1
 }
 VIET_disappeared_village = {
 	icon = county_modifier_development_negative
 	development_growth = -0.1
 }
 VIET_perfectly_arranged_marriage = {
-	icon = love_positive
+	icon = wedding_positive
 	county_opinion_add = 1
 }
 VIET_spirit_towns = {
@@ -324,18 +342,18 @@ VIET_respected_elder_death_grandmother = {
 VIET_serial_killer_found = {
 	icon = blood_positive
 	county_opinion_add = 3
-	monthly_county_control_change_add = 0.1
+	monthly_county_control_growth_add = 0.1
 }
 VIET_death_of_several_officials = {
 	icon = treatment_negative
 	development_growth_factor = -0.15
-	monthly_county_control_change_factor = -0.3
+	monthly_county_control_decline_factor = 0.3
 	build_speed = 0.1
 }
 VIET_secretly_corrupt_official = {
 	icon = county_modifier_corruption_negative
 	county_opinion_add = -5
-	monthly_county_control_change_add = -0.1
+	monthly_county_control_decline_add = -0.1
 }
 VIET_holy_hermit_passes_away = {
 	icon = piety_positive
@@ -371,7 +389,7 @@ VIET_famous_bard_arrested = {
 }
 VIET_haunted_ship = {
 	icon = magic_negative
-	monthly_county_control_change_add = -0.1
+	monthly_county_control_decline_add = -0.1
 }
 VIET_flat_stone_monument = {
 	icon = rock_positive
@@ -400,7 +418,7 @@ VIET_sandstorm_not_disaster_relief = {
 VIET_forlorn_watchman = {
 	icon = rock_positive
 	development_growth_factor = 0.02
-	monthly_county_control_change_factor = 0.05	
+	monthly_county_control_growth_factor = 0.05	
 }
 VIET_pistachio_land = {
 	icon = fertility_positive
@@ -430,7 +448,7 @@ VIET_landslide_not_disaster_relief = {
 VIET_strong_lads = {
 	icon = prowess_positive
 	levy_reinforcement_rate = 0.2
-	monthly_county_control_change_factor = 0.1
+	monthly_county_control_growth_factor = 0.1
 }
 VIET_giant_shade_tree = {
 	icon = fertility_positive
@@ -438,7 +456,7 @@ VIET_giant_shade_tree = {
 }
 VIET_shadow_people = {
 	icon = blood_negative
-	monthly_county_control_change_add = -0.1
+	monthly_county_control_decline_add = -0.1
 }
 VIET_youth_prank = {
 	icon = social_negative
@@ -466,7 +484,7 @@ VIET_incorruptible_officials = {
 VIET_cracking_down_on_corrupt_officials = {
 	icon = dread_positive
 	county_opinion_add = 5
-	monthly_county_control_change_add = 0.1
+	monthly_county_control_growth_add = 0.1
 }
 VIET_studying_incorruptible_officials = {
 	icon = letter_positive
@@ -524,7 +542,7 @@ VIET_famous_traveler_county = {
 }
 VIET_recent_building_collapse = {
 	icon = county_modifier_development_negative
-	monthly_county_control_change_add = -0.3
+	monthly_county_control_decline_add = -0.3
 }
 VIET_generous_donation = {
 	icon = piety_positive
@@ -627,18 +645,18 @@ VIET_rehabilitated_submerged_shrine = {
 }
 VIET_burnt_down_tower_renovated = {
 	icon = compass_positive
-	monthly_county_control_change_add = 0.3
+	monthly_county_control_growth_add = 0.3
 	levy_reinforcement_rate = 0.1
 	hostile_raid_time = 0.1
 }
 VIET_smuggling_ring_arrested = {
 	icon = goods_positive
-	monthly_county_control_change_add = 0.2
+	monthly_county_control_growth_add = 0.2
 	county_opinion_add = 3
 }
 VIET_haunted_fortress = {
 	icon = county_modifier_development_negative
-	monthly_county_control_change_add = -0.3
+	monthly_county_control_decline_add = -0.3
 	fort_level = 1
 	hostile_raid_time = 0.05
 }
@@ -649,7 +667,7 @@ VIET_famous_flower_meadows = {
 }
 VIET_cave_art = {
 	icon = outdoors_positive
-	monthly_county_control_change_add = 0.1
+	monthly_county_control_growth_add = 0.1
 	development_growth_factor = 0.01
 }
 VIET_investigated_cave_art = {
@@ -660,29 +678,29 @@ VIET_investigated_cave_art = {
 VIET_imposter_ruler = {
 	icon = mask_negative
 	county_opinion_add = -5
-	monthly_county_control_change_add = -0.3
-	monthly_county_control_change_factor = -0.25
+	monthly_county_control_decline_add = -0.3
+	monthly_county_control_decline_factor = 0.25
 }
 VIET_tales_holy_person = {
 	icon = piety_positive
 	development_growth_factor = 0.15
-	monthly_county_control_change_add = 0.2
+	monthly_county_control_growth_add = 0.2
 }
 VIET_decade_specter_vengeful = {
 	icon = piety_negative
 	development_growth_factor = -0.1
-	monthly_county_control_change_add = -0.1
+	monthly_county_control_decline_add = -0.1
 }
 VIET_decade_specter_helpful = {
 	icon = piety_positive
 	development_growth_factor = 0.1
-	monthly_county_control_change_add = 0.1
+	monthly_county_control_growth_add = 0.1
 }
 VIET_officials_resign_in_protest = {
 	icon = county_modifier_corruption_negative
 	county_opinion_add = -5
 	tax_mult = -0.01
-	monthly_county_control_change_add = -0.2
+	monthly_county_control_decline_add = -0.2
 }
 VIET_officials_resign_in_protest_something_done = {
 	icon = county_modifier_control_positive
@@ -691,7 +709,7 @@ VIET_officials_resign_in_protest_something_done = {
 VIET_officials_resign_in_protest_something_done_happy = {
 	icon = county_modifier_control_positive
 	county_opinion_add = 5
-	monthly_county_control_change_add = 0.1
+	monthly_county_control_growth_add = 0.1
 }
 VIET_heroic_official_rescues_children_county = {
 	icon = family_positive
@@ -711,19 +729,19 @@ VIET_heroic_official_promoted = {
 
 VIET_wayshrine_county = {
 	icon = piety_positive
-	monthly_county_control_change_add = 0.1
+	monthly_county_control_growth_add = 0.1
 	tax_mult = 0.02
 }
 
 VIET_demon_sightings = {
 	icon = beast_negative
-	monthly_county_control_change_add = -0.2
+	monthly_county_control_decline_add = -0.2
 	tax_mult = -0.01
 }
 
 VIET_rebuilt_old_fort = {
 	icon = county_modifier_control_positive
-	monthly_county_control_change_add = 0.2
+	monthly_county_control_growth_add = 0.2
 	fort_level = 1
 }
 
@@ -740,18 +758,18 @@ VIET_giant_mudcrab = {
 VIET_mysterious_night_noises = {
 	icon = magic_negative
 	development_growth = -0.1
-	monthly_county_control_change_add = -0.1
+	monthly_county_control_decline_add = -0.1
 }
 
 VIET_brilliant_light = {
 	icon = magic_positive
 	county_opinion_add = 2
-	monthly_county_control_change_add = 0.1
+	monthly_county_control_growth_add = 0.1
 }
 
 VIET_lake_dried_up = {
 	icon = fertility_negative
-	monthly_county_control_change_add = -0.2
+	monthly_county_control_decline_add = -0.2
 	development_growth = -0.4
 	tax_mult = -0.02
 }
@@ -759,14 +777,14 @@ VIET_lake_dried_up = {
 VIET_lake_dried_up_resettled = {
 	icon = fertility_negative
 	county_opinion_add = 4
-	monthly_county_control_change_add = -0.1
+	monthly_county_control_decline_add = -0.1
 	development_growth = -0.2
 	tax_mult = -0.01
 }
 
 VIET_mysterious_conman = {
 	icon = mask_negative
-	monthly_county_control_change_add = -0.1
+	monthly_county_control_decline_add = -0.1
 	development_growth = -0.1
 }
 
@@ -780,7 +798,7 @@ VIET_pillaged_academy = {
 VIET_rebuilt_academy = {
 	icon = learning_positive
 	development_growth = 0.2
-	monthly_county_control_change_add = 0.1
+	monthly_county_control_growth_add = 0.1
 }
 
 VIET_famous_ingredients = {
@@ -792,7 +810,7 @@ VIET_famous_ingredients = {
 VIET_punished_innocent_officials = {
 	icon = dread_positive
 	county_opinion_add = 10
-	monthly_county_control_change_add = -0.1
+	monthly_county_control_decline_add = -0.1
 	#courtier_and_guest_opinion = -5
 	#monthly_prestige_gain_mult = -0.01
 }
@@ -800,7 +818,7 @@ VIET_punished_innocent_officials = {
 VIET_did_not_punish_innocent_officials = {
 	icon = letter_negative
 	county_opinion_add = -10
-	#monthly_county_control_change_add = -0.1
+	#monthly_county_control_decline_add = -0.1
 	#monthly_prestige = 0.1
 }
 
@@ -813,13 +831,13 @@ VIET_innocent_officials_vindicated = {
 VIET_incestuous_siblings = {
 	icon = love_negative
 	county_opinion_add = -3
-	monthly_county_control_change_add = -0.1
+	monthly_county_control_decline_add = -0.1
 }
 
 VIET_calculating_the_apocalypse = {
 	icon = magic_negative
 	county_opinion_add = -6
-	monthly_county_control_change_add = -0.1
+	monthly_county_control_decline_add = -0.1
 	development_growth_factor = -0.06
 }
 
@@ -857,7 +875,7 @@ VIET_seaweed_fertilizer = {
 VIET_flood_prevention_measures = {
 	icon = county_modifier_control_positive
 	build_gold_cost = -0.05
-	monthly_county_control_change_add = 0.1
+	monthly_county_control_growth_add = 0.1
 	county_opinion_add = -5
 }
 
@@ -869,7 +887,7 @@ VIET_lack_of_flood_prevention_measures = {
 
 VIET_chestnut_tree_laws = {
 	icon = fertility_positive
-	monthly_county_control_change_add = -0.1
+	monthly_county_control_decline_add = -0.1
 	county_opinion_add = -5
 	development_growth = 0.1
 	tax_mult = 0.01
@@ -902,12 +920,25 @@ VIET_expanded_ascetics_retreat = {
 VIET_protected_desert_ascetics = {
 	icon = piety_positive
 	travel_danger = -2
-	monthly_county_control_change_add = 0.1
+	monthly_county_control_growth_add = 0.1
 }
 
 VIET_persecuted_desert_ascetics = {
 	icon = dread_negative
 	county_opinion_add = -5
+}
+
+VIET_mouse_rats_more = {
+	icon = rat_negative
+	tax_mult = -0.02
+	development_growth_factor = -0.1
+	epidemic_resistance = -5
+}
+
+VIET_excellent_rat_catchers = {
+	icon = rat_positive
+	development_growth_factor = 0.03
+	epidemic_resistance = 5
 }
 
 

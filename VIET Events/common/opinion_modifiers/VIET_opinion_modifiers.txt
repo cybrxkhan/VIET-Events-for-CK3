@@ -865,3 +865,15 @@ VIET_opinion_touche = {
 	opinion = 10
 }
 
+VIET_opinion_paid_attention = {
+	years = 5
+	opinion = 10
+	decaying = yes
+}
+
+VIET_opinion_didnt_pay_attention = {
+	years = 5
+	opinion = -10
+	decaying = yes
+}
+

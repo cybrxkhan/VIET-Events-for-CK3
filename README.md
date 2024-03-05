@@ -1,12 +1,11 @@
 # VIET Events for CK3
 
-<img src="https://i.imgur.com/WENd1G5.jpg">
+<img src="https://i.imgur.com/GWDnTbC.jpg">
 
-## Latest Version: 1.11.3 "Bache Bene Venies" (Released 2/8/24)
+## Latest Version: 1.12.0 "Rattus" (Released 3/5/24)
 
-_“Istud vinum, bonum vinum, vinum generosum, / reddit virum curialem, probum, animosum.”_
-_[Poetic Translation: This is wine, and this good wine; this is what we're after / Wine, it lets us all be friendly, fills us up with laughter.]_
-_- From Bache Bene Venies, an 11th - 13th century drinking song by university students_
+_““Consider the little mouse, how sagacious an animal it is which never entrusts its life to one hole only._
+_- Plautus (254 – 184 BCE), Roman playwright_
 
 Very Immersive Events and Tales (VIET), the sequel to VIET Events Reborn for CK2, is a flavor mod that adds a vast collection of events about everyday life to spice up your game. They add immersion and a diversity of experiences in between wars and vanilla’s event chains, and cover mundane minutiae ranging from small talk with courtiers and eating local cuisine to epic tales about love, philosophy, and the human condition. Some of the events unlock new decisions, character interactions, activities, and much more for you to explore!
 
@@ -16,7 +15,7 @@ Feel free to use my work in your mods - all I ask is that I am credited and (if 
 
 ## Features
 
-- Over **1101** new flavor events to experience!
+- Over **1108** new flavor events to experience!
 - Explore new decisions, artifacts, character interactions, activities, and more!
 - Game rule to disable sillier events for those who don't like them, with three levels to choose from: Balanced (Default), Serious (Restricted), and All Events (Full)
 - Compatible with almost anything since it doesn't touch any vanilla files - even with overhaul mods, you can via game rule disable events that reference things specific to our medieval world that wouldn’t make sense in other time periods or universes (like fantasy and sci-fi conversion mods)
@@ -40,13 +39,12 @@ The mod folder should look something like this:
 
 ## Changelog
 
-### Version 1.11.3 "Bache Bene Venies"
+### Version 1.11.3 "Rattus"
 
-New events added in this version: **13**
+New events added in this version: **7**
 
-- Added events with the following themes:
-    - 5 Jokes
-    - 8 Night*
+- Added 7 rodent-themed events
+- Added a couple East African event backgrounds
 - Miscellaneous bugfixes
 
 \* Adapted from VIET for CK2
