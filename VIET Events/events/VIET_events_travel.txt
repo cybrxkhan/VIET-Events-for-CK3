@@ -23,6 +23,7 @@
 # 7010-7019		Generic 2
 # 7020-7021		Water
 # 7022-7024		Desert
+# 7025-7027		Word Contest
 # 
 ############################################################################################################################
 
@@ -2674,5 +2675,374 @@ VIETmisc.7024 = {
 
 
 }
+
+
+##################################################################
+# VIET WORD CONTEST 7025-7027
+##################################################################
+
+
+
+
+# Aurora - witness aurora at night # Aww_Potatoes
+VIETmisc.7025 = {
+	type = character_event
+	title = VIETmisc.7025.t
+	desc = VIETmisc.7025.desc
+	theme = travel_diplomacy 
+	override_background = { reference = bp1_bonfire }
+
+	
+	left_portrait = {
+		character = root
+		animation = admiration
+	}	
+	
+	right_portrait = {
+		character = scope:person
+		animation = happiness
+	}	
+
+	trigger = {
+		is_location_valid_for_travel_event_on_land = yes
+		location = {
+			OR = {
+				terrain = taiga
+				AND = {
+					terrain = forest
+					OR = {
+						geographical_region = world_europe_north
+						geographical_region = world_steppe
+					}
+				}
+				geographical_region = hunt_animal_reindeer_region
+			}
+		}
+		current_travel_plan = {
+			any_entourage_character = {	
+				is_available_travelling = yes
+			}
+		}
+	}
+	
+	weight_multiplier = {
+		base = 1
+		modifier = {
+			add = 0.2
+			has_trait = content
+		}
+		modifier = {
+			add = -0.2
+			has_trait = ambitious
+		}
+		modifier = {
+			add = 0.2
+			has_trait = zealous
+		}
+		modifier = {
+			add = -0.2
+			has_trait = cynical
+		}
+		modifier = {
+			add = 0.2
+			has_trait = honest
+		}
+		modifier = {
+			add = -0.2
+			has_trait = deceitful
+		}
+	}
+
+	immediate = {
+		current_travel_plan = {
+			random_entourage_character = {
+				limit = {
+					is_available_travelling = yes
+				}
+				save_scope_as = person
+			}	
+		}	
+	}
+	
+	option = { # ok
+		name = VIETmisc.7025.a	
+		stress_impact = {
+			base = miniscule_stress_impact_loss
+		}
+		add_character_modifier = {
+			modifier = VIET_witnessed_aurora
+			years = 4
+		}
+		current_travel_plan = {
+			every_entourage_character = {
+				custom = every_entourage_tt
+				stress_impact = {
+					base = miniscule_stress_impact_loss
+				}
+				add_character_modifier = {
+					modifier = VIET_witnessed_aurora
+					years = 4
+				}
+			}
+		}		
+	}
+
+
+}
+
+# Ephemeral - come across a ruin in the wilderness # No discord username provided
+VIETmisc.7026 = {
+	type = character_event
+	title = VIETmisc.7026.t
+	desc = VIETmisc.7026.desc
+	theme = travel_learning
+	override_background = { reference = VIET_background_ancient_cairn }
+
+	
+	left_portrait = {
+		character = root
+		animation = admiration
+	}	
+	
+	right_portrait = {
+		character = scope:scholar
+		animation = thinking
+	}	
+
+	trigger = {
+		is_location_valid_for_travel_event_on_land = yes
+		current_travel_plan = {
+			any_entourage_character = {	
+				is_available_travelling = yes
+				learning >= medium_skill_rating
+				OR = {
+					has_trait = scholar
+					has_trait = education_learning_3
+					has_trait = education_learning_4
+					learning >= high_skill_rating
+				}
+			}
+		}
+	}
+	
+	weight_multiplier = {
+		base = 1
+		modifier = {
+			add = 0.2
+			has_trait = content
+		}
+		modifier = {
+			add = -0.2
+			has_trait = ambitious
+		}
+		modifier = {
+			add = 0.2
+			has_trait = zealous
+		}
+		modifier = {
+			add = -0.2
+			has_trait = cynical
+		}
+		modifier = {
+			add = 0.2
+			has_trait = honest
+		}
+		modifier = {
+			add = -0.2
+			has_trait = deceitful
+		}
+	}
+
+	immediate = {
+		current_travel_plan = {
+			random_entourage_character = {
+				limit = {
+					is_available_travelling = yes
+				}
+				save_scope_as = scholar
+			}	
+		}	
+		scope:scholar = {
+			add_opinion = {
+				target = root
+				modifier = VIET_opinion_interesting_conversation
+			}
+			reverse_add_opinion = {
+				target = root
+				modifier = VIET_opinion_interesting_conversation
+			}		
+		}
+	}
+	
+	option = { # ok
+		name = VIETmisc.7026.a	
+		VIET_small_piety_gain_effect = yes
+		stress_impact = {
+			cynical = miniscule_stress_impact_gain
+			arrogant = miniscule_stress_impact_gain
+		}
+				
+	}
+	
+	option = { # ok
+		name = VIETmisc.7026.b
+		VIET_small_prestige_gain_effect = yes
+		stress_impact = {
+			content = miniscule_stress_impact_gain
+			lazy = miniscule_stress_impact_gain
+		}
+				
+	}
+	
+	option = { # ok
+		name = VIETmisc.7026.c
+		stress_impact = {
+			base = minor_stress_impact_loss
+			content = miniscule_stress_impact_loss
+			lazy = miniscule_stress_impact_loss
+			humble = miniscule_stress_impact_loss
+		}
+				
+	}
+
+
+}
+
+
+
+
+# Braggadocio - meet some dumbass boasting about himself in a tavern # No discord username provided
+VIETmisc.7027 = {
+	type = character_event
+	title = VIETmisc.7027.t
+	desc = VIETmisc.7027.desc
+	theme = travel_diplomacy
+	override_background = { reference = tavern }
+
+
+	right_portrait = root
+
+	trigger = {
+		is_location_valid_for_travel_event_on_land = yes
+	}
+	
+	weight_multiplier = {
+		base = 1
+		modifier = {
+			add = 0.2
+			has_trait = gregarious
+		}
+		modifier = {
+			add = -0.2
+			has_trait = shy
+		}
+		modifier = {
+			add = 0.2
+			has_trait = lustful
+		}
+		modifier = {
+			add = -0.2
+			has_trait = chaste
+		}
+		modifier = {
+			add = 0.2
+			has_trait = humble
+		}
+		modifier = {
+			add = -0.2
+			has_trait = arrogant
+		}
+	}
+	
+	option = { # ok
+		name = VIETmisc.7027.a	
+		add_character_modifier = {
+			modifier = VIET_laughs_at_fools
+			years = 5
+		}
+		stress_impact = {
+			gregarious = miniscule_stress_impact_loss
+			arrogant = miniscule_stress_impact_loss
+			sadistic = miniscule_stress_impact_loss
+			arbitrary = miniscule_stress_impact_loss
+		}
+		current_travel_plan = {
+			every_entourage_character = {
+				custom = VIET_every_entourage_tt_laughing
+				limit = {
+					OR = {
+						has_trait = gregarious
+						has_trait = arrogant
+						has_trait = sadistic
+						has_trait = arbitrary
+					}
+				}
+				add_opinion = {
+					target = root
+					modifier = VIET_opinion_shared_a_laugh
+				}
+				# Have to hide it or else will display too much
+				hidden_effect = {
+					reverse_add_opinion = {
+						target = root
+						modifier = VIET_opinion_shared_a_laugh
+					}					
+				}
+				add_character_modifier = {
+					modifier = VIET_laughs_at_fools
+					years = 5
+				}
+			}
+		}				
+	}
+	
+	option = { # ok
+		name = VIETmisc.7027.b
+		VIET_large_piety_gain_effect = yes
+		stress_impact = {
+			base = minor_stress_impact_loss
+			shy = miniscule_stress_impact_loss
+			humble = miniscule_stress_impact_loss
+			gluttonous = miniscule_stress_impact_loss
+			calm = miniscule_stress_impact_loss
+		}
+		current_travel_plan = {
+			every_entourage_character = {
+				custom = VIET_every_entourage_tt_relaxing
+				limit = {
+					OR = {
+						has_trait = shy
+						has_trait = humble
+						has_trait = gluttonous
+						has_trait = calm
+					}
+				}
+				add_opinion = {
+					target = root
+					modifier = VIET_opinion_also_wants_to_relax
+				}
+				hidden_effect = {
+					reverse_add_opinion = {
+						target = root
+						modifier = VIET_opinion_also_wants_to_relax
+					}
+				}
+				stress_impact = {
+					base = minor_stress_impact_loss
+				}
+			}
+		}				
+	}
+
+
+}
+
+
+
+
+
+
+
+
 
 

@@ -941,6 +941,23 @@ VIET_excellent_rat_catchers = {
 	epidemic_resistance = 5
 }
 
+VIET_dogs_bred_for_hunting_and_guarding = {
+	icon = dog_positive
+	defender_holding_advantage = 3
+	epidemic_resistance = 5
+}
+
+VIET_dogs_bred_for_companionship = {
+	icon = dog_positive
+	tax_mult = 0.02
+}
+
+VIET_dogs_bred_for_herding_and_working = {
+	icon = dog_positive
+	development_growth = 0.1
+	development_growth_factor = 0.05
+}
+
 
 
 

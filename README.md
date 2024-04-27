@@ -1,11 +1,10 @@
 # VIET Events for CK3
 
-<img src="https://i.imgur.com/GWDnTbC.jpg">
+<img src="https://i.imgur.com/pPKaJlb.jpg">
 
-## Latest Version: 1.12.0 "Rattus" (Released 3/5/24)
+## Latest Version: 1.12.1 "Manetho" (Released 3/5/24)
 
-_““Consider the little mouse, how sagacious an animal it is which never entrusts its life to one hole only._
-_- Plautus (254 – 184 BCE), Roman playwright_
+_Manetho was a priest and historian from Ptolemaic Egypt in the 3rd century BCE. He wrote the Aegyptiaca (History of Egypt), which chronicles the reigns of the Pharaohs of ancient Egypt. Though the Aegyptiaca only survives in scattered fragments in the works of later ancient historians, and despite its flawed information, it remains a valuable source on ancient Egypt for modern scholars._
 
 Very Immersive Events and Tales (VIET), the sequel to VIET Events Reborn for CK2, is a flavor mod that adds a vast collection of events about everyday life to spice up your game. They add immersion and a diversity of experiences in between wars and vanilla’s event chains, and cover mundane minutiae ranging from small talk with courtiers and eating local cuisine to epic tales about love, philosophy, and the human condition. Some of the events unlock new decisions, character interactions, activities, and much more for you to explore!
 
@@ -15,7 +14,7 @@ Feel free to use my work in your mods - all I ask is that I am credited and (if 
 
 ## Features
 
-- Over **1108** new flavor events to experience!
+- Over **1116** new flavor events to experience!
 - Explore new decisions, artifacts, character interactions, activities, and more!
 - Game rule to disable sillier events for those who don't like them, with three levels to choose from: Balanced (Default), Serious (Restricted), and All Events (Full)
 - Compatible with almost anything since it doesn't touch any vanilla files - even with overhaul mods, you can via game rule disable events that reference things specific to our medieval world that wouldn’t make sense in other time periods or universes (like fantasy and sci-fi conversion mods)
@@ -39,12 +38,12 @@ The mod folder should look something like this:
 
 ## Changelog
 
-### Version 1.11.3 "Rattus"
+### Version 1.12.1 "Manetho"
 
-New events added in this version: **7**
+New events added in this version: **8**
 
-- Added 7 rodent-themed events
-- Added a couple East African event backgrounds
+- Added 8 events based on words from the winner of the VIET Word Contest for ModCon
+- The cave exploration event (VIETmisc.0092) is now a travel event
 - Miscellaneous bugfixes
 
 \* Adapted from VIET for CK2

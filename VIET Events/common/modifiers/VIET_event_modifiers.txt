@@ -3310,6 +3310,42 @@ VIET_trained_rodents = {
 	legitimacy_gain_mult = -0.05
 }
 
+VIET_embarrassing_situation = {
+	icon = social_negative
+	monthly_prestige = -0.04
+	stress_gain_mult = 0.05
+}
+
+VIET_welcomes_productive_arguments = {
+	icon = social_mixed
+	diplomacy = -1
+	monthly_lifestyle_xp_gain_mult = 0.05
+}
+
+VIET_eschews_pointless_conflict = {
+	icon = social_mixed
+	general_opinion = 5
+	intrigue = -1
+}
+
+VIET_witnessed_aurora = {
+	icon = magic_positive
+	monthly_piety = 0.1
+	stress_gain_mult = -0.05
+}
+
+VIET_laughs_at_fools = {
+	icon = mask_positive
+	monthly_prestige = 0.05
+	stress_loss_mult = 0.05
+}
+
+VIET_snuggery_modifier = {
+	icon = bed_positive
+	stress_gain_mult = -0.15
+	stress_loss_mult = 0.15
+}
+
 
 
 

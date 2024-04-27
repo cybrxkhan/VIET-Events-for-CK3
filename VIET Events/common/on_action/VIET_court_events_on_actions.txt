@@ -68,8 +68,10 @@ VIET_court_event_on_actions = {
 		100 = VIETmisc.6019 			# Folk music from a region is becoming popular at court
 		# Nuts
 		100 = VIETmisc.6020 			# More almond milk at court or not?
+		# VIET Word Contest
+		100 = VIETmisc.6021 			# Hullabaloo - character causes a scene at court # otonashikun
 
-		# 21
+		# 22
 
 	}
 }

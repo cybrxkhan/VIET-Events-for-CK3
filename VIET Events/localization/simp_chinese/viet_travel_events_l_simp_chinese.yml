@@ -1,5 +1,10 @@
 ﻿l_simp_chinese:
  VIET_every_entourage_tt_dislikes_rations:0 "所有不是[GetTrait('temperate').GetName( GetPlayer )]或[GetTrait('content').GetName( GetPlayer )]性格的随行人员"
+ VIET_every_entourage_tt_laughing:0 "Every entourage member who found the situation amusing"
+ VIET_every_entourage_tt_relaxing:0 "Every entourage member who just wants to relax"
+ 
+ # Travel Events
+
  VIETmisc.7001.t:0 "$travel_event_prefix$食物变质"
  VIETmisc.7001.desc:0 "在[ROOT.Char.GetCurrentLocation.GetName]的旅途中，我们惊恐地发现一些食物已经变质了！看来在早些时候，食物不小心掺入了大量的水，导致现在发霉了。\n\n现在附近没有任何定居点，我们需要打猎或寻找一些食物来维持生计，尽管这会浪费时间。不过，也许我们可以硬着头皮走下去，希望剩下的这点食物可以撑到去最近的定居点。"
  VIETmisc.7001.a:0 "我们还是花时间打猎或者寻找食物吧。"
@@ -82,15 +87,21 @@
  VIETmisc.7024.t:0 "$travel_event_prefix$海市蜃楼？"
  VIETmisc.7024.desc:0 "我们在[ROOT.Char.GetCurrentLocation.GetName]的沙漠中徘徊了几个小时，一直没有休息。突然眼前出现了绿洲！我们只能苦笑自己碰到海市蜃楼，但这海市蜃楼太真实了，我们甚至听到了水声和动物的叫声！\n\n[person.GetFirstName]大叫啊的一声，转头一看[person.GetSheHe]被一棵植物绊倒，倒在水里。\n\n咦？是真的！赞美[ROOT.Char.GetFaith.HighGodName]！"
  VIETmisc.7024.a:0 "（我们笑着把[person.GetFirstNameNoTooltip]拉出来）"
- VIETmisc.7025.t:0 "$travel_event_prefix$ xxxxx"
- VIETmisc.7025.desc:0 "xxxxx"
- VIETmisc.7025.a:0 "xxxxx"
- VIETmisc.7026.t:0 "$travel_event_prefix$ xxxxx"
- VIETmisc.7026.desc:0 "xxxxx"
- VIETmisc.7026.a:0 "xxxxx"
- VIETmisc.7027.t:0 "$travel_event_prefix$ xxxxx"
- VIETmisc.7027.desc:0 "xxxxx"
- VIETmisc.7027.a:0 "xxxxx"
+ # Version 1.12.1 Start Here - Note to Translators: please leave this comment here and do not remove it even in your versions of the loc
+ VIETmisc.7025.t:0 "$travel_event_prefix$ Aurora"
+ VIETmisc.7025.desc:0 "After we camped somewhere in the wilderness of [ROOT.Char.GetCurrentLocation.GetName] for the night, we were blessed with a most spectacular vision: an aurora.\n\nHigh above us, the night sky which had been of the purest darkness is transformed into one of vibrant colors. Like curtains or rays of sunshine in all sorts of colors, they erupt across the horizon, dazzling us with a magnificent display."
+ VIETmisc.7025.a:0 "Simply amazing."
+ VIETmisc.7025.info:0 "#emphasis Historical Context:#! The term #italic aurora#! as we understand it only dates back to the last few centuries (derived from the Roman goddess of the dawn). However, we have plenty of historical sources describing auroras, such as Roman and Chinese written accounts, and auroras feature prominently in the mythologies of certain peoples around the world. For example, Seneca, the 1st century Roman philosopher, statesman, and writer, described an aurora in his #italic Naturales Quaestiones#! that was sighted during the reign of Emperor Tiberius which appeared over Ostia, near Rome."
+ VIETmisc.7026.t:0 "$travel_event_prefix$ Ephemeral Ruins"
+ VIETmisc.7026.desc:0 "While traveling in [ROOT.Char.GetCurrentLocation.GetName], we came across some old ruins – ruins so old, we didn’t even recognize them as ruins at first, as we all thought they were randomly placed stones.\n\nOnly when [scholar.GetTitledFirstName], who has some knowledge of such ruins, came closer did [scholar.GetSheHe] recognize the site as man-made. The structure, [scholar.GetSheHe] says, has been badly worn down by the elements.\n\nAs we briefly rest by these ruins, [scholar.GetFirstNameNoTooltip] remarks, with a sigh, “Life is so ephemeral, isn’t it? To think that these must have been some sort of glorious building ages ago. Some day, we too will be in even worse shape than these ruins.”"
+ VIETmisc.7026.a:0 "Our lives are ephemeral, but [ROOT.Char.GetFaith.HighGodName] is not."
+ VIETmisc.7026.b:0 "Then we must do great and valiant deeds while we still live!"
+ VIETmisc.7026.c:0 "All the more reason to just enjoy life and not stress yourself out."
+ VIETmisc.7027.t:0 "$travel_event_prefix$ Braggadocio"
+ VIETmisc.7027.desc:0 "During our travels in [ROOT.Char.GetCurrentLocation.GetName], we were resting at a local tavern, enjoying the local [ROOT.Char.GetCurrentLocation.GetCulture.GetName] fare and cheerful folk music sung in the [ROOT.Char.GetCurrentLocation.GetCulture.GetLanguage.GetName] tongue.\n\nThe merry atmosphere was interrupted by a tall, beefy, and very intoxicated man with one of the smuggest smiles I’d ever seen. He made all sorts of ridiculous statements like all the enemies he’d killed or the women he slept with.\n\nAfter he started harassing other guests, the tavern staff kicked him out – he wasn’t so strong after all! My entourage chuckled to themselves, with some saying he was amusing to watch, while others said the tavern should’ve kicked him out earlier."
+ VIETmisc.7027.a:0 "I enjoy laughing at idiots like that."
+ VIETmisc.7027.b:0 "I just want to eat here in peace."
+ # Version 1.12.2 Start Here - Note to Translators: please leave this comment here and do not remove it even in your versions of the loc
  VIETmisc.7028.t:0 "$travel_event_prefix$ xxxxx"
  VIETmisc.7028.desc:0 "xxxxx"
  VIETmisc.7028.a:0 "xxxxx"

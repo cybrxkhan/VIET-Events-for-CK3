@@ -72,9 +72,14 @@
  VIETmisc.6020.t:0 "扁桃仁奶"
  VIETmisc.6020.desc:0 "我作为一个[ROOT.Char.GetTitleAsNameNoTooltip][ROOT.Char.GetFaith.GetReligion.GetAdjective]的忠实信徒，一直在寻找各种方法来改善我的形象。今天，[chaplain.GetCouncilTitle][chaplain.GetTitledFirstName]在我宫廷中向我提出了一个有趣的想法。\n\n[chaplain.GetSheHe]缓缓道：“贵安，[ROOT.Char.GetLadyLord]，我相信你知扁桃仁价值，以及我们如何在四旬斋期间饮用扁桃仁奶来替代动物奶，以示节制。”\n\n我思考了一下问道：“那剩下的扁桃仁呢？”\n\n[chaplain.GetFirstNameNoTooltip]想都没想回道：“那么，为什么不让厨师们在宴会和其他聚会上更经常地使用它们呢？虽然这样做会开支巨大，但这可以表明您在全年努力实践[ROOT.Char.GetFaith.ReligiousText]的教义。这只会很好地反映您作为一个虔诚的[ROOT.Char.GetFaith.GetReligion.GetAdjectiveNoTooltip]的形象。”"
  VIETmisc.6020.a:0 "“好主意！反正扁桃仁奶我喜欢。”"
- VIETmisc.6021.t:0 "xxxxx"
- VIETmisc.6021.desc:0 "xxxxx"
- VIETmisc.6021.a:0 "xxxxx"
+ # Version 1.12.1 Start Here - Note to Translators: please leave this comment here and do not remove it even in your versions of the loc
+ VIETmisc.6021.t:0 "Hullabaloo"
+ VIETmisc.6021.desc:0 "The peace and ceremony of today’s courtly life was interrupted with a loud noise.\n\n“What’s all this hullabaloo about?” I said, in a firm but dreary tone, as I stood up to investigate the commotion.\n\nAt the entryway into my court room, it seemed that when [courtier.GetTitledFirstName] entered the court room, [courtier.GetSheHe] tripped and fell on the floor. [courtier.GetSheHe|U] got entangled in [courtier.GetHerHis] clothes and was a complete mess, and shouted all sorts of inappropriate words in frustration as my servants rushed to help [courtier.GetHerHim] up.\n\nIt took a few more seconds for [courtier.GetFirstNameNoTooltip] to realize what a fool [courtier.GetSheHe] looked like. As others in my court snickered and whispered and pointed at [courtier.GetHerHim], [courtier.GetSheHe] looked most sheepish as I approached."
+ VIETmisc.6021.a:0 "No one should laugh at [courtier.GetFirstNamePossessiveNoTooltip] misfortune. It’s rude."
+ VIETmisc.6021.b:0 "That was funny. You looked like a complete moron."
+ VIETmisc.6021.c:0 "Well, no matter. Let's continue as we were."
+ VIET_every_courtier_tt_laughing:0 "Every [courtier|E] who found the situation amusing"
+ # Version 1.12.2 Start Here - Note to Translators: please leave this comment here and do not remove it even in your versions of the loc
  VIETmisc.6022.t:0 "xxxxx"
  VIETmisc.6022.desc:0 "xxxxx"
  VIETmisc.6022.a:0 "xxxxx"

@@ -1,6 +1,6 @@
-[img]https://i.imgur.com/RVwBLuS.jpg[/img]
+[img]https://i.imgur.com/pPKaJlb.jpg[/img]
 
-[h1]当前版本：1.12.0 "大鼠" (2024.3.5更新，兼容原版1.12.X)[/h1]
+[h1]当前版本：1.12.1 "曼涅托" (2024.4.27更新，兼容原版1.12.X)[/h1]
 
 [h1][B]
 [url=https://discord.gg/9KuyXv2uZA]我模组的Discord服务器[/url]
@@ -28,7 +28,7 @@ Very Immersive Events and Tales (VIET)是[url=https://steamcommunity.com/sharedf
 [img]http://i.imgur.com/EyXurbK.jpg[/img]
 
 [LIST]
-[*]多达[B][U]1108[/U]个新风味事件（链）[/B]！
+[*]多达[B][U]1116[/U]个新风味事件（链）[/B]！
 [*]新决议、宝物、角色互动、活动等等！
 [*]如果你不喜欢某些傻里傻气的事件，你可以在规则里面将它们停用，共有三个等级可供选择：平衡（默认）、严肃（有所限制）、所有事件（不设限）
 [*][B]几乎兼容所有模组[/B]，因为不触及原文件。就算是全局模组，你也可以在规则里禁用提及我们中世纪世界的事件，这样一来在其它世界线（比如奇幻世界或是科幻世界的模组）就显得更为合理了
@@ -56,9 +56,9 @@ Very Immersive Events and Tales (VIET)是[url=https://steamcommunity.com/sharedf
 
 [img]http://i.imgur.com/RQ5QZTF.jpg[/img]
 
-[h1]版本号1.12.0 "大鼠"[/h1]
+[h1]版本号1.12.1 "曼涅托"[/h1]
 
-该版本新增了[B]7[/B]个事件
+该版本新增了[B]8[/B]个事件
 
 
 完整更新日志请见此处：https://steamcommunity.com/sharedfiles/filedetails/changelog/2227658180

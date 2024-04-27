@@ -59,6 +59,7 @@
 # 0329-0330		Desert
 # 0331-0335		Jokes
 # 0336-0340		Rodent
+# 0341-0343		VIET Word Contest
 # 
 ############################################################################################################################
 
@@ -7281,7 +7282,8 @@ VIETmisc.0092 = {
 	type = character_event
 	title = VIETmisc.0092.t
 	desc = VIETmisc.0092.desc
-	theme = VIET_theme_skyrim_forest
+	theme = travel_intrigue
+	override_background = { reference = VIET_background_skyrim_forest }
 	
 	right_portrait = root
 	
@@ -32400,6 +32402,383 @@ VIETmisc.0340 = {
 }
 
 
+##################################################################
+# VIET WORD CONTEST 0341-0343
+##################################################################
+
+
+# Opprobrious Remarks - scholar says he likes arguing with his wife # asparagusrain
+VIETmisc.0341 = {
+	type = character_event
+	title = VIETmisc.0341.t
+	desc = VIETmisc.0341.desc
+	theme = diplomacy
+	
+	right_portrait = {
+		character = root
+		animation = thinking
+	}
+	
+	weight_multiplier = {
+		base = 1
+		modifier = {
+			add = 0.2
+			has_trait = humble
+		}
+		modifier = {
+			add = -0.2
+			has_trait = arrogant
+		}
+		modifier = {
+			add = 0.2
+			has_trait = diligent
+		}
+		modifier = {
+			add = -0.2
+			has_trait = lazy
+		}
+		modifier = {
+			add = 0.2
+			has_trait = patient
+		}
+		modifier = {
+			add = -0.2
+			has_trait = impatient
+		}
+	}
+	
+	option = { # ok
+		name = VIETmisc.0341.a
+		add_character_modifier = {
+			modifier = VIET_welcomes_productive_arguments
+			years = 10
+		}
+		stress_impact = {
+			humble = miniscule_stress_impact_gain
+			calm = miniscule_stress_impact_gain
+			craven = minor_stress_impact_gain
+			shy = minor_stress_impact_gain
+		}
+	}
+	
+	option = { # ok
+		name = VIETmisc.0341.b
+		add_character_modifier = {
+			modifier = VIET_eschews_pointless_conflict
+			years = 10
+		}
+		stress_impact = {
+			arrogant = miniscule_stress_impact_gain
+			wrathful = minor_stress_impact_gain
+			brave = minor_stress_impact_gain
+			vengeful = miniscule_stress_impact_gain
+		}
+	}
+	
+
+
+}
+
+
+# Lambast - councilor criticizes another councilor for dozing off at a meeting # _captainnemo
+VIETmisc.0342 = {
+	type = character_event
+	title = VIETmisc.0342.t
+	desc = VIETmisc.0342.desc
+	theme = unfriendly
+	override_background = { reference = council_chamber }
+	
+	left_portrait = {
+		character = scope:councilor_1
+		animation = shame
+	}
+	right_portrait = {
+		character = scope:councilor_2
+		animation = disapproval
+	}
+
+
+	trigger = {	
+		any_councillor = {
+			is_available_ai_adult = yes
+			count >= 2
+		}
+	}
+	
+	weight_multiplier = {
+		base = 1
+		modifier = {
+			add = 0.2
+			has_trait = content
+		}
+		modifier = {
+			add = -0.2
+			has_trait = ambitious
+		}
+		modifier = {
+			add = 0.2
+			has_trait = lazy
+		}
+		modifier = {
+			add = -0.2
+			has_trait = diligent
+		}
+		modifier = {
+			add = 0.2
+			has_trait = forgiving
+		}
+		modifier = {
+			add = -0.2
+			has_trait = vengeful
+		}
+	}
+
+	immediate = {
+		every_councillor = {
+			limit = {
+				is_available_ai_adult = yes
+			}
+			add_to_list = councilor_candidates
+		}
+		random_in_list = {
+			list = councilor_candidates
+			save_scope_as = councilor_1
+		}
+		random_in_list = {
+			list = councilor_candidates
+			limit = {
+				exists = scope:councilor_1
+				NOT = { this = scope:councilor_1 }
+			}
+			save_scope_as = councilor_2
+		}
+		scope:councilor_1 = {
+			add_character_modifier = {
+				modifier = VIET_embarrassing_situation
+				years = 10
+			}
+			add_opinion = {
+				target = scope:councilor_2
+				modifier = VIET_opinion_lambasted_me
+			}
+		}
+		scope:councilor_2 = {
+			add_opinion = {
+				target = scope:councilor_1
+				modifier = VIET_opinion_shirks_duties
+			}
+			progress_towards_rival_effect = {
+				CHARACTER = scope:councilor_1
+				OPINION = 0
+				REASON = VIET_rival_reason_placeholder
+			}
+		}
+		
+	}
+	option = { # ok
+		name = VIETmisc.0342.a
+		scope:councilor_1 = {
+			add_opinion = {
+				target = root
+				modifier = VIET_opinion_stood_up
+			}
+		}
+		scope:councilor_2 = {
+			add_opinion = {
+				target = root
+				modifier = disappointed_opinion
+				opinion = -10
+			}
+		}
+		stress_impact = {
+			ambitious = miniscule_stress_impact_gain
+			wrathful = miniscule_stress_impact_gain
+		}
+	}
+	
+	option = { # ok
+		name = VIETmisc.0342.b
+		scope:councilor_1 = {
+			add_opinion = {
+				target = root
+				modifier = VIET_opinion_lambasted_me
+			}
+			reverse_add_opinion = {
+				target = root
+				modifier = VIET_opinion_shirks_duties
+			}
+		}
+		scope:councilor_2 = {
+			add_opinion = {
+				target = root
+				modifier = pleased_opinion
+				opinion = 10
+			}
+		}
+		stress_impact = {
+			patient = miniscule_stress_impact_gain
+			lazy = minor_stress_impact_gain
+			forgiving = miniscule_stress_impact_gain
+		}
+	}
+	
+	option = { # ok
+		name = VIETmisc.0342.c
+		scope:councilor_1 = {
+			add_opinion = {
+				target = root
+				modifier = annoyed_opinion
+				opinion = -10
+			}
+		}
+		scope:councilor_2 = {
+			add_opinion = {
+				target = root
+				modifier = annoyed_opinion
+				opinion = -10
+			}
+		}
+		stress_impact = {
+			base = miniscule_stress_impact_loss
+			sadistic = miniscule_stress_impact_loss
+			content = miniscule_stress_impact_loss
+		}
+	}
+	
+
+
+}
+
+
+# Snuggery - courtier suggests you set aside a room as a snuggery for relaxing # Cerbzzz
+VIETmisc.0343 = {
+	type = character_event
+	title = VIETmisc.0343.t
+	desc = VIETmisc.0343.desc
+	theme = memory_positive
+	
+	left_portrait = {
+		character = scope:courtier
+		animation = throne_room_conversation_2
+	}
+	right_portrait = root
+
+
+	trigger = {	
+		NOT = { has_character_modifier = VIET_snuggery_modifier }	
+		OR = {
+			any_courtier_or_guest = {
+				is_available_ai_adult = yes
+				opinion = {
+					target = root
+					value >= 0
+				}
+			}
+			any_vassal = {
+				is_available_ai_adult = yes
+				opinion = {
+					target = root
+					value >= 0
+				}
+			}
+		}
+	}
+	
+	weight_multiplier = {
+		base = 1
+		modifier = {
+			add = 0.2
+			has_trait = lazy
+		}
+		modifier = {
+			add = -0.2
+			has_trait = diligent
+		}
+		modifier = {
+			add = 0.2
+			has_trait = paranoid
+		}
+		modifier = {
+			add = -0.2
+			has_trait = trusting
+		}
+		modifier = {
+			add = 0.2
+			has_trait = shy
+		}
+		modifier = {
+			add = -0.2
+			has_trait = gregarious
+		}
+	}
+
+	immediate = {
+		every_courtier_or_guest = {
+			limit = {
+				is_available_ai_adult = yes
+				opinion = {
+					target = root
+					value >= 0
+				}
+			}
+			add_to_list = candidate_characters
+		}
+		every_vassal = {
+			limit = {
+				is_available_ai_adult = yes
+				opinion = {
+					target = root
+					value >= 0
+				}
+			}
+			add_to_list = candidate_characters
+		}
+		random_in_list = {
+			list = candidate_characters
+			save_scope_as = courtier
+		}
+	}
+
+
+	option = { # ok
+		name = VIETmisc.0343.a
+		trigger = {
+			OR = {
+				gold >= 50
+				is_ai = no
+			}
+		}
+		remove_short_term_gold = 50
+		add_character_modifier = {
+			modifier = VIET_snuggery_modifier
+			years = 20
+		}
+		scope:courtier = {
+			add_opinion = {
+				target = root
+				modifier = VIET_opinion_listened_to_my_advice
+			}
+			reverse_add_opinion = {
+				target = root
+				modifier = VIET_opinion_good_advice
+			}
+		}
+		stress_impact = {
+			diligent = miniscule_stress_impact_gain
+			greedy = miniscule_stress_impact_gain
+		}
+	}
+	
+	option = { # ok
+		name = VIETmisc.0343.b
+		stress_impact = {
+			lazy = medium_stress_impact_gain
+			shy = miniscule_stress_impact_gain
+		}
+	}
+
+
+}
 
 
 

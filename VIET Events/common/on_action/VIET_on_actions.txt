@@ -368,7 +368,6 @@ VIET_events_yearly_pulse = {
 		100 = VIETmisc.0087		# Farmer tried to cheat a deal by altering the tally sticks but is caught
 		# Earth
 		100 = VIETmisc.0090		# See an earthworm on the road
-		100 = VIETmisc.0092		# Rest in a cave while traveling
 		100 = VIETmisc.0096		# Come across an ancient standing stone
 		# Death
 		100 = VIETmisc.0097		# Courtier pranks another by pretending there's a ghost around
@@ -478,6 +477,8 @@ VIET_events_yearly_pulse = {
 		100 = VIETmisc.0334		# Philogelos quip about sea travel
 		# Rodent
 		100 = VIETmisc.0337		# Servants suggest herbal incense to chase away mice
+		# VIET Word Contest
+		100 = VIETmisc.0342		# Lambast - councilor criticizes another councilor for dozing off at a meeting # _captainnemo
 	}
 }
 
@@ -877,6 +878,8 @@ VIET_events_tri_yearly_pulse = {
 		# Rodent
 		100 = VIETmisc.0336		# Dreamt of a mouse's lawsuit
 		100 = VIETmisc.0339		# Dreamt of mice turning into lions (based on an account by Anna Komnene)
+		# VIET Word Contest
+		100 = VIETmisc.0343		# Snuggery - courtier suggests you set aside a room as a snuggery for relaxing # Cerbzzz
 	}
 }
 
@@ -1137,6 +1140,8 @@ VIET_events_five_yearly_pulse = {
 		100 = VIETmisc.0330		# Courtier claims to have helped a snake that turned out to be a genie
 		# Rodent
 		100 = VIETmisc.0340		# Criminal caught using training rodents to steal
+		# VIET Word Contest
+		100 = VIETmisc.0341		# Opprobrious Remarks - scholar says he likes arguing with his wife # asparagusrain
 	}
 }
 
@@ -1585,8 +1590,10 @@ VIET_events_uncommon_county_pulse = {
 		100 = VIETmisc.3053 	# New laws concerning chestnut trees?
 		# Desert
 		100 = VIETmisc.3054 	# Desert ascetics become popular
+		# VIET Word Contest
+		100 = VIETmisc.3058 	# Dogs - dog breeds become famous in a region # Randlelikesdogs
 		
-		# 30
+		# 31
 		
     }
 }

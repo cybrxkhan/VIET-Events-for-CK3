@@ -36,6 +36,7 @@
 # 3053			Nuts
 # 3054-3055		Desert
 # 3056-3057		Rodents
+# 3058			Word Contest
 # 
 ############################################################################################################################
 
@@ -5530,3 +5531,125 @@ VIETmisc.3057 = {
 
 
 }
+
+
+
+
+
+##################################################################
+# VIET WORD CONTEST 3058
+##################################################################
+
+
+# Dogs - dog breeds become famous in a region # Randlelikesdogs
+VIETmisc.3058 = {
+	type = character_event
+	title = VIETmisc.3058.t
+	desc = VIETmisc.3058.desc
+	theme = VIET_theme_tuscan_country
+	
+	right_portrait = {
+		character = root
+		animation = worry
+	}
+
+		
+	trigger = {
+		NOT = { has_game_rule = VIET_conversion_universe_events }
+		any_held_title = {
+			tier = tier_county
+			NOR = {
+				has_county_modifier = VIET_dogs_bred_for_hunting_and_guarding
+				has_county_modifier = VIET_dogs_bred_for_companionship
+				has_county_modifier = VIET_dogs_bred_for_herding_and_working
+			}
+		}	
+	}
+
+    weight_multiplier = {
+        base = 0
+		modifier = {
+			add = {
+				every_held_title = {
+					limit = { tier = tier_county }
+					add = 1
+				}
+			}		
+		}			
+    }
+	
+	immediate = {
+		random_held_title = {
+			limit = { tier = tier_county }
+			save_scope_as = county
+		}
+	}
+
+	# Ok
+	option = {
+		name = VIETmisc.3058.a
+		scope:county = {
+			add_county_modifier = {
+				modifier = VIET_dogs_bred_for_hunting_and_guarding
+				years = 25
+			}
+		}
+	}
+
+	# Ok
+	option = {
+		name = VIETmisc.3058.b
+		scope:county = {
+			add_county_modifier = {
+				modifier = VIET_dogs_bred_for_companionship
+				years = 25
+			}
+		}
+	}
+
+	# Ok
+	option = {
+		name = VIETmisc.3058.c
+		scope:county = {
+			add_county_modifier = {
+				modifier = VIET_dogs_bred_for_herding_and_working
+				years = 25
+			}
+		}
+	}
+
+	# Ok
+	option = {
+		name = VIETmisc.3058.d
+		random_list = {
+			10 = {
+				scope:county = {
+					add_county_modifier = {
+						modifier = VIET_dogs_bred_for_hunting_and_guarding
+						years = 25
+					}
+				}
+			}
+			10 = {
+				scope:county = {
+					add_county_modifier = {
+						modifier = VIET_dogs_bred_for_companionship
+						years = 25
+					}
+				}
+			}
+			10 = {
+				scope:county = {
+					add_county_modifier = {
+						modifier = VIET_dogs_bred_for_herding_and_working
+						years = 25
+					}
+				}
+			}
+		}
+	}
+
+
+}
+
+

@@ -292,9 +292,13 @@ VIETmisc.3030.info:0 "#emphasis Исторический контекст:#! Х�
  VIETmisc.3057.desc:0 "The rat-catchers of [county.GetNameNoTier] have earned a positive reputation in the region for their skill at catching rodents. In fact, their services are even occasionally solicited elsewhere. This, of course, can only be a good thing, given these pesky rodents cause much mischief and harm by ruining our crops and spreading disease."
  VIETmisc.3057.a:0 "The rat-catchers’ services are invaluable!"
  # Version 1.12.1 Start Here - Note to Translators: please leave this comment here and do not remove it even in your versions of the loc
- VIETmisc.3058.t:0 "xxxxx"
- VIETmisc.3058.desc:0 "xxxxx"
- VIETmisc.3058.a:0 "xxxxx"
+ VIETmisc.3058.t:0 "Dogs"
+ VIETmisc.3058.desc:0 "[county.GetNameNoTier] has gained renown for the quality of the dog breeds developed there, and there are those who come from afar to acquire the dogs bred here. Perhaps I could have a hand in encouraging the locals to breed the dogs for certain purposes."
+ VIETmisc.3058.a:0 "Dogs that guard and hunt well"
+ VIETmisc.3058.b:0 "Dogs who are good companions"
+ VIETmisc.3058.c:0 "Dogs for herding and working"
+ VIETmisc.3058.d:0 "It doesn’t really matter to me"
+ # Version 1.12.2 Start Here - Note to Translators: please leave this comment here and do not remove it even in your versions of the loc
  VIETmisc.3059.t:0 "xxxxx"
  VIETmisc.3059.desc:0 "xxxxx"
  VIETmisc.3059.a:0 "xxxxx"

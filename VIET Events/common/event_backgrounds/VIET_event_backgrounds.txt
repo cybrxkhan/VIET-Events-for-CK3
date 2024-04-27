@@ -370,6 +370,19 @@ VIET_background_small_town = {
 	background = { # Iberian
 		trigger = {
 			location = {
+				culture = {
+					has_cultural_pillar = heritage_chinese
+				}
+			}
+		}
+		reference = "gfx/interface/illustrations/event_scenes/VIET_small_town_han.dds"
+		environment = "environment_bp2_courtyard"
+		ambience = "event:/SFX/Events/Backgrounds/town_market_middleeastern_day"
+	}
+
+	background = { # Iberian
+		trigger = {
+			location = {
 				geographical_region = world_europe_west_iberia
 			}
 		}

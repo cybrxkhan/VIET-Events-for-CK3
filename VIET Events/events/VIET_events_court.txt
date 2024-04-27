@@ -23,6 +23,7 @@
 # 6002-6017		Generic (2 year anniversary)
 # 6018-6019		Short
 # 6020			Nuts
+# 6021			Wprd Contest
 # 
 ############################################################################################################################
 
@@ -3139,6 +3140,155 @@ VIETmisc.6020 = {
 
 	after = {
 		scope:chaplain = {
+			clear_court_event_participation = yes
+		}
+	}
+
+}
+
+
+##################################################################
+# VIET WORD CONTEST 6021
+##################################################################
+
+
+# Hullabaloo - character causes a scene at court # otonashikun
+VIETmisc.6021 = {
+	type = court_event
+	title = VIETmisc.6021.t
+	desc = VIETmisc.6021.desc
+
+	theme = unfriendly
+
+	cooldown = { years = 5 }
+
+	lower_right_portrait = scope:courtier
+	#lower_left_portrait = scope:complainer
+	court_scene = {
+		button_position_character = scope:courtier
+		roles = {
+			scope:courtier = {
+				group = event_group
+				animation = pain
+			}
+			root = {
+				group = event_group
+				animation = war_over_tie
+			}
+		}
+	}
+
+	trigger = {
+		# # DLC check.
+		# has_royal_court = yes
+		# # Standard checks.
+		# is_available_adult = yes
+		# is_landed = yes
+		any_courtier = {
+			is_available_healthy_ai_adult = yes
+			has_court_event_flag = no
+			NOR = {
+				has_trait = humble
+				has_trait = content
+			}
+		}
+	}
+
+	immediate = {
+		random_courtier = {
+			limit = {
+				is_available_healthy_ai_adult = yes
+				has_court_event_flag = no
+				NOR = {
+					has_trait = shy
+					has_trait = arrogant
+				}		
+			}
+			save_scope_as = courtier
+			court_event_character_flag_effect = yes
+			VIET_huge_prestige_loss_effect = yes
+			add_character_modifier = {
+				modifier = VIET_embarrassing_situation
+				years = 10
+			}
+		}
+	}
+
+	option = { # Ok
+		name = VIETmisc.6021.a	
+		scope:courtier = {
+			add_opinion = {
+				target = root
+				modifier = VIET_opinion_stood_up
+			}
+		}
+		every_courtier = {
+			custom = VIET_every_courtier_tt_laughing
+			limit = {
+				is_available_ai_adult = yes
+				NOT = { this = scope:courtier }
+				OR = {
+					has_trait = gregarious
+					has_trait = sadistic
+					has_trait = callous
+					has_trait = arrogant
+					has_trait = arbitrary
+				}
+			}
+			add_opinion = {
+				target = root
+				modifier = VIET_opinion_chastised_me_in_public
+			}
+		}
+		stress_impact = {
+			arrogant = miniscule_stress_impact_gain
+			sadistic = minor_stress_impact_gain
+			callous = miniscule_stress_impact_gain
+			arbitrary = miniscule_stress_impact_gain
+		}
+	}
+
+	option = { # Ok
+		name = VIETmisc.6021.b	
+		scope:courtier = {
+			add_opinion = {
+				target = root
+				modifier = humiliated_opinion
+				opinion = -50
+			}
+		}
+		every_courtier = {
+			custom = VIET_every_courtier_tt_laughing
+			limit = {
+				is_available_ai_adult = yes
+				NOT = { this = scope:courtier }
+				OR = {
+					has_trait = gregarious
+					has_trait = sadistic
+					has_trait = callous
+					has_trait = arrogant
+					has_trait = arbitrary
+				}
+			}
+			add_opinion = {
+				target = root
+				modifier = VIET_opinion_shared_a_laugh
+			}
+		}
+		stress_impact = {
+			humble = miniscule_stress_impact_gain
+			compassionate = minor_stress_impact_gain
+			just = miniscule_stress_impact_gain
+		}
+	}
+
+	option = { # Ok
+		name = VIETmisc.6021.c
+	}
+
+
+	after = {
+		scope:courtier = {
 			clear_court_event_participation = yes
 		}
 	}

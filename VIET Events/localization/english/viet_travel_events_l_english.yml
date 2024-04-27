@@ -2,6 +2,8 @@
 
  VIET_every_entourage_tt_dislikes_rations:0 "Every entourage member who is not [GetTrait('temperate').GetName( GetPlayer )] or [GetTrait('content').GetName( GetPlayer )]"
  every_entourage_tt_attracted_to_women:0 "Every entourage member attracted to women"
+ VIET_every_entourage_tt_laughing:0 "Every entourage member who found the situation amusing"
+ VIET_every_entourage_tt_relaxing:0 "Every entourage member who just wants to relax"
  
  # Travel Events
 
@@ -112,15 +114,21 @@
  VIETmisc.7024.desc:0 "We've been wandering the desert of [ROOT.Char.GetCurrentLocation.GetName] for hours without rest. We saw a mirage of an oasis up ahead, and bitterly laughed at ourselves for being so helpless, even though things haven't even gotten that bad yet. The mirage was so convincing, we even heard the noise of water and animals!\n\n“Aahhh!” [person.GetFirstName] yells, as [person.GetSheHe] trips over a plant and splashes into water.\n\nHuh. Looks like the mirage was actually real after all – praise [ROOT.Char.GetFaith.HighGodName]!"
  VIETmisc.7024.a:0 "We laugh heartily as we pull [person.GetFirstNameNoTooltip] out of the oasis waters."
  # Version 1.11.3 Start Here - Note to Translators: please leave this comment here and do not remove it even in your versions of the loc
- VIETmisc.7025.t:0 "$travel_event_prefix$ xxxxx"
- VIETmisc.7025.desc:0 "xxxxx"
- VIETmisc.7025.a:0 "xxxxx"
- VIETmisc.7026.t:0 "$travel_event_prefix$ xxxxx"
- VIETmisc.7026.desc:0 "xxxxx"
- VIETmisc.7026.a:0 "xxxxx"
- VIETmisc.7027.t:0 "$travel_event_prefix$ xxxxx"
- VIETmisc.7027.desc:0 "xxxxx"
- VIETmisc.7027.a:0 "xxxxx"
+ # Version 1.12.1 Start Here - Note to Translators: please leave this comment here and do not remove it even in your versions of the loc
+ VIETmisc.7025.t:0 "$travel_event_prefix$ Aurora"
+ VIETmisc.7025.desc:0 "After we camped somewhere in the wilderness of [ROOT.Char.GetCurrentLocation.GetName] for the night, we were blessed with a most spectacular vision: an aurora.\n\nHigh above us, the night sky which had been of the purest darkness is transformed into one of vibrant colors. Like curtains or rays of sunshine in all sorts of colors, they erupt across the horizon, dazzling us with a magnificent display."
+ VIETmisc.7025.a:0 "Simply amazing."
+ VIETmisc.7025.info:0 "#emphasis Historical Context:#! The term #italic aurora#! as we understand it only dates back to the last few centuries (derived from the Roman goddess of the dawn). However, we have plenty of historical sources describing auroras, such as Roman and Chinese written accounts, and auroras feature prominently in the mythologies of certain peoples around the world. For example, Seneca, the 1st century Roman philosopher, statesman, and writer, described an aurora in his #italic Naturales Quaestiones#! that was sighted during the reign of Emperor Tiberius which appeared over Ostia, near Rome."
+ VIETmisc.7026.t:0 "$travel_event_prefix$ Ephemeral Ruins"
+ VIETmisc.7026.desc:0 "While traveling in [ROOT.Char.GetCurrentLocation.GetName], we came across some old ruins – ruins so old, we didn’t even recognize them as ruins at first, as we all thought they were randomly placed stones.\n\nOnly when [scholar.GetTitledFirstName], who has some knowledge of such ruins, came closer did [scholar.GetSheHe] recognize the site as man-made. The structure, [scholar.GetSheHe] says, has been badly worn down by the elements.\n\nAs we briefly rest by these ruins, [scholar.GetFirstNameNoTooltip] remarks, with a sigh, “Life is so ephemeral, isn’t it? To think that these must have been some sort of glorious building ages ago. Some day, we too will be in even worse shape than these ruins.”"
+ VIETmisc.7026.a:0 "Our lives are ephemeral, but [ROOT.Char.GetFaith.HighGodName] is not."
+ VIETmisc.7026.b:0 "Then we must do great and valiant deeds while we still live!"
+ VIETmisc.7026.c:0 "All the more reason to just enjoy life and not stress yourself out."
+ VIETmisc.7027.t:0 "$travel_event_prefix$ Braggadocio"
+ VIETmisc.7027.desc:0 "During our travels in [ROOT.Char.GetCurrentLocation.GetName], we were resting at a local tavern, enjoying the local [ROOT.Char.GetCurrentLocation.GetCulture.GetName] fare and cheerful folk music sung in the [ROOT.Char.GetCurrentLocation.GetCulture.GetLanguage.GetName] tongue.\n\nThe merry atmosphere was interrupted by a tall, beefy, and very intoxicated man with one of the smuggest smiles I’d ever seen. He made all sorts of ridiculous statements like all the enemies he’d killed or the women he slept with.\n\nAfter he started harassing other guests, the tavern staff kicked him out – he wasn’t so strong after all! My entourage chuckled to themselves, with some saying he was amusing to watch, while others said the tavern should’ve kicked him out earlier."
+ VIETmisc.7027.a:0 "I enjoy laughing at idiots like that."
+ VIETmisc.7027.b:0 "I just want to eat here in peace."
+ # Version 1.12.2 Start Here - Note to Translators: please leave this comment here and do not remove it even in your versions of the loc
  VIETmisc.7028.t:0 "$travel_event_prefix$ xxxxx"
  VIETmisc.7028.desc:0 "xxxxx"
  VIETmisc.7028.a:0 "xxxxx"

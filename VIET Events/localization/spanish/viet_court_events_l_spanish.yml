@@ -118,9 +118,14 @@ VIETmisc.6000.t:0 "Un debate público"
  VIETmisc.6020.b:0 "I understand your point, but it’s too expensive."
  VIETmisc.6020.info:0 "#emphasis Historical Context:#! Although almond milk is seen as a modern fad nowadays, it was actually very popular in the medieval period, particularly among the upper classes. In Christian Europe, it was often used as a substitute for animal milk (particularly around Lent). Almond milk featured prominently in medieval cookbooks, used in a variety of savory and sweet dishes, from soups and desserts to seafood or simply by itself."
  # Version 1.11.2 Start Here - Please leave this comment and do not remove it
- VIETmisc.6021.t:0 "xxxxx"
- VIETmisc.6021.desc:0 "xxxxx"
- VIETmisc.6021.a:0 "xxxxx"
+ # Version 1.12.1 Start Here - Note to Translators: please leave this comment here and do not remove it even in your versions of the loc
+ VIETmisc.6021.t:0 "Hullabaloo"
+ VIETmisc.6021.desc:0 "The peace and ceremony of today’s courtly life was interrupted with a loud noise.\n\n“What’s all this hullabaloo about?” I said, in a firm but dreary tone, as I stood up to investigate the commotion.\n\nAt the entryway into my court room, it seemed that when [courtier.GetTitledFirstName] entered the court room, [courtier.GetSheHe] tripped and fell on the floor. [courtier.GetSheHe|U] got entangled in [courtier.GetHerHis] clothes and was a complete mess, and shouted all sorts of inappropriate words in frustration as my servants rushed to help [courtier.GetHerHim] up.\n\nIt took a few more seconds for [courtier.GetFirstNameNoTooltip] to realize what a fool [courtier.GetSheHe] looked like. As others in my court snickered and whispered and pointed at [courtier.GetHerHim], [courtier.GetSheHe] looked most sheepish as I approached."
+ VIETmisc.6021.a:0 "No one should laugh at [courtier.GetFirstNamePossessiveNoTooltip] misfortune. It’s rude."
+ VIETmisc.6021.b:0 "That was funny. You looked like a complete moron."
+ VIETmisc.6021.c:0 "Well, no matter. Let's continue as we were."
+ VIET_every_courtier_tt_laughing:0 "Every [courtier|E] who found the situation amusing"
+ # Version 1.12.2 Start Here - Note to Translators: please leave this comment here and do not remove it even in your versions of the loc
  VIETmisc.6022.t:0 "xxxxx"
  VIETmisc.6022.desc:0 "xxxxx"
  VIETmisc.6022.a:0 "xxxxx"

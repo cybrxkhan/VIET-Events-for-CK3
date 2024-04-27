@@ -877,3 +877,45 @@ VIET_opinion_didnt_pay_attention = {
 	decaying = yes
 }
 
+VIET_opinion_stood_up = {
+	years = 20
+	opinion = 15
+	decaying = yes
+}
+
+VIET_opinion_lambasted_me = {
+	years = 10
+	opinion = -10
+	decaying = yes
+}
+
+VIET_opinion_shirks_duties = {
+	years = 10
+	opinion = -10
+	decaying = yes
+}
+
+VIET_opinion_good_advice = {
+	years = 10
+	opinion = 10
+	decaying = yes
+}
+
+VIET_opinion_listened_to_my_advice = {
+	years = 10
+	opinion = 10
+	decaying = yes
+}
+
+VIET_opinion_shared_a_laugh = {
+	years = 10
+	opinion = 5
+	decaying = yes
+}
+
+VIET_opinion_also_wants_to_relax = {
+	years = 10
+	opinion = 5
+	decaying = yes
+}
+
