@@ -3340,10 +3340,25 @@ VIET_laughs_at_fools = {
 	stress_loss_mult = 0.05
 }
 
-VIET_snuggery_modifier = {
-	icon = bed_positive
-	stress_gain_mult = -0.15
-	stress_loss_mult = 0.15
+VIET_maritime_animal_knowledge = {
+	icon = beast_positive
+	stewardship = 1
+	learning = 1
+	sea_travel_danger = -2
+	coastal_sea_travel_danger = -2
+}
+
+VIET_doesnt_fear_risks = {
+	icon = wit_positive
+	diplomacy = 1
+	martial = 1
+	intrigue = -1
+}
+
+VIET_minimizes_risks = {
+	icon = stress_positive
+	intrigue = 2
+	diplomacy = -1
 }
 
 

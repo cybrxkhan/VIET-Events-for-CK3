@@ -958,6 +958,17 @@ VIET_dogs_bred_for_herding_and_working = {
 	development_growth_factor = 0.05
 }
 
+VIET_shark_fishing = {
+	icon = goods_positive
+	development_growth = 0.1
+	development_growth_factor = 0.05
+}
+
+VIET_shark_attacks = {
+	icon = beast_negative
+	tax_mult = -0.01
+}
+
 
 
 
