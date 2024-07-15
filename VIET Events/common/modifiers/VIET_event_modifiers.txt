@@ -3357,8 +3357,16 @@ VIET_doesnt_fear_risks = {
 
 VIET_minimizes_risks = {
 	icon = stress_positive
-	intrigue = 2
+	intrigue = 1
+	stewardship = 1
 	diplomacy = -1
+}
+
+VIET_snuggery_modifier = {
+	icon = stress_positive
+	diplomacy = 1
+	personal_scheme_power_mult = 0.1
+	stress_loss_mult = 0.25
 }
 
 

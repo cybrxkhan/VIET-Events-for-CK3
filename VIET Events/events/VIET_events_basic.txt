@@ -60,6 +60,7 @@
 # 0331-0335		Jokes
 # 0336-0340		Rodent
 # 0341-0343		VIET Word Contest
+# 0344-0346		Shark
 # 
 ############################################################################################################################
 
@@ -32776,6 +32777,341 @@ VIETmisc.0343 = {
 			shy = miniscule_stress_impact_gain
 		}
 	}
+
+
+}
+
+
+
+##################################################################
+# SHARK 0344-0346
+##################################################################
+
+
+# Courtier gains an interest in marine biology
+VIETmisc.0344 = {
+	type = character_event
+	title = VIETmisc.0344.t
+	desc = VIETmisc.0344.desc
+	theme = memory_learning
+	override_background = { reference = throne_room }
+	
+	left_portrait = root
+	
+	right_portrait = {
+		character = scope:courtier
+		animation = thinking
+	}
+
+	trigger = {
+		any_held_county = {
+			is_coastal_county = yes	
+		}
+		OR = {
+			any_courtier_or_guest = {
+				is_available_ai_adult = yes
+				OR = {
+					learning >= decent_skill_rating
+					has_trait = scholar
+					has_trait = theologian
+					has_trait = education_learning_3
+					has_trait = education_learning_4
+				}
+			}
+			any_vassal = {
+				is_available_ai_adult = yes
+				OR = {
+					learning >= decent_skill_rating
+					has_trait = scholar
+					has_trait = theologian
+					has_trait = education_learning_3
+					has_trait = education_learning_4
+				}
+			}
+		}
+	}
+	
+	weight_multiplier = {
+		base = 1
+		modifier = {
+			add = 0.2
+			has_trait = humble
+		}
+		modifier = {
+			add = -0.2
+			has_trait = arrogant
+		}
+		modifier = {
+			add = 0.2
+			has_trait = diligent
+		}
+		modifier = {
+			add = -0.2
+			has_trait = lazy
+		}
+		modifier = {
+			add = 0.2
+			has_trait = gregarious
+		}
+		modifier = {
+			add = -0.2
+			has_trait = shy
+		}
+	}
+
+	immediate = {
+		every_courtier_or_guest = {
+			limit = {
+				is_available_ai_adult = yes
+				OR = {
+					learning >= decent_skill_rating
+					has_trait = scholar
+					has_trait = theologian
+					has_trait = education_learning_3
+					has_trait = education_learning_4
+				}
+			}
+			add_to_list = candidate_characters
+		}
+		every_vassal = {
+			limit = {
+				is_available_ai_adult = yes
+				OR = {
+					learning >= decent_skill_rating
+					has_trait = scholar
+					has_trait = theologian
+					has_trait = education_learning_3
+					has_trait = education_learning_4
+				}
+			}
+			add_to_list = candidate_characters
+		}
+		random_in_list = {
+			list = candidate_characters
+			save_scope_as = courtier
+		}
+		scope:courtier = {
+			add_character_modifier = {
+				modifier = VIET_maritime_animal_knowledge
+				years = 12
+			}
+		}
+	}
+	
+	option = { # ok
+		name = VIETmisc.0344.a
+		scope:courtier = {
+			add_opinion = {
+				target = root
+				modifier = VIET_opinion_interesting_conversation
+			}
+			reverse_add_opinion = {
+				target = root
+				modifier = VIET_opinion_interesting_conversation
+			}		
+		}
+		stress_impact = {
+			impatient = miniscule_stress_impact_gain
+			arrogant = miniscule_stress_impact_gain
+		}
+	}
+	
+	option = { # ok
+		name = VIETmisc.0344.b
+		VIET_large_prestige_gain_effect = yes
+		stress_impact = {
+			patient = miniscule_stress_impact_gain
+			humble = miniscule_stress_impact_gain
+		}
+	}
+
+	after = {		
+		if = {
+			limit = {
+				has_game_rule = VIET_historical_context_on
+			}
+			custom_tooltip = VIETmisc.0344.info
+		}
+	}
+	
+
+
+}
+
+
+# Using tongue stones (fossilized shark teeth) at a feast
+VIETmisc.0345 = {
+	type = character_event
+	title = VIETmisc.0345.t
+	desc = VIETmisc.0345.desc
+	theme = feast_activity
+	
+	right_portrait = {
+		character = root
+		animation = drink_goblet
+	}
+
+	trigger = {
+		has_game_rule = VIET_normal_universe_events
+	}
+	
+	weight_multiplier = {
+		base = 1
+		modifier = {
+			add = 0.2
+			has_trait = trusting
+		}
+		modifier = {
+			add = -0.2
+			has_trait = paranoid
+		}
+		modifier = {
+			add = 0.2
+			has_trait = ambitious
+		}
+		modifier = {
+			add = -0.2
+			has_trait = lazy
+		}
+		modifier = {
+			add = 0.2
+			has_trait = gregarious
+		}
+		modifier = {
+			add = -0.2
+			has_trait = shy
+		}
+	}
+	
+	option = { # ok
+		name = VIETmisc.0345.a
+		VIET_large_piety_gain_effect = yes
+		stress_impact = {
+			arbitrary = miniscule_stress_impact_gain
+			arrogant = miniscule_stress_impact_gain
+			callous = miniscule_stress_impact_gain
+			paranoid = miniscule_stress_impact_gain
+		}
+	}
+	
+	option = { # ok
+		name = VIETmisc.0345.b
+		VIET_large_prestige_gain_effect = yes
+		stress_impact = {
+			compassionate = miniscule_stress_impact_gain
+			humble = miniscule_stress_impact_gain
+			trusting = miniscule_stress_impact_gain
+			diligent = miniscule_stress_impact_gain
+		}
+	}
+
+	after = {			
+		if = {
+			limit = {
+				has_game_rule = VIET_historical_context_on
+			}
+			custom_tooltip = VIETmisc.0345.info
+		}
+	}
+	
+
+
+}
+
+
+# Character reads a line of poetry about divers and sharks (loosely based on the poet Sa'di of Shiraz)
+VIETmisc.0346 = {
+	type = character_event
+	title = VIETmisc.0346.t
+	desc = VIETmisc.0346.desc
+	theme = memory_learning
+	
+	right_portrait = {
+		character = root
+		animation = reading
+	}
+
+	trigger = {
+		OR = {
+			diplomacy >= decent_skill_rating
+			learning >= mediocre_skill_rating
+			has_trait = scholar
+			has_trait = poet
+			has_trait = theologian
+			has_trait = education_learning_1
+			has_trait = education_learning_2
+			has_trait = education_learning_3
+			has_trait = education_learning_4
+		}
+	}
+	
+	weight_multiplier = {
+		base = 1
+		modifier = {
+			add = 0.2
+			has_trait = content
+		}
+		modifier = {
+			add = -0.2
+			has_trait = ambitious
+		}
+		modifier = {
+			add = 0.2
+			has_trait = lazy
+		}
+		modifier = {
+			add = -0.2
+			has_trait = diligent
+		}
+		modifier = {
+			add = 0.2
+			has_trait = shy
+		}
+		modifier = {
+			add = -0.2
+			has_trait = gregarious
+		}
+	}
+	
+	option = { # ok
+		name = VIETmisc.0346.a
+		add_character_modifier = {
+			modifier = VIET_doesnt_fear_risks
+			years = 6
+		}
+		stress_impact = {
+			content = miniscule_stress_impact_gain
+			paranoid = miniscule_stress_impact_gain
+			craven = miniscule_stress_impact_gain
+			patient = miniscule_stress_impact_gain
+			calm = miniscule_stress_impact_gain
+		}
+	}
+	
+	option = { # ok
+		name = VIETmisc.0346.b
+		add_character_modifier = {
+			modifier = VIET_minimizes_risks
+			years = 6
+		}
+		stress_impact = {
+			ambitious = miniscule_stress_impact_gain
+			gregarious = miniscule_stress_impact_gain
+			brave = miniscule_stress_impact_gain
+			impatient = miniscule_stress_impact_gain
+			stubborn = miniscule_stress_impact_gain
+		}
+	}
+
+	after = {			
+		if = {
+			limit = {
+				has_game_rule = VIET_historical_context_on
+			}
+			custom_tooltip = VIETmisc.0346.info
+		}
+	}
+	
 
 
 }

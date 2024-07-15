@@ -479,6 +479,9 @@ VIET_events_yearly_pulse = {
 		100 = VIETmisc.0337		# Servants suggest herbal incense to chase away mice
 		# VIET Word Contest
 		100 = VIETmisc.0342		# Lambast - councilor criticizes another councilor for dozing off at a meeting # _captainnemo
+		# Shark
+		100 = VIETmisc.0344		# Courtier gains an interest in marine biology
+		100 = VIETmisc.0345		# Using tongue stones (fossilized shark teeth) at a feast
 	}
 }
 
@@ -880,6 +883,8 @@ VIET_events_tri_yearly_pulse = {
 		100 = VIETmisc.0339		# Dreamt of mice turning into lions (based on an account by Anna Komnene)
 		# VIET Word Contest
 		100 = VIETmisc.0343		# Snuggery - courtier suggests you set aside a room as a snuggery for relaxing # Cerbzzz
+		# Shark
+		100 = VIETmisc.0346		# Character reads a line of poetry about divers and sharks (loosely based on the poet Sa'di of Shiraz)
 	}
 }
 
@@ -1496,6 +1501,8 @@ VIET_events_common_county_pulse = {
 		# Rodents
 		100 = VIETmisc.3056 	# Increased rodent infestation
 		100 = VIETmisc.3057 	# Rat-catchers in a province become renowned
+		# Shark
+		100 = VIETmisc.3059 	# Shark Fishing industry is doing well
 		
 		# 40
     }
@@ -1670,6 +1677,8 @@ VIET_events_rare_county_pulse = {
 		100 = VIETmisc.3046		# Local scholar claims the apocalypse will happen in this county soon
 		# Desert
 		100 = VIETmisc.3055 	# Singing/booming sand dunes
+		# Shark
+		100 = VIETmisc.3060 	# Shark attack happens
 		
 		# 18
 		
@@ -1752,8 +1761,10 @@ VIET_events_common_artifact_pulse = {
 		# Generic
 		100 = VIETmisc.5052		# Small Seashell - find one by the beach
 		100 = VIETmisc.5054		# House Vase - buy one or not
+		# Shark
+		100 = VIETmisc.5056		# Tongue Stone (Shark Tooth) - Buy one to protect yourself against poison or not?
 		
-		# 31
+		# 32
     }
 }
 

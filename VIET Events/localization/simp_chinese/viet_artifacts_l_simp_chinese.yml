@@ -138,3 +138,8 @@
  VIET_supernova_1066_record_desc:0 "这段文字记录了各种[ROOT.Char.GetCulture.GetName]天文学家对1006年超新星的观测结果，这是有史以来观测到最大规模的新星事件。天空中出现了一颗巨大的 “新星”，持续时间长达数周，甚至可能长达数年。由于这一奇观，[ROOT.Char.GetTitledFirstName]鼓励当地学者写下一些关于它的记录，以供后人参考。"
  VIET_astrolabe_name:0 "星盘"
  VIET_astrolabe_desc:0 "此物乃以黄铜精心打造而成，功能繁多，常用于天文计算，如用来绘制星图。它亦被用于测绘和导航。"
+ # Version 1.12.2 Start Here - Note to Translators: please leave this comment here and do not remove it even in your versions of the loc
+ VIET_tongue_stone_name:0 "Tongue Stone Amulet"
+ VIET_tongue_stone_desc:0 "Also known as a snake tongue, these unique stones – perhaps from some sort of snake or mystical creature – have healing properties, including protection against posion. They are typically dipped in drink or preserved in an amulet like this one."
+ # Version 1.12.3 Start Here - Note to Translators: please leave this comment here and do not remove it even in your versions of the loc
+ # 49 Basic

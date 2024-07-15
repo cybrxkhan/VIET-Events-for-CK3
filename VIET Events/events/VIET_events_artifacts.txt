@@ -28,6 +28,7 @@
 # 5050-5051		Patch
 # 5052-5054		Generic
 # 5055			Astornomy
+# 5056			Shark
 # 
 ############################################################################################################################
 
@@ -8061,8 +8062,8 @@ VIETmisc.5055 = {
 				description = VIET_astrolabe_desc
 				type = VIET_clutter
 				visuals = VIET_astrolabe
-				quality = 15
-				wealth = 15
+				quality = 30
+				wealth = 30
 				modifier = artifact_VIET_astrolabe_modifier
 				max_durability = 40
 				save_scope_as = VIET_clutter_artifact
@@ -8101,4 +8102,141 @@ VIETmisc.5055 = {
 			education_learning_4 = miniscule_stress_impact_gain
 		}
 	}
+}
+
+##################################################################
+# SHARK 5056
+##################################################################
+
+# Tongue Stone (Shark Tooth) - Buy one to protect yourself against poison or not?
+VIETmisc.5056 = {
+	type = character_event
+	title = VIETmisc.5056.t
+	desc = VIETmisc.5056.desc
+	theme = intrigue_skulduggery_focus
+	override_background = { reference = VIET_background_small_town }
+	
+	left_portrait = scope:physician
+	right_portrait = {
+		character = root
+		animation = thinking
+	}
+	artifact = { # To display the artifact in the event-window
+        target = scope:VIET_clutter_artifact
+        position = lower_center_portrait
+    }
+
+	trigger = {
+		# Should be a settled culture
+		NOT = { government_has_flag = government_is_tribal }	
+		court_physician_available_trigger = yes
+	}
+
+    weight_multiplier = {
+        base = 1
+		# Reduce spam
+		modifier = {
+			add = -0.9
+			any_character_artifact = {
+				has_variable = VIET_tongue_stone_variable
+			}
+		}
+		modifier = {
+			add = -0.4
+			VIET_has_2_clutter_artifacts_trigger = yes	
+		}
+		modifier = {
+			add = -0.5
+			VIET_has_4_clutter_artifacts_trigger = yes	
+		}
+		modifier = {
+			add = 0.2
+			has_trait = patient
+		}
+		modifier = {
+			add = -0.2
+			has_trait = impatient
+		}
+		modifier = {
+			add = 0.2
+			has_trait = diligent
+		}
+		modifier = {
+			add = -0.2
+			has_trait = lazy
+		}
+		modifier = {
+			add = 0.2
+			has_trait = humble
+		}
+		modifier = {
+			add = -0.2
+			has_trait = arrogant
+		}
+    }
+	
+
+	immediate = {
+		save_court_physician_as_effect = { SCOPE_NAME = physician }
+		hidden_effect_new_object = {
+			create_artifact = {	
+				name = VIET_tongue_stone_name
+				description = VIET_tongue_stone_desc
+				type = VIET_clutter
+				visuals = VIET_tongue_stone
+				quality = 30
+				wealth = 30
+				modifier = artifact_VIET_tongue_stone_modifier
+				max_durability = 40
+				save_scope_as = VIET_clutter_artifact
+				history = {
+					type = created_before_history
+				}
+			}
+			scope:VIET_clutter_artifact = {
+				set_variable = VIET_tongue_stone_variable
+			}
+		}
+	}
+	
+	option = {
+		name = VIETmisc.5056.a	
+		trigger = {
+			OR = {
+				is_ai = no
+				gold >= 40
+			}
+		}
+		remove_short_term_gold = 40
+		show_as_tooltip = {
+			scope:VIET_clutter_artifact = {
+				set_owner = {
+					target = root
+				}
+			}
+		}
+		custom_tooltip = VIET_artifact_limit_warning
+	}
+	
+	option = {
+		name = VIETmisc.5056.b	
+		hidden_effect = {
+			destroy_artifact = scope:VIET_clutter_artifact
+		}
+		stress_impact = {
+			paranoid = minor_stress_impact_gain
+			diligent = miniscule_stress_impact_gain
+			ambitious = miniscule_stress_impact_gain
+		}
+	}
+
+	after = {			
+		if = {
+			limit = {
+				has_game_rule = VIET_historical_context_on
+			}
+			custom_tooltip = VIETmisc.5056.info
+		}
+	}
+
 }

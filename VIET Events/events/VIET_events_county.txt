@@ -37,6 +37,7 @@
 # 3054-3055		Desert
 # 3056-3057		Rodents
 # 3058			Word Contest
+# 3059-3060		Shark
 # 
 ############################################################################################################################
 
@@ -5550,7 +5551,7 @@ VIETmisc.3058 = {
 	
 	right_portrait = {
 		character = root
-		animation = worry
+		animation = personality_greedy
 	}
 
 		
@@ -5646,6 +5647,194 @@ VIETmisc.3058 = {
 					}
 				}
 			}
+		}
+	}
+
+
+}
+
+
+
+##################################################################
+# SHARK 3059-3060
+##################################################################
+
+
+# Shark Fishing industry is doing well
+VIETmisc.3059 = {
+	type = character_event
+	title = VIETmisc.3059.t
+	desc = VIETmisc.3059.desc
+	theme = stewardship_wealth_focus
+	override_background = { reference = docks }
+	
+	right_portrait = {
+		character = root
+		animation = personality_content
+	}
+
+		
+	trigger = {
+		any_held_title = {
+			tier = tier_county
+			is_coastal_county = yes
+		}	
+	}
+	
+    weight_multiplier = {
+        base = 0
+		modifier = {
+			add = {
+				every_held_title = {
+					limit = { tier = tier_county }
+					add = 1
+				}
+			}		
+		}
+    }
+	
+	immediate = {
+		random_held_title = {
+			limit = {
+				tier = tier_county
+				is_coastal_county = yes
+			}	
+			save_scope_as = county
+		}
+		scope:county = {
+			random_list = {
+				10 = {
+					add_county_modifier = {
+						modifier = VIET_shark_fishing
+						years = 3
+					}				
+				}
+				10 = {
+					add_county_modifier = {
+						modifier = VIET_shark_fishing
+						years = 6
+					}				
+				}
+				10 = {
+					add_county_modifier = {
+						modifier = VIET_shark_fishing
+						years = 9
+					}				
+				}
+				10 = {
+					add_county_modifier = {
+						modifier = VIET_shark_fishing
+						years = 12
+					}				
+				}
+				10 = {
+					add_county_modifier = {
+						modifier = VIET_shark_fishing
+						years = 15
+					}				
+				}
+			}	
+		}
+	}
+
+	# Ok
+	option = {
+		name = VIETmisc.3059.a
+	}
+
+
+}
+
+
+# Shark attack happens
+VIETmisc.3060 = {
+	type = character_event
+	title = VIETmisc.3060.t
+	desc = VIETmisc.3060.desc
+	theme = unfriendly
+	override_background = { reference = docks }
+	
+	right_portrait = {
+		character = root
+		animation = worry
+	}
+
+		
+	trigger = {
+		any_held_title = {
+			tier = tier_county
+			is_coastal_county = yes
+		}	
+	}
+	
+    weight_multiplier = {
+        base = 0
+		modifier = {
+			add = {
+				every_held_title = {
+					limit = { tier = tier_county }
+					add = 1
+				}
+			}		
+		}
+    }
+	
+	immediate = {
+		random_held_title = {
+			limit = {
+				tier = tier_county
+				is_coastal_county = yes
+			}	
+			save_scope_as = county
+		}
+	}
+
+	# Ok
+	option = {
+		name = VIETmisc.3060.a
+		scope:county = {			
+			add_county_modifier = {
+				modifier = VIET_shark_attacks
+				years = 8
+			}
+		}
+		stress_impact = {
+			zealous = miniscule_stress_impact_gain
+			compassionate = miniscule_stress_impact_gain
+			humble = miniscule_stress_impact_gain
+		}
+	}
+
+	# Ok
+	option = {
+		name = VIETmisc.3060.b
+		trigger = {
+			OR = {
+				gold >= 30
+				is_ai = no
+			}
+		}
+		remove_short_term_gold = 30
+		scope:county = {			
+			add_county_modifier = {
+				modifier = VIET_shark_attacks
+				years = 3
+			}
+		}
+		stress_impact = {
+			cynical = miniscule_stress_impact_gain
+			greedy = miniscule_stress_impact_gain
+			callous = miniscule_stress_impact_gain
+		}
+		custom_tooltip = VIET_decrease_county_modifier_time
+	}
+
+	after = {		
+		if = {
+			limit = {
+				has_game_rule = VIET_historical_context_on
+			}
+			custom_tooltip = VIETmisc.3060.info
 		}
 	}
 

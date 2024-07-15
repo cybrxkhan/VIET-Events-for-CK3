@@ -439,5 +439,5 @@ artifact_VIET_supernova_1066_record = {
 
 artifact_VIET_tongue_stone_modifier = {
 	negate_health_penalty_add = 0.1
-	murder_scheme_resistance_add = 4
+	hostile_scheme_resistance_add = 5
 }

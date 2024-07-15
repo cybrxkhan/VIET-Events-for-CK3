@@ -322,7 +322,7 @@ VIET_astrolabe = {
 	asset = ep1_western_box_small_basic_01_a_entity	
 }
 
-VIET_astrolabe = {
+VIET_tongue_stone = {
 	icon = "artifact_VIET_tongue_stone.dds"
 	asset = ep1_western_box_small_basic_01_a_entity	
 }
