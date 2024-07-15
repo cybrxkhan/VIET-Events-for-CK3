@@ -1,10 +1,11 @@
 # VIET Events for CK3
 
-<img src="https://i.imgur.com/pPKaJlb.jpg">
+<img src="https://i.imgur.com/vb7Fbkx.jpg">
 
-## Latest Version: 1.12.1 "Manetho" (Released 3/5/24)
+## Latest Version: 1.12.2 "Shark" (Released 7/14/24)
 
-_Manetho was a priest and historian from Ptolemaic Egypt in the 3rd century BCE. He wrote the Aegyptiaca (History of Egypt), which chronicles the reigns of the Pharaohs of ancient Egypt. Though the Aegyptiaca only survives in scattered fragments in the works of later ancient historians, and despite its flawed information, it remains a valuable source on ancient Egypt for modern scholars._
+_"If the diver worries about the shark's maw, he’ll never grasp the precious pearl."_
+_- Sa‘di of Shiraz (1209-1291 CE), Persian poet, in his magnum opus, the Golestān (“Rose Garden”)_
 
 Very Immersive Events and Tales (VIET), the sequel to VIET Events Reborn for CK2, is a flavor mod that adds a vast collection of events about everyday life to spice up your game. They add immersion and a diversity of experiences in between wars and vanilla’s event chains, and cover mundane minutiae ranging from small talk with courtiers and eating local cuisine to epic tales about love, philosophy, and the human condition. Some of the events unlock new decisions, character interactions, activities, and much more for you to explore!
 
@@ -14,7 +15,7 @@ Feel free to use my work in your mods - all I ask is that I am credited and (if 
 
 ## Features
 
-- Over **1116** new flavor events to experience!
+- Over **1122** new flavor events to experience!
 - Explore new decisions, artifacts, character interactions, activities, and more!
 - Game rule to disable sillier events for those who don't like them, with three levels to choose from: Balanced (Default), Serious (Restricted), and All Events (Full)
 - Compatible with almost anything since it doesn't touch any vanilla files - even with overhaul mods, you can via game rule disable events that reference things specific to our medieval world that wouldn’t make sense in other time periods or universes (like fantasy and sci-fi conversion mods)
@@ -38,13 +39,13 @@ The mod folder should look something like this:
 
 ## Changelog
 
-### Version 1.12.1 "Manetho"
+### Version 1.12.2 "Shark"
 
-New events added in this version: **8**
+New events added in this version: **6**
 
-- Added 8 events based on words from the winner of the VIET Word Contest for ModCon
-- The cave exploration event (VIETmisc.0092) is now a travel event
-- Miscellaneous bugfixes
+- Added 6 events about sharks
+- Added additional Spanish translations, courtesy of Ferchu
+- Miscellaneous bugfixes and tweaks
 
 \* Adapted from VIET for CK2
 

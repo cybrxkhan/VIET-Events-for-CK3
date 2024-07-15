@@ -1,6 +1,6 @@
-[img]https://i.imgur.com/pPKaJlb.jpg[/img]
+[img]https://i.imgur.com/vb7Fbkx.jpg[/img]
 
-[h1]当前版本：1.12.1 "曼涅托" (2024.4.27更新，兼容原版1.12.X)[/h1]
+[h1]当前版本：1.12.2 "鲨鱼" (2024.7.14更新，兼容原版1.12.X)[/h1]
 
 [h1][B]
 [url=https://discord.gg/9KuyXv2uZA]我模组的Discord服务器[/url]
@@ -28,7 +28,7 @@ Very Immersive Events and Tales (VIET)是[url=https://steamcommunity.com/sharedf
 [img]http://i.imgur.com/EyXurbK.jpg[/img]
 
 [LIST]
-[*]多达[B][U]1116[/U]个新风味事件（链）[/B]！
+[*]多达[B][U]1122[/U]个新风味事件（链）[/B]！
 [*]新决议、宝物、角色互动、活动等等！
 [*]如果你不喜欢某些傻里傻气的事件，你可以在规则里面将它们停用，共有三个等级可供选择：平衡（默认）、严肃（有所限制）、所有事件（不设限）
 [*][B]几乎兼容所有模组[/B]，因为不触及原文件。就算是全局模组，你也可以在规则里禁用提及我们中世纪世界的事件，这样一来在其它世界线（比如奇幻世界或是科幻世界的模组）就显得更为合理了
@@ -44,7 +44,7 @@ Very Immersive Events and Tales (VIET)是[url=https://steamcommunity.com/sharedf
 [*]日文——[url=https://steamcommunity.com/sharedfiles/filedetails/?id=2762293648]在此订阅子模组[/url]，感谢sla_domi
 [*]韩文——[url=https://steamcommunity.com/sharedfiles/filedetails/?id=2227982565]在此订阅子模组[/url]，感谢Ohboksu
 [*]俄文——本模组自带俄文，由AmoreLibre帮助翻译。完整俄文子模组[url=https://steamcommunity.com/sharedfiles/filedetails/?id=2525780456]在此订阅[/url]，感谢Д.Р.У.И.Д.
-[*]西文——本模组自带西文，由Sourenics帮助翻译。
+[*]西文——本模组自带西文，由Sourenics&Ferchu帮助翻译。
 [/LIST]
 
 
@@ -56,7 +56,7 @@ Very Immersive Events and Tales (VIET)是[url=https://steamcommunity.com/sharedf
 
 [img]http://i.imgur.com/RQ5QZTF.jpg[/img]
 
-[h1]版本号1.12.1 "曼涅托"[/h1]
+[h1]版本号1.12.2 "鲨鱼"[/h1]
 
 该版本新增了[B]8[/B]个事件
 

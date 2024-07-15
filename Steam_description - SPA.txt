@@ -1,6 +1,6 @@
-[img]https://i.imgur.com/pPKaJlb.jpg[/img]
+[img]https://i.imgur.com/vb7Fbkx.jpg[/img]
 
-[h1]Versión actual: 1.12.1 "Manetho" (Salida 24/4/27, Compatible con versión vanilla 1.12.X)[/h1]
+[h1]Versión actual: 1.12.2 "Shark" (Salida 14/7/27, Compatible con versión vanilla 1.12.X)[/h1]
 [h1][B][url=https://forms.gle/if7sLCAGpB1G2uJdA]Realice la encuesta VIET/RICE de 2023![/url]
 [url=https://discord.gg/9KuyXv2uZA]Servidor de Discord de mis Mods[/url][/B][/h1]
 [B]Echa un Vistazo a [url=https://forum.paradoxplaza.com/forum/threads/mod-viet-events-for-ck3-a-flavor-and-immersion-event-mod.1422081/]Tema del Foro[/url] Para Más Información[/B]
@@ -26,7 +26,7 @@ Siéntete libre de usar mi trabajo con tus mods - todo lo que pido es reconocimi
 [img]http://i.imgur.com/EyXurbK.jpg[/img]
 
 [LIST]
-[*]¡Más de [B][U]1116[/U] nuevos eventos[/B] para experimentar!
+[*]¡Más de [B][U]1122[/U] nuevos eventos[/B] para experimentar!
 [*]Explora nuevas decisiones, artefactos, interacciones y cadenas de eventos
 [*]Regla de juego para desactivar los eventos estúpidos para aquellos que no les guste, con tres niveles para escoger entre: Balanceado (Predeterminado), Serio (Restringido), y Todos los eventos (Todo)
 [*][B]Compatible con casi cualquier cosa[/B] ya que no modifico archivos del vanilla - incluso con mods de conversión total puedes desactivar los eventos que hagan referencias a cosas o lugares específicos del mundo medieval que no tendrían sentido en otros periodos o universos (como mods fantásticos o de ciencia ficción)
@@ -41,7 +41,7 @@ Siéntete libre de usar mi trabajo con tus mods - todo lo que pido es reconocimi
 [*]Alemán - [url=https://steamcommunity.com/sharedfiles/filedetails/?id=2447914570]Disponible como sub-mod aquí[/url], gracias a Ilusive
 [*]Coreano - [url=https://steamcommunity.com/sharedfiles/filedetails/?id=2227982565]Disponible como sub-mod aquí[/url], gracias a Ohboksu
 [*]Ruso - AmoreLibre está proporcionando la traducción, integrada en VIET.
-[*]Español - Sourenics está proporcionando la traducción, integrada en VIET.
+[*]Español - Sourenics & Ferchu está proporcionando la traducción, integrada en VIET.
 [/LIST]
 
 
@@ -52,7 +52,7 @@ Por favor, echa un vistazo a [url=https://steamcommunity.com/workshop/filedetail
 
 [img]http://i.imgur.com/RQ5QZTF.jpg[/img]
 
-[h1]Versión 1.12.1 "Manetho"[/h1]
+[h1]Versión 1.12.2 "Shark"[/h1]
 
 [I][/I]
 

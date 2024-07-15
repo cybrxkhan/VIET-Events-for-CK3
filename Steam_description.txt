@@ -1,6 +1,6 @@
-[img]https://i.imgur.com/pPKaJlb.jpg[/img]
+[img]https://i.imgur.com/vb7Fbkx.jpg[/img]
 
-[h1]Current Version: 1.12.1 "Manetho" (Released 4/27/24, Compatible with vanilla patch 1.12.X)[/h1]
+[h1]Current Version: 1.12.2 "Shark" (Released 7/14/24, Compatible with vanilla patch 1.12.X)[/h1]
 
 [h1][B][url=https://discord.gg/9KuyXv2uZA]Discord Server for my mods[/url]
 [url=https://cybrxkhansmods.godaddysites.com/]Official Website for my mods[/url][/B][/h1]
@@ -25,7 +25,7 @@ Feel free to use my work in your mods - all I ask is that I am credited and (if 
 [img]http://i.imgur.com/EyXurbK.jpg[/img]
 
 [LIST]
-[*]Over [B][U]1116[/U] new flavor events[/B] to experience!
+[*]Over [B][U]1122[/U] new flavor events[/B] to experience!
 [*]Explore new decisions, artifacts, character interactions, activities, and more!
 [*]Game rule to disable sillier events for those who don't like them, with three levels to choose from: Balanced (Default), Serious (Restricted), and All Events (Full)
 [*][B]Compatible with almost anything[/B] since it doesn't touch any vanilla files - even with overhaul mods, you can via game rule disable events that reference things specific to our medieval world that wouldn’t make sense in other time periods or universes (like fantasy/sci-fi conversion mods)
@@ -42,7 +42,7 @@ Because people are kindly spending their own free time and effort to work on the
 [*]Korean - [url=https://steamcommunity.com/sharedfiles/filedetails/?id=2227982565]Sub-mod by Ohboksu[/url], thanks to Ohboksu
 [*]Portuguese - [url=https://steamcommunity.com/sharedfiles/filedetails/?id=3227934458]Sub-mod by Alin[/url]
 [*]Russian - AmoreLibre has provided translations integrated into base VIET. More translations can be found in [url=https://steamcommunity.com/sharedfiles/filedetails/?id=2525780456]this sub-mod by Д.Р.У.И.Д.[/url]
-[*]Spanish - Sourenics has provided partial translation integrated into base VIET.
+[*]Spanish - Sourenics and Ferchu have provided translations integrated into base VIET.
 [/LIST]
 
 [img]https://i.imgur.com/9twioNH.jpg[/img]
@@ -51,15 +51,16 @@ Please see the [url=https://cybrxkhansmods.godaddysites.com/faq]FAQ on my mods' 
 
 [img]http://i.imgur.com/RQ5QZTF.jpg[/img]
 
-[h1]Version 1.12.1 "Manetho"[/h1]
+[h1]Version 1.12.2 "Shark"[/h1]
 
-[I]Manetho was a priest and historian from Ptolemaic Egypt in the 3rd century BCE. He wrote the Aegyptiaca (History of Egypt), which chronicles the reigns of the Pharaohs of ancient Egypt. Though the Aegyptiaca only survives in scattered fragments in the works of later ancient historians, and despite its flawed information, it remains a valuable source on ancient Egypt for modern scholars.[/I]
+[I]If the diver worries about the shark's maw, he’ll never grasp the precious pearl."
+- Sa‘di of Shiraz (1209-1291 CE), Persian poet, in his magnum opus, the Golestān (“Rose Garden”)[/I]
 
-New events added in this version: [B]8[/B]
+New events added in this version: [B]6[/B]
 
 [LIST]
-[*]Added 8 events based on words from the winner of the VIET Word Contest for ModCon
-[*]The cave exploration event (VIETmisc.0092) is now a travel event
+[*]Added 6 events about sharks
+[*]Added additional Spanish translations, courtesy of Ferchu
 [*]Miscellaneous bugfixes
 [/LIST]
 
