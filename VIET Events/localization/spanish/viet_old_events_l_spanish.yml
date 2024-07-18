@@ -1,4 +1,4 @@
-﻿l_spanish:
+l_spanish:
 
  # OG VIET Events for CK2 - these are the oldest, from the earliest, original version of VIET (c. 2012-2014)
  VIETold.0000.t:0 "xxxxx"
@@ -95,7 +95,7 @@
  VIETold.0020.c:0 "¡Encarcélenlo! Puede tener información útil."
  VIETold.0020.d:0 "Quizás podamos trabajar juntos, él y yo..."
  VIETold.0021.t:0 "¿Una Reliquia de Santo?"
- VIETold.0021.desc:0 ""¡Una verdadera reliquia del santo patrón de la ciudad! ¡Ver por ti mismo!" El comerciante sonríe a través de sus dientes torcidos mientras me muestra el hueso.\n\nMientras observo el hueso, sus crestas y su textura, el comerciante continúa: "Esto perteneció a nuestro santo, sin duda, y te lo daré por un precio asequible"."
+VIETold.0021.desc:0 "“¡Una verdadera reliquia del santo patrón de la ciudad! ¡Véalo usted mismo!” El mercader sonríe a través de sus dientes torcidos mientras me muestra el hueso.\n\nMientras observo el hueso, sus crestas y su textura, el mercader continúa, “Esto perteneció a nuestro santo, sin duda, y se lo daré por un precio asequible.”"
  VIETold.0021.a:0 "Esto impresionará a mucha gente. ¡Compraré esta reliquia sagrada!"
  VIETold.0021.b:0 "No, gracias. No necesito este tipo de objeto."
  VIETold.0021.c:0 "Eso es obviamente un hueso de cerdo. ¡Menudo fraude!"
@@ -1354,7 +1354,7 @@
  VIETold.2058.c:0 "Rezar a [ROOT.Char.GetFaith.HighGodName] para que no pase nada malo."
  VIETold.2058.d:0 "Ya veo. Esperemos que el frío no sea tan malo."
  VIETold.2059.t:0 "Frutas y Verduras"
- VIETold.2059.desc:0 "El mercado del pueblo siempre está lleno de actividad. Mientras espero encontrarme con alguien, miro distraídamente a la gente mientras van de un lado a otro. Desde granjeros fervorosos que venden y compran productos hasta hábiles comerciantes de tierras exóticas, muchos se han reunido aquí para hacer negocios.\n\nVi a una niña trabajando en el puesto cercano, así que entablo una conversación con ella.\n\n"Vendo frutas y verduras con mi madre", me dice. "Es divertido la mayoría de los días, pero es un trabajo duro"."
+ VIETold.2059.desc:0 "El mercado del pueblo siempre está lleno de actividad. Mientras espero encontrarme con alguien, miro distraídamente a la gente mientras van de un lado a otro. Desde granjeros fervorosos que venden y compran productos hasta hábiles comerciantes de tierras exóticas, muchos se han reunido aquí para hacer negocios.\n\nVi a una niña trabajando en el puesto cercano, así que entablo una conversación con ella.\n\n"Vendo frutas y verduras con mi madre", me dice. "Es divertido la mayoría de los días, pero es un trabajo duro.""
  VIETold.2059.a:0 "Mejor acostúmbrate a una vida de trabajo duro, pequeño."
  VIETold.2059.b:0 "¡Arriba esos ánimos! A veces debes relajarte."
  VIETold.2059.c:0 "Trabajar es inútil sin devoción a [ROOT.Char.GetFaith.HighGodName]."
@@ -1369,7 +1369,7 @@
  VIETold.2061.desc:0 "[scope_VIET_jon_battle_born.GetTitledFirstName] me mira sorprendido cuando le hago el ofrecimiento. Después, dice "¿En serio? ¡Ja! Por [ROOT.Char.GetFaith.HighGodName] sería todo un honor. Mi [ROOT.Char.GetLadyLord], será un placer ser de mayor utilidad, como guerrero y como poeta.""
  VIETold.2061.a:0 "Espero grandes cosas de tí."
  VIETold.2062.t:0 "Cargas Pesadas"
- VIETold.2062.desc:0 "Una doncella me está ayudando a limpiar mi habitación. Ella es famosa en la corte por tener una personalidad sarcástica y ocasionalmente distraída, incluso si es innegablemente capaz e inquebrantablemente leal. Mientras le entrego algunas cosas para que las tire al basurero, ella pone los ojos en blanco y dice sarcásticamente: "Juro que llevaré tus cargas"."
+ VIETold.2062.desc:0 "Una doncella me está ayudando a limpiar mi habitación. Ella es famosa en la corte por tener una personalidad sarcástica y ocasionalmente distraída, incluso si es innegablemente capaz e inquebrantablemente leal. Mientras le entrego algunas cosas para que las tire al basurero, ella pone los ojos en blanco y dice sarcásticamente: "Juro que llevaré tus cargas.""
  VIETold.2062.a:0 "Cuida ese tono. ¡Soy tu señor!"
  VIETold.2062.b:0 "¡Jaja! ¡Graciosa como siempre!"
  VIETold.2062.c:0 "Necesito gente más inteligente e ingeniosa en mi corte."
