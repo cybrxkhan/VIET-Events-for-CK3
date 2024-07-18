@@ -1,4 +1,4 @@
-﻿l_spanish:
+l_spanish:
 
  # Artifact Events (Both Old and New Combined)
  
@@ -158,7 +158,7 @@
  VIETmisc.5037.a:0 "Lo tendré a mi lado por si tengo sed."
  VIETmisc.5037.b:0 "Es solo un odre de agua, nada extraordinario."
  VIETmisc.5038.t:0 "Una muñeca inusual"
- VIETmisc.5038.desc:0 "Un mercader ambulante me muestra sus productos cuando paso por el mercado hoy. Es un tipo extraño y tiene algunas curiosidades extrañas a la venta.\n\n"¿Tal vez le gustaría esto, mi [ROOT.Char.GetLadyLord]?” dice, mostrándome una muñeca.\n\n"¿Es esto una broma?" Me burlo. "No soy un niño."\n\n"Oh, perdonadme, esta no es una muñeca ordinaria", dice, sonriendo a través de sus dientes torcidos. "Dejadme demostrárselo."\n\nSaca una pequeña llave y la inserta en un pequeño agujero en la muñeca que no había notado inicialmente. "Está hueco por dentro. ¡Esconde todo tipo de cosas en esta muñeca discreta! Todos piensan que es solo una muñeca... pero tú, mi discernidor, astuto [ROOT.Char.GetTitleAsNameNoTooltip], sabrá un uso mejor. ¡Las posibilidades son infinitas!”
+VIETmisc.5038.desc:0 "Un mercader ambulante me muestra sus mercancías mientras paso por el mercado hoy. Es un tipo extraño y tiene algunas curiosidades raras a la venta.\n\n“Quizás le gustaría esto, mi [ROOT.Char.GetLadyLord]?” dice, mostrándome una muñeca.\n\n“¿Es una broma?” me burlo. “No soy un niño.”\n\n“Oh, perdóneme, esta no es una muñeca ordinaria,” dice, sonriendo a través de sus dientes torcidos. “Permítame demostrarlo.”\n\nSaca una pequeña llave e inserta en un pequeño agujero de la muñeca que no había notado inicialmente. “Está hueca por dentro. ¡Esconde todo tipo de cosas en esta muñeca discreta! Todos piensan que es solo una muñeca... pero usted, mi perspicaz y astuto [ROOT.Char.GetTitleAsNameNoTooltip], sabrá mejor. ¡Las posibilidades son infinitas!”"
  VIETmisc.5038.a:0 "Eso me gusta más. Compraré esa "muñeca.""
  VIETmisc.5038.b:0 "Es inteligente, pero ¿qué escondería en ella?"
  VIETmisc.5039.t:0 "Limpiar, Limpiar"
@@ -245,7 +245,7 @@
  VIETmisc.5053.a:0 "Claro... ¿por qué no?"
  VIETmisc.5053.b:0 "Puedes quedarte con el mapa."
  VIETmisc.5054.t:0 "El jarrón"
- VIETmisc.5054.desc:0 ""Mi [ROOT.Char.GetLadyLord], ¿puede interesarle este hermoso jarrón?" Dice el comerciante, con los dientes torcidos.\n\nHoy estoy hojeando ociosamente varios artículos de lujo en un mercado local y me topé con la tienda de este hombre. Lo miro con cautela, antes de inspeccionar el artículo en cuestión. Es una cerámica finamente hecha, sin duda, demasiado simple para usar en una sala de cortesanos o en un salón de banquetes, pero lo suficientemente elegante como para hacer una bonita decoración en uno de mis dormitorios.\n\n“Esto fue elaborado por un experto artesano de la cultura [ROOT.Char.GetCulture.GetName]", continúa el comerciante, "usando una variedad de técnicas comprobadas. Cualquiera que vea esto en su hogar seguramente quedará impresionado con su gusto por el arte. Contemple estas maravillosas escenas de la vida cotidiana y la humanidad representadas en este jarrón, parece como si fueran a cobrar vida ante tus propios ojos!"."
+VIETmisc.5054.desc:0 "“Mi [ROOT.Char.GetLadyLord], ¿puedo interesarle en este fino jarrón?” dice el mercader, a través de sus dientes torcidos.\n\nHoy estoy curioseando sin rumbo fijo entre varias mercancías de lujo en un mercado local y me topé con la tienda de este hombre. Lo miro con cautela antes de inspeccionar el artículo en cuestión. Es una cerámica finamente elaborada, sin duda, demasiado simple para ser utilizada en una sala de audiencias o un salón de banquetes, pero lo suficientemente elegante como para ser una bonita decoración en uno de mis dormitorios.\n\n“Esto fue elaborado por expertos artesanos [ROOT.Char.GetCulture.GetName],” continúa el mercader, “usando una variedad de técnicas probadas. Cualquiera que vea esto en su hogar seguramente quedará impresionado con su gusto por el arte. Contemple estas maravillosas escenas de la vida cotidiana y la humanidad representadas en este jarrón, ¡como si estuvieran a punto de cobrar vida ante sus propios ojos!”"
  VIETmisc.5054.a:0 "Me has convencido. Lo compraré."
  VIETmisc.5054.b:0 "Está bien, pero no me interesa."
  # 1.5.4 - please leave this comment here 
@@ -256,11 +256,11 @@
  VIETmisc.5055.b:0 "Véndelo a un erudito que le dé mejor uso."
  # Version 1.10.2 Start Here - Note to Translators: please leave this comment here and do not remove it even in your versions of the loc
  # Version 1.12.2 Start Here - Note to Translators: please leave this comment here and do not remove it even in your versions of the loc
- VIETmisc.5056.t:0 "The Tongue Stone"
- VIETmisc.5056.desc:0 "Today I spent some time visiting the local apothecary while in town. While my physician, [physician.GetTitledFirstName], usually handles such matters by [physician.GetHerselfHimself], it doesn’t hurt to accompany [physician.GetHerHim] every now and then to learn how [physician.GetSheHe] helps me maintain my health.\n\nThe apothecary is, of course, delighted to have me around. [physician.GetFirstNameNoTooltip] observes with some amusement as she enthusiastically tries to sell me some of her more valuable products, in particular a tongue stone.\n\nWith a gleam in her eye, she shows me the triangular stone, and says, “As you know, my [ROOT.Char.GetLadyLord], these stones are renowned for protecting one from poison. You probably have experience dipping them in drink to ward off poison, but a bigger one like this would do better as a protective amulet.”"
- VIETmisc.5056.a:0 "A good offer! I’ll buy this tongue stone."
- VIETmisc.5056.b:0 "I appreciate your concern, but I’ll pass."
- VIETmisc.5056.info:0 "#emphasis Historical Context:#! In medieval times, fossilized sharks’ teeth were called “tongue stones” or “snake tongues.” Among other medical uses, they were a common cure or protection against poison. There was a tradition at the time of hanging tongue stones from decorative trees on tables during feasts; guests could dip the tongue stones into their wine or drink, assured that they would not be poisoned."
+ VIETmisc.5056.t:0 "La Piedra de Lengua"
+VIETmisc.5056.desc:0 "Hoy pasé algún tiempo visitando la botica local mientras estaba en el pueblo. Aunque mi médico, [physician.GetTitledFirstName], usualmente se encarga de estos asuntos [physician.GetHerselfHimself], no está de más acompañar a [physician.GetHerHim] de vez en cuando para aprender cómo [physician.GetSheHe] me ayuda a mantener mi salud.\n\nLa boticaria, por supuesto, está encantada de tenerme cerca. [physician.GetFirstNameNoTooltip] observa con cierta diversión mientras ella intenta venderme con entusiasmo algunos de sus productos más valiosos, en particular una piedra de lengua.\n\nCon un brillo en los ojos, me muestra la piedra triangular, y dice, “Como sabes, mi [ROOT.Char.GetLadyLord], estas piedras son conocidas por proteger contra el veneno. Probablemente tengas experiencia sumergiéndolas en la bebida para evitar el veneno, pero una más grande como esta sería mejor como amuleto protector.”"
+VIETmisc.5056.a:0 "¡Una buena oferta! Compraré esta piedra de lengua."
+VIETmisc.5056.b:0 "Agradezco tu preocupación, pero pasaré."
+VIETmisc.5056.info:0 "#emphasis Contexto Histórico:#! En la época medieval, los dientes fosilizados de tiburón eran llamados “piedras de lengua” o “lenguas de serpiente”. Entre otros usos médicos, eran una cura común o protección contra el veneno. Había una tradición en la época de colgar piedras de lengua de árboles decorativos en las mesas durante los banquetes; los invitados podían sumergir las piedras de lengua en su vino o bebida, asegurándose de que no serían envenenados."
  # Version 1.12.3 Start Here - Note to Translators: please leave this comment here and do not remove it even in your versions of the loc
  VIETmisc.5057.t:0 "xxxxx"
  VIETmisc.5057.desc:0 "xxxxx"
