@@ -1,4 +1,4 @@
-﻿l_spanish:
+l_spanish:
  # MISC
  artifact_VIET_clutter:0 "Curioso"
  artifact_VIET_recipe:0 "Receta"
@@ -136,9 +136,9 @@
  VIET_astrolabe_desc:0 "Un dispositivo mecánico cuidadosamente elaborado con latón que se usa para una variedad de funciones, principalmente relacionadas con cálculos astronómicos, como trazar las estrellas. También se usa para topografía y navegación."
  # Version 1.10.2 Start Here - Note to Translators: please leave this comment here and do not remove it even in your versions of the loc
  # Version 1.12.2 Start Here - Note to Translators: please leave this comment here and do not remove it even in your versions of the loc
- VIET_tongue_stone_name:0 "Tongue Stone Amulet"
- VIET_tongue_stone_desc:0 "Also known as a snake tongue, these unique stones – perhaps from some sort of snake or mystical creature – have healing properties, including protection against posion. They are typically dipped in drink or preserved in an amulet like this one."
- # Version 1.12.3 Start Here - Note to Translators: please leave this comment here and do not remove it even in your versions of the loc
+ VIET_tongue_stone_name:0 "Amuleto de Piedra de Lengua"
+VIET_tongue_stone_desc:0 "También conocidas como lenguas de serpiente, estas piedras únicas – quizás provenientes de algún tipo de serpiente o criatura mística – tienen propiedades curativas, incluyendo la protección contra el veneno. Por lo general, se sumergen en la bebida o se preservan en un amuleto como este."
+# Version 1.12.3 Start Here - Note to Translators: please leave this comment here and do not remove it even in your versions of the loc
  # 49 Basic
 
  # RECIPE ARTIFACTS
