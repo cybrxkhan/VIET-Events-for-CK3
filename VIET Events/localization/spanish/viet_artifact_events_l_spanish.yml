@@ -158,7 +158,7 @@
  VIETmisc.5037.a:0 "Lo tendré a mi lado por si tengo sed."
  VIETmisc.5037.b:0 "Es solo un odre de agua, nada extraordinario."
  VIETmisc.5038.t:0 "Una muñeca inusual"
- VIETmisc.5038.desc:0 "Un mercader ambulante me muestra sus productos cuando paso por el mercado hoy. Es un tipo extraño y tiene algunas curiosidades extrañas a la venta.\n\n"¿Tal vez le gustaría esto, mi [ROOT.Char.GetLadyLord]?” dice, mostrándome una muñeca.\n\n"¿Es esto una broma?" Me burlo. "No soy un niño."\n\n"Oh, perdonadme, esta no es una muñeca ordinaria", dice, sonriendo a través de sus dientes torcidos. "Dejadme demostrárselo."\n\nSaca una pequeña llave y la inserta en un pequeño agujero en la muñeca que no había notado inicialmente. "Está hueco por dentro. ¡Esconde todo tipo de cosas en esta muñeca discreta! Todos piensan que es solo una muñeca... pero tú, mi discernidor, astuto [ROOT.Char.GetTitleAsNameNoTooltip], sabrá un uso mejor. ¡Las posibilidades son infinitas!”
+VIETmisc.5038.desc:0 "Un mercader ambulante me muestra sus mercancías mientras paso por el mercado hoy. Es un tipo extraño y tiene algunas curiosidades raras a la venta.\n\n“Quizás le gustaría esto, mi [ROOT.Char.GetLadyLord]?” dice, mostrándome una muñeca.\n\n“¿Es una broma?” me burlo. “No soy un niño.”\n\n“Oh, perdóneme, esta no es una muñeca ordinaria,” dice, sonriendo a través de sus dientes torcidos. “Permítame demostrarlo.”\n\nSaca una pequeña llave e inserta en un pequeño agujero de la muñeca que no había notado inicialmente. “Está hueca por dentro. ¡Esconde todo tipo de cosas en esta muñeca discreta! Todos piensan que es solo una muñeca... pero usted, mi perspicaz y astuto [ROOT.Char.GetTitleAsNameNoTooltip], sabrá mejor. ¡Las posibilidades son infinitas!”"
  VIETmisc.5038.a:0 "Eso me gusta más. Compraré esa "muñeca.""
  VIETmisc.5038.b:0 "Es inteligente, pero ¿qué escondería en ella?"
  VIETmisc.5039.t:0 "Limpiar, Limpiar"
@@ -180,8 +180,8 @@
  VIETmisc.5042.b:0 "Negociar para pagar un precio más bajo."
  VIETmisc.5042.c:0 "Envía un sirviente para espiar al chef y aprenderlo."
  VIETmisc.5042.d:0 "Dile al chef que no me interesa."
- VIETmisc.recipe_steal.toast.success.not_caught:0 "¡Tu sirviente #P aprende#  la receta y no le atrapan!"
- VIETmisc.recipe_steal.toast.success.caught:0 "¡Tu sirviente #P aprende#  la receta pero lo atraparon!"
+ VIETmisc.recipe_steal.toast.success.not_caught:0 "¡Tu sirviente #P aprende#! la receta y no le atrapan!"
+ VIETmisc.recipe_steal.toast.success.caught:0 "¡Tu sirviente #P aprende#!  la receta pero lo atraparon!"
  VIETmisc.recipe_steal.toast.failure:0 "¡Tu sirviente #N falla#! en aprender la receta!"
  VIETmisc.recipe_steal.toast.failure_tooltip:0 "¡Perdiste la oportunidad de adquirir la [VIET_recipe_artifact.GetName]!"
  VIETmisc.5043.t:0 "¡Una prueba y estás en el cielo!"
@@ -245,7 +245,7 @@
  VIETmisc.5053.a:0 "Claro... ¿por qué no?"
  VIETmisc.5053.b:0 "Puedes quedarte con el mapa."
  VIETmisc.5054.t:0 "El jarrón"
- VIETmisc.5054.desc:0 ""Mi [ROOT.Char.GetLadyLord], ¿puede interesarle este hermoso jarrón?" Dice el comerciante, con los dientes torcidos.\n\nHoy estoy hojeando ociosamente varios artículos de lujo en un mercado local y me topé con la tienda de este hombre. Lo miro con cautela, antes de inspeccionar el artículo en cuestión. Es una cerámica finamente hecha, sin duda, demasiado simple para usar en una sala de cortesanos o en un salón de banquetes, pero lo suficientemente elegante como para hacer una bonita decoración en uno de mis dormitorios.\n\n“Esto fue elaborado por un experto artesano de la cultura [ROOT.Char.GetCulture.GetName]", continúa el comerciante, "usando una variedad de técnicas comprobadas. Cualquiera que vea esto en su hogar seguramente quedará impresionado con su gusto por el arte. Contemple estas maravillosas escenas de la vida cotidiana y la humanidad representadas en este jarrón, parece como si fueran a cobrar vida ante tus propios ojos!"."
+VIETmisc.5054.desc:0 "“Mi [ROOT.Char.GetLadyLord], ¿puedo interesarle en este fino jarrón?” dice el mercader, a través de sus dientes torcidos.\n\nHoy estoy curioseando sin rumbo fijo entre varias mercancías de lujo en un mercado local y me topé con la tienda de este hombre. Lo miro con cautela antes de inspeccionar el artículo en cuestión. Es una cerámica finamente elaborada, sin duda, demasiado simple para ser utilizada en una sala de audiencias o un salón de banquetes, pero lo suficientemente elegante como para ser una bonita decoración en uno de mis dormitorios.\n\n“Esto fue elaborado por expertos artesanos [ROOT.Char.GetCulture.GetName],” continúa el mercader, “usando una variedad de técnicas probadas. Cualquiera que vea esto en su hogar seguramente quedará impresionado con su gusto por el arte. Contemple estas maravillosas escenas de la vida cotidiana y la humanidad representadas en este jarrón, ¡como si estuvieran a punto de cobrar vida ante sus propios ojos!”"
  VIETmisc.5054.a:0 "Me has convencido. Lo compraré."
  VIETmisc.5054.b:0 "Está bien, pero no me interesa."
  # 1.5.4 - please leave this comment here 
