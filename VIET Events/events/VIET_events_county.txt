@@ -38,6 +38,7 @@
 # 3056-3057		Rodents
 # 3058			Word Contest
 # 3059-3060		Shark
+# 3061-3063		Three
 # 
 ############################################################################################################################
 
@@ -5840,5 +5841,305 @@ VIETmisc.3060 = {
 
 
 }
+
+
+
+##################################################################
+# THREE 3061-3063
+##################################################################
+
+
+# Fimbulwinter is upon us = fears of Ragnarok
+VIETmisc.3061 = {
+	type = character_event
+	title = VIETmisc.3061.t
+	desc = VIETmisc.3061.desc
+	theme = plague
+	override_background = { reference = VIET_background_small_town }
+	
+	right_portrait = {
+		character = root
+		animation = worry
+	}
+
+		
+	trigger = {
+		religion = religion:germanic_religion
+		any_held_title = {
+			tier = tier_county
+			religion = religion:germanic_religion
+		}	
+	}
+	
+    weight_multiplier = {
+        base = 0
+		modifier = {
+			add = {
+				every_held_title = {
+					limit = { tier = tier_county }
+					add = 1
+				}
+			}		
+		}
+    }
+	
+	immediate = {
+		random_held_title = {
+			limit = {
+				tier = tier_county
+			religion = religion:germanic_religion
+			}	
+			save_scope_as = county
+		}
+	}
+
+	# Ok
+	option = {
+		name = VIETmisc.3061.a
+		trigger = {
+			OR = {
+				gold >= 35
+				is_ai = no
+			}
+		}
+		remove_short_term_gold = 35
+		scope:county = {
+			add_county_modifier = {
+				modifier = VIET_fears_of_ragnarok
+				years = 3
+			}	
+		}
+		stress_impact = {
+			cynical = minor_stress_impact_gain
+			callous = miniscule_stress_impact_gain
+			lazy = miniscule_stress_impact_gain
+			greedy = miniscule_stress_impact_gain
+		}
+		custom_tooltip = VIET_decrease_county_modifier_time
+	}
+
+	# Ok
+	option = {
+		name = VIETmisc.3061.b
+		scope:county = {
+			add_county_modifier = {
+				modifier = VIET_fears_of_ragnarok
+				years = 10
+			}	
+		}
+		stress_impact = {
+			zealous = minor_stress_impact_gain
+			compassionate = miniscule_stress_impact_gain
+			diligent = miniscule_stress_impact_gain
+		}
+	}
+
+
+}
+
+
+# 3-headed sheep becomes a popular attraction
+VIETmisc.3062 = {
+	type = character_event
+	title = VIETmisc.3062.t
+	desc = VIETmisc.3062.desc
+	theme = VIET_theme_tuscan_country
+	
+	right_portrait = {
+		character = root
+		animation = personality_content
+	}
+
+		
+	trigger = {
+		any_held_title = {
+			tier = tier_county
+		}	
+	}
+	
+    weight_multiplier = {
+        base = 0
+		modifier = {
+			add = {
+				every_held_title = {
+					limit = { tier = tier_county }
+					add = 1
+				}
+			}		
+		}
+    }
+	
+	immediate = {
+		random_held_title = {
+			limit = {
+				tier = tier_county
+			}	
+			save_scope_as = county
+		}
+		scope:county = {
+			random_list = {
+				10 = {
+					add_county_modifier = {
+						modifier = VIET_three_headed_sheep
+						years = 4
+					}				
+				}
+				10 = {
+					add_county_modifier = {
+						modifier = VIET_three_headed_sheep
+						years = 6
+					}				
+				}
+				10 = {
+					add_county_modifier = {
+						modifier = VIET_three_headed_sheep
+						years = 8
+					}				
+				}
+				10 = {
+					add_county_modifier = {
+						modifier = VIET_three_headed_sheep
+						years = 10
+					}				
+				}
+			}	
+		}
+	}
+
+	# Ok
+	option = {
+		name = VIETmisc.3062.a
+	}
+
+
+}
+
+
+# Local official in an illegal three-way marriage
+VIETmisc.3063 = {
+	type = character_event
+	title = VIETmisc.3063.t
+	desc = VIETmisc.3063.desc
+	theme = marriage
+	override_background = { reference = VIET_background_small_town }
+	
+	right_portrait = {
+		character = root
+		animation = disappointed
+	}
+
+		
+	trigger = {
+		OR = {
+			faith = {
+				has_doctrine = doctrine_monogamy
+			}
+			culture = {
+				has_cultural_tradition = tradition_monogamous
+			}
+		}
+		culture = {
+			NOR = {
+				has_cultural_tradition = tradition_polygamous
+				has_cultural_tradition = tradition_concubines
+			}
+		}
+		any_held_title = {
+			tier = tier_county
+			OR = {
+				faith = {
+					has_doctrine = doctrine_monogamy
+				}
+				culture = {
+					has_cultural_tradition = tradition_monogamous
+				}
+			}
+			culture = {
+				NOR = {
+					has_cultural_tradition = tradition_polygamous
+					has_cultural_tradition = tradition_concubines
+				}
+			}
+		}	
+	}
+	
+    weight_multiplier = {
+        base = 0
+		modifier = {
+			add = {
+				every_held_title = {
+					limit = { tier = tier_county }
+					add = 1
+				}
+			}		
+		}
+    }
+	
+	immediate = {
+		random_held_title = {
+			limit = {
+				tier = tier_county
+				OR = {
+					faith = {
+						has_doctrine = doctrine_monogamy
+					}
+					culture = {
+						has_cultural_tradition = tradition_monogamous
+					}
+				}
+				culture = {
+					NOR = {
+						has_cultural_tradition = tradition_polygamous
+						has_cultural_tradition = tradition_concubines
+					}
+				}
+			}	
+			save_scope_as = county
+		}
+	}
+
+	# Ok
+	option = {
+		name = VIETmisc.3063.a	
+		trigger = {
+			OR = {
+				gold >= 50
+				is_ai = no
+			}
+		}
+		remove_short_term_gold = 50
+		#add_legitimacy = minor_legitimacy_loss	
+		scope:county = {
+			add_county_modifier = {
+				modifier = VIET_removed_polygamous_noble
+				years = 10
+			}		
+		}
+	}
+
+	# Ok
+	option = {
+		name = VIETmisc.3063.b
+		VIET_massive_piety_loss_effect = yes
+		VIET_massive_prestige_loss_effect = yes
+		scope:county = {
+			add_county_modifier = {
+				modifier = VIET_polygamous_noble
+				years = 10
+			}		
+		}
+	}
+
+
+}
+
+
+
+
+
+
+
+
+
 
 

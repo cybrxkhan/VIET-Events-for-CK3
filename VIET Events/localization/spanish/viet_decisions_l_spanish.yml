@@ -1,4 +1,4 @@
-l_spanish:
+﻿l_spanish:
  # Decisions
  VIET_decision_traveling_baklava_merchant:0 "Visitar al famoso pastelero"
  VIET_decision_traveling_baklava_merchant_tooltip:0 "Visitarás al famoso pastelero que vende varias delicias de Oriente Medio y que está en la ciudad"
@@ -73,7 +73,7 @@ l_spanish:
  VIET_decision_learn_shorthand_techniques_effect_tooltip:0 "Después de varios meses de estudio, obtendrás algún tipo de [character_modifier|E] #P positivo#! aumentando algunos de tus [skills|E]"
  VIET_decision_learn_shorthand_techniques_effect_tooltip_2:0 "Lo beneficioso que sea el [character_modifier|E] depende de tus [skills|E], [traits|E] y otros factores"
  VIET_decision_learn_shorthand_techniques_confirm:0 "Creo que he encontrado un escriba que está dispuesto a enseñarme."
- VIET_decision_learn_shorthand_techniques_context_tooltip:0 "#emphasis Contexto histórico:#! Taquigrafía es cualquier método abreviado de escritura rápida. Estos métodos se desarrollaron históricamente en muchas culturas alfabetizadas. Eran, y siguen siendo, particularmente útiles para ciertas profesiones como oficinistas y escribas, donde la información debía registrarse de manera rápida y eficiente." 
+ VIET_decision_learn_shorthand_techniques_context_tooltip:0 "#emphasis Contexto histórico:#! Taquigrafía es cualquier método abreviado de escritura rápida. Estos métodos se desarrollaron históricamente en muchas culturas alfabetizadas. Eran, y siguen siendo, particularmente útiles para ciertas profesiones como oficinistas y escribas, donde la información debía registrarse de manera rápida y eficiente". 
  VIET_decision_buy_valuable_medicinal_berries:0 "Comprar bayas medicinales valiosas"
  VIET_decision_buy_valuable_medicinal_berries_tooltip:0 "Hay bayas que tienen supuestas propiedades curativas"
  VIET_decision_buy_valuable_medicinal_berries_desc:0 "Parece que hay partes de mi reino donde se dice que las bayas poseen varias propiedades medicinales. ¡Debería comprarme algunas para mí!"
@@ -97,7 +97,7 @@ l_spanish:
  VIET_decision_visit_legendary_burial_mound_req:0 "Algún [county|E] de tu [domain|E] tiene [GetModifier('VIET_tomb_monument_warrior').GetNameWithTooltip], [GetModifier('VIET_tomb_monument_holy').GetNameWithTooltip] o [GetModifier('VIET_tomb_monument_ruler').GetNameWithTooltip] [county_modifier|E]"
  VIET_decision_visit_legendary_burial_mound_effect_tooltip:0 "Se sentirá inspirado durante su visita, lo que le otorgará un [character_modifier|E] #P positivo#!, cuyos beneficios dependerán de quién esté enterrado allí"
  VIET_decision_visit_legendary_burial_mound_confirm:0 "Vamos a ese lugar."
- VIET_decision_visit_legendary_burial_mound_context_tooltip:0 "#emphasis Contexto histórico:#! Los túmulos o túmulos funerarios (¡singular #italic túmulo#!) se pueden encontrar en prácticamente todas las partes del mundo, y algunos datan de hace miles de años. Como tal, a menudo hay muchas leyendas y mitos locales asociados con estos sitios."
+ VIET_decision_visit_legendary_burial_mound_context_tooltip:0 "#emphasis Contexto histórico:#! Los túmulos o túmulos funerarios (¡singular #italic túmulo#!) se pueden encontrar en prácticamente todas las partes del mundo, y algunos datan de hace miles de años. Como tal, a menudo hay muchas leyendas y mitos locales asociados con estos sitios".  
  VIET_decision_investigate_a_ghost_town:0 "Investiga un pueblo fantasma"
  VIET_decision_investigate_a_ghost_town_tooltip:0 "¡Quiero ver algunos fantasmas!"
  VIET_decision_investigate_a_ghost_town_desc:0 "Hay una zona en mis dominios donde abundan las historias de fantasmas. Se dice que algunos de los asentamientos en esta región albergan los llamados "pueblos fantasma", donde los lugareños afirman haber visto espíritus moviéndose. Últimamente me siento valiente y quiero llegar al fondo de todo esto. ¿Existen realmente esos fantasmas?"

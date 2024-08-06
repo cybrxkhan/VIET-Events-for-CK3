@@ -482,6 +482,9 @@ VIET_events_yearly_pulse = {
 		# Shark
 		100 = VIETmisc.0344		# Courtier gains an interest in marine biology
 		100 = VIETmisc.0345		# Using tongue stones (fossilized shark teeth) at a feast
+		# Three
+		100 = VIETmisc.0347		# Scholar gives a lecture on triangles
+		100 = VIETmisc.0348		# Reading about the "three orders" of society (priests, farmers/craftsmen, warriors)
 	}
 }
 
@@ -1599,8 +1602,10 @@ VIET_events_uncommon_county_pulse = {
 		100 = VIETmisc.3054 	# Desert ascetics become popular
 		# VIET Word Contest
 		100 = VIETmisc.3058 	# Dogs - dog breeds become famous in a region # Randlelikesdogs
+		# Three
+		100 = VIETmisc.3063 	# Local official in an illegal three-way marriage
 		
-		# 31
+		# 32
 		
     }
 }
@@ -1679,8 +1684,11 @@ VIET_events_rare_county_pulse = {
 		100 = VIETmisc.3055 	# Singing/booming sand dunes
 		# Shark
 		100 = VIETmisc.3060 	# Shark attack happens
+		# Three
+		100 = VIETmisc.3061 	# Fimbulwinter is upon us = fears of Ragnarok
+		100 = VIETmisc.3062 	# 3-headed sheep becomes a popular attraction
 		
-		# 18
+		# 20
 		
     }
 }
@@ -1966,8 +1974,10 @@ VIET_events_common_childhood_pulse = {
 		100 = VIETmisc.0308		# Lost your favorite toy
 		# Rodent
 		100 = VIETmisc.0338		# Child is told Aesop fable involving a cunning cat and mice
+		# Three
+		100 = VIETmisc.0349		# Child is taught about the Three Jewels of Buddhism
 
-		# Total: 11
+		# Total: 12
 	}
 }
 

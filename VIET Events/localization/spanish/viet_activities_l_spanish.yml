@@ -1,4 +1,4 @@
-l_spanish:
+﻿l_spanish:
 
  VIET_activity_result_gained_piety: "Obtenido [piety_i] [piety|E]"
  VIET_activity_result_gained_prestige: "Obtenido [prestige_i] [prestige|E]"
@@ -68,7 +68,7 @@ l_spanish:
  activity_VIET_ghost_town_investigation_guest_help_text: "$activity_VIET_ghost_town_investigation$"
  activity_VIET_ghost_town_investigation_predicted_cost: "El coste de investigar estos pueblos fantasmas depende de las [activity_options|E] que selecciones."
  activity_VIET_ghost_town_investigation_conclusion_desc: "La [GetActivityType( 'activity_VIET_ghost_town_investigation' ).GetName] ha terminado."
- VIET_ghost_town_investigation_sincerity_type_desc: "Cuanto más [gold|E] gastes en este esfuerzo, mayores serán las posibilidades de que descubras algo ahí fuera."
+ VIET_ghost_town_investigation_sincerity_type_desc: "Cuanto más [gold|E] gastes en este esfuerzo, mayores #bold# serán las posibilidades de que descubras algo #italic# ahí fuera."
  VIET_ghost_town_investigation_sincerity_type: "Sinceridad"
  VIET_ghost_town_investigation_sincerity_type_casual: "Casual"
  VIET_ghost_town_investigation_sincerity_type_casual_desc: "$VIET_ghost_town_investigation_sincerity_type_desc$\n\n#weak Quién sabe si estas historias de fantasmas son reales o no. De cualquier manera, ¡esta es una gran excusa para una divertida pequeña excursión!#!"

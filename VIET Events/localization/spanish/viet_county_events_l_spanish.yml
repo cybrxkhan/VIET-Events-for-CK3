@@ -1,4 +1,4 @@
-l_spanish:
+﻿l_spanish:
 
  # Misc 
  VIET_decrease_county_modifier_time:0 "Esta opción #V disminuye#! la duración en el tiempo del [county_modifier|E] en cuestión en comparación con la opción predeterminada"
@@ -110,7 +110,7 @@ l_spanish:
  VIETmisc.3023.t:0 "La "belleza" de [county.GetNameNoTier]"
  VIETmisc.3023.desc:0 "Los aldeanos están sorprendidos de que yo, [ROOT.Char.GetTitledFirstName], haya decidido visitar su aldea en [county.GetNameNoTier], aunque sea para conocer a esta chica de famosa belleza. Sus padres nunca antes habían hospedado a alguien tan importante, pero hacen todo lo posible por agradar. El padre es un artesano y la madre una [ROOT.GetCharacter.Custom('lowly_servant_type')], y ganan lo suficiente para permitirle a la familia una vida humilde pero cómoda. Cuando conocí a la chica, llamada [beauty.GetFullName], quedé impactado.\n\nDecir que es horrible es una cortesía absoluta. Tras investigar más, me enteré de que las historias de su belleza eran rumores crueles creados por algunos matones locales aburridos, que se salió de control. Su familia ha estado tratando de poner fin a esos chismes, sin éxito."
  VIETmisc.3023.desc.unpleasant:0 "\n\nLa chica no es una persona muy agraciada. Años de ser acosada por otros por su apariencia, al parecer, la han hecho amarga, aunque tengo que admitir que la encuentro tras conocerla, un humor despectivo divertido. Ella es hábil en las tareas del hogar y al menos, aguda, y es elocuente a pesar de su discurso contundente."
- VIETmisc.3023.desc.pleasant:0 "\n\nLa chica, sorprendentemente, tiene una personalidad bastante agradable. Parece que se esfuerza al máximo por hacer un buen trabajo en casa. "Si nunca puedo encontrar un buen marido," dice, "al menos estar soltera es mejor que tener un mal marido." Tengo que admitir que tiene cierto encanto, se vea o no se vea."
+ VIETmisc.3023.desc.pleasant:0 "\n\nLa chica, sorprendentemente, tiene una personalidad bastante agradable. Parece que se esfuerza al máximo por hacer un buen trabajo en casa. "Si nunca puedo encontrar un buen marido," dice, "al menos estar soltera es mejor que tener un mal marido." Tengo que admitir que tiene cierto encanto, se vea o no se vea.
  VIETmisc.3023.a:0 "No hay daño, no hay falta. Por eso, después de todo, no podemos confiar en los rumores."
  VIETmisc.3023.b:0 "¡Estos campesinos idiotas, todo su pueblo, se atreven a hacerme perder el tiempo!"
  VIETmisc.3023.c:0 "No importa su apariencia, hace un buen trabajo. Podría ser una criada para mí."
@@ -299,7 +299,7 @@ l_spanish:
  VIETmisc.3058.c:0 "Perros para pastoreo y trabajo"
  VIETmisc.3058.d:0 "Realmente no me importa"
  # Version 1.12.2 Start Here - Note to Translators: please leave this comment here and do not remove it even in your versions of the loc
-VIETmisc.3059.t:0 "Pesca de tiburones"
+ VIETmisc.3059.t:0 "Pesca de tiburones"
  VIETmisc.3059.desc:0 "La rentabilidad de la industria pesquera en [county.GetNameNoTier] sube y baja con las mareas, pero últimamente hay buenas noticias.\n\nÚltimamente, [county.GetNameNoTier] se ha ganado una reputación por sus abundantes y excelentes capturas de tiburones. Se dice que la carne de tiburón de allí es deliciosa, y que el aceite de tiburón y el cuero de tiburón son muy útiles y duraderos.\n\nSea cierto o no, estas historias impulsan la economía local mientras los pescadores desafían las aguas para cazar más y más tiburones para vender en mercados lejanos."
  VIETmisc.3059.a:0 "¡Realmente son muy buenas noticias!"
  VIETmisc.3060.t:0 "¿Ataques de tiburones?"

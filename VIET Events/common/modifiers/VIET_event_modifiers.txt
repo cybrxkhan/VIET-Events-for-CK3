@@ -3341,7 +3341,7 @@ VIET_laughs_at_fools = {
 }
 
 VIET_maritime_animal_knowledge = {
-	icon = beast_positive
+	icon = beast_mixed
 	stewardship = 1
 	learning = 1
 	sea_travel_danger = -2
@@ -3349,14 +3349,14 @@ VIET_maritime_animal_knowledge = {
 }
 
 VIET_doesnt_fear_risks = {
-	icon = wit_positive
+	icon = wit_mixed
 	diplomacy = 1
 	martial = 1
 	intrigue = -1
 }
 
 VIET_minimizes_risks = {
-	icon = stress_positive
+	icon = stress_mixed
 	intrigue = 1
 	stewardship = 1
 	diplomacy = -1
@@ -3367,6 +3367,18 @@ VIET_snuggery_modifier = {
 	diplomacy = 1
 	personal_scheme_power_mult = 0.1
 	stress_loss_mult = 0.25
+}
+
+VIET_learning_math = {
+	icon = learning_positive
+	monthly_stewardship_lifestyle_xp_gain_mult = 0.1
+	monthly_learning_lifestyle_xp_gain_mult = 0.1
+}
+
+VIET_studying_political_texts = {
+	icon = social_positive
+	diplomacy = 1
+	intrigue = 1
 }
 
 

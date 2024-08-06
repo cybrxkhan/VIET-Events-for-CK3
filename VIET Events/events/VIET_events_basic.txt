@@ -61,6 +61,7 @@
 # 0336-0340		Rodent
 # 0341-0343		VIET Word Contest
 # 0344-0346		Shark
+# 0347-0349		Three
 # 
 ############################################################################################################################
 
@@ -33119,6 +33120,332 @@ VIETmisc.0346 = {
 
 
 
+##################################################################
+# THREE 0347-0349
+##################################################################
+
+
+# Scholar gives a lecture on triangles
+VIETmisc.0347 = {
+	type = character_event
+	title = VIETmisc.0347.t
+	desc = VIETmisc.0347.desc
+	theme = learning_scholarship_focus
+	override_background = { reference = throne_room }
+	
+	
+	right_portrait = {
+		character = root
+		animation = thinking
+	}
+
+	trigger = {
+		# Want someone who's probably literate
+		probably_unintelligent_trigger = no
+		# Weed out most cultures that probably aren't literate at the game start and wouldn't be doing formal mathematics
+		NOT = { government_has_flag = government_is_tribal }
+	}
+	
+	weight_multiplier = {
+		base = 1
+		modifier = {
+			add = 0.2
+			has_trait = ambitious
+		}
+		modifier = {
+			add = -0.2
+			has_trait = content
+		}
+		modifier = {
+			add = 0.2
+			has_trait = diligent
+		}
+		modifier = {
+			add = -0.2
+			has_trait = lazy
+		}
+		modifier = {
+			add = 0.2
+			has_trait = gregarious
+		}
+		modifier = {
+			add = -0.2
+			has_trait = shy
+		}
+	}
+	
+	option = { # ok
+		name = VIETmisc.0347.a
+		add_character_modifier = {
+			modifier = VIET_learning_math
+			years = 3
+		}
+		stress_impact = {
+			impatient = miniscule_stress_impact_gain
+			lazy = miniscule_stress_impact_gain
+		}
+	}
+	
+	option = { # ok
+		name = VIETmisc.0347.b
+		add_character_modifier = {
+			modifier = VIET_indoors_nap
+			years = 3
+		}
+		stress_impact = {
+			diligent = miniscule_stress_impact_gain
+			ambitious = miniscule_stress_impact_gain
+		}
+	}
+
+	after = {		
+		every_courtier = {
+			custom = VIET_intellectual_courtiers
+			limit = {
+				is_available_ai_adult = yes
+				probably_unintelligent_trigger = no
+				learning >= low_skill_rating
+				OR = {
+					has_trait = diligent
+					has_trait = scholar
+					has_trait = theologian
+					has_trait = education_learning_1
+					has_trait = education_learning_2
+					has_trait = education_learning_3
+					has_trait = education_learning_4
+					learning >= medium_skill_rating
+					stewardship >= medium_skill_rating
+				}
+				NOT = { has_trait = lazy }
+				NOT = { has_trait = arbitrary }
+				NOT = { has_trait = impatient }
+			}
+			add_character_modifier = {
+				modifier = VIET_learning_math
+				years = 3
+			}	
+		}
+		every_courtier = {
+			custom = VIET_unintellectual_courtiers
+			limit = {
+				is_available_ai_adult = yes
+				probably_unintelligent_trigger = no
+				learning <= medium_skill_rating
+				OR = {
+					has_trait = lazy
+					has_trait = arbitrary
+					has_trait = impatient
+					learning <= low_skill_rating
+					probably_unintelligent_trigger = yes
+				}
+				NOT = { has_trait = scholar }
+				NOT = { has_trait = theologian }
+				NOT = { has_trait = education_learning_1 }
+				NOT = { has_trait = education_learning_2 }
+				NOT = { has_trait = education_learning_3 }
+				NOT = { has_trait = education_learning_4 }
+			}
+			add_character_modifier = {
+				modifier = VIET_indoors_nap
+				years = 3
+			}		
+		}
+	}
+	
+
+
+}
+
+
+
+
+# Reading about the "three orders" of society (priests, farmers/craftsmen, warriors)
+VIETmisc.0348 = {
+	type = character_event
+	title = VIETmisc.0348.t
+	desc = VIETmisc.0348.desc
+	theme = learning_scholarship_focus
+	
+	
+	right_portrait = {
+		character = root
+		animation = reading
+	}
+
+	trigger = {
+		# Want someone who's probably literate
+		probably_unintelligent_trigger = no
+		# Weed out most cultures that probably aren't literate at the game start and wouldn't be reading this stuff
+		NOT = { government_has_flag = government_is_tribal }
+		culture_has_european_heritage_pillar_trigger = yes
+	}
+	
+	weight_multiplier = {
+		base = 1
+		modifier = {
+			add = 0.2
+			has_trait = just
+		}
+		modifier = {
+			add = -0.2
+			has_trait = arbitrary
+		}
+		modifier = {
+			add = 0.2
+			has_trait = diligent
+		}
+		modifier = {
+			add = -0.2
+			has_trait = lazy
+		}
+		modifier = {
+			add = 0.2
+			has_trait = patient
+		}
+		modifier = {
+			add = -0.2
+			has_trait = impatient
+		}
+	}
+	
+	option = { # ok
+		name = VIETmisc.0348.a
+		VIET_medium_piety_gain_effect = yes
+		stress_impact = {
+			cynical = miniscule_stress_impact_gain
+			stubborn = miniscule_stress_impact_gain
+		}
+	}
+	
+	option = { # ok
+		name = VIETmisc.0348.b
+		VIET_medium_prestige_gain_effect = yes
+		stress_impact = {
+			zealous = miniscule_stress_impact_gain
+			fickle = miniscule_stress_impact_gain
+		}
+	}
+
+	after = {		
+		add_character_modifier = {
+			modifier = VIET_studying_political_texts
+			years = 9
+		}
+		if = {
+			limit = {
+				has_game_rule = VIET_historical_context_on
+			}
+			custom_tooltip = VIETmisc.0348.info
+		}	
+	}
+	
+
+
+}
+
+
+
+
+# Child is taught about the Three Jewels of Buddhism
+VIETmisc.0349 = {
+	type = character_event
+	title = VIETmisc.0349.t
+	desc = VIETmisc.0349.desc
+	theme = memory_formative
+
+	
+	left_portrait = {
+		character = scope:guardian
+		animation = happy_teacher
+	}
+	
+	right_portrait = {
+		character = root
+		animation = thinking
+	}
+
+	trigger = {
+		religion = religion:buddhism_religion
+		any_relation = {
+			type = guardian
+			is_available_ai_adult = yes
+			religion = religion:buddhism_religion
+		}
+	}
+	
+	weight_multiplier = {
+		base = 1
+		modifier = {
+			add = 0.2
+			has_trait = pensive
+		}
+		modifier = {
+			add = -0.2
+			has_trait = rowdy
+		}
+		modifier = {
+			add = 0.2
+			has_trait = humble
+		}
+		modifier = {
+			add = -0.2
+			has_trait = arrogant
+		}
+		modifier = {
+			add = 0.2
+			has_trait = zealous
+		}
+		modifier = {
+			add = -0.2
+			has_trait = cynical
+		}
+	}
+
+	immediate = {
+		random_relation = {
+			type = guardian
+			limit = {
+				is_available_ai_adult = yes				
+				religion = religion:buddhism_religion
+			}
+			save_scope_as = guardian
+		}
+	}
+	
+	option = { # ok
+		name = VIETmisc.0349.a
+		VIET_huge_piety_gain_effect = yes
+		scope:guardian = {
+			add_opinion = {
+				target = root
+				modifier = VIET_opinion_paid_attention
+			}
+		}
+		stress_impact = {
+			bossy = minor_stress_impact_gain
+			stubborn = miniscule_stress_impact_gain
+			arrogant = miniscule_stress_impact_gain
+			cynical = miniscule_stress_impact_gain
+		}
+	}
+	
+	option = { # ok
+		name = VIETmisc.0349.b
+		VIET_huge_prestige_gain_effect = yes
+		scope:guardian = {
+			add_opinion = {
+				target = root
+				modifier = VIET_opinion_didnt_pay_attention
+			}
+		}
+		stress_impact = {
+			base = minor_stress_impact_loss
+			rowdy = miniscule_stress_impact_loss
+			lazy = miniscule_stress_impact_loss
+		}
+	}
+
+}
 
 
 

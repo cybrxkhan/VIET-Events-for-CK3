@@ -1,4 +1,4 @@
-l_spanish:
+﻿l_spanish:
 
  # Events Related to Decisions
  VIETmisc.2001.t:0 "El Pastelero"
@@ -246,7 +246,7 @@ l_spanish:
  # 1.4.5 - please leave this comment here
  VIETmisc.2061.t:0 "Escribir de la forma correcta"
  VIETmisc.2061.desc:0 "Recientemente escuché que hay varias técnicas para ayudar a escribir más rápido, como el uso de abreviaturas o símbolos modificados para representar palabras. Tal vez tomarse un tiempo para aprender esto podría ser útil... o tal vez no. Si bien todavía estoy fascinado con este tema, tal vez pueda contactar a un erudito local o escriba que pueda enseñarme sobre estos asuntos."
- VIETmisc.2061.a:0 "Suponiendo que tenga tiempo, por supuesto."
+ VIETmisc.2061.a:0 "Suponiendo que tenga tiempo, por supuesto".
  VIETmisc.2061.tooltip:0 "Mientras tengas el [character_modifier|E] [GetModifier('VIET_shorthand_interest').GetNameWithTooltip] , tendrás acceso a una [decision|E] para hacer solo eso. Sin embargo, tenga en cuenta que perderá interés en hacerlo con el tiempo; una vez que el modificador expira, la [decision|E] ya no estará disponible."
  VIETmisc.2062.t:0 "Escribir de la forma correcta"
  VIETmisc.2062.desc:0 "Desde hace algunos meses, he estudiado varias técnicas de taquigrafía con un escriba local que se dice que es un maestro en este arte. He aprendido varias formas de abreviar mis palabras, o ciertas formas de escribir palabras más rápidamente."
@@ -281,7 +281,7 @@ l_spanish:
  VIETmisc.2068.desc:0 "Nos sentamos junto a la ventana durante mucho tiempo, hasta altas horas de la madrugada. Aún así, no sucedió nada interesante, y yo estaba dormido cuando salió el sol. Todo el viaje, al parecer, había sido un completo desperdicio. Quizás esas historias de fantasmas eran solo eso, historias."
  VIETmisc.2068.a:0 "Al menos tuve unas pequeñas vacaciones, ¿verdad?"
  VIETmisc.2069.t:0 "Ellos estaban por ahi"
- VIETmisc.2069.desc:0 "Nos sentamos junto a la ventana durante mucho tiempo y no sucedió nada interesante. Debo haberme quedado dormido, porque cuando me desperté, escuché a algunos de mis guardias charlando con entusiasmo. Uno, un joven ingenuo, me dijo mientras señalaba afuera: “Mi [ROOT.Char.GetLadyLord], confía en mí, ¿no? ¡Juro que vi los fantasmas, justo ahora! ¡Desaparecieron, pero estaban allí!”\n\nLos otros guardias se rieron y dijeron que el niño se había quedado dormido y despertó justo ahora. “Debes haber estado soñando, amigo mío”, dijo uno de ellos. "Ninguno de nosotros ha visto nada."\n\nTodo el viaje terminó siendo un desperdicio, ya que nada inusual sucedió el resto de esa noche. Probablemente."
+ VIETmisc.2069.desc:0 "Nos sentamos junto a la ventana durante mucho tiempo y no sucedió nada interesante. Debo haberme quedado dormido, porque cuando me desperté, escuché a algunos de mis guardias charlando con entusiasmo. Uno, un joven ingenuo, me dijo mientras señalaba afuera: “Mi [ROOT.Char.GetLadyLord], confía en mí, ¿no? ¡Juro que vi los fantasmas, justo ahora! ¡Desaparecieron, pero estaban allí!”\n\nLos otros guardias se rieron y dijeron que el niño se había quedado dormido y despertó justo ahora. “Debes haber estado soñando, amigo mío”, dijo uno de ellos. "Ninguno de nosotros ha visto nada".\n\nTodo el viaje terminó siendo un desperdicio, ya que nada inusual sucedió el resto de esa noche. Probablemente."
  VIETmisc.2069.a:0 "Creo al chico. Los fantasmas deben haber estado ahí fuera."
  VIETmisc.2069.b:0 "El niño debe haberlo soñado o confundido algo con un fantasma."
  VIETmisc.2070.t:0 "El ermitaño de [county.GetNameNoTier]"
