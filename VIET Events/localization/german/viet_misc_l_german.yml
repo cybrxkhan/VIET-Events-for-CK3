@@ -15,7 +15,7 @@
  setting_VIET_conversion_universe_events_desc:0 "Choose this setting if you are playing with a conversion mod that changes the entire setting, such as a fantasy or sci-fi world. This disables events referring to places, cultures, religions, etc on earth."
  rule_VIET_historical_context:0 "VIET Historical Context Tooltips"
  setting_VIET_historical_context_on:0 "On"
- setting_VIET_historical_context_on_desc:0 "Occasionally, there are tooltips that provide context about what inspired an event in question. Sometimes, reality is stranger than fiction, so some information might help players understand the history behind seemingly odd events."
+ setting_VIET_historical_context_on_desc:0 "Occasionally, there are tooltips that provide context about what inspired an event and help players understand the history behind seemingly odd events. Sometimes, reality is stranger than fiction!"
  setting_VIET_historical_context_off:0 "Off"
  setting_VIET_historical_context_off_desc:0 "The occasional tooltips that provide historical context about some events will not appear. This is for immersion purists who find these tooltips immersion breaking."
  rule_VIET_resource_amounts:0 "VIET Resource Gains/Losses"
