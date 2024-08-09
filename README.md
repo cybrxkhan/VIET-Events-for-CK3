@@ -1,11 +1,12 @@
 # VIET Events for CK3
 
-<img src="https://i.imgur.com/vb7Fbkx.jpg">
+<img src="https://i.imgur.com/CGaQucK.jpg">
 
-## Latest Version: 1.12.2 "Shark" (Released 7/14/24)
+## Latest Version: 1.12.3 "Tripitaka" (Released 8/8/24)
 
-_"If the diver worries about the shark's maw, he’ll never grasp the precious pearl."_
-_- Sa‘di of Shiraz (1209-1291 CE), Persian poet, in his magnum opus, the Golestān (“Rose Garden”)_
+_Tripitaka, meaning the “Three Baskets” in Sanskrit, refers to a term used to denote a Buddhist canon that was written down centuries after the life of the historical Buddha. Every major historical and surviving branch of Buddhism has its own collection of canonical texts, which, despite their differences, also have many shared elements._
+
+_This update commemorates VIET passing a milestone of 300k subscribers on Steam Workshop – thank you all for your continued support over these many years! My CK modwork has been an unusual but fun way for me to engage in creative writing, and as we get close to the 4th anniversary of VIET for CK3, I hope to continue adding more to the mod in the future._
 
 Very Immersive Events and Tales (VIET), the sequel to VIET Events Reborn for CK2, is a flavor mod that adds a vast collection of events about everyday life to spice up your game. They add immersion and a diversity of experiences in between wars and vanilla’s event chains, and cover mundane minutiae ranging from small talk with courtiers and eating local cuisine to epic tales about love, philosophy, and the human condition. Some of the events unlock new decisions, character interactions, activities, and much more for you to explore!
 
@@ -15,7 +16,7 @@ Feel free to use my work in your mods - all I ask is that I am credited and (if 
 
 ## Features
 
-- Over **1122** new flavor events to experience!
+- Over **1128** new flavor events to experience!
 - Explore new decisions, artifacts, character interactions, activities, and more!
 - Game rule to disable sillier events for those who don't like them, with three levels to choose from: Balanced (Default), Serious (Restricted), and All Events (Full)
 - Compatible with almost anything since it doesn't touch any vanilla files - even with overhaul mods, you can via game rule disable events that reference things specific to our medieval world that wouldn’t make sense in other time periods or universes (like fantasy and sci-fi conversion mods)
@@ -39,12 +40,12 @@ The mod folder should look something like this:
 
 ## Changelog
 
-### Version 1.12.2 "Shark"
+### Version 1.12.3 "Tripitaka"
 
 New events added in this version: **6**
 
-- Added 6 events about sharks
-- Added additional Spanish translations, courtesy of Ferchu
+- Added 6 events related to the number 3
+- Tweaked loc for game rules to fit interface
 - Miscellaneous bugfixes and tweaks
 
 \* Adapted from VIET for CK2

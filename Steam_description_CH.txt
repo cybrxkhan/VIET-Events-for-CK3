@@ -1,6 +1,6 @@
-[img]https://i.imgur.com/vb7Fbkx.jpg[/img]
+[img]https://i.imgur.com/CGaQucK.jpg[/img]
 
-[h1]当前版本：1.12.2 "鲨鱼" (2024.7.14更新，兼容原版1.12.X)[/h1]
+[h1]当前版本：1.12.3 "三藏" (2024.8.9更新，兼容原版1.12.X)[/h1]
 
 [h1][B]
 [url=https://discord.gg/9KuyXv2uZA]我模组的Discord服务器[/url]
@@ -56,9 +56,9 @@ Very Immersive Events and Tales (VIET)是[url=https://steamcommunity.com/sharedf
 
 [img]http://i.imgur.com/RQ5QZTF.jpg[/img]
 
-[h1]版本号1.12.2 "鲨鱼"[/h1]
+[h1]版本号1.12.3 "三藏"[/h1]
 
-该版本新增了[B]8[/B]个事件
+该版本新增了[B]6[/B]个事件
 
 
 完整更新日志请见此处：https://steamcommunity.com/sharedfiles/filedetails/changelog/2227658180
