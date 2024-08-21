@@ -12,7 +12,6 @@ Very Immersive Events and Tales (VIET), la secuela de [url=https://steamcommunit
 
 Además de nuevos eventos, intento adaptar muchos de los eventos del viejo VIET de CK2 siempre que sea posible. Espero que estos ocho años (con algún parón) creando mods para CK2 me ayuden a dar una experiencia divertida a cualquier jugador interesado en mis mods.
 
-Ten en cuenta que esta es una vresión temprana de VIET, así que acepto cualquier crítica constructiva - Aún estoy pillándole el truco a modificar CK3. No dudes en avisarme si encuentras algún fallo, o si crees que los eventos saltan muy frecuentemente. Aunque los eventos pueden ser repetitivos si juegas mucho, pues aún no he añadido muchos (igual ocurre con los eventos del CK3 vanilla), [B]Espero poder ir añadiendo más eventos en cada actualización![/B]
 
 [B]¡[U]VIET [I]FUNCIONARÁ[/I] CON GUARDADOS EXISTENTES![/U][/B] (Pero recuerda hacer una copia de seguridad por si las moscas.)
 
@@ -36,12 +35,12 @@ Siéntete libre de usar mi trabajo con tus mods - todo lo que pido es reconocimi
 [h1]TRADUCCIONES DISPONIBLES[/h1]
 ¡Ahora tenemos cubiertos los idiomas oficiales! Por favvor, tened en cuenta que debido a mi horario irregular a la hora de actualizar los mods, los compañeros trabajando en las traducciones pueden o no estar al tanto de las últimas versiones de VIET, dado que están cediendo su tiempo amablemente para traducirlo desinteresadamente.. Tened en cuenta que todo el texto que no sea Inglés tiene un marcador de posición en la versión base de VIET.
 [LIST]
+[*][B]Español[/B] - Sourenics & Ferchu está proporcionando la traducción, integrada en VIET.
 [*]Chino - [url=https://paratranz.cn/projects/1580]un equipo liderado por 9Milk(牛奶大魔王) ha proporcionado la traducción, integrada en VIET.
 [*]Francés - [url=https://steamcommunity.com/sharedfiles/filedetails/?id=2234027514]Disponible como sub-mod aquí[/url], gracias a Mouchi
 [*]Alemán - [url=https://steamcommunity.com/sharedfiles/filedetails/?id=2447914570]Disponible como sub-mod aquí[/url], gracias a Ilusive
 [*]Coreano - [url=https://steamcommunity.com/sharedfiles/filedetails/?id=2227982565]Disponible como sub-mod aquí[/url], gracias a Ohboksu
 [*]Ruso - AmoreLibre está proporcionando la traducción, integrada en VIET.
-[*]Español - Sourenics & Ferchu está proporcionando la traducción, integrada en VIET.
 [/LIST]
 
 
@@ -54,8 +53,17 @@ Por favor, echa un vistazo a [url=https://steamcommunity.com/workshop/filedetail
 
 [h1]Versión 1.12.3 "Tripitaka"[/h1]
 
-[I][/I]
+[I]Tripitaka, que significa "Tres Cestos" en sánscrito, se refiere a un término usado para denotar un canon budista que fue escrito siglos después de la vida del Buda histórico. Cada rama histórica y superviviente del budismo tiene su propia colección de textos canónicos, que, a pesar de sus diferencias, también comparten muchos elementos.
 
+Esta actualización conmemora que VIET ha alcanzado un hito de 300k suscriptores en Steam Workshop: ¡gracias a todos por vuestro continuo apoyo durante todos estos años! Mi trabajo en los mods de CK ha sido una forma inusual pero divertida de involucrarme en la escritura creativa, y a medida que nos acercamos al cuarto aniversario de VIET para CK3, espero seguir añadiendo más al mod en el futuro.[/I]
+
+Nuevos eventos añadidos en esta versión: [B]6[/B]
+
+[LIST]
+[*]Añadidos 6 eventos relacionados con el número 3
+[*]Ajustada la loc de las reglas del juego para adaptarse a la interfaz
+[*]Corrección de errores y ajustes varios
+[/LIST]
 
 
 [img]https://i.imgur.com/6L11s2n.jpg[/img]
@@ -70,7 +78,7 @@ Por favor, echa un vistazo a [url=https://steamcommunity.com/workshop/filedetail
 
 [img]http://i.imgur.com/GlNXL7m.jpg[/img]
 
-Un abrazo enorme a los equipos de WTWSMS (especialmente ILikeTrians and Loup99) y Lux Invicta (incluido tsf4), así como a M@ni@c, creador de Hide Your Jewelry, por mantener y mejorar VIET para CK2 con los años, lo que me proporcionó una base sólidad para un relanzamiento mejorado de los Eventos de VIET.
+Un abrazo enorme a los equipos de WTWSMS (especialmente ILikeTrians and Loup99) y Lux Invicta (incluido tsf4), así como a M@ni@c, creador de Hide Your Jewelry, por mantener y mejorar VIET para CK2 con los años, lo que me proporcionó una base sólida para un relanzamiento mejorado de los Eventos de VIET.
 
 Reconocimiento también a OrdepNM, quien fue mi cómplice en los inicios de VIET para CK2, y que estuvo ahí para ayudar a mentenerlo mientras yo sufría serios problemas médicos.
 
