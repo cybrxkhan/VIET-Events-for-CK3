@@ -222,6 +222,20 @@ VIET_background_tuscan_country = {
 ### ANCIENT CAIRN ###
 VIET_background_ancient_cairn = {
 
+	background = { # Greek
+		trigger = {
+			location = {
+				OR = {
+					geographical_region = world_asia_minor
+					geographical_region = world_europe_south_east
+				}
+			}
+		}
+		reference = "gfx/interface/illustrations/event_scenes/VIET_ancient_cairn_greek.dds"
+		environment = "environment_event_forest"
+		ambience = "event:/SFX/Events/Backgrounds/desert_day"
+	}
+
 	background = { # East African
 		trigger = {
 			location = {
@@ -266,12 +280,16 @@ VIET_background_ancient_cairn = {
 		ambience = "event:/SFX/Events/Backgrounds/desert_day"
 	}
 
-	background = { # Greco-Roman
+	background = { # Roman
 		trigger = {
 			location = {
+				# OR = {
+				# 	geographical_region = world_asia_minor
+				# 	geographical_region = world_europe_south
+				# }
 				OR = {
-					geographical_region = world_asia_minor
-					geographical_region = world_europe_south
+					geographical_region = world_europe_west_iberia
+					geographical_region = world_europe_south_italy
 				}
 			}
 		}

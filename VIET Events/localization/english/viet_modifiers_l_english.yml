@@ -1396,4 +1396,19 @@
  VIET_removed_polygamous_noble:0 "Removed Polygamous Noble"
  VIET_removed_polygamous_noble_desc:0 "Not too long ago, an already unpopular local official took two women as wives, going against the common marriage practices of this region. Many locals were deeply unhappy, and the region's rulers took action to be rid of this man, even though he was politically well-connected."
  # Version 1.12.4 Start Here - Note to Translators: please leave this comment here and do not remove it even in your versions of the loc
+ # Version 1.13.0 Start Here - Note to Translators: please leave this comment here and do not remove it even in your versions of the loc
+ VIET_learned_foreign_dances:0 "Learned Foreign Dances While Traveling"
+ VIET_lost_traveling_supplies_minor:0 "Minor Loss of Traveling Supplies"
+ VIET_lost_traveling_supplies_major:0 "Major Loss of Traveling Supplies"
+ VIET_rare_foreign_herbs:0 "Rare Foreign Herbs"
+ VIET_cheerful_traveling_song:0 "Cheerful Traveling Song"
+ VIET_worn_out_horseshoes_and_saddles:0 "Worn out Horseshoes and Saddles"
+ VIET_friendly_toll_guards:0 "Friendly Toll Guards"
+ VIET_friendly_toll_guards_desc:0 ""Tell you what... you seem like a good sort, so you don't have to pay as much to cross this bridge here.""
+ VIET_scorned_beggars:0 "Scorned Beggars"
+ VIET_scorned_beggars_desc:0 ""Those nasty poor people... why don't they get a job, or become a slave to someone, instead of lazing around?""
+ VIET_gave_beggars_money:0 "Gave Beggars Money"
+ VIET_gave_beggars_money_desc:0 ""We must help those who cannot help themselves! It is our duty to set a good example to society.""
+ VIET_chat_about_ruins_while_traveling:0 "Chatted about Ruins while Traveling"
+ # Version 1.13.1 Start Here - Note to Translators: please leave this comment here and do not remove it even in your versions of the loc
  xxxxxxxxxx:0 "xxx"

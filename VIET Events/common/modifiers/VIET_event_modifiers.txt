@@ -3381,6 +3381,62 @@ VIET_studying_political_texts = {
 	intrigue = 1
 }
 
+VIET_learned_foreign_dances = {
+	icon = social_positive
+	diplomacy = 1
+	personal_scheme_power_mult = 0.05
+}
+
+VIET_lost_traveling_supplies_minor = {
+	icon = goods_negative
+	travel_speed = -3
+	travel_safety = -3
+}
+
+VIET_lost_traveling_supplies_major = {
+	icon = goods_negative
+	travel_speed = -8
+	travel_safety = -8
+}
+
+VIET_rare_foreign_herbs = {
+	icon = fertility_positive
+	#fertility = 0.02
+	negate_health_penalty_add = 0.3
+}
+
+VIET_cheerful_traveling_song = {
+	icon = social_positive
+	travel_speed_mult = 0.05
+}
+
+VIET_worn_out_horseshoes_and_saddles = {
+	icon = horse_negative
+	travel_safety = -5
+	travel_speed_mult = -0.15
+}
+
+VIET_friendly_toll_guards = {
+	icon = martial_positive
+	travel_safety_mult = 0.1
+}
+
+VIET_scorned_beggars = {
+	icon = social_negative
+	monthly_piety = -0.3
+}
+
+VIET_gave_beggars_money = {
+	icon = social_positive
+	county_opinion_add = 3
+}
+
+VIET_chat_about_ruins_while_traveling = {
+	icon = compass_positive
+	diplomacy = 1
+	monthly_learning_lifestyle_xp_gain_mult = 0.03
+}
+
 
 
 
