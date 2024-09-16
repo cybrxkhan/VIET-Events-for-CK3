@@ -1397,4 +1397,18 @@ VIET_polygamous_noble_desc:0 "Recientemente, se ha difundido la noticia en la pr
 VIET_removed_polygamous_noble:0 "Consejero Polígamo Destituido"
 VIET_removed_polygamous_noble_desc:0 "No hace mucho, un consejero local, ya impopular, tomó a dos mujeres como esposas, yendo en contra de las prácticas matrimoniales comunes de esta región. Muchos locales estaban profundamente descontentos, y los gobernantes de la región tomaron medidas para deshacerse de este hombre, a pesar de que estaba bien conectado políticamente."
 # Version 1.12.4 Start Here - Note to Translators: please leave this comment here and do not remove it even in your versions of the loc
- xxxxxxxxxx:0 "xxx"
+ # Version 1.13.0 Start Here - Note to Translators: please leave this comment here and do not remove it even in your versions of the loc
+VIET_learned_foreign_dances:0 "Aprendió Bailes Extranjeros Durante el Viaje"
+VIET_lost_traveling_supplies_minor:0 "Pérdida Menor de Suministros de Viaje"
+VIET_lost_traveling_supplies_major:0 "Pérdida Mayor de Suministros de Viaje"
+VIET_rare_foreign_herbs:0 "Hierbas Extranjeras Raras"
+VIET_cheerful_traveling_song:0 "Canción Alegre de Viaje"
+VIET_worn_out_horseshoes_and_saddles:0 "Herraduras y Sillas de Montar Desgastadas"
+VIET_friendly_toll_guards:0 "Guardias de Peaje Amistosos"
+VIET_friendly_toll_guards_desc:0 ""Te diré una cosa... pareces una buena persona, así que no tienes que pagar tanto para cruzar este puente aquí.""
+VIET_scorned_beggars:0 "Pordioseros Menospreciados"
+VIET_scorned_beggars_desc:0 ""Esos desagradables pobres... ¿por qué no consiguen un trabajo o se convierten en esclavos de alguien, en lugar de andar por ahí sin hacer nada?""
+VIET_gave_beggars_money:0 "Dio Dinero a los Pordioseros"
+VIET_gave_beggars_money_desc:0 ""Debemos ayudar a aquellos que no pueden ayudarse a sí mismos. Es nuestro deber dar un buen ejemplo a la sociedad.""
+VIET_chat_about_ruins_while_traveling:0 "Charla sobre Ruinas Durante el Viaje"
+# Version 1.13.1 Start Here - Note to Translators: please leave this comment here and do not remove it even in your versions of the loc
