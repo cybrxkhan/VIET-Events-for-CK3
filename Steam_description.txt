@@ -1,8 +1,9 @@
-[img]https://i.imgur.com/CGaQucK.jpg[/img]
+[img]https://i.imgur.com/Y6fhAkk.jpg[/img]
 
-[h1]Current Version: 1.12.3 "Tripitaka" (Released 8/9/24, Compatible with vanilla patch 1.12.X)[/h1]
+[h1]Current Version: 1.13.0 "Periplus" (Released 9/25/24, Compatible with vanilla patch 1.13.X)[/h1]
 
-[h1][B][url=https://discord.gg/9KuyXv2uZA]Discord Server for my mods[/url]
+[h1][B][url=https://forms.gle/cYfCUFzzZgRDba5a6]2024 VIET/RICE Survey & Celtic Flavor Pack Poll[/url][/B]
+[B][url=https://discord.gg/9KuyXv2uZA]Discord Server for my mods[/url]
 [url=https://cybrxkhansmods.godaddysites.com/]Official Website for my mods[/url][/B][/h1]
 [B][url=https://forum.paradoxplaza.com/forum/threads/mod-viet-events-for-ck3-a-flavor-and-immersion-event-mod.1422081/]Paradox Forum Thread[/url][/B]
 [B]Manual Download/Installation available [url=https://github.com/cybrxkhan/VIET-Events-for-CK3/releases]on Github[/url][/B]
@@ -25,7 +26,7 @@ Feel free to use my work in your mods - all I ask is that I am credited and (if 
 [img]http://i.imgur.com/EyXurbK.jpg[/img]
 
 [LIST]
-[*]Over [B][U]1128[/U] new flavor events[/B] to experience!
+[*]Over [B][U]1140[/U] new flavor events[/B] to experience!
 [*]Explore new decisions, artifacts, character interactions, activities, and more!
 [*]Game rule to disable sillier events for those who don't like them, with three levels to choose from: Balanced (Default), Serious (Restricted), and All Events (Full)
 [*][B]Compatible with almost anything[/B] since it doesn't touch any vanilla files - even with overhaul mods, you can via game rule disable events that reference things specific to our medieval world that wouldn’t make sense in other time periods or universes (like fantasy/sci-fi conversion mods)
@@ -51,17 +52,18 @@ Please see the [url=https://cybrxkhansmods.godaddysites.com/faq]FAQ on my mods' 
 
 [img]http://i.imgur.com/RQ5QZTF.jpg[/img]
 
-[h1]Version 1.12.3 "Tripitaka"[/h1]
+[h1]Version 1.13.0 "Periplus"[/h1]
 
-[I]Tripitaka, meaning the “Three Baskets” in Sanskrit, refers to a term used to denote a Buddhist canon that was written down centuries after the life of the historical Buddha. Every major historical and surviving branch of Buddhism has its own collection of canonical texts, which, despite their differences, also have many shared elements.
+[I]“I have been a stranger in a strange land."
+- Exodus 2:22[/I]
 
-This update commemorates VIET passing a milestone of 300k subscribers on Steam Workshop – thank you all for your continued support over these many years! My CK modwork has been an unusual but fun way for me to engage in creative writing, and as we get close to the 4th anniversary of VIET for CK3, I hope to continue adding more to the mod in the future.[/I]
-
-New events added in this version: [B]6[/B]
+New events added in this version: [B]12[/B]
 
 [LIST]
-[*]Added 6 events related to the number 3
-[*]Tweaked loc for game rules to fit interface
+[*]Added 12 generic travel events
+[*]Added new Greek-themed event backgrounds
+[*]Added new decision categories for VIET’s decisions
+[*]Slightly tweaked likelihood of various travel events
 [*]Miscellaneous bugfixes and tweaks
 [/LIST]
 
