@@ -75,6 +75,10 @@ death_VIET_dream_killer:0 "apareció en el sueño de [TARGET_CHARACTER.GetUIName
  VIET_old_world_cactus_name_sri_lanka:0 "nawahandi"
  VIET_old_world_cactus_name_west_africa:0 "igilligilli"
 
+ # Decision Types
+ decision_group_type_VIET_everyday: "Ordinary Decisions (VIET)"
+ decision_group_type_VIET_rare: "Extraordinary Decisions (VIET)"
+
  # Events
 VIETintro.0011.t:0 "El viaje comienza"
 VIETintro.0011.desc:0 "Es hora de comenzar el viaje a [ROOT.Char.GetTravelPlan.GetData.GetNextDestination.GetProvince.GetName] para el [ROOT.Char.GetInvolvedActivity.GetShortName]. Estoy seguro de que el dolor de cabeza y el esfuerzo de organizar este viaje valdrán la pena al final cuando lleguemos a nuestro destino... o al menos tendré que esperar que ese sea el caso, porque de lo contrario todo este estrés por preparar el viaje habría sido en vano."

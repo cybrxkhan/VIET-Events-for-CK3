@@ -73,3 +73,7 @@
  game_rule_category_VIET: "VIET"
  VIET_old_world_cactus_name_sri_lanka:0 "丝苇"
  VIET_old_world_cactus_name_west_africa:0 "槲寄生仙人掌"
+
+ # Decision Types
+ decision_group_type_VIET_everyday: "Ordinary Decisions (VIET)"
+ decision_group_type_VIET_rare: "Extraordinary Decisions (VIET)"
