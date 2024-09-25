@@ -76,8 +76,8 @@ death_VIET_dream_killer:0 "apareció en el sueño de [TARGET_CHARACTER.GetUIName
  VIET_old_world_cactus_name_west_africa:0 "igilligilli"
 
  # Decision Types
- decision_group_type_VIET_everyday: "Ordinary Decisions (VIET)"
- decision_group_type_VIET_rare: "Extraordinary Decisions (VIET)"
+ decision_group_type_VIET_everyday: "Decisiones Ordinarias (VIET)"
+ decision_group_type_VIET_rare: "Decisiones Extraordinarias (VIET)"
 
  # Events
 VIETintro.0011.t:0 "El viaje comienza"
