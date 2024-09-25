@@ -55,7 +55,7 @@ Por favor, echa un vistazo a [url=https://steamcommunity.com/workshop/filedetail
 [h1]Versión 1.13.0 "Periplus"[/h1]
 
 [I]"Forastero soy en tierra ajena."
-- Exodus 2:22[/I]
+- Éxodo 2:22[/I]
 
 Nuevos eventos añadidos en esta versión: [B]12[/B]
 [LIST]
