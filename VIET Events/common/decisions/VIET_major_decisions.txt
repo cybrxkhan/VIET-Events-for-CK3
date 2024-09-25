@@ -1,14 +1,14 @@
 ﻿
 
 VIET_decision_oblivion_dream = {
-	picture = "gfx/interface/illustrations/decisions/decision_viet_oblivion_sunset.dds"
-	major = yes
+	picture = { reference = "gfx/interface/illustrations/decisions/decision_viet_oblivion_sunset.dds" }
+	decision_group_type = VIET_rare
 	desc = VIET_decision_oblivion_dream_desc
 
 	ai_check_interval = 4
 
 	is_shown = {
-		is_landed = yes
+		is_playable_character = yes
 		exists = var:VIET_oblivion_dream_counter
 		NOT = { has_character_flag = VIET_currently_doing_oblivion_dream }
 		NOT = { has_character_flag = VIET_oblivion_dream_done }
@@ -67,14 +67,14 @@ VIET_decision_oblivion_dream = {
 
 
 VIET_decision_meet_qi_ma_the_liar = {
-	picture = "gfx/interface/illustrations/decisions/decision_viet_qi_ma.dds"
-	major = yes
+	picture = { reference = "gfx/interface/illustrations/decisions/decision_viet_qi_ma.dds" }
+	decision_group_type = VIET_rare
 	desc = VIET_decision_meet_qi_ma_the_liar_desc
 
 	ai_check_interval = 4
 
 	is_shown = {
-		is_landed = yes
+		is_playable_character = yes
 		has_character_modifier = VIET_qi_ma_in_town
 		has_global_variable = VIET_qi_ma_is_active
 	}
@@ -108,8 +108,8 @@ VIET_decision_meet_qi_ma_the_liar = {
 
 
 VIET_decision_strange_trails = {
-	picture = "gfx/interface/illustrations/decisions/decision_viet_lord_huron_strange_trails.dds"
-	major = yes
+	picture = { reference = "gfx/interface/illustrations/decisions/decision_viet_lord_huron_strange_trails.dds" }
+	decision_group_type = VIET_rare
 	desc = VIET_decision_strange_trails_desc
 
 	ai_check_interval = 36
@@ -117,7 +117,7 @@ VIET_decision_strange_trails = {
 	#cooldown = { days = 1825 }
 
 	is_shown = {
-		is_landed = yes
+		is_playable_character = yes
 		has_character_flag = VIET_can_follow_the_strange_trails
 		NOT = { has_character_flag = VIET_finished_strange_trails }
 	}

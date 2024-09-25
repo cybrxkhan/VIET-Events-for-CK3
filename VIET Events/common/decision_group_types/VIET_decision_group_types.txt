@@ -1,0 +1,10 @@
+﻿
+
+VIET_everyday = {
+	sort_order = 10
+}
+
+VIET_rare = {
+	sort_order = 50
+	gui_tags = { big_button }
+}

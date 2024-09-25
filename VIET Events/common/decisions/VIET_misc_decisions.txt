@@ -1,7 +1,8 @@
 ﻿
 
 VIET_decision_traveling_baklava_merchant = {
-	picture = "gfx/interface/illustrations/decisions/decision_viet_baklava.dds"
+	picture = { reference = "gfx/interface/illustrations/decisions/decision_viet_baklava.dds" }
+	decision_group_type = VIET_everyday
 	desc = VIET_decision_traveling_baklava_merchant_desc
 
 	ai_check_interval = 48
@@ -9,7 +10,7 @@ VIET_decision_traveling_baklava_merchant = {
 	cooldown = { days = 365 }
 
 	is_shown = {
-		is_landed = yes
+		is_playable_character = yes
 		has_character_modifier = VIET_traveling_baklava_merchant_in_town
 	}
 
@@ -55,7 +56,8 @@ VIET_decision_traveling_baklava_merchant = {
 }
 
 VIET_decision_traveling_five_spice_merchant = {
-	picture = "gfx/interface/illustrations/decisions/decision_viet_spices.dds"
+	picture = { reference = "gfx/interface/illustrations/decisions/decision_viet_spices.dds" }
+	decision_group_type = VIET_everyday
 	desc = VIET_decision_traveling_five_spice_merchant_desc
 
 	ai_check_interval = 48
@@ -63,7 +65,7 @@ VIET_decision_traveling_five_spice_merchant = {
 	cooldown = { days = 365 }
 
 	is_shown = {
-		is_landed = yes
+		is_playable_character = yes
 		has_character_modifier = VIET_traveling_spice_merchant_in_town
 	}
 
@@ -111,13 +113,14 @@ VIET_decision_traveling_five_spice_merchant = {
 
 
 VIET_decision_exorcise_ghost_follower = {
-	picture = "gfx/interface/illustrations/decisions/decision_viet_skull.dds"
+	picture = { reference = "gfx/interface/illustrations/decisions/decision_viet_skull.dds" }
+	decision_group_type = VIET_everyday
 	desc = VIET_decision_exorcise_ghost_follower_desc
 
 	ai_check_interval = 30
 
 	is_shown = {
-		is_landed = yes
+		is_playable_character = yes
 		has_character_modifier = VIET_ghost_haunting
 	}
 
@@ -126,7 +129,7 @@ VIET_decision_exorcise_ghost_follower = {
 	}
 
 	is_valid_showing_failures_only = {
-		is_adult = yes
+		is_playable_character = yes
 		is_available = yes
 	}
 
@@ -164,13 +167,14 @@ VIET_decision_exorcise_ghost_follower = {
 
 
 VIET_decision_drink_shadowbanish_wine = {
-	picture = "gfx/interface/illustrations/decisions/decision_viet_wine.dds"
+	picture = { reference = "gfx/interface/illustrations/decisions/decision_viet_wine.dds" }
+	decision_group_type = VIET_rare
 	desc = VIET_decision_drink_shadowbanish_wine_desc
 
 	ai_check_interval = 12
 
 	is_shown = {
-		is_landed = yes
+		is_playable_character = yes
 		has_character_modifier = VIET_has_shadowbanish_wine_bottle
 	}
 
@@ -222,13 +226,14 @@ VIET_decision_drink_shadowbanish_wine = {
 
 
 VIET_decision_destroy_shadowbanish_wine = {
-	picture = "gfx/interface/illustrations/decisions/decision_viet_wine.dds"
+	picture = { reference = "gfx/interface/illustrations/decisions/decision_viet_wine.dds" }
+	decision_group_type = VIET_rare
 	desc = VIET_decision_destroy_shadowbanish_wine_desc
 
 	ai_check_interval = 12
 
 	is_shown = {
-		is_landed = yes
+		is_playable_character = yes
 		has_character_modifier = VIET_has_shadowbanish_wine_bottle
 		OR = {
 			religion = religion:islam_religion # Prohibited by khamr, a prohibition against intoxicants
@@ -287,13 +292,14 @@ VIET_decision_destroy_shadowbanish_wine = {
 
 
 VIET_decision_unlock_mysterious_chest = {
-	picture = "gfx/interface/illustrations/decisions/decision_viet_treasure_chest.dds"
+	picture = { reference = "gfx/interface/illustrations/decisions/decision_viet_treasure_chest.dds" }
+	decision_group_type = VIET_everyday
 	desc = VIET_decision_unlock_mysterious_chest_desc
 
 	ai_check_interval = 36
 
 	is_shown = {
-		is_landed = yes
+		is_playable_character = yes
 		has_character_modifier = VIET_has_mysterious_chest
 	}
 
@@ -328,13 +334,14 @@ VIET_decision_unlock_mysterious_chest = {
 
 
 VIET_decision_hire_belrand = {
-	picture = "gfx/interface/illustrations/decisions/decision_viet_travel.dds"
+	picture = { reference = "gfx/interface/illustrations/decisions/decision_viet_travel.dds" }
+	decision_group_type = VIET_everyday
 	desc = VIET_decision_hire_belrand_desc
 
 	ai_check_interval = 36
 
 	is_shown = {
-		is_landed = yes
+		is_playable_character = yes
 		has_character_modifier = VIET_mercenary_scholar_in_town
 	}
 
@@ -373,13 +380,14 @@ VIET_decision_hire_belrand = {
 
 
 VIET_decision_ransom_kidnapped_servants = {
-	picture = "gfx/interface/illustrations/decisions/decision_viet_bandits.dds"
+	picture = { reference = "gfx/interface/illustrations/decisions/decision_viet_bandits.dds" }
+	decision_group_type = VIET_rare
 	desc = VIET_decision_ransom_kidnapped_servants_desc
 
 	ai_check_interval = 4 # Due to small timeframe, AI will choose whether to do it immediately
 
 	is_shown = {
-		is_landed = yes
+		is_playable_character = yes
 		has_character_modifier = VIET_servant_hostage_countdown
 		#NOT = { has_character_flag = VIET_decision_choose_rescue_servants }
 	}
@@ -429,13 +437,14 @@ VIET_decision_ransom_kidnapped_servants = {
 
 
 VIET_decision_deal_with_crows = {
-	picture = "gfx/interface/illustrations/decisions/decision_viet_crow.dds"
+	picture = { reference = "gfx/interface/illustrations/decisions/decision_viet_crow.dds" }
+	decision_group_type = VIET_everyday
 	desc = VIET_decision_deal_with_crows_desc
 
 	ai_check_interval = 36
 
 	is_shown = {
-		is_landed = yes
+		is_playable_character = yes
 		has_character_modifier = VIET_crows_following
 		NOT = { has_character_flag = VIET_doing_crow_activities }
 	}
@@ -475,7 +484,8 @@ VIET_decision_deal_with_crows = {
 
 
 VIET_decision_feed_the_crows = {
-	picture = "gfx/interface/illustrations/decisions/decision_viet_crow.dds"
+	picture = { reference = "gfx/interface/illustrations/decisions/decision_viet_crow.dds" }
+	decision_group_type = VIET_everyday
 	desc = VIET_decision_feed_the_crows_desc
 
 	ai_check_interval = 36
@@ -483,7 +493,7 @@ VIET_decision_feed_the_crows = {
 	cooldown = { days = 1825 }
 
 	is_shown = {
-		is_landed = yes
+		is_playable_character = yes
 		VIET_is_crow_lord_or_lady_trigger = yes
 	}
 
@@ -522,13 +532,14 @@ VIET_decision_feed_the_crows = {
 
 
 VIET_decision_learn_shorthand_techniques = {
-	picture = "gfx/interface/illustrations/decisions/decision_viet_book.dds"
+	picture = { reference = "gfx/interface/illustrations/decisions/decision_viet_book.dds" }
+	decision_group_type = VIET_everyday
 	desc = VIET_decision_learn_shorthand_techniques_desc
 
 	ai_check_interval = 24
 
 	is_shown = {
-		is_landed = yes
+		is_playable_character = yes
 		has_character_modifier = VIET_shorthand_interest
 	}
 
@@ -583,7 +594,8 @@ VIET_decision_learn_shorthand_techniques = {
 
 
 VIET_decision_listen_to_wild_songbirds = {
-	picture = "gfx/interface/illustrations/decisions/decision_viet_bird.dds"
+	picture = { reference = "gfx/interface/illustrations/decisions/decision_viet_bird.dds" }
+	decision_group_type = VIET_everyday
 	desc = VIET_decision_listen_to_wild_songbirds_desc
 
 	ai_check_interval = 36
@@ -591,7 +603,7 @@ VIET_decision_listen_to_wild_songbirds = {
 	cooldown = { days = 1825 }
 
 	is_shown = {
-		is_landed = yes
+		is_playable_character = yes
 		has_character_modifier = VIET_songbird_enjoyer
 	}
 

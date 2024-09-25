@@ -3,6 +3,7 @@
 }
 
 VIET_basic_is_available_adult_trigger = {
+	# is_playable_character = yes
 	basic_is_valid_for_yearly_events_trigger = yes
 	is_adult = yes
 }

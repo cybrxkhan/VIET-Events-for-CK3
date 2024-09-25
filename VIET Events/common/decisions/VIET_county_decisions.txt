@@ -1,7 +1,8 @@
 ﻿
 
 VIET_decision_buy_valuable_medicinal_berries = {
-	picture = "gfx/interface/illustrations/decisions/decision_viet_alchemy.dds"
+	picture = { reference = "gfx/interface/illustrations/decisions/decision_viet_alchemy.dds" }
+	decision_group_type = VIET_everyday
 	desc = VIET_decision_buy_valuable_medicinal_berries_desc
 
 	ai_check_interval = 24
@@ -69,7 +70,8 @@ VIET_decision_buy_valuable_medicinal_berries = {
 }
 
 VIET_decision_employ_renowned_blacksmiths = {
-	picture = "gfx/interface/illustrations/decisions/decision_viet_blacksmith.dds"
+	picture = { reference = "gfx/interface/illustrations/decisions/decision_viet_blacksmith.dds" }
+	decision_group_type = VIET_everyday
 	desc = VIET_decision_employ_renowned_blacksmiths_desc
 
 	ai_check_interval = 24
@@ -169,7 +171,8 @@ VIET_decision_employ_renowned_blacksmiths = {
 
 
 VIET_decision_venerate_a_mummified_hermit = {
-	picture = "gfx/interface/illustrations/decisions/decision_viet_buddhist_monk.dds"
+	picture = { reference = "gfx/interface/illustrations/decisions/decision_viet_buddhist_monk.dds" }
+	decision_group_type = VIET_everyday
 	desc = VIET_decision_venerate_a_mummified_hermit_desc
 
 	ai_check_interval = 24
@@ -257,7 +260,8 @@ VIET_decision_venerate_a_mummified_hermit = {
 
 
 VIET_decision_purchase_dependable_donkeys = {
-	picture = "gfx/interface/illustrations/decisions/decision_viet_farm.dds"
+	picture = { reference = "gfx/interface/illustrations/decisions/decision_viet_farm.dds" }
+	decision_group_type = VIET_everyday
 	desc = VIET_decision_purchase_dependable_donkeys_desc
 
 	ai_check_interval = 24
@@ -358,7 +362,8 @@ VIET_decision_purchase_dependable_donkeys = {
 
 
 VIET_decision_add_more_dovecotes = {
-	picture = "gfx/interface/illustrations/decisions/decision_viet_farm.dds"
+	picture = { reference = "gfx/interface/illustrations/decisions/decision_viet_farm.dds" }
+	decision_group_type = VIET_everyday
 	desc = VIET_decision_add_more_dovecotes_desc
 
 	ai_check_interval = 24

@@ -24,7 +24,7 @@ VIET_travel_events_common = {
 		highest_held_title_tier >= tier_county
 		# Basic checks
 		is_available_travelling = yes
-		is_landed = yes
+		is_playable_character = yes
 	}
 
 	random_events = {
@@ -102,7 +102,7 @@ VIET_travel_events_uncommon = {
 		highest_held_title_tier >= tier_county
 		# Basic checks
 		is_available_travelling = yes
-		is_landed = yes
+		is_playable_character = yes
 	}
 
 	random_events = {
@@ -173,7 +173,7 @@ VIET_travel_events_rare = {
 		highest_held_title_tier >= tier_county
 		# Basic checks
 		is_available_travelling = yes
-		is_landed = yes
+		is_playable_character = yes
 	}
 
 	random_events = {
