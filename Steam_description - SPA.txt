@@ -1,8 +1,9 @@
-[img]https://i.imgur.com/CGaQucK.jpg[/img]
+[img]https://i.imgur.com/Y6fhAkk.jpg[/img]
 
-[h1]Versión actual: 1.12.3 "Tripitaka" (Salida 9/8/24, Compatible con versión vanilla 1.12.X)[/h1]
-[h1][B][url=https://forms.gle/if7sLCAGpB1G2uJdA]Realice la encuesta VIET/RICE de 2023![/url]
-[url=https://discord.gg/9KuyXv2uZA]Servidor de Discord de mis Mods[/url][/B][/h1]
+[h1]Versión actual: 1.13.0 "Periplus" 
+(Lanzamiento: 25/9/24, Compatible con versión vanilla 1.13.X)[/h1]
+
+[url=https://discord.gg/9KuyXv2uZA]Servidor de Discord de mis Mods[/url]
 [B]Echa un Vistazo a [url=https://forum.paradoxplaza.com/forum/threads/mod-viet-events-for-ck3-a-flavor-and-immersion-event-mod.1422081/]Tema del Foro[/url] Para Más Información[/B]
 [B]Descarga/Instalación manual [url=https://github.com/cybrxkhan/VIET-Events-for-CK3/releases]en Github[/url][/B]
 [B]Descarga desde Paradox [url=https://mods.paradoxplaza.com/mods/12992/Any] disponible aquí[/url][/B]
@@ -25,7 +26,7 @@ Siéntete libre de usar mi trabajo con tus mods - todo lo que pido es reconocimi
 [img]http://i.imgur.com/EyXurbK.jpg[/img]
 
 [LIST]
-[*]¡Más de [B][U]1128[/U] nuevos eventos[/B] para experimentar!
+[*]¡Más de [B][U]1140[/U] nuevos eventos[/B] para experimentar!
 [*]Explora nuevas decisiones, artefactos, interacciones y cadenas de eventos
 [*]Regla de juego para desactivar los eventos estúpidos para aquellos que no les guste, con tres niveles para escoger entre: Balanceado (Predeterminado), Serio (Restringido), y Todos los eventos (Todo)
 [*][B]Compatible con casi cualquier cosa[/B] ya que no modifico archivos del vanilla - incluso con mods de conversión total puedes desactivar los eventos que hagan referencias a cosas o lugares específicos del mundo medieval que no tendrían sentido en otros periodos o universos (como mods fantásticos o de ciencia ficción)
@@ -33,10 +34,10 @@ Siéntete libre de usar mi trabajo con tus mods - todo lo que pido es reconocimi
 [/LIST]
 
 [h1]TRADUCCIONES DISPONIBLES[/h1]
-¡Ahora tenemos cubiertos los idiomas oficiales! Por favvor, tened en cuenta que debido a mi horario irregular a la hora de actualizar los mods, los compañeros trabajando en las traducciones pueden o no estar al tanto de las últimas versiones de VIET, dado que están cediendo su tiempo amablemente para traducirlo desinteresadamente.. Tened en cuenta que todo el texto que no sea Inglés tiene un marcador de posición en la versión base de VIET.
+¡Ahora tenemos cubiertos los idiomas oficiales! Por favor, tened en cuenta que debido a mi horario irregular a la hora de actualizar los mods, los compañeros trabajando en las traducciones pueden o no estar al tanto de las últimas versiones de VIET, dado que están cediendo su tiempo amablemente para traducirlo desinteresadamente.. Tened en cuenta que todo el texto que no sea Inglés tiene un marcador de posición en la versión base de VIET.
 [LIST]
-[*][B]Español[/B] - Sourenics & Ferchu está proporcionando la traducción, integrada en VIET.
-[*]Chino - [url=https://paratranz.cn/projects/1580]un equipo liderado por 9Milk(牛奶大魔王) ha proporcionado la traducción, integrada en VIET.
+[*][B]Español[/B] - Sourenics & Ferchu están proporcionando la traducción, integrada en VIET.
+[*]Chino - [url=https://paratranz.cn/projects/1580] integrada en VIET.
 [*]Francés - [url=https://steamcommunity.com/sharedfiles/filedetails/?id=2234027514]Disponible como sub-mod aquí[/url], gracias a Mouchi
 [*]Alemán - [url=https://steamcommunity.com/sharedfiles/filedetails/?id=2447914570]Disponible como sub-mod aquí[/url], gracias a Ilusive
 [*]Coreano - [url=https://steamcommunity.com/sharedfiles/filedetails/?id=2227982565]Disponible como sub-mod aquí[/url], gracias a Ohboksu
@@ -51,18 +52,18 @@ Por favor, echa un vistazo a [url=https://steamcommunity.com/workshop/filedetail
 
 [img]http://i.imgur.com/RQ5QZTF.jpg[/img]
 
-[h1]Versión 1.12.3 "Tripitaka"[/h1]
+[h1]Versión 1.13.0 "Periplus"[/h1]
 
-[I]Tripitaka, que significa "Tres Cestos" en sánscrito, se refiere a un término usado para denotar un canon budista que fue escrito siglos después de la vida del Buda histórico. Cada rama histórica y superviviente del budismo tiene su propia colección de textos canónicos, que, a pesar de sus diferencias, también comparten muchos elementos.
+[I]"Forastero soy en tierra ajena."
+- Éxodo 2:22[/I]
 
-Esta actualización conmemora que VIET ha alcanzado un hito de 300k suscriptores en Steam Workshop: ¡gracias a todos por vuestro continuo apoyo durante todos estos años! Mi trabajo en los mods de CK ha sido una forma inusual pero divertida de involucrarme en la escritura creativa, y a medida que nos acercamos al cuarto aniversario de VIET para CK3, espero seguir añadiendo más al mod en el futuro.[/I]
-
-Nuevos eventos añadidos en esta versión: [B]6[/B]
-
+Nuevos eventos añadidos en esta versión: [B]12[/B]
 [LIST]
-[*]Añadidos 6 eventos relacionados con el número 3
-[*]Ajustada la loc de las reglas del juego para adaptarse a la interfaz
-[*]Corrección de errores y ajustes varios
+[*]Se añadieron nuevos eventos con temática griega
+[*]Se añadieron nuevas categorías de decisiones para las decisiones de VIET
+[*]Se ajustó ligeramente la probabilidad de varios eventos de viaje
+[*]Se añadieron 12 eventos genéricos de viaje
+[*]Ajustes y correcciones de errores varios
 [/LIST]
 
 
