@@ -26,7 +26,7 @@ VIET_is_unattractive_trigger = {
 		has_trait = maimed
 		has_trait = disfigured
 		has_trait = infirm
-		has_trait = eunuch
+		is_eunuch_trigger = yes
 		has_trait = blind
 		has_trait = beauty_bad_1
 		has_trait = beauty_bad_2
@@ -137,7 +137,7 @@ VIET_is_hummus_culture_trigger = {
 }
 
 VIET_sexual_character_trigger = {
-	NOT = { has_trait = eunuch }
+	NOT = { is_eunuch_trigger = yes }
 	NOT = { has_trait = celibate }
 	NOT = { has_sexuality = asexual }
 }

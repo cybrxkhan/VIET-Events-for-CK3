@@ -2933,7 +2933,7 @@ VIETold.0036 = {
 		NOR = {
 			has_trait = chaste
 			has_trait = celibate
-			has_trait = eunuch
+			is_eunuch_trigger = yes
 			has_sexuality = asexual
 			has_sexuality = homosexual
 		}
@@ -3068,7 +3068,7 @@ VIETold.0037 = {
 			}
 		}
 		NOR = { 
-			has_trait = eunuch
+			is_eunuch_trigger = yes
 			has_trait = lustful
 			faith = {
 				trait_is_virtue = lustful

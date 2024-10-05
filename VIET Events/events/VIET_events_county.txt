@@ -1763,7 +1763,7 @@ VIETmisc.3019 = {
 				is_ai = no
 			}
 			NOR = {
-				has_trait = eunuch
+				is_eunuch_trigger = yes
 				has_trait = celibate
 				has_sexuality = asexual
 			}

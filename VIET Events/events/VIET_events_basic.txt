@@ -9463,7 +9463,7 @@ VIETmisc.0116 = {
 				has_sexuality = asexual
 				has_sexuality = homosexual # Witnessing a hetereosexual couple
 				has_trait = celibate
-				has_trait = eunuch
+				is_eunuch_trigger = yes
 			}
 		}
 		add_character_modifier = {
@@ -13061,7 +13061,7 @@ VIETmisc.0157 = {
 				has_sexuality = homosexual
 				has_trait = chaste
 				has_trait = celibate
-				has_trait = eunuch
+				is_eunuch_trigger = yes
 			}
 			OR = {
 				has_trait = lustful
@@ -13112,7 +13112,7 @@ VIETmisc.0157 = {
 					has_sexuality = homosexual
 					has_trait = chaste
 					has_trait = celibate
-					has_trait = eunuch
+					is_eunuch_trigger = yes
 				}
 				OR = {
 					has_trait = lustful
@@ -15031,7 +15031,7 @@ VIETmisc.0175 = {
 		name = VIETmisc.0175.d
 		trigger = {
 			NOR = {
-				has_trait = eunuch
+				is_eunuch_trigger = yes
 				has_trait = celibate
 				has_sexuality = asexual
 			}

@@ -3645,7 +3645,7 @@ VIETold.1048 = {
 			NOR = {
 				has_sexuality = asexual
 				has_trait = celibate
-				has_trait = eunuch
+				is_eunuch_trigger = yes
 				has_trait = chaste
 			}
 		}
