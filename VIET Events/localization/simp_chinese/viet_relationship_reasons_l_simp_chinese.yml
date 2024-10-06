@@ -1,6 +1,0 @@
-﻿l_simp_chinese:
- VIET_friend_reason_placeholder:0 "[CHARACTER.GetShortUIName|U]和[TARGET_CHARACTER.GetShortUIName]越来越享受彼此的陪伴。"
- VIET_rival_reason_placeholder:0 "[CHARACTER.GetShortUIName|U]和[TARGET_CHARACTER.GetShortUIName]出于一些分歧，逐渐不喜欢对方了。"
- VIET_travel_argument_reason:0 "[CHARACTER.GetShortUIName|U]和[TARGET_CHARACTER.GetShortUIName]在[traveling|E]时发生争执。"
- VIET_travel_chat_reason:0 "[CHARACTER.GetShortUIName|U]和[TARGET_CHARACTER.GetShortUIName]在[traveling|E]时进行了深入交流"
- VIET_natural_philosophy_interest:0 "[CHARACTER.GetShortUIName|U]与[TARGET_CHARACTER.GetShortUIName]就自然哲学话题进行了愉快的对话。"
