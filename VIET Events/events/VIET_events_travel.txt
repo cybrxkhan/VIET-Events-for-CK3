@@ -4256,7 +4256,7 @@ VIETmisc.7040 = {
 	option = { # Go to sleep
 		name = VIETmisc.7040.d
 		stress_impact = {
-			base = miniscule_stress_impact_loss
+			base = minor_stress_impact_loss
 			lazy = miniscule_stress_impact_loss
 			shy = miniscule_stress_impact_loss
 		}
@@ -4349,7 +4349,7 @@ VIETmisc.7041 = {
 			}
 			send_interface_toast = {
 				left_icon = ROOT
-				title = VIETmisc.7041.toast
+				title = VIETmisc.7041.a.toast
 				add_character_modifier = {
 					modifier = VIET_local_shrine_blessing
 					years = 7
@@ -4843,16 +4843,31 @@ VIETmisc.7045 = {
 				modifier = VIET_stole_supplies_from_local_elder
 	 			years = 1
 			}
-		}	
+		}
 
-		custom_tooltip = VIETmisc.7045.b.tooltip
-
-		hidden_effect = {
-			random = {
-				chance = 25
+		duel = {
+			skills = { diplomacy intrigue prowess }
+			value = average_skill_rating
+			50 = { # You are caught
+				show_chance = no
+				custom_tooltip = VIETmisc.7045.b.failure
+				compare_modifier = {
+					value = scope:duel_value
+					multiplier = -3.5
+					min = -49
+				}
 				trigger_event = {
 					id = VIETmisc.7046
-					#months = { 2 4 }
+					months = { 2 4 }
+				}
+			}
+			50 = { # You are not caught
+				show_chance = no
+				custom_tooltip = VIETmisc.7045.b.success
+				compare_modifier = {
+					value = scope:duel_value
+					multiplier = 3.5
+					min = -49
 				}
 			}
 		}
@@ -5000,7 +5015,7 @@ VIETmisc.7047 = {
 			value = average_skill_rating
 			50 = { # Fail to catch them
 				#show_chance = no
-				custom_tooltip = VIETmisc.7047.c.failure
+				custom_tooltip = VIETmisc.7047.b.failure
 				compare_modifier = {
 					value = scope:duel_value
 					multiplier = -3.5
@@ -5009,7 +5024,7 @@ VIETmisc.7047 = {
 				send_interface_toast = {
 					type = event_toast_effect_bad
 					left_icon = ROOT
-					title = VIETmisc.7047.c.failure
+					title = VIETmisc.7047.b.failure
 					current_travel_plan = {
 						delay_travel_plan = { days = 3 }
 					}
@@ -5021,7 +5036,7 @@ VIETmisc.7047 = {
 			}
 			50 = { # Succeed in catching them
 				#show_chance = no
-				custom_tooltip = VIETmisc.7047.c.success
+				custom_tooltip = VIETmisc.7047.b.success
 				compare_modifier = {
 					value = scope:duel_value
 					multiplier = 3.5
@@ -5030,7 +5045,7 @@ VIETmisc.7047 = {
 				send_interface_toast = {
 					type = event_toast_effect_good
 					left_icon = ROOT
-					title = VIETmisc.7047.c.success
+					title = VIETmisc.7047.b.success
 					add_character_modifier = {
 						modifier = VIET_stopped_wooden_road_thieves
 						years = 8
@@ -5185,7 +5200,7 @@ VIETmisc.7048 = {
 				chance = 33
 				trigger_event = {
 					id = VIETmisc.7049
-					#months = { 2 4 }
+					years = { 1 5 }
 				}
 			}
 		}
@@ -5225,9 +5240,13 @@ VIETmisc.7049 = {
 	}	
 
 	lower_center_portrait = scope:traveler
+
+	trigger = {
+		exists = scope:traveler
+	}
 	
 	option = { # ok
-		name = VIETmisc.7046.a
+		name = VIETmisc.7049.a
 		stress_impact = {
 			base = minor_stress_impact_loss
 			humble = miniscule_stress_impact_loss

@@ -3450,7 +3450,8 @@ VIET_learning_fraudsters_techniques = {
 }
 
 VIET_travel_disappointment = {
-	icon = stress_negative
+	icon = stress_mixed
+	intrigue = 1
 	stress_loss_mult = -0.1
 	character_travel_speed_mult = -0.1
 }
