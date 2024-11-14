@@ -4757,7 +4757,7 @@ VIETmisc.7045 = {
 	
 	left_portrait = {
 		character = root
-		animation = holding_staff
+		animation = idle
 	}
 	
 	right_portrait = {
