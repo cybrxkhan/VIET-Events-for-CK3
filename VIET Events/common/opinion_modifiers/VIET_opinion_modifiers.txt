@@ -919,3 +919,14 @@ VIET_opinion_also_wants_to_relax = {
 	decaying = yes
 }
 
+VIET_opinion_stopped_local_thieves = {
+	years = 10
+	opinion = 15
+	decaying = yes
+}
+
+VIET_opinion_studied_constellations_together = {
+	years = 10
+	opinion = 15
+}
+

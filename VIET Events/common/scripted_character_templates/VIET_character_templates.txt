@@ -950,4 +950,41 @@ VIET_seductive_spirit_template = {
 	}
 }
 
+VIET_sailor_template = {
+	age = { 16 50 }
+	gender_female_chance = root_faith_dominant_gender_female_chance
+	dynasty = none
+	trait = lifestyle_traveler
+	random_traits = yes
+	# intrigue = {
+	# 	min_template_decent_skill
+	# 	max_template_decent_skill
+	# }
+	prowess = {
+		min_template_decent_skill
+		max_template_decent_skill
+	}
+	after_creation = {
+		VIET_ek_character_setup_effect = yes
+	}
+}
 
+
+
+VIET_generic_middle_aged_local_template = {
+	age = { 30 60 }
+	random_traits = yes
+	gender_female_chance = 50
+	after_creation = {		
+		VIET_ek_character_setup_effect = yes
+	}
+}
+
+VIET_generic_elder_local_template = {
+	age = { 60 80 }
+	random_traits = yes
+	gender_female_chance = 50
+	after_creation = {		
+		VIET_ek_character_setup_effect = yes
+	}
+}

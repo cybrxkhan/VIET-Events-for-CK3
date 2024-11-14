@@ -3422,6 +3422,81 @@ VIET_chat_about_ruins_while_traveling = {
 	monthly_learning_lifestyle_xp_gain_mult = 0.03
 }
 
+VIET_hired_local_sailors = {
+	icon = compass_mixed
+	diplomacy = -2
+	intrigue = 1
+	embarkation_cost_mult = -0.05
+	coastal_sea_travel_danger = -10
+}
+
+VIET_local_shrine_blessing = {
+	icon = piety_positive
+	negate_health_penalty_add = 0.1
+	epidemic_resistance = 4
+}
+
+VIET_learning_local_traveling_lore = {
+	icon = compass_positive
+	stewardship = 1
+	character_travel_safety_mult = 0.05
+	character_travel_speed_mult = 0.05
+}
+
+VIET_learning_fraudsters_techniques = {
+	icon = mask_positive
+	diplomacy = 1
+	intrigue = 1
+}
+
+VIET_travel_disappointment = {
+	icon = stress_negative
+	stress_loss_mult = -0.1
+	character_travel_speed_mult = -0.1
+}
+
+VIET_received_elders_wisdom = {
+	icon = stress_positive
+	stress_gain_mult = -0.1
+	monthly_lifestyle_xp_gain_mult = 0.02
+}
+
+VIET_stole_supplies_from_local_elder = {
+	icon = stewardship_positive
+	travel_safety = 6
+	travel_speed = 6
+}
+
+VIET_stole_from_elder = {
+	icon = family_negative
+	#legitimacy_gain_mult = -0.1
+	general_opinion = -5
+	county_opinion_add = -5
+	monthly_piety_gain_mult = -0.15
+}
+
+VIET_stopped_wooden_road_thieves = {
+	icon = travel_safety_positive
+	monthly_prestige = 0.25
+	county_opinion_add = 3
+}
+
+VIET_learning_constellations = {
+	icon = magic_positive
+	character_travel_safety = 3
+	monthly_learning_lifestyle_xp_gain_mult = 0.05
+}
+
+VIET_local_trade_knowledge = {
+	icon = goods_positive
+	stewardship = 1
+}
+
+VIET_trade_winds_information = {
+	icon = magic_positive
+	character_travel_safety = 5
+}
+
 
 
 
