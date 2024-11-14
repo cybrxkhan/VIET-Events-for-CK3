@@ -25,6 +25,8 @@
  setting_VIET_resource_one_and_a_half_desc:0 "Lump sums of prestige or piety gained or lost in most VIET events are roughly 1.5 times the default (i.e., 15 piety instead of 10 piety). This is for players who feel the default values are too low."
  setting_VIET_resource_twice:0 "2x"
  setting_VIET_resource_twice_desc:0 "Lump sums of prestige or piety gained or lost in most VIET events are roughly twice the default (i.e., 20 piety instead of 10 piety). This option is unbalanced and NOT recommended."
+ setting_VIET_resource_quadruple:0 "#high 4x#!"
+ setting_VIET_resource_quadruple_desc:0 "Lump sums of prestige or piety gained or lost in most VIET events are roughly four times the default (i.e., 40 piety instead of 10 piety). This option is unbalanced and #N NOT#! recommended."
  rule_VIET_event_frequency:0 "VIET Event Frequency"
  setting_VIET_event_frequency_default:0 "Default"
  setting_VIET_event_frequency_default_desc:0 "VIET Events trigger at the default rate."
@@ -62,6 +64,13 @@
  death_VIET_dream:0 "appeared in a dream"
  death_VIET_dream_killer:0 "appeared in [TARGET_CHARACTER.GetUINamePossessive] dream"
  game_rule_category_VIET: "VIET"
+ rule_VIET_clutter_artifacts:0 "VIET Clutter Artifacts"
+ setting_VIET_clutter_artifacts_default:0 "Default"
+ setting_VIET_clutter_artifacts_default_desc:0 "VIET's [clutter_artifact|E] events trigger at the default rates."
+ setting_VIET_clutter_artifacts_reduced:0 "#high Reduced#!"
+ setting_VIET_clutter_artifacts_reduced_desc:0 "VIET's [clutter_artifact|E] events trigger at the default rates. This can be tweaked in conjunction with the VIET Event Frequency game rule."
+ setting_VIET_clutter_artifacts_none:0 "#high Disabled#!"
+ setting_VIET_clutter_artifacts_none_desc:0 "VIET's [clutter_artifact|E] events will not trigger 99% of the time. This doesn't affect [artifacts|E] from major events. This can be tweaked in conjunction with the VIET Event Frequency game rule."
  
  # Game Concepts 
  game_concept_qi_ma_the_liar:0 "Qi Ma the Liar"

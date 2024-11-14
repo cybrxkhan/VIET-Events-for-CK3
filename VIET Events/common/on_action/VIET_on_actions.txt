@@ -1722,6 +1722,24 @@ VIET_events_common_artifact_pulse = {
 				}
 				subtract = 20
 			}
+			if = {
+				limit = {
+					has_game_rule = VIET_clutter_artifacts_reduced
+				}
+				add = 25
+			}
+			if = {
+				limit = {
+					has_game_rule = VIET_clutter_artifacts_none
+				}
+				add = 200
+			}
+			if = {
+				limit = {
+					is_ai = yes
+				}
+				add = 15
+			}
 		}
 		
 		40000 = 0
@@ -1805,6 +1823,24 @@ VIET_events_uncommon_artifact_pulse = {
 				}
 				subtract = 20
 			}
+			if = {
+				limit = {
+					has_game_rule = VIET_clutter_artifacts_reduced
+				}
+				add = 20
+			}
+			if = {
+				limit = {
+					has_game_rule = VIET_clutter_artifacts_none
+				}
+				add = 200
+			}
+			if = {
+				limit = {
+					is_ai = yes
+				}
+				add = 10
+			}
 		}
 		
 		40000 = 0
@@ -1878,6 +1914,24 @@ VIET_events_rare_artifact_pulse = {
 					has_game_rule = VIET_event_frequency_very_high
 				}
 				subtract = 20
+			}
+			if = {
+				limit = {
+					has_game_rule = VIET_clutter_artifacts_reduced
+				}
+				add = 10
+			}
+			if = {
+				limit = {
+					has_game_rule = VIET_clutter_artifacts_none
+				}
+				add = 200
+			}
+			if = {
+				limit = {
+					is_ai = yes
+				}
+				add = 10
 			}
 		}
 		

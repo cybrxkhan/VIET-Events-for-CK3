@@ -55,6 +55,7 @@ VIETmisc.2001 = {
 	left_portrait = root
 	
 	trigger = {
+		is_landed = yes
 		NOT = { has_game_rule = VIET_conversion_universe_events }
 		OR = {
 			NOT = { government_has_flag = government_is_tribal }			
@@ -250,6 +251,10 @@ VIETmisc.2004 = {
 	override_icon = { reference = "gfx/interface/icons/event_types/type_feast.dds" }
 	
 	left_portrait = root
+	
+	trigger = {
+		is_landed = yes
+	}
 	
 	weight_multiplier = {
 		base = 1
@@ -697,6 +702,10 @@ VIETmisc.2014 = {
 	left_portrait = {
 		character = root
 		animation = personality_rational
+	}
+
+	trigger = {		
+		is_landed = yes
 	}
 	
 	weight_multiplier = {
@@ -1170,6 +1179,10 @@ VIETmisc.2021 = {
 	
 	
 	left_portrait = root
+
+	trigger = {		
+		is_landed = yes
+	}
 	
 	weight_multiplier = {
 		base = 1
@@ -1279,6 +1292,10 @@ VIETmisc.2023 = {
 	left_portrait = {
 		character = root
 		animation = worry
+	}
+
+	trigger = {		
+		is_landed = yes
 	}
 	
 	weight_multiplier = {

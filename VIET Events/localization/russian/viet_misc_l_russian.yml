@@ -25,6 +25,8 @@ setting_VIET_resource_one_and_a_half:0 "1,5x"
 setting_VIET_resource_one_and_a_half_desc:0 "Единая сумма престижа или благочестия, полученная или потерянная в большинстве событий VIET, примерно в 1,5 раза больше, чем по умолчанию (т. е. 15 благочестия вместо 10 благочестия). Это для игроков, которые считают значения по умолчанию слишком низкими".
 setting_VIET_resource_twice:0 "2x"
 setting_VIET_resource_twice_desc:0 "Единовременные суммы престижа или благочестия, полученные или потерянные в большинстве событий VIET, примерно в два раза больше, чем по умолчанию (т. е. 20 благочестия вместо 10 благочестия). Этот вариант несбалансирован и НЕ рекомендуется."
+ setting_VIET_resource_quadruple:0 "#high 4x#!"
+ setting_VIET_resource_quadruple_desc:0 "Lump sums of prestige or piety gained or lost in most VIET events are roughly four times the default (i.e., 40 piety instead of 10 piety). This option is unbalanced and #N NOT#! recommended."
 rule_VIET_event_frequency:0 "Частота событий VIET"
 setting_VIET_event_frequency_default:0 "По умолчанию"
 setting_VIET_event_frequency_default_desc:0 "События VIET запускаются с частотой по умолчанию".
@@ -62,6 +64,13 @@ Duke_feudal_female_d_VIET_elsewhere:0 ""
  death_VIET_dream:0 "appeared in a dream"
  death_VIET_dream_killer:0 "appeared in [TARGET_CHARACTER.GetUINamePossessive] dream"
  game_rule_category_VIET: "VIET"
+ rule_VIET_clutter_artifacts:0 "VIET Clutter Artifacts"
+ setting_VIET_clutter_artifacts_default:0 "Default"
+ setting_VIET_clutter_artifacts_default_desc:0 "VIET's [clutter_artifact|E] events trigger at the default rates."
+ setting_VIET_clutter_artifacts_reduced:0 "#high Reduced#!"
+ setting_VIET_clutter_artifacts_reduced_desc:0 "VIET's [clutter_artifact|E] events trigger at the default rates. This can be tweaked in conjunction with the VIET Event Frequency game rule."
+ setting_VIET_clutter_artifacts_none:0 "#high Disabled#!"
+ setting_VIET_clutter_artifacts_none_desc:0 "VIET's [clutter_artifact|E] events will not trigger 99% of the time. This doesn't affect [artifacts|E] from major events. This can be tweaked in conjunction with the VIET Event Frequency game rule."
  
  # Концепции игры
  game_concept_qi_ma_the_liar:0 "Лжец Ци Ма"

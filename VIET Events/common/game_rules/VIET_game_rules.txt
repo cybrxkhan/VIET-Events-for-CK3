@@ -79,6 +79,10 @@ VIET_resource_amounts = {
 	VIET_resource_twice = {
 		flag = GG_can_change_rule		
 	}	
+
+	VIET_resource_quadruple = {
+		flag = GG_can_change_rule		
+	}	
 }
 
 VIET_event_frequency = {
@@ -108,5 +112,26 @@ VIET_event_frequency = {
 	VIET_event_frequency_low = {
 		flag = GG_can_change_rule		
 	}
+}
+
+VIET_clutter_artifacts = {
+	default = VIET_clutter_artifacts_default
+
+
+	categories = {
+		VIET tweaks flavor
+	}
+
+	VIET_clutter_artifacts_default = {
+		flag = GG_can_change_rule		
+	}
+
+	VIET_clutter_artifacts_reduced = {
+		flag = GG_can_change_rule		
+	}	
+
+	VIET_clutter_artifacts_none = {
+		flag = GG_can_change_rule		
+	}	
 }
 
