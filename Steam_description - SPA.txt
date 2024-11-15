@@ -54,7 +54,7 @@ Por favor, echa un vistazo a [url=https://steamcommunity.com/workshop/filedetail
 
 [h1]Versión 1.14.0 "Zhang Qian"[/h1]
 
-[I]Zhang Qian (c. 195 - 114 BCE) was a Han Dynasty explorer, diplomat, and official who traveled through much of Central Asia, paving the way for future Chinese conquests and explorations of the region, as well as the development of the so-called Silk Roads linking much of the Old World.[/I]
+[I]Zhang Qian (c. 195 - 114 a. C.) fue un explorador y diplomático de la Dinastía Han que viajó por gran parte de Asia Central, allanando el camino para futuras conquistas y exploraciones chinas en la región, así como para el desarrollo de las llamadas Rutas de la Seda que conectaban gran parte del Viejo Mundo.[/I]
 
 Nuevos eventos añadidos en esta versión: [B]10[/B]
 
