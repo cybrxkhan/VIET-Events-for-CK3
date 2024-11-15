@@ -1,11 +1,10 @@
 # VIET Events for CK3
 
-<img src="https://i.imgur.com/Y6fhAkk.jpg">
+<img src="https://i.imgur.com/c8eMusj.jpg">
 
-## Latest Version: 1.13.0 "Periplus" (Released 9/25/24)
+## Latest Version: 1.14.0 "Zhang Qian" (Released 11/15/24)
 
-_“I have been a stranger in a strange land."_
-_- Exodus 2:22_
+_Zhang Qian (c. 195 - 114 BCE) was a Han Dynasty explorer, diplomat, and official who traveled through much of Central Asia, paving the way for future Chinese conquests and explorations of the region, as well as the development of the so-called Silk Roads linking much of the Old World._
 
 Very Immersive Events and Tales (VIET), the sequel to VIET Events Reborn for CK2, is a flavor mod that adds a vast collection of events about everyday life to spice up your game. They add immersion and a diversity of experiences in between wars and vanilla’s event chains, and cover mundane minutiae ranging from small talk with courtiers and eating local cuisine to epic tales about love, philosophy, and the human condition. Some of the events unlock new decisions, character interactions, activities, and much more for you to explore!
 
@@ -15,7 +14,7 @@ Feel free to use my work in your mods - all I ask is that I am credited and (if 
 
 ## Features
 
-- Over **1140** new flavor events to experience!
+- Over **1150** new flavor events to experience!
 - Explore new decisions, artifacts, character interactions, activities, and more!
 - Game rule to disable sillier events for those who don't like them, with three levels to choose from: Balanced (Default), Serious (Restricted), and All Events (Full)
 - Compatible with almost anything since it doesn't touch any vanilla files - even with overhaul mods, you can via game rule disable events that reference things specific to our medieval world that wouldn’t make sense in other time periods or universes (like fantasy and sci-fi conversion mods)
@@ -39,14 +38,17 @@ The mod folder should look something like this:
 
 ## Changelog
 
-### Version 1.13.0 "Periplus"
+### Version 1.14.0 "Zhang Qian"
 
-New events added in this version: **12**
+New events added in this version: **10**
 
-- Added 12 generic travel events
-- Added new Greek-themed event backgrounds
-- Added new decision categories for VIET’s decisions
-- Slightly tweaked likelihood of various travel events
+- Added 10 generic travel events
+- Added new 4X option for the VIET Resource Gains/Losses game rule
+- Added new game rule to reduce or disable chances of Clutter Artifacts appearing
+- Disabled several decision-based event chains (like the Ransom Kidnapped Servants) for landless rulers
+- Changed most book artifacts like the Lusty [Culture] Maid from the miscellaneous to the journal category newly added in vanilla
+- Reduced chances AI will get Clutter Artifact events
+- Fixed issues with eunuch trait due to recent vanilla changes to eunuchs traits
 - Miscellaneous bugfixes and tweaks
 
 \* Adapted from VIET for CK2
