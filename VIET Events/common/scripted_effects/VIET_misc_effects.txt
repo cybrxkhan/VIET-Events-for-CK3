@@ -331,4 +331,8 @@ VIET_major_lifestyle_experience_gain_effect = {
 		limit = { has_lifestyle = learning_lifestyle }
 		add_learning_lifestyle_xp = major_lifestyle_xp
 	}
+	else_if = {
+		limit = { has_lifestyle = wanderer_lifestyle }
+		add_wanderer_lifestyle_xp = major_lifestyle_xp
+	}
 }
