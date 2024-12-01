@@ -56,7 +56,7 @@ VIET_dumpling_name = {
 	text = {
 		# Ghana: Kenkey
 		trigger = {
-			scope:cook.culture = {
+			culture = {
 				has_cultural_pillar = heritage_akan
 			}			
 		}
@@ -66,7 +66,7 @@ VIET_dumpling_name = {
 	text = {
 		# Turkic/Armenian: Manti
 		trigger = {
-			scope:cook.culture = {
+			culture = {
 				OR = {
 					has_cultural_pillar = heritage_turkic
 					has_cultural_pillar = language_armenian
@@ -79,7 +79,7 @@ VIET_dumpling_name = {
 	text = {
 		# Chinese: Baozi
 		trigger = {
-			scope:cook.culture = {
+			culture = {
 				has_cultural_pillar = heritage_chinese
 			}			
 		}
@@ -89,7 +89,7 @@ VIET_dumpling_name = {
 	text = {
 		# Mongolian: Buuz
 		trigger = {
-			scope:cook.culture = {
+			culture = {
 				has_cultural_pillar = heritage_mongolic
 			}			
 		}
@@ -99,7 +99,7 @@ VIET_dumpling_name = {
 	text = {
 		# Russian / Siberian: Pemeni
 		trigger = {
-			scope:cook.culture = {
+			culture = {
 				OR = {
 					has_cultural_pillar = heritage_east_slavic
 					has_cultural_pillar = heritage_ugro_permian
@@ -112,7 +112,7 @@ VIET_dumpling_name = {
 	text = {
 		# Georgian: Khinkali
 		trigger = {
-			scope:cook.culture = {
+			culture = {
 				has_cultural_pillar = language_georgian
 			}			
 		}
@@ -122,10 +122,10 @@ VIET_dumpling_name = {
 	text = {
 		# Tibetan: Momos
 		trigger = {
-			scope:cook.culture = {
+			culture = {
 				OR = {
 					has_cultural_pillar = heritage_tibetan
-					has_cultural_pillar = language_newari
+					has_cultural_pillar = language_pahari
 				}
 			}			
 		}
@@ -135,7 +135,7 @@ VIET_dumpling_name = {
 	text = {
 		# Indian: Samosas
 		trigger = {
-			scope:cook.culture = {
+			culture = {
 				OR = {
 					has_cultural_pillar = heritage_indo_aryan
 					has_cultural_pillar = heritage_dravidian
@@ -148,7 +148,7 @@ VIET_dumpling_name = {
 	text = {
 		# Polish: pierogi
 		trigger = {
-			scope:cook.culture = {
+			culture = {
 				has_cultural_pillar = language_lechitic
 			}			
 		}
