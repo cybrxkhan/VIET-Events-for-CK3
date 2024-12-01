@@ -33529,7 +33529,7 @@ VIETmisc.0351 = {
 	trigger = {	
 		OR = {
 			AND = {
-				is_traveling = no
+				is_travelling = no
 				domicile ?= {
 					domicile_location = {
 						NOR = {
@@ -33554,7 +33554,7 @@ VIETmisc.0351 = {
 				}
 			}
 			AND = {
-				is_traveling = yes
+				is_travelling = yes
 				location = {
 					NOR = {
 						terrain = drylands
@@ -33627,9 +33627,10 @@ VIETmisc.0351 = {
 	immediate = {
 		if = {
 			limit = {
-				is_traveling = yes
+				is_travelling = yes
+				exists = current_travel_plan
 			}
-			current_travel_plan = {
+			current_travel_plan ?= {
 				random_entourage_character = {
 					limit = {
 						is_ai = yes
