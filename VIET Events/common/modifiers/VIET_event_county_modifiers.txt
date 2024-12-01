@@ -994,6 +994,27 @@ VIET_removed_polygamous_noble = {
 	monthly_county_control_decline_factor = 0.1
 }
 
+VIET_minor_forest_fires = {
+	icon = outdoors_negative
+	county_opinion_add = -2
+	development_decline = -0.1	
+	travel_danger = 3
+}
+
+VIET_major_forest_fires = {
+	icon = outdoors_negative
+	county_opinion_add = -6
+	development_decline = -0.3
+	tax_mult = -0.01
+	travel_danger = 10
+}
+
+VIET_forest_fire_arsonists_caught = {
+	icon = outdoors_positive
+	county_opinion_add = 5
+	monthly_county_control_growth_add = 0.1
+}
+
 
 
 

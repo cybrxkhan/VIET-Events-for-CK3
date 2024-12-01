@@ -3498,6 +3498,24 @@ VIET_trade_winds_information = {
 	character_travel_safety = 5
 }
 
+VIET_drinking_birch_juice = {
+	icon = drink_positive
+	negate_health_penalty_add = 0.1
+}
+
+VIET_forest_spirit_curse = {
+	icon = magic_negative
+	health = -0.1
+	enemy_hostile_scheme_success_chance_add = 5
+}
+
+VIET_fire_entertainers = {
+	icon = mask_positive
+	diplomacy = 1
+	owned_personal_scheme_success_chance_growth_add = 2
+	court_grandeur_baseline_add = 1
+}
+
 
 
 

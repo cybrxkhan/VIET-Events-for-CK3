@@ -7,6 +7,8 @@ artifact_VIET_lusty_argonian_maid_modifier = {
 	seduce_scheme_phase_duration_add = miniscule_scheme_phase_duration_bonus_value
 }
 
+# Recipe Modifiers
+
 artifact_VIET_baklava_recipe_modifier_1 = {
 	monthly_prestige = 0.04
 	stress_gain_mult = -0.05
@@ -149,6 +151,31 @@ artifact_VIET_bean_soup_recipe_modifier_4 = {
 	county_opinion_add = 4
 	monthly_piety = 0.4
 	monthly_prestige = -0.2
+}
+
+artifact_VIET_dumpling_recipe_modifier_1 = {
+	provisions_use_mult = -0.05
+	provisions_capacity_mult = 0.05
+	stress_gain_mult = -0.05
+	stress_loss_mult = 0.05
+}
+artifact_VIET_dumpling_recipe_modifier_2 = {
+	provisions_use_mult = -0.1
+	provisions_capacity_mult = 0.1
+	stress_gain_mult = -0.1
+	stress_loss_mult = 0.1
+}
+artifact_VIET_dumpling_recipe_modifier_3 = {
+	provisions_use_mult = -0.15
+	provisions_capacity_mult = 0.15
+	stress_gain_mult = -0.15
+	stress_loss_mult = 0.15
+}
+artifact_VIET_dumpling_recipe_modifier_4 = {
+	provisions_use_mult = -0.2
+	provisions_capacity_mult = 0.2
+	stress_gain_mult = -0.2
+	stress_loss_mult = 0.2
 }
 
 # Clutter Artifacts
@@ -440,4 +467,9 @@ artifact_VIET_supernova_1066_record = {
 artifact_VIET_tongue_stone_modifier = {
 	negate_health_penalty_add = 0.1
 	enemy_hostile_scheme_success_chance_add = -1
+}
+
+artifact_VIET_fire_striker_modifier = {
+	character_travel_safety = 5
+	negate_intrigue_penalty_add = 1
 }

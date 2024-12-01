@@ -33465,12 +33465,23 @@ VIETmisc.0350 = {
 	title = VIETmisc.0350.t
 	desc = VIETmisc.0350.desc
 	theme = feast_activity
-	override_background = { reference = bp1_kitchen_western }
+	override_background = { reference = VIET_background_skyrim_forest }
 	
 	
 	right_portrait = {
 		character = root
-		animation = drink_goblet
+		animation = drink
+	}
+
+	# Make sure you are still the right culture
+	trigger = {
+		OR = {
+			culture_has_north_european_heritage_pillar_trigger = yes
+			culture_has_east_european_heritage_pillar_trigger = yes
+			culture = {
+				has_cultural_pillar = heritage_brythonic
+			}
+		}
 	}
 	
 	option = { # ok
@@ -33507,7 +33518,7 @@ VIETmisc.0351 = {
 	
 	left_portrait = {
 		character = root
-		animation = throne_room_one_handed_passive_2
+		animation = marshal_axe
 	}
 	
 	right_portrait = {
@@ -33554,8 +33565,8 @@ VIETmisc.0351 = {
 				}
 				current_travel_plan ?= {
 					any_entourage_character = {	
+						is_ai = yes
 						is_available_travelling = yes
-						is_available_ai_adult = yes
 						NOT = { has_trait = cynical }
 						OR = {
 							has_trait = zealous
@@ -33621,8 +33632,8 @@ VIETmisc.0351 = {
 			current_travel_plan = {
 				random_entourage_character = {
 					limit = {
+						is_ai = yes
 						is_available_travelling = yes
-						is_available_ai_adult = yes
 						NOT = { has_trait = cynical }
 						OR = {
 							has_trait = zealous
@@ -33690,6 +33701,11 @@ VIETmisc.0351 = {
 			100 = {
 				show_chance = no
 				desc = VIETmisc.0351.b.nothing
+				send_interface_toast = {
+					title = VIETmisc.0351.b.nothing
+					left_icon = root
+					type = event_toast_effect_good
+				}
 			}
 			100 = {
 				show_chance = no
@@ -33732,7 +33748,7 @@ VIETmisc.0352 = {
 	type = character_event
 	title = VIETmisc.0352.t
 	desc = VIETmisc.0352.desc
-	theme = diplomacy
+	theme = VIET_theme_small_town
 	
 
 	right_portrait = {

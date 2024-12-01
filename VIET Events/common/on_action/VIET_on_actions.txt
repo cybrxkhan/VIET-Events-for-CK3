@@ -485,6 +485,9 @@ VIET_events_yearly_pulse = {
 		# Three
 		100 = VIETmisc.0347		# Scholar gives a lecture on triangles
 		100 = VIETmisc.0348		# Reading about the "three orders" of society (priests, farmers/craftsmen, warriors)
+		# Forest
+		100 = VIETintro.1002 	# Harvesting and drinking birch sap/birch juice - triggers VIETmisc.0350
+		100 = VIETmisc.0351 	# Running low on firewood at a camp, but there are spirits nearby
 	}
 }
 
@@ -888,6 +891,8 @@ VIET_events_tri_yearly_pulse = {
 		100 = VIETmisc.0343		# Snuggery - courtier suggests you set aside a room as a snuggery for relaxing # Cerbzzz
 		# Shark
 		100 = VIETmisc.0346		# Character reads a line of poetry about divers and sharks (loosely based on the poet Sa'di of Shiraz)
+		# Fire
+		100 = VIETmisc.0352		# Troupe of entertainers who know how to use fire
 	}
 }
 
@@ -1604,6 +1609,8 @@ VIET_events_uncommon_county_pulse = {
 		100 = VIETmisc.3058 	# Dogs - dog breeds become famous in a region # Randlelikesdogs
 		# Three
 		100 = VIETmisc.3063 	# Local official in an illegal three-way marriage
+		# Forest
+		100 = VIETmisc.3064 	# Forest fires are occuring in a county
 		
 		# 32
 		
@@ -1789,8 +1796,10 @@ VIET_events_common_artifact_pulse = {
 		100 = VIETmisc.5054		# House Vase - buy one or not
 		# Shark
 		100 = VIETmisc.5056		# Tongue Stone (Shark Tooth) - Buy one to protect yourself against poison or not?
+		# Fire
+		100 = VIETmisc.5057		# Fire Striker - Smith offers to sell you one of his fire strikers
 		
-		# 32
+		# 33
     }
 }
 
@@ -1881,7 +1890,10 @@ VIET_events_uncommon_artifact_pulse = {
 		# Astronomy
 		100 = VIETmisc.5055		# Astrolabe - scholar gives you one
 		
-		# 24
+		# Dumpling
+		100 = VIETmisc.5058		# Dumpling recipe
+		
+		# 25
 		
     }
 }

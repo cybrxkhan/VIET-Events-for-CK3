@@ -6165,6 +6165,12 @@ VIETmisc.3064 = {
 	trigger = {
 		any_held_title = {
 			tier = tier_county
+			NOR = {
+				terrain = drylands
+				terrain = desert
+				terrain = desert_mountains
+				terrain = oasis
+			}	
 		}	
 	}
 	
@@ -6184,6 +6190,12 @@ VIETmisc.3064 = {
 		random_held_title = {
 			limit = {
 				tier = tier_county
+				NOR = {
+					terrain = drylands
+					terrain = desert
+					terrain = desert_mountains
+					terrain = oasis
+				}
 			}	
 			save_scope_as = county
 		}
@@ -6298,6 +6310,17 @@ VIETmisc.3065 = {
 	}
 
 	
+	right_portrait = {
+		character = root
+		animation = shock
+	}
+
+	# Make sure you still actually own the county
+	trigger = {
+		scope:county.holder = root
+	}
+
+	
 	immediate = {
 
 		if = {
@@ -6378,7 +6401,19 @@ VIETmisc.3066 = {
 	theme = realm
 	override_background = { reference = VIET_background_small_town }
 
+
 	
+	right_portrait = {
+		character = root
+		animation = war_over_win
+	}
+	
+
+	# Make sure you still actually own the county
+	trigger = {
+		scope:county.holder = root
+	}
+
 	immediate = {
 
 		if = {

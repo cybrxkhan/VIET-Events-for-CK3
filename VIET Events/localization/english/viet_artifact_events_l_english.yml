@@ -262,12 +262,14 @@
  VIETmisc.5056.b:0 "I appreciate your concern, but I’ll pass."
  VIETmisc.5056.info:0 "#emphasis Historical Context:#! In medieval times, fossilized sharks’ teeth were called “tongue stones” or “snake tongues.” Among other medical uses, they were a common cure or protection against poison. There was a tradition at the time of hanging tongue stones from decorative trees on tables during feasts; guests could dip the tongue stones into their wine or drink, assured that they would not be poisoned."
  # Version 1.12.3 Start Here - Note to Translators: please leave this comment here and do not remove it even in your versions of the loc
- VIETmisc.5057.t:0 "xxxxx"
- VIETmisc.5057.desc:0 "xxxxx"
- VIETmisc.5057.a:0 "xxxxx"
- VIETmisc.5058.t:0 "xxxxx"
- VIETmisc.5058.desc:0 "xxxxx"
- VIETmisc.5058.a:0 "xxxxx"
+ # Version 1.14.1 Start Here - Note to Translators: please leave this comment here and do not remove it even in your versions of the loc
+ VIETmisc.5057.t:0 "Firestriker"
+ VIETmisc.5057.desc:0 "I was in town and came across a blacksmith who was renowned locally for his skill. When I asked him about his products and what he made, he vaguely said that he had something that might be of interest to me.\n\nIf he said this to pique my interest on purpose, it worked, because I asked him what exactly he had to sell me. He then showed me a curved piece of metal.\n\n“My [ROOT.Char.GetLadyLord], this is no simple piece of metal,” he explained. “This is, as you know, a Firestriker, and one of the best you’ll ever see – ask anyone who’s bought one from me. Strike it against any flint, and it’s guaranteed to start a fire. I used to be an adventurer years ago, and I tell you, a tool like this is essential for travel and survival. If you ever get lost, this can save your life.”"
+ VIETmisc.5057.a:0 "I could use a practical tool like this!"
+ VIETmisc.5057.b:0 "It’s nice, but I don’t need it."
+ VIETmisc.5058.t:0 "Deligtful Dumplings"
+ VIETmisc.5058.desc:0 "I had heard that dumplings from a certain part of [county.GetNameNoTier] were renowned for their savory deliciousness. Fascinated by such claims, I had asked the locals to provide me some of these dumplings to sample.\n\nI was nothing short of amazed when I ate the dumplings. To say that they are a perfect blend of vegetables, sauces, spices, herbs, and more, all wrapped together in scrumptious dough, would be an understatement.\n\nWhen summoned before me, the local chef who prepared the meal said what I ate was simply a humble [culture.GetName] [culture.Custom('VIET_dumpling_name')], nothing more. If, however, I liked it enough, he would be willing to provide a recipe to my cooks so they could prepare it – for a price, of course."
+ # Version 1.14.2 Start Here - Note to Translators: please leave this comment here and do not remove it even in your versions of the loc
  VIETmisc.5059.t:0 "xxxxx"
  VIETmisc.5059.desc:0 "xxxxx"
  VIETmisc.5059.a:0 "xxxxx"

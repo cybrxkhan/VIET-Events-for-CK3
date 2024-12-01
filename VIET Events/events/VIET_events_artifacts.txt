@@ -8248,10 +8248,10 @@ VIETmisc.5056 = {
 ##################################################################
 
 # Fire Striker - Smith offers to sell you one of his fire strikers
-VIETmisc.5056 = {
+VIETmisc.5057 = {
 	type = character_event
-	title = VIETmisc.5056.t
-	desc = VIETmisc.5056.desc
+	title = VIETmisc.5057.t
+	desc = VIETmisc.5057.desc
 	theme = realm
 	override_background = { reference = VIET_background_small_town }
 	
@@ -8385,7 +8385,6 @@ VIETmisc.5058 = {
 
 	trigger = {
 		NOT = { has_game_rule = VIET_conversion_universe_events }
-		VIET_is_dumpling_culture_trigger = yes
 	}
 
     weight_multiplier = {
@@ -8424,6 +8423,10 @@ VIETmisc.5058 = {
     }
 	
 	immediate = {
+		capital_county = { save_scope_as = county }
+		scope:county.culture = {
+			save_scope_as = culture
+		}
 		play_music_cue = mx_cue_touching_moment	
 		random_list = {
 			60 = {
@@ -8519,7 +8522,7 @@ VIETmisc.5058 = {
 	}
 	
 	option = { # Pay
-		name = VIETmisc.5058.a
+		name = VIETmisc.5042.a
 		trigger = {
 			OR = {
 				is_ai = no
@@ -8544,7 +8547,7 @@ VIETmisc.5058 = {
 	}
 	
 	option = { # Negotiate
-		name = VIETmisc.5058.b
+		name = VIETmisc.5042.b
 		trigger = {
 			OR = {
 				is_ai = no
@@ -8571,7 +8574,7 @@ VIETmisc.5058 = {
 	}
 	
 	option = { # Steal
-		name = VIETmisc.5058.c
+		name = VIETmisc.5042.c
 		VIET_massive_piety_loss_effect = yes
 		random_list = {
 			15 = { # Get the recipe without getting caught 
@@ -8686,7 +8689,7 @@ VIETmisc.5058 = {
 	}
 	
 	option = { # Ignore
-		name = VIETmisc.5058.d
+		name = VIETmisc.5042.d
 		hidden_effect = {
 			destroy_artifact = scope:VIET_recipe_artifact
 		}

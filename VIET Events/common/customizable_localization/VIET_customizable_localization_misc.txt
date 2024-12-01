@@ -49,3 +49,114 @@ VIET_old_cactus_name = {
 		fallback = yes
 	}
 }
+
+VIET_dumpling_name = {
+	type = character
+
+	text = {
+		# Ghana: Kenkey
+		trigger = {
+			scope:culture = {
+				has_cultural_pillar = heritage_akan
+			}			
+		}
+		localization_key = VIET_dumpling_name_akan
+	}
+
+	text = {
+		# Turkic/Armenian: Manti
+		trigger = {
+			scope:culture = {
+				OR = {
+					has_cultural_pillar = heritage_turkic
+					has_cultural_pillar = language_armenian
+				}
+			}			
+		}
+		localization_key = VIET_dumpling_name_turkic
+	}
+
+	text = {
+		# Chinese: Baozi
+		trigger = {
+			scope:culture = {
+				has_cultural_pillar = heritage_chinese
+			}			
+		}
+		localization_key = VIET_dumpling_name_chinese
+	}
+
+	text = {
+		# Mongolian: Buuz
+		trigger = {
+			scope:culture = {
+				has_cultural_pillar = heritage_mongolic
+			}			
+		}
+		localization_key = VIET_dumpling_name_mongolic
+	}
+
+	text = {
+		# Russian / Siberian: Pemeni
+		trigger = {
+			scope:culture = {
+				OR = {
+					has_cultural_pillar = heritage_east_slavic
+					has_cultural_pillar = heritage_ugro_permian
+				}
+			}			
+		}
+		localization_key = VIET_dumpling_name_russian
+	}
+
+	text = {
+		# Georgian: Khinkali
+		trigger = {
+			scope:culture = {
+				has_cultural_pillar = language_georgian
+			}			
+		}
+		localization_key = VIET_dumpling_name_georgian
+	}
+
+	text = {
+		# Tibetan: Momos
+		trigger = {
+			scope:culture = {
+				OR = {
+					has_cultural_pillar = heritage_tibetan
+					has_cultural_pillar = language_newari
+				}
+			}			
+		}
+		localization_key = VIET_dumpling_name_tibetan
+	}
+
+	text = {
+		# Indian: Samosas
+		trigger = {
+			scope:culture = {
+				OR = {
+					has_cultural_pillar = heritage_indo_aryan
+					has_cultural_pillar = heritage_dravidian
+				}
+			}			
+		}
+		localization_key = VIET_dumpling_name_indian
+	}
+
+	text = {
+		# Polish: pierogi
+		trigger = {
+			scope:culture = {
+				has_cultural_pillar = language_lechitic
+			}			
+		}
+		localization_key = VIET_dumpling_name_polish
+	}
+
+	text = {
+		localization_key = VIET_dumpling_name_generic
+		fallback = yes
+	}
+}

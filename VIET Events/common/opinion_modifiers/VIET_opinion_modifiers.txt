@@ -930,3 +930,9 @@ VIET_opinion_studied_constellations_together = {
 	opinion = 15
 }
 
+VIET_interesting_entertainment = {
+	years = 10
+	opinion = 10
+	stacking = yes
+}
+
