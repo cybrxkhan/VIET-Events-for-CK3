@@ -8378,6 +8378,10 @@ VIETmisc.5058 = {
 		character = root
 		animation = admiration
 	}
+	right_portrait = {
+		character = scope:cook
+		animation = obsequious_bow
+	}
 	artifact = { # To display the artifact in the event-window
         target = scope:VIET_recipe_artifact
         position = lower_center_portrait
@@ -8427,6 +8431,16 @@ VIETmisc.5058 = {
 		scope:county.culture = {
 			save_scope_as = culture
 		}
+		scope:county.faith = {
+			save_scope_as = faith
+		}
+		create_character = {
+			location = location = root.location
+			template = VIET_generic_middle_aged_local_template
+			culture = scope:county.culture
+			faith = scope:county.faith
+			save_scope_as = cook
+		}	
 		play_music_cue = mx_cue_touching_moment	
 		random_list = {
 			60 = {
@@ -8712,4 +8726,16 @@ VIETmisc.5058 = {
 			}
 		}
 	}
+
+	after = {
+		hidden_effect = {
+			scope:cook = {
+				death = {
+					death_reason = death_disappearance
+				}			
+			}
+		}
+	}
+		
+
 }
