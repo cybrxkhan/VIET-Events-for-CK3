@@ -53,6 +53,11 @@ VIET_bean_soup = {
 	asset = ep1_western_box_small_basic_01_a_entity	
 }
 
+VIET_recipe_dumplings = {
+	icon = "artifact_VIET_recipe_dumplings.dds"
+	asset = ep1_western_box_small_basic_01_a_entity	
+}
+
 
 
 # CLUTTER
@@ -324,6 +329,11 @@ VIET_astrolabe = {
 
 VIET_tongue_stone = {
 	icon = "artifact_VIET_tongue_stone.dds"
+	asset = ep1_western_box_small_basic_01_a_entity	
+}
+
+VIET_fire_striker = {
+	icon = "artifact_VIET_fire_striker.dds"
 	asset = ep1_western_box_small_basic_01_a_entity	
 }
 

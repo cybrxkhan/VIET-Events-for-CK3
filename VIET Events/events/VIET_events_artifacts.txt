@@ -29,6 +29,8 @@
 # 5052-5054		Generic
 # 5055			Astornomy
 # 5056			Shark
+# 5057			Fire
+# 5058			Recipe: Dumplings (pierogi!)
 # 
 ############################################################################################################################
 
@@ -8239,4 +8241,472 @@ VIETmisc.5056 = {
 		}
 	}
 
+}
+
+##################################################################
+# FIRE 5057
+##################################################################
+
+# Fire Striker - Smith offers to sell you one of his fire strikers
+VIETmisc.5056 = {
+	type = character_event
+	title = VIETmisc.5056.t
+	desc = VIETmisc.5056.desc
+	theme = realm
+	override_background = { reference = VIET_background_small_town }
+	
+	right_portrait = {
+		character = root
+		animation = thinking
+	}
+	artifact = { # To display the artifact in the event-window
+        target = scope:VIET_clutter_artifact
+        position = lower_center_portrait
+    }
+
+    weight_multiplier = {
+        base = 1
+		# Reduce spam
+		modifier = {
+			add = -0.9
+			any_character_artifact = {
+				has_variable = VIET_fire_striker_variable
+			}
+		}
+		modifier = {
+			add = -0.4
+			VIET_has_2_clutter_artifacts_trigger = yes	
+		}
+		modifier = {
+			add = -0.5
+			VIET_has_4_clutter_artifacts_trigger = yes	
+		}
+		modifier = {
+			add = 0.2
+			has_trait = brave
+		}
+		modifier = {
+			add = -0.2
+			has_trait = craven
+		}
+		modifier = {
+			add = 0.2
+			has_trait = diligent
+		}
+		modifier = {
+			add = -0.2
+			has_trait = lazy
+		}
+		modifier = {
+			add = 0.2
+			has_trait = humble
+		}
+		modifier = {
+			add = -0.2
+			has_trait = arrogant
+		}
+    }
+	
+
+	immediate = {
+		hidden_effect_new_object = {
+			create_artifact = {	
+				name = VIET_fire_striker_name
+				description = VIET_fire_striker_desc
+				type = VIET_clutter
+				visuals = VIET_fire_striker
+				quality = 15
+				wealth = 15
+				modifier = artifact_VIET_fire_striker_modifier
+				max_durability = 40
+				save_scope_as = VIET_clutter_artifact
+				history = {
+					type = created_before_history
+				}
+			}
+			scope:VIET_clutter_artifact = {
+				set_variable = VIET_fire_striker_variable
+			}
+		}
+	}
+	
+	option = {
+		name = VIETmisc.5057.a	
+		trigger = {
+			OR = {
+				is_ai = no
+				gold >= 15
+			}
+		}
+		remove_short_term_gold = 15
+		show_as_tooltip = {
+			scope:VIET_clutter_artifact = {
+				set_owner = {
+					target = root
+				}
+			}
+		}
+		custom_tooltip = VIET_artifact_limit_warning
+	}
+	
+	option = {
+		name = VIETmisc.5057.b	
+		hidden_effect = {
+			destroy_artifact = scope:VIET_clutter_artifact
+		}
+		stress_impact = {
+			diligent = miniscule_stress_impact_gain
+		}
+	}
+}
+
+
+##################################################################
+# RECIPE: DUMPLING 5058
+##################################################################
+
+
+# Dumpling recipe
+VIETmisc.5058 = {
+	type = character_event
+	title = VIETmisc.5058.t
+	desc = VIETmisc.5058.desc
+	theme = feast_activity
+	override_background = { reference = bp1_kitchen_western }
+	
+	left_portrait = {
+		character = root
+		animation = admiration
+	}
+	artifact = { # To display the artifact in the event-window
+        target = scope:VIET_recipe_artifact
+        position = lower_center_portrait
+    }
+
+	trigger = {
+		NOT = { has_game_rule = VIET_conversion_universe_events }
+		VIET_is_dumpling_culture_trigger = yes
+	}
+
+    weight_multiplier = {
+        base = 1
+		# Reduce spam
+		modifier = {
+			add = -0.9
+			any_character_artifact = {
+				has_variable = VIET_recipe_dumpling_variable
+			}
+		}
+		modifier = {
+			add = 0.2
+			has_trait = gluttonous
+		}
+		modifier = {
+			add = -0.2
+			has_trait = temperate
+		}
+		modifier = {
+			add = 0.2
+			has_trait = gregarious
+		}
+		modifier = {
+			add = -0.2
+			has_trait = shy
+		}
+		modifier = {
+			add = 0.2
+			has_trait = compassionate
+		}
+		modifier = {
+			add = -0.2
+			has_trait = callous
+		}
+    }
+	
+	immediate = {
+		play_music_cue = mx_cue_touching_moment	
+		random_list = {
+			60 = {
+				hidden_effect_new_object = {
+					create_artifact = {	
+						name = VIET_recipe_dumpling_name
+						description = VIET_recipe_dumpling_desc
+						type = VIET_recipe
+						visuals = VIET_cool_dumpling
+						quality = 15
+						wealth = 15
+						modifier = artifact_VIET_dumpling_recipe_modifier_1
+						#max_durability = 40
+						decaying = no
+						save_scope_as = VIET_recipe_artifact
+						history = {
+							type = created_before_history
+						}
+					}
+					scope:VIET_recipe_artifact = {
+						set_variable = VIET_recipe_dumpling_variable
+					}
+				}
+			}
+			45 = {
+				hidden_effect_new_object = {
+					create_artifact = {	
+						name = VIET_recipe_dumpling_name
+						description = VIET_recipe_dumpling_desc
+						type = VIET_recipe
+						visuals = VIET_cool_dumpling
+						quality = 30
+						wealth = 30
+						modifier = artifact_VIET_dumpling_recipe_modifier_2
+						#max_durability = 40
+						decaying = no
+						save_scope_as = VIET_recipe_artifact
+						history = {
+							type = created_before_history
+						}
+					}
+					scope:VIET_recipe_artifact = {
+						set_variable = VIET_recipe_dumpling_variable
+					}
+				}
+			}
+			30 = {
+				hidden_effect_new_object = {
+					create_artifact = {	
+						name = VIET_recipe_dumpling_name
+						description = VIET_recipe_dumpling_desc
+						type = VIET_recipe
+						visuals = VIET_cool_dumpling
+						quality = 65
+						wealth = 65
+						modifier = artifact_VIET_dumpling_recipe_modifier_3
+						#max_durability = 40
+						decaying = no
+						save_scope_as = VIET_recipe_artifact
+						history = {
+							type = created_before_history
+						}
+					}
+					scope:VIET_recipe_artifact = {
+						set_variable = VIET_recipe_dumpling_variable
+					}
+				}
+			}
+			15 = {
+				hidden_effect_new_object = {
+					create_artifact = {	
+						name = VIET_recipe_dumpling_name
+						description = VIET_recipe_dumpling_desc
+						type = VIET_recipe
+						visuals = VIET_cool_dumpling
+						quality = 95
+						wealth = 95
+						modifier = artifact_VIET_dumpling_recipe_modifier_4
+						#max_durability = 40
+						decaying = no
+						save_scope_as = VIET_recipe_artifact
+						history = {
+							type = created_before_history
+						}
+					}
+					scope:VIET_recipe_artifact = {
+						set_variable = VIET_recipe_dumpling_variable
+					}
+				}
+			}
+		}
+
+	}
+	
+	option = { # Pay
+		name = VIETmisc.5058.a
+		trigger = {
+			OR = {
+				is_ai = no
+				gold >= 40
+			}
+		}
+		remove_short_term_gold = 40
+		show_as_tooltip = {
+			scope:VIET_recipe_artifact = {
+				set_owner = {
+					target = root
+				}
+			}
+		}
+		stress_impact = {
+			temperate = miniscule_stress_impact_gain
+			greedy = miniscule_stress_impact_gain
+		}
+		ai_chance = {
+			base = 50
+		}
+	}
+	
+	option = { # Negotiate
+		name = VIETmisc.5058.b
+		trigger = {
+			OR = {
+				is_ai = no
+				gold >= 25
+			}
+			diplomacy >= decent_skill_rating
+		}
+		skill = diplomacy
+		remove_short_term_gold = 25
+		show_as_tooltip = {
+			scope:VIET_recipe_artifact = {
+				set_owner = {
+					target = root
+				}
+			}
+		}
+		stress_impact = {
+			temperate = miniscule_stress_impact_gain
+			greedy = miniscule_stress_impact_gain
+		}
+		ai_chance = {
+			base = 50
+		}
+	}
+	
+	option = { # Steal
+		name = VIETmisc.5058.c
+		VIET_massive_piety_loss_effect = yes
+		random_list = {
+			15 = { # Get the recipe without getting caught 
+				desc = VIETmisc.recipe_steal.toast.success.not_caught
+				modifier = {
+					add = 7
+					intrigue >= decent_skill_rating
+				}
+				modifier = {
+					add = 5
+					intrigue >= very_high_skill_rating
+				}
+				send_interface_toast = {
+					type = event_toast_effect_good
+					left_icon = ROOT
+					title = VIETmisc.recipe_steal.toast.success.not_caught
+					show_as_tooltip = {
+						scope:VIET_recipe_artifact = {
+							set_owner = {
+								target = root
+							}
+						}
+					}
+				}
+			}
+			25 = { # Get the recipe but get caught
+				desc = VIETmisc.recipe_steal.toast.success.caught
+				modifier = {
+					add = 7
+					intrigue >= decent_skill_rating
+				}
+				modifier = {
+					add = 5
+					intrigue >= very_high_skill_rating
+				}
+				send_interface_toast = {
+					type = event_toast_effect_good
+					left_icon = ROOT
+					title = VIETmisc.recipe_steal.toast.success.caught
+					show_as_tooltip = {
+						scope:VIET_recipe_artifact = {
+							set_owner = {
+								target = root
+							}
+						}
+					}
+					VIET_huge_prestige_loss_effect = yes
+					stress_impact = {		
+						base = miniscule_stress_impact_gain
+					}
+				}
+			}		
+			50 = { # Fail to get the recipe
+				desc = VIETmisc.recipe_steal.toast.failure
+				modifier = {
+					add = 45
+					intrigue <= low_skill_rating
+				}
+				modifier = {
+					add = 25
+					intrigue <= mediocre_skill_rating
+				}
+				send_interface_toast = {
+					type = event_toast_effect_bad
+					left_icon = ROOT
+					title = VIETmisc.recipe_steal.toast.failure
+					custom_tooltip = VIETmisc.recipe_steal.toast.failure_tooltip
+					VIET_huge_prestige_loss_effect = yes
+					stress_impact = {		
+						base = minor_stress_impact_gain
+					}
+					hidden_effect = {
+						destroy_artifact = scope:VIET_recipe_artifact
+					}
+				}
+			}	
+		}
+		stress_impact = {
+			zealous = miniscule_stress_impact_gain
+			compassionate = miniscule_stress_impact_gain
+			honest = miniscule_stress_impact_gain
+			just = minor_stress_impact_gain
+			generous = miniscule_stress_impact_gain
+		}
+		ai_chance = {
+			base = 20
+			modifier = {
+				add = 10
+				has_trait = deceitful
+			}
+			modifier = {
+				add = 10
+				has_trait = callous
+			}
+			modifier = {
+				add = 10
+				has_trait = arbitrary
+			}
+			modifier = {
+				add = -15
+				has_trait = just
+			}
+			modifier = {
+				add = -15
+				has_trait = generous
+			}
+			modifier = {
+				add = -15
+				has_trait = honest
+			}
+		}
+	}
+	
+	option = { # Ignore
+		name = VIETmisc.5058.d
+		hidden_effect = {
+			destroy_artifact = scope:VIET_recipe_artifact
+		}
+		stress_impact = {
+			gluttonous = minor_stress_impact_gain
+		}
+		ai_chance = {
+			base = 100
+			modifier = {
+				add = 10
+				has_trait = greedy
+			}
+			modifier = {
+				add = 10
+				has_trait = temperate
+			}
+			modifier = {
+				add = 10
+				has_trait = content
+			}
+		}
+	}
 }

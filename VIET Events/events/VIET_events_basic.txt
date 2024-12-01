@@ -62,6 +62,8 @@
 # 0341-0343		VIET Word Contest
 # 0344-0346		Shark
 # 0347-0349		Three
+# 0350-0351 	Forest
+# 0352			Fire
 # 
 ############################################################################################################################
 
@@ -33446,6 +33448,405 @@ VIETmisc.0349 = {
 	}
 
 }
+
+
+
+
+
+##################################################################
+# FOREST 0350-0351
+##################################################################
+
+
+# Harvesting and drinking birch sap/birch juice
+# Triggered from VIETintro.1002
+VIETmisc.0350 = {
+	type = character_event
+	title = VIETmisc.0350.t
+	desc = VIETmisc.0350.desc
+	theme = feast_activity
+	override_background = { reference = bp1_kitchen_western }
+	
+	
+	right_portrait = {
+		character = root
+		animation = drink_goblet
+	}
+	
+	option = { # ok
+		name = VIETmisc.0350.a
+		add_character_modifier = {
+			modifier = VIET_drinking_birch_juice
+			years = 3
+		}
+		stress_impact = {
+			base = miniscule_stress_impact_loss
+		}
+	}
+
+	after = {
+		if = {
+			limit = {
+				has_game_rule = VIET_historical_context_on
+			}
+			custom_tooltip = VIETmisc.0350.info
+		}
+	}
+
+}
+
+
+# Running low on firewood at a camp, but there are spirits nearby
+VIETmisc.0351 = {
+	type = character_event
+	title = VIETmisc.0351.t
+	desc = VIETmisc.0351.desc
+	theme = laamp
+	override_background = { reference = bp1_bonfire }
+	
+	
+	left_portrait = {
+		character = root
+		animation = throne_room_one_handed_passive_2
+	}
+	
+	right_portrait = {
+		character = scope:superstitious
+		animation = stayback
+	}
+
+	trigger = {	
+		OR = {
+			AND = {
+				is_traveling = no
+				domicile ?= {
+					domicile_location = {
+						NOR = {
+							terrain = drylands
+							terrain = desert
+							terrain = desert_mountains
+							terrain = oasis
+						}
+					}
+				}
+				any_courtier = {
+					is_available_ai_adult = yes
+					NOT = { has_trait = cynical }
+					OR = {
+						has_trait = zealous
+						has_trait = paranoid
+						has_trait = eccentric
+						has_trait = gregarious
+						has_trait = craven
+						has_trait = fickle
+					}
+				}
+			}
+			AND = {
+				is_traveling = yes
+				location = {
+					NOR = {
+						terrain = drylands
+						terrain = desert
+						terrain = desert_mountains
+						terrain = oasis
+					}					
+				}
+				current_travel_plan ?= {
+					any_entourage_character = {	
+						is_available_travelling = yes
+						is_available_ai_adult = yes
+						NOT = { has_trait = cynical }
+						OR = {
+							has_trait = zealous
+							has_trait = paranoid
+							has_trait = eccentric
+							has_trait = gregarious
+							has_trait = craven
+							has_trait = fickle
+						}
+					}
+				}
+			}
+		}
+
+	}
+	
+	weight_multiplier = {
+		base = 1
+		modifier = {
+			add = 0.2
+			has_trait = diligent
+		}
+		modifier = {
+			add = -0.2
+			has_trait = lazy
+		}
+		modifier = {
+			add = 0.2
+			has_trait = cynical
+		}
+		modifier = {
+			add = -0.2
+			has_trait = zealous
+		}
+		modifier = {
+			add = 0.2
+			has_trait = honest
+		}
+		modifier = {
+			add = -0.2
+			has_trait = deceitful
+		}
+		modifier = {
+			add = 2
+			domicile ?= {
+				domicile_location = {
+					OR = {
+						terrain = forest
+						terrain = jungle
+						terrain = mountains
+						terrain = hills
+					}
+				}
+			}
+		}
+	}
+
+	immediate = {
+		if = {
+			limit = {
+				is_traveling = yes
+			}
+			current_travel_plan = {
+				random_entourage_character = {
+					limit = {
+						is_available_travelling = yes
+						is_available_ai_adult = yes
+						NOT = { has_trait = cynical }
+						OR = {
+							has_trait = zealous
+							has_trait = paranoid
+							has_trait = eccentric
+							has_trait = gregarious
+							has_trait = craven
+							has_trait = fickle
+						}
+					}
+					save_scope_as = superstitious
+				}	
+			}	
+			location.county = { save_scope_as = county }
+			scope:county.culture = {
+				save_scope_as = culture
+			}
+		}
+		else = {
+			random_courtier = {
+				limit = {
+					is_available_ai_adult = yes
+					NOT = { has_trait = cynical }
+					OR = {
+						has_trait = zealous
+						has_trait = paranoid
+						has_trait = eccentric
+						has_trait = gregarious
+						has_trait = craven
+						has_trait = fickle
+					}
+				}
+				save_scope_as = superstitious
+			}
+			root.domicile.domicile_location.county = {
+				save_scope_as = county
+			}
+			scope:county.culture = {
+				save_scope_as = culture
+			}
+		}
+
+	}
+	
+	option = { # ok
+		name = VIETmisc.0351.a
+		trigger = {
+			OR = {
+				gold >= 10
+				is_ai = no
+			}
+		}
+		remove_short_term_gold = 10
+		VIET_medium_piety_gain_effect = yes
+		stress_impact = {
+			cynical = minor_stress_impact_gain
+			arrogant = miniscule_stress_impact_gain
+			greedy = miniscule_stress_impact_gain
+		}
+	}
+	
+	option = { # ok
+		name = VIETmisc.0351.b
+		random_list = {
+			100 = {
+				show_chance = no
+				desc = VIETmisc.0351.b.nothing
+			}
+			100 = {
+				show_chance = no
+				desc = VIETmisc.0351.b.bad
+				send_interface_toast = {
+					title = VIETmisc.0351.b.bad
+					left_icon = root
+					type = event_toast_effect_bad
+					add_character_modifier = {
+						modifier = VIET_forest_spirit_curse
+						years = 3
+					}
+				}
+			}
+		}
+		stress_impact = {
+			zealous = minor_stress_impact_gain
+			humble = miniscule_stress_impact_gain
+			content = miniscule_stress_impact_gain
+		}
+	}
+	
+
+
+}
+
+
+
+
+
+##################################################################
+# FIRE 0352
+##################################################################
+
+
+
+
+# Troupe of entertainers who know how to use fire
+VIETmisc.0352 = {
+	type = character_event
+	title = VIETmisc.0352.t
+	desc = VIETmisc.0352.desc
+	theme = diplomacy
+	
+
+	right_portrait = {
+		character = root
+		animation = admiration
+	}
+
+	trigger = {	
+		is_landless_adventurer = no
+	}
+	
+	weight_multiplier = {
+		base = 1
+		modifier = {
+			add = 0.2
+			has_trait = gregarious
+		}
+		modifier = {
+			add = -0.2
+			has_trait = shy
+		}
+		modifier = {
+			add = 0.2
+			has_trait = lustful
+		}
+		modifier = {
+			add = -0.2
+			has_trait = chaste
+		}
+		modifier = {
+			add = 0.2
+			has_trait = lazy
+		}
+		modifier = {
+			add = -0.2
+			has_trait = diligent
+		}
+	}
+
+	
+	option = { # ok
+		name = VIETmisc.0352.a
+		trigger = {
+			OR = {
+				gold >= 20
+				is_ai = no
+			}
+		}
+		remove_short_term_gold = 20
+		VIET_medium_prestige_gain_effect = yes
+		stress_impact = {
+			base = miniscule_stress_impact_loss
+			gregarious = miniscule_stress_impact_loss
+			lazy = miniscule_stress_impact_loss
+		}
+		every_courtier_or_guest = {
+			custom = all_courtiers_and_guests
+			stress_impact = {
+				base = miniscule_stress_impact_loss
+			}
+			add_opinion = {
+				target = root
+				modifier = VIET_interesting_entertainment
+			}
+		}
+	}
+	
+	option = { # ok
+		name = VIETmisc.0352.b
+		trigger = {
+			OR = {
+				gold >= 50
+				is_ai = no
+			}
+		}
+		remove_short_term_gold = 50
+		VIET_huge_prestige_gain_effect = yes
+		stress_impact = {
+			base = miniscule_stress_impact_loss
+			gregarious = miniscule_stress_impact_loss
+			lazy = miniscule_stress_impact_loss
+		}
+		every_courtier_or_guest = {
+			custom = all_courtiers_and_guests
+			stress_impact = {
+				base = miniscule_stress_impact_loss
+			}
+			add_opinion = {
+				target = root
+				modifier = VIET_interesting_entertainment
+			}
+		}
+		add_character_modifier = {
+			modifier = VIET_fire_entertainers
+			years = 10
+		}
+	}
+	
+	option = { # ok
+		name = VIETmisc.0352.c
+		stress_impact = {
+			gregarious = minor_stress_impact_gain
+		}
+	}
+	
+
+
+}
+
+
+
+
+
+
 
 
 

@@ -39,6 +39,7 @@
 # 3058			Word Contest
 # 3059-3060		Shark
 # 3061-3063		Three
+# 3064-3066 	Forest
 # 
 ############################################################################################################################
 
@@ -6137,6 +6138,326 @@ VIETmisc.3063 = {
 
 
 
+
+
+##################################################################
+# FOREST 3064-3066
+##################################################################
+
+
+# Forest fires are occuring in a county
+VIETmisc.3064 = {
+	type = character_event
+	title = VIETmisc.3064.t
+	desc = VIETmisc.3064.desc
+	theme = unfriendly
+	override_background = { reference = burning_building }
+	override_effect_2d = {
+		reference = smoke
+	}
+	
+	right_portrait = {
+		character = root
+		animation = worry
+	}
+
+		
+	trigger = {
+		any_held_title = {
+			tier = tier_county
+		}	
+	}
+	
+    weight_multiplier = {
+        base = 0
+		modifier = {
+			add = {
+				every_held_title = {
+					limit = { tier = tier_county }
+					add = 1
+				}
+			}		
+		}
+    }
+	
+	immediate = {
+		random_held_title = {
+			limit = {
+				tier = tier_county
+			}	
+			save_scope_as = county
+		}
+		scope:county = {
+			random_list = {
+				10 = {
+					add_county_modifier = {
+						modifier = VIET_minor_forest_fires
+						years = 4
+					}				
+				}
+				10 = {
+					add_county_modifier = {
+						modifier = VIET_minor_forest_fires
+						years = 6
+					}				
+				}
+				10 = {
+					add_county_modifier = {
+						modifier = VIET_minor_forest_fires
+						years = 8
+					}				
+				}
+				10 = {
+					add_county_modifier = {
+						modifier = VIET_minor_forest_fires
+						years = 10
+					}				
+				}
+				10 = {
+					add_county_modifier = {
+						modifier = VIET_minor_forest_fires
+						years = 12
+					}				
+				}
+			}	
+		}
+	}
+
+	# Ok
+	option = {
+		name = VIETmisc.3064.a
+		trigger = {
+			OR = {
+				gold >= 35
+				is_ai = no
+			}
+		}
+		remove_short_term_gold = 35
+		stress_impact = {
+			callous = miniscule_stress_impact_gain
+			lazy = miniscule_stress_impact_gain
+			greedy = miniscule_stress_impact_gain
+		}
+		custom_tooltip = VIETmisc.3064.a.tooltip
+		hidden_effect = {
+			random = {
+				chance = 50
+				trigger_event = {
+					id = VIETmisc.3066
+					days = { 30 365 }
+				}
+			}
+		}
+	}
+
+	# Ok
+	option = {
+		name = VIETmisc.3064.b
+		VIET_huge_prestige_loss_effect = yes
+		stress_impact = {
+			paranoid = miniscule_stress_impact_gain
+			compassionate = miniscule_stress_impact_gain
+			diligent = miniscule_stress_impact_gain
+			just = miniscule_stress_impact_gain
+		}
+		custom_tooltip = VIETmisc.3064.b.tooltip
+		hidden_effect = {
+			random = {
+				chance = 50
+				trigger_event = {
+					id = VIETmisc.3065
+					days = { 30 365 }
+				}
+			}
+		}
+	}
+
+	after = {		
+		if = {
+			limit = {
+				has_game_rule = VIET_historical_context_on
+			}
+			custom_tooltip = VIETmisc.3064.info
+		}
+	}
+
+}
+
+
+
+
+# Forest fires get worse
+VIETmisc.3065 = {
+	type = character_event
+	title = VIETmisc.3065.t
+	desc = VIETmisc.3065.desc
+	theme = death
+	override_background = { reference = burning_building }
+	override_effect_2d = {
+		reference = smoke
+	}
+
+	
+	immediate = {
+
+		if = {
+			limit = {
+				scope:county = {
+					has_county_modifier = VIET_minor_forest_fires
+				}
+			}
+			scope:county = {
+				remove_county_modifier = VIET_minor_forest_fires
+			}
+		}
+
+	}
+
+	# Send in aid
+	option = {
+		name = VIETmisc.3065.a
+		trigger = {
+			OR = {
+				gold >= 50
+				is_ai = no
+			}
+		}
+		remove_short_term_gold = 50
+		VIET_huge_prestige_loss_effect = yes
+		stress_impact = {
+			callous = minor_stress_impact_gain
+			lazy = miniscule_stress_impact_gain
+			greedy = minor_stress_impact_gain
+		}
+		scope:county = {
+			add_county_modifier = {
+				modifier = VIET_major_forest_fires
+				years = 4
+			}	
+		}
+		custom_tooltip = VIET_decrease_county_modifier_time
+	}
+
+	# Ok
+	option = {
+		name = VIETmisc.3065.b
+		VIET_massive_prestige_loss_effect = yes
+		add_legitimacy = miniscule_legitimacy_loss
+		stress_impact = {
+			compassionate = minor_stress_impact_gain
+			generous = miniscule_stress_impact_gain
+			just = minor_stress_impact_gain
+		}
+		scope:county = {
+			add_county_modifier = {
+				modifier = VIET_major_forest_fires
+				years = 10
+			}	
+		}
+		custom_tooltip = VIET_increase_county_modifier_time
+	}
+
+	after = {		
+		if = {
+			limit = {
+				has_game_rule = VIET_historical_context_on
+			}
+			custom_tooltip = VIETmisc.3064.info
+		}
+	}
+
+
+}
+
+
+# Forest fire culprits caught
+VIETmisc.3066 = {
+	type = character_event
+	title = VIETmisc.3066.t
+	desc = VIETmisc.3066.desc
+	theme = realm
+	override_background = { reference = VIET_background_small_town }
+
+	
+	immediate = {
+
+		if = {
+			limit = {
+				scope:county = {
+					has_county_modifier = VIET_minor_forest_fires
+				}
+			}
+			scope:county = {
+				remove_county_modifier = VIET_minor_forest_fires
+			}
+		}
+		scope:county = {
+			random_list = {
+				10 = {
+					add_county_modifier = {
+						modifier = VIET_forest_fire_arsonists_caught
+						years = 6
+					}				
+				}
+				10 = {
+					add_county_modifier = {
+						modifier = VIET_forest_fire_arsonists_caught
+						years = 8
+					}				
+				}
+				10 = {
+					add_county_modifier = {
+						modifier = VIET_forest_fire_arsonists_caught
+						years = 10
+					}				
+				}
+				10 = {
+					add_county_modifier = {
+						modifier = VIET_forest_fire_arsonists_caught
+						years = 12
+					}				
+				}
+			}	
+		}
+	}
+
+	# Good
+	option = {
+		name = VIETmisc.3066.a
+		VIET_huge_prestige_gain_effect = yes
+		#add_legitimacy = miniscule_legitimacy_gain
+	}
+
+	# Reward your officials
+	option = {
+		name = VIETmisc.3066.b
+		trigger = {
+			OR = {
+				gold >= 25
+				is_ai = no
+			}
+		}
+		remove_short_term_gold = 25
+		add_legitimacy = minor_legitimacy_gain
+		VIET_massive_prestige_gain_effect = yes
+		stress_impact = {
+			arrogant = miniscule_stress_impact_gain
+			greedy = minor_stress_impact_gain
+			arbitrary = miniscule_stress_impact_gain
+		}
+	}
+
+	after = {		
+		if = {
+			limit = {
+				has_game_rule = VIET_historical_context_on
+			}
+			custom_tooltip = VIETmisc.3064.info
+		}
+	}
+
+
+}
 
 
 
