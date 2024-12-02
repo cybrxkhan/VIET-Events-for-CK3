@@ -92,7 +92,7 @@
  VIET_dumpling_name_tibetan:0 "momo"
  VIET_dumpling_name_indian:0 "samosa"
  VIET_dumpling_name_polish:0 "pierogi"
- VIET_dumpling_name_generic:0 "dumpling"
+ VIET_dumpling_name_generic:0 "empanadilla"
 
  # Decision Types
  decision_group_type_VIET_everyday: "Decisiones Ordinarias (VIET)"
