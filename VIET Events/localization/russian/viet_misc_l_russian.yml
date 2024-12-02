@@ -83,6 +83,16 @@ Duke_feudal_female_d_VIET_elsewhere:0 ""
  # Custom Loc
  VIET_old_world_cactus_name_sri_lanka:0 "nawahandi"
  VIET_old_world_cactus_name_west_africa:0 "igilligilli"
+ VIET_dumpling_name_akan:0 "kenkey"
+ VIET_dumpling_name_turkic:0 "manti"
+ VIET_dumpling_name_chinese:0 "baozi"
+ VIET_dumpling_name_mongolic:0 "buuz"
+ VIET_dumpling_name_russian:0 "pemeni"
+ VIET_dumpling_name_georgian:0 "khinkali"
+ VIET_dumpling_name_tibetan:0 "momo"
+ VIET_dumpling_name_indian:0 "samosa"
+ VIET_dumpling_name_polish:0 "pierogi"
+ VIET_dumpling_name_generic:0 "dumpling"
 
  # Decision Types
  decision_group_type_VIET_everyday: "Ordinary Decisions (VIET)"

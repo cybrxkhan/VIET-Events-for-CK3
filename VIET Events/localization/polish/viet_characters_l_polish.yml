@@ -1,0 +1,15 @@
+﻿l_polish:
+ # Note to Chinese translators if you ever see this: Qi Ma is a reference to the character M'aiq the Liar from Elder Scrolls
+ # Feel free to translate "Qi Ma" to something silly or some kind of pun
+ dynn_RICE_qi_ma:0 "Qi"
+ RICE_name_ma:0 "Ma"
+ RICE_nick_the_liar:0 "the Liar"
+ RICE_nick_the_liar_desc:1 "[CHARACTER.GetShortUINameNoTooltipNoFormat|U] knows much, tells some. [CHARACTER.GetShortUINameNoTooltipNoFormat|U] knows many things others do not."
+ VIET_name_dreamer:0 "The Dreamer"
+ VIET_nick_crow_lord:0 "the Lord of the Crows"
+ VIET_nick_crow_lord_desc:1 "Crows seem to gravitate to [CHARACTER.GetShortUINameNoTooltipNoFormat]. It is said that [CharYouSheHe(CHARACTER)] [CharHaveHas(CHARACTER)] fearsome, dark, arcane powers as a result of [CharYourHerHis(CHARACTER)] friendship with these crows."
+ VIET_nick_crow_lady:0 "the Lady of the Crows"
+ VIET_nick_crow_lady_desc:0 "$VIET_nick_crow_lord_desc$"
+ dynn_VIET_dreamer:0 ""
+ VIET_nick_runs_in_circles:0 "Runs in Circles"
+ VIET_nick_runs_in_circles_desc:0 "[CHARACTER.GetShortUINameNoTooltipNoFormat|U] isn't right in the mind, and runs around screaming "Ni ni ni ni ni!" a lot."

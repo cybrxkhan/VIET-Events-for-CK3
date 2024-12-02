@@ -1433,4 +1433,14 @@ VIET_listened_to_saint_francis:0 "Прослушал проповедь с жи�
  VIET_local_trade_knowledge:0 "Aware of Recent Trends in Commerce"
  VIET_trade_winds_information:0 "Learning about the Trade Winds"
  # Version 1.14.1 Start Here - Note to Translators: please leave this comment here and do not remove it even in your versions of the loc
+ VIET_minor_forest_fires:0 "Minor Forest Fires"
+ VIET_major_forest_fires:0 "Major Forest Fires"
+ VIET_forest_fire_arsonists_caught:0 "Forest Fire Arsonists Caught"
+ VIET_drinking_birch_juice:0 "Enjoying Birch Juice"
+ VIET_forest_spirit_curse:0 "Cursed by Tree Spirits"
+ VIET_forest_spirit_curse_desc:0 "This character allegedly chopped down trees to get firewood without paying proper respects to the local tree spirits."
+ VIET_fire_entertainers:0 "Fiery Entertainers"
+ VIET_fire_entertainers_desc:0 "This character has hired a troupe of trainers specializing in fire to stay at their court. The fiery skills of these entertainers captivate audiences like few others."
+ VIET_interesting_entertainment:0 "Provided Me Interesting Entertainment"
+ # Version 1.14.2 Start Here - Note to Translators: please leave this comment here and do not remove it even in your versions of the loc
  xxxxxxxxxx:0 "xxx"
