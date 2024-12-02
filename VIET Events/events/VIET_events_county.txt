@@ -6165,12 +6165,16 @@ VIETmisc.3064 = {
 	trigger = {
 		any_held_title = {
 			tier = tier_county
-			NOR = {
-				terrain = drylands
-				terrain = desert
-				terrain = desert_mountains
-				terrain = oasis
-			}	
+			NOT = {
+				any_county_province = {
+					OR = {
+						terrain = drylands
+						terrain = desert
+						terrain = desert_mountains
+						terrain = oasis
+					}				
+				}
+			}
 		}	
 	}
 	
@@ -6190,11 +6194,15 @@ VIETmisc.3064 = {
 		random_held_title = {
 			limit = {
 				tier = tier_county
-				NOR = {
-					terrain = drylands
-					terrain = desert
-					terrain = desert_mountains
-					terrain = oasis
+				NOT = {
+					any_county_province = {
+						OR = {
+							terrain = drylands
+							terrain = desert
+							terrain = desert_mountains
+							terrain = oasis
+						}				
+					}
 				}
 			}	
 			save_scope_as = county

@@ -8435,7 +8435,7 @@ VIETmisc.5058 = {
 			save_scope_as = faith
 		}
 		create_character = {
-			location = location = root.location
+			location = root.location
 			template = VIET_generic_middle_aged_local_template
 			culture = scope:county.culture
 			faith = scope:county.faith
