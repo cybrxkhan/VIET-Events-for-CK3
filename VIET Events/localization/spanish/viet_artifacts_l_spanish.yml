@@ -140,9 +140,8 @@
 VIET_tongue_stone_desc:0 "También conocidas como lenguas de serpiente, estas piedras únicas – quizás provenientes de algún tipo de serpiente o criatura mística – tienen propiedades curativas, incluyendo la protección contra el veneno. Por lo general, se sumergen en la bebida o se preservan en un amuleto como este."
  # Version 1.12.3 Start Here - Note to Translators: please leave this comment here and do not remove it even in your versions of the loc
  # Version 1.14.1 Start Here - Note to Translators: please leave this comment here and do not remove it even in your versions of the loc
- VIET_fire_striker_name:0 "Reliable Fire Striker"
- VIET_fire_striker_desc:0 "A piece of metal, typically iron or steel, used with flint and other stones to create a spark that can be used to make fire. This one is of particularly high quality, and will not disappoint its owner."
- # Version 1.14.2 Start Here - Note to Translators: please leave this comment here and do not remove it even in your versions of the loc
+ VIET_fire_striker_name:0 "Chisquero Fiable"
+VIET_fire_striker_desc:0 "Un trozo de metal, generalmente hierro o acero, utilizado junto con pedernal y otras piedras para crear una chispa que pueda encender un fuego. Este en particular es de calidad excepcional y no decepcionará a su dueño."
  # 50 Basic
 
  # RECIPE ARTIFACTS
