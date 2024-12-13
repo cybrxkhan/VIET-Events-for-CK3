@@ -98,8 +98,8 @@
 # Succubus event - VIETmisc.8107 - ?????
 # Choking on food at night event - VIETmisc.8109 - Eh
 # Grave robbing - VIETmisc.8112, VIETmisc.8113 - maybe try later
-# 
-# 
+# Come across another monument - VIETmisc.8449 - redundant with travel events
+# Province becomes well-known for its baklava - VIETmisc.8450 - maybe later
 # 
 # 
 # 

@@ -3516,6 +3516,47 @@ VIET_fire_entertainers = {
 	court_grandeur_baseline_add = 1
 }
 
+VIET_anvil_siren_helper_female = {
+	icon = travel_speed_positive
+	diplomacy = 2
+	intrigue = 2
+	prowess = 2
+}
+
+VIET_anvil_siren_helper_male = {
+	icon = travel_speed_positive
+	diplomacy = 2
+	intrigue = 2
+	prowess = 2
+}
+
+VIET_cozy_cottage_dream = {
+	icon = food_positive
+	stress_gain_mult = -0.03
+	stress_loss_mult = 0.03
+}
+
+VIET_spectacular_sunset = {
+	icon = magic_positive
+	monthly_lifestyle_xp_gain_mult = 0.02
+}
+
+VIET_religion_in_faraway_lands = {
+	icon = piety_positive
+	monthly_piety = 0.1
+	learning = 1
+}
+
+VIET_scarborough_fair_lesson = {
+	icon = compass_positive
+	diplomacy = 1
+	martial = 1
+	stewardship = 1
+	intrigue = 1
+	learning = 1
+	monthly_lifestyle_xp_gain_mult = 0.1
+}
+
 
 
 

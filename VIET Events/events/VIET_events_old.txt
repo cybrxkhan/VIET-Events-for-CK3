@@ -28,6 +28,7 @@
 # 2232-2233		Childhood Generic
 # 2234-2236		Generic for 3rd anniversary
 # 2237-2244		Night
+# 2245-2250 	Swansong 2 (Final events made for VIET Events Reborn)
 # 
 ############################################################################################################################
 
@@ -18143,6 +18144,525 @@ VIETold.2244 = {
 }
 
 
+
+#############################################
+# SWANSONG 2 (Final events made for VIET Events Reborn) 2245-22??
+#############################################
+
+# Traveler helps guards take down gang of female thieves who use seduction (Oblivion/Anvil reference)
+VIETold.2245 = {
+	type = character_event
+	title = VIETold.2245.t	
+	desc = VIETold.2245.desc
+	theme = seduction
+	override_background = { reference = VIET_background_small_town }
+	
+	# left_portrait = {
+	# 	character = root
+	# 	animation = throne_room_applaud_1
+	# }
+	
+	right_portrait = {
+		character = scope:adventurer
+		animation = throne_room_one_handed_passive_1
+	}
+
+
+
+	weight_multiplier = {
+		base = 1
+		modifier = {
+			add = 0.2
+			has_trait = just
+		}
+		modifier = {
+			add = -0.2
+			has_trait = arbitrary
+		}
+		modifier = {
+			add = 0.2
+			has_trait = lustful
+		}
+		modifier = {
+			add = -0.2
+			has_trait = chaste
+		}
+		modifier = {
+			add = 0.2
+			has_trait = trusting
+		}
+		modifier = {
+			add = -0.2
+			has_trait = paranoid
+		}
+	}
+	
+	immediate = {	
+		random_held_title = {
+			limit = { tier = tier_county }
+			save_scope_as = county
+		}
+		create_character = {
+			location = root.location
+			template = VIET_basic_traveler_template
+			faith = scope:county.faith
+			culture = scope:county.culture
+			save_scope_as = adventurer
+		}
+		if = {
+			limit = {
+				scope:adventurer = {
+					is_female = yes
+				}
+			}
+			scope:adventurer = {
+				add_trait = beauty_good_1
+				add_character_modifier = {
+					modifier = VIET_anvil_siren_helper_female
+				}
+				random = {
+					chance = 20
+					add_character_modifier = {
+						modifier = ignores_gender_army_rules
+					}
+				}
+			}
+		}
+		else = {
+			scope:adventurer = {
+				add_character_modifier = {
+					modifier = VIET_anvil_siren_helper_male
+				}
+			}
+		}
+	}
+
+	option = { # No reward
+		name = VIETold.2245.a
+		VIET_huge_prestige_loss_effect = yes
+		hidden_effect = {
+			random = {
+				chance = 80
+				scope:traveler = {
+					death = {
+						death_reason = death_vanished
+					}
+				}
+			}			
+		}
+		
+		stress_impact = {
+			generous = minor_stress_impact_gain
+			just = minor_stress_impact_gain
+		}
+	}
+
+	option = { # Standard reward
+		name = VIETold.2245.b
+		trigger = {
+			OR = {
+				is_ai = no
+				gold >= 30
+			}
+		}
+		remove_short_term_gold = 30
+		VIET_massive_prestige_gain_effect = yes
+		hidden_effect = {
+			random = {
+				chance = 80
+				scope:traveler = {
+					death = {
+						death_reason = death_vanished
+					}
+				}
+			}			
+		}
+		
+		stress_impact = {
+			greedy = minor_stress_impact_gain
+		}
+	}
+
+	option = { # Invite them to the court
+		name = VIETold.2245.c
+		trigger = {
+			OR = {
+				is_ai = no
+				gold >= 50
+			}
+		}
+		remove_short_term_gold = 50
+		add_courtier = scope:adventurer
+		add_character_modifier = {
+			modifier = VIET_guards_instructed_by_cunning_adventurer
+			years = 10
+		}
+		stress_impact = {
+			arrogant = minor_stress_impact_gain
+			paranoid = minor_stress_impact_gain
+		}
+	}
+
+
+}
+
+# Dream of a cozy cottage
+VIETold.2246 = {
+	type = character_event
+	title = VIETold.2246.t	
+	desc = VIETold.2246.desc
+	theme = memory_positive
+	override_background = { reference = VIET_background_oblivion_pastoral_dream }
+	
+	right_portrait = {
+		character = root
+		animation = happiness
+	}
+
+	weight_multiplier = {
+		base = 1
+		modifier = {
+			add = 0.2
+			has_trait = compassionate
+		}
+		modifier = {
+			add = -0.2
+			has_trait = sadistic
+		}
+		modifier = {
+			add = 0.2
+			has_trait = content
+		}
+		modifier = {
+			add = -0.2
+			has_trait = ambitious
+		}
+		modifier = {
+			add = 0.2
+			has_trait = zealous
+		}
+		modifier = {
+			add = -0.2
+			has_trait = cynical
+		}
+	}
+
+
+	option = { # Ok
+		name = VIETold.2246.a
+		add_character_modifier = {
+			modifier = VIET_cozy_cottage_dream
+			years = 4
+		}
+		stress_impact = {
+			base = miniscule_stress_impact_loss
+			humble = miniscule_stress_impact_loss
+			lazy = miniscule_stress_impact_loss
+			calm = miniscule_stress_impact_loss
+			content = miniscule_stress_impact_loss
+		}
+	}
+
+
+}
+
+# Witness a spectacular sunset
+VIETold.2247 = {
+	type = character_event
+	title = VIETold.2247.t	
+	desc = VIETold.2247.desc
+	theme = memory_positive
+	override_background = { reference = corridor_night }
+	
+	right_portrait = {
+		character = root
+		animation = happiness
+	}
+
+	weight_multiplier = {
+		base = 1
+		modifier = {
+			add = 0.2
+			has_trait = compassionate
+		}
+		modifier = {
+			add = -0.2
+			has_trait = sadistic
+		}
+		modifier = {
+			add = 0.2
+			has_trait = content
+		}
+		modifier = {
+			add = -0.2
+			has_trait = ambitious
+		}
+		modifier = {
+			add = 0.2
+			has_trait = patient
+		}
+		modifier = {
+			add = -0.2
+			has_trait = impatient
+		}
+	}
+
+
+	option = { # Ok
+		name = VIETold.2247.a
+		add_character_modifier = {
+			modifier = VIET_spectacular_sunset
+			years = 4
+		}
+		stress_impact = {
+			base = minor_stress_impact_loss
+			humble = miniscule_stress_impact_loss
+			lazy = miniscule_stress_impact_loss
+			calm = miniscule_stress_impact_loss
+			content = miniscule_stress_impact_loss
+		}
+	}
+
+
+}
+
+# Stories about a tropical paradise
+VIETold.2248 = {
+	type = character_event
+	title = VIETold.2248.t	
+	desc = VIETold.2248.desc
+	theme = realm
+	override_background = { reference = docks }
+	
+	left_portrait = {
+		character = scope:courtier
+		animation = throne_room_conversation_3
+	}
+	right_portrait = {
+		character = root
+		animation = personality_cynical
+	}
+
+	trigger = {
+		any_held_county = {
+			is_coastal_county = yes	
+		}
+		OR = {
+			any_courtier_or_guest = {
+				is_available_ai_adult = yes
+			}
+			any_vassal = {
+				is_available_ai_adult = yes
+			}
+		}
+	}
+
+	weight_multiplier = {
+		base = 1
+		modifier = {
+			add = 0.2
+			has_trait = shy
+		}
+		modifier = {
+			add = -0.2
+			has_trait = gregarious
+		}
+		modifier = {
+			add = 0.2
+			has_trait = lustful
+		}
+		modifier = {
+			add = -0.2
+			has_trait = chaste
+		}
+		modifier = {
+			add = 0.2
+			has_trait = honest
+		}
+		modifier = {
+			add = -0.2
+			has_trait = deceitful
+		}
+	}
+
+	immediate = {
+		every_courtier_or_guest = {
+			limit = {
+				is_available_ai_adult = yes
+			}
+			add_to_list = candidate_characters
+		}
+		every_vassal = {
+			limit = {
+				is_available_ai_adult = yes
+			}
+			add_to_list = candidate_characters
+		}
+		random_in_list = {
+			list = candidate_characters
+			save_scope_as = courtier
+		}
+		scope:courtier = {			
+			add_character_modifier = {
+				modifier = VIET_thinking_about_foreign_lands
+				years = 3
+			}
+		}
+	}
+
+	option = { # Doubt
+		name = VIETold.2248.a
+		add_character_modifier = {
+			modifier = VIET_skeptical_ruler
+			years = 3
+		}
+		stress_impact = {
+			trusting = miniscule_stress_impact_gain
+			ambitious = miniscule_stress_impact_gain
+		}
+	}
+
+	option = { # Believe in it
+		name = VIETold.2248.b
+		add_character_modifier = {
+			modifier = VIET_thinking_about_foreign_lands
+			years = 3
+		}
+		stress_impact = {
+			craven = miniscule_stress_impact_gain
+			lazy = miniscule_stress_impact_gain
+		}
+	}
+
+	option = { # What faith?
+		name = VIETold.2248.c
+		add_character_modifier = {
+			modifier = VIET_religion_in_faraway_lands
+			years = 3
+		}
+		stress_impact = {
+			cynical = miniscule_stress_impact_gain
+			arbitrary = miniscule_stress_impact_gain
+		}
+	}
+
+
+}
+
+# Song of Scarborough Fair
+VIETold.2249 = {
+	type = character_event
+	title = VIETold.2249.t	
+	desc = VIETold.2249.desc
+	theme = diplomacy
+	
+	left_portrait = {
+		character = root
+		animation = admiration
+	}
+	right_portrait = {
+		character = scope:adventurer
+		animation = personality_content
+	}
+
+
+	trigger = {
+		has_game_rule = VIET_normal_universe_events
+	}
+
+
+	weight_multiplier = {
+		base = 1
+		modifier = {
+			add = 0.2
+			has_trait = just
+		}
+		modifier = {
+			add = -0.2
+			has_trait = arbitrary
+		}
+		modifier = {
+			add = 0.2
+			has_trait = lustful
+		}
+		modifier = {
+			add = -0.2
+			has_trait = chaste
+		}
+		modifier = {
+			add = 0.2
+			has_trait = trusting
+		}
+		modifier = {
+			add = -0.2
+			has_trait = paranoid
+		}
+	}
+	
+	immediate = {	
+		random_held_title = {
+			limit = { tier = tier_county }
+			save_scope_as = county
+		}
+		create_character = {
+			location = root.location
+			template = VIET_generic_elder_local_template
+			faith = scope:county.faith
+			culture = scope:county.culture
+			save_scope_as = adventurer
+		}
+	}
+
+	option = { # Doubt
+		name = VIETold.2249.a
+		trigger_event = VIETold.2250
+	}
+
+
+}
+
+# Lesson of Scarborough Fair
+VIETold.2250 = {
+	type = character_event
+	title = VIETold.2250.t	
+	desc = VIETold.2250.desc
+	theme = diplomacy
+	
+	left_portrait = {
+		character = root
+		animation = admiration
+	}
+	right_portrait = {
+		character = scope:adventurer
+		animation = lute_active
+	}
+
+
+
+	option = {
+		name = VIETold.2250.a
+		custom_tooltip = VIETold.2250.a.tooltip
+		add_piety = 888
+		add_prestige = 888
+		dynasty ?= {
+			add_dynasty_prestige = 888
+		}
+		add_character_modifier = {
+			modifier = VIET_scarborough_fair_lesson
+		}
+	}
+
+	after = {			
+		hidden_effect = {
+			scope:adventurer = {
+				death = {
+					death_reason = death_vanished
+				}
+			}			
+		}
+	}
+
+}
 
 
 

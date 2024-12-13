@@ -1441,4 +1441,16 @@
  VIET_fire_entertainers_desc:0 "This character has hired a troupe of trainers specializing in fire to stay at their court. The fiery skills of these entertainers captivate audiences like few others."
  VIET_interesting_entertainment:0 "Provided Me Interesting Entertainment"
  # Version 1.14.2 Start Here - Note to Translators: please leave this comment here and do not remove it even in your versions of the loc
+ VIET_anvil_siren_helper_female:0 "Assisted Against Siren Gang"
+ VIET_anvil_siren_helper_female_desc:0 "This woman was once a cuning adventurer who tracked down an all-female gang of bandits who used seduction to rob men. She pretended that she wanted to join their gang, but in reality was helping set up an ambush for the local guards."
+ VIET_anvil_siren_helper_male:0 "$VIET_anvil_siren_helper_female$"
+ VIET_anvil_siren_helper_male_desc:0 "This man was once a cuning adventurer who tracked down an all-female gang of bandits who used seduction to rob men. He pretended to fall for the gang's tricks, but in reality was helping set up an ambush for the local guards."
+ VIET_guards_instructed_by_cunning_adventurer:0 "Guards Received Instruction from a Cunning Adventurer"
+ VIET_cozy_cottage_dream:0 "Dreamt of a Cozy Cottage"
+ VIET_cozy_cottage_dream_desc:0 ""A humble abode, of modest size, yet filled with warmth and love. It must have been in a pastoral, buccolic land, an arcadian paradise one can only find in dreams.""
+ VIET_spectacular_sunset:0 "Inspired by a Spectacular Sunset"
+ VIET_religion_in_faraway_lands:0 "Thinking about Religion in Faraway Lands"
+ VIET_scarborough_fair_lesson:0 "Lesson of Scarborough Fai"
+ VIET_scarborough_fair_lesson_desc:0 ""Are you going to Scarborough Fair?\nParsley, sage, rosemary, and thyme.\nRemember me to one who lives there\nShe once was a true love of mine."\n"
+ # Version 1.14.3 Start Here - Note to Translators: please leave this comment here and do not remove it even in your versions of the loc
  xxxxxxxxxx:0 "xxx"
