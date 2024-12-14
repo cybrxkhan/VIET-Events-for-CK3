@@ -18221,36 +18221,36 @@ VIETold.2245 = {
 		}
 		create_character = {
 			location = root.location
-			template = VIET_basic_traveler_template
+			template = VIET_siren_gang_defeater_traveler_template
 			faith = scope:county.faith
 			culture = scope:county.culture
 			save_scope_as = adventurer
 		}
-		hidden_effect = {
-			scope:adventurer = {
-				if = {
-					limit = {
-						is_female = yes
-					}
-					add_trait = beauty_good_1
-					add_character_modifier = {
-						modifier = VIET_anvil_siren_helper_female
-					}
-					random = {
-						chance = 40
-						add_character_modifier = {
-							modifier = ignores_gender_army_rules
-						}
-					}
-				}
-				else = {
-					add_character_modifier = {
-						modifier = VIET_anvil_siren_helper_male
-					}
-				}
+		# hidden_effect = {
+		# 	scope:adventurer = {
+		# 		if = {
+		# 			limit = {
+		# 				is_female = yes
+		# 			}
+		# 			add_trait = beauty_good_1
+		# 			add_character_modifier = {
+		# 				modifier = VIET_anvil_siren_helper_female
+		# 			}
+		# 			random = {
+		# 				chance = 40
+		# 				add_character_modifier = {
+		# 					modifier = ignores_gender_army_rules
+		# 				}
+		# 			}
+		# 		}
+		# 		else = {
+		# 			add_character_modifier = {
+		# 				modifier = VIET_anvil_siren_helper_male
+		# 			}
+		# 		}
 				
-			}
-		}
+		# 	}
+		# }
 	}
 
 	option = { # No reward

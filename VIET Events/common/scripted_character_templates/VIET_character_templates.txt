@@ -988,3 +988,44 @@ VIET_generic_elder_local_template = {
 		VIET_ek_character_setup_effect = yes
 	}
 }
+
+VIET_siren_gang_defeater_traveler_template = {
+	age = { 18 40 }
+	trait = adventurer
+	gender_female_chance = root_faith_dominant_gender_adjusted_female_chance
+	random_traits = yes
+	intrigue = {
+		min_template_decent_skill
+		max_template_decent_skill
+	}
+	prowess = {
+		min_template_decent_skill
+		max_template_decent_skill
+	}
+	after_creation = {
+		if = {
+			limit = {
+				is_female = yes
+			}
+			add_trait = beauty_good_1			
+			add_character_modifier = {
+				modifier = VIET_anvil_siren_helper_female
+			}
+			random = {
+				chance = 40
+				add_character_modifier = {
+					modifier = ignores_gender_army_rules
+				}
+			}
+		}
+		else = {
+			add_character_modifier = {
+				modifier = VIET_anvil_siren_helper_male
+			}
+		}
+		VIET_ek_character_setup_effect = yes
+	}
+}
+
+
+
