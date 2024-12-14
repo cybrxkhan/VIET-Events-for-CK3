@@ -310,6 +310,10 @@ VIET_events_yearly_pulse = {
 		100 = VIETold.2237		# Trip at night and cause a minor injury
 		100 = VIETold.2241		# Watching the Constellations at Night
 		100 = VIETold.2244		# Visit the beach at night
+
+		# Swansong 2
+		100 = VIETold.2246		# Dream of a cozy cottage
+		100 = VIETold.2247		# Witness a spectacular sunset
 		
 		#######################################
 		# NEXT GEN VIET
@@ -722,6 +726,9 @@ VIET_events_tri_yearly_pulse = {
 		# Night
 		100 = VIETold.2240		# Can't fall asleep at night and get distracted by the bed covers
 		100 = VIETold.2242		# Suffering from Insomnia - Valerian herbal remedy
+
+		# Swansong 2
+		100 = VIETold.2248		# Stories about a tropical paradise
 		
 		#######################################
 		# NEXT GEN VIET
@@ -1055,6 +1062,9 @@ VIET_events_five_yearly_pulse = {
 
 		# Night
 		100 = VIETold.2243		# Young servant dies because of his ambitious nature
+
+		# Swansong 2
+		100 = VIETold.2245		# Traveler helps guards take down gang of female thieves who use seduction (Oblivion/Anvil reference)
 		
 		#######################################
 		# NEXT GEN VIET
@@ -1158,7 +1168,7 @@ VIET_events_five_yearly_pulse = {
 	}
 }
 
-# Event chains - rare, most will only fire once a playthrough
+# Event chains or extremely rare one shots - rare, most will only fire once a playthrough
 VIET_events_event_chain_pulse = {
 	trigger = {
 		VIET_basic_is_available_adult_trigger = yes
@@ -1214,6 +1224,9 @@ VIET_events_event_chain_pulse = {
 		100 = VIETmisc.1030		# Lost Love - a beloved servant falls ill and is dying
 		100 = VIETmisc.1036		# Dream of the Final Journey - beloved grandparent returns to guide character into the afterlife
 		100 = VIETmisc.1071		# Dream of Oblivion
+
+		# Swansong 2
+		100 = VIETold.2249		# Song of Scarborough Fair
 		
 		#######################################
 		# NEXT GEN VIET

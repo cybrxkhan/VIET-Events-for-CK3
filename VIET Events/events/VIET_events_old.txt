@@ -18153,7 +18153,6 @@ VIETold.2244 = {
 VIETold.2245 = {
 	type = character_event
 	title = VIETold.2245.t	
-	desc = VIETold.2245.desc
 	desc = {
 		desc = VIETold.2245.desc
 		first_valid = {
@@ -18228,13 +18227,11 @@ VIETold.2245 = {
 			save_scope_as = adventurer
 		}
 		hidden_effect = {
-			if = {
-				limit = {
-					scope:adventurer = {
+			scope:adventurer = {
+				if = {
+					limit = {
 						is_female = yes
 					}
-				}
-				scope:adventurer = {
 					add_trait = beauty_good_1
 					add_character_modifier = {
 						modifier = VIET_anvil_siren_helper_female
@@ -18246,13 +18243,12 @@ VIETold.2245 = {
 						}
 					}
 				}
-			}
-			else = {
-				scope:adventurer = {
+				else = {
 					add_character_modifier = {
 						modifier = VIET_anvil_siren_helper_male
 					}
 				}
+				
 			}
 		}
 	}
