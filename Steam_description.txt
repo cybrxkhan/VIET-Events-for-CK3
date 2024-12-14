@@ -1,6 +1,6 @@
-[img]https://i.imgur.com/lzGYXwb.jpg[/img]
+[img]https://i.imgur.com/nJKGDHZ.jpg[/img]
 
-[h1]Current Version: 1.14.1 "Pierogi" (Released 12/2/24, Compatible with vanilla patch 1.14.X)[/h1]
+[h1]Current Version: 1.14.2 "Arcadia" (Released 12/13/24, Compatible with vanilla patch 1.14.X)[/h1]
 
 [h1][B][url=https://discord.gg/9KuyXv2uZA]Discord Server for my mods[/url]
 [url=https://cybrxkhansmods.godaddysites.com/]Official Website for my mods[/url][/B][/h1]
@@ -25,7 +25,7 @@ Feel free to use my work in your mods - all I ask is that I am credited and (if 
 [img]http://i.imgur.com/EyXurbK.jpg[/img]
 
 [LIST]
-[*]Over [B][U]1158[/U] new flavor events[/B] to experience!
+[*]Over [B][U]1164[/U] new flavor events[/B] to experience!
 [*]Explore new decisions, artifacts, character interactions, activities, and more!
 [*]Game rule to disable sillier events for those who don't like them, with three levels to choose from: Balanced (Default), Serious (Restricted), and All Events (Full)
 [*][B]Compatible with almost anything[/B] since it doesn't touch any vanilla files - even with overhaul mods, you can via game rule disable events that reference things specific to our medieval world that wouldn’t make sense in other time periods or universes (like fantasy/sci-fi conversion mods)
@@ -51,22 +51,14 @@ Please see the [url=https://cybrxkhansmods.godaddysites.com/faq]FAQ on my mods' 
 
 [img]http://i.imgur.com/RQ5QZTF.jpg[/img]
 
-[h1]Version 1.14.1 "Pierogi"[/h1]
+[h1]Version 1.14.2 "Arcadia"[/h1]
 
-[I]“I am the emperor, and I want dumplings!”
-- Emperor Ferdinand I of Austria (1793-1875)[/I]
+[I]This update commemorates the 12th anniversary of the release of the first version of VIET for CK2 on 12/11/12. VIET started off more as VIET+RICE, and VIETerans may recall a lot has changed since 2012, but I sincerely hope VIET and RICE have developed for the better. I am as always grateful to all of you for your support over these past 12 years in my CK modding career.[/I]
 
-New events added in this version: [B]8[/B]
+New events added in this version: [B]6[/B]
 
 [LIST]
-[*]Added events with the following themes:
-[LIST]
-[*]5 forest
-[*]2 fire
-[*]1 dumpling
-[/LIST]
-[*]Added 2 new artifacts: Dumpling Recipe and Reliable Fire Striker
-[*]Added English placeholder for the Polish language version of CK3 (i.e. if you play in Polish, VIET content will display in English instead of gibberish)
+[*]Added 6 generic events*
 [*]Miscellaneous bugfixes and tweaks
 [/LIST]
 

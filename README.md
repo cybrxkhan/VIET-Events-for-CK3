@@ -1,11 +1,10 @@
 # VIET Events for CK3
 
-<img src="https://i.imgur.com/lzGYXwb.jpg">
+<img src="https://i.imgur.com/nJKGDHZ.jpg">
 
-## Latest Version: 1.14.1 "Pierogi" (Released 12/2/24)
+## Latest Version: 1.14.2 "Arcadia" (Released 12/13/24)
 
-_“I am the emperor, and I want dumplings!”_
-_- Emperor Ferdinand I of Austria (1793-1875)_
+_This update commemorates the 12th anniversary of the release of the first version of VIET for CK2 on 12/11/12. VIET started off more as VIET+RICE, and VIETerans may recall a lot has changed since 2012, but I sincerely hope VIET and RICE have developed for the better. I am as always grateful to all of you for your support over these past 12 years in my CK modding career._
 
 Very Immersive Events and Tales (VIET), the sequel to VIET Events Reborn for CK2, is a flavor mod that adds a vast collection of events about everyday life to spice up your game. They add immersion and a diversity of experiences in between wars and vanilla’s event chains, and cover mundane minutiae ranging from small talk with courtiers and eating local cuisine to epic tales about love, philosophy, and the human condition. Some of the events unlock new decisions, character interactions, activities, and much more for you to explore!
 
@@ -15,7 +14,7 @@ Feel free to use my work in your mods - all I ask is that I am credited and (if 
 
 ## Features
 
-- Over **1158** new flavor events to experience!
+- Over **1164** new flavor events to experience!
 - Explore new decisions, artifacts, character interactions, activities, and more!
 - Game rule to disable sillier events for those who don't like them, with three levels to choose from: Balanced (Default), Serious (Restricted), and All Events (Full)
 - Compatible with almost anything since it doesn't touch any vanilla files - even with overhaul mods, you can via game rule disable events that reference things specific to our medieval world that wouldn’t make sense in other time periods or universes (like fantasy and sci-fi conversion mods)
@@ -39,16 +38,11 @@ The mod folder should look something like this:
 
 ## Changelog
 
-### Version 1.14.1 "Pierogi"
+### Version 1.14.2 "Arcadia"
 
-New events added in this version: **8**
+New events added in this version: **6**
 
-- Added events with the following themes:
-    - 5 forest
-    - 2 fire
-    - 1 dumpling
-- Added 2 new artifacts: Dumpling Recipe and Reliable Fire Striker
-- Added English placeholder for the Polish language version of CK3 (i.e. if you play in Polish, VIET content will display in English instead of gibberish)
+- Added 6 generic events*
 - Miscellaneous bugfixes and tweaks
 
 \* Adapted from VIET for CK2
