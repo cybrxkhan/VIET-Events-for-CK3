@@ -18154,6 +18154,21 @@ VIETold.2245 = {
 	type = character_event
 	title = VIETold.2245.t	
 	desc = VIETold.2245.desc
+	desc = {
+		desc = VIETold.2245.desc
+		first_valid = {
+			triggered_desc = {
+				trigger = {
+					scope:adventurer = {
+						is_female = yes
+					}
+				}
+				desc = VIETold.2245.desc.female
+			}
+			desc = VIETold.2245.desc.male
+		}
+		desc = VIETold.2245.desc.end
+	}
 	theme = seduction
 	override_background = { reference = VIET_background_small_town }
 	
@@ -18167,6 +18182,9 @@ VIETold.2245 = {
 		animation = throne_room_one_handed_passive_1
 	}
 
+	trigger = {
+		is_landed = yes
+	}
 
 
 	weight_multiplier = {
@@ -18209,29 +18227,31 @@ VIETold.2245 = {
 			culture = scope:county.culture
 			save_scope_as = adventurer
 		}
-		if = {
-			limit = {
+		hidden_effect = {
+			if = {
+				limit = {
+					scope:adventurer = {
+						is_female = yes
+					}
+				}
 				scope:adventurer = {
-					is_female = yes
-				}
-			}
-			scope:adventurer = {
-				add_trait = beauty_good_1
-				add_character_modifier = {
-					modifier = VIET_anvil_siren_helper_female
-				}
-				random = {
-					chance = 20
+					add_trait = beauty_good_1
 					add_character_modifier = {
-						modifier = ignores_gender_army_rules
+						modifier = VIET_anvil_siren_helper_female
+					}
+					random = {
+						chance = 40
+						add_character_modifier = {
+							modifier = ignores_gender_army_rules
+						}
 					}
 				}
 			}
-		}
-		else = {
-			scope:adventurer = {
-				add_character_modifier = {
-					modifier = VIET_anvil_siren_helper_male
+			else = {
+				scope:adventurer = {
+					add_character_modifier = {
+						modifier = VIET_anvil_siren_helper_male
+					}
 				}
 			}
 		}
@@ -18243,7 +18263,7 @@ VIETold.2245 = {
 		hidden_effect = {
 			random = {
 				chance = 80
-				scope:traveler = {
+				scope:adventurer = {
 					death = {
 						death_reason = death_vanished
 					}
@@ -18270,7 +18290,7 @@ VIETold.2245 = {
 		hidden_effect = {
 			random = {
 				chance = 80
-				scope:traveler = {
+				scope:adventurer = {
 					death = {
 						death_reason = death_vanished
 					}
