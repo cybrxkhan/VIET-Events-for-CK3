@@ -1,6 +1,6 @@
-[img]https://i.imgur.com/lzGYXwb[/img]
+[img]https://i.imgur.com/nJKGDHZ.jpg[/img]
 
-[h1]Versión actual: 1.14.1 "Pierogi" 
+[h1]Versión actual: 1.14.2 "Arcadia" 
 (Lanzamiento: 02/12/24, Compatible con versión vanilla 1.14.X)[/h1]
 
 [url=https://discord.gg/9KuyXv2uZA]Servidor de Discord de mis Mods[/url]
@@ -26,7 +26,7 @@ Siéntete libre de usar mi trabajo con tus mods - todo lo que pido es reconocimi
 [img]http://i.imgur.com/EyXurbK.jpg[/img]
 
 [LIST]
-[*]¡Más de [B][U]1158[/U] nuevos eventos[/B] para experimentar!
+[*]¡Más de [B][U]1164[/U] nuevos eventos[/B] para experimentar!
 [*]Explora nuevas decisiones, artefactos, interacciones y cadenas de eventos
 [*]Regla de juego para desactivar los eventos estúpidos para aquellos que no les guste, con tres niveles para escoger entre: Balanceado (Predeterminado), Serio (Restringido), y Todos los eventos (Todo)
 [*][B]Compatible con casi cualquier cosa[/B] ya que no modifico archivos del vanilla - incluso con mods de conversión total puedes desactivar los eventos que hagan referencias a cosas o lugares específicos del mundo medieval que no tendrían sentido en otros periodos o universos (como mods fantásticos o de ciencia ficción)
@@ -52,15 +52,12 @@ Por favor, echa un vistazo a [url=https://steamcommunity.com/workshop/filedetail
 
 [img]http://i.imgur.com/RQ5QZTF.jpg[/img]
 
-[h1]Versión 1.14.1 "Pierogi"[/h1]
+[h1]Versión 1.14.2 "Arcadia"[/h1]
 
-[I]"¡Soy el emperador, y quiero albóndigas! "
-Emperador Fernando I de Austria (1793-1875)[/I]
+[I]Esta actualización conmemora el 12º aniversario del lanzamiento de la primera versión de VIET para CK2 el 12/11/12. VIET comenzó más como VIET+RICE, y los VIETeranos recordarán que muchas cosas han cambiado desde 2012, pero espero sinceramente que VIET y RICE hayan evolucionado para mejor. Como siempre, estoy agradecido a todos ustedes por su apoyo durante estos 12 años en mi carrera de modding para CK. [/I]
 
-Nuevos eventos añadidos en esta versión: [B]8[/B]
+Nuevos eventos añadidos en esta versión: [B]6[/B]
 
-[LIST]
-[/LIST]
 
 
 [img]https://i.imgur.com/6L11s2n.jpg[/img]
