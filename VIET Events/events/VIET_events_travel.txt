@@ -4678,7 +4678,7 @@ VIETmisc.7044 = {
 						has_trait = education_learning_3
 						has_trait = education_learning_4
 						has_trait = education_learning_5
-						learning >= high_skill_rating
+						learning >= medium_skill_rating
 					}
 				}
 				save_scope_as = traveler
