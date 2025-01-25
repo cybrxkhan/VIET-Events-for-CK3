@@ -3578,7 +3578,7 @@ VIET_quality_henna = {
 	icon = fashion_positive
 	general_opinion = 5
 	attraction_opinion = 5
-	monthly_prestige = 0.02
+	monthly_prestige = 0.04
 }
 
 VIET_trade_information = {
@@ -3622,6 +3622,16 @@ VIET_buzzing_noise = {
 	icon = social_negative
 	intrigue = -1
 	stress_loss_mult = -0.1
+}
+
+VIET_showed_sympathy_to_jews = {
+	icon = diplomacy_positive
+	judaism_religion_opinion = 10
+}
+
+VIET_distrusts_jews = {
+	icon = diplomacy_negative
+	judaism_religion_opinion = -10
 }
 
 VIET_eradicator_of_bad_history = {

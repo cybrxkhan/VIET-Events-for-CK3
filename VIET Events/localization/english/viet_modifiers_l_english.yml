@@ -1467,6 +1467,8 @@
  VIET_earwax_relief_desc:0 "This character's ear was suffering from a large buildup of earwax recently. Thankfully, the earwax has been expertly removed, and they can hear better all of a sudden!"
  VIET_buzzing_noise:0 "Strange Buzzing Noise"
  VIET_buzzing_noise_desc:0 "Wherever this character goes, a strange, barely audible buzzing noise follows them."
+ VIET_showed_sympathy_to_jews:0 "Showed Sympathy to Jews"
+ VIET_distrusts_jews:0 "Wary Around Jews"
  VIET_eradicator_of_bad_history:0 "Eradicator of Bad History"
  # Version 1.14.4 Start Here - Note to Translators: please leave this comment here and do not remove it even in your versions of the loc
  xxxxxxxxxx:0 "xxx"
