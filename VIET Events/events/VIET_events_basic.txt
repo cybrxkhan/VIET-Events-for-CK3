@@ -33919,15 +33919,77 @@ VIETmisc.0353 = {
 		}
 	}
 
-	
-	option = { # ok
-		name = VIETmisc.0353.a
-		stress_impact = {
-			gregarious = minor_stress_impact_gain
+	immediate = {
+		hidden_effect = {
+			create_character = {
+				location = root.capital_province
+				culture = root.culture
+				faith = root.faith
+				save_scope_as = merchant		
+			}
+			scope:merchant = {
+				add_character_modifier = {
+					modifier = VIET_well_traveled_merchant
+				}	
+			}
 		}
 	}
 	
+	option = { # Exaggerated tale
+		name = VIETmisc.0353.a
+		VIET_medium_piety_gain_effect = yes
+		stress_impact = {
+			trusting = miniscule_stress_impact_gain
+		}
+		hidden_effect = {
+			scope:merchant = {
+				death = {
+					death_reason = death_vanished
+				}
+			}			
+		}
+	}
+	
+	option = { # Wow cool!
+		name = VIETmisc.0353.b
+		VIET_medium_piety_gain_effect = yes
+		stress_impact = {
+			cynical = miniscule_stress_impact_gain
+		}
+		hidden_effect = {
+			scope:merchant = {
+				death = {
+					death_reason = death_vanished
+				}
+			}			
+		}
+	}
+	
+	option = { # Invite him to stay
+		name = VIETmisc.0353.c
+		trigger = {
+			OR = {
+				gold >= 40
+				is_ai = no
+			}
+		}
+		remove_short_term_gold = 40
+		add_courtier = scope:merchant
+		stress_impact = {
+			paranoid = miniscule_stress_impact_gain
+			greedy = miniscule_stress_impact_gain
+			arrogant = miniscule_stress_impact_gain
+		}
+	}
 
+	after = {		
+		if = {
+			limit = {
+				has_game_rule = VIET_historical_context_on
+			}
+			custom_tooltip = VIETold.0353.info
+		}
+	}
 
 }
 
