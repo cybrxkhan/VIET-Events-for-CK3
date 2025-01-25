@@ -20,6 +20,7 @@
 # 1053-1074		Generic (from Swansong)
 # 1075-1092		Generic (other old)
 # 1093-1099		Bread
+# 1100-1102		Ear
 # 
 ############################################################################################################################
 
@@ -7124,5 +7125,211 @@ VIETold.1099 = {
 }
 
 
+
+######################################################################
+# Ear VIETold.1100-1102
+######################################################################
+
+
+# Giant earwax is cleaned out of ear
+VIETold.1100 = {
+	type = character_event
+	title = VIETold.1100.t
+	desc = VIETold.1100.desc
+	theme = friendly
+
+	right_portrait = {
+		character = root
+		animation = happiness
+	}
+	
+	weight_multiplier = {
+		base = 1
+		modifier = {
+			add = 0.2
+			has_trait = diligent
+		}
+		modifier = {
+			add = -0.2
+			has_trait = lazy
+		}
+		modifier = {
+			add = 0.2
+			has_trait = impatient
+		}
+		modifier = {
+			add = -0.2
+			has_trait = patient
+		}
+		modifier = {
+			add = 0.2
+			has_trait = fickle
+		}
+		modifier = {
+			add = -0.2
+			has_trait = stubborn
+		}
+	}
+	
+	option = { # Ok
+		name = VIETold.1100.a
+		add_character_modifier = {
+			modifier = VIET_earwax_relief
+			years = 3
+		}
+		stress_impact = {
+			base = miniscule_stress_impact_loss
+		}	
+	}
+
+}
+
+
+# Buzzing noises - self
+VIETold.1101 = {
+	type = character_event
+	title = VIETold.1101.t
+	desc = VIETold.1101.desc
+	theme = unfriendly
+
+	right_portrait = {
+		character = root
+		animation = personality_irrational
+	}
+
+	trigger = {
+		court_physician_available_trigger = yes
+	}
+	
+	weight_multiplier = {
+		base = 1
+		modifier = {
+			add = 0.2
+			has_trait = diligent
+		}
+		modifier = {
+			add = -0.2
+			has_trait = lazy
+		}
+		modifier = {
+			add = 0.2
+			has_trait = impatient
+		}
+		modifier = {
+			add = -0.2
+			has_trait = patient
+		}
+		modifier = {
+			add = 0.2
+			has_trait = fickle
+		}
+		modifier = {
+			add = -0.2
+			has_trait = stubborn
+		}
+	}
+
+	immediate = {
+		save_court_physician_as_effect = { SCOPE_NAME = physician }
+	}
+	
+	option = { # Ok
+		name = VIETold.1101.a
+		add_character_modifier = {
+			modifier = VIET_buzzing_noise
+			years = 10
+		}
+		stress_impact = {
+			base = miniscule_stress_impact_gain
+			impatient = miniscule_stress_impact_gain
+		}	
+	}
+
+}
+
+
+# Buzzing noises - other
+VIETold.1102 = {
+	type = character_event
+	title = VIETold.1102.t
+	desc = VIETold.1102.desc
+	theme = unfriendly
+
+	right_portrait = {
+		character = scope:courtier
+		animation = personality_irrational
+	}
+
+	trigger = {	
+		OR = {
+			any_courtier_or_guest = {
+				is_available_ai_adult = yes
+			}
+			any_vassal = {
+				is_available_ai_adult = yes
+			}
+		}
+		court_physician_available_trigger = yes
+	}
+	
+	weight_multiplier = {
+		base = 1
+		modifier = {
+			add = 0.2
+			has_trait = diligent
+		}
+		modifier = {
+			add = -0.2
+			has_trait = lazy
+		}
+		modifier = {
+			add = 0.2
+			has_trait = impatient
+		}
+		modifier = {
+			add = -0.2
+			has_trait = patient
+		}
+		modifier = {
+			add = 0.2
+			has_trait = fickle
+		}
+		modifier = {
+			add = -0.2
+			has_trait = stubborn
+		}
+	}
+
+	immediate = {
+		save_court_physician_as_effect = { SCOPE_NAME = physician }
+		every_courtier_or_guest = {
+			limit = {
+				is_available_ai_adult = yes
+			}
+			add_to_list = candidate_characters
+		}
+		every_vassal = {
+			limit = {
+				is_available_ai_adult = yes
+			}
+			add_to_list = candidate_characters
+		}
+		random_in_list = {
+			list = candidate_characters
+			save_scope_as = courtier
+		}
+		scope:courtier = {
+			add_character_modifier = {
+				modifier = VIET_buzzing_noise
+				years = 10
+			}
+		}
+	}
+	
+	option = { # Ok
+		name = VIETold.1102.a
+	}
+
+}
 
 

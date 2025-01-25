@@ -64,6 +64,8 @@
 # 0347-0349		Three
 # 0350-0351 	Forest
 # 0352			Fire
+# 0353-0357		Redhead
+# 0358-0360		Follow Up Events (on old/other events)
 # 
 ############################################################################################################################
 
@@ -33850,6 +33852,76 @@ VIETmisc.0352 = {
 	
 	option = { # ok
 		name = VIETmisc.0352.c
+		stress_impact = {
+			gregarious = minor_stress_impact_gain
+		}
+	}
+	
+
+
+}
+
+
+##################################################################
+# REDHEAD 0353-0357
+##################################################################
+
+
+
+
+# Merchant returns after encountering people who never knew about henna and hair dye, and tells exaggerated tale
+VIETmisc.0353 = {
+	type = character_event
+	title = VIETmisc.0353.t
+	desc = VIETmisc.0353.desc
+	theme = diplomacy_foreign_affairs_focus
+	
+
+	left_portrait = {
+		character = root
+		animation = personality_content
+	}
+
+	right_portrait = {
+		character = scope:merchant
+		animation = storyteller
+	}
+
+	trigger = {	
+		VIET_is_henna_culture_trigger = yes
+	}
+	
+	weight_multiplier = {
+		base = 1
+		modifier = {
+			add = 0.2
+			has_trait = gregarious
+		}
+		modifier = {
+			add = -0.2
+			has_trait = shy
+		}
+		modifier = {
+			add = 0.2
+			has_trait = lustful
+		}
+		modifier = {
+			add = -0.2
+			has_trait = chaste
+		}
+		modifier = {
+			add = 0.2
+			has_trait = lazy
+		}
+		modifier = {
+			add = -0.2
+			has_trait = diligent
+		}
+	}
+
+	
+	option = { # ok
+		name = VIETmisc.0353.a
 		stress_impact = {
 			gregarious = minor_stress_impact_gain
 		}
