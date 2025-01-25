@@ -100,8 +100,8 @@
 # Grave robbing - VIETmisc.8112, VIETmisc.8113 - maybe try later
 # Come across another monument - VIETmisc.8449 - redundant with travel events
 # Province becomes well-known for its baklava - VIETmisc.8450 - maybe later
-# 
-# 
+# Earwax as lip balm - VIETmisc.2311 - this is a later modern invention
+# Sailor earring Christian burial - VIETmisc.2312 - can't find source for this
 # 
 # 
 # USED ALREADY PROVINCIAL

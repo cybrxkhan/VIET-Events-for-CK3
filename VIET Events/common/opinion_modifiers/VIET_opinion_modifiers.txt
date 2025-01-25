@@ -936,3 +936,9 @@ VIET_interesting_entertainment = {
 	stacking = yes
 }
 
+VIET_opinion_similar_preferences = {
+	years = 10
+	opinion = 5
+	stacking = yes
+}
+
