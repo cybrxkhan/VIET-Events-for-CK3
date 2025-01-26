@@ -34354,10 +34354,23 @@ VIETmisc.0357 = {
 	desc = VIETmisc.0357.desc
 	theme = diplomacy_foreign_affairs_focus
 	
+	cooldown = { years = 25 }
 
 	right_portrait = {
-		character = scope:antisemite
+		character = root
 		animation = thinking
+	}
+
+	lower_left_portrait = {
+		character = scope:blonde
+	}
+
+	lower_center_portrait = {
+		character = scope:redhead
+	}
+
+	lower_right_portrait = {
+		character = scope:brunette
 	}
 
 

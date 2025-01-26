@@ -189,6 +189,10 @@ VIET_events_yearly_pulse = {
 		100 = VIETold.1092		# What if my life were a bard's tale?
 		# Bread
 		100 = VIETold.1093		# Giving trenchers to the poor and needy
+		# Ear
+		100 = VIETold.1100		# Giant earwax is cleaned out of ear
+		100 = VIETold.1101		# Buzzing noises - self
+		100 = VIETold.1102		# Buzzing noises - other
 		
 		#######################################
 		# OLD VIET
@@ -492,6 +496,9 @@ VIET_events_yearly_pulse = {
 		# Forest
 		100 = VIETintro.1002 	# Harvesting and drinking birch sap/birch juice - triggers VIETmisc.0350
 		100 = VIETmisc.0351 	# Running low on firewood at a camp, but there are spirits nearby
+		# Redhead
+		100 = VIETmisc.0354 	# Buy quality henna?
+		100 = VIETmisc.0357 	# Favorite hair color?
 	}
 }
 
@@ -900,6 +907,8 @@ VIET_events_tri_yearly_pulse = {
 		100 = VIETmisc.0346		# Character reads a line of poetry about divers and sharks (loosely based on the poet Sa'di of Shiraz)
 		# Fire
 		100 = VIETmisc.0352		# Troupe of entertainers who know how to use fire
+		# Redhead
+		100 = VIETmisc.0356		# Conversation about Judas Iscariot's red hair
 	}
 }
 
@@ -1165,6 +1174,9 @@ VIET_events_five_yearly_pulse = {
 		100 = VIETmisc.0340		# Criminal caught using training rodents to steal
 		# VIET Word Contest
 		100 = VIETmisc.0341		# Opprobrious Remarks - scholar says he likes arguing with his wife # asparagusrain
+		# Redhead
+		100 = VIETmisc.0353		# Merchant returns after encountering people who never knew about henna and hair dye, and tells exaggerated tale
+		100 = VIETmisc.0355		# Merchant tells about foreigners with red hair
 	}
 }
 
