@@ -3625,13 +3625,15 @@ VIET_buzzing_noise = {
 }
 
 VIET_showed_sympathy_to_jews = {
-	icon = diplomacy_positive
+	icon = family_mixed
 	judaism_religion_opinion = 10
+	christianity_religion_opinion = -10
 }
 
 VIET_distrusts_jews = {
-	icon = diplomacy_negative
+	icon = diplomacy_mixed
 	judaism_religion_opinion = -10
+	christianity_religion_opinion = 10
 }
 
 VIET_eradicator_of_bad_history = {

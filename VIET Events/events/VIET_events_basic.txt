@@ -2389,6 +2389,16 @@ VIETmisc.0030 = {
 		name = VIETmisc.0030.a
 		VIET_medium_prestige_loss_effect = yes
 	}
+
+	after = {
+		random = {
+			chance = 99
+			trigger_event = {
+				id = VIETmisc.0358
+				days = { 30 120 }
+			}
+		}
+	}
 }
 
 
@@ -34267,13 +34277,179 @@ VIETmisc.0356 = {
 				list = candidate_characters
 				save_scope_as = antisemite
 			}
+			scope:antisemite = {
+				add_character_modifier = {
+					modifier = VIET_distrusts_jews
+					years = 10
+				}
+			}
 		}
 	}
 	
 	option = { # We wouldn't know
 		name = VIETmisc.0356.a
 		VIET_small_piety_gain_effect = yes
+	}
+	
+	option = { # Yeah, he was probably a redhead
+		name = VIETmisc.0356.b
+		VIET_small_prestige_gain_effect = yes
 		scope:antisemite = {
+			add_opinion = {
+				target = root
+				modifier = pleased_opinion
+				opinion = 10
+			}
+		}
+	}
+	
+	option = { # Maybe Jesus was a redhead
+		name = VIETmisc.0356.c
+		add_character_modifier = {
+			modifier = VIET_showed_sympathy_to_jews
+			years = 10
+		}
+		scope:antisemite = {
+			add_opinion = {
+				target = root
+				modifier = disappointed_opinion
+				opinion = -10
+			}
+		}
+	}
+
+
+}
+
+
+
+
+# Favorite hair color?
+VIETmisc.0357 = {
+	type = character_event
+	title = VIETmisc.0357.t
+	desc = VIETmisc.0357.desc
+	theme = diplomacy_foreign_affairs_focus
+	
+
+	right_portrait = {
+		character = scope:antisemite
+		animation = thinking
+	}
+
+
+	trigger = {	
+		has_game_rule = VIET_normal_universe_events
+		VIET_is_redhead_or_blonde_area_or_culture = yes
+		NOT = { has_trait = celibate }
+		NOT = { has_sexuality = asexual }
+		OR = {
+			any_courtier_or_guest = {
+				count >= 3 # Need at least three courtiers
+				is_available_ai_adult = yes
+				VIET_is_redhead_or_blonde_area_or_culture = yes
+				NOT = { has_trait = celibate }
+				NOT = { has_sexuality = asexual }
+			}
+			any_vassal = {
+				is_available_ai_adult = yes
+				VIET_is_redhead_or_blonde_area_or_culture = yes
+				NOT = { has_trait = celibate }
+				NOT = { has_sexuality = asexual }
+			}
+		}
+	}
+	
+	weight_multiplier = {
+		base = 1
+		modifier = {
+			add = 0.2
+			has_trait = gregarious
+		}
+		modifier = {
+			add = -0.2
+			has_trait = shy
+		}
+		modifier = {
+			add = 0.2
+			has_trait = patient
+		}
+		modifier = {
+			add = -0.2
+			has_trait = impatient
+		}
+		modifier = {
+			add = 0.2
+			has_trait = honest
+		}
+		modifier = {
+			add = -0.2
+			has_trait = deceitful
+		}
+	}
+
+	immediate = {
+		immediate = {
+			every_courtier_or_guest = {
+				limit = {
+					is_available_ai_adult = yes
+					culture_has_european_heritage_pillar_trigger = yes
+					religion = religion:christianity_religion
+					NOT = {	culture = { has_cultural_pillar = heritage_israelite } }
+				}
+				add_to_list = candidate_characters
+			}
+			every_vassal = {
+				limit = {
+					is_available_ai_adult = yes
+					culture_has_european_heritage_pillar_trigger = yes
+					religion = religion:christianity_religion
+					NOT = {	culture = { has_cultural_pillar = heritage_israelite } }
+				}
+				add_to_list = candidate_characters
+			}
+			random_in_list = {
+				list = candidate_characters
+				save_scope_as = blonde
+			}
+			random_in_list = {
+				list = candidate_characters
+				limit = {
+					exists = scope:blonde
+					NOT = { this = scope:blonde }
+				}
+				save_scope_as = redhead
+			}
+			random_in_list = {
+				list = candidate_characters
+				limit = {
+					exists = scope:blonde
+					exists = scope:redhead
+					NOT = { this = scope:blonde }
+					NOT = { this = scope:redhead }
+				}
+				save_scope_as = brunette
+			}
+		}
+	}
+	
+	option = { # blonde
+		name = VIETmisc.0357.a
+		scope:blonde = {
+			add_opinion = {
+				target = root
+				modifier = pleased_opinion
+				opinion = 5
+			}
+		}
+		scope:redhead = {
+			add_opinion = {
+				target = root
+				modifier = disappointed_opinion
+				opinion = -5
+			}
+		}
+		scope:brunette = {
 			add_opinion = {
 				target = root
 				modifier = disappointed_opinion
@@ -34282,13 +34458,58 @@ VIETmisc.0356 = {
 		}
 	}
 	
-	option = { # Yeah, he was probably a redhead
-		name = VIETmisc.0356.b
-		VIET_small_prestige_gain_effect = yes
+	option = { # redhead
+		name = VIETmisc.0357.b
+		scope:redhead = {
+			add_opinion = {
+				target = root
+				modifier = pleased_opinion
+				opinion = 5
+			}
+		}
+		scope:blonde = {
+			add_opinion = {
+				target = root
+				modifier = disappointed_opinion
+				opinion = -5
+			}
+		}
+		scope:brunette = {
+			add_opinion = {
+				target = root
+				modifier = disappointed_opinion
+				opinion = -5
+			}
+		}
 	}
 	
-	option = { # Maybe Jesus was a redhead
-		name = VIETmisc.0356.c
+	option = { # brunette
+		name = VIETmisc.0357.c
+		scope:brunette = {
+			add_opinion = {
+				target = root
+				modifier = pleased_opinion
+				opinion = 5
+			}
+		}
+		scope:blonde = {
+			add_opinion = {
+				target = root
+				modifier = disappointed_opinion
+				opinion = -5
+			}
+		}
+		scope:redhead = {
+			add_opinion = {
+				target = root
+				modifier = disappointed_opinion
+				opinion = -5
+			}
+		}
+	}
+	
+	option = { # None
+		name = VIETmisc.0357.d
 	}
 
 
@@ -34298,8 +34519,132 @@ VIETmisc.0356 = {
 
 
 
+##################################################################
+# FOLLOW UP EVENTS TO OLD EVENTS 0358-0360
+##################################################################
 
 
+
+# Follow up to VIETmisc.0030: Tripped and fell while saying farewell to an envoy
+# Rumors and stories spreading about your tripping
+VIETmisc.0358 = {
+	type = character_event
+	title = VIETmisc.0358.t
+	desc = VIETmisc.0358.desc
+	theme = diplomacy_foreign_affairs_focus
+	
+
+	right_portrait = {
+		character = root
+		animation = stress
+	}
+
+
+	trigger = {	
+		is_landed_or_landless_administrative = yes
+	}
+
+	immediate = {
+		add_character_modifier = {
+			modifier = VIET_embarrassing_incident_rumors
+			years = 10
+		}
+	}
+	
+	option = { # Grr
+		name = VIETmisc.0358.a
+		stress_impact = {
+			base = miniscule_stress_impact_gain
+			arrogant = minor_stress_impact_gain
+			ambitious = minor_stress_impact_gain
+			wrathful = miniscule_stress_impact_gain
+			stubborn = miniscule_stress_impact_gain
+		}
+	}
+	
+	option = { # Suppress it
+		name = VIETmisc.0358.b
+		stress_impact = {
+			base = miniscule_stress_impact_gain
+			content = minor_stress_impact_gain
+			forgiving = minor_stress_impact_gain
+			lazy = miniscule_stress_impact_gain
+			humble = minor_stress_impact_gain
+		}
+		duel = {
+			skills = { diplomacy intrigue }
+			value = average_skill_rating
+			50 = { # It doesn't work
+				show_chance = no
+				custom_tooltip = VIETmisc.0358.b.toast.fail
+				compare_modifier = {
+					value = scope:duel_value
+					multiplier = -2.5
+					min = -49
+				}
+				add_legitimacy_ = miniscule_legitimacy_loss
+				remove_character_modifier = VIET_embarrassing_incident_rumors
+				add_character_modifier = {
+					modifier = VIET_embarrassing_incident_rumors_suppression_fail
+					years = 10
+				}
+			}
+			50 = { # It works
+				show_chance = no
+				custom_tooltip = VIETmisc.0358.b.toast.success
+				compare_modifier = {
+					value = scope:duel_value
+					multiplier = 2.5
+					min = -49
+				}
+				remove_character_modifier = VIET_embarrassing_incident_rumors
+			}
+		}
+	}
+
+
+}
+
+
+# Follow up to VIETmisc.0049: Nearby house of worship is desecrated by hooligans
+# Holy sign appears above the house of worship
+VIETmisc.0359 = {
+	type = character_event
+	title = VIETmisc.0359.t
+	desc = VIETmisc.0359.desc
+	theme = faith
+	
+
+	right_portrait = {
+		character = root
+		animation = shock
+	}
+
+
+	trigger = {	
+		is_landed_or_landless_administrative = yes
+	}
+
+	immediate = {
+		add_character_modifier = {
+			modifier = VIET_embarrassing_incident_rumors
+			years = 10
+		}
+	}
+	
+	option = { # Grr
+		name = VIETmisc.0359.a
+		stress_impact = {
+			base = miniscule_stress_impact_gain
+			arrogant = minor_stress_impact_gain
+			ambitious = minor_stress_impact_gain
+			wrathful = miniscule_stress_impact_gain
+			stubborn = miniscule_stress_impact_gain
+		}
+	}
+
+
+}
 
 
 
