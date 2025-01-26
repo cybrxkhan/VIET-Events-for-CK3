@@ -7192,6 +7192,11 @@ VIETold.1101 = {
 	desc = VIETold.1101.desc
 	theme = unfriendly
 
+	left_portrait = {
+		character = scope:physician
+		animation = physician
+	}
+
 	right_portrait = {
 		character = root
 		animation = personality_irrational
@@ -7254,6 +7259,11 @@ VIETold.1102 = {
 	title = VIETold.1102.t
 	desc = VIETold.1102.desc
 	theme = unfriendly
+
+	left_portrait = {
+		character = scope:physician
+		animation = physician
+	}
 
 	right_portrait = {
 		character = scope:courtier

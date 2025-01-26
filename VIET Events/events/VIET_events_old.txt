@@ -1106,6 +1106,39 @@ VIETold.2015 = {
 			shy = miniscule_stress_impact_gain
 			deceitful = miniscule_stress_impact_gain
 		}
+		hidden_effect = {
+			random = {
+				chance = 99
+				modifier = {
+					add = 4
+					has_trait = compassionate
+				}
+				modifier = {
+					add = 4
+					has_trait = calm
+				}
+				modifier = {
+					add = 4
+					has_trait = patient
+				}
+				modifier = {
+					add = 4
+					has_trait = just
+				}
+				modifier = {
+					add = 4
+					has_trait = shy
+				}
+				modifier = {
+					add = 4
+					has_trait = scholar
+				}
+				trigger_event = {
+					id = VIETmisc.0360
+					days = { 60 730 }
+				}
+			}
+		}
 	}	
 	option = { # Correct him - true history is more interesting
 		name = VIETold.2015.c
@@ -1116,6 +1149,39 @@ VIETold.2015 = {
 			shy = miniscule_stress_impact_gain
 			content = miniscule_stress_impact_gain
 		}
+		hidden_effect = {
+			random = {
+				chance = 99
+				modifier = {
+					add = 4
+					has_trait = compassionate
+				}
+				modifier = {
+					add = 4
+					has_trait = calm
+				}
+				modifier = {
+					add = 4
+					has_trait = patient
+				}
+				modifier = {
+					add = 4
+					has_trait = just
+				}
+				modifier = {
+					add = 4
+					has_trait = shy
+				}
+				modifier = {
+					add = 4
+					has_trait = scholar
+				}
+				trigger_event = {
+					id = VIETmisc.0360
+					days = { 60 730 }
+				}
+			}
+		}
 	}	
 	option = { # Correct him - show off knowledge
 		name = VIETold.2015.d
@@ -1125,6 +1191,39 @@ VIETold.2015 = {
 			arrogant = miniscule_stress_impact_loss
 			humble = miniscule_stress_impact_gain
 			shy = miniscule_stress_impact_gain
+		}
+		hidden_effect = {
+			random = {
+				chance = 99
+				modifier = {
+					add = 4
+					has_trait = compassionate
+				}
+				modifier = {
+					add = 4
+					has_trait = calm
+				}
+				modifier = {
+					add = 4
+					has_trait = patient
+				}
+				modifier = {
+					add = 4
+					has_trait = just
+				}
+				modifier = {
+					add = 4
+					has_trait = shy
+				}
+				modifier = {
+					add = 4
+					has_trait = scholar
+				}
+				trigger_event = {
+					id = VIETmisc.0360
+					days = { 60 730 }
+				}
+			}
 		}
 	}
 }

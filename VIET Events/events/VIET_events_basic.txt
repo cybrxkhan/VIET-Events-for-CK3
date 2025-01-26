@@ -2391,12 +2391,14 @@ VIETmisc.0030 = {
 	}
 
 	after = {
-		random = {
-			chance = 99
-			trigger_event = {
-				id = VIETmisc.0358
-				days = { 30 120 }
-			}
+		hidden_effect = {
+			random = {
+				chance = 99
+				trigger_event = {
+					id = VIETmisc.0358
+					days = { 30 120 }
+				}
+			}			
 		}
 	}
 }
@@ -3839,6 +3841,17 @@ VIETmisc.0049 = {
 			cynical = minor_stress_impact_gain
 			greedy = miniscule_stress_impact_gain
 		}
+		# Likelier to appear if you did it genuinely
+		hidden_effect = {	
+			faith = { save_scope_as = faith } # Save faith in case you convert in the meantime	
+			random = {
+				chance = 99
+				trigger_event = {
+					id = VIETmisc.0359
+					days = { 30 360 }
+				}
+			}
+		}
 	}	
 	option = { # I'll help if they help me
 		name = VIETmisc.0049.c
@@ -3848,6 +3861,17 @@ VIETmisc.0049 = {
 		stress_impact = {
 			zealous = minor_stress_impact_gain
 			generous = miniscule_stress_impact_gain
+		}
+		# Not as likely to appear if you did it for personal gain
+		hidden_effect = {	
+			faith = { save_scope_as = faith } # Save faith in case you convert in the meantime		
+			random = {
+				chance = 99
+				trigger_event = {
+					id = VIETmisc.0359
+					days = { 30 360 }
+				}
+			}
 		}
 	}
 }
@@ -33934,6 +33958,7 @@ VIETmisc.0353 = {
 		hidden_effect = {
 			create_character = {
 				location = root.capital_province
+				template = VIET_traveling_merchant_template
 				culture = root.culture
 				faith = root.faith
 				save_scope_as = merchant		
@@ -33963,7 +33988,7 @@ VIETmisc.0353 = {
 	
 	option = { # Wow cool!
 		name = VIETmisc.0353.b
-		VIET_medium_piety_gain_effect = yes
+		VIET_medium_prestige_gain_effect = yes
 		stress_impact = {
 			cynical = miniscule_stress_impact_gain
 		}
@@ -34254,34 +34279,32 @@ VIETmisc.0356 = {
 	}
 
 	immediate = {
-		immediate = {
-			every_courtier_or_guest = {
-				limit = {
-					is_available_ai_adult = yes
-					culture_has_european_heritage_pillar_trigger = yes
-					religion = religion:christianity_religion
-					NOT = {	culture = { has_cultural_pillar = heritage_israelite } }
-				}
-				add_to_list = candidate_characters
+		every_courtier_or_guest = {
+			limit = {
+				is_available_ai_adult = yes
+				culture_has_european_heritage_pillar_trigger = yes
+				religion = religion:christianity_religion
+				NOT = {	culture = { has_cultural_pillar = heritage_israelite } }
 			}
-			every_vassal = {
-				limit = {
-					is_available_ai_adult = yes
-					culture_has_european_heritage_pillar_trigger = yes
-					religion = religion:christianity_religion
-					NOT = {	culture = { has_cultural_pillar = heritage_israelite } }
-				}
-				add_to_list = candidate_characters
+			add_to_list = candidate_characters
+		}
+		every_vassal = {
+			limit = {
+				is_available_ai_adult = yes
+				culture_has_european_heritage_pillar_trigger = yes
+				religion = religion:christianity_religion
+				NOT = {	culture = { has_cultural_pillar = heritage_israelite } }
 			}
-			random_in_list = {
-				list = candidate_characters
-				save_scope_as = antisemite
-			}
-			scope:antisemite = {
-				add_character_modifier = {
-					modifier = VIET_distrusts_jews
-					years = 10
-				}
+			add_to_list = candidate_characters
+		}
+		random_in_list = {
+			list = candidate_characters
+			save_scope_as = antisemite
+		}
+		scope:antisemite = {
+			add_character_modifier = {
+				modifier = VIET_distrusts_jews
+				years = 10
 			}
 		}
 	}
@@ -34389,47 +34412,45 @@ VIETmisc.0357 = {
 	}
 
 	immediate = {
-		immediate = {
-			every_courtier_or_guest = {
-				limit = {
-					is_available_ai_adult = yes
-					culture_has_european_heritage_pillar_trigger = yes
-					religion = religion:christianity_religion
-					NOT = {	culture = { has_cultural_pillar = heritage_israelite } }
-				}
-				add_to_list = candidate_characters
+		every_courtier_or_guest = {
+			limit = {
+				is_available_ai_adult = yes
+				culture_has_european_heritage_pillar_trigger = yes
+				religion = religion:christianity_religion
+				NOT = {	culture = { has_cultural_pillar = heritage_israelite } }
 			}
-			every_vassal = {
-				limit = {
-					is_available_ai_adult = yes
-					culture_has_european_heritage_pillar_trigger = yes
-					religion = religion:christianity_religion
-					NOT = {	culture = { has_cultural_pillar = heritage_israelite } }
-				}
-				add_to_list = candidate_characters
+			add_to_list = candidate_characters
+		}
+		every_vassal = {
+			limit = {
+				is_available_ai_adult = yes
+				culture_has_european_heritage_pillar_trigger = yes
+				religion = religion:christianity_religion
+				NOT = {	culture = { has_cultural_pillar = heritage_israelite } }
 			}
-			random_in_list = {
-				list = candidate_characters
-				save_scope_as = blonde
+			add_to_list = candidate_characters
+		}
+		random_in_list = {
+			list = candidate_characters
+			save_scope_as = blonde
+		}
+		random_in_list = {
+			list = candidate_characters
+			limit = {
+				exists = scope:blonde
+				NOT = { this = scope:blonde }
 			}
-			random_in_list = {
-				list = candidate_characters
-				limit = {
-					exists = scope:blonde
-					NOT = { this = scope:blonde }
-				}
-				save_scope_as = redhead
+			save_scope_as = redhead
+		}
+		random_in_list = {
+			list = candidate_characters
+			limit = {
+				exists = scope:blonde
+				exists = scope:redhead
+				NOT = { this = scope:blonde }
+				NOT = { this = scope:redhead }
 			}
-			random_in_list = {
-				list = candidate_characters
-				limit = {
-					exists = scope:blonde
-					exists = scope:redhead
-					NOT = { this = scope:blonde }
-					NOT = { this = scope:redhead }
-				}
-				save_scope_as = brunette
-			}
+			save_scope_as = brunette
 		}
 	}
 	
@@ -34549,8 +34570,9 @@ VIETmisc.0358 = {
 			modifier = VIET_embarrassing_incident_rumors
 			years = 10
 		}
+		play_music_cue = mx_cue_stress 
 	}
-	
+
 	option = { # Grr
 		name = VIETmisc.0358.a
 		stress_impact = {
@@ -34576,28 +34598,36 @@ VIETmisc.0358 = {
 			value = average_skill_rating
 			50 = { # It doesn't work
 				show_chance = no
-				custom_tooltip = VIETmisc.0358.b.toast.fail
+				desc = VIETmisc.0358.b.toast.fail
 				compare_modifier = {
 					value = scope:duel_value
 					multiplier = -2.5
 					min = -49
 				}
-				add_legitimacy_ = miniscule_legitimacy_loss
-				remove_character_modifier = VIET_embarrassing_incident_rumors
-				add_character_modifier = {
-					modifier = VIET_embarrassing_incident_rumors_suppression_fail
-					years = 10
+				send_interface_toast = {
+					type = event_toast_effect_bad
+					title = VIETmisc.0358.b.toast.fail	
+					add_legitimacy_ = miniscule_legitimacy_loss
+					remove_character_modifier = VIET_embarrassing_incident_rumors
+					add_character_modifier = {
+						modifier = VIET_embarrassing_incident_rumors_suppression_fail
+						years = 10
+					}
 				}
 			}
 			50 = { # It works
 				show_chance = no
-				custom_tooltip = VIETmisc.0358.b.toast.success
+				desc = VIETmisc.0358.b.toast.success
 				compare_modifier = {
 					value = scope:duel_value
 					multiplier = 2.5
 					min = -49
 				}
-				remove_character_modifier = VIET_embarrassing_incident_rumors
+				send_interface_toast = {
+					type = event_toast_effect_good
+					title = VIETmisc.0358.b.toast.success	
+					remove_character_modifier = VIET_embarrassing_incident_rumors
+				}
 			}
 		}
 	}
@@ -34622,24 +34652,116 @@ VIETmisc.0359 = {
 
 
 	trigger = {	
-		is_landed_or_landless_administrative = yes
+		root.faith = scope:faith # Make sure you still have the same faith
 	}
 
 	immediate = {
-		add_character_modifier = {
-			modifier = VIET_embarrassing_incident_rumors
-			years = 10
-		}
+		play_music_cue = mx_cue_sacredrite 
 	}
 	
 	option = { # Grr
 		name = VIETmisc.0359.a
+		VIET_huge_piety_gain_effect = yes
+		add_character_modifier = {
+			modifier = VIET_divine_approval_of_good_deed
+			years = 10
+		}
 		stress_impact = {
-			base = miniscule_stress_impact_gain
-			arrogant = minor_stress_impact_gain
-			ambitious = minor_stress_impact_gain
-			wrathful = miniscule_stress_impact_gain
-			stubborn = miniscule_stress_impact_gain
+			base = miniscule_stress_impact_loss
+			zealous = medium_stress_impact_loss
+			ambitious = miniscule_stress_impact_loss
+			diligent = miniscule_stress_impact_loss
+			humble = minor_stress_impact_loss
+		}
+	}
+
+
+}
+
+
+# Follow up to VIETold.2015: Poet tells historical story with inaccuracy AKA Badhistory
+# Correcting badhistory nets you gain a good reputation
+VIETmisc.0360 = {
+	type = character_event
+	title = VIETmisc.0360.t
+	desc = VIETmisc.0360.desc
+	theme = learning
+	override_background = { reference = sitting_room }
+	
+
+	left_portrait = {
+		character = scope:courtier
+		animation = throne_room_conversation_2
+	}
+
+	right_portrait = {
+		character = root
+		animation = frontend_center_idle
+	}
+
+
+	trigger = {	
+		OR = {
+			any_courtier_or_guest = {
+				is_available_ai_adult = yes
+				opinion = {
+					target = root
+					value >= 0
+				}
+			}
+			any_vassal = {
+				is_available_ai_adult = yes
+				opinion = {
+					target = root
+					value >= 0
+				}
+			}
+		}
+	}
+
+	immediate = {
+		every_courtier_or_guest = {
+			limit = {
+				is_available_ai_adult = yes
+				opinion = {
+					target = root
+					value >= 0
+				}
+			}
+			add_to_list = candidate_characters
+		}
+		every_vassal = {
+			limit = {
+				is_available_ai_adult = yes
+				opinion = {
+					target = root
+					value >= 0
+				}
+			}
+			add_to_list = candidate_characters
+		}
+		random_in_list = {
+			list = candidate_characters
+			save_scope_as = courtier
+		}
+	}
+	
+	option = { # Ok
+		name = VIETmisc.0359.a
+		add_learning_skill = 1
+		add_character_modifier = {
+			modifier = VIET_eradicator_of_bad_history
+			years = 20
+		}
+		stress_impact = {
+			ambitious = miniscule_stress_impact_loss
+			diligent = miniscule_stress_impact_loss
+			scholar = miniscule_stress_impact_loss
+			education_learning_1 = miniscule_stress_impact_loss
+			education_learning_2 = miniscule_stress_impact_loss
+			education_learning_3 = miniscule_stress_impact_loss
+			education_learning_4 = miniscule_stress_impact_loss
+			education_learning_5 = miniscule_stress_impact_loss
 		}
 	}
 
