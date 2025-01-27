@@ -10,6 +10,6 @@ RICE_nick_the_liar_desc:1 "[CHARACTER.GetShortUINameNoTooltipNoFormat|U] sabe mu
 VIET_nick_crow_lord_desc:1 "Los cuervos parecen gravitar hacia [CHARACTER.GetShortUINameNoTooltipNoFormat]. Se dice que [CharEllaEl(CHARACTER)] [CharTieneTienen(CHARACTER)] temibles, oscuras y arcanas habilidades como resultado de su amistad con estos cuervos."
  VIET_nick_crow_lady:0 "La Dama de los Cuervos"
  VIET_nick_crow_lady_desc:0 "$VIET_nick_crow_lord_desc$"
- dynn_VIET_dreamer:0 ""
+ dynn_VIET_dreamer:0 "無"
  VIET_nick_runs_in_circles:0 "Corre en Círculos"
  VIET_nick_runs_in_circles_desc:0 "[CHARACTER.GetShortUINameNoTooltipNoFormat|U] no está bien de la cabeza, y corre por ahí gritando "¡Ni ni ni ni ni!" a menudo."
