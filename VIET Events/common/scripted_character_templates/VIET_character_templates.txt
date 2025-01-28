@@ -1045,4 +1045,21 @@ VIET_traveling_merchant_template = {
 	}
 }
 
+VIET_traveling_merchant_template_male = {
+	age = { 20 60 }
+	trait = lifestyle_traveler
+	gender_female_chance = 0
+	random_traits_list = {
+		education_stewardship_1 = { weight = { base = 10 } }
+		education_stewardship_2 = { weight = { base = 30 } }
+		education_stewardship_3 = { weight = { base = 30 } }
+		education_stewardship_4 = { weight = { base = 20 } }
+	}
+	random_traits = yes
+	
+	after_creation = {
+		VIET_ek_character_setup_effect = yes
+	}
+}
+
 

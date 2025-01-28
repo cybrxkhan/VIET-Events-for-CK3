@@ -1108,29 +1108,29 @@ VIETold.2015 = {
 		}
 		hidden_effect = {
 			random = {
-				chance = 99
+				chance = 8
 				modifier = {
-					add = 4
+					add = 2
 					has_trait = compassionate
 				}
 				modifier = {
-					add = 4
+					add = 2
 					has_trait = calm
 				}
 				modifier = {
-					add = 4
+					add = 2
 					has_trait = patient
 				}
 				modifier = {
-					add = 4
+					add = 2
 					has_trait = just
 				}
 				modifier = {
-					add = 4
-					has_trait = shy
+					add = 2
+					has_trait = gregarious
 				}
 				modifier = {
-					add = 4
+					add = 2
 					has_trait = scholar
 				}
 				trigger_event = {
@@ -1151,29 +1151,29 @@ VIETold.2015 = {
 		}
 		hidden_effect = {
 			random = {
-				chance = 99
+				chance = 8
 				modifier = {
-					add = 4
+					add = 2
 					has_trait = compassionate
 				}
 				modifier = {
-					add = 4
+					add = 2
 					has_trait = calm
 				}
 				modifier = {
-					add = 4
+					add = 2
 					has_trait = patient
 				}
 				modifier = {
-					add = 4
+					add = 2
 					has_trait = just
 				}
 				modifier = {
-					add = 4
-					has_trait = shy
+					add = 2
+					has_trait = gregarious
 				}
 				modifier = {
-					add = 4
+					add = 2
 					has_trait = scholar
 				}
 				trigger_event = {
@@ -1194,29 +1194,29 @@ VIETold.2015 = {
 		}
 		hidden_effect = {
 			random = {
-				chance = 99
+				chance = 8
 				modifier = {
-					add = 4
+					add = 2
 					has_trait = compassionate
 				}
 				modifier = {
-					add = 4
+					add = 2
 					has_trait = calm
 				}
 				modifier = {
-					add = 4
+					add = 2
 					has_trait = patient
 				}
 				modifier = {
-					add = 4
+					add = 2
 					has_trait = just
 				}
 				modifier = {
-					add = 4
-					has_trait = shy
+					add = 2
+					has_trait = gregarious
 				}
 				modifier = {
-					add = 4
+					add = 2
 					has_trait = scholar
 				}
 				trigger_event = {

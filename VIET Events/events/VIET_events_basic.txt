@@ -2393,7 +2393,7 @@ VIETmisc.0030 = {
 	after = {
 		hidden_effect = {
 			random = {
-				chance = 99
+				chance = 20
 				trigger_event = {
 					id = VIETmisc.0358
 					days = { 30 120 }
@@ -3845,7 +3845,7 @@ VIETmisc.0049 = {
 		hidden_effect = {	
 			faith = { save_scope_as = faith } # Save faith in case you convert in the meantime	
 			random = {
-				chance = 99
+				chance = 25
 				trigger_event = {
 					id = VIETmisc.0359
 					days = { 30 360 }
@@ -3866,7 +3866,7 @@ VIETmisc.0049 = {
 		hidden_effect = {	
 			faith = { save_scope_as = faith } # Save faith in case you convert in the meantime		
 			random = {
-				chance = 99
+				chance = 10
 				trigger_event = {
 					id = VIETmisc.0359
 					days = { 30 360 }
@@ -33958,7 +33958,7 @@ VIETmisc.0353 = {
 		hidden_effect = {
 			create_character = {
 				location = root.capital_province
-				template = VIET_traveling_merchant_template
+				template = VIET_traveling_merchant_template_male
 				culture = root.culture
 				faith = root.faith
 				save_scope_as = merchant		
@@ -34023,7 +34023,7 @@ VIETmisc.0353 = {
 			limit = {
 				has_game_rule = VIET_historical_context_on
 			}
-			custom_tooltip = VIETold.0353.info
+			custom_tooltip = VIETmisc.0353.info
 		}
 	}
 
@@ -34118,7 +34118,7 @@ VIETmisc.0354 = {
 			limit = {
 				has_game_rule = VIET_historical_context_on
 			}
-			custom_tooltip = VIETold.0354.info
+			custom_tooltip = VIETmisc.0354.info
 		}
 	}
 
@@ -34144,6 +34144,7 @@ VIETmisc.0355 = {
 		has_game_rule = VIET_normal_universe_events
 		# Should not happen to cultures where redheads could feasibly appear in large enough numbers
 		culture_has_european_heritage_pillar_trigger = no
+		#culture_has_mena_heritage_pillar_trigger = no
 		culture_has_north_african_heritage_pillar_trigger = no
 		# Should not happen in locations with those kinds of cultures
 		capital_province = {
@@ -34316,7 +34317,11 @@ VIETmisc.0356 = {
 	
 	option = { # Yeah, he was probably a redhead
 		name = VIETmisc.0356.b
-		VIET_small_prestige_gain_effect = yes
+		VIET_small_prestige_gain_effect = yes		
+		add_character_modifier = {
+			modifier = VIET_distrusts_jews
+			years = 10
+		}
 		scope:antisemite = {
 			add_opinion = {
 				target = root
@@ -34620,7 +34625,7 @@ VIETmisc.0358 = {
 				send_interface_toast = {
 					type = event_toast_effect_bad
 					title = VIETmisc.0358.b.toast.fail	
-					add_legitimacy_ = miniscule_legitimacy_loss
+					add_legitimacy = miniscule_legitimacy_loss
 					remove_character_modifier = VIET_embarrassing_incident_rumors
 					add_character_modifier = {
 						modifier = VIET_embarrassing_incident_rumors_suppression_fail
@@ -34760,7 +34765,7 @@ VIETmisc.0360 = {
 	}
 	
 	option = { # Ok
-		name = VIETmisc.0359.a
+		name = VIETmisc.0360.a
 		add_learning_skill = 1
 		add_character_modifier = {
 			modifier = VIET_eradicator_of_bad_history
