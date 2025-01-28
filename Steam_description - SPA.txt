@@ -54,8 +54,8 @@ Por favor, echa un vistazo a [url=https://steamcommunity.com/workshop/filedetail
 
 [h1]Versión 1.14.3 "Catalina de Aragón"[/h1]
 
-[I]“Lastly, I make this vow, that mine eyes desire you above all things.”
-- Catherine of Aragon’s deathbed letter to King Henry VIII[/I]
+[I]"Por último, hago este voto: que mis ojos te desean por encima de todas las cosas."
+- Última carta de Catalina de Aragón a Enrique VIII desde su lecho de muerte[/I]
 
 Nuevos eventos añadidos en esta versión: [B]11[/B]
 
