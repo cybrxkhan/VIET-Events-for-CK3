@@ -1,7 +1,7 @@
-[img]https://i.imgur.com/nJKGDHZ.jpg[/img]
+[img]https://i.imgur.com/t3x7oKz.jpg[/img]
 
-[h1]Versión actual: 1.14.2 "Arcadia" 
-(Lanzamiento: 02/12/24, Compatible con versión vanilla 1.14.X)[/h1]
+[h1]Versión actual: 1.14.3 "Catalina de Aragón" 
+(Lanzamiento: 28/01/25, Compatible con versión vanilla 1.14.X)[/h1]
 
 [url=https://discord.gg/9KuyXv2uZA]Servidor de Discord de mis Mods[/url]
 [B]Echa un Vistazo a [url=https://forum.paradoxplaza.com/forum/threads/mod-viet-events-for-ck3-a-flavor-and-immersion-event-mod.1422081/]Tema del Foro[/url] Para Más Información[/B]
@@ -26,7 +26,7 @@ Siéntete libre de usar mi trabajo con tus mods - todo lo que pido es reconocimi
 [img]http://i.imgur.com/EyXurbK.jpg[/img]
 
 [LIST]
-[*]¡Más de [B][U]1164[/U] nuevos eventos[/B] para experimentar!
+[*]¡Más de [B][U]1175[/U] nuevos eventos[/B] para experimentar!
 [*]Explora nuevas decisiones, artefactos, interacciones y cadenas de eventos
 [*]Regla de juego para desactivar los eventos estúpidos para aquellos que no les guste, con tres niveles para escoger entre: Balanceado (Predeterminado), Serio (Restringido), y Todos los eventos (Todo)
 [*][B]Compatible con casi cualquier cosa[/B] ya que no modifico archivos del vanilla - incluso con mods de conversión total puedes desactivar los eventos que hagan referencias a cosas o lugares específicos del mundo medieval que no tendrían sentido en otros periodos o universos (como mods fantásticos o de ciencia ficción)
@@ -52,11 +52,12 @@ Por favor, echa un vistazo a [url=https://steamcommunity.com/workshop/filedetail
 
 [img]http://i.imgur.com/RQ5QZTF.jpg[/img]
 
-[h1]Versión 1.14.2 "Arcadia"[/h1]
+[h1]Versión 1.14.3 "Catalina de Aragón"[/h1]
 
-[I]Esta actualización conmemora el 12º aniversario del lanzamiento de la primera versión de VIET para CK2 el 12/11/12. VIET comenzó más como VIET+RICE, y los VIETeranos recordarán que muchas cosas han cambiado desde 2012, pero espero sinceramente que VIET y RICE hayan evolucionado para mejor. Como siempre, estoy agradecido a todos ustedes por su apoyo durante estos 12 años en mi carrera de modding para CK. [/I]
+[I]“Lastly, I make this vow, that mine eyes desire you above all things.”
+- Catherine of Aragon’s deathbed letter to King Henry VIII[/I]
 
-Nuevos eventos añadidos en esta versión: [B]6[/B]
+Nuevos eventos añadidos en esta versión: [B]11[/B]
 
 
 
