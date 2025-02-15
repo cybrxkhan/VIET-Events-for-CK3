@@ -3643,6 +3643,24 @@ VIET_eradicator_of_bad_history = {
 	monthly_learning_lifestyle_xp_gain_mult = 0.1
 }
 
+VIET_rosemary_flower_tonic = {
+	icon = fertility_positive
+	negate_health_penalty_add = 0.3
+}
+
+VIET_candied_flowers = {
+	icon = fertility_positive
+	stress_loss_mult = 0.1
+	owned_personal_scheme_success_chance_add = 2
+	monthly_court_grandeur_change_add = 0.1
+}
+
+VIET_wildflowers_gift = {
+	icon = fertility_positive
+	stress_gain_mult = -0.05
+	stress_loss_mult = 0.05
+}
+
 
 
 

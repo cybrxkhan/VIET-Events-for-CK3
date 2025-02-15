@@ -499,6 +499,10 @@ VIET_events_yearly_pulse = {
 		# Redhead
 		100 = VIETmisc.0354 	# Buy quality henna?
 		100 = VIETmisc.0357 	# Favorite hair color?
+		# Flowers
+		100 = VIETmisc.0362 	# Physician suggests a tonic based on rosemary flowers
+		100 = VIETmisc.0364 	# Lover offers you flowers one day
+		100 = VIETmisc.0365 	# You and a lover enjoy playing with some flowers one day
 	}
 }
 
@@ -909,6 +913,9 @@ VIET_events_tri_yearly_pulse = {
 		100 = VIETmisc.0352		# Troupe of entertainers who know how to use fire
 		# Redhead
 		100 = VIETmisc.0356		# Conversation about Judas Iscariot's red hair
+		# Flowers
+		100 = VIETmisc.0361		# Discuss a legend about how the rose got its thorns with a courtier
+		100 = VIETmisc.0363		# Eating candied flowers
 	}
 }
 
