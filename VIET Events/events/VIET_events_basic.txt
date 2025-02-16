@@ -35149,7 +35149,7 @@ VIETmisc.0364 = {
 	title = VIETmisc.0364.t
 	desc = VIETmisc.0364.desc
 	theme = love
-	override_background = { reference = garden }
+	override_background = { reference = VIET_background_tuscan_country }
 
 	
 	left_portrait = {

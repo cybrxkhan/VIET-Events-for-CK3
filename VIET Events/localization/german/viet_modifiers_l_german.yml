@@ -1472,4 +1472,10 @@
  VIET_eradicator_of_bad_history:0 "Eradicator of Bad History"
  VIET_eradicator_of_bad_history_desc:0 "This character is renowned for their knowledge about history, as they are passionate about making sure that others do not perpetuate problematic, even incorrect understandings of history."
  # Version 1.14.4 Start Here - Note to Translators: please leave this comment here and do not remove it even in your versions of the loc
+ VIET_rosemary_flower_tonic:0 "Rosemary Flower Tonic"
+ VIET_candied_flowers:0 "Candied Flowers"
+ VIET_candied_flowers_desc:0 "This character has contacted a confectioner, known for their candied flowers, to supply them with these sweets."
+ VIET_wildflowers_gift:0 "Gift of Wildflowers from a Lover"
+ VIET_wildflowers_gift_desc:0 "#italic “These flowers are like the pleasures of the world.”#!"
+ # Version 1.14.5 Start Here - Note to Translators: please leave this comment here and do not remove it even in your versions of the loc
  xxxxxxxxxx:0 "xxx"
