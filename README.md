@@ -1,11 +1,11 @@
 # VIET Events for CK3
 
-<img src="https://i.imgur.com/t3x7oKz.jpg">
+<img src="https://i.imgur.com/Qi2xIeN.jpg">
 
-## Latest Version: 1.14.3 "Catherine of Aragon" (Released 1/28/25)
+## Latest Version: 1.14.4 "Flora" (Released 2/16/25)
 
-_“Lastly, I make this vow, that mine eyes desire you above all things.”_
-_- Catherine of Aragon’s deathbed letter to King Henry VIII_
+_“These flowers are like the pleasures of the world.”_
+_- William Shakespeare, Cymbeline_
 
 Very Immersive Events and Tales (VIET), the sequel to VIET Events Reborn for CK2, is a flavor mod that adds a vast collection of events about everyday life to spice up your game. They add immersion and a diversity of experiences in between wars and vanilla’s event chains, and cover mundane minutiae ranging from small talk with courtiers and eating local cuisine to epic tales about love, philosophy, and the human condition. Some of the events unlock new decisions, character interactions, activities, and much more for you to explore!
 
@@ -39,15 +39,11 @@ The mod folder should look something like this:
 
 ## Changelog
 
-### Version 1.14.3 "Arcadia"
+### Version 1.14.4 "Flora"
 
-New events added in this version: **11**
+New events added in this version: **5**
 
-- Added 11 events with the following themes:
-    - 5 Redhead
-    - 3 Ear*
-    - 3 Follow Up Events to old events
-- Set a dynasty name for the Dreamers since it creates an error in the error log
+- Added 5 flower themed events
 - Miscellaneous bugfixes and tweaks
 
 \* Adapted from VIET for CK2

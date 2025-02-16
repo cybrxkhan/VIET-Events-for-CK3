@@ -1,6 +1,6 @@
-[img]https://i.imgur.com/t3x7oKz.jpg[/img]
+[img]https://i.imgur.com/Qi2xIeN.jpg[/img]
 
-[h1]Current Version: 1.14.3 "Catherine of Aragon" (Released 1/28/25, Compatible with vanilla patch 1.14.X)[/h1]
+[h1]Current Version: 1.14.4 "Flora" (Released 2/16/25, Compatible with vanilla patch 1.14.X)[/h1]
 
 [h1][B][url=https://discord.gg/9KuyXv2uZA]Discord Server for my mods[/url]
 [url=https://cybrxkhansmods.godaddysites.com/]Official Website for my mods[/url][/B][/h1]
@@ -25,7 +25,7 @@ Feel free to use my work in your mods - all I ask is that I am credited and (if 
 [img]http://i.imgur.com/EyXurbK.jpg[/img]
 
 [LIST]
-[*]Over [B][U]1175[/U] new flavor events[/B] to experience!
+[*]Over [B][U]1180[/U] new flavor events[/B] to experience!
 [*]Explore new decisions, artifacts, character interactions, activities, and more!
 [*]Game rule to disable sillier events for those who don't like them, with three levels to choose from: Balanced (Default), Serious (Restricted), and All Events (Full)
 [*][B]Compatible with almost anything[/B] since it doesn't touch any vanilla files - even with overhaul mods, you can via game rule disable events that reference things specific to our medieval world that wouldn’t make sense in other time periods or universes (like fantasy/sci-fi conversion mods)
@@ -51,21 +51,15 @@ Please see the [url=https://cybrxkhansmods.godaddysites.com/faq]FAQ on my mods' 
 
 [img]http://i.imgur.com/RQ5QZTF.jpg[/img]
 
-[h1]Version 1.14.3 "Catherine of Aragon"[/h1]
+[h1]Version 1.14.4 "Flora"[/h1]
 
-[I]“Lastly, I make this vow, that mine eyes desire you above all things.”
-- Catherine of Aragon’s deathbed letter to King Henry VIII[/I]
+[I]“These flowers are like the pleasures of the world.”
+- William Shakespeare, Cymbeline[/I]
 
-New events added in this version: [B]11[/B]
+New events added in this version: [B]5[/B]
 
 [LIST]
-[*]Added 11 events with the following themes:
-[LIST]
-[*]5 Redhead
-[*]3 Ear*
-[*]3 Follow Up Events to old events
-[/LIST]
-[*]Set a dynasty name for the Dreamers since it creates an error in the error log
+[*]Added 5 flower themed events
 [*]Miscellaneous bugfixes and tweaks
 [/LIST]
 
