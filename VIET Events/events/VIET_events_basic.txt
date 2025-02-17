@@ -34382,6 +34382,7 @@ VIETmisc.0357 = {
 
 	trigger = {	
 		has_game_rule = VIET_normal_universe_events
+		is_landed = yes # To prevent error messages below
 		VIET_is_redhead_or_blonde_area_or_culture = yes
 		NOT = { has_trait = celibate }
 		NOT = { has_sexuality = asexual }
