@@ -54,8 +54,8 @@ Por favor, echa un vistazo a [url=https://steamcommunity.com/workshop/filedetail
 
 [h1]Versión 1.14.4 "Flora"[/h1]
 
-[I]“These flowers are like the pleasures of the world.”
-- William Shakespeare, Cymbeline[/I]
+[I]“Estas flores son como los placeres del mundo.”
+- William Shakespeare, Cimbelino[/I]
 
 Nuevos eventos añadidos en esta versión: [B]5[/B]
 
