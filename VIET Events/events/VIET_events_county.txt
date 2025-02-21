@@ -40,6 +40,7 @@
 # 3059-3060		Shark
 # 3061-3063		Three
 # 3064-3066 	Forest
+# 3067-3068 	Snow
 # 
 ############################################################################################################################
 
@@ -6495,7 +6496,7 @@ VIETmisc.3066 = {
 			limit = {
 				has_game_rule = VIET_historical_context_on
 			}
-			custom_tooltip = VIETmisc.3064.info
+			custom_tooltip = VIETmisc.3066.info
 		}
 	}
 
@@ -6507,3 +6508,225 @@ VIETmisc.3066 = {
 
 
 
+
+
+##################################################################
+# SNOW 3067-3068
+##################################################################
+
+
+# Snowfall causes destruction to local buildings and lives
+VIETmisc.3067 = {
+	type = character_event
+	title = VIETmisc.3067.t
+	desc = VIETmisc.3067.desc
+	theme = unfriendly
+	override_background = { reference = burning_building }
+	override_effect_2d = {
+		reference = smoke
+	}
+	
+	right_portrait = {
+		character = root
+		animation = worry
+	}
+
+	widget = {
+		gui = "event_window_widget_vfx_snow"
+		container = "foreground_shader_vfx_container"
+	}
+		
+	trigger = {
+		any_held_title = {
+			tier = tier_county
+			any_county_province = {
+				OR = {
+					has_province_modifier = winter_harsh_modifier
+					has_province_modifier = winter_normal_modifier
+					has_province_modifier = winter_mild_modifier
+				}				
+			}
+		}	
+	}
+	
+    weight_multiplier = {
+        base = 0
+		modifier = {
+			add = {
+				every_held_title = {
+					limit = { tier = tier_county }
+					add = 1
+				}
+			}		
+		}
+    }
+	
+
+	immediate = {
+		play_music_cue = mx_cue_stress  
+		random_held_title = {
+			limit = {
+				tier = tier_county
+				any_county_province = {
+					OR = {
+						has_province_modifier = winter_harsh_modifier
+						has_province_modifier = winter_normal_modifier
+						has_province_modifier = winter_mild_modifier
+					}				
+				}
+			}	
+			save_scope_as = county
+		}
+	}
+
+	# Ok
+	option = {
+		name = VIETmisc.3067.a
+		trigger = {
+			OR = {
+				gold >= 50
+				is_ai = no
+			}
+		}
+		remove_short_term_gold = 50
+		VIET_huge_piety_gain_effect = yes
+		stress_impact = {
+			callous = miniscule_stress_impact_gain
+			greedy = miniscule_stress_impact_gain
+		}
+		add_character_modifier = {
+			modifier = VIET_snowfall_relief
+			years = 10
+		}
+		scope:county = {
+			add_county_modifier = {
+				modifier = VIET_destructive_snowfall
+				years = 4
+			}	
+		}
+		custom_tooltip = VIET_decrease_county_modifier_time
+	}
+
+	# Ok
+	option = {
+		name = VIETmisc.3067.b
+		stress_impact = {
+			generous = minor_stress_impact_gain
+			compassionate = minor_stress_impact_gain
+			diligent = miniscule_stress_impact_gain
+			just = miniscule_stress_impact_gain
+		}
+		scope:county = {
+			add_county_modifier = {
+				modifier = VIET_destructive_snowfall
+				years = 10
+			}	
+		}
+	}
+
+}
+
+# Snowmelt in area is even better than normal, allowing for a better harvest
+VIETmisc.3068 = {
+	type = character_event
+	title = VIETmisc.3068.t
+	desc = VIETmisc.3068.desc
+	theme = VIET_theme_tuscan_country
+	
+	right_portrait = {
+		character = root
+		animation = worry
+	}
+
+		
+	trigger = {
+		any_held_title = {
+			tier = tier_county
+			any_county_province = {
+				OR = {
+					terrain = hills
+					terrain = mountains
+					terrain = desert_mountains
+					terrain = taiga
+				}	
+				# Should have a proper settlement that would make use of agriculture
+				OR = {
+					has_holding_type = city_holding
+					has_holding_type = castle_holding
+					has_holding_type = church_holding
+				}		
+			}
+		}	
+	}
+	
+    weight_multiplier = {
+        base = 0
+		modifier = {
+			add = {
+				every_held_title = {
+					limit = { tier = tier_county }
+					add = 1
+				}
+			}		
+		}
+    }
+	
+
+	immediate = {
+		play_music_cue = mx_cue_stress  
+		random_held_title = {
+			limit = {
+				tier = tier_county
+				any_county_province = {
+					OR = {
+						terrain = hills
+						terrain = mountains
+						terrain = desert_mountains
+						terrain = taiga
+					}	
+					# Should have a proper settlement that would make use of agriculture
+					OR = {
+						has_holding_type = city_holding
+						has_holding_type = castle_holding
+						has_holding_type = church_holding
+					}			
+				}
+			}	
+			save_scope_as = county
+		}
+		scope:county = {
+			random_list = {
+				10 = {
+					add_county_modifier = {
+						modifier = VIET_good_snowmelt
+						years = 6
+					}				
+				}
+				10 = {
+					add_county_modifier = {
+						modifier = VIET_good_snowmelt
+						years = 8
+					}				
+				}
+				10 = {
+					add_county_modifier = {
+						modifier = VIET_good_snowmelt
+						years = 10
+					}				
+				}
+				10 = {
+					add_county_modifier = {
+						modifier = VIET_good_snowmelt
+						years = 12
+					}				
+				}
+			}	
+		}	
+	}
+
+	# Ok
+	option = {
+		name = VIETmisc.3068.a
+	}
+
+}

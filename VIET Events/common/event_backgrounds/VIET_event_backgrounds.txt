@@ -847,3 +847,12 @@ VIET_background_night_beach = {
 		ambience = "event:/DLC/FP1/SFX/Events/event_beached_longships"
 	}
 }
+
+### NIGHT BEACH ###
+VIET_background_snowy_winter_wonderland = {
+	background = {
+		reference = "gfx/interface/illustrations/event_scenes/VIET_snowy_winter_wonderland.dds"
+		environment = "environment_hunt_snowy_forest"
+		ambience = "event:/SFX/Events/Backgrounds/mountains_day" 
+	}
+}

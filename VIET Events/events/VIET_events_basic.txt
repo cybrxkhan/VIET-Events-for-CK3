@@ -67,6 +67,7 @@
 # 0353-0357		Redhead
 # 0358-0360		Follow Up Events (on old/other events)
 # 0361-0365		Flower
+# 0366-0368		Snow
 # 
 ############################################################################################################################
 
@@ -35401,4 +35402,351 @@ VIETmisc.0365 = {
 
 
 
+}
+
+
+
+
+##################################################################
+# SNOW 0366-0368
+##################################################################
+
+
+# Courtier gets stuck outside in a snowstorm and returns
+VIETmisc.0366 = {
+	type = character_event
+	title = VIETmisc.0366.t
+	desc = VIETmisc.0366.desc
+	theme = unfriendly
+	override_background = { reference = VIET_background_snowy_winter_wonderland }
+	
+
+	# left_portrait = {
+	# 	character = root
+	# 	animation = shock
+	# }
+
+	right_portrait = {
+		character = scope:courtier
+		animation = shiver
+	}
+
+	widget = {
+		gui = "event_window_widget_vfx_snow"
+		container = "foreground_shader_vfx_container"
+	}
+
+	trigger = {	
+		location_has_winter_trigger = yes
+		OR = {
+			any_courtier_or_guest = {
+				is_available_ai_adult = yes
+			}
+			any_vassal = {
+				is_available_ai_adult = yes
+			}
+		}
+	}
+	
+	weight_multiplier = {
+		base = 1
+		modifier = {
+			add = 0.2
+			has_trait = lazy
+		}
+		modifier = {
+			add = -0.2
+			has_trait = diligent
+		}
+		modifier = {
+			add = 0.2
+			has_trait = content
+		}
+		modifier = {
+			add = -0.2
+			has_trait = ambitious
+		}
+		modifier = {
+			add = 0.2
+			has_trait = craven
+		}
+		modifier = {
+			add = -0.2
+			has_trait = brave
+		}
+	}
+
+	immediate = {
+		every_courtier_or_guest = {
+			limit = {
+				is_available_ai_adult = yes
+			}
+			add_to_list = candidate_characters
+		}
+		every_vassal = {
+			limit = {
+				is_available_ai_adult = yes
+			}
+			add_to_list = candidate_characters
+		}
+		random_in_list = {
+			list = candidate_characters
+			save_scope_as = courtier
+		}
+		scope:courtier = {
+			stress_impact = {
+				base = minor_stress_impact_gain
+				lazy = miniscule_stress_impact_gain
+			}
+			add_character_modifier = {
+				modifier = VIET_suffering_from_cold
+				years = 1
+			}
+		}
+	}
+	
+	option = { # glad you're okay
+		name = VIETmisc.0366.a
+		stress_impact = {
+			callous = miniscule_stress_impact_gain
+			sadistic = miniscule_stress_impact_gain
+			arrogant = miniscule_stress_impact_gain
+		}
+		scope:courtier = {
+			add_opinion = {
+				target = root
+				modifier = VIET_showed_sympathy
+			}		
+		}
+	}
+	
+	option = { # whatever
+		name = VIETmisc.0366.b
+		stress_impact = {
+			compassionate = miniscule_stress_impact_gain
+			humble = miniscule_stress_impact_gain
+			patient = miniscule_stress_impact_gain
+		}
+		VIET_medium_prestige_gain_effect = yes
+		scope:courtier = {
+			add_opinion = {
+				target = root
+				modifier = VIET_showed_no_sympathy
+			}			
+		}
+	}
+	
+}
+
+
+# Courtier really likes eating snow
+VIETmisc.0367 = {
+	type = character_event
+	title = VIETmisc.0367.t
+	desc = VIETmisc.0367.desc
+	theme = mental_health
+	override_background = { reference = VIET_background_snowy_winter_wonderland }
+	
+
+	left_portrait = {
+		character = root
+		animation = disgust
+	}
+
+	right_portrait = {
+		character = scope:courtier
+		animation = personality_irrational
+	}
+
+	# widget = {
+	# 	gui = "event_window_widget_vfx_snow"
+	# 	container = "foreground_shader_vfx_container"
+	# }
+
+	trigger = {	
+		location_has_winter_trigger = yes
+		OR = {
+			any_courtier_or_guest = {
+				is_available_ai_adult = yes
+				OR = {
+					has_trait = eccentric
+					has_trait = possessed
+					has_trait = depressed
+					has_trait = lunatic
+					has_trait = wrathful
+					has_trait = impatient
+					has_trait = intellect_bad_1
+					has_trait = intellect_bad_2
+					has_trait = intellect_bad_3
+				}
+			}
+			any_vassal = {
+				is_available_ai_adult = yes
+				OR = {
+					has_trait = eccentric
+					has_trait = possessed
+					has_trait = depressed
+					has_trait = lunatic
+					has_trait = wrathful
+					has_trait = impatient
+					has_trait = intellect_bad_1
+					has_trait = intellect_bad_2
+					has_trait = intellect_bad_3
+				}
+			}
+		}
+	}
+	
+	weight_multiplier = {
+		base = 1
+		modifier = {
+			add = 0.2
+			has_trait = diligent
+		}
+		modifier = {
+			add = -0.2
+			has_trait = lazy
+		}
+		modifier = {
+			add = 0.2
+			has_trait = just
+		}
+		modifier = {
+			add = -0.2
+			has_trait = arbitrary
+		}
+		modifier = {
+			add = 0.2
+			has_trait = patient
+		}
+		modifier = {
+			add = -0.2
+			has_trait = impatient
+		}
+	}
+
+	immediate = {
+		every_courtier_or_guest = {
+			limit = {
+				is_available_ai_adult = yes
+				OR = {
+					has_trait = eccentric
+					has_trait = possessed
+					has_trait = depressed
+					has_trait = lunatic
+					has_trait = wrathful
+					has_trait = impatient
+					has_trait = intellect_bad_1
+					has_trait = intellect_bad_2
+					has_trait = intellect_bad_3
+				}
+			}
+			add_to_list = candidate_characters
+		}
+		every_vassal = {
+			limit = {
+				is_available_ai_adult = yes
+				OR = {
+					has_trait = eccentric
+					has_trait = possessed
+					has_trait = depressed
+					has_trait = lunatic
+					has_trait = wrathful
+					has_trait = impatient
+					has_trait = intellect_bad_1
+					has_trait = intellect_bad_2
+					has_trait = intellect_bad_3
+				}
+			}
+			add_to_list = candidate_characters
+		}
+		random_in_list = {
+			list = candidate_characters
+			save_scope_as = courtier
+		}
+		scope:courtier = {
+			add_character_modifier = {
+				modifier = VIET_obsessed_with_eating_snow
+				years = 25
+			}
+		}
+	}
+	
+	option = { # wtf
+		name = VIETmisc.0367.a
+		if = {
+			limit = {
+				has_game_rule = VIET_historical_context_on
+			}
+			custom_tooltip = VIETmisc.0367.info
+		}
+	}
+	
+}
+
+
+# Character watching the snow outside and feeling peaceful
+VIETmisc.0368 = {
+	type = character_event
+	title = VIETmisc.0368.t
+	desc = VIETmisc.0368.desc
+	theme = memory_positive
+	override_background = { reference = VIET_background_snowy_winter_wonderland }
+
+
+	right_portrait = {
+		character = root
+		animation = personality_content
+	}
+
+	widget = {
+		gui = "event_window_widget_vfx_snow"
+		container = "foreground_shader_vfx_container"
+	}
+
+	trigger = {	
+		location_has_winter_trigger = yes
+	}
+	
+	weight_multiplier = {
+		base = 1
+		modifier = {
+			add = 0.2
+			has_trait = content
+		}
+		modifier = {
+			add = -0.2
+			has_trait = ambitious
+		}
+		modifier = {
+			add = 0.2
+			has_trait = calm
+		}
+		modifier = {
+			add = -0.2
+			has_trait = wrathful
+		}
+		modifier = {
+			add = 0.2
+			has_trait = patient
+		}
+		modifier = {
+			add = -0.2
+			has_trait = impatient
+		}
+	}
+
+	
+	option = { # wtf
+		name = VIETmisc.0368.a
+		stress_impact = {
+			base = miniscule_stress_impact_loss
+			content = miniscule_stress_impact_loss
+			lazy = miniscule_stress_impact_loss
+			patient = miniscule_stress_impact_loss
+			calm = miniscule_stress_impact_loss
+			shy = miniscule_stress_impact_loss
+		}
+	}
+	
 }
