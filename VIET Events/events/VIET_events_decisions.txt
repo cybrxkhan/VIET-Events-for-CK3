@@ -33,6 +33,7 @@
 # 2063-2072		County Event Decisions
 # 2073-2077		Animals
 # 2078			Generic
+# 2079-2081 	Snow Festival
 # 
 ############################################################################################################################
 
@@ -4521,6 +4522,325 @@ VIETmisc.2078 = {
 		}	
 	}	
 
+}
+
+
+
+
+##################################################################
+# SNOW FESTIVAL 2079-2081
+##################################################################
+
+# Officials suggest the snow festival idea
+VIETmisc.2079 = {
+	type = character_event
+	title = VIETmisc.2079.t
+	desc = VIETmisc.2079.desc
+	theme = feast_activity
+	override_background = { reference = VIET_background_snowy_winter_wonderland }
+	
+	
+	right_portrait = {
+		character = root
+		animation = thinking
+	}
+
+	trigger = {		
+		is_landed = yes
+		exists = capital_province
+		location_has_winter_trigger = yes
+	}
+	
+	weight_multiplier = {
+		base = 1
+		modifier = {
+			add = 0.2
+			has_trait = generous
+		}
+		modifier = {
+			add = -0.2
+			has_trait = greedy
+		}
+		modifier = {
+			add = 0.2
+			has_trait = gregarious
+		}
+		modifier = {
+			add = -0.2
+			has_trait = shy
+		}
+		modifier = {
+			add = 0.2
+			has_trait = diligent
+		}
+		modifier = {
+			add = -0.2
+			has_trait = lazy
+		}
+	}
+	
+	immediate = {
+		random_list = {
+			10 = {
+				add_character_modifier = {
+					modifier = VIET_snow_festival_idea
+					years = 10
+				}
+			}
+			10 = {
+				add_character_modifier = {
+					modifier = VIET_snow_festival_idea
+					years = 15
+				}
+			}
+			10 = {
+				add_character_modifier = {
+					modifier = VIET_snow_festival_idea
+					years = 20
+				}
+			}
+			10 = {
+				add_character_modifier = {
+					modifier = VIET_snow_festival_idea
+					years = 25
+				}
+			}
+		}
+	}
+	
+	option = { # Ok
+		name = VIETmisc.2079.a
+		stress_impact = {
+			greedy = miniscule_stress_impact_gain
+			shy = miniscule_stress_impact_gain
+			arrogant = miniscule_stress_impact_gain
+			paranoid = miniscule_stress_impact_gain
+			callous = miniscule_stress_impact_gain
+		}
+		custom_tooltip = VIETmisc.2079.tooltip
+	}
+	
+	option = { # Ok
+		name = VIETmisc.2079.b
+		VIET_huge_prestige_gain_effect = yes
+		stress_impact = {
+			gregarious = miniscule_stress_impact_gain
+			humble = miniscule_stress_impact_gain
+			lazy = miniscule_stress_impact_gain
+			generous = miniscule_stress_impact_gain
+		}
+		remove_character_modifier = VIET_snow_festival_idea
+	}
+
+	after = {				
+		if = {
+			limit = {
+				has_game_rule = VIET_historical_context_on
+			}
+			custom_tooltip = VIET_decision_snow_festival_context_tooltip
+		}
+	}
+
+}
+
+# Do the winter festival
+VIETmisc.2080 = {
+	type = character_event
+	title = VIETmisc.2080.t
+	desc = VIETmisc.2080.desc
+	theme = feast_activity
+	override_background = { reference = VIET_background_snowy_winter_wonderland }
+	
+	
+	right_portrait = {
+		character = root
+		animation = personality_content
+	}
+
+	widget = {
+		gui = "event_window_widget_vfx_snow"
+		container = "foreground_shader_vfx_container"
+	}
+
+	immediate = {
+		remove_character_modifier = VIET_snow_festival_idea
+		capital_province = { save_scope_as = capital_province }
+		capital_county = { save_scope_as = county }
+	}
+	
+	option = { # Ok
+		name = VIETmisc.2080.a
+		random_list = {
+			10 = {
+				set_variable = {
+					name = VIET_snow_festival_result
+					value = flag:wholesome
+				}
+			}
+			10 = {
+				set_variable = {
+					name = VIET_snow_festival_result
+					value = flag:naughty
+				}				
+			}
+		}
+		trigger_event = VIETmisc.2081 # It should happen immediately, in case you lose the title for some reason
+	}
+
+	after = {		
+		if = {
+			limit = {
+				has_game_rule = VIET_historical_context_on
+			}
+			custom_tooltip = VIET_decision_snow_festival_context_tooltip
+		}
+	}
+
+}
+
+
+# Do the winter festival
+VIETmisc.2081 = {
+	type = character_event
+	title = VIETmisc.2081.t
+	window = big_event_window
+	desc = {
+		desc = VIETmisc.2081.desc.intro
+		first_valid = {
+			triggered_desc = {
+				trigger = {
+					var:VIET_snow_festival_result ?= flag:naughty
+				}
+				desc = VIETmisc.2081.desc.naughty
+			}
+			desc = VIETmisc.2081.desc.wholesome
+		}
+		desc = VIETmisc.2081.desc.conclusion
+	}
+	theme = feast_activity
+	override_background = { reference = VIET_background_snowy_winter_wonderland }
+	
+	
+	right_portrait = {
+		character = root
+		animation = personality_content
+	}
+
+
+	widget = {
+		gui = "event_window_widget_vfx_snow"
+		container = "foreground_shader_vfx_container"
+	}
+
+	immediate = {
+		remove_character_modifier = VIET_snow_festival_idea
+		add_legitimacy = minor_legitimacy_gain
+		if = {
+			limit = {
+				var:VIET_snow_festival_result ?= flag:naughty
+			}
+			VIET_massive_prestige_gain_effect = yes
+			scope:county = {
+				add_county_modifier = {
+					modifier = VIET_snow_festival_result_county_naughty
+					years = 10
+				}
+			}
+			random_list = {
+				10 = {
+					add_character_modifier = {
+						modifier = VIET_snow_festival_result_naughty_1
+						years = 10
+					}
+				}
+				10 = {
+					add_character_modifier = {
+						modifier = VIET_snow_festival_result_naughty_2
+						years = 10
+					}
+				}
+				10 = {
+					add_character_modifier = {
+						modifier = VIET_snow_festival_result_naughty_3
+						years = 10
+					}
+				}
+				10 = {
+					add_character_modifier = {
+						modifier = VIET_snow_festival_result_naughty_4
+						years = 10
+					}
+				}
+				10 = {
+					add_character_modifier = {
+						modifier = VIET_snow_festival_result_naughty_5
+						years = 10
+					}
+				}
+			}
+		}
+		else_if = {
+			limit = {
+				var:VIET_snow_festival_result ?= flag:wholesome
+			}
+			VIET_massive_piety_gain_effect = yes
+			scope:county = {
+				add_county_modifier = {
+					modifier = VIET_snow_festival_result_county_wholesome
+					years = 10
+				}
+			}
+			random_list = {
+				10 = {
+					add_character_modifier = {
+						modifier = VIET_snow_festival_result_wholesome_1
+						years = 10
+					}
+				}
+				10 = {
+					add_character_modifier = {
+						modifier = VIET_snow_festival_result_wholesome_2
+						years = 10
+					}
+				}
+				10 = {
+					add_character_modifier = {
+						modifier = VIET_snow_festival_result_wholesome_3
+						years = 10
+					}
+				}
+				10 = {
+					add_character_modifier = {
+						modifier = VIET_snow_festival_result_wholesome_4
+						years = 10
+					}
+				}
+				10 = {
+					add_character_modifier = {
+						modifier = VIET_snow_festival_result_wholesome_5
+						years = 10
+					}
+				}
+			}
+		}
+	}
+	
+	option = { # Ok
+		name = VIETmisc.2081.a
+	}
+
+	after = {		
+		if = {
+			limit = { has_variable = VIET_snow_festival_result }
+			remove_variable = VIET_snow_festival_result
+		}			
+		if = {
+			limit = {
+				has_game_rule = VIET_historical_context_on
+			}
+			custom_tooltip = VIET_decision_snow_festival_context_tooltip
+		}
+	}
 }
 
 

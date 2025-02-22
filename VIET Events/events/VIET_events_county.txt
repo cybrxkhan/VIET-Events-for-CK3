@@ -6594,15 +6594,15 @@ VIETmisc.3067 = {
 			callous = miniscule_stress_impact_gain
 			greedy = miniscule_stress_impact_gain
 		}
-		add_character_modifier = {
-			modifier = VIET_snowfall_relief
-			years = 10
-		}
 		scope:county = {
 			add_county_modifier = {
 				modifier = VIET_destructive_snowfall
-				years = 4
+				years = 5
 			}	
+			add_county_modifier = {
+				modifier = VIET_snowfall_relief
+				years = 5
+			}
 		}
 		custom_tooltip = VIET_decrease_county_modifier_time
 	}

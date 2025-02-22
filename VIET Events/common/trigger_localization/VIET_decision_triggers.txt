@@ -46,3 +46,7 @@ VIET_decision_oblivion_dream_req_tooltip = {
 VIET_decision_oblivion_dream_current_req_tooltip = {
 	global = VIET_decision_oblivion_dream_current_req_tooltip
 }
+
+VIET_winter_capital_req = {
+	global = VIET_winter_capital_req
+}

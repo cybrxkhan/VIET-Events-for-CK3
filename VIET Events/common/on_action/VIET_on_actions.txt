@@ -503,6 +503,8 @@ VIET_events_yearly_pulse = {
 		100 = VIETmisc.0362 	# Physician suggests a tonic based on rosemary flowers
 		100 = VIETmisc.0364 	# Lover offers you flowers one day
 		100 = VIETmisc.0365 	# You and a lover enjoy playing with some flowers one day
+		# Snow
+		100 = VIETmisc.0368		# Character watching the snow outside and feeling peaceful
 	}
 }
 
@@ -916,6 +918,8 @@ VIET_events_tri_yearly_pulse = {
 		# Flowers
 		100 = VIETmisc.0361		# Discuss a legend about how the rose got its thorns with a courtier
 		100 = VIETmisc.0363		# Eating candied flowers
+		# Snow
+		100 = VIETmisc.0366		# Courtier gets stuck outside in a snowstorm and returns
 	}
 }
 
@@ -1184,6 +1188,8 @@ VIET_events_five_yearly_pulse = {
 		# Redhead
 		100 = VIETmisc.0353		# Merchant returns after encountering people who never knew about henna and hair dye, and tells exaggerated tale
 		100 = VIETmisc.0355		# Merchant tells about foreigners with red hair
+		# Snow
+		100 = VIETmisc.0367		# Courtier really likes eating snow
 	}
 }
 
@@ -1543,8 +1549,11 @@ VIET_events_common_county_pulse = {
 		100 = VIETmisc.3057 	# Rat-catchers in a province become renowned
 		# Shark
 		100 = VIETmisc.3059 	# Shark Fishing industry is doing well
+		# Snow
+		100 = VIETmisc.3067 	# Snowfall causes destruction to local buildings and lives
+		100 = VIETmisc.3068 	# Snowmelt in area is even better than normal, allowing for a better harvest
 		
-		# 40
+		# 41
     }
 }
 

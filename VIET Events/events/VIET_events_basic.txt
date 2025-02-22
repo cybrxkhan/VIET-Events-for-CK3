@@ -35441,9 +35441,11 @@ VIETmisc.0366 = {
 		OR = {
 			any_courtier_or_guest = {
 				is_available_ai_adult = yes
+				NOT = { has_trait = ill } 
 			}
 			any_vassal = {
 				is_available_ai_adult = yes
+				NOT = { has_trait = ill } 
 			}
 		}
 	}
@@ -35480,12 +35482,14 @@ VIETmisc.0366 = {
 		every_courtier_or_guest = {
 			limit = {
 				is_available_ai_adult = yes
+				NOT = { has_trait = ill } 
 			}
 			add_to_list = candidate_characters
 		}
 		every_vassal = {
 			limit = {
 				is_available_ai_adult = yes
+				NOT = { has_trait = ill } 
 			}
 			add_to_list = candidate_characters
 		}
@@ -35498,9 +35502,13 @@ VIETmisc.0366 = {
 				base = minor_stress_impact_gain
 				lazy = miniscule_stress_impact_gain
 			}
-			add_character_modifier = {
-				modifier = VIET_suffering_from_cold
-				years = 1
+			show_as_tooltip = { add_trait = ill }
+			hidden_effect = {
+				#Adds the trait, sends event "health.2201" to those who care if health is brought too low
+				contract_disease_effect = {
+					DISEASE = ill
+					TREATMENT_EVENT = yes
+				}
 			}
 		}
 	}

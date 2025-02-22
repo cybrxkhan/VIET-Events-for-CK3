@@ -3661,6 +3661,82 @@ VIET_wildflowers_gift = {
 	stress_loss_mult = 0.05
 }
 
+VIET_obsessed_with_eating_snow = {
+	icon = food_negative
+	health = -0.5
+	stress_gain_mult = 0.1
+	stress_loss_mult = -0.1
+	monthly_prestige = -0.2
+}
+
+
+VIET_snow_festival_result_county_naughty = {
+	icon = outdoors_positive
+	county_opinion_add = 10
+	development_growth = 0.1
+}
+
+VIET_snow_festival_result_county_wholesome = {
+	icon = outdoors_positive
+	monthly_county_control_growth_add = 0.1
+	development_growth = 0.1
+}
+
+VIET_snow_festival_result_naughty_1 = {
+	icon = outdoors_positive
+	monthly_prestige_gain_mult = 0.03
+}
+
+VIET_snow_festival_result_naughty_2 = {
+	icon = outdoors_positive
+	diplomacy = 1
+}
+
+VIET_snow_festival_result_naughty_3 = {
+	icon = outdoors_positive
+	owned_personal_scheme_success_chance_add = 3
+}
+
+VIET_snow_festival_result_naughty_4 = {
+	icon = outdoors_positive
+	general_opinion = 5
+}
+
+VIET_snow_festival_result_naughty_5 = {
+	icon = outdoors_positive
+	intrigue = 1
+}
+
+VIET_snow_festival_result_wholesome_1 = {
+	icon = outdoors_positive
+	monthly_piety_gain_mult = 0.03
+}
+
+VIET_snow_festival_result_wholesome_2 = {
+	icon = outdoors_positive
+	stewardship = 1
+}
+
+VIET_snow_festival_result_wholesome_3 = {
+	icon = outdoors_positive
+	legitimacy_gain_mult = 0.1
+}
+
+VIET_snow_festival_result_wholesome_4 = {
+	icon = outdoors_positive
+	stress_gain_mult = -0.15
+}
+
+VIET_snow_festival_result_wholesome_5 = {
+	icon = outdoors_positive
+	learning = 1
+}
+
+VIET_snow_festival_idea = {
+	icon = county_modifier_opinion_positive
+}
+
+
 
 
 

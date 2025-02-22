@@ -651,6 +651,66 @@ VIET_decision_listen_to_wild_songbirds = {
 }
 
 
+VIET_decision_snow_festival = {
+	picture = { reference = "gfx/interface/illustrations/decisions/decision_viet_snow.dds" }
+	decision_group_type = VIET_everyday
+	desc = VIET_decision_snow_festival_desc
+
+	ai_check_interval = 36
+	
+	#cooldown = { days = 1825 }
+
+	is_shown = {
+		exists = capital_province
+		is_landed = yes
+		has_character_modifier = VIET_snow_festival_idea
+	}
+
+	is_valid = {
+		has_character_modifier = VIET_snow_festival_idea
+		custom_description = {
+			text = "VIET_winter_capital_req"
+			capital_province = {
+				has_winter_trigger = yes
+			}
+		}
+	}
+
+	is_valid_showing_failures_only = {
+		is_adult = yes
+		is_available = yes
+	}
+
+	effect = {
+		custom_tooltip = VIET_decision_snow_festival_effect_tooltip_1
+		show_as_tooltip = {
+			add_legitimacy = minor_legitimacy_gain
+		}
+		custom_tooltip = VIET_decision_snow_festival_effect_tooltip_2
+		custom_tooltip = VIET_decision_snow_festival_effect_tooltip_3
+		trigger_event = VIETmisc.2080
+		if = {
+			limit = {
+				has_game_rule = VIET_historical_context_on
+			}
+			custom_tooltip = VIET_decision_snow_festival_context_tooltip
+		}
+	}
+
+	cost = {
+		gold = { value = minor_gold_value } # Will depend
+	}
+	
+	ai_potential = {
+		gold > minor_gold_value
+	}
+
+	ai_will_do = {
+		base = 30
+	}
+}
+
+
 
 
 
