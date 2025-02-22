@@ -4666,6 +4666,10 @@ VIETmisc.2080 = {
 		remove_character_modifier = VIET_snow_festival_idea
 		capital_province = { save_scope_as = capital_province }
 		capital_county = { save_scope_as = county }
+		scope:county = {
+			culture = { save_scope_as = culture }
+			faith = { save_scope_as = faith }
+		}
 	}
 	
 	option = { # Ok
@@ -4718,7 +4722,8 @@ VIETmisc.2081 = {
 		desc = VIETmisc.2081.desc.conclusion
 	}
 	theme = feast_activity
-	override_background = { reference = VIET_background_snowy_winter_wonderland }
+	override_background = { reference = VIET_background_small_town }
+	#override_background = { reference = VIET_background_snowy_winter_wonderland }
 	
 	
 	right_portrait = {

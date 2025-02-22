@@ -6521,10 +6521,7 @@ VIETmisc.3067 = {
 	title = VIETmisc.3067.t
 	desc = VIETmisc.3067.desc
 	theme = unfriendly
-	override_background = { reference = burning_building }
-	override_effect_2d = {
-		reference = smoke
-	}
+	override_background = { reference = VIET_background_snowy_winter_wonderland }
 	
 	right_portrait = {
 		character = root

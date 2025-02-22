@@ -35497,20 +35497,6 @@ VIETmisc.0366 = {
 			list = candidate_characters
 			save_scope_as = courtier
 		}
-		scope:courtier = {
-			stress_impact = {
-				base = minor_stress_impact_gain
-				lazy = miniscule_stress_impact_gain
-			}
-			show_as_tooltip = { add_trait = ill }
-			hidden_effect = {
-				#Adds the trait, sends event "health.2201" to those who care if health is brought too low
-				contract_disease_effect = {
-					DISEASE = ill
-					TREATMENT_EVENT = yes
-				}
-			}
-		}
 	}
 	
 	option = { # glad you're okay
@@ -35544,6 +35530,23 @@ VIETmisc.0366 = {
 		}
 	}
 	
+	after = {
+		
+		scope:courtier = {
+			stress_impact = {
+				base = minor_stress_impact_gain
+				lazy = miniscule_stress_impact_gain
+			}
+			show_as_tooltip = { add_trait = ill }
+			hidden_effect = {
+				#Adds the trait, sends event "health.2201" to those who care if health is brought too low
+				contract_disease_effect = {
+					DISEASE = ill
+					TREATMENT_EVENT = yes
+				}
+			}
+		}
+	}
 }
 
 
