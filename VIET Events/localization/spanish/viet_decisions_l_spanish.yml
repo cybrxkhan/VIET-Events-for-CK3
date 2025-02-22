@@ -166,7 +166,16 @@ VIET_decision_oblivion_dream_req_tooltip:0 "Has tenido al menos 1 sueño en esta
 VIET_decision_oblivion_dream_current_req_tooltip:0 "Actualmente no estás contemplando el extraño sueño"
 VIET_decision_oblivion_dream_effect_tooltip:0 "Continuarás la historia que has estado soñando."
 VIET_decision_oblivion_dream_confirm:0 "Me siento somnoliento..."
-
+VIET_decision_snow_festival:0 "Organizar un Festival de la Nieve"
+VIET_decision_snow_festival_tooltip:0 "¡La gente debería divertirse un poco en la nieve!"
+VIET_decision_snow_festival_desc:0 "Durante los fríos y duros meses de invierno, mis súbditos deben soportar mucho sufrimiento. Para aliviarlo en cierta medida, quiero que mis consejeros organicen un festival de la nieve en [GetPlayer.GetCapitalLocation.GetCounty.GetTitle.GetNameNoTier], siguiendo una costumbre local, donde la gente pueda reunirse para crear hermosas esculturas de nieve."
+VIET_decision_snow_festival_req_tooltip:0 "Has tenido al menos 1 sueño en esta cadena de eventos"
+VIET_decision_snow_festival_effect_tooltip_1:0 "@warning_icon! #X Esta [decision|E] solo puede tomarse una vez.#!"
+VIET_decision_snow_festival_effect_tooltip_2:0 "Gana #P beneficios#! en [county|E] y [character_modifiers|E], cuyos efectos dependerán de si el festival de la nieve resulta ser escandaloso o respetable"
+VIET_decision_snow_festival_effect_tooltip_3:0 "Gana una gran cantidad de @piety_icon! [piety|E] o @prestige_icon! [prestige|E] dependiendo de si el festival de la nieve resulta ser escandaloso o respetable"
+VIET_decision_snow_festival_context_tooltip:0 "#emphasis Contexto Histórico:#! Esta mini cadena de eventos está basada libremente en sucesos históricos similares ocurridos en la Europa de finales de la Edad Media y la era del Renacimiento. El caso más conocido fue un festival de la nieve celebrado en 1511 en la ciudad de Bruselas. Aunque en Internet se ha sensacionalizado como una protesta política de los ciudadanos de Bruselas contra la élite de la ciudad mediante esculturas pornográficas o satíricas, en realidad el evento fue apoyado e incluso patrocinado por los consejeros de la ciudad. Fue una forma de canalizar ansiedades políticas y sociales, fortalecer la identidad y el orgullo cívico, satirizar a enemigos extranjeros y religiosos, y simplemente divertirse."
+VIET_decision_snow_festival_confirm:0 "¡Veamos cómo nos divertimos este invierno!"
+VIET_winter_capital_req:0 "Tu [barony|E] [capital|E] está sufriendo los efectos del [winter|E] (es decir, tiene los [modifiers|E] invernales activos)"
  
  # Character Interactions
  VIET_gift_baklava:0 "Regalar pasteles especiales"
