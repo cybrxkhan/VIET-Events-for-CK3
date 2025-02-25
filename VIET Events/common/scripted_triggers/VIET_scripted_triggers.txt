@@ -183,15 +183,18 @@ VIET_is_redhead_or_blonde_area_or_culture = {
 		culture_has_european_heritage_pillar_trigger = yes
 		culture_has_mena_heritage_pillar_trigger = yes
 		culture_has_west_asian_heritage_pillar_trigger = yes
-		# Locations with those kinds of cultures
-		capital_province = {
-			OR = {
-				geographical_region = world_europe
-				geographical_region = world_steppe_west
-				geographical_region = world_asia_minor
-				geographical_region = world_africa_north
-				geographical_region = world_middle_east
-			}
+	}
+}
+
+VIET_is_redhead_or_blonde_area_capital = {
+	# Locations with those kinds of cultures
+	capital_province = {
+		OR = {
+			geographical_region = world_europe
+			geographical_region = world_steppe_west
+			geographical_region = world_asia_minor
+			geographical_region = world_africa_north
+			geographical_region = world_middle_east
 		}
 	}
 }

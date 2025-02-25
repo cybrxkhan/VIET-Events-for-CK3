@@ -34384,7 +34384,10 @@ VIETmisc.0357 = {
 	trigger = {	
 		has_game_rule = VIET_normal_universe_events
 		exists = capital_province # To prevent error messages below
-		VIET_is_redhead_or_blonde_area_or_culture = yes
+		OR = {
+			VIET_is_redhead_or_blonde_area_or_culture = yes
+			VIET_is_redhead_or_blonde_area_capital = yes
+		}
 		NOT = { has_trait = celibate }
 		NOT = { has_sexuality = asexual }
 		OR = {
