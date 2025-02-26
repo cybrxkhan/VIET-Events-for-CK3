@@ -4674,19 +4674,21 @@ VIETmisc.2080 = {
 	
 	option = { # Ok
 		name = VIETmisc.2080.a
-		random_list = {
-			10 = {
-				set_variable = {
-					name = VIET_snow_festival_result
-					value = flag:wholesome
+		hidden_effect = {
+			random_list = {
+				10 = {
+					set_variable = {
+						name = VIET_snow_festival_result
+						value = flag:wholesome
+					}
 				}
-			}
-			10 = {
-				set_variable = {
-					name = VIET_snow_festival_result
-					value = flag:naughty
-				}				
-			}
+				10 = {
+					set_variable = {
+						name = VIET_snow_festival_result
+						value = flag:naughty
+					}				
+				}
+			}			
 		}
 		trigger_event = VIETmisc.2081 # It should happen immediately, in case you lose the title for some reason
 	}
@@ -4728,7 +4730,7 @@ VIETmisc.2081 = {
 	
 	right_portrait = {
 		character = root
-		animation = personality_content
+		animation = interested
 	}
 
 
@@ -4836,7 +4838,7 @@ VIETmisc.2081 = {
 	
 	option = { # Ok
 		name = VIETmisc.2081.b
-		trigger_event = {
+		trigger = {
 			var:VIET_snow_festival_result ?= flag:naughty
 		}
 		VIET_huge_prestige_loss_effect = yes

@@ -6491,14 +6491,14 @@ VIETmisc.3066 = {
 		}
 	}
 
-	after = {		
-		if = {
-			limit = {
-				has_game_rule = VIET_historical_context_on
-			}
-			custom_tooltip = VIETmisc.3066.info
-		}
-	}
+	# after = {		
+	# 	if = {
+	# 		limit = {
+	# 			has_game_rule = VIET_historical_context_on
+	# 		}
+	# 		custom_tooltip = VIETmisc.3066.info
+	# 	}
+	# }
 
 
 }

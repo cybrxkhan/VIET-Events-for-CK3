@@ -1340,6 +1340,8 @@ VIET_events_common_decisions_pulse = {
 		# Animals
 		100 = VIETmisc.2074		# Courtier suggests you add dovecotes to your residence
 		100 = VIETmisc.2076		# Will you become a songbird fan or enjoyer?
+		# Snow
+		100 = VIETmisc.2079		# Officials suggest the snow festival idea
 		
 	}
 }
