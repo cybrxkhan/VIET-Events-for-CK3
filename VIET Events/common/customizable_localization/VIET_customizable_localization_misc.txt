@@ -160,3 +160,288 @@ VIET_dumpling_name = {
 		fallback = yes
 	}
 }
+
+VIET_snow_sculpture = {
+	type = character
+
+	random_valid = yes
+
+	text = {
+		localization_key = VIET_snow_sculpture_01
+	}
+
+	text = {
+		localization_key = VIET_snow_sculpture_02
+	}
+
+	text = {
+		localization_key = VIET_snow_sculpture_03
+	}
+
+	text = {
+		localization_key = VIET_snow_sculpture_04
+	}
+
+	text = {
+		localization_key = VIET_snow_sculpture_05
+	}
+
+	text = {
+		localization_key = VIET_snow_sculpture_06
+	}
+
+	text = {
+		localization_key = VIET_snow_sculpture_07
+	}
+
+	text = {
+		localization_key = VIET_snow_sculpture_08
+	}
+
+	text = {
+		localization_key = VIET_snow_sculpture_09
+	}
+
+	text = {
+		localization_key = VIET_snow_sculpture_10
+	}
+
+
+	text = {
+		trigger = {
+			var:VIET_snow_festival_result ?= flag:naughty		
+		}
+		localization_key = VIET_snow_sculpture_11
+	}
+
+	text = {
+		trigger = {
+			var:VIET_snow_festival_result ?= flag:naughty		
+		}
+		localization_key = VIET_snow_sculpture_12
+	}
+
+	text = {
+		trigger = {
+			var:VIET_snow_festival_result ?= flag:naughty		
+		}
+		localization_key = VIET_snow_sculpture_13
+	}
+
+	text = {
+		trigger = {
+			var:VIET_snow_festival_result ?= flag:naughty		
+		}
+		localization_key = VIET_snow_sculpture_14
+	}
+
+	text = {
+		trigger = {
+			var:VIET_snow_festival_result ?= flag:naughty		
+		}
+		localization_key = VIET_snow_sculpture_15
+	}
+
+	text = {
+		trigger = {
+			var:VIET_snow_festival_result ?= flag:naughty		
+		}
+		localization_key = VIET_snow_sculpture_16
+	}
+
+	text = {
+		trigger = {
+			var:VIET_snow_festival_result ?= flag:naughty		
+		}
+		localization_key = VIET_snow_sculpture_17
+	}
+
+	text = {
+		trigger = {
+			var:VIET_snow_festival_result ?= flag:naughty		
+		}
+		localization_key = VIET_snow_sculpture_18
+	}
+
+	text = {
+		trigger = {
+			var:VIET_snow_festival_result ?= flag:naughty		
+		}
+		localization_key = VIET_snow_sculpture_19
+	}
+
+	text = {
+		trigger = {
+			var:VIET_snow_festival_result ?= flag:naughty		
+		}
+		localization_key = VIET_snow_sculpture_20
+	}
+	
+	text = {
+		trigger = {
+			var:VIET_snow_festival_result ?= flag:wholesome		
+		}
+		localization_key = VIET_snow_sculpture_21
+	}
+
+	text = {
+		trigger = {
+			var:VIET_snow_festival_result ?= flag:wholesome		
+		}
+		localization_key = VIET_snow_sculpture_22
+	}
+
+	text = {
+		trigger = {
+			var:VIET_snow_festival_result ?= flag:wholesome		
+		}
+		localization_key = VIET_snow_sculpture_23
+	}
+
+	text = {
+		trigger = {
+			var:VIET_snow_festival_result ?= flag:wholesome		
+		}
+		localization_key = VIET_snow_sculpture_24
+	}
+
+	text = {
+		trigger = {
+			var:VIET_snow_festival_result ?= flag:wholesome		
+		}
+		localization_key = VIET_snow_sculpture_25
+	}
+
+	text = {
+		localization_key = VIET_snow_sculpture_26
+	}
+
+	text = {
+		localization_key = VIET_snow_sculpture_27
+	}
+
+	text = {
+		localization_key = VIET_snow_sculpture_28
+	}
+
+	text = {
+		localization_key = VIET_snow_sculpture_29
+	}
+
+	text = {
+		localization_key = VIET_snow_sculpture_30
+	}
+
+	text = {
+		trigger = {
+			var:VIET_snow_festival_result ?= flag:wholesome		
+		}
+		localization_key = VIET_snow_sculpture_31
+	}
+
+	text = {
+		localization_key = VIET_snow_sculpture_32
+	}
+
+	text = {
+		localization_key = VIET_snow_sculpture_33
+	}
+}
+
+
+VIET_snow_sculpture_reaction = {
+	type = character
+
+	random_valid = yes
+
+	text = {
+		localization_key = VIET_snow_sculpture_reaction_01
+	}
+
+	text = {
+		localization_key = VIET_snow_sculpture_reaction_02
+	}
+
+	text = {
+		localization_key = VIET_snow_sculpture_reaction_03
+	}
+
+	text = {
+		localization_key = VIET_snow_sculpture_reaction_04
+	}
+
+	text = {
+		localization_key = VIET_snow_sculpture_reaction_05
+	}
+
+	text = {
+		trigger = {
+			var:VIET_snow_festival_result ?= flag:naughty		
+		}
+		localization_key = VIET_snow_sculpture_reaction_06
+	}
+
+	text = {
+		trigger = {
+			var:VIET_snow_festival_result ?= flag:naughty		
+		}
+		localization_key = VIET_snow_sculpture_reaction_07
+	}
+
+	text = {
+		trigger = {
+			var:VIET_snow_festival_result ?= flag:naughty		
+		}
+		localization_key = VIET_snow_sculpture_reaction_08
+	}
+
+	text = {
+		trigger = {
+			var:VIET_snow_festival_result ?= flag:naughty		
+		}
+		localization_key = VIET_snow_sculpture_reaction_09
+	}
+
+	text = {
+		trigger = {
+			var:VIET_snow_festival_result ?= flag:naughty		
+		}
+		localization_key = VIET_snow_sculpture_reaction_10
+	}
+
+	text = {
+		trigger = {
+			var:VIET_snow_festival_result ?= flag:wholesome		
+		}
+		localization_key = VIET_snow_sculpture_reaction_11
+	}
+
+	text = {
+		trigger = {
+			var:VIET_snow_festival_result ?= flag:wholesome		
+		}
+		localization_key = VIET_snow_sculpture_reaction_12
+	}
+
+	text = {
+		trigger = {
+			var:VIET_snow_festival_result ?= flag:wholesome		
+		}
+		localization_key = VIET_snow_sculpture_reaction_13
+	}
+
+	text = {
+		trigger = {
+			var:VIET_snow_festival_result ?= flag:wholesome		
+		}
+		localization_key = VIET_snow_sculpture_reaction_14
+	}
+
+	text = {
+		trigger = {
+			var:VIET_snow_festival_result ?= flag:wholesome		
+		}
+		localization_key = VIET_snow_sculpture_reaction_15
+	}
+
+}

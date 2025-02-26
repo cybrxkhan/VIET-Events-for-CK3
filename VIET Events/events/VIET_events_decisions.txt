@@ -4833,6 +4833,15 @@ VIETmisc.2081 = {
 	option = { # Ok
 		name = VIETmisc.2081.a
 	}
+	
+	option = { # Ok
+		name = VIETmisc.2081.b
+		trigger_event = {
+			var:VIET_snow_festival_result ?= flag:naughty
+		}
+		VIET_huge_prestige_loss_effect = yes
+		VIET_huge_piety_gain_effect = yes
+	}
 
 	after = {		
 		if = {

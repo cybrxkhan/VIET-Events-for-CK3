@@ -6632,7 +6632,7 @@ VIETmisc.3068 = {
 	
 	right_portrait = {
 		character = root
-		animation = worry
+		animation = happiness
 	}
 
 		
@@ -6670,7 +6670,7 @@ VIETmisc.3068 = {
 	
 
 	immediate = {
-		play_music_cue = mx_cue_stress  
+		#play_music_cue = mx_cue_stress  
 		random_held_title = {
 			limit = {
 				tier = tier_county
