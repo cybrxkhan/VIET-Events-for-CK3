@@ -1,7 +1,7 @@
-[img]https://i.imgur.com/Qi2xIeN.jpg[/img]
+[img]https://i.imgur.com/b3r6W9t.jpg[/img]
 
-[h1]Versión actual: 1.14.4 "Flora" 
-(Lanzamiento: 16/02/25, Compatible con versión vanilla 1.14.X)[/h1]
+[h1]Versión actual: 1.14.5 "Snowfall" 
+(Lanzamiento: 28/02/25, Compatible con versión vanilla 1.14.X)[/h1]
 
 [url=https://discord.gg/9KuyXv2uZA]Servidor de Discord de mis Mods[/url]
 [B]Echa un Vistazo a [url=https://forum.paradoxplaza.com/forum/threads/mod-viet-events-for-ck3-a-flavor-and-immersion-event-mod.1422081/]Tema del Foro[/url] Para Más Información[/B]
@@ -26,7 +26,7 @@ Siéntete libre de usar mi trabajo con tus mods - todo lo que pido es reconocimi
 [img]http://i.imgur.com/EyXurbK.jpg[/img]
 
 [LIST]
-[*]¡Más de [B][U]1180[/U] nuevos eventos[/B] para experimentar!
+[*]¡Más de [B][U]1188[/U] nuevos eventos[/B] para experimentar!
 [*]Explora nuevas decisiones, artefactos, interacciones y cadenas de eventos
 [*]Regla de juego para desactivar los eventos estúpidos para aquellos que no les guste, con tres niveles para escoger entre: Balanceado (Predeterminado), Serio (Restringido), y Todos los eventos (Todo)
 [*][B]Compatible con casi cualquier cosa[/B] ya que no modifico archivos del vanilla - incluso con mods de conversión total puedes desactivar los eventos que hagan referencias a cosas o lugares específicos del mundo medieval que no tendrían sentido en otros periodos o universos (como mods fantásticos o de ciencia ficción)
@@ -52,10 +52,10 @@ Por favor, echa un vistazo a [url=https://steamcommunity.com/workshop/filedetail
 
 [img]http://i.imgur.com/RQ5QZTF.jpg[/img]
 
-[h1]Versión 1.14.4 "Flora"[/h1]
+[h1]Versión 1.14.5 "Snowfall"[/h1]
 
-[I]“Estas flores son como los placeres del mundo.”
-- William Shakespeare, Cimbelino[/I]
+[I]“Friends on pipa, poetry and drinking, all of them cast me away. When I see the snow, the moon or blossoms, I long for you deeply.”
+- Bai Juyi (772-846 CE), Chinese poet[/I]
 
 Nuevos eventos añadidos en esta versión: [B]5[/B]
 
