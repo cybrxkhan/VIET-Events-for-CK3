@@ -54,8 +54,8 @@ Por favor, echa un vistazo a [url=https://steamcommunity.com/workshop/filedetail
 
 [h1]Versión 1.14.5 "Snowfall"[/h1]
 
-[I]“Friends on pipa, poetry and drinking, all of them cast me away. When I see the snow, the moon or blossoms, I long for you deeply.”
-- Bai Juyi (772-846 CE), Chinese poet[/I]
+[I]“Amigos de la pipa, la poesía y la bebida, todos me han abandonado. Cuando veo la nieve, la luna o las flores, te anhelo profundamente.”
+- Bai Juyi (772-846 d.C.), poeta chino[/I]
 
 Nuevos eventos añadidos en esta versión: [B]5[/B]
 
