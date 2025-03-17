@@ -1,11 +1,11 @@
 # VIET Events for CK3
 
-<img src="https://i.imgur.com/Qi2xIeN.jpg">
+<img src="https://i.imgur.com/b3r6W9t.jpg">
 
-## Latest Version: 1.14.4 "Flora" (Released 2/16/25)
+## Latest Version: 1.14.5 "Snowfall" (Released 2/28/25)
 
-_“These flowers are like the pleasures of the world.”_
-_- William Shakespeare, Cymbeline_
+_“Friends on pipa, poetry and drinking, all of them cast me away. When I see the snow, the moon or blossoms, I long for you deeply.”_
+_- Bai Juyi (772-846 CE), Chinese poet_
 
 Very Immersive Events and Tales (VIET), the sequel to VIET Events Reborn for CK2, is a flavor mod that adds a vast collection of events about everyday life to spice up your game. They add immersion and a diversity of experiences in between wars and vanilla’s event chains, and cover mundane minutiae ranging from small talk with courtiers and eating local cuisine to epic tales about love, philosophy, and the human condition. Some of the events unlock new decisions, character interactions, activities, and much more for you to explore!
 
@@ -15,7 +15,7 @@ Feel free to use my work in your mods - all I ask is that I am credited and (if 
 
 ## Features
 
-- Over **1175** new flavor events to experience!
+- Over **1188** new flavor events to experience!
 - Explore new decisions, artifacts, character interactions, activities, and more!
 - Game rule to disable sillier events for those who don't like them, with three levels to choose from: Balanced (Default), Serious (Restricted), and All Events (Full)
 - Compatible with almost anything since it doesn't touch any vanilla files - even with overhaul mods, you can via game rule disable events that reference things specific to our medieval world that wouldn’t make sense in other time periods or universes (like fantasy and sci-fi conversion mods)
@@ -39,11 +39,13 @@ The mod folder should look something like this:
 
 ## Changelog
 
-### Version 1.14.4 "Flora"
+### Version 1.14.5 "Swowfall"
 
-New events added in this version: **5**
+New events added in this version: **8**
 
-- Added 5 flower themed events
+- Added 8 snow themed events
+- Added new decision: Organize a Snow Festival
+- Fixed irrelevant error spam due to rulers without territories getting the favorite hair color event
 - Miscellaneous bugfixes and tweaks
 
 \* Adapted from VIET for CK2

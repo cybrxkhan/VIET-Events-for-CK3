@@ -337,12 +337,15 @@
  VIETmisc.3066.a:0 "Hopefully things will be quiet in [county.GetNameNoTierNoTooltip] now."
  VIETmisc.3066.b:0 "Reward my officials for a job well done."
  # Version 1.14.2 Start Here - Note to Translators: please leave this comment here and do not remove it even in your versions of the loc
- VIETmisc.3067.t:0 "xxxxx"
- VIETmisc.3067.desc:0 "xxxxx"
- VIETmisc.3067.a:0 "xxxxx"
- VIETmisc.3068.t:0 "xxxxx"
- VIETmisc.3068.desc:0 "xxxxx"
- VIETmisc.3068.a:0 "xxxxx"
+ # Version 1.14.5 Start Here - Note to Translators: please leave this comment here and do not remove it even in your versions of the loc
+ VIETmisc.3067.t:0 "Snowy Destruction"
+ VIETmisc.3067.desc:0 "Snowfall has been reported in large amounts in [county.GetNameNoTier]. Many rural farmsteads were destroyed, resulting in a number of deaths among the commoners. Many others have already died from cold or hunger.\n\nLocal officials there are beseeching me to do something to alleviate the suffering of the people in this region. Shall I prove myself to be a generous and benevolent [ROOT.Char.GetTitledFirstName]?"
+ VIETmisc.3067.a:0 "Send aid to the locals suffering from this calamity!"
+ VIETmisc.3067.b:0 "Snow falls every year – we can’t spare any resources."
+ VIETmisc.3068.t:0 "Snowmelt"
+ VIETmisc.3068.desc:0 "Snowmelt has been important to the people living in [county.GetNameNoTier] for as long as anyone could remember. Every year, when the snows melt, they contribute significantly as a source of irrigation for local agriculture.\n\nThis year, it appears we’ve had a good accumulation of snow there – much more than expected, but not too much that it would cause flooding. That means that crops will prosper, and the harvest will be good… as long as nothing else goes wrong."
+ VIETmisc.3068.a:0 "That’s good to hear."
+ # Version 1.14.6 Start Here - Note to Translators: please leave this comment here and do not remove it even in your versions of the loc
  VIETmisc.3069.t:0 "xxxxx"
  VIETmisc.3069.desc:0 "xxxxx"
  VIETmisc.3069.a:0 "xxxxx"

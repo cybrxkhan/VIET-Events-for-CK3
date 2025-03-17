@@ -166,6 +166,16 @@ VIET_decision_listen_to_wild_songbirds_context_tooltip:0 "#emphasis Биолог
  VIET_decision_oblivion_dream_current_req_tooltip:0 "Currently not contemplating the strange dream"
  VIET_decision_oblivion_dream_effect_tooltip:0 "You will continue the story you have been dreaming about."
  VIET_decision_oblivion_dream_confirm:0 "I'm feeling sleepy...."
+ VIET_decision_snow_festival:0 "Organize a Snow Festival"
+ VIET_decision_snow_festival_tooltip:0 "People should have some fun in the snow!"
+ VIET_decision_snow_festival_desc:0 "During the cold, harsh winter months, my subjects have to endure much suffering. To alleviate this somewhat, I want my officials organize a snow festival in [GetPlayer.GetCapitalLocation.GetCounty.GetTitle.GetNameNoTier], following a local custom, where people can gather to create beautiful snow sculptures."
+ VIET_decision_snow_festival_req_tooltip:0 "You have had at least 1 dream in this event chain"
+ VIET_decision_snow_festival_effect_tooltip_1:0 "@warning_icon! #X This [decision|E] can only be taken once.#!"
+ VIET_decision_snow_festival_effect_tooltip_2:0 "Gain #P beneficial#! [county|E] and [character_modifiers|E], the effects of which depend on whether the snow festival ends up being scandalous or respectable"
+ VIET_decision_snow_festival_effect_tooltip_3:0 "Gain a large amount of @piety_icon! [piety|E] or @prestige_icon! [prestige|E] depending on whether the snow festival ends up being scandalous or respectable"
+ VIET_decision_snow_festival_context_tooltip:0 "#emphasis Historical Context:#! This mini event chain is based loosely on similar historically attested events in late medieval and renaissance era Europe. The best known occasion was a snow festival in 1511 in the city of Brussels. Though this has been sensationalized online as a political protest by Brussel’s citizens against the city’s elites by making pornographic or satirical sculptures, the event was in reality supported and even sponsored by city officials, and was a way to work out political and social anxieties, build civic identity and pride, satirize foreign and religious enemies, and to have simple fun."
+ VIET_decision_snow_festival_confirm:0 "Let's see have some winter fun!"
+ VIET_winter_capital_req:0 "Your [capital|E] [barony|E] is dealing is dealing with [winter|E] (i.e. has the winter barony [modifiers|E] on it)"
  
  
 # Взаимодействие с персонажами
