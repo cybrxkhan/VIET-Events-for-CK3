@@ -1,6 +1,6 @@
-[img]https://i.imgur.com/Qi2xIeN.jpg[/img]
+[img]https://i.imgur.com/b3r6W9t.jpg[/img]
 
-[h1]Current Version: 1.14.4 "Flora" (Released 2/16/25, Compatible with vanilla patch 1.14.X)[/h1]
+[h1]Current Version: 1.14.5 "Snowfall" (Released 2/28/25, Compatible with vanilla patch 1.14.X)[/h1]
 
 [h1][B][url=https://discord.gg/9KuyXv2uZA]Discord Server for my mods[/url]
 [url=https://cybrxkhansmods.godaddysites.com/]Official Website for my mods[/url][/B][/h1]
@@ -25,7 +25,7 @@ Feel free to use my work in your mods - all I ask is that I am credited and (if 
 [img]http://i.imgur.com/EyXurbK.jpg[/img]
 
 [LIST]
-[*]Over [B][U]1180[/U] new flavor events[/B] to experience!
+[*]Over [B][U]1188[/U] new flavor events[/B] to experience!
 [*]Explore new decisions, artifacts, character interactions, activities, and more!
 [*]Game rule to disable sillier events for those who don't like them, with three levels to choose from: Balanced (Default), Serious (Restricted), and All Events (Full)
 [*][B]Compatible with almost anything[/B] since it doesn't touch any vanilla files - even with overhaul mods, you can via game rule disable events that reference things specific to our medieval world that wouldn’t make sense in other time periods or universes (like fantasy/sci-fi conversion mods)
@@ -35,14 +35,15 @@ Feel free to use my work in your mods - all I ask is that I am credited and (if 
 [h1]TRANSLATIONS AVAILABLE[/h1]
 Because people are kindly spending their own free time and effort to work on these translations, [B]please be aware that the folks working on these translations may or may not be up to date with the latest version of VIET[/B]. Do note that all non-English languages available in the vanilla game has placeholder English localization in the base version of VIET, so they can be safely run, it will just display untranslated text in English (instead of gibberish).
 [LIST]
-[*]Chinese - [url=https://steamcommunity.com/sharedfiles/filedetails/?id=2997587648]Sub-mod by a team led by 9Milk(牛奶大魔王)[/url]
-[*]French - [url=https://steamcommunity.com/sharedfiles/filedetails/?id=2234027514]Sub-mod by Mouchi[/url]
-[*]German - [url=https://steamcommunity.com/sharedfiles/filedetails/?id=3355568022]Sub-mod by Dani and others[/url] 
-[*]Japanese - [url=https://steamcommunity.com/sharedfiles/filedetails/?id=2762293648]Sub-mod by sla_domi[/url]
-[*]Korean - [url=https://steamcommunity.com/sharedfiles/filedetails/?id=2227982565]Sub-mod by Ohboksu[/url], thanks to Ohboksu
-[*]Portuguese - [url=https://steamcommunity.com/sharedfiles/filedetails/?id=3227934458]Sub-mod by Alin[/url]
-[*]Russian - AmoreLibre has provided translations integrated into base VIET. More translations can be found in [url=https://steamcommunity.com/sharedfiles/filedetails/?id=2525780456]this sub-mod by Д.Р.У.И.Д.[/url]
-[*]Spanish - Sourenics and Ferchu have provided translations integrated into base VIET.
+[*]Chinese (中文) - [url=https://steamcommunity.com/sharedfiles/filedetails/?id=2997587648]Sub-mod by a team led by 9Milk(牛奶大魔王)[/url]
+[*]French (Français) - [url=https://steamcommunity.com/sharedfiles/filedetails/?id=2234027514]Sub-mod by Mouchi[/url]
+[*]German (Deutsch) - [url=https://steamcommunity.com/sharedfiles/filedetails/?id=3355568022]Sub-mod by Dani and others[/url] 
+[*]Japanese (日本語) - [url=https://steamcommunity.com/sharedfiles/filedetails/?id=2762293648]Sub-mod by sla_domi[/url]
+[*]Korean (한국어) - [url=https://steamcommunity.com/sharedfiles/filedetails/?id=2227982565]Sub-mod by Ohboksu[/url], thanks to Ohboksu
+[*]Portuguese (Português) - [url=https://steamcommunity.com/sharedfiles/filedetails/?id=3227934458]Sub-mod by Alin[/url]
+[*]Russian (русский) - AmoreLibre has provided translations integrated into base VIET. More translations can be found in [url=https://steamcommunity.com/sharedfiles/filedetails/?id=2525780456]this sub-mod by Д.Р.У.И.Д.[/url]
+[*]Spanish (Español) - Sourenics and Ferchu have provided translations integrated into base VIET.
+[*]Ukrainian (українська) - [url=https://steamcommunity.com/sharedfiles/filedetails/?id=3445880345]Sub-mod by Karley[/url]
 [/LIST]
 
 [img]https://i.imgur.com/9twioNH.jpg[/img]
@@ -51,15 +52,17 @@ Please see the [url=https://cybrxkhansmods.godaddysites.com/faq]FAQ on my mods' 
 
 [img]http://i.imgur.com/RQ5QZTF.jpg[/img]
 
-[h1]Version 1.14.4 "Flora"[/h1]
+[h1]Version 1.14.5 "Snowfall"[/h1]
 
-[I]“These flowers are like the pleasures of the world.”
-- William Shakespeare, Cymbeline[/I]
+[I]“Friends on pipa, poetry and drinking, all of them cast me away. When I see the snow, the moon or blossoms, I long for you deeply.”
+- Bai Juyi (772-846 CE), Chinese poet[/I]
 
-New events added in this version: [B]5[/B]
+New events added in this version: [B]8[/B]
 
 [LIST]
-[*]Added 5 flower themed events
+[*]Added 8 snow themed events
+[*]Added new decision: Organize a Snow Festival
+[*]Fixed irrelevant error spam due to rulers without territories getting the favorite hair color event
 [*]Miscellaneous bugfixes and tweaks
 [/LIST]
 
