@@ -3736,6 +3736,44 @@ VIET_snow_festival_idea = {
 	icon = county_modifier_opinion_positive
 }
 
+VIET_enjoying_coconut_milk = {
+	icon = drink_positive
+	stress_loss_mult = 0.05
+	negate_health_penalty_add = 0.1
+}
+
+VIET_coconut_head_injury = {
+	icon = stress_negative
+	monthly_prestige = -0.01
+	stress_loss_mult = -0.15
+	health = -0.1
+}
+
+VIET_coconut_injury_supported_courtier = {
+	icon = stress_mixed
+	courtier_and_guest_opinion = 5	
+	county_opinion_add = -5
+}
+
+VIET_coconut_injury_supported_locals = {
+	icon = stress_mixed
+	courtier_and_guest_opinion = -5	
+	county_opinion_add = 5
+}
+
+VIET_coconut_injury_paid_compensation = {
+	icon = stress_mixed
+	monthly_prestige = 0.04
+	county_opinion_add = 5
+}
+
+VIET_octopus_military_ideas = {
+	icon = prowess_positive
+	monthly_martial_lifestyle_xp_gain_mult = 0.05
+	defender_advantage = 2
+	controlled_province_advantage = 2
+}
+
 
 
 

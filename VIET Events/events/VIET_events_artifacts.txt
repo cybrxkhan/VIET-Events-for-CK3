@@ -31,6 +31,7 @@
 # 5056			Shark
 # 5057			Fire
 # 5058			Recipe: Dumplings (pierogi!)
+# 5059			Coconut
 # 
 ############################################################################################################################
 
@@ -8737,5 +8738,147 @@ VIETmisc.5058 = {
 		}
 	}
 		
+
+}
+
+
+##################################################################
+# COCONUT CUP 5059
+##################################################################
+
+# Coconut Cup - buy one from a merchant?
+VIETmisc.5059 = {
+	type = character_event
+	title = VIETmisc.5059.t
+	desc = VIETmisc.5059.desc
+	theme = realm
+	override_background = { reference = VIET_background_small_town }
+	
+	right_portrait = {
+		character = root
+		animation = admiration
+	}
+	artifact = { # To display the artifact in the event-window
+        target = scope:VIET_clutter_artifact
+        position = lower_center_portrait
+    }
+
+    weight_multiplier = {
+        base = 1
+		# Reduce spam
+		modifier = {
+			add = -0.9
+			any_character_artifact = {
+				has_variable = VIET_fire_striker_variable
+			}
+		}
+		modifier = {
+			add = -0.4
+			VIET_has_2_clutter_artifacts_trigger = yes	
+		}
+		modifier = {
+			add = -0.5
+			VIET_has_4_clutter_artifacts_trigger = yes	
+		}
+		modifier = {
+			add = 0.2
+			has_trait = greedy
+		}
+		modifier = {
+			add = -0.2
+			has_trait = generous
+		}
+		modifier = {
+			add = 0.2
+			has_trait = arrogant
+		}
+		modifier = {
+			add = -0.2
+			has_trait = humble
+		}
+		modifier = {
+			add = 0.2
+			has_trait = ambitious
+		}
+		modifier = {
+			add = -0.2
+			has_trait = content
+		}
+		# Make it unlikely in areas with coconuts
+		modifier = {
+			add = -0.7
+			exists = capital_province
+			capital_province = {
+				VIET_is_in_coconut_region_trigger = yes
+			}
+		}
+		# Make it unlikely in areas without much significant trade
+		modifier = {
+			add = -0.7
+			NOT = { government_has_flag = government_is_tribal }	
+		}
+    }
+	
+
+	immediate = {
+		hidden_effect_new_object = {
+			create_artifact = {	
+				name = VIET_coconut_cup_name
+				description = VIET_coconut_cup_desc
+				type = VIET_clutter
+				visuals = VIET_coconut_cup
+				quality = 30
+				wealth = 30
+				modifier = artifact_VIET_coconut_cup_modifier
+				max_durability = 40
+				save_scope_as = VIET_clutter_artifact
+				history = {
+					type = created_before_history
+				}
+			}
+			scope:VIET_clutter_artifact = {
+				set_variable = VIET_coconut_cup_variable
+			}
+		}
+	}
+	
+	option = {
+		name = VIETmisc.5059.a	
+		trigger = {
+			OR = {
+				is_ai = no
+				gold >= 50
+			}
+		}
+		remove_short_term_gold = 50
+		show_as_tooltip = {
+			scope:VIET_clutter_artifact = {
+				set_owner = {
+					target = root
+				}
+			}
+		}
+		custom_tooltip = VIET_artifact_limit_warning
+	}
+	
+	option = {
+		name = VIETmisc.5059.b	
+		hidden_effect = {
+			destroy_artifact = scope:VIET_clutter_artifact
+		}
+		stress_impact = {
+			arrogant = miniscule_stress_impact_gain
+			ambitious = miniscule_stress_impact_gain
+		}
+	}
+
+	after = {		
+		if = {
+			limit = {
+				has_game_rule = VIET_historical_context_on
+			}
+			custom_tooltip = VIETmisc.5059.info
+		}
+	}
 
 }

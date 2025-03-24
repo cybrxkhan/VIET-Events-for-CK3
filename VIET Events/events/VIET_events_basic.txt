@@ -68,6 +68,7 @@
 # 0358-0360		Follow Up Events (on old/other events)
 # 0361-0365		Flower
 # 0366-0368		Snow
+# 0369-0371		Coconut
 # 
 ############################################################################################################################
 
@@ -35764,3 +35765,362 @@ VIETmisc.0368 = {
 	}
 	
 }
+
+
+
+##################################################################
+# COCONUT 0369-0371
+##################################################################
+
+
+# Drinking coconut milk
+VIETmisc.0369 = {
+	type = character_event
+	title = VIETmisc.0369.t
+	desc = VIETmisc.0369.desc
+	theme = friendly
+	override_background = { reference = VIET_background_tuscan_country }
+
+	right_portrait = {
+		character = root
+		animation = drink
+	}
+
+	trigger = {	
+		is_landed = yes
+		capital_province = {
+			VIET_is_in_coconut_region_trigger = yes
+		}
+	}
+	
+	weight_multiplier = {
+		base = 1
+		modifier = {
+			add = 0.2
+			has_trait = lazy
+		}
+		modifier = {
+			add = -0.2
+			has_trait = diligent
+		}
+		modifier = {
+			add = 0.2
+			has_trait = content
+		}
+		modifier = {
+			add = -0.2
+			has_trait = ambitious
+		}
+		modifier = {
+			add = 0.2
+			has_trait = calm
+		}
+		modifier = {
+			add = -0.2
+			has_trait = wrathful
+		}
+	}
+	
+	option = { # Drinking coconut milk
+		name = VIETmisc.0369.a
+		add_character_modifier = {
+			modifier = VIET_enjoying_coconut_milk
+			days = 800
+		}
+		stress_impact = {
+			base = miniscule_stress_impact_loss
+		}
+	}
+
+}
+
+
+# Inspecting coconut farms and learning about the difficult work of harvesting coconuts
+VIETmisc.0370 = {
+	type = character_event
+	title = VIETmisc.0370.t
+	desc = VIETmisc.0370.desc
+	theme = VIET_theme_tuscan_country
+
+	right_portrait = {
+		character = root
+		animation = thinking
+	}
+
+	trigger = {	
+		is_landed = yes
+		capital_province = {
+			VIET_is_in_coconut_region_trigger = yes
+		}
+	}
+	
+	weight_multiplier = {
+		base = 1
+		modifier = {
+			add = 0.2
+			has_trait = diligent
+		}
+		modifier = {
+			add = -0.2
+			has_trait = lazy
+		}
+		modifier = {
+			add = 0.2
+			has_trait = gregarious
+		}
+		modifier = {
+			add = -0.2
+			has_trait = shy
+		}
+		modifier = {
+			add = 0.2
+			has_trait = humble
+		}
+		modifier = {
+			add = -0.2
+			has_trait = arbitrary
+		}
+	}
+	
+	option = { # Ok
+		name = VIETmisc.0370.a
+		VIET_medium_piety_gain_effect = yes
+		stress_impact = {
+			cynical = miniscule_stress_impact_gain
+			callous = minor_stress_impact_gain
+			sadistic = minor_stress_impact_gain
+			arbitrary = miniscule_stress_impact_gain
+			arrogant = miniscule_stress_impact_gain
+		}
+	}
+	
+	option = { # Ok
+		name = VIETmisc.0370.b
+		VIET_medium_prestige_gain_effect = yes
+		stress_impact = {
+			compassionate = minor_stress_impact_gain
+			just = miniscule_stress_impact_gain
+			humble = miniscule_stress_impact_gain
+		}
+	}
+	
+	option = { # Ok
+		name = VIETmisc.0370.c
+		trigger = {
+			learning >= decent_skill_rating			
+		}
+		skill = learning
+		show_as_unavailable = {
+			learning < decent_skill_rating
+		}
+		VIET_huge_prestige_gain_effect = yes
+		capital_county = {
+			add_county_modifier = {
+				modifier = VIET_safer_coconut_harvesting_methods
+				years = 20
+			}		
+		}
+		stress_impact = {
+			just = minor_stress_impact_loss
+			compassionate = minor_stress_impact_loss
+			humble = miniscule_stress_impact_loss
+		}
+	}
+
+}
+
+
+# Coconut lands on a courtier's head, and they demand compensation from the coconut tree owners
+VIETmisc.0371 = {
+	type = character_event
+	title = VIETmisc.0371.t
+	desc = VIETmisc.0371.desc
+	theme = unfriendly
+	override_background = { reference = throne_room }
+	
+
+	left_portrait = root
+
+	right_portrait = {
+		character = scope:courtier
+		animation = severelywounded
+	}
+
+
+	trigger = {	
+		is_landed = yes
+		capital_province = {
+			VIET_is_in_coconut_region_trigger = yes
+		}
+		OR = {
+			any_courtier_or_guest = {
+				is_available_ai_adult = yes
+				OR = {
+					has_trait = vengeful
+					has_trait = arrogant
+					has_trait = arbitrary
+					has_trait = paranoid
+					has_trait = greedy
+					has_trait = wrathful
+					has_trait = eccentric
+					has_trait = stubborn
+				}
+				NOT = {
+					has_trait = forgiving
+				}
+			}
+			any_vassal = {
+				is_available_ai_adult = yes
+				OR = {
+					has_trait = vengeful
+					has_trait = arrogant
+					has_trait = arbitrary
+					has_trait = paranoid
+					has_trait = greedy
+					has_trait = wrathful
+					has_trait = eccentric
+					has_trait = stubborn
+				}
+				NOT = {
+					has_trait = forgiving
+				}
+			}
+		}
+	}
+	
+	weight_multiplier = {
+		base = 1
+		modifier = {
+			add = 0.2
+			has_trait = just
+		}
+		modifier = {
+			add = -0.2
+			has_trait = arbitrary
+		}
+		modifier = {
+			add = 0.2
+			has_trait = humble
+		}
+		modifier = {
+			add = -0.2
+			has_trait = arrogant
+		}
+		modifier = {
+			add = 0.2
+			has_trait = diligent
+		}
+		modifier = {
+			add = -0.2
+			has_trait = lazy
+		}
+	}
+
+	immediate = {
+		every_courtier_or_guest = {
+			limit = {
+				is_available_ai_adult = yes
+				OR = {
+					has_trait = vengeful
+					has_trait = arrogant
+					has_trait = arbitrary
+					has_trait = paranoid
+					has_trait = greedy
+					has_trait = wrathful
+					has_trait = eccentric
+					has_trait = stubborn
+				}
+				NOT = {
+					has_trait = forgiving
+				}
+			}
+			add_to_list = candidate_characters
+		}
+		every_vassal = {
+			limit = {
+				is_available_ai_adult = yes
+				OR = {
+					has_trait = vengeful
+					has_trait = arrogant
+					has_trait = arbitrary
+					has_trait = paranoid
+					has_trait = greedy
+					has_trait = wrathful
+					has_trait = eccentric
+					has_trait = stubborn
+				}
+				NOT = {
+					has_trait = forgiving
+				}
+			}
+			add_to_list = candidate_characters
+		}
+		random_in_list = {
+			list = candidate_characters
+			save_scope_as = courtier
+		}
+		scope:courtier = {
+			increase_wounds_no_death_effect = { REASON = accident }
+			add_character_modifier = {
+				modifier = VIET_coconut_head_injury
+				years = 4
+			}
+		}
+	}
+	
+	option = { # locals should compensate
+		name = VIETmisc.0371.a
+		add_character_modifier = {
+			modifier = VIET_coconut_injury_supported_courtier
+			years = 10
+		}
+		scope:courtier = {
+			add_opinion = {
+				target = root
+				modifier = VIET_showed_sympathy
+			}		
+		}
+	}
+	
+	option = { # locals do not need to compensate
+		name = VIETmisc.0371.b
+		add_character_modifier = {
+			modifier = VIET_coconut_injury_supported_locals
+			years = 10
+		}
+		scope:courtier = {
+			add_opinion = {
+				target = root
+				modifier = VIET_showed_no_sympathy
+			}		
+		}
+	}
+	
+	option = { # you will compensate the courtier yourself
+		name = VIETmisc.0371.c
+		trigger = {
+			OR = {
+				gold >= 50
+				is_ai = no
+			}
+		}
+		pay_short_term_gold = {
+			target = scope:courtier
+			gold = 50
+		}
+		VIET_huge_prestige_gain_effect = yes
+		add_character_modifier = {
+			modifier = VIET_coconut_injury_paid_compensation
+			years = 10
+		}
+		scope:courtier = {
+			add_opinion = {
+				target = root
+				modifier = VIET_showed_sympathy
+			}		
+		}
+	}
+
+	
+}
+

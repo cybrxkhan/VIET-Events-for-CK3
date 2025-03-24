@@ -199,4 +199,23 @@ VIET_is_redhead_or_blonde_area_capital = {
 	}
 }
 
+VIET_is_in_coconut_region_trigger = {
+	OR = {
+		geographical_region = world_india
+		geographical_region = world_burma
+		geographical_region = custom_red_sea
+		geographical_region = ghw_region_subsahelian_africa
+		geographical_region = ghw_region_southern_middle_east
+		geographical_region = ghw_region_arabia
+		geographical_region = ghw_region_egypt
+	}
+}
+
+VIET_is_in_coconut_octopus_region_trigger = {
+	OR = {
+		geographical_region = world_india
+		geographical_region = world_burma
+		geographical_region = custom_red_sea
+	}
+}
 

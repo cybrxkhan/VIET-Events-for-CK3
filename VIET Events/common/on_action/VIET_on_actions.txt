@@ -505,6 +505,8 @@ VIET_events_yearly_pulse = {
 		100 = VIETmisc.0365 	# You and a lover enjoy playing with some flowers one day
 		# Snow
 		100 = VIETmisc.0368		# Character watching the snow outside and feeling peaceful
+		# Coconut
+		100 = VIETmisc.0369		# Drinking coconut milk
 	}
 }
 
@@ -920,6 +922,8 @@ VIET_events_tri_yearly_pulse = {
 		100 = VIETmisc.0363		# Eating candied flowers
 		# Snow
 		100 = VIETmisc.0366		# Courtier gets stuck outside in a snowstorm and returns
+		# Coconut
+		100 = VIETmisc.0370		# Inspecting coconut farms and learning about the difficult work of harvesting coconuts
 	}
 }
 
@@ -1190,6 +1194,8 @@ VIET_events_five_yearly_pulse = {
 		100 = VIETmisc.0355		# Merchant tells about foreigners with red hair
 		# Snow
 		100 = VIETmisc.0367		# Courtier really likes eating snow
+		# Coconut
+		100 = VIETmisc.0371		# Coconut lands on a courtier's head, and they demand compensation from the coconut tree owners
 	}
 }
 
@@ -1936,7 +1942,10 @@ VIET_events_uncommon_artifact_pulse = {
 		# Dumpling
 		100 = VIETmisc.5058		# Dumpling recipe
 		
-		# 25
+		# Coconut
+		100 = VIETmisc.5059		# Coconut Cup - buy one from a merchant?
+		
+		# 26
 		
     }
 }

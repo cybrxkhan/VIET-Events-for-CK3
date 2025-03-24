@@ -237,8 +237,10 @@ VIET_travel_events_rare = {
 		100 = VIETmisc.7037		# Come across friendly guards at a toll
 		# Generic 4
 		100 = VIETmisc.7045		# Come across the house of an elderly farmer
+		# Coconut
+		100 = VIETmisc.7050		# Notice octopus using coconut shells to protect themselves
 
-		# 9
+		# 10
 	}
 }
 

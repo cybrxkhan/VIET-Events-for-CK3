@@ -473,3 +473,10 @@ artifact_VIET_fire_striker_modifier = {
 	character_travel_safety = 5
 	negate_intrigue_penalty_add = 1
 }
+
+artifact_VIET_coconut_cup_modifier = {
+	diplomacy = 1
+	monthly_prestige = 0.15
+	monthly_court_grandeur_change_add = 0.1
+	enemy_hostile_scheme_success_chance_add = -3
+}

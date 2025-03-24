@@ -26,6 +26,7 @@
 # 7025-7027		Word Contest
 # 7028-7039		Generic 3
 # 7040-7049		Generic 4 (From Poll)
+# 7050			Coconut
 # 
 ############################################################################################################################
 
@@ -5257,3 +5258,94 @@ VIETmisc.7049 = {
 
 }
 
+
+
+##################################################################
+# COCONUT 7050
+##################################################################
+
+
+# Notice octopus using coconut shells to protect themselves
+VIETmisc.7050 = {
+	type = character_event
+	title = VIETmisc.7050.t
+	desc = VIETmisc.7050.desc
+	theme = travel
+	override_background = { reference = fp1_ocean }
+	
+	right_portrait = {
+		character = root
+		animation = laugh
+	}	
+
+	trigger = {
+		is_location_valid_for_travel_event_on_land = yes
+		location = {
+			is_coastal = yes
+			has_holding = yes
+			VIET_is_in_coconut_octopus_region_trigger = yes
+		}
+	}
+	
+	weight_multiplier = {
+		base = 1
+		modifier = {
+			add = 0.2
+			has_trait = trusting
+		}
+		modifier = {
+			add = -0.2
+			has_trait = paranoid
+		}
+		modifier = {
+			add = 0.2
+			has_trait = gregarious
+		}
+		modifier = {
+			add = -0.2
+			has_trait = shy
+		}
+		modifier = {
+			add = 0.2
+			has_trait = patient
+		}
+		modifier = {
+			add = -0.2
+			has_trait = impatient
+		}
+	}
+	
+	option = { # Interesting!
+		name = VIETmisc.7050.a
+		stress_impact = {
+			base = miniscule_stress_impact_loss
+			gregarious = miniscule_stress_impact_loss
+			content = miniscule_stress_impact_loss
+		}	
+	}
+	
+	option = { # Military applications
+		name = VIETmisc.7050.b
+		trigger = {
+			martial >= medium_skill_rating			
+		}
+		skill = martial
+		show_as_unavailable = {
+			martial < medium_skill_rating
+		}
+		add_character_modifier = {
+			modifier = VIET_octopus_military_ideas
+			years = 10
+		}
+	}
+	
+	after = {
+		if = {
+			limit = {
+				has_game_rule = VIET_historical_context_on
+			}
+			custom_tooltip = VIETmisc.7050.info
+		}
+	}
+
+}
