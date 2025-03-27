@@ -1,6 +1,6 @@
-[img]https://i.imgur.com/b3r6W9t.jpg[/img]
+[img]https://i.imgur.com/5agqkxn.jpg[/img]
 
-[h1]当前版本：1.14.5 "下雪" (2025.02.28更新，兼容原版1.14.X)[/h1]
+[h1]当前版本：1.15.0 "棕櫚樹" (2025.03.27更新，兼容原版1.14.X)[/h1]
 
 [h1][B]
 [url=https://discord.gg/9KuyXv2uZA]我模组的Discord服务器[/url]
@@ -56,12 +56,12 @@ Very Immersive Events and Tales (VIET)是[url=https://steamcommunity.com/sharedf
 
 [img]http://i.imgur.com/RQ5QZTF.jpg[/img]
 
-[h1]版本号1.14.5 "下雪"[/h1]
+[h1]版本号1.15.0 "棕櫚樹"[/h1]
 
 "琴詩酒友皆抛我 雪月花時最憶君。"
 - 白居易
 
-该版本新增了[B]8[/B]个事件
+该版本新增了[B]5[/B]个事件
 
 
 完整更新日志请见此处：https://steamcommunity.com/sharedfiles/filedetails/changelog/2227658180
