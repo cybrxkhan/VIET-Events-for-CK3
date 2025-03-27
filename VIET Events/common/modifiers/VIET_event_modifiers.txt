@@ -3762,8 +3762,8 @@ VIET_coconut_injury_supported_locals = {
 }
 
 VIET_coconut_injury_paid_compensation = {
-	icon = stress_mixed
-	monthly_prestige = 0.04
+	icon = stress_positive
+	monthly_prestige = 0.12
 	county_opinion_add = 5
 }
 
@@ -3772,6 +3772,12 @@ VIET_octopus_military_ideas = {
 	monthly_martial_lifestyle_xp_gain_mult = 0.05
 	defender_advantage = 2
 	controlled_province_advantage = 2
+}
+
+VIET_safer_coconut_harvesting_methods = {
+	icon = food_positive
+	development_growth_factor = 0.15
+	county_opinion_add = 5
 }
 
 

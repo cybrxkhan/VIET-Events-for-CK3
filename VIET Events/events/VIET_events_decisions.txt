@@ -750,7 +750,7 @@ VIETmisc.2014 = {
 VIETmisc.2015 = {
 	type = character_event
 	title = VIETmisc.2015.t
-	desc = VIETmisc.2015.desc
+	desc = VIETmisc.2015.desc.x
 	theme = VIET_theme_small_town
 	
 	left_portrait = {

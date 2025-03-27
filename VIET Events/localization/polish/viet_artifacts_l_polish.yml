@@ -142,7 +142,11 @@
  VIET_fire_striker_name:0 "Reliable Fire Striker"
  VIET_fire_striker_desc:0 "A piece of metal, typically iron or steel, used with flint and other stones to create a spark that can be used to make fire. This one is of particularly high quality, and will not disappoint its owner."
  # Version 1.14.2 Start Here - Note to Translators: please leave this comment here and do not remove it even in your versions of the loc
- # 50 Basic
+ # Version 1.15.0 Start Here - Note to Translators: please leave this comment here and do not remove it even in your versions of the loc
+ VIET_coconut_cup_name:0 "Coconut Cup"
+ VIET_coconut_cup_desc:0 "A coconut shell used as a bowl, elaborately decorated with precious metal in a typical [ROOT.Char.GetCulture.GetName] artistic style. It is meant for display and for drinking."
+ # Version 1.15.1 Start Here - Note to Translators: please leave this comment here and do not remove it even in your versions of the loc
+ # 51 Basic
 
  # RECIPE ARTIFACTS
  VIET_recipe_baklava_name:0 "Baklava Recipe"

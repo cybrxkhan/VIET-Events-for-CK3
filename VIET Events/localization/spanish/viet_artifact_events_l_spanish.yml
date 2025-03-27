@@ -270,9 +270,13 @@ VIETmisc.5056.info:0 "#emphasis Contexto Histórico:#! En la época medieval, lo
  VIETmisc.5058.t:0 "Deliciosas Empanadillas"
  VIETmisc.5058.desc:0 "Había oído que las empanadillas de una parte de [county.GetNameNoTier] eran famosas por ser deliciosas. Así que pedí a los lugareños que me preparasen algunas de estas empanadillas para probarlas.\n\nQuedé completamente asombrado cuando probé las empanadillas. Decir que son una mezcla perfecta de verduras, salsas, especias, hierbas y más, todo envuelto en una masa deliciosa, sería quedarse corto.\n\nCuando convoqué a [cook.GetHerHim], el chef local, [cook.GetFirstName], quien preparó la comida, me dijo que lo que comí era simplemente una humilde [cook.Custom('VIET_dumpling_name')] [cook.GetCulture.GetName], nada más. Sin embargo, si me había gustado lo suficiente, [cook.GetSheHe] podría proporcionar una receta para mis cocineros, por un precio, claro está."
  # Version 1.14.2 Start Here - Note to Translators: please leave this comment here and do not remove it even in your versions of the loc
- VIETmisc.5059.t:0 "xxxxx"
- VIETmisc.5059.desc:0 "xxxxx"
- VIETmisc.5059.a:0 "xxxxx"
+ # Version 1.15.0 Start Here - Note to Translators: please leave this comment here and do not remove it even in your versions of the loc
+ VIETmisc.5059.t:0 "Coconut Cup"
+ VIETmisc.5059.desc:0 "I examine the coconut cup that the merchant is presenting to me, that I noticed while passing through town. At a glance, it looks like a spectacular work of craftsmanship: a coconut shell mounted on precious metal, with both the coconut and the metal filled with elaborate, intricate [ROOT.Char.GetCulture.GetName] carvings.\n\nThe merchant is offering me a good price for it, and claims it was imported from rather far away, and would make a good showpiece or to drink from, not to mention that reputable doctors believe the coconut itself can help safeguard against poison, illness, and intestinal worms. Yet, is it really worth it to add to my possessions?"
+ VIETmisc.5059.a:0 "Yes, I need to buy this!"
+ VIETmisc.5059.b:0 "It’s nice, but I don’t need it."
+ VIETmisc.5059.info:0 "#emphasis Historical Context:#! A famous, comical dialogue exchange in the movie #italic Monty Python and the Holy Grail#! involves King Arthur being questioned as to how he acquired tropical coconuts in temperate England; the humor is based on the assumption that coconuts could not be found in medieval Europe. Ironically, coconuts were historically not only present in Europe and many parts of the world, they weren't even that rare, as a highly sought after luxury item thanks to long-distance trade. In medieval Europe, for instance, coconut milk, meat, and oil were extracted for their purported medicinal uses; the leftover coconut shell would often be carved into beautiful drinking cups, and gilded with gold and silver. These coconut cups remained popular well into the modern era."
+ # Version 1.15.1 Start Here - Note to Translators: please leave this comment here and do not remove it even in your versions of the loc
  VIETmisc.5060.t:0 "xxxxx"
  VIETmisc.5060.desc:0 "xxxxx"
  VIETmisc.5060.a:0 "xxxxx"

@@ -35939,11 +35939,11 @@ VIETmisc.0371 = {
 	override_background = { reference = throne_room }
 	
 
-	left_portrait = root
+	#left_portrait = root
 
 	right_portrait = {
 		character = scope:courtier
-		animation = severelywounded
+		animation = anger
 	}
 
 
@@ -35952,38 +35952,20 @@ VIETmisc.0371 = {
 		capital_province = {
 			VIET_is_in_coconut_region_trigger = yes
 		}
-		OR = {
-			any_courtier_or_guest = {
-				is_available_ai_adult = yes
-				OR = {
-					has_trait = vengeful
-					has_trait = arrogant
-					has_trait = arbitrary
-					has_trait = paranoid
-					has_trait = greedy
-					has_trait = wrathful
-					has_trait = eccentric
-					has_trait = stubborn
-				}
-				NOT = {
-					has_trait = forgiving
-				}
+		any_courtier_or_guest = {
+			is_available_ai_adult = yes
+			OR = {
+				has_trait = vengeful
+				has_trait = arrogant
+				has_trait = arbitrary
+				has_trait = paranoid
+				has_trait = greedy
+				has_trait = wrathful
+				has_trait = eccentric
+				has_trait = stubborn
 			}
-			any_vassal = {
-				is_available_ai_adult = yes
-				OR = {
-					has_trait = vengeful
-					has_trait = arrogant
-					has_trait = arbitrary
-					has_trait = paranoid
-					has_trait = greedy
-					has_trait = wrathful
-					has_trait = eccentric
-					has_trait = stubborn
-				}
-				NOT = {
-					has_trait = forgiving
-				}
+			NOT = {
+				has_trait = forgiving
 			}
 		}
 	}
@@ -36036,25 +36018,25 @@ VIETmisc.0371 = {
 			}
 			add_to_list = candidate_characters
 		}
-		every_vassal = {
-			limit = {
-				is_available_ai_adult = yes
-				OR = {
-					has_trait = vengeful
-					has_trait = arrogant
-					has_trait = arbitrary
-					has_trait = paranoid
-					has_trait = greedy
-					has_trait = wrathful
-					has_trait = eccentric
-					has_trait = stubborn
-				}
-				NOT = {
-					has_trait = forgiving
-				}
-			}
-			add_to_list = candidate_characters
-		}
+		# every_vassal = {
+		# 	limit = {
+		# 		is_available_ai_adult = yes
+		# 		OR = {
+		# 			has_trait = vengeful
+		# 			has_trait = arrogant
+		# 			has_trait = arbitrary
+		# 			has_trait = paranoid
+		# 			has_trait = greedy
+		# 			has_trait = wrathful
+		# 			has_trait = eccentric
+		# 			has_trait = stubborn
+		# 		}
+		# 		NOT = {
+		# 			has_trait = forgiving
+		# 		}
+		# 	}
+		# 	add_to_list = candidate_characters
+		# }
 		random_in_list = {
 			list = candidate_characters
 			save_scope_as = courtier

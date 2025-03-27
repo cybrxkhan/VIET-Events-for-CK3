@@ -338,7 +338,7 @@ VIET_fire_striker = {
 }
 
 VIET_coconut_cup = {
-	icon = "artifact_VIET_fire_striker.dds"
+	icon = "artifact_VIET_coconut_cup.dds"
 	asset = ep1_western_box_small_basic_01_a_entity	
 }
 

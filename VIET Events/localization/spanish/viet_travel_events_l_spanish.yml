@@ -226,9 +226,13 @@ VIETmisc.7039.a:0 "Hubo bastante conversación interesante para compartir."
  VIETmisc.7049.desc:0 "Esta noche, me encontré incapaz de dormir por una razón u otra. Con un suspiro, salí de mis aposentos.\n\nMis guardias se alarmaron, preocupados de que algo estuviera pasando, pero levanté la mano para tranquilizarlos de que todo estaba bien. Me dejaron en paz mientras caminaba de un lado a otro por el suelo exterior.\n\nFue entonces cuando miré al cielo nocturno y recordé esa noche no hace mucho, cuando [traveler.GetTitledFirstName] y yo pasamos un rato mirando las estrellas y estudiando las constelaciones. Me reí para mí mismo/a y levanté un dedo mientras trataba de señalar algunas de las constelaciones de las que hablamos."
  VIETmisc.7049.a:0 "Ahí está la constelación del [ROOT.Char.Custom('GetPubAdjective')|U] [ROOT.Char.Custom('GetRandomRegionalSmallGame')|U]…."
  # Version 1.14.1 Start Here - Note to Translators: please leave this comment here and do not remove it even in your versions of the loc
- VIETmisc.7050.t:0 "$travel_event_prefix$ xxxxx"
- VIETmisc.7050.desc:0 "xxxxx"
- VIETmisc.7050.a:0 "xxxxx"
+ # Version 1.15.0 Start Here - Note to Translators: please leave this comment here and do not remove it even in your versions of the loc
+ VIETmisc.7050.t:0 "$travel_event_prefix$ Armored Octopus"
+ VIETmisc.7050.desc:0 "While traveling by ferry through a coastal part of [ROOT.Char.GetCurrentLocation.GetName], we saw a most curious sight in the mostly clear, blue-ish waters below: several small octopuses crawling on the sandy bottom, carrying broken coconut shells with them. These octopuses arranged the coconut shells like they were armor, and it was very comical to see.\n\nThe ferryman believes this is an uncommon sight, but not unheard of in this area, since the local [ROOT.Char.GetCurrentLocation.GetCulture.GetCollectiveNoun] make extensive use of coconuts in their daily lives."
+ VIETmisc.7050.a:0 "A fascinating if amusing sight."
+ VIETmisc.7050.b:0 "Hmm…. This gives me some military ideas!"
+ VIETmisc.7050.info:0 "#emphasis Biological Context:#! #italic Amphioctopus marginatus#!, nicknamed the coconut octopus or veined octopus, is an octopus species native to the Western Pacific that is sometimes fished for food. It is an example of cephalopod intelligence, as it often uses clam shells as mobile armor to protect itself from predators and other dangers. Members of this species who live close to areas inhabited by humans in Indonesia have been observed gathering and using discarded coconut shells instead of clam shells, indicating their ability to adapt to the local environment, as well as plan ahead for future threats."
+ # Version 1.15.1 Start Here - Note to Translators: please leave this comment here and do not remove it even in your versions of the loc
  VIETmisc.7051.t:0 "$travel_event_prefix$ xxxxx"
  VIETmisc.7051.desc:0 "xxxxx"
  VIETmisc.7051.a:0 "xxxxx"

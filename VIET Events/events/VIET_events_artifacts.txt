@@ -8769,7 +8769,7 @@ VIETmisc.5059 = {
 		modifier = {
 			add = -0.9
 			any_character_artifact = {
-				has_variable = VIET_fire_striker_variable
+				has_variable = VIET_coconut_cup_variable
 			}
 		}
 		modifier = {
