@@ -54,8 +54,10 @@ Por favor, echa un vistazo a [url=https://steamcommunity.com/workshop/filedetail
 
 [h1]Versión 1.15.0 "Palmera"[/h1]
 
-[I]“Amigos de la pipa, la poesía y la bebida, todos me han abandonado. Cuando veo la nieve, la luna o las flores, te anhelo profundamente.”
-- Bai Juyi (772-846 d.C.), poeta chino[/I]
+[I]Guardia: ¿De dónde sacasteis los cocos?  
+Rey Arturo: Los encontramos.  
+Guardia: ¿Los encontrasteis? ¡¿En Mercia?! ¡El coco es tropical!  
+- Monty Python and the Holy Grail[/I]
 
 Nuevos eventos añadidos en esta versión: [B]5[/B]
 

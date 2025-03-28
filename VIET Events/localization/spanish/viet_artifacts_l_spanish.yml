@@ -143,8 +143,8 @@ VIET_tongue_stone_desc:0 "También conocidas como lenguas de serpiente, estas pi
  VIET_fire_striker_name:0 "Chisquero Fiable"
 VIET_fire_striker_desc:0 "Un trozo de metal, generalmente hierro o acero, utilizado junto con pedernal y otras piedras para crear una chispa que pueda encender un fuego. Este en particular es de calidad excepcional y no decepcionará a su dueño."
  # Version 1.15.0 Start Here - Note to Translators: please leave this comment here and do not remove it even in your versions of the loc
- VIET_coconut_cup_name:0 "Coconut Cup"
- VIET_coconut_cup_desc:0 "A coconut shell used as a bowl, elaborately decorated with precious metal in a typical [ROOT.Char.GetCulture.GetName] artistic style. It is meant for display and for drinking."
+ VIET_coconut_cup_name:0 "Copa de Coco"  
+VIET_coconut_cup_desc:0 "Una cáscara de coco utilizada como cuenco, elaboradamente decorada con metal precioso en un estilo artístico típico de [ROOT.Char.GetCulture.GetName]. Está destinada tanto a la exhibición como para beber."  
  # Version 1.15.1 Start Here - Note to Translators: please leave this comment here and do not remove it even in your versions of the loc
  # 51 Basic
 
