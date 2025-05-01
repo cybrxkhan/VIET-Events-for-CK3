@@ -218,3 +218,9 @@ VIET_is_in_coconut_octopus_region_trigger = {
 	}
 }
 
+# Don't count East Asian cultures without cheese 
+VIET_is_cheese_culture_trigger = {
+	NOT = {
+		culture_has_east_asian_heritage_pillar_trigger = yes
+	}
+}

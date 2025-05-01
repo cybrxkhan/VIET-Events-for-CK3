@@ -32,6 +32,7 @@
 # 5057			Fire
 # 5058			Recipe: Dumplings (pierogi!)
 # 5059			Coconut
+# 5060			Oblivion Remaster
 # 
 ############################################################################################################################
 
@@ -8878,6 +8879,237 @@ VIETmisc.5059 = {
 				has_game_rule = VIET_historical_context_on
 			}
 			custom_tooltip = VIETmisc.5059.info
+		}
+	}
+
+}
+
+##################################################################
+# OBLIVION REMASTER 5060
+##################################################################
+
+# Horse Armor - Will you let Todd Howard convince you to buy Horse Armor?
+VIETmisc.5060 = {
+	type = character_event
+	title = VIETmisc.5060.t
+	desc = VIETmisc.5060.desc
+	theme = travel
+	override_background = { reference = VIET_background_small_town }
+	
+	left_portrait = {
+		character = scope:todd_howard
+		animation = personality_content
+	}
+	
+	right_portrait = {
+		character = root
+		animation = thinking
+	}
+	artifact = { # To display the artifact in the event-window
+        target = scope:VIET_clutter_artifact
+        position = lower_center_portrait
+    }
+
+	trigger = {		
+		has_game_rule = VIET_all_events
+	}
+
+    weight_multiplier = {
+        base = 1
+		# Reduce spam
+		modifier = {
+			add = -0.9
+			any_character_artifact = {
+				has_variable = VIET_horse_archer_variable
+			}
+		}
+		modifier = {
+			add = -0.4
+			VIET_has_2_clutter_artifacts_trigger = yes	
+		}
+		modifier = {
+			add = -0.5
+			VIET_has_4_clutter_artifacts_trigger = yes	
+		}
+		modifier = {
+			add = 0.2
+			has_trait = greedy
+		}
+		modifier = {
+			add = -0.2
+			has_trait = generous
+		}
+		modifier = {
+			add = 0.2
+			has_trait = gregarious
+		}
+		modifier = {
+			add = -0.2
+			has_trait = shy
+		}
+		modifier = {
+			add = 0.2
+			has_trait = patient
+		}
+		modifier = {
+			add = -0.2
+			has_trait = impatient
+		}
+    }
+	
+
+	immediate = {
+		create_character = {
+			location = root.location
+			template = VIET_todd_howard_template
+			save_scope_as = todd_howard
+		}	
+		hidden_effect = {
+			scope:todd_howard = {
+				add_character_modifier = {
+					modifier = VIET_todd_howard_merchant
+				}
+			}
+		}
+		hidden_effect_new_object = {
+			create_artifact = {	
+				name = VIET_horse_armor_name
+				description = VIET_horse_armor_desc
+				type = VIET_clutter
+				visuals = VIET_horse_armor
+				quality = 30
+				wealth = 30
+				modifier = artifact_VIET_horse_armor_modifier
+				max_durability = 40
+				save_scope_as = VIET_clutter_artifact
+				history = {
+					type = created_before_history
+				}
+			}
+			scope:VIET_clutter_artifact = {
+				set_variable = VIET_horse_armor_variable
+			}
+		}
+	}
+	
+	# Buy the horse armor
+	option = {
+		name = VIETmisc.5060.a	
+		trigger = {
+			OR = {
+				is_ai = no
+				gold >= 50
+			}
+		}
+		remove_short_term_gold = 50
+		show_as_tooltip = {
+			scope:VIET_clutter_artifact = {
+				set_owner = {
+					target = root
+				}
+			}
+		}
+		stress_impact = {
+			greedy = minor_stress_impact_gain
+		}
+		custom_tooltip = VIET_artifact_limit_warning
+		hidden_effect = {
+			scope:todd_howard = {
+				death = {
+					death_reason = death_vanished
+				}
+			}			
+		}
+	}
+	
+	# Ask Todd Howard to join your court
+	option = {
+		name = VIETmisc.5060.b	
+		trigger = {
+			OR = {
+				is_ai = no
+				gold >= 100
+			}
+			diplomacy >= decent_skill_rating
+		}
+		skill = diplomacy
+		show_as_unavailable = {
+			diplomacy < decent_skill_rating
+		}
+		duel = {
+			skill = diplomacy
+			target = scope:todd_howard
+			15 = { # Failure
+				compare_modifier = {
+					value = scope:duel_value
+					multiplier = -1.1
+				}
+				desc = VIETold.5060.c.toast.failure
+				send_interface_toast = {
+					type = event_toast_effect_bad
+					left_icon = scope:todd_howard
+					title = VIETold.5060.c.toast.failure		
+					hidden_effect = {
+						remove_short_term_gold = 50
+						scope:todd_howard = {
+							death = {
+								death_reason = death_vanished
+							}
+						}			
+					}
+				}
+			}
+			10 = { # Success
+				compare_modifier = {
+					value = scope:duel_value
+					multiplier = 1.1
+				}
+				desc = VIETold.5060.c.toast.success
+				send_interface_toast = {
+					type = event_toast_effect_good
+					left_icon = scope:todd_howard
+					title = VIETold.5060.c.toast.success
+					add_courtier = scope:todd_howard	
+					pay_short_term_gold = {
+						target = scope:courtier
+						gold = 100
+					}				
+				}
+			}
+		}
+		show_as_tooltip = {
+			scope:VIET_clutter_artifact = {
+				set_owner = {
+					target = root
+				}
+			}
+		}
+		stress_impact = {
+			base = miniscule_stress_impact_gain
+			greedy = medium_stress_impact_gain
+		}
+		custom_tooltip = VIET_artifact_limit_warning
+	}
+	
+	# Don't buy the horse armor
+	option = {
+		name = VIETmisc.5060.c	
+		hidden_effect = {
+			destroy_artifact = scope:VIET_clutter_artifact
+			scope:todd_howard = {
+				death = {
+					death_reason = death_vanished
+				}
+			}			
+		}
+	}
+
+	after = {		
+		if = {
+			limit = {
+				has_game_rule = VIET_historical_context_on
+			}
+			custom_tooltip = VIETmisc.5060.info
 		}
 	}
 

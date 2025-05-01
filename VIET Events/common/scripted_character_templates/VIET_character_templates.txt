@@ -1062,4 +1062,25 @@ VIET_traveling_merchant_template_male = {
 	}
 }
 
+VIET_todd_howard_template = {
+	age = { 30 60 }
+	culture = root.culture
+	faith = root.faith
+	gender_female_chance = 0
+	trait = gregarious
+	trait = patient
+	trait = diligent
+	trait = deceitful
+	trait = education_diplomacy_5
+	trait = beauty_good_2
+	random_traits = no
+	diplomacy = {
+		min_template_decent_skill
+		max_template_decent_skill
+	}
+	after_creation = {
+		VIET_ek_character_setup_effect = yes
+	}
+}
+
 

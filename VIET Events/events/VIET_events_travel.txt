@@ -27,6 +27,7 @@
 # 7028-7039		Generic 3
 # 7040-7049		Generic 4 (From Poll)
 # 7050			Coconut
+# 7051-7052		Oblivion Remaster
 # 
 ############################################################################################################################
 
@@ -5346,6 +5347,339 @@ VIETmisc.7050 = {
 			}
 			custom_tooltip = VIETmisc.7050.info
 		}
+	}
+
+}
+
+
+
+##################################################################
+# OBLIVION REMASTER 7051-7052
+##################################################################
+
+
+# Come across a grove of dead trees (an alternate take on this site)
+# Doubles as a bonus reference to Grave of the Fireflies, the greatest movie you should only see once
+VIETmisc.7051 = {
+	type = character_event
+	title = VIETmisc.7051.t
+	desc = VIETmisc.7051.desc
+	theme = travel
+	override_background = { reference = bp1_bonfire }
+	
+	left_portrait = {
+		character = scope:scared
+		animation = fear
+	}	
+	
+	right_portrait = {
+		character = scope:traveler_2
+		animation = personality_honorable
+	}	
+
+	trigger = {
+		is_location_valid_for_travel_event_on_land = yes
+		NOT = { has_character_modifier = VIET_grave_of_the_fireflies }
+		current_travel_plan = {
+			any_entourage_character = {	
+				count >= 2		
+				is_available_travelling = yes
+			}
+		}
+	}
+	
+	weight_multiplier = {
+		base = 1
+		modifier = {
+			add = 0.2
+			has_trait = calm
+		}
+		modifier = {
+			add = -0.2
+			has_trait = wrathful
+		}
+		modifier = {
+			add = 0.2
+			has_trait = patient
+		}
+		modifier = {
+			add = -0.2
+			has_trait = impatient
+		}
+		modifier = {
+			add = 0.2
+			has_trait = trusting
+		}
+		modifier = {
+			add = -0.2
+			has_trait = paranoid
+		}
+	}
+
+	immediate = {
+		current_travel_plan = {
+			every_entourage_character = {	
+				limit = {
+					is_available_travelling = yes
+				}
+				add_to_list = entourage_character_candidates
+			}
+		}
+		random_in_list = {
+			list = entourage_character_candidates
+			weight = {
+				base = 50
+				modifier = {
+					has_trait = craven
+					add = 25
+				}
+				modifier = {
+					has_trait = paranoid
+					add = 10
+				}
+				modifier = {
+					has_trait = eccentric
+					add = 5
+				}
+				modifier = {
+					has_trait = trusting
+					add = -5
+				}
+				modifier = {
+					has_trait = content
+					add = -5
+				}
+				modifier = {
+					has_trait = calm
+					add = -10
+				}
+				modifier = {
+					has_trait = brave
+					add = -25
+				}
+			}
+			save_scope_as = scared
+		}
+		random_in_list = {
+			list = entourage_character_candidates
+			limit = {
+				exists = scope:scared
+				NOT = { this = scope:scared }
+			}
+			weight = {
+				base = 50
+				modifier = {
+					has_trait = craven
+					add = -25
+				}
+				modifier = {
+					has_trait = cynical
+					add = -10
+				}
+				modifier = {
+					has_trait = eccentric
+					add = -5
+				}
+				modifier = {
+					has_trait = trusting
+					add = 5
+				}
+				modifier = {
+					has_trait = zealous
+					add = 5
+				}
+				modifier = {
+					has_trait = calm
+					add = 10
+				}
+				modifier = {
+					has_trait = brave
+					add = 25
+				}
+			}
+			save_scope_as = brave
+		}
+	}
+	
+	option = { # Let's not camp there
+		name = VIETmisc.7051.a
+		VIET_medium_prestige_gain_effect = yes
+		scope:scared = {
+			add_opinion = {
+				target = root
+				modifier = grateful_opinion
+				opinion = 10
+			}
+		}	
+		scope:brave = {
+			add_opinion = {
+				target = root
+				modifier = disappointed_opinion
+				opinion = -10
+			}
+		}	
+		stress_impact = {
+			paranoid = miniscule_stress_impact_gain
+			content = miniscule_stress_impact_gain
+			craven = minor_stress_impact_gain
+		}	
+	}
+	
+	option = { # Let's camp there
+		name = VIETmisc.7051.b
+		VIET_medium_piety_gain_effect = yes
+		scope:scared = {
+			add_opinion = {
+				target = root
+				modifier = upset_opinion
+				opinion = -10
+			}
+		}	
+		scope:brave = {
+			add_opinion = {
+				target = root
+				modifier = pleased_opinion
+				opinion = 10
+			}
+		}	
+		stress_impact = {
+			paranoid = miniscule_stress_impact_gain
+			content = miniscule_stress_impact_gain
+			craven = minor_stress_impact_gain
+		}
+		hidden_effect = {			
+			random = {
+				chance = 25
+				random_list = {
+					40 = {
+						send_interface_toast = {
+							left_icon = ROOT
+							title = VIETmisc.7051.b.toast
+							add_character_modifier = {
+								modifier = VIET_grave_of_the_fireflies
+								years = 10
+							}
+						}
+					}
+					30 = {
+						send_interface_toast = {
+							left_icon = ROOT
+							title = VIETmisc.7051.b.toast
+							add_character_modifier = {
+								modifier = VIET_grave_of_the_fireflies
+								years = 20
+							}
+						}
+					}
+					20 = {
+						send_interface_toast = {
+							left_icon = ROOT
+							title = VIETmisc.7051.b.toast
+							add_character_modifier = {
+								modifier = VIET_grave_of_the_fireflies
+								years = 30
+							}
+						}
+					}
+					10 = {
+						send_interface_toast = {
+							left_icon = ROOT
+							title = VIETmisc.7051.b.toast
+							add_character_modifier = {
+								modifier = VIET_grave_of_the_fireflies
+							}
+						}
+					}
+				}
+			}
+		}
+
+	}
+
+}
+
+
+# Arrive in Anvil
+# Loosely inspired by the first time I discovered Anvil in Oblivion, and the first time I (re)discovered itin Oblivion Remastered
+VIETmisc.7052 = {
+	type = character_event
+	title = VIETmisc.7052.t
+	desc = VIETmisc.7052.desc
+	theme = travel
+	override_background = { reference = docks }
+
+	
+	right_portrait = {
+		character = root
+		animation = holding_staff
+	}	
+
+	trigger = {
+		is_location_valid_for_travel_event_on_land = yes
+		location = {
+			is_coastal = yes
+			has_holding = yes
+		}
+		is_traveling = yes
+	}
+	
+	weight_multiplier = {
+		base = 1
+		modifier = {
+			add = 0.2
+			has_trait = ambitious
+		}
+		modifier = {
+			add = -0.2
+			has_trait = content
+		}
+		modifier = {
+			add = 0.2
+			has_trait = patient
+		}
+		modifier = {
+			add = -0.2
+			has_trait = impatient
+		}
+		modifier = {
+			add = 0.2
+			has_trait = diligent
+		}
+		modifier = {
+			add = -0.2
+			has_trait = lazy
+		}
+	}
+
+	
+	option = { # Ok
+		name = VIETmisc.7052.a
+		stress_impact = {
+			base = miniscule_stress_impact_loss
+			content = miniscule_stress_impact_loss
+			lazy = miniscule_stress_impact_loss
+		}
+
+	}
+	
+	option = { # Ok
+		name = VIETmisc.7052.b
+		trigger = {
+			OR = {
+				gold >= 10
+				is_ai = no
+			}
+		}
+		remove_short_term_gold = 10
+		stress_impact = {
+			base = minor_stress_impact_loss
+			content = minor_stress_impact_loss
+			lazy = minor_stress_impact_loss
+		}
+		current_travel_plan = {
+			delay_travel_plan = { days = 10 }
+		}
+
 	}
 
 }

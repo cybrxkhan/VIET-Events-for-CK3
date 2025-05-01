@@ -342,6 +342,11 @@ VIET_coconut_cup = {
 	asset = ep1_western_box_small_basic_01_a_entity	
 }
 
+VIET_horse_armor = {
+	icon = "artifact_VIET_horse_armor.dds"
+	asset = ep1_western_box_small_basic_01_a_entity	
+}
+
 
 
 

@@ -3780,6 +3780,32 @@ VIET_safer_coconut_harvesting_methods = {
 	county_opinion_add = 5
 }
 
+VIET_hagaer_modifier = {
+	icon = learning_mixed
+	diplomacy = -3
+	stewardship = 1
+	learning = 2
+	owned_personal_scheme_success_chance_add = -10
+	monthly_lifestyle_xp_gain_mult = 0.05
+}
+
+VIET_supports_bookworms = {
+	icon = learning_positive
+	monthly_piety = 0.2
+	development_growth_factor = 0.04
+}
+
+VIET_ate_excellent_cheese = {
+	icon = food_positive
+	stress_loss_mult = 0.1
+}
+
+VIET_grave_of_the_fireflies = {
+	icon = magic_positive
+	stress_gain_mult = -0.05
+	stress_loss_mult = 0.05
+}
+
 
 
 
