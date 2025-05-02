@@ -483,8 +483,8 @@ artifact_VIET_coconut_cup_modifier = {
 
 artifact_VIET_horse_armor_modifier = {
 	monthly_prestige = 0.25
-	enemy_hostile_scheme_success_chance_add = -3
-	archer_cavalry_toughness_mult = 0.03
-	light_cavalry_toughness_mult = 0.03
-	heavy_cavalry_toughness_mult = 0.03
+	character_travel_safety = 3
+	archer_cavalry_toughness_mult = 0.02
+	light_cavalry_toughness_mult = 0.02
+	heavy_cavalry_toughness_mult = 0.02
 }

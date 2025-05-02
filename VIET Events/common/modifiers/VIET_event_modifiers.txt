@@ -3783,6 +3783,7 @@ VIET_safer_coconut_harvesting_methods = {
 VIET_hagaer_modifier = {
 	icon = learning_mixed
 	diplomacy = -3
+	intrigue = -1
 	stewardship = 1
 	learning = 2
 	owned_personal_scheme_success_chance_add = -10

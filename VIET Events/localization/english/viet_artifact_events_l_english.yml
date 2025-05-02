@@ -277,9 +277,15 @@
  VIETmisc.5059.b:0 "It’s nice, but I don’t need it."
  VIETmisc.5059.info:0 "#emphasis Historical Context:#! A famous, comical dialogue exchange in the movie #italic Monty Python and the Holy Grail#! involves King Arthur being questioned as to how he acquired tropical coconuts in temperate England; the humor is based on the assumption that coconuts could not be found in medieval Europe. Ironically, coconuts were historically not only present in Europe and many parts of the world, they weren't even that rare, as a highly sought after luxury item thanks to long-distance trade. In medieval Europe, for instance, coconut milk, meat, and oil were extracted for their purported medicinal uses; the leftover coconut shell would often be carved into beautiful drinking cups, and gilded with gold and silver. These coconut cups remained popular well into the modern era."
  # Version 1.15.1 Start Here - Note to Translators: please leave this comment here and do not remove it even in your versions of the loc
- VIETmisc.5060.t:0 "xxxxx"
- VIETmisc.5060.desc:0 "xxxxx"
- VIETmisc.5060.a:0 "xxxxx"
+ # Version 1.16.0 Start Here - Note to Translators: please leave this comment here and do not remove it even in your versions of the loc
+ VIETmisc.5060.t:0 "The Salesman"
+ VIETmisc.5060.desc:0 "I heard there was an excellent [todd_howard.GetCulture.GetName] merchant living in a town nearby, who sold all manner of useful items. Intrigued, I went to visit this fellow myself.\n\When I did meet this merchant named [todd_howard.GetFirstName] [todd_howard.GetDynasty.GetName], I noticed everything he said sounded exaggerated, as if he was a #italic liar#!, and yet… he seemed so charming and genuine, if a little awkward.\n\n“I think I might have something you’ll like at an affordable price,” he says. “Earlier, you mentioned your worries about your safety while traveling. My [ROOT.Char.GetLadyLord], this could help protect you, while providing a comfortable experience as you explore the world: this horse armor, for your horse.”\n\n[todd_howard.GetFirstNameNoTooltip] continues to elucidate the excellent quality of this horse armor and how it is not only protective, but aesthetic as well."
+ VIETmisc.5060.a:0 "You got a deal, [todd_howard.GetFirstNameNoTooltip]!"
+ VIETmisc.5060.b:0 "Your sweet “lies” could be a great asset to me, actually…."
+ VIETmisc.5060.b.toast.failure:0 "You fail to convince him to work for you"
+ VIETmisc.5060.b.toast.success:0 "You convince him to work for you now"
+ VIETmisc.5060.c:0 "Pah! People say you’re a good salesman? Forget it."
+ # Version 1.16.1 Start Here - Note to Translators: please leave this comment here and do not remove it even in your versions of the loc
  VIETmisc.5061.t:0 "xxxxx"
  VIETmisc.5061.desc:0 "xxxxx"
  VIETmisc.5061.a:0 "xxxxx"

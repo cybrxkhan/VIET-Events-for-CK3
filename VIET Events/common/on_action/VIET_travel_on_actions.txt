@@ -95,8 +95,10 @@ VIET_travel_events_common = {
 		100 = VIETmisc.7043 	# Horse collapses and dies under traveler
 		100 = VIETmisc.7047 	# Encounter thieves trying to steal wooden planks belonging to a road
 		100 = VIETmisc.7048 	# Traveler is gazing at the stars
+		# Oblivion Remaster
+		100 = VIETmisc.7052 	# Arrive in Anvil
 
-		# 22
+		# 23
 	}
 }
 
@@ -239,8 +241,10 @@ VIET_travel_events_rare = {
 		100 = VIETmisc.7045		# Come across the house of an elderly farmer
 		# Coconut
 		100 = VIETmisc.7050		# Notice octopus using coconut shells to protect themselves
+		# Oblivion Remaster
+		100 = VIETmisc.7051		# Come across a grove of dead trees (an alternate take on this site)
 
-		# 10
+		# 11
 	}
 }
 

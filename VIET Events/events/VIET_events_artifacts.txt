@@ -9044,11 +9044,11 @@ VIETmisc.5060 = {
 					value = scope:duel_value
 					multiplier = -1.1
 				}
-				desc = VIETold.5060.c.toast.failure
+				desc = VIETold.5060.b.toast.failure
 				send_interface_toast = {
 					type = event_toast_effect_bad
 					left_icon = scope:todd_howard
-					title = VIETold.5060.c.toast.failure		
+					title = VIETold.5060.b.toast.failure		
 					hidden_effect = {
 						remove_short_term_gold = 50
 						scope:todd_howard = {
@@ -9064,11 +9064,11 @@ VIETmisc.5060 = {
 					value = scope:duel_value
 					multiplier = 1.1
 				}
-				desc = VIETold.5060.c.toast.success
+				desc = VIETold.5060.b.toast.success
 				send_interface_toast = {
 					type = event_toast_effect_good
 					left_icon = scope:todd_howard
-					title = VIETold.5060.c.toast.success
+					title = VIETold.5060.b.toast.success
 					add_courtier = scope:todd_howard	
 					pay_short_term_gold = {
 						target = scope:courtier
