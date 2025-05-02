@@ -3807,6 +3807,15 @@ VIET_grave_of_the_fireflies = {
 	stress_loss_mult = 0.05
 }
 
+VIET_todd_howard_merchant = {
+	icon = letter_positive
+	diplomacy = 3
+	stewardship = 1
+	owned_personal_scheme_success_chance_add = 10
+	enemy_hostile_scheme_success_chance_add = -10
+	monthly_income = 0.2
+}
+
 
 
 
