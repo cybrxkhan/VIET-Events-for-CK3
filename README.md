@@ -1,13 +1,10 @@
 # VIET Events for CK3
 
-<img src="https://i.imgur.com/5agqkxn.jpg">
+<img src="https://i.imgur.com/pNp0DR5.jpg">
 
-## Latest Version: 1.15.0 "Palm Tree" (Released 3/27/25)
+## Latest Version: 1.16.0 "Imperial" (Released 5/3/25)
 
-_Guard: Where'd you get the coconuts?_
-_King Arthur: We found them._
-_Guard: Found them? In Mercia?! The coconut's tropical!_
-_- Monty Python and the Holy Grail_
+_"I've heard others say the same."_
 
 Very Immersive Events and Tales (VIET), the sequel to VIET Events Reborn for CK2, is a flavor mod that adds a vast collection of events about everyday life to spice up your game. They add immersion and a diversity of experiences in between wars and vanilla’s event chains, and cover mundane minutiae ranging from small talk with courtiers and eating local cuisine to epic tales about love, philosophy, and the human condition. Some of the events unlock new decisions, character interactions, activities, and much more for you to explore!
 
@@ -17,7 +14,7 @@ Feel free to use my work in your mods - all I ask is that I am credited and (if 
 
 ## Features
 
-- Over **1193** new flavor events to experience!
+- Over **1200** new flavor events to experience!
 - Explore new decisions, artifacts, character interactions, activities, and more!
 - Game rule to disable sillier events for those who don't like them, with three levels to choose from: Balanced (Default), Serious (Restricted), and All Events (Full)
 - Compatible with almost anything since it doesn't touch any vanilla files - even with overhaul mods, you can via game rule disable events that reference things specific to our medieval world that wouldn’t make sense in other time periods or universes (like fantasy and sci-fi conversion mods)
@@ -41,13 +38,16 @@ The mod folder should look something like this:
 
 ## Changelog
 
-### Version 1.15.0 "Palm Tree"
+### Version 1.16.0 "Imperial"
 
-New events added in this version: **5**
+New events added in this version: **7**
 
-- Added 5 coconut themed events
-- Added new artifact: Coconut Cup
-- Miscellaneous bugfixes and tweaks
+- Added 7 Oblivion inspired events
+- Added new artifact: Quality Horse Armor
+- Added a few new event backgrounds
+- VIET’s events now account for the new world_steppe_central and world_siberia regions added in vanilla as needed
+- Adjusted the geographical triggers for a few events
+- Miscellaneous bugfixes/tweaks
 
 \* Adapted from VIET for CK2
 

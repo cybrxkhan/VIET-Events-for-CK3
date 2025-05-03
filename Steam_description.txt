@@ -1,6 +1,6 @@
-[img]https://i.imgur.com/5agqkxn.jpg[/img]
+[img]https://i.imgur.com/pNp0DR5.jpg[/img]
 
-[h1]Current Version: 1.15.0 "Palm Tree" (Released 3/27/25, Compatible with vanilla patch 1.15.X)[/h1]
+[h1]Current Version: 1.16.0 "Imperial" (Released 5/3/25, Compatible with vanilla patch 1.16.X)[/h1]
 
 [h1][B][url=https://discord.gg/9KuyXv2uZA]Discord Server for my mods[/url]
 [url=https://cybrxkhansmods.godaddysites.com/]Official Website for my mods[/url][/B][/h1]
@@ -25,7 +25,7 @@ Feel free to use my work in your mods - all I ask is that I am credited and (if 
 [img]http://i.imgur.com/EyXurbK.jpg[/img]
 
 [LIST]
-[*]Over [B][U]1193[/U] new flavor events[/B] to experience!
+[*]Over [B][U]1200[/U] new flavor events[/B] to experience!
 [*]Explore new decisions, artifacts, character interactions, activities, and more!
 [*]Game rule to disable sillier events for those who don't like them, with three levels to choose from: Balanced (Default), Serious (Restricted), and All Events (Full)
 [*][B]Compatible with almost anything[/B] since it doesn't touch any vanilla files - even with overhaul mods, you can via game rule disable events that reference things specific to our medieval world that wouldn’t make sense in other time periods or universes (like fantasy/sci-fi conversion mods)
@@ -52,19 +52,19 @@ Please see the [url=https://cybrxkhansmods.godaddysites.com/faq]FAQ on my mods' 
 
 [img]http://i.imgur.com/RQ5QZTF.jpg[/img]
 
-[h1]Version 1.15.0 "Palm Tree"[/h1]
+[h1]Version 1.16.0 "Imperial"[/h1]
 
-[I]Guard: Where'd you get the coconuts?
-King Arthur: We found them.
-Guard: Found them? In Mercia?! The coconut's tropical!
-- Monty Python and the Holy Grail[/I]
+[I]"I've heard others say the same."[/I]
 
-New events added in this version: [B]5[/B]
+New events added in this version: [B]7[/B]
 
 [LIST]
-[*]Added 5 coconut themed events
-[*]Added new artifact: Coconut Cup
-[*]Miscellaneous bugfixes and tweaks
+[*]Added 7 Oblivion inspired events
+[*]Added new artifact: Quality Horse Armor
+[*]Added a few new event backgrounds
+[*]VIET’s events now account for the new world_steppe_central and world_siberia regions added in vanilla as needed
+[*]Adjusted the geographical triggers for a few events
+[*]Miscellaneous bugfixes/tweaks
 [/LIST]
 
 *Adapted from VIET for CK2
