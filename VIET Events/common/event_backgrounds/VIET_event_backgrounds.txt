@@ -42,6 +42,35 @@ VIET_background_nightmare = {
 ### TUSCAN COUNTRY ###
 VIET_background_tuscan_country = {
 
+	background = { # Occitan, River
+		trigger = {
+			location = {
+				is_riverside_province = yes
+				OR = {
+					geographical_region = world_europe_west_germania
+					geographical_region = world_europe_west_britannia
+					geographical_region = world_europe_west_francia
+					geographical_region = custom_west_slavia
+					geographical_region = ghw_region_northern_italy
+				}
+			}
+		}
+		reference = "gfx/interface/illustrations/event_scenes/VIET_tuscan_country_occitan_bridge.dds"
+		environment = "environment_travel_bridge"
+		ambience = "event:/SFX/Events/Backgrounds/castle_garden_day"
+	}
+
+	background = { # Turkmen/Asia Minor
+		trigger = {
+			location = {
+				geographical_region = world_asia_minor
+			}
+		}
+		reference = "gfx/interface/illustrations/event_scenes/VIET_tuscan_country_turkmen.dds"
+		environment = "environment_event_garden"
+		ambience = "event:/SFX/Events/Backgrounds/castle_garden_day"
+	}
+
 	background = { # East African
 		trigger = {
 			location = {
@@ -139,6 +168,8 @@ VIET_background_tuscan_country = {
 					geographical_region = world_steppe_west
 					geographical_region = world_steppe_east
 					geographical_region = world_europe_east
+					geographical_region = world_steppe_central
+					geographical_region = world_siberia
 				}
 				NOT = { geographical_region = ghw_region_baltic }
 			}
@@ -385,7 +416,19 @@ VIET_background_ancient_cairn = {
 ### SMALL TOWN ###
 VIET_background_small_town = {
 
-	background = { # Iberian
+	background = { # Western Mediterranean Port
+		trigger = {
+			location = {
+				is_coastal = yes
+				geographical_region = world_europe_south
+			}
+		}
+		reference = "gfx/interface/illustrations/event_scenes/VIET_small_town_sicilian_port.dds"
+		environment = "environment_event_fp3_docks"
+		ambience = "event:/SFX/Events/Backgrounds/docks_day"
+	}
+
+	background = { # Chinese
 		trigger = {
 			location = {
 				culture = {
@@ -483,6 +526,8 @@ VIET_background_small_town = {
 					geographical_region = world_steppe_west
 					geographical_region = world_steppe_east
 					geographical_region = world_tibet
+					geographical_region = world_steppe_central
+					geographical_region = world_siberia
 				}
 			}
 		}
@@ -575,7 +620,29 @@ VIET_background_small_town = {
 ### SKYRIM FOREST ###
 VIET_background_skyrim_forest = {
 
-	background = { # Levant
+	background = { # Bavarian
+		trigger = {
+			location = {
+				geographical_region = ghw_region_poland_bohemia_bavaria
+			}
+		}
+		reference = "gfx/interface/illustrations/event_scenes/VIET_skyrim_forest_bavarian.dds"
+		environment = "environment_event_forest"
+		ambience = "event:/SFX/Events/Backgrounds/deciduous_forest_day"
+	}
+
+	background = { # Sicilian
+		trigger = {
+			location = {
+				geographical_region = custom_sicily
+			}
+		}
+		reference = "gfx/interface/illustrations/event_scenes/VIET_skyrim_forest_sicilian.dds"
+		environment = "environment_event_forest"
+		ambience = "event:/SFX/Events/Backgrounds/desert_day"
+	}
+
+	background = { # France
 		trigger = {
 			location = {
 				geographical_region = world_europe_west_francia
@@ -665,6 +732,8 @@ VIET_background_skyrim_forest = {
 				OR = {
 					geographical_region = world_steppe_east
 					geographical_region = world_tibet
+					geographical_region = world_steppe_central
+					geographical_region = world_siberia
 				}
 			}
 		}
@@ -713,8 +782,8 @@ VIET_background_skyrim_forest = {
 	background = { # Mediterranean
 		trigger = {
 			location = {
-				geographical_region = graphical_mediterranean
-				NOT = { geographical_region = world_europe_west_iberia }
+				geographical_region = world_europe_south_east
+				#NOT = { geographical_region = world_europe_west_iberia }
 			}
 		}
 		reference = "gfx/interface/illustrations/event_scenes/VIET_skyrim_forest_greek.dds"
@@ -726,7 +795,6 @@ VIET_background_skyrim_forest = {
 		trigger = {
 			location = {
 				OR = {
-					geographical_region = world_middle_east_jerusalem
 					geographical_region = world_middle_east_arabia
 					geographical_region = world_africa_north
 					geographical_region = world_africa_sahara

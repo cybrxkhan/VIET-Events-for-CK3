@@ -1711,6 +1711,8 @@ VIETmisc.5014 = {
 				geographical_region = world_tibet
 				geographical_region = world_burma
 				geographical_region = world_middle_east_persia
+				geographical_region = world_steppe_central
+				geographical_region = world_siberia
 			}
 		}
 	}
@@ -8920,7 +8922,7 @@ VIETmisc.5060 = {
 		modifier = {
 			add = -0.9
 			any_character_artifact = {
-				has_variable = VIET_horse_archer_variable
+				has_variable = VIET_horse_armor_variable
 			}
 		}
 		modifier = {
@@ -9036,19 +9038,31 @@ VIETmisc.5060 = {
 		show_as_unavailable = {
 			diplomacy < decent_skill_rating
 		}
+		show_as_tooltip = {
+			scope:VIET_clutter_artifact = {
+				set_owner = {
+					target = root
+				}
+			}
+		}
+		stress_impact = {
+			base = miniscule_stress_impact_gain
+			greedy = medium_stress_impact_gain
+		}
+		custom_tooltip = VIET_artifact_limit_warning
 		duel = {
 			skill = diplomacy
 			target = scope:todd_howard
 			15 = { # Failure
 				compare_modifier = {
 					value = scope:duel_value
-					multiplier = -1.1
+					multiplier = -0.8
 				}
-				desc = VIETold.5060.b.toast.failure
+				desc = VIETmisc.5060.b.toast.failure
 				send_interface_toast = {
 					type = event_toast_effect_bad
 					left_icon = scope:todd_howard
-					title = VIETold.5060.b.toast.failure		
+					title = VIETmisc.5060.b.toast.failure		
 					hidden_effect = {
 						remove_short_term_gold = 50
 						scope:todd_howard = {
@@ -9062,33 +9076,21 @@ VIETmisc.5060 = {
 			10 = { # Success
 				compare_modifier = {
 					value = scope:duel_value
-					multiplier = 1.1
+					multiplier = 0.8
 				}
-				desc = VIETold.5060.b.toast.success
+				desc = VIETmisc.5060.b.toast.success
 				send_interface_toast = {
 					type = event_toast_effect_good
 					left_icon = scope:todd_howard
-					title = VIETold.5060.b.toast.success
+					title = VIETmisc.5060.b.toast.success
 					add_courtier = scope:todd_howard	
 					pay_short_term_gold = {
-						target = scope:courtier
+						target = scope:todd_howard
 						gold = 100
 					}				
 				}
 			}
 		}
-		show_as_tooltip = {
-			scope:VIET_clutter_artifact = {
-				set_owner = {
-					target = root
-				}
-			}
-		}
-		stress_impact = {
-			base = miniscule_stress_impact_gain
-			greedy = medium_stress_impact_gain
-		}
-		custom_tooltip = VIET_artifact_limit_warning
 	}
 	
 	# Don't buy the horse armor
@@ -9101,15 +9103,6 @@ VIETmisc.5060 = {
 					death_reason = death_vanished
 				}
 			}			
-		}
-	}
-
-	after = {		
-		if = {
-			limit = {
-				has_game_rule = VIET_historical_context_on
-			}
-			custom_tooltip = VIETmisc.5060.info
 		}
 	}
 

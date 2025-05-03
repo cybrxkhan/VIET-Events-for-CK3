@@ -2717,6 +2717,7 @@ VIETmisc.7025 = {
 					OR = {
 						geographical_region = world_europe_north
 						geographical_region = world_steppe
+						geographical_region = world_siberia
 					}
 				}
 				geographical_region = hunt_animal_reindeer_region
@@ -5363,6 +5364,7 @@ VIETmisc.7050 = {
 VIETmisc.7051 = {
 	type = character_event
 	title = VIETmisc.7051.t
+	window = big_event_window
 	desc = VIETmisc.7051.desc
 	theme = travel
 	override_background = { reference = bp1_bonfire }
@@ -5373,7 +5375,7 @@ VIETmisc.7051 = {
 	}	
 	
 	right_portrait = {
-		character = scope:traveler_2
+		character = scope:brave
 		animation = personality_honorable
 	}	
 
@@ -5550,7 +5552,7 @@ VIETmisc.7051 = {
 		}
 		hidden_effect = {			
 			random = {
-				chance = 25
+				chance = 40
 				random_list = {
 					40 = {
 						send_interface_toast = {
@@ -5611,10 +5613,10 @@ VIETmisc.7052 = {
 	title = VIETmisc.7052.t
 	desc = VIETmisc.7052.desc
 	theme = travel
-	override_background = { reference = docks }
+	override_background = { reference = VIET_background_small_town }
 
 	
-	right_portrait = {
+	left_portrait = {
 		character = root
 		animation = holding_staff
 	}	
@@ -5625,7 +5627,7 @@ VIETmisc.7052 = {
 			is_coastal = yes
 			has_holding = yes
 		}
-		is_traveling = yes
+		is_travelling = yes
 	}
 	
 	weight_multiplier = {
@@ -5664,6 +5666,14 @@ VIETmisc.7052 = {
 			content = miniscule_stress_impact_loss
 			lazy = miniscule_stress_impact_loss
 		}
+		current_travel_plan = {
+			every_entourage_character = {
+				custom = every_entourage_tt
+				stress_impact = {
+					base = miniscule_stress_impact_loss
+				}
+			}
+		}
 
 	}
 	
@@ -5671,11 +5681,11 @@ VIETmisc.7052 = {
 		name = VIETmisc.7052.b
 		trigger = {
 			OR = {
-				gold >= 10
+				gold >= 20
 				is_ai = no
 			}
 		}
-		remove_short_term_gold = 10
+		remove_short_term_gold = 20
 		stress_impact = {
 			base = minor_stress_impact_loss
 			content = minor_stress_impact_loss
@@ -5683,6 +5693,17 @@ VIETmisc.7052 = {
 		}
 		current_travel_plan = {
 			delay_travel_plan = { days = 10 }
+			every_entourage_character = {
+				custom = every_entourage_tt
+				stress_impact = {
+					base = minor_stress_impact_loss
+				}
+				add_opinion = {
+					target = root
+					modifier = pleased_opinion
+					opinion = 5
+				}				
+			}
 		}
 
 	}

@@ -18614,6 +18614,7 @@ VIETmisc.0215 = {
 					geographical_region = world_asia_minor
 					geographical_region = world_middle_east_persia
 					geographical_region = world_india
+					geographical_region = world_siberia
 				}
 			}
 		}		
@@ -19844,6 +19845,8 @@ VIETmisc.0226 = {
 					geographical_region = world_middle_east_persia
 					geographical_region = world_steppe_west
 					geographical_region = world_steppe_east
+					geographical_region = world_steppe_central
+					geographical_region = world_siberia
 				}		
 			}
 		}
@@ -36184,7 +36187,7 @@ VIETmisc.0372 = {
 	}
 	
 	option = { # Ok
-		name = VIETmisc.0129.a		
+		name = VIETmisc.0372.a		
 		hidden_effect = {
 			scope:hagaer = {
 				death = {
@@ -36333,6 +36336,7 @@ VIETmisc.0373 = {
 VIETmisc.0374 = {
 	type = character_event
 	title = VIETmisc.0374.t
+	#window = big_event_window
 	desc = VIETmisc.0374.desc
 	theme = VIET_theme_oblivion_pastoral_dream
 

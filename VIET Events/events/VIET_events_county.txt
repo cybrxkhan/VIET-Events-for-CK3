@@ -3079,6 +3079,7 @@ VIETmisc.3029 = {
 					geographical_region = world_asia_minor
 					geographical_region = world_steppe
 					geographical_region = world_middle_east_persia
+					geographical_region = world_siberia
 				}		
 			}
 		}	
@@ -3107,6 +3108,7 @@ VIETmisc.3029 = {
 						geographical_region = world_asia_minor
 						geographical_region = world_steppe
 						geographical_region = world_middle_east_persia
+						geographical_region = world_siberia
 					}			
 				}
 			}	

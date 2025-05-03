@@ -2260,6 +2260,7 @@ VIETold.2030 = {
 					geographical_region = world_india
 					geographical_region = world_burma
 					geographical_region = world_tibet
+					geographical_region = world_siberia
 					#geographical_region = world_asia_minor
 				}
 			}
@@ -3544,6 +3545,8 @@ VIETold.2049 = {
 				OR = {
 					geographical_region = world_steppe_tarim
 					geographical_region = world_steppe_east
+					geographical_region = world_steppe_central
+					geographical_region = world_siberia
 					geographical_region = world_burma
 					geographical_region = world_tibet
 				}
@@ -6660,6 +6663,7 @@ VIETold.2088 = {
 					geographical_region = world_africa_north
 					geographical_region = world_africa_east
 					geographical_region = world_steppe_west
+					geographical_region = world_steppe_central
 				}
 			}
 			culture_has_european_heritage_pillar_trigger = yes
@@ -9781,9 +9785,12 @@ VIETold.2137 = {
 			capital_province = {
 				OR = {
 					geographical_region = world_europe
-					geographical_region = world_middle_east_jerusalem
+					geographical_region = world_middle_east
 					geographical_region = world_africa
 					geographical_region = world_steppe_west
+					geographical_region = world_steppe_central
+					geographical_region = world_siberia
+					geographical_region = world_asia_minor
 				}
 			}				
 		}
@@ -10055,9 +10062,11 @@ VIETold.2140 = {
 				geographical_region = world_europe
 				geographical_region = world_asia_minor
 				geographical_region = world_africa
-				geographical_region = world_steppe_east
+				geographical_region = world_steppe_west
 				geographical_region = world_middle_east_jerusalem
 				geographical_region = world_middle_east_arabia
+				geographical_region = world_steppe_central
+				geographical_region = world_siberia
 			}
 		}
 		NOT = {
@@ -11087,6 +11096,8 @@ VIETold.2154 = {
 				geographical_region = world_middle_east_persia
 				geographical_region = world_burma
 				geographical_region = world_tibet
+				geographical_region = world_steppe_central
+				geographical_region = world_siberia
 			}
 		}
 	}

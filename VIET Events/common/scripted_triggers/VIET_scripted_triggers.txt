@@ -195,6 +195,8 @@ VIET_is_redhead_or_blonde_area_capital = {
 			geographical_region = world_asia_minor
 			geographical_region = world_africa_north
 			geographical_region = world_middle_east
+			geographical_region = world_steppe_central
+			geographical_region = world_siberia
 		}
 	}
 }
@@ -221,6 +223,6 @@ VIET_is_in_coconut_octopus_region_trigger = {
 # Don't count East Asian cultures without cheese 
 VIET_is_cheese_culture_trigger = {
 	NOT = {
-		culture_has_east_asian_heritage_pillar_trigger = yes
+		culture = { has_cultural_pillar = heritage_chinese }
 	}
 }

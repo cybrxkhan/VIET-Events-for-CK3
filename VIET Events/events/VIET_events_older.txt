@@ -2012,6 +2012,8 @@ VIETold.1031 = {
 				geographical_region = world_europe_east
 				geographical_region = world_steppe_west
 				geographical_region = world_steppe_east
+				geographical_region = world_steppe_central
+				geographical_region = world_siberia
 			}
 			OR = {
 				terrain = taiga
@@ -6275,6 +6277,8 @@ VIETold.1089 = {
 				geographical_region = world_india	
 				geographical_region = world_middle_east_persia
 				geographical_region = world_steppe_west
+				geographical_region = world_steppe_central
+				geographical_region = world_siberia
 			}
 		}
 	}
