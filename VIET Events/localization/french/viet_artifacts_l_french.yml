@@ -146,7 +146,11 @@
  VIET_coconut_cup_name:0 "Coconut Cup"
  VIET_coconut_cup_desc:0 "A coconut shell used as a bowl, elaborately decorated with precious metal in a typical [ROOT.Char.GetCulture.GetName] artistic style. It is meant for display and for drinking."
  # Version 1.15.1 Start Here - Note to Translators: please leave this comment here and do not remove it even in your versions of the loc
- # 51 Basic
+ # Version 1.16.0 Start Here - Note to Translators: please leave this comment here and do not remove it even in your versions of the loc
+ VIET_horse_armor_name:0 "Quality Horse Armor"
+ VIET_horse_armor_desc:0 "Elegant and durable, beautiful and resilient, this [ROOT.Char.GetCulture.GetName] horse armor protects a horse from the dangers of the world and looks stylish too."
+ # Version 1.16.1 Start Here - Note to Translators: please leave this comment here and do not remove it even in your versions of the loc
+ # 52 Basic
 
  # RECIPE ARTIFACTS
  VIET_recipe_baklava_name:0 "Baklava Recipe"

@@ -1511,4 +1511,30 @@ VIET_snow_festival_result_wholesome_4_desc:0 "$VIET_snow_festival_result_wholeso
 VIET_snow_festival_result_wholesome_5:0 "$VIET_snow_festival_result_wholesome_1$"
 VIET_snow_festival_result_wholesome_5_desc:0 "$VIET_snow_festival_result_wholesome_1_desc$"
  # Version 1.14.6 Start Here - Note to Translators: please leave this comment here and do not remove it even in your versions of the loc
+ # Version 1.15.0 Start Here - Note to Translators: please leave this comment here and do not remove it even in your versions of the loc
+ VIET_enjoying_coconut_milk:0 "Enjoying Coconut Milk"
+ VIET_coconut_head_injury:0 "Coconut Injury"
+ VIET_coconut_head_injury_desc:0 "This character was, rather embarrassingly, injured by a coconut falling on top of their head."
+ VIET_coconut_injury_supported_courtier:0 "Coconut Injury Case: Supported Courtier"
+ VIET_coconut_injury_supported_courtier_desc:0 "After one of their courtiers was injured by a coconut falling on top of their head, this ruler decided to force the farmers who owned the coconut tree to pay compensation."
+ VIET_coconut_injury_supported_locals:0 "Coconut Injury Case: Supported Farmers"
+ VIET_coconut_injury_supported_locals_desc:0 "After one of their courtiers was injured by a coconut falling on top of their head, this ruler pressured their courtier to stop demanding compensation from the farmers who owned the coconut tree."
+ VIET_coconut_injury_paid_compensation:0 "Coconut Injury Case: Paid Compensation"
+ VIET_coconut_injury_paid_compensation_desc:0 "After one of their courtiers was injured by a coconut falling on top of their head, this ruler paid compensation to their courtier, to help the farmers who owned the coconut tree and would've otherwise had to pay compensation themselves."
+ VIET_octopus_military_ideas:0 "Inspired by an Octopus"
+ VIET_octopus_military_ideas_desc:0 "This character came up with some interesting military ideas, after being inspired by an interesting octopus using coconut shells to defend itself."
+ VIET_safer_coconut_harvesting_methods:0 "Safer Coconut Harvesting Methods"
+ VIET_safer_coconut_harvesting_methods_desc:0 "Newer and safer methods of harvesting coconuts have been introduced in this region from elsewhere, reducing the likelihood of injury or even death to coconut harvesters."
+ # Version 1.15.1 Start Here - Note to Translators: please leave this comment here and do not remove it even in your versions of the loc
+ # Version 1.16.0 Start Here - Note to Translators: please leave this comment here and do not remove it even in your versions of the loc
+ VIET_hagaer_modifier:0 "Reading Addict"
+ VIET_hagaer_modifier_desc:0 "This bookworm is obsessed with books, finding books, and reading books, to the detriment of their social life and skills."
+ VIET_supports_bookworms:0 "Supports Bookworms"
+ VIET_ate_excellent_cheese:0 "Ate Excellent Cheese"
+ VIET_grave_of_the_fireflies:0 "Grave of the Fireflies"
+ VIET_grave_of_the_fireflies_desc:0 "This character had a deep spiritual experience after resting in a dead grove surrounded by fireflies."
+ VIET_todd_howard_merchant:0 "Hard-Working Merchant"
+ VIET_todd_howard_merchant_desc:0 "This character was previously a merchant who was well-known for being quite charming and persuasive as a salesman, even though some accused him of being a liar. The truth is, he just works, no matter what."
+ # Version 1.16.1 Start Here - Note to Translators: please leave this comment here and do not remove it even in your versions of the loc
  xxxxxxxxxx:0 "xxx"
+

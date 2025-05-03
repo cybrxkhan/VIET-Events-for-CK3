@@ -1810,7 +1810,6 @@
  VIETmisc.0368.desc:0 "Winter is a dangerous time, especially when it is snowing. Yet it is also a beautiful time. There is something pristine and striking about a landscape that is covered in fresh snow.\n\nIt has been snowing a lot in the past few days, and we’ve mainly stayed inside most of the time, huddling by the fireplace and wearing warm clothes. But our idleness is an opportunity for me to gaze at the outside world for even hours at a time, simply to admire the layer of pure, white snow that blankets the entire world, it seems.\n\nThere’s a cold beauty to it all, and it is strangely relaxing."
  VIETmisc.0368.a:0 "A beautiful, if ultimately ephemeral sight."
  # Version 1.14.6 Start Here - Note to Translators: please leave this comment here and do not remove it even in your versions of the loc
-
  # Version 1.15.0 Start Here - Note to Translators: please leave this comment here and do not remove it even in your versions of the loc
  VIETmisc.0369.t:0 "Coconut Milk"
  VIETmisc.0369.desc:0 "While relaxing outside on a hot day, my servants bring me some coconut milk, harvested from the coconuts of the nearby palm trees, and lightly sweetened. It was exactly what I needed to feel even more relaxed."
@@ -1826,15 +1825,20 @@
  VIETmisc.0371.b:0 "[courtier.GetFirstNameNoTooltip] shouldn’t waste our time with this"
  VIETmisc.0371.c:0 "As the [ROOT.Char.GetTitleAsNameNoTooltip] of these lands, I’ll pay the compensation"
  # Version 1.15.1 Start Here - Note to Translators: please leave this comment here and do not remove it even in your versions of the loc
- VIETmisc.0372.t:0 "xxxxx"
- VIETmisc.0372.desc:0 "xxxxx"
- VIETmisc.0372.a:0 "xxxxx"
- VIETmisc.0373.t:0 "xxxxx"
- VIETmisc.0373.desc:0 "xxxxx"
- VIETmisc.0373.a:0 "xxxxx"
- VIETmisc.0374.t:0 "xxxxx"
- VIETmisc.0374.desc:0 "xxxxx"
- VIETmisc.0374.a:0 "xxxxx"
+ # Version 1.16.0 Start Here - Note to Translators: please leave this comment here and do not remove it even in your versions of the loc
+ VIETmisc.0372.t:0 "The Reading Addict"
+ VIETmisc.0372.desc:0 "At a small banquet hosted by a local noble, I meet another invitee to the banquet, a young noble[hagaer.GetWomanMan] I do not recognize.\n\nUpon striking up a conversation with this introverted young [hagaer.GetWomanMan], [hagaer.GetSheHe] introduces [hagaer.GetHerselfHimself] thusly: “My name is [hagaer.GetFirstName]. I don't get out much. Too many books to read.”\n\nThat would explain why I’ve never met [hagaer.GetHerHim] before. After a bit more small talk, as I try to get to know [hagaer.GetHerHim] better out of curiosity, [hagaer.GetFirstNameNoTooltip] confesses: “It's terrible. I just can't walk past a bookstore. There’s this one bookseller in [ROOT.Char.GetCapitalLocation.GetCounty.GetTitle.GetNameNoTier] that’s the worst.”"
+ VIETmisc.0372.a:0 "You’re really a bookworm, aren’t you?"
+ VIETmisc.0372.b:0 "I could use a well-read individual at court…."
+ VIETmisc.0372.c:0 "Here, I’ll help you with buying more books."
+ VIETmisc.0373.t:0 "[ROOT.Char.GetCulture.GetNameNoTooltip] Cheese"
+ VIETmisc.0373.desc:0 "I ate some [ROOT.Char.GetCulture.GetName] cheese dish today, something prepared by that lovely cook of mine, that was absolutely delicious! Scrumptious! Nutritious! Marvelous! Fantabulous!\n\nI was so gleeful and pleased with the food that I screamed at everyone who had joined me for today’s dinner banquet: “#bold This cheese is wonderful! Time for a celebration! Cheese for everyone!#!”\n\nOne of my bodyguards standing nearby leans down and politely whispers in my ear, “My [ROOT.Char.GetLadyLord], there is no more cheese left.”\n\nI nod solemnly, and then shout at everyone else gathered: “Wait, forget that. Cheese for no one.”"
+ VIETmisc.0373.a:0 "Come now, why the strange looks? It’s cheese!"
+ VIETmisc.0374.t:0 "A Relaxing Walk"
+ VIETmisc.0374.desc:0 "Last night I had a most relaxing dream. I was in some majestic city with gleaming, tall stone buildings, that sat atop a large island on a lake with cerulean waters.\n\nIn the dream, I did not go into the city itself – no, I decided to take a nice stroll around the island itself, admiring the breathtaking scenery surrounding the city and the lake. There was something pastoral and arcadian about the landscape, the rolling hills and patchwork forests, the occasional small, ancient stone shrine, and small little settlements that dotted this grand lake. At one point, I even sat down in the grass to relax and close my eyes to nap within my dream.\n\nFinally, as I finished my stroll around the lake, it was sunset, and I saw a vision of unmatched beauty: the setting sun, adorned with painterly hues of red, orange, yellow, and pink, as it slowly lowered itself on the horizon.\n\nAnd then, just like that, I woke up. I sat up, a little dazed, remembering the dream, as the birds sang their merry songs outside my bedroom."
+ VIETmisc.0374.a:0 "If only I could go back there again…."
+ VIETmisc.0374.b:0 "Wait, that’s the wondrous land I dreamt about long ago!"
+ # Version 1.16.1 Start Here - Note to Translators: please leave this comment here and do not remove it even in your versions of the loc
  VIETmisc.0375.t:0 "xxxxx"
  VIETmisc.0375.desc:0 "xxxxx"
  VIETmisc.0375.a:0 "xxxxx"
