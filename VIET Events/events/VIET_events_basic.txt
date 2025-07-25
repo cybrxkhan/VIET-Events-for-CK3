@@ -36425,7 +36425,8 @@ VIETmisc.0375 = {
 		animation = reading
 	}
 
-	trigger = {
+	trigger = {	
+		VIET_is_sinosphere_trigger = yes
 		# Want someone who's probably literate and not a dumbass
 		NOT = { has_trait = blind }
 		probably_unintelligent_trigger = no
@@ -36436,11 +36437,372 @@ VIETmisc.0375 = {
 			learning >= decent_skill_rating
 		}
 		# Weed out most cultures that probably aren't literate at the game start and wouldn't be writing stuff like letters
-		NOT = { government_has_flag = government_is_tribal }	
+		NOT = { government_has_flag = government_is_tribal }
 	}
 	
 	weight_multiplier = {
 		base = 1
+		modifier = {
+			add = 0.2
+			has_trait = brave
+		}
+		modifier = {
+			add = -0.2
+			has_trait = craven
+		}
+		modifier = {
+			add = 0.2
+			has_trait = diligent
+		}
+		modifier = {
+			add = -0.2
+			has_trait = lazy
+		}
+		modifier = {
+			add = 0.2
+			has_trait = patient
+		}
+		modifier = {
+			add = -0.2
+			has_trait = impatient
+		}
+	}	
+
+	
+	option = { # Ok
+		name = VIETmisc.0375.a		
+		add_character_modifier = {
+			modifier = VIET_36_stratagems_peach_military
+			years = 10
+		}
+	}	
+	
+	option = { # Ok
+		name = VIETmisc.0375.b		
+		add_character_modifier = {
+			modifier = VIET_36_stratagems_peach_intrigue
+			years = 10
+		}
+	}	
+	
+	option = { # Ok
+		name = VIETmisc.0375.c
+		trigger = {
+			has_trait = gluttonous
+		}
+		trait = gluttonous
+		stress_impact = {
+			gluttonous = minor_stress_impact_loss
+		}
+		add_character_modifier = {
+			modifier = VIET_ate_good_food
+			days = 456
+		}
+	}	
+
+}
+
+
+
+
+# Physician suggests eating peaches to help with stomach preemptively
+VIETmisc.0376 = {
+	type = character_event
+	title = VIETmisc.0376.t
+	desc = VIETmisc.0376.desc
+	theme = medicine
+	override_background = { reference = bp1_kitchen_western }
+	
+	left_portrait = {
+		character = root
+		animation = personality_cynical
+	}
+	
+	right_portrait = {
+		character = scope:physician
+		animation = debating
+	}
+	
+	trigger = {
+		court_physician_available_trigger = yes
+	}
+
+	weight_multiplier = {
+		base = 1
+		modifier = {
+			add = 0.2
+			has_trait = calm
+		}
+		modifier = {
+			add = -0.2
+			has_trait = wrathful
+		}
+		modifier = {
+			add = 0.2
+			has_trait = gluttonous
+		}
+		modifier = {
+			add = -0.2
+			has_trait = temperate
+		}
+		modifier = {
+			add = 0.2
+			has_trait = compassionate
+		}
+		modifier = {
+			add = -0.2
+			has_trait = sadistic
+		}
+	}
+	
+	immediate = {
+		save_court_physician_as_effect = { SCOPE_NAME = physician }
+	}
+	
+	option = { # Ok
+		name = VIETmisc.0376.a
+		trigger = {
+			OR = {
+				gold >= 20
+				is_ai = no
+			}
+		}
+		remove_short_term_gold = 20
+		add_character_modifier = {
+			modifier = VIET_healthy_peaches
+			years = 8
+		}
+		scope:physician = {
+			add_opinion = {
+				target = root
+				modifier = VIET_opinion_listened_to_my_advice
+			}
+			reverse_add_opinion = {
+				target = root
+				modifier = VIET_opinion_good_advice
+			}
+		}
+
+	}	
+	
+	option = { # Ok
+		name = VIETmisc.0376.b
+		scope:physician = {
+			add_opinion = {
+				modifier = disappointed_opinion
+				opinion = -10
+				target = root
+			}
+		}
+
+	}	
+
+	after = {
+		if = {
+			limit = {
+				has_game_rule = VIET_historical_context_on
+			}
+			custom_tooltip = VIETmisc.0376.info
+		}
+	}
+
+}
+
+
+# Hanging peach wood talismans around the house
+VIETmisc.0377 = {
+	type = character_event
+	title = VIETmisc.0377.t
+	desc = VIETmisc.0377.desc
+	theme = friendly
+	
+	left_portrait = root
+
+	right_portrait = {
+		character = scope:courtier
+		animation = personality_compassionate
+	}
+	
+	trigger = {	
+		culture_has_east_asian_heritage_pillar_trigger = yes
+		OR = {
+			any_courtier_or_guest = {
+				is_available_ai_adult = yes
+				culture_has_east_asian_heritage_pillar_trigger = yes
+				opinion = {
+					target = root
+					value >= 0
+				}
+			}
+			any_vassal = {
+				is_available_ai_adult = yes
+				culture_has_east_asian_heritage_pillar_trigger = yes
+				opinion = {
+					target = root
+					value >= 0
+				}
+			}
+		}
+	}
+	
+	weight_multiplier = {
+		base = 1
+		modifier = {
+			add = 0.2
+			has_trait = paranoid
+		}
+		modifier = {
+			add = -0.2
+			has_trait = trusting
+		}
+		modifier = {
+			add = 0.2
+			has_trait = diligent
+		}
+		modifier = {
+			add = -0.2
+			has_trait = lazy
+		}
+		modifier = {
+			add = 0.2
+			has_trait = vengeful
+		}
+		modifier = {
+			add = -0.2
+			has_trait = forgiving
+		}
+	}
+
+	immediate = {
+		every_courtier_or_guest = {
+			limit = {
+				is_available_ai_adult = yes
+				culture_has_east_asian_heritage_pillar_trigger = yes
+				opinion = {
+					target = root
+					value >= 0
+				}
+			}
+			add_to_list = candidate_characters
+		}
+		every_vassal = {
+			limit = {
+				is_available_ai_adult = yes
+				culture_has_east_asian_heritage_pillar_trigger = yes
+				opinion = {
+					target = root
+					value >= 0
+				}
+			}
+			add_to_list = candidate_characters
+		}
+		random_in_list = {
+			list = candidate_characters
+			save_scope_as = courtier
+		}
+	}
+
+	
+	option = { # Ok
+		name = VIETmisc.0377.a
+		trigger = {
+			OR = {
+				gold >= 25
+				is_ai = no
+			}
+		}
+		remove_short_term_gold = 25
+		add_character_modifier = {
+			modifier = VIET_peach_wood_talismans
+			years = 10
+		}
+		stress_impact = {
+			greedy = miniscule_stress_impact_gain
+			cynical = minor_stress_impact_gain
+			lazy = miniscule_stress_impact_gain
+		}
+		scope:courtier = {
+			add_opinion = {
+				target = root
+				modifier = VIET_opinion_listened_to_my_advice
+			}
+			reverse_add_opinion = {
+				target = root
+				modifier = VIET_opinion_good_advice
+			}
+		}
+
+	}	
+	
+	option = { # Ok
+		name = VIETmisc.0377.b
+		stress_impact = {
+			eccentric = miniscule_stress_impact_gain
+			paranoid = minor_stress_impact_gain
+			zealous = minor_stress_impact_gain
+			diligent = miniscule_stress_impact_gain
+		}
+		scope:courtier = {			
+			add_opinion = {
+				modifier = disappointed_opinion
+				opinion = -10
+				target = root
+			}
+		}
+
+	}	
+
+
+}
+
+
+# Lover tells lame jokes about peaches
+VIETmisc.0378 = {
+	type = character_event
+	title = VIETmisc.0378.t
+	desc = VIETmisc.0378.desc
+	theme = friendly
+	
+	left_portrait = {
+		character = root
+		animation = personality_forgiving
+	}
+
+	right_portrait = {
+		character = scope:lover
+		animation = laugh
+	}
+	
+	trigger = {
+		VIET_sexual_character_trigger = yes
+		#OR = {
+		#	num_of_relation_soulmate > 0
+		#	num_of_relation_lover > 0
+		#}
+		OR = {
+			any_relation = {
+				type = soulmate
+				VIET_sexual_character_trigger = yes
+				is_available_ai_adult = yes
+			}
+			any_relation = {
+				type = lover
+				VIET_sexual_character_trigger = yes
+				is_available_ai_adult = yes
+			}
+		}
+	}
+	
+	weight_multiplier = {
+		base = 1
+		modifier = {
+			add = 0.2
+			has_trait = lustful
+		}
+		modifier = {
+			add = -0.2
+			has_trait = chaste
+		}
 		modifier = {
 			add = 0.2
 			has_trait = gregarious
@@ -36451,34 +36813,350 @@ VIETmisc.0375 = {
 		}
 		modifier = {
 			add = 0.2
-			has_trait = humble
+			has_trait = patient
 		}
 		modifier = {
 			add = -0.2
-			has_trait = arrogant
+			has_trait = impatient
 		}
-		modifier = {
-			add = 0.2
-			has_trait = trusting
+	}
+
+	immediate = {
+		random_list = {
+			50 = {
+				trigger = {
+					any_relation = {
+						type = soulmate
+						VIET_sexual_character_trigger = yes
+						is_available_ai_adult = yes
+					}
+				}
+				random_relation = {
+					type = soulmate
+					limit = {
+						VIET_sexual_character_trigger = yes
+						is_available_ai_adult = yes
+					}
+					save_scope_as = lover
+				}
+			}
+			50 = {
+				trigger = {
+					any_relation = {
+						type = lover
+						VIET_sexual_character_trigger = yes
+						is_available_ai_adult = yes
+					}
+				}
+				random_relation = {
+					type = lover
+					limit = {
+						VIET_sexual_character_trigger = yes
+						is_available_ai_adult = yes
+					}
+					save_scope_as = lover
+				}
+			}
 		}
-		modifier = {
-			add = -0.2
-			has_trait = paranoid
-		}
-	}	
+	}
 
 	
 	option = { # Ok
-		name = VIETmisc.0375.a		
-		hidden_effect = {
-			scope:hagaer = {
-				death = {
-					death_reason = death_disappearance
-				}			
+		name = VIETmisc.0378.a
+		add_character_modifier = {
+			modifier = VIET_doesnt_like_lame_jokes
+			years = 5
+		}
+		stress_impact = {
+			compassionate = miniscule_stress_impact_gain
+			forgiving = minor_stress_impact_gain
+			patient = miniscule_stress_impact_gain
+			calm = miniscule_stress_impact_gain
+		}
+		scope:lover = {
+			add_opinion = {
+				target = root
+				modifier = VIET_opinion_annoying_lame_jokes
+			}
+			reverse_add_opinion = {
+				target = root
+				modifier = VIET_opinion_dislikes_my_lame_jokes
 			}
 		}
+
 	}	
+	
+	option = { # Ok
+		name = VIETmisc.0378.b
+		add_character_modifier = {
+			modifier = VIET_likes_lame_jokes
+			years = 5
+		}
+		stress_impact = {
+			impatient = miniscule_stress_impact_gain
+			callous = miniscule_stress_impact_gain
+			wrathful = miniscule_stress_impact_gain
+		}
+		scope:lover = {
+			add_opinion = {
+				target = root
+				modifier = VIET_opinion_amused_by_lame_jokes
+			}
+			reverse_add_opinion = {
+				target = root
+				modifier = VIET_opinion_likes_my_lame_jokes
+			}
+		}
+
+	}	
+
+
 }
+
+
+
+
+# Drinking peach juice
+VIETmisc.0379 = {
+	type = character_event
+	title = VIETmisc.0379.t
+	desc = VIETmisc.0379.desc
+	theme = friendly
+
+
+	right_portrait = {
+		character = root
+		animation = personality_content
+	}
+	
+	trigger = {
+		any_held_title = {
+			tier = tier_county
+			any_county_province = {
+				OR = {
+					terrain = plains
+					terrain = farmlands
+					terrain = hills
+					terrain = forest
+					terrain = wetlands
+					terrain = steppe
+					terrain = floodplains
+				}
+				# Leave out areas that would not have major peach production during this period
+				NOR = {
+					geographical_region = world_europe_west_britannia
+					geographical_region = world_europe_west_germania
+					geographical_region = world_europe_west_francia
+					geographical_region = world_europe_north
+					geographical_region = world_europe_east
+					geographical_region = world_steppe_west
+					geographical_region = world_africa_sahara
+					geographical_region = world_africa_east
+					geographical_region = world_africa_west
+				}		
+			}
+		}	
+	}
+	
+	weight_multiplier = {
+		base = 1
+		modifier = {
+			add = 0.2
+			has_trait = lustful
+		}
+		modifier = {
+			add = -0.2
+			has_trait = chaste
+		}
+		modifier = {
+			add = 0.2
+			has_trait = gregarious
+		}
+		modifier = {
+			add = -0.2
+			has_trait = shy
+		}
+		modifier = {
+			add = 0.2
+			has_trait = patient
+		}
+		modifier = {
+			add = -0.2
+			has_trait = impatient
+		}
+	}
+
+
+	
+	option = { # Ok
+		name = VIETmisc.0379.a
+		add_character_modifier = {
+			modifier = VIET_peach_juice
+			years = 3
+		}
+		stress_impact = {
+			base = miniscule_stress_impact_gain
+			content = miniscule_stress_impact_gain
+			lazy = miniscule_stress_impact_gain
+		}
+
+	}	
+
+}
+
+
+# Have a dream where supposedly a courtier stole the peaches of immortality in a past life
+VIETmisc.0380 = {
+	type = character_event
+	title = VIETmisc.0380.t
+	desc = VIETmisc.0380.desc
+	theme = memory_intrigue
+	override_background = { reference = throne_room }
+	
+	left_portrait = scope:courtier
+	
+	right_portrait = root
+	
+	trigger = {	
+		OR = {
+			culture_has_east_asian_heritage_pillar_trigger = yes
+			religion = religion:taoism_religion
+		}
+		OR = {
+			any_courtier_or_guest = {
+				is_available_ai_adult = yes
+				OR = {
+					culture_has_east_asian_heritage_pillar_trigger = yes
+					religion = religion:taoism_religion
+				}
+			}
+			any_vassal = {
+				is_available_ai_adult = yes
+				OR = {
+					culture_has_east_asian_heritage_pillar_trigger = yes
+					religion = religion:taoism_religion
+				}
+			}
+		}
+	}
+	
+	weight_multiplier = {
+		base = 1
+		modifier = {
+			add = 0.2
+			has_trait = eccentric
+		}
+		modifier = {
+			add = -0.2
+			has_trait = lazy
+		}
+		modifier = {
+			add = 0.2
+			has_trait = just
+		}
+		modifier = {
+			add = -0.2
+			has_trait = arbitrary
+		}
+		modifier = {
+			add = 0.2
+			has_trait = zealous
+		}
+		modifier = {
+			add = -0.2
+			has_trait = cynical
+		}
+	}
+
+	immediate = {
+		every_courtier_or_guest = {
+			limit = {
+				is_available_ai_adult = yes
+				OR = {
+					culture_has_east_asian_heritage_pillar_trigger = yes
+					religion = religion:taoism_religion
+				}
+			}
+			add_to_list = candidate_characters
+		}
+		every_vassal = {
+			limit = {
+				is_available_ai_adult = yes
+				OR = {
+					culture_has_east_asian_heritage_pillar_trigger = yes
+					religion = religion:taoism_religion
+				}
+			}
+			add_to_list = candidate_characters
+		}
+		random_in_list = {
+			list = candidate_characters
+			save_scope_as = courtier
+			add_character_modifier = {
+				modifier = VIET_dongfang_shuo
+			}
+		}
+	}
+
+	
+	option = { # Ok
+		name = VIETmisc.0380.a
+		add_character_modifier = {
+			modifier = VIET_skeptical_ruler
+			years = 5
+		}
+	}	
+	
+	option = { # Ok
+		name = VIETmisc.0380.b
+		VIET_huge_piety_gain_effect = yes
+		scope:courtier = {
+			add_opinion = {
+				target = root
+				modifier = VIET_opinion_chastised_me_in_public
+			}
+		}
+		stress_impact = {
+			cynical = miniscule_stress_impact_gain
+			forgiving = miniscule_stress_impact_gain
+			shy = miniscule_stress_impact_gain
+			content = miniscule_stress_impact_gain
+		}
+	}	
+	
+	option = { # Ok
+		name = VIETmisc.0380.c
+		scope:courtier = {
+			VIET_huge_prestige_gain_effect = yes
+			add_opinion = {
+				target = root
+				modifier = VIET_opinion_nascent_spiritual_powers
+			}
+			reverse_add_opinion = {
+				target = root
+				modifier = VIET_opinion_thinks_i_have_spiritual_powers
+			}
+		}
+		stress_impact = {
+			cynical = minor_stress_impact_gain
+			paranoid = miniscule_stress_impact_gain
+		}
+	}	
+
+	after = {
+		if = {
+			limit = {
+				has_game_rule = VIET_historical_context_on
+			}
+			custom_tooltip = VIETmisc.0380.info
+		}
+	}
+
+}
+
+
+
+
 
 
 
