@@ -3846,6 +3846,7 @@ VIET_dongfang_shuo = {
 	enemy_hostile_scheme_success_chance_add = -10
 	diplomacy = 1
 	intrigue = 1
+	monthly_piety = 0.3
 }
 
 VIET_36_stratagems_peach_military = {

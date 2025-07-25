@@ -36763,10 +36763,7 @@ VIETmisc.0378 = {
 	desc = VIETmisc.0378.desc
 	theme = friendly
 	
-	left_portrait = {
-		character = root
-		animation = personality_forgiving
-	}
+	left_portrait = root
 
 	right_portrait = {
 		character = scope:lover
@@ -36995,9 +36992,9 @@ VIETmisc.0379 = {
 			years = 3
 		}
 		stress_impact = {
-			base = miniscule_stress_impact_gain
-			content = miniscule_stress_impact_gain
-			lazy = miniscule_stress_impact_gain
+			base = miniscule_stress_impact_loss
+			content = miniscule_stress_impact_loss
+			lazy = miniscule_stress_impact_loss
 		}
 
 	}	
@@ -37018,6 +37015,7 @@ VIETmisc.0380 = {
 	right_portrait = root
 	
 	trigger = {	
+		is_landed = yes
 		OR = {
 			culture_has_east_asian_heritage_pillar_trigger = yes
 			religion = religion:taoism_religion

@@ -172,8 +172,10 @@ VIET_travel_events_uncommon = {
 		100 = VIETmisc.7040		# Rowdy but friendly sailors at an inn
 		100 = VIETmisc.7042		# Innkeeper warns about fraudulent peddlers selling false relics
 		100 = VIETmisc.7044		# Traveler is disappointed by ruins
+		# Peaches
+		100 = VIETmisc.7053 	# Two cats playing with peaches 
 
-		# 16
+		# 17
 	}
 }
 

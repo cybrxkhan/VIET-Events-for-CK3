@@ -6853,6 +6853,12 @@ VIETmisc.3069 = {
 			}	
 			save_scope_as = county
 		}
+		scope:county.faith = {
+			save_scope_as = faith
+		}
+		scope:county.faith.religion = {
+			save_scope_as = religion
+		}
 		scope:county = {
 			random_list = {
 				10 = {

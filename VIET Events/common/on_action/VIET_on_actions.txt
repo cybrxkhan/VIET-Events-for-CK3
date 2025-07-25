@@ -507,6 +507,11 @@ VIET_events_yearly_pulse = {
 		100 = VIETmisc.0368		# Character watching the snow outside and feeling peaceful
 		# Coconut
 		100 = VIETmisc.0369		# Drinking coconut milk
+		# Peaches
+		100 = VIETmisc.0376		# Physician suggests eating peaches to help with stomach preemptively
+		100 = VIETmisc.0377		# Hanging peach wood talismans around the house
+		100 = VIETmisc.0378		# Lover tells lame jokes about peaches
+		100 = VIETmisc.0379		# Drinking peach juice
 	}
 }
 
@@ -924,6 +929,8 @@ VIET_events_tri_yearly_pulse = {
 		100 = VIETmisc.0366		# Courtier gets stuck outside in a snowstorm and returns
 		# Coconut
 		100 = VIETmisc.0370		# Inspecting coconut farms and learning about the difficult work of harvesting coconuts
+		# Peaches
+		100 = VIETmisc.0375		# Reading one of the Thirty-Six Strategems about sacrificing the plum tree to preserve the peach tree
 	}
 }
 
@@ -1200,6 +1207,8 @@ VIET_events_five_yearly_pulse = {
 		100 = VIETmisc.0372		# Hagaer - A bookworm in the Imperial City
 		100 = VIETmisc.0373		# CHEESE FOR EVERYONE! (Sheogorath)
 		100 = VIETmisc.0374		# Taking a walk around Lake Rumare in Imperial City and admiring the beauty of the land
+		# Peaches
+		100 = VIETmisc.0380		# Have a dream where supposedly a courtier stole the peaches of immortality in a past life
 	}
 }
 
@@ -1747,8 +1756,10 @@ VIET_events_rare_county_pulse = {
 		# Three
 		100 = VIETmisc.3061 	# Fimbulwinter is upon us = fears of Ragnarok
 		100 = VIETmisc.3062 	# 3-headed sheep becomes a popular attraction
+		# Peaches
+		100 = VIETmisc.3069 	# Legend of a knight/hermit who swore silence to protect his vow of chastity, where a peach tree grew on his grave
 		
-		# 20
+		# 21
 		
     }
 }

@@ -3307,12 +3307,24 @@ VIETmisc.6022 = {
 	type = character_event
 	title = VIETmisc.6022.t
 	desc = VIETmisc.6022.desc
-	theme = diplomacy
-	override_background = { reference = VIET_background_tuscan_country }
-	
-	right_portrait = {
-		character = root
-		animation = worry
+	theme = realm
+
+	cooldown = { years = 5 }
+
+	lower_right_portrait = scope:courtier
+	#lower_left_portrait = scope:complainer
+	court_scene = {
+		button_position_character = scope:courtier
+		roles = {
+			scope:courtier = {
+				group = event_group
+				animation = debating
+			}
+			root = {
+				group = event_group
+				animation = thinking
+			}
+		}
 	}
 
 		
@@ -3338,6 +3350,7 @@ VIETmisc.6022 = {
 		OR = {
 			any_vassal = {
 				is_available_ai_adult = yes
+				has_court_event_flag = no
 				stewardship >= decent_skill_rating
 				NOR = {
 					has_trait = lazy
@@ -3347,6 +3360,7 @@ VIETmisc.6022 = {
 			}
 			any_courtier_or_guest = {
 				is_available_ai_adult = yes
+				has_court_event_flag = no
 				stewardship >= decent_skill_rating
 				NOR = {
 					has_trait = lazy
@@ -3357,22 +3371,32 @@ VIETmisc.6022 = {
 		}
 	}
 	
-    weight_multiplier = {
-        base = 0
-		modifier = {
-			add = {
-				every_held_title = {
-					limit = { tier = tier_county }
-					add = 1
-				}
-			}		
-		}
-    }
-	
 	immediate = {
+		random_held_title = {
+			limit = {
+				tier = tier_county
+				any_county_province = {
+					OR = {
+						geographical_region = world_europe_west_britannia
+						geographical_region = world_europe_west_germania
+						geographical_region = world_europe_west_francia
+						geographical_region = world_europe_north
+						geographical_region = world_europe_east
+						geographical_region = world_steppe_west
+					}
+					NOR = {
+						terrain = mountains
+						terrain = desert_mountains
+						terrain = taiga
+					}			
+				}				
+			}
+			save_scope_as = county
+		}
 		every_vassal = {
 			limit = {
 				is_available_ai_adult = yes
+				has_court_event_flag = no
 				stewardship >= decent_skill_rating
 				NOR = {
 					has_trait = lazy
@@ -3385,6 +3409,7 @@ VIETmisc.6022 = {
 		every_courtier_or_guest = {
 			limit = {
 				is_available_ai_adult = yes
+				has_court_event_flag = no
 				stewardship >= decent_skill_rating
 				NOR = {
 					has_trait = lazy
@@ -3397,6 +3422,7 @@ VIETmisc.6022 = {
 				
 		random_in_list = {
 			list = candidates
+			court_event_character_flag_effect = yes
 			save_scope_as = courtier
 		}
 	}
@@ -3417,12 +3443,11 @@ VIETmisc.6022 = {
 			trusting = miniscule_stress_impact_gain
 			gluttonous = miniscule_stress_impact_gain
 		}
-		custom_tooltip = VIET_decrease_county_modifier_time
 	}
 
 	# Support the peach growers!
 	option = {
-		name = VIETmisc.3061.b
+		name = VIETmisc.6022.b
 		trigger = {
 			OR = {
 				gold >= 50
@@ -3445,7 +3470,7 @@ VIETmisc.6022 = {
 			value = average_skill_rating
 			50 = { # Mild success
 				show_chance = no
-				desc = VIETmisc.3061.b.mild_success
+				desc = VIETmisc.6022.b.mild_success
 				compare_modifier = {
 					value = scope:duel_value
 					multiplier = -1.5
@@ -3453,7 +3478,7 @@ VIETmisc.6022 = {
 				}
 				send_interface_toast = {
 					type = event_toast_effect_good
-					title = VIETmisc.3061.b.mild_success
+					title = VIETmisc.6022.b.mild_success
 					add_legitimacy = miniscule_legitimacy_gain
 					VIET_medium_prestige_gain_effect = yes
 					scope:county = {
@@ -3466,7 +3491,7 @@ VIETmisc.6022 = {
 			}
 			35 = { # Moderate Success
 				show_chance = no
-				desc = VIETmisc.3061.b.moderate_success
+				desc = VIETmisc.6022.b.moderate_success
 				compare_modifier = {
 					value = scope:duel_value
 					multiplier = 1.5
@@ -3474,7 +3499,7 @@ VIETmisc.6022 = {
 				}
 				send_interface_toast = {
 					type = event_toast_effect_good
-					title = VIETmisc.3061.b.moderate_success
+					title = VIETmisc.6022.b.moderate_success
 					add_legitimacy = miniscule_legitimacy_gain
 					VIET_huge_prestige_gain_effect = yes
 					scope:county = {
@@ -3487,7 +3512,7 @@ VIETmisc.6022 = {
 			}
 			15 = { # Great Success
 				show_chance = no
-				desc = VIETmisc.3061.b.great_success
+				desc = VIETmisc.6022.b.great_success
 				compare_modifier = {
 					value = scope:duel_value
 					multiplier = 1.5
@@ -3495,7 +3520,7 @@ VIETmisc.6022 = {
 				}
 				send_interface_toast = {
 					type = event_toast_effect_good
-					title = VIETmisc.3061.b.great_success
+					title = VIETmisc.6022.b.great_success
 					add_legitimacy = miniscule_legitimacy_gain
 					VIET_massive_prestige_gain_effect = yes
 					scope:county = {
@@ -3519,7 +3544,10 @@ VIETmisc.6022 = {
 			limit = {
 				has_game_rule = VIET_historical_context_on
 			}
-			custom_tooltip = VIETmisc.3061.info
+			custom_tooltip = VIETmisc.6022.info
+		}
+		scope:courtier = {
+			clear_court_event_participation = yes
 		}
 	}
 

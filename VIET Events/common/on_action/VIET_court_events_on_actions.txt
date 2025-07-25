@@ -70,8 +70,10 @@ VIET_court_event_on_actions = {
 		100 = VIETmisc.6020 			# More almond milk at court or not?
 		# VIET Word Contest
 		100 = VIETmisc.6021 			# Hullabaloo - character causes a scene at court # otonashikun
+		# Peaches
+		100 = VIETmisc.6022 			# Supporting European peach growers outside the traditional peach growing regions of the Mediterranean
 
-		# 22
+		# 23
 
 	}
 }
