@@ -1034,5 +1034,40 @@ VIET_good_snowmelt = {
 	development_growth = 0.1
 }
 
+VIET_peach_industry_1 = {
+	icon = fertility_positive
+	tax_mult = 0.01
+}
+
+VIET_peach_industry_2 = {
+	icon = fertility_positive
+	tax_mult = 0.03
+	development_growth = 0.05
+}
+
+VIET_peach_industry_3 = {
+	icon = fertility_positive
+	tax_mult = 0.03
+	development_growth = 0.1
+}
+
+VIET_enjoys_peasant_folklore = {
+	icon = social_mixed
+	county_opinion_add = 5
+	monthly_prestige = -0.2
+}
+
+VIET_scoffs_at_peasant_folklore = {
+	icon = social_mixed
+	monthly_prestige = 0.2
+	county_opinion_add = -5
+}
+
+VIET_silent_peach_tree_legend = {
+	icon = piety_positive
+	development_growth = 0.05
+	monthly_county_control_growth_add = 0.1
+}
+
 
 

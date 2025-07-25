@@ -3816,6 +3816,73 @@ VIET_todd_howard_merchant = {
 	monthly_income = 0.2
 }
 
+VIET_peach_and_goma_cute = {
+	icon = cat_positive
+	stress_gain_mult = -0.1
+	stress_loss_mult = 0.1
+}
+
+VIET_peach_and_goma_spiritual = {
+	icon = cat_positive
+	monthly_piety = 0.1
+	enemy_hostile_scheme_success_chance_add = -2
+}
+
+VIET_traveling_without_unnecessary_distractions = {
+	icon = travel_speed_positive
+	travel_speed = 10
+}
+
+VIET_peach_juice = {
+	icon = drink_positive
+	stress_gain_mult = -0.03
+	stress_loss_mult = 0.03
+	#negate_health_penalty_add = 0.1
+}
+
+VIET_dongfang_shuo = {
+	icon = magic_positive
+	owned_personal_scheme_success_chance_add = 10
+	enemy_hostile_scheme_success_chance_add = -10
+	diplomacy = 1
+	intrigue = 1
+}
+
+VIET_36_stratagems_peach_military = {
+	icon = martial_positive
+	martial = 1
+	advantage = 4
+}
+
+VIET_36_stratagems_peach_intrigue = {
+	icon = martial_positive
+	intrigue = 1
+	owned_personal_scheme_success_chance_add = 5
+}
+
+VIET_healthy_peaches = {
+	icon = food_positive
+	negate_health_penalty_add = 0.2
+}
+
+VIET_peach_wood_talismans = {
+	icon = magic_positive
+	intrigue = 1
+	enemy_hostile_scheme_success_chance_add = -3
+}
+
+VIET_doesnt_like_lame_jokes = {
+	icon = social_mixed
+	monthly_dread = 0.2
+	diplomacy = -1
+}
+
+VIET_likes_lame_jokes = {
+	icon = social_mixed
+	monthly_dread = -0.2
+	diplomacy = 1
+}
+
 
 
 
