@@ -70,6 +70,7 @@
 # 0366-0368		Snow
 # 0369-0371		Coconut
 # 0372-0374		Oblivion Remaster
+# 0375-0378		Peaches
 # 
 ############################################################################################################################
 
@@ -36400,3 +36401,87 @@ VIETmisc.0374 = {
 		}
 	}	
 }
+
+
+
+
+##################################################################
+# PEACHES 0375-0378
+##################################################################
+
+
+# Reading one of the Thirty-Six Strategems about sacrificing the plum tree to preserve the peach tree
+VIETmisc.0375 = {
+	type = character_event
+	title = VIETmisc.0375.t
+	desc = VIETmisc.0375.desc
+	theme = martial_strategy_focus
+	override_background = {
+		reference = study
+	}
+	
+	right_portrait = {
+		character = root
+		animation = reading
+	}
+
+	trigger = {
+		# Want someone who's probably literate and not a dumbass
+		NOT = { has_trait = blind }
+		probably_unintelligent_trigger = no
+		OR = {
+			probably_intelligent_trigger = yes
+			diplomacy >= decent_skill_rating
+			martial >= decent_skill_rating
+			learning >= decent_skill_rating
+		}
+		# Weed out most cultures that probably aren't literate at the game start and wouldn't be writing stuff like letters
+		NOT = { government_has_flag = government_is_tribal }	
+	}
+	
+	weight_multiplier = {
+		base = 1
+		modifier = {
+			add = 0.2
+			has_trait = gregarious
+		}
+		modifier = {
+			add = -0.2
+			has_trait = shy
+		}
+		modifier = {
+			add = 0.2
+			has_trait = humble
+		}
+		modifier = {
+			add = -0.2
+			has_trait = arrogant
+		}
+		modifier = {
+			add = 0.2
+			has_trait = trusting
+		}
+		modifier = {
+			add = -0.2
+			has_trait = paranoid
+		}
+	}	
+
+	
+	option = { # Ok
+		name = VIETmisc.0375.a		
+		hidden_effect = {
+			scope:hagaer = {
+				death = {
+					death_reason = death_disappearance
+				}			
+			}
+		}
+	}	
+}
+
+
+
+
+
+

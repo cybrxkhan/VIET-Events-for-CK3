@@ -226,3 +226,11 @@ VIET_is_cheese_culture_trigger = {
 		culture = { has_cultural_pillar = heritage_chinese }
 	}
 }
+
+VIET_is_not_a_literate_society = {
+	NOR = {
+		government_has_flag = government_is_tribal
+		government_has_flag = government_is_nomadic
+	}
+}
+
