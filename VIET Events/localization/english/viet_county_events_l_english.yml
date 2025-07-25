@@ -346,12 +346,19 @@
  VIETmisc.3068.desc:0 "Snowmelt has been important to the people living in [county.GetNameNoTier] for as long as anyone could remember. Every year, when the snows melt, they contribute significantly as a source of irrigation for local agriculture.\n\nThis year, it appears we’ve had a good accumulation of snow there – much more than expected, but not too much that it would cause flooding. That means that crops will prosper, and the harvest will be good… as long as nothing else goes wrong."
  VIETmisc.3068.a:0 "That’s good to hear."
  # Version 1.14.6 Start Here - Note to Translators: please leave this comment here and do not remove it even in your versions of the loc
- VIETmisc.3069.t:0 "xxxxx"
- VIETmisc.3069.desc:0 "xxxxx"
- VIETmisc.3069.a:0 "xxxxx"
- VIETmisc.3070.t:0 "xxxxx"
- VIETmisc.3070.desc:0 "xxxxx"
- VIETmisc.3070.a:0 "xxxxx"
+ # Version 1.16.1 Start Here - Note to Translators: please leave this comment here and do not remove it even in your versions of the loc
+ VIETmisc.3069.t:0 "Imperial Peaches"
+ VIETmisc.3069.desc:0 "Peaches are nothing new even in northern Europe; in ancient times, the fruit was greatly esteemed by powerful and wealthy Romans. In the present era, however, peaches can be challenging to grow in these colder climates compared to the Mediterranean, so any who wish to eat the fruit must export it at high prices from Mediterranean markets.\n\nHowever, recently, local nobles and merchants have managed to successfully cultivate small numbers of peaches in [county.GetNameNoTier].\n\n[courtier.GetTitledFirstName] suggests I should support this burgeoning industry. As [courtier.GetSheHe] explains it, “Peaches are a symbol! They harken back to the glory days of the old Romans. Tying yourself to these fruits will show that you are a far-sighted [ROOT.Char.GetTitleAsNameNoTooltip] who wants to renew the Roman way of life in these lands.”"
+ VIETmisc.3069.a:0 "It’s an unnecessarily ambitious waste of our resources."
+ VIETmisc.3069.b:0 "Intriguing idea! Let’s support the peach growers."
+ VIETmisc.3069.info:0 "#emphasis Historical Context:#! Although peaches originated from Asia, they reached the Mediterranean by the heyday of the Roman Empire, where they were very popular, and spread throughout the empire. For instance, we have archaeological evidence showing how peaches spread to northern Europe during this time alongside the presence of the Roman army. However, following the collapse of the western Empire, peaches became rare again in these regions. They began seeing a revival during the Carolingian period, as the peach’s association with Roman prestige and imperial might led the Carolingians to encourage the spread of peaches (and other similar plants) as part of a “renewal” of Roman culture. In a sense, through asserting control over the environment, they, too, were asserting their political legitimacy and imperial ideology over the rest of Europe."
+ # Version 1.16.1 Start Here - Note to Translators: please leave this comment here and do not remove it even in your versions of the loc
+ VIETmisc.3070.t:0 "The Peaches of Silence"
+ VIETmisc.3070.desc:0 "The story of a peach tree in [county.GetNameNoTier], said to be of supernatural origin, is spreading far and wide as of late.\n\nA devout [religion.GetAdjective] $knight_culture_player_no_tooltip_lowercase$ supposedly settled there long ago, attracted to the land’s beauty. He had made a solemn vow of chastity, to focus on worship of [faith.HighGodName] and other noble deeds.\n\nHe fell deeply in love with one of the local maidens, a pretty girl of charming, kind disposition, and fought day and night to fulfill his sacred vow. Finally, he could bear it no longer, and decided to not only retreat into the wilderness, but he also took an oath of silence, so he would not be tempted to confess his feelings. He became a renowned hermit, and when he died, a peach tree sprung up from his grave – a symbol of the spiritual power of silence that inspires the locals to this day."
+ VIETmisc.3070.a:0 "I’m glad the tale is spiritually inspiring!"
+ VIETmisc.3070.b:0 "Sounds like some banal peasant story."
+ VIETmisc.3070.info:0 "#emphasis Historical Context:#! This story is an abridged adaptation of a folk tale from the Azores about a Flemish knight who settled there when the islands were first discovered and settled by the Portuguese in the 15th century. During the island’s early history, Flemish settlers played a major role in the island’s colonization."
+ # Version 1.16.X Start Here - Note to Translators: please leave this comment here and do not remove it even in your versions of the loc
  VIETmisc.3071.t:0 "xxxxx"
  VIETmisc.3071.desc:0 "xxxxx"
  VIETmisc.3071.a:0 "xxxxx"

@@ -1535,5 +1535,20 @@
  VIET_todd_howard_merchant:0 "Hard-Working Merchant"
  VIET_todd_howard_merchant_desc:0 "This character was previously a merchant who was well-known for being quite charming and persuasive as a salesman, even though some accused him of being a liar. The truth is, he just works, no matter what."
  # Version 1.16.1 Start Here - Note to Translators: please leave this comment here and do not remove it even in your versions of the loc
+ VIET_peach_and_goma_cute:0 "Saw Some Cute Cats"
+ VIET_peach_and_goma_cute_desc:0 "While traveling, this character saw two cute cats playing with some peaches, and found it a charming sight."
+ VIET_peach_and_goma_spiritual:0 "Good Omen: Cute Cats"
+ VIET_peach_and_goma_spiritual_desc:0 "While traveling, this character saw two cute cats playing with some peaches, and believed it was a good omen of some sort."
+ VIET_peach_industry_1:0 "Modest Peach Industry"
+ VIET_peach_industry_1_desc:0 "Local rulers have supported the burgeoning peach industry here. The results have been mixed."
+ VIET_peach_industry_2:0 "Growing Peach Industry"
+ VIET_peach_industry_2_desc:0 "Local rulers have supported the burgeoning peach industry here. The peach growers here have had some decent success, as a result."
+ VIET_peach_industry_3:0 "Prosperous Peach Industry"
+ VIET_peach_industry_3_desc:0 "Local rulers have supported the burgeoning peach industry here. While they cannot compete with peach production from warmer regions, this area is turning into a local center of peach production."
+ VIET_enjoys_peasant_folklore:0 "Enjoys Peasant Folklore"
+ VIET_enjoys_peasant_folklore_desc:0 "This character finds the folklore of the commoners rather charming, despite (or because of) their perceived crudeness."
+ VIET_scoffs_at_peasant_folklore:0 "Scoffs at Peasant Folklore"
+ VIET_scoffs_at_peasant_folklore_desc:0 "This character looks down on the folklore of the commoners, seeing them as little more than crude and trite attempts at storytelling."
+ # Version 1.16.2 Start Here - Note to Translators: please leave this comment here and do not remove it even in your versions of the loc
  xxxxxxxxxx:0 "xxx"
 
