@@ -3304,9 +3304,10 @@ VIETmisc.6021 = {
 
 # Supporting European peach growers outside the traditional peach growing regions of the Mediterranean
 VIETmisc.6022 = {
-	type = character_event
+	type = court_event
 	title = VIETmisc.6022.t
 	desc = VIETmisc.6022.desc
+
 	theme = realm
 
 	cooldown = { years = 5 }
@@ -3329,6 +3330,7 @@ VIETmisc.6022 = {
 
 		
 	trigger = {
+		has_game_rule = VIET_normal_universe_events
 		any_held_title = {
 			tier = tier_county
 			any_county_province = {
@@ -3339,6 +3341,7 @@ VIETmisc.6022 = {
 					geographical_region = world_europe_north
 					geographical_region = world_europe_east
 					geographical_region = world_steppe_west
+					geographical_region = custom_slavia
 				}
 				NOR = {
 					terrain = mountains
@@ -3383,6 +3386,7 @@ VIETmisc.6022 = {
 						geographical_region = world_europe_north
 						geographical_region = world_europe_east
 						geographical_region = world_steppe_west
+						geographical_region = custom_slavia
 					}
 					NOR = {
 						terrain = mountains

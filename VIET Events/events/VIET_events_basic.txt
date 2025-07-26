@@ -36426,6 +36426,7 @@ VIETmisc.0375 = {
 	}
 
 	trigger = {	
+		has_game_rule = VIET_normal_universe_events
 		VIET_is_sinosphere_trigger = yes
 		# Want someone who's probably literate and not a dumbass
 		NOT = { has_trait = blind }
@@ -36624,6 +36625,7 @@ VIETmisc.0377 = {
 	}
 	
 	trigger = {	
+		has_game_rule = VIET_normal_universe_events
 		culture_has_east_asian_heritage_pillar_trigger = yes
 		OR = {
 			any_courtier_or_guest = {
@@ -36763,7 +36765,10 @@ VIETmisc.0378 = {
 	desc = VIETmisc.0378.desc
 	theme = friendly
 	
-	left_portrait = root
+	left_portrait = {
+		character = root
+		animation = frontend_right_idle
+	}
 
 	right_portrait = {
 		character = scope:lover
@@ -36873,11 +36878,11 @@ VIETmisc.0378 = {
 		scope:lover = {
 			add_opinion = {
 				target = root
-				modifier = VIET_opinion_annoying_lame_jokes
+				modifier = VIET_opinion_dislikes_my_lame_jokes
 			}
 			reverse_add_opinion = {
 				target = root
-				modifier = VIET_opinion_dislikes_my_lame_jokes
+				modifier = VIET_opinion_annoying_lame_jokes
 			}
 		}
 
@@ -36897,11 +36902,11 @@ VIETmisc.0378 = {
 		scope:lover = {
 			add_opinion = {
 				target = root
-				modifier = VIET_opinion_amused_by_lame_jokes
+				modifier = VIET_opinion_likes_my_lame_jokes
 			}
 			reverse_add_opinion = {
 				target = root
-				modifier = VIET_opinion_likes_my_lame_jokes
+				modifier = VIET_opinion_amused_by_lame_jokes
 			}
 		}
 
@@ -36927,6 +36932,7 @@ VIETmisc.0379 = {
 	}
 	
 	trigger = {
+		has_game_rule = VIET_normal_universe_events
 		any_held_title = {
 			tier = tier_county
 			any_county_province = {
@@ -37015,6 +37021,7 @@ VIETmisc.0380 = {
 	right_portrait = root
 	
 	trigger = {	
+		has_game_rule = VIET_normal_universe_events
 		is_landed = yes
 		OR = {
 			culture_has_east_asian_heritage_pillar_trigger = yes

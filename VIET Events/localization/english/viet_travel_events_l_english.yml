@@ -248,7 +248,7 @@
  VIETmisc.7052.a:0 "I’m so glad we finally made it."
  VIETmisc.7052.b:0 "We should rest here for more than a few days."
  # Version 1.16.1 Start Here - Note to Translators: please leave this comment here and do not remove it even in your versions of the loc
- VIETmisc.7053.t:0 "$travel_event_prefix$ $VIETmisc.7053.t$"
+ VIETmisc.7053.t:0 "$travel_event_prefix$ $VIETmisc.7054.t$"
  VIETmisc.7053.desc:0 "While walking down the road in [ROOT.Char.GetCurrentLocation.GetName], we notice two cats – one grey, and one white – near some trees playing with something. Curious, we edge closer.\n\nPeaches. They’re playing with some peaches that had fallen on the ground from a nearby peach tree.\n\n“Do cats even eat peaches?” I muse idly to myself. “I don’t ever recall seeing that.”"
  VIETmisc.7053.a:0 "The two cats are an adorable sight!"
  VIETmisc.7053.b:0 "It’s just some cats, let’s get going everyone."

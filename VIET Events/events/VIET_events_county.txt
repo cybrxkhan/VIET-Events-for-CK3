@@ -6754,6 +6754,7 @@ VIETmisc.3069 = {
 
 		
 	trigger = {
+		has_game_rule = VIET_normal_universe_events
 		# You should only care if your faith/culture would endorse the idea of a chaste male knight
 		faith = {
 			NOR = { 
