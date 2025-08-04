@@ -28,6 +28,7 @@
 # 7040-7049		Generic 4 (From Poll)
 # 7050			Coconut
 # 7051-7052		Oblivion Remaster
+# 7053-7054		Peaches
 # 
 ############################################################################################################################
 
@@ -5709,3 +5710,374 @@ VIETmisc.7052 = {
 	}
 
 }
+
+
+
+
+
+##################################################################
+# PEACHES 7053-7054
+##################################################################
+
+
+# Two cats playing with peaches
+# Vague reference to Peach and Goma, a brand/series of merch/online gifs from Asia about two cute cats
+VIETmisc.7053 = {
+	type = character_event
+	title = VIETmisc.7053.t
+	desc = VIETmisc.7053.desc
+	theme = travel
+	override_background = { reference = VIET_background_tuscan_country }
+
+	
+	left_portrait = {
+		character = scope:traveler
+		triggered_animation = {
+			trigger = {
+				OR = {
+					has_trait = cynical
+					has_trait = depressed
+					has_trait = impatient
+					has_trait = eccentric
+					has_trait = callous
+					has_trait = sadistic
+				}
+			}
+			animation = personality_irrational
+		}
+		triggered_animation = {
+			trigger = {
+				NOR = {
+					has_trait = cynical
+					has_trait = depressed
+					has_trait = impatient
+					has_trait = eccentric
+					has_trait = callous
+					has_trait = sadistic
+				}
+			}
+			animation = happiness
+		}
+	}	
+	
+	right_portrait = {
+		character = root
+		triggered_animation = {
+			trigger = {
+				OR = {
+					has_trait = cynical
+					has_trait = depressed
+					has_trait = impatient
+					has_trait = eccentric
+					has_trait = callous
+					has_trait = sadistic
+				}
+			}
+			animation = personality_irrational
+		}
+		triggered_animation = {
+			trigger = {
+				NOR = {
+					has_trait = cynical
+					has_trait = depressed
+					has_trait = impatient
+					has_trait = eccentric
+					has_trait = callous
+					has_trait = sadistic
+				}
+			}
+			animation = happiness
+		}
+	}	
+
+	trigger = {
+		has_game_rule = VIET_normal_universe_events
+		is_location_valid_for_travel_event_on_land = yes
+		# Leave out areas that would not have major peach production during this period
+		location = {
+			OR = {
+				terrain = plains
+				terrain = farmlands
+				terrain = hills
+				terrain = forest
+				terrain = wetlands
+				terrain = steppe
+				terrain = floodplains
+			}
+			NOR = {
+				geographical_region = world_europe_west_britannia
+				geographical_region = world_europe_west_germania
+				geographical_region = world_europe_west_francia
+				geographical_region = world_europe_north
+				geographical_region = world_europe_east
+				geographical_region = world_steppe_west
+				geographical_region = world_africa_sahara
+				geographical_region = world_africa_east
+				geographical_region = world_africa_west
+			}	
+		}
+		# Should have at least one entourage member to react to it
+		current_travel_plan = {
+			any_entourage_character = {	
+				is_available_travelling = yes
+			}
+		}
+	}
+	
+	weight_multiplier = {
+		base = 1
+		modifier = {
+			add = 0.2
+			has_trait = calm
+		}
+		modifier = {
+			add = -0.2
+			has_trait = wrathful
+		}
+		modifier = {
+			add = 0.2
+			has_trait = patient
+		}
+		modifier = {
+			add = -0.2
+			has_trait = impatient
+		}
+		modifier = {
+			add = 0.2
+			has_trait = trusting
+		}
+		modifier = {
+			add = -0.2
+			has_trait = paranoid
+		}
+	}
+
+	immediate = {
+		current_travel_plan = {
+			random_entourage_character = {
+				limit = {
+					is_available_travelling = yes
+				}
+				save_scope_as = traveler
+			}	
+		}		
+	}
+	
+	option = { # Cute
+		name = VIETmisc.7053.a
+		add_character_modifier = {
+			modifier = VIET_peach_and_goma_cute
+			years = 10
+		}
+
+		stress_impact = {
+			callous = minor_stress_impact_gain
+			sadistic = minor_stress_impact_gain
+			diligent = miniscule_stress_impact_gain
+			ambitious = miniscule_stress_impact_gain
+			impatient = miniscule_stress_impact_gain
+		}	
+
+		hidden_effect = {
+			random = {
+				chance = 30
+				modifier = {
+					factor = 1.75
+					has_trait = compassionate
+				}
+				modifier = {
+					factor = 1.25
+					has_trait = content
+				}
+				modifier = {
+					factor = 1.25
+					has_trait = humble
+				}
+				trigger_event = {
+					id = VIETmisc.7054
+					# months = { 3 24 }
+				}
+			}
+		}
+
+	}
+	
+	option = { # Ignore them
+		name = VIETmisc.7053.b
+
+		current_travel_plan = {
+			add_travel_plan_modifier = {
+				modifier = VIET_traveling_without_unnecessary_distractions
+	 			years = 1
+			}
+			every_entourage_character = {
+				custom = VIET_every_entourage_tt_religious
+				limit = {
+					OR = {
+						has_trait = zealous
+						ai_zeal >= low_positive_ai_value
+					}
+				}
+				add_opinion = {
+					modifier = disappointed_opinion
+					opinion = -10
+					target = root
+				}
+			}
+			every_entourage_character = {
+				custom = VIET_every_entourage_tt_likes_cute
+				limit = {
+					NOR = {
+						has_trait = callous
+						has_trait = sadistic
+						has_trait = zealous
+						ai_zeal >= low_positive_ai_value
+					}
+					OR = {
+						has_trait = compassionate
+						has_trait = content
+						has_trait = humble
+						has_trait = gregarious
+						has_trait = shy
+						ai_compassion >= low_positive_ai_value
+					}
+				}
+				add_opinion = {
+					modifier = disappointed_opinion
+					opinion = -10
+					target = root
+				}
+			}
+		}
+
+		stress_impact = {
+			content = minor_stress_impact_gain
+			compassionate = minor_stress_impact_gain
+			humble = miniscule_stress_impact_gain
+			patient = miniscule_stress_impact_gain
+			calm = miniscule_stress_impact_gain
+		}	
+
+	}
+	
+	option = { # It's a sign!
+		name = VIETmisc.7053.c
+		add_character_modifier = {
+			modifier = VIET_peach_and_goma_spiritual
+			years = 10
+		}
+		stress_impact = {
+			cynical = medium_stress_impact_gain
+			callous = minor_stress_impact_gain
+			sadistic = minor_stress_impact_gain
+			paranoid = miniscule_stress_impact_gain
+		}	
+
+		hidden_effect = {
+			random = {
+				chance = 30
+				modifier = {
+					factor = 1.75
+					has_trait = zealous
+				}
+				modifier = {
+					factor = 1.25
+					has_trait = just
+				}
+				modifier = {
+					factor = 1.25
+					has_trait = patient
+				}
+				trigger_event = {
+					id = VIETmisc.7054
+					# months = { 3 24 }
+				}
+			}
+		}
+	}
+	
+	after = {		
+		current_travel_plan = {
+			every_entourage_character = {
+				custom = VIET_every_entourage_tt_religious
+				limit = {
+					OR = {
+						has_trait = zealous
+						ai_zeal >= low_positive_ai_value
+					}
+				}
+				add_character_modifier = {
+					modifier = VIET_peach_and_goma_spiritual
+					years = 10
+				}
+			}
+			every_entourage_character = {
+				custom = VIET_every_entourage_tt_likes_cute
+				limit = {
+					NOR = {
+						has_trait = callous
+						has_trait = sadistic
+						has_trait = zealous
+						ai_zeal >= low_positive_ai_value
+					}
+					OR = {
+						has_trait = compassionate
+						has_trait = content
+						has_trait = humble
+						has_trait = gregarious
+						has_trait = shy
+						ai_compassion >= low_positive_ai_value
+					}
+				}
+				add_character_modifier = {
+					modifier = VIET_peach_and_goma_cute
+					years = 10
+				}
+			}
+		}
+	}
+
+}
+
+
+# Peach and Goma - follow up event
+# DO NOT COPY AS TEMPLATE LATER
+VIETmisc.7054 = {
+	type = character_event
+	title = VIETmisc.7054.t
+	desc = VIETmisc.7054.desc
+	theme = friendly
+	override_background = { reference = bedchamber }
+	
+	right_portrait = { 	
+		character = root
+		animation = personality_content
+	}
+
+
+	option = { # find joy in it
+		name = VIETmisc.7054.a
+		VIET_tiny_piety_gain_effect = yes
+		stress_impact = {		
+			base = miniscule_stress_impact_loss
+			compassionate = minor_stress_impact_loss
+			lazy = miniscule_stress_impact_loss
+			content = miniscule_stress_impact_loss
+			calm = miniscule_stress_impact_loss
+			trusting = miniscule_stress_impact_loss
+			humble = miniscule_stress_impact_loss
+			zealous = miniscule_stress_impact_loss
+		}
+	}	
+
+}
+
+
+
+
+
+
+
+
+
+
