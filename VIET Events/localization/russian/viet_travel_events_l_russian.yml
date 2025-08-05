@@ -4,6 +4,9 @@
  every_entourage_tt_attracted_to_women:0 "Every entourage member attracted to women"
  VIET_every_entourage_tt_laughing:0 "Every entourage member who found the situation amusing"
  VIET_every_entourage_tt_relaxing:0 "Every entourage member who just wants to relax"
+ VIET_every_entourage_tt_religious:0 "Every entourage member who is religious"
+ VIET_every_entourage_tt_likes_cute:0 "Every entourage member who appreciates cute things"
+ VIET_every_entourage_tt_dislikes_cute:0 "Every entourage member who is wary of cute things"
  
  # Travel Events
 
@@ -233,18 +236,29 @@
  VIETmisc.7050.b:0 "Hmm…. This gives me some military ideas!"
  VIETmisc.7050.info:0 "#emphasis Biological Context:#! #italic Amphioctopus marginatus#!, nicknamed the coconut octopus or veined octopus, is an octopus species native to the Western Pacific that is sometimes fished for food. It is an example of cephalopod intelligence, as it often uses clam shells as mobile armor to protect itself from predators and other dangers. Members of this species who live close to areas inhabited by humans in Indonesia have been observed gathering and using discarded coconut shells instead of clam shells, indicating their ability to adapt to the local environment, as well as plan ahead for future threats."
  # Version 1.15.1 Start Here - Note to Translators: please leave this comment here and do not remove it even in your versions of the loc
- VIETmisc.7051.t:0 "$travel_event_prefix$ xxxxx"
- VIETmisc.7051.desc:0 "xxxxx"
- VIETmisc.7051.a:0 "xxxxx"
- VIETmisc.7052.t:0 "$travel_event_prefix$ xxxxx"
- VIETmisc.7052.desc:0 "xxxxx"
- VIETmisc.7052.a:0 "xxxxx"
- VIETmisc.7053.t:0 "$travel_event_prefix$ xxxxx"
- VIETmisc.7053.desc:0 "xxxxx"
- VIETmisc.7053.a:0 "xxxxx"
- VIETmisc.7054.t:0 "$travel_event_prefix$ xxxxx"
- VIETmisc.7054.desc:0 "xxxxx"
- VIETmisc.7054.a:0 "xxxxx"
+ # Version 1.16.0 Start Here - Note to Translators: please leave this comment here and do not remove it even in your versions of the loc
+ VIETmisc.7051.t:0 "$travel_event_prefix$ Fireflies"
+ VIETmisc.7051.desc:0 "We were traveling through [ROOT.Char.GetCurrentLocation.GetName] as the sun was setting in the sky. While searching for a place to set up camp, we came across an eerie sight: a circle of dead [ROOT.Char.GetCurrentLocation.Custom('GetRandomAppropriateTree')] trees. Within this circle were rocks covered with unusually large cobwebs, and, alarmingly, a couple human skulls.\n\n“This place is cursed,” [scared.GetFirstName] whispered, [scared.GetHerHis] voice hoarse with fear. “We should leave.”\n\n“Wait,” [brave.GetFirstName] objects. [brave.GetSheHe|U] points at the dead trees, and says, “Look. #italic Fireflies#!. That's a lucky sign. We should camp here.”\n\nAs I ponder whether to camp here, I gaze at the fireflies, and the way they illuminate the ground and the dead trees, like stars gently glimmering in the night sky above. I feel an emotion stirring in my heart, one I cannot describe."
+ VIETmisc.7051.a:0 "Let’s camp a little farther away."
+ VIETmisc.7051.b:0 "We’ll camp here tonight."
+ VIETmisc.7051.b.toast:0 "The next morning...."
+ VIETmisc.7051.b.toast.desc:0 "When you woke up, you realize that the fireflies passed away during the night."
+ VIETmisc.7052.t:0 "$travel_event_prefix$ A Long-Awaited Arrival"
+ VIETmisc.7052.desc:0 "Our journey recently had been a struggle, as we endured several hardships and dangers, but we finally arrived at a large port town in [ROOT.Char.GetCurrentLocation.GetName] today in the afternoon, just on time.\n\nThe warm sun gently shined on us and the fresh and cool ocean breeze caressed our weary faces, as the guards let us in through the town gates. Perhaps it was due to the difficulties we faced in the past few days, but we felt so relieved, so happy.\n\nA large [ROOT.Char.GetCurrentLocation.Custom('GetRandomAppropriateTree')] tree sat in the middle of town, and wordlessly, my entourage and I went to join some locals who were resting under the shade."
+ VIETmisc.7052.a:0 "I’m so glad we finally made it."
+ VIETmisc.7052.b:0 "We should rest here for more than a few days."
+ # Version 1.16.1 Start Here - Note to Translators: please leave this comment here and do not remove it even in your versions of the loc
+ VIETmisc.7053.t:0 "$travel_event_prefix$ $VIETmisc.7054.t$"
+ VIETmisc.7053.desc:0 "While walking down the road in [ROOT.Char.GetCurrentLocation.GetName], we notice two cats – one grey, and one white – near some trees playing with something. Curious, we edge closer.\n\nPeaches. They’re playing with some peaches that had fallen on the ground from a nearby peach tree.\n\n“Do cats even eat peaches?” I muse idly to myself. “I don’t ever recall seeing that.”"
+ VIETmisc.7053.a:0 "The two cats are an adorable sight!"
+ VIETmisc.7053.b:0 "It’s just some cats, let’s get going everyone."
+ VIETmisc.7053.c:0 "It must be a sign from [ROOT.Char.GetFaith.HighGodName]!"
+ # Note to translators: In case you aren't aware, "peachy" here doesn't mean like a peach per se, but the slang term that usually means something is good or wonderful, that has a humorous or even old-fashioned connotation in American English
+ # I don't know if a word with a similar connotation might exist in your language but thought I'd point it out for fun
+ VIETmisc.7054.t:0 "Peachy Cats"
+ VIETmisc.7054.desc:0 "A while back, while traveling, I encountered two cats – one grey, one white – playing with some peaches that had fallen from a nearby peach tree.\n\nLast night, for some inexplicable reason, I dreamt of those cats again, playing with those peaches once more. Yet, this time, something about it seemed different.\n\nIn a way, I felt even more relaxed, and at peace."
+ VIETmisc.7054.a:0 "I wake up with a gentle smile on my face."
+ # Version 1.16.2 Start Here - Note to Translators: please leave this comment here and do not remove it even in your versions of the loc
  VIETmisc.7055.t:0 "$travel_event_prefix$ xxxxx"
  VIETmisc.7055.desc:0 "xxxxx"
  VIETmisc.7055.a:0 "xxxxx"

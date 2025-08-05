@@ -4,6 +4,10 @@ VIET_every_entourage_tt_dislikes_rations:0 "Todos los miembros del séquito que 
 every_entourage_tt_attracted_to_women:0 "Todos los miembros del séquito atraídos por las mujeres"
 VIET_every_entourage_tt_laughing:0 "Todos los miembros del séquito que encontraron la situación divertida"
 VIET_every_entourage_tt_relaxing:0 "Todos los miembros del séquito que solo quieren relajarse"
+ VIET_every_entourage_tt_religious:0 "Every entourage member who is religious"
+ VIET_every_entourage_tt_likes_cute:0 "Every entourage member who appreciates cute things"
+ VIET_every_entourage_tt_dislikes_cute:0 "Every entourage member who is wary of cute things"
+ 
 
 # Travel Events
 
@@ -245,12 +249,17 @@ VIETmisc.7052.desc:0 "Nuestro viaje había sido duro últimamente, soportando di
 VIETmisc.7052.a:0 "Qué alegría haber llegado por fin."
 VIETmisc.7052.b:0 "Deberíamos descansar aquí más de unos pocos días."
  # Version 1.16.1 Start Here - Note to Translators: please leave this comment here and do not remove it even in your versions of the loc
- VIETmisc.7053.t:0 "$travel_event_prefix$ xxxxx"
- VIETmisc.7053.desc:0 "xxxxx"
- VIETmisc.7053.a:0 "xxxxx"
- VIETmisc.7054.t:0 "$travel_event_prefix$ xxxxx"
- VIETmisc.7054.desc:0 "xxxxx"
- VIETmisc.7054.a:0 "xxxxx"
+ VIETmisc.7053.t:0 "$travel_event_prefix$ $VIETmisc.7054.t$"
+ VIETmisc.7053.desc:0 "While walking down the road in [ROOT.Char.GetCurrentLocation.GetName], we notice two cats – one grey, and one white – near some trees playing with something. Curious, we edge closer.\n\nPeaches. They’re playing with some peaches that had fallen on the ground from a nearby peach tree.\n\n“Do cats even eat peaches?” I muse idly to myself. “I don’t ever recall seeing that.”"
+ VIETmisc.7053.a:0 "The two cats are an adorable sight!"
+ VIETmisc.7053.b:0 "It’s just some cats, let’s get going everyone."
+ VIETmisc.7053.c:0 "It must be a sign from [ROOT.Char.GetFaith.HighGodName]!"
+ # Note to translators: In case you aren't aware, "peachy" here doesn't mean like a peach per se, but the slang term that usually means something is good or wonderful, that has a humorous or even old-fashioned connotation in American English
+ # I don't know if a word with a similar connotation might exist in your language but thought I'd point it out for fun
+ VIETmisc.7054.t:0 "Peachy Cats"
+ VIETmisc.7054.desc:0 "A while back, while traveling, I encountered two cats – one grey, one white – playing with some peaches that had fallen from a nearby peach tree.\n\nLast night, for some inexplicable reason, I dreamt of those cats again, playing with those peaches once more. Yet, this time, something about it seemed different.\n\nIn a way, I felt even more relaxed, and at peace."
+ VIETmisc.7054.a:0 "I wake up with a gentle smile on my face."
+ # Version 1.16.2 Start Here - Note to Translators: please leave this comment here and do not remove it even in your versions of the loc
  VIETmisc.7055.t:0 "$travel_event_prefix$ xxxxx"
  VIETmisc.7055.desc:0 "xxxxx"
  VIETmisc.7055.a:0 "xxxxx"
