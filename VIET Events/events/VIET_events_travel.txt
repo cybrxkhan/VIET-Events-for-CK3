@@ -5895,7 +5895,7 @@ VIETmisc.7053 = {
 				}
 				trigger_event = {
 					id = VIETmisc.7054
-					# months = { 3 24 }
+					months = { 3 24 }
 				}
 			}
 		}
@@ -5990,7 +5990,7 @@ VIETmisc.7053 = {
 				}
 				trigger_event = {
 					id = VIETmisc.7054
-					# months = { 3 24 }
+					months = { 3 24 }
 				}
 			}
 		}

@@ -36860,6 +36860,12 @@ VIETmisc.0378 = {
 				}
 			}
 		}
+		scope:lover = {
+			add_character_modifier = {
+				modifier = VIET_likes_lame_jokes
+				years = 5
+			}
+		}
 	}
 
 	
