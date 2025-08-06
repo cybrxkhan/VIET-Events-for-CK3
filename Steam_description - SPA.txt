@@ -1,7 +1,7 @@
 [img]https://i.imgur.com/pNp0DR5.jpg[/img]
 
-[h1]Versión actual: 1.16.0 "Imperial" 
-(Lanzamiento: 03/05/25, Compatible con versión vanilla 1.16.X)[/h1]
+[h1]Versión actual: 1.16.1 "Imperial" 
+(Lanzamiento: 05/08/25, Compatible con versión vanilla 1.16.X)[/h1]
 
 [url=https://discord.gg/9KuyXv2uZA]Servidor de Discord de mis Mods[/url]
 [B]Echa un Vistazo a [url=https://forum.paradoxplaza.com/forum/threads/mod-viet-events-for-ck3-a-flavor-and-immersion-event-mod.1422081/]Tema del Foro[/url] Para Más Información[/B]
@@ -52,11 +52,11 @@ Por favor, echa un vistazo a [url=https://steamcommunity.com/workshop/filedetail
 
 [img]http://i.imgur.com/RQ5QZTF.jpg[/img]
 
-[h1]Versión 1.16.0 "Imperial"[/h1]
+[h1]Versión 1.16.1 "Imperial"[/h1]
 
 [I]"He oído a otros decir lo mismo."[/I]
 
-Nuevos eventos añadidos en esta versión: [B]7[/B]
+Nuevos eventos añadidos en esta versión: [B]9[/B]
 
 
 
