@@ -1,7 +1,7 @@
 [img]https://i.imgur.com/pNp0DR5.jpg[/img]
 
-[h1]Versión actual: 1.16.1 "Imperial" 
-(Lanzamiento: 05/08/25, Compatible con versión vanilla 1.16.X)[/h1]
+[h1]Versión actual: 1.16.1 "Georgia" 
+(Lanzamiento: 08/08/25, Compatible con versión vanilla 1.16.X)[/h1]
 
 [url=https://discord.gg/9KuyXv2uZA]Servidor de Discord de mis Mods[/url]
 [B]Echa un Vistazo a [url=https://forum.paradoxplaza.com/forum/threads/mod-viet-events-for-ck3-a-flavor-and-immersion-event-mod.1422081/]Tema del Foro[/url] Para Más Información[/B]

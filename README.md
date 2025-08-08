@@ -1,10 +1,11 @@
 # VIET Events for CK3
 
-<img src="https://i.imgur.com/pNp0DR5.jpg">
+<img src="https://i.imgur.com/4gVVcJW.jpg">
 
-## Latest Version: 1.16.0 "Imperial" (Released 5/3/25)
+## Latest Version: 1.16.1 "Georgia" (Released 8/8/25)
 
-_"I've heard others say the same."_
+_"One does a whole painting for one peach and people think just the opposite - that particular peach is but a detail."_
+_- Pablo Picasso (1881-1973), Spanish artist_
 
 Very Immersive Events and Tales (VIET), the sequel to VIET Events Reborn for CK2, is a flavor mod that adds a vast collection of events about everyday life to spice up your game. They add immersion and a diversity of experiences in between wars and vanilla’s event chains, and cover mundane minutiae ranging from small talk with courtiers and eating local cuisine to epic tales about love, philosophy, and the human condition. Some of the events unlock new decisions, character interactions, activities, and much more for you to explore!
 
@@ -14,7 +15,7 @@ Feel free to use my work in your mods - all I ask is that I am credited and (if 
 
 ## Features
 
-- Over **1200** new flavor events to experience!
+- Over **1210** new flavor events to experience!
 - Explore new decisions, artifacts, character interactions, activities, and more!
 - Game rule to disable sillier events for those who don't like them, with three levels to choose from: Balanced (Default), Serious (Restricted), and All Events (Full)
 - Compatible with almost anything since it doesn't touch any vanilla files - even with overhaul mods, you can via game rule disable events that reference things specific to our medieval world that wouldn’t make sense in other time periods or universes (like fantasy and sci-fi conversion mods)
@@ -38,15 +39,11 @@ The mod folder should look something like this:
 
 ## Changelog
 
-### Version 1.16.0 "Imperial"
+### Version 1.16.1 "Georgia"
 
-New events added in this version: **7**
+New events added in this version: **10**
 
-- Added 7 Oblivion inspired events
-- Added new artifact: Quality Horse Armor
-- Added a few new event backgrounds
-- VIET’s events now account for the new world_steppe_central and world_siberia regions added in vanilla as needed
-- Adjusted the geographical triggers for a few events
+- Added 10 peach themed events
 - Miscellaneous bugfixes/tweaks
 
 \* Adapted from VIET for CK2
