@@ -6723,6 +6723,10 @@ VIETmisc.0087 = {
 		character = root
 		animation = personality_callous
 	}
+
+	trigger = {
+		is_landed = yes
+	}
 	
 	weight_multiplier = {
 		base = 1
