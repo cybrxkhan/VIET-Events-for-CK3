@@ -70,7 +70,8 @@
 # 0366-0368		Snow
 # 0369-0371		Coconut
 # 0372-0374		Oblivion Remaster
-# 0375-0378		Peaches
+# 0375-0380		Peaches
+# 0381-0389		Councilor
 # 
 ############################################################################################################################
 
@@ -37169,6 +37170,1000 @@ VIETmisc.0380 = {
 
 }
 
+
+
+
+##################################################################
+# COUNCILOR 0381-0389
+##################################################################
+
+
+# Chancellor proposes keeping a closer eye on envoys' servants
+VIETmisc.0381 = {
+	type = character_event
+	title = VIETmisc.0381.t
+	desc = VIETmisc.0381.desc
+	theme = diplomacy_foreign_affairs_focus
+	override_background = { reference = council_chamber }
+	
+	left_portrait = {
+		character = root
+		animation = thinking
+	}
+	
+	right_portrait = {
+		character = scope:chancellor
+		animation = debating
+	}
+
+	trigger = {	
+		is_landed = yes
+		exists = cp:councillor_chancellor
+		cp:councillor_chancellor = {
+			is_available_ai_adult = yes
+		}
+	}
+	
+	weight_multiplier = {
+		base = 1
+		modifier = {
+			add = 0.2
+			has_trait = trusting
+		}
+		modifier = {
+			add = -0.2
+			has_trait = paranoid
+		}
+		modifier = {
+			add = 0.2
+			has_trait = gregarious
+		}
+		modifier = {
+			add = -0.2
+			has_trait = shy
+		}
+		modifier = {
+			add = 0.2
+			has_trait = ambitious
+		}
+		modifier = {
+			add = -0.2
+			has_trait = content
+		}
+	}	
+
+	immediate = {
+		cp:councillor_chancellor = {
+			save_scope_as = chancellor
+		}		
+	}
+	
+	option = { # Let's be careful of them
+		name = VIETmisc.0375.a	
+		VIET_huge_prestige_loss_effect = yes
+		add_character_modifier = {
+			modifier = VIET_suspicious_of_envoys_attendants
+			years = 8
+		}
+		stress_impact = {
+			trusting = minor_stress_impact_gain
+			honest = miniscule_stress_impact_gain
+			forgiving = miniscule_stress_impact_gain
+		}
+		scope:chancellor = {
+			add_opinion = {
+				target = root
+				modifier = VIET_opinion_envoys_advice_good
+			}
+		}
+	}	
+	
+	option = { # We can trust them
+		name = VIETmisc.0375.b
+		add_character_modifier = {
+			modifier = VIET_generous_towards_envoys_attendants
+			years = 8
+		}
+		stress_impact = {
+			paranoid = minor_stress_impact_gain
+			shy = miniscule_stress_impact_gain
+			deceitful = miniscule_stress_impact_gain
+		}
+		scope:chancellor = {
+			add_opinion = {
+				target = root
+				modifier = VIET_opinion_envoys_advice_bad
+			}
+		}
+	}	
+
+}
+
+
+# Marshal doesn't care about diviners (also, Saladin quote from Kingdom of Heaven)
+VIETmisc.0382 = {
+	type = character_event
+	title = VIETmisc.0382.t
+	desc = VIETmisc.0382.desc
+	theme = memory_martial
+	override_background = { reference = army_camp }
+	
+	left_portrait = {
+		character = root
+		animation = thinking
+	}
+	
+	right_portrait = {
+		character = scope:chancellor
+		animation = personality_callous
+	}
+
+	trigger = {	
+		exists = cp:councillor_marshal
+		cp:councillor_marshal = {
+			is_available_ai_adult = yes
+		}
+	}
+	
+	weight_multiplier = {
+		base = 1
+		modifier = {
+			add = 0.2
+			has_trait = trusting
+		}
+		modifier = {
+			add = -0.2
+			has_trait = paranoid
+		}
+		modifier = {
+			add = 0.2
+			has_trait = gregarious
+		}
+		modifier = {
+			add = -0.2
+			has_trait = shy
+		}
+		modifier = {
+			add = 0.2
+			has_trait = ambitious
+		}
+		modifier = {
+			add = -0.2
+			has_trait = content
+		}
+	}	
+
+	immediate = {
+		cp:councillor_marshal = {
+			save_scope_as = marshal
+			add_character_modifier = {
+				modifier = VIET_skeptical_of_military_diviners
+				years = 25
+			}
+		}		
+	}
+	
+	option = { # I trust you over diviners
+		name = VIETmisc.0382.a
+		VIET_huge_piety_loss_effect = yes	
+		stress_impact = {
+			zealous = minor_stress_impact_gain
+		}
+		scope:marshal = {
+			add_opinion = {
+				target = root
+				modifier = VIET_opinion_agrees_intellectual
+			}
+		}	
+	}	
+	
+	option = { # Be nicer to the diviners
+		name = VIETmisc.0382.b
+		VIET_huge_piety_gain_effect = yes	
+		stress_impact = {
+			cynical = minor_stress_impact_gain
+		}
+		scope:marshal = {
+			add_opinion = {
+				target = root
+				modifier = VIET_opinion_disagrees_intellectual
+			}
+		}
+	}	
+	
+	option = { # Use diviners to boost morale
+		name = VIETmisc.0382.c
+		duel = {
+			skill = { diplomacy martial }
+			target = scope:marshal
+			10 = { # Failure
+				compare_modifier = {
+					value = scope:duel_value
+					multiplier = -0.8
+					min = -49
+				}
+				desc = VIETmisc.0382.c.toast.failure
+				send_interface_toast = {
+					type = event_toast_effect_bad
+					left_icon = scope:marshal
+					title = VIETmisc.0382.c.toast.failure
+					scope:marshal = {	
+						add_opinion = {
+							target = root
+							modifier = annoyed_opinion
+							opinion = -15
+						}
+					}	
+				}
+			}
+			10 = { # Success
+				compare_modifier = {
+					value = scope:duel_value
+					multiplier = 0.8
+					min = -49
+				}
+				desc = VIETmisc.0382.c.toast.success
+				send_interface_toast = {
+					type = event_toast_effect_good
+					left_icon = scope:marshal
+					title = VIETmisc.0382.c.toast.success
+					scope:marshal = {
+						add_opinion = { 
+							target = root
+							opinion = 15
+							modifier = fp3_convincing_argument_opinion
+						}				
+						add_character_modifier = {
+							modifier = VIET_diviners_boost_military_morale
+							years = 15
+						}						
+					}
+				}
+			}
+		}
+	}	
+
+	after = {
+		if = {
+			limit = {
+				has_game_rule = VIET_historical_context_on
+			}
+			custom_tooltip = VIETmisc.0382.info
+		}
+	}
+
+}
+
+
+
+# Spymaster says there's an opportunity to hire a commoner servant family to spy on other nobles
+VIETmisc.0383 = {
+	type = character_event
+	title = VIETmisc.0383.t
+	desc = VIETmisc.0383.desc
+	theme = intrigue_skulduggery_focus
+	
+	left_portrait = {
+		character = root
+		animation = thinking
+	}
+	
+	right_portrait = {
+		character = scope:spymaster
+		animation = scheme
+	}
+
+	trigger = {	
+		exists = cp:councillor_spymaster
+		cp:councillor_spymaster = {
+			is_available_ai_adult = yes
+		}
+	}
+	
+	weight_multiplier = {
+		base = 1
+		modifier = {
+			add = 0.2
+			has_trait = just
+		}
+		modifier = {
+			add = -0.2
+			has_trait = arbitrary
+		}
+		modifier = {
+			add = 0.2
+			has_trait = gregarious
+		}
+		modifier = {
+			add = -0.2
+			has_trait = shy
+		}
+		modifier = {
+			add = 0.2
+			has_trait = compassionate
+		}
+		modifier = {
+			add = -0.2
+			has_trait = sadistic
+		}
+	}	
+
+	immediate = {
+		cp:councillor_spymaster = {
+			save_scope_as = spymaster
+		}		
+	}
+	
+	option = { # Hire them
+		name = VIETmisc.0383.a
+		trigger = {
+			OR = {
+				is_ai = no
+				gold >= 60
+			}
+		}
+		remove_short_term_gold = 60
+		add_character_modifier = {
+			modifier = VIET_espionage_network_of_commoners
+			years = 15
+		}	
+		stress_impact = {
+			greedy = miniscule_stress_impact_gain
+			arrogant = miniscule_stress_impact_gain
+			honest = miniscule_stress_impact_gain
+		}
+		scope:spymaster = {
+			add_opinion = {
+				target = root
+				modifier = VIET_opinion_espionage_advice_good
+			}
+		}	
+	}	
+	
+	option = { # Don't hire them
+		name = VIETmisc.0383.b
+		stress_impact = {
+			deceitful = miniscule_stress_impact_gain
+		}
+		scope:spymaster = {
+			add_opinion = {
+				target = root
+				modifier = VIET_opinion_espionage_advice_bad
+			}
+		}	
+	}	
+
+}
+
+
+
+# Court Chaplain has doubts about their theological knowledge
+VIETmisc.0384 = {
+	type = character_event
+	title = VIETmisc.0384.t
+	desc = VIETmisc.0384.desc
+	theme = learning_theology_focus
+	
+	left_portrait = {
+		character = root
+		triggered_animation = {
+			trigger = { 
+				OR = {
+					has_trait = callous
+					has_trait = sadistic
+					has_trait = arrogant
+					has_trait = eccentric
+					has_trait = impatient
+				}	
+			}
+			animation = eyeroll
+		}
+		animation = personality_content
+	}
+	
+	right_portrait = {
+		character = scope:chaplain
+		animation = sadness
+	}
+
+	trigger = {	
+		exists = cp:councillor_court_chaplain
+		cp:councillor_court_chaplain = {
+			is_available_ai_adult = yes
+			NOT = { has_trait = arrogant }
+		}
+	}
+	
+	weight_multiplier = {
+		base = 1
+		modifier = {
+			add = 0.2
+			has_trait = humble
+		}
+		modifier = {
+			add = -0.2
+			has_trait = arrogant
+		}
+		modifier = {
+			add = 0.2
+			has_trait = gregarious
+		}
+		modifier = {
+			add = -0.2
+			has_trait = shy
+		}
+		modifier = {
+			add = 0.2
+			has_trait = compassionate
+		}
+		modifier = {
+			add = -0.2
+			has_trait = sadistic
+		}
+	}	
+
+	immediate = {
+		save_scope_as = liege
+		cp:councillor_court_chaplain = {
+			save_scope_as = chaplain
+			add_character_modifier = {
+				modifier = VIET_lacking_intellectual_self_esteem
+				years = 10
+			}
+		}		
+	}
+	
+	option = { # Your humility is why you deserve the job
+		name = VIETmisc.0384.a
+		stress_impact = {
+			callous = miniscule_stress_impact_gain
+			arrogant = miniscule_stress_impact_gain
+			cynical = miniscule_stress_impact_gain
+		}
+		scope:chaplain = {
+			remove_character_modifier = VIET_lacking_intellectual_self_esteem
+			add_character_modifier = {
+				modifier = VIET_encouraged_by_others
+				years = 5
+			}
+			add_opinion = {
+				target = root
+				modifier = VIET_opinion_encouragement
+			}					
+		}
+	}	
+	
+	option = { # Perhaps you should just study more
+		name = VIETmisc.0384.b
+		stress_impact = {
+			lazy = miniscule_stress_impact_gain
+			cynical = miniscule_stress_impact_gain
+		}
+		scope:chaplain = {
+			duel = {
+				skill = { learning }
+				target = scope:marshal
+				10 = { # Failure
+					compare_modifier = {
+						value = scope:duel_value
+						multiplier = -0.8
+						min = -49
+					}
+					desc = VIETmisc.0384.b.toast.failure
+					scope:liege = {
+						send_interface_toast = {
+							type = event_toast_effect_bad
+							left_icon = scope:chaplain
+							title = VIETmisc.0384.b.toast.failure
+							scope:chaplain = {	
+								stress_impact = {
+									base = medium_stress_impact_gain
+								}
+								add_opinion = {
+									target = scope:liege
+									modifier = frustrated_opinion
+									opinion = -15
+								}
+							}	
+						}
+					}
+				}
+				10 = { # Success
+					compare_modifier = {
+						value = scope:duel_value
+						multiplier = 0.8
+						min = -49
+					}
+					desc = VIETmisc.0384.b.toast.success
+					scope:liege = {
+						send_interface_toast = {
+							type = event_toast_effect_good
+							left_icon = scope:chaplain
+							title = VIETmisc.0384.b.toast.success
+							scope:chaplain = {
+								add_learning_skill = 1
+								stress_impact = {
+									base = medium_stress_impact_loss
+								}
+								add_character_modifier = {
+									modifier = VIET_encouraged_by_others
+									years = 10
+								}
+								add_opinion = {
+									target = root
+									modifier = VIET_opinion_encouragement
+								}						
+							}
+						}
+					}
+				}
+			}			
+		}
+	}	
+	
+	option = { # Just do your job
+		name = VIETmisc.0384.c
+		VIET_huge_prestige_gain_effect = yes
+		stress_impact = {
+			zealous = miniscule_stress_impact_gain
+		}
+	}	
+
+}
+
+
+# As Chancellor, annoying irrelevant people bribe you to to meet with your liege
+VIETmisc.0385 = {
+	type = character_event
+	title = VIETmisc.0385.t
+	desc = VIETmisc.0385.desc
+	theme = diplomacy_foreign_affairs_focus
+	
+	right_portrait = {
+		character = root
+		animation = boredom
+	}
+
+	trigger = {	
+		has_council_position = councillor_chancellor
+	}
+	
+	weight_multiplier = {
+		base = 1
+		modifier = {
+			add = 0.2
+			has_trait = patient
+		}
+		modifier = {
+			add = -0.2
+			has_trait = impatient
+		}
+		modifier = {
+			add = 0.2
+			has_trait = trusting
+		}
+		modifier = {
+			add = -0.2
+			has_trait = paranoid
+		}
+		modifier = {
+			add = 0.2
+			has_trait = calm
+		}
+		modifier = {
+			add = -0.2
+			has_trait = wrathful
+		}
+	}	
+
+	immediate = {
+		liege = {
+			save_scope_as = liege
+		}		
+	}
+	
+	option = { # Don't take the bribe
+		name = VIETmisc.0385.a
+		add_character_modifier = {
+			modifier = VIET_refuses_bribes_from_lessers
+			years = 10
+		}
+		stress_impact = {
+			greedy = medium_stress_impact_gain
+			arbitrary = miniscule_stress_impact_gain
+		}
+	}	
+	
+	option = { # Take the bribe
+		name = VIETmisc.0385.b
+		add_gold = { 10 100 }
+		stress_impact = {
+			just = minor_stress_impact_gain
+		}
+	}	
+
+}
+
+
+
+# As Marshal, your officers are following your orders with malicious compliance
+VIETmisc.0386 = {
+	type = character_event
+	title = VIETmisc.0386.t
+	desc = VIETmisc.0386.desc
+	theme = martial_strategy_focus
+	
+	right_portrait = {
+		character = root
+		animation = boredom
+	}
+
+	trigger = {	
+		has_council_position = councillor_marshal
+	}
+	
+	weight_multiplier = {
+		base = 1
+		modifier = {
+			add = 0.2
+			has_trait = arrogant
+		}
+		modifier = {
+			add = -0.2
+			has_trait = humble
+		}
+		modifier = {
+			add = 0.2
+			has_trait = sadistic
+		}
+		modifier = {
+			add = -0.2
+			has_trait = compassionate
+		}
+		modifier = {
+			add = 0.2
+			has_trait = arbitrary
+		}
+		modifier = {
+			add = -0.2
+			has_trait = just
+		}
+	}	
+
+	immediate = {
+		liege = {
+			save_scope_as = liege
+		}		
+	}
+	
+	option = { # Demote or punish the troublemakers
+		name = VIETmisc.0386.a
+		add_character_modifier = {
+			modifier = VIET_strict_military_discipline
+			years = 10
+		}
+		stress_impact = {
+			craven = minor_stress_impact_gain
+			forgiving = miniscule_stress_impact_gain
+		}
+	}	
+	
+	option = { # Talk it out with the officers
+		name = VIETmisc.0386.b
+		stress_impact = {
+			base = minor_stress_impact_gain
+			wrathful = minor_stress_impact_gain
+			arrogant = minor_stress_impact_gain
+			impatient = miniscule_stress_impact_gain
+		}
+		duel = {
+			skill = diplomacy
+			value = average_skill_rating
+			10 = { # Failure
+				custom_tooltip = VIETmisc.0386.b.failure
+				compare_modifier = {
+					value = scope:duel_value
+					multiplier = -0.8
+					min = -49
+				}
+				send_interface_toast = {
+					type = event_toast_effect_bad
+					left_icon = ROOT
+					title = VIETmisc.0386.b.failure
+					VIET_huge_prestige_loss_effect = yes
+					add_character_modifier = {
+						modifier = VIET_angered_military_officers
+						years = 10
+					}
+				}
+			}
+			10 = { # Success
+				custom_tooltip = VIETmisc.0386.b.success
+				compare_modifier = {
+					value = scope:duel_value
+					multiplier = 0.8
+					min = -49
+				}
+				send_interface_toast = {
+					type = event_toast_effect_good
+					left_icon = ROOT
+					title = VIETmisc.0386.b.success
+					VIET_huge_prestige_loss_effect = yes
+					add_character_modifier = {
+						modifier = VIET_good_relationship_with_military_officers
+						years = 10
+					}
+				}
+			}
+		}
+	}	
+	
+	option = { # Ignore them
+		name = VIETmisc.0386.c
+		add_character_modifier = {
+			modifier = VIET_undisciplined_military_officers
+			years = 10
+		}
+		stress_impact = {
+			brave = miniscule_stress_impact_gain
+			wrathful = minor_stress_impact_gain
+			arrogant = minor_stress_impact_gain
+			impatient = miniscule_stress_impact_gain
+			vengeful = miniscule_stress_impact_gain
+		}
+	}	
+}
+
+
+
+# As steward, you get tired of having to do math
+VIETmisc.0387 = {
+	type = character_event
+	title = VIETmisc.0387.t
+	desc = VIETmisc.0387.desc
+	theme = stewardship_wealth_focus
+	
+	right_portrait = {
+		character = root
+		animation = boredom
+	}
+
+	trigger = {	
+		has_council_position = councillor_steward
+	}
+	
+	weight_multiplier = {
+		base = 1
+		modifier = {
+			add = 0.2
+			has_trait = impatient
+		}
+		modifier = {
+			add = -0.2
+			has_trait = patient
+		}
+		modifier = {
+			add = 0.2
+			has_trait = wrathful
+		}
+		modifier = {
+			add = -0.2
+			has_trait = calm
+		}
+		modifier = {
+			add = 0.2
+			has_trait = lazy
+		}
+		modifier = {
+			add = -0.2
+			has_trait = diligent
+		}
+		modifier = {
+			add = 0.2
+			probably_unintelligent_trigger = yes
+		}
+		modifier = {
+			add = -0.2
+			probably_intelligent_trigger = yes
+		}
+	}	
+
+	immediate = {
+		liege = {
+			save_scope_as = liege
+		}		
+	}
+	
+	option = { # Do your job
+		name = VIETmisc.0387.a
+		stress_impact = {
+			base = miniscule_stress_impact_gain
+			lazy = miniscule_stress_impact_gain
+			impatient = miniscule_stress_impact_gain
+		}
+		add_character_modifier = {
+			modifier = VIET_dutiful_but_overworked
+			years = 8
+		}
+	}	
+	
+	option = { # Take a break
+		name = VIETmisc.0387.b
+		stress_impact = {
+			base = miniscule_stress_impact_loss
+		}		
+	}	
+}
+
+
+# As spymaster, a pathetic assassin tries to kill you in a laughably pathetic assassination attempt
+VIETmisc.0388 = {
+	type = character_event
+	title = VIETmisc.0388.t
+	desc = VIETmisc.0388.desc
+	theme = intrigue_skulduggery_focus
+	
+	right_portrait = {
+		character = root
+		animation = eyeroll
+	}
+
+	trigger = {	
+		has_council_position = councillor_spymaster
+	}
+	
+	weight_multiplier = {
+		base = 1
+		modifier = {
+			add = 0.2
+			has_trait = paranoid
+		}
+		modifier = {
+			add = -0.2
+			has_trait = trusting
+		}
+		modifier = {
+			add = 0.2
+			has_trait = patient
+		}
+		modifier = {
+			add = -0.2
+			has_trait = impatient
+		}
+		modifier = {
+			add = 0.2
+			has_trait = diligent
+		}
+		modifier = {
+			add = -0.2
+			has_trait = lazy
+		}
+	}	
+
+	immediate = {
+		liege = {
+			save_scope_as = liege
+		}		
+	}
+	
+	option = { # Worst assassin ever
+		name = VIETmisc.0388.a	
+		custom_description_no_bullet = {
+			text = VIETmisc.0388.a.tooltip
+		}
+		add_character_modifier = {
+			modifier = VIET_pathetic_assassination_unfazed
+			years = 7
+		}
+	}	
+	
+	option = { # Something is up
+		name = VIETmisc.0388.b
+		trigger = {
+			has_trait = paranoid
+			intrigue < decent_skill_rating
+		}
+		trait = paranoid
+		add_character_modifier = {
+			modifier = VIET_pathetic_assassination_paranoid
+			years = 7
+		}
+		
+	}	
+	
+	option = { # Something is up
+		name = VIETmisc.0388.b
+		trigger = {
+			intrigue >= decent_skill_rating			
+		}
+		skill = intrigue
+		add_character_modifier = {
+			modifier = VIET_pathetic_assassination_paranoid
+			years = 7
+		}
+		
+	}	
+}
+
+
+# As chaplain, local priests are not cooperative
+VIETmisc.0389 = {
+	type = character_event
+	title = VIETmisc.0389.t
+	desc = VIETmisc.0389.desc
+	theme = learning_theology_focus
+	
+	right_portrait = {
+		character = root
+		animation = disapproval
+	}
+
+	trigger = {	
+		has_council_position = councillor_court_chaplain
+	}
+	
+	weight_multiplier = {
+		base = 1
+		modifier = {
+			add = 0.2
+			has_trait = impatient
+		}
+		modifier = {
+			add = -0.2
+			has_trait = patient
+		}
+		modifier = {
+			add = 0.2
+			has_trait = wrathful
+		}
+		modifier = {
+			add = -0.2
+			has_trait = calm
+		}
+		modifier = {
+			add = 0.2
+			has_trait = lazy
+		}
+		modifier = {
+			add = -0.2
+			has_trait = diligent
+		}
+	}	
+
+	immediate = {
+		liege = {
+			save_scope_as = liege
+		}		
+	}
+	
+	option = { # Let them do things that suit their local needs
+		name = VIETmisc.0389.a	
+		stress_impact = {
+			arrogant = miniscule_stress_impact_gain
+			ambitious = miniscule_stress_impact_gain
+			paranoid = miniscule_stress_impact_gain
+			wrathful = miniscule_stress_impact_gain
+		}		
+		add_character_modifier = {
+			modifier = VIET_lenient_towards_local_religious_customs
+			years = 10
+		}		
+	}	
+	
+	option = { # They have to follow my orders as their religious leader
+		name = VIETmisc.0389.b	
+		stress_impact = {
+			humble = miniscule_stress_impact_gain
+			content = miniscule_stress_impact_gain
+			trusting = miniscule_stress_impact_gain
+			calm = miniscule_stress_impact_gain
+		}		
+		add_character_modifier = {
+			modifier = VIET_enforcing_religious_discipline_among_clergy
+			years = 10
+		}		
+	}	
+}
 
 
 

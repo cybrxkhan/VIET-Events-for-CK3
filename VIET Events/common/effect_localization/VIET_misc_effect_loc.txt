@@ -46,3 +46,7 @@ VIETmisc.0319.info = {
 VIETmisc.1084.info = {
 	global = VIETmisc.1084.info
 }
+
+VIETmisc.0388.a.tooltip = {
+	global = VIETmisc.0388.a.tooltip
+}

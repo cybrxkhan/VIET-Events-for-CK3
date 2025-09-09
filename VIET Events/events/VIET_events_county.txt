@@ -42,6 +42,7 @@
 # 3064-3066 	Forest
 # 3067-3068 	Snow
 # 3069			Peaches
+# 3070			Councilor
 # 
 ############################################################################################################################
 
@@ -6948,3 +6949,99 @@ VIETmisc.3069 = {
 
 }
 
+
+##################################################################
+# COUNCILOR 3070
+##################################################################
+
+
+# Steward finds a traditional tax loophole that's being abused by local nobles
+VIETmisc.3070 = {
+	type = character_event
+	title = VIETmisc.3070.t
+	desc = VIETmisc.3070.desc
+	theme = stewardship_wealth_focus
+	
+	left_portrait = {
+		character = root
+		animation = thinking
+	}
+	
+	right_portrait = {
+		character = scope:steward
+		animation = personality_greedy
+	}
+
+		
+	trigger = {
+		exists = cp:councillor_steward
+		cp:councillor_steward = {
+			is_available_ai_adult = yes
+		}
+	}
+	
+    weight_multiplier = {
+        base = 0
+		modifier = {
+			add = {
+				every_held_title = {
+					limit = { tier = tier_county }
+					add = 1
+				}
+			}		
+		}
+    }
+	
+	immediate = {
+		cp:councillor_steward = {
+			save_scope_as = steward
+		}	
+		random_held_title = {
+			limit = {
+				tier = tier_county
+			}	
+			save_scope_as = county
+		}
+	}
+
+	# Close the tax loophole
+	option = {
+		name = VIETmisc.3070.a
+		VIET_massive_prestige_loss_effect = yes
+		scope:county = {
+			add_county_modifier = {
+				modifier = VIET_closing_tax_loopholes
+				years = 20
+			}	
+		}
+		stress_impact = {
+			generous = miniscule_stress_impact_gain
+			lazy = miniscule_stress_impact_gain
+			craven = miniscule_stress_impact_gain
+		}
+		scope:steward = {
+			add_opinion = {
+				target = root
+				modifier = VIET_opinion_tax_advice_good
+			}
+		}	
+	}
+
+	# Let the local nobles be
+	option = {
+		name = VIETmisc.3070.b
+		stress_impact = {
+			zealous = minor_stress_impact_gain
+			compassionate = miniscule_stress_impact_gain
+			diligent = miniscule_stress_impact_gain
+		}
+		scope:steward = {
+			add_opinion = {
+				target = root
+				modifier = VIET_opinion_tax_advice_bad
+			}
+		}
+	}
+
+
+}
