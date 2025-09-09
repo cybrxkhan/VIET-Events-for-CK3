@@ -42,6 +42,15 @@ VIET_background_nightmare = {
 ### TUSCAN COUNTRY ###
 VIET_background_tuscan_country = {
 
+	background = { # Sardinian
+		trigger = {
+			location.duchy = title:d_sardinia
+		}
+		reference = "gfx/interface/illustrations/event_scenes/VIET_tuscan_country_sardinian.dds"
+		environment = "environment_event_garden"
+		ambience = "event:/SFX/Events/Backgrounds/castle_garden_day"
+	}
+
 	background = { # Occitan, River
 		trigger = {
 			location = {
@@ -253,6 +262,26 @@ VIET_background_tuscan_country = {
 ### ANCIENT CAIRN ###
 VIET_background_ancient_cairn = {
 
+	background = { # Eastern Iranian/Sogdian
+		trigger = {
+			location = {
+				geographical_region = world_transoxiana
+			}
+		}
+		reference = "gfx/interface/illustrations/event_scenes/VIET_ancient_cairn_sogdian.dds"
+		environment = "environment_event_desert"
+		ambience = "event:/SFX/Events/Backgrounds/desert_day"
+	}
+
+	background = { # Sardinian
+		trigger = {
+			location.duchy = title:d_sardinia
+		}
+		reference = "gfx/interface/illustrations/event_scenes/VIET_ancient_cairn_sardinian.dds"
+		environment = "environment_event_mountains"
+		ambience = "event:/SFX/Events/Backgrounds/steppe_day"
+	}
+
 	background = { # Greek
 		trigger = {
 			location = {
@@ -293,6 +322,7 @@ VIET_background_ancient_cairn = {
 		trigger = {
 			location = {
 				geographical_region = world_middle_east_persia
+				NOT = { geographical_region = world_transoxiana }
 			}
 		}
 		reference = "gfx/interface/illustrations/event_scenes/VIET_ancient_cairn_persian.dds"
@@ -415,6 +445,17 @@ VIET_background_ancient_cairn = {
 
 ### SMALL TOWN ###
 VIET_background_small_town = {
+
+	background = { # Tibetan
+		trigger = {
+			location = {
+				geographical_region = world_tibet
+			}
+		}
+		reference = "gfx/interface/illustrations/event_scenes/VIET_small_town_bodpa.dds"
+		environment = "environment_event_farms"
+		ambience = "event:/SFX/Events/Backgrounds/fields_farms_day"
+	}
 
 	background = { # Western Mediterranean Port
 		trigger = {
@@ -623,6 +664,17 @@ VIET_background_skyrim_forest = {
 	background = { # Bavarian
 		trigger = {
 			location = {
+				geographical_region = world_tibet
+			}
+		}
+		reference = "gfx/interface/illustrations/event_scenes/VIET_skyrim_forest_bodpa.dds"
+		environment = "environment_event_steppe"
+		ambience = "event:/SFX/Events/Backgrounds/steppe_day"
+	}
+
+	background = { # Bavarian
+		trigger = {
+			location = {
 				geographical_region = ghw_region_poland_bohemia_bavaria
 			}
 		}
@@ -726,12 +778,12 @@ VIET_background_skyrim_forest = {
 		ambience = "event:/SFX/Events/Backgrounds/deciduous_forest_day"
 	}
 
-	background = { # Steppe/Tibet
+	background = { # Steppe
 		trigger = {
 			location = {
 				OR = {
 					geographical_region = world_steppe_east
-					geographical_region = world_tibet
+					#geographical_region = world_tibet
 					geographical_region = world_steppe_central
 					geographical_region = world_siberia
 				}

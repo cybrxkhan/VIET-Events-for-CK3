@@ -6964,12 +6964,12 @@ VIETmisc.3070 = {
 	
 	left_portrait = {
 		character = root
-		animation = thinking
+		animation = personality_greedy
 	}
 	
 	right_portrait = {
 		character = scope:steward
-		animation = personality_greedy
+		animation = debating
 	}
 
 		
@@ -7018,6 +7018,7 @@ VIETmisc.3070 = {
 			generous = miniscule_stress_impact_gain
 			lazy = miniscule_stress_impact_gain
 			craven = miniscule_stress_impact_gain
+			generous = miniscule_stress_impact_gain
 		}
 		scope:steward = {
 			add_opinion = {
@@ -7032,8 +7033,9 @@ VIETmisc.3070 = {
 		name = VIETmisc.3070.b
 		stress_impact = {
 			zealous = minor_stress_impact_gain
-			compassionate = miniscule_stress_impact_gain
+			vengeful = miniscule_stress_impact_gain
 			diligent = miniscule_stress_impact_gain
+			ambitious = miniscule_stress_impact_gain
 		}
 		scope:steward = {
 			add_opinion = {

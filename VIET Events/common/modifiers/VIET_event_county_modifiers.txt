@@ -1069,5 +1069,11 @@ VIET_silent_peach_tree_legend = {
 	monthly_county_control_growth_add = 0.1
 }
 
+VIET_closing_tax_loopholes = {
+	icon = economy_mixed
+	tax_mult = 0.1
+	county_opinion_add = -10
+}
+
 
 

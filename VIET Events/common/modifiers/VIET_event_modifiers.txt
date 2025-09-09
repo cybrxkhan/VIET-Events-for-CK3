@@ -2182,7 +2182,7 @@ VIET_benevolently_intervened_locals = {
 	monthly_piety = 0.1
 }
 VIET_staying_inside = {
-	icon = learning_positive
+	icon = learning_mixed
 	diplomacy = -2
 	learning = 1
 	monthly_lifestyle_xp_gain_mult = 0.03
@@ -2191,13 +2191,13 @@ VIET_staying_inside = {
 	general_opinion = -5
 }
 VIET_encouraged_by_others = {
-	icon = love_positive
+	icon = love_mixed
 	monthly_lifestyle_xp_gain_mult = 0.04
-	personal_scheme_phase_duration_add = minor_scheme_phase_duration_malus_value
+	personal_scheme_phase_duration_add = minor_scheme_phase_duration_bonus_value
 	intrigue = -1
 }
 VIET_suspicious_of_praise = {
-	icon = mask_positive
+	icon = mask_mixed
 	diplomacy = -1
 	intrigue = 1
 	enemy_hostile_scheme_phase_duration_add = minor_scheme_phase_duration_malus_value
@@ -3882,6 +3882,106 @@ VIET_likes_lame_jokes = {
 	icon = social_mixed
 	monthly_dread = -0.2
 	diplomacy = 1
+}
+
+VIET_suspicious_of_envoys_attendants = {
+	icon = diplomacy_mixed
+	diplomacy = -2
+	intrigue = 2
+}
+
+VIET_generous_towards_envoys_attendants = {
+	icon = intrigue_mixed
+	diplomacy = 2
+	intrigue = -2
+}
+
+VIET_skeptical_of_military_diviners = {
+	icon = magic_mixed
+	advantage = 4
+	monthly_piety = -0.2
+}
+
+VIET_diviners_boost_military_morale = {
+	icon = prowess_positive
+	army_toughness_mult = 0.05
+}
+
+VIET_espionage_network_of_commoners = {
+	icon = intrigue_positive
+	owned_scheme_secrecy_add = 5
+	enemy_scheme_secrecy_add = -10
+	scheme_discovery_chance_mult = 0.1	
+}
+
+VIET_refuses_bribes_from_lessers = {
+	icon = stewardship_positive
+	monthly_piety = 0.1
+	legitimacy_gain_mult = 0.1		
+}
+
+VIET_strict_military_discipline = {
+	icon = martial_mixed
+	diplomacy = -1
+	martial = 1
+	intrigue = -1
+	dread_gain_mult = 0.1
+	levy_reinforcement_rate = 0.1	
+}
+
+VIET_good_relationship_with_military_officers = {
+	icon = martial_positive
+	diplomacy = 1
+	martial = 1
+}
+
+VIET_undisciplined_military_officers = {
+	icon = martial_negative
+	martial = -1
+	army_maintenance_mult = 0.05
+}
+
+VIET_angered_military_officers = {
+	icon = martial_negative
+	diplomacy = -1
+	martial = -2
+}
+
+VIET_dutiful_but_overworked = {
+	icon = letter_mixed
+	stewardship = 1
+	stress_gain_mult = 0.2
+}
+
+VIET_pathetic_assassination_unfazed = {
+	icon = blood_positive
+	monthly_prestige = 0.2
+	dread_gain_mult = 0.05
+}
+
+VIET_pathetic_assassination_paranoid = {
+	icon = mask_positive
+	intrigue = 1
+	scheme_discovery_chance_mult = 0.05
+}
+
+VIET_lenient_towards_local_religious_customs = {
+	icon = piety_positive
+	clergy_opinion = 5
+	county_opinion_add = 5
+}
+
+VIET_enforcing_religious_discipline_among_clergy = {
+	icon = learning_positive
+	monthly_piety = 0.4
+}
+
+VIET_lacking_intellectual_self_esteem = {
+	icon = stress_negative
+	learning = -1
+	monthly_lifestyle_xp_gain_mult = -0.2
+	stress_gain_mult = 0.1
+	stress_loss_mult = -0.1
 }
 
 

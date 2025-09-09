@@ -977,5 +977,40 @@ VIET_opinion_thinks_i_have_spiritual_powers = {
 	opinion = 10
 	stacking = yes
 }
-
+VIET_opinion_envoys_advice_good = {
+	years = 10
+	opinion = 10
+	decaying = yes
+	stacking = yes
+}
+VIET_opinion_envoys_advice_bad = {
+	years = 10
+	opinion = -10
+	decaying = yes
+	stacking = yes
+}
+VIET_opinion_tax_advice_good = {
+	years = 10
+	opinion = 10
+	decaying = yes
+	stacking = yes
+}
+VIET_opinion_tax_advice_bad = {
+	years = 10
+	opinion = -10
+	decaying = yes
+	stacking = yes
+}
+VIET_opinion_espionage_advice_good = {
+	years = 10
+	opinion = 10
+	decaying = yes
+	stacking = yes
+}
+VIET_opinion_espionage_advice_bad = {
+	years = 10
+	opinion = -10
+	decaying = yes
+	stacking = yes
+}
 

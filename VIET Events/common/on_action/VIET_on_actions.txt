@@ -512,6 +512,9 @@ VIET_events_yearly_pulse = {
 		100 = VIETmisc.0377		# Hanging peach wood talismans around the house
 		100 = VIETmisc.0378		# Lover tells lame jokes about peaches
 		100 = VIETmisc.0379		# Drinking peach juice
+		# Councilor
+		100 = VIETmisc.0387		# As steward, you get tired of having to do math
+		100 = VIETmisc.0389		# As chaplain, local priests are not cooperative
 	}
 }
 
@@ -931,6 +934,11 @@ VIET_events_tri_yearly_pulse = {
 		100 = VIETmisc.0370		# Inspecting coconut farms and learning about the difficult work of harvesting coconuts
 		# Peaches
 		100 = VIETmisc.0375		# Reading one of the Thirty-Six Strategems about sacrificing the plum tree to preserve the peach tree
+		# Councilor
+		100 = VIETmisc.0381		# Chancellor proposes keeping a closer eye on envoys' servants
+		100 = VIETmisc.0383		# Spymaster says there's an opportunity to hire a commoner servant family to spy on other nobles
+		100 = VIETmisc.0385		# As Chancellor, annoying irrelevant people bribe you to to meet with your liege
+		100 = VIETmisc.0386		# As Marshal, your officers are following your orders with malicious compliance
 	}
 }
 
@@ -1209,6 +1217,10 @@ VIET_events_five_yearly_pulse = {
 		100 = VIETmisc.0374		# Taking a walk around Lake Rumare in Imperial City and admiring the beauty of the land
 		# Peaches
 		100 = VIETmisc.0380		# Have a dream where supposedly a courtier stole the peaches of immortality in a past life
+		# Councilor
+		100 = VIETmisc.0382		# Marshal doesn't care about diviners (also, Saladin quote from Kingdom of Heaven)
+		100 = VIETmisc.0384		# Court Chaplain has doubts about their theological knowledge
+		100 = VIETmisc.0388		# As spymaster, a pathetic assassin tries to kill you in a laughably pathetic assassination attempt
 	}
 }
 
@@ -1673,8 +1685,10 @@ VIET_events_uncommon_county_pulse = {
 		100 = VIETmisc.3063 	# Local official in an illegal three-way marriage
 		# Forest
 		100 = VIETmisc.3064 	# Forest fires are occuring in a county
+		# Councilor
+		100 = VIETmisc.3070 	# Steward finds a traditional tax loophole that's being abused by local nobles
 		
-		# 32
+		# 33
 		
     }
 }

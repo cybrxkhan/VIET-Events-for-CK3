@@ -37239,7 +37239,7 @@ VIETmisc.0381 = {
 	}
 	
 	option = { # Let's be careful of them
-		name = VIETmisc.0375.a	
+		name = VIETmisc.0381.a	
 		VIET_huge_prestige_loss_effect = yes
 		add_character_modifier = {
 			modifier = VIET_suspicious_of_envoys_attendants
@@ -37259,7 +37259,7 @@ VIETmisc.0381 = {
 	}	
 	
 	option = { # We can trust them
-		name = VIETmisc.0375.b
+		name = VIETmisc.0381.b
 		add_character_modifier = {
 			modifier = VIET_generous_towards_envoys_attendants
 			years = 8
@@ -37284,6 +37284,7 @@ VIETmisc.0381 = {
 VIETmisc.0382 = {
 	type = character_event
 	title = VIETmisc.0382.t
+	window = big_event_window
 	desc = VIETmisc.0382.desc
 	theme = memory_martial
 	override_background = { reference = army_camp }
@@ -37294,7 +37295,7 @@ VIETmisc.0382 = {
 	}
 	
 	right_portrait = {
-		character = scope:chancellor
+		character = scope:marshal
 		animation = personality_callous
 	}
 
@@ -37302,6 +37303,10 @@ VIETmisc.0382 = {
 		exists = cp:councillor_marshal
 		cp:councillor_marshal = {
 			is_available_ai_adult = yes
+			martial >= medium_skill_rating
+			NOT = { has_trait = cynical }
+			NOT = { has_trait = trusting }
+			NOT = { has_trait = craven }
 		}
 	}
 	
@@ -37374,7 +37379,7 @@ VIETmisc.0382 = {
 	option = { # Use diviners to boost morale
 		name = VIETmisc.0382.c
 		duel = {
-			skill = { diplomacy martial }
+			skills = { diplomacy martial }
 			target = scope:marshal
 			10 = { # Failure
 				compare_modifier = {
@@ -37445,7 +37450,7 @@ VIETmisc.0383 = {
 	
 	left_portrait = {
 		character = root
-		animation = thinking
+		animation = personality_cynical
 	}
 	
 	right_portrait = {
@@ -37558,7 +37563,7 @@ VIETmisc.0384 = {
 			}
 			animation = eyeroll
 		}
-		animation = personality_content
+		animation = personality_forgiving
 	}
 	
 	right_portrait = {
@@ -37641,8 +37646,8 @@ VIETmisc.0384 = {
 		}
 		scope:chaplain = {
 			duel = {
-				skill = { learning }
-				target = scope:marshal
+				skill = learning
+				value = average_skill_rating
 				10 = { # Failure
 					compare_modifier = {
 						value = scope:duel_value
@@ -37721,7 +37726,7 @@ VIETmisc.0385 = {
 	
 	right_portrait = {
 		character = root
-		animation = boredom
+		animation = eyeroll
 	}
 
 	trigger = {	
@@ -37795,7 +37800,7 @@ VIETmisc.0386 = {
 	
 	right_portrait = {
 		character = root
-		animation = boredom
+		animation = disapproval
 	}
 
 	trigger = {	
@@ -37860,7 +37865,7 @@ VIETmisc.0386 = {
 			skill = diplomacy
 			value = average_skill_rating
 			10 = { # Failure
-				custom_tooltip = VIETmisc.0386.b.failure
+				desc = VIETmisc.0386.b.toast.failure
 				compare_modifier = {
 					value = scope:duel_value
 					multiplier = -0.8
@@ -37869,7 +37874,7 @@ VIETmisc.0386 = {
 				send_interface_toast = {
 					type = event_toast_effect_bad
 					left_icon = ROOT
-					title = VIETmisc.0386.b.failure
+					title = VIETmisc.0386.b.toast.failure
 					VIET_huge_prestige_loss_effect = yes
 					add_character_modifier = {
 						modifier = VIET_angered_military_officers
@@ -37878,7 +37883,7 @@ VIETmisc.0386 = {
 				}
 			}
 			10 = { # Success
-				custom_tooltip = VIETmisc.0386.b.success
+				desc = VIETmisc.0386.b.toast.success
 				compare_modifier = {
 					value = scope:duel_value
 					multiplier = 0.8
@@ -37887,7 +37892,7 @@ VIETmisc.0386 = {
 				send_interface_toast = {
 					type = event_toast_effect_good
 					left_icon = ROOT
-					title = VIETmisc.0386.b.success
+					title = VIETmisc.0386.b.toast.success
 					VIET_huge_prestige_loss_effect = yes
 					add_character_modifier = {
 						modifier = VIET_good_relationship_with_military_officers
@@ -38000,8 +38005,10 @@ VIETmisc.0387 = {
 VIETmisc.0388 = {
 	type = character_event
 	title = VIETmisc.0388.t
+	#window = big_event_window
 	desc = VIETmisc.0388.desc
 	theme = intrigue_skulduggery_focus
+	override_background = { reference = courtyard }
 	
 	right_portrait = {
 		character = root
@@ -38061,7 +38068,7 @@ VIETmisc.0388 = {
 		name = VIETmisc.0388.b
 		trigger = {
 			has_trait = paranoid
-			intrigue < decent_skill_rating
+			intrigue < high_skill_rating
 		}
 		trait = paranoid
 		add_character_modifier = {
@@ -38074,7 +38081,7 @@ VIETmisc.0388 = {
 	option = { # Something is up
 		name = VIETmisc.0388.b
 		trigger = {
-			intrigue >= decent_skill_rating			
+			intrigue >= high_skill_rating			
 		}
 		skill = intrigue
 		add_character_modifier = {
