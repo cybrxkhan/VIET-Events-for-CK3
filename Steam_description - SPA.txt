@@ -1,6 +1,6 @@
 [img]https://i.imgur.com/cXkUgOc.jpg[/img]
 
-[h1]Versión actual: 1.17.0 "Chancellor" 
+[h1]Versión actual: 1.17.0 "Canciller" 
 (Lanzamiento: 09/09/25, Compatible con versión vanilla 1.17.X)[/h1]
 
 [url=https://discord.gg/9KuyXv2uZA]Servidor de Discord de mis Mods[/url]
@@ -52,10 +52,10 @@ Por favor, echa un vistazo a [url=https://steamcommunity.com/workshop/filedetail
 
 [img]http://i.imgur.com/RQ5QZTF.jpg[/img]
 
-[h1]Versión 1.17.0 "Chancellor"[/h1]
+[h1]Versión 1.17.0 "Canciller"[/h1]
 
-[I]The Master said, "The ruler should employ the ministers according to ritual; the ministers should serve the ruler with loyalty.”
-- The Analects of Confucius[/I]
+[I]El Maestro dijo: "El gobernante debe emplear a los ministros de acuerdo con el ritual; los ministros deben servir al gobernante con lealtad"
+- Los Analectas de Confucio[/I]
 
 Nuevos eventos añadidos en esta versión: [B]10[/B]
 
