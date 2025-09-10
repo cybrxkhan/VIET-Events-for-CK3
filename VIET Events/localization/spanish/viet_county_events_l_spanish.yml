@@ -353,9 +353,12 @@ VIETmisc.3069.a:0 "¡Me alegra que el relato tenga una inspiración espiritual!"
 VIETmisc.3069.b:0 "Suena como una historia banal de campesinos."
 VIETmisc.3069.info:0 "#emphasis Contexto Histórico:#! Esta historia es una adaptación abreviada de un cuento popular de las Azores sobre un caballero flamenco que se asentó allí cuando las islas fueron descubiertas y colonizadas por los portugueses en el siglo XV. Durante los primeros años de historia de la isla, los colonos flamencos desempeñaron un papel importante en la colonización."
  # Version 1.16.X Start Here - Note to Translators: please leave this comment here and do not remove it even in your versions of the loc
- VIETmisc.3070.t:0 "xxxxx"
- VIETmisc.3070.desc:0 "xxxxx"
- VIETmisc.3070.a:0 "xxxxx"
+ # Version 1.17.0 Start Here - Note to Translators: please leave this comment here and do not remove it even in your versions of the loc
+ VIETmisc.3070.t:0 "A Tax Loophole"
+ VIETmisc.3070.desc:0 "My [steward.GetCouncilTitle], [steward.GetTitledFirstName], recently reviewed our tax laws and found something interesting. In [county.GetNameNoTier], there is a old law that allows for a tax loophole. Nobles there have abused it for years, justifying it as an ancient tradition.\n\n[steward.GetFirstNameNoTooltip] suggests that maybe we could fix this loophole to increase tax revenue there. It's an attractive idea... except for the fact that it might anger some of the local nobility.\n\n“Those nobles have taken advantage of the loophole for too long,” [steward.GetFirstNameNoTooltip] argues, undoubtedly passionate about the matter given how much time and hard work [steward.GetSheHe] dedicated to researching it. [steward.GetSheHe|U] urges me, “Close the loophole. Those greedy buffoons may grumble for a bit, but they’ll live. The money we get will more than make up for their pouting.”"
+ VIETmisc.3070.a:0 "Yes, please take care of that loophole!"
+ VIETmisc.3070.b:0 "We can’t risk angering the local nobility."
+ # Version 1.17.1 Start Here - Note to Translators: please leave this comment here and do not remove it even in your versions of the loc
  VIETmisc.3071.t:0 "xxxxx"
  VIETmisc.3071.desc:0 "xxxxx"
  VIETmisc.3071.a:0 "xxxxx"
