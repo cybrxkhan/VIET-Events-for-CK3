@@ -37304,6 +37304,7 @@ VIETmisc.0382 = {
 		cp:councillor_marshal = {
 			is_available_ai_adult = yes
 			martial >= medium_skill_rating
+			faith = root.faith
 			NOT = { has_trait = cynical }
 			NOT = { has_trait = trusting }
 			NOT = { has_trait = craven }
