@@ -49,22 +49,22 @@ VIETmisc.5000 = {
 	desc = VIETmisc.5000.desc
 	theme = stewardship
 	override_background = { reference = council_chamber }
-
-	left_portrait = {
+	
+	right_portrait = {
 		character = root
-	   	animation = forgiving
+		animation = personality_forgiving
 	}
 	artifact = { # To display the artifact in the event-window
-        target = scope:VIET_clutter_artifact
-        position = lower_center_portrait
+		target = scope:VIET_clutter_artifact
+		position = lower_center_portrait
 	}
-	right_portrait = {
+	left_portrait = {
 		character = scope:merchant
-		animation = personality_compassionate
+		animation = personality_content
 	}
-
-    weight_multiplier = {
-        base = 1
+	
+	weight_multiplier = {
+		base = 1
 		# Reduce spam
 		modifier = {
 			add = -0.9
@@ -105,13 +105,13 @@ VIETmisc.5000 = {
 			has_trait = callous
 		}
 	}
-
+	
 	immediate = {
-
+		
 		VIET_find_old_merchant_effect = yes
-
+		
 		root = { add_visiting_courtier = scope:merchant }
-
+		
 		hidden_effect = {
 			scope:merchant = {
 				add_gold = medium_gold_value
@@ -135,7 +135,7 @@ VIETmisc.5000 = {
 			}
 		}
 	}
-
+	
 	option = {
 		name = VIETmisc.5000.a
 		trigger = {
@@ -152,7 +152,7 @@ VIETmisc.5000 = {
 		}
 		custom_tooltip = VIET_artifact_limit_warning
 	}
-
+	
 	option = {
 		name = VIETmisc.5000.b
 		VIET_medium_prestige_gain_effect = yes
@@ -173,22 +173,22 @@ VIETmisc.5001 = {
 	desc = VIETmisc.5001.desc
 	theme = friendly
 	override_background = { reference = study }
-
+	
 	left_portrait = {
 		character = root
 		animation = personality_cynical
 	}
 	artifact = { # To display the artifact in the event-window
-        target = scope:VIET_clutter_artifact
-        position = lower_center_portrait
+		target = scope:VIET_clutter_artifact
+		position = lower_center_portrait
 	}
 	right_portrait = {
-		character = scope:maid
+		character = scope:servant
 		animation = personality_content
 	}
-
-    weight_multiplier = {
-        base = 1
+	
+	weight_multiplier = {
+		base = 1
 		# Reduce spam
 		modifier = {
 			add = -0.9
@@ -229,19 +229,16 @@ VIETmisc.5001 = {
 			has_trait = paranoid
 		}
 	}
-
+	
 	trigger = {
 		is_landed_or_landless_administrative = yes
 	}
-
+	
 	immediate = {
+		VIET_find_maid_effect = yes
 		
-
 		hidden_effect = {
-			
-			VIET_find_maid_effect = yes
-			
-			scope:maid = {
+			scope:servant = {
 				create_artifact = {
 					name = VIET_calipers_name
 					description = VIET_calipers_desc
@@ -262,7 +259,7 @@ VIETmisc.5001 = {
 			}
 		}
 	}
-
+	
 	option = {
 		name = VIETmisc.5001.a
 		scope:VIET_clutter_artifact = { set_owner = { target = root } }
@@ -272,7 +269,7 @@ VIETmisc.5001 = {
 		}
 		custom_tooltip = VIET_artifact_limit_warning
 	}
-
+	
 	option = {
 		name = VIETmisc.5001.b
 		hidden_effect = {
@@ -292,22 +289,22 @@ VIETmisc.5002 = {
 	desc = VIETmisc.5002.desc
 	theme = learning
 	override_background = { reference = study }
-
+	
 	left_portrait = {
 		character = root
 		animation = personality_rational
 	}
 	artifact = { # To display the artifact in the event-window
-        target = scope:VIET_clutter_artifact
-        position = lower_center_portrait
+		target = scope:VIET_clutter_artifact
+		position = lower_center_portrait
 	}
 	right_portrait = {
 		character = scope:scholar
 		animation = personality_bold
 	}
-
-    weight_multiplier = {
-        base = 1
+	
+	weight_multiplier = {
+		base = 1
 		# Reduce spam
 		modifier = {
 			add = -0.9
@@ -348,12 +345,12 @@ VIETmisc.5002 = {
 			has_trait = paranoid
 		}
 	}
-
+	
 	immediate = {
 		VIET_find_traveling_scholar_effect = yes
-
+		
 		root = { add_visiting_courtier = scope:scholar }
-
+		
 		hidden_effect = {
 			scope:scholar = {
 				create_artifact = {
@@ -376,7 +373,7 @@ VIETmisc.5002 = {
 			}
 		}
 	}
-
+	
 	option = {
 		name = VIETmisc.5002.a
 		trigger = {
@@ -395,7 +392,7 @@ VIETmisc.5002 = {
 		}
 		custom_tooltip = VIET_artifact_limit_warning
 	}
-
+	
 	option = {
 		name = VIETmisc.5002.b
 		hidden_effect = {
@@ -420,22 +417,22 @@ VIETmisc.5003 = {
 	title = VIETmisc.5003.t
 	desc = VIETmisc.5003.desc
 	theme = VIET_theme_small_town
-
+	
 	left_portrait = {
 		character = root
 		animation = personality_rational
 	}
 	artifact = { # To display the artifact in the event-window
-        target = scope:VIET_clutter_artifact
-        position = lower_center_portrait
+		target = scope:VIET_clutter_artifact
+		position = lower_center_portrait
 	}
 	right_portrait = {
 		character = scope:merchant
 		animation = personality_bold
 	}
-
-    weight_multiplier = {
-        base = 1
+	
+	weight_multiplier = {
+		base = 1
 		# Reduce spam
 		modifier = {
 			add = -0.9
@@ -476,10 +473,10 @@ VIETmisc.5003 = {
 			has_trait = impatient
 		}
 	}
-
+	
 	immediate = {
 		VIET_find_traveling_merchant_effect = yes
-
+		
 		hidden_effect = {
 			scope:merchant = {
 				create_artifact = {
@@ -502,7 +499,7 @@ VIETmisc.5003 = {
 			}
 		}
 	}
-
+	
 	option = {
 		name = VIETmisc.5003.a
 		trigger = {
@@ -521,7 +518,7 @@ VIETmisc.5003 = {
 			custom_tooltip = VIETmisc.5003.info
 		}
 	}
-
+	
 	option = {
 		name = VIETmisc.5003.b
 		hidden_effect = {
@@ -547,7 +544,7 @@ VIETmisc.5004 = {
 	desc = VIETmisc.5004.desc
 	theme = friendly
 	override_background = { reference = council_chamber }
-
+	
 	left_portrait = root
 	right_portrait = {
 		character = scope:nutgifter
@@ -557,7 +554,7 @@ VIETmisc.5004 = {
 		target = scope:VIET_clutter_artifact
 		position = lower_center_portrait
 	}
-
+	
 	weight_multiplier = {
 		base = 1
 		# Reduce spam
@@ -600,7 +597,13 @@ VIETmisc.5004 = {
 			has_trait = greedy
 		}
 	}
-
+	
+	trigger = {
+		any_courtier = {
+			is_available_ai_adult = yes
+		}
+	}
+	
 	immediate = {
 		random_courtier = {
 			limit = {
@@ -630,7 +633,7 @@ VIETmisc.5004 = {
 			}
 		}
 	}
-
+	
 	option = {
 		name = VIETmisc.5004.a
 		VIET_medium_prestige_loss_effect = yes
@@ -652,7 +655,7 @@ VIETmisc.5004 = {
 		}
 		custom_tooltip = VIET_artifact_limit_warning
 	}
-
+	
 	option = {
 		name = VIETmisc.5004.b
 		scope:nutgifter = {
@@ -678,7 +681,7 @@ VIETmisc.5005 = {
 	title = VIETmisc.5005.t
 	desc = VIETmisc.5005.desc
 	theme = learning_scholarship_focus
-
+	
 	left_portrait = {
 		character = root
 		animation = personality_rational
@@ -689,14 +692,14 @@ VIETmisc.5005 = {
 	}
 	right_portrait = {
 		character = scope:astronomer
-		animation = chaplain
+		animation = chancellor
 	}
-
+	
 	trigger = {
 		# Weed out most cultures that probably aren't literate at the game start
 		NOT = { government_has_flag = government_is_tribal }
 	}
-
+	
 	weight_multiplier = {
 		base = 1
 		# Reduce spam
@@ -739,11 +742,16 @@ VIETmisc.5005 = {
 			has_trait = paranoid
 		}
 	}
-
+	
 	immediate = {
-
+		VIET_find_astronomer_effect = yes
+		
 		hidden_effect = {
 			scope:astronomer = {
+				set_variable = {
+					name = created_artifact_type
+					value = flag:book
+				}
 				create_artifact = {
 					name = VIET_star_chart_name
 					description = VIET_star_chart_desc
@@ -767,7 +775,7 @@ VIETmisc.5005 = {
 			}
 		}
 	}
-
+	
 	option = {
 		name = VIETmisc.5005.a
 		trigger = {
@@ -784,7 +792,7 @@ VIETmisc.5005 = {
 		}
 		custom_tooltip = VIET_artifact_limit_warning
 	}
-
+	
 	option = {
 		name = VIETmisc.5005.b
 		hidden_effect = {
@@ -804,7 +812,7 @@ VIETmisc.5006 = {
 	desc = VIETmisc.5006.desc
 	theme = VIET_theme_small_town
 	override_icon = { reference = "gfx/interface/icons/event_types/type_feast.dds" }
-
+	
 	left_portrait = {
 		character = root
 		animation = personality_rational
@@ -817,7 +825,7 @@ VIETmisc.5006 = {
 		character = scope:smith
 		animation = personality_zealous
 	}
-
+	
 	weight_multiplier = {
 		base = 1
 		# Reduce spam
@@ -860,12 +868,14 @@ VIETmisc.5006 = {
 			has_trait = temperate
 		}
 	}
-
+	
 	immediate = {
 		create_character = {
 			template = local_artisan_template
 			location = root.capital_province
 			gender_female_chance = root_faith_dominant_gender_adjusted_female_chance
+			faith = root.capital_province.faith
+			culture = root.capital_province.culture
 			save_scope_as = smith
 		}
 		hidden_effect = {
@@ -897,7 +907,7 @@ VIETmisc.5006 = {
 			}
 		}
 	}
-
+	
 	option = {
 		name = VIETmisc.5006.a
 		trigger = {
@@ -914,7 +924,7 @@ VIETmisc.5006 = {
 		}
 		custom_tooltip = VIET_artifact_limit_warning
 	}
-
+	
 	option = {
 		name = VIETmisc.5006.b
 		hidden_effect = {
@@ -934,7 +944,7 @@ VIETmisc.5007 = {
 	title = VIETmisc.5007.t
 	desc = VIETmisc.5007.desc
 	theme = learning_scholarship_focus
-
+	
 	left_portrait = {
 		character = root
 		animation = personality_rational
@@ -947,7 +957,7 @@ VIETmisc.5007 = {
 		character = scope:merchant
 		animation = personality_zealous
 	}
-
+	
 	weight_multiplier = {
 		base = 1
 		# Reduce spam
@@ -990,74 +1000,10 @@ VIETmisc.5007 = {
 			has_trait = content
 		}
 	}
-
+	
 	immediate = {
-		#Set up a list of provinces, one per duchy in the realm, find all relevant pool characters there
-		every_realm_province = {
-			if = {
-				limit = {
-					save_temporary_scope_as = potential_province
-					NOT = {
-						any_in_list = {
-							list = pool_provinces
-							county.duchy = scope:potential_province.county.duchy
-						}
-					}
-				}
-				add_to_temporary_list = pool_provinces
-			}
-		}
-
-		every_in_list = {
-			list = pool_provinces
-			save_temporary_scope_as = pool_province
-
-			every_pool_character = {
-				province = scope:pool_province
-				limit = {
-					is_available_ai_adult = yes
-					has_trait_rank = {
-						trait = education_stewardship
-						rank > 1
-					}
-				}
-				add_to_temporary_list = potential_merchants
-			}
-		}
-
-		#Merchants with good skills, travelers are better at finding you
-		random_in_list = {
-			list = potential_merchants
-			limit = { is_alive = yes }
-			weight = {
-				base = 10
-				modifier = {
-					add = {
-						value = stewardship
-						value = diplomacy
-						if = {
-							limit = {
-								has_trait = { lifestyle_traveler }
-							}
-							add = 5
-						}
-					}
-				}
-			}
-			save_scope_as = merchant
-		}
-
-		#If no one was found, make one
-		if = {
-			limit = { NOT = { exists = scope:merchant } }
-
-			create_character = {
-				location = root.pool_province
-				template = merchant_template
-				save_scope_as = merchant
-			}
-		}
-
+		VIET_find_traveling_merchant_effect = yes
+		
 		hidden_effect = {
 			scope:merchant = {
 				create_artifact = {
@@ -1080,7 +1026,7 @@ VIETmisc.5007 = {
 			}
 		}
 	}
-
+	
 	option = {
 		name = VIETmisc.5007.a
 		trigger = {
@@ -1096,7 +1042,7 @@ VIETmisc.5007 = {
 		scope:VIET_clutter_artifact = { set_owner = { target = root } }
 		custom_tooltip = VIET_artifact_limit_warning
 	}
-
+	
 	option = {
 		name = VIETmisc.5007.b
 		hidden_effect = {
@@ -1116,7 +1062,7 @@ VIETmisc.5008 = {
 	title = VIETmisc.5008.t
 	desc = VIETmisc.5008.desc
 	theme = crown
-
+	
 	left_portrait = {
 		character = root
 		animation = happiness
@@ -1129,7 +1075,7 @@ VIETmisc.5008 = {
 		character = scope:noble
 		animation = personality_compassionate
 	}
-
+	
 	weight_multiplier = {
 		base = 1
 		# Reduce spam
@@ -1172,15 +1118,15 @@ VIETmisc.5008 = {
 			has_trait = vengeful
 		}
 	}
-
+	
 	trigger = {
 		VIET_has_minor_nobles = yes
 	}
-
+	
 	immediate = {
-
-		VIET_find_realm_minor_noble_effect = yes
-
+		
+		VIET_find_sub_realm_minor_noble_effect = yes
+		
 		hidden_effect = {
 			scope:noble = {
 				create_artifact = {
@@ -1203,7 +1149,7 @@ VIETmisc.5008 = {
 			}
 		}
 	}
-
+	
 	option = {
 		name = VIETmisc.5008.a
 		scope:VIET_clutter_artifact = { set_owner = { target = root } }
@@ -1219,7 +1165,7 @@ VIETmisc.5008 = {
 		}
 		custom_tooltip = VIET_artifact_limit_warning
 	}
-
+	
 	option = {
 		name = VIETmisc.5008.b
 		random_list = {
@@ -1253,7 +1199,7 @@ VIETmisc.5009 = {
 	desc = VIETmisc.5009.desc
 	theme = feast_activity
 	override_background = { reference = VIET_background_small_town }
-
+	
 	right_portrait = root
 	artifact = { # To display the artifact in the event-window
 		target = scope:VIET_clutter_artifact
@@ -1263,7 +1209,7 @@ VIETmisc.5009 = {
 		character = scope:artisan
 		animation = beg
 	}
-
+	
 	weight_multiplier = {
 		base = 1
 		# Reduce spam
@@ -1306,16 +1252,16 @@ VIETmisc.5009 = {
 			has_trait = vengeful
 		}
 	}
-
+	
 	immediate = {
-		random_sub_realm_barony = {
-			save_scope_as = barony
-		}
-
+		VIET_find_random_barony_effect = yes
+		
 		create_character = {
-			template = local_artisan_template # Kraken - Should be a more interesting character to befriend
+			template = stewardship_domain_focus_friend_template
 			location = scope:barony.holder.location
 			gender_female_chance = root_faith_dominant_gender_adjusted_female_chance
+			culture = scope:barony.culture
+			faith = scope:barony.faith
 			save_scope_as = artisan
 		}
 		hidden_effect = {
@@ -1347,7 +1293,7 @@ VIETmisc.5009 = {
 			}
 		}
 	}
-
+	
 	option = {
 		name = VIETmisc.5009.a
 		scope:VIET_clutter_artifact = { set_owner = { target = root } }
@@ -1369,7 +1315,7 @@ VIETmisc.5009 = {
 		}
 		custom_tooltip = VIET_artifact_limit_warning
 	}
-
+	
 	option = {
 		name = VIETmisc.5009.b
 		random_list = {
@@ -1402,7 +1348,7 @@ VIETmisc.5010 = {
 	desc = VIETmisc.5010.desc
 	theme = intrigue
 	override_background = { reference = throne_room }
-
+	
 	left_portrait = {
 		character = root
 		animation = scheme
@@ -1413,9 +1359,9 @@ VIETmisc.5010 = {
 	}
 	right_portrait = {
 		character = scope:smith
-		animation = personality_dishonorable
+		animation = personality_forgiving
 	}
-
+	
 	weight_multiplier = {
 		base = 1
 		# Reduce spam
@@ -1458,20 +1404,22 @@ VIETmisc.5010 = {
 			has_trait = lazy
 		}
 	}
-
+	
 	immediate = {
 		#Locksmiths should prefer intrigue
 		create_character = {
 			template = local_artisan_template
 			location = root.capital_province
 			gender_female_chance = root_faith_dominant_gender_adjusted_female_chance
+			faith = root.capital_province.faith
+			culture = root.capital_province.culture
 			intrigue = {
 				min_template_decent_skill
 				max_template_decent_skill
 			}
 			save_scope_as = smith
 		}
-
+		
 		hidden_effect = {
 			scope:smith = {
 				set_variable = {
@@ -1501,7 +1449,7 @@ VIETmisc.5010 = {
 			}
 		}
 	}
-
+	
 	option = {
 		name = VIETmisc.5010.a
 		trigger = {
@@ -1520,7 +1468,7 @@ VIETmisc.5010 = {
 		}
 		custom_tooltip = VIET_artifact_limit_warning
 	}
-
+	
 	option = {
 		name = VIETmisc.5010.b
 		hidden_effect = {
@@ -1542,7 +1490,7 @@ VIETmisc.5011 = {
 	desc = VIETmisc.5011.desc
 	theme = VIET_theme_small_town
 	override_icon = { reference = "gfx/interface/icons/event_types/type_love.dds" }
-
+	
 	left_portrait = {
 		character = root
 		animation = happiness
@@ -1555,7 +1503,7 @@ VIETmisc.5011 = {
 		character = scope:smith
 		animation = personality_greedy
 	}
-
+	
 	weight_multiplier = {
 		base = 1
 		# Reduce spam
@@ -1598,15 +1546,17 @@ VIETmisc.5011 = {
 			has_trait = fickle
 		}
 	}
-
+	
 	immediate = {
 		create_character = {
 			template = local_artisan_template
 			location = root.capital_province
 			gender_female_chance = root_faith_dominant_gender_adjusted_female_chance
+			faith = root.capital_province.faith
+			culture = root.capital_province.culture
 			save_scope_as = smith
 		}
-
+		
 		hidden_effect = {
 			scope:smith = {
 				set_variable = {
@@ -1636,7 +1586,7 @@ VIETmisc.5011 = {
 			}
 		}
 	}
-
+	
 	option = {
 		name = VIETmisc.5011.a
 		trigger = {
@@ -1653,7 +1603,7 @@ VIETmisc.5011 = {
 		}
 		custom_tooltip = VIET_artifact_limit_warning
 	}
-
+	
 	option = {
 		name = VIETmisc.5011.b
 		hidden_effect = {
@@ -1674,7 +1624,8 @@ VIETmisc.5012 = {
 	title = VIETmisc.5012.t
 	desc = VIETmisc.5012.desc
 	theme = realm
-
+	override_background = { reference = market }
+	
 	right_portrait = {
 		character = root
 		animation = personality_bold
@@ -1683,7 +1634,11 @@ VIETmisc.5012 = {
 		target = scope:VIET_clutter_artifact
 		position = lower_center_portrait
 	}
-
+	left_portrait = {
+		character = scope:merchant
+		animation = personality_greedy
+	}
+	
 	weight_multiplier = {
 		base = 1
 		# Reduce spam
@@ -1726,29 +1681,33 @@ VIETmisc.5012 = {
 			has_trait = stubborn
 		}
 	}
-
+	
 	immediate = {
-		hidden_effect_new_object = {
-			create_artifact = {
-				name = VIET_ivory_chess_set_name
-				description = VIET_ivory_chess_set_desc
-				type = VIET_clutter
-				visuals = VIET_ivory_chess_set
-				quality = 30
-				wealth = 30
-				modifier = artifact_VIET_ivory_chess_set_modifier
-				max_durability = 40
-				save_scope_as = VIET_clutter_artifact
-				history = {
-					type = created_before_history
+		VIET_find_traveling_merchant_effect = yes
+		
+		hidden_effect = {
+			scope:merchant = {
+				create_artifact = {
+					name = VIET_ivory_chess_set_name
+					description = VIET_ivory_chess_set_desc
+					type = VIET_clutter
+					visuals = VIET_ivory_chess_set
+					quality = 30
+					wealth = 30
+					modifier = artifact_VIET_ivory_chess_set_modifier
+					max_durability = 40
+					save_scope_as = VIET_clutter_artifact
+					history = {
+						type = created_before_history
+					}
 				}
-			}
-			scope:VIET_clutter_artifact = {
-				set_variable = VIET_ivory_chess_set_variable
+				scope:VIET_clutter_artifact = {
+					set_variable = VIET_ivory_chess_set_variable
+				}
 			}
 		}
 	}
-
+	
 	option = {
 		name = VIETmisc.5012.a
 		trigger = {
@@ -1758,16 +1717,14 @@ VIETmisc.5012 = {
 			}
 		}
 		remove_short_term_gold = 40
-		show_as_tooltip = {
-			scope:VIET_clutter_artifact = {
-				set_owner = {
-					target = root
-				}
+		scope:VIET_clutter_artifact = {
+			set_owner = {
+				target = root
 			}
 		}
 		custom_tooltip = VIET_artifact_limit_warning
 	}
-
+	
 	option = {
 		name = VIETmisc.5012.b
 		hidden_effect = {
@@ -1783,7 +1740,8 @@ VIETmisc.5013 = {
 	title = VIETmisc.5013.t
 	desc = VIETmisc.5013.desc
 	theme = realm
-
+	override_background = { reference = market }
+	
 	right_portrait = {
 		character = root
 		animation = personality_rational
@@ -1792,7 +1750,11 @@ VIETmisc.5013 = {
 		target = scope:VIET_clutter_artifact
 		position = lower_center_portrait
 	}
-
+	left_portrait = {
+		character = scope:artisan
+		animation = personality_content
+	}
+	
 	weight_multiplier = {
 		base = 1
 		# Reduce spam
@@ -1835,29 +1797,47 @@ VIETmisc.5013 = {
 			has_trait = stubborn
 		}
 	}
-
+	
 	immediate = {
-		hidden_effect_new_object = {
-			create_artifact = {
-				name = VIET_wooden_chess_set_name
-				description = VIET_wooden_chess_set_desc
-				type = VIET_clutter
-				visuals = VIET_wooden_chess_set
-				quality = 15
-				wealth = 15
-				modifier = artifact_VIET_wooden_chess_set_modifier
-				max_durability = 40
-				save_scope_as = VIET_clutter_artifact
-				history = {
-					type = created_before_history
+		create_character = {
+			template = local_artisan_template
+			location = root.capital_province
+			gender_female_chance = root_faith_dominant_gender_adjusted_female_chance
+			faith = root.capital_province.faith
+			culture = root.capital_province.culture
+			save_scope_as = artisan
+		}
+		
+		hidden_effect = {
+			scope:artisan = {
+				set_variable = {
+					name = created_artifact_type
+					value = flag:artisan
 				}
-			}
-			scope:VIET_clutter_artifact = {
-				set_variable = VIET_wooden_chess_set_variable
+				create_artifact = {
+					name = VIET_wooden_chess_set_name
+					description = VIET_wooden_chess_set_desc
+					type = VIET_clutter
+					visuals = VIET_wooden_chess_set
+					quality = 15
+					wealth = 15
+					modifier = artifact_VIET_wooden_chess_set_modifier
+					max_durability = 40
+					save_scope_as = VIET_clutter_artifact
+					history = {
+						type = created
+						actor = scope:artisan
+						recipient = root
+						location = scope:artisan.location
+					}
+				}
+				scope:VIET_clutter_artifact = {
+					set_variable = VIET_wooden_chess_set_variable
+				}
 			}
 		}
 	}
-
+	
 	option = {
 		name = VIETmisc.5013.a
 		trigger = {
@@ -1867,16 +1847,14 @@ VIETmisc.5013 = {
 			}
 		}
 		remove_short_term_gold = 20
-		show_as_tooltip = {
-			scope:VIET_clutter_artifact = {
-				set_owner = {
-					target = root
-				}
+		scope:VIET_clutter_artifact = {
+			set_owner = {
+				target = root
 			}
 		}
 		custom_tooltip = VIET_artifact_limit_warning
 	}
-
+	
 	option = {
 		name = VIETmisc.5013.b
 		hidden_effect = {
@@ -1892,7 +1870,8 @@ VIETmisc.5014 = {
 	title = VIETmisc.5014.t
 	desc = VIETmisc.5014.desc
 	theme = diplomacy_foreign_affairs_focus
-
+	override_background = { reference = feast }
+	
 	right_portrait = {
 		character = root
 		animation = personality_rational
@@ -1901,7 +1880,11 @@ VIETmisc.5014 = {
 		target = scope:VIET_clutter_artifact
 		position = lower_center_portrait
 	}
-
+	left_portrait = {
+		character = scope:traveler
+		animation = drink_goblet
+	}
+	
 	trigger = {
 		has_game_rule = VIET_normal_universe_events
 		exists = capital_province
@@ -1917,7 +1900,7 @@ VIETmisc.5014 = {
 			}
 		}
 	}
-
+	
 	weight_multiplier = {
 		base = 1
 		# Reduce spam
@@ -1960,59 +1943,60 @@ VIETmisc.5014 = {
 			has_trait = stubborn
 		}
 	}
-
+	
 	immediate = {
-		hidden_effect_new_object = {
-			create_artifact = {
-				name = VIET_porcelain_chopsticks_name
-				description = VIET_porcelain_chopsticks_desc
-				type = VIET_clutter
-				visuals = VIET_porcelain_chopsticks
-				quality = 30 #CHANGE FOR NEXT
-				wealth = 30 #CHANGE FOR NEXT
-				modifier = artifact_VIET_porcelain_chopsticks_modifier
-				max_durability = 40
-				save_scope_as = VIET_clutter_artifact
-				history = {
-					type = created_before_history
+		VIET_find_famous_traveler_effect = yes
+		root = { add_visiting_courtier = scope:traveler }
+		
+		hidden_effect = {
+			scope:traveler = {
+				create_artifact = {
+					name = VIET_porcelain_chopsticks_name
+					description = VIET_porcelain_chopsticks_desc
+					type = VIET_clutter
+					visuals = VIET_porcelain_chopsticks
+					quality = 30 #CHANGE FOR NEXT
+					wealth = 30 #CHANGE FOR NEXT
+					modifier = artifact_VIET_porcelain_chopsticks_modifier
+					max_durability = 40
+					save_scope_as = VIET_clutter_artifact
+					history = {
+						type = created_before_history
+					}
 				}
-			}
-			scope:VIET_clutter_artifact = {
-				set_variable = VIET_porcelain_chopsticks_variable
+				scope:VIET_clutter_artifact = {
+					set_variable = VIET_porcelain_chopsticks_variable
+				}
 			}
 		}
 	}
-
+	
 	option = {
 		name = VIETmisc.5014.a
 		trigger = {
 			VIET_is_sinosphere_trigger = yes
 		}
-		show_as_tooltip = {
-			scope:VIET_clutter_artifact = {
-				set_owner = {
-					target = root
-				}
+		scope:VIET_clutter_artifact = {
+			set_owner = {
+				target = root
 			}
 		}
 		custom_tooltip = VIET_artifact_limit_warning
 	}
-
+	
 	option = {
 		name = VIETmisc.5014.b
 		trigger = {
 			VIET_is_sinosphere_trigger = no
 		}
-		show_as_tooltip = {
-			scope:VIET_clutter_artifact = {
-				set_owner = {
-					target = root
-				}
+		scope:VIET_clutter_artifact = {
+			set_owner = {
+				target = root
 			}
 		}
 		custom_tooltip = VIET_artifact_limit_warning
 	}
-
+	
 	option = {
 		name = VIETmisc.5014.c
 		VIET_huge_prestige_gain_effect = yes
@@ -2031,7 +2015,8 @@ VIETmisc.5015 = {
 	title = VIETmisc.5015.t
 	desc = VIETmisc.5015.desc
 	theme = feast_activity
-
+	override_background = { reference = tavern }
+	
 	right_portrait = {
 		character = root
 		animation = schadenfreude
@@ -2040,7 +2025,11 @@ VIETmisc.5015 = {
 		target = scope:VIET_clutter_artifact
 		position = lower_center_portrait
 	}
-
+	left_portrait = {
+		character = scope:gambler
+		animation = personality_dishonorable
+	}
+	
 	weight_multiplier = {
 		base = 1
 		# Reduce spam
@@ -2083,36 +2072,42 @@ VIETmisc.5015 = {
 			has_trait = diligent
 		}
 	}
-
+	
+	trigger = {
+		VIET_has_minor_nobles = yes
+	}
+	
 	immediate = {
-		hidden_effect_new_object = {
-			create_artifact = {
-				name = VIET_bone_dice_name
-				description = VIET_bone_dice_desc
-				type = VIET_clutter
-				visuals = VIET_bone_dice
-				quality = 15
-				wealth = 15
-				modifier = artifact_VIET_bone_dice_modifier
-				max_durability = 40
-				save_scope_as = VIET_clutter_artifact
-				history = {
-					type = created_before_history
+		VIET_find_noble_gambler_effect = yes
+		
+		hidden_effect = {
+			scope:gambler = {
+				create_artifact = {
+					name = VIET_bone_dice_name
+					description = VIET_bone_dice_desc
+					type = VIET_clutter
+					visuals = VIET_bone_dice
+					quality = 15
+					wealth = 15
+					modifier = artifact_VIET_bone_dice_modifier
+					max_durability = 40
+					save_scope_as = VIET_clutter_artifact
+					history = {
+						type = created_before_history
+					}
 				}
-			}
-			scope:VIET_clutter_artifact = {
-				set_variable = VIET_bone_dice_variable
+				scope:VIET_clutter_artifact = {
+					set_variable = VIET_bone_dice_variable
+				}
 			}
 		}
 	}
-
+	
 	option = {
 		name = VIETmisc.5015.a
-		show_as_tooltip = {
-			scope:VIET_clutter_artifact = {
-				set_owner = {
-					target = root
-				}
+		scope:VIET_clutter_artifact = {
+			set_owner = {
+				target = root
 			}
 		}
 		stress_impact = {
@@ -2120,7 +2115,7 @@ VIETmisc.5015 = {
 		}
 		custom_tooltip = VIET_artifact_limit_warning
 	}
-
+	
 	option = {
 		name = VIETmisc.5015.b
 		VIET_medium_prestige_gain_effect = yes
@@ -2141,7 +2136,8 @@ VIETmisc.5016 = {
 	title = VIETmisc.5016.t
 	desc = VIETmisc.5016.desc
 	theme = feast_activity
-
+	override_background = { reference = tavern }
+	
 	right_portrait = {
 		character = root
 		animation = schadenfreude
@@ -2150,7 +2146,11 @@ VIETmisc.5016 = {
 		target = scope:VIET_clutter_artifact
 		position = lower_center_portrait
 	}
-
+	left_portrait = {
+		character = scope:gambler
+		animation = personality_dishonorable
+	}
+	
 	weight_multiplier = {
 		base = 1
 		# Reduce spam
@@ -2193,36 +2193,38 @@ VIETmisc.5016 = {
 			has_trait = diligent
 		}
 	}
-
+	
 	immediate = {
-		hidden_effect_new_object = {
-			create_artifact = {
-				name = VIET_wood_dice_name
-				description = VIET_wood_dice_desc
-				type = VIET_clutter
-				visuals = VIET_wood_dice
-				quality = 15
-				wealth = 15
-				modifier = artifact_VIET_wood_dice_modifier
-				max_durability = 40
-				save_scope_as = VIET_clutter_artifact
-				history = {
-					type = created_before_history
+		VIET_find_common_gambler_effect = yes
+		
+		hidden_effect = {
+			scope:gambler = {
+				create_artifact = {
+					name = VIET_wood_dice_name
+					description = VIET_wood_dice_desc
+					type = VIET_clutter
+					visuals = VIET_wood_dice
+					quality = 15
+					wealth = 15
+					modifier = artifact_VIET_wood_dice_modifier
+					max_durability = 40
+					save_scope_as = VIET_clutter_artifact
+					history = {
+						type = created_before_history
+					}
 				}
-			}
-			scope:VIET_clutter_artifact = {
-				set_variable = VIET_wood_dice_variable
+				scope:VIET_clutter_artifact = {
+					set_variable = VIET_wood_dice_variable
+				}
 			}
 		}
 	}
-
+	
 	option = {
 		name = VIETmisc.5016.a
-		show_as_tooltip = {
-			scope:VIET_clutter_artifact = {
-				set_owner = {
-					target = root
-				}
+		scope:VIET_clutter_artifact = {
+			set_owner = {
+				target = root
 			}
 		}
 		stress_impact = {
@@ -2230,7 +2232,7 @@ VIETmisc.5016 = {
 		}
 		custom_tooltip = VIET_artifact_limit_warning
 	}
-
+	
 	option = {
 		name = VIETmisc.5016.b
 		VIET_medium_prestige_gain_effect = yes
@@ -2249,7 +2251,8 @@ VIETmisc.5017 = {
 	title = VIETmisc.5017.t
 	desc = VIETmisc.5017.desc
 	theme = unfriendly
-
+	override_background = { reference = VIET_background_small_town }
+	
 	right_portrait = {
 		character = root
 		animation = stress
@@ -2258,7 +2261,11 @@ VIETmisc.5017 = {
 		target = scope:VIET_clutter_artifact
 		position = lower_center_portrait
 	}
-
+	left_portrait = {
+		character = scope:seamstress
+		animation = personality_forgiving
+	}
+	
 	weight_multiplier = {
 		base = 1
 		# Reduce spam
@@ -2301,29 +2308,47 @@ VIETmisc.5017 = {
 			has_trait = trusting
 		}
 	}
-
+	
 	immediate = {
-		hidden_effect_new_object = {
-			create_artifact = {
-				name = VIET_silk_slippers_name
-				description = VIET_silk_slippers_desc
-				type = VIET_clutter
-				visuals = VIET_silk_slippers
-				quality = 30
-				wealth = 30
-				modifier = artifact_VIET_silk_slippers_modifier
-				max_durability = 40
-				save_scope_as = VIET_clutter_artifact
-				history = {
-					type = created_before_history
+		create_character = {
+			template = local_artisan_template
+			age = { 40 60 }
+			location = root.capital_province
+			gender_female_chance = 100
+			faith = root.capital_province.faith
+			culture = root.capital_province.culture
+			save_scope_as = seamstress
+		}
+		hidden_effect = {
+			scope:seamstress = {
+				set_variable = {
+					name = created_artifact_type
+					value = flag:weaver
 				}
-			}
-			scope:VIET_clutter_artifact = {
-				set_variable = VIET_silk_slippers_variable
+				create_artifact = {
+					name = VIET_silk_slippers_name
+					description = VIET_silk_slippers_desc
+					type = VIET_clutter
+					visuals = VIET_silk_slippers
+					quality = 30
+					wealth = 30
+					modifier = artifact_VIET_silk_slippers_modifier
+					max_durability = 40
+					save_scope_as = VIET_clutter_artifact
+					history = {
+						type = created
+						actor = scope:seamstress
+						recipient = root
+						location = scope:seamstress.location
+					}
+				}
+				scope:VIET_clutter_artifact = {
+					set_variable = VIET_silk_slippers_variable
+				}
 			}
 		}
 	}
-
+	
 	option = {
 		name = VIETmisc.5017.a
 		trigger = {
@@ -2333,11 +2358,9 @@ VIETmisc.5017 = {
 			}
 		}
 		remove_short_term_gold = 40
-		show_as_tooltip = {
-			scope:VIET_clutter_artifact = {
-				set_owner = {
-					target = root
-				}
+		scope:VIET_clutter_artifact = {
+			set_owner = {
+				target = root
 			}
 		}
 		stress_impact = {
@@ -2345,7 +2368,7 @@ VIETmisc.5017 = {
 		}
 		custom_tooltip = VIET_artifact_limit_warning
 	}
-
+	
 	option = {
 		name = VIETmisc.5017.b
 		hidden_effect = {
@@ -2366,16 +2389,16 @@ VIETmisc.5018 = {
 	title = VIETmisc.5018.t
 	desc = VIETmisc.5018.desc
 	theme = feast_activity
-
+	
 	right_portrait = {
 		character = root
-		animation = personality_content
+		animation = personality_greedy
 	}
 	artifact = { # To display the artifact in the event-window
 		target = scope:VIET_clutter_artifact
 		position = lower_center_portrait
 	}
-
+	
 	weight_multiplier = {
 		base = 1
 		# Reduce spam
@@ -2418,7 +2441,7 @@ VIETmisc.5018 = {
 			has_trait = arrogant
 		}
 	}
-
+	
 	immediate = {
 		hidden_effect_new_object = {
 			create_artifact = {
@@ -2440,7 +2463,7 @@ VIETmisc.5018 = {
 			}
 		}
 	}
-
+	
 	option = {
 		name = VIETmisc.5018.a
 		VIET_large_prestige_loss_effect = yes
@@ -2457,7 +2480,7 @@ VIETmisc.5018 = {
 		}
 		custom_tooltip = VIET_artifact_limit_warning
 	}
-
+	
 	option = {
 		name = VIETmisc.5018.b
 		hidden_effect = {
@@ -2475,7 +2498,8 @@ VIETmisc.5019 = {
 	title = VIETmisc.5019.t
 	desc = VIETmisc.5019.desc
 	theme = friendly
-
+	override_background = { reference = study }
+	
 	left_portrait = {
 		character = root
 		animation = personality_rational
@@ -2484,7 +2508,11 @@ VIETmisc.5019 = {
 		target = scope:VIET_clutter_artifact
 		position = lower_center_portrait
 	}
-
+	right_portrait = {
+		character = scope:servant
+		animation = personality_callous
+	}
+	
 	weight_multiplier = {
 		base = 1
 		# Reduce spam
@@ -2527,37 +2555,41 @@ VIETmisc.5019 = {
 			has_trait = gregarious
 		}
 	}
-
+	
+	trigger = {
+		is_landed_or_landless_administrative = yes
+	}
 	immediate = {
-		hidden_effect_new_object = {
-			create_artifact = {
-				name = VIET_measuring_rod_name
-				description = VIET_measuring_rod_desc
-				type = VIET_clutter
-				visuals = VIET_measuring_rod
-				quality = 15
-				wealth = 15
-				modifier = artifact_VIET_measuring_rod_modifier
-				max_durability = 40
-				save_scope_as = VIET_clutter_artifact
-				history = {
-					type = created_before_history
+		VIET_find_servant_effect = yes
+		hidden_effect = {
+			scope:servant = {
+				create_artifact = {
+					name = VIET_measuring_rod_name
+					description = VIET_measuring_rod_desc
+					type = VIET_clutter
+					visuals = VIET_measuring_rod
+					quality = 15
+					wealth = 15
+					modifier = artifact_VIET_measuring_rod_modifier
+					max_durability = 40
+					save_scope_as = VIET_clutter_artifact
+					history = {
+						type = created_before_history
+					}
 				}
-			}
-			scope:VIET_clutter_artifact = {
-				set_variable = VIET_measuring_rod_variable
+				scope:VIET_clutter_artifact = {
+					set_variable = VIET_measuring_rod_variable
+				}
 			}
 		}
 	}
-
+	
 	option = {
 		name = VIETmisc.5019.a
 		VIET_large_prestige_loss_effect = yes
-		show_as_tooltip = {
-			scope:VIET_clutter_artifact = {
-				set_owner = {
-					target = root
-				}
+		scope:VIET_clutter_artifact = {
+			set_owner = {
+				target = root
 			}
 		}
 		stress_impact = {
@@ -2566,7 +2598,7 @@ VIETmisc.5019 = {
 		}
 		custom_tooltip = VIET_artifact_limit_warning
 	}
-
+	
 	option = {
 		name = VIETmisc.5019.b
 		hidden_effect = {
@@ -2584,7 +2616,7 @@ VIETmisc.5020 = {
 	desc = VIETmisc.5020.desc
 	theme = hunting
 	override_background = { reference = VIET_background_small_town }
-
+	
 	left_portrait = {
 		character = root
 		animation = personality_rational
@@ -2593,7 +2625,11 @@ VIETmisc.5020 = {
 		target = scope:VIET_clutter_artifact
 		position = lower_center_portrait
 	}
-
+	right_portrait = {
+		character = scope:hunter
+		animation = alto_flute_active
+	}
+	
 	weight_multiplier = {
 		base = 1
 		# Reduce spam
@@ -2636,50 +2672,68 @@ VIETmisc.5020 = {
 			has_trait = paranoid
 		}
 	}
-
+	
 	immediate = {
-		hidden_effect_new_object = {
-			create_artifact = {
-				name = VIET_prehistoric_bone_flute_name
-				description = VIET_prehistoric_bone_flute_desc
-				type = VIET_clutter
-				visuals = VIET_prehistoric_bone_flute
-				quality = 30
-				wealth = 30
-				modifier = artifact_VIET_prehistoric_bone_flute_modifier
-				#max_durability = 40
-				save_scope_as = VIET_clutter_artifact
-				history = {
-					type = created_before_history
+		VIET_find_hunter_effect = yes
+		
+		hidden_effect = {
+			scope:hunter = {
+				create_artifact = {
+					name = VIET_prehistoric_bone_flute_name
+					description = VIET_prehistoric_bone_flute_desc
+					type = VIET_clutter
+					visuals = VIET_prehistoric_bone_flute
+					quality = 30
+					wealth = 30
+					modifier = artifact_VIET_prehistoric_bone_flute_modifier
+					#max_durability = 40
+					save_scope_as = VIET_clutter_artifact
+					history = {
+						type = created_before_history
+					}
 				}
-			}
-			scope:VIET_clutter_artifact = {
-				set_variable = VIET_prehistoric_bone_flute_variable
+				scope:VIET_clutter_artifact = {
+					set_variable = VIET_prehistoric_bone_flute_variable
+				}
 			}
 		}
 	}
-
+	
 	option = {
 		name = VIETmisc.5020.a
-		show_as_tooltip = {
-			scope:VIET_clutter_artifact = {
-				set_owner = {
-					target = root
-				}
+		scope:VIET_clutter_artifact = {
+			set_owner = {
+				target = root
 			}
 		}
 		VIET_huge_prestige_loss_effect = yes
+		scope:hunter = {
+			add_opinion = {
+				target = root
+				modifier = VIET_opinion_accepted_my_gift
+			}
+			reverse_add_opinion = {
+				target = root
+				modifier = VIET_opinion_gave_me_a_gift
+			}
+		}
 		stress_impact = {
 			paranoid = miniscule_stress_impact_gain
 			craven = minor_stress_impact_gain
 		}
 		custom_tooltip = VIET_artifact_limit_warning
 	}
-
+	
 	option = {
 		name = VIETmisc.5020.b
 		hidden_effect = {
 			destroy_artifact = scope:VIET_clutter_artifact
+		}
+		scope:hunter = {
+			add_opinion = {
+				target = root
+				modifier = VIET_opinion_rejected_my_gift
+			}
 		}
 		stress_impact = {
 			brave = minor_stress_impact_gain
@@ -2697,7 +2751,7 @@ VIETmisc.5021 = {
 	desc = VIETmisc.5021.desc
 	theme = stewardship
 	override_background = { reference = council_chamber }
-
+	
 	left_portrait = {
 		character = root
 		animation = personality_forgiving
@@ -2706,7 +2760,11 @@ VIETmisc.5021 = {
 		target = scope:VIET_clutter_artifact
 		position = lower_center_portrait
 	}
-
+	right_portrait = {
+		character = scope:merchant
+		animation = personality_compassionate
+	}
+	
 	weight_multiplier = {
 		base = 1
 		# Reduce spam
@@ -2749,50 +2807,69 @@ VIETmisc.5021 = {
 			has_trait = paranoid
 		}
 	}
-
+	
 	immediate = {
-		hidden_effect_new_object = {
-			create_artifact = {
-				name = VIET_weighing_scales_name
-				description = VIET_weighing_scales_desc
-				type = VIET_clutter
-				visuals = VIET_weighing_scales
-				quality = 15
-				wealth = 15
-				modifier = artifact_VIET_weighing_scales_modifier
-				max_durability = 40
-				save_scope_as = VIET_clutter_artifact
-				history = {
-					type = created_before_history
+		VIET_find_merchant_effect = yes
+		root = { add_visiting_courtier = scope:merchant }
+		
+		hidden_effect = {
+			scope:merchant = {
+				create_artifact = {
+					name = VIET_weighing_scales_name
+					description = VIET_weighing_scales_desc
+					type = VIET_clutter
+					visuals = VIET_weighing_scales
+					quality = 15
+					wealth = 15
+					modifier = artifact_VIET_weighing_scales_modifier
+					max_durability = 40
+					save_scope_as = VIET_clutter_artifact
+					history = {
+						type = created_before_history
+					}
 				}
-			}
-			scope:VIET_clutter_artifact = {
-				set_variable = VIET_weighing_scales_variable
+				scope:VIET_clutter_artifact = {
+					set_variable = VIET_weighing_scales_variable
+				}
 			}
 		}
 	}
-
+	
 	option = {
 		name = VIETmisc.5021.a
-		show_as_tooltip = {
-			scope:VIET_clutter_artifact = {
-				set_owner = {
-					target = root
-				}
+		scope:VIET_clutter_artifact = {
+			set_owner = {
+				target = root
 			}
 		}
 		VIET_huge_prestige_loss_effect = yes
+		scope:merchant = {
+			add_opinion = {
+				target = root
+				modifier = VIET_opinion_accepted_my_gift
+			}
+			reverse_add_opinion = {
+				target = root
+				modifier = VIET_opinion_gave_me_a_gift
+			}
+		}
 		stress_impact = {
 			paranoid = miniscule_stress_impact_gain
 			fickle = miniscule_stress_impact_gain
 		}
 		custom_tooltip = VIET_artifact_limit_warning
 	}
-
+	
 	option = {
 		name = VIETmisc.5007.b
 		hidden_effect = {
 			destroy_artifact = scope:VIET_clutter_artifact
+		}
+		scope:merchant = {
+			add_opinion = {
+				target = root
+				modifier = VIET_opinion_rejected_my_gift
+			}
 		}
 		VIET_huge_prestige_gain_effect = yes
 		stress_impact = {
@@ -2810,8 +2887,8 @@ VIETmisc.5022 = {
 	title = VIETmisc.5022.t
 	desc = VIETmisc.5022.desc
 	theme = realm
-	override_background = { reference = corridor_day }
-
+	override_background = { reference = courtyard }
+	
 	left_portrait = {
 		character = root
 		animation = personality_content
@@ -2820,7 +2897,7 @@ VIETmisc.5022 = {
 		target = scope:VIET_clutter_artifact
 		position = lower_center_portrait
 	}
-
+	
 	weight_multiplier = {
 		base = 1
 		# Reduce spam
@@ -2863,9 +2940,9 @@ VIETmisc.5022 = {
 			has_trait = deceitful
 		}
 	}
-
+	
 	immediate = {
-		hidden_effect_new_object = {
+		hidden_effect = {
 			create_artifact = {
 				name = VIET_common_hammer_name
 				description = VIET_common_hammer_desc
@@ -2885,7 +2962,7 @@ VIETmisc.5022 = {
 			}
 		}
 	}
-
+	
 	option = {
 		name = VIETmisc.5022.a
 		show_as_tooltip = {
@@ -2901,7 +2978,7 @@ VIETmisc.5022 = {
 		}
 		custom_tooltip = VIET_artifact_limit_warning
 	}
-
+	
 	option = {
 		name = VIETmisc.5022.b
 		hidden_effect = {
@@ -2923,7 +3000,7 @@ VIETmisc.5023 = {
 	desc = VIETmisc.5023.desc
 	theme = realm
 	override_background = { reference = courtyard }
-
+	
 	left_portrait = {
 		character = root
 		animation = personality_cynical
@@ -2932,7 +3009,11 @@ VIETmisc.5023 = {
 		target = scope:VIET_clutter_artifact
 		position = lower_center_portrait
 	}
-
+	right_portrait = {
+		character = scope:laborer
+		animation = survey_staff
+	}
+	
 	weight_multiplier = {
 		base = 1
 		# Reduce spam
@@ -2975,36 +3056,37 @@ VIETmisc.5023 = {
 			has_trait = trusting
 		}
 	}
-
+	
 	immediate = {
-		hidden_effect_new_object = {
-			create_artifact = {
-				name = VIET_trusty_shovel_name
-				description = VIET_trusty_shovel_desc
-				type = VIET_clutter
-				visuals = VIET_trusty_shovel
-				quality = 15
-				wealth = 15
-				modifier = artifact_VIET_trusty_shovel_modifier
-				max_durability = 40
-				save_scope_as = VIET_clutter_artifact
-				history = {
-					type = created_before_history
+		VIET_find_laborer_effect = yes
+		hidden_effect = {
+			scope:laborer = {
+				create_artifact = {
+					name = VIET_trusty_shovel_name
+					description = VIET_trusty_shovel_desc
+					type = VIET_clutter
+					visuals = VIET_trusty_shovel
+					quality = 15
+					wealth = 15
+					modifier = artifact_VIET_trusty_shovel_modifier
+					max_durability = 40
+					save_scope_as = VIET_clutter_artifact
+					history = {
+						type = created_before_history
+					}
 				}
-			}
-			scope:VIET_clutter_artifact = {
-				set_variable = VIET_trusty_shovel_variable
+				scope:VIET_clutter_artifact = {
+					set_variable = VIET_trusty_shovel_variable
+				}
 			}
 		}
 	}
-
+	
 	option = {
 		name = VIETmisc.5023.a
-		show_as_tooltip = {
-			scope:VIET_clutter_artifact = {
-				set_owner = {
-					target = root
-				}
+		scope:VIET_clutter_artifact = {
+			set_owner = {
+				target = root
 			}
 		}
 		VIET_huge_prestige_loss_effect = yes
@@ -3013,7 +3095,7 @@ VIETmisc.5023 = {
 		}
 		custom_tooltip = VIET_artifact_limit_warning
 	}
-
+	
 	option = {
 		name = VIETmisc.5023.b
 		hidden_effect = {
@@ -3032,7 +3114,7 @@ VIETmisc.5024 = {
 	title = VIETmisc.5024.t
 	desc = VIETmisc.5024.desc
 	theme = diplomacy_foreign_affairs_focus
-
+	
 	left_portrait = {
 		character = root
 		animation = personality_forgiving
@@ -3041,7 +3123,11 @@ VIETmisc.5024 = {
 		target = scope:VIET_clutter_artifact
 		position = lower_center_portrait
 	}
-
+	right_portrait = {
+		character = scope:traveler
+		animation = survey
+	}
+	
 	weight_multiplier = {
 		base = 1
 		# Reduce spam
@@ -3084,36 +3170,48 @@ VIETmisc.5024 = {
 			has_trait = callous
 		}
 	}
-
+	
 	immediate = {
-		hidden_effect_new_object = {
-			create_artifact = {
-				name = VIET_leather_knapsack_name
-				description = VIET_leather_knapsack_desc
-				type = VIET_clutter
-				visuals = VIET_leather_knapsack
-				quality = 15
-				wealth = 15
-				modifier = artifact_VIET_leather_knapsack_modifier
-				max_durability = 40
-				save_scope_as = VIET_clutter_artifact
-				history = {
-					type = created_before_history
+		VIET_find_traveler_effect = yes
+		
+		hidden_effect = {
+			scope:traveler = {
+				create_artifact = {
+					name = VIET_leather_knapsack_name
+					description = VIET_leather_knapsack_desc
+					type = VIET_clutter
+					visuals = VIET_leather_knapsack
+					quality = 15
+					wealth = 15
+					modifier = artifact_VIET_leather_knapsack_modifier
+					max_durability = 40
+					save_scope_as = VIET_clutter_artifact
+					history = {
+						type = created_before_history
+					}
 				}
-			}
-			scope:VIET_clutter_artifact = {
-				set_variable = VIET_leather_knapsack_variable
+				scope:VIET_clutter_artifact = {
+					set_variable = VIET_leather_knapsack_variable
+				}
 			}
 		}
 	}
-
+	
 	option = {
 		name = VIETmisc.5024.a
-		show_as_tooltip = {
-			scope:VIET_clutter_artifact = {
-				set_owner = {
-					target = root
-				}
+		scope:VIET_clutter_artifact = {
+			set_owner = {
+				target = root
+			}
+		}
+		scope:traveler = {
+			add_opinion = {
+				target = root
+				modifier = VIET_opinion_accepted_my_gift
+			}
+			reverse_add_opinion = {
+				target = root
+				modifier = VIET_opinion_gave_me_a_gift
 			}
 		}
 		stress_impact = {
@@ -3122,11 +3220,17 @@ VIETmisc.5024 = {
 		}
 		custom_tooltip = VIET_artifact_limit_warning
 	}
-
+	
 	option = {
 		name = VIETmisc.5024.b
 		hidden_effect = {
 			destroy_artifact = scope:VIET_clutter_artifact
+		}
+		scope:traveler = {
+			add_opinion = {
+				target = root
+				modifier = VIET_opinion_rejected_my_gift
+			}
 		}
 		VIET_huge_prestige_gain_effect = yes
 		stress_impact = {
@@ -3144,7 +3248,7 @@ VIETmisc.5025 = {
 	desc = VIETmisc.5025.desc
 	theme = stewardship_duty_focus
 	override_background = { reference = tavern }
-
+	
 	left_portrait = {
 		character = root
 		animation = personality_forgiving
@@ -3153,7 +3257,11 @@ VIETmisc.5025 = {
 		target = scope:VIET_clutter_artifact
 		position = lower_center_portrait
 	}
-
+	right_portrait = {
+		character = scope:chef
+		animation = map_love
+	}
+	
 	weight_multiplier = {
 		base = 1
 		# Reduce spam
@@ -3196,36 +3304,43 @@ VIETmisc.5025 = {
 			has_trait = sadistic
 		}
 	}
-
+	
 	immediate = {
-		hidden_effect_new_object = {
-			create_artifact = {
-				name = VIET_wooden_bowl_name
-				description = VIET_wooden_bowl_desc
-				type = VIET_clutter
-				visuals = VIET_wooden_bowl
-				quality = 15
-				wealth = 15
-				modifier = artifact_VIET_wooden_bowl_modifier
-				max_durability = 40
-				save_scope_as = VIET_clutter_artifact
-				history = {
-					type = created_before_history
+		VIET_find_random_barony_effect = yes
+		
+		create_character = {
+			template = VIET_local_chef_template
+			location = scope:barony.holder.location
+			save_scope_as = chef
+		}
+		hidden_effect = {
+			scope:chef = {
+				create_artifact = {
+					name = VIET_wooden_bowl_name
+					description = VIET_wooden_bowl_desc
+					type = VIET_clutter
+					visuals = VIET_wooden_bowl
+					quality = 15
+					wealth = 15
+					modifier = artifact_VIET_wooden_bowl_modifier
+					max_durability = 40
+					save_scope_as = VIET_clutter_artifact
+					history = {
+						type = created_before_history
+					}
 				}
-			}
-			scope:VIET_clutter_artifact = {
-				set_variable = VIET_wooden_bowl_variable
+				scope:VIET_clutter_artifact = {
+					set_variable = VIET_wooden_bowl_variable
+				}
 			}
 		}
 	}
-
+	
 	option = {
 		name = VIETmisc.5025.a
-		show_as_tooltip = {
-			scope:VIET_clutter_artifact = {
-				set_owner = {
-					target = root
-				}
+		scope:VIET_clutter_artifact = {
+			set_owner = {
+				target = root
 			}
 		}
 		VIET_huge_prestige_loss_effect = yes
@@ -3236,7 +3351,7 @@ VIETmisc.5025 = {
 		}
 		custom_tooltip = VIET_artifact_limit_warning
 	}
-
+	
 	option = {
 		name = VIETmisc.5025.b
 		VIET_large_prestige_gain_effect = yes
@@ -3260,7 +3375,7 @@ VIETmisc.5026 = {
 	desc = VIETmisc.5026.desc
 	theme = intrigue_skulduggery_focus
 	override_background = { reference = garden }
-
+	
 	left_portrait = {
 		character = root
 		animation = personality_rational
@@ -3269,7 +3384,7 @@ VIETmisc.5026 = {
 		target = scope:VIET_clutter_artifact
 		position = lower_center_portrait
 	}
-
+	
 	weight_multiplier = {
 		base = 1
 		# Reduce spam
@@ -3312,7 +3427,7 @@ VIETmisc.5026 = {
 			has_trait = lazy
 		}
 	}
-
+	
 	immediate = {
 		hidden_effect_new_object = {
 			create_artifact = {
@@ -3334,7 +3449,7 @@ VIETmisc.5026 = {
 			}
 		}
 	}
-
+	
 	option = {
 		name = VIETmisc.5026.a
 		show_as_tooltip = {
@@ -3352,7 +3467,7 @@ VIETmisc.5026 = {
 		}
 		custom_tooltip = VIET_artifact_limit_warning
 	}
-
+	
 	option = {
 		name = VIETmisc.5026.b
 		hidden_effect = {
@@ -3375,7 +3490,7 @@ VIETmisc.5027 = {
 	title = VIETmisc.5027.t
 	desc = VIETmisc.5027.desc
 	theme = party
-
+	
 	left_portrait = {
 		character = root
 		animation = happiness
@@ -3384,7 +3499,11 @@ VIETmisc.5027 = {
 		target = scope:VIET_clutter_artifact
 		position = lower_center_portrait
 	}
-
+	right_portrait = {
+		character = scope:noble
+		animation = toast
+	}
+	
 	weight_multiplier = {
 		base = 1
 		# Reduce spam
@@ -3427,36 +3546,42 @@ VIETmisc.5027 = {
 			has_trait = callous
 		}
 	}
-
+	
+	trigger = {
+		VIET_has_minor_nobles = yes
+	}
+	
 	immediate = {
-		hidden_effect_new_object = {
-			create_artifact = {
-				name = VIET_ceramic_tankard_name
-				description = VIET_ceramic_tankard_desc
-				type = VIET_clutter
-				visuals = VIET_ceramic_tankard
-				quality = 15
-				wealth = 15
-				modifier = artifact_VIET_ceramic_tankard_modifier
-				max_durability = 40
-				save_scope_as = VIET_clutter_artifact
-				history = {
-					type = created_before_history
+		VIET_find_realm_minor_noble_effect = yes
+		
+		hidden_effect = {
+			scope:noble = {
+				create_artifact = {
+					name = VIET_ceramic_tankard_name
+					description = VIET_ceramic_tankard_desc
+					type = VIET_clutter
+					visuals = VIET_ceramic_tankard
+					quality = 15
+					wealth = 15
+					modifier = artifact_VIET_ceramic_tankard_modifier
+					max_durability = 40
+					save_scope_as = VIET_clutter_artifact
+					history = {
+						type = created_before_history
+					}
 				}
-			}
-			scope:VIET_clutter_artifact = {
-				set_variable = VIET_ceramic_tankard_variable
+				scope:VIET_clutter_artifact = {
+					set_variable = VIET_ceramic_tankard_variable
+				}
 			}
 		}
 	}
-
+	
 	option = {
 		name = VIETmisc.5027.a
-		show_as_tooltip = {
-			scope:VIET_clutter_artifact = {
-				set_owner = {
-					target = root
-				}
+		scope:VIET_clutter_artifact = {
+			set_owner = {
+				target = root
 			}
 		}
 		stress_impact = {
@@ -3465,7 +3590,7 @@ VIETmisc.5027 = {
 		}
 		custom_tooltip = VIET_artifact_limit_warning
 	}
-
+	
 	option = {
 		name = VIETmisc.5027.b
 		hidden_effect = {
@@ -3490,7 +3615,7 @@ VIETmisc.5028 = {
 	title = VIETmisc.5028.t
 	desc = VIETmisc.5028.desc
 	theme = party
-
+	
 	left_portrait = {
 		character = root
 		animation = happiness
@@ -3499,7 +3624,11 @@ VIETmisc.5028 = {
 		target = scope:VIET_clutter_artifact
 		position = lower_center_portrait
 	}
-
+	right_portrait = {
+		character = scope:noble
+		animation = toast
+	}
+	
 	weight_multiplier = {
 		base = 1
 		# Reduce spam
@@ -3542,36 +3671,42 @@ VIETmisc.5028 = {
 			has_trait = callous
 		}
 	}
-
+	
+	trigger = {
+		VIET_has_minor_nobles = yes
+	}
+	
 	immediate = {
-		hidden_effect_new_object = {
-			create_artifact = {
-				name = VIET_wooden_tankard_name
-				description = VIET_wooden_tankard_desc
-				type = VIET_clutter
-				visuals = VIET_wooden_tankard
-				quality = 15
-				wealth = 15
-				modifier = artifact_VIET_wooden_tankard_modifier
-				max_durability = 40
-				save_scope_as = VIET_clutter_artifact
-				history = {
-					type = created_before_history
+		VIET_find_sub_realm_minor_noble_effect = yes
+		
+		hidden_effect = {
+			scope:noble = {
+				create_artifact = {
+					name = VIET_wooden_tankard_name
+					description = VIET_wooden_tankard_desc
+					type = VIET_clutter
+					visuals = VIET_wooden_tankard
+					quality = 15
+					wealth = 15
+					modifier = artifact_VIET_wooden_tankard_modifier
+					max_durability = 40
+					save_scope_as = VIET_clutter_artifact
+					history = {
+						type = created_before_history
+					}
 				}
-			}
-			scope:VIET_clutter_artifact = {
-				set_variable = VIET_wooden_tankard_variable
+				scope:VIET_clutter_artifact = {
+					set_variable = VIET_wooden_tankard_variable
+				}
 			}
 		}
 	}
-
+	
 	option = {
 		name = VIETmisc.5028.a
-		show_as_tooltip = {
-			scope:VIET_clutter_artifact = {
-				set_owner = {
-					target = root
-				}
+		scope:VIET_clutter_artifact = {
+			set_owner = {
+				target = root
 			}
 		}
 		stress_impact = {
@@ -3580,7 +3715,7 @@ VIETmisc.5028 = {
 		}
 		custom_tooltip = VIET_artifact_limit_warning
 	}
-
+	
 	option = {
 		name = VIETmisc.5028.b
 		hidden_effect = {
@@ -3606,7 +3741,7 @@ VIETmisc.5029 = {
 	desc = VIETmisc.5029.desc
 	theme = unfriendly
 	override_background = { reference = VIET_background_small_town }
-
+	
 	right_portrait = {
 		character = root
 		animation = personality_irrational
@@ -3615,7 +3750,11 @@ VIETmisc.5029 = {
 		target = scope:VIET_clutter_artifact
 		position = lower_center_portrait
 	}
-
+	left_portrait = {
+		character = scope:artisan
+		animation = personality_forgiving
+	}
+	
 	weight_multiplier = {
 		base = 1
 		# Reduce spam
@@ -3658,29 +3797,47 @@ VIETmisc.5029 = {
 			has_trait = lazy
 		}
 	}
-
+	
 	immediate = {
-		hidden_effect_new_object = {
-			create_artifact = {
-				name = VIET_convenient_backscratcher_name
-				description = VIET_convenient_backscratcher_desc
-				type = VIET_clutter
-				visuals = VIET_convenient_backscratcher
-				quality = 15
-				wealth = 15
-				modifier = artifact_VIET_convenient_backscratcher_modifier
-				max_durability = 40
-				save_scope_as = VIET_clutter_artifact
-				history = {
-					type = created_before_history
+		create_character = {
+			template = local_artisan_template
+			location = root.capital_province
+			gender_female_chance = root_faith_dominant_gender_adjusted_female_chance
+			faith = root.capital_province.faith
+			culture = root.capital_province.culture
+			save_scope_as = artisan
+		}
+		
+		hidden_effect = {
+			scope:artisan = {
+				set_variable = {
+					name = created_artifact_type
+					value = flag:artisan
 				}
-			}
-			scope:VIET_clutter_artifact = {
-				set_variable = VIET_convenient_backscratcher_variable
+				create_artifact = {
+					name = VIET_convenient_backscratcher_name
+					description = VIET_convenient_backscratcher_desc
+					type = VIET_clutter
+					visuals = VIET_convenient_backscratcher
+					quality = 15
+					wealth = 15
+					modifier = artifact_VIET_convenient_backscratcher_modifier
+					max_durability = 40
+					save_scope_as = VIET_clutter_artifact
+					history = {
+						type = created
+						actor = scope:artisan
+						recipient = root
+						location = scope:artisan.location
+					}
+				}
+				scope:VIET_clutter_artifact = {
+					set_variable = VIET_convenient_backscratcher_variable
+				}
 			}
 		}
 	}
-
+	
 	option = {
 		name = VIETmisc.5029.a
 		trigger = {
@@ -3690,11 +3847,9 @@ VIETmisc.5029 = {
 			}
 		}
 		remove_short_term_gold = 15
-		show_as_tooltip = {
-			scope:VIET_clutter_artifact = {
-				set_owner = {
-					target = root
-				}
+		scope:VIET_clutter_artifact = {
+			set_owner = {
+				target = root
 			}
 		}
 		stress_impact = {
@@ -3703,7 +3858,7 @@ VIETmisc.5029 = {
 		}
 		custom_tooltip = VIET_artifact_limit_warning
 	}
-
+	
 	option = {
 		name = VIETmisc.5029.b
 		hidden_effect = {
@@ -3719,16 +3874,20 @@ VIETmisc.5030 = {
 	title = VIETmisc.5030.t
 	desc = VIETmisc.5030.desc
 	theme = VIET_theme_skyrim_forest
-
+	
 	right_portrait = {
 		character = root
-		animation = personality_bold
+		animation = survey_staff
 	}
 	artifact = { # To display the artifact in the event-window
 		target = scope:VIET_clutter_artifact
 		position = lower_center_portrait
 	}
-
+	left_portrait = {
+		character = scope:artisan
+		animation = personality_forgiving
+	}
+	
 	weight_multiplier = {
 		base = 1
 		# Reduce spam
@@ -3771,29 +3930,47 @@ VIETmisc.5030 = {
 			has_trait = lazy
 		}
 	}
-
+	
 	immediate = {
-		hidden_effect_new_object = {
-			create_artifact = {
-				name = VIET_rugged_walking_stick_name
-				description = VIET_rugged_walking_stick_desc
-				type = VIET_clutter
-				visuals = VIET_rugged_walking_stick
-				quality = 15
-				wealth = 15
-				modifier = artifact_VIET_rugged_walking_stick_modifier
-				#max_durability = 40
-				save_scope_as = VIET_clutter_artifact
-				history = {
-					type = created_before_history
+		create_character = {
+			template = local_artisan_template
+			location = root.capital_province
+			gender_female_chance = root_faith_dominant_gender_adjusted_female_chance
+			faith = root.capital_province.faith
+			culture = root.capital_province.culture
+			save_scope_as = artisan
+		}
+		
+		hidden_effect = {
+			scope:artisan = {
+				set_variable = {
+					name = created_artifact_type
+					value = flag:artisan
 				}
-			}
-			scope:VIET_clutter_artifact = {
-				set_variable = VIET_rugged_walking_stick_variable
+				create_artifact = {
+					name = VIET_rugged_walking_stick_name
+					description = VIET_rugged_walking_stick_desc
+					type = VIET_clutter
+					visuals = VIET_rugged_walking_stick
+					quality = 15
+					wealth = 15
+					modifier = artifact_VIET_rugged_walking_stick_modifier
+					#max_durability = 40
+					save_scope_as = VIET_clutter_artifact
+					history = {
+						type = created
+						actor = scope:artisan
+						recipient = root
+						location = scope:artisan.location
+					}
+				}
+				scope:VIET_clutter_artifact = {
+					set_variable = VIET_rugged_walking_stick_variable
+				}
 			}
 		}
 	}
-
+	
 	option = {
 		name = VIETmisc.5030.a
 		trigger = {
@@ -3803,11 +3980,9 @@ VIETmisc.5030 = {
 			}
 		}
 		remove_short_term_gold = 20
-		show_as_tooltip = {
-			scope:VIET_clutter_artifact = {
-				set_owner = {
-					target = root
-				}
+		scope:VIET_clutter_artifact = {
+			set_owner = {
+				target = root
 			}
 		}
 		stress_impact = {
@@ -3816,7 +3991,7 @@ VIETmisc.5030 = {
 		}
 		custom_tooltip = VIET_artifact_limit_warning
 	}
-
+	
 	option = {
 		name = VIETmisc.5030.b
 		VIET_huge_prestige_gain_effect = yes
@@ -3836,7 +4011,7 @@ VIETmisc.5031 = {
 	desc = VIETmisc.5031.desc
 	theme = martial
 	override_icon = { reference = "gfx/interface/icons/event_types/type_relation_friendly.dds" }
-
+	
 	left_portrait = {
 		character = root
 		animation = personality_rational
@@ -3845,7 +4020,11 @@ VIETmisc.5031 = {
 		target = scope:VIET_clutter_artifact
 		position = lower_center_portrait
 	}
-
+	right_portrait = {
+		character = scope:artisan
+		animation = personality_compassionate
+	}
+	
 	weight_multiplier = {
 		base = 1
 		# Reduce spam
@@ -3888,29 +4067,47 @@ VIETmisc.5031 = {
 			has_trait = shy
 		}
 	}
-
+	
 	immediate = {
-		hidden_effect_new_object = {
-			create_artifact = {
-				name = VIET_simple_gloves_name
-				description = VIET_simple_gloves_desc
-				type = VIET_clutter
-				visuals = VIET_simple_gloves
-				quality = 15
-				wealth = 15
-				modifier = artifact_VIET_simple_gloves_modifier
-				max_durability = 40
-				save_scope_as = VIET_clutter_artifact
-				history = {
-					type = created_before_history
+		create_character = {
+			template = local_artisan_template
+			location = root.capital_province
+			gender_female_chance = root_faith_dominant_gender_adjusted_female_chance
+			faith = root.capital_province.faith
+			culture = root.capital_province.culture
+			save_scope_as = artisan
+		}
+		
+		hidden_effect = {
+			scope:artisan = {
+				set_variable = {
+					name = created_artifact_type
+					value = flag:artisan
 				}
-			}
-			scope:VIET_clutter_artifact = {
-				set_variable = VIET_simple_gloves_variable
+				create_artifact = {
+					name = VIET_simple_gloves_name
+					description = VIET_simple_gloves_desc
+					type = VIET_clutter
+					visuals = VIET_simple_gloves
+					quality = 15
+					wealth = 15
+					modifier = artifact_VIET_simple_gloves_modifier
+					max_durability = 40
+					save_scope_as = VIET_clutter_artifact
+					history = {
+						type = created
+						actor = scope:artisan
+						recipient = root
+						location = scope:artisan.location
+					}
+				}
+				scope:VIET_clutter_artifact = {
+					set_variable = VIET_simple_gloves_variable
+				}
 			}
 		}
 	}
-
+	
 	option = {
 		name = VIETmisc.5031.a
 		trigger = {
@@ -3920,16 +4117,14 @@ VIETmisc.5031 = {
 			}
 		}
 		remove_short_term_gold = 25
-		show_as_tooltip = {
-			scope:VIET_clutter_artifact = {
-				set_owner = {
-					target = root
-				}
+		scope:VIET_clutter_artifact = {
+			set_owner = {
+				target = root
 			}
 		}
 		custom_tooltip = VIET_artifact_limit_warning
 	}
-
+	
 	option = {
 		name = VIETmisc.5031.b
 		hidden_effect = {
@@ -3946,7 +4141,7 @@ VIETmisc.5032 = {
 	title = VIETmisc.5032.t
 	desc = VIETmisc.5032.desc
 	theme = faith
-
+	
 	left_portrait = {
 		character = root
 		animation = personality_zealous
@@ -3955,7 +4150,11 @@ VIETmisc.5032 = {
 		target = scope:VIET_clutter_artifact
 		position = lower_center_portrait
 	}
-
+	right_portrait = {
+		character = scope:priest
+		animation = obsequious_bow
+	}
+	
 	weight_multiplier = {
 		base = 1
 		# Reduce spam
@@ -3998,41 +4197,43 @@ VIETmisc.5032 = {
 			has_trait = shy
 		}
 	}
-
+	
 	immediate = {
-		hidden_effect_new_object = {
-			create_artifact = {
-				name = VIET_elegant_candlestick_name
-				description = VIET_elegant_candlestick_desc
-				type = VIET_clutter
-				visuals = VIET_elegant_candlestick
-				quality = 15
-				wealth = 15
-				modifier = artifact_VIET_elegant_candlestick_modifier
-				max_durability = 40
-				save_scope_as = VIET_clutter_artifact
-				history = {
-					type = created_before_history
+		VIET_find_priest_effect = yes
+		
+		hidden_effect = {
+			scope:priest = {
+				create_artifact = {
+					name = VIET_elegant_candlestick_name
+					description = VIET_elegant_candlestick_desc
+					type = VIET_clutter
+					visuals = VIET_elegant_candlestick
+					quality = 15
+					wealth = 15
+					modifier = artifact_VIET_elegant_candlestick_modifier
+					max_durability = 40
+					save_scope_as = VIET_clutter_artifact
+					history = {
+						type = created_before_history
+					}
 				}
-			}
-			scope:VIET_clutter_artifact = {
-				set_variable = VIET_elegant_candlestick_variable
+				scope:VIET_clutter_artifact = {
+					set_variable = VIET_elegant_candlestick_variable
+				}
 			}
 		}
 	}
-
+	
 	option = {
 		name = VIETmisc.5032.a
-		show_as_tooltip = {
-			scope:VIET_clutter_artifact = {
-				set_owner = {
-					target = root
-				}
+		scope:VIET_clutter_artifact = {
+			set_owner = {
+				target = root
 			}
 		}
 		custom_tooltip = VIET_artifact_limit_warning
 	}
-
+	
 	option = {
 		name = VIETmisc.5032.b
 		VIET_huge_piety_gain_effect = yes
@@ -4051,8 +4252,8 @@ VIETmisc.5033 = {
 	desc = VIETmisc.5033.desc
 	theme = friendly
 	override_background = { reference = corridor_night }
-
-	left_portrait = {
+	
+	right_portrait = {
 		character = root
 		animation = personality_compassionate
 	}
@@ -4060,7 +4261,11 @@ VIETmisc.5033 = {
 		target = scope:VIET_clutter_artifact
 		position = lower_center_portrait
 	}
-
+	left_portrait = {
+		character = scope:soldier
+		animation = lantern
+	}
+	
 	weight_multiplier = {
 		base = 1
 		# Reduce spam
@@ -4103,36 +4308,42 @@ VIETmisc.5033 = {
 			has_trait = deceitful
 		}
 	}
-
+	
+	trigger = {
+		VIET_has_military_courtier = yes
+	}
 	immediate = {
-		hidden_effect_new_object = {
-			create_artifact = {
-				name = VIET_basic_lantern_name
-				description = VIET_basic_lantern_desc
-				type = VIET_clutter
-				visuals = VIET_basic_lantern
-				quality = 15
-				wealth = 15
-				modifier = artifact_VIET_basic_lantern_modifier
-				max_durability = 40
-				save_scope_as = VIET_clutter_artifact
-				history = {
-					type = created_before_history
+		VIET_find_military_courtier_effect = yes
+		
+		hidden_effect = {
+			scope:soldier = {
+				create_artifact = {
+					name = VIET_basic_lantern_name
+					description = VIET_basic_lantern_desc
+					type = VIET_clutter
+					visuals = VIET_basic_lantern
+					quality = 15
+					wealth = 15
+					modifier = artifact_VIET_basic_lantern_modifier
+					max_durability = 40
+					save_scope_as = VIET_clutter_artifact
+					history = {
+						type = created_before_history
+					}
 				}
-			}
-			scope:VIET_clutter_artifact = {
-				set_variable = VIET_basic_lantern_variable
+				scope:VIET_clutter_artifact = {
+					set_variable = VIET_basic_lantern_variable
+				}
 			}
 		}
 	}
-
+	after = { scope:soldier = { remove_character_flag = wear_armor } }
+	
 	option = {
 		name = VIETmisc.5033.a
-		show_as_tooltip = {
-			scope:VIET_clutter_artifact = {
-				set_owner = {
-					target = root
-				}
+		scope:VIET_clutter_artifact = {
+			set_owner = {
+				target = root
 			}
 		}
 		VIET_huge_prestige_loss_effect = yes
@@ -4143,7 +4354,7 @@ VIETmisc.5033 = {
 		}
 		custom_tooltip = VIET_artifact_limit_warning
 	}
-
+	
 	option = {
 		name = VIETmisc.5033.b
 		hidden_effect = {
@@ -4161,16 +4372,16 @@ VIETmisc.5034 = {
 	title = VIETmisc.5034.t
 	desc = VIETmisc.5034.desc
 	theme = friendly
-
+	
 	right_portrait = {
 		character = root
-		animation = schadenfreude
+		animation = manic
 	}
 	artifact = { # To display the artifact in the event-window
 		target = scope:VIET_clutter_artifact
 		position = lower_center_portrait
 	}
-
+	
 	weight_multiplier = {
 		base = 1
 		# Reduce spam
@@ -4213,7 +4424,7 @@ VIETmisc.5034 = {
 			has_trait = lustful
 		}
 	}
-
+	
 	immediate = {
 		hidden_effect_new_object = {
 			create_artifact = {
@@ -4235,7 +4446,7 @@ VIETmisc.5034 = {
 			}
 		}
 	}
-
+	
 	option = {
 		name = VIETmisc.5034.a
 		show_as_tooltip = {
@@ -4251,7 +4462,7 @@ VIETmisc.5034 = {
 		}
 		custom_tooltip = VIET_artifact_limit_warning
 	}
-
+	
 	option = {
 		name = VIETmisc.5034.b
 		VIET_huge_prestige_gain_effect = yes
@@ -4272,7 +4483,8 @@ VIETmisc.5035 = {
 	title = VIETmisc.5035.t
 	desc = VIETmisc.5035.desc
 	theme = feast_activity
-
+	override_background = { reference = bp1_kitchen_western }
+	
 	right_portrait = {
 		character = root
 		animation = admiration
@@ -4281,7 +4493,11 @@ VIETmisc.5035 = {
 		target = scope:VIET_clutter_artifact
 		position = lower_center_portrait
 	}
-
+	left_portrait = {
+		character = scope:servant
+		animation = personality_compassionate
+	}
+	
 	weight_multiplier = {
 		base = 1
 		# Reduce spam
@@ -4324,36 +4540,41 @@ VIETmisc.5035 = {
 			has_trait = chaste
 		}
 	}
-
+	
+	trigger = {
+		is_landed_or_landless_administrative = yes
+	}
 	immediate = {
-		hidden_effect_new_object = {
-			create_artifact = {
-				name = VIET_candy_jar_name
-				description = VIET_candy_jar_desc
-				type = VIET_clutter
-				visuals = VIET_candy_jar
-				quality = 15
-				wealth = 15
-				modifier = artifact_VIET_candy_jar_modifier
-				max_durability = 40
-				save_scope_as = VIET_clutter_artifact
-				history = {
-					type = created_before_history
+		VIET_find_servant_effect = yes
+		
+		hidden_effect = {
+			scope:servant = {
+				create_artifact = {
+					name = VIET_candy_jar_name
+					description = VIET_candy_jar_desc
+					type = VIET_clutter
+					visuals = VIET_candy_jar
+					quality = 15
+					wealth = 15
+					modifier = artifact_VIET_candy_jar_modifier
+					max_durability = 40
+					save_scope_as = VIET_clutter_artifact
+					history = {
+						type = created_before_history
+					}
 				}
-			}
-			scope:VIET_clutter_artifact = {
-				set_variable = VIET_candy_jar_variable
+				scope:VIET_clutter_artifact = {
+					set_variable = VIET_candy_jar_variable
+				}
 			}
 		}
 	}
-
+	
 	option = {
 		name = VIETmisc.5035.a
-		show_as_tooltip = {
-			scope:VIET_clutter_artifact = {
-				set_owner = {
-					target = root
-				}
+		scope:VIET_clutter_artifact = {
+			set_owner = {
+				target = root
 			}
 		}
 		VIET_huge_prestige_loss_effect = yes
@@ -4363,7 +4584,7 @@ VIETmisc.5035 = {
 		}
 		custom_tooltip = VIET_artifact_limit_warning
 	}
-
+	
 	option = {
 		name = VIETmisc.5035.b
 		VIET_huge_prestige_gain_effect = yes
@@ -4385,7 +4606,7 @@ VIETmisc.5036 = {
 	title = VIETmisc.5036.t
 	desc = VIETmisc.5036.desc
 	theme = martial_strategy_focus
-
+	
 	left_portrait = {
 		character = root
 		animation = shock
@@ -4394,7 +4615,11 @@ VIETmisc.5036 = {
 		target = scope:VIET_clutter_artifact
 		position = lower_center_portrait
 	}
-
+	right_portrait = {
+		character = scope:soldier
+		animation = manic
+	}
+	
 	weight_multiplier = {
 		base = 1
 		# Reduce spam
@@ -4437,36 +4662,42 @@ VIETmisc.5036 = {
 			has_trait = brave
 		}
 	}
-
+	
+	trigger = {
+		VIET_has_military_courtier = yes
+	}
 	immediate = {
-		hidden_effect_new_object = {
-			create_artifact = {
-				name = VIET_wooden_whistle_name
-				description = VIET_wooden_whistle_desc
-				type = VIET_clutter
-				visuals = VIET_wooden_whistle
-				quality = 15
-				wealth = 15
-				modifier = artifact_VIET_wooden_whistle_modifier
-				max_durability = 40
-				save_scope_as = VIET_clutter_artifact
-				history = {
-					type = created_before_history
+		VIET_find_military_courtier_effect = yes
+		
+		hidden_effect = {
+			scope:soldier = {
+				create_artifact = {
+					name = VIET_wooden_whistle_name
+					description = VIET_wooden_whistle_desc
+					type = VIET_clutter
+					visuals = VIET_wooden_whistle
+					quality = 15
+					wealth = 15
+					modifier = artifact_VIET_wooden_whistle_modifier
+					max_durability = 40
+					save_scope_as = VIET_clutter_artifact
+					history = {
+						type = created_before_history
+					}
 				}
-			}
-			scope:VIET_clutter_artifact = {
-				set_variable = VIET_wooden_whistle_variable
+				scope:VIET_clutter_artifact = {
+					set_variable = VIET_wooden_whistle_variable
+				}
 			}
 		}
 	}
-
+	after = { scope:soldier = { remove_character_flag  = wear_armor } }
+	
 	option = {
 		name = VIETmisc.5036.a
-		show_as_tooltip = {
-			scope:VIET_clutter_artifact = {
-				set_owner = {
-					target = root
-				}
+		scope:VIET_clutter_artifact = {
+			set_owner = {
+				target = root
 			}
 		}
 		stress_impact = {
@@ -4474,7 +4705,7 @@ VIETmisc.5036 = {
 		}
 		custom_tooltip = VIET_artifact_limit_warning
 	}
-
+	
 	option = {
 		name = VIETmisc.5036.b
 		VIET_huge_prestige_gain_effect = yes
@@ -4494,16 +4725,16 @@ VIETmisc.5037 = {
 	title = VIETmisc.5037.t
 	desc = VIETmisc.5037.desc
 	theme = VIET_theme_tuscan_country
-
+	
 	left_portrait = {
 		character = root
-		animation = personality_honorable
+		animation = holding_staff
 	}
 	artifact = { # To display the artifact in the event-window
 		target = scope:VIET_clutter_artifact
 		position = lower_center_portrait
 	}
-
+	
 	weight_multiplier = {
 		base = 1
 		# Reduce spam
@@ -4546,7 +4777,7 @@ VIETmisc.5037 = {
 			has_trait = arrogant
 		}
 	}
-
+	
 	immediate = {
 		hidden_effect_new_object = {
 			create_artifact = {
@@ -4568,7 +4799,7 @@ VIETmisc.5037 = {
 			}
 		}
 	}
-
+	
 	option = {
 		name = VIETmisc.5037.a
 		show_as_tooltip = {
@@ -4583,7 +4814,7 @@ VIETmisc.5037 = {
 		}
 		custom_tooltip = VIET_artifact_limit_warning
 	}
-
+	
 	option = {
 		name = VIETmisc.5037.b
 		VIET_huge_prestige_gain_effect = yes
@@ -4604,7 +4835,7 @@ VIETmisc.5038 = {
 	desc = VIETmisc.5038.desc
 	theme = intrigue_skulduggery_focus
 	override_background = { reference = market }
-
+	
 	left_portrait = {
 		character = root
 		animation = personality_rational
@@ -4613,7 +4844,11 @@ VIETmisc.5038 = {
 		target = scope:VIET_clutter_artifact
 		position = lower_center_portrait
 	}
-
+	right_portrait = {
+		character = scope:merchant
+		animation = personality_dishonorable
+	}
+	
 	weight_multiplier = {
 		base = 1
 		# Reduce spam
@@ -4656,36 +4891,38 @@ VIETmisc.5038 = {
 			has_trait = honest
 		}
 	}
-
+	
 	immediate = {
-		hidden_effect_new_object = {
-			create_artifact = {
-				name = VIET_hollow_doll_name
-				description = VIET_hollow_doll_desc
-				type = VIET_clutter
-				visuals = VIET_hollow_doll
-				quality = 30
-				wealth = 30
-				modifier = artifact_VIET_hollow_doll_modifier
-				#max_durability = 40
-				save_scope_as = VIET_clutter_artifact
-				history = {
-					type = created_before_history
+		VIET_find_traveling_merchant_effect = yes
+		
+		hidden_effect = {
+			scope:merchant = {
+				create_artifact = {
+					name = VIET_hollow_doll_name
+					description = VIET_hollow_doll_desc
+					type = VIET_clutter
+					visuals = VIET_hollow_doll
+					quality = 30
+					wealth = 30
+					modifier = artifact_VIET_hollow_doll_modifier
+					#max_durability = 40
+					save_scope_as = VIET_clutter_artifact
+					history = {
+						type = created_before_history
+					}
 				}
-			}
-			scope:VIET_clutter_artifact = {
-				set_variable = VIET_hollow_doll_variable
+				scope:VIET_clutter_artifact = {
+					set_variable = VIET_hollow_doll_variable
+				}
 			}
 		}
 	}
-
+	
 	option = {
 		name = VIETmisc.5038.a
-		show_as_tooltip = {
-			scope:VIET_clutter_artifact = {
-				set_owner = {
-					target = root
-				}
+		scope:VIET_clutter_artifact = {
+			set_owner = {
+				target = root
 			}
 		}
 		stress_impact = {
@@ -4693,7 +4930,7 @@ VIETmisc.5038 = {
 		}
 		custom_tooltip = VIET_artifact_limit_warning
 	}
-
+	
 	option = {
 		name = VIETmisc.5038.b
 		VIET_huge_prestige_gain_effect = yes
@@ -4715,13 +4952,17 @@ VIETmisc.5039 = {
 	title = VIETmisc.5039.t
 	desc = VIETmisc.5039.desc
 	theme = friendly
-
-	right_portrait = root
+	
+	left_portrait = root
 	artifact = { # To display the artifact in the event-window
 		target = scope:VIET_clutter_artifact
 		position = lower_center_portrait
 	}
-
+	right_portrait = {
+		character = scope:servant
+		animation = survey_staff
+	}
+	
 	weight_multiplier = {
 		base = 1
 		# Reduce spam
@@ -4764,36 +5005,41 @@ VIETmisc.5039 = {
 			has_trait = stubborn
 		}
 	}
-
+	
+	trigger = {
+		is_landed_or_landless_administrative = yes
+	}
 	immediate = {
-		hidden_effect_new_object = {
-			create_artifact = {
-				name = VIET_decorated_broom_name
-				description = VIET_decorated_broom_desc
-				type = VIET_clutter
-				visuals = VIET_decorated_broom
-				quality = 15
-				wealth = 15
-				modifier = artifact_VIET_decorated_broom_modifier
-				max_durability = 40
-				save_scope_as = VIET_clutter_artifact
-				history = {
-					type = created_before_history
+		VIET_find_servant_effect = yes
+		
+		hidden_effect = {
+			scope:servant = {
+				create_artifact = {
+					name = VIET_decorated_broom_name
+					description = VIET_decorated_broom_desc
+					type = VIET_clutter
+					visuals = VIET_decorated_broom
+					quality = 15
+					wealth = 15
+					modifier = artifact_VIET_decorated_broom_modifier
+					max_durability = 40
+					save_scope_as = VIET_clutter_artifact
+					history = {
+						type = created_before_history
+					}
 				}
-			}
-			scope:VIET_clutter_artifact = {
-				set_variable = VIET_decorated_broom_variable
+				scope:VIET_clutter_artifact = {
+					set_variable = VIET_decorated_broom_variable
+				}
 			}
 		}
 	}
-
+	
 	option = {
 		name = VIETmisc.5039.a
-		show_as_tooltip = {
-			scope:VIET_clutter_artifact = {
-				set_owner = {
-					target = root
-				}
+		scope:VIET_clutter_artifact = {
+			set_owner = {
+				target = root
 			}
 		}
 		stress_impact = {
@@ -4801,12 +5047,19 @@ VIETmisc.5039 = {
 		}
 		custom_tooltip = VIET_artifact_limit_warning
 	}
-
+	
 	option = {
 		name = VIETmisc.5039.b
 		VIET_huge_prestige_gain_effect = yes
 		hidden_effect = {
 			destroy_artifact = scope:VIET_clutter_artifact
+		}
+		show_as_tooltip = {
+			scope:VIET_clutter_artifact = {
+				set_owner = {
+					target = scope:servant
+				}
+			}
 		}
 		stress_impact = {
 			temperate = miniscule_stress_impact_gain
@@ -4822,19 +5075,23 @@ VIETmisc.5040 = {
 	title = VIETmisc.5040.t
 	desc = VIETmisc.5040.desc
 	theme = learning_scholarship_focus
-
+	
 	right_portrait = root
 	artifact = { # To display the artifact in the event-window
 		target = scope:VIET_clutter_artifact
 		position = lower_center_portrait
 	}
-
+	left_portrait = {
+		character = scope:scholar
+		animation = chancellor
+	}
+	
 	trigger = {
 		has_game_rule = VIET_normal_universe_events
 		# Weed out most cultures that probably aren't literate at the game start
 		NOT = { government_has_flag = government_is_tribal }
 	}
-
+	
 	weight_multiplier = {
 		base = 1
 		# Reduce spam
@@ -4877,36 +5134,44 @@ VIETmisc.5040 = {
 			has_trait = vengeful
 		}
 	}
-
+	
 	immediate = {
-		hidden_effect_new_object = {
-			create_artifact = {
-				name = VIET_traveling_inkwell_name
-				description = VIET_traveling_inkwell_desc
-				type = VIET_clutter
-				visuals = VIET_traveling_inkwell
-				quality = 15
-				wealth = 15
-				modifier = artifact_VIET_traveling_inkwell_modifier
-				max_durability = 40
-				save_scope_as = VIET_clutter_artifact
-				history = {
-					type = created_before_history
+		#Not interested in coming to court, so using a temporary character
+		create_character = {
+			location = root.capital_province
+			template = VIET_local_scholar_template
+			faith = root.capital_province.faith
+			culture = root.capital_province.culture
+			save_scope_as = scholar
+		}
+		hidden_effect = {
+			scope:scholar = {
+				create_artifact = {
+					name = VIET_traveling_inkwell_name
+					description = VIET_traveling_inkwell_desc
+					type = VIET_clutter
+					visuals = VIET_traveling_inkwell
+					quality = 15
+					wealth = 15
+					modifier = artifact_VIET_traveling_inkwell_modifier
+					max_durability = 40
+					save_scope_as = VIET_clutter_artifact
+					history = {
+						type = created_before_history
+					}
 				}
-			}
-			scope:VIET_clutter_artifact = {
-				set_variable = VIET_traveling_inkwell_variable
+				scope:VIET_clutter_artifact = {
+					set_variable = VIET_traveling_inkwell_variable
+				}
 			}
 		}
 	}
-
+	
 	option = {
 		name = VIETmisc.5040.a
-		show_as_tooltip = {
-			scope:VIET_clutter_artifact = {
-				set_owner = {
-					target = root
-				}
+		scope:VIET_clutter_artifact = {
+			set_owner = {
+				target = root
 			}
 		}
 		stress_impact = {
@@ -4914,7 +5179,7 @@ VIETmisc.5040 = {
 		}
 		custom_tooltip = VIET_artifact_limit_warning
 	}
-
+	
 	option = {
 		name = VIETmisc.5040.b
 		VIET_huge_prestige_gain_effect = yes
@@ -4925,6 +5190,8 @@ VIETmisc.5040 = {
 			diligent = miniscule_stress_impact_gain
 		}
 	}
+	
+	after = { hidden_effect = { scope:scholar = { death = { death_reason = death_disappearance } } } }
 }
 
 
@@ -4934,13 +5201,18 @@ VIETmisc.5041 = {
 	title = VIETmisc.5041.t
 	desc = VIETmisc.5041.desc
 	theme = VIET_theme_tuscan_country
-
+	
 	right_portrait = root
 	artifact = { # To display the artifact in the event-window
 		target = scope:VIET_clutter_artifact
 		position = lower_center_portrait
 	}
-
+	left_portrait = {
+		character = scope:gardener
+		animation = personality_rational
+	}
+	
+	
 	weight_multiplier = {
 		base = 1
 		# Reduce spam
@@ -4983,37 +5255,42 @@ VIETmisc.5041 = {
 			has_trait = vengeful
 		}
 	}
-
+	
+	trigger = {
+		is_landed_or_landless_administrative = yes
+	}
 	immediate = {
-		hidden_effect_new_object = {
-			create_artifact = {
-				name = VIET_ancient_coin_name
-				description = VIET_ancient_coin_desc
-				type = VIET_clutter
-				visuals = VIET_ancient_coin
-				quality = 15
-				wealth = 15
-				modifier = artifact_VIET_ancient_coin_modifier
-				#max_durability = 40 # TAKE NOTE
-				decaying = no
-				save_scope_as = VIET_clutter_artifact
-				history = {
-					type = created_before_history
+		VIET_find_gardener_effect = yes
+		
+		hidden_effect = {
+			scope:gardener = {
+				create_artifact = {
+					name = VIET_ancient_coin_name
+					description = VIET_ancient_coin_desc
+					type = VIET_clutter
+					visuals = VIET_ancient_coin
+					quality = 15
+					wealth = 15
+					modifier = artifact_VIET_ancient_coin_modifier
+					#max_durability = 40 # TAKE NOTE
+					decaying = no
+					save_scope_as = VIET_clutter_artifact
+					history = {
+						type = created_before_history
+					}
 				}
-			}
-			scope:VIET_clutter_artifact = {
-				set_variable = VIET_ancient_coin_variable
+				scope:VIET_clutter_artifact = {
+					set_variable = VIET_ancient_coin_variable
+				}
 			}
 		}
 	}
-
+	
 	option = {
 		name = VIETmisc.5041.a
-		show_as_tooltip = {
-			scope:VIET_clutter_artifact = {
-				set_owner = {
-					target = root
-				}
+		scope:VIET_clutter_artifact = {
+			set_owner = {
+				target = root
 			}
 		}
 		stress_impact = {
@@ -5022,25 +5299,32 @@ VIETmisc.5041 = {
 		}
 		custom_tooltip = VIET_artifact_limit_warning
 	}
-
+	
 	option = {
 		name = VIETmisc.5041.b
 		VIET_huge_prestige_gain_effect = yes
-		hidden_effect = {
-			destroy_artifact = scope:VIET_clutter_artifact
-		}
+		#hidden_effect = {
+		destroy_artifact = scope:VIET_clutter_artifact
+		#}
 		stress_impact = {
 			humble = miniscule_stress_impact_gain
 			trusting = miniscule_stress_impact_gain
 			calm = miniscule_stress_impact_gain
 		}
 	}
-
+	
 	option = {
 		name = VIETmisc.5041.c
 		VIET_huge_piety_gain_effect = yes
-		hidden_effect = {
-			destroy_artifact = scope:VIET_clutter_artifact
+		#hidden_effect = {
+		#	destroy_artifact = scope:VIET_clutter_artifact
+		#}
+		show_as_tooltip = {
+			scope:VIET_clutter_artifact = {
+				set_owner = {
+					target = scope:gardener
+				}
+			}
 		}
 		stress_impact = {
 			greedy = miniscule_stress_impact_gain
@@ -5063,8 +5347,8 @@ VIETmisc.5042 = {
 	title = VIETmisc.5042.t
 	desc = VIETmisc.5042.desc
 	theme = feast_activity
-	override_background = { reference = council_chamber }
-
+	override_background = { reference = bp1_kitchen_western }
+	
 	left_portrait = {
 		character = root
 		animation = admiration
@@ -5073,12 +5357,16 @@ VIETmisc.5042 = {
 		target = scope:VIET_recipe_artifact
 		position = lower_center_portrait
 	}
-
+	right_portrait = {
+		character = scope:chef
+		animation = obsequious_bow
+	}
+	
 	trigger = {
 		NOT = { has_game_rule = VIET_conversion_universe_events }
 		VIET_is_baklava_culture_trigger = yes
 	}
-
+	
 	weight_multiplier = {
 		base = 1
 		# Reduce spam
@@ -5113,102 +5401,120 @@ VIETmisc.5042 = {
 			has_trait = callous
 		}
 	}
-
+	
 	immediate = {
 		play_music_cue = mx_cue_touching_moment
-		random_list = {
-			60 = {
-				hidden_effect_new_object = {
-					create_artifact = {
-						name = VIET_recipe_baklava_name
-						description = VIET_recipe_baklava_desc
-						type = VIET_recipe
-						visuals = VIET_cool_baklava
-						quality = 15
-						wealth = 15
-						modifier = artifact_VIET_baklava_recipe_modifier_1
-						#max_durability = 40
-						decaying = no
-						save_scope_as = VIET_recipe_artifact
-						history = {
-							type = created_before_history
+		
+		VIET_find_random_barony_effect = yes
+		
+		create_character = {
+			template = VIET_local_chef_template
+			location = scope:barony.holder.location
+			faith = scope:barony.faith
+			culture = scope:barony.culture
+			save_scope_as = chef
+		}
+		hidden_effect = {
+			scope:chef = {
+				random_list = {
+					60 = {
+						create_artifact = {
+							name = VIET_recipe_baklava_name
+							description = VIET_recipe_baklava_desc
+							type = VIET_recipe
+							visuals = VIET_cool_baklava
+							quality = 15
+							wealth = 15
+							modifier = artifact_VIET_baklava_recipe_modifier_1
+							#max_durability = 40
+							decaying = no
+							save_scope_as = VIET_recipe_artifact
+							history = {
+								type = created
+								actor = scope:chef
+								recipient = root
+								location = scope:chef.location
+							}
+						}
+						scope:VIET_recipe_artifact = {
+							set_variable = VIET_recipe_baklava_variable
 						}
 					}
-					scope:VIET_recipe_artifact = {
-						set_variable = VIET_recipe_baklava_variable
-					}
-				}
-			}
-			45 = {
-				hidden_effect_new_object = {
-					create_artifact = {
-						name = VIET_recipe_baklava_name
-						description = VIET_recipe_baklava_desc
-						type = VIET_recipe
-						visuals = VIET_cool_baklava
-						quality = 30
-						wealth = 30
-						modifier = artifact_VIET_baklava_recipe_modifier_2
-						#max_durability = 40
-						decaying = no
-						save_scope_as = VIET_recipe_artifact
-						history = {
-							type = created_before_history
+					45 = {
+						create_artifact = {
+							name = VIET_recipe_baklava_name
+							description = VIET_recipe_baklava_desc
+							type = VIET_recipe
+							visuals = VIET_cool_baklava
+							quality = 30
+							wealth = 30
+							modifier = artifact_VIET_baklava_recipe_modifier_2
+							#max_durability = 40
+							decaying = no
+							save_scope_as = VIET_recipe_artifact
+							history = {
+								type = created
+								actor = scope:chef
+								recipient = root
+								location = scope:chef.location
+							}
+						}
+						scope:VIET_recipe_artifact = {
+							set_variable = VIET_recipe_baklava_variable
 						}
 					}
-					scope:VIET_recipe_artifact = {
-						set_variable = VIET_recipe_baklava_variable
-					}
-				}
-			}
-			30 = {
-				hidden_effect_new_object = {
-					create_artifact = {
-						name = VIET_recipe_baklava_name
-						description = VIET_recipe_baklava_desc
-						type = VIET_recipe
-						visuals = VIET_cool_baklava
-						quality = 65
-						wealth = 65
-						modifier = artifact_VIET_baklava_recipe_modifier_3
-						#max_durability = 40
-						decaying = no
-						save_scope_as = VIET_recipe_artifact
-						history = {
-							type = created_before_history
+					30 = {
+						create_artifact = {
+							name = VIET_recipe_baklava_name
+							description = VIET_recipe_baklava_desc
+							type = VIET_recipe
+							visuals = VIET_cool_baklava
+							quality = 65
+							wealth = 65
+							modifier = artifact_VIET_baklava_recipe_modifier_3
+							#max_durability = 40
+							decaying = no
+							save_scope_as = VIET_recipe_artifact
+							history = {
+								type = created
+								actor = scope:chef
+								recipient = root
+								location = scope:chef.location
+							}
+						}
+						scope:VIET_recipe_artifact = {
+							set_variable = VIET_recipe_baklava_variable
 						}
 					}
-					scope:VIET_recipe_artifact = {
-						set_variable = VIET_recipe_baklava_variable
-					}
-				}
-			}
-			15 = {
-				hidden_effect_new_object = {
-					create_artifact = {
-						name = VIET_recipe_baklava_name
-						description = VIET_recipe_baklava_desc
-						type = VIET_recipe
-						visuals = VIET_cool_baklava
-						quality = 95
-						wealth = 95
-						modifier = artifact_VIET_baklava_recipe_modifier_4
-						#max_durability = 40
-						decaying = no
-						save_scope_as = VIET_recipe_artifact
-						history = {
-							type = created_before_history
+					15 = {
+						create_artifact = {
+							name = VIET_recipe_baklava_name
+							description = VIET_recipe_baklava_desc
+							type = VIET_recipe
+							visuals = VIET_cool_baklava
+							quality = 95
+							wealth = 95
+							modifier = artifact_VIET_baklava_recipe_modifier_4
+							#max_durability = 40
+							decaying = no
+							save_scope_as = VIET_recipe_artifact
+							history = {
+								type = created
+								actor = scope:chef
+								recipient = root
+								location = scope:chef.location
+							}
 						}
-					}
-					scope:VIET_recipe_artifact = {
-						set_variable = VIET_recipe_baklava_variable
+						scope:VIET_recipe_artifact = {
+							set_variable = VIET_recipe_baklava_variable
+						}
 					}
 				}
 			}
 		}
-
+		
 	}
-
+	
 	option = { # Pay
 		name = VIETmisc.5042.a
 		trigger = {
@@ -5218,11 +5524,9 @@ VIETmisc.5042 = {
 			}
 		}
 		remove_short_term_gold = 40
-		show_as_tooltip = {
-			scope:VIET_recipe_artifact = {
-				set_owner = {
-					target = root
-				}
+		scope:VIET_recipe_artifact = {
+			set_owner = {
+				target = root
 			}
 		}
 		stress_impact = {
@@ -5233,7 +5537,7 @@ VIETmisc.5042 = {
 			base = 50
 		}
 	}
-
+	
 	option = { # Negotiate
 		name = VIETmisc.5042.b
 		trigger = {
@@ -5245,11 +5549,9 @@ VIETmisc.5042 = {
 		}
 		skill = diplomacy
 		remove_short_term_gold = 25
-		show_as_tooltip = {
-			scope:VIET_recipe_artifact = {
-				set_owner = {
-					target = root
-				}
+		scope:VIET_recipe_artifact = {
+			set_owner = {
+				target = root
 			}
 		}
 		stress_impact = {
@@ -5260,7 +5562,7 @@ VIETmisc.5042 = {
 			base = 50
 		}
 	}
-
+	
 	option = { # Steal
 		name = VIETmisc.5042.c
 		VIET_massive_piety_loss_effect = yes
@@ -5279,11 +5581,9 @@ VIETmisc.5042 = {
 					type = event_toast_effect_good
 					left_icon = ROOT
 					title = VIETmisc.recipe_steal.toast.success.not_caught
-					show_as_tooltip = {
-						scope:VIET_recipe_artifact = {
-							set_owner = {
-								target = root
-							}
+					scope:VIET_recipe_artifact = {
+						set_owner = {
+							target = root
 						}
 					}
 				}
@@ -5302,11 +5602,9 @@ VIETmisc.5042 = {
 					type = event_toast_effect_good
 					left_icon = ROOT
 					title = VIETmisc.recipe_steal.toast.success.caught
-					show_as_tooltip = {
-						scope:VIET_recipe_artifact = {
-							set_owner = {
-								target = root
-							}
+					scope:VIET_recipe_artifact = {
+						set_owner = {
+							target = root
 						}
 					}
 					VIET_huge_prestige_loss_effect = yes
@@ -5375,7 +5673,7 @@ VIETmisc.5042 = {
 			}
 		}
 	}
-
+	
 	option = { # Ignore
 		name = VIETmisc.5042.d
 		hidden_effect = {
@@ -5410,7 +5708,7 @@ VIETmisc.5043 = {
 	desc = VIETmisc.5043.desc
 	theme = feast_activity
 	override_background = { reference = market }
-
+	
 	left_portrait = {
 		character = root
 		animation = admiration
@@ -5419,12 +5717,16 @@ VIETmisc.5043 = {
 		target = scope:VIET_recipe_artifact
 		position = lower_center_portrait
 	}
-
+	right_portrait = {
+		character = scope:chef
+		animation = personality_content
+	}
+	
 	#trigger = {
 	#NOT = { has_game_rule = VIET_conversion_universe_events }
 	#VIET_is_sweetroll_culture_trigger = yes
 	#}
-
+	
 	weight_multiplier = {
 		base = 1
 		# Reduce spam
@@ -5459,102 +5761,119 @@ VIETmisc.5043 = {
 			has_trait = callous
 		}
 	}
-
+	
 	immediate = {
 		play_music_cue = mx_cue_touching_moment
-		random_list = {
-			60 = {
-				hidden_effect_new_object = {
-					create_artifact = {
-						name = VIET_recipe_sweetroll_name
-						description = VIET_recipe_sweetroll_desc
-						type = VIET_recipe
-						visuals = VIET_legendary_sweetroll
-						quality = 15
-						wealth = 15
-						modifier = artifact_VIET_sweetroll_recipe_modifier_1
-						#max_durability = 40
-						decaying = no
-						save_scope_as = VIET_recipe_artifact
-						history = {
-							type = created_before_history
+		
+		VIET_find_random_barony_effect = yes
+		
+		create_character = {
+			template = VIET_local_chef_template
+			location = scope:barony.holder.location
+			faith = scope:barony.faith
+			culture = scope:barony.culture
+			save_scope_as = chef
+		}
+		hidden_effect = {
+			scope:chef = {
+				random_list = {
+					60 = {
+						create_artifact = {
+							name = VIET_recipe_sweetroll_name
+							description = VIET_recipe_sweetroll_desc
+							type = VIET_recipe
+							visuals = VIET_legendary_sweetroll
+							quality = 15
+							wealth = 15
+							modifier = artifact_VIET_sweetroll_recipe_modifier_1
+							#max_durability = 40
+							decaying = no
+							save_scope_as = VIET_recipe_artifact
+							history = {
+								type = created
+								actor = scope:chef
+								recipient = root
+								location = scope:chef.location
+							}
+						}
+						scope:VIET_recipe_artifact = {
+							set_variable = VIET_recipe_sweetroll_variable
 						}
 					}
-					scope:VIET_recipe_artifact = {
-						set_variable = VIET_recipe_sweetroll_variable
-					}
-				}
-			}
-			45 = {
-				hidden_effect_new_object = {
-					create_artifact = {
-						name = VIET_recipe_sweetroll_name
-						description = VIET_recipe_sweetroll_desc
-						type = VIET_recipe
-						visuals = VIET_legendary_sweetroll
-						quality = 30
-						wealth = 30
-						modifier = artifact_VIET_sweetroll_recipe_modifier_2
-						#max_durability = 40
-						decaying = no
-						save_scope_as = VIET_recipe_artifact
-						history = {
-							type = created_before_history
+					45 = {
+						create_artifact = {
+							name = VIET_recipe_sweetroll_name
+							description = VIET_recipe_sweetroll_desc
+							type = VIET_recipe
+							visuals = VIET_legendary_sweetroll
+							quality = 30
+							wealth = 30
+							modifier = artifact_VIET_sweetroll_recipe_modifier_2
+							#max_durability = 40
+							decaying = no
+							save_scope_as = VIET_recipe_artifact
+							history = {
+								type = created
+								actor = scope:chef
+								recipient = root
+								location = scope:chef.location
+							}
+						}
+						scope:VIET_recipe_artifact = {
+							set_variable = VIET_recipe_sweetroll_variable
 						}
 					}
-					scope:VIET_recipe_artifact = {
-						set_variable = VIET_recipe_sweetroll_variable
-					}
-				}
-			}
-			30 = {
-				hidden_effect_new_object = {
-					create_artifact = {
-						name = VIET_recipe_sweetroll_name
-						description = VIET_recipe_sweetroll_desc
-						type = VIET_recipe
-						visuals = VIET_legendary_sweetroll
-						quality = 65
-						wealth = 65
-						modifier = artifact_VIET_sweetroll_recipe_modifier_3
-						#max_durability = 40
-						decaying = no
-						save_scope_as = VIET_recipe_artifact
-						history = {
-							type = created_before_history
+					30 = {
+						create_artifact = {
+							name = VIET_recipe_sweetroll_name
+							description = VIET_recipe_sweetroll_desc
+							type = VIET_recipe
+							visuals = VIET_legendary_sweetroll
+							quality = 65
+							wealth = 65
+							modifier = artifact_VIET_sweetroll_recipe_modifier_3
+							#max_durability = 40
+							decaying = no
+							save_scope_as = VIET_recipe_artifact
+							history = {
+								type = created
+								actor = scope:chef
+								recipient = root
+								location = scope:chef.location
+							}
+						}
+						scope:VIET_recipe_artifact = {
+							set_variable = VIET_recipe_sweetroll_variable
 						}
 					}
-					scope:VIET_recipe_artifact = {
-						set_variable = VIET_recipe_sweetroll_variable
-					}
-				}
-			}
-			15 = {
-				hidden_effect_new_object = {
-					create_artifact = {
-						name = VIET_recipe_sweetroll_name
-						description = VIET_recipe_sweetroll_desc
-						type = VIET_recipe
-						visuals = VIET_legendary_sweetroll
-						quality = 95
-						wealth = 95
-						modifier = artifact_VIET_sweetroll_recipe_modifier_4
-						#max_durability = 40
-						decaying = no
-						save_scope_as = VIET_recipe_artifact
-						history = {
-							type = created_before_history
+					15 = {
+						create_artifact = {
+							name = VIET_recipe_sweetroll_name
+							description = VIET_recipe_sweetroll_desc
+							type = VIET_recipe
+							visuals = VIET_legendary_sweetroll
+							quality = 95
+							wealth = 95
+							modifier = artifact_VIET_sweetroll_recipe_modifier_4
+							#max_durability = 40
+							decaying = no
+							save_scope_as = VIET_recipe_artifact
+							history = {
+								type = created
+								actor = scope:chef
+								recipient = root
+								location = scope:chef.location
+							}
 						}
-					}
-					scope:VIET_recipe_artifact = {
-						set_variable = VIET_recipe_sweetroll_variable
+						scope:VIET_recipe_artifact = {
+							set_variable = VIET_recipe_sweetroll_variable
+						}
 					}
 				}
 			}
 		}
-
 	}
-
+	
 	option = { # Pay
 		name = VIETmisc.5043.a
 		trigger = {
@@ -5564,11 +5883,9 @@ VIETmisc.5043 = {
 			}
 		}
 		remove_short_term_gold = 40
-		show_as_tooltip = {
-			scope:VIET_recipe_artifact = {
-				set_owner = {
-					target = root
-				}
+		scope:VIET_recipe_artifact = {
+			set_owner = {
+				target = root
 			}
 		}
 		stress_impact = {
@@ -5579,7 +5896,7 @@ VIETmisc.5043 = {
 			base = 50
 		}
 	}
-
+	
 	option = { # Negotiate
 		name = VIETmisc.5043.b
 		trigger = {
@@ -5591,11 +5908,9 @@ VIETmisc.5043 = {
 		}
 		skill = diplomacy
 		remove_short_term_gold = 25
-		show_as_tooltip = {
-			scope:VIET_recipe_artifact = {
-				set_owner = {
-					target = root
-				}
+		scope:VIET_recipe_artifact = {
+			set_owner = {
+				target = root
 			}
 		}
 		stress_impact = {
@@ -5606,7 +5921,7 @@ VIETmisc.5043 = {
 			base = 50
 		}
 	}
-
+	
 	option = { # Steal
 		name = VIETmisc.5043.c
 		VIET_massive_piety_loss_effect = yes
@@ -5625,11 +5940,9 @@ VIETmisc.5043 = {
 					type = event_toast_effect_good
 					left_icon = ROOT
 					title = VIETmisc.recipe_steal.toast.success.not_caught
-					show_as_tooltip = {
-						scope:VIET_recipe_artifact = {
-							set_owner = {
-								target = root
-							}
+					scope:VIET_recipe_artifact = {
+						set_owner = {
+							target = root
 						}
 					}
 				}
@@ -5648,11 +5961,9 @@ VIETmisc.5043 = {
 					type = event_toast_effect_good
 					left_icon = ROOT
 					title = VIETmisc.recipe_steal.toast.success.caught
-					show_as_tooltip = {
-						scope:VIET_recipe_artifact = {
-							set_owner = {
-								target = root
-							}
+					scope:VIET_recipe_artifact = {
+						set_owner = {
+							target = root
 						}
 					}
 					VIET_huge_prestige_loss_effect = yes
@@ -5721,7 +6032,7 @@ VIETmisc.5043 = {
 			}
 		}
 	}
-
+	
 	option = { # Ignore
 		name = VIETmisc.5043.d
 		hidden_effect = {
@@ -5746,6 +6057,8 @@ VIETmisc.5043 = {
 			}
 		}
 	}
+	
+	after = { hidden_effect = { scope:chef = { death = { death_reason = death_disappearance } } } }
 }
 
 
@@ -5755,8 +6068,8 @@ VIETmisc.5044 = {
 	title = VIETmisc.5044.t
 	desc = VIETmisc.5044.desc
 	theme = feast_activity
-	override_background = { reference = market }
-
+	override_background = { reference = bp1_kitchen_western }
+	
 	left_portrait = {
 		character = root
 		animation = admiration
@@ -5765,12 +6078,16 @@ VIETmisc.5044 = {
 		target = scope:VIET_recipe_artifact
 		position = lower_center_portrait
 	}
-
+	right_portrait = {
+		character = scope:chef
+		animation = personality_greedy
+	}
+	
 	trigger = {
 		NOT = { has_game_rule = VIET_conversion_universe_events }
 		VIET_is_hummus_culture_trigger = yes
 	}
-
+	
 	weight_multiplier = {
 		base = 1
 		# Reduce spam
@@ -5805,102 +6122,120 @@ VIETmisc.5044 = {
 			has_trait = callous
 		}
 	}
-
+	
 	immediate = {
 		play_music_cue = mx_cue_touching_moment
-		random_list = {
-			60 = {
-				hidden_effect_new_object = {
-					create_artifact = {
-						name = VIET_recipe_hummus_name
-						description = VIET_recipe_hummus_desc
-						type = VIET_recipe
-						visuals = VIET_hummus
-						quality = 15
-						wealth = 15
-						modifier = artifact_VIET_hummus_recipe_modifier_1
-						#max_durability = 40
-						decaying = no
-						save_scope_as = VIET_recipe_artifact
-						history = {
-							type = created_before_history
+		
+		VIET_find_random_barony_effect = yes
+		
+		create_character = {
+			location = scope:barony.holder.location
+			template = VIET_local_chef_template
+			faith = scope:barony.faith
+			culture = scope:barony.culture
+			save_scope_as = chef
+		}
+		
+		hidden_effect = {
+			scope:chef = {
+				random_list = {
+					60 = {
+						create_artifact = {
+							name = VIET_recipe_hummus_name
+							description = VIET_recipe_hummus_desc
+							type = VIET_recipe
+							visuals = VIET_hummus
+							quality = 15
+							wealth = 15
+							modifier = artifact_VIET_hummus_recipe_modifier_1
+							#max_durability = 40
+							decaying = no
+							save_scope_as = VIET_recipe_artifact
+							history = {
+								type = created
+								actor = scope:chef
+								recipient = root
+								location = scope:chef.location
+							}
+						}
+						scope:VIET_recipe_artifact = {
+							set_variable = VIET_recipe_hummus_variable
 						}
 					}
-					scope:VIET_recipe_artifact = {
-						set_variable = VIET_recipe_hummus_variable
-					}
-				}
-			}
-			45 = {
-				hidden_effect_new_object = {
-					create_artifact = {
-						name = VIET_recipe_hummus_name
-						description = VIET_recipe_hummus_desc
-						type = VIET_recipe
-						visuals = VIET_hummus
-						quality = 30
-						wealth = 30
-						modifier = artifact_VIET_hummus_recipe_modifier_2
-						#max_durability = 40
-						decaying = no
-						save_scope_as = VIET_recipe_artifact
-						history = {
-							type = created_before_history
+					45 = {
+						create_artifact = {
+							name = VIET_recipe_hummus_name
+							description = VIET_recipe_hummus_desc
+							type = VIET_recipe
+							visuals = VIET_hummus
+							quality = 30
+							wealth = 30
+							modifier = artifact_VIET_hummus_recipe_modifier_2
+							#max_durability = 40
+							decaying = no
+							save_scope_as = VIET_recipe_artifact
+							history = {
+								type = created
+								actor = scope:chef
+								recipient = root
+								location = scope:chef.location
+							}
+						}
+						scope:VIET_recipe_artifact = {
+							set_variable = VIET_recipe_hummus_variable
 						}
 					}
-					scope:VIET_recipe_artifact = {
-						set_variable = VIET_recipe_hummus_variable
-					}
-				}
-			}
-			30 = {
-				hidden_effect_new_object = {
-					create_artifact = {
-						name = VIET_recipe_hummus_name
-						description = VIET_recipe_hummus_desc
-						type = VIET_recipe
-						visuals = VIET_hummus
-						quality = 65
-						wealth = 65
-						modifier = artifact_VIET_hummus_recipe_modifier_3
-						#max_durability = 40
-						decaying = no
-						save_scope_as = VIET_recipe_artifact
-						history = {
-							type = created_before_history
+					30 = {
+						create_artifact = {
+							name = VIET_recipe_hummus_name
+							description = VIET_recipe_hummus_desc
+							type = VIET_recipe
+							visuals = VIET_hummus
+							quality = 65
+							wealth = 65
+							modifier = artifact_VIET_hummus_recipe_modifier_3
+							#max_durability = 40
+							decaying = no
+							save_scope_as = VIET_recipe_artifact
+							history = {
+								type = created
+								actor = scope:chef
+								recipient = root
+								location = scope:chef.location
+							}
+						}
+						scope:VIET_recipe_artifact = {
+							set_variable = VIET_recipe_hummus_variable
 						}
 					}
-					scope:VIET_recipe_artifact = {
-						set_variable = VIET_recipe_hummus_variable
-					}
-				}
-			}
-			15 = {
-				hidden_effect_new_object = {
-					create_artifact = {
-						name = VIET_recipe_hummus_name
-						description = VIET_recipe_hummus_desc
-						type = VIET_recipe
-						visuals = VIET_hummus
-						quality = 95
-						wealth = 95
-						modifier = artifact_VIET_hummus_recipe_modifier_4
-						#max_durability = 40
-						decaying = no
-						save_scope_as = VIET_recipe_artifact
-						history = {
-							type = created_before_history
+					15 = {
+						create_artifact = {
+							name = VIET_recipe_hummus_name
+							description = VIET_recipe_hummus_desc
+							type = VIET_recipe
+							visuals = VIET_hummus
+							quality = 95
+							wealth = 95
+							modifier = artifact_VIET_hummus_recipe_modifier_4
+							#max_durability = 40
+							decaying = no
+							save_scope_as = VIET_recipe_artifact
+							history = {
+								type = created
+								actor = scope:chef
+								recipient = root
+								location = scope:chef.location
+							}
 						}
-					}
-					scope:VIET_recipe_artifact = {
-						set_variable = VIET_recipe_hummus_variable
+						scope:VIET_recipe_artifact = {
+							set_variable = VIET_recipe_hummus_variable
+						}
 					}
 				}
 			}
 		}
-
 	}
-
+	
 	option = { # Pay
 		name = VIETmisc.5044.a
 		trigger = {
@@ -5910,11 +6245,9 @@ VIETmisc.5044 = {
 			}
 		}
 		remove_short_term_gold = 40
-		show_as_tooltip = {
-			scope:VIET_recipe_artifact = {
-				set_owner = {
-					target = root
-				}
+		scope:VIET_recipe_artifact = {
+			set_owner = {
+				target = root
 			}
 		}
 		stress_impact = {
@@ -5925,7 +6258,7 @@ VIETmisc.5044 = {
 			base = 50
 		}
 	}
-
+	
 	option = { # Negotiate
 		name = VIETmisc.5044.b
 		trigger = {
@@ -5937,11 +6270,9 @@ VIETmisc.5044 = {
 		}
 		skill = diplomacy
 		remove_short_term_gold = 25
-		show_as_tooltip = {
-			scope:VIET_recipe_artifact = {
-				set_owner = {
-					target = root
-				}
+		scope:VIET_recipe_artifact = {
+			set_owner = {
+				target = root
 			}
 		}
 		stress_impact = {
@@ -5952,7 +6283,7 @@ VIETmisc.5044 = {
 			base = 50
 		}
 	}
-
+	
 	option = { # Steal
 		name = VIETmisc.5044.c
 		VIET_massive_piety_loss_effect = yes
@@ -5971,11 +6302,9 @@ VIETmisc.5044 = {
 					type = event_toast_effect_good
 					left_icon = ROOT
 					title = VIETmisc.recipe_steal.toast.success.not_caught
-					show_as_tooltip = {
-						scope:VIET_recipe_artifact = {
-							set_owner = {
-								target = root
-							}
+					scope:VIET_recipe_artifact = {
+						set_owner = {
+							target = root
 						}
 					}
 				}
@@ -5994,11 +6323,9 @@ VIETmisc.5044 = {
 					type = event_toast_effect_good
 					left_icon = ROOT
 					title = VIETmisc.recipe_steal.toast.success.caught
-					show_as_tooltip = {
-						scope:VIET_recipe_artifact = {
-							set_owner = {
-								target = root
-							}
+					scope:VIET_recipe_artifact = {
+						set_owner = {
+							target = root
 						}
 					}
 					VIET_huge_prestige_loss_effect = yes
@@ -6067,7 +6394,7 @@ VIETmisc.5044 = {
 			}
 		}
 	}
-
+	
 	option = { # Ignore
 		name = VIETmisc.5043.d
 		hidden_effect = {
@@ -6107,7 +6434,7 @@ VIETmisc.5045 = {
 	desc = VIETmisc.5045.desc
 	theme = seduction
 	override_background = { reference = study }
-
+	
 	left_portrait = {
 		character = root
 		animation = disbelief
@@ -6116,14 +6443,14 @@ VIETmisc.5045 = {
 		target = scope:VIET_lusty_argonian_maid
 		position = lower_center_portrait
 	}
-
+	
 	trigger = {
 		NOT = { has_game_rule = VIET_serious_events }
 		NOT = { has_character_flag = VIET_lusty_argonian_maid_happened }
 		# Weed out most cultures that probably aren't literate at the game start
 		NOT = { government_has_flag = government_is_tribal }
 	}
-
+	
 	weight_multiplier = {
 		base = 1
 		modifier = {
@@ -6151,7 +6478,7 @@ VIETmisc.5045 = {
 			has_trait = diligent
 		}
 	}
-
+	
 	immediate = {
 		hidden_effect_new_object = {
 			create_artifact = {
@@ -6181,7 +6508,7 @@ VIETmisc.5045 = {
 			# }
 		}
 	}
-
+	
 	option = {
 		name = VIETmisc.5045.a
 		VIET_massive_piety_loss_effect = yes
@@ -6196,7 +6523,7 @@ VIETmisc.5045 = {
 			chaste = medium_stress_impact_gain
 		}
 	}
-
+	
 	option = {
 		name = VIETmisc.5045.b
 		VIET_massive_piety_gain_effect = yes
@@ -6206,7 +6533,7 @@ VIETmisc.5045 = {
 			lustful = medium_stress_impact_gain
 		}
 	}
-
+	
 	after = {
 		add_character_flag = VIET_lusty_argonian_maid_happened
 	}
@@ -6226,7 +6553,7 @@ VIETmisc.5046 = {
 	title = VIETmisc.5046.t
 	desc = VIETmisc.5046.desc
 	theme = feast_activity
-
+	
 	left_portrait = {
 		character = root
 		animation = personality_rational
@@ -6234,8 +6561,12 @@ VIETmisc.5046 = {
 	artifact = { # To display the artifact in the event-window
 		target = scope:VIET_recipe_artifact
 		position = lower_center_portrait
+	}		
+	right_portrait = {
+		character = scope:noble
+		animation = personality_dishonorable
 	}
-
+	
 	weight_multiplier = {
 		base = 1
 		# Reduce spam
@@ -6270,102 +6601,117 @@ VIETmisc.5046 = {
 			has_trait = content
 		}
 	}
-
+	
+	trigger = {
+		VIET_has_minor_nobles = yes
+	}
+	
 	immediate = {
 		play_music_cue = mx_cue_touching_moment
-		random_list = {
-			60 = {
-				hidden_effect_new_object = {
-					create_artifact = {
-						name = VIET_recipe_yogurt_name
-						description = VIET_recipe_yogurt_desc
-						type = VIET_recipe
-						visuals = VIET_yogurt
-						quality = 15
-						wealth = 15
-						modifier = artifact_VIET_yogurt_recipe_modifier_1
-						#max_durability = 40
-						decaying = no
-						save_scope_as = VIET_recipe_artifact
-						history = {
-							type = created_before_history
+		
+		VIET_find_realm_minor_noble_effect = yes
+		
+		hidden_effect = {
+			scope:noble = {
+				random_list = {
+					60 = {
+						create_artifact = {
+							name = VIET_recipe_yogurt_name
+							description = VIET_recipe_yogurt_desc
+							type = VIET_recipe
+							visuals = VIET_yogurt
+							quality = 15
+							wealth = 15
+							modifier = artifact_VIET_yogurt_recipe_modifier_1
+							#max_durability = 40
+							decaying = no
+							save_scope_as = VIET_recipe_artifact
+							history = {
+								type = created
+								actor = scope:noble
+								recipient = root
+								location = scope:noble.location
+							}
+						}
+						scope:VIET_recipe_artifact = {
+							set_variable = VIET_recipe_yogurt_variable
 						}
 					}
-					scope:VIET_recipe_artifact = {
-						set_variable = VIET_recipe_yogurt_variable
-					}
-				}
-			}
-			45 = {
-				hidden_effect_new_object = {
-					create_artifact = {
-						name = VIET_recipe_yogurt_name
-						description = VIET_recipe_yogurt_desc
-						type = VIET_recipe
-						visuals = VIET_yogurt
-						quality = 30
-						wealth = 30
-						modifier = artifact_VIET_yogurt_recipe_modifier_2
-						#max_durability = 40
-						decaying = no
-						save_scope_as = VIET_recipe_artifact
-						history = {
-							type = created_before_history
+					45 = {
+						create_artifact = {
+							name = VIET_recipe_yogurt_name
+							description = VIET_recipe_yogurt_desc
+							type = VIET_recipe
+							visuals = VIET_yogurt
+							quality = 30
+							wealth = 30
+							modifier = artifact_VIET_yogurt_recipe_modifier_2
+							#max_durability = 40
+							decaying = no
+							save_scope_as = VIET_recipe_artifact
+							history = {
+								type = created
+								actor = scope:noble
+								recipient = root
+								location = scope:noble.location
+							}
+						}
+						scope:VIET_recipe_artifact = {
+							set_variable = VIET_recipe_yogurt_variable
 						}
 					}
-					scope:VIET_recipe_artifact = {
-						set_variable = VIET_recipe_yogurt_variable
-					}
-				}
-			}
-			30 = {
-				hidden_effect_new_object = {
-					create_artifact = {
-						name = VIET_recipe_yogurt_name
-						description = VIET_recipe_yogurt_desc
-						type = VIET_recipe
-						visuals = VIET_yogurt
-						quality = 65
-						wealth = 65
-						modifier = artifact_VIET_yogurt_recipe_modifier_3
-						#max_durability = 40
-						decaying = no
-						save_scope_as = VIET_recipe_artifact
-						history = {
-							type = created_before_history
+					30 = {
+						create_artifact = {
+							name = VIET_recipe_yogurt_name
+							description = VIET_recipe_yogurt_desc
+							type = VIET_recipe
+							visuals = VIET_yogurt
+							quality = 65
+							wealth = 65
+							modifier = artifact_VIET_yogurt_recipe_modifier_3
+							#max_durability = 40
+							decaying = no
+							save_scope_as = VIET_recipe_artifact
+							history = {
+								type = created
+								actor = scope:noble
+								recipient = root
+								location = scope:noble.location
+							}
+						}
+						scope:VIET_recipe_artifact = {
+							set_variable = VIET_recipe_yogurt_variable
 						}
 					}
-					scope:VIET_recipe_artifact = {
-						set_variable = VIET_recipe_yogurt_variable
-					}
-				}
-			}
-			15 = {
-				hidden_effect_new_object = {
-					create_artifact = {
-						name = VIET_recipe_yogurt_name
-						description = VIET_recipe_yogurt_desc
-						type = VIET_recipe
-						visuals = VIET_yogurt
-						quality = 95
-						wealth = 95
-						modifier = artifact_VIET_yogurt_recipe_modifier_4
-						#max_durability = 40
-						decaying = no
-						save_scope_as = VIET_recipe_artifact
-						history = {
-							type = created_before_history
+					15 = {
+						create_artifact = {
+							name = VIET_recipe_yogurt_name
+							description = VIET_recipe_yogurt_desc
+							type = VIET_recipe
+							visuals = VIET_yogurt
+							quality = 95
+							wealth = 95
+							modifier = artifact_VIET_yogurt_recipe_modifier_4
+							#max_durability = 40
+							decaying = no
+							save_scope_as = VIET_recipe_artifact
+							history = {
+								type = created
+								actor = scope:noble
+								recipient = root
+								location = scope:noble.location
+							}
 						}
-					}
-					scope:VIET_recipe_artifact = {
-						set_variable = VIET_recipe_yogurt_variable
+						scope:VIET_recipe_artifact = {
+							set_variable = VIET_recipe_yogurt_variable
+						}
 					}
 				}
 			}
 		}
-
+		
 	}
-
+	
 	option = { # Pay
 		name = VIETmisc.5046.a
 		trigger = {
@@ -6375,11 +6721,9 @@ VIETmisc.5046 = {
 			}
 		}
 		remove_short_term_gold = 40
-		show_as_tooltip = {
-			scope:VIET_recipe_artifact = {
-				set_owner = {
-					target = root
-				}
+		scope:VIET_recipe_artifact = {
+			set_owner = {
+				target = root
 			}
 		}
 		stress_impact = {
@@ -6390,7 +6734,7 @@ VIETmisc.5046 = {
 			base = 50
 		}
 	}
-
+	
 	option = { # Negotiate
 		name = VIETmisc.5046.b
 		trigger = {
@@ -6402,11 +6746,9 @@ VIETmisc.5046 = {
 		}
 		skill = diplomacy
 		remove_short_term_gold = 25
-		show_as_tooltip = {
-			scope:VIET_recipe_artifact = {
-				set_owner = {
-					target = root
-				}
+		scope:VIET_recipe_artifact = {
+			set_owner = {
+				target = root
 			}
 		}
 		stress_impact = {
@@ -6417,7 +6759,7 @@ VIETmisc.5046 = {
 			base = 50
 		}
 	}
-
+	
 	option = { # Steal
 		name = VIETmisc.5046.c
 		VIET_massive_piety_loss_effect = yes
@@ -6436,11 +6778,9 @@ VIETmisc.5046 = {
 					type = event_toast_effect_good
 					left_icon = ROOT
 					title = VIETmisc.recipe_steal.toast.success.not_caught
-					show_as_tooltip = {
-						scope:VIET_recipe_artifact = {
-							set_owner = {
-								target = root
-							}
+					scope:VIET_recipe_artifact = {
+						set_owner = {
+							target = root
 						}
 					}
 				}
@@ -6459,11 +6799,9 @@ VIETmisc.5046 = {
 					type = event_toast_effect_good
 					left_icon = ROOT
 					title = VIETmisc.recipe_steal.toast.success.caught
-					show_as_tooltip = {
-						scope:VIET_recipe_artifact = {
-							set_owner = {
-								target = root
-							}
+					scope:VIET_recipe_artifact = {
+						set_owner = {
+							target = root
 						}
 					}
 					VIET_huge_prestige_loss_effect = yes
@@ -6532,7 +6870,7 @@ VIETmisc.5046 = {
 			}
 		}
 	}
-
+	
 	option = { # Ignore
 		name = VIETmisc.5046.d
 		hidden_effect = {
@@ -6569,7 +6907,7 @@ VIETmisc.5047 = {
 	desc = VIETmisc.5047.desc
 	theme = feast_activity
 	#override_background = { reference = tavern }
-
+	
 	left_portrait = {
 		character = root
 		animation = personality_forgiving
@@ -6577,8 +6915,12 @@ VIETmisc.5047 = {
 	artifact = { # To display the artifact in the event-window
 		target = scope:VIET_recipe_artifact
 		position = lower_center_portrait
+	}		
+	right_portrait = {
+		character = scope:noble
+		animation = drink_goblet
 	}
-
+	
 	weight_multiplier = {
 		base = 1
 		# Reduce spam
@@ -6613,102 +6955,117 @@ VIETmisc.5047 = {
 			has_trait = arrogant
 		}
 	}
-
+	
+	trigger = {
+		VIET_has_minor_nobles = yes
+	}
+	
 	immediate = {
 		play_music_cue = mx_cue_touching_moment
-		random_list = {
-			60 = {
-				hidden_effect_new_object = {
-					create_artifact = {
-						name = VIET_recipe_savory_pie_name
-						description = VIET_recipe_savory_pie_desc
-						type = VIET_recipe
-						visuals = VIET_savory_pie
-						quality = 15
-						wealth = 15
-						modifier = artifact_VIET_savory_pie_recipe_modifier_1
-						#max_durability = 40
-						decaying = no
-						save_scope_as = VIET_recipe_artifact
-						history = {
-							type = created_before_history
+		
+		VIET_find_noble_widow_effect = yes
+		
+		hidden_effect = {
+			scope:noble = {
+				random_list = {
+					60 = {
+						create_artifact = {
+							name = VIET_recipe_savory_pie_name
+							description = VIET_recipe_savory_pie_desc
+							type = VIET_recipe
+							visuals = VIET_savory_pie
+							quality = 15
+							wealth = 15
+							modifier = artifact_VIET_savory_pie_recipe_modifier_1
+							#max_durability = 40
+							decaying = no
+							save_scope_as = VIET_recipe_artifact
+							history = {
+								type = created
+								actor = scope:noble
+								recipient = root
+								location = scope:noble.location
+							}
+						}
+						scope:VIET_recipe_artifact = {
+							set_variable = VIET_recipe_savory_pie_variable
 						}
 					}
-					scope:VIET_recipe_artifact = {
-						set_variable = VIET_recipe_savory_pie_variable
-					}
-				}
-			}
-			45 = {
-				hidden_effect_new_object = {
-					create_artifact = {
-						name = VIET_recipe_savory_pie_name
-						description = VIET_recipe_savory_pie_desc
-						type = VIET_recipe
-						visuals = VIET_savory_pie
-						quality = 30
-						wealth = 30
-						modifier = artifact_VIET_savory_pie_recipe_modifier_2
-						#max_durability = 40
-						decaying = no
-						save_scope_as = VIET_recipe_artifact
-						history = {
-							type = created_before_history
+					45 = {
+						create_artifact = {
+							name = VIET_recipe_savory_pie_name
+							description = VIET_recipe_savory_pie_desc
+							type = VIET_recipe
+							visuals = VIET_savory_pie
+							quality = 30
+							wealth = 30
+							modifier = artifact_VIET_savory_pie_recipe_modifier_2
+							#max_durability = 40
+							decaying = no
+							save_scope_as = VIET_recipe_artifact
+							history = {
+								type = created
+								actor = scope:noble
+								recipient = root
+								location = scope:noble.location
+							}
+							scope:VIET_recipe_artifact = {
+								set_variable = VIET_recipe_savory_pie_variable
+							}
 						}
-					}
-					scope:VIET_recipe_artifact = {
-						set_variable = VIET_recipe_savory_pie_variable
-					}
-				}
-			}
-			30 = {
-				hidden_effect_new_object = {
-					create_artifact = {
-						name = VIET_recipe_savory_pie_name
-						description = VIET_recipe_savory_pie_desc
-						type = VIET_recipe
-						visuals = VIET_savory_pie
-						quality = 65
-						wealth = 65
-						modifier = artifact_VIET_savory_pie_recipe_modifier_3
-						#max_durability = 40
-						decaying = no
-						save_scope_as = VIET_recipe_artifact
-						history = {
-							type = created_before_history
+						30 = {
+							create_artifact = {
+								name = VIET_recipe_savory_pie_name
+								description = VIET_recipe_savory_pie_desc
+								type = VIET_recipe
+								visuals = VIET_savory_pie
+								quality = 65
+								wealth = 65
+								modifier = artifact_VIET_savory_pie_recipe_modifier_3
+								#max_durability = 40
+								decaying = no
+								save_scope_as = VIET_recipe_artifact
+								history = {
+									type = created
+									actor = scope:noble
+									recipient = root
+									location = scope:noble.location
+								}
+							}
+							scope:VIET_recipe_artifact = {
+								set_variable = VIET_recipe_savory_pie_variable
+							}
 						}
-					}
-					scope:VIET_recipe_artifact = {
-						set_variable = VIET_recipe_savory_pie_variable
-					}
-				}
-			}
-			15 = {
-				hidden_effect_new_object = {
-					create_artifact = {
-						name = VIET_recipe_savory_pie_name
-						description = VIET_recipe_savory_pie_desc
-						type = VIET_recipe
-						visuals = VIET_savory_pie
-						quality = 95
-						wealth = 95
-						modifier = artifact_VIET_savory_pie_recipe_modifier_4
-						#max_durability = 40
-						decaying = no
-						save_scope_as = VIET_recipe_artifact
-						history = {
-							type = created_before_history
+						15 = {
+							create_artifact = {
+								name = VIET_recipe_savory_pie_name
+								description = VIET_recipe_savory_pie_desc
+								type = VIET_recipe
+								visuals = VIET_savory_pie
+								quality = 95
+								wealth = 95
+								modifier = artifact_VIET_savory_pie_recipe_modifier_4
+								#max_durability = 40
+								decaying = no
+								save_scope_as = VIET_recipe_artifact
+								history = {
+									type = created
+									actor = scope:noble
+									recipient = root
+									location = scope:noble.location
+								}
+							}
+							scope:VIET_recipe_artifact = {
+								set_variable = VIET_recipe_savory_pie_variable
+							}
 						}
-					}
-					scope:VIET_recipe_artifact = {
-						set_variable = VIET_recipe_savory_pie_variable
 					}
 				}
 			}
 		}
-
+		
 	}
-
+	
 	option = { # Pay
 		name = VIETmisc.5047.a
 		trigger = {
@@ -6718,11 +7075,9 @@ VIETmisc.5047 = {
 			}
 		}
 		remove_short_term_gold = 40
-		show_as_tooltip = {
-			scope:VIET_recipe_artifact = {
-				set_owner = {
-					target = root
-				}
+		scope:VIET_recipe_artifact = {
+			set_owner = {
+				target = root
 			}
 		}
 		stress_impact = {
@@ -6733,7 +7088,7 @@ VIETmisc.5047 = {
 			base = 50
 		}
 	}
-
+	
 	option = { # Negotiate
 		name = VIETmisc.5047.b
 		trigger = {
@@ -6745,11 +7100,9 @@ VIETmisc.5047 = {
 		}
 		skill = diplomacy
 		remove_short_term_gold = 25
-		show_as_tooltip = {
-			scope:VIET_recipe_artifact = {
-				set_owner = {
-					target = root
-				}
+		scope:VIET_recipe_artifact = {
+			set_owner = {
+				target = root
 			}
 		}
 		stress_impact = {
@@ -6760,7 +7113,7 @@ VIETmisc.5047 = {
 			base = 50
 		}
 	}
-
+	
 	option = { # Steal
 		name = VIETmisc.5047.c
 		VIET_massive_piety_loss_effect = yes
@@ -6779,11 +7132,10 @@ VIETmisc.5047 = {
 					type = event_toast_effect_good
 					left_icon = ROOT
 					title = VIETmisc.recipe_steal.toast.success.not_caught
-					show_as_tooltip = {
-						scope:VIET_recipe_artifact = {
-							set_owner = {
-								target = root
-							}
+					
+					scope:VIET_recipe_artifact = {
+						set_owner = {
+							target = root
 						}
 					}
 				}
@@ -6802,11 +7154,10 @@ VIETmisc.5047 = {
 					type = event_toast_effect_good
 					left_icon = ROOT
 					title = VIETmisc.recipe_steal.toast.success.caught
-					show_as_tooltip = {
-						scope:VIET_recipe_artifact = {
-							set_owner = {
-								target = root
-							}
+					
+					scope:VIET_recipe_artifact = {
+						set_owner = {
+							target = root
 						}
 					}
 					VIET_huge_prestige_loss_effect = yes
@@ -6875,7 +7226,7 @@ VIETmisc.5047 = {
 			}
 		}
 	}
-
+	
 	option = { # Ignore
 		name = VIETmisc.5047.d
 		hidden_effect = {
@@ -6911,7 +7262,7 @@ VIETmisc.5048 = {
 	title = VIETmisc.5048.t
 	desc = VIETmisc.5048.desc
 	theme = feast_activity
-
+	
 	left_portrait = {
 		character = root
 		animation = personality_content
@@ -6920,7 +7271,11 @@ VIETmisc.5048 = {
 		target = scope:VIET_recipe_artifact
 		position = lower_center_portrait
 	}
-
+	right_portrait = {
+		character = scope:merchant
+		animation = drink_goblet
+	}
+	
 	weight_multiplier = {
 		base = 1
 		# Reduce spam
@@ -6955,102 +7310,115 @@ VIETmisc.5048 = {
 			has_trait = temperate
 		}
 	}
-
+	
 	immediate = {
 		play_music_cue = mx_cue_touching_moment
-		random_list = {
-			60 = {
-				hidden_effect_new_object = {
-					create_artifact = {
-						name = VIET_recipe_fruit_pie_name
-						description = VIET_recipe_fruit_pie_desc
-						type = VIET_recipe
-						visuals = VIET_fruit_pie
-						quality = 15
-						wealth = 15
-						modifier = artifact_VIET_fruit_pie_recipe_modifier_1
-						#max_durability = 40
-						decaying = no
-						save_scope_as = VIET_recipe_artifact
-						history = {
-							type = created_before_history
+		
+		VIET_find_merchant_effect = yes
+		
+		root = { add_visiting_courtier = scope:merchant }
+		
+		hidden_effect = {
+			scope:merchant = {
+				random_list = {
+					60 = {
+						create_artifact = {
+							name = VIET_recipe_fruit_pie_name
+							description = VIET_recipe_fruit_pie_desc
+							type = VIET_recipe
+							visuals = VIET_fruit_pie
+							quality = 15
+							wealth = 15
+							modifier = artifact_VIET_fruit_pie_recipe_modifier_1
+							#max_durability = 40
+							decaying = no
+							save_scope_as = VIET_recipe_artifact
+							history = {
+								type = created
+								actor = scope:merchant
+								recipient = root
+								location = scope:merchant.location
+							}
+						}
+						scope:VIET_recipe_artifact = {
+							set_variable = VIET_recipe_fruit_pie_variable
 						}
 					}
-					scope:VIET_recipe_artifact = {
-						set_variable = VIET_recipe_fruit_pie_variable
-					}
-				}
-			}
-			45 = {
-				hidden_effect_new_object = {
-					create_artifact = {
-						name = VIET_recipe_fruit_pie_name
-						description = VIET_recipe_fruit_pie_desc
-						type = VIET_recipe
-						visuals = VIET_fruit_pie
-						quality = 30
-						wealth = 30
-						modifier = artifact_VIET_fruit_pie_recipe_modifier_2
-						#max_durability = 40
-						decaying = no
-						save_scope_as = VIET_recipe_artifact
-						history = {
-							type = created_before_history
+					45 = {
+						create_artifact = {
+							name = VIET_recipe_fruit_pie_name
+							description = VIET_recipe_fruit_pie_desc
+							type = VIET_recipe
+							visuals = VIET_fruit_pie
+							quality = 30
+							wealth = 30
+							modifier = artifact_VIET_fruit_pie_recipe_modifier_2
+							#max_durability = 40
+							decaying = no
+							save_scope_as = VIET_recipe_artifact
+							history = {
+								type = created
+								actor = scope:merchant
+								recipient = root
+								location = scope:merchant.location
+							}
+						}
+						scope:VIET_recipe_artifact = {
+							set_variable = VIET_recipe_fruit_pie_variable
 						}
 					}
-					scope:VIET_recipe_artifact = {
-						set_variable = VIET_recipe_fruit_pie_variable
-					}
-				}
-			}
-			30 = {
-				hidden_effect_new_object = {
-					create_artifact = {
-						name = VIET_recipe_fruit_pie_name
-						description = VIET_recipe_fruit_pie_desc
-						type = VIET_recipe
-						visuals = VIET_fruit_pie
-						quality = 65
-						wealth = 65
-						modifier = artifact_VIET_fruit_pie_recipe_modifier_3
-						#max_durability = 40
-						decaying = no
-						save_scope_as = VIET_recipe_artifact
-						history = {
-							type = created_before_history
+					30 = {
+						create_artifact = {
+							name = VIET_recipe_fruit_pie_name
+							description = VIET_recipe_fruit_pie_desc
+							type = VIET_recipe
+							visuals = VIET_fruit_pie
+							quality = 65
+							wealth = 65
+							modifier = artifact_VIET_fruit_pie_recipe_modifier_3
+							#max_durability = 40
+							decaying = no
+							save_scope_as = VIET_recipe_artifact
+							history = {
+								type = created
+								actor = scope:merchant
+								recipient = root
+								location = scope:merchant.location
+							}
+						}
+						scope:VIET_recipe_artifact = {
+							set_variable = VIET_recipe_fruit_pie_variable
 						}
 					}
-					scope:VIET_recipe_artifact = {
-						set_variable = VIET_recipe_fruit_pie_variable
-					}
-				}
-			}
-			15 = {
-				hidden_effect_new_object = {
-					create_artifact = {
-						name = VIET_recipe_fruit_pie_name
-						description = VIET_recipe_fruit_pie_desc
-						type = VIET_recipe
-						visuals = VIET_fruit_pie
-						quality = 95
-						wealth = 95
-						modifier = artifact_VIET_fruit_pie_recipe_modifier_4
-						#max_durability = 40
-						decaying = no
-						save_scope_as = VIET_recipe_artifact
-						history = {
-							type = created_before_history
+					15 = {
+						create_artifact = {
+							name = VIET_recipe_fruit_pie_name
+							description = VIET_recipe_fruit_pie_desc
+							type = VIET_recipe
+							visuals = VIET_fruit_pie
+							quality = 95
+							wealth = 95
+							modifier = artifact_VIET_fruit_pie_recipe_modifier_4
+							#max_durability = 40
+							decaying = no
+							save_scope_as = VIET_recipe_artifact
+							history = {
+								type = created
+								actor = scope:merchant
+								recipient = root
+								location = scope:merchant.location
+							}
 						}
-					}
-					scope:VIET_recipe_artifact = {
-						set_variable = VIET_recipe_fruit_pie_variable
+						scope:VIET_recipe_artifact = {
+							set_variable = VIET_recipe_fruit_pie_variable
+						}
 					}
 				}
 			}
 		}
-
+		
 	}
-
+	
 	option = { # Pay
 		name = VIETmisc.5048.a
 		trigger = {
@@ -7060,11 +7428,9 @@ VIETmisc.5048 = {
 			}
 		}
 		remove_short_term_gold = 40
-		show_as_tooltip = {
-			scope:VIET_recipe_artifact = {
-				set_owner = {
-					target = root
-				}
+		scope:VIET_recipe_artifact = {
+			set_owner = {
+				target = root
 			}
 		}
 		stress_impact = {
@@ -7075,7 +7441,7 @@ VIETmisc.5048 = {
 			base = 50
 		}
 	}
-
+	
 	option = { # Negotiate
 		name = VIETmisc.5048.b
 		trigger = {
@@ -7087,11 +7453,9 @@ VIETmisc.5048 = {
 		}
 		skill = diplomacy
 		remove_short_term_gold = 25
-		show_as_tooltip = {
-			scope:VIET_recipe_artifact = {
-				set_owner = {
-					target = root
-				}
+		scope:VIET_recipe_artifact = {
+			set_owner = {
+				target = root
 			}
 		}
 		stress_impact = {
@@ -7102,7 +7466,7 @@ VIETmisc.5048 = {
 			base = 50
 		}
 	}
-
+	
 	option = { # Steal
 		name = VIETmisc.5048.c
 		VIET_massive_piety_loss_effect = yes
@@ -7121,11 +7485,9 @@ VIETmisc.5048 = {
 					type = event_toast_effect_good
 					left_icon = ROOT
 					title = VIETmisc.recipe_steal.toast.success.not_caught
-					show_as_tooltip = {
-						scope:VIET_recipe_artifact = {
-							set_owner = {
-								target = root
-							}
+					scope:VIET_recipe_artifact = {
+						set_owner = {
+							target = root
 						}
 					}
 				}
@@ -7144,11 +7506,9 @@ VIETmisc.5048 = {
 					type = event_toast_effect_good
 					left_icon = ROOT
 					title = VIETmisc.recipe_steal.toast.success.caught
-					show_as_tooltip = {
-						scope:VIET_recipe_artifact = {
-							set_owner = {
-								target = root
-							}
+					scope:VIET_recipe_artifact = {
+						set_owner = {
+							target = root
 						}
 					}
 					VIET_huge_prestige_loss_effect = yes
@@ -7217,7 +7577,7 @@ VIETmisc.5048 = {
 			}
 		}
 	}
-
+	
 	option = { # Ignore
 		name = VIETmisc.5048.d
 		hidden_effect = {
@@ -7254,7 +7614,7 @@ VIETmisc.5049 = {
 	desc = VIETmisc.5049.desc
 	theme = feast_activity
 	override_background = { reference = tavern }
-
+	
 	left_portrait = {
 		character = root
 		animation = personality_content
@@ -7263,7 +7623,11 @@ VIETmisc.5049 = {
 		target = scope:VIET_recipe_artifact
 		position = lower_center_portrait
 	}
-
+	right_portrait = {
+		character = scope:chef
+		animation = personality_greedy
+	}
+	
 	weight_multiplier = {
 		base = 1
 		# Reduce spam
@@ -7298,102 +7662,116 @@ VIETmisc.5049 = {
 			has_trait = temperate
 		}
 	}
-
+	
 	immediate = {
 		play_music_cue = mx_cue_touching_moment
-		random_list = {
-			60 = {
-				hidden_effect_new_object = {
-					create_artifact = {
-						name = VIET_recipe_bean_soup_name
-						description = VIET_recipe_bean_soup_desc
-						type = VIET_recipe
-						visuals = VIET_bean_soup
-						quality = 15
-						wealth = 15
-						modifier = artifact_VIET_bean_soup_recipe_modifier_1
-						#max_durability = 40
-						decaying = no
-						save_scope_as = VIET_recipe_artifact
-						history = {
-							type = created_before_history
+		VIET_find_random_barony_effect = yes
+		
+		create_character = {
+			template = VIET_local_chef_template
+			location = scope:barony.holder.location
+			save_scope_as = chef
+		}
+		hidden_effect = {
+			scope:chef = {
+				random_list = {
+					60 = {
+						create_artifact = {
+							name = VIET_recipe_bean_soup_name
+							description = VIET_recipe_bean_soup_desc
+							type = VIET_recipe
+							visuals = VIET_bean_soup
+							quality = 15
+							wealth = 15
+							modifier = artifact_VIET_bean_soup_recipe_modifier_1
+							#max_durability = 40
+							decaying = no
+							save_scope_as = VIET_recipe_artifact
+							history = {
+								type = created
+								actor = scope:chef
+								location = scope:chef.location
+							}
+						}
+						scope:VIET_recipe_artifact = {
+							set_variable = VIET_recipe_bean_soup_variable
 						}
 					}
-					scope:VIET_recipe_artifact = {
-						set_variable = VIET_recipe_bean_soup_variable
-					}
-				}
-			}
-			45 = {
-				hidden_effect_new_object = {
-					create_artifact = {
-						name = VIET_recipe_bean_soup_name
-						description = VIET_recipe_bean_soup_desc
-						type = VIET_recipe
-						visuals = VIET_bean_soup
-						quality = 30
-						wealth = 30
-						modifier = artifact_VIET_bean_soup_recipe_modifier_2
-						#max_durability = 40
-						decaying = no
-						save_scope_as = VIET_recipe_artifact
-						history = {
-							type = created_before_history
+					45 = {
+						create_artifact = {
+							name = VIET_recipe_bean_soup_name
+							description = VIET_recipe_bean_soup_desc
+							type = VIET_recipe
+							visuals = VIET_bean_soup
+							quality = 30
+							wealth = 30
+							modifier = artifact_VIET_bean_soup_recipe_modifier_2
+							#max_durability = 40
+							decaying = no
+							save_scope_as = VIET_recipe_artifact
+							history = {
+								type = created
+								actor = scope:chef
+								recipient = root
+								location = scope:chef.location
+							}
+						}
+						scope:VIET_recipe_artifact = {
+							set_variable = VIET_recipe_bean_soup_variable
 						}
 					}
-					scope:VIET_recipe_artifact = {
-						set_variable = VIET_recipe_bean_soup_variable
-					}
-				}
-			}
-			30 = {
-				hidden_effect_new_object = {
-					create_artifact = {
-						name = VIET_recipe_bean_soup_name
-						description = VIET_recipe_bean_soup_desc
-						type = VIET_recipe
-						visuals = VIET_bean_soup
-						quality = 65
-						wealth = 65
-						modifier = artifact_VIET_bean_soup_recipe_modifier_3
-						#max_durability = 40
-						decaying = no
-						save_scope_as = VIET_recipe_artifact
-						history = {
-							type = created_before_history
+					30 = {
+						create_artifact = {
+							name = VIET_recipe_bean_soup_name
+							description = VIET_recipe_bean_soup_desc
+							type = VIET_recipe
+							visuals = VIET_bean_soup
+							quality = 65
+							wealth = 65
+							modifier = artifact_VIET_bean_soup_recipe_modifier_3
+							#max_durability = 40
+							decaying = no
+							save_scope_as = VIET_recipe_artifact
+							history = {
+								type = created
+								actor = scope:chef
+								recipient = root
+								location = scope:chef.location
+							}
+						}
+						scope:VIET_recipe_artifact = {
+							set_variable = VIET_recipe_bean_soup_variable
 						}
 					}
-					scope:VIET_recipe_artifact = {
-						set_variable = VIET_recipe_bean_soup_variable
-					}
-				}
-			}
-			15 = {
-				hidden_effect_new_object = {
-					create_artifact = {
-						name = VIET_recipe_bean_soup_name
-						description = VIET_recipe_bean_soup_desc
-						type = VIET_recipe
-						visuals = VIET_bean_soup
-						quality = 95
-						wealth = 95
-						modifier = artifact_VIET_bean_soup_recipe_modifier_4
-						#max_durability = 40
-						decaying = no
-						save_scope_as = VIET_recipe_artifact
-						history = {
-							type = created_before_history
+					15 = {
+						create_artifact = {
+							name = VIET_recipe_bean_soup_name
+							description = VIET_recipe_bean_soup_desc
+							type = VIET_recipe
+							visuals = VIET_bean_soup
+							quality = 95
+							wealth = 95
+							modifier = artifact_VIET_bean_soup_recipe_modifier_4
+							#max_durability = 40
+							decaying = no
+							save_scope_as = VIET_recipe_artifact
+							history = {
+								type = created
+								actor = scope:chef
+								recipient = root
+								location = scope:chef.location
+							}
 						}
-					}
-					scope:VIET_recipe_artifact = {
-						set_variable = VIET_recipe_bean_soup_variable
+						scope:VIET_recipe_artifact = {
+							set_variable = VIET_recipe_bean_soup_variable
+						}
 					}
 				}
 			}
 		}
-
+		
 	}
-
+	
 	option = { # Pay
 		name = VIETmisc.5049.a
 		trigger = {
@@ -7403,11 +7781,9 @@ VIETmisc.5049 = {
 			}
 		}
 		remove_short_term_gold = 40
-		show_as_tooltip = {
-			scope:VIET_recipe_artifact = {
-				set_owner = {
-					target = root
-				}
+		scope:VIET_recipe_artifact = {
+			set_owner = {
+				target = root
 			}
 		}
 		stress_impact = {
@@ -7418,7 +7794,7 @@ VIETmisc.5049 = {
 			base = 50
 		}
 	}
-
+	
 	option = { # Negotiate
 		name = VIETmisc.5049.b
 		trigger = {
@@ -7430,11 +7806,9 @@ VIETmisc.5049 = {
 		}
 		skill = diplomacy
 		remove_short_term_gold = 25
-		show_as_tooltip = {
-			scope:VIET_recipe_artifact = {
-				set_owner = {
-					target = root
-				}
+		scope:VIET_recipe_artifact = {
+			set_owner = {
+				target = root
 			}
 		}
 		stress_impact = {
@@ -7445,7 +7819,7 @@ VIETmisc.5049 = {
 			base = 50
 		}
 	}
-
+	
 	option = { # Steal
 		name = VIETmisc.5049.c
 		VIET_massive_piety_loss_effect = yes
@@ -7464,11 +7838,9 @@ VIETmisc.5049 = {
 					type = event_toast_effect_good
 					left_icon = ROOT
 					title = VIETmisc.recipe_steal.toast.success.not_caught
-					show_as_tooltip = {
-						scope:VIET_recipe_artifact = {
-							set_owner = {
-								target = root
-							}
+					scope:VIET_recipe_artifact = {
+						set_owner = {
+							target = root
 						}
 					}
 				}
@@ -7487,11 +7859,9 @@ VIETmisc.5049 = {
 					type = event_toast_effect_good
 					left_icon = ROOT
 					title = VIETmisc.recipe_steal.toast.success.caught
-					show_as_tooltip = {
-						scope:VIET_recipe_artifact = {
-							set_owner = {
-								target = root
-							}
+					scope:VIET_recipe_artifact = {
+						set_owner = {
+							target = root
 						}
 					}
 					VIET_huge_prestige_loss_effect = yes
@@ -7560,7 +7930,7 @@ VIETmisc.5049 = {
 			}
 		}
 	}
-
+	
 	option = { # Ignore
 		name = VIETmisc.5049.d
 		hidden_effect = {
@@ -7601,7 +7971,7 @@ VIETmisc.5050 = {
 	desc = VIETmisc.5050.desc
 	theme = vassal
 	override_background = { reference = VIET_background_small_town }
-
+	
 	left_portrait = {
 		character = root
 		animation = happiness
@@ -7610,7 +7980,11 @@ VIETmisc.5050 = {
 		target = scope:VIET_clutter_artifact
 		position = lower_center_portrait
 	}
-
+	right_portrait = {
+		character = scope:weaver
+		animation = map_love
+	}
+	
 	weight_multiplier = {
 		base = 1
 		# Reduce spam
@@ -7653,37 +8027,53 @@ VIETmisc.5050 = {
 			has_trait = greedy
 		}
 	}
-
+	
 	immediate = {
-		hidden_effect_new_object = {
-			create_artifact = {
-				name = VIET_patchwork_quilt_name
-				description = VIET_patchwork_quilt_desc
-				type = VIET_clutter
-				visuals = VIET_patchwork_quilt
-				quality = 15
-				wealth = 15
-				modifier = artifact_VIET_patchwork_quilt_modifier
-				max_durability = 40
-				save_scope_as = VIET_clutter_artifact
-				history = {
-					type = created_before_history
+		VIET_find_random_barony_effect = yes
+		
+		create_character = {
+			template = local_artisan_template
+			location = scope:barony.holder.location
+			faith = scope:barony.faith
+			culture = scope:barony.culture
+			save_scope_as = weaver
+		}
+		hidden_effect = {
+			scope:weaver = {
+				set_variable = {
+					name = created_artifact_type
+					value = flag:weaver
 				}
-			}
-			scope:VIET_clutter_artifact = {
-				set_variable = VIET_patchwork_quilt_variable
+				create_artifact = {
+					name = VIET_patchwork_quilt_name
+					description = VIET_patchwork_quilt_desc
+					type = VIET_clutter
+					visuals = VIET_patchwork_quilt
+					quality = 15
+					wealth = 15
+					modifier = artifact_VIET_patchwork_quilt_modifier
+					max_durability = 40
+					save_scope_as = VIET_clutter_artifact
+					history = {
+						type = created
+						actor = scope:weaver
+						recipient = root
+						location = scope:weaver.location
+					}
+				}
+				scope:VIET_clutter_artifact = {
+					set_variable = VIET_patchwork_quilt_variable
+				}
 			}
 		}
 	}
-
+	
 	option = {
 		name = VIETmisc.5050.a
 		VIET_medium_prestige_loss_effect = yes
-		show_as_tooltip = {
-			scope:VIET_clutter_artifact = {
-				set_owner = {
-					target = root
-				}
+		scope:VIET_clutter_artifact = {
+			set_owner = {
+				target = root
 			}
 		}
 		stress_impact = {
@@ -7692,7 +8082,7 @@ VIETmisc.5050 = {
 		}
 		custom_tooltip = VIET_artifact_limit_warning
 	}
-
+	
 	option = {
 		name = VIETmisc.5050.b
 		random_list = {
@@ -7723,13 +8113,13 @@ VIETmisc.5051 = {
 	desc = VIETmisc.5051.desc
 	theme = friendly
 	override_background = { reference = garden }
-
+	
 	left_portrait = root
 	artifact = { # To display the artifact in the event-window
 		target = scope:VIET_clutter_artifact
 		position = lower_center_portrait
 	}
-
+	
 	weight_multiplier = {
 		base = 1
 		# Reduce spam
@@ -7772,7 +8162,7 @@ VIETmisc.5051 = {
 			has_trait = paranoid
 		}
 	}
-
+	
 	immediate = {
 		hidden_effect_new_object = {
 			create_artifact = {
@@ -7794,7 +8184,7 @@ VIETmisc.5051 = {
 			}
 		}
 	}
-
+	
 	option = {
 		name = VIETmisc.5051.a
 		trigger = {
@@ -7822,7 +8212,7 @@ VIETmisc.5051 = {
 			custom_tooltip = VIETmisc.5051.info
 		}
 	}
-
+	
 	option = {
 		name = VIETmisc.5051.b
 		hidden_effect = {
@@ -7855,8 +8245,8 @@ VIETmisc.5052 = {
 	title = VIETmisc.5052.t
 	desc = VIETmisc.5052.desc
 	theme = VIET_theme_skyrim_forest
-	override_background = { reference = fp1_beached_longships }
-
+	override_background = { reference = bp3_coast }
+	
 	left_portrait = {
 		character = root
 		animation = happiness
@@ -7865,7 +8255,7 @@ VIETmisc.5052 = {
 		target = scope:VIET_clutter_artifact
 		position = lower_center_portrait
 	}
-
+	
 	weight_multiplier = {
 		base = 1
 		# Reduce spam
@@ -7908,7 +8298,13 @@ VIETmisc.5052 = {
 			has_trait = greedy
 		}
 	}
-
+	
+	trigger = {
+		any_realm_county = {
+			is_coastal_county = yes
+		}
+	}
+	
 	immediate = {
 		hidden_effect_new_object = {
 			create_artifact = {
@@ -7930,7 +8326,7 @@ VIETmisc.5052 = {
 			}
 		}
 	}
-
+	
 	option = {
 		name = VIETmisc.5052.a
 		VIET_medium_prestige_loss_effect = yes
@@ -7946,7 +8342,7 @@ VIETmisc.5052 = {
 		}
 		custom_tooltip = VIET_artifact_limit_warning
 	}
-
+	
 	option = {
 		name = VIETmisc.5052.b
 		hidden_effect = {
@@ -7966,7 +8362,7 @@ VIETmisc.5053 = {
 	desc = VIETmisc.5053.desc
 	theme = realm
 	override_icon = { reference = "gfx/interface/icons/event_types/type_learning.dds" }
-
+	
 	left_portrait = {
 		character = root
 		animation = happiness
@@ -7975,7 +8371,11 @@ VIETmisc.5053 = {
 		target = scope:VIET_clutter_artifact
 		position = lower_center_portrait
 	}
-
+	right_portrait = {
+		character = scope:scholar
+		animation = chancellor
+	}
+	
 	weight_multiplier = {
 		base = 1
 		# Reduce spam
@@ -8018,37 +8418,48 @@ VIETmisc.5053 = {
 			has_trait = greedy
 		}
 	}
-
+	
 	immediate = {
-		hidden_effect_new_object = {
-			create_artifact = {
-				name = VIET_useless_map_name
-				description = VIET_useless_map_desc
-				type = VIET_clutter
-				visuals = VIET_useless_map
-				quality = 30
-				wealth = 30
-				modifier = artifact_VIET_useless_map_modifier
-				max_durability = 40
-				save_scope_as = VIET_clutter_artifact
-				history = {
-					type = created_before_history
+		VIET_find_scholar_effect = yes
+		
+		root = { add_visiting_courtier = scope:scholar }
+		
+		hidden_effect = {
+			scope:scholar = {
+				set_variable = {
+					name = created_artifact_type
+					value = flag:book
 				}
-			}
-			scope:VIET_clutter_artifact = {
-				set_variable = VIET_useless_map_variable
+				create_artifact = {
+					name = VIET_useless_map_name
+					description = VIET_useless_map_desc
+					type = VIET_clutter
+					visuals = VIET_useless_map
+					quality = 30
+					wealth = 30
+					modifier = artifact_VIET_useless_map_modifier
+					max_durability = 40
+					save_scope_as = VIET_clutter_artifact
+					history = {
+						type = created
+						actor = scope:scholar
+						recipient = root
+						location = scope:scholar.location
+					}
+				}
+				scope:VIET_clutter_artifact = {
+					set_variable = VIET_useless_map_variable
+				}
 			}
 		}
 	}
-
+	
 	option = {
 		name = VIETmisc.5053.a
 		VIET_huge_prestige_loss_effect = yes
-		show_as_tooltip = {
-			scope:VIET_clutter_artifact = {
-				set_owner = {
-					target = root
-				}
+		scope:VIET_clutter_artifact = {
+			set_owner = {
+				target = root
 			}
 		}
 		stress_impact = {
@@ -8058,7 +8469,7 @@ VIETmisc.5053 = {
 		}
 		custom_tooltip = VIET_artifact_limit_warning
 	}
-
+	
 	option = {
 		name = VIETmisc.5053.b
 		VIET_huge_prestige_gain_effect = yes
@@ -8081,7 +8492,7 @@ VIETmisc.5054 = {
 	title = VIETmisc.5054.t
 	desc = VIETmisc.5054.desc
 	theme = VIET_theme_small_town
-
+	
 	left_portrait = {
 		character = root
 		animation = happiness
@@ -8090,7 +8501,11 @@ VIETmisc.5054 = {
 		target = scope:VIET_clutter_artifact
 		position = lower_center_portrait
 	}
-
+	right_portrait = {
+		character = root
+		animation = personality_dishonorable
+	}
+	
 	weight_multiplier = {
 		base = 1
 		# Reduce spam
@@ -8133,29 +8548,33 @@ VIETmisc.5054 = {
 			has_trait = greedy
 		}
 	}
-
+	
 	immediate = {
-		hidden_effect_new_object = {
-			create_artifact = {
-				name = VIET_house_vase_name
-				description = VIET_house_vase_desc
-				type = VIET_clutter
-				visuals = VIET_house_vase
-				quality = 15
-				wealth = 15
-				modifier = artifact_VIET_house_vase_modifier
-				max_durability = 40
-				save_scope_as = VIET_clutter_artifact
-				history = {
-					type = created_before_history
+		VIET_find_merchant_effect = yes
+		
+		hidden_effect = {
+			scope:merchant = {
+				create_artifact = {
+					name = VIET_house_vase_name
+					description = VIET_house_vase_desc
+					type = VIET_clutter
+					visuals = VIET_house_vase
+					quality = 15
+					wealth = 15
+					modifier = artifact_VIET_house_vase_modifier
+					max_durability = 40
+					save_scope_as = VIET_clutter_artifact
+					history = {
+						type = created_before_history
+					}
 				}
-			}
-			scope:VIET_clutter_artifact = {
-				set_variable = VIET_house_vase_variable
+				scope:VIET_clutter_artifact = {
+					set_variable = VIET_house_vase_variable
+				}
 			}
 		}
 	}
-
+	
 	option = {
 		name = VIETmisc.5054.a
 		trigger = {
@@ -8165,11 +8584,9 @@ VIETmisc.5054 = {
 			}
 		}
 		remove_short_term_gold = 20
-		show_as_tooltip = {
-			scope:VIET_clutter_artifact = {
-				set_owner = {
-					target = root
-				}
+		scope:VIET_clutter_artifact = {
+			set_owner = {
+				target = root
 			}
 		}
 		stress_impact = {
@@ -8177,7 +8594,7 @@ VIETmisc.5054 = {
 		}
 		custom_tooltip = VIET_artifact_limit_warning
 	}
-
+	
 	option = {
 		name = VIETmisc.5054.b
 		hidden_effect = {
@@ -8204,7 +8621,7 @@ VIETmisc.5055 = {
 	title = VIETmisc.5055.t
 	desc = VIETmisc.5055.desc
 	theme = learning_scholarship_focus
-
+	
 	right_portrait = {
 		character = root
 		animation = reading
@@ -8213,12 +8630,16 @@ VIETmisc.5055 = {
 		target = scope:VIET_clutter_artifact
 		position = lower_center_portrait
 	}
-
+	left_portrait = {
+		character = scope:astronomer
+		animation = personality_compassionate
+	}
+	
 	trigger = {
 		# Should be a literate culture
-		NOT = { government_has_flag = government_is_tribal }
+		VIET_is_not_a_literate_society = yes
 	}
-
+	
 	weight_multiplier = {
 		base = 1
 		# Reduce spam
@@ -8261,41 +8682,43 @@ VIETmisc.5055 = {
 			has_trait = arrogant
 		}
 	}
-
+	
 	immediate = {
-		hidden_effect_new_object = {
-			create_artifact = {
-				name = VIET_astrolabe_name
-				description = VIET_astrolabe_desc
-				type = VIET_clutter
-				visuals = VIET_astrolabe
-				quality = 30
-				wealth = 30
-				modifier = artifact_VIET_astrolabe_modifier
-				max_durability = 40
-				save_scope_as = VIET_clutter_artifact
-				history = {
-					type = created_before_history
+		VIET_find_astronomer_effect = yes
+		
+		hidden_effect = {
+			scope:astronomer = {
+				create_artifact = {
+					name = VIET_astrolabe_name
+					description = VIET_astrolabe_desc
+					type = VIET_clutter
+					visuals = VIET_astrolabe
+					quality = 30
+					wealth = 30
+					modifier = artifact_VIET_astrolabe_modifier
+					max_durability = 40
+					save_scope_as = VIET_clutter_artifact
+					history = {
+						type = created_before_history
+					}
 				}
-			}
-			scope:VIET_clutter_artifact = {
-				set_variable = VIET_astrolabe_variable
+				scope:VIET_clutter_artifact = {
+					set_variable = VIET_astrolabe_variable
+				}
 			}
 		}
 	}
-
+	
 	option = {
 		name = VIETmisc.5055.a
-		show_as_tooltip = {
-			scope:VIET_clutter_artifact = {
-				set_owner = {
-					target = root
-				}
+		scope:VIET_clutter_artifact = {
+			set_owner = {
+				target = root
 			}
 		}
 		custom_tooltip = VIET_artifact_limit_warning
 	}
-
+	
 	option = {
 		name = VIETmisc.5055.b
 		add_gold = { 25 100 }
@@ -8321,24 +8744,24 @@ VIETmisc.5056 = {
 	title = VIETmisc.5056.t
 	desc = VIETmisc.5056.desc
 	theme = intrigue_skulduggery_focus
-	override_background = { reference = VIET_background_small_town }
-
+	override_background = { reference = physicians_study }
+	
 	left_portrait = scope:physician
 	right_portrait = {
-		character = root
-		animation = thinking
+		character = scope:apothecary
+		animation = physician
 	}
 	artifact = { # To display the artifact in the event-window
 		target = scope:VIET_clutter_artifact
 		position = lower_center_portrait
 	}
-
+	
 	trigger = {
 		# Should be a settled culture
-		NOT = { government_has_flag = government_is_tribal }
+		VIET_is_not_a_literate_society = yes
 		court_physician_available_trigger = yes
 	}
-
+	
 	weight_multiplier = {
 		base = 1
 		# Reduce spam
@@ -8381,11 +8804,14 @@ VIETmisc.5056 = {
 			has_trait = arrogant
 		}
 	}
-
-
+	
+	
 	immediate = {
 		save_court_physician_as_effect = { SCOPE_NAME = physician }
-		hidden_effect_new_object = {
+		VIET_find_apothecary_effect = yes
+		
+		hidden_effect = {
+			scope:apothecary = {
 			create_artifact = {
 				name = VIET_tongue_stone_name
 				description = VIET_tongue_stone_desc
@@ -8404,8 +8830,9 @@ VIETmisc.5056 = {
 				set_variable = VIET_tongue_stone_variable
 			}
 		}
+		}
 	}
-
+	
 	option = {
 		name = VIETmisc.5056.a
 		trigger = {
@@ -8415,28 +8842,26 @@ VIETmisc.5056 = {
 			}
 		}
 		remove_short_term_gold = 40
-		show_as_tooltip = {
 			scope:VIET_clutter_artifact = {
 				set_owner = {
 					target = root
 				}
 			}
-		}
 		custom_tooltip = VIET_artifact_limit_warning
 	}
-
+	
 	option = {
 		name = VIETmisc.5056.b
-		hidden_effect = {
-			destroy_artifact = scope:VIET_clutter_artifact
-		}
+		#hidden_effect = {
+		#	destroy_artifact = scope:VIET_clutter_artifact
+		#}
 		stress_impact = {
 			paranoid = minor_stress_impact_gain
 			diligent = miniscule_stress_impact_gain
 			ambitious = miniscule_stress_impact_gain
 		}
 	}
-
+	
 	after = {
 		if = {
 			limit = {
@@ -8445,7 +8870,7 @@ VIETmisc.5056 = {
 			custom_tooltip = VIETmisc.5056.info
 		}
 	}
-
+	
 }
 
 ##################################################################
@@ -8458,8 +8883,8 @@ VIETmisc.5057 = {
 	title = VIETmisc.5057.t
 	desc = VIETmisc.5057.desc
 	theme = realm
-	override_background = { reference = VIET_background_small_town }
-
+	override_background = { reference = armory }
+	
 	right_portrait = {
 		character = root
 		animation = thinking
@@ -8468,7 +8893,11 @@ VIETmisc.5057 = {
 		target = scope:VIET_clutter_artifact
 		position = lower_center_portrait
 	}
-
+	left_portrait = {
+		character = scope:smith
+		animation = spymaster
+	}
+	
 	weight_multiplier = {
 		base = 1
 		# Reduce spam
@@ -8511,30 +8940,47 @@ VIETmisc.5057 = {
 			has_trait = arrogant
 		}
 	}
-
-
+	
+	
 	immediate = {
-		hidden_effect_new_object = {
-			create_artifact = {
-				name = VIET_fire_striker_name
-				description = VIET_fire_striker_desc
-				type = VIET_clutter
-				visuals = VIET_fire_striker
-				quality = 15
-				wealth = 15
-				modifier = artifact_VIET_fire_striker_modifier
-				max_durability = 40
-				save_scope_as = VIET_clutter_artifact
-				history = {
-					type = created_before_history
+		create_character = {
+			template = local_artisan_template
+			location = root.capital_province
+			gender_female_chance = root_faith_dominant_gender_adjusted_female_chance
+			faith = root.capital_province.faith
+			culture = root.capital_province.culture
+			save_scope_as = smith
+		}
+		hidden_effect = {
+			scope:smith = {
+				set_variable = {
+					name = created_artifact_type
+					value = flag:smith
 				}
-			}
-			scope:VIET_clutter_artifact = {
-				set_variable = VIET_fire_striker_variable
+				create_artifact = {
+					name = VIET_fire_striker_name
+					description = VIET_fire_striker_desc
+					type = VIET_clutter
+					visuals = VIET_fire_striker
+					quality = 15
+					wealth = 15
+					modifier = artifact_VIET_fire_striker_modifier
+					max_durability = 40
+					save_scope_as = VIET_clutter_artifact
+					history = {
+						type = created
+						actor = scope:smith
+						recipient = root
+						location = scope:smith.location
+					}
+				}
+				scope:VIET_clutter_artifact = {
+					set_variable = VIET_fire_striker_variable
+				}
 			}
 		}
 	}
-
+	
 	option = {
 		name = VIETmisc.5057.a
 		trigger = {
@@ -8544,16 +8990,14 @@ VIETmisc.5057 = {
 			}
 		}
 		remove_short_term_gold = 15
-		show_as_tooltip = {
-			scope:VIET_clutter_artifact = {
-				set_owner = {
-					target = root
-				}
+		scope:VIET_clutter_artifact = {
+			set_owner = {
+				target = root
 			}
 		}
 		custom_tooltip = VIET_artifact_limit_warning
 	}
-
+	
 	option = {
 		name = VIETmisc.5057.b
 		hidden_effect = {
@@ -8578,7 +9022,7 @@ VIETmisc.5058 = {
 	desc = VIETmisc.5058.desc
 	theme = feast_activity
 	override_background = { reference = bp1_kitchen_western }
-
+	
 	left_portrait = {
 		character = root
 		animation = admiration
@@ -8591,11 +9035,11 @@ VIETmisc.5058 = {
 		target = scope:VIET_recipe_artifact
 		position = lower_center_portrait
 	}
-
+	
 	trigger = {
 		NOT = { has_game_rule = VIET_conversion_universe_events }
 	}
-
+	
 	weight_multiplier = {
 		base = 1
 		# Reduce spam
@@ -8630,116 +9074,118 @@ VIETmisc.5058 = {
 			has_trait = callous
 		}
 	}
-
+	
 	immediate = {
-		capital_county = { save_scope_as = county }
-		scope:county.culture = {
-			save_scope_as = culture
-		}
-		scope:county.faith = {
-			save_scope_as = faith
-		}
+		VIET_find_random_barony_effect = yes
+		
 		create_character = {
-			location = root.location
-			template = VIET_generic_middle_aged_local_template
-			culture = scope:county.culture
-			faith = scope:county.faith
+			location = scope:barony.holder.location
+			template = VIET_local_chef_template
+			faith = scope:barony.faith
+			culture = scope:barony.culture
 			save_scope_as = cook
 		}
 		play_music_cue = mx_cue_touching_moment
-		random_list = {
-			60 = {
-				hidden_effect_new_object = {
-					create_artifact = {
-						name = VIET_recipe_dumpling_name
-						description = VIET_recipe_dumpling_desc
-						type = VIET_recipe
-						visuals = VIET_recipe_dumplings
-						quality = 15
-						wealth = 15
-						modifier = artifact_VIET_dumpling_recipe_modifier_1
-						#max_durability = 40
-						decaying = no
-						save_scope_as = VIET_recipe_artifact
-						history = {
-							type = created_before_history
+		hidden_effect = {
+			scope:cook = {
+				random_list = {
+					60 = {
+						create_artifact = {
+							name = VIET_recipe_dumpling_name
+							description = VIET_recipe_dumpling_desc
+							type = VIET_recipe
+							visuals = VIET_recipe_dumplings
+							quality = 15
+							wealth = 15
+							modifier = artifact_VIET_dumpling_recipe_modifier_1
+							#max_durability = 40
+							decaying = no
+							save_scope_as = VIET_recipe_artifact
+							history = {
+								type = created
+								actor = scope:cook
+								recipient = root
+								location = scope:cook.location
+							}
+						}
+						scope:VIET_recipe_artifact = {
+							set_variable = VIET_recipe_dumpling_variable
 						}
 					}
-					scope:VIET_recipe_artifact = {
-						set_variable = VIET_recipe_dumpling_variable
-					}
-				}
-			}
-			45 = {
-				hidden_effect_new_object = {
-					create_artifact = {
-						name = VIET_recipe_dumpling_name
-						description = VIET_recipe_dumpling_desc
-						type = VIET_recipe
-						visuals = VIET_recipe_dumplings
-						quality = 30
-						wealth = 30
-						modifier = artifact_VIET_dumpling_recipe_modifier_2
-						#max_durability = 40
-						decaying = no
-						save_scope_as = VIET_recipe_artifact
-						history = {
-							type = created_before_history
+					45 = {
+						create_artifact = {
+							name = VIET_recipe_dumpling_name
+							description = VIET_recipe_dumpling_desc
+							type = VIET_recipe
+							visuals = VIET_recipe_dumplings
+							quality = 30
+							wealth = 30
+							modifier = artifact_VIET_dumpling_recipe_modifier_2
+							#max_durability = 40
+							decaying = no
+							save_scope_as = VIET_recipe_artifact
+							history = {
+								type = created
+								actor = scope:cook
+								recipient = root
+								location = scope:cook.location
+							}
+						}
+						scope:VIET_recipe_artifact = {
+							set_variable = VIET_recipe_dumpling_variable
 						}
 					}
-					scope:VIET_recipe_artifact = {
-						set_variable = VIET_recipe_dumpling_variable
-					}
-				}
-			}
-			30 = {
-				hidden_effect_new_object = {
-					create_artifact = {
-						name = VIET_recipe_dumpling_name
-						description = VIET_recipe_dumpling_desc
-						type = VIET_recipe
-						visuals = VIET_recipe_dumplings
-						quality = 65
-						wealth = 65
-						modifier = artifact_VIET_dumpling_recipe_modifier_3
-						#max_durability = 40
-						decaying = no
-						save_scope_as = VIET_recipe_artifact
-						history = {
-							type = created_before_history
+					30 = {
+						create_artifact = {
+							name = VIET_recipe_dumpling_name
+							description = VIET_recipe_dumpling_desc
+							type = VIET_recipe
+							visuals = VIET_recipe_dumplings
+							quality = 65
+							wealth = 65
+							modifier = artifact_VIET_dumpling_recipe_modifier_3
+							#max_durability = 40
+							decaying = no
+							save_scope_as = VIET_recipe_artifact
+							history = {
+								type = created
+								actor = scope:cook
+								recipient = root
+								location = scope:cook.location
+							}
+						}
+						scope:VIET_recipe_artifact = {
+							set_variable = VIET_recipe_dumpling_variable
 						}
 					}
-					scope:VIET_recipe_artifact = {
-						set_variable = VIET_recipe_dumpling_variable
-					}
-				}
-			}
-			15 = {
-				hidden_effect_new_object = {
-					create_artifact = {
-						name = VIET_recipe_dumpling_name
-						description = VIET_recipe_dumpling_desc
-						type = VIET_recipe
-						visuals = VIET_recipe_dumplings
-						quality = 95
-						wealth = 95
-						modifier = artifact_VIET_dumpling_recipe_modifier_4
-						#max_durability = 40
-						decaying = no
-						save_scope_as = VIET_recipe_artifact
-						history = {
-							type = created_before_history
+					15 = {
+						create_artifact = {
+							name = VIET_recipe_dumpling_name
+							description = VIET_recipe_dumpling_desc
+							type = VIET_recipe
+							visuals = VIET_recipe_dumplings
+							quality = 95
+							wealth = 95
+							modifier = artifact_VIET_dumpling_recipe_modifier_4
+							#max_durability = 40
+							decaying = no
+							save_scope_as = VIET_recipe_artifact
+							history = {
+								type = created
+								actor = scope:cook
+								recipient = root
+								location = scope:cook.location
+							}
 						}
-					}
-					scope:VIET_recipe_artifact = {
-						set_variable = VIET_recipe_dumpling_variable
+						scope:VIET_recipe_artifact = {
+							set_variable = VIET_recipe_dumpling_variable
+						}
 					}
 				}
 			}
 		}
-
 	}
-
+	
 	option = { # Pay
 		name = VIETmisc.5042.a
 		trigger = {
@@ -8749,11 +9195,9 @@ VIETmisc.5058 = {
 			}
 		}
 		remove_short_term_gold = 40
-		show_as_tooltip = {
-			scope:VIET_recipe_artifact = {
-				set_owner = {
-					target = root
-				}
+		scope:VIET_recipe_artifact = {
+			set_owner = {
+				target = root
 			}
 		}
 		stress_impact = {
@@ -8764,7 +9208,7 @@ VIETmisc.5058 = {
 			base = 50
 		}
 	}
-
+	
 	option = { # Negotiate
 		name = VIETmisc.5042.b
 		trigger = {
@@ -8776,11 +9220,9 @@ VIETmisc.5058 = {
 		}
 		skill = diplomacy
 		remove_short_term_gold = 25
-		show_as_tooltip = {
-			scope:VIET_recipe_artifact = {
-				set_owner = {
-					target = root
-				}
+		scope:VIET_recipe_artifact = {
+			set_owner = {
+				target = root
 			}
 		}
 		stress_impact = {
@@ -8791,7 +9233,7 @@ VIETmisc.5058 = {
 			base = 50
 		}
 	}
-
+	
 	option = { # Steal
 		name = VIETmisc.5042.c
 		VIET_massive_piety_loss_effect = yes
@@ -8810,11 +9252,9 @@ VIETmisc.5058 = {
 					type = event_toast_effect_good
 					left_icon = ROOT
 					title = VIETmisc.recipe_steal.toast.success.not_caught
-					show_as_tooltip = {
-						scope:VIET_recipe_artifact = {
-							set_owner = {
-								target = root
-							}
+					scope:VIET_recipe_artifact = {
+						set_owner = {
+							target = root
 						}
 					}
 				}
@@ -8833,11 +9273,9 @@ VIETmisc.5058 = {
 					type = event_toast_effect_good
 					left_icon = ROOT
 					title = VIETmisc.recipe_steal.toast.success.caught
-					show_as_tooltip = {
-						scope:VIET_recipe_artifact = {
-							set_owner = {
-								target = root
-							}
+					scope:VIET_recipe_artifact = {
+						set_owner = {
+							target = root
 						}
 					}
 					VIET_huge_prestige_loss_effect = yes
@@ -8906,7 +9344,7 @@ VIETmisc.5058 = {
 			}
 		}
 	}
-
+	
 	option = { # Ignore
 		name = VIETmisc.5042.d
 		hidden_effect = {
@@ -8931,18 +9369,18 @@ VIETmisc.5058 = {
 			}
 		}
 	}
-
-	after = {
-		hidden_effect = {
-			scope:cook = {
-				death = {
-					death_reason = death_disappearance
-				}
-			}
-		}
-	}
-
-
+	
+	#after = {
+	#	hidden_effect = {
+	#		scope:cook = {
+	#			death = {
+	#				death_reason = death_disappearance
+	#			}
+	#		}
+	#	}
+	#}
+	
+	
 }
 
 
@@ -8957,7 +9395,7 @@ VIETmisc.5059 = {
 	desc = VIETmisc.5059.desc
 	theme = realm
 	override_background = { reference = VIET_background_small_town }
-
+	
 	right_portrait = {
 		character = root
 		animation = admiration
@@ -8966,7 +9404,11 @@ VIETmisc.5059 = {
 		target = scope:VIET_clutter_artifact
 		position = lower_center_portrait
 	}
-
+	left_portrait = {
+		character = scope:merchant
+		animation = personality_greedy
+	}
+	
 	weight_multiplier = {
 		base = 1
 		# Reduce spam
@@ -9022,30 +9464,34 @@ VIETmisc.5059 = {
 			NOT = { government_has_flag = government_is_tribal }
 		}
 	}
-
-
+	
+	
 	immediate = {
-		hidden_effect_new_object = {
-			create_artifact = {
-				name = VIET_coconut_cup_name
-				description = VIET_coconut_cup_desc
-				type = VIET_clutter
-				visuals = VIET_coconut_cup
-				quality = 30
-				wealth = 30
-				modifier = artifact_VIET_coconut_cup_modifier
-				max_durability = 40
-				save_scope_as = VIET_clutter_artifact
-				history = {
-					type = created_before_history
+		VIET_find_merchant_effect = yes
+		
+		hidden_effect = {
+			scope:merchant = {
+				create_artifact = {
+					name = VIET_coconut_cup_name
+					description = VIET_coconut_cup_desc
+					type = VIET_clutter
+					visuals = VIET_coconut_cup
+					quality = 30
+					wealth = 30
+					modifier = artifact_VIET_coconut_cup_modifier
+					max_durability = 40
+					save_scope_as = VIET_clutter_artifact
+					history = {
+						type = created_before_history
+					}
 				}
-			}
-			scope:VIET_clutter_artifact = {
-				set_variable = VIET_coconut_cup_variable
+				scope:VIET_clutter_artifact = {
+					set_variable = VIET_coconut_cup_variable
+				}
 			}
 		}
 	}
-
+	
 	option = {
 		name = VIETmisc.5059.a
 		trigger = {
@@ -9055,16 +9501,14 @@ VIETmisc.5059 = {
 			}
 		}
 		remove_short_term_gold = 50
-		show_as_tooltip = {
-			scope:VIET_clutter_artifact = {
-				set_owner = {
-					target = root
-				}
+		scope:VIET_clutter_artifact = {
+			set_owner = {
+				target = root
 			}
 		}
 		custom_tooltip = VIET_artifact_limit_warning
 	}
-
+	
 	option = {
 		name = VIETmisc.5059.b
 		hidden_effect = {
@@ -9075,7 +9519,7 @@ VIETmisc.5059 = {
 			ambitious = miniscule_stress_impact_gain
 		}
 	}
-
+	
 	after = {
 		if = {
 			limit = {
@@ -9084,7 +9528,7 @@ VIETmisc.5059 = {
 			custom_tooltip = VIETmisc.5059.info
 		}
 	}
-
+	
 }
 
 ##################################################################
@@ -9097,13 +9541,13 @@ VIETmisc.5060 = {
 	title = VIETmisc.5060.t
 	desc = VIETmisc.5060.desc
 	theme = travel
-	override_background = { reference = VIET_background_small_town }
-
+	override_background = { reference = market }
+	
 	left_portrait = {
 		character = scope:todd_howard
 		animation = personality_content
 	}
-
+	
 	right_portrait = {
 		character = root
 		animation = thinking
@@ -9112,11 +9556,11 @@ VIETmisc.5060 = {
 		target = scope:VIET_clutter_artifact
 		position = lower_center_portrait
 	}
-
+	
 	trigger = {
 		has_game_rule = VIET_all_events
 	}
-
+	
 	weight_multiplier = {
 		base = 1
 		# Reduce spam
@@ -9159,8 +9603,8 @@ VIETmisc.5060 = {
 			has_trait = impatient
 		}
 	}
-
-
+	
+	
 	immediate = {
 		create_character = {
 			location = root.location
@@ -9172,29 +9616,27 @@ VIETmisc.5060 = {
 				add_character_modifier = {
 					modifier = VIET_todd_howard_merchant
 				}
-			}
-		}
-		hidden_effect_new_object = {
-			create_artifact = {
-				name = VIET_horse_armor_name
-				description = VIET_horse_armor_desc
-				type = VIET_clutter
-				visuals = VIET_horse_armor
-				quality = 30
-				wealth = 30
-				modifier = artifact_VIET_horse_armor_modifier
-				max_durability = 40
-				save_scope_as = VIET_clutter_artifact
-				history = {
-					type = created_before_history
+				create_artifact = {
+					name = VIET_horse_armor_name
+					description = VIET_horse_armor_desc
+					type = VIET_clutter
+					visuals = VIET_horse_armor
+					quality = 30
+					wealth = 30
+					modifier = artifact_VIET_horse_armor_modifier
+					max_durability = 40
+					save_scope_as = VIET_clutter_artifact
+					history = {
+						type = created_before_history
+					}
 				}
-			}
-			scope:VIET_clutter_artifact = {
-				set_variable = VIET_horse_armor_variable
+				scope:VIET_clutter_artifact = {
+					set_variable = VIET_horse_armor_variable
+				}
 			}
 		}
 	}
-
+	
 	# Buy the horse armor
 	option = {
 		name = VIETmisc.5060.a
@@ -9205,11 +9647,9 @@ VIETmisc.5060 = {
 			}
 		}
 		remove_short_term_gold = 50
-		show_as_tooltip = {
-			scope:VIET_clutter_artifact = {
-				set_owner = {
-					target = root
-				}
+		scope:VIET_clutter_artifact = {
+			set_owner = {
+				target = root
 			}
 		}
 		stress_impact = {
@@ -9224,7 +9664,7 @@ VIETmisc.5060 = {
 			}
 		}
 	}
-
+	
 	# Ask Todd Howard to join your court
 	option = {
 		name = VIETmisc.5060.b
@@ -9293,7 +9733,7 @@ VIETmisc.5060 = {
 			}
 		}
 	}
-
+	
 	# Don't buy the horse armor
 	option = {
 		name = VIETmisc.5060.c
@@ -9306,5 +9746,5 @@ VIETmisc.5060 = {
 			}
 		}
 	}
-
+	
 }
