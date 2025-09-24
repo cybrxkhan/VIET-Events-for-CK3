@@ -48,7 +48,7 @@ VIETmisc.5000 = {
 	title = VIETmisc.5000.t
 	desc = VIETmisc.5000.desc
 	theme = stewardship
-	override_background = { reference = council_chamber }
+	override_background = { reference = relaxing_room_location }
 	
 	right_portrait = {
 		character = root
@@ -1740,7 +1740,7 @@ VIETmisc.5013 = {
 	title = VIETmisc.5013.t
 	desc = VIETmisc.5013.desc
 	theme = realm
-	override_background = { reference = market }
+	override_background = { reference = alley_day }
 	
 	right_portrait = {
 		character = root
@@ -5075,6 +5075,7 @@ VIETmisc.5040 = {
 	title = VIETmisc.5040.t
 	desc = VIETmisc.5040.desc
 	theme = learning_scholarship_focus
+	override_background = { reference = location_study }
 	
 	right_portrait = root
 	artifact = { # To display the artifact in the event-window
@@ -6957,7 +6958,7 @@ VIETmisc.5047 = {
 	}
 	
 	trigger = {
-		VIET_has_minor_nobles = yes
+		is_landed_or_landless_administrative = yes
 	}
 	
 	immediate = {
@@ -8300,9 +8301,7 @@ VIETmisc.5052 = {
 	}
 	
 	trigger = {
-		any_realm_county = {
-			is_coastal_county = yes
-		}
+		VIET_has_coast_trigger = yes
 	}
 	
 	immediate = {

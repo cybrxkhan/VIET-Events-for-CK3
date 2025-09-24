@@ -28,7 +28,7 @@
 # VIET_find_astronomer_effect - returns scope:astronomer
 # VIET_find_priest_effect - returns scope:priest
 # VIET_find_physician_effect - returns scope:physician
-# VIET_find_apothecary_effect - returns scope:physician, always female
+# VIET_find_apothecary_effect - returns scope:apothecary, always female
 
 # FOLK
 # VIET_find_traveler_effect - returns scope:traveler, adds traveler xp
@@ -517,8 +517,9 @@ VIET_find_priest_effect = {
 			province = scope:pool_province
 			limit = {
 				is_available_ai_adult = yes
-				has_character_flag = need_priest_outfit
 				faith = root.faith
+				has_character_flag = need_priest_outfit
+				NOT = { has_trait = excommunicated }
 			}
 			add_to_temporary_list = potential_priests
 		}
@@ -532,6 +533,7 @@ VIET_find_priest_effect = {
 			modifier = {
 				add = {
 					value = learning
+					value = age
 				}
 			}
 		}

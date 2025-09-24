@@ -234,6 +234,17 @@ VIET_is_not_a_literate_society = {
 	}
 }
 
+VIET_has_coast_trigger = {
+	OR = {
+		any_realm_county = {
+			is_coastal_county = yes
+		}
+		capital_province = {
+			is_coastal = yes
+		}
+	}
+}
+
 VIET_is_menial_servant = {
 	is_available_ai_adult = yes
 	is_lowborn = yes
