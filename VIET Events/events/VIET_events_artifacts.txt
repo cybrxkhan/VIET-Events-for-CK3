@@ -144,8 +144,20 @@ VIETmisc.5000 = {
 				gold >= 20
 			}
 		}
-		remove_short_term_gold = 20
-		scope:VIET_clutter_artifact = { set_owner = root }
+		pay_short_term_gold = {
+			target = scope:merchant
+			gold = 20
+		}
+		scope:VIET_clutter_artifact = {
+			set_owner = {
+				target = root
+				history = {
+					type = purchased
+					actor = scope:merchant
+					recipient = root
+				}
+			}
+		}
 		stress_impact = {
 			arrogant = miniscule_stress_impact_gain
 			lazy = miniscule_stress_impact_gain
@@ -250,7 +262,10 @@ VIETmisc.5001 = {
 					max_durability = 40
 					save_scope_as = VIET_clutter_artifact
 					history = {
-						type = created_before_history
+						type = discovered
+						actor = scope:servant
+						recipient = root
+						location = root.location
 					}
 				}
 				scope:VIET_clutter_artifact = {
@@ -272,11 +287,28 @@ VIETmisc.5001 = {
 	
 	option = {
 		name = VIETmisc.5001.b
-		hidden_effect = {
+		#hidden_effect = {
 			destroy_artifact = scope:VIET_clutter_artifact
-		}
+		#}
 		stress_impact = {
 			arbitrary = miniscule_stress_impact_gain
+		}
+	}
+	
+	option = { # You keep it
+		name = VIETmisc.5001.c
+		VIET_large_prestige_loss_effect = yes
+		show_as_tooltip = {
+			scope:VIET_clutter_artifact = {
+				set_owner = {
+					target = scope:servant
+				}
+			}
+		}
+		stress_impact = {
+			greedy = miniscule_stress_impact_gain
+			humble = miniscule_stress_impact_gain
+			eccentric = miniscule_stress_impact_loss
 		}
 	}
 }
@@ -349,8 +381,6 @@ VIETmisc.5002 = {
 	immediate = {
 		VIET_find_traveling_scholar_effect = yes
 		
-		root = { add_visiting_courtier = scope:scholar }
-		
 		hidden_effect = {
 			scope:scholar = {
 				create_artifact = {
@@ -382,8 +412,20 @@ VIETmisc.5002 = {
 				gold >= 25
 			}
 		}
-		remove_short_term_gold = 25
-		scope:VIET_clutter_artifact = { set_owner = { target = root } }
+		pay_short_term_gold = {
+			target = scope:scholar
+			gold = 25
+		}
+		scope:VIET_clutter_artifact = {
+			set_owner = {
+				target = root
+				history = {
+					type = purchased
+					actor = scope:scholar
+					recipient = root
+				}
+			}
+		}
 		if = {
 			limit = {
 				has_game_rule = VIET_historical_context_on
@@ -508,8 +550,20 @@ VIETmisc.5003 = {
 				gold >= 20
 			}
 		}
-		remove_short_term_gold = 20
-		scope:VIET_clutter_artifact = { set_owner = { target = root } }
+		pay_short_term_gold = {
+			target = scope:merchant
+			gold = 20
+		}
+		scope:VIET_clutter_artifact = {
+			set_owner = {
+				target = root
+				history = {
+					type = purchased
+					actor = scope:merchant
+					recipient = root
+				}
+			}
+		}
 		custom_tooltip = VIET_artifact_limit_warning
 		if = {
 			limit = {
@@ -541,7 +595,18 @@ VIETmisc.5003 = {
 VIETmisc.5004 = {
 	type = character_event
 	title = VIETmisc.5004.t
-	desc = VIETmisc.5004.desc
+	desc = {
+		first_valid = {
+			triggered_desc = {
+				trigger = {
+					faith_is_aniconic_trigger = yes
+				}
+				desc = VIETmisc.5004.aniconic.desc
+			}
+			desc = VIETmisc.5004.desc
+		}
+	}
+				
 	theme = friendly
 	override_background = { reference = council_chamber }
 	
@@ -605,17 +670,19 @@ VIETmisc.5004 = {
 	}
 	
 	immediate = {
+		save_scope_as = likeness
 		random_courtier = {
 			limit = {
 				is_available_ai_adult = yes
 			}
 			save_scope_as = nutgifter
+			save_scope_as = owner # For decorations
 		}
 		hidden_effect = {
 			scope:nutgifter = {
 				create_artifact = {
 					name = VIET_nutcracker_name
-					description = VIET_nutcracker_desc
+					description = placeholder
 					type = VIET_clutter
 					visuals = VIET_nutcracker
 					quality = 15
@@ -630,6 +697,15 @@ VIETmisc.5004 = {
 			}
 			scope:VIET_clutter_artifact = {
 				set_variable = VIET_nutcracker_variable
+				VIET_set_artifact_wealth_med_effect = yes
+				set_artifact_feature_group = generic_material_wood
+				if = {
+					limit = { root = { faith_is_aniconic_trigger = yes } }
+					set_artifact_description = VIET_nutcracker_aniconic_desc
+				}
+				else = {
+					set_artifact_description = VIET_nutcracker_desc
+				}
 			}
 		}
 	}
@@ -784,8 +860,20 @@ VIETmisc.5005 = {
 				gold >= 40
 			}
 		}
-		remove_short_term_gold = 40
-		scope:VIET_clutter_artifact = { set_owner = { target = root } }
+		pay_short_term_gold = {
+			target = scope:astronomer
+			gold = 40
+		}
+		scope:VIET_clutter_artifact = {
+			set_owner = {
+				target = root
+				history = {
+					type = purchased
+					actor = scope:astronomer
+					recipient = root
+				}
+			}
+		}
 		stress_impact = {
 			greedy = miniscule_stress_impact_gain
 			callous = miniscule_stress_impact_gain
@@ -870,20 +958,29 @@ VIETmisc.5006 = {
 	}
 	
 	immediate = {
-		create_character = {
-			template = local_artisan_template
-			location = root.capital_province
-			gender_female_chance = root_faith_dominant_gender_adjusted_female_chance
-			faith = root.capital_province.faith
-			culture = root.capital_province.culture
-			save_scope_as = smith
-		}
-		hidden_effect = {
+		if = {
+			limit = { is_ai = no }
+			create_character = {
+				template = local_artisan_template
+				location = root.capital_province
+				gender_female_chance = root_faith_dominant_gender_adjusted_female_chance
+				faith = root.capital_province.faith
+				culture = root.capital_province.culture
+				save_scope_as = smith
+			}
 			scope:smith = {
 				set_variable = {
 					name = created_artifact_type
 					value = flag:smith
 				}
+				save_scope_as = owner
+			}
+		}
+		else = {
+			save_scope_as = owner
+		}
+		hidden_effect = {
+			scope:owner = {
 				create_artifact = {
 					name = VIET_silverware_set_name
 					description = VIET_silverware_set_desc
@@ -898,7 +995,7 @@ VIETmisc.5006 = {
 						type = created
 						actor = scope:smith
 						recipient = root
-						location = scope:smith.location
+						location = root.capital_province
 					}
 				}
 			}
@@ -916,13 +1013,32 @@ VIETmisc.5006 = {
 				gold >= 40
 			}
 		}
-		remove_short_term_gold = 40
-		scope:VIET_clutter_artifact = { set_owner = { target = root } }
+		if = {
+			limit = { exists = scope:smith }
+			pay_short_term_gold = {
+				target = scope:smith
+				gold = 40
+			}
+			scope:VIET_clutter_artifact = {
+				set_owner = {
+					target = root
+					history = {
+						type = purchased
+						actor = scope:smith
+						recipient = root
+					}
+				}
+			}
+		}
+		else = {
+			remove_short_term_gold = 40
+		}
 		stress_impact = {
 			temperate = miniscule_stress_impact_gain
 			humble = miniscule_stress_impact_gain
 		}
 		custom_tooltip = VIET_artifact_limit_warning
+		
 	}
 	
 	option = {
@@ -1035,11 +1151,23 @@ VIETmisc.5007 = {
 				gold >= 30
 			}
 		}
-		remove_short_term_gold = 30
+		pay_short_term_gold = {
+			target = scope:merchant
+			gold = 30
+		}
 		stress_impact = {
 			humble = miniscule_stress_impact_gain
 		}
-		scope:VIET_clutter_artifact = { set_owner = { target = root } }
+		scope:VIET_clutter_artifact = {
+			set_owner = {
+				target = root
+				history = {
+					type = purchased
+					actor = scope:merchant
+					recipient = root
+				}
+			}
+		}
 		custom_tooltip = VIET_artifact_limit_warning
 	}
 	
@@ -1129,9 +1257,10 @@ VIETmisc.5008 = {
 		
 		hidden_effect = {
 			scope:noble = {
+				save_scope_as = owner # For decorations
 				create_artifact = {
 					name = VIET_beautiful_pitcher_name
-					description = VIET_beautiful_pitcher_desc
+					description = placeholder
 					type = VIET_clutter
 					visuals = VIET_beautiful_pitcher
 					quality = 15
@@ -1145,6 +1274,9 @@ VIETmisc.5008 = {
 				}
 				scope:VIET_clutter_artifact = {
 					set_variable = VIET_beautiful_pitcher_variable
+					VIET_set_artifact_wealth_high_effect = yes
+					set_artifact_feature_group = decoration_material_inlay
+					set_artifact_description = VIET_beautiful_pitcher_desc
 				}
 			}
 		}
@@ -1256,23 +1388,32 @@ VIETmisc.5009 = {
 	immediate = {
 		VIET_find_random_barony_effect = yes
 		
-		create_character = {
-			template = stewardship_domain_focus_friend_template
-			location = scope:barony.holder.location
-			gender_female_chance = root_faith_dominant_gender_adjusted_female_chance
-			culture = scope:barony.culture
-			faith = scope:barony.faith
-			save_scope_as = artisan
-		}
-		hidden_effect = {
+		if = {
+			limit = { is_ai = no }
+			create_character = {
+				template = local_artisan_template
+				location = scope:barony.holder.location
+				gender_female_chance = root_faith_dominant_gender_adjusted_female_chance
+				culture = scope:barony.culture
+				faith = scope:barony.faith
+				save_scope_as = artisan
+			}
 			scope:artisan = {
 				set_variable = {
 					name = created_artifact_type
 					value = flag:artisan
 				}
+				save_scope_as = owner
+			}
+		}
+		else = {
+			save_scope_as = owner
+		}
+		hidden_effect = {
+			scope:owner = {
 				create_artifact = {
 					name = VIET_basic_pitcher_name
-					description = VIET_basic_pitcher_desc
+					description = placeholder
 					type = VIET_clutter
 					visuals = VIET_basic_pitcher
 					quality = 15
@@ -1284,11 +1425,14 @@ VIETmisc.5009 = {
 						type = created
 						actor = scope:artisan
 						recipient = root
-						location = scope:artisan.location
+						location = scope:barony.holder.location
 					}
 				}
 				scope:VIET_clutter_artifact = {
 					set_variable = VIET_basic_pitcher_variable
+					VIET_set_artifact_wealth_med_effect = yes
+					set_artifact_feature_group = generic_material_wood
+					set_artifact_description = VIET_basic_pitcher_desc
 				}
 			}
 		}
@@ -1303,16 +1447,6 @@ VIETmisc.5009 = {
 			paranoid = miniscule_stress_impact_gain
 			callous = miniscule_stress_impact_gain
 		}
-		scope:artisan = {
-			add_opinion = {
-				target = root
-				modifier = VIET_opinion_accepted_my_gift
-			}
-			reverse_add_opinion = {
-				target = root
-				modifier = VIET_opinion_gave_me_a_gift
-			}
-		}
 		custom_tooltip = VIET_artifact_limit_warning
 	}
 	
@@ -1325,12 +1459,6 @@ VIETmisc.5009 = {
 		}
 		hidden_effect = {
 			destroy_artifact = scope:VIET_clutter_artifact
-		}
-		scope:artisan = {
-			add_opinion = {
-				target = root
-				modifier = VIET_opinion_rejected_my_gift
-			}
 		}
 		stress_impact = {
 			compassionate = miniscule_stress_impact_gain
@@ -1458,8 +1586,20 @@ VIETmisc.5010 = {
 				gold >= 50
 			}
 		}
-		remove_short_term_gold = 50
-		scope:VIET_clutter_artifact = { set_owner = { target = root } }
+		pay_short_term_gold = {
+			target = scope:smith
+			gold = 50
+		}
+		scope:VIET_clutter_artifact = {
+			set_owner = {
+				target = root
+				history = {
+					type = purchased
+					actor = scope:smith
+					recipient = root
+				}
+			}
+		}
 		add_visiting_courtier = scope:smith
 		stress_impact = {
 			honest = miniscule_stress_impact_gain
@@ -1473,6 +1613,7 @@ VIETmisc.5010 = {
 		name = VIETmisc.5010.b
 		hidden_effect = {
 			destroy_artifact = scope:VIET_clutter_artifact
+			scope:smith = { VIET_clean_up_character_effect = yes }
 		}
 		stress_impact = {
 			paranoid = minor_stress_impact_gain
@@ -1548,21 +1689,29 @@ VIETmisc.5011 = {
 	}
 	
 	immediate = {
-		create_character = {
-			template = local_artisan_template
-			location = root.capital_province
-			gender_female_chance = root_faith_dominant_gender_adjusted_female_chance
-			faith = root.capital_province.faith
-			culture = root.capital_province.culture
-			save_scope_as = smith
-		}
-		
-		hidden_effect = {
+		if = {
+			limit = { is_ai = no }
+			create_character = {
+				template = local_artisan_template
+				location = root.capital_province
+				gender_female_chance = root_faith_dominant_gender_adjusted_female_chance
+				faith = root.capital_province.faith
+				culture = root.capital_province.culture
+				save_scope_as = smith
+			}
 			scope:smith = {
 				set_variable = {
 					name = created_artifact_type
 					value = flag:smith
 				}
+				save_scope_as = owner
+			}
+		}
+		else = {
+			save_scope_as = owner
+		}
+		hidden_effect = {
+			scope:owner = {
 				create_artifact = {
 					name = VIET_hand_mirror_name
 					description = VIET_hand_mirror_desc
@@ -1577,7 +1726,7 @@ VIETmisc.5011 = {
 						type = created
 						actor = scope:smith
 						recipient = root
-						location = scope:smith.location
+						location = root.capital_province
 					}
 				}
 				scope:VIET_clutter_artifact = {
@@ -1595,8 +1744,26 @@ VIETmisc.5011 = {
 				gold >= 20
 			}
 		}
-		remove_short_term_gold = 20
-		scope:VIET_clutter_artifact = { set_owner = root }
+		if = {
+			limit = { exists = scope:smith }
+			pay_short_term_gold = {
+				target = scope:smith
+				gold = 20
+			}
+			scope:VIET_clutter_artifact = {
+				set_owner = {
+					target = root
+					history = {
+						type = purchased
+						actor = scope:smith
+						recipient = root
+					}
+				}
+			}
+		}
+		else = {
+			remove_short_term_gold = 20
+		}
 		stress_impact = {
 			humble = miniscule_stress_impact_gain
 			chaste = miniscule_stress_impact_gain
@@ -1716,10 +1883,18 @@ VIETmisc.5012 = {
 				gold >= 40
 			}
 		}
-		remove_short_term_gold = 40
+		pay_short_term_gold = {
+			target = scope:merchant
+			gold = 40
+		}
 		scope:VIET_clutter_artifact = {
 			set_owner = {
 				target = root
+				history = {
+					type = purchased
+					actor = scope:merchant
+					recipient = root
+				}
 			}
 		}
 		custom_tooltip = VIET_artifact_limit_warning
@@ -1799,21 +1974,29 @@ VIETmisc.5013 = {
 	}
 	
 	immediate = {
-		create_character = {
-			template = local_artisan_template
-			location = root.capital_province
-			gender_female_chance = root_faith_dominant_gender_adjusted_female_chance
-			faith = root.capital_province.faith
-			culture = root.capital_province.culture
-			save_scope_as = artisan
-		}
-		
-		hidden_effect = {
+		if = {
+			limit = { is_ai = no }
+			create_character = {
+				template = local_artisan_template
+				location = scope:barony.holder.location
+				gender_female_chance = root_faith_dominant_gender_adjusted_female_chance
+				culture = scope:barony.culture
+				faith = scope:barony.faith
+				save_scope_as = artisan
+			}
 			scope:artisan = {
 				set_variable = {
 					name = created_artifact_type
 					value = flag:artisan
 				}
+				save_scope_as = owner
+			}
+		}
+		else = {
+			save_scope_as = owner
+		}
+		hidden_effect = {
+			scope:owner = {
 				create_artifact = {
 					name = VIET_wooden_chess_set_name
 					description = VIET_wooden_chess_set_desc
@@ -1828,11 +2011,14 @@ VIETmisc.5013 = {
 						type = created
 						actor = scope:artisan
 						recipient = root
-						location = scope:artisan.location
+						location = scope:barony.holder.location
 					}
 				}
 				scope:VIET_clutter_artifact = {
 					set_variable = VIET_wooden_chess_set_variable
+					VIET_set_artifact_wealth_med_effect = yes
+					set_artifact_feature_group = generic_material_wood
+					set_artifact_name = VIET_wooden_chess_set_name
 				}
 			}
 		}
@@ -1846,11 +2032,25 @@ VIETmisc.5013 = {
 				gold >= 20
 			}
 		}
-		remove_short_term_gold = 20
-		scope:VIET_clutter_artifact = {
-			set_owner = {
-				target = root
+		if = {
+			limit = { exists = scope:artisan }
+			pay_short_term_gold = {
+				target = scope:artisan
+				gold = 20
 			}
+			scope:VIET_clutter_artifact = {
+				set_owner = {
+					target = root
+					history = {
+						type = purchased
+						actor = scope:artisan
+						recipient = root
+					}
+				}
+			}
+		}
+		else = {
+			remove_short_term_gold = 20
 		}
 		custom_tooltip = VIET_artifact_limit_warning
 	}
@@ -2082,9 +2282,10 @@ VIETmisc.5015 = {
 		
 		hidden_effect = {
 			scope:gambler = {
+				save_scope_as = owner # For decorations
 				create_artifact = {
 					name = VIET_bone_dice_name
-					description = VIET_bone_dice_desc
+					description = placeholder
 					type = VIET_clutter
 					visuals = VIET_bone_dice
 					quality = 15
@@ -2098,6 +2299,9 @@ VIETmisc.5015 = {
 				}
 				scope:VIET_clutter_artifact = {
 					set_variable = VIET_bone_dice_variable
+					VIET_set_artifact_wealth_high_effect = yes
+					set_artifact_feature_group = decoration_material_inlay_HSB
+					set_artifact_description = VIET_bone_dice_desc
 				}
 			}
 		}
@@ -2201,7 +2405,7 @@ VIETmisc.5016 = {
 			scope:gambler = {
 				create_artifact = {
 					name = VIET_wood_dice_name
-					description = VIET_wood_dice_desc
+					description = placeholder
 					type = VIET_clutter
 					visuals = VIET_wood_dice
 					quality = 15
@@ -2215,6 +2419,8 @@ VIETmisc.5016 = {
 				}
 				scope:VIET_clutter_artifact = {
 					set_variable = VIET_wood_dice_variable
+					set_artifact_feature_group = generic_material_wood
+					set_artifact_description = VIET_wood_dice_desc
 				}
 			}
 		}
@@ -2310,21 +2516,31 @@ VIETmisc.5017 = {
 	}
 	
 	immediate = {
-		create_character = {
-			template = local_artisan_template
-			age = { 40 60 }
-			location = root.capital_province
-			gender_female_chance = 100
-			faith = root.capital_province.faith
-			culture = root.capital_province.culture
-			save_scope_as = seamstress
-		}
-		hidden_effect = {
+		save_scope_as = owner # To respect religious sumptuary laws
+		if = {
+			limit = { is_ai = no }
+			create_character = {
+				template = local_artisan_template
+				age = { 40 60 }
+				location = root.capital_province
+				gender_female_chance = 100
+				faith = root.capital_province.faith
+				culture = root.capital_province.culture
+				save_scope_as = seamstress
+			}
 			scope:seamstress = {
 				set_variable = {
 					name = created_artifact_type
 					value = flag:weaver
 				}
+				save_scope_as = artifact_holder
+			}
+		}
+		else = {
+			save_scope_as = artifact_holder
+		}
+		hidden_effect = {
+			scope:artifact_holder = {
 				create_artifact = {
 					name = VIET_silk_slippers_name
 					description = VIET_silk_slippers_desc
@@ -2339,11 +2555,14 @@ VIETmisc.5017 = {
 						type = created
 						actor = scope:seamstress
 						recipient = root
-						location = scope:seamstress.location
+						location = root.capital_province
 					}
 				}
 				scope:VIET_clutter_artifact = {
 					set_variable = VIET_silk_slippers_variable
+					VIET_set_artifact_wealth_high_effect = yes
+					set_artifact_feature_group = generic_material_cloth
+					set_artifact_name = VIET_silk_slippers_name
 				}
 			}
 		}
@@ -2357,11 +2576,25 @@ VIETmisc.5017 = {
 				gold >= 40
 			}
 		}
-		remove_short_term_gold = 40
-		scope:VIET_clutter_artifact = {
-			set_owner = {
-				target = root
+		if = {
+			limit = { exists = scope:seamstress }
+			pay_short_term_gold = {
+				target = scope:seamstress
+				gold = 40
 			}
+			scope:VIET_clutter_artifact = {
+				set_owner = {
+					target = root
+					history = {
+						type = purchased
+						actor = scope:seamstress
+						recipient = root
+					}
+				}
+			}
+		}
+		else = {
+			remove_short_term_gold = 40
 		}
 		stress_impact = {
 			temperate = miniscule_stress_impact_gain
@@ -2498,7 +2731,7 @@ VIETmisc.5019 = {
 	title = VIETmisc.5019.t
 	desc = VIETmisc.5019.desc
 	theme = friendly
-	override_background = { reference = study }
+	override_background = { reference = corridor_day }
 	
 	left_portrait = {
 		character = root
@@ -2508,10 +2741,7 @@ VIETmisc.5019 = {
 		target = scope:VIET_clutter_artifact
 		position = lower_center_portrait
 	}
-	right_portrait = {
-		character = scope:servant
-		animation = personality_callous
-	}
+	lower_right_portrait = scope:servant
 	
 	weight_multiplier = {
 		base = 1
@@ -2601,8 +2831,27 @@ VIETmisc.5019 = {
 	
 	option = {
 		name = VIETmisc.5019.b
-		hidden_effect = {
+		#hidden_effect = {
 			destroy_artifact = scope:VIET_clutter_artifact
+		#}
+	}
+	
+	option = { # Return it
+		name = VIETmisc.5019.c
+		VIET_large_prestige_loss_effect = yes
+		VIET_medium_piety_gain_effect = yes
+		show_as_tooltip = {
+			scope:VIET_clutter_artifact = {
+				set_owner = {
+					target = scope:servant
+				}
+			}
+		}
+		stress_impact = {
+			generous = miniscule_stress_impact_loss
+			honest = miniscule_stress_impact_loss
+			arrogant = miniscule_stress_impact_gain
+			sadistic = miniscule_stress_impact_gain
 		}
 	}
 }
@@ -3114,6 +3363,7 @@ VIETmisc.5024 = {
 	title = VIETmisc.5024.t
 	desc = VIETmisc.5024.desc
 	theme = diplomacy_foreign_affairs_focus
+	override_icon = { reference = "gfx/interface/icons/event_types/type_travel_diplomacy.dds" }
 	
 	left_portrait = {
 		character = root
@@ -3307,17 +3557,25 @@ VIETmisc.5025 = {
 	
 	immediate = {
 		VIET_find_random_barony_effect = yes
-		
-		create_character = {
-			template = VIET_local_chef_template
-			location = scope:barony.holder.location
-			save_scope_as = chef
+		if = {
+			limit = { is_ai = no }
+			create_character = {
+				template = VIET_local_chef_template
+				location = scope:barony.holder.location
+				save_scope_as = chef
+			}
+			scope:chef = {
+				save_scope_as = owner
+			}
+		}
+		else = {
+			save_scope_as = owner
 		}
 		hidden_effect = {
-			scope:chef = {
+			scope:owner = {
 				create_artifact = {
 					name = VIET_wooden_bowl_name
-					description = VIET_wooden_bowl_desc
+					description = placeholder
 					type = VIET_clutter
 					visuals = VIET_wooden_bowl
 					quality = 15
@@ -3331,6 +3589,9 @@ VIETmisc.5025 = {
 				}
 				scope:VIET_clutter_artifact = {
 					set_variable = VIET_wooden_bowl_variable
+					VIET_set_artifact_wealth_high_effect = yes
+					set_artifact_feature_group = generic_material_wood
+					set_artifact_description = VIET_wooden_bowl_desc
 				}
 			}
 		}
@@ -3683,7 +3944,7 @@ VIETmisc.5028 = {
 			scope:noble = {
 				create_artifact = {
 					name = VIET_wooden_tankard_name
-					description = VIET_wooden_tankard_desc
+					description = placeholder
 					type = VIET_clutter
 					visuals = VIET_wooden_tankard
 					quality = 15
@@ -3697,6 +3958,9 @@ VIETmisc.5028 = {
 				}
 				scope:VIET_clutter_artifact = {
 					set_variable = VIET_wooden_tankard_variable
+					VIET_set_artifact_wealth_high_effect = yes
+					set_artifact_feature_group = generic_material_wood
+					set_artifact_description = VIET_wooden_tankard_desc
 				}
 			}
 		}
@@ -3799,21 +4063,30 @@ VIETmisc.5029 = {
 	}
 	
 	immediate = {
-		create_character = {
-			template = local_artisan_template
-			location = root.capital_province
-			gender_female_chance = root_faith_dominant_gender_adjusted_female_chance
-			faith = root.capital_province.faith
-			culture = root.capital_province.culture
-			save_scope_as = artisan
-		}
-		
-		hidden_effect = {
+		if = {
+			limit = { is_ai = no }
+			create_character = {
+				template = local_artisan_template
+				location = root.capital_province
+				gender_female_chance = root_faith_dominant_gender_adjusted_female_chance
+				faith = root.capital_province.faith
+				culture = root.capital_province.culture
+				save_scope_as = artisan
+			}
 			scope:artisan = {
 				set_variable = {
 					name = created_artifact_type
 					value = flag:artisan
 				}
+				save_scope_as = owner
+			}
+		}
+		else = {
+			save_scope_as = owner
+		}
+		
+		hidden_effect = {
+			scope:owner = {
 				create_artifact = {
 					name = VIET_convenient_backscratcher_name
 					description = VIET_convenient_backscratcher_desc
@@ -3828,7 +4101,7 @@ VIETmisc.5029 = {
 						type = created
 						actor = scope:artisan
 						recipient = root
-						location = scope:artisan.location
+						location = root.capital_province
 					}
 				}
 				scope:VIET_clutter_artifact = {
@@ -3846,11 +4119,25 @@ VIETmisc.5029 = {
 				gold >= 15
 			}
 		}
-		remove_short_term_gold = 15
-		scope:VIET_clutter_artifact = {
-			set_owner = {
-				target = root
+		if = {
+			limit = { exists = scope:artisan }
+			pay_short_term_gold = {
+				target = scope:artisan
+				gold = 15
 			}
+			scope:VIET_clutter_artifact = {
+				set_owner = {
+					target = root
+					history = {
+						type = purchased
+						actor = scope:artisan
+						recipient = root
+					}
+				}
+			}
+		}
+		else = {
+			remove_short_term_gold = 15
 		}
 		stress_impact = {
 			greedy = miniscule_stress_impact_gain
@@ -3883,10 +4170,7 @@ VIETmisc.5030 = {
 		target = scope:VIET_clutter_artifact
 		position = lower_center_portrait
 	}
-	left_portrait = {
-		character = scope:artisan
-		animation = personality_forgiving
-	}
+	lower_left_portrait = scope:artisan
 	
 	weight_multiplier = {
 		base = 1
@@ -3932,24 +4216,33 @@ VIETmisc.5030 = {
 	}
 	
 	immediate = {
-		create_character = {
-			template = local_artisan_template
-			location = root.capital_province
-			gender_female_chance = root_faith_dominant_gender_adjusted_female_chance
-			faith = root.capital_province.faith
-			culture = root.capital_province.culture
-			save_scope_as = artisan
-		}
-		
-		hidden_effect = {
+		if = {
+			limit = { is_ai = no }
+			create_character = {
+				template = local_artisan_template
+				location = root.capital_province
+				gender_female_chance = root_faith_dominant_gender_adjusted_female_chance
+				faith = root.capital_province.faith
+				culture = root.capital_province.culture
+				save_scope_as = artisan
+			}
 			scope:artisan = {
 				set_variable = {
 					name = created_artifact_type
 					value = flag:artisan
 				}
+				save_scope_as = owner
+			}
+		}
+		else = {
+			save_scope_as = owner
+		}
+		
+		hidden_effect = {
+			scope:owner = {
 				create_artifact = {
 					name = VIET_rugged_walking_stick_name
-					description = VIET_rugged_walking_stick_desc
+					description = placeholder
 					type = VIET_clutter
 					visuals = VIET_rugged_walking_stick
 					quality = 15
@@ -3961,11 +4254,16 @@ VIETmisc.5030 = {
 						type = created
 						actor = scope:artisan
 						recipient = root
-						location = scope:artisan.location
+						location = root.capital_province
 					}
 				}
 				scope:VIET_clutter_artifact = {
 					set_variable = VIET_rugged_walking_stick_variable
+					VIET_set_artifact_wealth_high_effect = yes
+					set_artifact_feature_group = shaft_wood
+					set_artifact_feature_group = shaft_decoration
+					get_artifact_feature_references_effect = yes
+					set_artifact_description = VIET_rugged_walking_stick_desc
 				}
 			}
 		}
@@ -3979,11 +4277,25 @@ VIETmisc.5030 = {
 				gold >= 20
 			}
 		}
-		remove_short_term_gold = 20
-		scope:VIET_clutter_artifact = {
-			set_owner = {
-				target = root
+		if = {
+			limit = { exists = scope:artisan }
+			pay_short_term_gold = {
+				target = scope:artisan
+				gold = 15
 			}
+			scope:VIET_clutter_artifact = {
+				set_owner = {
+					target = root
+					history = {
+						type = purchased
+						actor = scope:artisan
+						recipient = root
+					}
+				}
+			}
+		}
+		else = {
+			remove_short_term_gold = 20
 		}
 		stress_impact = {
 			arrogant = miniscule_stress_impact_gain
@@ -4069,21 +4381,30 @@ VIETmisc.5031 = {
 	}
 	
 	immediate = {
-		create_character = {
-			template = local_artisan_template
-			location = root.capital_province
-			gender_female_chance = root_faith_dominant_gender_adjusted_female_chance
-			faith = root.capital_province.faith
-			culture = root.capital_province.culture
-			save_scope_as = artisan
-		}
-		
-		hidden_effect = {
+		if = {
+			limit = { is_ai = no }
+			create_character = {
+				template = local_artisan_template
+				location = root.capital_province
+				gender_female_chance = root_faith_dominant_gender_adjusted_female_chance
+				faith = root.capital_province.faith
+				culture = root.capital_province.culture
+				save_scope_as = artisan
+			}
 			scope:artisan = {
 				set_variable = {
 					name = created_artifact_type
 					value = flag:artisan
 				}
+				save_scope_as = owner
+			}
+		}
+		else = {
+			save_scope_as = owner
+		}
+		
+		hidden_effect = {
+			scope:owner = {
 				create_artifact = {
 					name = VIET_simple_gloves_name
 					description = VIET_simple_gloves_desc
@@ -4098,10 +4419,11 @@ VIETmisc.5031 = {
 						type = created
 						actor = scope:artisan
 						recipient = root
-						location = scope:artisan.location
+						location = root.capital_province
 					}
 				}
 				scope:VIET_clutter_artifact = {
+					VIET_set_artifact_wealth_med_effect = yes
 					set_variable = VIET_simple_gloves_variable
 				}
 			}
@@ -4116,11 +4438,25 @@ VIETmisc.5031 = {
 				gold >= 25
 			}
 		}
-		remove_short_term_gold = 25
-		scope:VIET_clutter_artifact = {
-			set_owner = {
-				target = root
+		if = {
+			limit = { exists = scope:artisan }
+			pay_short_term_gold = {
+				target = scope:artisan
+				gold = 25
 			}
+			scope:VIET_clutter_artifact = {
+				set_owner = {
+					target = root
+					history = {
+						type = purchased
+						actor = scope:artisan
+						recipient = root
+					}
+				}
+			}
+		}
+		else = {
+			remove_short_term_gold = 25
 		}
 		custom_tooltip = VIET_artifact_limit_warning
 	}
@@ -4199,13 +4535,24 @@ VIETmisc.5032 = {
 	}
 	
 	immediate = {
-		VIET_find_priest_effect = yes
+		if = {
+			limit = { is_ai = no }
+			VIET_find_priest_effect = yes
+			scope:priest = {
+				save_scope_as = owner
+				save_scope_as = potter # for porcelain
+			}
+		}
+		else = {
+			save_scope_as = owner
+			save_scope_as = potter
+		}
 		
 		hidden_effect = {
-			scope:priest = {
+			scope:owner = {
 				create_artifact = {
 					name = VIET_elegant_candlestick_name
-					description = VIET_elegant_candlestick_desc
+					description = placeholder
 					type = VIET_clutter
 					visuals = VIET_elegant_candlestick
 					quality = 15
@@ -4219,6 +4566,11 @@ VIETmisc.5032 = {
 				}
 				scope:VIET_clutter_artifact = {
 					set_variable = VIET_elegant_candlestick_variable
+					VIET_set_artifact_wealth_high_effect = yes
+					set_artifact_feature_group = generic_material_earthware
+					set_artifact_feature_group = decoration_pattern
+					get_artifact_feature_references_effect = yes
+					set_artifact_description = VIET_elegant_candlestick_desc
 				}
 			}
 		}
@@ -4545,13 +4897,15 @@ VIETmisc.5035 = {
 		is_landed_or_landless_administrative = yes
 	}
 	immediate = {
+		save_scope_as = potter #for porcelain jars
+		
 		VIET_find_servant_effect = yes
 		
 		hidden_effect = {
 			scope:servant = {
 				create_artifact = {
 					name = VIET_candy_jar_name
-					description = VIET_candy_jar_desc
+					description = placeholder
 					type = VIET_clutter
 					visuals = VIET_candy_jar
 					quality = 15
@@ -4565,6 +4919,8 @@ VIETmisc.5035 = {
 				}
 				scope:VIET_clutter_artifact = {
 					set_variable = VIET_candy_jar_variable
+					set_artifact_feature_group = generic_material_earthware
+					set_artifact_description = VIET_candy_jar_desc
 				}
 			}
 		}
@@ -4673,7 +5029,7 @@ VIETmisc.5036 = {
 			scope:soldier = {
 				create_artifact = {
 					name = VIET_wooden_whistle_name
-					description = VIET_wooden_whistle_desc
+					description = placeholder
 					type = VIET_clutter
 					visuals = VIET_wooden_whistle
 					quality = 15
@@ -4687,6 +5043,8 @@ VIETmisc.5036 = {
 				}
 				scope:VIET_clutter_artifact = {
 					set_variable = VIET_wooden_whistle_variable
+					set_artifact_feature_group = generic_material_wood
+					set_artifact_description = VIET_wooden_whistle_desc
 				}
 			}
 		}
@@ -4725,6 +5083,7 @@ VIETmisc.5037 = {
 	title = VIETmisc.5037.t
 	desc = VIETmisc.5037.desc
 	theme = VIET_theme_tuscan_country
+	override_icon = { reference = "gfx/interface/icons/event_types/type_travel_diplomacy.dds" }
 	
 	left_portrait = {
 		character = root
@@ -4920,6 +5279,16 @@ VIETmisc.5038 = {
 	
 	option = {
 		name = VIETmisc.5038.a
+		trigger = {
+			OR = {
+				is_ai = no
+				gold >= 40
+			}
+		}
+		pay_short_term_gold = {
+			target = scope:merchant
+			gold = 40
+		}
 		scope:VIET_clutter_artifact = {
 			set_owner = {
 				target = root
@@ -5011,12 +5380,13 @@ VIETmisc.5039 = {
 	}
 	immediate = {
 		VIET_find_servant_effect = yes
+		save_scope_as = owner # For decorations
 		
 		hidden_effect = {
 			scope:servant = {
 				create_artifact = {
 					name = VIET_decorated_broom_name
-					description = VIET_decorated_broom_desc
+					description = placeholder
 					type = VIET_clutter
 					visuals = VIET_decorated_broom
 					quality = 15
@@ -5030,6 +5400,10 @@ VIETmisc.5039 = {
 				}
 				scope:VIET_clutter_artifact = {
 					set_variable = VIET_decorated_broom_variable
+					set_artifact_feature_group = shaft_wood
+					set_artifact_feature_group = decoration_pattern
+					get_artifact_feature_references_effect = yes
+					set_artifact_description = VIET_decorated_broom_desc
 				}
 			}
 		}
@@ -5051,9 +5425,6 @@ VIETmisc.5039 = {
 	option = {
 		name = VIETmisc.5039.b
 		VIET_huge_prestige_gain_effect = yes
-		hidden_effect = {
-			destroy_artifact = scope:VIET_clutter_artifact
-		}
 		show_as_tooltip = {
 			scope:VIET_clutter_artifact = {
 				set_owner = {
@@ -5138,18 +5509,27 @@ VIETmisc.5040 = {
 	
 	immediate = {
 		#Not interested in coming to court, so using a temporary character
-		create_character = {
-			location = root.capital_province
-			template = VIET_local_scholar_template
-			faith = root.capital_province.faith
-			culture = root.capital_province.culture
-			save_scope_as = scholar
+		if = {
+			limit = { is_ai = no }
+			create_character = {
+				location = root.capital_province
+				template = VIET_local_scholar_template
+				faith = root.capital_province.faith
+				culture = root.capital_province.culture
+				save_scope_as = scholar
+			}
+			scope:scholar = {
+				save_scope_as = owner
+			}
+		}
+		else = {
+			save_scope_as = owner
 		}
 		hidden_effect = {
-			scope:scholar = {
+			scope:owner = {
 				create_artifact = {
 					name = VIET_traveling_inkwell_name
-					description = VIET_traveling_inkwell_desc
+					description = placeholder
 					type = VIET_clutter
 					visuals = VIET_traveling_inkwell
 					quality = 15
@@ -5163,6 +5543,10 @@ VIETmisc.5040 = {
 				}
 				scope:VIET_clutter_artifact = {
 					set_variable = VIET_traveling_inkwell_variable
+					VIET_set_artifact_wealth_med_effect = yes
+					set_artifact_feature_group = box_material # Or glass
+					set_artifact_feature_group = decoration_pattern
+					set_artifact_description = VIET_traveling_inkwell_desc
 				}
 			}
 		}
@@ -5277,7 +5661,10 @@ VIETmisc.5041 = {
 					decaying = no
 					save_scope_as = VIET_clutter_artifact
 					history = {
-						type = created_before_history
+						type = discovered
+						actor = scope:gardener
+						recipient = root
+						location = root.location
 					}
 				}
 				scope:VIET_clutter_artifact = {
@@ -5317,9 +5704,6 @@ VIETmisc.5041 = {
 	option = {
 		name = VIETmisc.5041.c
 		VIET_huge_piety_gain_effect = yes
-		#hidden_effect = {
-		#	destroy_artifact = scope:VIET_clutter_artifact
-		#}
 		show_as_tooltip = {
 			scope:VIET_clutter_artifact = {
 				set_owner = {
@@ -5515,6 +5899,7 @@ VIETmisc.5042 = {
 		}
 		
 	}
+	after = { scope:chef = { VIET_clean_up_character_effect = yes } }
 	
 	option = { # Pay
 		name = VIETmisc.5042.a
@@ -5524,10 +5909,18 @@ VIETmisc.5042 = {
 				gold >= 40
 			}
 		}
-		remove_short_term_gold = 40
+		pay_short_term_gold = {
+			target = scope:chef
+			gold = 40
+		}
 		scope:VIET_recipe_artifact = {
 			set_owner = {
 				target = root
+				history = {
+					type = purchased
+					actor = scope:chef
+					recipient = root
+				}
 			}
 		}
 		stress_impact = {
@@ -5549,10 +5942,18 @@ VIETmisc.5042 = {
 			diplomacy >= decent_skill_rating
 		}
 		skill = diplomacy
-		remove_short_term_gold = 25
+		pay_short_term_gold = {
+			target = scope:chef
+			gold = 25
+		}
 		scope:VIET_recipe_artifact = {
 			set_owner = {
 				target = root
+				history = {
+					type = purchased
+					actor = scope:chef
+					recipient = root
+				}
 			}
 		}
 		stress_impact = {
@@ -5582,10 +5983,10 @@ VIETmisc.5042 = {
 					type = event_toast_effect_good
 					left_icon = ROOT
 					title = VIETmisc.recipe_steal.toast.success.not_caught
-					scope:VIET_recipe_artifact = {
-						set_owner = {
-							target = root
-						}
+					steal_artifact_in_event_effect = {
+						THIEF = root
+						VICTIM = scope:chef
+						ARTIFACT = scope:VIET_recipe_artifact
 					}
 				}
 			}
@@ -5603,10 +6004,10 @@ VIETmisc.5042 = {
 					type = event_toast_effect_good
 					left_icon = ROOT
 					title = VIETmisc.recipe_steal.toast.success.caught
-					scope:VIET_recipe_artifact = {
-						set_owner = {
-							target = root
-						}
+					steal_artifact_in_event_effect = {
+						THIEF = root
+						VICTIM = scope:chef
+						ARTIFACT = scope:VIET_recipe_artifact
 					}
 					VIET_huge_prestige_loss_effect = yes
 					stress_impact = {
@@ -5883,10 +6284,18 @@ VIETmisc.5043 = {
 				gold >= 40
 			}
 		}
-		remove_short_term_gold = 40
+		pay_short_term_gold = {
+			target = scope:chef
+			gold = 40
+		}
 		scope:VIET_recipe_artifact = {
 			set_owner = {
 				target = root
+				history = {
+					type = purchased
+					actor = scope:chef
+					recipient = root
+				}
 			}
 		}
 		stress_impact = {
@@ -5908,10 +6317,18 @@ VIETmisc.5043 = {
 			diplomacy >= decent_skill_rating
 		}
 		skill = diplomacy
-		remove_short_term_gold = 25
+		pay_short_term_gold = {
+			target = scope:chef
+			gold = 25
+		}
 		scope:VIET_recipe_artifact = {
 			set_owner = {
 				target = root
+				history = {
+					type = purchased
+					actor = scope:chef
+					recipient = root
+				}
 			}
 		}
 		stress_impact = {
@@ -5941,10 +6358,10 @@ VIETmisc.5043 = {
 					type = event_toast_effect_good
 					left_icon = ROOT
 					title = VIETmisc.recipe_steal.toast.success.not_caught
-					scope:VIET_recipe_artifact = {
-						set_owner = {
-							target = root
-						}
+					steal_artifact_in_event_effect = {
+						THIEF = root
+						VICTIM = scope:chef
+						ARTIFACT = scope:VIET_recipe_artifact
 					}
 				}
 			}
@@ -5962,10 +6379,10 @@ VIETmisc.5043 = {
 					type = event_toast_effect_good
 					left_icon = ROOT
 					title = VIETmisc.recipe_steal.toast.success.caught
-					scope:VIET_recipe_artifact = {
-						set_owner = {
-							target = root
-						}
+					steal_artifact_in_event_effect = {
+						THIEF = root
+						VICTIM = scope:chef
+						ARTIFACT = scope:VIET_recipe_artifact
 					}
 					VIET_huge_prestige_loss_effect = yes
 					stress_impact = {
@@ -6236,6 +6653,7 @@ VIETmisc.5044 = {
 			}
 		}
 	}
+	after = { scope:chef = { VIET_clean_up_character_effect = yes } }
 	
 	option = { # Pay
 		name = VIETmisc.5044.a
@@ -6245,10 +6663,18 @@ VIETmisc.5044 = {
 				gold >= 40
 			}
 		}
-		remove_short_term_gold = 40
+		pay_short_term_gold = {
+			target = scope:chef
+			gold = 40
+		}
 		scope:VIET_recipe_artifact = {
 			set_owner = {
 				target = root
+				history = {
+					type = purchased
+					actor = scope:chef
+					recipient = root
+				}
 			}
 		}
 		stress_impact = {
@@ -6270,10 +6696,18 @@ VIETmisc.5044 = {
 			diplomacy >= decent_skill_rating
 		}
 		skill = diplomacy
-		remove_short_term_gold = 25
+		pay_short_term_gold = {
+			target = scope:chef
+			gold = 25
+		}
 		scope:VIET_recipe_artifact = {
 			set_owner = {
 				target = root
+				history = {
+					type = purchased
+					actor = scope:chef
+					recipient = root
+				}
 			}
 		}
 		stress_impact = {
@@ -6303,10 +6737,10 @@ VIETmisc.5044 = {
 					type = event_toast_effect_good
 					left_icon = ROOT
 					title = VIETmisc.recipe_steal.toast.success.not_caught
-					scope:VIET_recipe_artifact = {
-						set_owner = {
-							target = root
-						}
+					steal_artifact_in_event_effect = {
+						THIEF = root
+						VICTIM = scope:chef
+						ARTIFACT = scope:VIET_recipe_artifact
 					}
 				}
 			}
@@ -6324,10 +6758,10 @@ VIETmisc.5044 = {
 					type = event_toast_effect_good
 					left_icon = ROOT
 					title = VIETmisc.recipe_steal.toast.success.caught
-					scope:VIET_recipe_artifact = {
-						set_owner = {
-							target = root
-						}
+					steal_artifact_in_event_effect = {
+						THIEF = root
+						VICTIM = scope:chef
+						ARTIFACT = scope:VIET_recipe_artifact
 					}
 					VIET_huge_prestige_loss_effect = yes
 					stress_impact = {
@@ -6721,10 +7155,18 @@ VIETmisc.5046 = {
 				gold >= 40
 			}
 		}
-		remove_short_term_gold = 40
+		pay_short_term_gold = {
+			target = scope:noble
+			gold = 40
+		}
 		scope:VIET_recipe_artifact = {
 			set_owner = {
 				target = root
+				history = {
+					type = purchased
+					actor = scope:noble
+					recipient = root
+				}
 			}
 		}
 		stress_impact = {
@@ -6746,10 +7188,18 @@ VIETmisc.5046 = {
 			diplomacy >= decent_skill_rating
 		}
 		skill = diplomacy
-		remove_short_term_gold = 25
+		pay_short_term_gold = {
+			target = scope:noble
+			gold = 25
+		}
 		scope:VIET_recipe_artifact = {
 			set_owner = {
 				target = root
+				history = {
+					type = purchased
+					actor = scope:noble
+					recipient = root
+				}
 			}
 		}
 		stress_impact = {
@@ -6779,10 +7229,10 @@ VIETmisc.5046 = {
 					type = event_toast_effect_good
 					left_icon = ROOT
 					title = VIETmisc.recipe_steal.toast.success.not_caught
-					scope:VIET_recipe_artifact = {
-						set_owner = {
-							target = root
-						}
+					steal_artifact_in_event_effect = {
+						THIEF = root
+						VICTIM = scope:noble
+						ARTIFACT = scope:VIET_recipe_artifact
 					}
 				}
 			}
@@ -6800,10 +7250,10 @@ VIETmisc.5046 = {
 					type = event_toast_effect_good
 					left_icon = ROOT
 					title = VIETmisc.recipe_steal.toast.success.caught
-					scope:VIET_recipe_artifact = {
-						set_owner = {
-							target = root
-						}
+					steal_artifact_in_event_effect = {
+						THIEF = root
+						VICTIM = scope:noble
+						ARTIFACT = scope:VIET_recipe_artifact
 					}
 					VIET_huge_prestige_loss_effect = yes
 					stress_impact = {
@@ -7010,246 +7460,262 @@ VIETmisc.5047 = {
 								recipient = root
 								location = scope:noble.location
 							}
-							scope:VIET_recipe_artifact = {
-								set_variable = VIET_recipe_savory_pie_variable
-							}
 						}
-						30 = {
-							create_artifact = {
-								name = VIET_recipe_savory_pie_name
-								description = VIET_recipe_savory_pie_desc
-								type = VIET_recipe
-								visuals = VIET_savory_pie
-								quality = 65
-								wealth = 65
-								modifier = artifact_VIET_savory_pie_recipe_modifier_3
-								#max_durability = 40
-								decaying = no
-								save_scope_as = VIET_recipe_artifact
-								history = {
-									type = created
-									actor = scope:noble
-									recipient = root
-									location = scope:noble.location
-								}
-							}
-							scope:VIET_recipe_artifact = {
-								set_variable = VIET_recipe_savory_pie_variable
-							}
-						}
-						15 = {
-							create_artifact = {
-								name = VIET_recipe_savory_pie_name
-								description = VIET_recipe_savory_pie_desc
-								type = VIET_recipe
-								visuals = VIET_savory_pie
-								quality = 95
-								wealth = 95
-								modifier = artifact_VIET_savory_pie_recipe_modifier_4
-								#max_durability = 40
-								decaying = no
-								save_scope_as = VIET_recipe_artifact
-								history = {
-									type = created
-									actor = scope:noble
-									recipient = root
-									location = scope:noble.location
-								}
-							}
-							scope:VIET_recipe_artifact = {
-								set_variable = VIET_recipe_savory_pie_variable
-							}
+						scope:VIET_recipe_artifact = {
+							set_variable = VIET_recipe_savory_pie_variable
 						}
 					}
-				}
-			}
-		}
-		
-	}
-	
-	option = { # Pay
-		name = VIETmisc.5047.a
-		trigger = {
-			OR = {
-				is_ai = no
-				gold >= 40
-			}
-		}
-		remove_short_term_gold = 40
-		scope:VIET_recipe_artifact = {
-			set_owner = {
-				target = root
-			}
-		}
-		stress_impact = {
-			temperate = miniscule_stress_impact_gain
-			greedy = miniscule_stress_impact_gain
-		}
-		ai_chance = {
-			base = 50
-		}
-	}
-	
-	option = { # Negotiate
-		name = VIETmisc.5047.b
-		trigger = {
-			OR = {
-				is_ai = no
-				gold >= 25
-			}
-			diplomacy >= decent_skill_rating
-		}
-		skill = diplomacy
-		remove_short_term_gold = 25
-		scope:VIET_recipe_artifact = {
-			set_owner = {
-				target = root
-			}
-		}
-		stress_impact = {
-			temperate = miniscule_stress_impact_gain
-			greedy = miniscule_stress_impact_gain
-		}
-		ai_chance = {
-			base = 50
-		}
-	}
-	
-	option = { # Steal
-		name = VIETmisc.5047.c
-		VIET_massive_piety_loss_effect = yes
-		random_list = {
-			15 = { # Get the recipe without getting caught
-				desc = VIETmisc.recipe_steal.toast.success.not_caught
-				modifier = {
-					add = 7
-					intrigue >= decent_skill_rating
-				}
-				modifier = {
-					add = 5
-					intrigue >= very_high_skill_rating
-				}
-				send_interface_toast = {
-					type = event_toast_effect_good
-					left_icon = ROOT
-					title = VIETmisc.recipe_steal.toast.success.not_caught
-					
-					scope:VIET_recipe_artifact = {
-						set_owner = {
-							target = root
+					30 = {
+						create_artifact = {
+							name = VIET_recipe_savory_pie_name
+							description = VIET_recipe_savory_pie_desc
+							type = VIET_recipe
+							visuals = VIET_savory_pie
+							quality = 65
+							wealth = 65
+							modifier = artifact_VIET_savory_pie_recipe_modifier_3
+							#max_durability = 40
+							decaying = no
+							save_scope_as = VIET_recipe_artifact
+							history = {
+								type = created
+								actor = scope:noble
+								recipient = root
+								location = scope:noble.location
+							}
+						}
+						scope:VIET_recipe_artifact = {
+							set_variable = VIET_recipe_savory_pie_variable
+						}
+					}
+					15 = {
+						create_artifact = {
+							name = VIET_recipe_savory_pie_name
+							description = VIET_recipe_savory_pie_desc
+							type = VIET_recipe
+							visuals = VIET_savory_pie
+							quality = 95
+							wealth = 95
+							modifier = artifact_VIET_savory_pie_recipe_modifier_4
+							#max_durability = 40
+							decaying = no
+							save_scope_as = VIET_recipe_artifact
+							history = {
+								type = created
+								actor = scope:noble
+								recipient = root
+								location = scope:noble.location
+							}
+						}
+						scope:VIET_recipe_artifact = {
+							set_variable = VIET_recipe_savory_pie_variable
 						}
 					}
 				}
-			}
-			25 = { # Get the recipe but get caught
-				desc = VIETmisc.recipe_steal.toast.success.caught
-				modifier = {
-					add = 7
-					intrigue >= decent_skill_rating
-				}
-				modifier = {
-					add = 5
-					intrigue >= very_high_skill_rating
-				}
-				send_interface_toast = {
-					type = event_toast_effect_good
-					left_icon = ROOT
-					title = VIETmisc.recipe_steal.toast.success.caught
-					
-					scope:VIET_recipe_artifact = {
-						set_owner = {
-							target = root
-						}
-					}
-					VIET_huge_prestige_loss_effect = yes
-					stress_impact = {
-						base = miniscule_stress_impact_gain
-					}
-				}
-			}
-			50 = { # Fail to get the recipe
-				desc = VIETmisc.recipe_steal.toast.failure
-				modifier = {
-					add = 45
-					intrigue <= low_skill_rating
-				}
-				modifier = {
-					add = 25
-					intrigue <= mediocre_skill_rating
-				}
-				send_interface_toast = {
-					type = event_toast_effect_bad
-					left_icon = ROOT
-					title = VIETmisc.recipe_steal.toast.failure
-					custom_tooltip = VIETmisc.recipe_steal.toast.failure_tooltip
-					VIET_huge_prestige_loss_effect = yes
-					stress_impact = {
-						base = minor_stress_impact_gain
-					}
-					hidden_effect = {
-						destroy_artifact = scope:VIET_recipe_artifact
-					}
-				}
-			}
-		}
-		stress_impact = {
-			zealous = miniscule_stress_impact_gain
-			compassionate = miniscule_stress_impact_gain
-			honest = miniscule_stress_impact_gain
-			just = minor_stress_impact_gain
-			generous = miniscule_stress_impact_gain
-		}
-		ai_chance = {
-			base = 20
-			modifier = {
-				add = 10
-				has_trait = deceitful
-			}
-			modifier = {
-				add = 10
-				has_trait = callous
-			}
-			modifier = {
-				add = 10
-				has_trait = arbitrary
-			}
-			modifier = {
-				add = -15
-				has_trait = just
-			}
-			modifier = {
-				add = -15
-				has_trait = generous
-			}
-			modifier = {
-				add = -15
-				has_trait = honest
 			}
 		}
 	}
 	
-	option = { # Ignore
-		name = VIETmisc.5047.d
-		hidden_effect = {
-			destroy_artifact = scope:VIET_recipe_artifact
+}
+
+option = { # Pay
+	name = VIETmisc.5047.a
+	trigger = {
+		OR = {
+			is_ai = no
+			gold >= 40
 		}
-		stress_impact = {
-			gluttonous = minor_stress_impact_gain
+	}
+	pay_short_term_gold = {
+		target = scope:noble
+		gold = 40
+	}
+	scope:VIET_recipe_artifact = {
+		set_owner = {
+			target = root
+			history = {
+				type = purchased
+				actor = scope:noble
+				recipient = root
+			}
 		}
-		ai_chance = {
-			base = 100
+	}
+	stress_impact = {
+		temperate = miniscule_stress_impact_gain
+		greedy = miniscule_stress_impact_gain
+	}
+	ai_chance = {
+		base = 50
+	}
+}
+
+option = { # Negotiate
+	name = VIETmisc.5047.b
+	trigger = {
+		OR = {
+			is_ai = no
+			gold >= 25
+		}
+		diplomacy >= decent_skill_rating
+	}
+	skill = diplomacy
+	pay_short_term_gold = {
+		target = scope:noble
+		gold = 25
+	}
+	scope:VIET_recipe_artifact = {
+		set_owner = {
+			target = root
+			history = {
+				type = purchased
+				actor = scope:noble
+				recipient = root
+			}
+		}
+	}
+	stress_impact = {
+		temperate = miniscule_stress_impact_gain
+		greedy = miniscule_stress_impact_gain
+	}
+	ai_chance = {
+		base = 50
+	}
+}
+
+option = { # Steal
+	name = VIETmisc.5047.c
+	VIET_massive_piety_loss_effect = yes
+	random_list = {
+		15 = { # Get the recipe without getting caught
+			desc = VIETmisc.recipe_steal.toast.success.not_caught
 			modifier = {
-				add = 10
-				has_trait = greedy
+				add = 7
+				intrigue >= decent_skill_rating
 			}
 			modifier = {
-				add = 10
-				has_trait = temperate
+				add = 5
+				intrigue >= very_high_skill_rating
+			}
+			send_interface_toast = {
+				type = event_toast_effect_good
+				left_icon = ROOT
+				title = VIETmisc.recipe_steal.toast.success.not_caught
+				
+				steal_artifact_in_event_effect = {
+					THIEF = root
+					VICTIM = scope:noble
+					ARTIFACT = scope:VIET_recipe_artifact
+				}
+			}
+		}
+		25 = { # Get the recipe but get caught
+			desc = VIETmisc.recipe_steal.toast.success.caught
+			modifier = {
+				add = 7
+				intrigue >= decent_skill_rating
 			}
 			modifier = {
-				add = 10
-				has_trait = content
+				add = 5
+				intrigue >= very_high_skill_rating
 			}
+			send_interface_toast = {
+				type = event_toast_effect_good
+				left_icon = ROOT
+				title = VIETmisc.recipe_steal.toast.success.caught
+				
+				steal_artifact_in_event_effect = {
+					THIEF = root
+					VICTIM = scope:noble
+					ARTIFACT = scope:VIET_recipe_artifact
+				}
+				VIET_huge_prestige_loss_effect = yes
+				stress_impact = {
+					base = miniscule_stress_impact_gain
+				}
+			}
+		}
+		50 = { # Fail to get the recipe
+			desc = VIETmisc.recipe_steal.toast.failure
+			modifier = {
+				add = 45
+				intrigue <= low_skill_rating
+			}
+			modifier = {
+				add = 25
+				intrigue <= mediocre_skill_rating
+			}
+			send_interface_toast = {
+				type = event_toast_effect_bad
+				left_icon = ROOT
+				title = VIETmisc.recipe_steal.toast.failure
+				custom_tooltip = VIETmisc.recipe_steal.toast.failure_tooltip
+				VIET_huge_prestige_loss_effect = yes
+				stress_impact = {
+					base = minor_stress_impact_gain
+				}
+				hidden_effect = {
+					destroy_artifact = scope:VIET_recipe_artifact
+				}
+			}
+		}
+	}
+	stress_impact = {
+		zealous = miniscule_stress_impact_gain
+		compassionate = miniscule_stress_impact_gain
+		honest = miniscule_stress_impact_gain
+		just = minor_stress_impact_gain
+		generous = miniscule_stress_impact_gain
+	}
+	ai_chance = {
+		base = 20
+		modifier = {
+			add = 10
+			has_trait = deceitful
+		}
+		modifier = {
+			add = 10
+			has_trait = callous
+		}
+		modifier = {
+			add = 10
+			has_trait = arbitrary
+		}
+		modifier = {
+			add = -15
+			has_trait = just
+		}
+		modifier = {
+			add = -15
+			has_trait = generous
+		}
+		modifier = {
+			add = -15
+			has_trait = honest
+		}
+	}
+}
+
+option = { # Ignore
+	name = VIETmisc.5047.d
+	hidden_effect = {
+		destroy_artifact = scope:VIET_recipe_artifact
+	}
+	stress_impact = {
+		gluttonous = minor_stress_impact_gain
+	}
+	ai_chance = {
+		base = 100
+		modifier = {
+			add = 10
+			has_trait = greedy
+		}
+		modifier = {
+			add = 10
+			has_trait = temperate
+		}
+		modifier = {
+			add = 10
+			has_trait = content
 		}
 	}
 }
@@ -7428,10 +7894,18 @@ VIETmisc.5048 = {
 				gold >= 40
 			}
 		}
-		remove_short_term_gold = 40
+		pay_short_term_gold = {
+			target = scope:merchant
+			gold = 40
+		}
 		scope:VIET_recipe_artifact = {
 			set_owner = {
 				target = root
+				history = {
+					type = purchased
+					actor = scope:merchant
+					recipient = root
+				}
 			}
 		}
 		stress_impact = {
@@ -7453,10 +7927,18 @@ VIETmisc.5048 = {
 			diplomacy >= decent_skill_rating
 		}
 		skill = diplomacy
-		remove_short_term_gold = 25
+		pay_short_term_gold = {
+			target = scope:merchant
+			gold = 25
+		}
 		scope:VIET_recipe_artifact = {
 			set_owner = {
 				target = root
+				history = {
+					type = purchased
+					actor = scope:merchant
+					recipient = root
+				}
 			}
 		}
 		stress_impact = {
@@ -7486,10 +7968,10 @@ VIETmisc.5048 = {
 					type = event_toast_effect_good
 					left_icon = ROOT
 					title = VIETmisc.recipe_steal.toast.success.not_caught
-					scope:VIET_recipe_artifact = {
-						set_owner = {
-							target = root
-						}
+					steal_artifact_in_event_effect = {
+						THIEF = root
+						VICTIM = scope:merchant
+						ARTIFACT = scope:VIET_recipe_artifact
 					}
 				}
 			}
@@ -7507,10 +7989,10 @@ VIETmisc.5048 = {
 					type = event_toast_effect_good
 					left_icon = ROOT
 					title = VIETmisc.recipe_steal.toast.success.caught
-					scope:VIET_recipe_artifact = {
-						set_owner = {
-							target = root
-						}
+					steal_artifact_in_event_effect = {
+						THIEF = root
+						VICTIM = scope:merchant
+						ARTIFACT = scope:VIET_recipe_artifact
 					}
 					VIET_huge_prestige_loss_effect = yes
 					stress_impact = {
@@ -7772,6 +8254,7 @@ VIETmisc.5049 = {
 		}
 		
 	}
+	after = { scope:chef = { VIET_clean_up_character_effect = yes } }
 	
 	option = { # Pay
 		name = VIETmisc.5049.a
@@ -7781,10 +8264,18 @@ VIETmisc.5049 = {
 				gold >= 40
 			}
 		}
-		remove_short_term_gold = 40
+		pay_short_term_gold = {
+			target = scope:chef
+			gold = 40
+		}
 		scope:VIET_recipe_artifact = {
 			set_owner = {
 				target = root
+				history = {
+					type = purchased
+					actor = scope:chef
+					recipient = root
+				}
 			}
 		}
 		stress_impact = {
@@ -7806,10 +8297,18 @@ VIETmisc.5049 = {
 			diplomacy >= decent_skill_rating
 		}
 		skill = diplomacy
-		remove_short_term_gold = 25
+		pay_short_term_gold = {
+			target = scope:merchant
+			gold = 25
+		}
 		scope:VIET_recipe_artifact = {
 			set_owner = {
 				target = root
+				history = {
+					type = purchased
+					actor = scope:chef
+					recipient = root
+				}
 			}
 		}
 		stress_impact = {
@@ -7839,10 +8338,10 @@ VIETmisc.5049 = {
 					type = event_toast_effect_good
 					left_icon = ROOT
 					title = VIETmisc.recipe_steal.toast.success.not_caught
-					scope:VIET_recipe_artifact = {
-						set_owner = {
-							target = root
-						}
+					steal_artifact_in_event_effect = {
+						THIEF = root
+						VICTIM = scope:chef
+						ARTIFACT = scope:VIET_recipe_artifact
 					}
 				}
 			}
@@ -7860,10 +8359,10 @@ VIETmisc.5049 = {
 					type = event_toast_effect_good
 					left_icon = ROOT
 					title = VIETmisc.recipe_steal.toast.success.caught
-					scope:VIET_recipe_artifact = {
-						set_owner = {
-							target = root
-						}
+					steal_artifact_in_event_effect = {
+						THIEF = root
+						VICTIM = scope:chef
+						ARTIFACT = scope:VIET_recipe_artifact
 					}
 					VIET_huge_prestige_loss_effect = yes
 					stress_impact = {
@@ -8031,23 +8530,32 @@ VIETmisc.5050 = {
 	
 	immediate = {
 		VIET_find_random_barony_effect = yes
-		
-		create_character = {
-			template = local_artisan_template
-			location = scope:barony.holder.location
-			faith = scope:barony.faith
-			culture = scope:barony.culture
-			save_scope_as = weaver
-		}
-		hidden_effect = {
+		if = {
+			limit = { is_ai = no }
+			create_character = {
+				template = local_artisan_template
+				gender_female_chance = root_faith_dominant_gender_adjusted_female_chance
+				location = scope:barony.holder.location
+				faith = scope:barony.faith
+				culture = scope:barony.culture
+				save_scope_as = weaver
+			}
 			scope:weaver = {
 				set_variable = {
 					name = created_artifact_type
 					value = flag:weaver
 				}
+				save_scope_as = owner
+			}
+		}
+		else = {
+			save_scope_as = owner
+		}
+		hidden_effect = {
+			scope:owner = {
 				create_artifact = {
 					name = VIET_patchwork_quilt_name
-					description = VIET_patchwork_quilt_desc
+					description = placeholder
 					type = VIET_clutter
 					visuals = VIET_patchwork_quilt
 					quality = 15
@@ -8059,11 +8567,14 @@ VIETmisc.5050 = {
 						type = created
 						actor = scope:weaver
 						recipient = root
-						location = scope:weaver.location
+						location = scope:barony.holder.location
 					}
 				}
 				scope:VIET_clutter_artifact = {
 					set_variable = VIET_patchwork_quilt_variable
+					VIET_set_artifact_wealth_med_effect = yes
+					set_artifact_feature_group = generic_material_cloth
+					set_artifact_description = VIET_patchwork_quilt_desc
 				}
 			}
 		}
@@ -8115,7 +8626,10 @@ VIETmisc.5051 = {
 	theme = friendly
 	override_background = { reference = garden }
 	
-	left_portrait = root
+	left_portrait = {
+		character = root
+		animation = clutching_ball
+	}
 	artifact = { # To display the artifact in the event-window
 		target = scope:VIET_clutter_artifact
 		position = lower_center_portrait
@@ -8177,7 +8691,8 @@ VIETmisc.5051 = {
 				max_durability = 40
 				save_scope_as = VIET_clutter_artifact
 				history = {
-					type = created_before_history
+					type = purchased
+					actor = root
 				}
 			}
 			scope:VIET_clutter_artifact = {
@@ -8501,7 +9016,7 @@ VIETmisc.5054 = {
 		position = lower_center_portrait
 	}
 	right_portrait = {
-		character = root
+		character = scope:merchant
 		animation = personality_dishonorable
 	}
 	
@@ -8582,10 +9097,18 @@ VIETmisc.5054 = {
 				gold >= 20
 			}
 		}
-		remove_short_term_gold = 20
+		pay_short_term_gold = {
+			target = scope:merchant
+			gold = 20
+		}
 		scope:VIET_clutter_artifact = {
 			set_owner = {
 				target = root
+				history = {
+					type = purchased
+					actor = scope:merchant
+					recipient = root
+				}
 			}
 		}
 		stress_impact = {
@@ -8811,24 +9334,24 @@ VIETmisc.5056 = {
 		
 		hidden_effect = {
 			scope:apothecary = {
-			create_artifact = {
-				name = VIET_tongue_stone_name
-				description = VIET_tongue_stone_desc
-				type = VIET_clutter
-				visuals = VIET_tongue_stone
-				quality = 30
-				wealth = 30
-				modifier = artifact_VIET_tongue_stone_modifier
-				max_durability = 40
-				save_scope_as = VIET_clutter_artifact
-				history = {
-					type = created_before_history
+				create_artifact = {
+					name = VIET_tongue_stone_name
+					description = VIET_tongue_stone_desc
+					type = VIET_clutter
+					visuals = VIET_tongue_stone
+					quality = 30
+					wealth = 30
+					modifier = artifact_VIET_tongue_stone_modifier
+					max_durability = 40
+					save_scope_as = VIET_clutter_artifact
+					history = {
+						type = created_before_history
+					}
+				}
+				scope:VIET_clutter_artifact = {
+					set_variable = VIET_tongue_stone_variable
 				}
 			}
-			scope:VIET_clutter_artifact = {
-				set_variable = VIET_tongue_stone_variable
-			}
-		}
 		}
 	}
 	
@@ -8840,12 +9363,20 @@ VIETmisc.5056 = {
 				gold >= 40
 			}
 		}
-		remove_short_term_gold = 40
-			scope:VIET_clutter_artifact = {
-				set_owner = {
-					target = root
+		pay_short_term_gold = {
+			target = scope:apothecary
+			gold = 40
+		}
+		scope:VIET_clutter_artifact = {
+			set_owner = {
+				target = root
+				history = {
+					type = purchased
+					actor = scope:apothecary
+					recipient = root
 				}
 			}
+		}
 		custom_tooltip = VIET_artifact_limit_warning
 	}
 	
@@ -8942,20 +9473,29 @@ VIETmisc.5057 = {
 	
 	
 	immediate = {
-		create_character = {
-			template = local_artisan_template
-			location = root.capital_province
-			gender_female_chance = root_faith_dominant_gender_adjusted_female_chance
-			faith = root.capital_province.faith
-			culture = root.capital_province.culture
-			save_scope_as = smith
-		}
-		hidden_effect = {
+		if = {
+			limit = { is_ai = no }
+			create_character = {
+				template = local_artisan_template
+				location = root.capital_province
+				gender_female_chance = root_faith_dominant_gender_adjusted_female_chance
+				faith = root.capital_province.faith
+				culture = root.capital_province.culture
+				save_scope_as = smith
+			}
 			scope:smith = {
 				set_variable = {
 					name = created_artifact_type
 					value = flag:smith
 				}
+				save_scope_as = owner
+			}
+		}
+		else = {
+			save_scope_as = owner
+		}
+		hidden_effect = {
+			scope:owner = {
 				create_artifact = {
 					name = VIET_fire_striker_name
 					description = VIET_fire_striker_desc
@@ -8970,7 +9510,7 @@ VIETmisc.5057 = {
 						type = created
 						actor = scope:smith
 						recipient = root
-						location = scope:smith.location
+						location = root.capital_province
 					}
 				}
 				scope:VIET_clutter_artifact = {
@@ -8988,11 +9528,25 @@ VIETmisc.5057 = {
 				gold >= 15
 			}
 		}
-		remove_short_term_gold = 15
-		scope:VIET_clutter_artifact = {
-			set_owner = {
-				target = root
+		if = {
+			limit = { exists = scope:smith }
+			pay_short_term_gold = {
+				target = scope:smith
+				gold = 15
 			}
+			scope:VIET_clutter_artifact = {
+				set_owner = {
+					target = root
+					history = {
+						type = purchased
+						actor = scope:smith
+						recipient = root
+					}
+				}
+			}
+		}
+		else = {
+			remove_short_term_gold = 15
 		}
 		custom_tooltip = VIET_artifact_limit_warning
 	}
@@ -9184,6 +9738,7 @@ VIETmisc.5058 = {
 			}
 		}
 	}
+	after = { scope:cook = { VIET_clean_up_character_effect = yes } }
 	
 	option = { # Pay
 		name = VIETmisc.5042.a
@@ -9193,10 +9748,18 @@ VIETmisc.5058 = {
 				gold >= 40
 			}
 		}
-		remove_short_term_gold = 40
+		pay_short_term_gold = {
+			target = scope:chef
+			gold = 40
+		}
 		scope:VIET_recipe_artifact = {
 			set_owner = {
 				target = root
+				history = {
+					type = purchased
+					actor = scope:chef
+					recipient = root
+				}
 			}
 		}
 		stress_impact = {
@@ -9218,10 +9781,18 @@ VIETmisc.5058 = {
 			diplomacy >= decent_skill_rating
 		}
 		skill = diplomacy
-		remove_short_term_gold = 25
+		pay_short_term_gold = {
+			target = scope:chef
+			gold = 25
+		}
 		scope:VIET_recipe_artifact = {
 			set_owner = {
 				target = root
+				history = {
+					type = purchased
+					actor = scope:chef
+					recipient = root
+				}
 			}
 		}
 		stress_impact = {
@@ -9251,10 +9822,10 @@ VIETmisc.5058 = {
 					type = event_toast_effect_good
 					left_icon = ROOT
 					title = VIETmisc.recipe_steal.toast.success.not_caught
-					scope:VIET_recipe_artifact = {
-						set_owner = {
-							target = root
-						}
+					steal_artifact_in_event_effect = {
+						THIEF = root
+						VICTIM = scope:cook
+						ARTIFACT = scope:VIET_recipe_artifact
 					}
 				}
 			}
@@ -9272,10 +9843,10 @@ VIETmisc.5058 = {
 					type = event_toast_effect_good
 					left_icon = ROOT
 					title = VIETmisc.recipe_steal.toast.success.caught
-					scope:VIET_recipe_artifact = {
-						set_owner = {
-							target = root
-						}
+					steal_artifact_in_event_effect = {
+						THIEF = root
+						VICTIM = scope:cook
+						ARTIFACT = scope:VIET_recipe_artifact
 					}
 					VIET_huge_prestige_loss_effect = yes
 					stress_impact = {
@@ -9369,16 +9940,6 @@ VIETmisc.5058 = {
 		}
 	}
 	
-	#after = {
-	#	hidden_effect = {
-	#		scope:cook = {
-	#			death = {
-	#				death_reason = death_disappearance
-	#			}
-	#		}
-	#	}
-	#}
-	
 	
 }
 
@@ -9470,9 +10031,10 @@ VIETmisc.5059 = {
 		
 		hidden_effect = {
 			scope:merchant = {
+				save_scope_as = owner # For decorations
 				create_artifact = {
 					name = VIET_coconut_cup_name
-					description = VIET_coconut_cup_desc
+					description = placeholder
 					type = VIET_clutter
 					visuals = VIET_coconut_cup
 					quality = 30
@@ -9486,6 +10048,11 @@ VIETmisc.5059 = {
 				}
 				scope:VIET_clutter_artifact = {
 					set_variable = VIET_coconut_cup_variable
+					VIET_set_artifact_wealth_high_effect = yes
+					set_artifact_feature_group = decoration_material_inlay
+					set_artifact_feature_group = decoration_pattern
+					get_artifact_feature_references_effect = yes
+					set_artifact_description = VIET_coconut_cup_desc
 				}
 			}
 		}
@@ -9499,10 +10066,18 @@ VIETmisc.5059 = {
 				gold >= 50
 			}
 		}
-		remove_short_term_gold = 50
+		pay_short_term_gold = {
+			target = scope:merchant
+			gold = 50
+		}
 		scope:VIET_clutter_artifact = {
 			set_owner = {
 				target = root
+				history = {
+					type = purchased
+					actor = scope:merchant
+					recipient = root
+				}
 			}
 		}
 		custom_tooltip = VIET_artifact_limit_warning
@@ -9645,10 +10220,18 @@ VIETmisc.5060 = {
 				gold >= 50
 			}
 		}
-		remove_short_term_gold = 50
+		pay_short_term_gold = {
+			target = scope:todd_howard
+			gold = 40
+		}
 		scope:VIET_clutter_artifact = {
 			set_owner = {
 				target = root
+				history = {
+					type = purchased
+					actor = scope:todd_howard
+					recipient = root
+				}
 			}
 		}
 		stress_impact = {
@@ -9678,10 +10261,13 @@ VIETmisc.5060 = {
 		show_as_unavailable = {
 			diplomacy < decent_skill_rating
 		}
-		show_as_tooltip = {
-			scope:VIET_clutter_artifact = {
-				set_owner = {
-					target = root
+		scope:VIET_clutter_artifact = {
+			set_owner = {
+				target = root
+				history = {
+					type = purchased
+					actor = scope:todd_howard
+					recipient = root
 				}
 			}
 		}

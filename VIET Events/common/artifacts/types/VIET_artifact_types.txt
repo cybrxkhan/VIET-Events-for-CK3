@@ -3,6 +3,17 @@
 VIET_clutter = {
 	slot = miscellaneous
 	can_reforge = no
+	optional_features = {
+		box_material
+		decoration_material_inlay
+		decoration_material_inlay_HSB
+		decoration_pattern
+		generic_material_cloth
+		generic_material_earthware
+		generic_material_wood
+		shaft_decoration
+		shaft_wood
+	}
 }
 
 VIET_recipe = {

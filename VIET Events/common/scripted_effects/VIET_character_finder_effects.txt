@@ -2,13 +2,14 @@
 
 # Documentation for character finder effects, which either spawn or create a character to use in events
 
-# LIST GENERATION EFFECTS
 ## VIET_pool_provinces_effect - returns pool_provinces, province list
 ## VIET_realm_court_list_effect - returns VIET_court_list and potential_minor_nobles, character list
 ## VIET_sub_realm_court_list_effect - as prior, but only for your sub-realm
-
-# TITLE FINDERS
 ## VIET_find_random_barony_effect - returns scope:barony
+
+## VIET_clean_up_character_effect - kills the scope if the root is ai, use ``after = { scope:wanderer = { VIET_clean_up_character_effect = yes } }``
+## VIET_set_artifact_wealth_med_effect - sets scope:wealth and scope:quality to 20, to apply the proper decorations
+## VIET_set_artifact_wealth_high_effect - sets scope:wealth and scope:quality to 60
 
 # MERCHANTS
 ## VIET_pick_merchant_effect - may return scope:merchant from list potential_merchants
@@ -16,7 +17,7 @@
 # VIET_find_traveling_merchant_effect - returns scope:merchant, adds traveler xp
 # VIET_find_old_merchant_effect - returns scope:merchant
 
-# NOBLES - use trigger = { VIET_has_minor_nobles = yes } to ensure there are valid nobles to find
+# NOBLES - use ``trigger = { VIET_has_minor_nobles = yes }`` to ensure there are valid nobles to find
 ## VIET_pick_minor_noble_effect - may return scope:noble from lists VIET_court_list and potential_minor_nobles
 # VIET_find_realm_minor_noble_effect - returns scope:noble
 # VIET_find_sub_realm_minor_noble_effect - returns scope:noble
@@ -36,7 +37,7 @@
 # VIET_find_common_gambler_effect - returns scope:gambler, adds board game xp
 # VIET_find_noble_gambler_effect - returns scope:gambler, adds board game xp
 
-# SERVANTS - trigger = { is_landed_or_landless_administrative = yes } is not necessary, but prevents adventures getting servant events
+# SERVANTS - ``trigger = { is_landed_or_landless_administrative = yes }`` is not necessary, but prevents adventures getting servant events
 # VIET_find_servant_effect - returns scope:servant
 # VIET_find_maid_effect - returns scope:servant
 # VIET_find_male_servant_effect - returns scope:servant
@@ -45,7 +46,7 @@
 
 # WARRIORS
 # VIET_find_hunter_effect - returns scope:hunter
-# VIET_find_military_courtier_effect - returns scope:soldier and puts them in armor, use trigger = { VIET_has_military_courtier = yes } and after = { scope:soldier = { remove_character_flag = wear_armor } }
+# VIET_find_military_courtier_effect - returns scope:soldier and puts them in armor, use ``trigger = { VIET_has_military_courtier = yes }`` and ``after = { scope:soldier = { remove_character_flag = wear_armor } }``
 
 #############################################################################################
 
@@ -126,10 +127,6 @@ VIET_sub_realm_court_list_effect = {
 	}
 }
 
-#############################################################################################
-# Titles
-#############################################################################################
-
 VIET_find_random_barony_effect = {
 	random_sub_realm_barony = {
 		save_scope_as = barony
@@ -140,6 +137,35 @@ VIET_find_random_barony_effect = {
 		capital_barony = {
 			save_scope_as = barony
 		}
+	}
+}
+
+VIET_clean_up_character_effect = {
+	if = {
+		limit = { root = { is_ai = yes } }
+		hidden_effect = { death = { death_reason = death_disappearance } }
+	}
+}
+
+VIET_set_artifact_wealth_med_effect = {
+	save_scope_value_as = {
+		name = wealth
+		value = 20
+	}
+	save_scope_value_as = {
+		name = quality
+		value = 20
+	}
+}
+
+VIET_set_artifact_wealth_high_effect = {
+	save_scope_value_as = {
+		name = wealth
+		value = 60
+	}
+	save_scope_value_as = {
+		name = quality
+		value = 60
 	}
 }
 
@@ -235,9 +261,9 @@ VIET_find_noble_widow_effect = {
 		hidden_effect = {
 			root = { add_courtier = scope:noble }
 			scope:irrelevant_dead_husband = {
-				set_character_flag = high_noble_clothing
+				add_character_flag = high_noble_clothing
 				marry = scope:noble
-				death = { death_reason = natural }
+				death = natural
 			}
 		}
 	}
@@ -482,7 +508,7 @@ VIET_find_astronomer_effect = {
 					value = learning
 					if = {
 						limit = {
-							faith = { has_doctrine = { tenet_astrology } }
+							faith = { has_doctrine = tenet_astrology }
 						}
 						add = 10
 					}
@@ -816,6 +842,7 @@ VIET_find_common_gambler_effect = {
 					}
 				}
 			}
+		}
 			weight = {
 				base = 1
 				
@@ -830,7 +857,6 @@ VIET_find_common_gambler_effect = {
 					}
 				}
 			}
-		}
 		save_scope_as = gambler
 	}
 	#If no courtier fits, make one
@@ -894,6 +920,7 @@ VIET_find_noble_gambler_effect = {
 					value > 0
 				}
 			}
+		}
 			weight = {
 				base = 1
 				
@@ -917,7 +944,6 @@ VIET_find_noble_gambler_effect = {
 					}
 				}
 			}
-		}
 		save_scope_as = gambler
 	}
 	#If no noble fits, find a random one, preferrably cynical, greedy, and irrational
@@ -931,10 +957,10 @@ VIET_find_noble_gambler_effect = {
 					add = {
 						value = ai_greed
 					}
-					subtract = {
-						value = ai_zeal
-						value = ai_rationality
-					}
+					#subtract = {
+					#	value = ai_zeal
+					#	value = ai_rationality
+					#}
 					add = {
 						if = {
 							limit = {
@@ -985,10 +1011,9 @@ VIET_find_servant_effect = {
 			location = root.capital_province
 			template = servant_character
 			save_scope_as = servant
-			change_liege = { liege = root }
 		}
+		hidden_effect = { add_courtier = scope:servant }
 	}
-	hidden_effect = { add_courtier = scope:servant }
 }
 
 VIET_find_maid_effect = {
@@ -1006,11 +1031,10 @@ VIET_find_maid_effect = {
 			location = root.capital_province
 			template = servant_character
 			gender_female_chance = 100
-			save_scope_as = maid
-			change_liege = { liege = root }
+			save_scope_as = servant
 		}
+		hidden_effect = { add_courtier = scope:servant }
 	}
-	hidden_effect = { add_courtier = scope:servant }
 }
 
 VIET_find_male_servant_effect = {
@@ -1019,7 +1043,7 @@ VIET_find_male_servant_effect = {
 			VIET_is_menial_servant = yes
 			is_male = yes
 		}
-		save_scope_as = maid
+		save_scope_as = servant
 	}
 	#If no courtier fits, make one
 	if = {
@@ -1029,10 +1053,9 @@ VIET_find_male_servant_effect = {
 			template = servant_character
 			gender_female_chance = 0
 			save_scope_as = servant
-			change_liege = { liege = root }
 		}
+		hidden_effect = { add_courtier = scope:servant }
 	}
-	hidden_effect = { add_courtier = scope:servant }
 }						
 
 VIET_find_laborer_effect = {
@@ -1114,10 +1137,9 @@ VIET_find_gardener_effect = {
 			location = root.capital_province
 			template = servant_character
 		save_scope_as = gardener
-		change_liege = { liege = root }
 		}
+		hidden_effect = { add_courtier = scope:gardener }
 	}
-	hidden_effect = { add_courtier = scope:gardener }
 }
 
 #############################################################################################
