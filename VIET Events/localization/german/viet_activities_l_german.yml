@@ -7,6 +7,7 @@
  VIET_activity_result_gained_smaller_prestige: "Gained a small amount of [prestige_i] [prestige|E]"
 
  # Viewing Flowers in Bloom
+ activity_VIET_view_flower_meadows_in_bloom_host_an_a:0 "$host_activity_a$"
  activity_VIET_view_flower_meadows_in_bloom:0 "Flower Viewing"
  activity_VIET_view_flower_meadows_in_bloom_desc:0 "There is a part of your realm famous for the beauty of its meadows and fields in springtime, when the flowers are in full bloom."
  activity_VIET_view_flower_meadows_in_bloom_selection_tooltip: "Visit a famed flower meadow.\n\nAnticipated Rewards:$activity_VIET_view_flower_meadows_in_bloom$"
@@ -28,6 +29,7 @@
  TRAVEL_NAME_FOR_activity_VIET_view_flower_meadows_in_bloom:0 "[Character.GetFirstNamePossessiveNoTooltip] $activity_VIET_view_flower_meadows_in_bloom$"
 
  # Burial Mound Visit
+ activity_VIET_burial_mound_visit_host_an_a:0 "$host_activity_a$"
  activity_VIET_burial_mound_visit:0 "Burial Mound Visit"
  activity_VIET_burial_mound_visit_desc:0 "A shrine to a legendary figure is said to be buried under a mound or hill in your domain. It might be worth it to visit this site."
  activity_VIET_burial_mound_rewards_tooltip: "\n$BULLET_WITH_TAB$[prestige_i|E] [prestige|E]\n$BULLET_WITH_TAB$[piety_i|E] [piety|E]\n$BULLET_WITH_TAB$Lose [stress_loss_i|E] [stress|E]\n$BULLET_WITH_TAB$[lifestyle_experience|E]\n$BULLET_WITH_TAB$Beneficial [character_modifiers|E]"
@@ -57,6 +59,7 @@
  TRAVEL_NAME_FOR_activity_VIET_burial_mound_visit:0 "[Character.GetFirstNamePossessiveNoTooltip] $activity_VIET_burial_mound_visit$"
 
  # Ghost town investigation
+ activity_VIET_ghost_town_investigation_host_an_a:0 "$host_activity_a$"
  activity_VIET_ghost_town_investigation:0 "Ghost Town Investigation"
  activity_VIET_ghost_town_investigation_desc:0 "There are many stories out there about so-called "ghost towns," where the locals claim to witness seeing spirits moving about. Could any of these stories be true?"
  activity_VIET_ghost_town_investigation_rewards_tooltip: "\n$BULLET_WITH_TAB$Results depend on whether ghosts are sighted or not"
@@ -94,6 +97,7 @@
  TRAVEL_NAME_FOR_activity_VIET_ghost_town_investigation:0 "[Character.GetFirstNamePossessiveNoTooltip] $activity_VIET_ghost_town_investigation$"
 
  # Giant Shade Tree
+ activity_VIET_giant_shade_tree_visit_host_an_a:0 "$host_activity_a$"
  activity_VIET_giant_shade_tree_visit:0 "Giant Shade Tree Visit"
  activity_VIET_giant_shade_tree_visit_desc:0 "There is a well-known shade tree in your [realm|E] that would be a great place to relax."
  activity_VIET_giant_shade_tree_visit_rewards_tooltip: "\n$BULLET_WITH_TAB$Lose [stress_loss_i|E] [stress|E]"
@@ -116,6 +120,7 @@
  TRAVEL_NAME_FOR_activity_VIET_giant_shade_tree_visit:0 "[Character.GetFirstNamePossessiveNoTooltip] $activity_VIET_giant_shade_tree_visit$"
 
  # Ancient Stone Monument
+ activity_VIET_ancient_stone_monument_examination_host_an_a:0 "$host_activity_an$"
  activity_VIET_ancient_stone_monument_examination:0 "Ancient Stone Monument Examination"
  activity_VIET_ancient_stone_monument_examination_desc:0 "Ancient stone monuments might be a dime a dozen for some scholars, but there are some which intrigue even those without scholarly inclinations, inspiring the average person to admire and better understand it."
  activity_VIET_ancient_stone_monument_examination_rewards_tooltip: "\n$BULLET_WITH_TAB$Gain [piety_i] [piety|E]\n$BULLET_WITH_TAB$Lose [stress_loss_i|E] [stress|E]\n$BULLET_WITH_TAB$[GetModifier('VIET_examined_ancient_stone_monument').GetNameWithTooltip] [character_modifier|E]"

@@ -2919,12 +2919,6 @@ VIET_popular_folk_music_court = {
 	monthly_court_grandeur_change_add = 0.1	
 }
 
-VIET_popular_folk_music_court = {
-	icon = social_positive
-	monthly_prestige = 0.3
-	monthly_court_grandeur_change_add = 0.1	
-}
-
 VIET_bridge_knowledge = {
 	icon = county_modifier_development_positive
 	stewardship = 1
@@ -3172,12 +3166,6 @@ VIET_plant_milk = {
 	monthly_piety = 0.1
 	stress_loss_mult = 0.05
 	monthly_income = -0.1
-}
-
-VIET_no_sympathy_servants = {
-	icon = family_negative
-	monthly_piety = -0.1
-	stress_loss_mult = -0.05
 }
 
 VIET_no_sympathy_servants = {
@@ -3982,6 +3970,37 @@ VIET_lacking_intellectual_self_esteem = {
 	monthly_lifestyle_xp_gain_mult = -0.2
 	stress_gain_mult = 0.1
 	stress_loss_mult = -0.1
+}
+
+VIET_possessed_by_a_dead_monk = {
+	icon = piety_positive
+	learning = 3
+	monthly_lifestyle_xp_gain_mult = -0.2
+	stress_gain_mult = -0.25
+	stress_loss_mult = 0.25
+}
+
+VIET_sheepskin_rebirth = {
+	icon = piety_positive
+	monthly_piety = 0.1
+	buddhism_religion_opinion = 5
+}
+
+VIET_respects_cunning = {
+	icon = mask_positive
+	enemy_hostile_scheme_success_chance_add = -5
+}
+
+VIET_unimpressed_ruler = {
+	icon = mask_positive
+	monthly_prestige = 0.25
+}
+
+VIET_dragon_dormant = {
+	icon = beast_positive
+	monthly_prestige = 0.1
+	monthly_merit_mult = 0.05
+	confucian_education_xp_gain_mult = 0.05	
 }
 
 

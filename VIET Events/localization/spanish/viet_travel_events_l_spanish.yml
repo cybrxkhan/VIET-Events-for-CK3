@@ -259,12 +259,20 @@ VIETmisc.7053.c:0 "¡Debe de ser una señal de [ROOT.Char.GetFaith.HighGodName]!
 VIETmisc.7054.desc:0 "Hace un tiempo, mientras viajaba, me encontré con dos gatos — uno gris y otro blanco — jugando con unos melocotones que habían caído de un melocotonero cercano.\n\nAnoche, por alguna razón inexplicable, soñé de nuevo con esos gatos, jugando otra vez con esos melocotones. Sin embargo, esta vez, algo en la escena parecía diferente.\n\nDe algún modo, me sentí aún más relajado y en paz." 
 VIETmisc.7054.a:0 "Despierto con una sonrisa suave en el rostro." 
  # Version 1.16.2 Start Here - Note to Translators: please leave this comment here and do not remove it even in your versions of the loc
- VIETmisc.7055.t:0 "$travel_event_prefix$ xxxxx"
- VIETmisc.7055.desc:0 "xxxxx"
- VIETmisc.7055.a:0 "xxxxx"
- VIETmisc.7056.t:0 "$travel_event_prefix$ xxxxx"
- VIETmisc.7056.desc:0 "xxxxx"
- VIETmisc.7056.a:0 "xxxxx"
+ # Version 1.18.0 Start Here - Note to Translators: please leave this comment here and do not remove it even in your versions of the loc
+ # Note to Chinese translators: I've tried the best I could to find the original names of Pu Songling's stories from 聊斋志异, but I might be inaccurate since I only know them mainly from the English translation
+ VIETmisc.7055.t:0 "$travel_event_prefix$ Adultery and Enlightenment" # Original Chinese: 羅祖
+ VIETmisc.7055.desc:0 "We stopped by a [culture.GetName] shrine in [ROOT.Char.GetCurrentLocation.GetName] built long ago to honor the progenitor of a local family of some repute.\n\nLegend had it that this man, a soldier, often left home on military campaigns and would entrust his wife and son to the care of a friend. However, when he returned one time, he caught his wife and friend committing adultery. He had raised his sword to kill them, but stopped at the last minute. He retired to the wilderness and became a renowned and highly realized hermit.\n\nThe man's descendant, [heir.GetFirstName], a [heir.GetWomanMan] of sagely disposition [heir.GetHerselfHimself] remarked with a chuckle after telling me this story, “These days, few care about leading saintly lives – everyone wants to become an instant Buddha. My ancestor’s example teaches us that there is only one true path to instant Buddhahood: put down your sword!”"
+ VIETmisc.7055.a:0 "I agree with that. Wise words indeed."
+ VIETmisc.7055.b:0 "Your ancestor shouldn't have spared them."
+ VIETmisc.7055.c:0 "You seem virtuous yourself – how about working for me?"
+ VIETmisc.7055.info:0 "$VIETmisc.liaozhai_zhiyi.intro$ This tale tells of a soldier who caught his wife cheating on a friend and almost killed them, before deciding to spare them. He then becomes a famous hermit who is respected by many people, even though he does not enjoy the attention. The story pokes fun at how people back then, just like now, often wanted immediate spiritual attainment and achievements, but were unwilling to actually do anything that would lead them towards living a virtuous life, unlike the soldier turned hermit in the story."
+ VIETmisc.7056.t:0 "$travel_event_prefix$ The Wolves" # Original Chinese: 狼
+ VIETmisc.7056.desc:0 "The market town of [ROOT.Char.GetCurrentLocation.GetName] was full of wonderful food. As we decided what to eat, we met a talkative butcher named [butcher.GetFirstName], who told us of a scary encounter he had last night.\n\nWhile walking home, carrying a couple bones and his butcher’s knife, he met two wolves who clearly wanted to kill and eat him. He threw the bones at the wolves to distract them, but the wolves continued to follow him, so he hid in a pile of hay in a field nearby.\n\nThe wolves waited for him until one grew bored and left, and the other fell asleep. He pounced on the sleeping wolf, killing it with his knife. He then saw the other wolf digging a hole further away, and realized the sleeping wolf pretended to sleep to lure him so the other could attack him from behind. The butcher then killed the second wolf, and escaped."
+ VIETmisc.7056.a:0 "The wolves were cunning, but you’re even more cunning!"
+ VIETmisc.7056.b:0 "I don’t think they sounded #italic that#! scary."
+ VIETmisc.7056.info:0 "$VIETmisc.liaozhai_zhiyi.intro$ This tale revolves around a butcher’s various attempts to be rid of two wolves who were out to kill him. These days, it is even commonly taught in Chinese schools thanks to its relative simplicity and its clear message about a person’s determination and cunning, even in difficult circumstances."
+ # Version 1.18.1 Start Here - Note to Translators: please leave this comment here and do not remove it even in your versions of the loc
  VIETmisc.7057.t:0 "$travel_event_prefix$ xxxxx"
  VIETmisc.7057.desc:0 "xxxxx"
  VIETmisc.7057.a:0 "xxxxx"

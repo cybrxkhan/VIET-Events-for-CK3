@@ -884,6 +884,17 @@ VIET_generic_middle_aged_male_template = {
 	}
 }
 
+VIET_generic_local_middle_aged_male_template = {
+	age = { 30 60 }
+	random_traits = yes
+	culture = scope:county.culture
+	faith = scope:county.faith
+	gender_female_chance = 0
+	after_creation = {		
+		VIET_ek_character_setup_effect = yes
+	}
+}
+
 VIET_old_beggar_male_template = {
 	age = { 60 80 }
 	culture = scope:county.culture
@@ -1083,4 +1094,54 @@ VIET_todd_howard_template = {
 	}
 }
 
+VIET_fox_spirit_template = {
+	age = { 18 30 }
+	#culture = root.culture
+	#faith = root.faith
+	gender_female_chance = 100
+	trait = beauty_good_3
+	random_traits = no
+	diplomacy = {
+		min_template_decent_skill
+		max_template_decent_skill
+	}
+	after_creation = {
+		VIET_ek_character_setup_effect = yes
+	}
+}
 
+
+VIET_generic_wise_local_template = {
+	age = { 18 60 }
+	gender_female_chance = 50
+	random_traits_list = {
+		education_learning_4 = { weight = { base = 5 } }
+		education_learning_3 = { weight = { base = 10 } }
+		education_learning_2 = { weight = { base = 10 } }
+		education_stewardship_4 = { weight = { base = 5 } }
+		education_stewardship_3 = { weight = { base = 10 } }
+		education_stewardship_2 = { weight = { base = 10 } }
+		education_diplomacy_4 = { weight = { base = 5 } }
+		education_diplomacy_3 = { weight = { base = 10 } }
+		education_diplomacy_2 = { weight = { base = 10 } }
+	}
+	random_traits = no
+	#Personality
+	random_traits_list = {
+		count = 3
+		content = {}
+		patient = {}
+		compassionate = {}
+		gregarious = {}
+		humble = {}
+		just = {}
+		generous = {}
+		diligent = {}
+		forgiving = {}
+		chaste = {}
+		temperate = {}
+	}
+	after_creation = {		
+		VIET_ek_character_setup_effect = yes
+	}
+}

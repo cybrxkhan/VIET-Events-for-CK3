@@ -1713,6 +1713,7 @@ VIETmisc.5014 = {
 				geographical_region = world_middle_east_persia
 				geographical_region = world_steppe_central
 				geographical_region = world_siberia
+				geographical_region = world_asia_southeast
 			}
 		}
 	}

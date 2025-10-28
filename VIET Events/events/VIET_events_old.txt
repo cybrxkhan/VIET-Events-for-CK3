@@ -2219,6 +2219,15 @@ VIETold.2030 = {
 
 	trigger = {
 		NOT = { has_game_rule = VIET_conversion_universe_events }
+		# Shouldn't happen close to Japan
+		capital_province = {
+			NOR = {
+				geographical_region = world_asia_japan
+				geographical_region = world_asia_sakhalin_hokkaido
+				geographical_region = world_asia_north_east
+				geographical_region = world_asia_korea
+			}
+		}
 	}
 	
 	weight_multiplier = {
@@ -2251,7 +2260,7 @@ VIETold.2030 = {
 		modifier = {
 			add = -0.5
 			capital_province = {
-				OR = {
+				NOR = {
 					geographical_region = world_africa_north_east
 					geographical_region = world_africa_east
 					geographical_region = world_steppe
@@ -2261,6 +2270,7 @@ VIETold.2030 = {
 					geographical_region = world_burma
 					geographical_region = world_tibet
 					geographical_region = world_siberia
+					geographical_region = world_asia
 					#geographical_region = world_asia_minor
 				}
 			}
@@ -2638,11 +2648,10 @@ VIETold.2035 = {
 		# Should only be for people who know a bit about the Eurasian nomads, or are the nomads themselves
 		capital_province = {
 			NOR = {
-				geographical_region = world_africa_west
-				geographical_region = world_africa_east
-				geographical_region = world_africa_north_west
+				geographical_region = world_africa
 				geographical_region = world_europe_west
 				geographical_region = world_europe_north
+				geographical_region = world_asia_southeast_islands
 			}
 		}
 	}
@@ -3208,8 +3217,8 @@ VIETold.2044 = {
 			add = -0.9
 			capital_province = {
 				OR = {
-					geographical_region = world_africa_west
-					geographical_region = world_africa_sahara
+					geographical_region = world_africa
+					geographical_region = world_asia_southeast_islands
 				}
 			}
 		}
@@ -3549,6 +3558,7 @@ VIETold.2049 = {
 					geographical_region = world_siberia
 					geographical_region = world_burma
 					geographical_region = world_tibet
+					geographical_region = world_asia
 				}
 			}
 		}
@@ -5206,9 +5216,9 @@ VIETold.2070 = {
 	
 	trigger = {
 		OR = {
-			VIET_is_sinosphere_trigger = yes
+			VIET_is_lesser_sinosphere_culture_trigger = yes
 			any_directly_owned_province = {
-				VIET_is_sinosphere_trigger = yes
+				VIET_is_lesser_sinosphere_culture_trigger = yes
 			}
 		}
 		NOT = { has_game_rule = VIET_conversion_universe_events }
@@ -6782,18 +6792,17 @@ VIETold.2089 = {
 	
 	trigger = {
 		has_game_rule = VIET_normal_universe_events
-		OR = {
-			capital_province = {
-				OR = {
-					geographical_region = world_europe
-					geographical_region = world_asia_minor
-					geographical_region = world_middle_east
-					geographical_region = world_middle_east_persia
-					geographical_region = world_africa_north
-					geographical_region = world_africa_east
-					geographical_region = world_steppe_west
-					geographical_region = world_india
-				}
+		capital_province = {
+			OR = {
+				geographical_region = world_europe
+				geographical_region = world_asia_minor
+				geographical_region = world_middle_east
+				geographical_region = world_middle_east_persia
+				geographical_region = world_africa_north
+				geographical_region = world_africa_east
+				geographical_region = world_steppe_west
+				geographical_region = world_india
+				geographical_region = world_asia_southeast
 			}
 		}
 	}
@@ -11089,14 +11098,13 @@ VIETold.2154 = {
 	trigger = {
 		NOT = { has_game_rule = VIET_conversion_universe_events }
 		capital_province = {
-			OR = {
-				geographical_region = world_steppe_tarim
-				geographical_region = world_steppe_east
-				geographical_region = world_india
-				geographical_region = world_middle_east_persia
-				geographical_region = world_burma
-				geographical_region = world_tibet
-				geographical_region = world_steppe_central
+			NOR = {
+				geographical_region = world_asia_china
+				geographical_region = world_africa
+				geographical_region = world_middle_east_jerusalem
+				geographical_region = world_middle_east_arabia
+				geographical_region = world_europe_west
+				geographical_region = world_steppe_west
 				geographical_region = world_siberia
 			}
 		}
@@ -11268,6 +11276,7 @@ VIETold.2157 = {
 	
 	trigger = {
 		any_held_county = {
+			is_landless_type_title = no
 			is_coastal_county = yes	
 		}
 	}
@@ -11416,7 +11425,7 @@ VIETold.2159 = {
 	
 	trigger = {
 		NOT = { has_game_rule = VIET_conversion_universe_events }
-		VIET_is_sinosphere_trigger = yes	
+		VIET_is_lesser_sinosphere_culture_trigger = yes	
 	}
 
 	weight_multiplier = {
@@ -12290,6 +12299,8 @@ VIETold.2171 = {
 				geographical_region = world_middle_east
 				geographical_region = world_middle_east_persia
 				geographical_region = world_africa_north
+				geographical_region = world_africa_east
+				geographical_region = world_steppe_west
 			}
 		}
 	}
@@ -13761,6 +13772,11 @@ VIETold.2191 = {
 				geographical_region = world_africa_west
 				geographical_region = world_asia_minor
 				geographical_region = world_steppe
+				geographical_region = world_asia_north_east
+				geographical_region = world_asia_korea
+				geographical_region = world_asia_japan
+				geographical_region = world_asia_sakhalin_hokkaido
+				geographical_region = world_siberia
 			}
 		}
 	}
@@ -14371,6 +14387,9 @@ VIETold.2198 = {
 				geographical_region = world_middle_east_persia
 				geographical_region = world_middle_east_jerusalem
 				geographical_region = world_asia_minor
+				geographical_region = world_siberia
+				geographical_region = world_asia_korea
+				geographical_region = world_asia_japan
 			}
 		}
 		any_vassal = {
@@ -14383,6 +14402,9 @@ VIETold.2198 = {
 					geographical_region = world_middle_east_persia
 					geographical_region = world_middle_east_jerusalem
 					geographical_region = world_asia_minor
+					geographical_region = world_siberia
+					geographical_region = world_asia_korea
+					geographical_region = world_asia_japan
 				}
 			}			
 		}
@@ -14428,6 +14450,9 @@ VIETold.2198 = {
 						geographical_region = world_middle_east_persia
 						geographical_region = world_middle_east_jerusalem
 						geographical_region = world_asia_minor
+						geographical_region = world_siberia
+						geographical_region = world_asia_korea
+						geographical_region = world_asia_japan
 					}
 				}			
 			}
@@ -14501,12 +14526,15 @@ VIETold.2199 = {
 					geographical_region = world_himalaya
 					geographical_region = world_burma
 					geographical_region = world_europe_west_iberia
+					geographical_region = world_asia_southeast
+					geographical_region = world_asia_china
 				}
 			}
 			culture_has_west_asian_heritage_pillar_trigger = yes
 			culture_has_south_asian_heritage_pillar_trigger = yes
 			culture_has_mena_heritage_pillar_trigger = yes
 			culture_has_south_european_heritage_pillar_trigger = yes
+			culture_has_southeast_asian_heritage_pillar_trigger = yes
 		}
 	}
 
@@ -15838,7 +15866,10 @@ VIETold.2216 = {
 
 	immediate = {	
 		random_held_title = {
-			limit = { tier = tier_county }
+			limit = {
+				tier = tier_county					
+				is_landless_type_title = no
+			}
 			save_scope_as = county
 		}
 		create_character = {
@@ -16135,7 +16166,10 @@ VIETold.2220 = {
 
 	immediate = {	
 		random_sub_realm_county = {
-			limit = { tier = tier_county }
+			limit = {
+				tier = tier_county					
+				is_landless_type_title = no
+			}
 			save_scope_as = county
 		}
 		create_character = {
@@ -18326,7 +18360,10 @@ VIETold.2245 = {
 	
 	immediate = {	
 		random_held_title = {
-			limit = { tier = tier_county }
+			limit = {
+				tier = tier_county					
+				is_landless_type_title = no
+			}
 			save_scope_as = county
 		}
 		create_character = {
@@ -18571,6 +18608,7 @@ VIETold.2248 = {
 
 	trigger = {
 		any_held_county = {
+			is_landless_type_title = no
 			is_coastal_county = yes	
 		}
 		OR = {
@@ -18727,7 +18765,10 @@ VIETold.2249 = {
 	
 	immediate = {	
 		random_held_title = {
-			limit = { tier = tier_county }
+			limit = {
+				tier = tier_county					
+				is_landless_type_title = no
+			}
 			save_scope_as = county
 		}
 		create_character = {

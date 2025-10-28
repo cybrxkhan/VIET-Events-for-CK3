@@ -693,10 +693,6 @@ VIET_opinion_gracious = {
 	years = 10
 	opinion = 15
 }
-VIET_opinion_rejected_my_gift = {
-	years = 10
-	opinion = -10
-}
 VIET_opinion_rudely_rejected_my_gift = {
 	years = 10
 	opinion = -25

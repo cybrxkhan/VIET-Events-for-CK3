@@ -429,14 +429,14 @@ VIET_events_yearly_pulse = {
 		# Oblivion Unmarked Locations
 		100 = VIETmisc.0193		# Lonely Grave - south of Boethia's shrine - encounter a lonely grave in the middle of nowhere
 		# Animals
-		100 = VIETmisc.0196		# Spooked by a frogmouth bird
+		#100 = VIETmisc.0196		# Spooked by a frogmouth bird
 		100 = VIETmisc.0200		# Meet a commoner looking for snail slime
 		100 = VIETmisc.0202		# Almost mistook a slowworm for a snake
 		100 = VIETmisc.0204		# Encountering some onagers (Asiatic wild ass) in the wilderness
 		100 = VIETmisc.0205		# Scared by the red eyes of an apollo butterfly
-		100 = VIETmisc.0208		# Hyrax is chilling on the rocks
-		100 = VIETmisc.0213		# Say hello to a fennec fox
-		100 = VIETmisc.0216		# Encounter black winged stilts by some ponds
+		#100 = VIETmisc.0208		# Hyrax is chilling on the rocks
+		#100 = VIETmisc.0213		# Say hello to a fennec fox
+		#100 = VIETmisc.0216		# Encounter black winged stilts by some ponds
 		100 = VIETmisc.0220		# Character sees a lark flying overhead
 		100 = VIETmisc.0222		# Hoopoes are hanging around and you're of a culture that sees them negatively
 		100 = VIETmisc.0223		# Hoopoes are hanging around and you're of a culture that sees them positively
@@ -851,11 +851,11 @@ VIET_events_tri_yearly_pulse = {
 		# Animals
 		100 = VIETmisc.0197		# Camels killed by karakurt spiders
 		100 = VIETmisc.0198		# Courtier tells you about witnessing a basking shark
-		100 = VIETmisc.0199		# Witness hunters failing to catch a Chevrotain/Mouse-Deer that goes into a lake
+		#100 = VIETmisc.0199		# Witness hunters failing to catch a Chevrotain/Mouse-Deer that goes into a lake
 		100 = VIETmisc.0201		# Encounter commoners collecting some snails - buy some for food?
 		100 = VIETmisc.0203		# Greater Honeyguide helping villagers find some sweet sweet honey
 		100 = VIETmisc.0210		# Honey badger don't care - it killed a lot of chickens belonging to a farmer
-		100 = VIETmisc.0212		# Come across a mongoose and a cobra "dueling"
+		#100 = VIETmisc.0212		# Come across a mongoose and a cobra "dueling"
 		100 = VIETmisc.0214		# Solve sparrow problem by setting up sparrow traps at home to catch them for their meat?
 		100 = VIETmisc.0218		# Traveler claims to have met a horde of monkeys
 		100 = VIETmisc.0219		# Langur monkey street performance
@@ -939,6 +939,9 @@ VIET_events_tri_yearly_pulse = {
 		100 = VIETmisc.0383		# Spymaster says there's an opportunity to hire a commoner servant family to spy on other nobles
 		100 = VIETmisc.0385		# As Chancellor, annoying irrelevant people bribe you to to meet with your liege
 		100 = VIETmisc.0386		# As Marshal, your officers are following your orders with malicious compliance
+
+		# Strange Tales from a Chinese Studio
+		100 = VIETmisc.0393 	# Dragon Dormant (蛰龙): Encounter a mysterious dragon from a book - a Qing Dynasty depiction of this story is the picture of cybrxkhan's profile in some places!
 	}
 }
 
@@ -1221,6 +1224,11 @@ VIET_events_five_yearly_pulse = {
 		100 = VIETmisc.0382		# Marshal doesn't care about diviners (also, Saladin quote from Kingdom of Heaven)
 		100 = VIETmisc.0384		# Court Chaplain has doubts about their theological knowledge
 		100 = VIETmisc.0388		# As spymaster, a pathetic assassin tries to kill you in a laughably pathetic assassination attempt
+		
+		# Strange Tales from a Chinese Studio
+		100 = VIETmisc.0390 	# Silver Above Beauty (沂水秀才): Two fox spirits show a scholar silver, a calligraphy scroll, and themselves
+		100 = VIETmisc.0394 	# Sheep Skin (某公): Person recalls their reincarnation where they were initially condemned to be reborn as a sheep
+
 	}
 }
 
@@ -1312,6 +1320,9 @@ VIET_events_event_chain_pulse = {
 
 		# 10
 		100 = VIETmisc.0280				# Come across a beggar in a town who asks for 10 gold coins
+
+		# Strange Tales from a Chinese Studio
+		100 = VIETmisc.0392				# Monk of Changqing (长清僧): Old monk dies, and his ghost accidentally possesses a young man who just died
 		
 	}
 }

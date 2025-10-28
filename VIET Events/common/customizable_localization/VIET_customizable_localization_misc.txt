@@ -445,3 +445,77 @@ VIET_snow_sculpture_reaction = {
 	}
 
 }
+
+
+VIET_random_chinese_classic = {
+	type = character
+
+	random_valid = yes
+
+	text = {
+		localization_key = five_sons_history
+	}
+	text = {
+		localization_key = hounds_history
+	}
+	text = {
+		localization_key = testamenary_history
+	}
+	text = {
+		localization_key = virtue_history
+	}
+	text = {
+		localization_key = oaths_history
+	}
+	text = {
+		localization_key = councels_history
+	}
+	text = {
+		localization_key = canon_history
+	}
+	text = {
+		localization_key = wei_poetry
+	}
+	text = {
+		localization_key = qi_poetry
+	}
+	text = {
+		localization_key = kuai_poetry
+	}
+	text = {
+		localization_key = decade_poetry
+	}
+	text = {
+		localization_key = sheng_poetry
+	}
+	text = {
+		localization_key = praise_poetry
+	}
+	text = {
+		localization_key = sacrificial_poetry
+	}
+	text = {
+		localization_key = ai_rites
+	}
+	text = {
+		localization_key = implements_rites
+	}
+	text = {
+		localization_key = mourning_rites
+	}
+	text = {
+		localization_key = cap_rites
+	}
+	text = {
+		localization_key = scholar_rites
+	}
+	text = {
+		localization_key = banquet_rites
+	}
+	text = {
+		localization_key = doctrine_rites
+	}
+	text = {
+		localization_key = pattern_rites
+	}
+}

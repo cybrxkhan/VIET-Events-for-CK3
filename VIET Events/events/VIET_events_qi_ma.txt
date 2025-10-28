@@ -987,8 +987,8 @@ VIETmonogatari.0301 = {
 			OR = {
 				has_title = title:e_byzantium
 				top_liege = { has_title = title:e_byzantium }
-				has_title = title:e_roman_empire
-				top_liege = { has_title = title:e_roman_empire }
+				has_title = title:h_roman_empire
+				top_liege = { has_title = title:h_roman_empire }
 			}
 		}
 		VIET_qi_ma_stewardship_advice_effect = yes
