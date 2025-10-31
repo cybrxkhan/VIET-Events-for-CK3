@@ -1606,16 +1606,16 @@ VIET_enforcing_religious_discipline_among_clergy:0 "Imposición de la Disciplina
 VIET_lacking_intellectual_self_esteem:0 "Falta de Autoestima Intelectual"  
  # Version 1.17.1 Start Here - Note to Translators: please leave this comment here and do not remove it even in your versions of the loc
  # Version 1.18.0 Start Here - Note to Translators: please leave this comment here and do not remove it even in your versions of the loc
- VIET_possessed_by_a_dead_monk:0 "Possessed by a Dead Monk"
- VIET_possessed_by_a_dead_monk_desc:0 "Ever since they had a strange accident, and became unconscious for a while, this character claims that they are actually a monastic, stating they prefer a life of solitude and spritual reflection. Some people believe they have been possessed by the spirit of a monastic who passed away around the time of that accident."
- VIET_sheepskin_rebirth:0 "Strange Tuft of Hair"
- VIET_sheepskin_rebirth_desc:0 "This character has an unusual, small patch of hair on their body. Rumor has it that in their past life, they committed some sins, and were condemned to be reborn as a sheep, but were saved at the last minute because they saved someone's life, so they were allowed to be reborn as a woman. However, the underworld officials, supposedly, couldn't remove every part of the sheep skin."
- VIET_respects_cunning:0 "Respects Cunning"
- VIET_respects_cunning_desc:0 "This character recognizes those who have great cunning, believing there is much they can learn from them."
- VIET_unimpressed_ruler:0 "Easily Unimpressed"
- VIET_unimpressed_ruler_desc:0 "“Bah! Anyone could've done that.”"
- VIET_dragon_dormant:0 "Dragon Dormant"
- VIET_dragon_dormant_desc:0 "Rumor has it this character recently encountered a mysterious little dragon at their home."
+ VIET_possessed_by_a_dead_monk:0 "Poseído por un Monje Muerto"  
+VIET_possessed_by_a_dead_monk_desc:0 "Desde que sufrió un extraño accidente y permaneció inconsciente durante un tiempo, este personaje afirma que en realidad es un monje, y que prefiere una vida de soledad y reflexión espiritual. Algunos creen que ha sido poseído por el espíritu de un monje que falleció en la misma época en la que ocurrió aquel accidente."  
+VIET_sheepskin_rebirth:0 "Extraño Mechón de Pelo"  
+VIET_sheepskin_rebirth_desc:0 "Este personaje tiene un pequeño y peculiar mechón de pelo en el cuerpo. Se rumorea que, en su vida anterior, cometió ciertos pecados y fue condenado a renacer como una oveja, pero fue salvado en el último momento al rescatar la vida de alguien, por lo que se le permitió renacer como una mujer. Sin embargo, según se dice, los consejeros del inframundo no pudieron eliminar por completo toda la piel de oveja."  
+VIET_respects_cunning:0 "Respeta la Astucia"  
+VIET_respects_cunning_desc:0 "Este personaje reconoce a aquellos que poseen gran astucia, creyendo que tiene mucho que aprender de ellos."  
+VIET_unimpressed_ruler:0 "Difícil de Impresionar"  
+VIET_unimpressed_ruler_desc:0 "«¡Bah! Cualquiera podría haber hecho eso.»"  
+VIET_dragon_dormant:0 "Dragón Durmiente"  
+VIET_dragon_dormant_desc:0 "Se rumorea que este personaje se encontró recientemente con un pequeño y misterioso dragón en su hogar."
  # Version 1.18.1 Start Here - Note to Translators: please leave this comment here and do not remove it even in your versions of the loc
  xxxxxxxxxx:0 "xxx"
 
