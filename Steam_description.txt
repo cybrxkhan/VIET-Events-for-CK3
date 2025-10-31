@@ -56,7 +56,7 @@ Please see the [url=https://cybrxkhansmods.godaddysites.com/faq]FAQ on my mods' 
 [h1]Version 1.18.0 "Pu Songling"[/h1]
 
 [I]“Here in the civilized world, stranger events by far occur than in the Country of Cropped Hair; Before our very eyes, weirder tales unfold than in the Nation of Flying Heads.”
-- – Pu Songling, Chinese writer (1640-1715), in the preface of his Strange Tales from a Chinese Studio[/I]
+- Pu Songling, Chinese writer (1640-1715), in the preface of his Strange Tales from a Chinese Studio[/I]
 
 New events added in this version: [B]7[/B]
 
