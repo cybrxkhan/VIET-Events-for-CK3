@@ -1,7 +1,7 @@
-[img]https://i.imgur.com/cXkUgOc.jpg[/img]
+[img]https://i.imgur.com/uXp8zbo.jpg[/img]
 
-[h1]Versión actual: 1.17.0 "Canciller" 
-(Lanzamiento: 09/09/25, Compatible con versión vanilla 1.17.X)[/h1]
+[h1]Versión actual: 1.18.0 "Pu Songling" 
+(Lanzamiento: 28/10/25, Compatible con versión vanilla 1.18.X)[/h1]
 
 [url=https://discord.gg/9KuyXv2uZA]Servidor de Discord de mis Mods[/url]
 [B]Echa un Vistazo a [url=https://forum.paradoxplaza.com/forum/threads/mod-viet-events-for-ck3-a-flavor-and-immersion-event-mod.1422081/]Tema del Foro[/url] Para Más Información[/B]
@@ -26,7 +26,7 @@ Siéntete libre de usar mi trabajo con tus mods - todo lo que pido es reconocimi
 [img]http://i.imgur.com/EyXurbK.jpg[/img]
 
 [LIST]
-[*]¡Más de [B][U]1220[/U] nuevos eventos[/B] para experimentar!
+[*]¡Más de [B][U]1227[/U] nuevos eventos[/B] para experimentar!
 [*]Explora nuevas decisiones, artefactos, interacciones y cadenas de eventos
 [*]Regla de juego para desactivar los eventos estúpidos para aquellos que no les guste, con tres niveles para escoger entre: Balanceado (Predeterminado), Serio (Restringido), y Todos los eventos (Todo)
 [*][B]Compatible con casi cualquier cosa[/B] ya que no modifico archivos del vanilla - incluso con mods de conversión total puedes desactivar los eventos que hagan referencias a cosas o lugares específicos del mundo medieval que no tendrían sentido en otros periodos o universos (como mods fantásticos o de ciencia ficción)
@@ -52,12 +52,13 @@ Por favor, echa un vistazo a [url=https://steamcommunity.com/workshop/filedetail
 
 [img]http://i.imgur.com/RQ5QZTF.jpg[/img]
 
-[h1]Versión 1.17.0 "Canciller"[/h1]
+[h1]Versión 1.18.0 "Pu Songling"[/h1]
 
-[I]El Maestro dijo: "El gobernante debe emplear a los ministros de acuerdo con el ritual; los ministros deben servir al gobernante con lealtad"
-- Los Analectas de Confucio[/I]
+[I]"Aquí, en el mundo civilizado, ocurren sucesos mucho más extraños que en el País del Cabello Cortado; ante nuestros propios ojos se desarrollan historias más insólitas que en la Nación de las Cabezas Voladoras."  
+– Pú Sōnglíng, escritor chino (1640–1715), en el prefacio de sus *Relatos extraños de un estudio chino*[/I]  
 
-Nuevos eventos añadidos en esta versión: [B]10[/B]
+Nuevos sucesos añadidos en esta versión: [B]7[/B]
+
 
 
 
