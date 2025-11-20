@@ -42,6 +42,71 @@ VIET_background_nightmare = {
 ### TUSCAN COUNTRY ###
 VIET_background_tuscan_country = {
 
+	background = { # Bugis
+		trigger = {	
+			location = {		
+				geographical_region = world_asia_southeast_islands
+			}	
+		}
+		reference = "gfx/interface/illustrations/event_scenes/VIET_tuscan_country_bugis.dds"
+		environment = "environment_tgp_farm_asia"
+		ambience = "event:/DLC/EP4/SFX/Events/Event_Backgrounds/tgp_farm_asia"
+	}
+
+	background = { # Khmer
+		trigger = {	
+			location = {		
+				geographical_region = world_asia_southeast_mainland
+				NOT = { geographical_region = custom_viet_lands }
+			}	
+		}
+		reference = "gfx/interface/illustrations/event_scenes/VIET_tuscan_country_khmer.dds"
+		environment = "environment_event_bp1_jungle"
+		ambience = "event:/DLC/EP2/SFX/Events/Backgrounds/evn_background_jungle"
+	}
+
+	background = { # Viet
+		trigger = {	
+			location = {		
+				OR = {
+					geographical_region = custom_viet_lands
+					geographical_region = tgp_yue_region
+				}
+			}	
+		}
+		reference = "gfx/interface/illustrations/event_scenes/VIET_tuscan_country_viet.dds"
+		environment = "environment_event_garden"
+		ambience = "event:/SFX/Events/Backgrounds/castle_garden_day"
+	}
+
+	background = { # Korea
+		trigger = {
+			location = {
+				OR = {
+					geographical_region = world_asia_korea
+					geographical_region = world_asia_north_east
+				}
+			}
+		}
+		reference = "gfx/interface/illustrations/event_scenes/VIET_tuscan_country_goryeo.dds"
+		environment = "environment_event_garden"
+		ambience = "event:/SFX/Events/Backgrounds/castle_garden_day"
+	}
+
+	background = { # Japan
+		trigger = {
+			location = {
+				OR = {
+					geographical_region = world_asia_japan
+					geographical_region = world_asia_sakhalin_hokkaido
+				}
+			}
+		}
+		reference = "gfx/interface/illustrations/event_scenes/VIET_tuscan_country_japanese.dds"
+		environment = "environment_event_garden"
+		ambience = "event:/SFX/Events/Backgrounds/castle_garden_day"
+	}
+
 	background = { # Sardinian
 		trigger = {
 			location.duchy = title:d_sardinia
@@ -262,6 +327,43 @@ VIET_background_tuscan_country = {
 ### ANCIENT CAIRN ###
 VIET_background_ancient_cairn = {
 
+	background = { # Malay
+		trigger = {
+			location = {
+				geographical_region = world_asia_southeast_islands
+			}
+		}
+		reference = "gfx/interface/illustrations/event_scenes/VIET_ancient_cairn_malay.dds"
+		environment = "environment_event_bp1_jungle"
+		ambience = "event:/DLC/EP2/SFX/Events/Backgrounds/evn_background_jungle"
+	}
+
+	background = { # Khmer
+		trigger = {
+			location = {
+				geographical_region = world_asia_southeast_mainland
+			}
+		}
+		reference = "gfx/interface/illustrations/event_scenes/VIET_ancient_cairn_khmer.dds"
+		environment = "environment_event_bp1_jungle"
+		ambience = "event:/DLC/EP2/SFX/Events/Backgrounds/evn_background_jungle"
+	}
+
+	background = { # Khitan/Northern China
+		trigger = {
+			location = {
+				OR = {
+					geographical_region = world_asia_khitan_steppe
+					geographical_region = world_asia_shiwei_steppe
+					geographical_region = great_yuan_de_jure_region
+				}
+			}
+		}
+		reference = "gfx/interface/illustrations/event_scenes/VIET_ancient_cairn_khitan.dds"
+		environment = "environment_event_desert"
+		ambience = "event:/SFX/Events/Backgrounds/desert_day"
+	}
+
 	background = { # Eastern Iranian/Sogdian
 		trigger = {
 			location = {
@@ -446,6 +548,86 @@ VIET_background_ancient_cairn = {
 ### SMALL TOWN ###
 VIET_background_small_town = {
 
+	background = { # Batak
+		trigger = {
+			location = {
+				geographical_region = world_asia_southeast_islands
+			}
+		}
+		reference = "gfx/interface/illustrations/event_scenes/VIET_small_town_batak.dds"
+		environment = "environment_tgp_farm_asia"
+		ambience = "event:/DLC/EP4/SFX/Events/Event_Backgrounds/tgp_farm_asia"
+	}
+
+	background = { # Khmer
+		trigger = {
+			location = {
+				geographical_region = world_asia_southeast_mainland
+				NOT = { geographical_region = custom_viet_lands }
+			}
+		}
+		reference = "gfx/interface/illustrations/event_scenes/VIET_small_town_khmer.dds"
+		environment = "environment_tgp_farm_asia"
+		ambience = "event:/DLC/EP4/SFX/Events/Event_Backgrounds/tgp_farm_asia"
+	}
+
+	background = { # Vietnamese
+		trigger = {
+			location = {
+				OR = {
+					geographical_region = custom_viet_lands
+					geographical_region = tgp_yue_region
+				}
+			}
+		}
+		reference = "gfx/interface/illustrations/event_scenes/VIET_small_town_viet.dds"
+		environment = "environment_tgp_farm_asia"
+		ambience = "event:/DLC/EP4/SFX/Events/Event_Backgrounds/tgp_farm_asia"
+	}
+
+	background = { # Hmong/SW Chinese
+		trigger = {
+			location = {
+				OR = {
+					geographical_region = tgp_shu_region
+					geographical_region = tgp_qian_region
+					geographical_region = tgp_dian_region
+				}
+			}
+		}
+		reference = "gfx/interface/illustrations/event_scenes/VIET_small_town_hmong.dds"
+		environment = "environment_tgp_market_asia"
+		ambience = "event:/DLC/EP4/SFX/Events/Event_Backgrounds/tgp_market_asia"
+	}
+
+	background = { # Japanese
+		trigger = {
+			location = {
+				OR = {
+					geographical_region = world_asia_japan
+					geographical_region = world_asia_sakhalin_hokkaido
+				}
+			}
+		}
+		reference = "gfx/interface/illustrations/event_scenes/VIET_small_town_japanese.dds"
+		environment = "environment_tgp_market_asia"
+		ambience = "event:/DLC/EP4/SFX/Events/Event_Backgrounds/tgp_market_asia"
+	}
+
+	background = { # Korean
+		trigger = {
+			location = {
+				OR = {
+					geographical_region = world_asia_korea
+					geographical_region = world_asia_north_east
+				}
+			}
+		}
+		reference = "gfx/interface/illustrations/event_scenes/VIET_small_town_goryeo.dds"
+		environment = "environment_tgp_market_asia"
+		ambience = "event:/DLC/EP4/SFX/Events/Event_Backgrounds/tgp_market_asia"
+	}
+
 	background = { # Tibetan
 		trigger = {
 			location = {
@@ -478,8 +660,8 @@ VIET_background_small_town = {
 			}
 		}
 		reference = "gfx/interface/illustrations/event_scenes/VIET_small_town_han.dds"
-		environment = "environment_bp2_courtyard"
-		ambience = "event:/SFX/Events/Backgrounds/town_market_middleeastern_day"
+		environment = "environment_tgp_market_asia"
+		ambience = "event:/DLC/EP4/SFX/Events/Event_Backgrounds/tgp_market_asia"
 	}
 
 	background = { # Iberian
@@ -660,6 +842,72 @@ VIET_background_small_town = {
 
 ### SKYRIM FOREST ###
 VIET_background_skyrim_forest = {
+
+	background = { # Javanese
+		trigger = {
+			location = {
+				geographical_region = world_asia_southeast_islands
+			}
+		}
+		reference = "gfx/interface/illustrations/event_scenes/VIET_skyrim_forest_javanese.dds"
+		environment = "environment_event_bp1_jungle"
+		ambience = "event:/DLC/EP2/SFX/Events/Backgrounds/evn_background_jungle"
+	}
+
+	background = { # Khmer
+		trigger = {
+			location = {
+				geographical_region = world_asia_southeast_mainland
+				NOT = { geographical_region = custom_viet_lands }
+			}
+		}
+		reference = "gfx/interface/illustrations/event_scenes/VIET_skyrim_forest_khmer.dds"
+		environment = "environment_event_bp1_jungle"
+		ambience = "event:/DLC/EP2/SFX/Events/Backgrounds/evn_background_jungle"
+	}
+
+	background = { # Vietnamese
+		trigger = {
+			location = {
+				OR = {
+					geographical_region = custom_viet_lands
+					geographical_region = tgp_yue_region
+				}
+			}
+		}
+		reference = "gfx/interface/illustrations/event_scenes/VIET_skyrim_forest_viet.dds"
+		environment = "environment_event_bp1_jungle"
+		ambience = "event:/DLC/EP2/SFX/Events/Backgrounds/evn_background_jungle"
+	}
+
+	background = { # Chinese/Japanese bamboo forest
+		trigger = {
+			location = {
+				OR = {
+					geographical_region = world_asia_china
+					geographical_region = world_asia_japan
+				}
+			}
+		}
+		reference = "gfx/interface/illustrations/event_scenes/VIET_skyrim_forest_han.dds"
+		environment = "environment_event_forest"
+		ambience = "event:/SFX/Events/Backgrounds/deciduous_forest_day"
+	}
+
+	background = { # Korean
+		trigger = {
+			location = {
+				OR = {
+					geographical_region = world_asia_korea
+					geographical_region = world_asia_north_east
+					geographical_region = world_asia_sakhalin_hokkaido
+				}
+			}
+		}
+		reference = "gfx/interface/illustrations/event_scenes/VIET_skyrim_forest_goryeo.dds"
+		environment = "environment_event_forest"
+		ambience = "event:/SFX/Events/Backgrounds/deciduous_forest_day"
+	}
 
 	background = { # Bavarian
 		trigger = {
@@ -923,9 +1171,25 @@ VIET_background_oblivion_prison_sewer = {
 
 ### WEDDING ###
 VIET_background_wedding = {
+	background = {	 #East Asian
+		trigger = {
+			location ?= {
+				OR = {
+					culture ?= { has_graphical_east_asia_culture_group_trigger = yes }
+					steppe_building_gfx_use_east_asian_trigger = yes
+				}
+			}
+		}
+		reference = "gfx/interface/illustrations/event_scenes/tgp_wedding_ceremony_asia.dds"
+		environment = "environment_tgp_wedding_ceremony_asia"
+		ambience = "event:/DLC/EP2/SFX/Events/Grand_Activities/Weddings/ep2_event_grand_wedding"
+	}
 	background = {	 #Indian
 		trigger = {
-			location.culture = { has_graphical_india_culture_group_trigger = yes }
+			OR = {
+				location.culture ?= { has_graphical_india_culture_group_trigger = yes }
+				location ?= { steppe_building_gfx_use_indian_trigger = yes }
+			}
 		}
 		reference = "gfx/interface/illustrations/event_scenes/ep2_wedding_ceremony_indian.dds"
 		environment = "environment_indian_wedding"
@@ -934,9 +1198,11 @@ VIET_background_wedding = {
 	background = {	 #MENA (also steppes and African )
 		trigger = {
 			OR = {
-				location.culture = { has_graphical_mena_culture_group_trigger = yes }
-				location.culture = { has_graphical_steppe_culture_group_trigger = yes }
-				location.culture = { has_graphical_african_culture_group_trigger = yes }
+				location.culture ?= { has_graphical_mena_culture_group_trigger = yes }
+				location.culture ?= { has_graphical_steppe_culture_group_trigger = yes }
+				location.culture ?= { has_graphical_african_culture_group_trigger = yes }
+				location.culture ?= { has_building_gfx = iranian_building_gfx }
+				location ?= { steppe_building_gfx_use_mena_trigger = yes }
 			}
 		}
 		reference = "gfx/interface/illustrations/event_scenes/ep2_wedding_ceremony_mena.dds"

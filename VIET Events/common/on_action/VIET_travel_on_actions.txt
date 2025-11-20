@@ -98,7 +98,17 @@ VIET_travel_events_common = {
 		# Oblivion Remaster
 		100 = VIETmisc.7052 	# Arrive in Anvil
 
-		# 23
+		###################################
+		# TRANSFERRED - events created before Travel was a thing
+		###################################
+
+		# Animals
+		100 = VIETmisc.0196		# Spooked by a frogmouth bird
+		100 = VIETmisc.0208		# Hyrax is chilling on the rocks
+		100 = VIETmisc.0213		# Say hello to a fennec fox
+		100 = VIETmisc.0216		# Encounter black winged stilts by some ponds
+
+		# 27
 	}
 }
 
@@ -173,9 +183,20 @@ VIET_travel_events_uncommon = {
 		100 = VIETmisc.7042		# Innkeeper warns about fraudulent peddlers selling false relics
 		100 = VIETmisc.7044		# Traveler is disappointed by ruins
 		# Peaches
-		100 = VIETmisc.7053 	# Two cats playing with peaches 
+		100 = VIETmisc.7053 	# Two cats playing with peaches
+		# Strange Tales from a Chinese Studio
+		100 = VIETmisc.7056		# Wolf (狼): Butcher encounters two wolves who try to kill him, but he outsmarts them
+ 
 
-		# 17
+		###################################
+		# TRANSFERRED - events created before Travel was a thing
+		###################################
+
+		# Animals
+		100 = VIETmisc.0199		# Witness hunters failing to catch a Chevrotain/Mouse-Deer that goes into a lake
+		100 = VIETmisc.0212		# Come across a mongoose and a cobra "dueling"
+
+		# 20
 	}
 }
 
@@ -245,8 +266,10 @@ VIET_travel_events_rare = {
 		100 = VIETmisc.7050		# Notice octopus using coconut shells to protect themselves
 		# Oblivion Remaster
 		100 = VIETmisc.7051		# Come across a grove of dead trees (an alternate take on this site)
+		# Strange Tales from a Chinese Studio
+		100 = VIETmisc.7055		# Adultery and Enlightenment (羅祖): Man comes home to find his wife cheating on him with his friend, but instead of killing them, he becomes a hermit
 
-		# 11
+		# 12
 	}
 }
 

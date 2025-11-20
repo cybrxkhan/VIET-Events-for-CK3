@@ -1535,6 +1535,9 @@ VIETmisc.1036 = {
 			has_trait = callous
 			has_trait = sadistic
 		}
+		is_immortal = no
+		# Disabling LotR for Elves
+		NOT = { culture ?= { has_cultural_parameter = is_elven_heritage } }
 	}
 	
 	weight_multiplier = {

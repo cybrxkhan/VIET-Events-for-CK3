@@ -379,7 +379,10 @@ VIETmisc.6001 = {
 			court_event_character_flag_effect = yes
 		}
 		random_held_title = {
-			limit = { tier = tier_county }
+			limit = {
+				tier = tier_county					
+				is_landless_type_title = no
+			}
 			save_scope_as = county
 		}
 	}
@@ -1882,7 +1885,10 @@ VIETmisc.6009 = {
 
 	immediate = {
 		random_held_title = {
-			limit = { tier = tier_county }
+			limit = {
+				tier = tier_county					
+				is_landless_type_title = no
+			}
 			save_scope_as = county
 		}
 		create_character = {
@@ -2250,7 +2256,10 @@ VIETmisc.6012 = {
 		}	
 		
 		random_held_title = {
-			limit = { tier = tier_county }
+			limit = {
+				tier = tier_county					
+				is_landless_type_title = no
+			}
 			save_scope_as = county
 		}
 
@@ -2374,6 +2383,7 @@ VIETmisc.6013 = {
 		# is_landed = yes
 		any_held_title = {
 			tier = tier_county
+			is_landless_type_title = no
 			NOT = { this = root.capital_county }
 		}
 	}
@@ -2382,7 +2392,8 @@ VIETmisc.6013 = {
 
 		random_held_title = {
 			limit = {
-				tier = tier_county
+				tier = tier_county			
+				is_landless_type_title = no
 				NOT = { this = root.capital_county }
 			}
 			save_scope_as = county
@@ -2962,7 +2973,10 @@ VIETmisc.6019 = {
 			court_event_character_flag_effect = yes
 		}
 		random_held_title = {
-			limit = { tier = tier_county }
+			limit = {
+				tier = tier_county					
+				is_landless_type_title = no
+			}
 			save_scope_as = county
 			add_county_modifier = {
 				modifier = VIET_popular_folk_music
@@ -3333,6 +3347,7 @@ VIETmisc.6022 = {
 		has_game_rule = VIET_normal_universe_events
 		any_held_title = {
 			tier = tier_county
+			is_landless_type_title = no
 			any_county_province = {
 				OR = {
 					geographical_region = world_europe_west_britannia
@@ -3377,7 +3392,8 @@ VIETmisc.6022 = {
 	immediate = {
 		random_held_title = {
 			limit = {
-				tier = tier_county
+				tier = tier_county			
+				is_landless_type_title = no
 				any_county_province = {
 					OR = {
 						geographical_region = world_europe_west_britannia

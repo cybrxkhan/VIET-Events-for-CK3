@@ -259,12 +259,20 @@ VIETmisc.7053.c:0 "¡Debe de ser una señal de [ROOT.Char.GetFaith.HighGodName]!
 VIETmisc.7054.desc:0 "Hace un tiempo, mientras viajaba, me encontré con dos gatos — uno gris y otro blanco — jugando con unos melocotones que habían caído de un melocotonero cercano.\n\nAnoche, por alguna razón inexplicable, soñé de nuevo con esos gatos, jugando otra vez con esos melocotones. Sin embargo, esta vez, algo en la escena parecía diferente.\n\nDe algún modo, me sentí aún más relajado y en paz." 
 VIETmisc.7054.a:0 "Despierto con una sonrisa suave en el rostro." 
  # Version 1.16.2 Start Here - Note to Translators: please leave this comment here and do not remove it even in your versions of the loc
- VIETmisc.7055.t:0 "$travel_event_prefix$ xxxxx"
- VIETmisc.7055.desc:0 "xxxxx"
- VIETmisc.7055.a:0 "xxxxx"
- VIETmisc.7056.t:0 "$travel_event_prefix$ xxxxx"
- VIETmisc.7056.desc:0 "xxxxx"
- VIETmisc.7056.a:0 "xxxxx"
+ # Version 1.18.0 Start Here - Note to Translators: please leave this comment here and do not remove it even in your versions of the loc
+ # Note to Chinese translators: I've tried the best I could to find the original names of Pu Songling's stories from 聊斋志异, but I might be inaccurate since I only know them mainly from the English translation
+ VIETmisc.7055.t:0 "$travel_event_prefix$ Adulterio e Iluminación" # Original Chinese: 羅祖  
+VIETmisc.7055.desc:0 "Nos detuvimos en un santuario [culture.GetName] en [ROOT.Char.GetCurrentLocation.GetName], construido hace mucho tiempo para honrar al progenitor de una familia local de cierta reputación.\n\nCuenta la leyenda que este hombre, un soldado, solía ausentarse en campañas militares y dejaba a su esposa e hijo al cuidado de un amigo. Sin embargo, cuando regresó en una ocasión, sorprendió a su esposa y a su amigo cometiendo adulterio. Levantó su espada para matarlos, pero se detuvo en el último momento. Se retiró al desierto y se convirtió en un ermitaño célebre y profundamente realizado.\n\nEl descendiente del hombre, [heir.GetFirstName], un [heir.GetWomanMan] de disposición sabia, comentó entre risas tras contarme esta historia: «Hoy en día, pocos se preocupan por llevar una vida santa; todos quieren convertirse en un Buda instantáneo. El ejemplo de mi antepasado nos enseña que solo hay un verdadero camino hacia la iluminación inmediata: ¡deja caer la espada!»"  
+VIETmisc.7055.a:0 "Estoy de acuerdo. Sin duda, palabras sabias."  
+VIETmisc.7055.b:0 "Tu antepasado no debería haberles perdonado la vida."  
+VIETmisc.7055.c:0 "Pareces virtuoso tú mismo... ¿qué te parecería trabajar para mí?"  
+VIETmisc.7055.info:0 "$VIETmisc.liaozhai_zhiyi.intro$ Este relato narra la historia de un soldado que sorprendió a su esposa engañándole con un amigo y estuvo a punto de matarlos, antes de decidir perdonarlos. Después se convierte en un ermitaño famoso, respetado por muchos, aunque no disfruta de la atención. La historia se burla de cómo la gente de entonces, al igual que hoy, deseaba alcanzar la iluminación espiritual de inmediato y lograr grandes méritos, pero sin estar dispuesta a llevar una vida realmente virtuosa, a diferencia del soldado convertido en ermitaño."  
+VIETmisc.7056.t:0 "$travel_event_prefix$ Los Lobos" # Original Chinese: 狼  
+VIETmisc.7056.desc:0 "La villa mercantil de [ROOT.Char.GetCurrentLocation.GetName] rebosaba de deliciosa comida. Mientras decidíamos qué comer, conocimos a un carnicero hablador llamado [butcher.GetFirstName], quien nos relató un espeluznante encuentro que había tenido la noche anterior.\n\nMientras regresaba a casa, llevando un par de huesos y su cuchillo de carnicero, se topó con dos lobos que claramente querían matarle y devorarle. Les lanzó los huesos para distraerlos, pero los lobos siguieron persiguiéndole, así que se escondió en un montón de heno en un campo cercano.\n\nLos lobos le esperaron hasta que uno se aburrió y se marchó, y el otro se quedó dormido. Entonces el carnicero se abalanzó sobre el lobo dormido y lo mató con su cuchillo. Luego vio que el otro lobo estaba cavando un hoyo algo más lejos, y comprendió que el supuesto lobo dormido solo fingía hacerlo para atraerle y permitir que el otro le atacara por la espalda. El carnicero mató también al segundo lobo y escapó."  
+VIETmisc.7056.a:0 "Los lobos fueron astutos, ¡pero tú lo fuiste aún más!"  
+VIETmisc.7056.b:0 "No me parecen #italic tan#! aterradores."  
+VIETmisc.7056.info:0 "$VIETmisc.liaozhai_zhiyi.intro$ Este relato gira en torno a los intentos de un carnicero por librarse de dos lobos que querían matarle. Hoy en día, incluso se enseña en escuelas chinas gracias a su sencillez y a su mensaje claro sobre la determinación y la astucia de una persona, incluso en las circunstancias más difíciles."
+ # Version 1.18.1 Start Here - Note to Translators: please leave this comment here and do not remove it even in your versions of the loc
  VIETmisc.7057.t:0 "$travel_event_prefix$ xxxxx"
  VIETmisc.7057.desc:0 "xxxxx"
  VIETmisc.7057.a:0 "xxxxx"

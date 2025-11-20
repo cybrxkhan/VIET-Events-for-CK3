@@ -29,6 +29,7 @@
 # 7050			Coconut
 # 7051-7052		Oblivion Remaster
 # 7053-7054		Peaches
+# 7055-7056		Strange Tales from a Chinese Studio / Liaozhao Zhiyi / 	聊齋誌異
 # 
 ############################################################################################################################
 
@@ -2719,6 +2720,8 @@ VIETmisc.7025 = {
 						geographical_region = world_europe_north
 						geographical_region = world_steppe
 						geographical_region = world_siberia
+						geographical_region = world_asia_north_east
+						geographical_region = world_asia_sakhalin_hokkaido
 					}
 				}
 				geographical_region = hunt_animal_reindeer_region
@@ -4631,7 +4634,7 @@ VIETmisc.7044 = {
 				OR = {
 					has_trait = scholar
 					has_trait = theologian
-					has_trait = poet
+					has_trait = lifestyle_poet
 					has_trait = education_learning_3
 					has_trait = education_learning_4
 					has_trait = education_learning_5
@@ -4678,7 +4681,7 @@ VIETmisc.7044 = {
 					OR = {
 						has_trait = scholar
 						has_trait = theologian
-						has_trait = poet
+						has_trait = lifestyle_poet
 						has_trait = education_learning_3
 						has_trait = education_learning_4
 						has_trait = education_learning_5
@@ -5814,6 +5817,9 @@ VIETmisc.7053 = {
 				geographical_region = world_africa_sahara
 				geographical_region = world_africa_east
 				geographical_region = world_africa_west
+				geographical_region = world_asia_north_east
+				geographical_region = world_siberia
+				geographical_region = world_asia_southeast_islands
 			}	
 		}
 		# Should have at least one entourage member to react to it
@@ -6074,6 +6080,258 @@ VIETmisc.7054 = {
 
 
 
+
+##################################################################
+# 7055-7056 Strange Tales from a Chinese Studio / Liaozhao Zhiyi / 	聊齋誌異
+##################################################################
+
+
+# Adultery and Enlightenment (羅祖): Man comes home to find his wife cheating on him with his friend, but instead of killing them, he becomes a hermit
+VIETmisc.7055 = {
+	type = character_event
+	title = VIETmisc.7055.t
+	window = big_event_window
+	desc = VIETmisc.7055.desc
+	theme = travel
+	override_background = { reference = VIET_background_small_town }
+
+	
+	left_portrait = {
+		character = root
+		animation = personality_forgiving
+	}	
+	
+	right_portrait = {
+		character = scope:heir
+		animation = storyteller
+	}	
+
+	trigger = {
+		has_game_rule = VIET_normal_universe_events
+		is_location_valid_for_travel_event_on_land = yes
+		OR = {
+			VIET_is_lesser_sinosphere_culture_trigger = yes
+			faith = { has_doctrine = special_doctrine_immaterial_harmony }
+		}
+		location.county = {
+			VIET_is_lesser_sinosphere_culture_trigger = yes
+		}
+		location.county.faith = {
+			has_doctrine = special_doctrine_immaterial_harmony
+		}
+	}
+	
+	weight_multiplier = {
+		base = 1
+		modifier = {
+			add = 0.2
+			has_trait = calm
+		}
+		modifier = {
+			add = -0.2
+			has_trait = wrathful
+		}
+		modifier = {
+			add = 0.2
+			has_trait = patient
+		}
+		modifier = {
+			add = -0.2
+			has_trait = impatient
+		}
+		modifier = {
+			add = 0.2
+			has_trait = trusting
+		}
+		modifier = {
+			add = -0.2
+			has_trait = paranoid
+		}
+	}
+
+	immediate = {
+		location.county.culture = {
+			save_scope_as = culture
+		}
+		location.county.faith = {
+			save_scope_as = faith
+		}
+		create_character = {
+			location = root.location
+			template = VIET_generic_wise_local_template
+			culture = scope:culture
+			faith = scope:faith
+			save_scope_as = heir
+		}	
+	}
+	
+	option = { # ok
+		name = VIETmisc.7055.a
+		VIET_medium_piety_gain_effect = yes
+		stress_impact = {
+			vengeful = minor_stress_impact_gain
+			wrathful = minor_stress_impact_gain
+			lazy = miniscule_stress_impact_gain
+			sadistic = miniscule_stress_impact_gain
+		}
+		scope:heir ?= { silent_disappearance_effect = yes }
+	}
+	
+	option = { # ok
+		name = VIETmisc.7055.b
+		VIET_medium_prestige_gain_effect = yes
+		stress_impact = {
+			forgiving = minor_stress_impact_gain
+			calm = minor_stress_impact_gain
+			compassionate = miniscule_stress_impact_gain
+		}
+		scope:heir ?= { silent_disappearance_effect = yes }
+	}
+	
+	option = { # ok
+		name = VIETmisc.7055.c
+		trigger = {
+			OR = {
+				is_ai = no
+				gold >= 50
+			}
+		}
+		remove_short_term_gold = 50
+		add_courtier = scope:heir
+		stress_impact = {
+			greedy = minor_stress_impact_gain
+		}
+	}
+
+
+	after = {
+		if = {
+			limit = {
+				has_game_rule = VIET_historical_context_on
+			}
+			custom_tooltip = VIETmisc.7055.info
+		}
+	}
+}
+
+
+
+
+
+
+
+# Wolf (狼): Butcher encounters two wolves who try to kill him, but he outsmarts them
+VIETmisc.7056 = {
+	type = character_event
+	title = VIETmisc.7056.t
+	window = big_event_window
+	desc = VIETmisc.7056.desc
+	theme = travel
+	override_background = { reference = VIET_background_small_town }
+
+	
+	left_portrait = {
+		character = root
+		animation = personality_content
+	}	
+	
+	right_portrait = {
+		character = scope:butcher
+		animation = storyteller
+	}	
+
+	trigger = {
+		has_game_rule = VIET_normal_universe_events
+		is_location_valid_for_travel_event_on_land = yes
+		# OR = {
+		# 	VIET_is_lesser_sinosphere_culture_trigger = yes
+		# 	faith = { has_doctrine = special_doctrine_immaterial_harmony }
+		# }
+		# location.county.culture = {
+		# 	VIET_is_lesser_sinosphere_culture_trigger = yes
+		# }
+		#is_vegetarian_trigger = no
+		location.county = {
+			NOT = { religion = religion:jainism_religion }
+		}
+	}
+	
+	weight_multiplier = {
+		base = 1
+		modifier = {
+			add = 0.2
+			has_trait = calm
+		}
+		modifier = {
+			add = -0.2
+			has_trait = wrathful
+		}
+		modifier = {
+			add = 0.2
+			has_trait = gregarious
+		}
+		modifier = {
+			add = -0.2
+			has_trait = shy
+		}
+		modifier = {
+			add = 0.2
+			has_trait = gluttonous
+		}
+		modifier = {
+			add = -0.2
+			has_trait = temperate
+		}
+	}
+
+	immediate = {
+		location.county = {
+			save_scope_as = county
+		}
+		create_character = {
+			location = root.location
+			template = VIET_generic_local_middle_aged_male_template
+			save_scope_as = butcher
+		}	
+	}
+	
+	option = { # ok
+		name = VIETmisc.7056.a
+		add_character_modifier = {
+			modifier = VIET_respects_cunning
+			years = 10
+		}
+		stress_impact = {
+			arrogant = miniscule_stress_impact_gain
+			arbitrary = miniscule_stress_impact_gain
+		}
+	}
+	
+	option = { # ok
+		name = VIETmisc.7056.b
+		add_character_modifier = {
+			modifier = VIET_unimpressed_ruler
+			years = 10
+		}
+		stress_impact = {
+			craven = miniscule_stress_impact_gain
+			humble = miniscule_stress_impact_gain
+			trusting = miniscule_stress_impact_gain
+			paranoid = miniscule_stress_impact_gain
+		}
+	}
+
+
+	after = {
+		scope:butcher ?= { silent_disappearance_effect = yes }
+		if = {
+			limit = {
+				has_game_rule = VIET_historical_context_on
+			}
+			custom_tooltip = VIETmisc.7056.info
+		}
+	}
+}
 
 
 

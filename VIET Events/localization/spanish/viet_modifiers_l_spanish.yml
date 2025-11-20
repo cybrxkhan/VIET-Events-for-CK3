@@ -1605,5 +1605,17 @@ VIET_lenient_towards_local_religious_customs:0 "Indulgente con las Costumbres Re
 VIET_enforcing_religious_discipline_among_clergy:0 "Imposición de la Disciplina Religiosa entre el Clero"  
 VIET_lacking_intellectual_self_esteem:0 "Falta de Autoestima Intelectual"  
  # Version 1.17.1 Start Here - Note to Translators: please leave this comment here and do not remove it even in your versions of the loc
+ # Version 1.18.0 Start Here - Note to Translators: please leave this comment here and do not remove it even in your versions of the loc
+ VIET_possessed_by_a_dead_monk:0 "Poseído por un Monje Muerto"  
+VIET_possessed_by_a_dead_monk_desc:0 "Desde que sufrió un extraño accidente y permaneció inconsciente durante un tiempo, este personaje afirma que en realidad es un monje, y que prefiere una vida de soledad y reflexión espiritual. Algunos creen que ha sido poseído por el espíritu de un monje que falleció en la misma época en la que ocurrió aquel accidente."  
+VIET_sheepskin_rebirth:0 "Extraño Mechón de Pelo"  
+VIET_sheepskin_rebirth_desc:0 "Este personaje tiene un pequeño y peculiar mechón de pelo en el cuerpo. Se rumorea que, en su vida anterior, cometió ciertos pecados y fue condenado a renacer como una oveja, pero fue salvado en el último momento al rescatar la vida de alguien, por lo que se le permitió renacer como una mujer. Sin embargo, según se dice, los consejeros del inframundo no pudieron eliminar por completo toda la piel de oveja."  
+VIET_respects_cunning:0 "Respeta la Astucia"  
+VIET_respects_cunning_desc:0 "Este personaje reconoce a aquellos que poseen gran astucia, creyendo que tiene mucho que aprender de ellos."  
+VIET_unimpressed_ruler:0 "Difícil de Impresionar"  
+VIET_unimpressed_ruler_desc:0 "«¡Bah! Cualquiera podría haber hecho eso.»"  
+VIET_dragon_dormant:0 "Dragón Durmiente"  
+VIET_dragon_dormant_desc:0 "Se rumorea que este personaje se encontró recientemente con un pequeño y misterioso dragón en su hogar."
+ # Version 1.18.1 Start Here - Note to Translators: please leave this comment here and do not remove it even in your versions of the loc
  xxxxxxxxxx:0 "xxx"
 

@@ -309,6 +309,7 @@ VIETintro.1002 = {
 		has_game_rule = VIET_normal_universe_events
 		any_held_title = {
 			tier = tier_county
+			is_landless_type_title = no
 			any_county_province = {
 				OR = {
 					geographical_region = world_europe_north

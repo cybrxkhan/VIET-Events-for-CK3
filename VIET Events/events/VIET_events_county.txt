@@ -66,7 +66,10 @@ VIETmisc.3000 = {
 		modifier = {
 			add = {
 				every_held_title = {
-					limit = { tier = tier_county }
+					limit = {
+						tier = tier_county					
+						is_landless_type_title = no
+					}
 					add = 1
 				}
 			}		
@@ -128,7 +131,10 @@ VIETmisc.3001 = {
 		modifier = {
 			add = {
 				every_held_title = {
-					limit = { tier = tier_county }
+					limit = {
+						tier = tier_county					
+						is_landless_type_title = no
+					}
 					add = 1
 				}
 			}		
@@ -138,7 +144,8 @@ VIETmisc.3001 = {
 	immediate = {
 		random_held_title = {
 			limit = {
-				tier = tier_county
+				tier = tier_county					
+				is_landless_type_title = no
 			}	
 			save_scope_as = county
 		}
@@ -216,7 +223,10 @@ VIETmisc.3002 = {
 		modifier = {
 			add = {
 				every_held_title = {
-					limit = { tier = tier_county }
+					limit = {
+						tier = tier_county					
+						is_landless_type_title = no
+					}
 					add = 1
 				}
 			}		
@@ -226,7 +236,8 @@ VIETmisc.3002 = {
 	immediate = {
 		random_held_title = {
 			limit = {
-				tier = tier_county
+				tier = tier_county					
+				is_landless_type_title = no
 			}	
 			save_scope_as = county
 		}
@@ -285,6 +296,7 @@ VIETmisc.3002 = {
 		trigger = {
 			is_ai = no
 			any_held_title = {
+				is_landless_type_title = no
 				count >= 2 #Don't give away your only title
 			}
 			highest_held_title_tier >= tier_duchy
@@ -342,7 +354,10 @@ VIETmisc.3003 = {
 		modifier = {
 			add = {
 				every_held_title = {
-					limit = { tier = tier_county }
+					limit = {
+						tier = tier_county					
+						is_landless_type_title = no
+					}
 					add = 1
 				}
 			}		
@@ -352,7 +367,8 @@ VIETmisc.3003 = {
 	immediate = {
 		random_held_title = {
 			limit = {
-				tier = tier_county
+				tier = tier_county					
+				is_landless_type_title = no
 			}	
 			save_scope_as = county
 		}
@@ -470,7 +486,10 @@ VIETmisc.3004 = {
 		modifier = {
 			add = {
 				every_held_title = {
-					limit = { tier = tier_county }
+					limit = {
+						tier = tier_county					
+						is_landless_type_title = no
+					}
 					add = 1
 				}
 			}		
@@ -480,7 +499,8 @@ VIETmisc.3004 = {
 	immediate = {
 		random_held_title = {
 			limit = {
-				tier = tier_county
+				tier = tier_county					
+				is_landless_type_title = no
 			}	
 			save_scope_as = county
 		}
@@ -539,7 +559,10 @@ VIETmisc.3005 = {
 		modifier = {
 			add = {
 				every_held_title = {
-					limit = { tier = tier_county }
+					limit = {
+						tier = tier_county					
+						is_landless_type_title = no
+					}
 					add = 1
 				}
 			}		
@@ -549,7 +572,8 @@ VIETmisc.3005 = {
 	immediate = {
 		random_held_title = {
 			limit = {
-				tier = tier_county
+				tier = tier_county					
+				is_landless_type_title = no
 			}	
 			save_scope_as = county
 		}
@@ -633,7 +657,10 @@ VIETmisc.3006 = {
 		modifier = {
 			add = {
 				every_held_title = {
-					limit = { tier = tier_county }
+					limit = {
+						tier = tier_county					
+						is_landless_type_title = no
+					}
 					add = 1
 				}
 			}		
@@ -643,7 +670,8 @@ VIETmisc.3006 = {
 	immediate = {
 		random_held_title = {
 			limit = {
-				tier = tier_county
+				tier = tier_county					
+				is_landless_type_title = no
 			}	
 			save_scope_as = county
 		}
@@ -711,7 +739,10 @@ VIETmisc.3007 = {
 		modifier = {
 			add = {
 				every_held_title = {
-					limit = { tier = tier_county }
+					limit = {
+						tier = tier_county					
+						is_landless_type_title = no
+					}
 					add = 1
 				}
 			}		
@@ -721,7 +752,8 @@ VIETmisc.3007 = {
 	immediate = {
 		random_held_title = {
 			limit = {
-				tier = tier_county
+				tier = tier_county					
+				is_landless_type_title = no
 			}	
 			save_scope_as = county
 		}
@@ -817,7 +849,10 @@ VIETmisc.3008 = {
 		modifier = {
 			add = {
 				every_held_title = {
-					limit = { tier = tier_county }
+					limit = {
+						tier = tier_county					
+						is_landless_type_title = no
+					}
 					add = 1
 				}
 			}		
@@ -827,7 +862,8 @@ VIETmisc.3008 = {
 	immediate = {
 		random_held_title = {
 			limit = {
-				tier = tier_county
+				tier = tier_county					
+				is_landless_type_title = no
 			}	
 			save_scope_as = county
 		}
@@ -882,7 +918,10 @@ VIETmisc.3009 = {
 		modifier = {
 			add = {
 				every_held_title = {
-					limit = { tier = tier_county }
+					limit = {
+						tier = tier_county					
+						is_landless_type_title = no
+					}
 					add = 1
 				}
 			}		
@@ -892,7 +931,8 @@ VIETmisc.3009 = {
 	immediate = {
 		random_held_title = {
 			limit = {
-				tier = tier_county
+				tier = tier_county					
+				is_landless_type_title = no
 			}	
 			save_scope_as = county
 		}
@@ -942,7 +982,10 @@ VIETmisc.3010 = {
 		modifier = {
 			add = {
 				every_held_title = {
-					limit = { tier = tier_county }
+					limit = {
+						tier = tier_county					
+						is_landless_type_title = no
+					}
 					add = 1
 				}
 			}		
@@ -952,7 +995,8 @@ VIETmisc.3010 = {
 	immediate = {
 		random_held_title = {
 			limit = {
-				tier = tier_county
+				tier = tier_county					
+				is_landless_type_title = no
 			}	
 			save_scope_as = county
 		}
@@ -1014,7 +1058,10 @@ VIETmisc.3011 = {
 		modifier = {
 			add = {
 				every_held_title = {
-					limit = { tier = tier_county }
+					limit = {
+						tier = tier_county					
+						is_landless_type_title = no
+					}
 					add = 1
 				}
 			}		
@@ -1024,7 +1071,8 @@ VIETmisc.3011 = {
 	immediate = {
 		random_held_title = {
 			limit = {
-				tier = tier_county
+				tier = tier_county					
+				is_landless_type_title = no
 			}	
 			save_scope_as = county
 		}
@@ -1093,7 +1141,10 @@ VIETmisc.3012 = {
 		modifier = {
 			add = {
 				every_held_title = {
-					limit = { tier = tier_county }
+					limit = {
+						tier = tier_county					
+						is_landless_type_title = no
+					}
 					add = 1
 				}
 			}		
@@ -1103,7 +1154,8 @@ VIETmisc.3012 = {
 	immediate = {
 		random_held_title = {
 			limit = {
-				tier = tier_county
+				tier = tier_county					
+				is_landless_type_title = no
 			}	
 			save_scope_as = county
 		}
@@ -1197,7 +1249,10 @@ VIETmisc.3013 = {
 		modifier = {
 			add = {
 				every_held_title = {
-					limit = { tier = tier_county }
+					limit = {
+						tier = tier_county					
+						is_landless_type_title = no
+					}
 					add = 1
 				}
 			}		
@@ -1207,7 +1262,8 @@ VIETmisc.3013 = {
 	immediate = {
 		random_held_title = {
 			limit = {
-				tier = tier_county
+				tier = tier_county					
+				is_landless_type_title = no
 			}	
 			save_scope_as = county
 		}
@@ -1283,7 +1339,10 @@ VIETmisc.3014 = {
 		modifier = {
 			add = {
 				every_held_title = {
-					limit = { tier = tier_county }
+					limit = {
+						tier = tier_county					
+						is_landless_type_title = no
+					}
 					add = 1
 				}
 			}		
@@ -1293,7 +1352,8 @@ VIETmisc.3014 = {
 	immediate = {
 		random_held_title = {
 			limit = {
-				tier = tier_county
+				tier = tier_county					
+				is_landless_type_title = no
 			}	
 			save_scope_as = county
 		}
@@ -1389,7 +1449,10 @@ VIETmisc.3015 = {
 		modifier = {
 			add = {
 				every_held_title = {
-					limit = { tier = tier_county }
+					limit = {
+						tier = tier_county					
+						is_landless_type_title = no
+					}
 					add = 1
 				}
 			}		
@@ -1399,7 +1462,8 @@ VIETmisc.3015 = {
 	immediate = {
 		random_held_title = {
 			limit = {
-				tier = tier_county
+				tier = tier_county					
+				is_landless_type_title = no
 			}	
 			save_scope_as = county
 		}
@@ -1484,7 +1548,10 @@ VIETmisc.3016 = {
 		modifier = {
 			add = {
 				every_held_title = {
-					limit = { tier = tier_county }
+					limit = {
+						tier = tier_county					
+						is_landless_type_title = no
+					}
 					add = 1
 				}
 			}		
@@ -1494,7 +1561,8 @@ VIETmisc.3016 = {
 	immediate = {
 		random_held_title = {
 			limit = {
-				tier = tier_county
+				tier = tier_county					
+				is_landless_type_title = no
 			}	
 			save_scope_as = county
 		}
@@ -1575,7 +1643,10 @@ VIETmisc.3017 = {
 		modifier = {
 			add = {
 				every_held_title = {
-					limit = { tier = tier_county }
+					limit = {
+						tier = tier_county					
+						is_landless_type_title = no
+					}
 					add = 1
 				}
 			}		
@@ -1585,7 +1656,8 @@ VIETmisc.3017 = {
 	immediate = {
 		random_held_title = {
 			limit = {
-				tier = tier_county
+				tier = tier_county					
+				is_landless_type_title = no
 			}	
 			save_scope_as = county
 		}
@@ -1635,7 +1707,10 @@ VIETmisc.3018 = {
 		modifier = {
 			add = {
 				every_held_title = {
-					limit = { tier = tier_county }
+					limit = {
+						tier = tier_county					
+						is_landless_type_title = no
+					}
 					add = 1
 				}
 			}		
@@ -1645,7 +1720,8 @@ VIETmisc.3018 = {
 	immediate = {
 		random_held_title = {
 			limit = {
-				tier = tier_county
+				tier = tier_county					
+				is_landless_type_title = no
 			}	
 			save_scope_as = county
 		}
@@ -1700,7 +1776,10 @@ VIETmisc.3019 = {
 		modifier = {
 			add = {
 				every_held_title = {
-					limit = { tier = tier_county }
+					limit = {
+						tier = tier_county					
+						is_landless_type_title = no
+					}
 					add = 1
 				}
 			}		
@@ -1710,7 +1789,8 @@ VIETmisc.3019 = {
 	immediate = {
 		random_held_title = {
 			limit = {
-				tier = tier_county
+				tier = tier_county					
+				is_landless_type_title = no
 			}	
 			save_scope_as = county
 		}
@@ -1965,7 +2045,10 @@ VIETmisc.3020 = {
 		modifier = {
 			add = {
 				every_held_title = {
-					limit = { tier = tier_county }
+					limit = {
+						tier = tier_county					
+						is_landless_type_title = no
+					}
 					add = 1
 				}
 			}		
@@ -1975,7 +2058,8 @@ VIETmisc.3020 = {
 	immediate = {
 		random_held_title = {
 			limit = {
-				tier = tier_county
+				tier = tier_county					
+				is_landless_type_title = no
 			}	
 			save_scope_as = county
 		}
@@ -2078,7 +2162,10 @@ VIETmisc.3021 = {
 		modifier = {
 			add = {
 				every_held_title = {
-					limit = { tier = tier_county }
+					limit = {
+						tier = tier_county					
+						is_landless_type_title = no
+					}
 					add = 1
 				}
 			}		
@@ -2088,7 +2175,8 @@ VIETmisc.3021 = {
 	immediate = {
 		random_held_title = {
 			limit = {
-				tier = tier_county
+				tier = tier_county					
+				is_landless_type_title = no
 			}	
 			save_scope_as = county
 		}
@@ -2155,7 +2243,10 @@ VIETmisc.3022 = {
 		modifier = {
 			add = {
 				every_held_title = {
-					limit = { tier = tier_county }
+					limit = {
+						tier = tier_county					
+						is_landless_type_title = no
+					}
 					add = 1
 				}
 			}		
@@ -2165,7 +2256,8 @@ VIETmisc.3022 = {
 	immediate = {
 		random_held_title = {
 			limit = {
-				tier = tier_county
+				tier = tier_county					
+				is_landless_type_title = no
 			}	
 			save_scope_as = county
 		}
@@ -2633,7 +2725,10 @@ VIETmisc.3025 = {
 		modifier = {
 			add = {
 				every_held_title = {
-					limit = { tier = tier_county }
+					limit = {
+						tier = tier_county					
+						is_landless_type_title = no
+					}
 					add = 1
 				}
 			}		
@@ -2683,7 +2778,10 @@ VIETmisc.3026 = {
 		modifier = {
 			add = {
 				every_held_title = {
-					limit = { tier = tier_county }
+					limit = {
+						tier = tier_county					
+						is_landless_type_title = no
+					}
 					add = 1
 				}
 			}		
@@ -2742,6 +2840,7 @@ VIETmisc.3027 = {
 	trigger = {
 		any_held_title = {
 			tier = tier_county
+			is_landless_type_title = no
 			any_county_province = {
 				NOR = {
 					geographical_region = world_africa_east
@@ -2758,7 +2857,10 @@ VIETmisc.3027 = {
 		modifier = {
 			add = {
 				every_held_title = {
-					limit = { tier = tier_county }
+					limit = {
+						tier = tier_county					
+						is_landless_type_title = no
+					}
 					add = 1
 				}
 			}		
@@ -2983,6 +3085,7 @@ VIETmisc.3028 = {
 		NOT = { has_game_rule = VIET_conversion_universe_events }
 		any_held_title = {
 			tier = tier_county
+			is_landless_type_title = no
 			any_county_province = {
 				OR = {
 					geographical_region = ghw_region_ethiopia
@@ -2997,7 +3100,10 @@ VIETmisc.3028 = {
 		modifier = {
 			add = {
 				every_held_title = {
-					limit = { tier = tier_county }
+					limit = {
+						tier = tier_county					
+						is_landless_type_title = no
+					}
 					add = 1
 				}
 			}		
@@ -3074,6 +3180,7 @@ VIETmisc.3029 = {
 		NOT = { has_game_rule = VIET_conversion_universe_events }
 		any_held_title = {
 			tier = tier_county
+			is_landless_type_title = no
 			any_county_province = {
 				OR = {
 					geographical_region = world_europe
@@ -3082,6 +3189,9 @@ VIETmisc.3029 = {
 					geographical_region = world_steppe
 					geographical_region = world_middle_east_persia
 					geographical_region = world_siberia
+					geographical_region = world_asia_china
+					geographical_region = world_asia_korea
+					geographical_region = world_asia_north_east
 				}		
 			}
 		}	
@@ -3092,7 +3202,10 @@ VIETmisc.3029 = {
 		modifier = {
 			add = {
 				every_held_title = {
-					limit = { tier = tier_county }
+					limit = {
+						tier = tier_county					
+						is_landless_type_title = no
+					}
 					add = 1
 				}
 			}		
@@ -3111,6 +3224,9 @@ VIETmisc.3029 = {
 						geographical_region = world_steppe
 						geographical_region = world_middle_east_persia
 						geographical_region = world_siberia
+						geographical_region = world_asia_china
+						geographical_region = world_asia_korea
+						geographical_region = world_asia_north_east
 					}			
 				}
 			}	
@@ -3184,7 +3300,10 @@ VIETmisc.3030 = {
 		modifier = {
 			add = {
 				every_held_title = {
-					limit = { tier = tier_county }
+					limit = {
+						tier = tier_county					
+						is_landless_type_title = no
+					}
 					add = 1
 				}
 			}		
@@ -3268,7 +3387,10 @@ VIETmisc.3031 = {
 		modifier = {
 			add = {
 				every_held_title = {
-					limit = { tier = tier_county }
+					limit = {
+						tier = tier_county					
+						is_landless_type_title = no
+					}
 					add = 1
 				}
 			}		
@@ -3333,7 +3455,10 @@ VIETmisc.3032 = {
 		modifier = {
 			add = {
 				every_held_title = {
-					limit = { tier = tier_county }
+					limit = {
+						tier = tier_county					
+						is_landless_type_title = no
+					}
 					add = 1
 				}
 			}		
@@ -3393,6 +3518,7 @@ VIETmisc.3033 = {
 	trigger = {
 		any_held_title = {
 			tier = tier_county
+			is_landless_type_title = no
 			any_county_province = {
 				OR = {
 					terrain = plains
@@ -3483,7 +3609,10 @@ VIETmisc.3034 = {
 		modifier = {
 			add = {
 				every_held_title = {
-					limit = { tier = tier_county }
+					limit = {
+						tier = tier_county					
+						is_landless_type_title = no
+					}
 					add = 1
 				}
 			}		
@@ -3561,7 +3690,10 @@ VIETmisc.3035 = {
 		modifier = {
 			add = {
 				every_held_title = {
-					limit = { tier = tier_county }
+					limit = {
+						tier = tier_county					
+						is_landless_type_title = no
+					}
 					add = 1
 				}
 			}		
@@ -3654,7 +3786,10 @@ VIETmisc.3036 = {
 		modifier = {
 			add = {
 				every_held_title = {
-					limit = { tier = tier_county }
+					limit = {
+						tier = tier_county					
+						is_landless_type_title = no
+					}
 					add = 1
 				}
 			}		
@@ -3741,7 +3876,10 @@ VIETmisc.3037 = {
 		modifier = {
 			add = {
 				every_held_title = {
-					limit = { tier = tier_county }
+					limit = {
+						tier = tier_county					
+						is_landless_type_title = no
+					}
 					add = 1
 				}
 			}		
@@ -3817,7 +3955,10 @@ VIETmisc.3038 = {
 		modifier = {
 			add = {
 				every_held_title = {
-					limit = { tier = tier_county }
+					limit = {
+						tier = tier_county					
+						is_landless_type_title = no
+					}
 					add = 1
 				}
 			}		
@@ -3939,7 +4080,10 @@ VIETmisc.3039 = {
 		modifier = {
 			add = {
 				every_held_title = {
-					limit = { tier = tier_county }
+					limit = {
+						tier = tier_county					
+						is_landless_type_title = no
+					}
 					add = 1
 				}
 			}		
@@ -4008,7 +4152,10 @@ VIETmisc.3040 = {
 		modifier = {
 			add = {
 				every_held_title = {
-					limit = { tier = tier_county }
+					limit = {
+						tier = tier_county					
+						is_landless_type_title = no
+					}
 					add = 1
 				}
 			}		
@@ -4120,7 +4267,10 @@ VIETmisc.3041 = {
 		modifier = {
 			add = {
 				every_held_title = {
-					limit = { tier = tier_county }
+					limit = {
+						tier = tier_county					
+						is_landless_type_title = no
+					}
 					add = 1
 				}
 			}		
@@ -4130,7 +4280,8 @@ VIETmisc.3041 = {
 	immediate = {
 		random_held_title = {
 			limit = {
-				tier = tier_county
+				tier = tier_county					
+				is_landless_type_title = no
 			}	
 			save_scope_as = county
 		}
@@ -4201,6 +4352,7 @@ VIETmisc.3041 = {
 		trigger = {
 			is_ai = no
 			any_held_title = {
+				is_landless_type_title = no
 				count >= 2 #Don't give away your only title
 			}
 			highest_held_title_tier >= tier_duchy
@@ -4264,7 +4416,10 @@ VIETmisc.3042 = {
 		modifier = {
 			add = {
 				every_held_title = {
-					limit = { tier = tier_county }
+					limit = {
+						tier = tier_county					
+						is_landless_type_title = no
+					}
 					add = 1
 				}
 			}		
@@ -4330,7 +4485,10 @@ VIETmisc.3043 = {
 		modifier = {
 			add = {
 				every_held_title = {
-					limit = { tier = tier_county }
+					limit = {
+						tier = tier_county					
+						is_landless_type_title = no
+					}
 					add = 1
 				}
 			}		
@@ -4418,7 +4576,10 @@ VIETmisc.3044 = {
 		modifier = {
 			add = {
 				every_held_title = {
-					limit = { tier = tier_county }
+					limit = {
+						tier = tier_county					
+						is_landless_type_title = no
+					}
 					add = 1
 				}
 			}		
@@ -4428,7 +4589,8 @@ VIETmisc.3044 = {
 	immediate = {
 		random_held_title = {
 			limit = {
-				tier = tier_county
+				tier = tier_county					
+				is_landless_type_title = no
 			}	
 			save_scope_as = county
 		}
@@ -4483,7 +4645,10 @@ VIETmisc.3045 = {
 		modifier = {
 			add = {
 				every_held_title = {
-					limit = { tier = tier_county }
+					limit = {
+						tier = tier_county					
+						is_landless_type_title = no
+					}
 					add = 1
 				}
 			}		
@@ -4493,7 +4658,8 @@ VIETmisc.3045 = {
 	immediate = {
 		random_held_title = {
 			limit = {
-				tier = tier_county
+				tier = tier_county					
+				is_landless_type_title = no
 			}	
 			save_scope_as = county
 		}
@@ -4561,7 +4727,10 @@ VIETmisc.3046 = {
 		modifier = {
 			add = {
 				every_held_title = {
-					limit = { tier = tier_county }
+					limit = {
+						tier = tier_county					
+						is_landless_type_title = no
+					}
 					add = 1
 				}
 			}		
@@ -4571,7 +4740,8 @@ VIETmisc.3046 = {
 	immediate = {
 		random_held_title = {
 			limit = {
-				tier = tier_county
+				tier = tier_county					
+				is_landless_type_title = no
 			}	
 			save_scope_as = county
 		}
@@ -4665,7 +4835,10 @@ VIETmisc.3047 = {
 		modifier = {
 			add = {
 				every_held_title = {
-					limit = { tier = tier_county }
+					limit = {
+						tier = tier_county					
+						is_landless_type_title = no
+					}
 					add = 1
 				}
 			}		
@@ -4675,7 +4848,8 @@ VIETmisc.3047 = {
 	immediate = {
 		random_held_title = {
 			limit = {
-				tier = tier_county
+				tier = tier_county					
+				is_landless_type_title = no
 			}	
 			save_scope_as = county
 		}
@@ -4902,6 +5076,7 @@ VIETmisc.3051 = {
 	trigger = {
 		any_held_title = {
 			tier = tier_county
+			is_landless_type_title = no
 			is_coastal_county = yes
 		}	
 	}
@@ -4911,7 +5086,10 @@ VIETmisc.3051 = {
 		modifier = {
 			add = {
 				every_held_title = {
-					limit = { tier = tier_county }
+					limit = {
+						tier = tier_county					
+						is_landless_type_title = no
+					}
 					add = 1
 				}
 			}		
@@ -4991,7 +5169,10 @@ VIETmisc.3052 = {
 		modifier = {
 			add = {
 				every_held_title = {
-					limit = { tier = tier_county }
+					limit = {
+						tier = tier_county					
+						is_landless_type_title = no
+					}
 					add = 1
 				}
 			}		
@@ -5001,7 +5182,8 @@ VIETmisc.3052 = {
 	immediate = {
 		random_held_title = {
 			limit = {
-				tier = tier_county
+				tier = tier_county					
+				is_landless_type_title = no
 			}	
 			save_scope_as = county
 		}
@@ -5066,6 +5248,7 @@ VIETmisc.3053 = {
 		has_game_rule = VIET_normal_universe_events
 		any_held_title = {
 			tier = tier_county
+			is_landless_type_title = no
 			any_county_province = {
 				OR = {
 					geographical_region = world_europe_west
@@ -5084,7 +5267,10 @@ VIETmisc.3053 = {
 		modifier = {
 			add = {
 				every_held_title = {
-					limit = { tier = tier_county }
+					limit = {
+						tier = tier_county					
+						is_landless_type_title = no
+					}
 					add = 1
 				}
 			}		
@@ -5158,6 +5344,7 @@ VIETmisc.3054 = {
 	trigger = {
 		any_held_title = {
 			tier = tier_county
+			is_landless_type_title = no
 			any_county_province = {
 				OR = {
 					terrain = desert
@@ -5172,7 +5359,10 @@ VIETmisc.3054 = {
 		modifier = {
 			add = {
 				every_held_title = {
-					limit = { tier = tier_county }
+					limit = {
+						tier = tier_county					
+						is_landless_type_title = no
+					}
 					add = 1
 				}
 			}		
@@ -5328,6 +5518,7 @@ VIETmisc.3055 = {
 	trigger = {
 		any_held_title = {
 			tier = tier_county
+			is_landless_type_title = no
 			any_county_province = {
 				OR = {
 					terrain = desert
@@ -5342,7 +5533,10 @@ VIETmisc.3055 = {
 		modifier = {
 			add = {
 				every_held_title = {
-					limit = { tier = tier_county }
+					limit = {
+						tier = tier_county					
+						is_landless_type_title = no
+					}
 					add = 1
 				}
 			}		
@@ -5433,7 +5627,10 @@ VIETmisc.3056 = {
 		modifier = {
 			add = {
 				every_held_title = {
-					limit = { tier = tier_county }
+					limit = {
+						tier = tier_county					
+						is_landless_type_title = no
+					}
 					add = 1
 				}
 			}		
@@ -5496,7 +5693,10 @@ VIETmisc.3057 = {
 		modifier = {
 			add = {
 				every_held_title = {
-					limit = { tier = tier_county }
+					limit = {
+						tier = tier_county					
+						is_landless_type_title = no
+					}
 					add = 1
 				}
 			}		
@@ -5566,6 +5766,7 @@ VIETmisc.3058 = {
 		NOT = { has_game_rule = VIET_conversion_universe_events }
 		any_held_title = {
 			tier = tier_county
+			is_landless_type_title = no
 			NOR = {
 				has_county_modifier = VIET_dogs_bred_for_hunting_and_guarding
 				has_county_modifier = VIET_dogs_bred_for_companionship
@@ -5579,7 +5780,10 @@ VIETmisc.3058 = {
 		modifier = {
 			add = {
 				every_held_title = {
-					limit = { tier = tier_county }
+					limit = {
+						tier = tier_county					
+						is_landless_type_title = no
+					}
 					add = 1
 				}
 			}		
@@ -5684,6 +5888,7 @@ VIETmisc.3059 = {
 	trigger = {
 		any_held_title = {
 			tier = tier_county
+			is_landless_type_title = no
 			is_coastal_county = yes
 		}	
 	}
@@ -5693,7 +5898,10 @@ VIETmisc.3059 = {
 		modifier = {
 			add = {
 				every_held_title = {
-					limit = { tier = tier_county }
+					limit = {
+						tier = tier_county					
+						is_landless_type_title = no
+					}
 					add = 1
 				}
 			}		
@@ -5770,6 +5978,7 @@ VIETmisc.3060 = {
 	trigger = {
 		any_held_title = {
 			tier = tier_county
+			is_landless_type_title = no
 			is_coastal_county = yes
 		}	
 	}
@@ -5779,7 +5988,10 @@ VIETmisc.3060 = {
 		modifier = {
 			add = {
 				every_held_title = {
-					limit = { tier = tier_county }
+					limit = {
+						tier = tier_county					
+						is_landless_type_title = no
+					}
 					add = 1
 				}
 			}		
@@ -5873,6 +6085,7 @@ VIETmisc.3061 = {
 		religion = religion:germanic_religion
 		any_held_title = {
 			tier = tier_county
+			is_landless_type_title = no
 			religion = religion:germanic_religion
 		}	
 	}
@@ -5882,7 +6095,10 @@ VIETmisc.3061 = {
 		modifier = {
 			add = {
 				every_held_title = {
-					limit = { tier = tier_county }
+					limit = {
+						tier = tier_county					
+						is_landless_type_title = no
+					}
 					add = 1
 				}
 			}		
@@ -5960,6 +6176,7 @@ VIETmisc.3062 = {
 	trigger = {
 		any_held_title = {
 			tier = tier_county
+			is_landless_type_title = no
 		}	
 	}
 	
@@ -5968,7 +6185,10 @@ VIETmisc.3062 = {
 		modifier = {
 			add = {
 				every_held_title = {
-					limit = { tier = tier_county }
+					limit = {
+						tier = tier_county					
+						is_landless_type_title = no
+					}
 					add = 1
 				}
 			}		
@@ -5978,7 +6198,8 @@ VIETmisc.3062 = {
 	immediate = {
 		random_held_title = {
 			limit = {
-				tier = tier_county
+				tier = tier_county					
+				is_landless_type_title = no
 			}	
 			save_scope_as = county
 		}
@@ -6052,6 +6273,7 @@ VIETmisc.3063 = {
 		}
 		any_held_title = {
 			tier = tier_county
+			is_landless_type_title = no
 			OR = {
 				faith = {
 					has_doctrine = doctrine_monogamy
@@ -6074,7 +6296,10 @@ VIETmisc.3063 = {
 		modifier = {
 			add = {
 				every_held_title = {
-					limit = { tier = tier_county }
+					limit = {
+						tier = tier_county					
+						is_landless_type_title = no
+					}
 					add = 1
 				}
 			}		
@@ -6170,6 +6395,7 @@ VIETmisc.3064 = {
 	trigger = {
 		any_held_title = {
 			tier = tier_county
+			is_landless_type_title = no
 			NOT = {
 				any_county_province = {
 					OR = {
@@ -6188,7 +6414,10 @@ VIETmisc.3064 = {
 		modifier = {
 			add = {
 				every_held_title = {
-					limit = { tier = tier_county }
+					limit = {
+						tier = tier_county					
+						is_landless_type_title = no
+					}
 					add = 1
 				}
 			}		
@@ -6540,6 +6769,7 @@ VIETmisc.3067 = {
 	trigger = {
 		any_held_title = {
 			tier = tier_county
+			is_landless_type_title = no
 			any_county_province = {
 				OR = {
 					has_province_modifier = winter_harsh_modifier
@@ -6555,7 +6785,10 @@ VIETmisc.3067 = {
 		modifier = {
 			add = {
 				every_held_title = {
-					limit = { tier = tier_county }
+					limit = {
+						tier = tier_county					
+						is_landless_type_title = no
+					}
 					add = 1
 				}
 			}		
@@ -6643,6 +6876,7 @@ VIETmisc.3068 = {
 	trigger = {
 		any_held_title = {
 			tier = tier_county
+			is_landless_type_title = no
 			any_county_province = {
 				OR = {
 					terrain = hills
@@ -6665,7 +6899,10 @@ VIETmisc.3068 = {
 		modifier = {
 			add = {
 				every_held_title = {
-					limit = { tier = tier_county }
+					limit = {
+						tier = tier_county					
+						is_landless_type_title = no
+					}
 					add = 1
 				}
 			}		
@@ -6767,6 +7004,7 @@ VIETmisc.3069 = {
 		NOT = { culture = { has_cultural_parameter = martial_custom_female_only_combatant } }
 		any_held_title = {
 			tier = tier_county
+			is_landless_type_title = no
 			# Should be in a county whose faith/culture would endorse the idea of a chaste male knight
 			faith = {
 				NOR = { 
@@ -6797,6 +7035,9 @@ VIETmisc.3069 = {
 					geographical_region = world_africa_sahara
 					geographical_region = world_africa_east
 					geographical_region = world_africa_west
+					geographical_region = world_asia_north_east
+					geographical_region = world_siberia
+					geographical_region = world_asia_southeast_islands
 				}		
 			}
 		}	
@@ -6807,7 +7048,10 @@ VIETmisc.3069 = {
 		modifier = {
 			add = {
 				every_held_title = {
-					limit = { tier = tier_county }
+					limit = {
+						tier = tier_county					
+						is_landless_type_title = no
+					}
 					add = 1
 				}
 			}		
@@ -6850,6 +7094,9 @@ VIETmisc.3069 = {
 						geographical_region = world_africa_sahara
 						geographical_region = world_africa_east
 						geographical_region = world_africa_west
+						geographical_region = world_asia_north_east
+						geographical_region = world_siberia
+						geographical_region = world_asia_southeast_islands
 					}		
 				}
 			}	
@@ -6917,7 +7164,7 @@ VIETmisc.3069 = {
 			compassionate = miniscule_stress_impact_loss
 			humble = miniscule_stress_impact_loss
 			gallant = miniscule_stress_impact_loss
-			poet = miniscule_stress_impact_loss
+			lifestyle_poet = miniscule_stress_impact_loss
 		}
 	}
 
@@ -6985,7 +7232,10 @@ VIETmisc.3070 = {
 		modifier = {
 			add = {
 				every_held_title = {
-					limit = { tier = tier_county }
+					limit = {
+						tier = tier_county					
+						is_landless_type_title = no
+					}
 					add = 1
 				}
 			}		
@@ -6998,7 +7248,8 @@ VIETmisc.3070 = {
 		}	
 		random_held_title = {
 			limit = {
-				tier = tier_county
+				tier = tier_county					
+				is_landless_type_title = no
 			}	
 			save_scope_as = county
 		}

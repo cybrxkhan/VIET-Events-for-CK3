@@ -1604,5 +1604,17 @@
  VIET_enforcing_religious_discipline_among_clergy:0 "Enforcing Religious Discipline Among Clergy"
  VIET_lacking_intellectual_self_esteem:0 "Lacking Intellectual Self-Esteem"
  # Version 1.17.1 Start Here - Note to Translators: please leave this comment here and do not remove it even in your versions of the loc
+ # Version 1.18.0 Start Here - Note to Translators: please leave this comment here and do not remove it even in your versions of the loc
+ VIET_possessed_by_a_dead_monk:0 "Possessed by a Dead Monk"
+ VIET_possessed_by_a_dead_monk_desc:0 "Ever since they had a strange accident, and became unconscious for a while, this character claims that they are actually a monastic, stating they prefer a life of solitude and spritual reflection. Some people believe they have been possessed by the spirit of a monastic who passed away around the time of that accident."
+ VIET_sheepskin_rebirth:0 "Strange Tuft of Hair"
+ VIET_sheepskin_rebirth_desc:0 "This character has an unusual, small patch of hair on their body. Rumor has it that in their past life, they committed some sins, and were condemned to be reborn as a sheep, but were saved at the last minute because they saved someone's life, so they were allowed to be reborn as a woman. However, the underworld officials, supposedly, couldn't remove every part of the sheep skin."
+ VIET_respects_cunning:0 "Respects Cunning"
+ VIET_respects_cunning_desc:0 "This character recognizes those who have great cunning, believing there is much they can learn from them."
+ VIET_unimpressed_ruler:0 "Easily Unimpressed"
+ VIET_unimpressed_ruler_desc:0 "“Bah! Anyone could've done that.”"
+ VIET_dragon_dormant:0 "Dragon Dormant"
+ VIET_dragon_dormant_desc:0 "Rumor has it this character recently encountered a mysterious little dragon at their home."
+ # Version 1.18.1 Start Here - Note to Translators: please leave this comment here and do not remove it even in your versions of the loc
  xxxxxxxxxx:0 "xxx"
 

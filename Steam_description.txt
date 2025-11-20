@@ -1,6 +1,6 @@
-[img]https://i.imgur.com/cXkUgOc.jpg[/img]
+[img]https://i.imgur.com/uXp8zbo.jpg[/img]
 
-[h1]Current Version: 1.17.0 "Chancellor" (Released 9/9/25, Compatible with vanilla patch 1.17.X)[/h1]
+[h1]Current Version: 1.18.0 "Pu Songling" (Released 10/28/25, Compatible with vanilla patch 1.18.X)[/h1]
 
 [h1][B][url=https://discord.gg/9KuyXv2uZA]Discord Server for my mods[/url]
 [url=https://cybrxkhansmods.godaddysites.com/]Official Website for my mods[/url][/B][/h1]
@@ -25,7 +25,7 @@ Feel free to use my work in your mods - all I ask is that I am credited and (if 
 [img]http://i.imgur.com/EyXurbK.jpg[/img]
 
 [LIST]
-[*]Over [B][U]1220[/U] new flavor events[/B] to experience!
+[*]Over [B][U]1227[/U] new flavor events[/B] to experience!
 [*]Explore new decisions, artifacts, character interactions, activities, and more!
 [*]Game rule to disable sillier events for those who don't like them, with three levels to choose from: Balanced (Default), Serious (Restricted), and All Events (Full)
 [*][B]Compatible with almost anything[/B] since it doesn't touch any vanilla files - even with overhaul mods, you can via game rule disable events that reference things specific to our medieval world that wouldn’t make sense in other time periods or universes (like fantasy/sci-fi conversion mods)
@@ -53,16 +53,25 @@ Please see the [url=https://cybrxkhansmods.godaddysites.com/faq]FAQ on my mods' 
 
 [img]http://i.imgur.com/RQ5QZTF.jpg[/img]
 
-[h1]Version 1.17.0 "Chancellor"[/h1]
+[h1]Version 1.18.0 "Pu Songling"[/h1]
 
-[I]The Master said, "The ruler should employ the ministers according to ritual; the ministers should serve the ruler with loyalty.”
-- The Analects of Confucius[/I]
+[I]“Here in the civilized world, stranger events by far occur than in the Country of Cropped Hair; Before our very eyes, weirder tales unfold than in the Nation of Flying Heads.”
+- Pu Songling, Chinese writer (1640-1715), in the preface of his Strange Tales from a Chinese Studio[/I]
 
-New events added in this version: [B]10[/B]
+New events added in this version: [B]7[/B]
+
+As changelog is too big to list here, see the full changelog here: https://steamcommunity.com/sharedfiles/filedetails/changelog/2227658180
+
 
 [LIST]
-[*]Added 10 events about Councilors
-[*]Added 5 new event backgrounds
+[*]Added 7 events inspired by Strange Tales from a Chinese Studio (聊斋志异)
+[*]Added many new Asian-themed event backgrounds
+[*]Added English placeholders for new Japanese translation version
+[*]Tweaked various county events to not happen to the new county admin titles
+[*]Reworked geographical region triggers for many events to account for the newly added parts of Asia
+[*]Reworked the following events to be travel events: VIETmisc.0196, VIETmisc.0199, VIETmisc.0208, VIETmisc.0212, VIETmisc.0213, VIETmisc.0216
+[*]Fixed rumors of an island beyond Japan event being less likely in Asia as opposed to Africa/Europe (it’s supposed to be the other way around)
+[*]Fixed missing grammatical article loc for the names of activities
 [*]Miscellaneous bugfixes/tweaks
 [/LIST]
 
@@ -74,8 +83,8 @@ New events added in this version: [B]10[/B]
 [LIST]
 [*][url=https://steamcommunity.com/sharedfiles/filedetails/?id=2273832430]Regional Immersion and Cultural Enrichment (RICE)[/url] - a cultural flavor mod for lesser-known, obscure regions modeled after PI's flavor packs
 [*][url=https://steamcommunity.com/sharedfiles/filedetails/?id=2217770052]In Taberna (CK2 Edition)[/url] - the classic song from CK2 returns to CK3
+[*]More East African Clothing Variety: [url=https://steamcommunity.com/sharedfiles/filedetails/?id=3577493277]Vanilla Version[/url] | [url=https://steamcommunity.com/sharedfiles/filedetails/?edit=true&id=3577493412]EPE Version[/url]
 [*][url=https://steamcommunity.com/sharedfiles/filedetails/?id=2218667128]Recruit Courtiers[/url] - simple decision to spawn male or female courtiers in your court for a small price, similar to CK2
-[*][url=https://steamcommunity.com/sharedfiles/filedetails/?id=2219643991]Reduced Injuries and Deaths from Battles[/url] - if you're tired of people dropping like flies in battles
 [*][url=https://steamcommunity.com/sharedfiles/filedetails/?id=2747792660]Rename Egaliatarian Ethos to Cosmopolitan[/url]
 [*][url=https://steamcommunity.com/sharedfiles/filedetails/?id=2629092890]Rename Tribal Era to Late Antiquity[/url]
 [/LIST]

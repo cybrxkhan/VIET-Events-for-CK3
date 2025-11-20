@@ -336,3 +336,44 @@ VIET_major_lifestyle_experience_gain_effect = {
 		add_wanderer_lifestyle_xp = major_lifestyle_xp
 	}
 }
+
+
+
+VIET_remove_personality_traits_effect = {
+	remove_trait = brave
+	remove_trait = craven
+	remove_trait = calm
+	remove_trait = wrathful
+	remove_trait = chaste
+	remove_trait = lustful
+	remove_trait = content
+	remove_trait = ambitious
+	remove_trait = diligent
+	remove_trait = lazy
+	remove_trait = fickle
+	remove_trait = stubborn
+	remove_trait = forgiving
+	remove_trait = vengeful
+	remove_trait = generous
+	remove_trait = greedy
+	remove_trait = gregarious
+	remove_trait = shy
+	remove_trait = honest
+	remove_trait = deceitful
+	remove_trait = humble
+	remove_trait = arrogant
+	remove_trait = just
+	remove_trait = arbitrary
+	remove_trait = patient
+	remove_trait = impatient
+	remove_trait = temperate
+	remove_trait = gluttonous
+	remove_trait = trusting
+	remove_trait = paranoid
+	remove_trait = zealous
+	remove_trait = cynical
+	remove_trait = sadistic
+	remove_trait = callous
+	remove_trait = compassionate
+	remove_trait = eccentric
+}

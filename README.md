@@ -1,11 +1,11 @@
 # VIET Events for CK3
 
-<img src="https://i.imgur.com/cXkUgOc.jpg">
+<img src="https://i.imgur.com/uXp8zbo.jpg">
 
-## Latest Version: 1.17.0 "Chancellor" (Released 9/9/25)
+## Latest Version: 1.18.0 "Pu Songling" (Released 10/28/25)
 
-_"The Master said, "The ruler should employ the ministers according to ritual; the ministers should serve the ruler with loyalty.”_
-_- The Analects of Confucius_
+_"“Here in the civilized world, stranger events by far occur than in the Country of Cropped Hair; Before our very eyes, weirder tales unfold than in the Nation of Flying Heads.”_
+_– Pu Songling, Chinese writer (1640-1715), in the preface of his Strange Tales from a Chinese Studio_
 
 Very Immersive Events and Tales (VIET), the sequel to VIET Events Reborn for CK2, is a flavor mod that adds a vast collection of events about everyday life to spice up your game. They add immersion and a diversity of experiences in between wars and vanilla’s event chains, and cover mundane minutiae ranging from small talk with courtiers and eating local cuisine to epic tales about love, philosophy, and the human condition. Some of the events unlock new decisions, character interactions, activities, and much more for you to explore!
 
@@ -15,7 +15,7 @@ Feel free to use my work in your mods - all I ask is that I am credited and (if 
 
 ## Features
 
-- Over **1220** new flavor events to experience!
+- Over **1227** new flavor events to experience!
 - Explore new decisions, artifacts, character interactions, activities, and more!
 - Game rule to disable sillier events for those who don't like them, with three levels to choose from: Balanced (Default), Serious (Restricted), and All Events (Full)
 - Compatible with almost anything since it doesn't touch any vanilla files - even with overhaul mods, you can via game rule disable events that reference things specific to our medieval world that wouldn’t make sense in other time periods or universes (like fantasy and sci-fi conversion mods)
@@ -39,12 +39,18 @@ The mod folder should look something like this:
 
 ## Changelog
 
-### Version 1.17.0 "Chancellor"
+### Version 1.18.0 "Pu Songling"
 
-New events added in this version: **10**
+New events added in this version: **7**
 
-- Added 10 events about Councilors
-- Added 5 new event backgrounds
+- Added 7 events inspired by Strange Tales from a Chinese Studio (聊斋志异)
+- Added many new Asian-themed event backgrounds
+- Added English placeholders for new Japanese translation version
+- Tweaked various county events to not happen to the new county admin titles
+- Reworked geographical region triggers for many events to account for the newly added parts of Asia
+- Reworked the following events to be travel events: VIETmisc.0196, VIETmisc.0199, VIETmisc.0208, VIETmisc.0212, VIETmisc.0213, VIETmisc.0216
+- Fixed rumors of an island beyond Japan event being less likely in Asia as opposed to Africa/Europe (it’s supposed to be the other way around)
+- Fixed missing grammatical article loc for the names of activities
 - Miscellaneous bugfixes/tweaks
 
 \* Adapted from VIET for CK2
@@ -60,3 +66,6 @@ A few other shoutouts in particular:
 - Sleight of Hand for pushing me to get into the CK2 modding scene and for other assistance over the years, which is why I am still here for some reason.
 - tora75 for contributing the Norse unique localizations for several events.
 - Stik, Vertimnus, and Tobbzn on the CK3 Mod Co-op for helping me figure out how to adapt my CK2 province events and do a system for county events for CK3.
+
+
+

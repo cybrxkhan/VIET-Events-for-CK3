@@ -72,6 +72,7 @@
 # 0372-0374		Oblivion Remaster
 # 0375-0380		Peaches
 # 0381-0389		Councilor
+# 0390-0394		Strange Tales from a Chinese Studio / Liaozhao Zhiyi / 	聊齋誌異
 # 
 ############################################################################################################################
 
@@ -9004,7 +9005,7 @@ VIETmisc.0111 = {
 						NOT = { exists = scope:create_family_blocker }
 						exists = scope:scope_VIET_left_for_dead_person # They will exist, but we do this to suppress errors for newly created characters not existing while trigger tooltips are generating
 					}
-					game_rule_create_spouse_and_children = { CHARACTER = scope:scope_VIET_left_for_dead_person }
+					game_rule_create_spouse_and_children = { CHARACTER = scope:scope_VIET_left_for_dead_person LOCATION = scope:scope_VIET_left_for_dead_person }
 				}
 			}
 
@@ -16748,7 +16749,7 @@ VIETmisc.0196 = {
 	type = character_event
 	title = VIETmisc.0196.t
 	desc = VIETmisc.0196.desc
-	theme = death
+	theme = travel_danger
 	override_background = { reference = VIET_background_skyrim_forest }
 	
 	right_portrait = {
@@ -16758,13 +16759,13 @@ VIETmisc.0196 = {
 
 	trigger = {
 		NOT = { has_game_rule = VIET_conversion_universe_events }
-		any_held_title = {
-			tier = tier_county
-			any_county_province = {
-				OR = {
-					geographical_region = world_india
-					geographical_region = world_burma
-				}		
+		is_location_valid_for_travel_event_on_land = yes
+		location = {
+			OR = {
+				geographical_region = world_india
+				geographical_region = world_burma
+				geographical_region = world_asia_southeast
+				geographical_region = custom_viet_lands
 			}
 		}		
 	}
@@ -16932,11 +16933,19 @@ VIETmisc.0198 = {
 		}
 		any_held_title = {
 			tier = tier_county
+			is_landless_type_title = no
 			any_county_province = {
 				OR = {
 					geographical_region = world_middle_east_jerusalem
 					geographical_region = world_europe
 					geographical_region = world_africa_north
+					geographical_region = world_asia_north_east
+					geographical_region = world_asia_korea
+					geographical_region = world_asia_china
+					geographical_region = world_asia_japan
+					geographical_region = world_asia_north_east
+					geographical_region = world_asia_sakhalin_hokkaido
+					geographical_region = world_asia_philippines
 				}
 			}
 		}
@@ -17004,7 +17013,7 @@ VIETmisc.0199 = {
 	type = character_event
 	title = VIETmisc.0199.t
 	desc = VIETmisc.0199.desc
-	theme = hunt_activity
+	theme = travel_martial
 	override_background = { reference = VIET_background_skyrim_forest }
 	
 	left_portrait = {
@@ -17014,10 +17023,13 @@ VIETmisc.0199 = {
 
 	trigger = {
 		NOT = { has_game_rule = VIET_conversion_universe_events }
-		capital_province = {
+		is_location_valid_for_travel_event_on_land = yes
+		location = {
 			OR = {
 				geographical_region = world_india
 				geographical_region = world_burma
+				geographical_region = world_asia_southeast
+				geographical_region = custom_viet_lands
 				geographical_region = ghw_region_subsahelian_africa # One species found in parts of tropical West and Central Africa
 			}
 		}		
@@ -17048,6 +17060,12 @@ VIETmisc.0199 = {
 		modifier = {
 			add = -0.2
 			has_trait = paranoid
+		}
+	}
+
+	immediate = {
+		location.culture = {
+			save_scope_as = culture
 		}
 	}
 
@@ -17477,6 +17495,7 @@ VIETmisc.0204 = {
 		NOT = { has_game_rule = VIET_conversion_universe_events }
 		any_held_title = {
 			tier = tier_county
+			is_landless_type_title = no
 			any_county_province = {
 				OR = {
 					geographical_region = custom_outremer
@@ -17571,7 +17590,10 @@ VIETmisc.0205 = {
 				geographical_region = world_middle_east_persia
 				geographical_region = custom_outremer
 				geographical_region = world_steppe
+				geographical_region = world_siberia
 				geographical_region = world_tibet
+				geographical_region = world_asia_china
+				geographical_region = world_asia_north_east
 			}
 			NOT = { geographical_region = world_europe_west_britannia }
 		}		
@@ -17680,6 +17702,7 @@ VIETmisc.0206 = {
 		NOT = { has_game_rule = VIET_conversion_universe_events }
 		any_held_title = {
 			tier = tier_county
+			is_landless_type_title = no
 			any_county_province = {
 				OR = {
 					geographical_region = world_africa_east
@@ -17762,6 +17785,12 @@ VIETmisc.0207 = {
 			OR = {
 				geographical_region = world_india
 				geographical_region = world_burma
+				geographical_region = world_asia_southeast_mainland
+				geographical_region = world_asia_borneo
+				geographical_region = world_asia_indonesia
+				geographical_region = custom_viet_lands
+				geographical_region = tgp_yue_region
+				geographical_region = tgp_dian_region
 			}
 		}		
 	}
@@ -17878,7 +17907,8 @@ VIETmisc.0208 = {
 	type = character_event
 	title = VIETmisc.0208.t
 	desc = VIETmisc.0208.desc
-	theme = VIET_theme_skyrim_forest
+	theme = travel_intrigue
+	override_background = { reference = VIET_background_skyrim_forest }
 	
 	left_portrait = root
 	right_portrait = {
@@ -17888,22 +17918,22 @@ VIETmisc.0208 = {
 
 	trigger = {
 		NOT = { has_game_rule = VIET_conversion_universe_events }
-		any_courtier = {
-			is_available_ai_adult = yes
-		}
-		any_held_title = {
-			tier = tier_county
-			any_county_province = {
-				OR = {
-					geographical_region = world_africa_sahara
-					geographical_region = world_africa_west
-					geographical_region = world_africa_east
-					geographical_region = ghw_region_egypt
-					geographical_region = world_middle_east_jerusalem
-					geographical_region = world_middle_east_arabia
-				}
+		is_location_valid_for_travel_event_on_land = yes
+		current_travel_plan = {
+			any_entourage_character = {	
+				is_available_travelling = yes
 			}
-		}		
+		}
+		location = {
+			OR = {
+				geographical_region = world_africa_sahara
+				geographical_region = world_africa_west
+				geographical_region = world_africa_east
+				geographical_region = ghw_region_egypt
+				geographical_region = world_middle_east_jerusalem
+				geographical_region = world_middle_east_arabia
+			}
+		}	
 	}
 	
 	weight_multiplier = {
@@ -17935,11 +17965,13 @@ VIETmisc.0208 = {
 	}
 
 	immediate = {
-		random_courtier = {
-			limit = {
-				is_available_ai_adult = yes
-			}
-			save_scope_as = hyrax_watcher
+		current_travel_plan = {
+			random_entourage_character = {
+				limit = {
+					is_available_travelling = yes
+				}
+				save_scope_as = hyrax_watcher
+			}	
 		}
 	}
 	
@@ -18084,6 +18116,7 @@ VIETmisc.0210 = {
 		NOT = { has_game_rule = VIET_conversion_universe_events }
 		any_held_title = {
 			tier = tier_county
+			is_landless_type_title = no
 			any_county_province = {
 				OR = {
 					geographical_region = world_africa_sahara
@@ -18288,7 +18321,7 @@ VIETmisc.0212 = {
 	type = character_event
 	title = VIETmisc.0212.t
 	desc = VIETmisc.0212.desc
-	theme = martial
+	theme = travel_martial
 	override_background = { reference = VIET_background_tuscan_country }
 	
 	left_portrait = {
@@ -18298,18 +18331,20 @@ VIETmisc.0212 = {
 
 	trigger = {
 		NOT = { has_game_rule = VIET_conversion_universe_events }
-		any_held_title = {
-			tier = tier_county
-			any_county_province = {
-				OR = {
-					geographical_region = world_africa_west
-					geographical_region = world_africa_east
-					geographical_region = world_middle_east_jerusalem
-					geographical_region = world_middle_east_arabia
-					geographical_region = ghw_region_persia
-					geographical_region = world_india
-					geographical_region = world_burma
-				}
+		is_location_valid_for_travel_event_on_land = yes
+		location = {
+			OR = {
+				geographical_region = world_africa_west
+				geographical_region = world_africa_east
+				geographical_region = world_middle_east_jerusalem
+				geographical_region = world_middle_east_arabia
+				geographical_region = ghw_region_persia
+				geographical_region = world_india
+				geographical_region = world_burma
+				geographical_region = world_asia_southeast
+				geographical_region = custom_viet_lands
+				geographical_region = tgp_yue_region
+				geographical_region = tgp_dian_region
 			}
 		}		
 	}
@@ -18366,8 +18401,8 @@ VIETmisc.0213 = {
 	type = character_event
 	title = VIETmisc.0213.t
 	desc = VIETmisc.0213.desc
-	theme = martial
-	override_background = { reference = VIET_background_tuscan_country }
+	theme = travel_martial
+	override_background = { reference = VIET_background_desert_frontier }
 	
 	left_portrait = {
 		character = root
@@ -18376,15 +18411,17 @@ VIETmisc.0213 = {
 
 	trigger = {
 		NOT = { has_game_rule = VIET_conversion_universe_events }
-		any_held_title = {
-			tier = tier_county
-			any_county_province = {
-				OR = {
-					geographical_region = world_africa
-					geographical_region = ghw_region_holy_land
-				}
+		is_location_valid_for_travel_event_on_land = yes
+		location = {
+			OR = {
+				geographical_region = world_africa
+				geographical_region = ghw_region_holy_land
 			}
-		}		
+			OR = {
+				terrain = desert
+				terrain = desert_mountains
+			}
+		}	
 	}
 	
 	weight_multiplier = {
@@ -18471,6 +18508,12 @@ VIETmisc.0214 = {
 				geographical_region = world_africa_west
 				geographical_region = world_africa_east
 				geographical_region = world_tibet
+				geographical_region = world_asia_china
+				geographical_region = world_asia_korea
+				geographical_region = world_asia_japan
+				geographical_region = world_asia_north_east
+				geographical_region = world_asia_sakhalin_hokkaido
+				geographical_region = world_asia_southeast_islands
 			}
 		}	
 	}
@@ -18607,9 +18650,11 @@ VIETmisc.0215 = {
 			}
 			NOT = { has_trait = paranoid }
 			NOT = { has_trait = temperate }
+			NOT = { religion = religion:jainism_religion }
 		}
 		any_held_title = {
 			tier = tier_county
+			is_landless_type_title = no
 			any_county_province = {
 				OR = {
 					geographical_region = world_africa_east
@@ -18667,6 +18712,7 @@ VIETmisc.0215 = {
 				}
 				NOT = { has_trait = paranoid }
 				NOT = { has_trait = temperate }
+				NOT = { religion = religion:jainism_religion }
 			}
 			add_character_modifier = {
 				modifier = VIET_coturnism
@@ -18750,7 +18796,8 @@ VIETmisc.0216 = {
 	type = character_event
 	title = VIETmisc.0216.t
 	desc = VIETmisc.0216.desc
-	theme = VIET_theme_skyrim_forest 
+	theme = travel_stewardship
+	override_background = { reference = VIET_background_skyrim_forest } 
 	
 	left_portrait = {
 		character = root
@@ -18759,22 +18806,23 @@ VIETmisc.0216 = {
 
 	trigger = {
 		NOT = { has_game_rule = VIET_conversion_universe_events }
-		any_held_title = {
-			tier = tier_county
-			any_county_province = {
-				OR = {
-					geographical_region = world_africa_east
-					geographical_region = world_africa_north
-					geographical_region = world_africa_west
-					geographical_region = world_europe_west_francia
-					geographical_region = world_europe_west_iberia
-					geographical_region = world_europe_south
-					geographical_region = world_middle_east
-					geographical_region = world_asia_minor
-					geographical_region = world_middle_east_persia
-					geographical_region = world_india
-					geographical_region = world_burma
-				}
+		is_location_valid_for_travel_event_on_land = yes
+		location = {
+			OR = {
+				geographical_region = world_africa_east
+				geographical_region = world_africa_north
+				geographical_region = world_africa_west
+				geographical_region = world_europe_west_francia
+				geographical_region = world_europe_west_iberia
+				geographical_region = world_europe_south
+				geographical_region = world_middle_east
+				geographical_region = world_asia_minor
+				geographical_region = world_middle_east_persia
+				geographical_region = world_india
+				geographical_region = world_burma
+				geographical_region = world_siberia
+				geographical_region = world_asia
+				geographical_region = world_tibet
 			}
 		}		
 	}
@@ -18878,6 +18926,7 @@ VIETmisc.0217 = {
 		NOT = { has_game_rule = VIET_conversion_universe_events }
 		any_held_title = {
 			tier = tier_county
+			is_landless_type_title = no
 			any_county_province = {
 				OR = {
 					geographical_region = world_india
@@ -19217,6 +19266,10 @@ VIETmisc.0221 = {
 				geographical_region = world_asia_minor
 				geographical_region = world_steppe
 				geographical_region = world_middle_east_persia
+				geographical_region = world_siberia
+				geographical_region = world_asia_china
+				geographical_region = world_asia_korea
+				geographical_region = world_asia_north_east
 			}
 		}		
 	}
@@ -19341,6 +19394,7 @@ VIETmisc.0222 = {
 				geographical_region = world_africa_sahara
 				geographical_region = world_europe_north
 				geographical_region = world_europe_west_britannia
+				geographical_region = world_asia_southeast_islands
 			}
 		}
 		culture_has_european_heritage_pillar_trigger = yes	
@@ -19449,6 +19503,7 @@ VIETmisc.0223 = {
 				geographical_region = world_africa_sahara
 				geographical_region = world_europe_north
 				geographical_region = world_europe_west_britannia
+				geographical_region = world_asia_southeast_islands
 			}
 		}
 		culture_has_european_heritage_pillar_trigger = no	
@@ -19682,6 +19737,7 @@ VIETmisc.0225 = {
 		NOT = { has_game_rule = VIET_conversion_universe_events }
 		any_held_title = {
 			tier = tier_county
+			is_landless_type_title = no
 			any_county_province = {
 				OR = { # Mainly seems to be a India/Central Asian phenomenon
 					geographical_region = world_india
@@ -19843,6 +19899,7 @@ VIETmisc.0226 = {
 		}
 		any_held_title = {
 			tier = tier_county
+			is_landless_type_title = no
 			any_county_province = {
 				OR = {
 					geographical_region = world_europe
@@ -24311,7 +24368,7 @@ VIETmisc.0265 = {
 		any_courtier = {
 			is_available_ai_adult = yes
 			OR = {
-				has_trait = poet
+				has_trait = lifestyle_poet
 				diplomacy >= decent_skill_rating
 				learning >= decent_skill_rating
 			}
@@ -24366,7 +24423,7 @@ VIETmisc.0265 = {
 			limit = {
 				is_available_ai_adult = yes
 				OR = {
-					has_trait = poet
+					has_trait = lifestyle_poet
 					diplomacy >= decent_skill_rating
 					learning >= decent_skill_rating
 				}
@@ -26562,7 +26619,8 @@ VIETmisc.0280 = {
 	immediate = {		
 		random_held_title = {
 			limit = {
-				tier = tier_county
+				tier = tier_county				
+				is_landless_type_title = no
 			}	
 			save_scope_as = grateful_county
 		}	
@@ -27174,7 +27232,8 @@ VIETmisc.0288 = {
 	immediate = {
 		random_held_title = {
 			limit = {
-				tier = tier_county
+				tier = tier_county		
+				is_landless_type_title = no
 			}	
 			save_scope_as = county
 		}
@@ -30422,6 +30481,7 @@ VIETmisc.0324 = {
 				geographical_region = ghw_region_near_east
 				geographical_region = world_africa_north_west
 				geographical_region = ghw_region_southern_middle_east
+				geographical_region = world_asia
 			}
 		}
 	}
@@ -32857,6 +32917,7 @@ VIETmisc.0344 = {
 
 	trigger = {
 		any_held_county = {
+			is_landless_type_title = no
 			is_coastal_county = yes	
 		}
 		OR = {
@@ -33088,7 +33149,7 @@ VIETmisc.0346 = {
 			diplomacy >= decent_skill_rating
 			learning >= mediocre_skill_rating
 			has_trait = scholar
-			has_trait = poet
+			has_trait = lifestyle_poet
 			has_trait = theologian
 			has_trait = education_learning_1
 			has_trait = education_learning_2
@@ -36946,6 +37007,7 @@ VIETmisc.0379 = {
 		has_game_rule = VIET_normal_universe_events
 		any_held_title = {
 			tier = tier_county
+			is_landless_type_title = no
 			any_county_province = {
 				OR = {
 					terrain = plains
@@ -36966,7 +37028,9 @@ VIETmisc.0379 = {
 					geographical_region = world_steppe_west
 					geographical_region = world_africa_sahara
 					geographical_region = world_africa_east
-					geographical_region = world_africa_west
+					geographical_region = world_asia_north_east
+					geographical_region = world_siberia
+					geographical_region = world_asia_southeast_islands
 				}		
 			}
 		}	
@@ -38176,8 +38240,847 @@ VIETmisc.0389 = {
 
 
 
+##################################################################
+# 0390-0394 Strange Tales from a Chinese Studio / Liaozhao Zhiyi / 	聊齋誌異
+##################################################################
+
+
+# Silver Above Beauty (沂水秀才): Two fox spirits show a scholar silver, a calligraphy scroll, and themselves
+VIETmisc.0390 = {
+	type = character_event
+	title = VIETmisc.0390.t
+	window = big_event_window
+	desc = {
+		first_valid = {
+			triggered_desc = {
+				trigger = {
+					OR = {
+						VIET_is_sinosphere_government_trigger = yes
+						culture = { has_cultural_pillar = heritage_chinese }
+						knows_language = language_chinese
+					}
+				}
+				desc = VIETmisc.0390.desc.chinese
+			}
+			desc = VIETmisc.0390.desc.non_chinese
+		}
+		desc = VIETmisc.0390.desc
+	}
+	theme = seduction
+	override_background = { reference = study }
+	
+	left_portrait = {
+		character = root
+		animation = reading
+		camera = camera_event_center_pointing_slighty_left
+	}
+	
+	center_portrait = {
+		character = scope:fox_spirit_1
+		animation = fanning
+		camera = camera_event_right_pointing_right_scheme
+		hide_info = yes
+	}
+	
+	right_portrait = {
+		character = scope:fox_spirit_2
+		animation = fanning_coyly
+		camera = camera_event_center_pointing_very_left
+		#camera = camera_event_very_right
+		#camera = camera_event_far_right_very_right
+		hide_info = yes
+	}
+
+	trigger = {	
+		has_game_rule = VIET_normal_universe_events
+		is_female = no
+		OR = {
+			has_sexuality = heterosexual
+			has_sexuality = bisexual
+		}
+		is_playable_character = yes
+		VIET_is_sinosphere_trigger = yes
+		# OR = {
+		# 	VIET_is_sinosphere_government_trigger = yes
+		# 	government_is_japanese_trigger = yes
+		# }
+		NOT = { learning <= low_skill_rating }
+		OR = {
+			learning >= mediocre_skill_rating
+			has_trait = confucian_education
+			has_trait = scholar
+			has_trait = lifestyle_poet
+			has_trait = theologian
+			has_trait = education_learning_3
+			has_trait = education_learning_4
+			has_trait = education_learning_5
+		}
+	}
+	
+	weight_multiplier = {
+		base = 1
+		modifier = {
+			add = 0.2
+			has_trait = lustful
+		}
+		modifier = {
+			add = -0.2
+			has_trait = chaste
+		}
+		modifier = {
+			add = 0.2
+			has_trait = lazy
+		}
+		modifier = {
+			add = -0.2
+			has_trait = diligent
+		}
+		modifier = {
+			add = 0.2
+			has_trait = trusting
+		}
+		modifier = {
+			add = -0.2
+			has_trait = paranoid
+		}
+		modifier = {
+			add = -0.3
+			age >= 40
+		}
+	}	
+
+	immediate = {
+		root.location.county = { save_scope_as = county }
+		create_character = {
+			location = root.location
+			template = VIET_fox_spirit_template
+			faith = scope:county.faith
+			culture = scope:county.culture
+			save_scope_as = fox_spirit_1
+		}
+		create_character = {
+			location = root.location
+			template = VIET_fox_spirit_template
+			faith = scope:county.faith
+			culture = scope:county.culture
+			save_scope_as = fox_spirit_2
+		}
+	}
+	
+	option = { # Take the silver
+		name = VIETmisc.0390.a
+		show_as_tooltip = {
+			add_gold = { 5 100 }
+		}
+		stress_impact = {
+			generous = minor_stress_impact_gain
+			paranoid = miniscule_stress_impact_gain
+			confucian_education = miniscule_stress_impact_gain
+		}	
+		set_variable = {
+			name = VIET_silver_over_beauty_choice
+			value = flag:silver
+			days = 1
+		}
+	}	
+	
+	option = { # Take the scroll
+		name = VIETmisc.0390.b
+		stress_impact = {
+			greedy = minor_stress_impact_gain
+		}
+		set_variable = {
+			name = VIET_silver_over_beauty_choice
+			value = flag:scroll
+			days = 1
+		}	
+	}	
+	
+	option = { # Ignore the fox spirits
+		name = VIETmisc.0390.c
+		stress_impact = {
+			greedy = minor_stress_impact_gain
+			gregarious = minor_stress_impact_gain
+			lustful = miniscule_stress_impact_gain
+		}	
+		set_variable = {
+			name = VIET_silver_over_beauty_choice
+			value = flag:ignore
+			days = 1
+		}
+
+		# hidden_effect = {
+		# 	send_interface_toast = {
+		# 		left_icon = ROOT
+		# 		title = VIETmisc.0390.c.toast
+		# 		stress_impact = {
+		# 			base = minor_stress_impact_loss
+		# 		}
+		# 	}			
+		# }
+		#scope:fox_spirit_1 ?= { silent_disappearance_effect = yes }
+		#scope:fox_spirit_2 ?= { silent_disappearance_effect = yes }
+
+	}	
+
+	after = {
+		trigger_event = VIETmisc.0391
+		# if = {
+		# 	limit = {
+		# 		has_game_rule = VIET_historical_context_on
+		# 	}
+		# 	custom_tooltip = VIETmisc.0390.info
+		# }
+	}
+
+}
+
+
+# Silver Above Beauty (沂水秀才): the result
+VIETmisc.0391 = {
+	type = character_event
+	title = VIETmisc.0391.t
+	window = big_event_window
+	desc = {
+		first_valid = {
+			triggered_desc = {
+				trigger = {
+					var:VIET_silver_over_beauty_choice ?= flag:silver
+				}
+				desc = VIETmisc.0391.desc.silver
+			}
+			triggered_desc = {
+				trigger = {
+					var:VIET_silver_over_beauty_choice ?= flag:scroll
+				}
+				desc = VIETmisc.0391.desc.scroll
+			}
+			triggered_desc = {
+				trigger = {
+					var:VIET_silver_over_beauty_choice ?= flag:ignore
+				}
+				desc = VIETmisc.0391.desc.ignore
+			}
+			# Fallback
+			desc = VIETmisc.0391.desc.neutral
+		}
+	}
+	theme = seduction
+	override_background = { reference = study }
+	
+	left_portrait = {
+		character = root
+		triggered_animation = {
+			trigger = {
+				var:VIET_silver_over_beauty_choice ?= flag:silver
+				OR = {
+					has_trait = wrathful
+					has_trait = vengeful
+					has_trait = sadistic
+					has_trait = arrogant
+				}
+			}
+			animation = personality_vengeful
+		}
+		triggered_animation = {
+			trigger = {
+				var:VIET_silver_over_beauty_choice ?= flag:silver
+				NOR = {
+					has_trait = wrathful
+					has_trait = vengeful
+					has_trait = sadistic
+					has_trait = arrogant
+				}
+			}
+			animation = shame
+		}
+		triggered_animation = {
+			trigger = {
+				NOT = { var:VIET_silver_over_beauty_choice ?= flag:silver }
+				OR = {
+					has_trait = wrathful
+					has_trait = vengeful
+					has_trait = sadistic
+					has_trait = arrogant
+					has_trait = craven
+					has_trait = paranoid
+					has_trait = greedy
+				}
+			}
+			animation = paranoia
+		}
+		animation = personality_rational
+		camera = camera_event_center_close_to_right
+	}
+	
+	center_portrait = {
+		character = scope:fox_spirit_1
+		animation = fanning_coyly
+		camera = camera_event_right_pointing_left_away
+		hide_info = yes
+	}
+	
+	right_portrait = {
+		character = scope:fox_spirit_2
+		animation = fanning_coyly
+		camera = camera_event_right_fully_away
+		#camera = camera_event_very_right
+		#camera = camera_event_far_right_very_right
+		hide_info = yes
+	}
+	
+	option = { # Ok
+		name = {
+			trigger = {
+				var:VIET_silver_over_beauty_choice ?= flag:silver
+			}
+			text = VIETmisc.0391.a.bad
+		}
+		name = {
+			trigger = {
+				NOT = { var:VIET_silver_over_beauty_choice ?= flag:silver }
+			}
+			text = VIETmisc.0391.a.good
+		}
+		flavor = VIETmisc.0391.a.flavor
+		if = {
+			limit = {
+				var:VIET_silver_over_beauty_choice ?= flag:silver
+			}
+			custom_tooltip = VIETmisc.0391.a.tooltip
+			VIET_small_piety_loss_effect = yes
+			stress_impact = {
+				base = miniscule_stress_impact_gain
+				greedy = minor_stress_impact_gain
+				wrathful = miniscule_stress_impact_gain
+				vengeful = miniscule_stress_impact_gain
+				humble = miniscule_stress_impact_gain
+				generous = minor_stress_impact_gain
+				arrogant = miniscule_stress_impact_gain
+			}
+		}
+		if = {
+			limit = {
+				var:VIET_silver_over_beauty_choice ?= flag:scroll
+			}
+			VIET_medium_piety_gain_effect = yes
+			stress_impact = {
+				base = minor_stress_impact_loss
+				confucian_education = miniscule_stress_impact_loss
+				scholar = miniscule_stress_impact_loss
+				education_learning_3 = miniscule_stress_impact_loss
+				education_learning_4 = miniscule_stress_impact_loss
+				education_learning_5 = miniscule_stress_impact_loss
+				calm = miniscule_stress_impact_loss
+				humble = miniscule_stress_impact_loss
+				lustful = miniscule_stress_impact_loss
+			}
+		}
+		if = {
+			limit = {
+				var:VIET_silver_over_beauty_choice ?= flag:ignore
+			}
+			add_learning_lifestyle_xp = minor_lifestyle_xp
+			if = {
+				limit = { has_trait = confucian_education }
+				add_trait_xp = {
+					trait = confucian_education
+					value = lifestyle_confucian_education_xp_gain_minor_value
+				}
+			}
+			stress_impact = {
+				base = miniscule_stress_impact_loss
+				diligent = miniscule_stress_impact_loss
+				calm = miniscule_stress_impact_loss
+				humble = miniscule_stress_impact_loss
+			}
+		}
+
+	}	
+
+	after = {
+		if = {
+			limit = { has_variable = VIET_silver_over_beauty_choice }
+			remove_variable = VIET_silver_over_beauty_choice
+		}
+		scope:fox_spirit_1 ?= { silent_disappearance_effect = yes }
+		scope:fox_spirit_2 ?= { silent_disappearance_effect = yes }
+		if = {
+			limit = {
+				has_game_rule = VIET_historical_context_on
+			}
+			custom_tooltip = VIETmisc.0391.info
+		}
+	}
+
+}
 
 
 
+# Monk of Changqing (长清僧): Old monk dies, and his ghost accidentally possesses a young man who just died
+VIETmisc.0392 = {
+	type = character_event
+	title = VIETmisc.0392.t
+	window = big_event_window
+	desc = VIETmisc.0392.desc
+	theme = seduction
+	override_background = { reference = study }
+	
+	left_portrait = {
+		character = root
+		animation = worry
+	}
+	
+	right_portrait = {
+		character = scope:monk
+		animation = prayer
+		camera = camera_event_group_talking_left_left
+	}
+
+	lower_center_portrait = scope:manager
+
+	trigger = {	
+		has_game_rule = VIET_normal_universe_events
+		is_playable_character = yes
+		OR = {
+			VIET_is_sinosphere_trigger = yes
+			religion = religion:buddhism_religion
+		}
+		any_courtier = {
+			is_available_ai_adult = yes
+			age <= 40
+			religion = religion:buddhism_religion
+			has_no_particular_noble_roots_trigger = yes
+			NOT = { is_close_family_of = root }
+			is_clergy = no
+			NOT = { has_council_position = councillor_court_chaplain }
+			NOT = { has_trait = devoted }
+		}
+		capital_county.duchy.kingdom = {
+			any_in_de_jure_hierarchy = {
+				tier = tier_county
+				NOT = { holder = root }
+				holder = { is_ai = yes }
+				OR = {
+					holder.faith = { has_doctrine = special_doctrine_immaterial_harmony }
+					holder.religion = religion:buddhism_religion	
+				}		
+				any_county_province = {
+					has_holding_type = church_holding
+				}
+			}
+		}
+	}
+	
+	weight_multiplier = {
+		base = 1
+		modifier = {
+			add = 0.2
+			has_trait = zealous
+		}
+		modifier = {
+			add = -0.2
+			has_trait = cynical
+		}
+		modifier = {
+			add = 0.2
+			has_trait = gregarious
+		}
+		modifier = {
+			add = -0.2
+			has_trait = shy
+		}
+		modifier = {
+			add = 0.2
+			has_trait = stubborn
+		}
+		modifier = {
+			add = -0.2
+			has_trait = fickle
+		}
+	}	
+
+	immediate = {
+		capital_county.duchy.kingdom = {
+			random_in_de_jure_hierarchy = {
+				limit = {
+					tier = tier_county
+					NOT = { holder = root }
+					holder = { is_ai = yes }
+					OR = {
+						holder.faith = { has_doctrine = special_doctrine_immaterial_harmony }
+						holder.religion = religion:buddhism_religion	
+					}		
+					any_county_province = {
+						has_holding_type = church_holding
+					}					
+				}
+				holder = {
+					save_scope_as = manager
+				}
+				random_county_province = {
+					limit = {
+						has_holding_type = church_holding
+					}
+					save_scope_as = location
+				}
+			}
+		}
+		random_courtier = {
+			limit = {
+				is_available_ai_adult = yes
+				age <= 40
+				religion = religion:buddhism_religion
+				has_no_particular_noble_roots_trigger = yes
+				NOT = { is_close_family_of = root }
+				is_clergy = no
+				NOT = { has_council_position = councillor_court_chaplain }
+				NOT = { has_trait = devoted }
+			}		
+			save_scope_as = monk
+		}
+		scope:monk = {
+			VIET_remove_personality_traits_effect = yes	
+			add_trait = calm
+			add_trait = humble
+			add_trait = temperate
+			add_trait = devoted			
+			add_trait = celibate			
+			add_character_modifier = {
+				modifier = VIET_possessed_by_a_dead_monk
+			}
+		}
+	}
+	
+	option = { # Ok
+		name = VIETmisc.0392.a
+		if = {
+			limit = {
+				OR = {
+					faith = { has_doctrine = special_doctrine_immaterial_harmony }
+					religion = religion:buddhism_religion	
+				}		
+			}
+			VIET_massive_piety_gain_effect = yes
+		}
+		else = {
+			VIET_massive_prestige_gain_effect = yes
+		}
+		scope:manager = {
+			add_courtier = scope:monk
+		}
+		scope:monk = {			
+			add_opinion = {
+				modifier = pleased_opinion
+				target = root
+				opinion = 10
+			}
+			add_character_flag = {
+				flag = blocked_from_leaving
+				years = 50
+			}				
+		}
+		stress_impact = {
+			cynical = minor_stress_impact_gain
+			arrogant = miniscule_stress_impact_gain
+			gregarious = miniscule_stress_impact_gain
+			paranoid = miniscule_stress_impact_gain
+		}
+	}	
+	
+	option = { # Try to get them back
+		name = VIETmisc.0392.b
+		VIET_massive_piety_loss_effect = yes
+		duel = {
+			skill = intrigue
+			target = scope:monk
+			10 = { # Failure
+				compare_modifier = {
+					value = scope:duel_value
+					multiplier = -1.1
+				}
+				desc = VIETmisc.0392.b.toast_bad
+				send_interface_toast = {
+					type = event_toast_effect_bad
+					left_icon = scope:monk
+					title = VIETmisc.0392.b.toast_bad
+					scope:manager = {
+						add_courtier = scope:monk
+					}
+					scope:monk = {
+						add_character_flag = {
+							flag = blocked_from_leaving
+							years = 50
+						}				
+						add_opinion = {
+							modifier = disappointed_opinion
+							target = root
+							opinion = -10
+						}
+					}
+				}
+			}
+			10 = { # Success
+				compare_modifier = {
+					value = scope:duel_value
+					multiplier = 1.1
+				}
+				desc = VIETmisc.0392.b.toast_good
+				send_interface_toast = {
+					type = event_toast_effect_good
+					left_icon = scope:monk
+					title = VIETmisc.0392.b.toast_good
+					scope:monk = {
+						add_opinion = {
+							modifier = disappointed_opinion
+							target = root
+							opinion = -50
+						}
+					}
+				}
+			}
+		}
+		stress_impact = {
+			zealous = minor_stress_impact_gain
+			humble = miniscule_stress_impact_gain
+			compassionate = miniscule_stress_impact_gain
+			generous = miniscule_stress_impact_gain
+			content = miniscule_stress_impact_gain
+		}
+	}	
+
+	after = {
+		if = {
+			limit = {
+				has_game_rule = VIET_historical_context_on
+			}
+			custom_tooltip = VIETmisc.0392.info
+		}
+	}
+
+}
 
 
+# Dragon Dormant (蛰龙): Encounter a mysterious dragon from a book - a Qing Dynasty depiction of this story is the picture of cybrxkhan's profile in some places!
+VIETmisc.0393 = {
+	type = character_event
+	title = VIETmisc.0393.t
+	window = big_event_window
+	desc = VIETmisc.0393.desc
+	theme = friendly
+	override_background = { reference = study }
+	
+	left_portrait = {
+		character = scope:courtier
+		animation = personality_cynical
+	}
+	
+	right_portrait = {
+		character = root
+		animation = storyteller
+	}
+
+	trigger = {	
+		has_game_rule = VIET_normal_universe_events
+		is_playable_character = yes
+		VIET_is_sinosphere_trigger = yes
+		any_courtier = {
+			is_available_ai_adult = yes
+			VIET_is_sinosphere_trigger = yes
+		}
+	}
+	
+	weight_multiplier = {
+		base = 1
+		modifier = {
+			add = 0.2
+			has_trait = compassionate
+		}
+		modifier = {
+			add = -0.2
+			has_trait = callous
+		}
+		modifier = {
+			add = 0.2
+			has_trait = calm
+		}
+		modifier = {
+			add = -0.2
+			has_trait = wrathful
+		}
+		modifier = {
+			add = 0.2
+			has_trait = just
+		}
+		modifier = {
+			add = -0.2
+			has_trait = arbitrary
+		}
+	}	
+
+	immediate = {
+		random_courtier = {
+			limit = {
+				is_available_ai_adult = yes
+				VIET_is_sinosphere_trigger = yes
+			}		
+			save_scope_as = courtier
+		}
+	}
+	
+	option = { # Ok
+		name = VIETmisc.0393.a
+		VIET_small_prestige_gain_effect = yes
+	}	
+	
+	option = { # Ok
+		name = VIETmisc.0393.b
+		VIET_small_piety_gain_effect = yes
+	}	
+
+	after = {
+		add_character_modifier = {
+			modifier = VIET_dragon_dormant
+			years = 10
+		}
+		stress_impact = {
+			base = miniscule_stress_impact_loss
+			zealous = minor_stress_impact_loss
+			humble = miniscule_stress_impact_loss
+			compassionate = miniscule_stress_impact_loss
+			just = miniscule_stress_impact_loss
+			content = miniscule_stress_impact_loss
+		}
+		scope:courtier = {
+			add_opinion = {
+				target = root
+				modifier = amused_opinion
+				opinion = 5
+			}
+		}
+		if = {
+			limit = {
+				has_game_rule = VIET_historical_context_on
+			}
+			custom_tooltip = VIETmisc.0393.info
+		}
+	}
+
+}
+
+
+# Sheep Skin (某公): Person recalls their reincarnation where they were initially condemned to be reborn as a sheep
+VIETmisc.0394 = {
+	type = character_event
+	title = VIETmisc.0394.t
+	window = big_event_window
+	desc = VIETmisc.0394.desc
+	theme = faith
+	override_background = { reference = relaxing_room }
+	
+	left_portrait = {
+		character = root
+		animation = pondering
+		camera = camera_event_scheme_center_look_right
+	}
+	
+	right_portrait = {
+		character = scope:courtier
+		animation = storyteller
+	}
+
+	trigger = {	
+		has_game_rule = VIET_normal_universe_events
+		is_playable_character = yes
+		OR = {
+			VIET_is_sinosphere_trigger = yes
+			religion = religion:buddhism_religion
+		}
+		any_courtier = {
+			is_available_ai_adult = yes
+			religion = religion:buddhism_religion
+			dynasty != root.dynasty
+			NOT = { has_trait = cynical }
+		}
+	}
+	
+	weight_multiplier = {
+		base = 1
+		modifier = {
+			add = 0.2
+			has_trait = patient
+		}
+		modifier = {
+			add = -0.2
+			has_trait = impatient
+		}
+		modifier = {
+			add = 0.2
+			has_trait = gregarious
+		}
+		modifier = {
+			add = -0.2
+			has_trait = shy
+		}
+		modifier = {
+			add = 0.2
+			has_trait = humble
+		}
+		modifier = {
+			add = -0.2
+			has_trait = arrogant
+		}
+	}	
+
+	immediate = {
+		random_courtier = {
+			limit = {
+				is_available_ai_adult = yes
+				religion = religion:buddhism_religion
+				dynasty != root.dynasty
+				NOT = { has_trait = cynical }
+			}		
+			save_scope_as = courtier
+		}
+		scope:courtier = {			
+			add_character_modifier = {
+				modifier = VIET_sheepskin_rebirth
+			}
+		}
+	}
+	
+	option = { # Ok
+		name = VIETmisc.0394.a
+		VIET_medium_prestige_gain_effect = yes
+		stress_impact = {
+			cynical = miniscule_stress_impact_loss
+			gregarious = miniscule_stress_impact_loss
+			callous = miniscule_stress_impact_loss
+			arbitrary = miniscule_stress_impact_loss
+			eccentric = miniscule_stress_impact_loss
+		}
+	}	
+	
+	option = { # Ok
+		name = VIETmisc.0394.b
+		VIET_medium_piety_gain_effect = yes
+		stress_impact = {
+			zealous = miniscule_stress_impact_loss
+			just = miniscule_stress_impact_loss
+			humble = miniscule_stress_impact_loss
+			forgiving = miniscule_stress_impact_loss
+			compassionate = miniscule_stress_impact_loss
+		}
+		
+	}	
+
+	after = {
+		if = {
+			limit = {
+				has_game_rule = VIET_historical_context_on
+			}
+			custom_tooltip = VIETmisc.0394.info
+		}
+	}
+
+}
