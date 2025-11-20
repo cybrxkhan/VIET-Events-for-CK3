@@ -304,6 +304,7 @@ artifact_VIET_trusty_shovel_modifier = {
 
 artifact_VIET_leather_knapsack_modifier = {
 	intrigue = 1
+	character_travel_safety = 2
 }
 
 artifact_VIET_wooden_bowl_modifier = {
@@ -368,6 +369,7 @@ artifact_VIET_wooden_whistle_modifier = {
 
 artifact_VIET_simple_waterskin_modifier = {
 	stress_loss_mult = 0.12
+	character_travel_speed_mult = 0.05
 }
 
 artifact_VIET_hollow_doll_modifier = {
