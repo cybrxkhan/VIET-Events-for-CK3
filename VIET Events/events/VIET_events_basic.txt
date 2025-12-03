@@ -73,6 +73,7 @@
 # 0375-0380		Peaches
 # 0381-0389		Councilor
 # 0390-0394		Strange Tales from a Chinese Studio / Liaozhao Zhiyi / 	聊齋誌異
+# 0395-0XXX		Backgrounds
 # 
 ############################################################################################################################
 
@@ -39082,5 +39083,75 @@ VIETmisc.0394 = {
 			custom_tooltip = VIETmisc.0394.info
 		}
 	}
+
+}
+
+
+
+
+
+##################################################################
+# 0395-0XXX Backgrounds (events utilizing backgrounds I haven't used a lot of)
+##################################################################
+
+
+# Don't eat fruits like strawberries in a weird manner or else people will judge you
+# I sincerely apologize to anyone who gets this reference and is reading this comment
+# But if you *do* get it, it means you're terminally online in a certain part of the internet
+VIETmisc.0395 = {
+	type = character_event
+	title = VIETmisc.0395.t
+	window = big_event_window
+	desc = VIETmisc.0395.desc
+	theme = seduction
+	override_background = { reference = study }
+	
+	left_portrait = {
+		character = root
+		animation = reading
+		camera = camera_event_center_pointing_slighty_left
+	}
+
+	trigger = {	
+		has_game_rule = VIET_normal_universe_events
+	}
+	
+	weight_multiplier = {
+		base = 1
+		modifier = {
+			add = 0.2
+			has_trait = lustful
+		}
+		modifier = {
+			add = -0.2
+			has_trait = chaste
+		}
+		modifier = {
+			add = 0.2
+			has_trait = lazy
+		}
+		modifier = {
+			add = -0.2
+			has_trait = diligent
+		}
+		modifier = {
+			add = 0.2
+			has_trait = trusting
+		}
+		modifier = {
+			add = -0.2
+			has_trait = paranoid
+		}
+	}	
+	
+	option = { # Take the silver
+		name = VIETmisc.0390.a
+		stress_impact = {
+			generous = minor_stress_impact_gain
+			paranoid = miniscule_stress_impact_gain
+			confucian_education = miniscule_stress_impact_gain
+		}	
+	}	
+	
 
 }
