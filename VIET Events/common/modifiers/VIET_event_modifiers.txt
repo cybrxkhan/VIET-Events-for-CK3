@@ -1272,7 +1272,7 @@ VIET_mountain_tea = {
 	negate_health_penalty_add = 0.1
 }
 VIET_chinese_black_tea_gift = {
-	icon = drink_positive
+	icon = tea_positive
 	diplomacy = 1
 	health = 0.2
 }

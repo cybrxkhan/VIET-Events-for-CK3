@@ -226,7 +226,7 @@ artifact_VIET_beautiful_pitcher_modifier = {
 
 artifact_VIET_basic_pitcher_modifier = {
 	monthly_prestige = 0.05
-	monthly_piety = 0.1
+	character_travel_safety = 1
 }
 
 artifact_VIET_secure_chest_modifier = {
@@ -304,6 +304,7 @@ artifact_VIET_trusty_shovel_modifier = {
 
 artifact_VIET_leather_knapsack_modifier = {
 	intrigue = 1
+	character_travel_safety = 2
 }
 
 artifact_VIET_wooden_bowl_modifier = {
@@ -347,6 +348,7 @@ artifact_VIET_elegant_candlestick_modifier = {
 
 artifact_VIET_basic_lantern_modifier = {	
 	enemy_hostile_scheme_success_chance_add = -2
+	character_travel_safety = 1
 }
 
 artifact_VIET_favored_handkerchief_modifier = {
@@ -368,6 +370,7 @@ artifact_VIET_wooden_whistle_modifier = {
 
 artifact_VIET_simple_waterskin_modifier = {
 	stress_loss_mult = 0.12
+	character_travel_speed_mult = 0.05
 }
 
 artifact_VIET_hollow_doll_modifier = {
@@ -381,6 +384,7 @@ artifact_VIET_decorated_broom_modifier = {
 }
 
 artifact_VIET_traveling_inkwell_modifier = {
+	negate_diplomacy_penalty_add = 1
 	monthly_lifestyle_xp_gain_mult = 0.03	
 }
 

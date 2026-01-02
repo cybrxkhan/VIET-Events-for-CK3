@@ -35495,7 +35495,7 @@ VIETmisc.0366 = {
 	desc = VIETmisc.0366.desc
 	theme = unfriendly
 	override_background = { reference = VIET_background_snowy_winter_wonderland }
-	
+	widget = { gui = event_window_widget_vfx_snowstorm container = foreground_shader_vfx_container }
 
 	# left_portrait = {
 	# 	character = root
@@ -35505,11 +35505,6 @@ VIETmisc.0366 = {
 	right_portrait = {
 		character = scope:courtier
 		animation = shiver
-	}
-
-	widget = {
-		gui = "event_window_widget_vfx_snow"
-		container = "foreground_shader_vfx_container"
 	}
 
 	trigger = {	
@@ -35633,7 +35628,7 @@ VIETmisc.0367 = {
 	desc = VIETmisc.0367.desc
 	theme = mental_health
 	override_background = { reference = VIET_background_snowy_winter_wonderland }
-	
+	widget = { gui = event_window_widget_vfx_snow container = foreground_shader_vfx_container }
 
 	left_portrait = {
 		character = root
@@ -35779,16 +35774,11 @@ VIETmisc.0368 = {
 	desc = VIETmisc.0368.desc
 	theme = memory_positive
 	override_background = { reference = VIET_background_snowy_winter_wonderland }
-
+	widget = { gui = event_window_widget_vfx_snow container = foreground_shader_vfx_container }
 
 	right_portrait = {
 		character = root
 		animation = personality_content
-	}
-
-	widget = {
-		gui = "event_window_widget_vfx_snow"
-		container = "foreground_shader_vfx_container"
 	}
 
 	trigger = {	

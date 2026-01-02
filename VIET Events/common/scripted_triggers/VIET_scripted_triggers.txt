@@ -250,3 +250,82 @@ VIET_is_not_a_literate_society = {
 	}
 }
 
+VIET_has_coast_trigger = {
+	OR = {
+		any_realm_county = {
+			is_coastal_county = yes
+		}
+		capital_province = {
+			is_coastal = yes
+		}
+	}
+}
+
+VIET_is_menial_servant = {
+	is_available_ai_adult = yes
+	is_lowborn = yes
+	is_councillor = no
+	is_married = no # Prevents lowborn queens from counting as maids
+	is_knight = no
+	#liege_or_court_owner = ROOT # Must belong to the player's court
+	any_court_position_employer = { count < 2 }
+	OR = {
+		any_court_position_employer = { count = 0 }
+		has_court_position = court_gardener_court_position
+		has_court_position = lady_in_waiting_court_position
+		has_court_position = antiquarian_court_position
+		has_court_position = travel_leader_court_position
+		has_court_position = wet_nurse_court_position
+		has_court_position = food_taster_court_position
+		has_court_position = master_of_horse_court_position
+		has_court_position = seneschal_court_position
+		has_court_position = cupbearer_court_position
+		has_court_position = chief_eunuch_court_position
+	}
+	NOT = {
+		has_trait = devoted # God comes first
+	}
+}
+
+VIET_has_minor_nobles = { #Needs a baron or minor noble in the realm
+	OR = {
+		any_courtier = {
+			VIET_is_minor_noble = yes
+		}
+		any_vassal_or_below = {
+			VIET_is_minor_noble = yes
+		}
+	}
+}
+
+VIET_is_minor_noble = {
+	has_dynasty = yes
+	highest_held_title_tier < tier_county
+	is_available_ai_adult = yes
+	has_unelectable_trait_trigger = no # Tooled for the HRE, but ensures they're part of the second estate
+}
+
+VIET_has_military_courtier = {
+	OR = {
+		any_knight = { is_available_ai_adult = yes }
+		any_courtier = { VIET_is_military_courtier = yes }
+	}
+}
+
+VIET_is_military_courtier = {
+	is_available_ai_adult = yes
+	OR = {
+		is_knight = yes
+		has_council_position = councillor_marshal
+		has_martial_court_position = yes
+		has_trait = education_martial_1
+		has_trait = education_martial_2
+		has_trait = education_martial_3
+		has_trait = education_martial_4
+		has_trait = education_martial_5
+	}
+	OR = {
+		can_be_marshal_trigger = yes
+		can_be_knight_trigger = yes
+	}
+}

@@ -24,5 +24,6 @@ on_VIET_setup = {
 	# Potentially have event trigger at game start???
 	events = {
 		VIETintro.0001		# Behind the scenes stuff
+		VIETintro.0002		# Set appearance of some characters
 	}
 }

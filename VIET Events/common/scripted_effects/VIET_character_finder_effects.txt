@@ -1,0 +1,1231 @@
+﻿#############################################################################################
+
+# Documentation for character finder effects, which either spawn or create a character to use in events
+
+## VIET_pool_provinces_effect - returns pool_provinces, province list
+## VIET_realm_court_list_effect - returns VIET_court_list and potential_minor_nobles, character list
+## VIET_sub_realm_court_list_effect - as prior, but only for your sub-realm
+## VIET_find_random_barony_effect - returns scope:barony
+
+## VIET_clean_up_character_effect - kills the scope if the root is ai, use ``after = { scope:wanderer = { VIET_clean_up_character_effect = yes } }``
+## VIET_set_artifact_wealth_med_effect - sets scope:wealth and scope:quality to 20, to apply the proper decorations
+## VIET_set_artifact_wealth_high_effect - sets scope:wealth and scope:quality to 60
+
+# MERCHANTS
+## VIET_pick_merchant_effect - may return scope:merchant from list potential_merchants
+# VIET_find_merchant_effect - returns scope:merchant
+# VIET_find_traveling_merchant_effect - returns scope:merchant, adds traveler xp
+# VIET_find_old_merchant_effect - returns scope:merchant
+
+# NOBLES - use ``trigger = { VIET_has_minor_nobles = yes }`` to ensure there are valid nobles to find
+## VIET_pick_minor_noble_effect - may return scope:noble from lists VIET_court_list and potential_minor_nobles
+# VIET_find_realm_minor_noble_effect - returns scope:noble
+# VIET_find_sub_realm_minor_noble_effect - returns scope:noble
+# VIET_find_noble_widow_effect - returns scope:noble, creates widowed courtier if not found
+
+# SCHOLARS
+# VIET_find_scholar_effect - returns scope:scholar
+# VIET_find_traveling_scholar_effect - returns scope:scholar, adds traveler xp
+# VIET_find_astronomer_effect - returns scope:astronomer
+# VIET_find_priest_effect - returns scope:priest
+# VIET_find_physician_effect - returns scope:physician
+# VIET_find_apothecary_effect - returns scope:apothecary, always female
+
+# FOLK
+# VIET_find_traveler_effect - returns scope:traveler, adds traveler xp
+# VIET_find_famous_traveler_effect - returns scope:traveler, adds famous traveler modifier, significant traveler xp
+# VIET_find_common_gambler_effect - returns scope:gambler, adds board game xp
+# VIET_find_noble_gambler_effect - returns scope:gambler, adds board game xp
+
+# SERVANTS - ``trigger = { is_landed_or_landless_administrative = yes }`` is not necessary, but prevents adventures getting servant events
+# VIET_find_servant_effect - returns scope:servant
+# VIET_find_maid_effect - returns scope:servant
+# VIET_find_male_servant_effect - returns scope:servant
+# VIET_find_laborer_effect - returns scope:laborer
+# VIET_find_gardener_effect - returns scope:gardener
+
+# WARRIORS
+# VIET_find_hunter_effect - returns scope:hunter
+# VIET_find_military_courtier_effect - returns scope:soldier and puts them in armor, use ``trigger = { VIET_has_military_courtier = yes }`` and ``after = { scope:soldier = { remove_character_flag = wear_armor } }``
+
+#############################################################################################
+
+VIET_pool_provinces_effect = {
+	#Add the capital province for landless adventurers
+	capital_province = {
+		add_to_temporary_list = pool_provinces
+	}
+	
+	#Set up a list of provinces, one per duchy in the realm, find all relevant pool characters there
+	every_realm_province = {
+		if = {
+			limit = {
+				save_temporary_scope_as = potential_province
+				NOT = {
+					any_in_list = {
+						list = pool_provinces
+						county.duchy = scope:potential_province.county.duchy
+					}
+				}
+			}
+			add_to_temporary_list = pool_provinces
+		}
+	}
+}
+
+VIET_realm_court_list_effect = {
+	#Get a list of all subjects to the realm, add every minor noble
+	top_liege = {
+		add_to_temporary_list = VIET_court_list
+		every_vassal_or_below = {
+			if = {
+				limit = {
+					highest_held_title_tier > tier_barony
+					save_temporary_scope_as = potential_vassal_court
+					NOT = {
+						any_in_list = {
+							list = pool_vassal_courts
+							this = scope:potential_vassal_court
+						}
+					}
+				}
+				add_to_temporary_list = pool_vassal_courts
+			}
+			if = {
+				limit = {
+					VIET_is_minor_noble = yes
+				}
+				add_to_temporary_list = potential_minor_nobles
+			}
+		}
+	}
+}
+
+VIET_sub_realm_court_list_effect = {
+	#Get a list of all subjects to your realm, add every minor noble
+	add_to_temporary_list = VIET_court_list
+	every_vassal_or_below = {
+		if = {
+			limit = {
+				highest_held_title_tier > tier_barony
+				save_temporary_scope_as = potential_court
+				NOT = {
+					any_in_list = {
+						list = VIET_court_list
+						this = scope:potential_court
+					}
+				}
+			}
+			add_to_temporary_list = VIET_court_list
+		}
+		if = {
+			limit = {
+				VIET_is_minor_noble = yes
+			}
+			add_to_temporary_list = potential_minor_nobles
+		}
+	}
+}
+
+VIET_find_random_barony_effect = {
+	random_sub_realm_barony = {
+		save_scope_as = barony
+	}
+	#Fall back to capital if none exist (you are landless)
+	if = {
+		limit = { NOT = { exists = scope:barony } }
+		capital_barony = {
+			save_scope_as = barony
+		}
+	}
+}
+
+VIET_clean_up_character_effect = {
+	if = {
+		limit = { root = { is_ai = yes } }
+		hidden_effect = { death = { death_reason = death_disappearance } }
+	}
+}
+
+VIET_set_artifact_wealth_med_effect = {
+	save_scope_value_as = {
+		name = wealth
+		value = 20
+	}
+	save_scope_value_as = {
+		name = quality
+		value = 20
+	}
+}
+
+VIET_set_artifact_wealth_high_effect = {
+	save_scope_value_as = {
+		name = wealth
+		value = 60
+	}
+	save_scope_value_as = {
+		name = quality
+		value = 60
+	}
+}
+
+#############################################################################################
+# Nobles
+#############################################################################################
+
+VIET_pick_minor_noble_effect = {
+	
+	every_in_list = {
+		list = VIET_court_list
+		save_temporary_scope_as = current_court_list
+		
+		scope:current_court_list = {
+			every_courtier = {
+				limit = {
+					VIET_is_minor_noble = yes
+				}
+				add_to_temporary_list = potential_minor_nobles
+			}
+		}
+	}
+	
+	random_in_list = {
+		list = potential_minor_nobles
+		limit = { is_alive = yes }
+		save_scope_as = noble
+	}
+}
+
+VIET_find_realm_minor_noble_effect = {
+	VIET_realm_court_list_effect = yes
+	VIET_pick_minor_noble_effect = yes
+}
+
+VIET_find_sub_realm_minor_noble_effect = {
+	VIET_sub_realm_court_list_effect = yes
+	VIET_pick_minor_noble_effect = yes
+}
+
+VIET_find_noble_widow_effect = {
+	VIET_realm_court_list_effect = yes
+	
+	every_in_list = {
+		list = VIET_court_list
+		save_temporary_scope_as = current_court_list
+		
+		scope:current_court_list = {
+			every_courtier = {
+				limit = {
+					VIET_is_minor_noble = yes
+					is_female = yes
+					NOT = { is_close_family_of = root }
+				}
+				add_to_temporary_list = potential_minor_nobles
+			}
+		}
+	}
+	
+	random_in_list = {
+		list = potential_minor_nobles
+		limit = {
+			any_former_spouse = {
+				even_if_dead = yes
+				is_alive = no
+			}
+		}
+		save_scope_as = noble
+	}
+	
+	#If no one was found, make a fallback one
+	if = {
+		limit = { NOT = { exists = scope:noble } }
+		
+		create_character = {
+			location = root.capital_province
+			template = VIET_generic_middle_aged_local_template
+			gender_female_chance = 100
+			dynasty = generate
+			culture = this.culture
+			faith = this.faith
+			save_scope_as = noble
+		}
+		create_character = {
+			location = root.capital_province
+			template = VIET_generic_middle_aged_local_template
+			gender_female_chance = 0
+			dynasty = generate
+			culture = this.culture
+			faith = this.faith
+			save_scope_as = irrelevant_dead_husband
+		}
+		hidden_effect = {
+			root = { add_courtier = scope:noble }
+			scope:irrelevant_dead_husband = {
+				add_character_flag = high_noble_clothing
+				marry = scope:noble
+				death = natural
+			}
+		}
+	}
+}
+
+#############################################################################################
+# Merchants
+#############################################################################################
+
+VIET_pick_merchant_effect = {
+	#Merchants with good skills, travelers are better at finding you
+	random_in_list = {
+		list = potential_merchants
+		limit = { is_alive = yes }
+		weight = {
+			base = 10
+			modifier = {
+				add = {
+					value = stewardship
+					value = diplomacy
+					if = {
+						limit = {
+							has_trait = lifestyle_traveler
+						}
+						add = 5
+					}
+				}
+			}
+		}
+		save_scope_as = merchant
+	}
+}
+
+VIET_find_merchant_effect = {
+	VIET_pool_provinces_effect = yes
+	
+	every_in_list = {
+		list = pool_provinces
+		save_temporary_scope_as = pool_province
+		
+		every_pool_character = {
+			province = scope:pool_province
+			limit = {
+				is_available_ai_adult = yes
+				has_trait_rank = {
+					trait = education_stewardship
+					rank > 1
+				}
+			}
+			add_to_temporary_list = potential_merchants
+		}
+	}
+	
+	VIET_pick_merchant_effect = yes
+	
+	#If no one was found, make one
+	if = {
+		limit = { NOT = { exists = scope:merchant } }
+		
+		create_character = {
+			location = root.capital_province
+			faith = root.capital_province.faith
+			culture = root.capital_province.culture
+			template = merchant_template
+			save_scope_as = merchant
+		}
+	}
+}
+
+VIET_find_traveling_merchant_effect = {
+	VIET_find_merchant_effect = yes
+	# Makes them a more skilled traveler
+	hidden_effect = {
+		scope:merchant = {
+			add_trait = lifestyle_traveler
+			add_trait_xp = {
+				trait = lifestyle_traveler
+				track = travel
+				value = {
+					integer_range = {
+						min = 1
+						max = 5
+					}
+				}
+			}
+		}
+	}
+}
+
+VIET_find_old_merchant_effect = {
+	VIET_pool_provinces_effect = yes
+	
+	every_in_list = {
+		list = pool_provinces
+		save_temporary_scope_as = pool_province
+		
+		every_pool_character = {
+			province = scope:pool_province
+			limit = {
+				is_available_ai_adult = yes
+				has_trait_rank = {
+					trait = education_stewardship
+					rank > 1
+				}
+				#Must be old enough to retire
+				age > 36
+			}
+			add_to_temporary_list = potential_merchants
+		}
+	}
+	
+	VIET_pick_merchant_effect = yes
+	
+	#If no one was found, make one
+	if = {
+		limit = { NOT = { exists = scope:merchant } }
+		
+		create_character = {
+			location = root.capital_province
+			template = merchant_template
+			faith = root.capital_province.faith
+			culture = root.capital_province.culture
+			age = { 40 60 }
+			save_scope_as = merchant
+		}
+	}
+}
+
+#############################################################################################
+# Scholars
+#############################################################################################
+
+VIET_find_scholar_effect = {
+	VIET_pool_provinces_effect = yes
+	
+	every_in_list = {
+		list = pool_provinces
+		save_temporary_scope_as = pool_province
+		
+		every_pool_character = {
+			province = scope:pool_province
+			limit = {
+				is_available_ai_adult = yes
+				OR = {
+					has_trait_rank = {
+						trait = education_learning
+						rank > 1
+					}
+					has_education_rank_5_trigger = yes
+					has_trait = scholar
+					has_trait = theologian
+				}
+			}
+			add_to_temporary_list = potential_scholars
+		}
+	}
+	
+	random_in_list = {
+		list = potential_scholars
+		limit = { is_alive = yes }
+		weight = {
+			base = 10
+			modifier = {
+				add = {
+					value = learning
+					if = {
+						limit = { has_trait = scholar }
+						add = 15
+					}
+					if = {
+						limit = { has_trait = theologian }
+						add = 10
+					}
+				}
+			}
+		}
+		save_scope_as = scholar
+	}
+	
+	#If no one was found, make one
+	if = {
+		limit = { NOT = { exists = scope:scholar } }
+		
+		create_character = {
+			location = root.capital_province
+			template = VIET_local_scholar_template
+			faith = root.capital_province.faith
+			culture = root.capital_province.culture
+			save_scope_as = scholar
+		}
+	}
+}
+
+VIET_find_traveling_scholar_effect = {
+	VIET_find_scholar_effect = yes
+	# Makes them a more skilled traveler
+	hidden_effect = {
+		scope:merchant = {
+			add_trait = lifestyle_traveler
+			add_trait_xp = {
+				trait = lifestyle_traveler
+				track = travel
+				value = {
+					integer_range = {
+						min = 1
+						max = 5
+					}
+				}
+			}
+		}
+	}
+}
+
+
+VIET_find_astronomer_effect = {
+	VIET_pool_provinces_effect = yes
+	
+	every_in_list = {
+		list = pool_provinces
+		save_temporary_scope_as = pool_province
+		
+		every_pool_character = {
+			province = scope:pool_province
+			limit = {
+				is_available_ai_adult = yes
+				has_trait_rank = {
+					trait = education_learning
+					rank > 1
+				}
+			}
+			add_to_temporary_list = potential_astronomers
+		}
+	}
+	
+	random_in_list = {
+		list = potential_astronomers
+		limit = { is_alive = yes }
+		weight = {
+			base = 15
+			modifier = {
+				add = {
+					value = learning
+					if = {
+						limit = {
+							faith = { has_doctrine = tenet_astrology }
+						}
+						add = 10
+					}
+				}
+			}
+		}
+		save_scope_as = astronomer
+	}
+	
+	#If no one was found, make one
+	if = {
+		limit = { NOT = { exists = scope:astronomer } }
+		
+		create_character = {
+			location = root.capital_province
+			template = astrologer_character_template
+			faith = root.capital_province.faith
+			culture = root.capital_province.culture
+			save_scope_as = astronomer
+		}
+	}
+}
+
+VIET_find_priest_effect = {
+	VIET_pool_provinces_effect = yes
+	
+	every_in_list = {
+		list = pool_provinces
+		save_temporary_scope_as = pool_province
+		
+		every_pool_character = {
+			province = scope:pool_province
+			limit = {
+				is_available_ai_adult = yes
+				faith = root.faith
+				has_character_flag = need_priest_outfit
+				NOT = { has_trait = excommunicated }
+			}
+			add_to_temporary_list = potential_priests
+		}
+	}
+	
+	random_in_list = {
+		list = potential_priests
+		limit = { is_alive = yes }
+		weight = {
+			base = 15
+			modifier = {
+				add = {
+					value = learning
+					value = age
+				}
+			}
+		}
+		save_scope_as = priest
+	}
+	
+	#If no one was found, make one
+	if = {
+		limit = { NOT = { exists = scope:priest } }
+		
+		create_character = {
+			location = root.capital_province
+			template = VIET_local_priest_template
+			culture = root.capital_province.culture
+			save_scope_as = priest
+		}
+	}
+}
+
+VIET_find_physician_effect = {
+	VIET_pool_provinces_effect = yes
+	
+	every_in_list = {
+		list = pool_provinces
+		save_temporary_scope_as = pool_province
+		
+		every_pool_character = {
+			province = scope:pool_province
+			limit = {
+				is_available_ai_adult = yes
+				has_trait = lifestyle_physician
+			}
+			add_to_temporary_list = potential_physicians
+		}
+	}
+	
+	random_in_list = {
+		list = potential_physicians
+		limit = { is_alive = yes }
+		weight = {
+			base = 15
+			modifier = {
+				add = {
+					value = learning
+				}
+			}
+		}
+		save_scope_as = physician
+	}
+	
+	#If no one was found, make one
+	if = {
+		limit = { NOT = { exists = scope:physician } }
+		
+		create_character = {
+			location = root.capital_province
+			template = VIET_local_physician_template
+			faith = root.capital_province.faith
+			culture = root.capital_province.culture
+			save_scope_as = physician
+		}
+	}
+}
+
+VIET_find_apothecary_effect = {
+	VIET_pool_provinces_effect = yes
+	
+	every_in_list = {
+		list = pool_provinces
+		save_temporary_scope_as = pool_province
+		
+		every_pool_character = {
+			province = scope:pool_province
+			limit = {
+				is_available_ai_adult = yes
+				OR = {
+					has_trait = lifestyle_physician
+					has_trait = lifestyle_herbalist
+				}
+				is_female = yes
+			}
+			add_to_temporary_list = potential_physicians
+		}
+	}
+	
+	random_in_list = {
+		list = potential_physicians
+		limit = { is_alive = yes }
+		weight = {
+			base = 15
+			modifier = {
+				add = {
+					value = learning
+				}
+			}
+		}
+		save_scope_as = apothecary
+	}
+	
+	#If no one was found, make one
+	if = {
+		limit = { NOT = { exists = scope:apothecary } }
+		
+		create_character = {
+			location = root.capital_province
+			template = VIET_local_physician_template
+			gender_female_chance = 100
+			faith = root.capital_province.faith
+			culture = root.capital_province.culture
+			save_scope_as = apothecary
+		}
+	}
+}
+
+#############################################################################################
+# Folk
+#############################################################################################
+
+VIET_find_traveler_effect = {
+	VIET_pool_provinces_effect = yes
+	
+	every_in_list = {
+		list = pool_provinces
+		save_temporary_scope_as = pool_province
+		
+		every_pool_character = {
+			province = scope:pool_province
+			limit = {
+				is_available_ai_adult = yes
+				OR = {
+					has_trait_rank = {
+						trait = education_diplomacy
+						rank > 2
+					}
+					num_of_known_languages > 1
+					has_trait = adventurer
+					has_trait = lifestyle_wayfarer
+					has_trait = lifestyle_voyager
+					has_trait = lifestyle_surveyor
+				}
+			}
+			add_to_temporary_list = potential_travelers
+		}
+	}
+	
+	random_in_list = {
+		list = potential_travelers
+		limit = { is_alive = yes }
+		weight = {
+			base = 10
+			modifier = {
+				add = {
+					value = diplomacy
+					value = num_of_known_languages
+				}
+			}
+		}
+		save_scope_as = traveler
+	}
+	
+	#If no one was found, make one
+	if = {
+		limit = { NOT = { exists = scope:traveler } }
+		
+		create_character = {
+			location = root.capital_province
+			template = VIET_basic_traveler_template
+			save_scope_as = traveler
+		}
+	}
+	
+	scope:traveler = {
+		hidden_effect = {
+			add_trait = lifestyle_traveler
+			add_trait_xp = {
+				trait = lifestyle_traveler
+				track = travel
+				value = {
+					integer_range = {
+						min = 1
+						max = 5
+					}
+				}
+			}
+		}
+	}
+}
+
+VIET_find_famous_traveler_effect = {
+	VIET_pool_provinces_effect = yes
+	
+	every_in_list = {
+		list = pool_provinces
+		save_temporary_scope_as = pool_province
+		
+		every_pool_character = {
+			province = scope:pool_province
+			limit = {
+				is_available_ai_adult = yes
+				OR = {
+					has_trait_rank = {
+						trait = education_diplomacy
+						rank > 2
+					}
+					num_of_known_languages > 1
+					has_education_rank_5_trigger = yes
+					has_trait = diplomat
+					has_trait = adventurer
+					has_trait = lifestyle_wayfarer
+					has_trait = lifestyle_voyager
+					has_trait = lifestyle_surveyor
+				}
+			}
+			add_to_temporary_list = potential_travelers
+		}
+	}
+	
+	random_in_list = {
+		list = potential_travelers
+		limit = { is_alive = yes }
+		weight = {
+			base = 10
+			modifier = {
+				add = {
+					value = diplomacy
+					value = num_of_known_languages
+				}
+			}
+		}
+		save_scope_as = traveler
+	}
+	
+	#If no one was found, make one
+	if = {
+		limit = { NOT = { exists = scope:traveler } }
+		
+		create_character = {
+			location = root.capital_province
+			template = VIET_famous_traveler_template
+			save_scope_as = traveler
+		}
+	}
+	
+	scope:traveler = {
+		hidden_effect = {
+			add_character_modifier = {
+				modifier = VIET_famous_traveler
+			}
+			add_trait = lifestyle_traveler
+			add_trait_xp = {
+				trait = lifestyle_traveler
+				track = travel
+				value = {
+					integer_range = {
+						min = small_lifestyle_random_xp_low
+						max = small_lifestyle_random_xp_high
+					}
+				}
+			}
+		}
+	}
+}
+
+VIET_find_common_gambler_effect = {
+	random_courtier_or_guest = {
+		limit = {
+			is_available_ai_adult = yes
+			OR = {
+				has_court_position = bookmaker_court_position
+				AND = {
+					has_dynasty = no
+					OR = {
+						has_trait = profligate
+						has_trait = drunkard
+						has_trait_xp = {
+							trait = tourney_participant
+							track = wit
+							value > 0
+						}
+					}
+				}
+			}
+		}
+			weight = {
+				base = 1
+				
+				modifier = {
+					add = {
+						if = {
+							limit = {
+								has_court_position = bookmaker_court_position
+							}
+							add = 100
+						}
+					}
+				}
+			}
+		save_scope_as = gambler
+	}
+	#If no courtier fits, make one
+	if = {
+		limit = { NOT = { exists = scope:gambler } }
+		create_character = {
+			location = root.capital_province
+			template = generic_bookmaker_character
+			faith = root.capital_province.faith
+			culture = root.capital_province.culture
+			trait = profligate
+			save_scope_as = gambler
+		}
+		hidden_effect = { add_visiting_courtier = scope:gambler }
+	}
+	
+	#Gamblers should have their wit improved
+	scope:gambler = {
+		hidden_effect = {
+			add_trait = tourney_participant
+			add_trait_xp = {
+				trait = tourney_participant
+				track = wit
+				value = {
+					integer_range = {
+						min = 1
+						max = 5
+					}
+				}
+			}
+		}
+	}
+}
+
+VIET_find_noble_gambler_effect = {
+	VIET_sub_realm_court_list_effect = yes
+	
+	every_in_list = {
+		list = VIET_court_list
+		save_temporary_scope_as = current_court_list
+		
+		scope:current_court_list = {
+			every_courtier = {
+				limit = {
+					VIET_is_minor_noble = yes
+				}
+				add_to_temporary_list = potential_minor_nobles
+			}
+		}
+	}
+	
+	random_in_list = {
+		list = potential_minor_nobles
+		limit = {
+			OR = {
+				has_court_position = bookmaker_court_position
+				has_trait = profligate
+				has_trait_xp = {
+					trait = tourney_participant
+					track = wit
+					value > 0
+				}
+			}
+		}
+			weight = {
+				base = 1
+				
+				modifier = {
+					add = {
+						if = {
+							limit = {
+								is_courtier_of = root
+							}
+							add = 30
+						}
+					}
+					add = {
+						if = {
+							limit = {
+								has_court_position = bookmaker_court_position
+								is_courtier_of = root
+							}
+							add = 100
+						}
+					}
+				}
+			}
+		save_scope_as = gambler
+	}
+	#If no noble fits, find a random one, preferrably cynical, greedy, and irrational
+	if = {
+		limit = { NOT = { exists = scope:gambler } }
+		random_in_list = {
+			list = potential_minor_nobles
+			weight = {
+				base = 1
+				modifier = {
+					add = {
+						value = ai_greed
+					}
+					#subtract = {
+					#	value = ai_zeal
+					#	value = ai_rationality
+					#}
+					add = {
+						if = {
+							limit = {
+								has_trait = drunkard
+							}
+							add = 20
+						}
+					}
+				}
+			}
+			save_scope_as = gambler
+		}
+	}
+	
+	#Gamblers should have their wit improved
+	scope:gambler = {
+		hidden_effect = {
+			add_trait = tourney_participant
+			add_trait_xp = {
+				trait = tourney_participant
+				track = wit
+				value = {
+					integer_range = {
+						min = 1
+						max = 5
+					}
+				}
+			}
+		}
+	}
+}
+
+#############################################################################################
+# Servants
+#############################################################################################
+
+VIET_find_servant_effect = {
+	random_courtier = {
+		limit = {
+			VIET_is_menial_servant = yes
+		}
+		save_scope_as = servant
+	}
+	#If no courtier fits, make one
+	if = {
+		limit = { NOT = { exists = scope:servant } }
+		create_character = {
+			location = root.capital_province
+			template = servant_character
+			save_scope_as = servant
+		}
+		hidden_effect = { add_courtier = scope:servant }
+	}
+}
+
+VIET_find_maid_effect = {
+	random_courtier = {
+		limit = {
+			VIET_is_menial_servant = yes
+			is_female = yes
+		}
+		save_scope_as = servant
+	}
+	#If no courtier fits, make one
+	if = {
+		limit = { NOT = { exists = scope:servant } }
+		create_character = {
+			location = root.capital_province
+			template = servant_character
+			gender_female_chance = 100
+			save_scope_as = servant
+		}
+		hidden_effect = { add_courtier = scope:servant }
+	}
+}
+
+VIET_find_male_servant_effect = {
+	random_courtier = {
+		limit = {
+			VIET_is_menial_servant = yes
+			is_male = yes
+		}
+		save_scope_as = servant
+	}
+	#If no courtier fits, make one
+	if = {
+		limit = { NOT = { exists = scope:servant } }
+		create_character = {
+			location = root.capital_province
+			template = servant_character
+			gender_female_chance = 0
+			save_scope_as = servant
+		}
+		hidden_effect = { add_courtier = scope:servant }
+	}
+}						
+
+VIET_find_laborer_effect = {
+	VIET_pool_provinces_effect = yes
+	
+	every_in_list = {
+		list = pool_provinces
+		save_temporary_scope_as = pool_province
+		
+		every_pool_character = {
+			province = scope:pool_province
+			limit = {
+				is_available_ai_adult = yes
+				is_lowborn = yes
+				has_education_rank_1_trigger = yes
+			}
+			add_to_temporary_list = potential_laborers
+		}
+	}
+	
+	random_in_list = {
+		list = potential_laborers
+		limit = { is_alive = yes }
+		weight = {
+			base = 1
+			modifier = {
+				add = {
+					value = prowess # Menial laborers should be tough
+				}
+			}
+		}
+		save_scope_as = laborer
+	}
+	
+	#If no one was found, make one
+	if = {
+		limit = { NOT = { exists = scope:laborer } }
+		
+		create_character = {
+			location = root.capital_province
+			template = servant_character
+			gender_female_chance = root_soldier_female_chance
+			save_scope_as = laborer
+		}
+	}
+}
+
+VIET_find_gardener_effect = {
+	random_courtier = {
+		limit = {
+			OR = {
+				VIET_is_menial_servant = yes
+				has_trait = lifestyle_gardener
+				has_trait = lifestyle_herbalist
+				has_court_position = court_gardener_court_position
+				has_court_position = cave_hermit_court_position
+			}
+		}
+		weight = {
+			base = 1
+			
+			modifier = {
+				add = {
+					if = {
+						limit = {
+							has_court_position = court_gardener_court_position
+						}
+						add = 100
+					}
+				}
+			}
+		}
+		save_scope_as = gardener
+	}
+	#If no courtier fits, make one
+	if = {
+		limit = { NOT = { exists = scope:gardener } }
+		create_character = {
+			location = root.capital_province
+			template = servant_character
+		save_scope_as = gardener
+		}
+		hidden_effect = { add_courtier = scope:gardener }
+	}
+}
+
+#############################################################################################
+# Warriors
+#############################################################################################
+
+VIET_find_hunter_effect = {
+	VIET_pool_provinces_effect = yes
+	
+	every_in_list = {
+		list = pool_provinces
+		save_temporary_scope_as = pool_province
+		
+		every_pool_character = {
+			province = scope:pool_province
+			limit = {
+				is_available_ai_adult = yes
+				can_hunt_trigger = yes
+				OR = {
+					has_trait_rank = {
+						trait = education_martial
+						rank > 1
+					}
+					has_trait = lifestyle_hunter
+				}
+			}
+			add_to_temporary_list = potential_hunters
+		}
+	}
+	
+	random_in_list = {
+		list = potential_hunters
+		limit = { is_alive = yes }
+		weight = {
+			base = 10
+			modifier = {
+				add = {
+					value = martial
+					value = prowess
+				}
+				add = {
+					if = {
+						limit = {
+							has_trait = lifestyle_hunter
+						}
+						add = 10
+					}
+				}
+			}
+		}
+		save_scope_as = hunter
+	}
+	
+	#If no one was found, make one
+	if = {
+		limit = { NOT = { exists = scope:hunter } }
+		
+		create_character = {
+			location = root.capital_province
+			template = hunter_template
+			save_scope_as = hunter
+		}
+	}
+	hidden_effect = {
+		scope:hunter = {
+			add_trait = lifestyle_hunter
+		}
+	}
+}
+
+VIET_find_military_courtier_effect = {
+	every_courtier = {
+		limit = { VIET_is_military_courtier = yes }
+		add_to_temporary_list = potential_soldiers
+	}
+	every_knight = {
+		limit = {
+			is_courtier = no
+			is_ai = yes
+		}
+		add_to_temporary_list = potential_soldiers
+	}
+	
+	random_in_list = {
+		list = potential_soldiers
+		save_scope_as = soldier
+	}
+	scope:soldier = { add_character_flag = wear_armor }
+}
