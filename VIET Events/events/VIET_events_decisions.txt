@@ -4538,7 +4538,7 @@ VIETmisc.2079 = {
 	desc = VIETmisc.2079.desc
 	theme = feast_activity
 	override_background = { reference = VIET_background_snowy_winter_wonderland }
-	
+	widget = { gui = event_window_widget_vfx_snow container = foreground_shader_vfx_container }
 	
 	right_portrait = {
 		character = root
@@ -4650,7 +4650,7 @@ VIETmisc.2080 = {
 	desc = VIETmisc.2080.desc
 	theme = feast_activity
 	override_background = { reference = VIET_background_snowy_winter_wonderland }
-	
+	widget = { gui = event_window_widget_vfx_snow container = foreground_shader_vfx_container }
 	
 	right_portrait = {
 		character = root
@@ -4726,7 +4726,7 @@ VIETmisc.2081 = {
 	theme = feast_activity
 	override_background = { reference = VIET_background_small_town }
 	#override_background = { reference = VIET_background_snowy_winter_wonderland }
-	
+	widget = { gui = event_window_widget_vfx_snow container = foreground_shader_vfx_container }
 	
 	right_portrait = {
 		character = root

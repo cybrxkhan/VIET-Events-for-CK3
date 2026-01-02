@@ -377,3 +377,287 @@ VIET_remove_personality_traits_effect = {
 	remove_trait = compassionate
 	remove_trait = eccentric
 }
+
+VIET_assign_oblivion_septim_dynasty_effect = {
+	random_list = {
+		10 = {
+			dynasty ?= { set_dynasty_name = VIET_random_oblivion_dynasty_names_001 }
+			house ?= { set_house_name = VIET_random_oblivion_dynasty_names_001 }
+		}
+		10 = {
+			dynasty ?= { set_dynasty_name = VIET_random_oblivion_dynasty_names_002 }
+			house ?= { set_house_name = VIET_random_oblivion_dynasty_names_002 }
+		}
+		10 = {
+			dynasty ?= { set_dynasty_name = VIET_random_oblivion_dynasty_names_003 }
+			house ?= { set_house_name = VIET_random_oblivion_dynasty_names_003 }
+		}
+		10 = {
+			dynasty ?= { set_dynasty_name = VIET_random_oblivion_dynasty_names_004 }
+			house ?= { set_house_name = VIET_random_oblivion_dynasty_names_004 }
+		}
+		10 = {
+			dynasty ?= { set_dynasty_name = VIET_random_oblivion_dynasty_names_005 }
+			house ?= { set_house_name = VIET_random_oblivion_dynasty_names_005 }
+		}
+		10 = {
+			dynasty ?= { set_dynasty_name = VIET_random_oblivion_dynasty_names_006 }
+			house ?= { set_house_name = VIET_random_oblivion_dynasty_names_006 }
+		}
+		10 = {
+			dynasty ?= { set_dynasty_name = VIET_random_oblivion_dynasty_names_007 }
+			house ?= { set_house_name = VIET_random_oblivion_dynasty_names_007 }
+		}
+		10 = {
+			dynasty ?= { set_dynasty_name = VIET_random_oblivion_dynasty_names_008 }
+			house ?= { set_house_name = VIET_random_oblivion_dynasty_names_008 }
+		}
+		10 = {
+			dynasty ?= { set_dynasty_name = VIET_random_oblivion_dynasty_names_009 }
+			house ?= { set_house_name = VIET_random_oblivion_dynasty_names_009 }
+		}
+		10 = {
+			dynasty ?= { set_dynasty_name = VIET_random_oblivion_dynasty_names_010 }
+			house ?= { set_house_name = VIET_random_oblivion_dynasty_names_010 }
+		}
+		10 = {
+			dynasty ?= { set_dynasty_name = VIET_random_oblivion_dynasty_names_011 }
+			house ?= { set_house_name = VIET_random_oblivion_dynasty_names_011 }
+		}
+		10 = {
+			dynasty ?= { set_dynasty_name = VIET_random_oblivion_dynasty_names_012 }
+			house ?= { set_house_name = VIET_random_oblivion_dynasty_names_012 }
+		}
+		10 = {
+			dynasty ?= { set_dynasty_name = VIET_random_oblivion_dynasty_names_013 }
+			house ?= { set_house_name = VIET_random_oblivion_dynasty_names_013 }
+		}
+		10 = {
+			dynasty ?= { set_dynasty_name = VIET_random_oblivion_dynasty_names_014 }
+			house ?= { set_house_name = VIET_random_oblivion_dynasty_names_014 }
+		}
+		10 = {
+			dynasty ?= { set_dynasty_name = VIET_random_oblivion_dynasty_names_015 }
+			house ?= { set_house_name = VIET_random_oblivion_dynasty_names_015 }
+		}
+		10 = {
+			dynasty ?= { set_dynasty_name = VIET_random_oblivion_dynasty_names_016 }
+			house ?= { set_house_name = VIET_random_oblivion_dynasty_names_016 }
+		}
+		10 = {
+			dynasty ?= { set_dynasty_name = VIET_random_oblivion_dynasty_names_017 }
+			house ?= { set_house_name = VIET_random_oblivion_dynasty_names_017 }
+		}
+		10 = {
+			dynasty ?= { set_dynasty_name = VIET_random_oblivion_dynasty_names_018 }
+			house ?= { set_house_name = VIET_random_oblivion_dynasty_names_018 }
+		}
+		10 = {
+			dynasty ?= { set_dynasty_name = VIET_random_oblivion_dynasty_names_019 }
+			house ?= { set_house_name = VIET_random_oblivion_dynasty_names_019 }
+		}
+		10 = {
+			dynasty ?= { set_dynasty_name = VIET_random_oblivion_dynasty_names_020 }
+			house ?= { set_house_name = VIET_random_oblivion_dynasty_names_020 }
+		}
+		10 = {
+			dynasty ?= { set_dynasty_name = VIET_random_oblivion_dynasty_names_021 }
+			house ?= { set_house_name = VIET_random_oblivion_dynasty_names_021 }
+		}
+		10 = {
+			dynasty ?= { set_dynasty_name = VIET_random_oblivion_dynasty_names_022 }
+			house ?= { set_house_name = VIET_random_oblivion_dynasty_names_022 }
+		}
+		10 = {
+			dynasty ?= { set_dynasty_name = VIET_random_oblivion_dynasty_names_023 }
+			house ?= { set_house_name = VIET_random_oblivion_dynasty_names_023 }
+		}
+		10 = {
+			dynasty ?= { set_dynasty_name = VIET_random_oblivion_dynasty_names_024 }
+			house ?= { set_house_name = VIET_random_oblivion_dynasty_names_024 }
+		}
+		10 = {
+			dynasty ?= { set_dynasty_name = VIET_random_oblivion_dynasty_names_025 }
+			house ?= { set_house_name = VIET_random_oblivion_dynasty_names_025 }
+		}
+		10 = {
+			dynasty ?= { set_dynasty_name = VIET_random_oblivion_dynasty_names_026 }
+			house ?= { set_house_name = VIET_random_oblivion_dynasty_names_026 }
+		}
+		10 = {
+			dynasty ?= { set_dynasty_name = VIET_random_oblivion_dynasty_names_027 }
+			house ?= { set_house_name = VIET_random_oblivion_dynasty_names_027 }
+		}
+		10 = {
+			dynasty ?= { set_dynasty_name = VIET_random_oblivion_dynasty_names_028 }
+			house ?= { set_house_name = VIET_random_oblivion_dynasty_names_028 }
+		}
+		10 = {
+			dynasty ?= { set_dynasty_name = VIET_random_oblivion_dynasty_names_029 }
+			house ?= { set_house_name = VIET_random_oblivion_dynasty_names_029 }
+		}
+
+		10 = {
+			dynasty ?= { set_dynasty_name = VIET_random_oblivion_dynasty_names_030 }
+			house ?= { set_house_name = VIET_random_oblivion_dynasty_names_030 }
+		}
+		10 = {
+			dynasty ?= { set_dynasty_name = VIET_random_oblivion_dynasty_names_031 }
+			house ?= { set_house_name = VIET_random_oblivion_dynasty_names_031 }
+		}
+		10 = {
+			dynasty ?= { set_dynasty_name = VIET_random_oblivion_dynasty_names_032 }
+			house ?= { set_house_name = VIET_random_oblivion_dynasty_names_032 }
+		}
+		10 = {
+			dynasty ?= { set_dynasty_name = VIET_random_oblivion_dynasty_names_033 }
+			house ?= { set_house_name = VIET_random_oblivion_dynasty_names_033 }
+		}
+		10 = {
+			dynasty ?= { set_dynasty_name = VIET_random_oblivion_dynasty_names_034 }
+			house ?= { set_house_name = VIET_random_oblivion_dynasty_names_034 }
+		}
+		10 = {
+			dynasty ?= { set_dynasty_name = VIET_random_oblivion_dynasty_names_035 }
+			house ?= { set_house_name = VIET_random_oblivion_dynasty_names_035 }
+		}
+		10 = {
+			dynasty ?= { set_dynasty_name = VIET_random_oblivion_dynasty_names_036 }
+			house ?= { set_house_name = VIET_random_oblivion_dynasty_names_036 }
+		}
+		10 = {
+			dynasty ?= { set_dynasty_name = VIET_random_oblivion_dynasty_names_037 }
+			house ?= { set_house_name = VIET_random_oblivion_dynasty_names_037 }
+		}
+		10 = {
+			dynasty ?= { set_dynasty_name = VIET_random_oblivion_dynasty_names_038 }
+			house ?= { set_house_name = VIET_random_oblivion_dynasty_names_038 }
+		}
+		10 = {
+			dynasty ?= { set_dynasty_name = VIET_random_oblivion_dynasty_names_039 }
+			house ?= { set_house_name = VIET_random_oblivion_dynasty_names_039 }
+		}
+		10 = {
+			dynasty ?= { set_dynasty_name = VIET_random_oblivion_dynasty_names_040 }
+			house ?= { set_house_name = VIET_random_oblivion_dynasty_names_040 }
+		}
+		10 = {
+			dynasty ?= { set_dynasty_name = VIET_random_oblivion_dynasty_names_041 }
+			house ?= { set_house_name = VIET_random_oblivion_dynasty_names_041 }
+		}
+		10 = {
+			dynasty ?= { set_dynasty_name = VIET_random_oblivion_dynasty_names_042 }
+			house ?= { set_house_name = VIET_random_oblivion_dynasty_names_042 }
+		}
+		10 = {
+			dynasty ?= { set_dynasty_name = VIET_random_oblivion_dynasty_names_043 }
+			house ?= { set_house_name = VIET_random_oblivion_dynasty_names_043 }
+		}
+		10 = {
+			dynasty ?= { set_dynasty_name = VIET_random_oblivion_dynasty_names_044 }
+			house ?= { set_house_name = VIET_random_oblivion_dynasty_names_044 }
+		}
+		10 = {
+			dynasty ?= { set_dynasty_name = VIET_random_oblivion_dynasty_names_045 }
+			house ?= { set_house_name = VIET_random_oblivion_dynasty_names_045 }
+		}
+		10 = {
+			dynasty ?= { set_dynasty_name = VIET_random_oblivion_dynasty_names_046 }
+			house ?= { set_house_name = VIET_random_oblivion_dynasty_names_046 }
+		}
+		10 = {
+			dynasty ?= { set_dynasty_name = VIET_random_oblivion_dynasty_names_047 }
+			house ?= { set_house_name = VIET_random_oblivion_dynasty_names_047 }
+		}
+		10 = {
+			dynasty ?= { set_dynasty_name = VIET_random_oblivion_dynasty_names_048 }
+			house ?= { set_house_name = VIET_random_oblivion_dynasty_names_048 }
+		}
+		10 = {
+			dynasty ?= { set_dynasty_name = VIET_random_oblivion_dynasty_names_049 }
+			house ?= { set_house_name = VIET_random_oblivion_dynasty_names_049 }
+		}
+		10 = {
+			dynasty ?= { set_dynasty_name = VIET_random_oblivion_dynasty_names_050 }
+			house ?= { set_house_name = VIET_random_oblivion_dynasty_names_050 }
+		}
+		10 = {
+			dynasty ?= { set_dynasty_name = VIET_random_oblivion_dynasty_names_051 }
+			house ?= { set_house_name = VIET_random_oblivion_dynasty_names_051 }
+		}
+		10 = {
+			dynasty ?= { set_dynasty_name = VIET_random_oblivion_dynasty_names_052 }
+			house ?= { set_house_name = VIET_random_oblivion_dynasty_names_052 }
+		}
+		10 = {
+			dynasty ?= { set_dynasty_name = VIET_random_oblivion_dynasty_names_053 }
+			house ?= { set_house_name = VIET_random_oblivion_dynasty_names_053 }
+		}
+		10 = {
+			dynasty ?= { set_dynasty_name = VIET_random_oblivion_dynasty_names_054 }
+			house ?= { set_house_name = VIET_random_oblivion_dynasty_names_054 }
+		}
+		10 = {
+			dynasty ?= { set_dynasty_name = VIET_random_oblivion_dynasty_names_055 }
+			house ?= { set_house_name = VIET_random_oblivion_dynasty_names_055 }
+		}
+		10 = {
+			dynasty ?= { set_dynasty_name = VIET_random_oblivion_dynasty_names_056 }
+			house ?= { set_house_name = VIET_random_oblivion_dynasty_names_056 }
+		}
+		10 = {
+			dynasty ?= { set_dynasty_name = VIET_random_oblivion_dynasty_names_057 }
+			house ?= { set_house_name = VIET_random_oblivion_dynasty_names_057 }
+		}
+		10 = {
+			dynasty ?= { set_dynasty_name = VIET_random_oblivion_dynasty_names_058 }
+			house ?= { set_house_name = VIET_random_oblivion_dynasty_names_058 }
+		}
+		10 = {
+			dynasty ?= { set_dynasty_name = VIET_random_oblivion_dynasty_names_059 }
+			house ?= { set_house_name = VIET_random_oblivion_dynasty_names_059 }
+		}
+		10 = {
+			dynasty ?= { set_dynasty_name = VIET_random_oblivion_dynasty_names_060 }
+			house ?= { set_house_name = VIET_random_oblivion_dynasty_names_060 }
+		}
+		10 = {
+			dynasty ?= { set_dynasty_name = VIET_random_oblivion_dynasty_names_061 }
+			house ?= { set_house_name = VIET_random_oblivion_dynasty_names_061 }
+		}
+		10 = {
+			dynasty ?= { set_dynasty_name = VIET_random_oblivion_dynasty_names_062 }
+			house ?= { set_house_name = VIET_random_oblivion_dynasty_names_062 }
+		}
+		10 = {
+			dynasty ?= { set_dynasty_name = VIET_random_oblivion_dynasty_names_063 }
+			house ?= { set_house_name = VIET_random_oblivion_dynasty_names_063 }
+		}
+		10 = {
+			dynasty ?= { set_dynasty_name = VIET_random_oblivion_dynasty_names_064 }
+			house ?= { set_house_name = VIET_random_oblivion_dynasty_names_064 }
+		}
+		10 = {
+			dynasty ?= { set_dynasty_name = VIET_random_oblivion_dynasty_names_065 }
+			house ?= { set_house_name = VIET_random_oblivion_dynasty_names_065 }
+		}
+		10 = {
+			dynasty ?= { set_dynasty_name = VIET_random_oblivion_dynasty_names_066 }
+			house ?= { set_house_name = VIET_random_oblivion_dynasty_names_066 }
+		}
+		10 = {
+			dynasty ?= { set_dynasty_name = VIET_random_oblivion_dynasty_names_067 }
+			house ?= { set_house_name = VIET_random_oblivion_dynasty_names_067 }
+		}
+		10 = {
+			dynasty ?= { set_dynasty_name = VIET_random_oblivion_dynasty_names_068 }
+			house ?= { set_house_name = VIET_random_oblivion_dynasty_names_068 }
+		}
+		10 = {
+			dynasty ?= { set_dynasty_name = VIET_random_oblivion_dynasty_names_069 }
+			house ?= { set_house_name = VIET_random_oblivion_dynasty_names_069 }
+		}
+	}
+}
+
+

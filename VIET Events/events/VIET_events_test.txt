@@ -434,3 +434,28 @@ VIETtest.0011 = {
 		}
 	}
 }
+
+# Oblivion Test
+VIETtest.0012 = {
+	type = character_event
+	title = VIETtest.0012.t
+	desc = VIETtest.0012.desc
+	theme = VIET_theme_tuscan_country
+	orphan = yes 
+	
+	left_portrait = scope:uriel
+	right_portrait = scope:martin
+	lower_left_portrait = scope:baurus
+	lower_right_portrait = scope:jauffre
+
+	immediate = {
+		character:VIET_oblivion_character_001 = scope:uriel
+		character:VIET_oblivion_character_002 = scope:martin
+		character:VIET_oblivion_character_003 = scope:baurus
+		character:VIET_oblivion_character_004 = scope:jauffre
+	}
+	
+	option = {
+		name = VIETtest.0012.a
+	}
+}

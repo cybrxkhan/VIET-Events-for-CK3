@@ -1,0 +1,117 @@
+﻿
+
+##########################################################################
+# 
+# Characters for the Oblivion Event Chain
+# 
+# Previously they were randomly generated, but there's a bizarre bug (which I suspect is something vanilla related)
+# where generated characters in specific circumstances I have yet to discover get their traits duplicated constantly,
+# leading to massive slowdowns in the late game. I do not think the bug happens with pre-created historical characters
+# to my knowledge, so this is my solution to that problem for now. 
+# 
+##########################################################################
+
+# Uriel Septim
+VIET_oblivion_character_001 = {
+	name = "Uriell"
+	religion = "pagan"
+	culture = "roman"
+	diplomacy = 8
+	martial = 8
+	stewardship = 8
+	intrigue = 8
+	learning = 8
+	prowess = 8
+	trait = education_diplomacy_4
+	trait = intellect_good_2
+	trait = ambitious
+	trait = calm
+	trait = just
+	trait = humble
+	trait = lifestyle_mystic
+	disallow_random_traits = yes
+	1.8.8 = {
+		birth = "1.8.8"
+		effect = {
+			add_character_flag = no_headgear
+		}
+	}
+	88.8.8 = {
+		death = "88.8.8"
+	}
+}
+
+# Martin Septim
+VIET_oblivion_character_002 = {
+	name = "Martin"
+	religion = "pagan"
+	culture = "roman"
+	diplomacy = 7
+	learning = 10
+	trait = education_learning_4
+	trait = intellect_good_2
+	trait = compassionate
+	trait = diligent
+	trait = brave
+	trait = humble
+	trait = legitimized_bastard
+	disallow_random_traits = yes
+	father = VIET_oblivion_character_001
+	52.8.8 = {
+		birth = "52.8.8"
+		effect = {
+			add_character_flag = no_headgear
+		}
+	}
+	88.8.8 = {
+		death = "88.8.8"
+	}
+}
+
+# Baurus
+VIET_oblivion_character_003 = {
+	name = "Boutros"
+	religion = "pagan"
+	culture = "baranis"
+	prowess = 8
+	trait = education_martial_3
+	trait = diligent
+	trait = calm
+	trait = brave
+	trait = lifestyle_blademaster
+	disallow_random_traits = yes
+	58.8.8 = {
+		birth = "58.8.8"
+		effect = {
+			add_character_flag = no_headgear
+		}
+	}
+	88.8.8 = {
+		death = "88.8.8"
+	}
+}
+
+# Jauffre
+VIET_oblivion_character_004 = {
+	name = "JaufrE_"
+	religion = "pagan"
+	culture = "breton"
+	martial = 8
+	learning = 8
+	prowess = 8
+	trait = education_martial_4
+	trait = humble
+	trait = just
+	trait = brave
+	trait = lifestyle_blademaster
+	disallow_random_traits = yes
+	30.8.8 = {
+		birth = "30.8.8"
+		effect = {
+			add_character_flag = no_headgear
+		}
+	}
+	88.8.8 = {
+		death = "88.8.8"
+	}
+}

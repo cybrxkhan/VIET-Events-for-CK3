@@ -19,10 +19,105 @@ VIETintro.0001 = {
 		character:VIET_character_003 = { make_unprunable = yes }
 		character:VIET_character_004 = { make_unprunable = yes }
 		character:VIET_character_005 = { make_unprunable = yes }
+		character:VIET_oblivion_character_001 = { make_unprunable = yes }
+		character:VIET_oblivion_character_002 = { make_unprunable = yes }
+		character:VIET_oblivion_character_003 = { make_unprunable = yes }
+		character:VIET_oblivion_character_004 = { make_unprunable = yes }
 	}
 
 }
 
+
+
+# Set appearance of some characters
+VIETintro.0002 = {
+	scope = none
+	hidden = yes
+	
+	immediate = {
+		# Get culture and faith for the Septims
+		random_ruler = {
+			limit = {
+				any_courtier_or_guest = {
+					is_female = no
+					exists = dynasty
+					any_dynasty_member = {
+						count = 0
+					}
+				}
+				any_courtier_or_guest = {
+					is_female = no
+					NOT = { exists = dynasty }
+				}
+			}
+			random_courtier_or_guest = {
+				limit = {
+					is_female = no
+					exists = dynasty
+				}
+				culture = {
+					save_scope_as = septim_culture
+				}
+				save_scope_as = septim_reference						
+			}
+			random_courtier_or_guest = {
+				limit = {
+					is_female = no
+					NOT = { exists = dynasty }
+				}
+				save_scope_as = martin_reference						
+			}
+		}
+		# Baurus culture and faith
+		random_ruler = {
+			limit = {
+				any_courtier_or_guest = { is_female = no }
+			}
+			random_courtier_or_guest = {
+				culture = {
+					save_scope_as = baurus_culture
+				}
+				save_scope_as = baurus_reference						
+			}
+		}
+		# Jauffre culture and faith
+		random_ruler = {
+			limit = {
+				any_courtier_or_guest = { is_female = no }
+			}
+			random_courtier_or_guest = {
+				culture = {
+					save_scope_as = jauffre_culture
+				}
+				save_scope_as = jauffre_reference						
+			}
+		}
+		character:VIET_oblivion_character_001 = {
+			set_culture = scope:septim_culture
+			copy_inheritable_appearance_from = scope:septim_reference
+			change_first_name = { template_character = scope:septim_reference }
+			VIET_assign_oblivion_septim_dynasty_effect = yes
+		}
+		character:VIET_oblivion_character_002 = {
+			set_culture = scope:septim_culture
+			copy_inheritable_appearance_from = scope:martin_reference
+			change_first_name = { template_character = scope:martin_reference }		
+		}
+		character:VIET_oblivion_character_003 = {
+			set_culture = scope:baurus_culture
+			copy_inheritable_appearance_from = scope:baurus_reference	
+			change_first_name = { template_character = scope:baurus_reference }				
+		}
+		character:VIET_oblivion_character_004 = {
+			set_culture = scope:jauffre_culture
+			copy_inheritable_appearance_from = scope:jauffre_reference	
+			change_first_name = { template_character = scope:jauffre_reference }			
+		}
+
+		# set_dynasty_name
+	}
+
+}
 
 
 

@@ -2692,6 +2692,11 @@ VIETmisc.1071 = {
 		NOT = { exists = var:VIET_oblivion_dream_counter }
 		NOT = { has_global_variable = VIET_Oblivion_dream_completed }	
 		NOT = { has_game_rule = VIET_serious_events }
+		# These characters shouldn't be pruned, but this is to check just in case
+		exists = character:VIET_oblivion_character_001
+		exists = character:VIET_oblivion_character_002
+		exists = character:VIET_oblivion_character_003
+		exists = character:VIET_oblivion_character_004
 	}
 	
 	weight_multiplier = {
@@ -2733,176 +2738,193 @@ VIETmisc.1071 = {
 		}
 		# Disable the decision for now
 		add_character_flag = VIET_currently_doing_oblivion_dream
-		# Generate the Emperor VIET_uriel_septim_template
+
+		# Call in "historical" characters and save them
 		hidden_effect = {
-			# 50/50 the Emperor is your culture, or a random culture
-			random_list = {
-				50 = {
-					create_character = {
-						location = root.capital_province
-						template = VIET_uriel_septim_template
-						culture = root.culture
-						save_scope_as = uriel
-					}
-				}
-				50 = {
-					trigger = {
-						NOT = { has_game_rule = VIET_serious_events } # No weirdness
-						# any_county = {
-						# 	NOT = {
-						# 		culture = root.culture
-						# 	}
-						# }
-					}
-					random_county = {
-						# limit = {
-						# 	NOT = {
-						# 		culture = root.culture
-						# 	}
-						# }
-						save_scope_as = county
-					}
-					create_character = {
-						location = root.capital_province
-						template = VIET_uriel_septim_template
-						culture = scope:county.culture
-						save_scope_as = uriel
-					}
-				}
-			}		
-			# Generate Baurus
-			random_list = {
-				# VIET_baurus_template
-				33 = {
-					create_character = {
-						location = root.capital_province
-						template = VIET_baurus_template
-						culture = root.culture
-						save_scope_as = baurus
-					}
-				}
-				66 = {
-					trigger = {
-						NOT = { has_game_rule = VIET_serious_events } # No weirdness
-						# any_county = {
-						# 	NOT = {
-						# 		culture = root.culture
-						# 	}
-						# 	NOT = {
-						# 		culture = scope:uriel.culture
-						# 	}
-						# }
-					}
-					random_county = {
-						# limit = {
-						# 	NOT = {
-						# 		culture = root.culture
-						# 	}
-						# 	NOT = {
-						# 		culture = scope:uriel.culture
-						# 	}
-						# }
-						save_scope_as = county
-					}
-					create_character = {
-						location = root.capital_province
-						template = VIET_baurus_template
-						culture = scope:county.culture
-						save_scope_as = baurus
-					}
-				}
+			character:VIET_oblivion_character_001 = {
+				save_scope_as = uriel
 			}
-			# Generate Jauffre
-			random_list = {
-				33 = {
-					create_character = {
-						location = root.capital_province
-						template = VIET_jauffre_template
-						culture = root.culture
-						save_scope_as = jauffre
-					}
-				}
-				66 = {
-					trigger = {
-						NOT = { has_game_rule = VIET_serious_events } # No weirdness
-						# any_county = {
-						# 	NOT = {
-						# 		culture = root.culture
-						# 	}
-						# 	NOT = {
-						# 		culture = scope:uriel.culture
-						# 	}
-						# }
-					}
-					random_county = {
-						# limit = {
-						# 	NOT = {
-						# 		culture = root.culture
-						# 	}
-						# 	NOT = {
-						# 		culture = scope:uriel.culture
-						# 	}
-						# }
-						save_scope_as = county
-					}
-					create_character = {
-						location = root.capital_province
-						template = VIET_jauffre_template
-						culture = scope:county.culture
-						save_scope_as = jauffre
-					}
-				}
-			}
-			# Generate Martin
-			create_character = {
-				location = root.capital_province
-				template = VIET_martin_template
-				culture = scope:uriel.culture
-				father = scope:uriel
-				dynasty = scope:uriel.dynasty
+			character:VIET_oblivion_character_002 = {
 				save_scope_as = martin
 			}
-			scope:uriel = {				
-				add_to_global_variable_list = {
-					name = VIET_uriel_septim_person # Dunno how else to do this
-					target = this
-				}	
-				death = {
-					death_reason = death_VIET_dream
-					killer = root
-				}
+			character:VIET_oblivion_character_003 = {
+				save_scope_as = baurus
 			}
-			scope:baurus = {				
-				add_to_global_variable_list = {
-					name = VIET_baurus_septim_person # Dunno how else to do this
-					target = this
-				}	
-				death = {
-					death_reason = death_VIET_dream
-					killer = root
-				}
-			}
-			scope:jauffre = {				
-				add_to_global_variable_list = {
-					name = VIET_jauffre_septim_person # Dunno how else to do this
-					target = this
-				}	
-				death = {
-					death_reason = death_VIET_dream
-					killer = root
-				}
-			}
-			scope:martin = {				
-				add_to_global_variable_list = {
-					name = VIET_martin_septim_person # Dunno how else to do this
-					target = this
-				}	
-				death = {
-					death_reason = death_VIET_dream
-					killer = root
-				}
+			character:VIET_oblivion_character_004 = {
+				save_scope_as = jauffre
 			}
 		}
+
+		# # Generate the Emperor VIET_uriel_septim_template
+		# hidden_effect = {
+		# 	# 50/50 the Emperor is your culture, or a random culture
+		# 	random_list = {
+		# 		50 = {
+		# 			create_character = {
+		# 				location = root.capital_province
+		# 				template = VIET_uriel_septim_template
+		# 				culture = root.culture
+		# 				save_scope_as = uriel
+		# 			}
+		# 		}
+		# 		50 = {
+		# 			trigger = {
+		# 				NOT = { has_game_rule = VIET_serious_events } # No weirdness
+		# 				# any_county = {
+		# 				# 	NOT = {
+		# 				# 		culture = root.culture
+		# 				# 	}
+		# 				# }
+		# 			}
+		# 			random_county = {
+		# 				# limit = {
+		# 				# 	NOT = {
+		# 				# 		culture = root.culture
+		# 				# 	}
+		# 				# }
+		# 				save_scope_as = county
+		# 			}
+		# 			create_character = {
+		# 				location = root.capital_province
+		# 				template = VIET_uriel_septim_template
+		# 				culture = scope:county.culture
+		# 				save_scope_as = uriel
+		# 			}
+		# 		}
+		# 	}		
+		# 	# Generate Baurus
+		# 	random_list = {
+		# 		# VIET_baurus_template
+		# 		33 = {
+		# 			create_character = {
+		# 				location = root.capital_province
+		# 				template = VIET_baurus_template
+		# 				culture = root.culture
+		# 				save_scope_as = baurus
+		# 			}
+		# 		}
+		# 		66 = {
+		# 			trigger = {
+		# 				NOT = { has_game_rule = VIET_serious_events } # No weirdness
+		# 				# any_county = {
+		# 				# 	NOT = {
+		# 				# 		culture = root.culture
+		# 				# 	}
+		# 				# 	NOT = {
+		# 				# 		culture = scope:uriel.culture
+		# 				# 	}
+		# 				# }
+		# 			}
+		# 			random_county = {
+		# 				# limit = {
+		# 				# 	NOT = {
+		# 				# 		culture = root.culture
+		# 				# 	}
+		# 				# 	NOT = {
+		# 				# 		culture = scope:uriel.culture
+		# 				# 	}
+		# 				# }
+		# 				save_scope_as = county
+		# 			}
+		# 			create_character = {
+		# 				location = root.capital_province
+		# 				template = VIET_baurus_template
+		# 				culture = scope:county.culture
+		# 				save_scope_as = baurus
+		# 			}
+		# 		}
+		# 	}
+		# 	# Generate Jauffre
+		# 	random_list = {
+		# 		33 = {
+		# 			create_character = {
+		# 				location = root.capital_province
+		# 				template = VIET_jauffre_template
+		# 				culture = root.culture
+		# 				save_scope_as = jauffre
+		# 			}
+		# 		}
+		# 		66 = {
+		# 			trigger = {
+		# 				NOT = { has_game_rule = VIET_serious_events } # No weirdness
+		# 				# any_county = {
+		# 				# 	NOT = {
+		# 				# 		culture = root.culture
+		# 				# 	}
+		# 				# 	NOT = {
+		# 				# 		culture = scope:uriel.culture
+		# 				# 	}
+		# 				# }
+		# 			}
+		# 			random_county = {
+		# 				# limit = {
+		# 				# 	NOT = {
+		# 				# 		culture = root.culture
+		# 				# 	}
+		# 				# 	NOT = {
+		# 				# 		culture = scope:uriel.culture
+		# 				# 	}
+		# 				# }
+		# 				save_scope_as = county
+		# 			}
+		# 			create_character = {
+		# 				location = root.capital_province
+		# 				template = VIET_jauffre_template
+		# 				culture = scope:county.culture
+		# 				save_scope_as = jauffre
+		# 			}
+		# 		}
+		# 	}
+		# 	# Generate Martin
+		# 	create_character = {
+		# 		location = root.capital_province
+		# 		template = VIET_martin_template
+		# 		culture = scope:uriel.culture
+		# 		father = scope:uriel
+		# 		dynasty = scope:uriel.dynasty
+		# 		save_scope_as = martin
+		# 	}
+		# 	scope:uriel = {				
+		# 		add_to_global_variable_list = {
+		# 			name = VIET_uriel_septim_person # Dunno how else to do this
+		# 			target = this
+		# 		}	
+		# 		death = {
+		# 			death_reason = death_VIET_dream
+		# 			killer = root
+		# 		}
+		# 	}
+		# 	scope:baurus = {				
+		# 		add_to_global_variable_list = {
+		# 			name = VIET_baurus_septim_person # Dunno how else to do this
+		# 			target = this
+		# 		}	
+		# 		death = {
+		# 			death_reason = death_VIET_dream
+		# 			killer = root
+		# 		}
+		# 	}
+		# 	scope:jauffre = {				
+		# 		add_to_global_variable_list = {
+		# 			name = VIET_jauffre_septim_person # Dunno how else to do this
+		# 			target = this
+		# 		}	
+		# 		death = {
+		# 			death_reason = death_VIET_dream
+		# 			killer = root
+		# 		}
+		# 	}
+		# 	scope:martin = {				
+		# 		add_to_global_variable_list = {
+		# 			name = VIET_martin_septim_person # Dunno how else to do this
+		# 			target = this
+		# 		}	
+		# 		death = {
+		# 			death_reason = death_VIET_dream
+		# 			killer = root
+		# 		}
+		# 	}
+		# }
 	}
 	
 	
@@ -2998,9 +3020,20 @@ VIETmisc.1074 = {
 	}
 
 	immediate = {
-		ordered_in_global_list = {
-			variable = VIET_uriel_septim_person
-			save_scope_as = uriel
+		# Call in "historical" characters and save them
+		hidden_effect = {
+			character:VIET_oblivion_character_001 = {
+				save_scope_as = uriel
+			}
+			character:VIET_oblivion_character_002 = {
+				save_scope_as = martin
+			}
+			character:VIET_oblivion_character_003 = {
+				save_scope_as = baurus
+			}
+			character:VIET_oblivion_character_004 = {
+				save_scope_as = jauffre
+			}
 		}
 		# Disable the decision for now
 		add_character_flag = VIET_currently_doing_oblivion_dream
@@ -3123,17 +3156,20 @@ VIETmisc.1077 = {
 	}
 
 	immediate = {
-		ordered_in_global_list = {
-			variable = VIET_uriel_septim_person
-			save_scope_as = uriel
-		}
-		ordered_in_global_list = {
-			variable = VIET_baurus_septim_person
-			save_scope_as = baurus
-		}
-		ordered_in_global_list = {
-			variable = VIET_jauffre_septim_person
-			save_scope_as = jauffre
+		# Call in "historical" characters and save them
+		hidden_effect = {
+			character:VIET_oblivion_character_001 = {
+				save_scope_as = uriel
+			}
+			character:VIET_oblivion_character_002 = {
+				save_scope_as = martin
+			}
+			character:VIET_oblivion_character_003 = {
+				save_scope_as = baurus
+			}
+			character:VIET_oblivion_character_004 = {
+				save_scope_as = jauffre
+			}
 		}
 		# Disable the decision for now
 		add_character_flag = VIET_currently_doing_oblivion_dream
@@ -3305,21 +3341,20 @@ VIETmisc.1080 = {
 
 
 	immediate = {
-		ordered_in_global_list = {
-			variable = VIET_uriel_septim_person
-			save_scope_as = uriel
-		}
-		ordered_in_global_list = {
-			variable = VIET_baurus_septim_person
-			save_scope_as = baurus
-		}
-		ordered_in_global_list = {
-			variable = VIET_jauffre_septim_person
-			save_scope_as = jauffre
-		}
-		ordered_in_global_list = {
-			variable = VIET_martin_septim_person
-			save_scope_as = martin
+		# Call in "historical" characters and save them
+		hidden_effect = {
+			character:VIET_oblivion_character_001 = {
+				save_scope_as = uriel
+			}
+			character:VIET_oblivion_character_002 = {
+				save_scope_as = martin
+			}
+			character:VIET_oblivion_character_003 = {
+				save_scope_as = baurus
+			}
+			character:VIET_oblivion_character_004 = {
+				save_scope_as = jauffre
+			}
 		}
 		# Disable the decision for now
 		add_character_flag = VIET_currently_doing_oblivion_dream
