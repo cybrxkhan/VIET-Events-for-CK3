@@ -30,7 +30,7 @@
 # 7051-7052		Oblivion Remaster
 # 7053-7054		Peaches
 # 7055-7056		Strange Tales from a Chinese Studio / Liaozhao Zhiyi / 	聊齋誌異
-# 7057-????		Event Backgrounds
+# 7057-7058		Event Backgrounds
 # 
 ############################################################################################################################
 
@@ -6352,11 +6352,14 @@ VIETmisc.7057 = {
 	
 	left_portrait = {
 		character = root
-		animation = worry
+		animation = personality_cynical
 	}	
 
 	
-	right_portrait = scope:traveler
+	right_portrait = {
+		character = scope:traveler
+		animation = storyteller
+	}
 
 	trigger = {
 		is_location_valid_for_travel_event_on_land = yes
@@ -6435,6 +6438,109 @@ VIETmisc.7057 = {
 	 			years = 1
 			}
 		}
+	}
+
+}
+
+# ce1_condemned_village
+# Pass by an abandoned village that is supposedly cursed, that even the devil avoids
+VIETmisc.7058 = {
+	type = character_event
+	title = VIETmisc.7058.t
+	desc = VIETmisc.7058.desc
+	theme = travel_intrigue
+	override_background = { reference = ce1_condemned_village }
+
+	
+	right_portrait = {
+		character = root
+		animation = holding_staff
+	}	
+
+	trigger = {
+		is_location_valid_for_travel_event_on_land = yes
+		location = {
+			has_holding = yes
+		}
+	}
+	
+	weight_multiplier = {
+		base = 1
+		modifier = {
+			add = 0.2
+			has_trait = cynical
+		}
+		modifier = {
+			add = -0.2
+			has_trait = zealous
+		}
+		modifier = {
+			add = 0.2
+			has_trait = gregarious
+		}
+		modifier = {
+			add = -0.2
+			has_trait = shy
+		}
+		modifier = {
+			add = 0.2
+			has_trait = brave
+		}
+		modifier = {
+			add = -0.2
+			has_trait = craven
+		}
+	}
+
+	immediate = {
+		location.county = { save_scope_as = county }
+		scope:county.faith = {
+			save_scope_as = faith
+		}
+	}
+	
+	option = { # ok
+		name = VIETmisc.7058.a
+		stress_impact = {
+			brave = miniscule_stress_impact_gain
+		}
+	}
+	
+	option = { # ok
+		name = VIETmisc.7058.b
+		trigger = {
+			OR = {
+				gold >= 10
+				is_ai = no
+			}
+		}
+		remove_short_term_gold = 10
+		VIET_huge_piety_gain_effect = yes
+		stress_impact = {
+			cynical = miniscule_stress_impact_gain
+		}
+	}
+	
+	option = { # ok
+		name = VIETmisc.7058.c
+		flavor = VIETmisc.7058.c.flavor
+		VIET_massive_prestige_gain_effect = yes
+		stress_impact = {
+			base = miniscule_stress_impact_gain
+			craven = miniscule_stress_impact_gain
+			brave = miniscule_stress_impact_loss
+		}
+		random = {
+			chance = 40
+			send_interface_message = {
+				right_icon = root
+				title = VIETmisc.7058.c.message
+				add_character_modifier = {
+					modifier = VIET_abandoned_village_curse
+					years = 13
+				}
+			}
+		}		
 	}
 
 }

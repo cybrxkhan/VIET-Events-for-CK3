@@ -73,7 +73,7 @@
 # 0375-0380		Peaches
 # 0381-0389		Councilor
 # 0390-0394		Strange Tales from a Chinese Studio / Liaozhao Zhiyi / 	聊齋誌異
-# 0395-0XXX		Backgrounds
+# 0395-0399		Backgrounds
 # 
 ############################################################################################################################
 
@@ -39081,7 +39081,7 @@ VIETmisc.0394 = {
 
 
 ##################################################################
-# 0395-0XXX Backgrounds (events utilizing backgrounds I haven't used a lot of)
+# 0395-0399 Backgrounds (events utilizing backgrounds I haven't used a lot of)
 ##################################################################
 
 # bp1_kitchen_western
@@ -39097,8 +39097,12 @@ VIETmisc.0395 = {
 	
 	left_portrait = {
 		character = root
-		animation = reading
-		camera = camera_event_center_pointing_slighty_left
+		animation = boredom
+	}
+
+	right_portrait = {
+		character = scope:adult
+		animation = disapproval
 	}
 
 	trigger = {	
@@ -39241,6 +39245,12 @@ VIETmisc.0395 = {
 		random_in_list = {
 			list = candidate_characters
 			save_scope_as = adult
+		}
+		scope:adult = {
+			add_character_modifier = {
+				modifier = VIET_judgmental_boomer
+				years = 8
+			}
 		}
 	}
 	
@@ -39476,7 +39486,7 @@ VIETmisc.0397 = {
 				scope:child = {
 					trigger_event = {
 						id = VIETmisc.0398
-						months = { 12 48 }
+						#months = { 12 48 }
 					}
 				}
 			}
@@ -39500,6 +39510,13 @@ VIETmisc.0397 = {
 					left_icon = ROOT
 					title = VIETmisc.0397.b.failure
 					VIET_huge_prestige_loss_effect = yes
+					scope:child = {
+						add_opinion = {
+							target = root
+							modifier = annoyed_opinion
+							opinion = -5
+						}
+					}
 				}
 			}
 			10 = { # Success - interested

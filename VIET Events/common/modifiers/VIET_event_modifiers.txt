@@ -4039,6 +4039,28 @@ VIET_diligent_studies = {
 	stress_loss_mult = -0.1
 }
 
+VIET_abandoned_village_curse = {
+	icon = magic_negative
+	health = -0.5
+	stress_gain_mult = 0.1
+	stress_loss_mult = -0.1
+}
+
+VIET_judgmental_boomer = {
+	icon = social_negative
+	diplomacy = -1
+}
+
+VIET_increased_studiousness = {
+	icon = merit_mixed
+	monthly_lifestyle_xp_gain_mult = 0.05
+	monthly_merit_mult = 0.1
+	confucian_education_xp_gain_mult = 0.1
+	study_confucian_classics_scheme_phase_duration_add = -50
+	stress_gain_mult = 0.15
+	stress_loss_mult = -0.15
+}
+
 
 
 
