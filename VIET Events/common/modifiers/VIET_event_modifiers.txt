@@ -4003,6 +4003,42 @@ VIET_dragon_dormant = {
 	confucian_education_xp_gain_mult = 0.05	
 }
 
+VIET_strawberry_pick_me = {
+	icon = food_mixed
+	diplomacy = -1
+	attraction_opinion = 5
+	monthly_prestige = 0.1
+}
+
+VIET_strawberry_not_pick_me = {
+	icon = spoon_mixed
+	diplomacy = 1
+	stress_gain_mult = 0.1
+	stress_loss_mult = -0.1
+}
+
+VIET_avoiding_dangerous_caves = {
+	icon = rock_positive
+	travel_safety = 2
+}
+
+VIET_child_obsessed_with_medicine = {
+	icon = health_mixed
+	diplomacy = -1
+	martial = -1
+	stewardship = -1
+	intrigue = -1
+	learning = 1
+	negate_health_penalty_add = 0.5
+}
+
+VIET_diligent_studies = {
+	icon = stress_mixed
+	monthly_prestige = 0.35
+	stress_gain_mult = 0.1
+	stress_loss_mult = -0.1
+}
+
 
 
 

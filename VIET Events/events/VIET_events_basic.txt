@@ -39084,17 +39084,16 @@ VIETmisc.0394 = {
 # 0395-0XXX Backgrounds (events utilizing backgrounds I haven't used a lot of)
 ##################################################################
 
-
+# bp1_kitchen_western
 # Don't eat fruits like strawberries in a weird manner or else people will judge you
-# I sincerely apologize to anyone who gets this reference and is reading this comment
-# But if you *do* get it, it means you're terminally online in a certain part of the internet
+# I sincerely apologize to anyone who gets this reference/meme and is reading this comment
+# But if you *do* get it, it means you're terminally online in a certain part of the internet, so....
 VIETmisc.0395 = {
 	type = character_event
 	title = VIETmisc.0395.t
-	window = big_event_window
 	desc = VIETmisc.0395.desc
 	theme = seduction
-	override_background = { reference = study }
+	override_background = { reference = bp1_kitchen_western }
 	
 	left_portrait = {
 		character = root
@@ -39103,18 +39102,241 @@ VIETmisc.0395 = {
 	}
 
 	trigger = {	
-		has_game_rule = VIET_normal_universe_events
+		#has_game_rule = VIET_normal_universe_events
+		OR = {
+			any_courtier_or_guest = {
+				is_available_ai_adult = yes
+				culture = root.culture
+				diplomacy >= average_skill_rating
+				age > root.age_plus_10
+				OR = {
+					has_trait = temperate
+					has_trait = ambitious
+					has_trait = diligent
+					has_trait = arrogant
+					has_trait = zealous
+					has_trait = gregarious
+					has_trait = honest
+					has_trait = just
+					has_trait = paranoid
+					has_trait = stubborn
+				}
+				NOR = {
+					has_trait = forgiving
+					has_trait = lazy
+					has_trait = shy
+					has_trait = content
+				}
+			}
+			any_vassal = {
+				is_available_ai_adult = yes
+				culture = root.culture
+				diplomacy >= average_skill_rating
+				age > root.age_plus_10
+				OR = {
+					has_trait = temperate
+					has_trait = ambitious
+					has_trait = diligent
+					has_trait = arrogant
+					has_trait = zealous
+					has_trait = gregarious
+					has_trait = honest
+					has_trait = just
+					has_trait = paranoid
+					has_trait = stubborn
+				}
+				NOR = {
+					has_trait = forgiving
+					has_trait = lazy
+					has_trait = shy
+					has_trait = content
+				}
+			}
+		}
 	}
 	
 	weight_multiplier = {
 		base = 1
 		modifier = {
 			add = 0.2
-			has_trait = lustful
+			has_trait = arrogant
 		}
 		modifier = {
 			add = -0.2
-			has_trait = chaste
+			has_trait = humble
+		}
+		modifier = {
+			add = 0.2
+			has_trait = just
+		}
+		modifier = {
+			add = -0.2
+			has_trait = arbitrary
+		}
+		modifier = {
+			add = 0.2
+			has_trait = patient
+		}
+		modifier = {
+			add = -0.2
+			has_trait = impatient
+		}
+	}
+
+	immediate = {
+		every_courtier_or_guest = {
+			limit = {
+				is_available_ai_adult = yes
+				culture = root.culture
+				diplomacy >= average_skill_rating
+				age > root.age_plus_10
+				OR = {
+					has_trait = temperate
+					has_trait = ambitious
+					has_trait = diligent
+					has_trait = arrogant
+					has_trait = zealous
+					has_trait = gregarious
+					has_trait = honest
+					has_trait = just
+					has_trait = paranoid
+					has_trait = stubborn
+				}
+				NOR = {
+					has_trait = forgiving
+					has_trait = lazy
+					has_trait = shy
+					has_trait = content
+				}
+			}
+			add_to_list = candidate_characters
+		}
+		every_vassal = {
+			limit = {
+				is_available_ai_adult = yes
+				culture = root.culture
+				diplomacy >= average_skill_rating
+				age > root.age_plus_10
+				OR = {
+					has_trait = temperate
+					has_trait = ambitious
+					has_trait = diligent
+					has_trait = arrogant
+					has_trait = zealous
+					has_trait = gregarious
+					has_trait = honest
+					has_trait = just
+					has_trait = paranoid
+					has_trait = stubborn
+				}
+				NOR = {
+					has_trait = forgiving
+					has_trait = lazy
+					has_trait = shy
+					has_trait = content
+				}
+			}
+			add_to_list = candidate_characters
+		}
+		random_in_list = {
+			list = candidate_characters
+			save_scope_as = adult
+		}
+	}
+	
+	option = { # You pick how you want to eat the strawberries
+		name = VIETmisc.0395.a
+		add_character_modifier = {
+			modifier = VIET_strawberry_pick_me
+			years = 5
+		}
+		scope:adult = {
+			add_opinion = {
+				modifier = VIET_opinion_didnt_listen_to_my_advice
+				target = root
+			}
+			reverse_add_opinion = {
+				modifier = VIET_opinion_annoying_elder
+				target = root
+			}
+		}
+		stress_impact = {
+			humble = miniscule_stress_impact_gain
+			temperate = miniscule_stress_impact_gain
+			patient = miniscule_stress_impact_gain
+			eccentric = miniscule_stress_impact_gain
+			diplomat = miniscule_stress_impact_gain
+			education_diplomacy_3 = miniscule_stress_impact_gain
+			education_diplomacy_4 = miniscule_stress_impact_gain
+			education_diplomacy_5 = miniscule_stress_impact_gain
+		}	
+	}	
+	
+	option = { # You will make an effort to eat with appropriate etiquette
+		name = VIETmisc.0395.b
+		add_character_modifier = {
+			modifier = VIET_strawberry_not_pick_me
+			years = 5
+		}
+		scope:adult = {
+			add_opinion = {
+				modifier = VIET_opinion_listened_to_my_advice
+				target = root
+			}
+			reverse_add_opinion = {
+				modifier = VIET_opinion_wise_elder
+				target = root
+			}
+		}
+		stress_impact = {
+			arrogant = miniscule_stress_impact_gain
+			gluttonous = miniscule_stress_impact_gain
+			impatient = miniscule_stress_impact_gain
+			arbitrary = miniscule_stress_impact_gain
+			callous = miniscule_stress_impact_gain
+		}	
+	}	
+
+	after = {
+		if = {
+			limit = {
+				has_game_rule = VIET_historical_context_on
+			}
+			custom_tooltip = VIETmisc.0395.info
+		}
+	}
+	
+
+}
+
+# tgp_examination_room
+# Have a nightmare about the imperial exams
+VIETmisc.0396 = {
+	type = character_event
+	title = VIETmisc.0396.t
+	desc = VIETmisc.0396.desc
+	theme = unfriendly
+	override_background = { reference = tgp_examination_room }
+	
+	right_portrait = {
+		character = root
+		animation = paranoia
+	}
+
+	trigger = {	
+		has_game_rule = VIET_normal_universe_events
+		VIET_is_sinosphere_government_trigger = yes
+	}
+	
+	weight_multiplier = {
+		base = 1
+		modifier = {
+			add = 0.2
+			has_trait = ambitious
+		}
+		modifier = {
+			add = -0.2
+			has_trait = content
 		}
 		modifier = {
 			add = 0.2
@@ -39126,22 +39348,236 @@ VIETmisc.0395 = {
 		}
 		modifier = {
 			add = 0.2
-			has_trait = trusting
+			has_trait = paranoid
 		}
 		modifier = {
 			add = -0.2
-			has_trait = paranoid
+			has_trait = trusting
 		}
 	}	
-	
-	option = { # Take the silver
-		name = VIETmisc.0390.a
+
+	immediate = {
 		stress_impact = {
-			generous = minor_stress_impact_gain
+			base = miniscule_stress_impact_gain
+			diligent = miniscule_stress_impact_gain
+			ambitious = miniscule_stress_impact_gain
 			paranoid = miniscule_stress_impact_gain
+			arrogant = miniscule_stress_impact_gain
+			scholar = miniscule_stress_impact_gain
 			confucian_education = miniscule_stress_impact_gain
 		}	
+	}
+	
+	option = { # Ok
+		name = VIETmisc.0396.a
+		VIET_small_piety_gain_effect = yes
+	}	
+	
+	option = { # Ok
+		name = VIETmisc.0396.b
+		stress_impact = {
+			base = miniscule_stress_impact_gain
+			diligent = miniscule_stress_impact_gain
+			ambitious = miniscule_stress_impact_gain
+			lazy = miniscule_stress_impact_gain
+			content = miniscule_stress_impact_gain
+		}	
+		add_character_modifier = {
+			modifier = VIET_increased_studiousness
+			years = 4
+		}
 	}	
 	
 
 }
+
+
+
+# physicians_study
+# Child shows interest in a physicians' work
+VIETmisc.0397 = {
+	type = character_event
+	title = VIETmisc.0397.t
+	desc = VIETmisc.0397.desc
+	theme = learning_medicine_focus
+	
+	left_portrait = {
+		character = scope:physician
+		animation = physician
+	}
+	
+	right_portrait = {
+		character = scope:child
+		animation = personality_greedy
+	}
+
+	trigger = {	
+		court_physician_available_trigger = yes
+		any_courtier = {
+			is_adult = no
+			age <= 11
+			age >= 4
+			is_ai = yes
+			NOT = { has_trait = lifestyle_physician }
+		}
+	}
+	
+	weight_multiplier = {
+		base = 1
+		modifier = {
+			add = 0.2
+			has_trait = ambitious
+		}
+		modifier = {
+			add = -0.2
+			has_trait = content
+		}
+		modifier = {
+			add = 0.2
+			has_trait = lazy
+		}
+		modifier = {
+			add = -0.2
+			has_trait = diligent
+		}
+		modifier = {
+			add = 0.2
+			has_trait = paranoid
+		}
+		modifier = {
+			add = -0.2
+			has_trait = trusting
+		}
+	}	
+	
+	immediate = {
+		save_court_physician_as_effect = { SCOPE_NAME = physician }
+		random_courtier = {
+			limit = {
+				is_adult = no
+				age <= 11
+				age >= 4
+				is_ai = yes
+			}	
+			save_scope_as = child		
+		}
+	}
+	
+	option = { # Ok
+		name = VIETmisc.0397.a
+		add_character_modifier = {
+			modifier = VIET_child_obsessed_with_medicine
+			years = 4
+		}
+		custom_tooltip = VIETmisc.0397.a.tooltip
+		hidden_effect = {
+			random = {
+				chance = 50
+				scope:child = {
+					trigger_event = {
+						id = VIETmisc.0398
+						months = { 12 48 }
+					}
+				}
+			}
+		}
+	}	
+	
+	option = { # Ok
+		name = VIETmisc.0397.b
+		duel = {
+			skill = diplomacy
+			value = medium_skill_rating
+			10 = { # Failure - they're not interested
+				#show_chance = no
+				custom_tooltip = VIETmisc.0397.b.failure
+				compare_modifier = {
+					value = scope:duel_value
+					multiplier = -0.7
+				}
+				send_interface_toast = {
+					type = event_toast_effect_bad
+					left_icon = ROOT
+					title = VIETmisc.0397.b.failure
+					VIET_huge_prestige_loss_effect = yes
+				}
+			}
+			10 = { # Success - interested
+				#show_chance = no
+				custom_tooltip = VIETmisc.0397.b.success
+				compare_modifier = {
+					value = scope:duel_value
+					multiplier = 0.7
+				}
+				send_interface_toast = {
+					type = event_toast_effect_good
+					left_icon = ROOT
+					title = VIETmisc.0397.b.success
+					VIET_huge_prestige_gain_effect = yes
+					scope:child = {
+						add_character_modifier = {
+							modifier = VIET_diligent_studies
+							years = 4
+						}
+					}
+				}
+			}
+		}
+	}	
+	
+
+}
+
+
+# Child ends up gaining the physician trait
+VIETmisc.0398 = {
+	type = character_event
+	title = VIETmisc.0398.t
+	desc = VIETmisc.0398.desc
+	theme = learning_medicine_focus
+	
+	right_portrait = {
+		character = scope:child
+		animation = reading
+	}
+	
+	option = { # Ok
+		name = VIETmisc.0398.a
+		add_trait = lifestyle_physician
+		if = {
+			limit = {
+				is_ruler = no
+			}
+			liege = {
+				trigger_event = VIETmisc.0399
+			}
+		}
+	}	
+
+}
+
+
+# Child ends up gaining the physician trait
+VIETmisc.0399 = {
+	type = character_event
+	title = VIETmisc.0399.t
+	desc = VIETmisc.0399.desc
+	theme = learning_medicine_focus
+	
+	right_portrait = {
+		character = scope:child
+		animation = reading
+	}
+	
+	option = { # Ok
+		name = VIETmisc.0399.a
+		scope:child = {
+			show_as_tooltip = {
+				add_trait = lifestyle_physician
+			}
+		}
+	}	
+
+}
+
+

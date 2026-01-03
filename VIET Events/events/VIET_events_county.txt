@@ -43,6 +43,7 @@
 # 3067-3068 	Snow
 # 3069			Peaches
 # 3070			Councilor
+# 3071-			Event Backgrounds
 # 
 ############################################################################################################################
 
@@ -7293,6 +7294,149 @@ VIETmisc.3070 = {
 				target = root
 				modifier = VIET_opinion_tax_advice_bad
 			}
+		}
+	}
+
+
+}
+
+
+##################################################################
+# EVENT BACKGROUNDS 3071-
+##################################################################
+
+
+# bp2_university
+# Tensions rising between university students and townspeople
+VIETmisc.3071 = {
+	type = character_event
+	title = VIETmisc.3071.t
+	desc = VIETmisc.3071.desc
+	theme = unfriendly
+	override_background = bp2_university
+	
+	right_portrait = {
+		character = root
+		animation = stress
+	}
+	
+
+		
+	trigger = {
+		any_held_title = {
+			tier = tier_county
+			is_landless_type_title = no
+			title_province = { has_university_building_trigger = yes }
+		}	
+	}
+	
+    weight_multiplier = {
+        base = 0
+		modifier = {
+			add = {
+				every_held_title = {
+					limit = {
+						tier = tier_county					
+						is_landless_type_title = no
+						title_province = { has_university_building_trigger = yes }
+					}
+					add = 1
+				}
+			}		
+		}
+    }
+	
+	immediate = {
+		random_held_title = {
+			limit = {
+				tier = tier_county					
+				is_landless_type_title = no
+				title_province = { has_university_building_trigger = yes }
+			}	
+			save_scope_as = county
+		}
+	}
+
+	# Ignore it
+	option = {
+		name = VIETmisc.3071.a
+		VIET_huge_prestige_loss_effect = yes
+		scope:county = {
+			add_character_modifier = {
+				modifier = VIET_tensions_between_locals_and_students
+				years = 10
+			}
+		}
+		stress_impact = {
+			zealous = miniscule_stress_impact_gain
+			just = miniscule_stress_impact_gain
+			diligent = miniscule_stress_impact_gain
+			ambitious = miniscule_stress_impact_gain
+		}
+	}
+
+	# Fine/reprimand the students/university
+	option = {
+		name = VIETmisc.3071.b
+		add_gold = 50
+		scope:county = {
+			add_character_modifier = {
+				modifier = VIET_university_fined
+				years = 10
+			}
+		}
+		stress_impact = {
+			zealous = miniscule_stress_impact_gain
+			wrathful = miniscule_stress_impact_gain
+			sadistic = miniscule_stress_impact_gain
+		}
+	}
+
+	# Punish the students/university
+	option = {
+		name = VIETmisc.3071.c
+		add_gold = 50
+		VIET_huge_piety_loss_effect = yes
+		scope:county = {
+			add_character_modifier = {
+				modifier = VIET_university_punished
+				years = 10
+			}
+		}
+		stress_impact = {
+			zealous = miniscule_stress_impact_gain
+			forgiving = miniscule_stress_impact_gain
+			calm = miniscule_stress_impact_gain
+		}
+	}
+
+	# Influence students to be more restrained
+	option = {
+		name = VIETmisc.3071.d
+		trigger = {
+			OR = {
+				is_ai = no
+				gold >= 100
+			}
+			diplomacy >= decent_skill_rating
+		}
+		skill = diplomacy
+		show_as_unavailable = {
+			diplomacy < decent_skill_rating
+		}
+		remove_short_term_gold = 25
+		VIET_huge_prestige_gain_effect = yes
+		scope:county = {
+			add_character_modifier = {
+				modifier = VIET_university_restrained
+				years = 10
+			}
+		}
+		stress_impact = {
+			arbitrary = miniscule_stress_impact_gain
+			callous = miniscule_stress_impact_gain
+			wrathful = miniscule_stress_impact_gain
+			sadistic = miniscule_stress_impact_gain
 		}
 	}
 

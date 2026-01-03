@@ -1010,3 +1010,20 @@ VIET_opinion_espionage_advice_bad = {
 	stacking = yes
 }
 
+VIET_opinion_didnt_listen_to_my_advice = {
+	years = 10
+	opinion = -10
+	decaying = yes
+}
+
+VIET_opinion_annoying_elder = {
+	years = 10
+	opinion = -10
+	decaying = yes
+}
+
+VIET_opinion_wise_elder = {
+	years = 10
+	opinion = 10
+	decaying = yes
+}

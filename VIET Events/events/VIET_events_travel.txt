@@ -30,6 +30,7 @@
 # 7051-7052		Oblivion Remaster
 # 7053-7054		Peaches
 # 7055-7056		Strange Tales from a Chinese Studio / Liaozhao Zhiyi / 	聊齋誌異
+# 7057-????		Event Backgrounds
 # 
 ############################################################################################################################
 
@@ -6335,7 +6336,108 @@ VIETmisc.7056 = {
 
 
 
+##################################################################
+# 7057-0XXX Backgrounds (events utilizing backgrounds I haven't used a lot of)
+##################################################################
 
+# fp3_cave
+# Entourage member sees strange eyes in a cave
+VIETmisc.7057 = {
+	type = character_event
+	title = VIETmisc.7057.t
+	desc = VIETmisc.7057.desc
+	theme = travel
+	override_background = { reference = fp3_cave }
+
+	
+	left_portrait = {
+		character = root
+		animation = worry
+	}	
+
+	
+	right_portrait = scope:traveler
+
+	trigger = {
+		is_location_valid_for_travel_event_on_land = yes
+		current_travel_plan = {
+			any_entourage_character = {
+				is_available_travelling = yes
+			}
+		}
+	}
+	
+	weight_multiplier = {
+		base = 1
+		modifier = {
+			add = 0.2
+			has_trait = patient
+		}
+		modifier = {
+			add = -0.2
+			has_trait = impatient
+		}
+		modifier = {
+			add = 0.2
+			has_trait = honest
+		}
+		modifier = {
+			add = -0.2
+			has_trait = deceitful
+		}
+		modifier = {
+			add = 0.2
+			has_trait = trusting
+		}
+		modifier = {
+			add = -0.2
+			has_trait = paranoid
+		}
+	}
+
+	immediate = {
+		current_travel_plan = {
+			random_entourage_character = {
+				limit = {
+					is_available_travelling = yes
+				}
+				save_scope_as = traveler
+			}	
+		}		
+	}
+	
+	option = { # ok
+		name = VIETmisc.7057.a	
+		VIET_huge_prestige_gain_effect = yes
+		stress_impact = {
+			paranoid = miniscule_stress_impact_gain
+		}
+	}
+	
+	option = { # ok
+		name = VIETmisc.7057.b
+		VIET_huge_piety_gain_effect = yes
+		stress_impact = {
+			cynical = miniscule_stress_impact_gain
+		}
+	}
+	
+	option = { # ok
+		name = VIETmisc.7057.c
+		
+		stress_impact = {
+			lazy = miniscule_stress_impact_gain
+		}
+
+		current_travel_plan = {
+			add_travel_plan_modifier = {
+				modifier = VIET_avoiding_dangerous_caves
+	 			years = 1
+			}
+		}
+	}
+
+}
 
 
 
