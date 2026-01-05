@@ -1,6 +1,6 @@
 ﻿############################################################################################################################
 # 
-# Generic Flavor Events - VIETmisc.0000-VIETmisc.0999 reserved
+# Generic Flavor Events - VIETmisc.0000-VIETmisc.0399 reserved
 # Fired from the on_actions for every one, two, five, and ten years depending on rarity
 # 
 # Note to self:

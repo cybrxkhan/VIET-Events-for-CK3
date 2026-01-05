@@ -1027,3 +1027,13 @@ VIET_opinion_wise_elder = {
 	opinion = 10
 	decaying = yes
 }
+VIET_opinion_agrees_basic = {
+	years = 10
+	decaying = yes
+	stacking = yes
+}
+VIET_opinion_disagrees_basic = {
+	years = 10
+	decaying = yes
+	stacking = yes
+}

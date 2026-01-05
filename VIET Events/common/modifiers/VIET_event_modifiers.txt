@@ -4061,6 +4061,20 @@ VIET_increased_studiousness = {
 	stress_loss_mult = -0.15
 }
 
+VIET_patronized_local_church_renovations = {
+	icon = piety_positive
+	monthly_piety = 0.2
+	clergy_opinion = 10
+	christianity_religion_opinion = 10	
+}
+
+VIET_irritated_eyes = {
+	icon = mask_negative
+	health = -0.1
+	prowess = -1
+	stress_gain_mult = 0.15
+}
+
 
 
 

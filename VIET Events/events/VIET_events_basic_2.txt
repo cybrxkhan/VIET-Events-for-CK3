@@ -1,0 +1,435 @@
+﻿############################################################################################################################
+# 
+# Basic 2 - Put into a separate file because the original VIET_events_basic was getting too large
+# In fact, it's larger than all except one vanilla event file as of me writing this in January 2026!
+# 
+# Generic Flavor Events - VIETmisc.0400-VIETmisc.0999 reserved
+# Fired from the on_actions for every one, two, five, and ten years depending on rarity
+# 
+# Note to self:
+# 
+# is_available_at_peace_adult = yes <-- use as trigger if needed
+# on_actions also has triggers
+# has_game_rule = VIET_all_events / VIET_serious_events / VIET_balanced_events
+# has_game_rule = VIET_normal_universe_events / VIET_historical_universe_events / VIET_conversion_universe_events
+# 
+# base = miniscule_stress_impact_loss
+# content = minor_stress_impact_loss
+# calm = medium_stress_impact_loss
+# 
+# Animations: idle, chancellor, steward, marshal, spymaster, chaplain, anger, rage, disapproval, disbelief, disgust, fear, sadness, shame, shock, worry, boredom, grief, paranoia, dismissal, flirtation, flirtation_left, love, schadenfreude, stress, happiness, ecstasy, admiration, lunatic (?), scheme, beg, pain, newborn, sick, severelywounded, prisonhouse, prisondungeon, war_attacker, war_defender, war_over_tie, war_over_win, war_over_loss, pregnant, personality_honorable, personality_dishonorable, personality_bold, personality_coward, personality_greedy, personality_content, personality_vengeful, personality_forgiving, personality_rational, personality_irrational, personality_compassionate, personality_callous, personality_zealous, personality_cynical
+# 
+# 
+# ##### GRAND LIST OF EVENTS #####
+# 
+# 0400-04xx		Strawberries
+# 
+############################################################################################################################
+
+namespace = VIETmisc
+
+##################################################################
+# 0400-04XX Strawberries
+##################################################################
+
+# Local woman accuses another of throwing strawberries at her while she was pregnant
+VIETmisc.0400 = {
+	type = character_event
+	title = VIETmisc.0400.t
+	desc = VIETmisc.0400.desc
+	theme = VIET_theme_small_town
+
+
+	right_portrait = {
+		character = root
+		animation = boredom
+	}
+
+	trigger = {	
+		has_game_rule = VIET_normal_universe_events
+		capital_province = {
+			VIET_is_in_wild_strawberry_region_trigger = yes
+		}	
+		# This appears to be a medieval (Western?) European superstition
+		culture_has_european_heritage_pillar_trigger = yes
+	}
+	
+	weight_multiplier = {
+		base = 1
+		modifier = {
+			add = 0.2
+			has_trait = compassionate
+		}
+		modifier = {
+			add = -0.2
+			has_trait = callous
+		}
+		modifier = {
+			add = 0.2
+			has_trait = just
+		}
+		modifier = {
+			add = -0.2
+			has_trait = arbitrary
+		}
+		modifier = {
+			add = 0.2
+			has_trait = patient
+		}
+		modifier = {
+			add = -0.2
+			has_trait = impatient
+		}
+	}
+	
+	option = { # Support the mother
+		name = VIETmisc.0400.a
+		add_character_modifier = {
+			modifier = VIET_sympathetic_to_mothers
+			years = 5
+		}
+	}	
+	
+	option = { # Support the other woman
+		name = VIETmisc.0400.b
+		add_character_modifier = {
+			modifier = VIET_suspicious_of_hystical_women
+			years = 5
+		}
+	}	
+	
+	option = { # GTFO
+		name = VIETmisc.0400.c
+		stress_impact = {
+			just = miniscule_stress_impact_gain
+			patient = miniscule_stress_impact_gain
+			calm = miniscule_stress_impact_gain
+		}
+	}	
+
+
+	after = {		
+		if = {
+			limit = {
+				has_game_rule = VIET_historical_context_on
+			}
+			custom_tooltip = VIETmisc.0400.info
+		}
+	}
+
+}
+
+
+
+# Inspecting a church under construction with chaplain, and seeing the strawberries being drawn everywhere
+VIETmisc.0401 = {
+	type = character_event
+	title = VIETmisc.0401.t
+	desc = VIETmisc.0401.desc
+	theme = VIET_theme_small_town
+
+
+	left_portrait = {
+		character = root
+		animation = personality_zealous
+	}
+	
+	right_portrait = {
+		character = scope:chaplain
+		animation = storyteller
+	}
+
+	trigger = {	
+		has_game_rule = VIET_normal_universe_events
+		exists = cp:councillor_court_chaplain
+		cp:councillor_court_chaplain = {
+			is_available_ai_adult = yes
+			religion = religion:christianity_religion
+		}
+		religion = religion:christianity_religion
+	}
+	
+	weight_multiplier = {
+		base = 1
+		modifier = {
+			add = 0.2
+			has_trait = zealous
+		}
+		modifier = {
+			add = -0.2
+			has_trait = cynical
+		}
+		modifier = {
+			add = 0.2
+			has_trait = gregarious
+		}
+		modifier = {
+			add = -0.2
+			has_trait = shy
+		}
+		modifier = {
+			add = 0.2
+			has_trait = diligent
+		}
+		modifier = {
+			add = -0.2
+			has_trait = lazy
+		}
+	}
+	
+	immediate = {
+		cp:councillor_court_chaplain = {
+			save_scope_as = chaplain
+		}	
+	}
+
+	option = { # like it
+		name = VIETmisc.0401.a
+		VIET_medium_prestige_gain_effect = yes
+		scope:chaplain = {			
+			add_opinion = {
+				modifier = pleased_opinion
+				target = root
+				opinion = 10
+			}				
+		}
+		stress_impact = {
+			zealous = miniscule_stress_impact_loss
+			humble = miniscule_stress_impact_loss
+		}
+	}	
+
+	option = { # don't like it
+		name = VIETmisc.0401.a
+		VIET_medium_piety_gain_effect = yes
+		scope:chaplain = {			
+			add_opinion = {
+				modifier = disappointed_opinion
+				opinion = -10
+				target = root
+			}				
+		}
+		stress_impact = {
+			honest = miniscule_stress_impact_loss
+			temperate = miniscule_stress_impact_loss
+		}
+	}	
+
+
+	after = {		
+		if = {
+			limit = {
+				has_game_rule = VIET_historical_context_on
+			}
+			custom_tooltip = VIETmisc.0401.info
+		}
+	}
+
+}
+
+
+
+# Physician suggests a salve made out of strawberries and pepper for irritated eyes
+VIETmisc.0402 = {
+	type = character_event
+	title = VIETmisc.0402.t
+	desc = VIETmisc.0402.desc
+	theme = physical_health
+
+
+	left_portrait = {
+		character = root
+		animation = thinking
+	}
+	
+	right_portrait = {
+		character = scope:physician
+		animation = physician
+	}
+	
+	trigger = {
+		court_physician_available_trigger = yes
+		capital_province = {
+			VIET_is_in_wild_strawberry_region_trigger = yes
+		}	
+	}
+	
+	weight_multiplier = {
+		base = 1
+		modifier = {
+			add = 0.2
+			has_trait = zealous
+		}
+		modifier = {
+			add = -0.2
+			has_trait = cynical
+		}
+		modifier = {
+			add = 0.2
+			has_trait = gregarious
+		}
+		modifier = {
+			add = -0.2
+			has_trait = shy
+		}
+		modifier = {
+			add = 0.2
+			has_trait = diligent
+		}
+		modifier = {
+			add = -0.2
+			has_trait = lazy
+		}
+	}
+	
+	immediate = {
+		save_court_physician_as_effect = { SCOPE_NAME = physician }
+	}
+
+	option = { # Ok
+		name = VIETmisc.0402.a
+		trigger = {
+			OR = {
+				gold >= 25
+				is_ai = no
+			}
+		}
+		remove_short_term_gold = 25
+		stress_impact = {
+			greedy = miniscule_stress_impact_gain
+		}
+	}	
+
+	option = { # Ok
+		name = VIETmisc.0402.b	
+		add_character_modifier = {
+			modifier = VIET_irritated_eyes
+			years = 10
+		}			
+		stress_impact = {
+			diligent = miniscule_stress_impact_gain
+		}
+	}	
+
+
+	after = {		
+		if = {
+			limit = {
+				has_game_rule = VIET_historical_context_on
+			}
+			custom_tooltip = VIETmisc.0402.info
+		}
+	}
+
+}
+
+
+# Physician says you need to put more sugar on strawberries for your health
+VIETmisc.0403 = {
+	type = character_event
+	title = VIETmisc.0403.t
+	desc = VIETmisc.0403.desc
+	theme = feast_activity
+
+
+	left_portrait = {
+		character = root
+		animation = drink_goblet
+	}
+	
+	right_portrait = {
+		character = scope:physician
+		animation = disapproval
+	}
+	
+	trigger = {
+		court_physician_available_trigger = yes
+		capital_province = {
+			VIET_is_in_wild_strawberry_region_trigger = yes
+		}
+	}
+	
+	weight_multiplier = {
+		base = 1
+		modifier = {
+			add = 0.2
+			has_trait = zealous
+		}
+		modifier = {
+			add = -0.2
+			has_trait = cynical
+		}
+		modifier = {
+			add = 0.2
+			has_trait = gregarious
+		}
+		modifier = {
+			add = -0.2
+			has_trait = shy
+		}
+		modifier = {
+			add = 0.2
+			has_trait = diligent
+		}
+		modifier = {
+			add = -0.2
+			has_trait = lazy
+		}
+	}
+	
+	immediate = {
+		save_court_physician_as_effect = { SCOPE_NAME = physician }
+	}
+
+	option = { # Ok
+		name = VIETmisc.0403.a
+		VIET_medium_prestige_loss_effect = yes
+		stress_impact = {
+			temperate = miniscule_stress_impact_gain
+		}
+	}	
+
+	option = { # Ok
+		name = VIETmisc.0403.b
+		scope:physician = {
+			add_opinion = {
+				modifier = disappointed_opinion
+				opinion = -10
+				target = root
+			}
+		}
+		stress_impact = {
+			trusting = miniscule_stress_impact_gain
+			gluttonous = minor_stress_impact_gain
+		}
+	}	
+
+	option = { # Ok
+		name = VIETmisc.0403.c
+		trigger = {
+			learning >= decent_skill_rating			
+		}
+		skill = learning
+		show_as_unavailable = {
+			learning < decent_skill_rating
+		}
+		VIET_medium_prestige_gain_effect = yes
+		add_character_modifier = {
+			modifier = VIET_impressed_others_with_knowledge
+			days = 365
+		}	
+	}	
+
+
+	after = {		
+		if = {
+			limit = {
+				has_game_rule = VIET_historical_context_on
+			}
+			custom_tooltip = VIETmisc.0403.info
+		}
+	}
+
+}
+
+

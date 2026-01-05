@@ -329,3 +329,15 @@ VIET_is_military_courtier = {
 		can_be_knight_trigger = yes
 	}
 }
+
+
+VIET_is_in_wild_strawberry_region_trigger = {
+	OR = {
+		geographical_region = world_europe
+		geographical_region = world_asia_minor
+		geographical_region = world_steppe_west
+		geographical_region = world_steppe_central
+	}
+}
+
+

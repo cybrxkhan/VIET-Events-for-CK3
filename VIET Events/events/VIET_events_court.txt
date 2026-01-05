@@ -25,6 +25,7 @@
 # 6020			Nuts
 # 6021			Word Contest
 # 6022 			Peaches
+# 6023			Strawberries
 # 
 ############################################################################################################################
 
@@ -3567,6 +3568,191 @@ VIETmisc.6022 = {
 			custom_tooltip = VIETmisc.6022.info
 		}
 		scope:courtier = {
+			clear_court_event_participation = yes
+		}
+	}
+
+}
+
+
+##################################################################
+# STRAWBERRIES 6023
+##################################################################
+
+
+# Two Christian patrons argue about whether strawberries in a Virgin Mary painting are scandalous or religiously appropriate
+VIETmisc.6023 = {
+	type = court_event
+	title = VIETmisc.6023.t
+	desc = VIETmisc.6023.desc
+
+	theme = realm
+
+	cooldown = { years = 5 }
+
+	court_scene = {
+		button_position_character = root
+		roles = {
+			scope:courtier_1 = {
+				group = event_group
+				animation = disapproval
+			}
+			scope:courtier_1 = {
+				group = event_group
+				animation = dismissal
+			}
+			root = {
+				group = event_group
+				animation = boredom
+			}
+		}
+	}
+
+		
+	trigger = {
+		has_game_rule = VIET_normal_universe_events
+		religion = religion:christianity_religion	
+		OR = {
+			any_vassal = {
+				is_available_ai_adult = yes
+				has_court_event_flag = no
+				faith = root.faith
+				NOT = { has_trait = cynical	}
+				count >= 2
+			}
+			any_courtier = {
+				is_available_ai_adult = yes
+				has_court_event_flag = no
+				faith = root.faith
+				NOT = { has_trait = cynical	}
+				count >= 2
+			}
+		}
+	}
+	
+	immediate = {
+		every_vassal = {
+			limit = {
+				is_available_ai_adult = yes
+				has_court_event_flag = no
+				stewardship >= decent_skill_rating
+				NOT = { has_trait = cynical	}
+			}
+			add_to_list = candidates
+		}
+		every_courtier = {
+			limit = {
+				is_available_ai_adult = yes
+				has_court_event_flag = no
+				stewardship >= decent_skill_rating
+				NOT = { has_trait = cynical	}
+			}
+			add_to_list = candidates
+		}
+				
+		random_in_list = {
+			list = courtier_candidates
+			save_scope_as = courtier_1
+		}
+		random_in_list = {
+			list = courtier_candidates
+			limit = {
+				exists = scope:courtier_1
+				NOT = { this = scope:courtier_1 }
+			}
+			save_scope_as = courtier_2
+		}
+		scope:courtier_1 = {
+			add_opinion = {
+				modifier = VIET_opinion_disagrees_basic
+				opinion = -10
+				target = scope:courtier_2
+			}
+			reverse_add_opinion = {
+				modifier = VIET_opinion_disagrees_basic
+				opinion = -10
+				target = scope:courtier_2
+			}			
+			VIET_massive_piety_gain_effect = yes
+			add_character_modifier = {
+				modifier = VIET_patronized_local_church_renovations
+				years = 10
+			}
+		}
+		scope:courtier_2 = {
+			VIET_massive_piety_gain_effect = yes
+			add_character_modifier = {
+				modifier = VIET_patronized_local_church_renovations
+				years = 10
+			}
+		}
+	}
+
+	# It's too scandalous
+	option = {
+		name = VIETmisc.6023.a
+		VIET_medium_piety_gain_effect = yes
+		scope:courtier_1 = {
+			add_opinion = {
+				modifier = VIET_opinion_agrees_basic
+				opinion = 10
+				target = root
+			}
+		}
+		scope:courtier_2 = {
+			add_opinion = {
+				modifier = VIET_opinion_disagrees_basic
+				opinion = -10
+				target = root
+			}
+		}
+	}
+
+	# Strawberries are fine
+	option = {
+		name = VIETmisc.6022.b
+		VIET_medium_prestige_gain_effect = yes
+		scope:courtier_2 = {
+			add_opinion = {
+				modifier = VIET_opinion_agrees_basic
+				opinion = 10
+				target = root
+			}
+		}
+		scope:courtier_1 = {
+			add_opinion = {
+				modifier = VIET_opinion_disagrees_basic
+				opinion = -10
+				target = root
+			}
+		}
+	}
+
+	# I don't care
+	option = {
+		name = VIETmisc.6022.c
+		#VIET_medium_prestige_gain_effect = yes
+		scope:courtier_2 = {
+			add_opinion = {
+				target = root
+				modifier = annoyed_opinion
+				opinion = -5
+			}
+		}
+		scope:courtier_1 = {
+			add_opinion = {
+				target = root
+				modifier = annoyed_opinion
+				opinion = -5
+			}
+		}
+	}
+
+	after = {		
+		scope:courtier_1 = {
+			clear_court_event_participation = yes
+		}
+		scope:courtier_2 = {
 			clear_court_event_participation = yes
 		}
 	}
