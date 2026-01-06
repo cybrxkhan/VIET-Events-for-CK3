@@ -44,6 +44,7 @@
 # 3069			Peaches
 # 3070			Councilor
 # 3071-3072		Event Backgrounds
+# 3073-3074		Strawberries
 # 
 ############################################################################################################################
 
@@ -7311,6 +7312,7 @@ VIETmisc.3070 = {
 VIETmisc.3071 = {
 	type = character_event
 	title = VIETmisc.3071.t
+	window = big_event_window
 	desc = VIETmisc.3071.desc
 	theme = unfriendly
 	override_background = bp2_university
@@ -7362,7 +7364,7 @@ VIETmisc.3071 = {
 		name = VIETmisc.3071.a
 		VIET_huge_prestige_loss_effect = yes
 		scope:county = {
-			add_character_modifier = {
+			add_county_modifier = {
 				modifier = VIET_tensions_between_locals_and_students
 				years = 10
 			}
@@ -7380,7 +7382,7 @@ VIETmisc.3071 = {
 		name = VIETmisc.3071.b
 		add_gold = 50
 		scope:county = {
-			add_character_modifier = {
+			add_county_modifier = {
 				modifier = VIET_university_fined
 				years = 10
 			}
@@ -7398,7 +7400,7 @@ VIETmisc.3071 = {
 		add_gold = 50
 		VIET_huge_piety_loss_effect = yes
 		scope:county = {
-			add_character_modifier = {
+			add_county_modifier = {
 				modifier = VIET_university_punished
 				years = 10
 			}
@@ -7427,7 +7429,7 @@ VIETmisc.3071 = {
 		remove_short_term_gold = 25
 		VIET_huge_prestige_gain_effect = yes
 		scope:county = {
-			add_character_modifier = {
+			add_county_modifier = {
 				modifier = VIET_university_restrained
 				years = 10
 			}
@@ -7553,3 +7555,239 @@ VIETmisc.3072 = {
 	}
 
 }
+
+
+
+
+##################################################################
+# STRAWBERRIES 3073-3074
+##################################################################
+
+
+# Asian region becomes known for its bayberries
+VIETmisc.3073 = {
+	type = character_event
+	title = VIETmisc.3073.t
+	desc = VIETmisc.3073.desc
+	theme = VIET_theme_skyrim_forest
+	
+	right_portrait = {
+		character = root
+		animation = happiness
+	}
+
+	trigger = {
+		any_held_title = {
+			tier = tier_county
+			is_landless_type_title = no
+			any_county_province = {
+				OR = {
+					terrain = farmlands
+					terrain = hills
+					terrain = mountains
+					terrain = forest
+					terrain = wetlands
+					terrain = floodplains
+					terrain = terraced_hills
+				}			
+			}
+			any_county_province = {
+				OR = {
+					geographical_region = world_asia_china
+					geographical_region = world_asia_japan
+					geographical_region = world_asia_korea
+					geographical_region = world_asia_philippines
+					geographical_region = custom_viet_lands
+				}		
+			}
+		}	
+	}
+	
+    weight_multiplier = {
+        base = 0
+		modifier = {
+			add = {
+				every_held_title = {
+					limit = {
+						tier = tier_county					
+						is_landless_type_title = no
+					}
+					add = 1
+				}
+			}		
+		}
+    }
+	
+	immediate = {
+		random_held_title = {
+			limit = {
+				tier = tier_county					
+				is_landless_type_title = no
+				any_county_province = {
+					OR = {
+						terrain = farmlands
+						terrain = hills
+						terrain = mountains
+						terrain = forest
+						terrain = wetlands
+						terrain = floodplains
+						terrain = terraced_hills
+					}			
+				}
+				any_county_province = {
+					OR = {
+						geographical_region = world_asia_china
+						geographical_region = world_asia_japan
+						geographical_region = world_asia_korea
+						geographical_region = world_asia_philippines
+						geographical_region = custom_viet_lands
+					}		
+				}
+			}	
+			save_scope_as = county
+		}
+		scope:county = {
+			random_list = {
+				10 = {
+					add_county_modifier = {
+						modifier = VIET_bayberries_county
+						years = 10
+					}
+				}
+				10 = {
+					add_county_modifier = {
+						modifier = VIET_bayberries_county
+						years = 15
+					}
+				}
+				10 = {
+					add_county_modifier = {
+						modifier = VIET_bayberries_county
+						years = 20
+					}
+				}
+				10 = {
+					add_county_modifier = {
+						modifier = VIET_bayberries_county
+						years = 25
+					}
+				}
+			}
+		}
+	}
+
+	# Ok
+	option = {
+		name = VIETmisc.3073.a
+	}
+
+	after = {		
+		if = {
+			limit = {
+				has_game_rule = VIET_historical_context_on
+			}
+			custom_tooltip = VIETmisc.3073.info
+		}
+	}
+
+
+}
+
+
+
+# European region becomes known for its (wild) strawberries
+VIETmisc.3074 = {
+	type = character_event
+	title = VIETmisc.3074.t
+	desc = VIETmisc.3074.desc
+	theme = VIET_theme_tuscan_country
+	
+	right_portrait = {
+		character = root
+		animation = personality_content
+	}
+
+	trigger = {
+		any_held_title = {
+			tier = tier_county
+			is_landless_type_title = no
+			any_county_province = {
+				VIET_is_in_wild_strawberry_region_trigger = yes	
+			}
+		}	
+	}
+	
+    weight_multiplier = {
+        base = 0
+		modifier = {
+			add = {
+				every_held_title = {
+					limit = {
+						tier = tier_county					
+						is_landless_type_title = no
+					}
+					add = 1
+				}
+			}		
+		}
+    }
+	
+	immediate = {
+		random_held_title = {
+			limit = {
+				tier = tier_county					
+				is_landless_type_title = no
+				any_county_province = {
+					VIET_is_in_wild_strawberry_region_trigger = yes	
+				}
+			}	
+			save_scope_as = county
+		}
+		scope:county = {
+			random_list = {
+				10 = {
+					add_county_modifier = {
+						modifier = VIET_strawberries_county
+						years = 5
+					}
+				}
+				10 = {
+					add_county_modifier = {
+						modifier = VIET_strawberries_county
+						years = 10
+					}
+				}
+				10 = {
+					add_county_modifier = {
+						modifier = VIET_strawberries_county
+						years = 15
+					}
+				}
+				10 = {
+					add_county_modifier = {
+						modifier = VIET_strawberries_county
+						years = 20
+					}
+				}
+			}
+		}
+	}
+
+	# Ok
+	option = {
+		name = VIETmisc.3074.a
+	}
+
+	after = {		
+		if = {
+			limit = {
+				has_game_rule = VIET_historical_context_on
+			}
+			custom_tooltip = VIETmisc.3074.info
+		}
+	}
+
+
+}
+
+

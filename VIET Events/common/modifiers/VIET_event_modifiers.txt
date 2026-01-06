@@ -4075,6 +4075,62 @@ VIET_irritated_eyes = {
 	stress_gain_mult = 0.15
 }
 
+VIET_interesting_trivia_about_wild_plants = {
+	icon = fertility_positive
+	monthly_stewardship_lifestyle_xp_gain_mult = 0.1
+	monthly_learning_lifestyle_xp_gain_mult = 0.1
+}
+
+VIET_ate_delicious_strawberries = {
+	icon = food_positive
+	stress_loss_mult = 0.05
+	monthly_prestige = 0.1
+}
+
+VIET_expert_strawberry_gatherers = {
+	icon = food_positive
+	diplomacy = 1
+	monthly_court_grandeur_change_add = 0.1	
+	stress_loss_mult = 0.1
+	monthly_prestige = 0.1
+}
+
+VIET_potential_strawberry_gardens = {
+	icon = fertility_positive
+}
+
+VIET_famous_strawberry_gardens = {
+	icon = fertility_positive
+	development_growth = 0.1
+	tax_mult = 0.02
+}
+
+VIET_harvested_strawberries_ruler = {
+	icon = fertility_positive
+	diplomacy = 1
+	monthly_court_grandeur_change_add = 0.1
+	stress_loss_mult = 0.1
+	monthly_prestige = 0.2	
+}
+
+VIET_harvested_strawberries_adventurer = {
+	icon = fertility_positive
+	diplomacy = 1
+	courtier_opinion = 10
+	stress_loss_mult = 0.1
+	monthly_prestige = 0.1	
+}
+
+VIET_sympathetic_to_mothers = {
+	icon = love_positive
+	diplomacy = 1	
+}
+
+VIET_suspicious_of_hystical_women = {
+	icon = intrigue_positive
+	intrigue = 1	
+}
+
 
 
 

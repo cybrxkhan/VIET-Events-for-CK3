@@ -90,3 +90,38 @@ VIET_trigger_qi_ma_learning_effect = {
 	}
 }
 
+VIET_create_strawberry_gardens_effect = {	
+	VIET_massive_prestige_gain_effect = yes
+	capital_county = {
+		save_scope_as = capital
+		if = {
+			limit = {
+				has_county_modifier = VIET_potential_strawberry_gardens
+			}
+			remove_county_modifier = VIET_potential_strawberry_gardens
+		}
+		add_county_modifier = {
+			modifier = VIET_famous_strawberry_gardens
+			years = 50
+		}
+	}
+}
+
+VIET_harvest_strawberries_ruler_effect = {	
+	VIET_medium_prestige_gain_effect = yes
+	add_character_modifier = {
+		modifier = VIET_harvested_strawberries_ruler
+		years = 10
+	}
+}
+
+VIET_harvest_strawberries_adventurer_effect = {	
+	domicile ?= { change_provisions = medium_provisions_gain }
+	add_character_modifier = {
+		modifier = VIET_harvested_strawberries_adventurer
+		years = 10
+	}
+}
+
+
+

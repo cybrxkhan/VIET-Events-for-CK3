@@ -22,14 +22,14 @@
 # 
 # ##### GRAND LIST OF EVENTS #####
 # 
-# 0400-04xx		Strawberries
+# 0400-0406		Strawberries
 # 
 ############################################################################################################################
 
 namespace = VIETmisc
 
 ##################################################################
-# 0400-04XX Strawberries
+# 0400-0406 Strawberries
 ##################################################################
 
 # Local woman accuses another of throwing strawberries at her while she was pregnant
@@ -126,7 +126,8 @@ VIETmisc.0401 = {
 	type = character_event
 	title = VIETmisc.0401.t
 	desc = VIETmisc.0401.desc
-	theme = VIET_theme_small_town
+	theme = faith
+	override_background = { reference = VIET_background_small_town }
 
 
 	left_portrait = {
@@ -200,7 +201,7 @@ VIETmisc.0401 = {
 	}	
 
 	option = { # don't like it
-		name = VIETmisc.0401.a
+		name = VIETmisc.0401.b
 		VIET_medium_piety_gain_effect = yes
 		scope:chaplain = {			
 			add_opinion = {
@@ -239,7 +240,7 @@ VIETmisc.0402 = {
 
 	left_portrait = {
 		character = root
-		animation = thinking
+		animation = stress
 	}
 	
 	right_portrait = {
@@ -378,12 +379,13 @@ VIETmisc.0403 = {
 	}
 	
 	immediate = {
+		has_game_rule = VIET_normal_universe_events
 		save_court_physician_as_effect = { SCOPE_NAME = physician }
 	}
 
 	option = { # Ok
 		name = VIETmisc.0403.a
-		VIET_medium_prestige_loss_effect = yes
+		VIET_large_prestige_loss_effect = yes
 		stress_impact = {
 			temperate = miniscule_stress_impact_gain
 		}
@@ -406,6 +408,18 @@ VIETmisc.0403 = {
 
 	option = { # Ok
 		name = VIETmisc.0403.c
+		VIET_small_prestige_loss_effect = yes
+		scope:physician = {
+			add_opinion = {
+				target = root
+				modifier = amused_opinion
+				opinion = 5
+			}
+		}
+	}	
+
+	option = { # Ok
+		name = VIETmisc.0403.d
 		trigger = {
 			learning >= decent_skill_rating			
 		}
@@ -427,6 +441,321 @@ VIETmisc.0403 = {
 				has_game_rule = VIET_historical_context_on
 			}
 			custom_tooltip = VIETmisc.0403.info
+		}
+	}
+
+}
+
+
+
+
+# Christian chaplain gives lecture about the religious symbolism of strawberries
+VIETmisc.0404 = {
+	type = character_event
+	title = VIETmisc.0404.t
+	desc = VIETmisc.0404.desc
+	theme = faith
+
+
+	left_portrait = {
+		character = root
+		triggered_animation = {
+			trigger = {
+				OR = {
+					has_trait = cynical
+					has_trait = arrogant
+					has_trait = callous
+				}
+				NOT = { has_trait = zealous }
+			}
+			animation = boredom
+		}
+		animation = personality_zealous
+	}
+	
+	right_portrait = {
+		character = scope:chaplain
+		animation = storyteller
+	}
+	
+	trigger = {
+		religion = religion:christianity_religion
+		exists = cp:councillor_court_chaplain
+		cp:councillor_court_chaplain = {
+			religion = religion:christianity_religion
+			is_available_healthy_ai_adult = yes
+			OR = {
+				diplomacy >= mediocre_skill_rating
+				learning >= mediocre_skill_rating
+			}
+		}
+		culture_has_european_heritage_pillar_trigger = yes
+	}
+	
+	weight_multiplier = {
+		base = 1
+		modifier = {
+			add = 0.2
+			has_trait = zealous
+		}
+		modifier = {
+			add = -0.2
+			has_trait = cynical
+		}
+		modifier = {
+			add = 0.2
+			has_trait = patient
+		}
+		modifier = {
+			add = -0.2
+			has_trait = impatient
+		}
+		modifier = {
+			add = 0.2
+			has_trait = diligent
+		}
+		modifier = {
+			add = -0.2
+			has_trait = lazy
+		}
+	}
+	
+	immediate = {
+		cp:councillor_court_chaplain = {
+			save_scope_as = chaplain
+		}	
+	}
+
+	option = { # Ok
+		name = VIETmisc.0404.a
+		VIET_small_piety_gain_effect = yes
+		stress_impact = {
+			cynical = miniscule_stress_impact_gain
+		}	
+	}	
+
+	option = { # Ok
+		name = VIETmisc.0404.b
+		VIET_small_prestige_gain_effect = yes
+		stress_impact = {
+			temperate = miniscule_stress_impact_gain
+		}	
+	}	
+
+}
+
+
+
+# Physician recommends a tonic made of the Strawberry Tree
+VIETmisc.0405 = {
+	type = character_event
+	title = VIETmisc.0405.t
+	desc = VIETmisc.0405.desc
+	theme = physical_health
+	override_background = { reference = bp1_kitchen_western }	
+	#override_icon = { reference = "gfx/interface/icons/event_types/type_medicine.dds" }
+
+	left_portrait = root
+	
+	right_portrait = {
+		character = scope:physician
+		animation = throne_room_conversation_3
+	}
+	
+	trigger = {
+		has_game_rule = VIET_normal_universe_events
+		court_physician_available_trigger = yes
+		capital_province = {
+			OR = {
+				geographical_region = world_europe_west_iberia
+				geographical_region = world_asia_minor
+				geographical_region = world_europe_south_italy
+				geographical_region = world_africa_north_west
+				geographical_region = custom_south_francia
+				geographical_region = world_europe_south_east
+				geographical_region = custom_ireland
+			}
+		}
+	}
+
+	weight_multiplier = {
+		base = 1
+		modifier = {
+			add = 0.2
+			has_trait = fickle
+		}
+		modifier = {
+			add = -0.2
+			has_trait = stubborn
+		}
+		modifier = {
+			add = 0.2
+			has_trait = temperate
+		}
+		modifier = {
+			add = -0.2
+			has_trait = gluttonous
+		}
+		modifier = {
+			add = 0.2
+			has_trait = diligent
+		}
+		modifier = {
+			add = -0.2
+			has_trait = lazy
+		}
+	}
+	
+	immediate = {
+		save_court_physician_as_effect = { SCOPE_NAME = physician }
+	}
+
+	option = { # Ok
+		name = VIETmisc.0405.a
+		trigger = {
+			OR = {
+				gold >= 25
+				is_ai = no
+			}
+		}
+		remove_short_term_gold = 25
+		add_character_modifier = {
+			modifier = VIET_strawberry_tree_tonic
+			years = 10
+		}	
+		scope:physician = {
+			add_opinion = {
+				target = root
+				modifier = VIET_opinion_listened_to_my_advice
+			}
+			reverse_add_opinion = {
+				target = root
+				modifier = VIET_opinion_good_advice
+			}
+		}	
+		stress_impact = {
+			greedy = miniscule_stress_impact_gain
+		}
+	}	
+
+	option = { # Ok
+		name = VIETmisc.0405.b	
+		scope:physician = {
+			add_opinion = {
+				modifier = disappointed_opinion
+				opinion = -10
+				target = root
+			}
+		}	
+		stress_impact = {
+			diligent = miniscule_stress_impact_gain
+		}
+	}	
+
+	after = {		
+		if = {
+			limit = {
+				has_game_rule = VIET_historical_context_on
+			}
+			custom_tooltip = VIETmisc.0405.info
+		}
+	}
+
+}
+
+
+
+
+# You realized strawberry trees are found in the Mediterranean... but also Ireland, for some reason
+VIETmisc.0406 = {
+	type = character_event
+	title = VIETmisc.0406.t
+	desc = VIETmisc.0406.desc
+	theme = learning
+	
+	right_portrait = {
+		character = root
+		animation = reading
+	}
+	
+	trigger = {
+		has_game_rule = VIET_normal_universe_events
+		OR = {
+			learning >= average_skill_rating
+			has_trait = education_learning_3
+			has_trait = education_learning_4
+			has_trait = education_learning_5
+			has_trait = scholar
+			has_trait = lifestyle_gardener
+			has_trait = lifestyle_herbalist
+			has_trait = lifestyle_physician			
+		}
+		capital_province = {
+			OR = {
+				geographical_region = world_europe
+				geographical_region = world_asia_minor
+				geographical_region = world_africa_north
+				geographical_region = world_steppe_west
+				geographical_region = world_middle_east_jerusalem
+			}
+		}
+	}
+
+	weight_multiplier = {
+		base = 1
+		modifier = {
+			add = 0.2
+			has_trait = patient
+		}
+		modifier = {
+			add = -0.2
+			has_trait = impatient
+		}
+		modifier = {
+			add = 0.2
+			has_trait = calm
+		}
+		modifier = {
+			add = -0.2
+			has_trait = arbitrary
+		}
+		modifier = {
+			add = 0.2
+			has_trait = diligent
+		}
+		modifier = {
+			add = -0.2
+			has_trait = lazy
+		}
+	}
+
+	option = { # Ok
+		name = VIETmisc.0406.a
+		VIET_tiny_piety_gain_effect = yes
+		stress_impact = {
+			cynical = miniscule_stress_impact_gain
+		}
+	}	
+
+	option = { # Ok
+		name = VIETmisc.0406.b
+		VIET_tiny_prestige_gain_effect = yes
+	}	
+
+	option = { # Ok
+		name = VIETmisc.0406.c
+		stress_impact = {
+			base = miniscule_stress_impact_loss
+			lazy = miniscule_stress_impact_loss
+		}
+	}	
+
+	after = {		
+		if = {
+			limit = {
+				has_game_rule = VIET_historical_context_on
+			}
+			custom_tooltip = VIETmisc.0405.info
 		}
 	}
 

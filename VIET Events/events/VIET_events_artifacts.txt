@@ -33,6 +33,7 @@
 # 5058			Recipe: Dumplings (pierogi!)
 # 5059			Coconut
 # 5060			Oblivion Remaster
+# 5061			Strawberries
 # 
 ############################################################################################################################
 
@@ -9433,6 +9434,211 @@ VIETmisc.5060 = {
 				death = {
 					death_reason = death_vanished
 				}
+			}
+		}
+	}
+	
+}
+
+##################################################################
+# STRAWBERRIES 5061
+##################################################################
+
+# Fruit Preserve/Fruit Jam
+VIETmisc.5061 = {
+	type = character_event
+	title = VIETmisc.5061.t
+	desc = VIETmisc.5061.desc
+	theme = VIET_theme_kitchen_generic
+	
+	right_portrait = {
+		character = root
+		animation = thinking
+	}
+
+	trigger = {
+		is_landed = yes
+	}
+	artifact = { # To display the artifact in the event-window
+        target = scope:VIET_recipe_artifact
+        position = lower_center_portrait
+    }
+
+    weight_multiplier = {
+        base = 1
+		# Reduce spam
+		modifier = {
+			add = -0.9
+			any_character_artifact = {
+				has_variable = VIET_recipe_fruit_preserve_variable
+			}
+		}
+		modifier = {
+			add = 0.2
+			has_trait = gluttonous
+		}
+		modifier = {
+			add = -0.2
+			has_trait = temperate
+		}
+		modifier = {
+			add = 0.2
+			has_trait = gregarious
+		}
+		modifier = {
+			add = -0.2
+			has_trait = shy
+		}
+		modifier = {
+			add = 0.2
+			has_trait = compassionate
+		}
+		modifier = {
+			add = -0.2
+			has_trait = callous
+		}
+    }
+	
+	immediate = {
+		random_list = {
+			60 = {
+				hidden_effect_new_object = {
+					create_artifact = {	
+						name = VIET_recipe_fruit_preserve_name
+						description = VIET_recipe_fruit_preserve_desc
+						type = VIET_recipe
+						visuals = VIET_fruit_preserve
+						quality = 15
+						wealth = 15
+						modifier = artifact_VIET_fruit_preserve_recipe_modifier_1
+						#max_durability = 40
+						decaying = no
+						save_scope_as = VIET_recipe_artifact
+						history = {
+							type = created_before_history
+						}
+					}
+					scope:VIET_recipe_artifact = {
+						set_variable = VIET_recipe_fruit_preserve_variable
+					}
+				}
+			}
+			45 = {
+				hidden_effect_new_object = {
+					create_artifact = {	
+						name = VIET_recipe_fruit_preserve_name
+						description = VIET_recipe_fruit_preserve_desc
+						type = VIET_recipe
+						visuals = VIET_fruit_preserve
+						quality = 30
+						wealth = 30
+						modifier = artifact_VIET_fruit_preserve_recipe_modifier_2
+						#max_durability = 40
+						decaying = no
+						save_scope_as = VIET_recipe_artifact
+						history = {
+							type = created_before_history
+						}
+					}
+					scope:VIET_recipe_artifact = {
+						set_variable = VIET_recipe_fruit_preserve_variable
+					}
+				}
+			}
+			30 = {
+				hidden_effect_new_object = {
+					create_artifact = {	
+						name = VIET_recipe_fruit_preserve_name
+						description = VIET_recipe_fruit_preserve_desc
+						type = VIET_recipe
+						visuals = VIET_fruit_preserve
+						quality = 65
+						wealth = 65
+						modifier = artifact_VIET_fruit_preserve_recipe_modifier_3
+						#max_durability = 40
+						decaying = no
+						save_scope_as = VIET_recipe_artifact
+						history = {
+							type = created_before_history
+						}
+					}
+					scope:VIET_recipe_artifact = {
+						set_variable = VIET_recipe_fruit_preserve_variable
+					}
+				}
+			}
+			15 = {
+				hidden_effect_new_object = {
+					create_artifact = {	
+						name = VIET_recipe_fruit_preserve_name
+						description = VIET_recipe_fruit_preserve_desc
+						type = VIET_recipe
+						visuals = VIET_fruit_preserve
+						quality = 95
+						wealth = 95
+						modifier = artifact_VIET_fruit_preserve_recipe_modifier_4
+						#max_durability = 40
+						decaying = no
+						save_scope_as = VIET_recipe_artifact
+						history = {
+							type = created_before_history
+						}
+					}
+					scope:VIET_recipe_artifact = {
+						set_variable = VIET_recipe_fruit_preserve_variable
+					}
+				}
+			}
+		}
+
+	}
+	
+	option = { # Pay
+		name = VIETmisc.5061.a
+		trigger = {
+			OR = {
+				is_ai = no
+				gold >= 40
+			}
+		}
+		remove_short_term_gold = 40
+		show_as_tooltip = {
+			scope:VIET_recipe_artifact = {
+				set_owner = {
+					target = root
+				}
+			}
+		}
+		stress_impact = {
+			temperate = miniscule_stress_impact_gain
+			greedy = miniscule_stress_impact_gain
+		}
+		ai_chance = {
+			base = 50
+		}
+	}
+	
+	option = { # Ignore
+		name = VIETmisc.5061.b
+		hidden_effect = {
+			destroy_artifact = scope:VIET_recipe_artifact
+		}
+		stress_impact = {
+			gluttonous = minor_stress_impact_gain
+		}
+		ai_chance = {
+			base = 100
+			modifier = {
+				add = 10
+				has_trait = greedy
+			}
+			modifier = {
+				add = 10
+				has_trait = temperate
+			}
+			modifier = {
+				add = 10
+				has_trait = content
 			}
 		}
 	}

@@ -287,9 +287,12 @@
  VIETmisc.5060.b.toast.success:0 "You convince him to work for you now"
  VIETmisc.5060.c:0 "Pah! People say you’re a good salesman? Forget it."
  # Version 1.16.1 Start Here - Note to Translators: please leave this comment here and do not remove it even in your versions of the loc
- VIETmisc.5061.t:0 "xxxxx"
- VIETmisc.5061.desc:0 "xxxxx"
- VIETmisc.5061.a:0 "xxxxx"
+ # Version 1.18.1 Start Here - Note to Translators: please leave this comment here and do not remove it even in your versions of the loc
+ VIETmisc.5061.t:0 "Fruit Preserves"
+ VIETmisc.5061.desc:0 "Fruit preserves are commonly eaten everywhere. But a #italic good#! one? That’s something to be treasured indeed.\n\nA certain village near [ROOT.Char.GetCapitalLocation.GetCounty.GetTitle.GetNameNoTierNoTooltip], however, might have what might be one of the best fruit preserves I’ve ever tasted. They had given me some of these fruit preserves as a gift to me, their [ROOT.Char.GetTitleAsNameNoTooltip], and even my cooks were impressed with it.\n\nMy cooks have told me it might be a good idea for us to learn how they make these fruit preserves. There are many methods of preparation, and some are clearly superior to others."
+ VIETmisc.5061.a:0 "Send some cooks to learn from those villagers!"
+ VIETmisc.5061.b:0 "It’s tasty but not worth the trouble."
+ # Version 1.18.2 Start Here - Note to Translators: please leave this comment here and do not remove it even in your versions of the loc
  VIETmisc.5062.t:0 "xxxxx"
  VIETmisc.5062.desc:0 "xxxxx"
  VIETmisc.5062.a:0 "xxxxx"

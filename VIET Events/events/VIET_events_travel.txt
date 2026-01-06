@@ -31,6 +31,7 @@
 # 7053-7054		Peaches
 # 7055-7056		Strange Tales from a Chinese Studio / Liaozhao Zhiyi / 	聊齋誌異
 # 7057-7058		Event Backgrounds
+# 7059-7060		Strawberries
 # 
 ############################################################################################################################
 
@@ -6337,7 +6338,7 @@ VIETmisc.7056 = {
 
 
 ##################################################################
-# 7057-0XXX Backgrounds (events utilizing backgrounds I haven't used a lot of)
+# 7057-7058 Backgrounds (events utilizing backgrounds I haven't used a lot of)
 ##################################################################
 
 # fp3_cave
@@ -6345,6 +6346,7 @@ VIETmisc.7056 = {
 VIETmisc.7057 = {
 	type = character_event
 	title = VIETmisc.7057.t
+	window = big_event_window
 	desc = VIETmisc.7057.desc
 	theme = travel
 	override_background = { reference = fp3_cave }
@@ -6447,6 +6449,7 @@ VIETmisc.7057 = {
 VIETmisc.7058 = {
 	type = character_event
 	title = VIETmisc.7058.t
+	window = big_event_window
 	desc = VIETmisc.7058.desc
 	theme = travel_intrigue
 	override_background = { reference = ce1_condemned_village }
@@ -6455,6 +6458,7 @@ VIETmisc.7058 = {
 	right_portrait = {
 		character = root
 		animation = holding_staff
+		camera = camera_event_left_pointing_right
 	}	
 
 	trigger = {
@@ -6546,4 +6550,242 @@ VIETmisc.7058 = {
 }
 
 
+
+##################################################################
+# 7059-7060 STRAWBERRIES
+##################################################################
+
+# Pass by the Barren Strawberry plant, which resembles the strawberry but isn't the same thing
+VIETmisc.7059 = {
+	type = character_event
+	title = VIETmisc.7059.t
+	desc = VIETmisc.7059.desc
+	theme = travel_learning
+	override_background = { reference = VIET_background_tuscan_country }
+
+	
+	left_portrait = {
+		character = root
+		animation = personality_greedy
+	}	
+
+	
+	right_portrait = {
+		character = scope:traveler
+		animation = personality_cynical
+	}
+
+	trigger = {
+		is_location_valid_for_travel_event_on_land = yes
+		current_travel_plan = {
+			any_entourage_character = {
+				is_available_travelling = yes
+				OR = {
+					learning >= decent_skill_rating
+					has_trait = lifestyle_herbalist
+					has_trait = lifestyle_physician
+					has_trait = lifestyle_gardener
+					has_trait = lifestyle_traveler
+				}
+			}
+		}
+		location = {
+			VIET_is_in_wild_strawberry_region_trigger = yes
+		}
+	}
+	
+	weight_multiplier = {
+		base = 1
+		modifier = {
+			add = 0.2
+			has_trait = gluttonous
+		}
+		modifier = {
+			add = -0.2
+			has_trait = temperate
+		}
+		modifier = {
+			add = 0.2
+			has_trait = honest
+		}
+		modifier = {
+			add = -0.2
+			has_trait = deceitful
+		}
+		modifier = {
+			add = 0.2
+			has_trait = fickle
+		}
+		modifier = {
+			add = -0.2
+			has_trait = stubborn
+		}
+	}
+
+	immediate = {
+		current_travel_plan = {
+			random_entourage_character = {
+				limit = {
+					is_available_travelling = yes
+					OR = {
+						learning >= decent_skill_rating
+						has_trait = lifestyle_herbalist
+						has_trait = lifestyle_physician
+						has_trait = lifestyle_gardener
+						has_trait = lifestyle_traveler
+					}
+				}
+				save_scope_as = traveler
+			}	
+		}	
+		scope:traveler = {
+			add_character_modifier = {
+				modifier = VIET_impressed_others_with_knowledge
+				days = 365
+			}				
+		}
+	}
+	
+	option = { # ok
+		name = VIETmisc.7059.a
+		scope:traveler = {
+			add_opinion = {
+				target = root
+				modifier = VIET_opinion_interesting_conversation
+			}
+			reverse_add_opinion = {
+				target = root
+				modifier = VIET_opinion_interesting_conversation
+			}		
+		}		
+		add_character_modifier = {
+			modifier = VIET_interesting_trivia_about_wild_plants
+			years = 3
+		}
+		stress_impact = {
+			shy = minor_stress_impact_gain
+			arrogant = miniscule_stress_impact_gain
+		}
+	}
+	
+	option = { # ok
+		name = VIETmisc.7059.b	
+		stress_impact = {
+			base = miniscule_stress_impact_loss
+			gluttonous = miniscule_stress_impact_loss
+			lazy = miniscule_stress_impact_loss
+		}
+	}
+
+	after = {		
+		if = {
+			limit = {
+				has_game_rule = VIET_historical_context_on
+			}
+			custom_tooltip = VIETmisc.7059.info
+		}
+	}
+
+}
+
+# Villagers provide some delicious strawberries
+VIETmisc.7060 = {
+	type = character_event
+	title = VIETmisc.7060.t
+	desc = VIETmisc.7060.desc
+	theme = travel_diplomacy
+	override_background = { reference = VIET_background_small_town }
+
+	
+	right_portrait = {
+		character = root
+		animation = admiration
+	}
+
+	trigger = {
+		is_location_valid_for_travel_event_on_land = yes
+		location = {
+			VIET_is_in_wild_strawberry_region_trigger = yes
+		}
+	}
+	
+	weight_multiplier = {
+		base = 1
+		modifier = {
+			add = 0.2
+			has_trait = patient
+		}
+		modifier = {
+			add = -0.2
+			has_trait = impatient
+		}
+		modifier = {
+			add = 0.2
+			has_trait = honest
+		}
+		modifier = {
+			add = -0.2
+			has_trait = deceitful
+		}
+		modifier = {
+			add = 0.2
+			has_trait = trusting
+		}
+		modifier = {
+			add = -0.2
+			has_trait = paranoid
+		}
+	}
+
+	immediate = {
+		stress_impact = {
+			base = miniscule_stress_impact_loss
+			gluttonous = miniscule_stress_impact_loss
+		}		
+	}
+	
+	option = { # ok
+		name = VIETmisc.7060.a	
+	}
+	
+	option = { # ok
+		name = VIETmisc.7060.b	
+		trigger = {
+			OR = {
+				gold >= 10
+				is_ai = no
+			}
+		}
+		remove_short_term_gold = 10
+		add_character_modifier = {
+			modifier = VIET_ate_delicious_strawberries
+			years = 3
+		}
+	}
+	
+	option = { # ok
+		name = VIETmisc.7060.c	
+		trigger = {
+			OR = {
+				gold >= 30
+				is_ai = no
+			}
+		}
+		remove_short_term_gold = 30
+		add_character_modifier = {
+			modifier = VIET_expert_strawberry_gatherers
+			years = 10
+		}
+	}
+
+	after = {		
+		if = {
+			limit = {
+				has_game_rule = VIET_historical_context_on
+			}
+			custom_tooltip = VIET_decision_strawberry_garden_context_tooltip
+		}
+	}
+
+}
 

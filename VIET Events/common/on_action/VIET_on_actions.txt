@@ -515,6 +515,12 @@ VIET_events_yearly_pulse = {
 		# Councilor
 		100 = VIETmisc.0387		# As steward, you get tired of having to do math
 		100 = VIETmisc.0389		# As chaplain, local priests are not cooperative
+		# Backgrounds
+		100 = VIETmisc.0396		# Have a nightmare about the imperial exams
+		# Strawberries
+		100 = VIETmisc.0402		# Physician suggests a salve made out of strawberries and pepper for irritated eyes
+		100 = VIETmisc.0404		# Christian chaplain gives lecture about the religious symbolism of strawberries
+		100 = VIETmisc.0405		# Physician recommends a tonic made of the Strawberry Tree
 	}
 }
 
@@ -942,6 +948,14 @@ VIET_events_tri_yearly_pulse = {
 
 		# Strange Tales from a Chinese Studio
 		100 = VIETmisc.0393 	# Dragon Dormant (蛰龙): Encounter a mysterious dragon from a book - a Qing Dynasty depiction of this story is the picture of cybrxkhan's profile in some places!
+		
+		# Backgrounds
+		100 = VIETmisc.0395 	# Don't eat fruits like strawberries in a weird manner or else people will judge you
+
+		# Strawberries
+		100 = VIETmisc.0401 	# Inspecting a church under construction with chaplain, and seeing the strawberries being drawn everywhere
+		100 = VIETmisc.0403		# Physician says you need to put more sugar on strawberries for your health
+		100 = VIETmisc.0406		# You realized strawberry trees are found in the Mediterranean... but also Ireland, for some reason
 	}
 }
 
@@ -1228,6 +1242,11 @@ VIET_events_five_yearly_pulse = {
 		# Strange Tales from a Chinese Studio
 		100 = VIETmisc.0390 	# Silver Above Beauty (沂水秀才): Two fox spirits show a scholar silver, a calligraphy scroll, and themselves
 		100 = VIETmisc.0394 	# Sheep Skin (某公): Person recalls their reincarnation where they were initially condemned to be reborn as a sheep
+		
+		# Backgrounds
+		100 = VIETmisc.0397 	# Child shows interest in a physicians' work
+		# Strawberries
+		100 = VIETmisc.0400 	# Local woman accuses another of throwing strawberries at her while she was pregnant
 
 	}
 }
@@ -1441,6 +1460,8 @@ VIET_events_rare_decisions_pulse = {
 		100 = VIETmisc.2023		# Servants are kidnapped - start the countdown
 		# Crows
 		100 = VIETmisc.2047		# Crows keep following you around for some reason
+		# Strawberries
+		100 = VIETmisc.2082		# Someone suggests strawberry gardens in your capital county
 		
 	}
 }
@@ -1596,8 +1617,10 @@ VIET_events_common_county_pulse = {
 		# Snow
 		100 = VIETmisc.3067 	# Snowfall causes destruction to local buildings and lives
 		100 = VIETmisc.3068 	# Snowmelt in area is even better than normal, allowing for a better harvest
+		# Background
+		100 = VIETmisc.3071 	# Tensions rising between university students and townspeople
 		
-		# 41
+		# 42
     }
 }
 
@@ -1698,8 +1721,11 @@ VIET_events_uncommon_county_pulse = {
 		100 = VIETmisc.3064 	# Forest fires are occuring in a county
 		# Councilor
 		100 = VIETmisc.3070 	# Steward finds a traditional tax loophole that's being abused by local nobles
+		# Strawberries
+		100 = VIETmisc.3073 	# Asian region becomes known for its bayberries
+		100 = VIETmisc.3074 	# European region becomes known for its (wild) strawberries
 		
-		# 33
+		# 35
 		
     }
 }
@@ -1784,7 +1810,10 @@ VIET_events_rare_county_pulse = {
 		# Peaches
 		100 = VIETmisc.3069 	# Legend of a knight/hermit who swore silence to protect his vow of chastity, where a peach tree grew on his grave
 		
-		# 21
+		# Backgrounds
+		100 = VIETmisc.3072 	# Villagers take revenge on bandits, pile their bodies into a massive fire
+		
+		# 22
 		
     }
 }
@@ -1985,7 +2014,10 @@ VIET_events_uncommon_artifact_pulse = {
 		# Coconut
 		100 = VIETmisc.5059		# Coconut Cup - buy one from a merchant?
 		
-		# 26
+		# Strawberries
+		100 = VIETmisc.5061 	# Fruit Preserve/Fruit Jam
+		
+		# 27
 		
     }
 }

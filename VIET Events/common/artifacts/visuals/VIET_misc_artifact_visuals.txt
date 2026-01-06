@@ -58,6 +58,11 @@ VIET_recipe_dumplings = {
 	asset = ep1_western_box_small_basic_01_a_entity	
 }
 
+VIET_fruit_preserve = {
+	icon = "artifact_VIET_recipe_fruit_preserve.dds"
+	asset = ep1_western_box_small_basic_01_a_entity	
+}
+
 
 
 # CLUTTER

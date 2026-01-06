@@ -72,6 +72,10 @@ VIET_court_event_on_actions = {
 		100 = VIETmisc.6021 			# Hullabaloo - character causes a scene at court # otonashikun
 		# Peaches
 		100 = VIETmisc.6022 			# Supporting European peach growers outside the traditional peach growing regions of the Mediterranean
+		
+		# Strawberries
+		100 = VIETmisc.6023 			# Two Christian patrons argue about whether strawberries in a Virgin Mary painting are scandalous or religiously appropriate
+		
 
 		# 23
 

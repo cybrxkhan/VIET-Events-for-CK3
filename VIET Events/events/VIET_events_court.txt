@@ -3597,7 +3597,7 @@ VIETmisc.6023 = {
 				group = event_group
 				animation = disapproval
 			}
-			scope:courtier_1 = {
+			scope:courtier_2 = {
 				group = event_group
 				animation = dismissal
 			}
@@ -3638,7 +3638,7 @@ VIETmisc.6023 = {
 				stewardship >= decent_skill_rating
 				NOT = { has_trait = cynical	}
 			}
-			add_to_list = candidates
+			add_to_list = courtier_candidates
 		}
 		every_courtier = {
 			limit = {
@@ -3647,7 +3647,7 @@ VIETmisc.6023 = {
 				stewardship >= decent_skill_rating
 				NOT = { has_trait = cynical	}
 			}
-			add_to_list = candidates
+			add_to_list = courtier_candidates
 		}
 				
 		random_in_list = {
@@ -3710,7 +3710,7 @@ VIETmisc.6023 = {
 
 	# Strawberries are fine
 	option = {
-		name = VIETmisc.6022.b
+		name = VIETmisc.6023.b
 		VIET_medium_prestige_gain_effect = yes
 		scope:courtier_2 = {
 			add_opinion = {
@@ -3730,7 +3730,7 @@ VIETmisc.6023 = {
 
 	# I don't care
 	option = {
-		name = VIETmisc.6022.c
+		name = VIETmisc.6023.c
 		#VIET_medium_prestige_gain_effect = yes
 		scope:courtier_2 = {
 			add_opinion = {

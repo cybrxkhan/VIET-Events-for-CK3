@@ -39367,6 +39367,9 @@ VIETmisc.0396 = {
 	}	
 
 	immediate = {
+		culture:han = {
+			save_scope_as = chinese
+		}
 		stress_impact = {
 			base = miniscule_stress_impact_gain
 			diligent = miniscule_stress_impact_gain
@@ -39479,6 +39482,13 @@ VIETmisc.0397 = {
 			modifier = VIET_child_obsessed_with_medicine
 			years = 4
 		}
+		scope:child = {
+			progress_towards_friend_effect = {
+				CHARACTER = scope:physician
+				OPINION = 0
+				REASON = VIET_friend_reason_placeholder
+			}			
+		}
 		custom_tooltip = VIETmisc.0397.a.tooltip
 		hidden_effect = {
 			random = {
@@ -39583,16 +39593,19 @@ VIETmisc.0399 = {
 	
 	right_portrait = {
 		character = scope:child
-		animation = reading
+		animation = physician
+	}
+
+	immediate = {
+		scope:child = {
+			show_as_tooltip = {
+				add_trait_force_tooltip = lifestyle_physician
+			}
+		}		
 	}
 	
 	option = { # Ok
 		name = VIETmisc.0399.a
-		scope:child = {
-			show_as_tooltip = {
-				add_trait = lifestyle_physician
-			}
-		}
 	}	
 
 }
