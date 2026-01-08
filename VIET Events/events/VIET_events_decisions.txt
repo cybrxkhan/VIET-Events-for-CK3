@@ -5009,10 +5009,10 @@ VIETmisc.2082 = {
 		}
 		capital_county = {
 			save_scope_as = capital
-			add_county_modifier = {
-				modifier = VIET_potential_strawberry_gardens
-				years = 10
-			}
+			# add_county_modifier = {
+			# 	modifier = VIET_potential_strawberry_gardens
+			# 	years = 20
+			# }
 		}
 	}
 	
@@ -5030,9 +5030,9 @@ VIETmisc.2082 = {
 			gluttonous = miniscule_stress_impact_gain
 			ambitious = miniscule_stress_impact_gain
 		}
-		scope:capital = {
-			remove_county_modifier = VIET_potential_strawberry_gardens
-		}
+		# scope:capital = {
+		# 	remove_county_modifier = VIET_potential_strawberry_gardens
+		# }
 	}
 	
 	option = { # Ok
@@ -5045,6 +5045,12 @@ VIETmisc.2082 = {
 			}
 		}
 		VIET_huge_prestige_loss_effect = yes
+		scope:capital = {
+			add_county_modifier = {
+				modifier = VIET_potential_strawberry_gardens
+				years = 20
+			}
+		}
 		stress_impact = {
 			temperate = miniscule_stress_impact_gain
 			lazy = miniscule_stress_impact_gain
@@ -5102,14 +5108,15 @@ VIETmisc.2084 = {
 	type = character_event
 	title = VIETmisc.2084.t
 	desc = {
+		desc = VIETmisc.2084.desc
 		first_valid = {
 			triggered_desc = {
 				trigger = {
-					is_landless_adventurer = yes
+					government_has_flag = government_is_landless_adventurer
 				}
 				desc = VIETmisc.2084.desc.landless
 			}
-			desc = VIETmisc.2084.desc
+			desc = VIETmisc.2084.desc.landed
 		}
 	}
 	theme = VIET_theme_tuscan_country

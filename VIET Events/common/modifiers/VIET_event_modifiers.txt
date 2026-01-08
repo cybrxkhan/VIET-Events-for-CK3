@@ -2226,7 +2226,7 @@ VIET_thinks_pragmatic_on_love = {
 VIET_new_young_foreign_servant = {
 	icon = mask_positive
 	intrigue = 1
-	learn_language_scheme_phase_duration_add = miniscule_scheme_phase_duration_malus_value
+	learn_language_scheme_phase_duration_add = miniscule_scheme_phase_duration_bonus_value
 }
 VIET_awkward_laughter = {
 	icon = social_positive

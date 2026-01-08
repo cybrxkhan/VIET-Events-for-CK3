@@ -5,7 +5,14 @@ VIET_decision_traveling_baklava_merchant = {
 	decision_group_type = VIET_everyday
 	desc = VIET_decision_traveling_baklava_merchant_desc
 
-	ai_check_interval = 48
+	ai_check_interval_by_tier = {
+		barony = 0
+		county = 48
+		duchy = 36
+		kingdom = 36
+		empire = 36
+		hegemony = 36
+	}
 
 	cooldown = { days = 365 }
 
@@ -60,7 +67,14 @@ VIET_decision_traveling_five_spice_merchant = {
 	decision_group_type = VIET_everyday
 	desc = VIET_decision_traveling_five_spice_merchant_desc
 
-	ai_check_interval = 48
+	ai_check_interval_by_tier = {
+		barony = 0
+		county = 48
+		duchy = 36
+		kingdom = 36
+		empire = 36
+		hegemony = 36
+	}
 
 	cooldown = { days = 365 }
 
@@ -117,7 +131,14 @@ VIET_decision_exorcise_ghost_follower = {
 	decision_group_type = VIET_everyday
 	desc = VIET_decision_exorcise_ghost_follower_desc
 
-	ai_check_interval = 30
+	ai_check_interval_by_tier = {
+		barony = 0
+		county = 48
+		duchy = 36
+		kingdom = 36
+		empire = 36
+		hegemony = 36
+	}
 
 	is_shown = {
 		is_playable_character = yes
@@ -171,7 +192,14 @@ VIET_decision_drink_shadowbanish_wine = {
 	decision_group_type = VIET_rare
 	desc = VIET_decision_drink_shadowbanish_wine_desc
 
-	ai_check_interval = 12
+	ai_check_interval_by_tier = {
+		barony = 0
+		county = 48
+		duchy = 36
+		kingdom = 36
+		empire = 36
+		hegemony = 36
+	}
 
 	is_shown = {
 		is_playable_character = yes
@@ -230,7 +258,14 @@ VIET_decision_destroy_shadowbanish_wine = {
 	decision_group_type = VIET_rare
 	desc = VIET_decision_destroy_shadowbanish_wine_desc
 
-	ai_check_interval = 12
+	ai_check_interval_by_tier = {
+		barony = 0
+		county = 48
+		duchy = 36
+		kingdom = 36
+		empire = 36
+		hegemony = 36
+	}
 
 	is_shown = {
 		is_playable_character = yes
@@ -296,7 +331,14 @@ VIET_decision_unlock_mysterious_chest = {
 	decision_group_type = VIET_everyday
 	desc = VIET_decision_unlock_mysterious_chest_desc
 
-	ai_check_interval = 36
+	ai_check_interval_by_tier = {
+		barony = 0
+		county = 48
+		duchy = 36
+		kingdom = 36
+		empire = 36
+		hegemony = 36
+	}
 
 	is_shown = {
 		is_playable_character = yes
@@ -338,7 +380,14 @@ VIET_decision_hire_belrand = {
 	decision_group_type = VIET_everyday
 	desc = VIET_decision_hire_belrand_desc
 
-	ai_check_interval = 36
+	ai_check_interval_by_tier = {
+		barony = 0
+		county = 48
+		duchy = 36
+		kingdom = 36
+		empire = 36
+		hegemony = 36
+	}
 
 	is_shown = {
 		is_playable_character = yes
@@ -384,7 +433,15 @@ VIET_decision_ransom_kidnapped_servants = {
 	decision_group_type = VIET_rare
 	desc = VIET_decision_ransom_kidnapped_servants_desc
 
-	ai_check_interval = 4 # Due to small timeframe, AI will choose whether to do it immediately
+	# Due to small timeframe, AI will choose whether to do it immediately
+	ai_check_interval_by_tier = {
+		barony = 0
+		county = 4
+		duchy = 4
+		kingdom = 4
+		empire = 4
+		hegemony = 4
+	}
 
 	is_shown = {
 		is_playable_character = yes
@@ -441,7 +498,14 @@ VIET_decision_deal_with_crows = {
 	decision_group_type = VIET_everyday
 	desc = VIET_decision_deal_with_crows_desc
 
-	ai_check_interval = 36
+	ai_check_interval_by_tier = {
+		barony = 0
+		county = 48
+		duchy = 36
+		kingdom = 36
+		empire = 36
+		hegemony = 36
+	}
 
 	is_shown = {
 		is_playable_character = yes
@@ -488,7 +552,14 @@ VIET_decision_feed_the_crows = {
 	decision_group_type = VIET_everyday
 	desc = VIET_decision_feed_the_crows_desc
 
-	ai_check_interval = 36
+	ai_check_interval_by_tier = {
+		barony = 0
+		county = 48
+		duchy = 36
+		kingdom = 36
+		empire = 36
+		hegemony = 36
+	}
 	
 	cooldown = { days = 1825 }
 
@@ -536,7 +607,14 @@ VIET_decision_learn_shorthand_techniques = {
 	decision_group_type = VIET_everyday
 	desc = VIET_decision_learn_shorthand_techniques_desc
 
-	ai_check_interval = 24
+	ai_check_interval_by_tier = {
+		barony = 0
+		county = 48
+		duchy = 36
+		kingdom = 36
+		empire = 36
+		hegemony = 36
+	}
 
 	is_shown = {
 		is_playable_character = yes
@@ -598,7 +676,14 @@ VIET_decision_listen_to_wild_songbirds = {
 	decision_group_type = VIET_everyday
 	desc = VIET_decision_listen_to_wild_songbirds_desc
 
-	ai_check_interval = 36
+	ai_check_interval_by_tier = {
+		barony = 0
+		county = 48
+		duchy = 36
+		kingdom = 36
+		empire = 36
+		hegemony = 36
+	}
 	
 	cooldown = { days = 1825 }
 
@@ -656,7 +741,14 @@ VIET_decision_snow_festival = {
 	decision_group_type = VIET_everyday
 	desc = VIET_decision_snow_festival_desc
 
-	ai_check_interval = 36
+	ai_check_interval_by_tier = {
+		barony = 0
+		county = 48
+		duchy = 36
+		kingdom = 36
+		empire = 36
+		hegemony = 36
+	}
 	
 	#cooldown = { days = 1825 }
 
@@ -697,12 +789,29 @@ VIET_decision_snow_festival = {
 		}
 	}
 
-	cost = {
-		gold = { value = minor_gold_value } # Will depend
-	}
+	cost = { 
+		gold = {
+			value = 0
+			if = {
+				limit = {
+					has_treasury = no
+				}
+				add = minor_gold_value
+			}
+		}
+		treasury = {
+			value = 0
+			if = {
+				limit = {
+					has_treasury = yes
+				}
+				add = minor_treasury_value
+			}
+		}
+	}	
 	
 	ai_potential = {
-		gold > minor_gold_value
+		always = yes
 	}
 
 	ai_will_do = {

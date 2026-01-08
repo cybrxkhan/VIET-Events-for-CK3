@@ -5,7 +5,14 @@ VIET_decision_buy_valuable_medicinal_berries = {
 	decision_group_type = VIET_everyday
 	desc = VIET_decision_buy_valuable_medicinal_berries_desc
 
-	ai_check_interval = 24
+	ai_check_interval_by_tier = {
+		barony = 0
+		county = 48
+		duchy = 36
+		kingdom = 36
+		empire = 36
+		hegemony = 36
+	}
 	
 	cooldown = { days = 3650 }
 
@@ -74,7 +81,14 @@ VIET_decision_employ_renowned_blacksmiths = {
 	decision_group_type = VIET_everyday
 	desc = VIET_decision_employ_renowned_blacksmiths_desc
 
-	ai_check_interval = 24
+	ai_check_interval_by_tier = {
+		barony = 0
+		county = 48
+		duchy = 36
+		kingdom = 36
+		empire = 36
+		hegemony = 36
+	}
 	
 	cooldown = { days = 3650 }
 
@@ -153,12 +167,29 @@ VIET_decision_employ_renowned_blacksmiths = {
 		trigger_event = VIETmisc.2064
 	}
 
-	cost = {
-		gold = { value = medium_gold_value } # Will depend
-	}
+	cost = { 
+		gold = {
+			value = 0
+			if = {
+				limit = {
+					has_treasury = no
+				}
+				add = medium_gold_value
+			}
+		}
+		treasury = {
+			value = 0
+			if = {
+				limit = {
+					has_treasury = yes
+				}
+				add = medium_treasury_value
+			}
+		}
+	}	
 	
 	ai_potential = {
-		gold > medium_gold_value
+		always = yes
 	}
 
 	ai_will_do = {
@@ -175,7 +206,14 @@ VIET_decision_venerate_a_mummified_hermit = {
 	decision_group_type = VIET_everyday
 	desc = VIET_decision_venerate_a_mummified_hermit_desc
 
-	ai_check_interval = 24
+	ai_check_interval_by_tier = {
+		barony = 0
+		county = 48
+		duchy = 36
+		kingdom = 36
+		empire = 36
+		hegemony = 36
+	}
 	
 	cooldown = { days = 3650 }
 
@@ -264,7 +302,14 @@ VIET_decision_purchase_dependable_donkeys = {
 	decision_group_type = VIET_everyday
 	desc = VIET_decision_purchase_dependable_donkeys_desc
 
-	ai_check_interval = 24
+	ai_check_interval_by_tier = {
+		barony = 0
+		county = 48
+		duchy = 36
+		kingdom = 36
+		empire = 36
+		hegemony = 36
+	}
 	
 	cooldown = { days = 3650 }
 
@@ -366,7 +411,14 @@ VIET_decision_add_more_dovecotes = {
 	decision_group_type = VIET_everyday
 	desc = VIET_decision_add_more_dovecotes_desc
 
-	ai_check_interval = 24
+	ai_check_interval_by_tier = {
+		barony = 0
+		county = 48
+		duchy = 36
+		kingdom = 36
+		empire = 36
+		hegemony = 36
+	}
 	
 	#cooldown = { days = 3650 }
 
@@ -440,3 +492,205 @@ VIET_decision_add_more_dovecotes = {
 }
 
 
+VIET_decision_strawberry_garden = {
+	picture = { reference = "gfx/interface/illustrations/decisions/decision_viet_meadow.dds" }
+	decision_group_type = VIET_everyday
+	desc = VIET_decision_strawberry_garden_desc
+
+	ai_check_interval_by_tier = {
+		barony = 0
+		county = 48
+		duchy = 36
+		kingdom = 36
+		empire = 36
+		hegemony = 36
+	}
+	
+	#cooldown = { days = 3650 }
+
+	is_shown = {
+		is_landed = yes
+		any_held_county = {
+			has_county_modifier = VIET_potential_strawberry_gardens
+		}
+	}
+
+	is_valid = {
+		custom_description = {
+			text = VIET_decision_strawberry_garden_county_req
+			capital_county = {
+				has_county_modifier = VIET_potential_strawberry_gardens
+			}
+		}
+		gold >= 100
+	}
+
+	is_valid_showing_failures_only = {
+		is_adult = yes
+		is_available = yes
+	}
+
+	effect = {
+		VIET_create_strawberry_gardens_effect = yes
+		trigger_event = VIETmisc.2083
+		if = {
+			limit = {
+				has_game_rule = VIET_historical_context_on
+			}
+			custom_tooltip = VIET_decision_strawberry_garden_context_tooltip
+		}
+	}
+
+	cost = { 
+		gold = {
+			value = 0
+			if = {
+				limit = {
+					has_treasury = no
+				}
+				add = medium_gold_value
+			}
+		}
+		treasury = {
+			value = 0
+			if = {
+				limit = {
+					has_treasury = yes
+				}
+				add = medium_treasury_value
+			}
+		}
+	}	
+	
+	ai_potential = {
+		always = yes
+	}
+
+	ai_will_do = {
+		base = 30
+	}
+}
+
+
+
+VIET_decision_get_strawberries = {
+	picture = { reference = "gfx/interface/illustrations/decisions/decision_viet_meadow.dds" }
+	decision_group_type = VIET_everyday
+	ai_check_interval_by_tier = {
+		barony = 0
+		county = 48
+		duchy = 36
+		kingdom = 36
+		empire = 36
+		hegemony = 36
+	}
+
+	cooldown = { days = 3650 }
+	
+	desc = VIET_decision_get_strawberries_desc
+	
+	is_shown = {
+		is_playable_character = yes	
+		trigger_if = {
+			limit = {
+				is_landless_ruler = yes
+			}
+			domicile.domicile_location.county = {
+				has_county_modifier = VIET_famous_strawberry_gardens
+			}
+		}
+		trigger_else = {
+			OR = {
+				any_held_county = {
+					has_county_modifier = VIET_famous_strawberry_gardens
+				}
+				any_vassal_or_below = {
+					any_held_county = {
+						has_county_modifier = VIET_famous_strawberry_gardens
+					}
+				}
+			}
+		}
+	}
+	
+	is_valid = {
+		trigger_if = {
+			limit = {
+				is_landless_ruler = yes
+			}
+			custom_description = {
+				text = VIET_decision_strawberries_landless_req
+				domicile.domicile_location.county = {
+					has_county_modifier = VIET_famous_strawberry_gardens
+				}
+			}
+		}
+		trigger_else = {
+			custom_description = {
+				text = VIET_decision_strawberries_landed_req
+				OR = {
+					any_held_county = {
+						has_county_modifier = VIET_famous_strawberry_gardens
+					}
+					any_vassal_or_below = {
+						any_held_county = {
+							has_county_modifier = VIET_famous_strawberry_gardens
+						}
+					}
+				}
+			}
+		}
+	}
+
+	is_valid_showing_failures_only = {
+		is_available_adult = yes
+	}
+
+	effect = {
+	
+		custom_tooltip = VIET_decision_get_strawberries_effect_tooltip_1
+
+		show_as_tooltip = {
+			VIET_harvest_strawberries_effect = yes
+		}
+		
+		if = {
+			limit = {
+				has_game_rule = RICE_historical_context_on
+			}
+			custom_tooltip = VIET_decision_get_strawberries_context_tooltip
+		}
+		
+		trigger_event = {
+			id = VIETmisc.2084
+		}
+	}
+
+	cost = { 
+		gold = { value = minor_gold_value }
+	}	
+
+	ai_potential = {
+		short_term_gold >= minor_gold_value
+	}
+
+	ai_will_do = {
+		base = 30
+		modifier = {
+			add = 10
+			has_trait = diligent
+		}
+		modifier = {
+			add = -10
+			has_trait = lazy
+		}
+		modifier = {
+			add = 10
+			has_trait = gluttonous
+		}
+		modifier = {
+			add = -10
+			has_trait = temperate
+		}
+	}
+}

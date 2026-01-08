@@ -5,7 +5,14 @@ VIET_decision_oblivion_dream = {
 	decision_group_type = VIET_rare
 	desc = VIET_decision_oblivion_dream_desc
 
-	ai_check_interval = 4
+	ai_check_interval_by_tier = {
+		barony = 0
+		county = 4
+		duchy = 4
+		kingdom = 4
+		empire = 4
+		hegemony = 4
+	}
 
 	is_shown = {
 		is_playable_character = yes
@@ -71,7 +78,14 @@ VIET_decision_meet_qi_ma_the_liar = {
 	decision_group_type = VIET_rare
 	desc = VIET_decision_meet_qi_ma_the_liar_desc
 
-	ai_check_interval = 4
+	ai_check_interval_by_tier = {
+		barony = 0
+		county = 12
+		duchy = 4
+		kingdom = 4
+		empire = 4
+		hegemony = 4
+	}
 
 	is_shown = {
 		is_playable_character = yes
@@ -112,7 +126,14 @@ VIET_decision_strange_trails = {
 	decision_group_type = VIET_rare
 	desc = VIET_decision_strange_trails_desc
 
-	ai_check_interval = 36
+	ai_check_interval_by_tier = {
+		barony = 0
+		county = 48
+		duchy = 36
+		kingdom = 36
+		empire = 36
+		hegemony = 36
+	}
 	
 	#cooldown = { days = 1825 }
 

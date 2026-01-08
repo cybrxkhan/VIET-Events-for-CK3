@@ -107,6 +107,18 @@ VIET_create_strawberry_gardens_effect = {
 	}
 }
 
+VIET_harvest_strawberries_effect = {
+	if = {
+		limit = {
+			government_has_flag = government_is_landless_adventurer
+		}
+		VIET_harvest_strawberries_adventurer_effect = yes
+	}
+	else = {
+		VIET_harvest_strawberries_ruler_effect = yes
+	}
+}
+
 VIET_harvest_strawberries_ruler_effect = {	
 	VIET_medium_prestige_gain_effect = yes
 	add_character_modifier = {
