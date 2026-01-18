@@ -344,6 +344,7 @@ VIETmisc.0403 = {
 	}
 	
 	trigger = {
+		has_game_rule = VIET_normal_universe_events
 		court_physician_available_trigger = yes
 		capital_province = {
 			VIET_is_in_wild_strawberry_region_trigger = yes
@@ -379,7 +380,6 @@ VIETmisc.0403 = {
 	}
 	
 	immediate = {
-		has_game_rule = VIET_normal_universe_events
 		save_court_physician_as_effect = { SCOPE_NAME = physician }
 	}
 

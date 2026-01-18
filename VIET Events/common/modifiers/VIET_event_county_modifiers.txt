@@ -1133,5 +1133,16 @@ VIET_tactics_against_bandits = {
 	levy_attack = 5
 }
 
+VIET_bayberries_county = {
+	icon = fertility_positive
+	development_growth = 0.1
+	tax_mult = 0.01
+}
+
+VIET_strawberries_county = {
+	icon = fertility_positive
+	tax_mult = 0.04
+}
+
 
 

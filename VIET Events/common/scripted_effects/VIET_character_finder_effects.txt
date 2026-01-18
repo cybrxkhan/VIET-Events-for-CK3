@@ -1210,22 +1210,23 @@ VIET_find_hunter_effect = {
 	}
 }
 
-VIET_find_military_courtier_effect = {
-	every_courtier = {
-		limit = { VIET_is_military_courtier = yes }
-		add_to_temporary_list = potential_soldiers
-	}
-	every_knight = {
-		limit = {
-			is_courtier = no
-			is_ai = yes
-		}
-		add_to_temporary_list = potential_soldiers
-	}
+# Something about this or the military trigger is causing a CTD
+# VIET_find_military_courtier_effect = {
+# 	every_courtier = {
+# 		limit = { VIET_is_military_courtier = yes }
+# 		add_to_temporary_list = potential_soldiers
+# 	}
+# 	every_knight = {
+# 		limit = {
+# 			is_courtier = no
+# 			is_ai = yes
+# 		}
+# 		add_to_temporary_list = potential_soldiers
+# 	}
 	
-	random_in_list = {
-		list = potential_soldiers
-		save_scope_as = soldier
-	}
-	scope:soldier = { add_character_flag = wear_armor }
-}
+# 	random_in_list = {
+# 		list = potential_soldiers
+# 		save_scope_as = soldier
+# 	}
+# 	scope:soldier = { add_character_flag = wear_armor }
+# }

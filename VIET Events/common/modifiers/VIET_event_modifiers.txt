@@ -4131,6 +4131,13 @@ VIET_suspicious_of_hystical_women = {
 	intrigue = 1	
 }
 
+VIET_strawberry_tree_tonic = {
+	icon = fertility_positive
+	negate_health_penalty_add = 0.1
+	stress_gain_mult = -0.1
+	stress_loss_mult = 0.1
+}
+
 
 
 

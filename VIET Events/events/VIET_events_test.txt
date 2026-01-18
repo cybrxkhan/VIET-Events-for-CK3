@@ -449,13 +449,13 @@ VIETtest.0012 = {
 	lower_right_portrait = scope:jauffre
 
 	immediate = {
-		character:VIET_oblivion_character_001 = scope:uriel
-		character:VIET_oblivion_character_002 = scope:martin
-		character:VIET_oblivion_character_003 = scope:baurus
-		character:VIET_oblivion_character_004 = scope:jauffre
+		character:VIET_oblivion_character_001 = { save_scope_as = scope:uriel }
+		character:VIET_oblivion_character_002 = { save_scope_as = scope:martin }
+		character:VIET_oblivion_character_003 = { save_scope_as = scope:baurus }
+		character:VIET_oblivion_character_004 = { save_scope_as = scope:jauffre }
 	}
 	
 	option = {
-		name = VIETtest.0012.a
+		name = VIETmisc.0001.a
 	}
 }

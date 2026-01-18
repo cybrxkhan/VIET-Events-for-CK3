@@ -4097,12 +4097,8 @@ VIETmisc.5033 = {
 	override_background = { reference = corridor_night }
 	
 	left_portrait = {
-		character = scope:soldier
-		animation = lantern
-	}
-	right_portrait = {
 		character = root
-		animation = personality_compassionate
+		animation = latern
 	}
 	artifact = { # To display the artifact in the event-window
         target = scope:VIET_clutter_artifact
@@ -4152,40 +4148,35 @@ VIETmisc.5033 = {
 		}
 	}
 	
-	trigger = {
-		VIET_has_military_courtier = yes
-	}
-	immediate = {
-		VIET_find_military_courtier_effect = yes
-		
+	immediate = {	
 		hidden_effect_new_object = {
-			scope:soldier = {
-				create_artifact = {
-					name = VIET_basic_lantern_name
-					description = VIET_basic_lantern_desc
-					type = VIET_clutter
-					visuals = VIET_basic_lantern
-					quality = 15
-					wealth = 15
-					modifier = artifact_VIET_basic_lantern_modifier
-					max_durability = 40
-					save_scope_as = VIET_clutter_artifact
-					history = {
-						type = created_before_history
-					}
+			create_artifact = {
+				name = VIET_basic_lantern_name
+				description = VIET_basic_lantern_desc
+				type = VIET_clutter
+				visuals = VIET_basic_lantern
+				quality = 15
+				wealth = 15
+				modifier = artifact_VIET_basic_lantern_modifier
+				max_durability = 40
+				save_scope_as = VIET_clutter_artifact
+				history = {
+					type = created_before_history
 				}
-				scope:VIET_clutter_artifact = {
-					set_variable = VIET_basic_lantern_variable
-				}
+			}
+			scope:VIET_clutter_artifact = {
+				set_variable = VIET_basic_lantern_variable
 			}
 		}
 	}
 	
 	option = {
 		name = VIETmisc.5033.a
-		scope:VIET_clutter_artifact = {
-			set_owner = {
-				target = root
+		show_as_tooltip = {
+			scope:VIET_clutter_artifact = {
+				set_owner = {
+					target = root
+				}
 			}
 		}
 		VIET_huge_prestige_loss_effect = yes
@@ -4203,7 +4194,6 @@ VIETmisc.5033 = {
 			destroy_artifact = scope:VIET_clutter_artifact
 		}
 	}
-	after = { scope:soldier = { remove_character_flag = wear_armor } }
 }
 
 
@@ -4445,10 +4435,6 @@ VIETmisc.5036 = {
 		character = root
 		animation = shock
 	}
-	right_portrait = {
-		character = scope:soldier
-		animation = war_defender
-	}
 	artifact = { # To display the artifact in the event-window
         target = scope:VIET_clutter_artifact
         position = lower_center_portrait
@@ -4497,42 +4483,37 @@ VIETmisc.5036 = {
 		}
 	}
 	
-	trigger = {
-		VIET_has_military_courtier = yes
-	}
-	immediate = {
-		VIET_find_military_courtier_effect = yes
-		
+	immediate = {	
 		hidden_effect_new_object = {
-			scope:soldier = {
-				create_artifact = {
-					name = VIET_wooden_whistle_name
-					description = placeholder
-					type = VIET_clutter
-					visuals = VIET_wooden_whistle
-					quality = 15
-					wealth = 15
-					modifier = artifact_VIET_wooden_whistle_modifier
-					max_durability = 40
-					save_scope_as = VIET_clutter_artifact
-					history = {
-						type = created_before_history
-					}
+			create_artifact = {
+				name = VIET_wooden_whistle_name
+				description = VIET_wooden_whistle_desc
+				type = VIET_clutter
+				visuals = VIET_wooden_whistle
+				quality = 15
+				wealth = 15
+				modifier = artifact_VIET_wooden_whistle_modifier
+				max_durability = 40
+				save_scope_as = VIET_clutter_artifact
+				history = {
+					type = created_before_history
 				}
-				scope:VIET_clutter_artifact = {
-					set_variable = VIET_wooden_whistle_variable
-					set_artifact_feature_group = generic_material_wood
-					set_artifact_description = VIET_wooden_whistle_desc
-				}
+			}
+			scope:VIET_clutter_artifact = {
+				set_variable = VIET_wooden_whistle_variable
+				set_artifact_feature_group = generic_material_wood
+				set_artifact_description = VIET_wooden_whistle_desc
 			}
 		}
 	}
 	
 	option = {
 		name = VIETmisc.5036.a
-		scope:VIET_clutter_artifact = {
-			set_owner = {
-				target = root
+		show_as_tooltip = {
+			scope:VIET_clutter_artifact = {
+				set_owner = {
+					target = root
+				}
 			}
 		}
 		stress_impact = {
@@ -4551,7 +4532,6 @@ VIETmisc.5036 = {
 			brave = miniscule_stress_impact_gain
 		}
 	}
-	after = { scope:soldier = { remove_character_flag  = wear_armor } }
 }
 
 
@@ -9434,7 +9414,7 @@ VIETmisc.5060 = {
 				death = {
 					death_reason = death_vanished
 				}
-			}
+			}			
 		}
 	}
 	
@@ -9500,6 +9480,12 @@ VIETmisc.5061 = {
     }
 	
 	immediate = {
+		capital_county = {
+			save_scope_as = fruit_preserve_capital
+		}
+		scope:fruit_preserve_capital = {
+			culture = { save_scope_as = fruit_culture }
+		}
 		random_list = {
 			60 = {
 				hidden_effect_new_object = {

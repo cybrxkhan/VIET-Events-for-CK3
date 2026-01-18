@@ -648,7 +648,7 @@ VIET_decision_get_strawberries = {
 
 	effect = {
 	
-		custom_tooltip = VIET_decision_get_strawberries_effect_tooltip_1
+		#custom_tooltip = VIET_decision_get_strawberries_effect_tooltip_1
 
 		show_as_tooltip = {
 			VIET_harvest_strawberries_effect = yes
