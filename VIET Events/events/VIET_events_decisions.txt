@@ -5128,7 +5128,7 @@ VIETmisc.2084 = {
 	}
 	
 	immediate = {
-		VIET_create_strawberry_gardens_effect = yes
+		VIET_harvest_strawberries_effect = yes
 	}
 	
 	option = { # Ok

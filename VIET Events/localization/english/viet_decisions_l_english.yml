@@ -151,7 +151,7 @@
  VIET_decision_strawberry_garden_county_req:0 "Your [capital|E] has the [GetModifier('VIET_potential_strawberry_gardens').GetNameWithTooltip] [county_modifier|E]"
  VIET_decision_strawberry_garden_confirm:0 "Let's do this!"
  VIET_decision_strawberry_garden_context_tooltip:0 "#emphasis Historical Context:#! The modern strawberry was bred in France in the 18th century a cross between two New World strawberry varieties – #italic Fragaria Virginiana#! from North America, and #italic Fragaria chiloensis#! from the Pacific coasts of North and South America and Hawaii. Before the Columbian exchange, strawberries in the old world came from other species, such as #italic Fragaria Vesca#! from northern Eurasia. Though greatly enjoyed by many since Neolithic times, they are smaller and rounder than the modern strawberry; they were cultivated more systematically starting in the late medieval period, particularly in France. The 14th century French king Charles V, for instance, was said to have 1200 strawberry plants in his garden."
- VIET_decision_get_strawberries:0 "Acquire Quality Strawberry"
+ VIET_decision_get_strawberries:0 "Acquire Quality Strawberries"
  VIET_decision_get_strawberries_tooltip:0 "There are gourmet strawberries I simply have to eat!"
  VIET_decision_get_strawberries_desc:0 "I could access strawberry gardnes in these parts that are renowned for the quality of their strawberries."
  VIET_decision_get_strawberries_confirm:0 "Mmmm.... Strawberries!"

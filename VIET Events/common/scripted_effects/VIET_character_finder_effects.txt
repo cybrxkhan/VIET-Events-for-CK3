@@ -461,7 +461,7 @@ VIET_find_traveling_scholar_effect = {
 	VIET_find_scholar_effect = yes
 	# Makes them a more skilled traveler
 	hidden_effect = {
-		scope:merchant = {
+		scope:scholar = {
 			add_trait = lifestyle_traveler
 			add_trait_xp = {
 				trait = lifestyle_traveler

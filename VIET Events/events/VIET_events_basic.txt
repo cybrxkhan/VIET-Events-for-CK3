@@ -39495,7 +39495,7 @@ VIETmisc.0397 = {
 				scope:child = {
 					trigger_event = {
 						id = VIETmisc.0398
-						#months = { 12 48 }
+						months = { 12 48 }
 					}
 				}
 			}
@@ -39508,7 +39508,7 @@ VIETmisc.0397 = {
 			skill = diplomacy
 			value = medium_skill_rating
 			10 = { # Failure - they're not interested
-				#show_chance = no
+				show_chance = no
 				custom_tooltip = VIETmisc.0397.b.failure
 				compare_modifier = {
 					value = scope:duel_value
@@ -39529,7 +39529,7 @@ VIETmisc.0397 = {
 				}
 			}
 			10 = { # Success - interested
-				#show_chance = no
+				show_chance = no
 				custom_tooltip = VIETmisc.0397.b.success
 				compare_modifier = {
 					value = scope:duel_value

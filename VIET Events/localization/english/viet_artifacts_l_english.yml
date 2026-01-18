@@ -117,7 +117,7 @@
  VIET_thunderstone_talisman_name:0 "Thunderstone Talisman"
  VIET_thunderstone_talisman_desc:0 "A protective talisman made using a thunderstone, special stones of unknown origin - perhaps supernatural, even."
  VIET_patchwork_quilt_name:0 "Patchwork Quilt"
- VIET_patchwork_quilt_desc:0 "A simple but beautiful [VIET_clutter_artifact.GetFeatureText( 'generic_material_cloth' )] quilt, decorated with traditional [county_culture.GetName] patterns and designs"
+ VIET_patchwork_quilt_desc:0 "A simple but beautiful [VIET_clutter_artifact.GetFeatureText( 'generic_material_cloth' )] quilt, decorated with traditional [culture.GetName] patterns and designs"
  VIET_leather_ball_name:0 "Leather Ball"
  VIET_leather_ball_desc:0 "A ball made from a patchwork of leather stuffed with feathers. It is great for playing games and keeping oneself fit."
  # 1.5.3 - please leave this comment here

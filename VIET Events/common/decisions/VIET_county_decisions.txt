@@ -522,7 +522,6 @@ VIET_decision_strawberry_garden = {
 				has_county_modifier = VIET_potential_strawberry_gardens
 			}
 		}
-		gold >= 100
 	}
 
 	is_valid_showing_failures_only = {
@@ -656,7 +655,7 @@ VIET_decision_get_strawberries = {
 		
 		if = {
 			limit = {
-				has_game_rule = RICE_historical_context_on
+				has_game_rule = VIET_historical_context_on
 			}
 			custom_tooltip = VIET_decision_get_strawberries_context_tooltip
 		}

@@ -100,6 +100,7 @@ VIETmisc.0400 = {
 	
 	option = { # GTFO
 		name = VIETmisc.0400.c
+		VIET_huge_prestige_gain_effect = yes
 		stress_impact = {
 			just = miniscule_stress_impact_gain
 			patient = miniscule_stress_impact_gain
@@ -697,6 +698,7 @@ VIETmisc.0406 = {
 				geographical_region = world_africa_north
 				geographical_region = world_steppe_west
 				geographical_region = world_middle_east_jerusalem
+				geographical_region = world_middle_east_arabia
 			}
 		}
 	}

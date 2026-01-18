@@ -7783,7 +7783,7 @@ VIETmisc.3074 = {
 			limit = {
 				has_game_rule = VIET_historical_context_on
 			}
-			custom_tooltip = VIETmisc.3074.info
+			custom_tooltip = VIET_decision_strawberry_garden_context_tooltip
 		}
 	}
 

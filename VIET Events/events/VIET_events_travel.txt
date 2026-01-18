@@ -6671,9 +6671,9 @@ VIETmisc.7059 = {
 	option = { # ok
 		name = VIETmisc.7059.b	
 		stress_impact = {
-			base = miniscule_stress_impact_loss
-			gluttonous = miniscule_stress_impact_loss
-			lazy = miniscule_stress_impact_loss
+			base = minor_stress_impact_loss
+			gluttonous = minor_stress_impact_loss
+			lazy = minor_stress_impact_loss
 		}
 	}
 

@@ -1649,6 +1649,12 @@
  VIET_harvested_strawberries_adventurer:0 "$VIET_harvested_strawberries_ruler$"
  VIET_sympathetic_to_mothers:0 "Sympathetic to Mothers"
  VIET_suspicious_of_hystical_women:0 "Suspicious of Hysterical Women"
+ VIET_strawberry_tree_tonic:0 "Strawberry Tree Tonic" # Note to translators, this is the plant Arbutus unedo, called the Strawberry Tree in English, which is not the same as strawberries proper!
+ VIET_strawberry_tree_tonic_desc:0 "This character regularly consumes a tonic made from the leaves of the Strawberry Tree, which is not to be confused with the strawberry plant. These leaves are said to have many good medicinal properties."
+ VIET_bayberries_county:0 "Famous Bayberries"
+ VIET_bayberries_county_desc:0 "Bayberry fruits from this region have gained some renown in many other places."
+ VIET_strawberries_county:0 "Famous Strawberries"
+ VIET_strawberries_county_desc:0 "Strawberries from this region are renowned for their quality."
  # Version 1.18.2 Start Here - Note to Translators: please leave this comment here and do not remove it even in your versions of the loc
  xxxxxxxxxx:0 "xxx"
 

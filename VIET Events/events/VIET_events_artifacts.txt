@@ -1839,6 +1839,7 @@ VIETmisc.5014 = {
 	trigger = {
 		has_game_rule = VIET_normal_universe_events
 		exists = capital_province
+		VIET_is_sinosphere_trigger = no # Doesn't make sense for Asian cultures to learn about chopsticks
 		capital_province = {
 			OR = {
 				geographical_region = world_steppe_tarim
@@ -2264,7 +2265,7 @@ VIETmisc.5017 = {
 	immediate = {	
 		hidden_effect_new_object = {
 			create_artifact = {
-				name = VIET_silk_slippers_name
+				name = placeholder
 				description = placeholder
 				type = VIET_clutter
 				visuals = VIET_silk_slippers
@@ -2282,6 +2283,7 @@ VIETmisc.5017 = {
 				VIET_set_artifact_wealth_high_effect = yes
 				set_artifact_feature_group = generic_material_cloth
 				set_artifact_name = VIET_silk_slippers_name
+				set_artifact_description = VIET_silk_slippers_desc
 			}
 		}
 	}
@@ -4098,7 +4100,7 @@ VIETmisc.5033 = {
 	
 	left_portrait = {
 		character = root
-		animation = latern
+		animation = lantern
 	}
 	artifact = { # To display the artifact in the event-window
         target = scope:VIET_clutter_artifact
@@ -8309,7 +8311,7 @@ VIETmisc.5055 = {
 	
 	trigger = {
 		# Should be a literate culture
-		VIET_is_not_a_literate_society = yes
+		VIET_is_a_literate_society = yes
 	}
 	
 	weight_multiplier = {
