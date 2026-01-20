@@ -630,6 +630,8 @@ VIET_random_fruit = {
 					geographical_region = world_asia_korea
 					geographical_region = world_asia_philippines
 					geographical_region = custom_viet_lands
+					geographical_region = world_steppe_tarim
+					geographical_region = world_tibet
 				}
 			}
 		}
@@ -831,6 +833,7 @@ VIET_random_fruit = {
 				OR = {
 					geographical_region = world_asia_china
 					geographical_region = world_asia_southeast
+					geographical_region = world_steppe_tarim
 				}
 			}
 		}
@@ -1021,6 +1024,7 @@ VIET_random_fruit = {
 				OR = {
 					geographical_region = world_asia_southeast_mainland
 					geographical_region = world_asia_china
+					geographical_region = world_steppe_tarim
 				}
 			}
 		}
@@ -1037,6 +1041,448 @@ VIET_random_fruit = {
 			}
 		}
 		localization_key = VIET_marula
+	}
+
+	text = {
+		trigger = {
+			location = {
+				OR = {
+					geographical_region = world_europe
+					geographical_region = world_steppe_west
+					geographical_region = world_asia_minor
+				}
+			}
+		}
+		localization_key = VIET_sloe
+	}
+
+	text = {
+		trigger = {
+			location = {
+				#OR = {
+					geographical_region = dlc_tgp_swahili_coast_region
+				#}
+			}
+		}
+		localization_key = VIET_sourplum
+	}
+
+	text = {
+		trigger = {
+			location = {
+				OR = {
+					geographical_region = world_india
+					geographical_region = world_burma
+					geographical_region = world_asia_southeast
+				}
+			}
+		}
+		localization_key = VIET_wax_apple
+	}
+
+	text = {
+		trigger = {
+			location = {
+				OR = {
+					geographical_region = world_europe
+					geographical_region = world_africa_north
+					geographical_region = world_middle_east
+					geographical_region = world_steppe_west
+					geographical_region = world_asia_minor
+				}
+			}
+		}
+		localization_key = VIET_barberry
+	}
+
+	text = {
+		trigger = {
+			location = {
+				OR = {
+					geographical_region = world_india
+					geographical_region = world_burma
+					geographical_region = world_asia_southeast
+					geographical_region = dlc_tgp_swahili_coast_region
+				}
+			}
+		}
+		localization_key = VIET_bilimbi
+	}
+
+	text = {
+		trigger = {
+			location = {
+				OR = {
+					geographical_region = world_india
+					geographical_region = world_burma
+					geographical_region = world_asia_southeast
+					geographical_region = ghw_region_afghanistan
+				}
+			}
+		}
+		localization_key = VIET_karonda
+	}
+
+	text = {
+		trigger = {
+			location = {
+				OR = {
+					geographical_region = world_europe
+					geographical_region = world_africa_north_west
+					geographical_region = world_steppe_west
+					geographical_region = world_asia_minor
+				}
+			}
+		}
+		localization_key = VIET_elderberry
+	}
+
+	text = {
+		trigger = {
+			location = {
+				OR = {
+					geographical_region = world_asia_north_east
+					geographical_region = world_siberia
+					geographical_region = world_steppe
+					geographical_region = world_asia_sakhalin_hokkaido
+				}
+			}
+		}
+		localization_key = VIET_honeyberry
+	}
+
+	text = {
+		trigger = {
+			location = {
+				OR = {
+					geographical_region = world_asia_southeast
+					geographical_region = world_burma
+					geographical_region = world_india
+					geographical_region = world_asia_china
+				}
+			}
+		}
+		localization_key = VIET_star_fruit
+	}
+
+	text = {
+		trigger = {
+			location = {
+				OR = {
+					geographical_region = world_asia_east
+					geographical_region = custom_viet_lands
+					geographical_region = world_steppe_tarim
+					geographical_region = world_asia_north_east
+				}
+			}
+		}
+		localization_key = VIET_goji_berry
+	}
+
+	text = {
+		trigger = {
+			location = {
+				OR = {
+					geographical_region = world_africa_west 
+					geographical_region = world_africa_east
+					geographical_region = world_africa_sahara
+				}
+			}
+		}
+		localization_key = VIET_baobab
+	}
+
+	text = {
+		trigger = {
+			location = {
+				OR = {
+					geographical_region = world_india 
+					geographical_region = world_burma
+					geographical_region = world_asia_southeast
+				}
+			}
+		}
+		localization_key = VIET_wood_apple
+	}
+
+	text = {
+		trigger = {
+			location = {
+				OR = {
+					geographical_region = world_burma
+					geographical_region = world_asia_china
+					geographical_region = world_asia_southeast
+				}
+			}
+		}
+		localization_key = VIET_calamansi
+	}
+
+	text = {
+		trigger = {
+			location = {
+				OR = {
+					geographical_region = world_europe_west_iberia
+					geographical_region = world_europe_west_francia
+					geographical_region = world_europe_south
+					geographical_region = world_asia_minor
+					geographical_region = world_middle_east
+					geographical_region = world_africa_north
+				}
+			}
+		}
+		localization_key = VIET_bergamot_orange
+	}
+
+	text = {
+		trigger = {
+			location = {
+				OR = {
+					geographical_region = world_europe_west_iberia
+					geographical_region = world_europe_south
+					geographical_region = world_asia_minor
+					geographical_region = world_middle_east
+					geographical_region = world_africa_north
+					geographical_region = world_africa_sahara
+					geographical_region = world_africa_east
+					geographical_region = world_india
+				}
+			}
+		}
+		localization_key = VIET_lemon
+	}
+
+	text = {
+		trigger = {
+			location = {
+				OR = {
+					geographical_region = world_europe_west_iberia
+					geographical_region = world_europe_south
+					geographical_region = world_asia_minor
+					geographical_region = world_middle_east
+					geographical_region = world_africa_north
+					geographical_region = world_africa_sahara
+					geographical_region = world_africa_east
+					geographical_region = world_india
+					geographical_region = world_burma
+					geographical_region = world_asia_southeast
+					geographical_region = world_asia_korea
+					geographical_region = world_asia_china
+					geographical_region = world_asia_japan
+					geographical_region = world_steppe_tarim
+				}
+			}
+		}
+		localization_key = VIET_citron
+	}
+
+	text = {
+		trigger = {
+			religion = religion:judaism_religion
+			location = {
+				OR = {
+					geographical_region = world_europe_west_iberia
+					geographical_region = world_europe_south
+					geographical_region = world_asia_minor
+					geographical_region = world_middle_east
+					geographical_region = world_africa_north
+					geographical_region = world_africa_sahara
+					geographical_region = world_africa_east
+					geographical_region = world_india
+					geographical_region = world_burma
+					geographical_region = world_asia_southeast
+					geographical_region = world_asia_korea
+					geographical_region = world_asia_china
+					geographical_region = world_asia_japan
+					geographical_region = world_steppe_tarim
+				}
+			}
+		}
+		localization_key = VIET_etrog
+	}
+
+	text = {
+		trigger = {
+			location = {
+				OR = {
+					geographical_region = world_burma
+					geographical_region = world_asia_southeast
+					geographical_region = world_asia_china
+				}
+			}
+		}
+		localization_key = VIET_pomelo
+	}
+
+	text = {
+		trigger = {
+			location = {
+				OR = {
+					geographical_region = world_europe_west_britannia
+					geographical_region = world_europe_north
+					geographical_region = world_europe_west_germania
+					geographical_region = world_europe_east
+					geographical_region = world_steppe_west
+					geographical_region = world_steppe_central
+					geographical_region = world_steppe_east
+					geographical_region = world_siberia
+					geographical_region = world_asia_north_east
+					geographical_region = world_asia_sakhalin_hokkaido
+				}
+			}
+		}
+		localization_key = VIET_cloudberry
+	}
+
+	text = {
+		trigger = {
+			location = {
+				OR = {
+					geographical_region = world_burma
+					geographical_region = world_asia_southeast
+					geographical_region = world_india
+				}
+			}
+		}
+		localization_key = VIET_elephant_apple
+	}
+
+	text = {
+		trigger = {
+			location = {
+				OR = {
+					geographical_region = world_asia_philippines
+					geographical_region = world_asia_sulawesi_maluku
+				}
+			}
+		}
+		localization_key = VIET_breadnut
+	}
+
+	text = {
+		trigger = {
+			location = {
+				OR = {
+					geographical_region = world_burma
+					geographical_region = world_asia_southeast
+					geographical_region = world_india
+					geographical_region = tgp_yue_region
+				}
+			}
+		}
+		localization_key = VIET_jackfruit
+	}
+
+	text = {
+		trigger = {
+			location = {
+				OR = {
+					geographical_region = world_burma
+					geographical_region = world_asia_southeast
+					geographical_region = world_india
+				}
+			}
+		}
+		localization_key = VIET_cempedak
+	}
+
+	text = {
+		trigger = {
+			location = {
+				#OR = {
+					geographical_region = world_india
+				#}
+			}
+		}
+		localization_key = VIET_kokum
+	}
+
+	text = {
+		trigger = {
+			location = {
+				OR = {
+					geographical_region = world_burma
+					geographical_region = world_asia_southeast
+				}
+			}
+		}
+		localization_key = VIET_langsat
+	}
+
+	text = {
+		trigger = {
+			location = {
+				OR = {
+					geographical_region = world_burma
+					geographical_region = world_asia_southeast
+					geographical_region = world_india
+					geographical_region = world_asia_china
+				}
+			}
+		}
+		localization_key = VIET_mangosteen
+	}
+
+	text = {
+		trigger = {
+			location = {
+				#OR = {
+					geographical_region = world_asia_southeast_islands
+				#}
+			}
+		}
+		localization_key = VIET_salak
+	}
+
+	text = {
+		trigger = {
+			location = {
+				OR = {
+					geographical_region = world_burma
+					geographical_region = world_asia_southeast
+					geographical_region = world_india
+					geographical_region = world_middle_east
+					geographical_region = world_africa
+					geographical_region = world_asia_minor
+				}
+			}
+		}
+		localization_key = VIET_tamarind
+	}
+
+	text = {
+		trigger = {
+			location = {
+				OR = {
+					geographical_region = world_asia
+					geographical_region = world_asia_southeast
+					geographical_region = world_burma
+					geographical_region = world_tibet
+				}
+			}
+		}
+		localization_key = VIET_ginkgo
+	}
+
+	text = {
+		trigger = {
+			location = {
+				OR = {
+					geographical_region = world_europe
+					geographical_region = world_asia_minor
+					geographical_region = world_khorasan
+					geographical_region = world_transoxiana
+					geographical_region = world_kabulistan
+					geographical_region = world_steppe
+					geographical_region = custom_slavia
+					geographical_region = world_siberia
+					geographical_region = world_tibet
+					geographical_region = world_asia_japan
+					geographical_region = world_asia_sakhalin_hokkaido
+				}
+			}
+		}
+		localization_key = VIET_juniper_berry
 	}
 
 }

@@ -38,6 +38,7 @@ VIETintro.0002 = {
 		# Get culture and faith for the Septims
 		random_ruler = {
 			limit = {
+				is_landed = yes # Reduce admin spam and make Greek/Han a little less likely
 				any_courtier_or_guest = {
 					is_female = no
 					dynasty ?= {
@@ -72,6 +73,7 @@ VIETintro.0002 = {
 		# Baurus culture and faith
 		random_ruler = {
 			limit = {
+				is_landed = yes # Reduce admin spam and make Greek/Han a little less likely
 				any_courtier_or_guest = { is_female = no }
 			}
 			random_courtier_or_guest = {
@@ -84,6 +86,7 @@ VIETintro.0002 = {
 		# Jauffre culture and faith
 		random_ruler = {
 			limit = {
+				is_landed = yes # Reduce admin spam and make Greek/Han a little less likely
 				any_courtier_or_guest = { is_female = no }
 			}
 			random_courtier_or_guest = {

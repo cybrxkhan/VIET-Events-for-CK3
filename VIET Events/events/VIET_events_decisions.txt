@@ -5128,6 +5128,9 @@ VIETmisc.2084 = {
 	}
 	
 	immediate = {
+		location.county = {
+			save_scope_as = capital
+		}
 		VIET_harvest_strawberries_effect = yes
 	}
 	

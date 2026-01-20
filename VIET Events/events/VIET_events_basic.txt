@@ -39382,7 +39382,7 @@ VIETmisc.0396 = {
 	
 	option = { # Ok
 		name = VIETmisc.0396.a
-		VIET_small_piety_gain_effect = yes
+		#VIET_small_piety_gain_effect = yes
 	}	
 	
 	option = { # Ok
@@ -39396,7 +39396,7 @@ VIETmisc.0396 = {
 		}	
 		add_character_modifier = {
 			modifier = VIET_increased_studiousness
-			years = 4
+			years = 5
 		}
 	}	
 	

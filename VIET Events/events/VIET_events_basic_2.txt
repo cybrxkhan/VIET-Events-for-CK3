@@ -649,6 +649,7 @@ VIETmisc.0405 = {
 			}
 		}	
 		stress_impact = {
+			base = miniscule_stress_impact_gain
 			diligent = miniscule_stress_impact_gain
 		}
 	}	
