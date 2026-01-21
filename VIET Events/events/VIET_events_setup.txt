@@ -39,15 +39,8 @@ VIETintro.0002 = {
 		random_ruler = {
 			limit = {
 				is_landed = yes # Reduce admin spam and make Greek/Han a little less likely
-				any_courtier_or_guest = {
-					is_female = no
-					dynasty ?= {
-						any_dynasty_member = {
-							count = 0
-						}
-					}
-				}
-				any_courtier_or_guest = {
+				any_courtier_or_guest = {					
+					count >= 2 # Need at least three courtiers
 					is_female = no
 					NOT = { exists = dynasty }
 				}
@@ -55,7 +48,7 @@ VIETintro.0002 = {
 			random_courtier_or_guest = {
 				limit = {
 					is_female = no
-					exists = dynasty
+					NOT = { exists = dynasty }
 				}
 				culture = {
 					save_scope_as = septim_culture

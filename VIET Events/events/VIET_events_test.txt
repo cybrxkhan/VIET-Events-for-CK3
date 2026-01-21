@@ -438,8 +438,8 @@ VIETtest.0011 = {
 # Oblivion Test
 VIETtest.0012 = {
 	type = character_event
-	title = VIETtest.0012.t
-	desc = VIETtest.0012.desc
+	title = VIETtest.0008.t
+	desc = VIETtest.0008.desc
 	theme = VIET_theme_tuscan_country
 	orphan = yes 
 	
@@ -449,10 +449,10 @@ VIETtest.0012 = {
 	lower_right_portrait = scope:jauffre
 
 	immediate = {
-		character:VIET_oblivion_character_001 = { save_scope_as = scope:uriel }
-		character:VIET_oblivion_character_002 = { save_scope_as = scope:martin }
-		character:VIET_oblivion_character_003 = { save_scope_as = scope:baurus }
-		character:VIET_oblivion_character_004 = { save_scope_as = scope:jauffre }
+		character:VIET_oblivion_character_001 = { save_scope_as = uriel }
+		character:VIET_oblivion_character_002 = { save_scope_as = martin }
+		character:VIET_oblivion_character_003 = { save_scope_as = baurus }
+		character:VIET_oblivion_character_004 = { save_scope_as = jauffre }
 	}
 	
 	option = {

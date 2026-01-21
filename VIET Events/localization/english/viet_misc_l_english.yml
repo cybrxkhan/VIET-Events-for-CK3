@@ -147,7 +147,7 @@
  VIET_banana:0 "banana"
  VIET_date:0 "date"
  VIET_strawberry:0 "strawberry"
- VIET_strawberry:0 "bayberry"
+ VIET_bayberry:0 "bayberry"
  VIET_mango:0 "mango"
  VIET_durian:0 "durian" # Ew
  VIET_pear:0 "pear"
@@ -204,6 +204,7 @@
  VIET_salak:0 "salak"
  VIET_tamarind:0 "tamarind"
  VIET_ginkgo:0 "ginkgo"
+ VIET_jujube:0 "jujube"
  VIET_juniper_berry:0 "juniper berry"
 
  # Random dynasty names for the Oblivion event
