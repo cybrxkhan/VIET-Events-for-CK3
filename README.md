@@ -1,11 +1,11 @@
 # VIET Events for CK3
 
-<img src="https://i.imgur.com/uXp8zbo.jpg">
+<img src="https://i.imgur.com/0GwJEMw.jpg">
 
-## Latest Version: 1.18.0 "Pu Songling" (Released 10/28/25)
+## Latest Version: 1.18.1 "Strawberries" (Released 1/27/26)
 
-_"“Here in the civilized world, stranger events by far occur than in the Country of Cropped Hair; Before our very eyes, weirder tales unfold than in the Nation of Flying Heads.”_
-_– Pu Songling, Chinese writer (1640-1715), in the preface of his Strange Tales from a Chinese Studio_
+_“One must ask children and birds how cherries and strawberries taste.”_
+_– Johann Wolfgang von Goethe (1749–1832), German writer_
 
 Very Immersive Events and Tales (VIET), the sequel to VIET Events Reborn for CK2, is a flavor mod that adds a vast collection of events about everyday life to spice up your game. They add immersion and a diversity of experiences in between wars and vanilla’s event chains, and cover mundane minutiae ranging from small talk with courtiers and eating local cuisine to epic tales about love, philosophy, and the human condition. Some of the events unlock new decisions, character interactions, activities, and much more for you to explore!
 
@@ -15,7 +15,7 @@ Feel free to use my work in your mods - all I ask is that I am credited and (if 
 
 ## Features
 
-- Over **1227** new flavor events to experience!
+- Over **1252** new flavor events to experience!
 - Explore new decisions, artifacts, character interactions, activities, and more!
 - Game rule to disable sillier events for those who don't like them, with three levels to choose from: Balanced (Default), Serious (Restricted), and All Events (Full)
 - Compatible with almost anything since it doesn't touch any vanilla files - even with overhaul mods, you can via game rule disable events that reference things specific to our medieval world that wouldn’t make sense in other time periods or universes (like fantasy and sci-fi conversion mods)
@@ -39,19 +39,22 @@ The mod folder should look something like this:
 
 ## Changelog
 
-### Version 1.18.0 "Pu Songling"
+### Version 1.18.1 "Strawberries"
 
-New events added in this version: **7**
+New events added in this version: **25**
 
-- Added 7 events inspired by Strange Tales from a Chinese Studio (聊斋志异)
-- Added many new Asian-themed event backgrounds
-- Added English placeholders for new Japanese translation version
-- Tweaked various county events to not happen to the new county admin titles
-- Reworked geographical region triggers for many events to account for the newly added parts of Asia
-- Reworked the following events to be travel events: VIETmisc.0196, VIETmisc.0199, VIETmisc.0208, VIETmisc.0212, VIETmisc.0213, VIETmisc.0216
-- Fixed rumors of an island beyond Japan event being less likely in Asia as opposed to Africa/Europe (it’s supposed to be the other way around)
-- Fixed missing grammatical article loc for the names of activities
-- Miscellaneous bugfixes/tweaks
+- Added 25 events with the following themes: 16 strawberry events & 9 events utilizing vanilla backgrounds I haven’t used much
+- Added 2 new decisions: Cultivate Strawberry Gardens and Acquire Quality Strawberries 
+- VIET decisions now have ai_check_interval_by_tier for different tiers to be in line with vanilla’s recent changes
+- A few VIET decisions will now cost treasury instead of gold if you have the appropriate government
+- Changed several artifact events to now have actual NPCs appear (courtesy of DPh Kraken)
+- Disabled the Dream of the Final Journey event chain for immortal characters (for mods that have that)
+- Bonuses from Vietold.2249-2250 events reduced to 88
+- Waterskin, Knapsack, Common Pitcher, Walking Stick, and Basic Lantern artifacts now have traveling-related bonuses
+- Traveling Inkwell artifact now negates a bit of diplomacy loss
+- Decorated Broom artifact now reduces enemy hostile scheme success
+- Various miscellaneous tweaks to artifact events (mostly courtesy of DPh Kraken)
+- Miscellaneous bugfixes
 
 \* Adapted from VIET for CK2
 
