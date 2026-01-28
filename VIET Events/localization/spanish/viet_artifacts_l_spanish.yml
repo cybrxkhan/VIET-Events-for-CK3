@@ -173,3 +173,8 @@ VIET_horse_armor_desc:0 "Elegante y duradera, bella y resistente, esta armadura 
  VIET_recipe_dumpling_name:0 "[cook.GetCulture.GetNameNoTooltip] [cook.Custom('VIET_dumpling_name')|U] Recipe"
  VIET_recipe_dumpling_desc:0 "Cooks who have this recipe will have the knowledge needed to make a delicious [cook.GetCulture.GetName] [cook.Custom('VIET_dumpling_name')]. These dumplings, filled with savory flavors like vegetables, spices, herbs, and more, will undoubtedly delight and amaze."
  # Version 1.14.2 Start Here - Note to Translators: please leave this comment here and do not remove it even in your versions of the loc
+ # Version 1.18.1 Start Here - Note to Translators: please leave this comment here and do not remove it even in your versions of the loc
+ VIET_recipe_fruit_preserve_name:0 "[fruit_culture.GetNameNoTooltip] Fruit Preserve Recipe"
+ VIET_recipe_fruit_preserve_desc:0 "Cooks who have this recipe will have the knowledge needed to make a kind of #bold [ROOT.Char.Custom('VIET_random_fruit')]#! preserve using traditional [fruit_culture.GetName] methods. This fruit preserve can be used to accompany other dishes, or eaten on its own as a snack. Regardless, it's sweet and delicious!"
+ # Version 1.18.2 Start Here - Note to Translators: please leave this comment here and do not remove it even in your versions of the loc
+

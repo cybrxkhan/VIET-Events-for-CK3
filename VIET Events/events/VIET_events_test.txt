@@ -439,7 +439,7 @@ VIETtest.0011 = {
 VIETtest.0012 = {
 	type = character_event
 	title = VIETtest.0008.t
-	desc = VIETtest.0008.desc
+	desc = VIETmisc.0001.a
 	theme = VIET_theme_tuscan_country
 	orphan = yes 
 	

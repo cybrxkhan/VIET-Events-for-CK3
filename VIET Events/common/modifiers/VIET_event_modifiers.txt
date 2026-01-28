@@ -4077,8 +4077,9 @@ VIET_irritated_eyes = {
 
 VIET_interesting_trivia_about_wild_plants = {
 	icon = fertility_positive
-	monthly_stewardship_lifestyle_xp_gain_mult = 0.1
-	monthly_learning_lifestyle_xp_gain_mult = 0.1
+	monthly_stewardship_lifestyle_xp_gain_mult = 0.05
+	monthly_intrigue_lifestyle_xp_gain_mult = 0.05
+	monthly_learning_lifestyle_xp_gain_mult = 0.05
 }
 
 VIET_ate_delicious_strawberries = {

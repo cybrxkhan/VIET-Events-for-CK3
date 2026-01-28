@@ -22,6 +22,7 @@
  VIETmisc.5003.info:0 "#emphasis Contexto histórico:#! El primer reloj de arena conocido puede haber sido fabricado ya en el siglo VIII DC por un monje franco llamado Liutprand, aunque hay poca evidencia de esta historia. Las representaciones de relojes de arena son escasas hasta el siglo XIV, cuando de repente se vuelven mucho más comunes en el arte, por lo que es difícil determinar los orígenes del dispositivo y cuándo se inventó. Sin embargo, se volvieron extremadamente comunes a fines del siglo XIV debido a su simple efectividad."
  VIETmisc.5004.t:0 "Cascanueces"
  VIETmisc.5004.desc:0 "[nutgifter.GetTitledFirstName] me ha obsequiado con un regalo: un cascanueces maravillosamente elaborado, pintado con colores vibrantes y hecho para parecerse a mi propia imagen. Será útil para comer nueces, por supuesto, pero también dicen que ahuyenta a los malos espíritus cuando les muestra sus dientes para romper nueces."
+ VIETmisc.5004.aniconic.desc:0 "[nutgifter.GetCharacterViewName] has presented me with a gift - a wonderfully crafted nutcracker, painted with vibrant colors. It'll be useful for eating nuts, of course, but [nutgifter.GetSheHe] also says it scares away evil spirits as it bares its nut-cracking teeth at them."
  VIETmisc.5004.a:0 "¡Bien entonces! Vamos a buscar algunas nueces para abrir."
  VIETmisc.5004.b:0 "¡Bah, patrañas! no lo necesito. Tíralo en algún lugar."
  VIETmisc.5005.t:0 "El duro trabajo de un astrónomo"
@@ -286,9 +287,12 @@ VIETmisc.5060.b.toast.failure:0 "No consigues convencerle de que trabaje para ti
 VIETmisc.5060.b.toast.success:0 "Le convences para que trabaje para ti ahora"
 VIETmisc.5060.c:0 "¡Bah! ¿La gente dice que eres un buen vendedor? Olvídalo."
  # Version 1.16.1 Start Here - Note to Translators: please leave this comment here and do not remove it even in your versions of the loc
- VIETmisc.5061.t:0 "xxxxx"
- VIETmisc.5061.desc:0 "xxxxx"
- VIETmisc.5061.a:0 "xxxxx"
+ # Version 1.18.1 Start Here - Note to Translators: please leave this comment here and do not remove it even in your versions of the loc
+ VIETmisc.5061.t:0 "Fruit Preserves"
+ VIETmisc.5061.desc:0 "Fruit preserves are commonly eaten everywhere. But a #italic good#! one? That’s something to be treasured indeed.\n\nA certain village near [ROOT.Char.GetCapitalLocation.GetCounty.GetTitle.GetNameNoTierNoTooltip], however, might have what might be one of the best fruit preserves I’ve ever tasted. They had given me some of these fruit preserves as a gift to me, their [ROOT.Char.GetTitleAsNameNoTooltip], and even my cooks were impressed with it.\n\nMy cooks have told me it might be a good idea for us to learn how they make these fruit preserves. There are many methods of preparation, and some are clearly superior to others."
+ VIETmisc.5061.a:0 "Send some cooks to learn from those villagers!"
+ VIETmisc.5061.b:0 "It’s tasty but not worth the trouble."
+ # Version 1.18.2 Start Here - Note to Translators: please leave this comment here and do not remove it even in your versions of the loc
  VIETmisc.5062.t:0 "xxxxx"
  VIETmisc.5062.desc:0 "xxxxx"
  VIETmisc.5062.a:0 "xxxxx"

@@ -39366,6 +39366,7 @@ VIETmisc.0396 = {
 	}	
 
 	immediate = {
+		play_music_cue = mx_cue_stress 
 		culture:han = {
 			save_scope_as = chinese
 		}
@@ -39477,11 +39478,11 @@ VIETmisc.0397 = {
 	
 	option = { # Ok
 		name = VIETmisc.0397.a
-		add_character_modifier = {
-			modifier = VIET_child_obsessed_with_medicine
-			years = 4
-		}
 		scope:child = {
+			add_character_modifier = {
+				modifier = VIET_child_obsessed_with_medicine
+				years = 4
+			}
 			progress_towards_friend_effect = {
 				CHARACTER = scope:physician
 				OPINION = 0

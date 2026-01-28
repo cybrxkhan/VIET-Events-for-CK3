@@ -537,7 +537,7 @@
  VIETmisc.4018.b:0 "If he wishes to associate with commoners, so be it."
  VIETmisc.4018.c:0 "I can understand his reasons, to be honest."
  VIETmisc.4019.t:0 "The Floating Ship"
- VIETmisc.4019.desc:0 "Disturbing reports from  [county.GetNameNoTier]! A mysterious ship has been spotted floating in the sky along the far horizon in several areas by the coast. The few ships that tried to approach it could never reach it, and it does not fly the flag or banner of any known peoples or realms. Wherever it is spotted, locals report hearing strange, whistling noises, like a faint, screeching, wailing wind, in the night for several weeks afterwards."
+ VIETmisc.4019.desc:0 "Disturbing reports from [county.GetNameNoTier]! A mysterious ship has been spotted floating in the sky along the far horizon in several areas by the coast. The few ships that tried to approach it could never reach it, and it does not fly the flag or banner of any known peoples or realms. Wherever it is spotted, locals report hearing strange, whistling noises, like a faint, screeching, wailing wind, in the night for several weeks afterwards."
  VIETmisc.4019.a:0 "Alarming apparitions...."
  VIETmisc.4019.b:0 "Maybe it's peasant hysteria?"
  VIETmisc.4020.t:0 "The Ancient Stone Monument"

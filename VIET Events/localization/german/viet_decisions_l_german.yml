@@ -145,6 +145,19 @@
  VIET_decision_snow_festival_context_tooltip:0 "#emphasis Historical Context:#! This mini event chain is based loosely on similar historically attested events in late medieval and renaissance era Europe. The best known occasion was a snow festival in 1511 in the city of Brussels. Though this has been sensationalized online as a political protest by Brussel’s citizens against the city’s elites by making pornographic or satirical sculptures, the event was in reality supported and even sponsored by city officials, and was a way to work out political and social anxieties, build civic identity and pride, satirize foreign and religious enemies, and to have simple fun."
  VIET_decision_snow_festival_confirm:0 "Let's see have some winter fun!"
  VIET_winter_capital_req:0 "Your [capital|E] [barony|E] is dealing is dealing with [winter|E] (i.e. has the winter barony [modifiers|E] on it)"
+ VIET_decision_strawberry_garden:0 "Cultivate Strawberry Gardens"
+ VIET_decision_strawberry_garden_tooltip:0 "Strawberries are delicious and nutritious!"
+ VIET_decision_strawberry_garden_desc:0 "Agronomists and gardeners believe there is a part of my [realm|E] that is highly suitable for strawberry cultivation. Though it will take some work, if I were to provide some funding, we could build strawberry gardens there."
+ VIET_decision_strawberry_garden_county_req:0 "Your [capital|E] has the [GetModifier('VIET_potential_strawberry_gardens').GetNameWithTooltip] [county_modifier|E]"
+ VIET_decision_strawberry_garden_confirm:0 "Let's do this!"
+ VIET_decision_strawberry_garden_context_tooltip:0 "#emphasis Historical Context:#! The modern strawberry was bred in France in the 18th century a cross between two New World strawberry varieties – #italic Fragaria Virginiana#! from North America, and #italic Fragaria chiloensis#! from the Pacific coasts of North and South America and Hawaii. Before the Columbian exchange, strawberries in the old world came from other species, such as #italic Fragaria Vesca#! from northern Eurasia. Though greatly enjoyed by many since Neolithic times, they are smaller and rounder than the modern strawberry; they were cultivated more systematically starting in the late medieval period, particularly in France. The 14th century French king Charles V, for instance, was said to have 1200 strawberry plants in his garden."
+ VIET_decision_get_strawberries:0 "Acquire Quality Strawberries"
+ VIET_decision_get_strawberries_tooltip:0 "There are gourmet strawberries I simply have to eat!"
+ VIET_decision_get_strawberries_desc:0 "I could access strawberry gardnes in these parts that are renowned for the quality of their strawberries."
+ VIET_decision_get_strawberries_confirm:0 "Mmmm.... Strawberries!"
+ VIET_decision_strawberries_landless_req:0 "Your [domicile|E] is in a [county|E] with the [GetModifier('VIET_famous_strawberry_gardens').GetNameWithTooltip] [county_modifier|E]"
+ VIET_decision_strawberries_landed_req:0 "You or a [vassal|E] has a [capital|E] with the [GetModifier('VIET_famous_strawberry_gardens').GetNameWithTooltip] [county_modifier|E]"
+ VIET_decision_get_strawberries_context_tooltip:0 "$VIET_decision_strawberry_garden_context_tooltip$"
  
  
  # Character Interactions
