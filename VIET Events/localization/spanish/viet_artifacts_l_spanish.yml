@@ -1,4 +1,4 @@
-﻿l_spanish:
+l_spanish:
  # MISC
  artifact_VIET_clutter:0 "Curioso"
  artifact_VIET_recipe:0 "Receta"
@@ -17,8 +17,8 @@
  VIET_lusty_argonian_maid_desc:0 "Una copia escrita de una obscena obra de teatro sobre las obscenas desventuras de una sirvienta [ROOT.Char.GetCulture.GetName], contadas en varios actos."
  VIET_childhood_blanket_name:0 "Manta infantil"
  VIET_childhood_blanket_desc:0 "La manta de la infancia de [ROOT.Char.GetTitledFirstName]. Se dice que le proporcionó a [ROOT.Char.GetHerHim] un gran consuelo, incluso de adulto, por vergonzoso que haya sido admitirlo ante los demás."
- VIET_supernova_1066_record_name:0 "[ROOT.Char.GetCulture.GetNameNoTooltip] Account of the 1006 Supernova"
- VIET_supernova_1066_record_desc:0 "This text records the observations various [ROOT.Char.GetCulture.GetName] astronomers made concerning the 1006 Supernova, the brighest observed stellar event in recorded history. A large 'new' star was seen in the sky for up to a few weeks and possibly as long as a couple years. Due to the extraordinary nature of this event, [ROOT.Char.GetTitledFirstName] encouraged local scholars to write down some notes about it for posterity."
+ VIET_supernova_1066_record_name:0 "Relato [ROOT.Char.GetCulture.GetNameNoTooltip] de la Supernova de 1006"
+ VIET_supernova_1066_record_desc:0 "Este texto registra las observaciones que varios astrónomos [ROOT.Char.GetCulture.GetName] realizaron sobre la Supernova de 1006, el evento estelar más brillante observado en la historia registrada. Una gran estrella 'nueva' fue vista en el cielo durante unas pocas semanas y posiblemente hasta un par de años. Debido a la naturaleza extraordinaria de este evento, [ROOT.Char.GetTitledFirstName] instó a los eruditos locales a escribir algunas notas sobre el mismo para la posteridad."
 
  # BASIC ARTIFACTS
  VIET_abacus_name:0 "Ábaco"
@@ -170,11 +170,13 @@ VIET_horse_armor_desc:0 "Elegante y duradera, bella y resistente, esta armadura 
  VIET_recipe_bean_soup_desc:0 "Los cocineros que tengan esta receta sabrán cómo hacer una sopa de frijoles simple, sustanciosa y rústica. Aunque algunas élites la denigran como un alimento apto solo para campesinos, con las hierbas, especias, verduras y la preparación adecuadas, cualquier sopa de frijoles puede convertirse en una parte saludable y deliciosa de cualquier comida."
  # 1.5.3 - please leave this comment here
  # Version 1.14.1 Start Here - Note to Translators: please leave this comment here and do not remove it even in your versions of the loc
- VIET_recipe_dumpling_name:0 "[cook.GetCulture.GetNameNoTooltip] [cook.Custom('VIET_dumpling_name')|U] Recipe"
- VIET_recipe_dumpling_desc:0 "Cooks who have this recipe will have the knowledge needed to make a delicious [cook.GetCulture.GetName] [cook.Custom('VIET_dumpling_name')]. These dumplings, filled with savory flavors like vegetables, spices, herbs, and more, will undoubtedly delight and amaze."
+ VIET_recipe_dumpling_name:0 "Receta de [cook.Custom('VIET_dumpling_name')|U] [cook.GetCulture.GetNameNoTooltip]"
+ VIET_recipe_dumpling_desc:0 "Los cocineros que posean esta receta tendrán el conocimiento necesario para preparar unos deliciosos [cook.Custom('VIET_dumpling_name')] [cook.GetCulture.GetName]. Estas empanadillas, rellenas de sabrosos ingredientes como verduras, especias, hierbas y más, sin duda deleitarán y sorprenderán."
  # Version 1.14.2 Start Here - Note to Translators: please leave this comment here and do not remove it even in your versions of the loc
  # Version 1.18.1 Start Here - Note to Translators: please leave this comment here and do not remove it even in your versions of the loc
- VIET_recipe_fruit_preserve_name:0 "[fruit_culture.GetNameNoTooltip] Fruit Preserve Recipe"
- VIET_recipe_fruit_preserve_desc:0 "Cooks who have this recipe will have the knowledge needed to make a kind of #bold [ROOT.Char.Custom('VIET_random_fruit')]#! preserve using traditional [fruit_culture.GetName] methods. This fruit preserve can be used to accompany other dishes, or eaten on its own as a snack. Regardless, it's sweet and delicious!"
+ VIET_recipe_fruit_preserve_name:0 "Receta de Conserva de Frutas [fruit_culture.GetNameNoTooltip]"
+ VIET_recipe_fruit_preserve_desc:0 "Los cocineros que posean esta receta tendrán el conocimiento necesario para preparar una conserva de #bold [ROOT.Char.Custom('VIET_random_fruit')]#! utilizando métodos tradicionales [fruit_culture.GetName]. Esta conserva de frutas puede utilizarse para acompañar otros platos o comerse sola como tentempié. En cualquier caso, ¡es dulce y deliciosa!"
  # Version 1.18.2 Start Here - Note to Translators: please leave this comment here and do not remove it even in your versions of the loc
+
+
 
