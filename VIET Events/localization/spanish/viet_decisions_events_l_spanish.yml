@@ -1,4 +1,4 @@
-﻿l_spanish:
+l_spanish:
 
  # Events Related to Decisions
  VIETmisc.2001.t:0 "El Pastelero"
@@ -358,20 +358,20 @@ VIETmisc.2081.a:0 "¡Me alegra que todos se hayan divertido!"
 VIETmisc.2081.b:0 "Esta gente tiene una moral tan baja..."
  # Version 1.14.6 Start Here - Note to Translators: please leave this comment here and do not remove it even in your versions of the loc
  # Version 1.18.1 Start Here - Note to Translators: please leave this comment here and do not remove it even in your versions of the loc
- VIETmisc.2082.t:0 "A Strawberry Proposal"
- VIETmisc.2082.desc:0 "“Consider my recommendation, my [ROOT.Char.GetLadyLord],” [courtier.GetTitledFirstName] says, as [courtier.GetSheHe] summarizes [courtier.GetHerHis] arguments. “Like I said, there are gardeners and agronomists here who have found ways to cultivate wild strawberries in a more controlled environment. The land around [ROOT.Char.GetCapitalLocation.GetCounty.GetTitle.GetNameNoTier] is, with some work, suitable for strawberry gardens, and supporting their creation will make this region the envy of nobility and royalty across the world, I assure you.”\n\nEveryone enjoys a good strawberry, but it would take some effort to cultivate them. Yet [courtier.GetFirstNameNoTooltip] insists this would be a good investment for [ROOT.Char.GetCapitalLocation.GetCounty.GetTitle.GetNameNoTier], going as far as to make the case for it to me at court today."
- VIETmisc.2082.a:0 "Why do that when we can search for wild strawberries in the woods?"
- VIETmisc.2082.b:0 "I think you’re onto something. I’ll consider it."
- VIETmisc.2082.tooltip:0 "For as long as the [GetModifier('VIET_potential_strawberry_gardens').GetNameWithTooltip] [county_modifier|E] is active, [rulers|E] of [capital.GetNameNoTier] will have access to the [decision|E] to #V $VIET_decision_strawberry_garden$#! which will upgrade the [modifier|E].#!"
- VIETmisc.2083.t:0 "Strawberry Gardens"
- VIETmisc.2083.desc:0 "Cultivating strawberries is no easy task, as it requires transplanting wild strawberries from forests into carefully designed gardens. However, with some planning and hard work, I think we’ve pulled it off, establishing a healthy collection of strawberry plants in some gardens in [ROOT.Char.GetCapitalLocation.GetCounty.GetTitle.GetNameNoTier].\n\nI should expect a more permanent source of strawberries for whatever food and drink I and my court consume in the future, as long as I stay in the area! One can only hope these strawberries will flourish for a long time."
- VIETmisc.2083.a:0 "Delicious strawberries… I look forward to it!"
- VIETmisc.2083.tooltip:0 "For as long as the [GetModifier('VIET_famous_strawberry_gardens').GetNameWithTooltip] [county_modifier|E] is active, [rulers|E] who own [capital.GetNameNoTier] [county|E], their [lieges|E], and those with a [domicile|E] in it, can take the [decision|E] to #V $VIET_decision_get_strawberries$#!."
- VIETmisc.2084.t:0 "Quality Strawberries"
- VIETmisc.2084.desc:0 "The strawberry gardens of [capital.GetNameNoTier] are one of the better cultivated sources of strawberries in the region, known for their flavor, beautiful red color, and relatively large size.\n\n"
- VIETmisc.2084.desc.landless:0 "Of course, these aren’t the normal wild strawberries one can find in the wilderness (albeit with some effort). One has to pay for these specific strawberries, as these gardens are owned by the local elites, but it is a price I’m willing to pay."
- VIETmisc.2084.desc.landed:0 "I have sent for my servants to gather a large number of strawberries from these gardens. From personal meals to grand banquets, to ingredients in medicine, these strawberries will see plenty of usage from me!"
- VIETmisc.2084.a:0 "$VIETmisc.2083.a$"
+VIETmisc.2082.t:0 "Una Propuesta sobre Fresas"
+VIETmisc.2082.desc:0 "“Considere mi recomendación, [ROOT.Char.GetLadyLord]”, dice [courtier.GetTitledFirstName], mientras [courtier.GetSheHe] resume [courtier.GetHerHis] argumentos. “Como he dicho, hay jardineros y agrónomos aquí que han encontrado formas de cultivar fresas silvestres en un entorno más controlado. Las tierras alrededor de [ROOT.Char.GetCapitalLocation.GetCounty.GetTitle.GetNameNoTier] son, con algo de trabajo, adecuadas para jardines de fresas, y apoyar su creación hará de esta región la envidia de la nobleza y la realeza de todo el mundo, se lo aseguro.”\n\nTodo el mundo disfruta de una buena fresa, pero cultivarlas requeriría cierto esfuerzo. Sin embargo, [courtier.GetFirstNameNoTooltip] insiste en que sería una buena inversión para [ROOT.Char.GetCapitalLocation.GetCounty.GetTitle.GetNameNoTier], hasta el punto de presentarme el caso hoy en la corte."
+VIETmisc.2082.a:0 "¿Para qué hacer eso cuando podemos buscar fresas silvestres en el bosque?"
+VIETmisc.2082.b:0 "Creo que vas por buen camino. Lo consideraré."
+VIETmisc.2082.tooltip:0 "Mientras esté activo el modificador [GetModifier('VIET_potential_strawberry_gardens').GetNameWithTooltip] [county_modifier|E], los [rulers|E] de [capital.GetNameNoTier] tendrán acceso a la [decision|E] #V $VIET_decision_strawberry_garden$#! que mejorará el [modifier|E].#!"
+VIETmisc.2083.t:0 "Jardines de Fresas"
+VIETmisc.2083.desc:0 "Cultivar fresas no es tarea fácil, ya que requiere trasplantar fresas silvestres de los bosques a jardines cuidadosamente diseñados. Sin embargo, con algo de planificación y trabajo duro, creo que lo hemos logrado, estableciendo una saludable colección de plantas de fresa en algunos jardines de [ROOT.Char.GetCapitalLocation.GetCounty.GetTitle.GetNameNoTier].\n\n¡Debo esperar una fuente más permanente de fresas para cualquier comida y bebida que yo y mi corte consumamos en el futuro, mientras permanezca en la zona! Solo cabe esperar que estas fresas florezcan durante mucho tiempo."
+VIETmisc.2083.a:0 "Deliciosas fresas… ¡Las espero con ansias!"
+VIETmisc.2083.tooltip:0 "Mientras esté activo el modificador [GetModifier('VIET_famous_strawberry_gardens').GetNameWithTooltip] [county_modifier|E], los [rulers|E] que sean propietarios de [capital.GetNameNoTier] [county|E], sus [lieges|E], y aquellos con un [domicile|E] en ella, pueden tomar la [decision|E] #V $VIET_decision_get_strawberries$#!."
+VIETmisc.2084.t:0 "Fresas de Calidad"
+VIETmisc.2084.desc:0 "Los jardines de fresas de [capital.GetNameNoTier] son una de las fuentes cultivadas de fresas más destacadas de la región, conocidas por su sabor, su hermoso color rojo y su tamaño relativamente grande.\n\n"
+VIETmisc.2084.desc.landless:0 "Por supuesto, estas no son las fresas silvestres normales que se pueden encontrar en la naturaleza (aunque con cierto esfuerzo). Hay que pagar por estas fresas específicas, ya que estos jardines son propiedad de las élites locales, pero es un precio que estoy dispuesto a pagar."
+VIETmisc.2084.desc.landed:0 "He enviado a mis sirvientes a recoger una gran cantidad de fresas de estos jardines. Desde comidas personales hasta grandes banquetes, pasando por ingredientes en medicinas, ¡estas fresas tendrán un amplio uso por mi parte!"
+VIETmisc.2084.a:0 "$VIETmisc.2083.a$"
  # Version 1.18.2 Start Here - Note to Translators: please leave this comment here and do not remove it even in your versions of the loc
  VIETmisc.2085.t:0 "xxxxx"
  VIETmisc.2085.desc:0 "xxxxx"
