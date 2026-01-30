@@ -1,4 +1,4 @@
-﻿l_spanish:
+l_spanish:
  # Decisions
  VIET_decision_traveling_baklava_merchant:0 "Visitar al famoso pastelero"
  VIET_decision_traveling_baklava_merchant_tooltip:0 "Visitarás al famoso pastelero que vende varias delicias de Oriente Medio y que está en la ciudad"
@@ -176,19 +176,19 @@ VIET_decision_snow_festival_effect_tooltip_3:0 "Gana una gran cantidad de @piety
 VIET_decision_snow_festival_context_tooltip:0 "#emphasis Contexto Histórico:#! Esta mini cadena de eventos está basada libremente en sucesos históricos similares ocurridos en la Europa de finales de la Edad Media y la era del Renacimiento. El caso más conocido fue un festival de la nieve celebrado en 1511 en la ciudad de Bruselas. Aunque en Internet se ha sensacionalizado como una protesta política de los ciudadanos de Bruselas contra la élite de la ciudad mediante esculturas pornográficas o satíricas, en realidad el evento fue apoyado e incluso patrocinado por los consejeros de la ciudad. Fue una forma de canalizar ansiedades políticas y sociales, fortalecer la identidad y el orgullo cívico, satirizar a enemigos extranjeros y religiosos, y simplemente divertirse."
 VIET_decision_snow_festival_confirm:0 "¡Veamos cómo nos divertimos este invierno!"
 VIET_winter_capital_req:0 "Tu [barony|E] [capital|E] está sufriendo los efectos del [winter|E] (es decir, tiene los [modifiers|E] invernales activos)"
- VIET_decision_strawberry_garden:0 "Cultivate Strawberry Gardens"
- VIET_decision_strawberry_garden_tooltip:0 "Strawberries are delicious and nutritious!"
- VIET_decision_strawberry_garden_desc:0 "Agronomists and gardeners believe there is a part of my [realm|E] that is highly suitable for strawberry cultivation. Though it will take some work, if I were to provide some funding, we could build strawberry gardens there."
- VIET_decision_strawberry_garden_county_req:0 "Your [capital|E] has the [GetModifier('VIET_potential_strawberry_gardens').GetNameWithTooltip] [county_modifier|E]"
- VIET_decision_strawberry_garden_confirm:0 "Let's do this!"
- VIET_decision_strawberry_garden_context_tooltip:0 "#emphasis Historical Context:#! The modern strawberry was bred in France in the 18th century a cross between two New World strawberry varieties – #italic Fragaria Virginiana#! from North America, and #italic Fragaria chiloensis#! from the Pacific coasts of North and South America and Hawaii. Before the Columbian exchange, strawberries in the old world came from other species, such as #italic Fragaria Vesca#! from northern Eurasia. Though greatly enjoyed by many since Neolithic times, they are smaller and rounder than the modern strawberry; they were cultivated more systematically starting in the late medieval period, particularly in France. The 14th century French king Charles V, for instance, was said to have 1200 strawberry plants in his garden."
- VIET_decision_get_strawberries:0 "Acquire Quality Strawberries"
- VIET_decision_get_strawberries_tooltip:0 "There are gourmet strawberries I simply have to eat!"
- VIET_decision_get_strawberries_desc:0 "I could access strawberry gardnes in these parts that are renowned for the quality of their strawberries."
- VIET_decision_get_strawberries_confirm:0 "Mmmm.... Strawberries!"
- VIET_decision_strawberries_landless_req:0 "Your [domicile|E] is in a [county|E] with the [GetModifier('VIET_famous_strawberry_gardens').GetNameWithTooltip] [county_modifier|E]"
- VIET_decision_strawberries_landed_req:0 "You or a [vassal|E] has a [capital|E] with the [GetModifier('VIET_famous_strawberry_gardens').GetNameWithTooltip] [county_modifier|E]"
- VIET_decision_get_strawberries_context_tooltip:0 "$VIET_decision_strawberry_garden_context_tooltip$"
+VIET_decision_strawberry_garden:0 "Cultivar Jardines de Fresas"
+VIET_decision_strawberry_garden_tooltip:0 "¡Las fresas son deliciosas y nutritivas!"
+VIET_decision_strawberry_garden_desc:0 "Los agrónomos y jardineros creen que hay una parte de mi [realm|E] que es muy adecuada para el cultivo de fresas. Aunque requerirá algo de trabajo, si yo proporcionara algo de financiación, podríamos construir jardines de fresas allí."
+VIET_decision_strawberry_garden_county_req:0 "Tu [capital|E] tiene el modificador [GetModifier('VIET_potential_strawberry_gardens').GetNameWithTooltip] [county_modifier|E]"
+VIET_decision_strawberry_garden_confirm:0 "¡Hagámoslo!"
+VIET_decision_strawberry_garden_context_tooltip:0 "#emphasis Contexto Histórico:#! La fresa moderna se creó en Francia en el siglo XVIII mediante el cruce de dos variedades de fresa del Nuevo Mundo: la #italic Fragaria Virginiana#! de Norteamérica y la #italic Fragaria chiloensis#! de las costas del Pacífico de Norteamérica, Sudamérica y Hawái. Antes del intercambio colombino, las fresas del viejo mundo procedían de otras especies, como la #italic Fragaria Vesca#! del norte de Eurasia. Aunque muy apreciadas por muchos desde el Neolítico, son más pequeñas y redondas que la fresa moderna; su cultivo se sistematizó a partir del periodo bajomedieval, especialmente en Francia. Se dice, por ejemplo, que el rey francés Carlos V, del siglo XIV, tenía 1200 plantas de fresa en su jardín."
+VIET_decision_get_strawberries:0 "Conseguir Fresas de Calidad"
+VIET_decision_get_strawberries_tooltip:0 "¡Hay fresas gourmet que simplemente debo comer!"
+VIET_decision_get_strawberries_desc:0 "Podría acceder a jardines de fresas en esta zona que son renombrados por la calidad de sus fresas."
+VIET_decision_get_strawberries_confirm:0 "Mmmm.... ¡Fresas!"
+VIET_decision_strawberries_landless_req:0 "Tu [domicile|E] está en un [county|E] con el modificador [GetModifier('VIET_famous_strawberry_gardens').GetNameWithTooltip] [county_modifier|E]"
+VIET_decision_strawberries_landed_req:0 "Tú o un [vassal|E] tenéis una [capital|E] con el modificador [GetModifier('VIET_famous_strawberry_gardens').GetNameWithTooltip] [county_modifier|E]"
+VIET_decision_get_strawberries_context_tooltip:0 "$VIET_decision_strawberry_garden_context_tooltip$"
  
  
  # Character Interactions
