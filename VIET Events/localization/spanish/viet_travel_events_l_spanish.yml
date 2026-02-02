@@ -1,4 +1,4 @@
-l_spanish:
+﻿l_spanish:
 
 VIET_every_entourage_tt_dislikes_rations:0 "Todos los miembros del séquito que no son [GetTrait('temperate').GetName( GetPlayer )] o [GetTrait('content').GetName( GetPlayer )]"
 every_entourage_tt_attracted_to_women:0 "Todos los miembros del séquito atraídos por las mujeres"
