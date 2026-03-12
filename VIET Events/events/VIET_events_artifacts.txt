@@ -35,6 +35,7 @@
 # 5060			Oblivion Remaster
 # 5061			Strawberries
 # 5062 			Horses
+# 5063 			White
 # 
 ############################################################################################################################
 
@@ -9756,6 +9757,228 @@ VIETmisc.5062 = {
 			content = miniscule_stress_impact_gain
 		}
 	}
+}
+
+
+
+
+##################################################################
+# WHITE 5063
+##################################################################
+
+
+# Tofu
+VIETmisc.5063 = {
+	type = character_event
+	title = VIETmisc.5063.t
+	desc = VIETmisc.5063.desc
+	theme = VIET_theme_kitchen_generic
+	
+	right_portrait = {
+		character = root
+		animation = thinking
+	}
+
+	trigger = {
+		is_landed = yes
+	}
+	artifact = { # To display the artifact in the event-window
+        target = scope:VIET_recipe_artifact
+        position = lower_center_portrait
+    }
+
+	trigger = {
+		has_game_rule = VIET_normal_universe_events
+		VIET_is_lesser_sinosphere_culture_trigger = yes
+	}
+
+    weight_multiplier = {
+        base = 1
+		# Reduce spam
+		modifier = {
+			add = -0.9
+			any_character_artifact = {
+				has_variable = VIET_recipe_tofu_variable
+			}
+		}
+		# Reduce chances if not an Eastern religion
+		modifier = {
+			add = -0.7
+			NOR = {
+				faith = { has_doctrine = special_doctrine_immaterial_harmony }
+				religion = religion:buddhism_religion	
+			}	
+		}
+		modifier = {
+			add = 0.2
+			has_trait = gluttonous
+		}
+		modifier = {
+			add = -0.2
+			has_trait = temperate
+		}
+		modifier = {
+			add = 0.2
+			has_trait = humble
+		}
+		modifier = {
+			add = -0.2
+			has_trait = arrogant
+		}
+		modifier = {
+			add = 0.2
+			has_trait = compassionate
+		}
+		modifier = {
+			add = -0.2
+			has_trait = callous
+		}
+    }
+	
+	immediate = {
+		random_list = {
+			60 = {
+				hidden_effect_new_object = {
+					create_artifact = {	
+						name = VIET_recipe_tofu_name
+						description = VIET_recipe_tofu_desc
+						type = VIET_recipe
+						visuals = VIET_tofu
+						quality = 15
+						wealth = 15
+						modifier = artifact_VIET_tofu_recipe_modifier_1
+						#max_durability = 40
+						decaying = no
+						save_scope_as = VIET_recipe_artifact
+						history = {
+							type = created_before_history
+						}
+					}
+					scope:VIET_recipe_artifact = {
+						set_variable = VIET_recipe_tofu_variable
+					}
+				}
+			}
+			45 = {
+				hidden_effect_new_object = {
+					create_artifact = {	
+						name = VIET_recipe_tofu_name
+						description = VIET_recipe_tofu_desc
+						type = VIET_recipe
+						visuals = VIET_tofu
+						quality = 30
+						wealth = 30
+						modifier = artifact_VIET_tofu_recipe_modifier_2
+						#max_durability = 40
+						decaying = no
+						save_scope_as = VIET_recipe_artifact
+						history = {
+							type = created_before_history
+						}
+					}
+					scope:VIET_recipe_artifact = {
+						set_variable = VIET_recipe_tofu_variable
+					}
+				}
+			}
+			30 = {
+				hidden_effect_new_object = {
+					create_artifact = {	
+						name = VIET_recipe_tofu_name
+						description = VIET_recipe_tofu_desc
+						type = VIET_recipe
+						visuals = VIET_tofu
+						quality = 65
+						wealth = 65
+						modifier = artifact_VIET_tofu_recipe_modifier_3
+						#max_durability = 40
+						decaying = no
+						save_scope_as = VIET_recipe_artifact
+						history = {
+							type = created_before_history
+						}
+					}
+					scope:VIET_recipe_artifact = {
+						set_variable = VIET_recipe_tofu_variable
+					}
+				}
+			}
+			15 = {
+				hidden_effect_new_object = {
+					create_artifact = {	
+						name = VIET_recipe_tofu_name
+						description = VIET_recipe_tofu_desc
+						type = VIET_recipe
+						visuals = VIET_tofu
+						quality = 95
+						wealth = 95
+						modifier = artifact_VIET_tofu_recipe_modifier_4
+						#max_durability = 40
+						decaying = no
+						save_scope_as = VIET_recipe_artifact
+						history = {
+							type = created_before_history
+						}
+					}
+					scope:VIET_recipe_artifact = {
+						set_variable = VIET_recipe_tofu_variable
+					}
+				}
+			}
+		}
+
+	}
+	
+	option = { # Pay
+		name = VIETmisc.5063.a
+		trigger = {
+			OR = {
+				is_ai = no
+				gold >= 40
+			}
+		}
+		remove_short_term_gold = 40
+		show_as_tooltip = {
+			scope:VIET_recipe_artifact = {
+				set_owner = {
+					target = root
+				}
+			}
+		}
+		stress_impact = {
+			temperate = miniscule_stress_impact_gain
+			greedy = miniscule_stress_impact_gain
+		}
+		ai_chance = {
+			base = 50
+		}
+	}
+	
+	option = { # Ignore
+		name = VIETmisc.5063.b
+		hidden_effect = {
+			destroy_artifact = scope:VIET_recipe_artifact
+		}
+		stress_impact = {
+			gluttonous = minor_stress_impact_gain
+		}
+		ai_chance = {
+			base = 100
+			modifier = {
+				add = 10
+				has_trait = greedy
+			}
+			modifier = {
+				add = 10
+				has_trait = temperate
+			}
+			modifier = {
+				add = 10
+				has_trait = content
+			}
+		}
+	}
+	
 }
 
 

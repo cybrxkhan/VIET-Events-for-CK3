@@ -24,6 +24,7 @@
 # 
 # 0400-0406		Strawberries
 # 0407-0409 	Horses
+# 0410-0414 	White
 # 
 ############################################################################################################################
 
@@ -1133,6 +1134,686 @@ VIETmisc.0409 = {
 
 
 
+##################################################################
+# 0410-0414 White
+##################################################################
+
+
+# Female courtier enjoys bathing in white milk
+VIETmisc.0410 = {
+	type = character_event
+	title = VIETmisc.0410.t
+	desc = VIETmisc.0410.desc
+	theme = seduction
+	override_background = { reference = relaxing_room }
+
+
+	left_portrait = {
+		character = root
+		animation = personality_cynical
+	}
+
+	right_portrait = {
+		character = scope:milk_bather
+		animation = eyeroll
+	}
+
+	trigger = {	
+		OR = {
+			any_courtier_or_guest = {
+				is_available_ai_adult = yes
+				is_female = yes
+				VIET_is_cheese_culture_trigger = no # Won't happen to cultures where milk isn't as important
+				NOR = {
+					has_trait = temperate
+					has_trait = humble
+					has_trait = reclusive
+					probably_unintelligent_trigger = yes
+					diplomacy <= low_skill_rating
+					learning <= low_skill_rating
+				}
+			}
+			any_vassal = {
+				is_available_ai_adult = yes
+				is_female = yes
+				VIET_is_cheese_culture_trigger = no # Won't happen to cultures where milk isn't as important
+				NOR = {
+					has_trait = temperate
+					has_trait = humble
+					has_trait = reclusive
+					probably_unintelligent_trigger = yes
+					diplomacy <= low_skill_rating
+					learning <= low_skill_rating
+				}
+			}
+		}
+	}
+	
+	weight_multiplier = {
+		base = 1
+		modifier = {
+			add = 0.2
+			has_trait = zealous
+		}
+		modifier = {
+			add = -0.2
+			has_trait = cynical
+		}
+		modifier = {
+			add = 0.2
+			has_trait = honest
+		}
+		modifier = {
+			add = -0.2
+			has_trait = deceitful
+		}
+		modifier = {
+			add = 0.2
+			has_trait = fickle
+		}
+		modifier = {
+			add = -0.2
+			has_trait = stubborn
+		}
+	}
+	
+	immediate = {
+		every_courtier_or_guest = {
+			limit = {
+				is_available_ai_adult = yes
+				is_female = yes
+				VIET_is_cheese_culture_trigger = no # Won't happen to cultures where milk isn't as important
+				NOR = {
+					has_trait = temperate
+					has_trait = humble
+					has_trait = reclusive
+					probably_unintelligent_trigger = yes
+					diplomacy <= low_skill_rating
+					learning <= low_skill_rating
+				}
+			}
+			add_to_list = candidate_characters
+		}
+		every_vassal = {
+			limit = {
+				is_available_ai_adult = yes
+				is_female = yes
+				VIET_is_cheese_culture_trigger = no # Won't happen to cultures where milk isn't as important
+				NOR = {
+					has_trait = temperate
+					has_trait = humble
+					has_trait = reclusive
+					probably_unintelligent_trigger = yes
+					diplomacy <= low_skill_rating
+					learning <= low_skill_rating
+				}
+			}
+			add_to_list = candidate_characters
+		}
+		random_in_list = {
+			list = candidate_characters
+			save_scope_as = milk_bather
+			add_character_modifier = {
+				modifier = VIET_milk_bather
+				years = 10
+			}
+		}
+	}
+
+	option = { # Let her be
+		name = VIETmisc.0410.a
+		stress_impact = {
+			temperate = minor_stress_impact_gain
+			humble = miniscule_stress_impact_gain
+		}
+	}	
+
+	option = { # Convince her to stop
+		name = VIETmisc.0410.b
+		VIET_huge_piety_gain_effect = yes
+		duel = {
+			skill = diplomacy
+			target = scope:milk_bather
+			10 = { # Failure
+				compare_modifier = {
+					value = scope:duel_value
+					multiplier = -1.1
+				}
+				desc = VIETmisc.0410.b.toast_bad
+				send_interface_toast = {
+					type = event_toast_effect_bad
+					left_icon = scope:milk_bather
+					title = VIETmisc.0410.b.toast_bad
+					scope:milk_bather = {
+						add_opinion = {
+							target = root
+							modifier = VIET_opinion_chastised_me_in_private
+						}				
+						reverse_add_opinion = {
+							modifier = disappointed_opinion
+							target = root
+							opinion = -10
+						}
+					}
+				}
+			}
+			10 = { # Success
+				compare_modifier = {
+					value = scope:duel_value
+					multiplier = 1.1
+				}
+				desc = VIETmisc.0410.b.toast_good
+				send_interface_toast = {
+					type = event_toast_effect_good
+					left_icon = scope:milk_bather
+					title = VIETmisc.0410.b.toast_good
+					scope:milk_bather = {
+						add_opinion = {
+							target = root
+							modifier = VIET_opinion_good_advice
+						}
+						reverse_add_opinion = {
+							target = root
+							modifier = VIET_opinion_listened_to_my_advice
+						}
+					}
+				}
+			}
+		}
+		stress_impact = {
+			content = miniscule_stress_impact_gain
+			shy = miniscule_stress_impact_gain
+		}
+	}	
+
+	option = { # Start doing it yourself
+		name = VIETmisc.0410.c
+		trigger = {
+			OR = {
+				gold >= 25
+				is_ai = no
+			}
+		}
+		remove_short_term_gold = 25
+		add_character_modifier = {
+			modifier = VIET_milk_bather
+			years = 10
+		}
+		stress_impact = {
+			greedy = minor_stress_impact_gain
+			temperate = minor_stress_impact_gain
+			content = miniscule_stress_impact_gain
+			humble = miniscule_stress_impact_gain
+		}
+	}	
+
+
+}
 
 
 
+# Are black or white robes more appropriate for Christian monks?
+VIETmisc.0411 = {
+	type = character_event
+	title = VIETmisc.0411.t
+	desc = VIETmisc.0411.desc
+	theme = faith
+	override_background = { reference = courtyard }
+
+	
+	left_portrait = {
+		character = scope:courtier_1
+		animation = throne_room_conversation_3
+	}
+	right_portrait = {
+		character = scope:courtier_2
+		animation = throne_room_conversation_2
+	}
+
+
+	trigger = {	
+		has_game_rule = VIET_normal_universe_events
+		religion = religion:christianity_religion
+		any_courtier = {
+			is_available_ai_adult = yes
+			religion = religion:christianity_religion
+			count >= 2
+		}
+	}
+	
+	weight_multiplier = {
+		base = 1
+		modifier = {
+			add = 0.2
+			has_trait = humble
+		}
+		modifier = {
+			add = -0.2
+			has_trait = arrogant
+		}
+		modifier = {
+			add = 0.2
+			has_trait = zealous
+		}
+		modifier = {
+			add = -0.2
+			has_trait = cynical
+		}
+		modifier = {
+			add = 0.2
+			has_trait = shy
+		}
+		modifier = {
+			add = -0.2
+			has_trait = gregarious
+		}
+	}
+
+	immediate = {
+		every_courtier = {
+			limit = {
+				is_available_ai_adult = yes
+				religion = religion:christianity_religion
+			}
+			add_to_list = courtier_candidates
+		}
+		random_in_list = {
+			list = courtier_candidates
+			save_scope_as = courtier_1
+			add_character_modifier = {
+				modifier = VIET_prefers_humble_monks
+				years = 5
+			}
+		}
+		random_in_list = {
+			list = courtier_candidates
+			limit = {
+				exists = scope:courtier_1
+				NOT = { this = scope:courtier_1 }
+			}
+			save_scope_as = courtier_2
+			add_character_modifier = {
+				modifier = VIET_prefers_pure_monks
+				years = 5
+			}
+		}
+	}
+
+	
+	option = { # black - humility
+		name = VIETmisc.0411.a
+		add_character_modifier = {
+			modifier = VIET_prefers_humble_monks
+			years = 5
+		}
+		scope:courtier_1 = {
+			add_opinion = {
+				target = root
+				modifier = VIET_opinion_shares_my_opinions
+			}
+			reverse_add_opinion = {
+				target = root
+				modifier = VIET_opinion_shares_my_opinions
+			}			
+		}
+		stress_impact = {
+			humble = miniscule_stress_impact_loss
+			temperate = miniscule_stress_impact_loss
+			patient = miniscule_stress_impact_loss
+		}
+	}
+	
+	option = { # ok
+		name = VIETmisc.0411.b
+		add_character_modifier = {
+			modifier = VIET_prefers_pure_monks
+			years = 5
+		}
+		scope:courtier_2 = {
+			add_opinion = {
+				target = root
+				modifier = VIET_opinion_shares_my_opinions
+			}
+			reverse_add_opinion = {
+				target = root
+				modifier = VIET_opinion_shares_my_opinions
+			}			
+		}
+		stress_impact = {
+			chaste = miniscule_stress_impact_loss
+			forgiving = miniscule_stress_impact_loss
+			compassionate = miniscule_stress_impact_loss
+		}
+	}
+	
+	option = { # ok
+		name = VIETmisc.0411.c
+		VIET_large_prestige_gain_effect = yes
+		stress_impact = {
+			content = minor_stress_impact_loss
+			trusting = miniscule_stress_impact_loss
+			zealous = miniscule_stress_impact_loss
+		}
+	}
+
+	after = {
+		if = {
+			limit = {
+				has_game_rule = VIET_historical_context_on
+			}
+			custom_tooltip = VIETmisc.0411.info
+		}
+
+	}
+
+}
+
+
+
+# Physician suggests a lily of the valley tonic to improve memory
+VIETmisc.0412 = {
+	type = character_event
+	title = VIETmisc.0412.t
+	desc = VIETmisc.0412.desc
+	theme = physical_health
+
+
+	left_portrait = {
+		character = root
+		animation = personality_cynical
+	}
+	
+	right_portrait = {
+		character = scope:physician
+		animation = physician
+	}
+	
+	trigger = {
+		court_physician_available_trigger = yes
+		has_game_rule = VIET_normal_universe_events
+		capital_province = {
+			OR = {
+				geographical_region = world_asia_minor
+				geographical_region = world_europe
+				geographical_region = world_steppe_west
+			}
+		}
+	}
+	
+	weight_multiplier = {
+		base = 1
+		modifier = {
+			add = 0.2
+			has_trait = ambitious
+		}
+		modifier = {
+			add = -0.2
+			has_trait = content
+		}
+		modifier = {
+			add = 0.2
+			has_trait = gregarious
+		}
+		modifier = {
+			add = -0.2
+			has_trait = shy
+		}
+		modifier = {
+			add = 0.2
+			has_trait = diligent
+		}
+		modifier = {
+			add = -0.2
+			has_trait = lazy
+		}
+	}
+	
+	immediate = {
+		save_court_physician_as_effect = { SCOPE_NAME = physician }
+	}
+
+	option = { # Ok
+		name = VIETmisc.0412.a
+		stress_impact = {
+			ambitious = miniscule_stress_impact_gain
+			diligent = miniscule_stress_impact_gain
+		}
+	}	
+
+	option = { # Ok
+		name = VIETmisc.0412.b	
+		trigger = {
+			OR = {
+				gold >= 50
+				is_ai = no
+			}
+		}
+		remove_short_term_gold = 50
+		scope:physician = {
+			duel = {
+				skill = learning
+				value = medium_skill_rating
+				10 = { # Failure - they're not interested
+					#show_chance = no
+					desc = VIETmisc.0412.t
+					custom_tooltip = VIETmisc.0412.b.failure
+					compare_modifier = {
+						value = scope:duel_value
+						multiplier = -0.7
+					}
+					send_interface_toast = {
+						type = event_toast_effect_bad
+						left_icon = scope:physician
+						title = VIETmisc.0412.b.failure
+						root = {
+							stress_impact = {
+								base = miniscule_stress_impact_gain
+							}
+							add_character_modifier = {
+								modifier = VIET_lily_of_the_valley_with_side_effects
+								years = 10
+							}
+						}
+					}
+				}
+				10 = { # Success - interested
+					#show_chance = no
+					desc = VIETmisc.2011.t
+					custom_tooltip = VIETmisc.0412.b.success
+					compare_modifier = {
+						value = scope:duel_value
+						multiplier = 0.7
+					}
+					send_interface_toast = {
+						type = event_toast_effect_good
+						left_icon = scope:physician
+						title = VIETmisc.0412.b.success
+						root = {
+							add_character_modifier = {
+								modifier = VIET_lily_of_the_valley
+								years = 10
+							}
+						}
+					}
+				}
+			}			
+		}
+	}	
+
+
+}
+
+
+
+# Kid asks why white and red are opposites
+VIETmisc.0413 = {
+	type = character_event
+	title = VIETmisc.0413.t
+	desc = VIETmisc.0413.desc
+	theme = learning
+	override_background = { reference = relaxing_room }
+
+	
+	left_portrait = {
+		character = scope:child
+		animation = personality_cynical
+	}
+	
+	right_portrait = root
+
+	trigger = {
+		has_game_rule = VIET_normal_universe_events
+		religion = religion:christianity_religion
+		culture_has_european_heritage_pillar_trigger = yes
+		any_courtier_or_guest = {
+			is_available_child = yes
+			religion = religion:christianity_religion
+			age >= 3
+			age <= 12
+		}
+	}
+	
+	weight_multiplier = {
+		base = 1
+		modifier = {
+			add = 0.2
+			has_trait = diligent
+		}
+		modifier = {
+			add = -0.2
+			has_trait = lazy
+		}
+		modifier = {
+			add = 0.2
+			has_trait = just
+		}
+		modifier = {
+			add = -0.2
+			has_trait = arbitrary
+		}
+		modifier = {
+			add = 0.2
+			has_trait = patient
+		}
+		modifier = {
+			add = -0.2
+			has_trait = impatient
+		}
+	}
+
+	immediate = {
+		random_courtier_or_guest = {
+			limit = {
+				is_available_child = yes
+				religion = religion:christianity_religion
+				age >= 3
+				age <= 12
+			}
+			save_scope_as = child
+		}
+	}
+	
+	option = { # ok
+		name = VIETmisc.0413.a
+		scope:child = {
+			add_opinion = {
+				target = root
+				modifier = trust_opinion
+				opinion = 10
+			}
+		}
+		stress_impact = {
+			diligent = miniscule_stress_impact_gain
+			impatient = miniscule_stress_impact_gain
+		}
+	}
+	
+	option = { # ok
+		name = VIETmisc.0413.b
+		VIET_huge_prestige_gain_effect = yes
+		scope:child = {
+			add_opinion = {
+				target = root
+				modifier = annoyed_opinion
+				opinion = -10
+			}
+		}
+		stress_impact = {
+			compassionate = miniscule_stress_impact_gain
+			patient = miniscule_stress_impact_gain
+			humble = miniscule_stress_impact_gain
+		}
+	}
+
+	after = { 
+		if = {
+			limit = {
+				has_game_rule = VIET_historical_context_on
+			}
+			custom_tooltip = VIETmisc.0413.info
+		}		
+	}
+
+
+}
+
+
+
+# Jasmine tea
+VIETmisc.0414 = {
+	type = character_event
+	title = VIETmisc.0414.t
+	desc = VIETmisc.0414.desc
+	theme = friendly
+	override_background = { reference = relaxing_room }
+	
+	left_portrait = {
+		character = root
+		animation = drink
+	}
+
+	trigger = {
+		has_game_rule = VIET_normal_universe_events
+		VIET_is_lesser_sinosphere_culture_trigger = yes
+	}
+
+	weight_multiplier = {
+		base = 1
+		modifier = {
+			add = 0.2
+			has_trait = content
+		}
+		modifier = {
+			add = -0.2
+			has_trait = ambitious
+		}
+		modifier = {
+			add = 0.2
+			has_trait = lazy
+		}
+		modifier = {
+			add = -0.2
+			has_trait = diligent
+		}
+		modifier = {
+			add = 0.2
+			has_trait = compassionate
+		}
+		modifier = {
+			add = -0.2
+			has_trait = sadistic
+		}
+	}
+	
+	option = { # ok
+		name = VIETmisc.0414.a
+		stress_impact = {
+			base = miniscule_stress_impact_loss
+			lazy = miniscule_stress_impact_loss
+		}
+		add_character_modifier = {
+			modifier = VIET_jasmine_tea
+			years = 5
+		}
+	}
+}

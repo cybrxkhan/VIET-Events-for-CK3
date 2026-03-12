@@ -208,6 +208,31 @@ artifact_VIET_fruit_preserve_recipe_modifier_4 = {
 	negate_diplomacy_penalty_add = 4
 }
 
+artifact_VIET_tofu_recipe_modifier_1 = {
+	monthly_piety = 0.1
+	health = 0.1
+	stress_gain_mult = -0.05
+	stress_loss_mult = 0.05
+}
+artifact_VIET_tofu_recipe_modifier_2 = {
+	monthly_piety = 0.2
+	health = 0.2
+	stress_gain_mult = -0.1
+	stress_loss_mult = 0.1
+}
+artifact_VIET_tofu_recipe_modifier_3 = {
+	monthly_piety = 0.3
+	health = 0.3
+	stress_gain_mult = -0.15
+	stress_loss_mult = 0.15
+}
+artifact_VIET_tofu_recipe_modifier_4 = {
+	monthly_piety = 0.4
+	health = 0.4
+	stress_gain_mult = -0.2
+	stress_loss_mult = 0.2
+}
+
 ####################################################################################
 #
 # Clutter Artifacts

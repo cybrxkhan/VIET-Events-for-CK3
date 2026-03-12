@@ -4192,6 +4192,43 @@ VIET_dreamt_of_ox_head_horse_face = {
 }
 
 
+VIET_milk_bather = {
+	icon = drink_positive	
+	negate_diplomacy_penalty_add = 1
+	attraction_opinion = 10
+	monthly_prestige = 0.25
+}
+
+VIET_prefers_humble_monks = {
+	icon = piety_positive
+	diplomacy = 1
+	owned_personal_scheme_success_chance_add = 2
+}
+
+VIET_prefers_pure_monks = {
+	icon = piety_positive
+	learning = 1
+	enemy_hostile_scheme_success_chance_add = -2
+}
+
+VIET_lily_of_the_valley_with_side_effects = {
+	icon = drink_mixed
+	health = -0.3
+	monthly_lifestyle_xp_gain_mult = 0.08
+}
+
+VIET_lily_of_the_valley = {
+	icon = drink_positive
+	monthly_lifestyle_xp_gain_mult = 0.08
+}
+
+VIET_lily_of_the_valley = {
+	icon = tea_positive
+	stress_gain_mult = -0.05
+	stress_loss_mult = 0.05
+}
+
+
 
 
 

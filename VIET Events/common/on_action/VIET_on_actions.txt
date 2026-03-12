@@ -523,6 +523,10 @@ VIET_events_yearly_pulse = {
 		100 = VIETmisc.0405		# Physician recommends a tonic made of the Strawberry Tree
 		# Horses
 		100 = VIETmisc.0407 	# Observe a stablehand testing colts to see whether they'd make good warhorses
+		# White
+		100 = VIETmisc.0411 	# Are black or white robes more appropriate for Christian monks?
+		100 = VIETmisc.0413		# Kid asks why white and red are opposites
+		100 = VIETmisc.0414		# Jasmine tea
 	}
 }
 
@@ -961,6 +965,11 @@ VIET_events_tri_yearly_pulse = {
 		
 		# Horses
 		100 = VIETmisc.0408		# Bloodletting horses - hire a new doctor?
+
+		# White
+		100 = VIETmisc.0410		# Female courtier enjoys bathing in white milk
+		100 = VIETmisc.0412		# Physician suggests a lily of the valley tonic to improve memory
+
 	}
 }
 
@@ -2026,9 +2035,12 @@ VIET_events_uncommon_artifact_pulse = {
 		100 = VIETmisc.5059		# Coconut Cup - buy one from a merchant?
 		
 		# Strawberries
-		100 = VIETmisc.5061 	# Fruit Preserve/Fruit Jam
+		100 = VIETmisc.5061 	# Fruit Preserve/Fruit Jam recipe
 		
-		# 27
+		# Tofu
+		100 = VIETmisc.5063 	# Tofu recipe
+		
+		# 28
 		
     }
 }
