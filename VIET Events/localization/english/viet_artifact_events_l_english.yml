@@ -298,9 +298,13 @@
  VIETmisc.5062.a:0 "I would appreciate a lucky horseshoe!"
  VIETmisc.5062.b:0 "I trust in [ROOT.Char.GetFaith.HighGodName], not irrational superstition."
  # Version 1.18.3 Start Here - Note to Translators: please leave this comment here and do not remove it even in your versions of the loc
- VIETmisc.5063.t:0 "xxxxx"
- VIETmisc.5063.desc:0 "xxxxx"
- VIETmisc.5063.a:0 "xxxxx"
+ VIETmisc.5063.t:0 "Tofu"
+ VIETmisc.5063.desc:0 "Tofu, which is prepared by pressing the curds of soybeans into solid white blocks, has become more and more popular these days among [ROOT.Char.GetCulture.GetCollectiveNoun]. While tofu itself has a plain though not unpleasant taste, it is best cooked with other ingredients, whether meats, vegetables, spices, sauces, sweeteners, whatever one can think of!\n\nIt has come to my attention that some nearby villagers produce quality tofu that can be used to prepare a variety of dishes. Perhaps if I pay them, they are willing to divulge to my cooks how this tofu is made…."
+ VIETmisc.5063.a:0 "I’m willing to pay to acquire the recipe."
+ VIETmisc.5063.b:0 "Maybe I’ll hire these villagers to work in my kitchens!"
+ VIETmisc.5063.c:0 "On second thought, do I really care about tofu?"
+ VIETmisc.5063.info:0 "#emphasis Historical Context:#! The invention of tofu has been popularly attributed to Chinese Prince Liú Ān (179–122 BCE) of the Hàn Dynasty. Although it is not implausible that tofu had been around since then, more concrete, recorded evidence for tofu’s existence dates from the early Sòng Dynasty. As such, tofu only became increasingly popular in Asia during the medieval period. Unlike its misconception in non-Asian cultures as a tasteless, uninspiring ingredient only vegetarians eat, and though it is a staple of [Glossary( 'East Asian Buddhist Cuisine', 'BUDDHIST_CUISINE_GLOSS' )], tofu is greatly enjoyed in Asia thanks to its versatility in use in many dishes, vegetarian and non-vegetarian, savory and sweet, freshed, baked, fermented, and fried, and more."
+ # Version 1.18.4 Start Here - Note to Translators: please leave this comment here and do not remove it even in your versions of the loc
  VIETmisc.5064.t:0 "xxxxx"
  VIETmisc.5064.desc:0 "xxxxx"
  VIETmisc.5064.a:0 "xxxxx"

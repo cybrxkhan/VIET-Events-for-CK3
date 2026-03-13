@@ -4212,17 +4212,17 @@ VIET_prefers_pure_monks = {
 }
 
 VIET_lily_of_the_valley_with_side_effects = {
-	icon = drink_mixed
+	icon = fertility_mixed
 	health = -0.3
 	monthly_lifestyle_xp_gain_mult = 0.08
 }
 
 VIET_lily_of_the_valley = {
-	icon = drink_positive
+	icon = fertility_positive
 	monthly_lifestyle_xp_gain_mult = 0.08
 }
 
-VIET_lily_of_the_valley = {
+VIET_jasmine_tea = {
 	icon = tea_positive
 	stress_gain_mult = -0.05
 	stress_loss_mult = 0.05

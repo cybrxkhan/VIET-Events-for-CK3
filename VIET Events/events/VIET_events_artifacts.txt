@@ -9801,7 +9801,7 @@ VIETmisc.5063 = {
 				has_variable = VIET_recipe_tofu_variable
 			}
 		}
-		# Reduce chances if not an Eastern religion
+		# Reduce chances if not an East Asian religion
 		modifier = {
 			add = -0.7
 			NOR = {

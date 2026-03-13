@@ -1667,5 +1667,16 @@
  VIET_dreamt_of_ox_head_horse_face:0 "Dreamt of Ox-Head and Horse-Face"
  VIET_dreamt_of_ox_head_horse_face_desc:0 "This character recently had a brief illness after dreaming of a visit by [Glossary( ' Ox-Head and Horse-Face', 'OX_HEAD_AND_HORSE_FACE_GLOSS' )]. Strangely, it wasn't an ominous dream; the two figures claimed they visited this character by accident, and would compensate them for the trouble with some fortune."
  # Version 1.18.3 Start Here - Note to Translators: please leave this comment here and do not remove it even in your versions of the loc
+ VIET_milk_bather:0 "Loves Taking Milk Baths"
+ VIET_prefers_humble_monks:0 "Monks Should Be Humble"
+ VIET_prefers_humble_monks_desc:0 "This character believes humility is one of the most important qualities of the ideal Christian monk."
+ VIET_prefers_pure_monks:0 "Monks Should Be Pure"
+ VIET_prefers_pure_monks_desc:0 "This character believes spiritual purity is one of the most important qualities of the ideal Christian monk."
+ VIET_lily_of_the_valley:0 "Lily of the Valley"
+ VIET_lily_of_the_valley_desc:0 "This character regularly consumes a tonic made with Lily of the Valley which is said to assist in improving one's memory."
+ VIET_lily_of_the_valley_with_side_effects:0 "$VIET_lily_of_the_valley$"
+ VIET_lily_of_the_valley_with_side_effects_desc:0 "This character regularly consumes a tonic made with Lily of the Valley which is said to assist in improving one's memory. However, due to the toxicity of Lily of the Valley, and perhaps poor preparation of the tonic, this character appears to be suffering some side effects."
+ VIET_jasmine_tea:0 "Enjoys Jasmine Tea"
+ # Version 1.18.4 Start Here - Note to Translators: please leave this comment here and do not remove it even in your versions of the loc
  xxxxxxxxxx:0 "xxx"
 
