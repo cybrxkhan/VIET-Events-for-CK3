@@ -1,6 +1,6 @@
 # VIET Events for CK3
 
-<img src="https://i.imgur.com/5AXi5UD.jpg">
+<img src="https://i.imgur.com/gGaoY1C.jpg">
 
 ## Latest Version: 1.18.3 "White Chocolate" (Released 3/14/26)
 
