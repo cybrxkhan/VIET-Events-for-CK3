@@ -2,9 +2,14 @@
 
 <img src="https://i.imgur.com/5AXi5UD.jpg">
 
-## Latest Version: 1.18.2 "Heavenly Horses" (Released 2/17/26)
+## Latest Version: 1.18.3 "White Chocolate" (Released 3/14/26)
 
-_Ferghana Horses, historically known in China as “Heavenly Horses,” were a horse breed originating from the Ferghana Valley of Central Asia. It was renowned for its speed and strength, and first became popular during the Han Dynasty; such Heavenly Horses were still being depicted in many kinds of artwork well into the Tang Dynasty centuries later._
+_The spring breeze melted away the snow_
+_on the hills and was quickly gone without a trace_
+_Would that I borrowed it briefly_
+_to blow through my hair;_
+_I wish to blow away the ageing frost thickening behind my ears._
+_– U Tak (1262-1342), Korean scholar and poet_
 
 Very Immersive Events and Tales (VIET), the sequel to VIET Events Reborn for CK2, is a flavor mod that adds a vast collection of events about everyday life to spice up your game. They add immersion and a diversity of experiences in between wars and vanilla’s event chains, and cover mundane minutiae ranging from small talk with courtiers and eating local cuisine to epic tales about love, philosophy, and the human condition. Some of the events unlock new decisions, character interactions, activities, and much more for you to explore!
 
@@ -14,7 +19,7 @@ Feel free to use my work in your mods - all I ask is that I am credited and (if 
 
 ## Features
 
-- Over **1258** new flavor events to experience!
+- Over **1264** new flavor events to experience!
 - Explore new decisions, artifacts, character interactions, activities, and more!
 - Game rule to disable sillier events for those who don't like them, with three levels to choose from: Balanced (Default), Serious (Restricted), and All Events (Full)
 - Compatible with almost anything since it doesn't touch any vanilla files - even with overhaul mods, you can via game rule disable events that reference things specific to our medieval world that wouldn’t make sense in other time periods or universes (like fantasy and sci-fi conversion mods)
@@ -38,12 +43,12 @@ The mod folder should look something like this:
 
 ## Changelog
 
-### Version 1.18.2 "Heavenly Horses"
+### Version 1.18.3 "White Chocolate"
 
 New events added in this version: **6**
 
-- Added 6 events about horses
-- Added Lucky Horseshoe artifact
+- Added 6 white color themed events
+- Added Tofu recipe artifact
 - Miscellaneous bugfixes
 
 \* Adapted from VIET for CK2
