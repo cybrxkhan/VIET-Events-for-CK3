@@ -184,7 +184,7 @@
  # Version 1.18.2 Start Here - Note to Translators: please leave this comment here and do not remove it even in your versions of the loc
  # Version 1.18.3 Start Here - Note to Translators: please leave this comment here and do not remove it even in your versions of the loc
  VIET_recipe_tofu_name:0 "[ROOT.Char.GetCulture.GetNameNoTooltip] Tofu Recipe"
- VIET_recipe_tofu_desc:0 "Cooks who have this recipe will know how to prepare tofu in a [ROOT.Char.GetCulture.GetName] methods. It can be enjoyed as part of traditional [Glossary( 'East Asian Vegetarian Dishes', 'BUDDHIST_CUISINE_GLOSS' )], or as a part of non-vegetarian dishes as well."
+ VIET_recipe_tofu_desc:0 "Cooks who have this recipe will know how to prepare tofu in the [ROOT.Char.GetCulture.GetName] manner. It can be enjoyed as part of traditional [Glossary( 'East Asian vegetarian cuisine', 'BUDDHIST_CUISINE_GLOSS' )], or as an ingredient in non-vegetarian dishes as well."
  # Version 1.18.4 Start Here - Note to Translators: please leave this comment here and do not remove it even in your versions of the loc
 
  # 10 Basic

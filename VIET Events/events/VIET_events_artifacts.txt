@@ -9778,10 +9778,7 @@ VIETmisc.5063 = {
 		character = root
 		animation = thinking
 	}
-
-	trigger = {
-		is_landed = yes
-	}
+	
 	artifact = { # To display the artifact in the event-window
         target = scope:VIET_recipe_artifact
         position = lower_center_portrait
@@ -9956,6 +9953,49 @@ VIETmisc.5063 = {
 	
 	option = { # Ignore
 		name = VIETmisc.5063.b
+		trigger = {
+			OR = {
+				is_ai = no
+				gold >= 100
+			}
+		}
+		remove_short_term_gold = 100
+		show_as_tooltip = {
+			scope:VIET_recipe_artifact = {
+				set_owner = {
+					target = root
+				}
+			}
+		}
+		add_character_modifier = {
+			modifier = VIET_hired_skilled_peasant_cooks
+			years = 20
+		}
+		stress_impact = {
+			temperate = miniscule_stress_impact_gain
+			paranoid = miniscule_stress_impact_gain
+			shy = miniscule_stress_impact_gain
+			greedy = minor_stress_impact_gain
+		}
+		ai_chance = {
+			base = 100
+			modifier = {
+				add = 10
+				has_trait = greedy
+			}
+			modifier = {
+				add = 10
+				has_trait = temperate
+			}
+			modifier = {
+				add = 10
+				has_trait = content
+			}
+		}
+	}
+	
+	option = { # Ignore
+		name = VIETmisc.5063.c
 		hidden_effect = {
 			destroy_artifact = scope:VIET_recipe_artifact
 		}
@@ -9979,6 +10019,15 @@ VIETmisc.5063 = {
 		}
 	}
 	
+	after = {
+		if = {
+			limit = {
+				has_game_rule = VIET_historical_context_on
+			}
+			custom_tooltip = VIETmisc.5063.info
+		}		
+	}
+
 }
 
 

@@ -4228,6 +4228,15 @@ VIET_jasmine_tea = {
 	stress_loss_mult = 0.05
 }
 
+VIET_hired_skilled_peasant_cooks = {
+	icon = food_positive
+	diplomacy = 1
+	monthly_prestige_gain_mult = 0.03
+	stress_gain_mult = -0.05
+	stress_loss_mult = 0.05
+	monthly_court_grandeur_change_add = 0.1	
+}
+
 
 
 

@@ -1139,7 +1139,7 @@ VIETmisc.0409 = {
 ##################################################################
 
 
-# Female courtier enjoys bathing in white milk
+# Female courtier enjoys bathing in white milk / milk bather
 VIETmisc.0410 = {
 	type = character_event
 	title = VIETmisc.0410.t
@@ -1262,6 +1262,7 @@ VIETmisc.0410 = {
 
 	option = { # Let her be
 		name = VIETmisc.0410.a
+		remove_short_term_gold = 25
 		stress_impact = {
 			temperate = minor_stress_impact_gain
 			humble = miniscule_stress_impact_gain
@@ -1274,16 +1275,18 @@ VIETmisc.0410 = {
 		duel = {
 			skill = diplomacy
 			target = scope:milk_bather
-			10 = { # Failure
+			50 = { # Failure
 				compare_modifier = {
 					value = scope:duel_value
 					multiplier = -1.1
+					min = -49
 				}
 				desc = VIETmisc.0410.b.toast_bad
 				send_interface_toast = {
 					type = event_toast_effect_bad
 					left_icon = scope:milk_bather
 					title = VIETmisc.0410.b.toast_bad
+					remove_short_term_gold = 25
 					scope:milk_bather = {
 						add_opinion = {
 							target = root
@@ -1297,10 +1300,11 @@ VIETmisc.0410 = {
 					}
 				}
 			}
-			10 = { # Success
+			50 = { # Success
 				compare_modifier = {
 					value = scope:duel_value
 					multiplier = 1.1
+					min = -49
 				}
 				desc = VIETmisc.0410.b.toast_good
 				send_interface_toast = {
@@ -1330,11 +1334,11 @@ VIETmisc.0410 = {
 		name = VIETmisc.0410.c
 		trigger = {
 			OR = {
-				gold >= 25
+				gold >= 50
 				is_ai = no
 			}
 		}
-		remove_short_term_gold = 25
+		remove_short_term_gold = 50
 		add_character_modifier = {
 			modifier = VIET_milk_bather
 			years = 10
@@ -1358,7 +1362,7 @@ VIETmisc.0411 = {
 	title = VIETmisc.0411.t
 	desc = VIETmisc.0411.desc
 	theme = faith
-	override_background = { reference = courtyard }
+	#override_background = { reference = courtyard }
 
 	
 	left_portrait = {
@@ -1448,13 +1452,27 @@ VIETmisc.0411 = {
 		}
 		scope:courtier_1 = {
 			add_opinion = {
+				modifier = VIET_opinion_agrees_basic
+				opinion = 5
 				target = root
-				modifier = VIET_opinion_shares_my_opinions
 			}
 			reverse_add_opinion = {
+				modifier = VIET_opinion_agrees_basic
+				opinion = 5
 				target = root
-				modifier = VIET_opinion_shares_my_opinions
 			}			
+		}
+		scope:courtier_2 = {
+			add_opinion = {
+				modifier = VIET_opinion_disagrees_basic
+				opinion = -5
+				target = root
+			}
+			reverse_add_opinion = {
+				modifier = VIET_opinion_disagrees_basic
+				opinion = -5
+				target = root
+			}	
 		}
 		stress_impact = {
 			humble = miniscule_stress_impact_loss
@@ -1471,13 +1489,27 @@ VIETmisc.0411 = {
 		}
 		scope:courtier_2 = {
 			add_opinion = {
+				modifier = VIET_opinion_agrees_basic
+				opinion = 5
 				target = root
-				modifier = VIET_opinion_shares_my_opinions
 			}
 			reverse_add_opinion = {
+				modifier = VIET_opinion_agrees_basic
+				opinion = 5
 				target = root
-				modifier = VIET_opinion_shares_my_opinions
 			}			
+		}
+		scope:courtier_1 = {
+			add_opinion = {
+				modifier = VIET_opinion_disagrees_basic
+				opinion = -5
+				target = root
+			}
+			reverse_add_opinion = {
+				modifier = VIET_opinion_disagrees_basic
+				opinion = -5
+				target = root
+			}	
 		}
 		stress_impact = {
 			chaste = miniscule_stress_impact_loss
@@ -1488,8 +1520,9 @@ VIETmisc.0411 = {
 	
 	option = { # ok
 		name = VIETmisc.0411.c
-		VIET_large_prestige_gain_effect = yes
+		VIET_huge_prestige_gain_effect = yes
 		stress_impact = {
+			base = minor_stress_impact_loss
 			content = minor_stress_impact_loss
 			trusting = miniscule_stress_impact_loss
 			zealous = miniscule_stress_impact_loss
@@ -1592,46 +1625,50 @@ VIETmisc.0412 = {
 		scope:physician = {
 			duel = {
 				skill = learning
-				value = medium_skill_rating
-				10 = { # Failure - they're not interested
+				value = decent_skill_rating
+				50 = { # Failure - it's bad
 					#show_chance = no
-					desc = VIETmisc.0412.t
-					custom_tooltip = VIETmisc.0412.b.failure
+					desc = VIETmisc.0412.b.failure
 					compare_modifier = {
 						value = scope:duel_value
 						multiplier = -0.7
+						min = -49
 					}
-					send_interface_toast = {
-						type = event_toast_effect_bad
-						left_icon = scope:physician
-						title = VIETmisc.0412.b.failure
-						root = {
-							stress_impact = {
-								base = miniscule_stress_impact_gain
-							}
-							add_character_modifier = {
-								modifier = VIET_lily_of_the_valley_with_side_effects
-								years = 10
+					root = {
+						send_interface_toast = {
+							type = event_toast_effect_bad
+							left_icon = scope:physician
+							title = VIETmisc.0412.b.failure
+							root = {
+								stress_impact = {
+									base = miniscule_stress_impact_gain
+								}
+								add_character_modifier = {
+									modifier = VIET_lily_of_the_valley_with_side_effects
+									years = 10
+								}
 							}
 						}
 					}
 				}
-				10 = { # Success - interested
+				50 = { # Success - it's not bad
 					#show_chance = no
-					desc = VIETmisc.2011.t
-					custom_tooltip = VIETmisc.0412.b.success
+					desc = VIETmisc.0412.b.success
 					compare_modifier = {
 						value = scope:duel_value
 						multiplier = 0.7
+						min = -49
 					}
-					send_interface_toast = {
-						type = event_toast_effect_good
-						left_icon = scope:physician
-						title = VIETmisc.0412.b.success
-						root = {
-							add_character_modifier = {
-								modifier = VIET_lily_of_the_valley
-								years = 10
+					root = {
+						send_interface_toast = {
+							type = event_toast_effect_good
+							left_icon = scope:physician
+							title = VIETmisc.0412.b.success
+							root = {
+								add_character_modifier = {
+									modifier = VIET_lily_of_the_valley
+									years = 10
+								}
 							}
 						}
 					}
