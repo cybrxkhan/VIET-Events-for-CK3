@@ -42,6 +42,17 @@ VIET_background_nightmare = {
 ### TUSCAN COUNTRY ###
 VIET_background_tuscan_country = {
 
+	background = { # Central Africa
+		trigger = {	
+			location = {		
+				geographical_region = ghw_region_north_african_interior
+			}	
+		}
+		reference = "gfx/interface/illustrations/event_scenes/VIET_tuscan_country_sao.dds"
+		environment = "environment_event_steppe"
+		ambience = "event:/SFX/Events/Backgrounds/steppe_day"
+	}
+
 	background = { # Bugis
 		trigger = {	
 			location = {		
@@ -209,10 +220,15 @@ VIET_background_tuscan_country = {
 	background = { # Eastern Mediterranean
 		trigger = {
 			location = {
+				NOT = { geographical_region = world_mesopotamia }
+				NOT = { geographical_region = world_jazira }
 				OR = {
 					geographical_region = world_asia_minor
-					geographical_region = world_middle_east_jerusalem
 					geographical_region = world_europe_south_east
+					AND = {
+						geographical_region = world_middle_east_jerusalem
+						is_coastal = yes
+					}
 				}
 			}
 		}
@@ -221,12 +237,32 @@ VIET_background_tuscan_country = {
 		ambience = "event:/SFX/Events/Backgrounds/castle_garden_day"
 	}
 
-	background = { # Middle Eastern/Tarim
+	background = { # Levantine/Jerusalem/Mesopotamia
 		trigger = {
 			location = {
 				OR = {
-					geographical_region = world_middle_east
-					geographical_region = world_middle_east_persia
+					geographical_region = world_mesopotamia
+					geographical_region = world_jazira
+					AND = {
+						geographical_region = world_middle_east_jerusalem
+						is_coastal = no
+					}
+				}
+			}
+		}
+		reference = "gfx/interface/illustrations/event_scenes/VIET_tuscan_country_levantine.dds"
+		environment = "environment_event_desert"
+		ambience = "event:/SFX/Events/Backgrounds/castle_garden_day"
+	}
+
+	background = { # Arabia
+		trigger = {
+			location = {
+				NOT = { geographical_region = world_mesopotamia }
+				NOT = { geographical_region = world_jazira }
+				OR = {
+					geographical_region = world_middle_east_arabia
+					geographical_region = world_middle_east_persia				
 				}
 			}
 		}
@@ -548,6 +584,19 @@ VIET_background_ancient_cairn = {
 ### SMALL TOWN ###
 VIET_background_small_town = {
 
+
+
+	background = { # Central Africa
+		trigger = {	
+			location = {		
+				geographical_region = ghw_region_north_african_interior
+			}	
+		}
+		reference = "gfx/interface/illustrations/event_scenes/VIET_small_town_sao.dds"
+		environment = "environment_event_garden"
+		ambience = "event:/SFX/Events/Backgrounds/townmarket_day_tribal_pagan"
+	}
+
 	background = { # Batak
 		trigger = {
 			location = {
@@ -682,6 +731,7 @@ VIET_background_small_town = {
 				geographical_region = world_africa
 				NOT = { geographical_region = ghw_region_subsahelian_africa }
 				NOT = { geographical_region = world_africa_east }
+				NOT = { geographical_region = ghw_region_north_african_interior }
 			}
 		}
 		reference = "gfx/interface/illustrations/event_scenes/VIET_small_town_african.dds"

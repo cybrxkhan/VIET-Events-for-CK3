@@ -1,6 +1,6 @@
-[img]https://i.imgur.com/gGaoY1C.jpg[/img]
+[img]https://i.imgur.com/99bfZnH.jpg[/img]
 
-[h1]Current Version: 1.18.3 "White Chocolate" (Released 3/14/26, Compatible with vanilla patch 1.18.X)[/h1]
+[h1]Current Version: 1.19.0 "Gaia" (Released 4/21/26, Compatible with vanilla patch 1.19.X)[/h1]
 
 [h1][B][url=https://discord.gg/9KuyXv2uZA]Discord Server for my mods[/url]
 [url=https://cybrxkhansmods.godaddysites.com/]Official Website for my mods[/url][/B][/h1]
@@ -25,7 +25,7 @@ Feel free to use my work in your mods - all I ask is that I am credited and (if 
 [img]http://i.imgur.com/EyXurbK.jpg[/img]
 
 [LIST]
-[*]Over [B][U]1264[/U] new flavor events[/B] to experience!
+[*]Over [B][U]1269[/U] new flavor events[/B] to experience!
 [*]Explore new decisions, artifacts, character interactions, activities, and more!
 [*]Game rule to disable sillier events for those who don't like them, with three levels to choose from: Balanced (Default), Serious (Restricted), and All Events (Full)
 [*][B]Compatible with almost anything[/B] since it doesn't touch any vanilla files - even with overhaul mods, you can via game rule disable events that reference things specific to our medieval world that wouldn’t make sense in other time periods or universes (like fantasy/sci-fi conversion mods)
@@ -53,23 +53,20 @@ Please see the [url=https://cybrxkhansmods.godaddysites.com/faq]FAQ on my mods' 
 
 [img]http://i.imgur.com/RQ5QZTF.jpg[/img]
 
-[h1]Version 1.18.3 "White Chocolate"[/h1]
+[h1]Version 1.19.0 "Gaia"[/h1]
 
-[I]The spring breeze melted away the snow
-on the hills and was quickly gone without a trace
-Would that I borrowed it briefly
-to blow through my hair;
-I wish to blow away the ageing frost thickening behind my ears.
-– U Tak (1262-1342), Korean scholar and poet[/I]
+[I]“Earth is the cradle of humanity, but one cannot live in the cradle forever.”
+– Konstantin Tsiolkovsky (1857 - 1935), Russian rocket scientist and pioneer of astronautics[/I]
 
-New events added in this version: [B]6[/B]
+New events added in this version: [B]5[/B]
 
 As changelog is too big to list here, see the full changelog here: https://steamcommunity.com/sharedfiles/filedetails/changelog/2227658180
 
-
 [LIST]
-[*]Added 6 white color themed events
-[*]Added Tofu recipe artifact
+[*]Added 5 events inspired by Earth Day and the environment
+[*]Added a few new event backgrounds
+[*]Disabled a few events for nomads where it wouldn’t make sense
+[*]Fixed missing loc for burning the bandits and students vs locals event modifiers
 [*]Miscellaneous bugfixes
 [/LIST]
 

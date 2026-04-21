@@ -1,15 +1,11 @@
 # VIET Events for CK3
 
-<img src="https://i.imgur.com/gGaoY1C.jpg">
+<img src="https://i.imgur.com/99bfZnH.jpg">
 
-## Latest Version: 1.18.3 "White Chocolate" (Released 3/14/26)
+## Latest Version: 1.19.0 "Gaia" (Released 4/21/26)
 
-_The spring breeze melted away the snow_
-_on the hills and was quickly gone without a trace_
-_Would that I borrowed it briefly_
-_to blow through my hair;_
-_I wish to blow away the ageing frost thickening behind my ears._
-_– U Tak (1262-1342), Korean scholar and poet_
+_“Earth is the cradle of humanity, but one cannot live in the cradle forever.”_
+_– Konstantin Tsiolkovsky (1857 - 1935), Russian rocket scientist and pioneer of astronautics_
 
 Very Immersive Events and Tales (VIET), the sequel to VIET Events Reborn for CK2, is a flavor mod that adds a vast collection of events about everyday life to spice up your game. They add immersion and a diversity of experiences in between wars and vanilla’s event chains, and cover mundane minutiae ranging from small talk with courtiers and eating local cuisine to epic tales about love, philosophy, and the human condition. Some of the events unlock new decisions, character interactions, activities, and much more for you to explore!
 
@@ -19,7 +15,7 @@ Feel free to use my work in your mods - all I ask is that I am credited and (if 
 
 ## Features
 
-- Over **1264** new flavor events to experience!
+- Over **1269** new flavor events to experience!
 - Explore new decisions, artifacts, character interactions, activities, and more!
 - Game rule to disable sillier events for those who don't like them, with three levels to choose from: Balanced (Default), Serious (Restricted), and All Events (Full)
 - Compatible with almost anything since it doesn't touch any vanilla files - even with overhaul mods, you can via game rule disable events that reference things specific to our medieval world that wouldn’t make sense in other time periods or universes (like fantasy and sci-fi conversion mods)
@@ -43,12 +39,14 @@ The mod folder should look something like this:
 
 ## Changelog
 
-### Version 1.18.3 "White Chocolate"
+### Version 1.19.0 "Gaia"
 
-New events added in this version: **6**
+New events added in this version: **5**
 
-- Added 6 white color themed events
-- Added Tofu recipe artifact
+- Added 5 events inspired by Earth Day and the environment
+- Added a few new event backgrounds
+- Disabled a few events for nomads where it wouldn’t make sense
+- Fixed missing loc for burning the bandits and students vs locals event modifiers
 - Miscellaneous bugfixes
 
 \* Adapted from VIET for CK2
