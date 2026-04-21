@@ -151,8 +151,8 @@ VIET_horse_armor_name:0 "Armadura de Caballo de Calidad"
 VIET_horse_armor_desc:0 "Elegante y duradera, bella y resistente, esta armadura de caballo [ROOT.Char.GetCulture.GetName] protege a un caballo de los peligros del mundo y además luce con estilo."
 # Version 1.16.1 Start Here - Note to Translators: please leave this comment here and do not remove it even in your versions of the loc
  # Version 1.18.2 Start Here - Note to Translators: please leave this comment here and do not remove it even in your versions of the loc
- VIET_lucky_horseshoe_name:0 "Lucky Horseshoe"
- VIET_lucky_horseshoe_desc:0 "This [ROOT.Char.GetCulture.GetName] horseshoe is a lucky charm that is especially effective when placed above or besides an entrance or doorway. It is believed to protect its owner from evil spirits and misfortune, and bring them good luck."
+VIET_lucky_horseshoe_name:0 "Herradura de la suerte"
+VIET_lucky_horseshoe_desc:0 "Esta herradura [ROOT.Char.GetCulture.GetName] es un amuleto de la suerte que resulta especialmente efectivo cuando se coloca encima o junto a una entrada o puerta. Se cree que protege a su dueño de los malos espíritus y la mala fortuna, y le trae buena suerte."
  # Version 1.18.3 Start Here - Note to Translators: please leave this comment here and do not remove it even in your versions of the loc
  # 53 Basic
 
@@ -182,8 +182,8 @@ VIET_horse_armor_desc:0 "Elegante y duradera, bella y resistente, esta armadura 
  VIET_recipe_fruit_preserve_desc:0 "Los cocineros que posean esta receta tendrán el conocimiento necesario para preparar una conserva de #bold [ROOT.Char.Custom('VIET_random_fruit')]#! utilizando métodos tradicionales [fruit_culture.GetName]. Esta conserva de frutas puede utilizarse para acompañar otros platos o comerse sola como tentempié. En cualquier caso, ¡es dulce y deliciosa!"
  # Version 1.18.2 Start Here - Note to Translators: please leave this comment here and do not remove it even in your versions of the loc
  # Version 1.18.3 Start Here - Note to Translators: please leave this comment here and do not remove it even in your versions of the loc
- VIET_recipe_tofu_name:0 "[ROOT.Char.GetCulture.GetNameNoTooltip] Tofu Recipe"
- VIET_recipe_tofu_desc:0 "Cooks who have this recipe will know how to prepare tofu in the [ROOT.Char.GetCulture.GetName] manner. It can be enjoyed as part of traditional [Glossary( 'East Asian vegetarian cuisine', 'BUDDHIST_CUISINE_GLOSS' )], or as an ingredient in non-vegetarian dishes as well."
+ VIET_recipe_tofu_name:0 "Receta de tofu [ROOT.Char.GetCulture.GetNameNoTooltip]"
+ VIET_recipe_tofu_desc:0 "Los cocineros que posean esta receta sabrán cómo preparar tofu al estilo [ROOT.Char.GetCulture.GetName]. Puede disfrutarse como parte de la [Glossary( 'cocina vegetariana de Asia Oriental', 'BUDDHIST_CUISINE_GLOSS' )] tradicional, o también como ingrediente en platos no vegetarianos."
  # Version 1.18.4 Start Here - Note to Translators: please leave this comment here and do not remove it even in your versions of the loc
 
  # 10 Basic
