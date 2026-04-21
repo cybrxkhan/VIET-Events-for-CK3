@@ -305,9 +305,12 @@ VIETmisc.7060.c:0 "¿Podríais enseñarnos cómo localizar estas fresas?"
  VIETmisc.7062.a:0 "At least our horses are in better shape at the moment."
  VIETmisc.7062.b:0 "Let this be a lesson for us to be careful with our horses."
  # Version 1.18.3 Start Here - Note to Translators: please leave this comment here and do not remove it even in your versions of the loc
- VIETmisc.7063.t:0 "$travel_event_prefix$ xxxxx"
- VIETmisc.7063.desc:0 "xxxxx"
- VIETmisc.7063.a:0 "xxxxx"
+ # Version 1.19.0 Start Here - Note to Translators: please leave this comment here and do not remove it even in your versions of the loc
+ VIETmisc.7063.t:0 "$travel_event_prefix$ Molehills"
+ VIETmisc.7063.desc:0 "Up ahead, the road and nearby ground were covered in what looked like little mounds of dirt.\n\n“Molehills,” [traveler_1.GetFirstName] says glumly. “We should be careful, lest we stumble over them. Looks like the locals here in [ROOT.Char.GetCurrentLocation.GetName] have a #italic lot#! of moles to deal with.”\n\n“It’s possible they prefer having the molehills around,” [traveler_2.GetFirstName] suggests. “For farmers, it’s not a bad way to bring good soil up to the surface. You just let the moles do the dirty work, so to speak.”"
+ VIETmisc.7063.a:0 "One should always watch out for these stupid pests."
+ VIETmisc.7063.b:0 "Clever idea, using the dirt these moles dig up!"
+ # Version 1.19.1 Start Here - Note to Translators: please leave this comment here and do not remove it even in your versions of the loc
  VIETmisc.7064.t:0 "$travel_event_prefix$ xxxxx"
  VIETmisc.7064.desc:0 "xxxxx"
  VIETmisc.7064.a:0 "xxxxx"

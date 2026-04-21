@@ -5,5 +5,5 @@ tags={
 	"Culture"
 }
 name="VIET Events - A Flavor and Immersion Event Mod"
-supported_version="1.18.*"
+supported_version="1.19.*"
 remote_file_id="2227658180"

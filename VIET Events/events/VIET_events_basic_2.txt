@@ -25,6 +25,7 @@
 # 0400-0406		Strawberries
 # 0407-0409 	Horses
 # 0410-0414 	White
+# 0415-0416 	Earth Day
 # 
 ############################################################################################################################
 
@@ -1853,4 +1854,338 @@ VIETmisc.0414 = {
 			years = 5
 		}
 	}
+}
+
+
+
+##################################################################
+# 0415-0416 Earth Day
+##################################################################
+
+
+# Peasant says praying to fertility god/saint helped their crops grow on barren land
+VIETmisc.0415 = {
+	type = character_event
+	title = VIETmisc.0415.t
+	desc = VIETmisc.0415.desc
+	theme = VIET_theme_tuscan_country
+
+
+	left_portrait = {
+		character = root
+		animation = personality_cynical
+	}
+
+	right_portrait = {
+		character = scope:peasant
+		animation = storyteller
+	}
+
+	trigger = {	
+		is_landed = yes
+		capital_province = {
+			NOR = {
+				terrain = desert
+				terrain = desert_mountains
+				terrain = mountains
+				terrain = taiga
+			}
+		}
+	}
+	
+	weight_multiplier = {
+		base = 1
+		modifier = {
+			add = 0.2
+			has_trait = trusting
+		}
+		modifier = {
+			add = -0.2
+			has_trait = paranoid
+		}
+		modifier = {
+			add = 0.2
+			has_trait = humble
+		}
+		modifier = {
+			add = -0.2
+			has_trait = arrogant
+		}
+		modifier = {
+			add = 0.2
+			has_trait = fickle
+		}
+		modifier = {
+			add = -0.2
+			has_trait = stubborn
+		}
+	}
+	
+	immediate = {
+		capital_county = {
+			save_scope_as = target_county
+		}
+		create_character = {
+			location = root.location
+			template = VIET_generic_middle_aged_local_template
+			culture = scope:target_county.culture
+			faith = scope:target_county.faith
+			save_scope_as = peasant
+		}		
+	}
+
+	option = { # Ok
+		name = VIETmisc.0415.a
+		trigger = {
+			root.faith.religion = scope:peasant.faith.religion
+		}
+		VIET_large_piety_gain_effect = yes
+		stress_impact = {
+			cynical = minor_stress_impact_gain
+			arrogant = miniscule_stress_impact_gain
+			paranoid = miniscule_stress_impact_gain
+		}
+	}	
+
+	option = { # Ok
+		name = VIETmisc.0415.b
+		trigger = {
+			NOT = { root.faith.religion = scope:peasant.faith.religion }
+		}
+		VIET_large_piety_gain_effect = yes
+		stress_impact = {
+			cynical = minor_stress_impact_gain
+			arrogant = miniscule_stress_impact_gain
+			paranoid = miniscule_stress_impact_gain
+		}
+	}	
+
+	option = { # Nah
+		name = VIETmisc.0415.c
+		add_character_modifier = {
+			modifier = VIET_skeptical_ruler
+			days = 800
+		}
+		stress_impact = {
+			cynical = minor_stress_impact_loss
+			zealous = minor_stress_impact_gain
+		}
+	}	
+
+	after = {
+		scope:peasant ?= { silent_disappearance_effect = yes }
+	}
+
+}
+
+
+# Scholarly courtier blabbers about the circumference of the earth
+VIETmisc.0416 = {
+	type = character_event
+	title = VIETmisc.0416.t
+	desc = VIETmisc.0416.desc
+	theme = diplomacy
+	override_icon = { reference = "gfx/interface/icons/event_types/type_learning.dds" }
+
+
+	left_portrait = {
+		character = root
+		animation = personality_cynical
+	}
+
+	right_portrait = {
+		character = scope:scholar
+		animation = debating
+	}
+
+	trigger = {	
+		has_game_rule = VIET_normal_universe_events
+		OR = {
+			any_courtier_or_guest = {
+				is_available_ai_adult = yes
+				OR = {
+					learning >= high_skill_rating
+					has_trait = scholar
+					has_trait = theologian
+					has_trait = education_learning_1
+					has_trait = education_learning_2
+					has_trait = education_learning_3
+					has_trait = education_learning_4
+					has_trait = education_learning_5
+				}
+				OR = {
+					has_trait = ambitious
+					has_trait = diligent
+					has_trait = arrogant
+					has_trait = gregarious
+					has_trait = eccentric
+				}
+				NOR = {
+					has_trait = lazy
+					has_trait = shy
+				}
+			}
+			any_vassal = {
+				is_available_ai_adult = yes
+				OR = {
+					learning >= high_skill_rating
+					has_trait = scholar
+					has_trait = theologian
+					has_trait = education_learning_1
+					has_trait = education_learning_2
+					has_trait = education_learning_3
+					has_trait = education_learning_4
+					has_trait = education_learning_5
+				}
+				OR = {
+					has_trait = ambitious
+					has_trait = diligent
+					has_trait = arrogant
+					has_trait = gregarious
+					has_trait = eccentric
+				}
+				NOR = {
+					has_trait = lazy
+					has_trait = shy
+				}
+			}
+		}
+	}
+	
+	weight_multiplier = {
+		base = 1
+		modifier = {
+			add = 0.2
+			has_trait = zealous
+		}
+		modifier = {
+			add = -0.2
+			has_trait = cynical
+		}
+		modifier = {
+			add = 0.2
+			has_trait = gregarious
+		}
+		modifier = {
+			add = -0.2
+			has_trait = shy
+		}
+		modifier = {
+			add = 0.2
+			has_trait = patient
+		}
+		modifier = {
+			add = -0.2
+			has_trait = impatient
+		}
+	}
+	
+	immediate = {
+		every_courtier_or_guest = {
+			limit = {
+				is_available_ai_adult = yes
+				OR = {
+					learning >= high_skill_rating
+					has_trait = scholar
+					has_trait = theologian
+					has_trait = education_learning_1
+					has_trait = education_learning_2
+					has_trait = education_learning_3
+					has_trait = education_learning_4
+					has_trait = education_learning_5
+				}
+				OR = {
+					has_trait = ambitious
+					has_trait = diligent
+					has_trait = arrogant
+					has_trait = gregarious
+					has_trait = eccentric
+				}
+				NOR = {
+					has_trait = lazy
+					has_trait = shy
+				}
+			}
+			add_to_list = candidate_characters
+		}
+		every_vassal = {
+			limit = {
+				is_available_ai_adult = yes
+				OR = {
+					learning >= high_skill_rating
+					has_trait = scholar
+					has_trait = theologian
+					has_trait = education_learning_1
+					has_trait = education_learning_2
+					has_trait = education_learning_3
+					has_trait = education_learning_4
+					has_trait = education_learning_5
+				}
+				OR = {
+					has_trait = ambitious
+					has_trait = diligent
+					has_trait = arrogant
+					has_trait = gregarious
+					has_trait = eccentric
+				}
+				NOR = {
+					has_trait = lazy
+					has_trait = shy
+				}
+			}
+			add_to_list = candidate_characters
+		}
+		random_in_list = {
+			list = candidate_characters
+			save_scope_as = scholar
+		}
+		scope:scholar = {
+			add_character_modifier = {
+				modifier = VIET_intellectual_obsessions
+				years = 10
+			}
+		}
+	}
+
+	option = { # Ok
+		name = VIETmisc.0416.a
+		VIET_large_prestige_gain_effect = yes
+		scope:scholar = {
+			add_opinion = {
+				modifier = disappointed_opinion
+				opinion = -10
+				target = root
+			}
+		}
+		stress_impact = {
+			patient = minor_stress_impact_gain
+			humble = miniscule_stress_impact_gain
+			content = miniscule_stress_impact_gain
+			eccentric = miniscule_stress_impact_gain
+		}
+	}	
+
+	option = { # Ok
+		name = VIETmisc.0416.b
+		add_learning_lifestyle_xp = major_lifestyle_xp
+		VIET_large_prestige_loss_effect = yes
+		scope:scholar = {
+			add_opinion = {
+				target = root
+				modifier = VIET_opinion_interesting_conversation
+			}
+			reverse_add_opinion = {
+				target = root
+				modifier = VIET_opinion_interesting_conversation
+			}
+		}
+		stress_impact = {
+			impatient = minor_stress_impact_gain
+			arrogant = minor_stress_impact_gain
+			lazy = miniscule_stress_impact_gain
+			shy = miniscule_stress_impact_gain
+		}
+	}	
+
+
 }
