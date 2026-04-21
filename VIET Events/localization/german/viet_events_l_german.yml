@@ -2061,12 +2061,17 @@
  VIETmisc.0414.desc:0 "Jasmine tea, made with the white blossoms of the jasmine plant, is always a fragrant delight – a way to warm the body and the soul.\n\nI take a sip of my cup of jasmine tea, and it makes me think of springtime blossoms."
  VIETmisc.0414.a:0 "A wonderful kind of tea, this is…."
  # Version 1.18.4 Start Here - Note to Translators: please leave this comment here and do not remove it even in your versions of the loc
- VIETmisc.0415.t:0 "xxxxx"
- VIETmisc.0415.desc:0 "xxxxx"
- VIETmisc.0415.a:0 "xxxxx"
- VIETmisc.0416.t:0 "xxxxx"
- VIETmisc.0416.desc:0 "xxxxx"
- VIETmisc.0416.a:0 "xxxxx"
+ # Version 1.19.0 Start Here - Note to Translators: please leave this comment here and do not remove it even in your versions of the loc
+ VIETmisc.0415.t:0 "Prayers for Fertility"
+ VIETmisc.0415.desc:0 "“I could hardly believe it myself!” the peasant tells me in an animated tone. “I prayed day and night to [peasant.GetFaith.FertilityGodName], and my once infertile fields which used to barely grow any crops in previous years suddenly became the most abundant in the area – and it’s been that way since!”\n\nI had heard of this [peasant.GetCulture.GetName] peasant, named [peasant.GetFirstNameNoTooltip], who could supposedly turn barren fields into very productive ones. I thought maybe [peasant.GetSheHe] knew agricultural techniques that we could use elsewhere, and I was so intrigued that I wanted to visit [peasant.GetHerselfHimself].\n\nIt seems that [peasant.GetHerHis] secret was simple, earnest devotion to [peasant.GetFaith.HighGodName]. Was I make wrongful assumptions about the situation, or could this be a miracle of our time?"
+ VIETmisc.0415.a:0 "Here’s good evidence that [peasant.GetFaith.FertilityGodName] helps the devout!"
+ VIETmisc.0415.b:0 "How silly. [peasant.GetFaith.GetReligion.GetAdjective] prayers are unhelpful nonsense."
+ VIETmisc.0415.c:0 "I don’t think [peasant.GetFaith.FertilityGodName] caused this, plausible as it sounds."
+ VIETmisc.0416.t:0 "The Earth's Circumference"
+ VIETmisc.0416.desc:0 "[scholar.GetFirstName] has always been well-read in topics like geography, astronomy, and mathematics. Today, I gathered with [scholar.GetHerHim] and a few others for casual refreshments and snacks, and [scholar.GetSheHe] took the time to excitedly tell us about [scholar.GetHerHis] latest intellectual obsession.\n\n“The ancients and even modern scholars have devised different ways to calculate the circumference of the earth,” [scholar.GetSheHe] repeats [scholar.GetHerselfHimself]. “There are so many different methods, such as using distances between locations, the placement of celestial bodies like the sun, mathematical formulas to calculate all of these…. It’s fascinating, isn’t it? Now, I also read about a newer method of calculating the circumference espoused by…”"
+ VIETmisc.0416.a:0 "Let’s talk about something less… cerebral."
+ VIETmisc.0416.b:0 "Go on! What is the new method of calculation?"
+ # Version 1.19.1 Start Here - Note to Translators: please leave this comment here and do not remove it even in your versions of the loc
  VIETmisc.0417.t:0 "xxxxx"
  VIETmisc.0417.desc:0 "xxxxx"
  VIETmisc.0417.a:0 "xxxxx"
