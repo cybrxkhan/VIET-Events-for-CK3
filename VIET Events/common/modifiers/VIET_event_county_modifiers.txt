@@ -1144,26 +1144,5 @@ VIET_strawberries_county = {
 	tax_mult = 0.04
 }
 
-VIET_unchecked_human_waste = {
-	icon = excrement_negative
-	development_growth_factor = -0.15
-	epidemic_resistance = -10	
-}
-
-VIET_regulated_human_waste = {
-	icon = excrement_mixed
-	epidemic_resistance = 5	
-	development_growth_factor = 0.15
-	county_opinion_add = -10
-	tax_mult = -0.02
-}
-
-VIET_successful_foresters = {
-	icon = fertility_positive
-	tax_mult = 0.01
-	development_growth = 0.1
-	development_growth_factor = 0.1
-}
-
 
 

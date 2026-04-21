@@ -4887,7 +4887,8 @@ VIETmisc.2082 = {
 	}
 
 	trigger = {	
-		VIET_is_a_literate_society = yes
+		#has_game_rule = VIET_normal_universe_events
+		NOT = { government_has_flag = government_is_tribal }
 		capital_province = {
 			VIET_is_in_wild_strawberry_region_trigger = yes
 		}

@@ -970,9 +970,6 @@ VIET_events_tri_yearly_pulse = {
 		100 = VIETmisc.0410		# Female courtier enjoys bathing in white milk
 		100 = VIETmisc.0412		# Physician suggests a lily of the valley tonic to improve memory
 
-		# Earth Day
-		100 = VIETmisc.0416		# Scholarly courtier blabbers about the circumference of the earth
-
 	}
 }
 
@@ -1268,9 +1265,6 @@ VIET_events_five_yearly_pulse = {
 
 		# Horses
 		100 = VIETmisc.0409 	# Courtier gets briefly sick and claims to have seen Ox Head and Horse Face in a dream 牛头馬面 / 우두귀와 마두귀 / Ngưu Đầu & Mã Diện
-		
-		# Earth Day
-		100 = VIETmisc.0415		# Peasant says praying to fertility god/saint helped their crops grow on barren land
 
 	}
 }
@@ -1643,11 +1637,8 @@ VIET_events_common_county_pulse = {
 		100 = VIETmisc.3068 	# Snowmelt in area is even better than normal, allowing for a better harvest
 		# Background
 		100 = VIETmisc.3071 	# Tensions rising between university students and townspeople
-		# Earth Day
-		100 = VIETmisc.3075 	# Foresters report success
-		100 = VIETmisc.3076 	# Human waste is getting out of hand - what to do?
 		
-		# 44
+		# 42
     }
 }
 

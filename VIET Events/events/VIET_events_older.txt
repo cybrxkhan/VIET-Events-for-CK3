@@ -6603,7 +6603,6 @@ VIETold.1093 = {
 	}
 
 	trigger = {
-		has_game_rule = VIET_normal_universe_events
 		OR = {
 			religion = religion:christianity_religion
 			capital_province = {

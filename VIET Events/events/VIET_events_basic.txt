@@ -26283,7 +26283,8 @@ VIETmisc.0277 = {
 	}
 
 	trigger = {
-		VIET_is_a_literate_society = yes		
+		# Weed out most cultures that probably aren't literate and don't have scholars running around
+		NOT = { government_has_flag = government_is_tribal }		
 	}
 	
 	weight_multiplier = {

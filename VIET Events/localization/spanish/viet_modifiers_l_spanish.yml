@@ -1680,27 +1680,5 @@ VIET_lily_of_the_valley_with_side_effects_desc:0 "Este personaje consume regular
 VIET_jasmine_tea:0 "Disfruta del té de jazmín"
 VIET_hired_skilled_peasant_cooks:0 "Contrató cocineros campesinos habilidosos"
  # Version 1.18.4 Start Here - Note to Translators: please leave this comment here and do not remove it even in your versions of the loc
- # Version 1.19.0 Start Here - Note to Translators: please leave this comment here and do not remove it even in your versions of the loc
- VIET_intellectual_obsessions:0 "Intellectual Obsessions"
- VIET_intellectual_obsessions_desc:0 "This character is currently fascinated with certain intellectual topics, and loves to talk to others about it. Some might find such a fixation admirable, but others might find it annoying."
- VIET_tensions_between_locals_and_students:0 "Tensions Between Locals and Students"
- VIET_university_fined:0 "Scholarly Institutions Fined"
- VIET_university_fined_desc:0 "Scholarly institutions in this region were fined for the outrageous behavior of their students towards the local population."
- VIET_university_punished:0 "Scholarly Institutions Punished"
- VIET_university_punished_desc:0 "Scholarly institutions in this region were gravely punished through financial, legal, and political means due to the outrageous behavior of their students towards the local population."
- VIET_university_restrained:0 "Scholarly Institutions Restrained"
- VIET_university_restrained_desc:0 "Scholarly institutions in this region were forced to restrain the outrageous behavior of their students towards the local population."
- VIET_villagers_fight_back:0 "Vilagers Fought Back Against Local Bandits"
- VIET_villagers_fight_back_congratulations:0 "Congratulated Heroic Villagers"
- VIET_villagers_fight_back_learn_from_them:0 "Learned from Heroic Villagers"
- VIET_villagers_fight_back_learn_from_them_desc:0 "Authories here have integrated tactics learned from heroic villagers who defended their homes from local bandits in planning out local defenses against both bandits and foreign foes."
- VIET_tactics_against_bandits:0 "$VIET_villagers_fight_back_learn_from_them$"
- VIET_tactics_against_bandits_desc:0 "This character learned the tactics that heroic villagers used to defend their homes from local bandits."
- VIET_unchecked_human_waste:0 "Unchecked Human Waste"
- VIET_unchecked_human_waste_desc:0 "Authorites here have been unable to regulations on human waste in this region, and those who live in settlements here toss all manner of garbage wherever they want without care. Public health and the beauty of the surrounding lands have suffered greatly as a result."
- VIET_regulated_human_waste:0 "Regulated Human Waste"
- VIET_regulated_human_waste_desc:0 "Due to an increasing accumulation of filth in local settlements, authorites have no choice but to enforce stricter rules with the disposal of human waste, in order to maintain public health and the beauty of the surrounding lands."
- VIET_successful_foresters:0 "Successful Forestry Practices"
- # Version 1.18.4 Start Here - Note to Translators: please leave this comment here and do not remove it even in your versions of the loc
  xxxxxxxxxx:0 "xxx"
 

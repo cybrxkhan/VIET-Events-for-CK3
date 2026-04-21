@@ -4237,13 +4237,6 @@ VIET_hired_skilled_peasant_cooks = {
 	monthly_court_grandeur_change_add = 0.1	
 }
 
-VIET_intellectual_obsessions = {
-	icon = learning_mixed
-	diplomacy = -2
-	learning = 1
-	monthly_lifestyle_xp_gain_mult = 0.1
-}
-
 
 
 
