@@ -305,9 +305,12 @@ VIETmisc.7062.desc:0 "En el camino en [ROOT.Char.GetCurrentLocation.GetName] nos
 VIETmisc.7062.a:0 "Al menos nuestros caballos están en mejor estado por ahora."
 VIETmisc.7062.b:0 "Que esto nos sirva de lección para ser cuidadosos con nuestros caballos."
  # Version 1.18.3 Start Here - Note to Translators: please leave this comment here and do not remove it even in your versions of the loc
- VIETmisc.7063.t:0 "$travel_event_prefix$ xxxxx"
- VIETmisc.7063.desc:0 "xxxxx"
- VIETmisc.7063.a:0 "xxxxx"
+ # Version 1.19.0 Start Here - Note to Translators: please leave this comment here and do not remove it even in your versions of the loc
+VIETmisc.7063.t:0 "$travel_event_prefix$ Montes de Topos"
+VIETmisc.7063.desc:0 "Más adelante, el camino y el suelo cercano estaban cubiertos de lo que parecían pequeños montículos de tierra.\n\n«Montes de topos», dice [traveler_1.GetFirstName] con tristeza. «Deberíamos tener cuidado, no sea que tropecemos con ellos. Parece que los lugareños de aquí en [ROOT.Char.GetCurrentLocation.GetName] tienen #italic muchos#! topos con los que lidiar».\n\n«Es posible que prefieran tener los montes de topos cerca», sugiere [traveler_2.GetFirstName]. «Para los agricultores, no es una mala manera de sacar tierra buena a la superficie. Los topos hacen el trabajo sucio, por así decirlo»."
+VIETmisc.7063.a:0 "Siempre hay que cuidarse de estas estúpidas plagas."
+VIETmisc.7063.b:0 "¡Idea inteligente, usar la tierra que estos topos excavan!"
+ # Version 1.19.1 Start Here - Note to Translators: please leave this comment here and do not remove it even in your versions of the loc
  VIETmisc.7064.t:0 "$travel_event_prefix$ xxxxx"
  VIETmisc.7064.desc:0 "xxxxx"
  VIETmisc.7064.a:0 "xxxxx"
