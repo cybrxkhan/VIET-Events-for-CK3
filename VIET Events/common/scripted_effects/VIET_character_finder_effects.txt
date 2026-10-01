@@ -413,7 +413,7 @@ VIET_find_scholar_effect = {
 						rank > 1
 					}
 					has_education_rank_5_trigger = yes
-					has_trait = scholar
+					has_trait = lifestyle_scholar
 					has_trait = theologian
 				}
 			}
@@ -430,7 +430,7 @@ VIET_find_scholar_effect = {
 				add = {
 					value = learning
 					if = {
-						limit = { has_trait = scholar }
+						limit = { has_trait = lifestyle_scholar }
 						add = 15
 					}
 					if = {

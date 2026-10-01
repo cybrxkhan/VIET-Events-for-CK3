@@ -506,12 +506,12 @@ VIET_local_scholar_template = {
 		if = {
 			limit = {
 				NOR = {
-					has_trait = scholar
+					has_trait = lifestyle_scholar
 					has_trait = theologian
 				}
 			}
 			random_list = {
-				10 = { add_trait = scholar }
+				10 = { add_trait = lifestyle_scholar }
 				10 = { add_trait = theologian }
 			}
 		}
@@ -706,10 +706,10 @@ VIET_skilled_scholar_template = {
 		if = {
 			limit = {
 				NOT = {
-					has_trait = scholar
+					has_trait = lifestyle_scholar
 				}
 			}
-			add_trait = scholar
+			add_trait = lifestyle_scholar
 		}
 	}
 }
@@ -848,10 +848,10 @@ VIET_ontus_vanin_template = {
 		if = {
 			limit = {
 				NOT = {
-					has_trait = scholar
+					has_trait = lifestyle_scholar
 				}
 			}
-			add_trait = scholar
+			add_trait = lifestyle_scholar
 		}
 	}
 }
@@ -1175,7 +1175,7 @@ VIET_fox_spirit_template = {
 	#faith = root.faith
 	gender_female_chance = 100
 	trait = beauty_good_3
-	random_traits = no
+	random_traits = yes
 	diplomacy = {
 		min_template_decent_skill
 		max_template_decent_skill

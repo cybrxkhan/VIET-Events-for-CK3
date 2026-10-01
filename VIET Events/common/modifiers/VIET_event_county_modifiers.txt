@@ -1165,5 +1165,24 @@ VIET_successful_foresters = {
 	development_growth_factor = 0.1
 }
 
+VIET_peek_a_boo = {
+	icon = blood_negative
+	county_opinion_add = -10
+	monthly_county_control_decline_add = -0.1
+}
+
+VIET_peek_a_boo_inspiration = {
+	icon = blood_mixed
+	owned_hostile_scheme_success_chance_add = 10
+	dread_baseline_add = 10
+	diplomacy = -2
+}
+
+VIET_pinders = {
+	icon = beast_positive
+	tax_mult = 0.04
+	development_growth_factor = 0.1
+}
+
 
 

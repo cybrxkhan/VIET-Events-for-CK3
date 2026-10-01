@@ -531,6 +531,9 @@ VIET_events_yearly_pulse = {
 		# Byzantine and Turkish
 		100 = VIETmisc.0417		# Consulting oneirokritika (dream handbooks) about dreams
 		100 = VIETmisc.0419		# Adding Turkic/Seljuk style decorations to residence?
+
+		# Generic
+		100 = VIETmisc.0424		# Friend tells you how much you mean to them
 	}
 }
 
@@ -980,6 +983,9 @@ VIET_events_tri_yearly_pulse = {
 		# Byzantine and Turkish
 		100 = VIETmisc.0420		# Courtier suggests patronizing the occult, like what Turkic rulers such as the Seljuks did, to legitimize their rule
 
+		# Generic
+		100 = VIETmisc.0421		# You dream of a bear trying to hug you
+
 	}
 }
 
@@ -1264,7 +1270,6 @@ VIET_events_five_yearly_pulse = {
 		100 = VIETmisc.0388		# As spymaster, a pathetic assassin tries to kill you in a laughably pathetic assassination attempt
 		
 		# Strange Tales from a Chinese Studio
-		100 = VIETmisc.0390 	# Silver Above Beauty (沂水秀才): Two fox spirits show a scholar silver, a calligraphy scroll, and themselves
 		100 = VIETmisc.0394 	# Sheep Skin (某公): Person recalls their reincarnation where they were initially condemned to be reborn as a sheep
 		
 		# Backgrounds
@@ -1281,6 +1286,9 @@ VIET_events_five_yearly_pulse = {
 
 		# Byzantine and Turkish
 		100 = VIETmisc.0418		# Physician talks about the writings of Paul of Aegina, especially in regards to surgery
+		
+		# Generic
+		100 = VIETmisc.0425		# Thinking about Li Qingzhao's poetry
 
 	}
 }
@@ -1375,6 +1383,7 @@ VIET_events_event_chain_pulse = {
 		100 = VIETmisc.0280				# Come across a beggar in a town who asks for 10 gold coins
 
 		# Strange Tales from a Chinese Studio
+		100 = VIETmisc.0390 			# Silver Above Beauty (沂水秀才): Two fox spirits show a scholar silver, a calligraphy scroll, and themselves
 		100 = VIETmisc.0392				# Monk of Changqing (长清僧): Old monk dies, and his ghost accidentally possesses a young man who just died
 		
 	}
@@ -1496,6 +1505,8 @@ VIET_events_rare_decisions_pulse = {
 		100 = VIETmisc.2047		# Crows keep following you around for some reason
 		# Strawberries
 		100 = VIETmisc.2082		# Someone suggests strawberry gardens in your capital county
+		# Betting on Books and Spilling Tea (赌书泼茶) Li Qingzhao/Zhao Mingcheng referenc
+		100 = VIETmisc.2085		# Betting on Books and Spilling Tea (赌书泼茶)
 		
 	}
 }
@@ -1656,8 +1667,11 @@ VIET_events_common_county_pulse = {
 		# Earth Day
 		100 = VIETmisc.3075 	# Foresters report success
 		100 = VIETmisc.3076 	# Human waste is getting out of hand - what to do?
+
+		# Generic
+		100 = VIETmisc.3078 	# County is in need of good pinders
 		
-		# 44
+		# 45
     }
 }
 
@@ -1850,7 +1864,10 @@ VIET_events_rare_county_pulse = {
 		# Backgrounds
 		100 = VIETmisc.3072 	# Villagers take revenge on bandits, pile their bodies into a massive fire
 		
-		# 22
+		# Generic
+		100 = VIETmisc.3077 	# Peek-a-boo (Serial killer women get away with it)
+		
+		# 23
 		
     }
 }

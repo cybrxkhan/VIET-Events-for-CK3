@@ -111,6 +111,9 @@ VIET_travel_events_common = {
 		100 = VIETmisc.7064 	# Traveler can't handle the smell of garos/garum (fermented fish sauce)
 		100 = VIETmisc.7065 	# Baklava peddler
 
+		# Generic
+		100 = VIETmisc.7067		# Rest at a big chungus tree
+
 		###################################
 		# TRANSFERRED - events created before Travel was a thing
 		###################################
@@ -121,7 +124,7 @@ VIET_travel_events_common = {
 		100 = VIETmisc.0213		# Say hello to a fennec fox
 		100 = VIETmisc.0216		# Encounter black winged stilts by some ponds
 
-		# 33
+		# 34
 	}
 }
 
@@ -287,8 +290,10 @@ VIET_travel_events_rare = {
 		100 = VIETmisc.7055		# Adultery and Enlightenment (羅祖): Man comes home to find his wife cheating on him with his friend, but instead of killing them, he becomes a hermit
 		# Backgrounds
 		100 = VIETmisc.7058		# Pass by an abandoned village that is supposedly cursed, that even the devil avoids
+		# Generic
+		100 = VIETmisc.7066		# A mysterious arrow whizzes by
 
-		# 14
+		# 15
 	}
 }
 

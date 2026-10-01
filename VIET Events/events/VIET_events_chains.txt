@@ -3573,7 +3573,7 @@ VIETmisc.1084 = { # Fullscreen Intro Event
 			modifier = {
 				add = 10
 				OR = {
-					has_trait = scholar
+					has_trait = lifestyle_scholar
 					has_trait = theologian
 					has_trait = lifestyle_mystic
 				}

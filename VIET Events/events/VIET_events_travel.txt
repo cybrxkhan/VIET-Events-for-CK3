@@ -35,6 +35,7 @@
 # 7061-7062		Horses
 # 7063		 	Earth Day
 # 7064-7065	 	Byzantine and Turkish
+# 7066-7067	 	Generic
 # 
 ############################################################################################################################
 
@@ -2830,7 +2831,7 @@ VIETmisc.7026 = {
 				is_available_travelling = yes
 				learning >= medium_skill_rating
 				OR = {
-					has_trait = scholar
+					has_trait = lifestyle_scholar
 					has_trait = education_learning_3
 					has_trait = education_learning_4
 					has_trait = education_learning_5
@@ -3604,7 +3605,7 @@ VIETmisc.7034 = {
 				OR = {
 					has_trait = lifestyle_physician
 					has_trait = lifestyle_herbalist
-					has_trait = scholar
+					has_trait = lifestyle_scholar
 					has_trait = education_learning_3
 					has_trait = education_learning_4
 					has_trait = education_learning_5
@@ -3650,7 +3651,7 @@ VIETmisc.7034 = {
 					OR = {
 						has_trait = lifestyle_physician
 						has_trait = lifestyle_herbalist
-						has_trait = scholar
+						has_trait = lifestyle_scholar
 						has_trait = education_learning_3
 						has_trait = education_learning_4
 						has_trait = education_learning_5
@@ -4637,7 +4638,7 @@ VIETmisc.7044 = {
 				is_available_travelling = yes	
 				learning >= mediocre_skill_rating			
 				OR = {
-					has_trait = scholar
+					has_trait = lifestyle_scholar
 					has_trait = theologian
 					has_trait = lifestyle_poet
 					has_trait = education_learning_3
@@ -4684,7 +4685,7 @@ VIETmisc.7044 = {
 					is_available_travelling = yes
 					learning >= mediocre_skill_rating			
 					OR = {
-						has_trait = scholar
+						has_trait = lifestyle_scholar
 						has_trait = theologian
 						has_trait = lifestyle_poet
 						has_trait = education_learning_3
@@ -7427,7 +7428,6 @@ VIETmisc.7065 = {
 				is_ai = no
 			}
 		}
-		remove_short_term_gold = 25
 		duel = {
 			skill = diplomacy
 			target = scope:peddler
@@ -7491,3 +7491,141 @@ VIETmisc.7065 = {
 	}
 
 }
+
+##################################################################
+# 7066-7067 Generic
+##################################################################
+
+# A mysterious arrow whizzes by
+VIETmisc.7066 = {
+	type = character_event
+	title = VIETmisc.7066.t
+	desc = VIETmisc.7066.desc
+	theme = travel_martial
+	override_background = { reference = VIET_background_tuscan_country }
+
+	left_portrait = {
+		character = root
+		animation = fear
+	}	
+
+	trigger = {
+		is_location_valid_for_travel_event_on_land = yes
+	}
+	
+	weight_multiplier = {
+		base = 1
+		modifier = {
+			add = 0.2
+			has_trait = brave
+		}
+		modifier = {
+			add = -0.2
+			has_trait = craven
+		}
+		modifier = {
+			add = 0.2
+			has_trait = impatient
+		}
+		modifier = {
+			add = -0.2
+			has_trait = patient
+		}
+		modifier = {
+			add = 0.2
+			has_trait = trusting
+		}
+		modifier = {
+			add = -0.2
+			has_trait = paranoid
+		}
+	}	
+	option = { # Hurry along
+		name = VIETmisc.7066.a
+		current_travel_plan = {
+			add_destination_progress = { days = 4 }
+		}		
+		stress_impact = {
+			base = minor_stress_impact_gain
+			paranoid = major_stress_impact_gain
+			craven = minor_stress_impact_gain
+		}
+	}
+	
+	option = { # ok
+		name = VIETmisc.7066.b
+		current_travel_plan = {
+			add_travel_plan_modifier = {
+				modifier = VIET_paranoid_traveling
+				years = 1
+			}
+		}
+
+	}
+
+}
+
+# Rest at a big chungus tree
+VIETmisc.7067 = {
+	type = character_event
+	title = VIETmisc.7067.t
+	desc = VIETmisc.7067.desc
+	theme = travel_stewardship
+	override_background = { reference = VIET_background_tuscan_country }
+
+	left_portrait = {
+		character = root
+		animation = personality_content
+	}	
+
+	trigger = {
+		is_location_valid_for_travel_event_on_land = yes
+	}
+	
+	weight_multiplier = {
+		base = 1
+		modifier = {
+			add = 0.2
+			has_trait = calm
+		}
+		modifier = {
+			add = -0.2
+			has_trait = wrathful
+		}
+		modifier = {
+			add = 0.2
+			has_trait = humble
+		}
+		modifier = {
+			add = -0.2
+			has_trait = arrogant
+		}
+		modifier = {
+			add = 0.2
+			has_trait = zealous
+		}
+		modifier = {
+			add = -0.2
+			has_trait = cynical
+		}
+	}	
+	option = { # ok
+		name = VIETmisc.7067.a
+		stress_impact = {
+			base = minor_stress_impact_loss
+			content = minor_stress_impact_loss
+			calm = minor_stress_impact_loss
+		}
+	}
+	
+	option = { # ok
+		name = VIETmisc.7067.b
+		VIET_medium_piety_gain_effect = yes
+		stress_impact = {
+			zealous = medium_stress_impact_loss
+		}
+
+	}
+
+}
+

@@ -1131,7 +1131,7 @@ VIETold.2015 = {
 				}
 				modifier = {
 					add = 2
-					has_trait = scholar
+					has_trait = lifestyle_scholar
 				}
 				trigger_event = {
 					id = VIETmisc.0360
@@ -1174,7 +1174,7 @@ VIETold.2015 = {
 				}
 				modifier = {
 					add = 2
-					has_trait = scholar
+					has_trait = lifestyle_scholar
 				}
 				trigger_event = {
 					id = VIETmisc.0360
@@ -1217,7 +1217,7 @@ VIETold.2015 = {
 				}
 				modifier = {
 					add = 2
-					has_trait = scholar
+					has_trait = lifestyle_scholar
 				}
 				trigger_event = {
 					id = VIETmisc.0360
@@ -17436,7 +17436,7 @@ VIETold.2235 = {
 			is_available_ai_adult = yes
 			NOR = {
 				has_trait = diligent
-				has_trait = scholar
+				has_trait = lifestyle_scholar
 				has_trait = craven
 				has_trait = humble
 				has_trait = patient
@@ -17479,7 +17479,7 @@ VIETold.2235 = {
 				is_available_ai_adult = yes
 				NOR = {
 					has_trait = diligent
-					has_trait = scholar
+					has_trait = lifestyle_scholar
 					has_trait = craven
 					has_trait = humble
 					has_trait = patient

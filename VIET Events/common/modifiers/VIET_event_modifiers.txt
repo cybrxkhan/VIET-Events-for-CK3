@@ -4308,6 +4308,52 @@ VIET_learning_about_surgeries = {
 	negate_health_penalty_add = 0.2
 }
 
+VIET_seulgi_bear = {
+	icon = bear_positive
+	stress_gain_mult = -0.15
+	stress_loss_mult = 0.15
+}
+
+VIET_experiencing_eerie_coincidences = {
+	icon = magic_mixed
+	enemy_hostile_scheme_success_chance_add = -10
+	stress_gain_mult = 0.15
+	monthly_piety = -0.2
+}
+
+VIET_dream_paranoia = {
+	icon = stress_mixed
+	diplomacy = -2
+	intrigue = 2
+}
+
+VIET_paranoid_traveling = {
+	icon = travel_mixed
+	travel_speed = -10
+	travel_safety = 10
+}
+
+VIET_betting_on_books_and_spilling_tea_modifier = {
+	icon = tea_positive
+	negate_learning_penalty_add = 2
+	monthly_learning_lifestyle_xp_gain_mult = 0.1
+	stress_gain_mult = -0.1
+	stress_loss_mult = 0.1
+}
+
+VIET_li_qingzhao_poems_youth = {
+	icon = merit_positive
+	monthly_diplomacy_lifestyle_xp_gain_mult = 0.1
+	character_spiritual_fulfillment_loss_mult = -0.1
+	
+}
+
+VIET_li_qingzhao_poems_old_age = {
+	icon = merit_positive
+	monthly_learning_lifestyle_xp_gain_mult = 0.1
+	character_spiritual_fulfillment_gain_mult = 0.1	
+}
+
 
 
 

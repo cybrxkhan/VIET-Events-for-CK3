@@ -35,6 +35,7 @@
 # 2078			Generic
 # 2079-2081 	Snow Festival
 # 2082-2084		Strawberries
+# 2085-2086		Generic (Betting on Books and Spilling Tea)
 # 
 ############################################################################################################################
 
@@ -5148,3 +5149,162 @@ VIETmisc.2084 = {
 
 }
 
+
+##################################################################
+# BETTING ON BOOKS AND SPILLING TEA 2085-2086
+##################################################################
+
+# Betting on Books and Spilling Tea (赌书泼茶)
+# Based on a cute real life activity that the Chinese poet Li Qingzhao and her husband Zhao Mingcheng would do
+# They're a bunch of IRL nerds. IRL nerd soulmates
+VIETmisc.2085 = {
+	type = character_event
+	title = {
+		first_valid = {
+			triggered_desc = {
+				trigger = {
+					VIET_is_lesser_sinosphere_culture_trigger = yes
+				}
+				desc = VIETmisc.2085.t.sinosphere
+			}
+			desc = VIETmisc.2085.t
+		}
+	}
+	desc = VIETmisc.2085.desc
+	theme = love
+	override_background = { reference = study }
+	
+	left_portrait = {
+		character = root
+		animation = laugh
+	}
+	
+	right_portrait = {
+		character = scope:spouse
+		animation = pointing
+		camera = camera_event_crowd
+	}
+
+	trigger = {	
+		VIET_is_a_literate_society = yes
+		learning >= decent_skill_rating
+		any_consort = {
+			is_available_ai_adult = yes
+			learning >= decent_skill_rating
+			# OR = {
+			# 	can_set_relation_lover_trigger = { CHARACTER = root }
+			# 	can_set_relation_soulmate_trigger = { CHARACTER = root }
+			# }
+			opinion = {
+				target = root
+				value >= 0
+			}
+		}
+	}
+	
+	weight_multiplier = {
+		base = 1
+		# More likely if you're inside the Sinosphere
+		modifier = {
+			add = 0.3
+			VIET_is_lesser_sinosphere_culture_trigger = no
+		}
+		modifier = {
+			add = 0.2
+			has_trait = shy
+		}
+		modifier = {
+			add = -0.2
+			has_trait = wrathful
+		}
+		modifier = {
+			add = 0.2
+			has_trait = humble
+		}
+		modifier = {
+			add = -0.2
+			has_trait = arrogant
+		}
+		modifier = {
+			add = 0.2
+			has_trait = gregarious
+		}
+		modifier = {
+			add = -0.2
+			has_trait = ambitious
+		}
+	}
+
+	immediate = {
+		random_consort = {
+			limit = {
+				is_available_ai_adult = yes
+				learning >= decent_skill_rating
+				# OR = {
+				# 	can_set_relation_lover_trigger = { CHARACTER = root }
+				# 	can_set_relation_soulmate_trigger = { CHARACTER = root }
+				# 	has_relation_lover = root
+				# 	has_relation_soulmate = root
+				# }		
+				opinion = {
+					target = root
+					value >= 0
+				}		
+			}
+			save_scope_as = spouse
+		}
+	}
+	
+	option = { # Ok
+		name = VIETmisc.2085.a
+		add_character_modifier = {
+			modifier = VIET_betting_on_books_and_spilling_tea_modifier
+		}
+		if = {
+			limit = {
+				scope:spouse = {
+					can_set_relation_soulmate_trigger = { CHARACTER = root }
+				}
+			}
+			set_relation_soulmate = { reason = VIET_lover_reason_intellectual_interest target = scope:spouse }
+		}
+		else_if = {
+			limit = {
+				scope:spouse = {
+					can_set_relation_lover_trigger = { CHARACTER = root }
+				}
+			}
+			set_relation_lover = { reason = VIET_lover_reason_intellectual_interest target = scope:spouse }
+		}
+		else = {
+			scope:spouse = {
+				add_opinion = {
+					target = root
+					modifier = happy_opinion
+					opinion = 30
+				}
+				reverse_add_opinion = {
+					target = root
+					modifier = happy_opinion
+					opinion = 30
+				}
+			}			
+		}
+		scope:spouse = {
+			add_character_modifier = {
+				modifier = VIET_betting_on_books_and_spilling_tea_modifier
+			}			
+		}
+		#custom_tooltip = VIETmisc.2085.tooltip
+	}
+
+	# after = {
+	# 	if = {
+	# 		limit = {
+	# 			has_game_rule = VIET_historical_context_on
+	# 		}
+	# 		custom_tooltip = VIETmisc.2085.info
+	# 	}
+	# }
+
+}

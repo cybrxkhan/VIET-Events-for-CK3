@@ -27,6 +27,7 @@
 # 0410-0414 	White
 # 0415-0416 	Earth Day
 # 0417-0420 	Byzantine and Turkish
+# 0421-0425 	Generic
 # 
 ############################################################################################################################
 
@@ -691,7 +692,7 @@ VIETmisc.0406 = {
 			has_trait = education_learning_3
 			has_trait = education_learning_4
 			has_trait = education_learning_5
-			has_trait = scholar
+			has_trait = lifestyle_scholar
 			has_trait = lifestyle_gardener
 			has_trait = lifestyle_herbalist
 			has_trait = lifestyle_physician			
@@ -2006,7 +2007,7 @@ VIETmisc.0416 = {
 				is_available_ai_adult = yes
 				OR = {
 					learning >= high_skill_rating
-					has_trait = scholar
+					has_trait = lifestyle_scholar
 					has_trait = theologian
 					has_trait = education_learning_1
 					has_trait = education_learning_2
@@ -2030,7 +2031,7 @@ VIETmisc.0416 = {
 				is_available_ai_adult = yes
 				OR = {
 					learning >= high_skill_rating
-					has_trait = scholar
+					has_trait = lifestyle_scholar
 					has_trait = theologian
 					has_trait = education_learning_1
 					has_trait = education_learning_2
@@ -2087,7 +2088,7 @@ VIETmisc.0416 = {
 				is_available_ai_adult = yes
 				OR = {
 					learning >= high_skill_rating
-					has_trait = scholar
+					has_trait = lifestyle_scholar
 					has_trait = theologian
 					has_trait = education_learning_1
 					has_trait = education_learning_2
@@ -2114,7 +2115,7 @@ VIETmisc.0416 = {
 				is_available_ai_adult = yes
 				OR = {
 					learning >= high_skill_rating
-					has_trait = scholar
+					has_trait = lifestyle_scholar
 					has_trait = theologian
 					has_trait = education_learning_1
 					has_trait = education_learning_2
@@ -2612,7 +2613,7 @@ VIETmisc.0420 = {
 				OR = {
 					has_trait = eccentric
 					learning >= medium_skill_rating
-					has_trait = scholar
+					has_trait = lifestyle_scholar
 					has_trait = lifestyle_mystic
 					has_trait = lifestyle_physician
 					has_trait = lifestyle_herbalist
@@ -2634,7 +2635,7 @@ VIETmisc.0420 = {
 				OR = {
 					has_trait = eccentric
 					learning >= medium_skill_rating
-					has_trait = scholar
+					has_trait = lifestyle_scholar
 					has_trait = lifestyle_mystic
 					has_trait = lifestyle_physician
 					has_trait = lifestyle_herbalist
@@ -2689,7 +2690,7 @@ VIETmisc.0420 = {
 				OR = {
 					has_trait = eccentric
 					learning >= medium_skill_rating
-					has_trait = scholar
+					has_trait = lifestyle_scholar
 					has_trait = lifestyle_mystic
 					has_trait = lifestyle_physician
 					has_trait = lifestyle_herbalist
@@ -2714,7 +2715,7 @@ VIETmisc.0420 = {
 				OR = {
 					has_trait = eccentric
 					learning >= medium_skill_rating
-					has_trait = scholar
+					has_trait = lifestyle_scholar
 					has_trait = lifestyle_mystic
 					has_trait = lifestyle_physician
 					has_trait = lifestyle_herbalist
@@ -2794,3 +2795,569 @@ VIETmisc.0420 = {
 	}
 
 }
+
+
+
+
+
+##################################################################
+# 0421-0425 Generic
+##################################################################
+
+
+# You dream of a bear trying to hug you
+# I think this is supposed to be a Seulgi reference. I'm sorry if you understand what I mean.
+VIETmisc.0421 = {
+	type = character_event
+	title = VIETmisc.0421.t
+	desc = VIETmisc.0421.desc
+	theme = memory_positive
+	override_background = { reference = bedchamber }
+
+
+	left_portrait = {
+		character = root
+		animation = personality_irrational
+		camera = camera_event_center_mostly_away_right
+	}
+	
+	weight_multiplier = {
+		base = 1
+		modifier = {
+			add = 0.2
+			has_trait = compassionate
+		}
+		modifier = {
+			add = -0.2
+			has_trait = callous
+		}
+		modifier = {
+			add = 0.2
+			has_trait = trusting
+		}
+		modifier = {
+			add = -0.2
+			has_trait = paranoid
+		}
+		modifier = {
+			add = 0.2
+			has_trait = just
+		}
+		modifier = {
+			add = -0.2
+			has_trait = arbitrary
+		}
+	}
+
+	option = { # lolwut
+		name = VIETmisc.0421.a
+		stress_impact = {
+			base = minor_stress_impact_loss
+			content = minor_stress_impact_loss
+			compassionate = minor_stress_impact_loss
+		}
+	}
+
+	option = { # lolwut
+		name = VIETmisc.0421.b
+		VIET_large_prestige_loss_effect = yes
+		VIET_large_piety_gain_effect = yes
+		stress_impact = {
+			base = minor_stress_impact_loss
+			content = minor_stress_impact_loss
+			compassionate = major_stress_impact_loss
+		}
+	}
+
+	after = {
+		add_character_modifier = {
+			modifier = VIET_seulgi_bear
+			years = 10
+		}
+		if = {
+			limit = {
+				OR = {
+					any_relation = {
+						type = soulmate
+						VIET_sexual_character_trigger = yes
+						is_available_ai_adult = yes
+					}
+					any_relation = {
+						type = lover
+						VIET_sexual_character_trigger = yes
+						is_available_ai_adult = yes
+					}
+				}				
+			}
+			hidden_effect = {
+				random = {
+					chance = 50
+					trigger_event = {
+						id = VIETmisc.0422
+						days = { 10 30 }
+					}
+				}
+			}
+		}
+	}
+
+}
+
+
+# Folow up event: You dream of a bear trying to hug you and suspect it was your lover
+# I think this is supposed to be a Seulgi reference. I'm sorry if you understand what I mean.
+VIETmisc.0422 = {
+	type = character_event
+	title = VIETmisc.0422.t
+	desc = VIETmisc.0422.desc
+	theme = memory_positive
+	override_background = { reference = bedchamber }
+
+
+	left_portrait = {
+		character = root
+		animation = storyteller
+	}
+
+	right_portrait = {
+		character = scope:lover
+		animation = personality_cynical
+	}
+
+	trigger = {
+		OR = {
+			any_relation = {
+				type = soulmate
+				VIET_sexual_character_trigger = yes
+				is_available_ai_adult = yes
+			}
+			any_relation = {
+				type = lover
+				VIET_sexual_character_trigger = yes
+				is_available_ai_adult = yes
+			}
+		}		
+	}
+
+	immediate = {
+		random_list = {
+			50 = {
+				trigger = {
+					any_relation = {
+						type = soulmate
+						VIET_sexual_character_trigger = yes
+						is_available_ai_adult = yes
+					}
+				}
+				random_relation = {
+					type = soulmate
+					limit = {
+						VIET_sexual_character_trigger = yes
+						is_available_ai_adult = yes
+					}
+					save_scope_as = lover
+				}
+			}
+			50 = {
+				trigger = {
+					any_relation = {
+						type = lover
+						VIET_sexual_character_trigger = yes
+						is_available_ai_adult = yes
+					}
+				}
+				random_relation = {
+					type = lover
+					limit = {
+						VIET_sexual_character_trigger = yes
+						is_available_ai_adult = yes
+					}
+					save_scope_as = lover
+				}
+			}
+		}
+	}
+
+	option = { # lolwut
+		name = VIETmisc.0422.a
+		
+		
+		add_opinion = {
+			target = scope:lover
+			modifier = love_opinion
+			opinion = 15
+		}
+		
+		reverse_add_opinion = {
+			target = scope:lover
+			modifier = love_opinion
+			opinion = 15
+		}
+
+		stress_impact = {
+			base = minor_stress_impact_loss
+		}
+
+		scope:lover = {	
+			stress_impact = {
+				base = minor_stress_impact_loss
+			}		
+		}
+	}
+
+	option = { # lolwut
+		name = VIETmisc.0422.b
+		
+		add_character_modifier = {
+			modifier = VIET_skeptical_ruler
+			years = 10
+		}
+
+		stress_impact = {
+			cynical = medium_stress_impact_loss
+			callous = minor_stress_impact_loss
+			arbitrary = minor_stress_impact_loss
+			eccentric = minor_stress_impact_loss
+		}
+
+	}
+
+}
+
+
+# Folow up event to Silver Above Beauty (沂水秀才), you meet a real life girl who resembles the women you saw in the dream (VIETmisc.390-0391)
+VIETmisc.0423 = {
+	type = character_event
+	title = VIETmisc.0423.t
+	desc = VIETmisc.0423.desc
+	theme = seduction
+	override_background = { reference = feast }
+
+
+	left_portrait = {
+		character = root
+		animation = stunned
+	}
+
+	right_portrait = {
+		character = scope:girl
+		animation = gongshou
+	}
+
+	trigger = {
+		# Make sure she's still around and not married off to someone else
+		scope:girl ?= {
+			is_alive = yes
+			is_married = no
+		}	
+	}
+
+	option = { # lolwut
+		name = VIETmisc.0423.a
+
+		add_courtier = scope:girl
+
+		add_character_modifier = {
+			modifier = VIET_experiencing_eerie_coincidences
+			years = 10
+		}
+
+		stress_impact = {
+			paranoid = medium_stress_impact_gain
+			trusting = minor_stress_impact_loss
+		}
+
+	}
+
+	option = { # whatever
+		name = VIETmisc.0423.b
+
+		add_character_modifier = {
+			modifier = VIET_skeptical_ruler
+			years = 10
+		}
+
+		stress_impact = {
+			paranoid = medium_stress_impact_gain
+			trusting = minor_stress_impact_loss
+		}
+
+		scope:girl ?= { silent_disappearance_effect = yes }
+
+	}
+
+	option = { # Ok
+		name = VIETmisc.0423.c
+		trigger = {
+			OR = {
+				has_trait = eccentric
+				has_trait = lunatic
+				has_trait = paranoid
+			}
+		}
+		trait = eccentric
+		trait = lunatic_1
+		trait = lunatic_genetic
+		trait = paranoid
+		show_as_unavailable = {
+			NOR = {
+				has_trait = eccentric
+				has_trait = lunatic
+				has_trait = paranoid
+			}
+		}
+
+		add_character_modifier = {
+			modifier = VIET_dream_paranoia
+			years = 10
+		}
+
+		scope:girl ?= { silent_disappearance_effect = yes }
+
+	}
+
+}
+
+
+
+
+# Friend tells you how much you mean to them
+VIETmisc.0424 = {
+	type = character_event
+	title = VIETmisc.0424.t
+	desc = VIETmisc.0424.desc
+	theme = friendly
+
+
+	left_portrait = {
+		character = root
+		animation = personality_compassionate
+	}
+
+	right_portrait = {
+		character = scope:friend
+		animation = personality_forgiving
+	}
+
+	trigger = {
+		OR = {
+			any_relation = {
+				type = friend
+				is_available_ai_adult = yes
+			}
+			any_relation = {
+				type = best_friend
+				is_available_ai_adult = yes
+			}
+		}		
+	}
+	
+	weight_multiplier = {
+		base = 1
+		modifier = {
+			add = 0.2
+			has_trait = compassionate
+		}
+		modifier = {
+			add = -0.2
+			has_trait = callous
+		}
+		modifier = {
+			add = 0.2
+			has_trait = generous
+		}
+		modifier = {
+			add = -0.2
+			has_trait = greedy
+		}
+		modifier = {
+			add = 0.2
+			has_trait = humble
+		}
+		modifier = {
+			add = -0.2
+			has_trait = arrogant
+		}
+	}
+
+	immediate = {
+		random_list = {
+			50 = {
+				trigger = {
+					any_relation = {
+						type = friend
+						is_available_ai_adult = yes
+					}
+				}
+				random_relation = {
+					type = friend
+					limit = {
+						is_available_ai_adult = yes
+					}
+					save_scope_as = friend
+				}
+			}
+			50 = {
+				trigger = {
+					any_relation = {
+						type = best_friend
+						is_available_ai_adult = yes
+					}
+				}
+				random_relation = {
+					type = best_friend
+					limit = {
+						is_available_ai_adult = yes
+					}
+					save_scope_as = friend
+				}
+			}
+		}
+	}
+
+	option = { # ok
+		name = VIETmisc.0424.a
+		scope:friend = {
+			add_stress = minor_stress_impact_loss
+			add_opinion = {
+				target = root
+				modifier = friendliness_opinion
+				opinion = 15
+			}				
+			reverse_add_opinion = {
+				target = root
+				modifier = friendliness_opinion
+				opinion = 15
+			}				
+		}
+		stress_impact = {
+			base = minor_stress_impact_loss
+			arrogant = medium_stress_impact_gain
+			paranoid = medium_stress_impact_gain
+			sadistic = medium_stress_impact_gain
+			callous = medium_stress_impact_gain
+		}
+	}
+
+	option = { # lolwut
+		name = VIETmisc.0424.b
+		VIET_huge_prestige_gain_effect = yes
+		scope:friend = {
+			add_opinion = {
+				modifier = sadness_opinion
+				opinion = -10
+				target = root
+			}
+		}
+		stress_impact = {
+			humble = minor_stress_impact_gain
+			trusting = minor_stress_impact_gain
+			patient = minor_stress_impact_gain
+			compassionate = medium_stress_impact_gain
+			gregarious = medium_stress_impact_gain
+		}
+	}
+
+}
+
+# Thinking about Li Qingzhao's poetry
+VIETmisc.0425 = {
+	type = character_event
+	title = VIETmisc.0425.t
+	desc = VIETmisc.0425.desc
+	theme = romance_scheme
+	override_background = { reference = location_study }
+
+	left_portrait = {
+		character = root
+		animation = reading
+	}
+
+	trigger = {
+		game_start_date >= 1156.1.1 # She passed away in 1155, so wouldn't make sense for earlier start dates
+		has_game_rule = VIET_normal_universe_events
+		VIET_is_sinosphere_trigger = yes
+		# Want someone who's probably literate and not a dumbass
+		NOT = { has_trait = blind }
+		probably_unintelligent_trigger = no
+		OR = {
+			probably_intelligent_trigger = yes
+			diplomacy >= mediocre_skill_rating
+			learning >= mediocre_skill_rating
+			has_trait = lifestyle_poet
+		}	
+	}
+	
+	weight_multiplier = {
+		base = 1
+		modifier = {
+			add = 0.2
+			has_trait = compassionate
+		}
+		modifier = {
+			add = -0.2
+			has_trait = callous
+		}
+		modifier = {
+			add = 0.2
+			has_trait = content
+		}
+		modifier = {
+			add = -0.2
+			has_trait = ambitious
+		}
+		modifier = {
+			add = 0.2
+			has_trait = humble
+		}
+		modifier = {
+			add = -0.2
+			has_trait = arrogant
+		}
+	}
+
+	option = { # ok
+		name = VIETmisc.0425.a
+		add_character_modifier = {
+			modifier = VIET_li_qingzhao_poems_youth
+			years = 10
+		}
+	}
+
+	option = { # lolwut
+		name = VIETmisc.0425.b
+		add_character_modifier = {
+			modifier = VIET_li_qingzhao_poems_old_age
+			years = 10
+		}
+	}
+
+	option = { # lolwut
+		name = VIETmisc.0425.c
+		if = {
+			limit = {
+				has_trait = lifestyle_poet
+				has_trait_xp = {
+					trait = lifestyle_poet
+					value < 100
+				}
+			}
+			add_trait_xp = {
+				trait = lifestyle_poet
+				value = 20
+			}
+		}
+		else = {
+			gain_appropriate_lifestyle_major_xp_effect = yes
+		}
+	}
+
+}
+
+
+
+
+
+
+
+

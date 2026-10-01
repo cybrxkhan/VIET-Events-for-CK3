@@ -358,7 +358,7 @@ VIETintro.1001 = {
 						add = 5
 					}
 					modifier = {
-						has_trait = scholar
+						has_trait = lifestyle_scholar
 						add = 5
 					}
 					modifier = {
