@@ -1,11 +1,21 @@
 # VIET Events for CK3
 
-<img src="https://i.imgur.com/vMESYvT.jpg">
+<img src="https://i.imgur.com/9bnGsJD.jpg">
 
-## Latest Version: 1.19.1 "Constantinople" (Released 5/30/26)
+## Latest Version: 1.20.0 "Li Qingzhao" (Released 10/01/26)
 
-_"Istanbul was Constantinople. Now it's Istanbul, not Constantinople. Been a long time gone, oh Constantinople. Why did Constantinople get the works? That's nobody's business but the Turks!"_
-_- The Four Lads, "Istanbul (not Constantinople)" (1953)_
+_"Seeing a guest come, she feels shy;_
+_Her stockings coming down, away she tries to fly._
+_Her hairpin drops;_
+_She never stops_
+_But to look back._
+_She leans against the door,_
+_Pretending to sniff at mume blossoms once more._
+
+_蹴罢秋千，起来慵整纤纤手。露浓花瘦，薄汗轻衣透。_
+_见客入来，袜刬金钗溜。和羞走，倚门回首，却把青梅嗅。_
+
+_– Li Qingzhao (1084 – c. 1155), considered China’s greatest female poet_
 
 Very Immersive Events and Tales (VIET), the sequel to VIET Events Reborn for CK2, is a flavor mod that adds a vast collection of events about everyday life to spice up your game. They add immersion and a diversity of experiences in between wars and vanilla’s event chains, and cover mundane minutiae ranging from small talk with courtiers and eating local cuisine to epic tales about love, philosophy, and the human condition. Some of the events unlock new decisions, character interactions, activities, and much more for you to explore!
 
@@ -15,7 +25,7 @@ Feel free to use my work in your mods - all I ask is that I am credited and (if 
 
 ## Features
 
-- Over **1275** new flavor events to experience!
+- Over **1285** new flavor events to experience!
 - Explore new decisions, artifacts, character interactions, activities, and more!
 - Game rule to disable sillier events for those who don't like them, with three levels to choose from: Balanced (Default), Serious (Restricted), and All Events (Full)
 - Compatible with almost anything since it doesn't touch any vanilla files - even with overhaul mods, you can via game rule disable events that reference things specific to our medieval world that wouldn’t make sense in other time periods or universes (like fantasy and sci-fi conversion mods)
@@ -39,11 +49,11 @@ The mod folder should look something like this:
 
 ## Changelog
 
-### Version 1.19.1 "Constantinople"
+### Version 1.20.0 "Li Qingzhao"
 
-New events added in this version: **6**
+New events added in this version: **10**
 
-- Added 6 Byzantine and Turkish themed events
+- Added 10 generic events, including a couple inspired by Li Qingzhao
 - Miscellaneous bugfixes
 
 \* Adapted from VIET for CK2

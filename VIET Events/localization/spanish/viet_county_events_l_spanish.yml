@@ -392,12 +392,17 @@ VIETmisc.3076.a:0 "Solo puedo hacer hasta cierto punto. Tendrán que soportarlo.
 VIETmisc.3076.b:0 "Impongamos medidas más severas – ¡puedo oler la inmundicia desde aquí!"
 VIETmisc.3076.info:0 "#emphasis Contexto histórico:#! En contraste con los estereotipos modernos de la era medieval como una de suciedad y falta de higiene, los asentamientos medievales a menudo se preocupaban por la eliminación adecuada de los desechos humanos. Los funcionarios y médicos eran conscientes de los problemas de salud pública que causaban los desechos humanos sin control, y promulgaban varias ordenanzas para regular esto. Como solo un ejemplo, en 1397, la ciudad de Valencia en España creó una oficina municipal encargada de recolectar y deshacerse de los cuerpos de animales muertos. Curiosamente, más de un siglo después, en 1503, un empleado de esta oficina fue despedido porque «sirvió tan mal en su cargo que toda la ciudad está llena de gatos, perros y pollos muertos»."
  # Version 1.19.1 Start Here - Note to Translators: please leave this comment here and do not remove it even in your versions of the loc
- VIETmisc.3077.t:0 "xxxxx"
- VIETmisc.3077.desc:0 "xxxxx"
- VIETmisc.3077.a:0 "xxxxx"
- VIETmisc.3078.t:0 "xxxxx"
- VIETmisc.3078.desc:0 "xxxxx"
- VIETmisc.3078.a:0 "xxxxx"
+ # Version 1.20.0 Start Here - Note to Translators: please leave this comment here and do not remove it even in your versions of the loc
+ VIETmisc.3077.t:0 "Murdered Delivery Boys"
+ VIETmisc.3077.desc:0 "“The victims were all young men sent to deliver food to the old mansion,” my [councilor.GetCouncilTitle] [councilor.GetTitledFirstName] notes, reading off the report from [county.GetNameNoTier]. “Report here says every full moon, for several years, they were lured in by five beautiful young women who lived there. When the local guards finally located and broke into the residence, neither the girls nor the bodies of the young men could be found – only the boys’ pristinely preserved clothes.”\n\n[councilor.GetFirstNameNoTooltip] looks at me with a grimace. “Our people don't know where the women went. Murders are sadly a fact of life, but something about these murders feels ominous, if I have to be honest.”"
+ VIETmisc.3077.a:0 "Sadly, not much we can do at this point."
+ VIETmisc.3077.b:0 "Redouble efforts to locate these seductive murderers!"
+ VIETmisc.3077.c:0 "I… kind of like the idea. Inspiring concept."
+ VIETmisc.3078.t:0 "Pinders"
+ VIETmisc.3078.desc:0 "Escaping farm animals have become a major concern in [county.GetNameNoTier] as of late.\n\nMy officials report that commoners claim that [Glossary( 'pinders', 'PINDERS_GLOSS' )] there are often inept, and they recommend further resources to hire new, better pinders and provide better training for those already employed as pinders.\n\n“It behooves my [ROOT.Char.GetLadyLord],” one report reads, “to remember that the loss of livestock is no small matter, and a grave economic concern that affects us all.”"
+ VIETmisc.3078.a:0 "We can provide the necessary resources."
+ VIETmisc.3078.b:0 "We don’t have the resources for this."
+ # Version 1.20.1 Start Here - Note to Translators: please leave this comment here and do not remove it even in your versions of the loc
  VIETmisc.3079.t:0 "xxxxx"
  VIETmisc.3079.desc:0 "xxxxx"
  VIETmisc.3079.a:0 "xxxxx"

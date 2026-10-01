@@ -373,12 +373,19 @@ VIETmisc.2084.desc.landless:0 "Por supuesto, estas no son las fresas silvestres 
 VIETmisc.2084.desc.landed:0 "He enviado a mis sirvientes a recoger una gran cantidad de fresas de estos jardines. Desde comidas personales hasta grandes banquetes, pasando por ingredientes en medicinas, ¡estas fresas tendrán un amplio uso por mi parte!"
 VIETmisc.2084.a:0 "$VIETmisc.2083.a$"
  # Version 1.18.2 Start Here - Note to Translators: please leave this comment here and do not remove it even in your versions of the loc
- VIETmisc.2085.t:0 "xxxxx"
- VIETmisc.2085.desc:0 "xxxxx"
- VIETmisc.2085.a:0 "xxxxx"
- VIETmisc.2086.t:0 "xxxxx"
- VIETmisc.2086.desc:0 "xxxxx"
- VIETmisc.2086.a:0 "xxxxx"
+ # Version 1.20.0 Start Here - Note to Translators: please leave this comment here and do not remove it even in your versions of the loc
+ VIETmisc.2085.t:0 "Betting on Books"
+ VIETmisc.2085.t.sinosphere:0 "Betting on Books and Spilling Tea" # 赌书泼茶
+ VIETmisc.2085.desc:0 "Lately, my [spouse.GetWifeHusband] [spouse.GetFirstName] and I have developed an amusing activity when we have free time, which [spouse.GetSheHe] calls [Glossary( 'betting on books', 'BETTING_ON_BOOKS_GLOSS' )].\n\nWe’ll sit by our bookshelves, sipping fine drinks, and we’ll test each other’s knowledge, taking turns to ask each other if we could name the exact book, chapter, and page, a certain line or passage was from. Often, the arguing and banter is so fun, we’d end up laughing and even spill our drink on our clothes!"
+ VIETmisc.2085.a:0 "As fellow bookworms, is there nothing more delightful?"
+ VIETmisc.2085.info:0 "The [decision|E] to #V $VIET_decision_bet_on_books$#! is now available if you and a [spouse|E], [concubine|E], [lover|E], or [soulmate|E] both have the [GetModifier('VIET_betting_on_books_and_spilling_tea_modifier').GetNameWithTooltip] [character_modifier|E] [modifier|E].#!"
+ # Version 1.20.1 Start Here - Note to Translators: please leave this comment here and do not remove it even in your versions of the loc
+ VIETmisc.2086.t:0 "$VIETmisc.2085.t$"
+ VIETmisc.2086.t.sinosphere:0 "$VIETmisc.2085.t.sinosphere$"
+ VIETmisc.2086.desc:0 "“I win!” [spouse.GetFirstName] shouts with glee, laughing when [spouse.GetSheHe] correctly guesses where the exact line of the book I asked about was from. [spouse.GetSheHe|U] raises [spouse.GetHerHis] cup to me while laughing even more, before accidentally spilling [ROOT.Char.Custom('RegionalDrink')] on [spouse.GetHerHis] clothes.\n\nI roll my eyes playfully, and then tell [spouse.GetHerHim], “Our score’s still even. Now it’s my turn – test me!”\n\n“Let’s see…” [spouse.GetSheHe] begins, not the least bothered by the liquid on [spouse.GetHerHis] clothes, as [spouse.GetSheHe] eyes the bookshelf."
+ VIETmisc.2086.desc.sinosphere:0 "“I win!” [spouse.GetFirstName] shouts with glee, laughing when [spouse.GetSheHe] correctly guesses where the exact line of the #italic [ROOT.Char.Custom('VIET_random_chinese_classic')]#! I asked about was from. [spouse.GetSheHe|U] raises [spouse.GetHerHis] cup to me while laughing even more, before accidentally spilling tea on [spouse.GetHerHis] clothes.\n\nI roll my eyes playfully, and then tell [spouse.GetHerHim], “Our score’s still even. Now it’s my turn – test me!”\n\n“Let’s see…” [spouse.GetSheHe] begins, not the least bothered by the tea on [spouse.GetHerHis] clothes, as [spouse.GetSheHe] eyes the bookshelf."
+ VIETmisc.2086.a:0 "A smirk appears on [spouse.GetFirstNamePossessiveNoTooltip] face."
+ # Version 1.20.2 Start Here - Note to Translators: please leave this comment here and do not remove it even in your versions of the loc
  VIETmisc.2087.t:0 "xxxxx"
  VIETmisc.2087.desc:0 "xxxxx"
  VIETmisc.2087.a:0 "xxxxx"

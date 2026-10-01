@@ -5,3 +5,4 @@ VIET_rival_reason_placeholder:0 "[CHARACTER.GetShortUIName|U] y [TARGET_CHARACTE
 VIET_travel_argument_reason:0 "[CHARACTER.GetShortUIName|U] y [TARGET_CHARACTER.GetShortUIName] tuvieron una gran discusión mientras [viajaban|E]."
 VIET_travel_chat_reason:0 "[CHARACTER.GetShortUIName|U] y [TARGET_CHARACTER.GetShortUIName] tuvieron una maravillosa y profunda conversación mientras [viajaban|E]."
 VIET_natural_philosophy_interest:0 "[CHARACTER.GetShortUIName|U] y [TARGET_CHARACTER.GetShortUIName] tuvieron una agradable e intelectual conversación sobre la filosofía natural."
+ VIET_lover_reason_intellectual_interest:0 "[CHARACTER.GetShortUIName|U] and [TARGET_CHARACTER.GetShortUIName] fell in love thanks to bonding affectionately over shared intellectual interests."

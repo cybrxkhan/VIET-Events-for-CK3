@@ -392,12 +392,17 @@ VIETmisc.3030.info:0 "#emphasis Исторический контекст:#! Х�
  VIETmisc.3076.b:0 "Enforce harsher measures – I can just smell the filth from here!"
  VIETmisc.3076.info:0 "#emphasis Historical Context:#! In contrast to modern stereotypes of the medieval era as one of filth and lack of hygiene, medieval settlements were often concerned with proper disposal of human waste. Officials and physicians were aware of the public health problems that unchecked human waste caused, and would enact various ordinances to regulate this. As just one example, in 1397, the city of Valencia in Spain created a municipal office tasked with collecting and disposing of the bodies of dead animals. Interestingly, more than a century later in 1503, an employee of this office was fired because he “served so badly in his office that the whole city is full of dead cats, dogs, and chickens.”"
  # Version 1.19.1 Start Here - Note to Translators: please leave this comment here and do not remove it even in your versions of the loc
- VIETmisc.3077.t:0 "xxxxx"
- VIETmisc.3077.desc:0 "xxxxx"
- VIETmisc.3077.a:0 "xxxxx"
- VIETmisc.3078.t:0 "xxxxx"
- VIETmisc.3078.desc:0 "xxxxx"
- VIETmisc.3078.a:0 "xxxxx"
+ # Version 1.20.0 Start Here - Note to Translators: please leave this comment here and do not remove it even in your versions of the loc
+ VIETmisc.3077.t:0 "Murdered Delivery Boys"
+ VIETmisc.3077.desc:0 "“The victims were all young men sent to deliver food to the old mansion,” my [councilor.GetCouncilTitle] [councilor.GetTitledFirstName] notes, reading off the report from [county.GetNameNoTier]. “Report here says every full moon, for several years, they were lured in by five beautiful young women who lived there. When the local guards finally located and broke into the residence, neither the girls nor the bodies of the young men could be found – only the boys’ pristinely preserved clothes.”\n\n[councilor.GetFirstNameNoTooltip] looks at me with a grimace. “Our people don't know where the women went. Murders are sadly a fact of life, but something about these murders feels ominous, if I have to be honest.”"
+ VIETmisc.3077.a:0 "Sadly, not much we can do at this point."
+ VIETmisc.3077.b:0 "Redouble efforts to locate these seductive murderers!"
+ VIETmisc.3077.c:0 "I… kind of like the idea. Inspiring concept."
+ VIETmisc.3078.t:0 "Pinders"
+ VIETmisc.3078.desc:0 "Escaping farm animals have become a major concern in [county.GetNameNoTier] as of late.\n\nMy officials report that commoners claim that [Glossary( 'pinders', 'PINDERS_GLOSS' )] there are often inept, and they recommend further resources to hire new, better pinders and provide better training for those already employed as pinders.\n\n“It behooves my [ROOT.Char.GetLadyLord],” one report reads, “to remember that the loss of livestock is no small matter, and a grave economic concern that affects us all.”"
+ VIETmisc.3078.a:0 "We can provide the necessary resources."
+ VIETmisc.3078.b:0 "We don’t have the resources for this."
+ # Version 1.20.1 Start Here - Note to Translators: please leave this comment here and do not remove it even in your versions of the loc
  VIETmisc.3079.t:0 "xxxxx"
  VIETmisc.3079.desc:0 "xxxxx"
  VIETmisc.3079.a:0 "xxxxx"

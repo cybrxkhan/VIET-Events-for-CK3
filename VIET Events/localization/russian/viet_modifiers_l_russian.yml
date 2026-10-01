@@ -1722,5 +1722,23 @@ VIET_listened_to_saint_francis:0 "Прослушал проповедь с жи�
  VIET_enjoying_garos_desc:0 "This character enjoys eating food with [Glossary( 'garos', 'GAROS_GLOSS' )], even if the smell can take some getting used to."
  VIET_learning_about_surgeries:0 "Learning about Surgeries"
  # Version 1.19.2 Start Here - Note to Translators: please leave this comment here and do not remove it even in your versions of the loc
+ # Version 1.20.0 Start Here - Note to Translators: please leave this comment here and do not remove it even in your versions of the loc
+ VIET_peek_a_boo:0 "Murdered Delivery Boys"
+ VIET_peek_a_boo_desc:0 "A number of young men were discovered to have been murdered by a group of young beautiful women. The murderers' whereabouts are unknown."
+ VIET_peek_a_boo_inspiration:0 "Inspired by Murderous Young Women"
+ VIET_peek_a_boo_inspiration_desc:0 "This character has found the notorious deeds of a certain group of serial killers, who happen to be beautiful young women, quite inspiring. It's a bit alarming."
+ VIET_pinders:0 "Better Pinders"
+ VIET_pinders_desc:0 "Local authorities have hired and improved the training of [Glossary( 'pinders', 'PINDERS_GLOSS' )] in this region."
+ VIET_seulgi_bear:0 "Dreamt of a Friendly Hugging Bear"
+ VIET_experiencing_eerie_coincidences:0 "Experiencing Eerie Coincidences"
+ VIET_dream_paranoia:0 "Paranoid About Dreams Manifesting in Real Life"
+ VIET_paranoid_traveling:0 "Paranoid About Safety While Traveling"
+ VIET_betting_on_books_and_spilling_tea_modifier:0 "Betting on Books"
+ VIET_betting_on_books_and_spilling_tea_modifier_desc:0 "This character has a spouse, or used to have a spouse, who they frequently enjoy playing a game of [Glossary( 'betting on books', 'BETTING_ON_BOOKS_GLOSS' )] - something perfect for two bookworms in love." # \n\n#EMP Can take the [decision|E] to #V $VIET_decision_bet_on_books$#! if a [spouse|E], [concubine|E], [lover|E], or [soulmate|E] has the same [modifier|E].#!
+ VIET_li_qingzhao_poems_youth:0 "Inspired by Lǐ Qīngzhào's Early Poetry"
+ VIET_li_qingzhao_poems_youth_desc:0 "This character finds great inspiration from the happier early poetry of [Glossary( 'Lǐ Qīngzhào', 'LI_QINGZHAO_GLOSS' )], when she was still married to her beloved [Glossary( 'Zhào Míngchéng', 'ZHAO_MINGCHENG_GLOSS' )]."
+ VIET_li_qingzhao_poems_old_age:0 "Inspired by Lǐ Qīngzhào's Later Poetry"
+ VIET_li_qingzhao_poems_old_age_desc:0 "This character finds great inspiration from the melancholic later poetry of [Glossary( 'Lǐ Qīngzhào', 'LI_QINGZHAO_GLOSS' )], after the death of her beloved [Glossary( 'Zhào Míngchéng', 'ZHAO_MINGCHENG_GLOSS' )]."
+ # Version 1.20.1 Start Here - Note to Translators: please leave this comment here and do not remove it even in your versions of the loc
  xxxxxxxxxx:0 "xxx"
 

@@ -323,12 +323,16 @@
  VIETmisc.7065.b.toast_good:0 "You manage to negotiate a better price"
  VIETmisc.7065.c:0 "I’m not interested in anything today."
  # Version 1.19.2 Start Here - Note to Translators: please leave this comment here and do not remove it even in your versions of the loc
- VIETmisc.7066.t:0 "$travel_event_prefix$ xxxxx"
- VIETmisc.7066.desc:0 "xxxxx"
- VIETmisc.7066.a:0 "xxxxx"
- VIETmisc.7067.t:0 "$travel_event_prefix$ xxxxx"
- VIETmisc.7067.desc:0 "xxxxx"
- VIETmisc.7067.a:0 "xxxxx"
+ # Version 1.20.0 Start Here - Note to Translators: please leave this comment here and do not remove it even in your versions of the loc
+ VIETmisc.7066.t:0 "$travel_event_prefix$ The Mysterious Arrow"
+ VIETmisc.7066.desc:0 "The arrow whizzed by so fast that we didn’t have any time to react, but it thankfully and harmlessly hit a nearby [ROOT.Char.GetCurrentLocation.Custom('GetRandomAppropriateTree')] tree. We were on full alert, preparing our weapons and waiting for the worst….\n\nAnd there was silence. Nothing but silence.\n\nWe eventually searched the area and found no one and nothing suspicious. Where in the name of [ROOT.Char.GetFaith.HighGodNameAlternate] did that arrow come from? And was it meant for us?"
+ VIETmisc.7066.a:0 "Let’s hurry along."
+ VIETmisc.7066.b:0 "Take extra precautions!"
+ VIETmisc.7067.t:0 "$travel_event_prefix$ Tree's Shade"
+ VIETmisc.7067.desc:0 "The large old [ROOT.Char.GetCurrentLocation.Custom('GetRandomAppropriateTree')] tree up ahead was a welcome sight, after a long day of traveling.\n\nWe sat under its shade, admiring the local landscape of [ROOT.Char.GetCurrentLocation.GetName] for a while."
+ VIETmisc.7067.a:0 "A relaxing view."
+ VIETmisc.7067.b:0 "I should pray to [ROOT.Char.GetFaith.random_GoodGodNames] while here."
+ # Version 1.20.1 Start Here - Note to Translators: please leave this comment here and do not remove it even in your versions of the loc
  VIETmisc.7068.t:0 "$travel_event_prefix$ xxxxx"
  VIETmisc.7068.desc:0 "xxxxx"
  VIETmisc.7068.a:0 "xxxxx"
