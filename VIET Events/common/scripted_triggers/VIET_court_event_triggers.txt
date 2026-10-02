@@ -1,0 +1,109 @@
+﻿# Candidate character scope; root is the ruler receiving the court event.
+# Reuse these predicates in event eligibility and actor selection.
+
+VIET_court_6002_complainer_trigger = {
+	is_available_ai_adult = yes
+	has_court_event_flag = no
+	NOT = { is_close_family_of = root }
+	OR = {
+		has_trait = arrogant
+		has_trait = diligent
+		has_trait = just
+		has_trait = zealous
+		has_trait = impatient
+		has_trait = stubborn
+		has_trait = wrathful
+	}
+	NOR = {
+		has_trait = shy
+		has_trait = craven
+		has_trait = lazy
+	}
+}
+
+VIET_court_6002_relative_trigger = {
+	is_available_ai_adult = yes
+	has_court_event_flag = no
+	is_close_or_extended_family_of = root
+	OR = {
+		has_trait = arrogant
+		has_trait = lazy
+		has_trait = lunatic_1
+		has_trait = lunatic_genetic
+		has_trait = wrathful
+		has_trait = impatient
+		has_trait = possessed_1
+		has_trait = possessed_genetic
+		has_trait = callous
+		has_trait = sadistic
+	}
+	# Do not select the only courtier who can also fill the other role.
+	save_temporary_scope_as = VIET_court_6002_relative_candidate
+	root = {
+		any_courtier = {
+			VIET_court_6002_complainer_trigger = yes
+			NOT = { this = scope:VIET_court_6002_relative_candidate }
+		}
+	}
+}
+
+VIET_court_6006_mean_trigger = {
+	is_available_ai_adult = yes
+	has_court_event_flag = no
+	OR = {
+		has_trait = arrogant
+		has_trait = zealous
+		has_trait = impatient
+		has_trait = wrathful
+		has_trait = diligent
+		has_trait = ambitious
+	}
+	NOR = {
+		has_trait = content
+		has_trait = forgiving
+		has_trait = lazy
+	}
+}
+
+VIET_court_6006_nice_trigger = {
+	is_available_ai_adult = yes
+	has_court_event_flag = no
+	OR = {
+		has_trait = forgiving
+		has_trait = lazy
+		has_trait = content
+		has_trait = patient
+		has_trait = calm
+		has_trait = compassionate
+	}
+	NOR = {
+		has_trait = vengeful
+		has_trait = wrathful
+		has_trait = sadistic
+		has_trait = paranoid
+	}
+	# Check for a distinct critic before reserving the sympathetic courtier.
+	save_temporary_scope_as = VIET_court_6006_nice_candidate
+	root = {
+		any_courtier = {
+			VIET_court_6006_mean_trigger = yes
+			NOT = { this = scope:VIET_court_6006_nice_candidate }
+		}
+	}
+}
+
+VIET_court_6021_courtier_trigger = {
+	is_available_healthy_ai_adult = yes
+	has_court_event_flag = no
+	NOR = {
+		has_trait = humble
+		has_trait = content
+	}
+}
+
+VIET_court_6023_patron_trigger = {
+	is_available_ai_adult = yes
+	has_court_event_flag = no
+	faith = root.faith
+	NOT = { has_trait = cynical }
+}
