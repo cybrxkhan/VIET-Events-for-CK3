@@ -300,8 +300,9 @@ VIETmisc.3002 = {
 		trigger = {
 			is_ai = no
 			any_held_title = {
+				tier = tier_county
 				is_landless_type_title = no
-				count >= 2 #Don't give away your only title
+				count >= 2 #Don't give away your only county
 			}
 			highest_held_title_tier >= tier_duchy
 		}
@@ -4356,8 +4357,9 @@ VIETmisc.3041 = {
 		trigger = {
 			is_ai = no
 			any_held_title = {
+				tier = tier_county
 				is_landless_type_title = no
-				count >= 2 #Don't give away your only title
+				count >= 2 #Don't give away your only county
 			}
 			highest_held_title_tier >= tier_duchy
 		}
