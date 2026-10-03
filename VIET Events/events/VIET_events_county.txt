@@ -8087,7 +8087,7 @@ VIETmisc.3077 = {
 			}
 		}
 		stress_impact = {
-			paraonid = minor_stress_impact_gain
+			paranoid = minor_stress_impact_gain
 			diligent = minor_stress_impact_gain
 			just = minor_stress_impact_gain
 		}

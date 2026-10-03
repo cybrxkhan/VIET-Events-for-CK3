@@ -5329,10 +5329,6 @@ VIETold.1074 = {
 	theme = diplomacy_foreign_affairs_focus
 	override_icon = { reference = "gfx/interface/icons/event_types/type_medicine.dds" }
 
-	left_portrait = {
-		character = scope:perfume_crazy
-		animation = personality_callous
-	}
 	right_portrait = {
 		character = root
 		animation = disapproval
