@@ -464,6 +464,13 @@ VIET_decision_ransom_kidnapped_servants = {
 		stress_impact = {
 			callous = minor_stress_impact_gain
 		}
+		if = {
+			limit = { has_variable = VIET_servant_hostage_incident }
+			save_scope_value_as = {
+				name = VIET_servant_hostage_incident
+				value = var:VIET_servant_hostage_incident
+			}
+		}
 		trigger_event = VIETmisc.2024
 	}
 

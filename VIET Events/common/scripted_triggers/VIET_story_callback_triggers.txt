@@ -1,0 +1,17 @@
+﻿# Existing saves can have queued callbacks without an incident value. Accept
+# those only until this character starts a new, numbered incident.
+VIET_is_current_servant_hostage_incident_trigger = {
+	trigger_if = {
+		limit = { has_variable = VIET_servant_hostage_incident }
+		exists = scope:VIET_servant_hostage_incident
+		var:VIET_servant_hostage_incident = scope:VIET_servant_hostage_incident
+	}
+}
+
+VIET_is_current_crow_incident_trigger = {
+	trigger_if = {
+		limit = { has_variable = VIET_crow_incident }
+		exists = scope:VIET_crow_incident
+		var:VIET_crow_incident = scope:VIET_crow_incident
+	}
+}
