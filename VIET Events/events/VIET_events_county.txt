@@ -4861,7 +4861,7 @@ VIETmisc.3047 = {
 	option = {
 		name = VIETmisc.3047.a
 		stress_impact = {
-			scholar = minor_stress_impact_gain
+			erudite = minor_stress_impact_gain
 		}
 	}
 	# Build it
