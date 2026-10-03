@@ -895,7 +895,7 @@ VIETold.2012 = {
 			limit = {
 				faith = {
 					OR = {
-						has_doctrine_parameter = pacifist_opinion_active 
+						has_doctrine_parameter = pacifist
 						trait_is_virtue = calm					
 					}
 				}
@@ -906,7 +906,7 @@ VIETold.2012 = {
 			limit = {
 				faith = {
 					OR = {
-						has_doctrine = tenet_warmonger 
+						main_rite = { rite_has_tenet = tenet_warmonger }
 						trait_is_virtue = wrathful					
 					}
 				}
@@ -1969,7 +1969,7 @@ VIETold.2027 = {
 	trigger = {
 		faith = {
 			NOR = {
-				has_doctrine = tenet_divine_marriage
+				main_rite = { rite_has_tenet = tenet_divine_marriage }
 				has_doctrine = doctrine_consanguinity_unrestricted
 			}		
 		}
