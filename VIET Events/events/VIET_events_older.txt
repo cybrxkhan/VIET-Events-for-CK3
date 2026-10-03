@@ -3212,11 +3212,11 @@ VIETold.1044 = {
 	}
 	
 	trigger = {
-		faith = { has_doctrine = muhammad_succession_sunni_doctrine }
+		religion = religion:islam_religion
 		NOT = { has_game_rule = VIET_conversion_universe_events }
 		any_courtier_or_guest = {
 			is_available_ai_adult = yes
-			faith = { has_doctrine = muhammad_succession_sunni_doctrine }
+			religion = religion:islam_religion
 		}
 	}
 	
@@ -3252,6 +3252,7 @@ VIETold.1044 = {
 		random_courtier_or_guest = {
 			limit = {
 				is_available_ai_adult = yes
+				religion = religion:islam_religion
 			}
 			save_scope_as = scope_VIET_bad_teeth_person
 		}
@@ -3343,8 +3344,7 @@ VIETold.1045 = {
 	}
 	
 	trigger = {
-		root.faith = { has_doctrine = muhammad_succession_sunni_doctrine }
-		#faith = { faiths_are_in_sunni_islam_group = yes }
+		religion = religion:islam_religion
 		NOT = { has_game_rule = VIET_conversion_universe_events }
 	}
 	
