@@ -5128,8 +5128,39 @@ VIETmisc.2084 = {
 	}
 	
 	immediate = {
-		location.county = {
-			save_scope_as = capital
+		if = {
+			limit = { is_landless_ruler = yes }
+			domicile.domicile_location.county = {
+				save_scope_as = capital
+			}
+		}
+		else_if = {
+			limit = {
+				any_held_county = {
+					has_county_modifier = VIET_famous_strawberry_gardens
+				}
+			}
+			random_held_county = {
+				limit = {
+					has_county_modifier = VIET_famous_strawberry_gardens
+				}
+				save_scope_as = capital
+			}
+		}
+		else = {
+			random_vassal_or_below = {
+				limit = {
+					any_held_county = {
+						has_county_modifier = VIET_famous_strawberry_gardens
+					}
+				}
+				random_held_county = {
+					limit = {
+						has_county_modifier = VIET_famous_strawberry_gardens
+					}
+					save_scope_as = capital
+				}
+			}
 		}
 		VIET_harvest_strawberries_effect = yes
 	}
