@@ -1,5 +1,6 @@
 ﻿
 VIET_decision_buy_valuable_medicinal_berries_req = {
+	first = VIET_decision_buy_valuable_medicinal_berries_req
 	global = VIET_decision_buy_valuable_medicinal_berries_req
 }
 
@@ -8,10 +9,12 @@ VIET_decision_employ_renowned_blacksmiths_req = {
 }
 
 VIET_decision_visit_legendary_burial_mound_req = {
+	first = VIET_decision_visit_legendary_burial_mound_req
 	global = VIET_decision_visit_legendary_burial_mound_req
 }
 
 VIET_decision_investigate_a_ghost_town_req = {
+	first = VIET_decision_investigate_a_ghost_town_req
 	global = VIET_decision_investigate_a_ghost_town_req
 }
 
@@ -20,10 +23,12 @@ VIET_decision_venerate_a_mummified_hermit_req = {
 }
 
 VIET_decision_relax_at_a_giant_shade_tree_req = {
+	first = VIET_decision_relax_at_a_giant_shade_tree_req
 	global = VIET_decision_relax_at_a_giant_shade_tree_req
 }
 
 VIET_decision_examine_ancient_stone_monument_req = {
+	first = VIET_decision_examine_ancient_stone_monument_req
 	global = VIET_decision_examine_ancient_stone_monument_req
 }
 
@@ -32,6 +37,7 @@ VIET_decision_purchase_dependable_donkeys_req = {
 }
 
 VIET_decision_view_flower_meadows_in_bloom_req = {
+	first = VIET_decision_view_flower_meadows_in_bloom_req
 	global = VIET_decision_view_flower_meadows_in_bloom_req
 }
 
