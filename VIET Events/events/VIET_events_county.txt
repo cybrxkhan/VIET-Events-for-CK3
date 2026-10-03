@@ -6997,8 +6997,8 @@ VIETmisc.3069 = {
 		# You should only care if your faith/culture would endorse the idea of a chaste male knight
 		faith = {
 			NOR = { 
-				has_doctrine = tenet_polyamory
-				has_doctrine = tenet_carnal_exaltation
+				main_rite = { rite_has_tenet = tenet_polyamory }
+				main_rite = { rite_has_tenet = tenet_carnal_exaltation }
 				trait_is_virtue = lustful
 			}
 		}
@@ -7009,8 +7009,8 @@ VIETmisc.3069 = {
 			# Should be in a county whose faith/culture would endorse the idea of a chaste male knight
 			faith = {
 				NOR = { 
-					has_doctrine = tenet_polyamory
-					has_doctrine = tenet_carnal_exaltation
+					main_rite = { rite_has_tenet = tenet_polyamory }
+					main_rite = { rite_has_tenet = tenet_carnal_exaltation }
 					trait_is_virtue = lustful
 				}
 			}
@@ -7068,8 +7068,8 @@ VIETmisc.3069 = {
 				# Should be in a county whose faith/culture would endorse the idea of a chaste knight
 				faith = {
 					NOR = { 
-						has_doctrine = tenet_polyamory
-						has_doctrine = tenet_carnal_exaltation
+						main_rite = { rite_has_tenet = tenet_polyamory }
+						main_rite = { rite_has_tenet = tenet_carnal_exaltation }
 						trait_is_virtue = lustful
 					}
 				}

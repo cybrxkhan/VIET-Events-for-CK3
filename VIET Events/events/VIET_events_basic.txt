@@ -4149,7 +4149,7 @@ VIETmisc.0053 = {
 		trigger = {
 			faith = {
 				NOR = {
-					has_doctrine = tenet_divine_marriage
+					main_rite = { rite_has_tenet = tenet_divine_marriage }
 					has_doctrine = doctrine_consanguinity_unrestricted
 				}		
 			}		
@@ -4172,7 +4172,7 @@ VIETmisc.0053 = {
 		trigger = {
 			faith = {
 				OR = {
-					has_doctrine = tenet_divine_marriage
+					main_rite = { rite_has_tenet = tenet_divine_marriage }
 					has_doctrine = doctrine_consanguinity_unrestricted
 				}		
 			}		
@@ -20282,9 +20282,9 @@ VIETmisc.0230 = {
 			religion = { is_in_family = rf_eastern }
 			faith = {
 				OR = {
-					has_doctrine = tenet_dharmic_pacifism
-					has_doctrine = tenet_pacifism
-					has_doctrine = tenet_reincarnation
+					main_rite = { rite_has_tenet = tenet_dharmic_pacifism }
+					main_rite = { rite_has_tenet = tenet_pacifism }
+					main_rite = { rite_has_tenet = tenet_reincarnation }
 					trait_is_sin = gluttonous
 					trait_is_sin = sadistic
 					trait_is_sin = callous

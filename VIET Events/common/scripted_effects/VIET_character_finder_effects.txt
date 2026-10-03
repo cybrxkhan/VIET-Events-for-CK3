@@ -508,7 +508,7 @@ VIET_find_astronomer_effect = {
 					value = learning
 					if = {
 						limit = {
-							faith = { has_doctrine = tenet_astrology }
+							faith = { main_rite = { rite_has_tenet = tenet_astrology } }
 						}
 						add = 10
 					}
