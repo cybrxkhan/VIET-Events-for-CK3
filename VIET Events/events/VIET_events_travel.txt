@@ -2874,6 +2874,14 @@ VIETmisc.7026 = {
 			random_entourage_character = {
 				limit = {
 					is_available_travelling = yes
+					learning >= medium_skill_rating
+					OR = {
+						has_trait = lifestyle_scholar
+						has_trait = education_learning_3
+						has_trait = education_learning_4
+						has_trait = education_learning_5
+						learning >= high_skill_rating
+					}
 				}
 				save_scope_as = scholar
 			}	
