@@ -1,0 +1,36 @@
+﻿# Legacy saves may have active stories and queued callbacks without an incident
+# number. Accept those until a new numbered occurrence starts; never reset the
+# counters on resolution, or an older callback could match a newer occurrence.
+
+VIET_is_current_baklava_visit_trigger = {
+	trigger_if = {
+		limit = { has_variable = VIET_baklava_visit }
+		exists = scope:VIET_baklava_visit
+		trigger_if = {
+			limit = { exists = scope:VIET_baklava_visit }
+			var:VIET_baklava_visit = scope:VIET_baklava_visit
+		}
+	}
+}
+
+VIET_is_current_spice_visit_trigger = {
+	trigger_if = {
+		limit = { has_variable = VIET_spice_visit }
+		exists = scope:VIET_spice_visit
+		trigger_if = {
+			limit = { exists = scope:VIET_spice_visit }
+			var:VIET_spice_visit = scope:VIET_spice_visit
+		}
+	}
+}
+
+VIET_is_current_ghost_haunting_incident_trigger = {
+	trigger_if = {
+		limit = { has_variable = VIET_ghost_haunting_incident }
+		exists = scope:VIET_ghost_haunting_incident
+		trigger_if = {
+			limit = { exists = scope:VIET_ghost_haunting_incident }
+			var:VIET_ghost_haunting_incident = scope:VIET_ghost_haunting_incident
+		}
+	}
+}
