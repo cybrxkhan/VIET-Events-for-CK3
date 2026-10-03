@@ -2474,7 +2474,7 @@ VIETmisc.0418 = {
 			gregarious = minor_stress_impact_loss
 			impatient = miniscule_stress_impact_loss
 			lazy = miniscule_stress_impact_loss
-			scholar = miniscule_stress_impact_gain
+			erudite = miniscule_stress_impact_gain
 			lifestyle_physician = miniscule_stress_impact_gain
 			lifestyle_herbalist = miniscule_stress_impact_gain
 		}
