@@ -1,0 +1,29 @@
+﻿# County title scope. Use the same predicate for eligibility and selection.
+
+VIET_flower_meadows_county_trigger = {
+	tier = tier_county
+	is_landless_type_title = no
+	any_county_province = {
+		OR = {
+			terrain = plains
+			terrain = farmlands
+			terrain = hills
+			terrain = mountains
+			terrain = forest
+			terrain = taiga
+			terrain = wetlands
+			terrain = steppe
+			terrain = floodplains
+		}
+	}
+}
+
+VIET_dog_breeding_county_trigger = {
+	tier = tier_county
+	is_landless_type_title = no
+	NOR = {
+		has_county_modifier = VIET_dogs_bred_for_hunting_and_guarding
+		has_county_modifier = VIET_dogs_bred_for_companionship
+		has_county_modifier = VIET_dogs_bred_for_herding_and_working
+	}
+}
