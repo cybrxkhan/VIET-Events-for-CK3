@@ -70,6 +70,9 @@ VIETintro.0002 = {
 				any_courtier_or_guest = { is_female = no }
 			}
 			random_courtier_or_guest = {
+				limit = {
+					is_female = no
+				}
 				culture = {
 					save_scope_as = baurus_culture
 				}
@@ -83,6 +86,9 @@ VIETintro.0002 = {
 				any_courtier_or_guest = { is_female = no }
 			}
 			random_courtier_or_guest = {
+				limit = {
+					is_female = no
+				}
 				culture = {
 					save_scope_as = jauffre_culture
 				}
