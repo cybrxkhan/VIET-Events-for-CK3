@@ -256,6 +256,7 @@
  # 1.4.6 - please leave this comment here
  VIETmisc.2063.t:0 "Bayas como Buena Medicina"
  VIETmisc.2063.desc:0 "He enviado a mis sirvientes a comprar algunas de las renombradas bayas de [county.GetNameNoTier]. Mi medico [physician.GetTitledFirstName]. Puedo usar estas bayas medicinales para una variedad de propósitos, y puedo beber varios tés de hierbas hechos con estas bayas como un tónico para la salud. Ahora, ¿cuántas bayas les pido a mis sirvientes que compren de nuevo?"
+ VIETmisc.2063.desc.no_physician:0 "He enviado a mis sirvientes a comprar algunas de las famosas bayas de [county.GetNameNoTier]. Estas bayas medicinales tienen diversos usos, y puedo beber infusiones preparadas con ellas como tónico para la salud. Ahora, ¿cuántas bayas les pedí que compraran?"
  VIETmisc.2063.a:0 "Una pequeña cantidad, no demasiada pero suficiente."
  VIETmisc.2063.b:0 "Una cantidad media debería ser más que suficiente."
  VIETmisc.2063.c:0 "Una gran cantidad para que me dure mucho tiempo."
