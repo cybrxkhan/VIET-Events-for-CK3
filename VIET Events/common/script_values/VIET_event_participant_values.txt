@@ -1,0 +1,13 @@
+﻿# Count the same distinct court/guest/vassal pool used by VIETmisc.0357.
+# Evaluated in the event recipient's scope, with ROOT as that recipient.
+VIET_hair_debate_candidate_count = {
+	value = 0
+	every_courtier_or_guest = {
+		limit = { VIET_hair_debate_participant_trigger = yes }
+		add = 1
+	}
+	every_vassal = {
+		limit = { VIET_hair_debate_vassal_participant_trigger = yes }
+		add = 1
+	}
+}

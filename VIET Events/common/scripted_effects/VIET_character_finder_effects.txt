@@ -283,7 +283,7 @@ VIET_pick_merchant_effect = {
 			modifier = {
 				add = {
 					value = stewardship
-					value = diplomacy
+					add = diplomacy
 					if = {
 						limit = {
 							has_trait = lifestyle_traveler
@@ -559,7 +559,7 @@ VIET_find_priest_effect = {
 			modifier = {
 				add = {
 					value = learning
-					value = age
+					add = age
 				}
 			}
 		}
@@ -713,7 +713,7 @@ VIET_find_traveler_effect = {
 			modifier = {
 				add = {
 					value = diplomacy
-					value = num_of_known_languages
+					add = num_of_known_languages
 				}
 			}
 		}
@@ -785,7 +785,7 @@ VIET_find_famous_traveler_effect = {
 			modifier = {
 				add = {
 					value = diplomacy
-					value = num_of_known_languages
+					add = num_of_known_languages
 				}
 			}
 		}
@@ -1178,7 +1178,7 @@ VIET_find_hunter_effect = {
 			modifier = {
 				add = {
 					value = martial
-					value = prowess
+					add = prowess
 				}
 				add = {
 					if = {

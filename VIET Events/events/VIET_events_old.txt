@@ -8025,8 +8025,8 @@ VIETold.2110 = {
 			culture = { has_cultural_pillar = heritage_north_germanic }
 		}
 		any_courtier_or_guest = {
+			is_available_ai_adult = yes
 			OR = {
-				is_available_ai_adult = yes
 				faith = faith:norse_pagan
 				culture = { has_cultural_pillar = heritage_north_germanic }
 			}
