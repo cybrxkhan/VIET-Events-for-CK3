@@ -74,13 +74,13 @@ VIET_decision_learn_shorthand_techniques_effect_tooltip:0 "После неско
 VIET_decision_learn_shorthand_techniques_effect_tooltip_2:0 "Насколько силен [character_modifier|E] зависит от ваших [навыков|E], [черт|E] и других факторов"
 VIET_decision_learn_shorthand_techniques_confirm:0 "Кажется, я нашел писца, который готов учить".
 VIET_decision_learn_shorthand_techniques_context_tooltip:0 "#emphasis Исторический контекст:#! Стенография — это любой сокращенный метод быстрого письма. Эти методы были исторически разработаны во многих культурах, где существовала письменность. Они были и остаются особенно полезными для определенных профессий, таких как клерки и писцы, где необходима информация быть записаны быстро и эффективно".
-VIET_decision_buy_valueable_medicinal_berries:0 "Купить ценные лекарственные ягоды"
-VIET_decision_buy_valueable_medicinal_berries_tooltip:0 "Есть ягоды с предполагаемыми целебными свойствами"
-VIET_decision_buy_valueable_medicinal_berries_desc:0 "Кажется, есть части моего царства, где ягоды, как говорят, обладают различными целебными свойствами. Я должен купить их себе!"
-VIET_decision_buy_valueable_medicinal_berries_effect_tooltip:0 "Вы выбираете, сколько ягод купить, определяя, как долго будет действовать [GetModifier('VIET_berry_good_medicine').GetNameWithTooltip] [character_modifier|E] #weak (Минимальная стоимость: @gold_icon! 15)#!"
-VIET_decision_buy_valueable_medicinal_berries_confirm:0 "Хорошая ягода."
-VIET_decision_buy_valueable_medicinal_berries_req:0 "Любой [графство|E] в вашем [домене|E] имеет [GetModifier('VIET_berry_good_medicine_county').GetNameWithTooltip] [county_modifier|E]"
-VIET_decision_buy_valueable_medicinal_berries_context_tooltip:0 "#emphasis Исторический контекст: #! Ягоды были частью многих культур с незапамятных времен и использовались в качестве пищи, лекарств, источника красителей и многого другого."
+VIET_decision_buy_valuable_medicinal_berries:0 "Купить ценные лекарственные ягоды"
+VIET_decision_buy_valuable_medicinal_berries_tooltip:0 "Есть ягоды с предполагаемыми целебными свойствами"
+VIET_decision_buy_valuable_medicinal_berries_desc:0 "Кажется, есть части моего царства, где ягоды, как говорят, обладают различными целебными свойствами. Я должен купить их себе!"
+VIET_decision_buy_valuable_medicinal_berries_effect_tooltip:0 "Вы выбираете, сколько ягод купить, определяя, как долго будет действовать [GetModifier('VIET_berry_good_medicine').GetNameWithTooltip] [character_modifier|E] #weak (Минимальная стоимость: @gold_icon! 15)#!"
+VIET_decision_buy_valuable_medicinal_berries_confirm:0 "Хорошая ягода."
+VIET_decision_buy_valuable_medicinal_berries_req:0 "Любой [county|E] в вашем [domain|E] имеет [GetModifier('VIET_berry_good_medicine_county').GetNameWithTooltip] [county_modifier|E]"
+VIET_decision_buy_valuable_medicinal_berries_context_tooltip:0 "#emphasis Исторический контекст: #! Ягоды были частью многих культур с незапамятных времен и использовались в качестве пищи, лекарств, источника красителей и многого другого."
 VIET_decision_employ_renowned_blacksmiths:0 "Нанимайте известных кузнецов для армий"
 VIET_decision_employ_renowned_blacksmiths_tooltip:0 "Мои солдаты всегда могут использовать лучшее оружие и доспехи".
 VIET_decision_employ_renowned_blacksmiths_desc:0 "В моем королевстве есть кузнецы. Возможно, я смогу использовать некоторых из них в своей армии, чтобы они могли создавать, ремонтировать и обслуживать оружие и доспехи моих войск".
@@ -94,14 +94,12 @@ VIET_decision_employ_renowned_blacksmiths_context_tooltip:0 "#emphasis Исто�
 VIET_decision_visit_legendary_burial_mound:0 "Посетите легендарный курган"
 VIET_decision_visit_legendary_burial_mound_tooltip:0 "Я должен посетить одно из этих легендарных мест хотя бы раз в жизни".
 VIET_decision_visit_legendary_burial_mound_desc:0 "Недавно я посвятил святилище легендарному персонажу, который, как говорят, похоронен под курганом или холмом, расположенным в одной из частей моих владений. Возможно, мне следует посетить святилище, чтобы засвидетельствовать свое почтение."
-VIET_decision_visit_legendary_burial_mound_req:0 "Любой [графство|E] в вашем [domain|E] имеет [GetModifier('VIET_tomb_monument_warrior').GetNameWithTooltip], [GetModifier('VIET_tomb_monument_holy').GetNameWithTooltip] или [GetModifier('VIET_ruet_monument_monument). GetNameWithTooltip] [county_modifier|E]"
 VIET_decision_visit_legendary_burial_mound_effect_tooltip:0 "Во время посещения вы будете вдохновлены, что даст вам положительный #P#! [character_modifier|E], преимущества которого будут зависеть от того, кто там похоронен"
 VIET_decision_visit_legendary_burial_mound_confirm:0 "Пойдем в это место".
 VIET_decision_visit_legendary_burial_mound_context_tooltip:0 "#emphasis Исторический контекст:#! Курганы или курганы (единственное число #курсив tumulus#!) можно найти практически в любой части мира, а некоторые датируются тысячами лет. легенды и мифы, связанные с этими местами".
 VIET_decision_investigate_a_ghost_town:0 "Исследуйте город-призрак"
 VIET_decision_investigate_a_ghost_town_tooltip:0 "Я хочу увидеть призраков!"
 VIET_decision_investigate_a_ghost_town_desc:0 "В моем владении есть область, где много рассказов о привидениях. Говорят, что в некоторых поселениях в этой области есть так называемые "города-призраки", где местные жители утверждают, что видели, как перемещаются духи. I В последнее время я набрался храбрости и хочу разобраться в этом — неужели там действительно есть такие призраки?"
-VIET_decision_investigate_a_ghost_town_req:0 "Любой [графство|E] в вашем [домене|E] имеет [GetModifier('VIET_spirit_towns').GetNameWithTooltip] [county_modifier|E]"
 VIET_decision_investigate_a_ghost_town_effect_tooltip_1:0 "Вы отправитесь в один из этих так называемых городов-призраков и, надеюсь, встретитесь с призраками".
 VIET_decision_investigate_a_ghost_town_effect_tooltip_2:0 "#N Вы получите заметное количество [стресс|E], потому что вы [GetTrait('craven').GetName( GetPlayer )]#!"
 VIET_decision_investigate_a_ghost_town_confirm:0 "Я обязательно увижу их мельком."
@@ -116,7 +114,6 @@ VIET_decision_venerate_a_mummified_hermit_context_tooltip:0 "#emphasis Исто�
 VIET_decision_relax_at_a_giant_shade_tree:0 "Отдохните у гигантского тенистого дерева"
 VIET_decision_relax_at_a_giant_shade_tree_tooltip:0 "Дерево должно быть очень большим"
 VIET_decision_relax_at_a_giant_shade_tree_desc:0 "На моих территориях в одной из деревень растет известное тенистое дерево. Думаю, пришло время посетить его и проверить, заслужена ли его репутация."
-VIET_decision_relax_at_a_giant_shade_tree_req:0 "Любой [county|E] в вашем [domain|E] имеет [GetModifier('VIET_giant_shade_tree').GetNameWithTooltip] [county_modifier|E]"
 VIET_decision_relax_at_a_giant_shade_tree_effect_tooltip:0 "Вы отправитесь к известному тенистому дереву в своем домене, чтобы расслабиться и избавиться от [стресс|E]"
 VIET_decision_relax_at_a_giant_shade_tree_confirm:0 "Не могу дождаться, когда увижу это!"
 VIET_decision_relax_at_a_giant_shade_tree_context_tooltip:0 "#emphasis Исторический контекст:#! Теневые деревья — это большие деревья, которые были посажены с целью создания тени под своей кроной или кроной или же выросли в месте, где они стали таковыми для людей, живущих поблизости."
@@ -157,7 +154,6 @@ VIET_decision_listen_to_wild_songbirds_context_tooltip:0 "#emphasis Биолог
  VIET_decision_view_flower_meadows_in_bloom_desc:0 "There is a part of my realm that is famous for the beauty of its meadows and fields in springtime, when the flowers are in full bloom. Why don't I travel there one of these days, to witness such beauty for myself?"
  VIET_decision_view_flower_meadows_in_bloom_effect_tooltip:0 "You will lose some [stress|E] and you might also gain a random amount of [piety|E]"
  VIET_decision_view_flower_meadows_in_bloom_req_tooltip:0 "Month is March, April, or May"
- VIET_decision_view_flower_meadows_in_bloom_req:0 "Any [county|E] in your [domain|E] has the [GetModifier('VIET_famous_flower_meadows').GetNameWithTooltip] [county_modifier|E]"
  VIET_decision_view_flower_meadows_in_bloom_confirm:0 "Make preparations to go."
  VIET_decision_oblivion_dream:0 "Contemplate Your Strange Dream"
  VIET_decision_oblivion_dream_tooltip:0 "There must be more to this dream!"
@@ -208,7 +204,7 @@ activity_VIET_crow_removal_name:0 "[ACTIVITY.GetOwner.GetNamePossessiveOrMy|U] �
 activity_VIET_visit_to_a_legendary_burial_mound:0 "Посетить легендарный курган"
 activity_VIET_visit_to_a_legendary_burial_mound_name:0 "[ACTIVITY.GetOwner.GetNamePossessiveOrMy|U] Посещение легендарного кургана"
 activity_VIET_investigation_of_a_ghost_town:0 "Расследование города-призрака"
-activity_VIET_Investigation_of_a_ghost_town_name:0 "[ACTIVITY.GetOwner.GetNamePossessiveOrMy|U] Исследование города-призрака"
+activity_VIET_investigation_of_a_ghost_town_name:0 "[ACTIVITY.GetOwner.GetNamePossessiveOrMy|U] Исследование города-призрака"
 activity_VIET_veneration_of_a_mummified_hermit:0 "Почитание мумифицированного отшельника"
 activity_VIET_veneration_of_a_mummified_hermit_name:0 "[ACTIVITY.GetOwner.GetNamePossessiveOrMy|U] Почитание мумифицированного отшельника"
 activity_VIET_trip_giant_shade_tree:0 "Путешествие к гигантскому тенистому дереву"
