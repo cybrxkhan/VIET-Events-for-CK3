@@ -1335,6 +1335,20 @@ VIETmisc.2023 = {
 	
 	option = { # Ok
 		name = VIETmisc.2023.a
+		# Do not read the new incident variable while building the option tooltip.
+		hidden_effect_new_object = {
+			if = {
+				limit = { has_variable = VIET_servant_hostage_incident }
+				change_variable = { name = VIET_servant_hostage_incident add = 1 }
+			}
+			else = {
+				set_variable = { name = VIET_servant_hostage_incident value = 1 }
+			}
+			save_scope_value_as = {
+				name = VIET_servant_hostage_incident
+				value = var:VIET_servant_hostage_incident
+			}
+		}
 		#hidden_effect = { # Start countdown to ransom deadline
 		#	trigger_event = {
 		#		id = VIETmisc.2008
@@ -1420,6 +1434,11 @@ VIETmisc.2024 = {
 	type = character_event
 	title = VIETmisc.2024.t
 	desc = VIETmisc.2024.desc
+	trigger = {
+		has_character_modifier = VIET_servant_hostage_countdown
+		has_character_flag = VIET_servant_hostage_countdown_real
+		VIET_is_current_servant_hostage_incident_trigger = yes
+	}
 	theme = corruption
 	override_background = { reference = throne_room }
 	
@@ -1823,6 +1842,7 @@ VIETmisc.2032 = {
 		if = {
 			limit = {
 				has_character_flag = VIET_servant_hostage_countdown_real
+				VIET_is_current_servant_hostage_incident_trigger = yes
 			}
 			remove_character_flag = VIET_servant_hostage_countdown_real
 			random_list = {
@@ -1903,11 +1923,13 @@ VIETmisc.2035 = {
 	hidden = yes
 	
 	immediate = {
-		remove_character_flag = VIET_servant_hostage_countdown_real
 		if = {
 			limit = {
 				has_character_modifier = VIET_servant_hostage_countdown
+				has_character_flag = VIET_servant_hostage_countdown_real
+				VIET_is_current_servant_hostage_incident_trigger = yes
 			}
+			remove_character_flag = VIET_servant_hostage_countdown_real
 			random_list = {
 				10 = { trigger_event = VIETmisc.2036 } # Servants execute a bungled escape attempt
 				10 = { trigger_event = VIETmisc.2037 } # Servants are killed early in gang war
@@ -2529,6 +2551,20 @@ VIETmisc.2047 = {
 	
 	option = { # Ok
 		name = VIETmisc.2047.a
+		# Do not read the new incident variable while building the option tooltip.
+		hidden_effect_new_object = {
+			if = {
+				limit = { has_variable = VIET_crow_incident }
+				change_variable = { name = VIET_crow_incident add = 1 }
+			}
+			else = {
+				set_variable = { name = VIET_crow_incident value = 1 }
+			}
+			save_scope_value_as = {
+				name = VIET_crow_incident
+				value = var:VIET_crow_incident
+			}
+		}
 		add_character_modifier = {
 			modifier = VIET_crows_following
 		}
@@ -3363,10 +3399,12 @@ VIETmisc.2060 = {
 	immediate = {
 		if = {
 			limit = {
+				has_character_modifier = VIET_crows_following
+				VIET_is_current_crow_incident_trigger = yes
 				NOR = {
 					has_character_flag = VIET_doing_crow_activities
 					has_character_modifier = VIET_crow_enemy
-					has_character_modifier = VIET_crow_friend
+					VIET_is_crow_lord_or_lady_trigger = yes
 				}
 			}
 			trigger_event = VIETmisc.2048
