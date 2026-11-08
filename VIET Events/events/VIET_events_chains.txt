@@ -1522,6 +1522,7 @@ VIETmisc.1036 = {
 		# Pick a nice grandparent
 		any_close_or_extended_family_member = {
 			even_if_dead = yes
+			is_alive = no
 			is_grandparent_of = root
 			has_personality_benevolent_trigger = yes
 			num_sinful_traits < 1
@@ -1600,6 +1601,7 @@ VIETmisc.1036 = {
 		random_close_or_extended_family_member = {
 			even_if_dead = yes
 			limit = {
+				is_alive = no
 				is_grandparent_of = root
 				has_personality_benevolent_trigger = yes
 				num_sinful_traits < 1
