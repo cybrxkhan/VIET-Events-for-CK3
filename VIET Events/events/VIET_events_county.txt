@@ -3521,21 +3521,7 @@ VIETmisc.3033 = {
 
 	trigger = {
 		any_held_title = {
-			tier = tier_county
-			is_landless_type_title = no
-			any_county_province = {
-				OR = {
-					terrain = plains
-					terrain = farmlands
-					terrain = hills
-					terrain = mountains
-					terrain = forest
-					terrain = taiga
-					terrain = wetlands
-					terrain = steppe
-					terrain = floodplains
-				}			
-			}
+			VIET_flower_meadows_county_trigger = yes
 		}	
 	}
 	
@@ -3555,7 +3541,9 @@ VIETmisc.3033 = {
 	
 	immediate = {
 		random_held_title = {
-			limit = { tier = tier_county }
+			limit = {
+				VIET_flower_meadows_county_trigger = yes
+			}
 			save_scope_as = county
 		}
 		scope:county = {
@@ -5766,13 +5754,7 @@ VIETmisc.3058 = {
 	trigger = {
 		NOT = { has_game_rule = VIET_conversion_universe_events }
 		any_held_title = {
-			tier = tier_county
-			is_landless_type_title = no
-			NOR = {
-				has_county_modifier = VIET_dogs_bred_for_hunting_and_guarding
-				has_county_modifier = VIET_dogs_bred_for_companionship
-				has_county_modifier = VIET_dogs_bred_for_herding_and_working
-			}
+			VIET_dog_breeding_county_trigger = yes
 		}	
 	}
 
@@ -5793,7 +5775,9 @@ VIETmisc.3058 = {
 	
 	immediate = {
 		random_held_title = {
-			limit = { tier = tier_county }
+			limit = {
+				VIET_dog_breeding_county_trigger = yes
+			}
 			save_scope_as = county
 		}
 	}
