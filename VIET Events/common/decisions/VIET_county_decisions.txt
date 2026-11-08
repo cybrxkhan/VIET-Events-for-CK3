@@ -530,7 +530,9 @@ VIET_decision_strawberry_garden = {
 	}
 
 	effect = {
-		VIET_create_strawberry_gardens_effect = yes
+		show_as_tooltip = {
+			VIET_create_strawberry_gardens_effect = yes
+		}
 		trigger_event = VIETmisc.2083
 		if = {
 			limit = {
