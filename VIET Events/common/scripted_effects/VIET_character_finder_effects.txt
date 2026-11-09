@@ -84,12 +84,12 @@ VIET_realm_court_list_effect = {
 					save_temporary_scope_as = potential_vassal_court
 					NOT = {
 						any_in_list = {
-							list = pool_vassal_courts
+							list = VIET_court_list
 							this = scope:potential_vassal_court
 						}
 					}
 				}
-				add_to_temporary_list = pool_vassal_courts
+				add_to_temporary_list = VIET_court_list
 			}
 			if = {
 				limit = {
