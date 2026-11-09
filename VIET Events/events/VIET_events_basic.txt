@@ -34855,7 +34855,7 @@ VIETmisc.0360 = {
 		stress_impact = {
 			ambitious = miniscule_stress_impact_loss
 			diligent = miniscule_stress_impact_loss
-			scholar = miniscule_stress_impact_loss
+			erudite = miniscule_stress_impact_loss
 			education_learning_1 = miniscule_stress_impact_loss
 			education_learning_2 = miniscule_stress_impact_loss
 			education_learning_3 = miniscule_stress_impact_loss
@@ -36310,7 +36310,7 @@ VIETmisc.0372 = {
 		}
 		
 		stress_impact = {
-			scholar = miniscule_stress_impact_loss
+			erudite = miniscule_stress_impact_loss
 			compassionate = miniscule_stress_impact_loss
 			generous = minor_stress_impact_loss
 			callous = miniscule_stress_impact_gain
@@ -38560,7 +38560,7 @@ VIETmisc.0391 = {
 			stress_impact = {
 				base = minor_stress_impact_loss
 				confucian_education = miniscule_stress_impact_loss
-				scholar = miniscule_stress_impact_loss
+				erudite = miniscule_stress_impact_loss
 				education_learning_3 = miniscule_stress_impact_loss
 				education_learning_4 = miniscule_stress_impact_loss
 				education_learning_5 = miniscule_stress_impact_loss
@@ -39399,7 +39399,7 @@ VIETmisc.0396 = {
 			ambitious = miniscule_stress_impact_gain
 			paranoid = miniscule_stress_impact_gain
 			arrogant = miniscule_stress_impact_gain
-			scholar = miniscule_stress_impact_gain
+			erudite = miniscule_stress_impact_gain
 			confucian_education = miniscule_stress_impact_gain
 		}	
 	}

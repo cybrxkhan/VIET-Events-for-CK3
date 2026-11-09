@@ -850,7 +850,7 @@ VIETmisc.5005 = {
 			destroy_artifact = scope:VIET_clutter_artifact
 		}
 		stress_impact = {
-			scholar = medium_stress_impact_gain
+			erudite = medium_stress_impact_gain
 		}
 	}
 }
@@ -8402,7 +8402,7 @@ VIETmisc.5055 = {
 			destroy_artifact = scope:VIET_clutter_artifact
 		}
 		stress_impact = {
-			scholar = miniscule_stress_impact_gain
+			erudite = miniscule_stress_impact_gain
 			theologian = miniscule_stress_impact_gain
 			education_learning_3 = miniscule_stress_impact_gain
 			education_learning_4 = miniscule_stress_impact_gain

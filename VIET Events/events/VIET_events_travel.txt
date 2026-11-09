@@ -4128,7 +4128,7 @@ VIETmisc.7039 = {
 		}
 		stress_impact = {
 			gregarious = minor_stress_impact_loss
-			scholar = minor_stress_impact_loss
+			erudite = minor_stress_impact_loss
 			education_learning_1 = miniscule_stress_impact_loss
 			education_learning_2 = miniscule_stress_impact_loss
 			education_learning_3 = miniscule_stress_impact_loss

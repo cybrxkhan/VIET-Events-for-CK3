@@ -17975,7 +17975,7 @@ VIETold.2241 = {
 			lazy = miniscule_stress_impact_loss
 			humble = miniscule_stress_impact_loss
 			calm = miniscule_stress_impact_loss
-			scholar = minor_stress_impact_loss
+			erudite = minor_stress_impact_loss
 			education_learning_3 = minor_stress_impact_loss
 			education_learning_4 = minor_stress_impact_loss
 		}
