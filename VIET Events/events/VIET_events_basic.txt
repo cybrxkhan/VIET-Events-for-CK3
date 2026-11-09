@@ -5272,6 +5272,7 @@ VIETmisc.0066 = {
 		random_courtier = {
 			limit = {
 				is_available_ai_adult = yes
+				NOT = { is_close_family_of = root }
 			}
 			save_scope_as = scope_VIET_fellow_lost_traveler
 		}

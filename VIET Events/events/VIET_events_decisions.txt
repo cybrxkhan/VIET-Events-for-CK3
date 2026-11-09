@@ -5276,7 +5276,7 @@ VIETmisc.2085 = {
 		# More likely if you're inside the Sinosphere
 		modifier = {
 			add = 0.3
-			VIET_is_lesser_sinosphere_culture_trigger = no
+			VIET_is_lesser_sinosphere_culture_trigger = yes
 		}
 		modifier = {
 			add = 0.2
