@@ -1,0 +1,8 @@
+﻿# Character scope: remove only temporary dessert choices, not their modifiers.
+VIET_clear_dessert_gift_flags_effect = {
+	remove_character_flag = VIET_was_gifted_baklava
+	remove_character_flag = VIET_was_gifted_lokma
+	remove_character_flag = VIET_was_gifted_kanafeh
+	remove_character_flag = VIET_was_gifted_halwa
+	remove_character_flag = VIET_was_gifted_qatayef
+}

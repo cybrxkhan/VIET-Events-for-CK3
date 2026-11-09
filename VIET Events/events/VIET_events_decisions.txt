@@ -58,6 +58,7 @@ VIETmisc.2001 = {
 	left_portrait = root
 	
 	trigger = {
+		NOT = { has_character_modifier = VIET_traveling_baklava_merchant_in_town }
 		is_landed = yes
 		NOT = { has_game_rule = VIET_conversion_universe_events }
 		OR = {
@@ -118,6 +119,20 @@ VIETmisc.2001 = {
 	
 	option = { # Ok
 		name = VIETmisc.2001.a
+		# Keep incident bookkeeping out of option-tooltip evaluation.
+		hidden_effect_new_object = {
+			if = {
+				limit = { has_variable = VIET_baklava_visit }
+				change_variable = { name = VIET_baklava_visit add = 1 }
+			}
+			else = {
+				set_variable = { name = VIET_baklava_visit value = 1 }
+			}
+			save_scope_value_as = {
+				name = VIET_baklava_visit
+				value = var:VIET_baklava_visit
+			}
+		}
 		add_character_modifier = {
 			modifier = VIET_traveling_baklava_merchant_in_town
 		}
@@ -233,9 +248,17 @@ VIETmisc.2003 = {
 		animation = sadness
 	}
 	
+	trigger = {
+		has_character_modifier = VIET_traveling_baklava_merchant_in_town
+		VIET_is_current_baklava_visit_trigger = yes
+	}
+
 	option = { # Ok
 		name = VIETmisc.2003.a
-		remove_character_modifier = VIET_traveling_baklava_merchant_in_town
+		if = {
+			limit = { VIET_is_current_baklava_visit_trigger = yes }
+			remove_character_modifier = VIET_traveling_baklava_merchant_in_town
+		}
 	}
 }
 
@@ -256,6 +279,7 @@ VIETmisc.2004 = {
 	left_portrait = root
 	
 	trigger = {
+		NOT = { has_character_modifier = VIET_traveling_spice_merchant_in_town }
 		is_landed = yes
 	}
 	
@@ -289,6 +313,20 @@ VIETmisc.2004 = {
 	
 	option = { # Ok
 		name = VIETmisc.2004.a
+		# Keep incident bookkeeping out of option-tooltip evaluation.
+		hidden_effect_new_object = {
+			if = {
+				limit = { has_variable = VIET_spice_visit }
+				change_variable = { name = VIET_spice_visit add = 1 }
+			}
+			else = {
+				set_variable = { name = VIET_spice_visit value = 1 }
+			}
+			save_scope_value_as = {
+				name = VIET_spice_visit
+				value = var:VIET_spice_visit
+			}
+		}
 		add_character_modifier = {
 			modifier = VIET_traveling_spice_merchant_in_town
 		}
@@ -361,9 +399,17 @@ VIETmisc.2006 = {
 		animation = sadness
 	}
 	
+	trigger = {
+		has_character_modifier = VIET_traveling_spice_merchant_in_town
+		VIET_is_current_spice_visit_trigger = yes
+	}
+
 	option = { # Ok
 		name = VIETmisc.2006.a
-		remove_character_modifier = VIET_traveling_spice_merchant_in_town
+		if = {
+			limit = { VIET_is_current_spice_visit_trigger = yes }
+			remove_character_modifier = VIET_traveling_spice_merchant_in_town
+		}
 	}
 }
 
@@ -385,6 +431,10 @@ VIETmisc.2007 = {
 		animation = paranoia
 	}
 	
+	trigger = {
+		NOT = { has_character_modifier = VIET_ghost_haunting }
+	}
+
 	weight_multiplier = {
 		base = 1
 		modifier = {
@@ -419,6 +469,20 @@ VIETmisc.2007 = {
 	
 	option = { # Ok
 		name = VIETmisc.2007.a
+		# Keep incident bookkeeping out of option-tooltip evaluation.
+		hidden_effect_new_object = {
+			if = {
+				limit = { has_variable = VIET_ghost_haunting_incident }
+				change_variable = { name = VIET_ghost_haunting_incident add = 1 }
+			}
+			else = {
+				set_variable = { name = VIET_ghost_haunting_incident value = 1 }
+			}
+			save_scope_value_as = {
+				name = VIET_ghost_haunting_incident
+				value = var:VIET_ghost_haunting_incident
+			}
+		}
 		add_character_modifier = {
 			modifier = VIET_ghost_haunting
 		}
@@ -477,11 +541,15 @@ VIETmisc.2008 = {
 
 	trigger = {
 		has_character_modifier = VIET_ghost_haunting
+		VIET_is_current_ghost_haunting_incident_trigger = yes
 	}
 	
 	option = { # Ok
 		name = VIETmisc.2008.a
-		remove_character_modifier = VIET_ghost_haunting
+		if = {
+			limit = { VIET_is_current_ghost_haunting_incident_trigger = yes }
+			remove_character_modifier = VIET_ghost_haunting
+		}
 	}
 }
 
@@ -2058,6 +2126,7 @@ VIETmisc.2039 = {
 	option = { # Ok
 		name = VIETmisc.2039.a
 		scope:recipient = {
+			VIET_clear_dessert_gift_flags_effect = yes
 			add_character_flag = VIET_was_gifted_baklava
 			show_as_tooltip = {
 				add_character_modifier = {
@@ -2070,6 +2139,7 @@ VIETmisc.2039 = {
 	option = { # Ok
 		name = VIETmisc.2039.b
 		scope:recipient = {
+			VIET_clear_dessert_gift_flags_effect = yes
 			add_character_flag = VIET_was_gifted_lokma
 			show_as_tooltip = {
 				add_character_modifier = {
@@ -2082,6 +2152,7 @@ VIETmisc.2039 = {
 	option = { # Ok
 		name = VIETmisc.2039.c
 		scope:recipient = {
+			VIET_clear_dessert_gift_flags_effect = yes
 			add_character_flag = VIET_was_gifted_kanafeh
 			show_as_tooltip = {
 				add_character_modifier = {
@@ -2094,6 +2165,7 @@ VIETmisc.2039 = {
 	option = { # Ok
 		name = VIETmisc.2039.d
 		scope:recipient = {
+			VIET_clear_dessert_gift_flags_effect = yes
 			add_character_flag = VIET_was_gifted_halwa
 			show_as_tooltip = {
 				add_character_modifier = {
@@ -2106,6 +2178,7 @@ VIETmisc.2039 = {
 	option = { # Ok
 		name = VIETmisc.2039.e
 		scope:recipient = {
+			VIET_clear_dessert_gift_flags_effect = yes
 			add_character_flag = VIET_was_gifted_qatayef
 			show_as_tooltip = {
 				add_character_modifier = {
@@ -2286,25 +2359,8 @@ VIETmisc.2041 = {
 	}
 	
 	after = {
-		if = {
-			limit = { scope:recipient = { has_character_flag = VIET_was_gifted_baklava } }
-			remove_character_flag = VIET_was_gifted_baklava
-		}
-		if = {
-			limit = { scope:recipient = { has_character_flag = VIET_was_gifted_lokma } }
-			remove_character_flag = VIET_was_gifted_lokma
-		}
-		if = {
-			limit = { scope:recipient = { has_character_flag = VIET_was_gifted_kanafeh } }
-			remove_character_flag = VIET_was_gifted_kanafeh
-		}
-		if = {
-			limit = { scope:recipient = { has_character_flag = VIET_was_gifted_halwa } }
-			remove_character_flag = VIET_was_gifted_halwa
-		}
-		if = {
-			limit = { scope:recipient = { has_character_flag = VIET_was_gifted_qatayef } }
-			remove_character_flag = VIET_was_gifted_qatayef
+		scope:recipient = {
+			VIET_clear_dessert_gift_flags_effect = yes
 		}
 	}	
 	
@@ -2331,25 +2387,8 @@ VIETmisc.2042 = {
 	}
 	
 	after = {
-		if = {
-			limit = { scope:recipient = { has_character_flag = VIET_was_gifted_baklava } }
-			remove_character_flag = VIET_was_gifted_baklava
-		}
-		if = {
-			limit = { scope:recipient = { has_character_flag = VIET_was_gifted_lokma } }
-			remove_character_flag = VIET_was_gifted_lokma
-		}
-		if = {
-			limit = { scope:recipient = { has_character_flag = VIET_was_gifted_kanafeh } }
-			remove_character_flag = VIET_was_gifted_kanafeh
-		}
-		if = {
-			limit = { scope:recipient = { has_character_flag = VIET_was_gifted_halwa } }
-			remove_character_flag = VIET_was_gifted_halwa
-		}
-		if = {
-			limit = { scope:recipient = { has_character_flag = VIET_was_gifted_qatayef } }
-			remove_character_flag = VIET_was_gifted_qatayef
+		scope:recipient = {
+			VIET_clear_dessert_gift_flags_effect = yes
 		}
 	}	
 	
@@ -2493,7 +2532,7 @@ VIETmisc.2046 = {
 		scope:actor = {
 			add_opinion = {
 				target = scope:recipient
-				modifier = VIET_opinion_gifted_spices
+				modifier = VIET_opinion_refused_gift_spices
 			}
 		}
 	}
