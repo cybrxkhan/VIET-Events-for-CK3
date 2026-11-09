@@ -402,6 +402,8 @@
 	
 	# map_entity = "building_western_feast_01_entity"
 
+	header_background = "gfx/interface/illustrations/event_scenes/VIET_ancient_cairn.dds"
+
 	# Travel
 	background = { # Bridge
 		trigger = {

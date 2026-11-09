@@ -285,7 +285,8 @@ VIETmisc.7058.b:0 "Hacer ofrendas y orar por las almas de los muertos."
 VIETmisc.7058.c:0 "¡No tengo miedo! Acamparemos aquí esta noche."
 VIETmisc.7058.c.flavor:0 "#italic “Tuve que pasar por allí un par de veces porque un mercader con el que trabajaba desde lejos no le daba mucha importancia a nuestras supersticiones. Después de que pasamos, incluso él admitió que pensó que alguien nos vigilaba todo el tiempo….”#!\n\nCuando dejo el pueblo, no puedo evitar recordar las palabras del carretero, que ahora suenan extrañamente premonitorias. Miro a mi alrededor, esperando ver ojos mirándome desde una de las ventanas rotas de las casas del pueblo; tengo que convencerme a mí mismo de que no veo nada."
 VIETmisc.7058.c.message:0 "Algo se siente #italic extraño#! cuando te marchas"
-VIETmisc.7059.t:0 "$travel_event_prefix$ La Fresa Estéril" # Nota: Potentilla sterilis, llamada "barren strawberry" en inglés.
+ # Nota: Potentilla sterilis, llamada "barren strawberry" en inglés.
+VIETmisc.7059.t:0 "$travel_event_prefix$ La Fresa Estéril"
 VIETmisc.7059.desc:0 "“¿No son esas plantas de fresa?”, pregunto, mientras pasamos junto a un follaje denso cerca del camino con muchas plantas y arbustos. Señalo lo que parece una planta de fresa, pero no hay bayas en ella. Me pregunto en voz alta: “¿Quizás alguien pasó por aquí y recogió algunas fresas antes?”\n\n[traveler.GetTitledFirstName] se acerca y pasa [traveler.GetHerHis] mano por las hojas de la planta, examinando su apariencia física, antes de negar con [traveler.GetHerHis] cabeza.\n\n“Estas son fresas estériles”, me corrige [traveler.GetSheHe]. “Se ven similares, pero no producen ningún fruto. Las hojas también son un poco diferentes, si miras de cerca.”"
 VIETmisc.7059.a:0 "Fascinante. ¿Qué más sabes sobre estas plantas?"
 VIETmisc.7059.b:0 "Supongo que solo soñaré despierto con fresas por ahora."

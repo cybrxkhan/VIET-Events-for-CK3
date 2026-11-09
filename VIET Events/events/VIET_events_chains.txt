@@ -3546,6 +3546,7 @@ VIETmisc.1083 = {
 VIETmisc.1084 = { # Fullscreen Intro Event
 	type = character_event
 	window = fullscreen_event
+	queue_icon = "gfx/interface/icons/memory_types/VIET_stars.dds"
 	title = VIETmisc.1084.t
 	desc = VIETmisc.1084.desc
 	theme = realm

@@ -44,6 +44,7 @@ VIETmisc.0319.info = {
 }
 
 VIETmisc.1084.info = {
+	first = VIETmisc.1084.info
 	global = VIETmisc.1084.info
 }
 

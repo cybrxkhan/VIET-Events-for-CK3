@@ -25,7 +25,7 @@
  VIET_view_flower_meadows_in_bloom_admiration_intent_desc: "Deseas admirar la belleza de un famoso prado de flores."
  VIET_view_flower_meadows_in_bloom_completed_log_title:0 "$activity_VIET_view_flower_meadows_in_bloom$ Completado"
  VIET_view_flower_meadows_in_bloom_completed_log:0 "[CHARACTER.GetShortUIName|U] terminó de ver los prados de flores en flor"
- VIET_decision_view_flower_meadows_in_bloom_req:0 "Cualquier [county|E] en tu [domain|E] tiene el [GetModifier('VIET_famous_flower_meadows').GetNameWithTooltip] [county_modifier|E]"
+ VIET_decision_view_flower_meadows_in_bloom_req:0 "Algún [county|E] de tu [domain|E] tiene [GetModifier('VIET_famous_flower_meadows').GetNameWithTooltip] como [county_modifier|E]"
  TRAVEL_NAME_FOR_activity_VIET_view_flower_meadows_in_bloom:0 "$activity_VIET_view_flower_meadows_in_bloom$ de [Character.GetFirstNamePossessiveNoTooltip]"
 
  # Visita a Montículo Funerario
@@ -55,7 +55,7 @@
  VIET_burial_mound_visit_visitation_intent_desc: "Irás al montículo funerario."
  VIET_burial_mound_visit_completed_log_title:0 "Visita al Montículo Funerario Completada"
  VIET_burial_mound_visit_completed_log:0 "[CHARACTER.GetShortUIName|U] completó [CHARACTER.GetHerHis] visita al legendario montículo funerario en [PROVINCE.GetBaronyNameExplicitly]"
- VIET_decision_visit_legendary_burial_mound_req:0 "Cualquier [county|E] en tu [domain|E] tiene el [GetModifier('VIET_tomb_monument_warrior').GetNameWithTooltip], [GetModifier('VIET_tomb_monument_holy').GetNameWithTooltip], o [GetModifier('VIET_tomb_monument_ruler').GetNameWithTooltip] [county_modifier|E]"
+ VIET_decision_visit_legendary_burial_mound_req:0 "Algún [county|E] de tu [domain|E] tiene [GetModifier('VIET_tomb_monument_warrior').GetNameWithTooltip], [GetModifier('VIET_tomb_monument_holy').GetNameWithTooltip] o [GetModifier('VIET_tomb_monument_ruler').GetNameWithTooltip] [county_modifier|E]"
  TRAVEL_NAME_FOR_activity_VIET_burial_mound_visit:0 "$activity_VIET_burial_mound_visit$ de [Character.GetFirstNamePossessiveNoTooltip]"
 
  # Investigación de Pueblo Fantasma
@@ -93,7 +93,7 @@
  VIET_ghost_town_investigation_guard_saw_something_disbelief_completed_log_title:0 "Fantasma Avistado (Probablemente No)"
  VIET_ghost_town_investigation_guard_saw_something_disbelief_completed_log:0 "Uno de los guardias de [CHARACTER.GetShortUINamePossessive|U] supuestamente avistó un fantasma durante [CHARACTER.GetHerHis] investigación de los supuestos pueblos fantasmas en [PROVINCE.GetBaronyNameExplicitly], pero [CHARACTER.GetShortUINameNoTooltip] no le creyó"
  VIET_ghost_town_investigation_resources_amount:0 "Recursos gastados en la investigación"
- VIET_decision_investigate_a_ghost_town_req:0 "Cualquier [county|E] en tu [domain|E] tiene el [GetModifier('VIET_spirit_towns').GetNameWithTooltip] [county_modifier|E]" 
+ VIET_decision_investigate_a_ghost_town_req:0 "Algún [county|E] de tu [domain|E] tiene [GetModifier('VIET_spirit_towns').GetNameWithTooltip] como [county_modifier|E]"
  TRAVEL_NAME_FOR_activity_VIET_ghost_town_investigation:0 "$activity_VIET_ghost_town_investigation$ de [Character.GetFirstNamePossessiveNoTooltip]"
 
  # Visita al Árbol de Sombra Gigante
@@ -116,7 +116,7 @@
  VIET_giant_shade_tree_visit_relaxation_intent_desc: "Te relajarás bajo el árbol de sombra gigante."
  VIET_giant_shade_tree_visit_completed_log_title:0 "Visita al Árbol de Sombra Gigante Completada"
  VIET_giant_shade_tree_visit_completed_log:0 "[CHARACTER.GetShortUIName|U] completó [CHARACTER.GetHerHis] visita al árbol de sombra gigante en [PROVINCE.GetBaronyNameExplicitly]"
- VIET_decision_relax_at_a_giant_shade_tree_req:0 "Cualquier [county|E] en tu [domain|E] tiene el [GetModifier('VIET_giant_shade_tree').GetNameWithTooltip] [county_modifier|E]"
+ VIET_decision_relax_at_a_giant_shade_tree_req:0 "Algún [county|E] de tu [domain|E] tiene [GetModifier('VIET_giant_shade_tree').GetNameWithTooltip] como [county_modifier|E]"
  TRAVEL_NAME_FOR_activity_VIET_giant_shade_tree_visit:0 "$activity_VIET_giant_shade_tree_visit$ de [Character.GetFirstNamePossessiveNoTooltip]"
 
  # Examen del Monumento de Piedra Antiguo

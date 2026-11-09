@@ -1,4 +1,6 @@
-﻿#########################
+﻿@generic_event_theme_sound = "event:/SFX/Events/Themes/sfx_event_theme_type_generic"
+
+#########################
 # 
 # VIET EVENT THEMES
 # With sources listed in comments
