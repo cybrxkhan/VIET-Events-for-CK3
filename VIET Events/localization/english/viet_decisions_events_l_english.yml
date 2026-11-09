@@ -256,6 +256,7 @@
  # 1.4.6 - please leave this comment here
  VIETmisc.2063.t:0 "Berry Good Medicine"
  VIETmisc.2063.desc:0 "I've sent my servants to purchase some of the renowned berries of [county.GetNameNoTier]. My physician, [physician.GetTitledFirstName], can use these medicinal berries for a variety of purposes, and I can drink various herbal teas made using these berries as a health tonic. Now, how many berries did I ask my servants to buy again?"
+ VIETmisc.2063.desc.no_physician:0 "I've sent my servants to purchase some of the renowned berries of [county.GetNameNoTier]. These medicinal berries have a variety of uses, and I can drink herbal teas made using them as a health tonic. Now, how many berries did I ask my servants to buy again?"
  VIETmisc.2063.a:0 "A small amount, not too much but just enough"
  VIETmisc.2063.b:0 "A medium amount should more than suffice"
  VIETmisc.2063.c:0 "A large amount to last me a very long while"

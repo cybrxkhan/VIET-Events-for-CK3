@@ -3652,7 +3652,15 @@ VIETmisc.2062 = {
 VIETmisc.2063 = {
 	type = character_event
 	title = VIETmisc.2063.t
-	desc = VIETmisc.2063.desc
+	desc = {
+		first_valid = {
+			triggered_desc = {
+				trigger = { exists = scope:physician }
+				desc = VIETmisc.2063.desc
+			}
+			desc = VIETmisc.2063.desc.no_physician
+		}
+	}
 	theme = medicine
 	
 	
@@ -3661,6 +3669,14 @@ VIETmisc.2063 = {
 		animation = personality_rational
 	}
 	
+	immediate = {
+		clear_saved_scope = physician
+		if = {
+			limit = { court_physician_available_trigger = yes }
+			save_court_physician_as_effect = { SCOPE_NAME = physician }
+		}
+	}
+
 	option = { # Ok
 		name = VIETmisc.2063.a
 		remove_short_term_gold = 15

@@ -11844,6 +11844,7 @@ VIETmisc.0140 = {
 			has_trait_benevolent_trigger = yes # Someone who is nice
 		}
 		any_courtier = {
+			count >= 2
 			is_available_ai_adult = yes
 		}
 	}
@@ -11887,6 +11888,7 @@ VIETmisc.0140 = {
 		random_courtier = {
 			limit = {
 				is_available_ai_adult = yes
+				NOT = { this = scope:scope_VIET_helper }
 			}
 			save_scope_as = scope_VIET_tripper
 			add_opinion = {
@@ -21565,7 +21567,7 @@ VIETmisc.0243 = {
 	}
 
 	immediate = {
-		random_courtier = {
+		random_courtier_or_guest = {
 			limit = {
 				is_available_ai_adult = yes
 				OR = {
@@ -21579,7 +21581,7 @@ VIETmisc.0243 = {
 			}
 			save_scope_as = realist
 		}
-		random_courtier = {
+		random_courtier_or_guest = {
 			limit = {
 				is_available_ai_adult = yes
 				NOR = {
@@ -34466,21 +34468,7 @@ VIETmisc.0357 = {
 		}
 		NOT = { has_trait = celibate }
 		NOT = { has_sexuality = asexual }
-		OR = {
-			any_courtier_or_guest = {
-				count >= 3 # Need at least three courtiers
-				is_available_ai_adult = yes
-				VIET_is_redhead_or_blonde_area_or_culture = yes
-				NOT = { has_trait = celibate }
-				NOT = { has_sexuality = asexual }
-			}
-			any_vassal = {
-				is_available_ai_adult = yes
-				VIET_is_redhead_or_blonde_area_or_culture = yes
-				NOT = { has_trait = celibate }
-				NOT = { has_sexuality = asexual }
-			}
-		}
+		VIET_hair_debate_candidate_count >= 3
 	}
 	
 	weight_multiplier = {
@@ -34514,28 +34502,22 @@ VIETmisc.0357 = {
 	immediate = {
 		every_courtier_or_guest = {
 			limit = {
-				is_available_ai_adult = yes
-				culture_has_european_heritage_pillar_trigger = yes
-				religion = religion:christianity_religion
-				NOT = {	culture = { has_cultural_pillar = heritage_israelite } }
+				VIET_hair_debate_participant_trigger = yes
 			}
-			add_to_list = candidate_characters
+			add_to_list = VIET_hair_debate_candidates
 		}
 		every_vassal = {
 			limit = {
-				is_available_ai_adult = yes
-				culture_has_european_heritage_pillar_trigger = yes
-				religion = religion:christianity_religion
-				NOT = {	culture = { has_cultural_pillar = heritage_israelite } }
+				VIET_hair_debate_vassal_participant_trigger = yes
 			}
-			add_to_list = candidate_characters
+			add_to_list = VIET_hair_debate_candidates
 		}
 		random_in_list = {
-			list = candidate_characters
+			list = VIET_hair_debate_candidates
 			save_scope_as = blonde
 		}
 		random_in_list = {
-			list = candidate_characters
+			list = VIET_hair_debate_candidates
 			limit = {
 				exists = scope:blonde
 				NOT = { this = scope:blonde }
@@ -34543,7 +34525,7 @@ VIETmisc.0357 = {
 			save_scope_as = redhead
 		}
 		random_in_list = {
-			list = candidate_characters
+			list = VIET_hair_debate_candidates
 			limit = {
 				exists = scope:blonde
 				exists = scope:redhead

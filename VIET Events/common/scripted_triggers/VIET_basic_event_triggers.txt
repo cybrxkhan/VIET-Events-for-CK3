@@ -1,0 +1,17 @@
+﻿# Participants in VIETmisc.0357's hair-preference debate.
+VIET_hair_debate_participant_trigger = {
+	is_available_ai_adult = yes
+	VIET_is_redhead_or_blonde_area_or_culture = yes
+	NOT = { has_trait = celibate }
+	NOT = { has_sexuality = asexual }
+}
+
+# ROOT is the event recipient. Court/guest candidates are counted and added first.
+# A vassal visiting the court must not become a second entry in the combined pool.
+VIET_hair_debate_vassal_participant_trigger = {
+	VIET_hair_debate_participant_trigger = yes
+	NOR = {
+		is_courtier_of = root
+		is_foreign_court_or_pool_guest_of = root
+	}
+}
