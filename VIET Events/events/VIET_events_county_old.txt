@@ -1213,7 +1213,7 @@ VIETmisc.4015 = {
 		trigger = {
 			religion = { is_in_family = rf_abrahamic }
 			faith = {
-				NOT = { has_doctrine = tenet_unreformed_syncretism }
+				NOT = { main_rite = { rite_has_tenet = tenet_unreformed_syncretism } }
 			}
 		}
 		VIET_huge_piety_gain_effect = yes
@@ -3039,14 +3039,14 @@ VIETmisc.4037 = {
 			is_landless_type_title = no
 			faith = {
 				NOR = {
-					has_doctrine = tenet_divine_marriage
+					main_rite = { rite_has_tenet = tenet_divine_marriage }
 					has_doctrine = doctrine_consanguinity_unrestricted
 				}		
 			}
 		}	
 		faith = {
 			NOR = {
-				has_doctrine = tenet_divine_marriage
+				main_rite = { rite_has_tenet = tenet_divine_marriage }
 				has_doctrine = doctrine_consanguinity_unrestricted
 			}		
 		}
@@ -3074,7 +3074,7 @@ VIETmisc.4037 = {
 				is_landless_type_title = no
 				faith = {
 					NOR = {
-						has_doctrine = tenet_divine_marriage
+						main_rite = { rite_has_tenet = tenet_divine_marriage }
 						has_doctrine = doctrine_consanguinity_unrestricted
 					}		
 				}
