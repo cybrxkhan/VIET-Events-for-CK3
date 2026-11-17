@@ -43,7 +43,7 @@ The mod folder should look something like this:
 
 ## Changelog
 
-### Version 1.20.1 "Life"
+### Version 1.21.0 "Life"
 
 New events added in this version: **3**
 
