@@ -70,7 +70,7 @@ As changelog is too big to list here, see the full changelog here: https://steam
 
 [LIST]
 [*]Added 3 generic events
-[*]Changed several modifiers to reflect new tax types
+[*]Changed several modifiers to reflect new tax types and trade goods
 [*]Miscellaneous bugfixes and tweaks, many thanks to eg3r
 [/LIST]
 

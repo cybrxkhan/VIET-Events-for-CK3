@@ -43,12 +43,12 @@ The mod folder should look something like this:
 
 ## Changelog
 
-### Version 1.20.0 "Li Qingzhao"
+### Version 1.20.1 "Life"
 
 New events added in this version: **3**
 
 - Added 3 generic events
-- Changed several modifiers to reflect new tax types
+- Changed several modifiers to reflect new tax types and trade goods
 - Miscellaneous bugfixes and tweaks, many thanks to eg3r
 
 \* Adapted from VIET for CK2
