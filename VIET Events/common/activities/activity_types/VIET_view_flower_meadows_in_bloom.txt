@@ -298,6 +298,9 @@
 	}
 
 	### Graphics
+
+	header_background = "gfx/interface/illustrations/activity_header_backgrounds/activity_VIET_view_flower_meadows_in_bloom.dds"
+
 	# map_entity = {
 	# 	trigger = {
 	# 		activity_location.culture = {
@@ -321,8 +324,6 @@
 	# }
 	
 	# map_entity = "building_western_feast_01_entity"
-
-	header_background = "gfx/interface/illustrations/event_scenes/garden.dds"
 
 	# Travel
 	# background = {

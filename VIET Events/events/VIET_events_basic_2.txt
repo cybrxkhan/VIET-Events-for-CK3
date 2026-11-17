@@ -28,6 +28,7 @@
 # 0415-0416 	Earth Day
 # 0417-0420 	Byzantine and Turkish
 # 0421-0425 	Generic
+# 0426-0428 	Generic
 # 
 ############################################################################################################################
 
@@ -3357,6 +3358,308 @@ VIETmisc.0425 = {
 
 
 
+
+##################################################################
+# 0426-0428 Generic
+##################################################################
+
+
+# Physician speaks of the benefits of goat milk
+VIETmisc.0426 = {
+	type = character_event
+	title = VIETmisc.0426.t
+	desc = VIETmisc.0426.desc
+	theme = medicine
+	override_background = { reference = relaxing_room }
+
+
+	left_portrait = {
+		character = root
+		animation = personality_cynical
+	}
+
+	right_portrait = {
+		character = scope:physician
+		animation = storyteller
+	}
+
+	trigger = {
+		has_game_rule = VIET_normal_universe_events
+		court_physician_available_trigger = yes
+		culture_has_east_asian_heritage_pillar_trigger = no
+	}
+	
+	weight_multiplier = {
+		base = 1
+		modifier = {
+			add = 0.2
+			has_trait = diligent
+		}
+		modifier = {
+			add = -0.2
+			has_trait = lazy
+		}
+		modifier = {
+			add = 0.2
+			has_trait = fickle
+		}
+		modifier = {
+			add = -0.2
+			has_trait = stubborn
+		}
+		modifier = {
+			add = 0.2
+			has_trait = temperate
+		}
+		modifier = {
+			add = -0.2
+			has_trait = gluttonous
+		}
+	}
+
+	immediate = {
+		save_court_physician_as_effect = { SCOPE_NAME = physician }
+	}
+
+	option = { # Ok
+		name = VIETmisc.0426.a
+		VIET_huge_prestige_loss_effect = yes
+		scope:physician = {
+			add_opinion = {
+				modifier = VIET_opinion_listened_to_my_advice
+				target = root
+			}
+		}
+		add_character_modifier = {
+			modifier = VIET_drinks_goat_milk
+			years = 20
+		}
+		stress_impact = {
+			paranoid = minor_stress_impact_gain
+			arrogant = medium_stress_impact_gain
+		}
+	}
+
+	option = { # Ok
+		name = VIETmisc.0426.b
+		scope:physician = {
+			add_opinion = {
+				modifier = VIET_opinion_didnt_listen_to_my_advice
+				target = root
+			}
+		}
+		stress_impact = {
+			trusting = minor_stress_impact_gain
+			humble = medium_stress_impact_gain
+		}
+	}
+
+
+	after = {		
+		if = {
+			limit = {
+				has_game_rule = VIET_historical_context_on
+			}
+			custom_tooltip = VIETmisc.0426.info
+		}
+	}
+
+}
+
+
+# Priests ask for donations to fund foundling wheels
+VIETmisc.0427 = {
+	type = character_event
+	title = VIETmisc.0427.t
+	desc = VIETmisc.0427.desc
+	theme = pregnancy
+	override_background = { reference = VIET_background_small_town }
+
+
+	left_portrait = {
+		character = root
+		animation = war_over_tie
+	}
+
+	trigger = {
+		has_game_rule = VIET_normal_universe_events
+	}
+	
+	weight_multiplier = {
+		base = 1
+		modifier = {
+			add = 0.2
+			has_trait = diligent
+		}
+		modifier = {
+			add = -0.2
+			has_trait = lazy
+		}
+		modifier = {
+			add = 0.2
+			has_trait = compassionate
+		}
+		modifier = {
+			add = -0.2
+			has_trait = callous
+		}
+		modifier = {
+			add = 0.2
+			has_trait = humble
+		}
+		modifier = {
+			add = -0.2
+			has_trait = arrogant
+		}
+	}
+
+	option = { # Ok
+		name = VIETmisc.0427.a
+		trigger = {
+			OR = {
+				gold >= medium_gold_value
+				is_ai = no
+			}
+		}
+		remove_short_term_gold = {
+			value = {
+				value = medium_gold_value
+				min = 25
+				max = 125
+			}
+		}
+		VIET_massive_piety_gain_effect = yes
+		add_character_modifier = {
+			modifier = VIET_donated_foundling_wheels
+			years = 10
+		}
+		stress_and_fulfillment_impact = {
+			generous = major_stress_impact_loss
+			compassionate = major_stress_impact_loss
+			humble = minor_stress_impact_loss
+			arrogant = minor_stress_impact_gain
+			sadistic = medium_stress_impact_gain
+			greedy = major_stress_impact_gain
+			callous = major_stress_impact_gain
+		}
+	}
+
+	option = { # No
+		name = VIETmisc.0427.b
+		stress_and_fulfillment_impact = {
+			generous = medium_stress_impact_gain
+			compassionate = medium_stress_impact_gain
+			humble = miniscule_stress_impact_gain
+			arrogant = miniscule_stress_impact_loss
+			sadistic = minor_stress_impact_loss
+			greedy = medium_stress_impact_loss
+			callous = medium_stress_impact_loss
+		}
+	}
+
+}
+
+
+
+# Feeling introspective and small in the universe
+VIETmisc.0428 = {
+	type = character_event
+	title = VIETmisc.0428.t
+	desc = VIETmisc.0428.desc
+	theme = faith
+	override_background = { reference = VIET_background_tuscan_country }
+
+
+	left_portrait = {
+		character = root
+		animation = personality_forgiving
+		camera = camera_event_left_away
+	}
+
+	trigger = {
+		has_game_rule = VIET_normal_universe_events
+	}
+	
+	weight_multiplier = {
+		base = 1
+		modifier = {
+			add = 0.2
+			has_trait = diligent
+		}
+		modifier = {
+			add = -0.2
+			has_trait = lazy
+		}
+		modifier = {
+			add = 0.2
+			has_trait = compassionate
+		}
+		modifier = {
+			add = -0.2
+			has_trait = callous
+		}
+		modifier = {
+			add = 0.2
+			has_trait = humble
+		}
+		modifier = {
+			add = -0.2
+			has_trait = arrogant
+		}
+	}
+
+	option = { # Ok
+		name = VIETmisc.0428.a
+		stress_impact = {
+			base = minor_stress_impact_loss
+			cynical = miniscule_stress_impact_loss
+			callous = miniscule_stress_impact_loss
+			ambitious = miniscule_stress_impact_gain
+			compassionate = miniscule_stress_impact_gain
+		}
+	}
+
+	option = { # Ok
+		name = VIETmisc.0428.b
+		VIET_medium_prestige_gain_effect = yes
+		stress_impact = {
+			ambitious = miniscule_stress_impact_loss
+			diligent = miniscule_stress_impact_loss
+			lazy = miniscule_stress_impact_gain
+			content = miniscule_stress_impact_gain
+		}
+	}
+
+	option = { # Ok
+		name = VIETmisc.0428.c
+		VIET_medium_piety_gain_effect = yes
+		stress_impact = {
+			zealous = miniscule_stress_impact_loss
+			trusting = miniscule_stress_impact_loss
+			cynical = miniscule_stress_impact_gain
+			impatient = miniscule_stress_impact_gain
+		}
+	}
+
+	option = { # Ok
+		name = VIETmisc.0428.d
+		change_spiritual_fulfillment = minor_spiritual_fulfillment_value
+		stress_impact = {
+			content = miniscule_stress_impact_loss
+			humble = miniscule_stress_impact_loss
+			callous = miniscule_stress_impact_gain
+			arrogant = miniscule_stress_impact_gain
+		}
+	}
+
+	after = {
+		add_character_modifier = {
+			modifier = VIET_contemplating_place_in_life
+			years = 10
+		}
+	}
+
+}
 
 
 

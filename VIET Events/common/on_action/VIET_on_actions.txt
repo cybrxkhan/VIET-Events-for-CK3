@@ -534,6 +534,9 @@ VIET_events_yearly_pulse = {
 
 		# Generic
 		100 = VIETmisc.0424		# Friend tells you how much you mean to them
+		
+		# Generic
+		100 = VIETmisc.0428		# Feeling introspective and small in the universe
 	}
 }
 
@@ -985,6 +988,9 @@ VIET_events_tri_yearly_pulse = {
 
 		# Generic
 		100 = VIETmisc.0421		# You dream of a bear trying to hug you
+		
+		# Generic
+		100 = VIETmisc.0426		# Physician speaks of the benefits of goat milk
 
 	}
 }
@@ -1289,6 +1295,9 @@ VIET_events_five_yearly_pulse = {
 		
 		# Generic
 		100 = VIETmisc.0425		# Thinking about Li Qingzhao's poetry
+		
+		# Generic
+		100 = VIETmisc.0427		# Priests ask for donations to fund foundling wheels
 
 	}
 }

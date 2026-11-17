@@ -299,6 +299,11 @@
 	}
 
 	### Graphics
+
+
+	header_background = "gfx/interface/illustrations/activity_header_backgrounds/activity_VIET_ancient_stone_monument_examination.dds"
+
+
 	# map_entity = {
 	# 	trigger = {
 	# 		activity_location.culture = {
@@ -322,8 +327,6 @@
 	# }
 	
 	# map_entity = "building_western_feast_01_entity"
-
-	header_background = "gfx/interface/illustrations/event_scenes/VIET_ancient_cairn.dds"
 
 	# Travel
 	background = { # Bridge

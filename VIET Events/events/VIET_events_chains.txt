@@ -1522,7 +1522,6 @@ VIETmisc.1036 = {
 		# Pick a nice grandparent
 		any_close_or_extended_family_member = {
 			even_if_dead = yes
-			is_alive = no
 			is_grandparent_of = root
 			has_personality_benevolent_trigger = yes
 			num_sinful_traits < 1
@@ -1601,7 +1600,6 @@ VIETmisc.1036 = {
 		random_close_or_extended_family_member = {
 			even_if_dead = yes
 			limit = {
-				is_alive = no
 				is_grandparent_of = root
 				has_personality_benevolent_trigger = yes
 				num_sinful_traits < 1
@@ -3546,7 +3544,7 @@ VIETmisc.1083 = {
 VIETmisc.1084 = { # Fullscreen Intro Event
 	type = character_event
 	window = fullscreen_event
-	queue_icon = "gfx/interface/icons/memory_types/VIET_stars.dds"
+	queue_icon = "gfx/interface/icons/court_position_types/court_scholar_court_position.dds"
 	title = VIETmisc.1084.t
 	desc = VIETmisc.1084.desc
 	theme = realm

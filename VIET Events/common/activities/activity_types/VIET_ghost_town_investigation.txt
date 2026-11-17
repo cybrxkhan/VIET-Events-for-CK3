@@ -372,6 +372,10 @@
 	}
 
 	### Graphics
+
+
+	header_background = "gfx/interface/illustrations/activity_header_backgrounds/activity_VIET_ghost_town_investigation.dds"
+
 	# map_entity = {
 	# 	trigger = {
 	# 		activity_location.culture = {
@@ -395,8 +399,6 @@
 	# }
 	
 	# map_entity = "building_western_feast_01_entity"
-
-	header_background = "gfx/interface/illustrations/event_scenes/alley.dds"
 
 	# Travel
 	background = { # Bridge

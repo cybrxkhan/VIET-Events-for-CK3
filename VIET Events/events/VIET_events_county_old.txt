@@ -1212,9 +1212,7 @@ VIETmisc.4015 = {
 		name = VIETmisc.4015.c
 		trigger = {
 			religion = { is_in_family = rf_abrahamic }
-			faith = {
-				NOT = { main_rite = { rite_has_tenet = tenet_unreformed_syncretism } }
-			}
+			NOT = { rite = { rite_has_tenet = tenet_unreformed_syncretism } }
 		}
 		VIET_huge_piety_gain_effect = yes
 	}
@@ -3037,19 +3035,15 @@ VIETmisc.4037 = {
 		any_held_title = {
 			tier = tier_county
 			is_landless_type_title = no
-			faith = {
-				NOR = {
-					main_rite = { rite_has_tenet = tenet_divine_marriage }
-					has_doctrine = doctrine_consanguinity_unrestricted
-				}		
-			}
-		}	
-		faith = {
 			NOR = {
-				main_rite = { rite_has_tenet = tenet_divine_marriage }
-				has_doctrine = doctrine_consanguinity_unrestricted
-			}		
+				rite = { rite_has_tenet = tenet_divine_marriage }
+				rite = { rite_has_doctrine = doctrine_consanguinity_unrestricted }
+			}	
 		}
+		NOR = {
+			rite = { rite_has_tenet = tenet_divine_marriage }
+			rite = { rite_has_doctrine = doctrine_consanguinity_unrestricted }
+		}	
 	}
 	
     weight_multiplier = {
@@ -3072,11 +3066,9 @@ VIETmisc.4037 = {
 			limit = {
 				tier = tier_county					
 				is_landless_type_title = no
-				faith = {
-					NOR = {
-						main_rite = { rite_has_tenet = tenet_divine_marriage }
-						has_doctrine = doctrine_consanguinity_unrestricted
-					}		
+				NOR = {
+					rite = { rite_has_tenet = tenet_divine_marriage }
+					rite = { rite_has_doctrine = doctrine_consanguinity_unrestricted }
 				}
 			}
 			save_scope_as = county

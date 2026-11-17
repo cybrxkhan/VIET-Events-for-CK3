@@ -3212,11 +3212,11 @@ VIETold.1044 = {
 	}
 	
 	trigger = {
-		religion = religion:islam_religion
+		rite = { rite_has_doctrine = muhammad_succession_sunni_doctrine }
 		NOT = { has_game_rule = VIET_conversion_universe_events }
 		any_courtier_or_guest = {
 			is_available_ai_adult = yes
-			religion = religion:islam_religion
+			rite = { rite_has_doctrine = muhammad_succession_sunni_doctrine }
 		}
 	}
 	
@@ -3252,7 +3252,6 @@ VIETold.1044 = {
 		random_courtier_or_guest = {
 			limit = {
 				is_available_ai_adult = yes
-				religion = religion:islam_religion
 			}
 			save_scope_as = scope_VIET_bad_teeth_person
 		}
@@ -3344,7 +3343,8 @@ VIETold.1045 = {
 	}
 	
 	trigger = {
-		religion = religion:islam_religion
+		rite = { rite_has_doctrine = muhammad_succession_sunni_doctrine }
+		#faith = { faiths_are_in_sunni_islam_group = yes }
 		NOT = { has_game_rule = VIET_conversion_universe_events }
 	}
 	
@@ -5329,6 +5329,10 @@ VIETold.1074 = {
 	theme = diplomacy_foreign_affairs_focus
 	override_icon = { reference = "gfx/interface/icons/event_types/type_medicine.dds" }
 
+	left_portrait = {
+		character = scope:perfume_crazy
+		animation = personality_callous
+	}
 	right_portrait = {
 		character = root
 		animation = disapproval

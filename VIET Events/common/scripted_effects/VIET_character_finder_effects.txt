@@ -84,12 +84,12 @@ VIET_realm_court_list_effect = {
 					save_temporary_scope_as = potential_vassal_court
 					NOT = {
 						any_in_list = {
-							list = VIET_court_list
+							list = pool_vassal_courts
 							this = scope:potential_vassal_court
 						}
 					}
 				}
-				add_to_temporary_list = VIET_court_list
+				add_to_temporary_list = pool_vassal_courts
 			}
 			if = {
 				limit = {
@@ -283,7 +283,7 @@ VIET_pick_merchant_effect = {
 			modifier = {
 				add = {
 					value = stewardship
-					add = diplomacy
+					value = diplomacy
 					if = {
 						limit = {
 							has_trait = lifestyle_traveler
@@ -508,7 +508,7 @@ VIET_find_astronomer_effect = {
 					value = learning
 					if = {
 						limit = {
-							faith = { main_rite = { rite_has_tenet = tenet_astrology } }
+							rite = { rite_has_tenet = tenet_astrology }
 						}
 						add = 10
 					}
@@ -559,7 +559,7 @@ VIET_find_priest_effect = {
 			modifier = {
 				add = {
 					value = learning
-					add = age
+					value = age
 				}
 			}
 		}
@@ -713,7 +713,7 @@ VIET_find_traveler_effect = {
 			modifier = {
 				add = {
 					value = diplomacy
-					add = num_of_known_languages
+					value = num_of_known_languages
 				}
 			}
 		}
@@ -785,7 +785,7 @@ VIET_find_famous_traveler_effect = {
 			modifier = {
 				add = {
 					value = diplomacy
-					add = num_of_known_languages
+					value = num_of_known_languages
 				}
 			}
 		}
@@ -1178,7 +1178,7 @@ VIET_find_hunter_effect = {
 			modifier = {
 				add = {
 					value = martial
-					add = prowess
+					value = prowess
 				}
 				add = {
 					if = {

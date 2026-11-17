@@ -4147,12 +4147,10 @@ VIETmisc.0053 = {
 	option = { # bad
 		name = VIETmisc.0053.b
 		trigger = {
-			faith = {
-				NOR = {
-					main_rite = { rite_has_tenet = tenet_divine_marriage }
-					has_doctrine = doctrine_consanguinity_unrestricted
-				}		
-			}		
+			NOR = {
+				rite = { rite_has_tenet = tenet_divine_marriage }
+				rite = { rite_has_doctrine = doctrine_consanguinity_unrestricted }
+			}	
 		}
 		VIET_small_piety_gain_effect = yes
 		#add_character_modifier = {
@@ -4170,11 +4168,9 @@ VIETmisc.0053 = {
 	option = { # incest religion
 		name = VIETmisc.0053.d
 		trigger = {
-			faith = {
-				OR = {
-					main_rite = { rite_has_tenet = tenet_divine_marriage }
-					has_doctrine = doctrine_consanguinity_unrestricted
-				}		
+			OR = {
+				rite = { rite_has_tenet = tenet_divine_marriage }
+				rite = { rite_has_doctrine = doctrine_consanguinity_unrestricted }
 			}		
 		}
 		VIET_medium_piety_gain_effect = yes
@@ -5272,7 +5268,6 @@ VIETmisc.0066 = {
 		random_courtier = {
 			limit = {
 				is_available_ai_adult = yes
-				NOT = { is_close_family_of = root }
 			}
 			save_scope_as = scope_VIET_fellow_lost_traveler
 		}
@@ -11844,7 +11839,6 @@ VIETmisc.0140 = {
 			has_trait_benevolent_trigger = yes # Someone who is nice
 		}
 		any_courtier = {
-			count >= 2
 			is_available_ai_adult = yes
 		}
 	}
@@ -11888,7 +11882,6 @@ VIETmisc.0140 = {
 		random_courtier = {
 			limit = {
 				is_available_ai_adult = yes
-				NOT = { this = scope:scope_VIET_helper }
 			}
 			save_scope_as = scope_VIET_tripper
 			add_opinion = {
@@ -20283,18 +20276,20 @@ VIETmisc.0230 = {
 		OR = {
 			religion = { is_in_family = rf_abrahamic }
 			religion = { is_in_family = rf_eastern }
-			faith = {
-				OR = {
-					main_rite = { rite_has_tenet = tenet_dharmic_pacifism }
-					main_rite = { rite_has_tenet = tenet_pacifism }
-					main_rite = { rite_has_tenet = tenet_reincarnation }
-					trait_is_sin = gluttonous
-					trait_is_sin = sadistic
-					trait_is_sin = callous
-					trait_is_sin = wrathful
-					trait_is_virtue = compassionate
-					trait_is_virtue = temperate
-					trait_is_virtue = generous
+			OR = {
+				rite = { rite_has_tenet = tenet_dharmic_pacifism }
+				rite = { rite_has_tenet = tenet_pacifism }
+				rite = { rite_has_tenet = tenet_reincarnation }
+				faith = {
+					OR = {
+						trait_is_sin = gluttonous
+						trait_is_sin = sadistic
+						trait_is_sin = callous
+						trait_is_sin = wrathful
+						trait_is_virtue = compassionate
+						trait_is_virtue = temperate
+						trait_is_virtue = generous
+					}
 				}
 			}
 		}
@@ -20470,23 +20465,22 @@ VIETmisc.0232 = {
 		OR = {
 			religion = { is_in_family = rf_abrahamic }
 			religion = { is_in_family = rf_eastern }
-			faith = {
-				OR = {
-					faith_has_monasticism_trigger = yes
-					main_rite = {
-						OR = {
-							rite_has_tenet = tenet_dharmic_pacifism
-							rite_has_tenet = tenet_pacifism
-							rite_has_tenet = tenet_mendicant_preachers
-							rite_has_tenet = tenet_asceticism
-							rite_has_tenet = tenet_sanctity_of_nature
-						}
+			OR = {
+				rite = { rite_has_tenet = tenet_dharmic_pacifism }
+				rite = { rite_has_tenet = tenet_pacifism }
+				rite = { rite_has_tenet = tenet_mendicant_preachers }
+				rite = { rite_has_tenet = tenet_asceticism }
+				rite = { rite_has_tenet = tenet_sanctity_of_nature }
+				faith = { faith_has_monasticism_trigger = yes }
+				faith = {
+					OR = {
+						faith_has_monasticism_trigger = yes
+						trait_is_sin = sadistic
+						trait_is_sin = callous
+						trait_is_virtue = compassionate
+						trait_is_virtue = generous
+						trait_is_virtue = humble
 					}
-					trait_is_sin = sadistic
-					trait_is_sin = callous
-					trait_is_virtue = compassionate
-					trait_is_virtue = generous
-					trait_is_virtue = humble
 				}
 			}
 		}
@@ -21567,7 +21561,7 @@ VIETmisc.0243 = {
 	}
 
 	immediate = {
-		random_courtier_or_guest = {
+		random_courtier = {
 			limit = {
 				is_available_ai_adult = yes
 				OR = {
@@ -21581,7 +21575,7 @@ VIETmisc.0243 = {
 			}
 			save_scope_as = realist
 		}
-		random_courtier_or_guest = {
+		random_courtier = {
 			limit = {
 				is_available_ai_adult = yes
 				NOR = {
@@ -27140,7 +27134,7 @@ VIETmisc.0287 = {
 
 	trigger = {
 		# Event doesn't make sense if you don't care about cheating
-		NOT = { faith = { has_doctrine_parameter = no_unfaithfulness_penalty_active } }
+		accepts_adultery_without_penalty_trigger = no
 	}
 	
 	weight_multiplier = {
@@ -29013,7 +29007,7 @@ VIETmisc.0307 = {
 			base = minor_stress_impact_loss
 		}	
 		add_character_modifier = {
-			modifier = VIET_new_toys
+			modifier = VIET_new_toys_modifier
 			years = 5
 		}
 	}
@@ -34468,7 +34462,21 @@ VIETmisc.0357 = {
 		}
 		NOT = { has_trait = celibate }
 		NOT = { has_sexuality = asexual }
-		VIET_hair_debate_candidate_count >= 3
+		OR = {
+			any_courtier_or_guest = {
+				count >= 3 # Need at least three courtiers
+				is_available_ai_adult = yes
+				VIET_is_redhead_or_blonde_area_or_culture = yes
+				NOT = { has_trait = celibate }
+				NOT = { has_sexuality = asexual }
+			}
+			any_vassal = {
+				is_available_ai_adult = yes
+				VIET_is_redhead_or_blonde_area_or_culture = yes
+				NOT = { has_trait = celibate }
+				NOT = { has_sexuality = asexual }
+			}
+		}
 	}
 	
 	weight_multiplier = {
@@ -34502,22 +34510,28 @@ VIETmisc.0357 = {
 	immediate = {
 		every_courtier_or_guest = {
 			limit = {
-				VIET_hair_debate_participant_trigger = yes
+				is_available_ai_adult = yes
+				culture_has_european_heritage_pillar_trigger = yes
+				religion = religion:christianity_religion
+				NOT = {	culture = { has_cultural_pillar = heritage_israelite } }
 			}
-			add_to_list = VIET_hair_debate_candidates
+			add_to_list = candidate_characters
 		}
 		every_vassal = {
 			limit = {
-				VIET_hair_debate_vassal_participant_trigger = yes
+				is_available_ai_adult = yes
+				culture_has_european_heritage_pillar_trigger = yes
+				religion = religion:christianity_religion
+				NOT = {	culture = { has_cultural_pillar = heritage_israelite } }
 			}
-			add_to_list = VIET_hair_debate_candidates
+			add_to_list = candidate_characters
 		}
 		random_in_list = {
-			list = VIET_hair_debate_candidates
+			list = candidate_characters
 			save_scope_as = blonde
 		}
 		random_in_list = {
-			list = VIET_hair_debate_candidates
+			list = candidate_characters
 			limit = {
 				exists = scope:blonde
 				NOT = { this = scope:blonde }
@@ -34525,7 +34539,7 @@ VIETmisc.0357 = {
 			save_scope_as = redhead
 		}
 		random_in_list = {
-			list = VIET_hair_debate_candidates
+			list = candidate_characters
 			limit = {
 				exists = scope:blonde
 				exists = scope:redhead
@@ -39477,7 +39491,6 @@ VIETmisc.0397 = {
 				age <= 11
 				age >= 4
 				is_ai = yes
-				NOT = { has_trait = lifestyle_physician }
 			}	
 			save_scope_as = child		
 		}

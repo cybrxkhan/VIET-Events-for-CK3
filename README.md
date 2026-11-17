@@ -1,21 +1,15 @@
 # VIET Events for CK3
 
-<img src="https://i.imgur.com/9bnGsJD.jpg">
+<img src="https://i.imgur.com/rPaDd2l.jpg">
 
-## Latest Version: 1.20.0 "Li Qingzhao" (Released 10/01/26)
+## Latest Version: 1.21.0 "Life" (Released 11/16/26)
 
-_"Seeing a guest come, she feels shy;_
-_Her stockings coming down, away she tries to fly._
-_Her hairpin drops;_
-_She never stops_
-_But to look back._
-_She leans against the door,_
-_Pretending to sniff at mume blossoms once more._
+_All in an instant, now amidst clouds, now within mist,_
+_One hundred beautiful scenes are revealed._
 
-_蹴罢秋千，起来慵整纤纤手。露浓花瘦，薄汗轻衣透。_
-_见客入来，袜刬金钗溜。和羞走，倚门回首，却把青梅嗅。_
+_雲霧の暫時百景を尽しけり_
 
-_– Li Qingzhao (1084 – c. 1155), considered China’s greatest female poet_
+_– Matsuo Bashō (1644 – 1694), Japanese poet_
 
 Very Immersive Events and Tales (VIET), the sequel to VIET Events Reborn for CK2, is a flavor mod that adds a vast collection of events about everyday life to spice up your game. They add immersion and a diversity of experiences in between wars and vanilla’s event chains, and cover mundane minutiae ranging from small talk with courtiers and eating local cuisine to epic tales about love, philosophy, and the human condition. Some of the events unlock new decisions, character interactions, activities, and much more for you to explore!
 
@@ -25,7 +19,7 @@ Feel free to use my work in your mods - all I ask is that I am credited and (if 
 
 ## Features
 
-- Over **1285** new flavor events to experience!
+- Over **1288** new flavor events to experience!
 - Explore new decisions, artifacts, character interactions, activities, and more!
 - Game rule to disable sillier events for those who don't like them, with three levels to choose from: Balanced (Default), Serious (Restricted), and All Events (Full)
 - Compatible with almost anything since it doesn't touch any vanilla files - even with overhaul mods, you can via game rule disable events that reference things specific to our medieval world that wouldn’t make sense in other time periods or universes (like fantasy and sci-fi conversion mods)
@@ -51,10 +45,11 @@ The mod folder should look something like this:
 
 ### Version 1.20.0 "Li Qingzhao"
 
-New events added in this version: **10**
+New events added in this version: **3**
 
-- Added 10 generic events, including a couple inspired by Li Qingzhao
-- Miscellaneous bugfixes
+- Added 3 generic events
+- Changed several modifiers to reflect new tax types
+- Miscellaneous bugfixes and tweaks, many thanks to eg3r
 
 \* Adapted from VIET for CK2
 

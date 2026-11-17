@@ -893,22 +893,19 @@ VIETold.2012 = {
 		name = VIETold.2012.b
 		if = {
 			limit = {
-				faith = {
-					OR = {
-						has_doctrine_parameter = pacifist
-						trait_is_virtue = calm					
-					}
+				OR = {
+					rite = { rite_has_tenet = tenet_dharmic_pacifism }
+					rite = { rite_has_tenet = tenet_pacifism }
+					faith = { trait_is_virtue = calm }				
 				}
 			}
 			VIET_tiny_piety_gain_effect = yes
 		}
 		else_if = {
 			limit = {
-				faith = {
-					OR = {
-						main_rite = { rite_has_tenet = tenet_warmonger }
-						trait_is_virtue = wrathful					
-					}
+				OR = {
+					rite = { rite_has_tenet = tenet_warmonger }
+					faith = { trait_is_virtue = wrathful }				
 				}
 			}
 			VIET_tiny_prestige_loss_effect = yes
@@ -1967,12 +1964,10 @@ VIETold.2027 = {
 	}
 
 	trigger = {
-		faith = {
-			NOR = {
-				main_rite = { rite_has_tenet = tenet_divine_marriage }
-				has_doctrine = doctrine_consanguinity_unrestricted
-			}		
-		}
+		NOR = {
+			rite = { rite_has_tenet = tenet_divine_marriage }
+			rite = { rite_has_doctrine = doctrine_consanguinity_unrestricted }
+		}	
 	}
 	
 	weight_multiplier = {
@@ -3539,10 +3534,7 @@ VIETold.2049 = {
 	trigger = {
 		has_game_rule = VIET_normal_universe_events
 		NOT = { has_character_flag = VIET_pagan_future_prophecy }
-		faith = {
-			religion = { is_in_family = rf_pagan }
-			has_doctrine_parameter = unreformed
-		}
+		religion = { is_in_family = rf_pagan }
 	}
 
 	weight_multiplier = {
@@ -4180,7 +4172,7 @@ VIETold.2057 = {
 	option = { # Amusing!
 		name = VIETold.2057.c
 		trigger = {
-			NOT = { faith = { has_doctrine = doctrine_gender_female_dominated } }
+			NOT = { rite = { rite_has_doctrine = doctrine_gender_female_dominated } }
 		}
 		add_character_modifier = {
 			modifier = VIET_amused_ruler
@@ -8025,8 +8017,8 @@ VIETold.2110 = {
 			culture = { has_cultural_pillar = heritage_north_germanic }
 		}
 		any_courtier_or_guest = {
-			is_available_ai_adult = yes
 			OR = {
+				is_available_ai_adult = yes
 				faith = faith:norse_pagan
 				culture = { has_cultural_pillar = heritage_north_germanic }
 			}
@@ -9911,7 +9903,7 @@ VIETold.2138 = {
 		name = VIETold.2138.b
 		trigger = {
 			is_female = no
-			NOT = { faith = { has_doctrine = doctrine_gender_female_dominated } }
+			NOT = { rite = { rite_has_doctrine = doctrine_gender_female_dominated } }
 		}
 		add_character_modifier = {
 			modifier = VIET_sexist_against_women
@@ -9966,7 +9958,7 @@ VIETold.2138 = {
 		name = VIETold.2138.e
 		trigger = {
 			is_female = yes
-			NOT = { faith = { has_doctrine = doctrine_gender_female_dominated } }
+			NOT = { rite = { rite_has_doctrine = doctrine_gender_female_dominated } }
 		}
 		add_character_modifier = {
 			modifier = VIET_self_hating_woman
@@ -11538,7 +11530,7 @@ VIETold.2161 = {
 	
 	trigger = {
 		NOT = { has_game_rule = VIET_serious_events }
-		faith = { has_doctrine = doctrine_consanguinity_unrestricted }
+		rite = { rite_has_doctrine = doctrine_consanguinity_unrestricted }
 	}
 
 	weight_multiplier = {

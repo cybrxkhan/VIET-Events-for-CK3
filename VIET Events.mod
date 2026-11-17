@@ -5,5 +5,5 @@ tags={
 	"Culture"
 }
 name="VIET Events - A Flavor and Immersion Event Mod"
-supported_version="1.20.*"
+supported_version="1.21.*"
 path="mod/VIET Events"

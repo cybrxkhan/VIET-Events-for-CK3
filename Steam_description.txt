@@ -1,8 +1,8 @@
 [img]https://i.imgur.com/gskL3AC.jpg[/img]
 
-[img]https://i.imgur.com/9bnGsJD.jpg[/img]
+[img]https://i.imgur.com/rPaDd2l.jpg[/img]
 
-[h1]Current Version: 1.20.0 "Li Qingzhao" (Released 10/01/26, Compatible with vanilla patch 1.20.X)[/h1]
+[h1]Current Version: 1.21.0 "Life" (Released 11/17/26, Compatible with vanilla patch 1.21.X)[/h1]
 
 [h1][B][url=https://discord.gg/9KuyXv2uZA]Discord Server for my mods[/url]
 [url=https://cybrxkhansmods.godaddysites.com/]Official Website for my mods[/url][/B][/h1]
@@ -27,7 +27,7 @@ Feel free to use my work in your mods - all I ask is that I am credited and (if 
 [img]http://i.imgur.com/EyXurbK.jpg[/img]
 
 [LIST]
-[*]Over [B][U]1285[/U] new flavor events[/B] to experience!
+[*]Over [B][U]1288[/U] new flavor events[/B] to experience!
 [*]Explore new decisions, artifacts, character interactions, activities, and more!
 [*]Game rule to disable sillier events for those who don't like them, with three levels to choose from: Balanced (Default), Serious (Restricted), and All Events (Full)
 [*][B]Compatible with almost anything[/B] since it doesn't touch any vanilla files - even with overhaul mods, you can via game rule disable events that reference things specific to our medieval world that wouldn’t make sense in other time periods or universes (like fantasy/sci-fi conversion mods)
@@ -42,7 +42,7 @@ Because people are kindly spending their own free time and effort to work on the
 [*]German (Deutsch) - [url=https://steamcommunity.com/sharedfiles/filedetails/?id=3355568022]Sub-mod by Dani and others[/url] 
 [*]Japanese (日本語) - [url=https://steamcommunity.com/sharedfiles/filedetails/?id=2897785688]Sub-mod by takuro[/url]
 [*]Korean (한국어) - [url=https://steamcommunity.com/sharedfiles/filedetails/?id=2227982565]Sub-mod by Ohboksu[/url], thanks to Ohboksu
-[*]Portuguese (Português) - [url=https://steamcommunity.com/sharedfiles/filedetails/?id=3227934458]Sub-mod by Alin[/url]
+[*]Portuguese - [url=https://steamcommunity.com/sharedfiles/filedetails/?edit=true&id=3837107096]submod by kkauak[/url]
 [*]Russian (русский) - AmoreLibre has provided translations integrated into base VIET. More translations can be found in [url=https://steamcommunity.com/sharedfiles/filedetails/?id=2959639167]this sub-mod by Негр в панамке[/url]
 [*]Spanish (Español) - Sourenics, Ferchu, and Danny have provided translations integrated into base VIET.
 [*]Turkish (Türkçe) - [url=https://steamcommunity.com/sharedfiles/filedetails/?id=3601567013]Sub-mod by Kubrick[/url]
@@ -55,28 +55,23 @@ Please see the [url=https://cybrxkhansmods.godaddysites.com/faq]FAQ on my mods' 
 
 [img]http://i.imgur.com/RQ5QZTF.jpg[/img]
 
-[h1]Version 1.20.0 "Li Qingzhao"[/h1]
+[h1]Version 1.21.0 "Life"[/h1]
 
-[I]Seeing a guest come, she feels shy;
-Her stockings coming down, away she tries to fly.
-Her hairpin drops;
-She never stops
-But to look back.
-She leans against the door,
-Pretending to sniff at mume blossoms once more.
+[I]All in an instant, now amidst clouds, now within mist,
+One hundred beautiful scenes are revealed.
 
-蹴罢秋千，起来慵整纤纤手。露浓花瘦，薄汗轻衣透。
-见客入来，袜刬金钗溜。和羞走，倚门回首，却把青梅嗅。
+雲霧の暫時百景を尽しけり
 
-– Li Qingzhao (1084 – c. 1155), considered China’s greatest female poet[/I]
+– Matsuo Bashō (1644 – 1694), Japanese poet[/I]
 
-New events added in this version: [B]10[/B]
+New events added in this version: [B]3[/B]
 
 As changelog is too big to list here, see the full changelog here: https://steamcommunity.com/sharedfiles/filedetails/changelog/2227658180
 
 [LIST]
-[*]Added 10 generic events, including a couple inspired by Li Qingzhao
-[*]Miscellaneous bugfixes
+[*]Added 3 generic events
+[*]Changed several modifiers to reflect new tax types
+[*]Miscellaneous bugfixes and tweaks, many thanks to eg3r
 [/LIST]
 
 *Adapted from VIET for CK2

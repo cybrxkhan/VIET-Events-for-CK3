@@ -52,7 +52,7 @@ VIET_norse_localization_trigger = {
 	OR = {
 		AND = {
 			culture = { has_cultural_pillar = heritage_north_germanic }
-			faith = { has_doctrine_parameter = unreformed }
+			religion = { is_in_family = rf_pagan }
 		}
 		faith = faith:norse_pagan
 	}
@@ -255,7 +255,7 @@ VIET_has_coast_trigger = {
 		any_realm_county = {
 			is_coastal_county = yes
 		}
-		capital_province = {
+		capital_province ?= {
 			is_coastal = yes
 		}
 	}

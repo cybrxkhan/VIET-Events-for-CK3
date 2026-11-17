@@ -1247,7 +1247,7 @@
  VIET_conformist_child_desc:0 "This child tries to conform to what the other children like to do... at least for now."
  VIET_dancing_like_hinds:0 "Enjoys Dancing Like Hinds"
  VIET_dancing_like_hinds_desc:0 "Older people may criticize how the youths of today dance, but this young person definitely doesn't care!"
- VIET_new_toys:0 "Interesting New Toys"
+ VIET_new_toys_modifier:0 "Interesting New Toys"
  VIET_toy_keepsake:0 "Toy Keepsake from Childhood"
  VIET_alkanet_prank:0 "Alkanet Prank"
  VIET_alkanet_prank_desc:0 "This character is fond of doing a prank where they uses oil made from alkanet, which is red in color, to pretend they are bleeding."
@@ -1738,5 +1738,13 @@
  VIET_li_qingzhao_poems_old_age:0 "Inspired by Lǐ Qīngzhào's Later Poetry"
  VIET_li_qingzhao_poems_old_age_desc:0 "This character finds great inspiration from the melancholic later poetry of [Glossary( 'Lǐ Qīngzhào', 'LI_QINGZHAO_GLOSS' )], after the death of her beloved [Glossary( 'Zhào Míngchéng', 'ZHAO_MINGCHENG_GLOSS' )]."
  # Version 1.20.1 Start Here - Note to Translators: please leave this comment here and do not remove it even in your versions of the loc
+ # Version 1.21.0 Start Here - Note to Translators: please leave this comment here and do not remove it even in your versions of the loc
+ VIET_drinks_goat_milk:0 "Drinks Goat Milk"
+ VIET_drinks_goat_milk_desc:0 "Consumption of goat milk may have health benefits according to some medical authorities, but that doesn't change the fact that it is a drink associated with the destitute and desperate."
+ VIET_donated_foundling_wheels:0 "Helped Build Foundling Wheels"
+ VIET_donated_foundling_wheels_desc:0 "This character benevolently donated money to help fund the construction of [Glossary( 'foundling wheels', 'FOUNDLING_WHEELS_GLOSS' )]."
+ VIET_contemplating_place_in_life:0 "Contemplating Place in Life"
+ VIET_contemplating_place_in_life_desc:0 "#italic “For dust thou art, and unto dust shalt thou return.”#!"
+ # Version 1.21.1 Start Here - Note to Translators: please leave this comment here and do not remove it even in your versions of the loc
  xxxxxxxxxx:0 "xxx"
 
